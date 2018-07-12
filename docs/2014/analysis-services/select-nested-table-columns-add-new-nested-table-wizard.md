@@ -1,5 +1,5 @@
 ---
-title: Seleccione las columnas de tabla anidada (Agregar nueva tabla anidada) | Documentos de Microsoft
+title: Seleccionar columnas de tabla anidada (Agregar nueva tabla anidada) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectnestedtablecolumns.f1
 ms.assetid: b78a820f-b5a2-4dfc-809a-8d6a949a3f3a
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34c7311d6f297e59d96dbe73888aeacbf1b284e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efcf3c3b0b628cfb7aac93b24a1fc4c874ceb57e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278302"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>Seleccionar las columnas de la tabla anidada (Agregar nueva tabla anidada)
   Utilice la página **Seleccionar las columnas de la tabla anidada** para seleccionar los atributos y medidas que se van a incluir en la tabla anidada y para definir cómo utilizará el modelo de minería de datos esos atributos y medidas.  
@@ -39,7 +39,7 @@ ms.locfileid: "36107717"
  Seleccione esta opción para indicar si una medida o atributo se utilizará como columna de predicción en el modelo de minería de datos. Una columna puede estar marcada como de entrada y de predicción.  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda F1 del Asistente para minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Asistente para la Ayuda de F1 de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Seleccione la clave de tabla anidada &#40;agregar nueva tabla anidada&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
  [Especificar el uso de la columna de modelo de minería de datos &#40;Asistente para minería de datos&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   

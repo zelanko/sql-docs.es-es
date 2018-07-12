@@ -1,5 +1,5 @@
 ---
-title: Especificar funciones de conversión explícita en consultas XPath (SQLXML 4.0) | Documentos de Microsoft
+title: Especificar funciones de conversión explícita en consultas XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], explicit conversion functions
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 59a2a54b1a3fe7a8136fa2ab0cb56f4cd215c245
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 841a28a156075c6342ea9c678eb938fc3414e643
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179642"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Especificar funciones de conversión explícita en consultas XPath (SQLXML 4.0)
   En los siguientes ejemplos se muestra cómo especificar funciones de conversión explícita en consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "36111515"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. Usar la función de conversión explícita number()  
  La función `number()` convierte un argumento en un número.  
   
- Suponiendo que el valor de **ContactID** no es numérico, la siguiente consulta convierte **ContactID** en un número y lo compara con el valor 4. A continuación, la consulta devuelve todos los  **\<empleado >** elementos secundarios del nodo de contexto con el **ContactID** atributo que tiene un valor numérico de 4:  
+ Suponiendo que el valor de **ContactID** no es numérico, la siguiente consulta convierte **ContactID** a un número y lo compara con el valor 4. A continuación, la consulta devuelve todos  **\<empleado >** elementos secundarios del nodo de contexto con el **ContactID** atributo que tiene un valor numérico de 4:  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -51,7 +51,7 @@ ms.locfileid: "36111515"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (ExplicitConversionA.xml) y guárdela en el mismo directorio donde esté guardado el archivo SampleSchema1.xml.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36111515"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. Usar la función de conversión explícita string()  
  La función `string()` convierte un argumento en una cadena.  
   
- La siguiente consulta convierte **ContactID** en una cadena y la compara con la cadena de valor "4". La consulta devuelve todos los  **\<empleado >** elementos secundarios del nodo de contexto con un **ContactID** con un valor de cadena de "4":  
+ La siguiente consulta convierte **ContactID** en una cadena y lo compara con la cadena de valor "4". La consulta devuelve todos los  **\<empleado >** elementos secundarios del nodo de contexto con un **ContactID** con un valor de cadena "4":  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  
@@ -100,7 +100,7 @@ ms.locfileid: "36111515"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (ExplicitConversionB.xml) y guárdela en el mismo directorio donde esté guardado el archivo SampleSchema1.xml.  
   

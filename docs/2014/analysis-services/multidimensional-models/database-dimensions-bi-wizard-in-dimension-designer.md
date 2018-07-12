@@ -1,5 +1,5 @@
 ---
-title: Iniciar el Asistente de Business Intelligence en el Diseñador de dimensiones | Documentos de Microsoft
+title: Iniciar el Asistente de Business Intelligence en el Diseñador de dimensiones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Wizard
 ms.assetid: d765c89e-9512-40fb-984a-8200c2541df6
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d1c4f381882bd1d4cdb3457208a0ca6fe02eb35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb479f01c315a4e8fd6d83ae687610566147b444
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163556"
 ---
 # <a name="start-the-business-intelligence-wizard-in-dimension-designer"></a>Iniciar el Asistente de Business Intelligence en el Diseñador de dimensiones
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede crear operadores de resúmenes personalizados y fórmulas de miembro personalizado, y configurar las dimensiones para la reescritura mediante el Asistente de Business Intelligence o el Diseñador de dimensiones. Puede iniciar el Asistente de Business Intelligence desde el Explorador de soluciones o desde el Diseñador de cubos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Se puede obtener acceso al Diseñador de dimensiones desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

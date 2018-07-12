@@ -1,25 +1,23 @@
 ---
-title: El uso de índices no agrupados | Documentos de Microsoft
+title: El uso de índices de almacén de columnas no agrupado | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4c341fb8-7cb1-4cab-921b-e80b751d6c19
-caps.latest.revision: 7
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: fd711b644c551da7a658eff7ede74007d69a2286
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f32acde4b49b8b4b91c087fb66e41d4c2cf276ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157026"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Usar índices no clúster de almacén de columnas
   Describe las tareas clave para utilizar un índice no clúster de almacén de columnas en una tabla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -30,16 +28,16 @@ ms.locfileid: "36111847"
   
 ## <a name="contents"></a>Contenido  
   
--   [Crear un índice no clúster de almacén de columnas](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)  
+-   [Crear un índice no agrupado de almacén de columnas](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)  
   
--   [Cambiar los datos de un índice no clúster de almacén de columnas](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
+-   [Cambiar los datos de un índice no agrupado de almacén de columnas](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
   
-##  <a name="load"></a> Crear un índice no clúster de almacén de columnas  
- Para cargar datos en un índice no clúster de almacén de columnas, cargue primero los datos en una tabla tradicional de almacén de filas almacenada como un montón o clúster de índice y, a continuación, usar [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) para crear un índice de almacén de columnas.  
+##  <a name="load"></a> Crear un índice no agrupado de almacén de columnas  
+ Para cargar datos en un índice de almacén, cargue primero los datos en una tabla tradicional de almacén de filas almacenada como un montón o agrupado de índice y, a continuación, usar [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) para crear un índice de almacén de columnas.  
   
  ![Cargar datos en un índice de almacén de columnas](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "cargar datos en un índice de almacén de columnas")  
   
-##  <a name="change"></a> Cambiar los datos de un índice no clúster de almacén de columnas  
+##  <a name="change"></a> Cambiar los datos de un índice no agrupado de almacén de columnas  
  Una vez creado un índice no clúster de almacén de columnas en una tabla, no puede modificar directamente los datos de esa tabla. Una consulta con INSERT, UPDATE, DELETE o MERGE generará un error y devolverá un mensaje de error. Para agregar o modificar los datos de la tabla, puede hacer lo siguiente:  
   
 -   Deshabilitar el índice de almacén de columnas. Después puede actualizar los datos de la tabla. Si deshabilita el índice de almacén de columnas, puede regenerar el índice de almacén de columnas cuando termine de actualizar los datos. Por ejemplo:  

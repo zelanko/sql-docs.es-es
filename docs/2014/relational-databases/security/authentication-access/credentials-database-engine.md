@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - principals [SQL Server], credentials
 - schemas [SQL Server], credentials
@@ -22,15 +21,15 @@ helpviewer_keywords:
 - credentials [SQL Server]
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9de71af86c410658ab37aa1959ab2c9962b30a1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 579b9d6f9847652ab2088eeb5111372fc4377c02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198785"
 ---
 # <a name="credentials-database-engine"></a>Credenciales (motor de base de datos)
   Una credencial es un registro que contiene la información de autenticación (credenciales) necesaria para conectarse a un recurso situado fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esta información la utiliza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]internamente. La mayoría de las credenciales incluyen un nombre de usuario y una contraseña de Windows.  
@@ -39,10 +38,10 @@ ms.locfileid: "36111981"
   
  Las credenciales del sistema se crean de forma automática y se asocian a extremos específicos. Los nombres de las credenciales del sistema comienzan por dos signos de número (##).  
   
- Para obtener más información acerca de las credenciales, consulte el [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) vista de catálogo.  
+ Para obtener más información acerca de las credenciales, vea el [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) vista de catálogo.  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Crear una credencial](../authentication-access/create-a-credential.md) [crear CREDENCIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
+ [Crear una credencial](../authentication-access/create-a-credential.md) [crear la CREDENCIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
  [Proteger SQL Server](../securing-sql-server.md)  
   

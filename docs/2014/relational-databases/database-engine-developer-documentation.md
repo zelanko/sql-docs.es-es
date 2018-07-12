@@ -1,5 +1,5 @@
 ---
-title: Developer&#39;guía (motor de base de datos) | Documentos de Microsoft
+title: Desarrollador&#39;guía (motor de base de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e414fe4737caa5c1e9e862555ecd9be3286b592a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6a611237e283ad10a6dfd8433d08ef2b3708dd6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258911"
 ---
-# <a name="developer39s-guide-database-engine"></a>Developer&#39;guía (motor de base de datos)
+# <a name="developer39s-guide-database-engine"></a>Desarrollador&#39;guía (motor de base de datos)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona un completo conjunto de herramientas para desarrollar, administrar y controlar las aplicaciones de base de datos.  
   
 ## <a name="in-this-section"></a>En esta sección  

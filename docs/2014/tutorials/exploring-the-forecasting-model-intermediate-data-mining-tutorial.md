@@ -1,5 +1,5 @@
 ---
-title: Explorar el modelo de previsión (Tutorial de minería de datos intermedios) | Documentos de Microsoft
+title: Explorar el modelo de previsión (Tutorial de minería de datos intermedios) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0a00f409-050f-4b92-9763-ba31a6aa3052
 caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 6f6cffb56dd4ef4a9df6618ce126e2b3d0340640
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: f3e41c8060a007e52af23c0637c744e72f0d1fb4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167772"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Explorar el modelo de previsión (tutorial intermedio de minería de datos)
-  Ahora que ha creado el modelo de minería de datos de pronóstico, puede explorar los resultados mediante el **Visor de modelos de minería de datos** pestaña del Diseñador de minería de datos. El [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de Series temporales contiene dos pestañas: **gráficos** y **modelo**.  
+  Ahora que ha creado el modelo de minería de datos de pronóstico, puede explorar los resultados utilizando la **Visor de modelos de minería de datos** ficha del Diseñador de minería de datos. El [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de Series temporales contiene dos pestañas: **gráficos** y **modelo**.  
   
  Además, puede usar el visor de árboles genérico de Microsoft con todos los modelos. Cada vista presenta una imagen ligeramente diferente de la información del modelo de series temporales.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "36313043"
 -   [Visor de contenido genérico de Microsoft](#bkmk_Content)  
   
 ##  <a name="bkmk_Charts"></a> Pestaña gráficos  
- El **gráficos** pestaña de la [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de Series temporales de forma gráfica cada una de las series, incluidos los datos históricos y predicciones. Cada línea del gráfico de serie temporal representa una combinación única de producto, región y atributo de predicción.  
+ El **gráficos** pestaña de la [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de Series temporales gráfica cada una de las series, incluidos los datos históricos y predicciones. Cada línea del gráfico de serie temporal representa una combinación única de producto, región y atributo de predicción.  
   
  La leyenda del lado derecho del visor muestra las series temporales disponibles, basándose en las selecciones en la lista desplegable. Puede activar y desactivar las casillas de la leyenda para controlar las series temporales que se muestran en el gráfico.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36313043"
   
     -   **M200 Europe: Quantity**  
   
-    -   **M200 North America: cantidad**  
+    -   **M200 Norteamérica: cantidad**  
   
     -   **M200 Pacífico: cantidad**  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36313043"
   
 #### <a name="to-change-prediction-and-display-options-in-the-chart-view"></a>Para cambiar las opciones de predicción y presentación de la vista Gráfico  
   
-1.  Intente cambiar el valor de **pasos de predicción** aumentándolo de **5** a **10**y luego de nuevo a **6**.  
+1.  Intente cambiar el valor de **pasos de predicción** aumentándolo de **5** a **10**y luego volver a **6**.  
   
      Cuando los datos históricos tienen una gran fluctuación, las fluctuaciones tienden a repetirse o incluso a amplificarse a medida que aumenta el número de predicciones. Probablemente necesitará investigar este aspecto para entender la causa del mayor aumento de datos históricos y decidir si desea aceptar estos resultados, buscar algún tipo de corrección de los datos de origen o aplicar algún tipo de suavizado en el modelo.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36313043"
   
      Esta opción muestra el error estimado para cada valor previsto.  
   
-3.  Tenga en cuenta la escala del eje X. Los cambios en los datos históricos y previstos se expresan siempre como porcentaje, pero los valores reales se ajustan automáticamente para dar cabida a todos los valores del gráfico. Por consiguiente, al comparar modelos debe tener cuidado de no confiar solamente en las representaciones visuales. Para obtener el texto exacto valor, o el aumento de porcentaje y el valor de predicciones, sitúe el mouse sobre la línea de puntos o líneas sólidas, o haga clic en las líneas para ver los valores en el **leyenda de minería de datos**.  
+3.  Tenga en cuenta la escala del eje X. Los cambios en los datos históricos y previstos se expresan siempre como porcentaje, pero los valores reales se ajustan automáticamente para dar cabida a todos los valores del gráfico. Por consiguiente, al comparar modelos debe tener cuidado de no confiar solamente en las representaciones visuales. Para obtener exactamente el valor, o el aumento de porcentaje y el valor para las predicciones, sitúe el mouse sobre la línea de puntos o las líneas llenas, o haga clic en las líneas para ver los valores en el **leyenda de minería de datos**.  
   
      **Sugerencia**: si el **leyenda de minería de datos** no está visible, cambie a **modelo** ver, haga clic en cualquier nodo y seleccione **Mostrar leyenda**.  
   
@@ -96,37 +96,37 @@ ms.locfileid: "36313043"
   
  Primero, observe que, debido a que los datos describen dos medidas distintas (importe y cantidad) para las ventas de varias líneas de productos (T1000, etc.) de tres regiones diferentes (Europa, Norteamérica y el Pacífico), el modelo que creó contiene realmente 24 árboles distintos. Cada árbol representa un modelo de patrones de venta para una combinación diferente de región, producto y atributo de predicción.  
   
- Puede elegir cuál es la combinación de la línea de productos, región y ventas métrica que desea ver seleccionando una serie de la **árbol** la lista desplegable en el **modelo** ficha.  
+ Puede elegir qué combinación de la línea de productos, región y ventas métrica que desea ver seleccionando una serie de la **árbol** lista desplegable el **modelo** ficha.  
   
  ¿Qué puede saber al ver el modelo como un árbol? Por ejemplo, comparemos dos modelos, uno con varios niveles del árbol y otro que tiene un único nodo.  
   
--   Cuando un gráfico de árbol contiene un solo nodo, significa que la tendencia encontrada en el modelo es básicamente homogénea en el tiempo. Puede usar este nodo único, etiquetado **todos los**, para ver la fórmula que describe la relación entre las variables de entrada y el resultado.  
+-   Cuando un gráfico de árbol contiene un solo nodo, significa que la tendencia encontrada en el modelo es básicamente homogénea en el tiempo. Puede usar este nodo único, etiquetado **todas**, para ver la fórmula que describe la relación entre las variables de entrada y el resultado.  
   
--   Cuando un gráfico de árbol para una serie temporal tiene varias bifurcaciones, significa que la serie temporal que se detectó es demasiado compleja para representarse como una sola ecuación. En su lugar, el gráfico de árbol puede contener varias bifurcaciones, cada bifurcación etiquetada con las condiciones que causaron el árbol para *dividir*. Cuando se divide el árbol, cada bifurcación representa un segmento de tiempo diferente, en el que la tendencia puede describirse como una sola ecuación.  
+-   Cuando un gráfico de árbol para una serie temporal tiene varias bifurcaciones, significa que la serie temporal que se detectó es demasiado compleja para representarse como una sola ecuación. En su lugar, el gráfico de árbol puede contener varias bifurcaciones, cada bifurcación etiquetada con las condiciones que ha provocado el árbol para *dividir*. Cuando se divide el árbol, cada bifurcación representa un segmento de tiempo diferente, en el que la tendencia puede describirse como una sola ecuación.  
   
      Por ejemplo, si mira el gráfico y ve un salto súbito en el volumen de ventas a partir de algún día de septiembre y continúa hasta las vacaciones Navidad, puede cambiar a la **modelo** vista para ver la fecha exacta donde cambió la tendencia. Las bifurcaciones del árbol que representan 'antes de septiembre' y 'después de septiembre' contendrían fórmulas diferentes: una fórmula que describe matemáticamente las tendencias de ventas hasta la división y otra fórmula que describe las tendencias de ventas de septiembre hasta las vacaciones de Navidad.  
   
 #### <a name="to-explore-the-decision-tree-for-a-time-series-model"></a>Para explorar el árbol de decisión de un modelo de series temporales  
   
-1.  En el **árbol** lista el **modelo** ficha del Visor, seleccione la **T1000 Europe: cantidad** serie.  
+1.  En el **árbol** lista el **modelo** ficha del Visor, seleccione el **T1000 Europe: cantidad** serie.  
   
-     Haga clic en el nodo con la etiqueta **todos los**.  
+     Haga clic en el nodo con la etiqueta **todas**.  
   
-     Para una **todos los** nodo, la información sobre herramientas que aparece incluye información como el número de casos de las series completas y ecuaciones de series temporales derivadas del análisis de los datos.  
+     Para un **todas** nodo, la información sobre herramientas que aparece incluye información como el número de casos de las series completas y las ecuaciones de series temporales derivan del análisis de los datos.  
   
 2.  Si el **leyenda de minería de datos** no está visible, haga clic en el nodo y seleccione **Mostrar leyenda**.  
   
-     El **leyenda de minería de datos** proporciona mucho la misma información que se encuentra en la información sobre herramientas. Si ninguna de las variables independientes son discretas, también aparecerá un histograma que muestra la distribución de variables en el nodo.  
+     El **leyenda de minería de datos** proporciona casi la misma información que se encuentra en la información sobre herramientas. Si ninguna de las variables independientes son discretas, también aparecerá un histograma que muestra la distribución de variables en el nodo.  
   
-3.  Ahora seleccione una serie temporal diferente para verla. Mediante el **árbol** lista el **modelo** ficha del Visor, seleccione la **M200 North America: cantidad** serie.  
+3.  Ahora seleccione una serie temporal diferente para verla. Mediante el **árbol** lista el **modelo** ficha del Visor, seleccione el **M200 North America: cantidad** serie.  
   
-     El gráfico de árbol contiene ahora un **todos los** nodo y dos nodos secundarios. Si examina las etiquetas de los nodos secundarios, puede saber en qué momento cambió la línea de tendencia.  
+     El gráfico de árbol contiene ahora un **todas** nodo y dos nodos secundarios. Si examina las etiquetas de los nodos secundarios, puede saber en qué momento cambió la línea de tendencia.  
   
-     Para cada nodo secundario, la descripción de la **leyenda de minería de datos** también incluye el recuento de casos de cada rama del árbol.  
+     Para cada nodo secundario, la descripción en el **leyenda de minería de datos** también incluye el recuento de casos de cada rama del árbol.  
   
  En la siguiente lista se describen algunas características adicionales del visor de árbol:  
   
--   Puede cambiar la variable que se representa en el gráfico utilizando el **fondo** control. De forma predeterminada, los nodos que son más oscuros contienen más de los casos, porque el valor de **fondo** está establecido en **rellenado**. Para ver solo cuántos casos hay en un nodo, sitúe el mouse sobre un nodo y ver la información sobre herramientas que aparece, o haga clic en el nodo y ver los números de la **leyenda del nodo** ventana.  
+-   Puede cambiar la variable que se representa en el gráfico utilizando el **en segundo plano** control. De forma predeterminada, los nodos que son más oscuros contienen más casos, dado que el valor de **en segundo plano** está establecido en **rellenado**. Para ver solo cuántos casos hay en un nodo, sitúe el mouse sobre un nodo y ver la información sobre herramientas que aparece, o haga clic en el nodo y ver los números de la **leyenda del nodo** ventana.  
   
 -   La fórmula de regresión para el nodo se puede ver también en la información sobre herramientas o haciendo clic en el nodo. Si ha creado un modelo mixto, puede ver dos fórmulas, una para ARTXP (en los nodos hoja) y otra para el modelo ARIMA (en el nodo raíz del árbol).  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36313043"
   
 -   **Visor de Series temporales de Microsoft**: esta vista combina los resultados de los dos algoritmos. Aunque puede ver cada serie por separado, no puede determinar cómo se combinan los resultados de cada algoritmo. Asimismo, en esta vista, la información sobre herramientas y la leyenda de minería de datos muestran solo las estadísticas más importantes.  
   
--   **Visor de árbol de contenido genérico**: le permite examinar y ver todas las series de datos que se usaron en el modelo al mismo tiempo y si ha creado una combinación de modelo, tanto el ARIMA y árboles ARTXP se muestran en el mismo gráfico.  
+-   **Visor de árbol de contenido genérico**: le permite examinar y ver todas las series de datos que se usaron en el modelo al mismo tiempo y si ha creado una combinación de modelo, tanto el ARIMA y se muestran los árboles ARTXP en el mismo gráfico.  
   
      Puede usar este visor para obtener todas las estadísticas de ambos algoritmos, así como las asignaciones de los valores.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "36313043"
   
 2.  En el **título del nodo** panel, haga clic en el primer nodo (todos).  
   
-3.  En el **detalles del nodo** panel, observe el valor de ATTRIBUTE_NAME.  
+3.  En el **detalles del nodo** panel, vea el valor de ATTRIBUTE_NAME.  
   
      Este valor indica qué serie, o qué combinación de producto y región, está incluida en este nodo. En el ejemplo de AdventureWorks, el primer nodo es el de la serie M200 Europe.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "36313043"
   
 6.  En el **título del nodo** panel, haga clic en el primer nodo de ARIMA y expanda el nodo hasta que todos los nodos secundarios están visibles.  
   
-7.  En el **detalles del nodo** panel, observe el valor de ATTRIBUTE_NAME.  
+7.  En el **detalles del nodo** panel, vea el valor de ATTRIBUTE_NAME.  
   
      Este valor indica qué serie temporal está incluida en este nodo. El primer nodo de la sección ARIMA debería coincidir con el primer nodo de la sección (Todos). En el ejemplo de AdventureWorks, este nodo contiene el análisis ARIMA de la serie M200 Europa.  
   

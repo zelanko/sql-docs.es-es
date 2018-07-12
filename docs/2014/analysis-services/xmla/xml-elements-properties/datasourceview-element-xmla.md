@@ -1,5 +1,5 @@
 ---
-title: Elemento DataSourceView (XMLA) | Documentos de Microsoft
+title: Elemento DataSourceView (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DataSourceView element
 ms.assetid: c4a4360f-7342-484b-bac1-0a247e8f279d
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2492232f892dd9f02b84bb50f5ddb7a4415c60e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7f230cf653a6435c7f9bb541c6e3cb39615efe42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211815"
 ---
 # <a name="datasourceview-element-xmla"></a>Elemento DataSourceView (XMLA)
-  Contiene una vista del origen de datos fuera de línea de enlace para el elemento primario [lote](../xml-elements-commands/batch-element-xmla.md) o [proceso](../xml-elements-commands/process-element-xmla.md) elemento.  
+  Contiene una vista del origen de datos fuera de línea de enlace para el elemento primario [Batch](../xml-elements-commands/batch-element-xmla.md) o [proceso](../xml-elements-commands/process-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -67,9 +67,9 @@ ms.locfileid: "36111217"
 |Elementos secundarios|[DatabaseID](id-element-xmla.md), [DataSourceViewID](../../scripting/properties/id-element-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
- El `DataSourceView` elemento representa un enlace fuera de línea a una vista del origen de datos, utilizado por el `Batch` o `Process` comando para anular temporalmente la vista del origen de datos de enlace de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos procesados por el comando.  
+ El `DataSourceView` elemento representa un enlace fuera de línea a una vista del origen de datos, utilizado por el `Batch` o `Process` command to tempoarily override la vista del origen de datos de enlace de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos procesa el comando.  
   
- Para obtener más información acerca de los enlaces fuera de línea, consulte [orígenes de datos y enlaces &#40;SSAS multidimensionales&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obtener más información sobre los enlaces fuera de línea, consulte [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;XMLA&#41;](xml-elements-properties.md)  

@@ -1,5 +1,5 @@
 ---
-title: Generación de perfiles de rendimiento del controlador ODBC | Documentos de Microsoft
+title: Generación de perfiles de rendimiento del controlador ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,12 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 337209ac91faecab319f66bcb9b61252e3444f5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 526e25bcfebad13868d41a23bcee50caea23bda6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953650"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422814"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Generar perfiles del rendimiento del controlador ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "32953650"
   
 -   Conectándose a un origen de datos que especifique el registro.  
   
--   Al llamar a [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para establecer atributos específicos del controlador ese control de la generación de perfiles.  
+-   Una llamada a [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para establecer atributos específicos del controlador de ese control de la generación de perfiles.  
   
  Cada proceso de la aplicación obtiene su propia copia del controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y los perfiles se generan de forma global para la combinación de una copia del controlador y un proceso de la aplicación. Cuando algo en la aplicación activa la generación de perfiles, el proceso de generación de perfiles registra información de todas las conexiones activas en el controlador de esa aplicación. Se incluyen incluso las conexiones que no llamaron específicamente para la generación de perfiles.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "32953650"
   
  Si una aplicación empieza a generar perfiles en un archivo de registro y una segunda aplicación intenta empezar a generar perfiles en el mismo archivo de registro, la segunda aplicación no puede registrar ningún dato de generación de perfiles. Si la segunda aplicación empieza a generar perfiles después de que la primera haya descargado su controlador, la segunda aplicación sobrescribirá el archivo de registro de la primera aplicación.  
   
- Si una aplicación se conecta a un origen de datos que tiene habilitada de la generación de perfiles, el controlador devuelve SQL_ERROR si la aplicación llama **SQLSetConnectOption** para iniciar el registro. Una llamada a **SQLGetDiagRec** , a continuación, devuelve lo siguiente:  
+ Si una aplicación se conecta a un origen de datos que tiene la generación de perfiles habilitada, el controlador devuelve SQL_ERROR si la aplicación llama a **SQLSetConnectOption** para iniciar el registro. Una llamada a **SQLGetDiagRec** , a continuación, devuelve lo siguiente:  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -75,7 +75,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Conexión  
   
--   Red  
+-   red  
   
 -   Time  
   
@@ -83,7 +83,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>Estadísticas de perfil de aplicación  
   
-|Campo SQLPERF|Description|  
+|Campo SQLPERF|Descripción|  
 |-------------------|-----------------|  
 |TimerResolution|Resolución mínima de la hora del reloj del servidor en milisegundos. Normalmente se indica como 0 (cero) y solo debe considerarse si el número notificado es grande. Si la resolución mínima del reloj del servidor es mayor que el intervalo probable para algunas de las estadísticas basadas en temporizador, esas estadísticas se podrían exagerar.|  
 |SQLidu|Número de instrucciones INSERT, DELETE o UPDATE después de SQL_PERF_START.|  
@@ -121,13 +121,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Estadísticas de tiempo  
   
-|Campo SQLPERF|Description|  
+|Campo SQLPERF|Descripción|  
 |-------------------|-----------------|  
 |msExecutionTime|Cantidad acumulada de tiempo que ha dedicado el controlador al procesamiento después de SQL_PERF_START, incluido el tiempo que ha pasado esperando respuestas del servidor.|  
 |msNetworkServerTime|Cantidad acumulada de tiempo que el controlador ha pasado esperando respuestas del servidor.|  
   
 ## <a name="see-also"></a>Vea también  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Generación de perfiles de rendimiento de controlador ODBC temas "Cómo..." & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [Generación de perfiles de temas de procedimientos de ODBC Driver Performance &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

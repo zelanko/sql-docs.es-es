@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03157682c4b5a5dcaa89c46a64b094f8e321ec8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 44bb65b09d081ba43aef2de6991bb09b9f6ecf4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228895"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Introducción a las expresiones
-  Las expresiones ayudan a crear informes eficaces y flexibles. Este tutorial enseña a crear e implementar expresiones que usen operadores y funciones comunes. Usará el **expresión** cuadro de diálogo para escribir expresiones que concatenan valores de nombre, busque valores en un conjunto de datos independiente, mostrar diferentes imágenes según los valores de campo, y así sucesivamente.  
+  Las expresiones ayudan a crear informes eficaces y flexibles. Este tutorial enseña a crear e implementar expresiones que usen operadores y funciones comunes. Usará el **expresión** cuadro de diálogo para escribir expresiones que concatenan valores de nombres, buscan valores en un conjunto de datos independiente, mostrar diferentes imágenes según los valores de campo y así sucesivamente.  
   
  Se trata de un informe con barras y colores de filas que alternan entre el blanco y un color. El informe incluye un parámetro para seleccionar el color de las filas que no son blancas.  
   
@@ -39,15 +39,15 @@ ms.locfileid: "36111178"
   
 3.  [Nombre, iniciales y apellido nombre para mostrar](#Concatenate)  
   
-4.  [Utilizar imágenes para mostrar el sexo](#Gender)  
+4.  [Usar imágenes para mostrar el sexo](#Gender)  
   
-5.  [Buscar el nombre CountryRegion](#Lookup)  
+5.  [Buscar nombre CountryRegion](#Lookup)  
   
-6.  [Número de días desde la última compra](#Count)  
+6.  [Recuento de días desde la última compra](#Count)  
   
 7.  [Usar un indicador para mostrar la comparación de ventas](#Indicator)  
   
-8.  [Hacer que el informe "Green Bar" de informes](#GreenBar)  
+8.  [Hacer que el informe que notificar una "barra verde"](#GreenBar)  
   
 ### <a name="other-optional-steps"></a>Otros pasos opcionales  
   
@@ -73,15 +73,15 @@ ms.locfileid: "36111178"
   
 #### <a name="to-create-a-new-table-report"></a>Para crear un nuevo informe de tabla  
   
-1.  Haga clic en **iniciar**, seleccione **programas**, haga clic en [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
+1.  Haga clic en **iniciar**, apunte a **programas**, haga clic en [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
   
      Aparecerá el cuadro de diálogo **Introducción** .  
   
     > [!NOTE]  
-    >  Si el **Introducción** cuadro de diálogo no aparece, desde el **Report Builder** botón, haga clic en **nuevo**.  
+    >  Si el **Introducción** no aparece el cuadro de diálogo, desde el **Report Builder** botón, haga clic en **New**.  
   
     > [!NOTE]  
-    >  Si prefiere usar la versión ClickOnce del generador de informes, abra el Administrador de informes y haga clic en **Report Builder**, o vaya a un sitio de SharePoint en que Reporting Services tipos de contenido como informes están habilitados y haga clic en  **Informe del generador** en el **nuevo documento** menú en el **documentos** pestaña de una biblioteca de documentos compartida.  
+    >  Si prefiere usar la versión ClickOnce del generador de informes, abra el Administrador de informes y haga clic en **Report Builder**, o vaya a un sitio de SharePoint en los servicios de informes de los tipos de contenido como informes están habilitados y haga clic en  **Informe del generador** en el **nuevo documento** menú en el **documentos** pestaña de una biblioteca de documentos compartida.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -710,9 +710,9 @@ ms.locfileid: "36111178"
 ## <a name="see-also"></a>Vea también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Indicadores &#40;el generador de informes SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [Imágenes, cuadros de texto, rectángulos y líneas &#40;el generador de informes SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Los indicadores &#40;generador de informes y SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
+ [Imágenes, cuadros de texto, rectángulos y líneas &#40;generador de informes y SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
  [Tablas &#40;Generador de informes y SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-data/report-datasets-ssrs.md)  
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Referencia de interfaz de usuario del cuadro de diálogo de firma digital | Documentos de Microsoft
+title: Referencia de interfaz de usuario del cuadro de diálogo de firma digital | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.digitalsigning.f1
 helpviewer_keywords:
 - Digital Signing dialog box
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f9a1d691a87df5e307fcf19d7ec8c246d7df286c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87c24975549416e09ad73e8528dee3e74f1925cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173096"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Firma digital
   Utilice el cuadro de diálogo **Firma digital** para firmar un paquete con una firma digital o para quitar la firma. El cuadro de diálogo **Firma digital** está disponible en la opción de **Firma digital** del menú **SSIS** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

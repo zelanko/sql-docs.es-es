@@ -1,5 +1,5 @@
 ---
-title: Documentar modelos de minería de datos (datos de complementos de minería de datos para Excel) | Documentos de Microsoft
+title: Documentar modelos de minería de datos (complementos de minería de datos para Excel de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - documenting models
 - mining structures, managing
@@ -16,34 +16,34 @@ helpviewer_keywords:
 - model properties
 ms.assetid: 0a663e11-e40c-4708-ad18-fabb6c976fa4
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a093deb3764c154ae45596ad64d2805aa6d00d88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f605fd2ef1e0aafad5b34a2b74c12fc95be6ef7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110849"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167716"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>Documentar modelos de minería de datos (Complementos de minería de datos para Excel)
-  ![Botón de modelo de documento, cinta de opciones de minería de datos](media/dmc-docmodel.gif "botón documentar modelo, cinta de opciones de minería de datos")  
+  ![Botón de documento modelo, cinta de opciones minería de datos](media/dmc-docmodel.gif "botón documentar modelo, cinta de opciones minería de datos")  
   
- El **documento modelo** asistente crea un informe que proporciona información útil acerca de los modelos de minería de datos que ha creado. Si documenta un modelo, podrá realizar un seguimiento de los datos usados para generarlo, obtener información adicional sobre el momento en que se procesó y realizar un seguimiento de los cambios en los parámetros que afectan a los resultados del mismo.  
+ El **documentar modelo** asistente crea un informe que proporciona información útil acerca de los modelos de minería de datos que ha creado. Si documenta un modelo, podrá realizar un seguimiento de los datos usados para generarlo, obtener información adicional sobre el momento en que se procesó y realizar un seguimiento de los cambios en los parámetros que afectan a los resultados del mismo.  
   
 ## <a name="using-the-document-model-wizard"></a>Usar el asistente para Documentar modelo  
   
 1.  Haga clic en el **minería de datos** ficha.  
   
-2.  En el **uso del modelo** grupo, haga clic en **documento modelo**.  
+2.  En el **uso del modelo** grupo, haga clic en **documentar modelo**.  
   
-3.  En el **Seleccionar modelo** cuadro de diálogo, seleccione el modelo en el que al informe y, a continuación, haga clic en **siguiente**. Debe ejecutar el **documento modelo** asistente por separado para cada modelo que desee en un documento.  
+3.  En el **Seleccionar modelo** cuadro de diálogo, seleccione el modelo en el que al informe y, a continuación, haga clic en **siguiente**. Debe ejecutar el **documentar modelo** asistente por separado para cada modelo que desee documentar.  
   
-4.  En el **seleccionar detalles de la documentación** diálogo cuadro, elija una de estas dos opciones: **información completa** o **información de resumen**.  
+4.  En el **seleccionar detalles de la documentación** diálogo cuadro, elija una de las dos opciones: **Complete información** o **información de resumen**.  
   
 5.  Haga clic en **Finalizar**.  
   
-6.  El asistente crea automáticamente una nueva hoja de cálculo que contiene el informe especificado, denominado **documentación del modelo de**,  
+6.  El asistente crea automáticamente una nueva hoja de cálculo que contiene el informe especificado, denominado **documentación del modelo**,  
   
 ## <a name="understanding-the-report"></a>Descripción del informe  
  En el momento de crear un informe para documentar un modelo de minería de datos, puede optar por crear un resumen, que contiene información básica como el nombre y la descripción del modelo, o un informe completo, que contiene detalles sobre la estructura subyacente e información avanzada sobre el modelo de minería de datos.  

@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Management Studio [SQL Server]
 - Enterprise Manager (See SQL Server Management Studio [Analysis Services])
 - SQL Server Management Studio [SQL Server], about SQL Server Management Studio
 ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: df674c3d4cb72bb9a6e320719e97534a0aa5c931
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c7ca5884a90b3e6e94eca1bc98988417e7b8a8bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169356"
 ---
 # <a name="use-sql-server-management-studio"></a>Usar SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) es un entorno integrado para tener acceso, configurar, administrar, administrar y desarrollar todos los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS combina un amplio grupo de herramientas gráficas con una serie de editores de script enriquecidos que permiten a desarrolladores y administradores de todos los niveles obtener acceso [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) es un entorno integrado para obtener acceso, configurar, administrar, administrar y desarrollar todos los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS combina un amplio grupo de herramientas gráficas con una serie de editores de script enriquecidos que permiten a desarrolladores y administradores de todos los niveles obtener acceso [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  SSMS combina las características del Administrador corporativo, el Analizador de consultas y Analysis Manager, herramientas incluidas en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], en un único entorno. Además, SSMS funciona con todos los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , como [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. De este modo, los desarrolladores pueden disfrutar de una experiencia familiar y los administradores de bases de datos disponen de una herramienta única y completa que combina herramientas gráficas fáciles de usar con funciones avanzadas de scripting.  
   
- Descargue e instale SSMS en el [Microsoft Developer Network](http://msdn.microsoft.com/library/dn434042.aspx).  
+ Descargue e instale SSMS desde el [Microsoft Developer Network](http://msdn.microsoft.com/library/dn434042.aspx).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Características de SQL Server Management Studio](features-in-sql-server-management-studio.md)  

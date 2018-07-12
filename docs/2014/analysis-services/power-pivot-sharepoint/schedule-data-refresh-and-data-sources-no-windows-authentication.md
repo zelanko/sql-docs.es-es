@@ -1,5 +1,5 @@
 ---
-title: Programación de actualización de datos y orígenes de datos que no admiten la autenticación de Windows (PowerPivot para SharePoint) | Documentos de Microsoft
+title: Actualización de datos programada y orígenes de datos que no admiten la autenticación de Windows (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28ab8ddcc8ef6a866992cdf7a2fabe75a5a30878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 474308339c112899787a4b6344bbe53622f4fff7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230105"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Actualización de datos programada y orígenes de datos no compatibles con la Autenticación de Windows (PowerPivot para SharePoint)
   En este tema se describe un flujo de trabajo de nuevos datos de programación de PowerPivot para SharePoint que pueden usar orígenes de datos que **NO** admiten la autenticación de Windows. Por ejemplo, orígenes de datos Oracle o IBM DB2. Las ilustraciones y los pasos de este tema hacen referencia a orígenes de datos Oracle, pero se aplica el mismo flujo de trabajo a otros orígenes de datos.  
@@ -106,7 +106,7 @@ ms.locfileid: "36106639"
   
 6.  En el **credenciales** página, cambie el primer nombre de campo a `Oracle User ID` y cambie el **tipo de campo** a `User Name`.  
   
-     Cambie el segundo nombre de campo a `Oracle Password` y **tipo de campo** a `Password`.  
+     Cambiar el nombre del segundo campo a `Oracle Password` y **tipo de campo** a `Password`.  
   
 7.  Haga clic en **Siguiente**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36106639"
   
 11. Escriba el identificador de usuario Oracle y la contraseña de Oracle y, a continuación, haga clic en **Aceptar**.  
   
- Para obtener más información, vea la sección "Para crear una aplicación de destino para la autenticación de SQL Server" en [usar almacenamiento seguro con autenticación de SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ Para obtener más información, vea la sección "Para crear una aplicación de destino para la autenticación de SQL Server" en [Use Secure Store con la autenticación de SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>Para configurar la aplicación de servicio PowerPivot  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36106639"
   
 9. Seleccione **Conectar con las credenciales guardadas en el servicio de almacenamiento seguro (SSS) para iniciar sesión en el origen de datos. Especifique el identificador usado para buscar las credenciales en el cuadro de identificador de SSS**.  
   
-10. En el **Id.:** , escriba `OracleAuthentication`.  
+10. En el **ID:** , escriba `OracleAuthentication`.  
   
 11. Haga clic en **Aceptar**.  
   

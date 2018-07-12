@@ -1,5 +1,5 @@
 ---
-title: Atributos de elemento (XMLA) | Documentos de Microsoft
+title: Atributos de elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Attributes element
 ms.assetid: c0393de8-44e8-46de-af78-1fd66c218521
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: bad3c0949f4c6c241a81bf4a8b90834aadfdfdf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f064935032298e037938734fa5d3d1ac9fcbae84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161086"
 ---
 # <a name="attributes-element-xmla"></a>Elemento Attributes (XMLA)
   Contiene una colección de elementos [Attribute](attribute-element-xmla.md) utilizada por los comandos primarios [Insert](../xml-elements-commands/insert-element-xmla.md) o [Update](../xml-elements-commands/update-element-xmla.md) , o por el elemento primario [Where](where-element-xmla.md) .  

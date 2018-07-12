@@ -1,28 +1,26 @@
 ---
-title: Usar columnas de datos en ejecución (ODBC) | Documentos de Microsoft
+title: Usar columnas de datos en ejecución (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4c1e770b2963a08e2e57396a299467d0ce0bcbeb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 219f6b5ed42835441970156897fe16f818e7c6a0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104692"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413494"
 ---
 # <a name="use-data-at-execution-columns-odbc"></a>Usar columnas de datos en ejecución (ODBC)
     
@@ -189,6 +187,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Administrar en los temas de procedimientos de las columnas text e image &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
+ [Administración de temas de procedimientos sobre las columnas de texto e imagen &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
   

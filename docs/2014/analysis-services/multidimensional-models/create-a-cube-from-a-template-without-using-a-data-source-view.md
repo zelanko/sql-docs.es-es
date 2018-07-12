@@ -1,5 +1,5 @@
 ---
-title: Crear un cubo a partir de una plantilla sin usar una vista del origen de datos | Documentos de Microsoft
+title: Crear un cubo desde una plantilla sin usar una vista del origen de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c834ce714cd4ad0de92f3638288146674d4bc1e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a03699873933bb98cf1657cc5fa0ae057eabf52e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161386"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Crear un cubo a partir de una plantilla sin usar una vista del origen de datos
   Seleccione **Generar el cubo sin un origen de datos** en la primera página del Asistente para cubos para crear un cubo sin usar una vista del origen de datos. Posteriormente, podrá usar el Asistente para generar esquemas para generar el esquema relacional para la vista del origen de datos basándose en la estructura de cubo y, posiblemente, en otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre cómo generar un esquema, vea [Asistente para generar esquemas &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "36111049"
 |columna|Descripción|  
 |------------|-----------------|  
 |**Nombre de medida**|Cada valor de esta columna define el nombre de una medida del cubo. Haga clic en un valor de esta columna para escribir un nombre. Haga clic en **Agregar nueva medida** en esta columna para crear una nueva medida. Esta columna establece la `Name` propiedad del objeto de medida.|  
-|**Grupo de medida**|El nombre del grupo de medida que contiene la medida. Haga clic en este valor para elegir o escribir un nombre. Si elimina todas las medidas que pertenecen a un grupo de medida determinado, se quita el grupo de medida. Esta columna establece la `Name` propiedad para el objeto de grupo de medida.|  
+|**Grupo de medida**|El nombre del grupo de medida que contiene la medida. Haga clic en este valor para elegir o escribir un nombre. Si elimina todas las medidas que pertenecen a un grupo de medida determinado, se quita el grupo de medida. Esta columna establece la `Name` propiedad del objeto de grupo de medida.|  
 |**Tipo de datos**|El tipo de datos de la medida. Haga clic en este valor para cambiar el tipo de datos. El valor predeterminado cuando se crea una medida es `Single`. Esta columna establece la `DataType` propiedad del objeto de medida.|  
 |**Agregación**|La agregación estándar de la medida. Haga clic en esta celda para especificar una de las agregaciones estándar para la medida (o **Ninguna**). El valor predeterminado cuando se crea una medida es `Sum`. Esta columna establece la `AggregationFunction` propiedad del objeto de medida.|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36111049"
   
  Si usa una plantilla para crear el cubo, las cuadrícula situada debajo de **Seleccionar dimensiones de plantilla** mostrará las dimensiones de la plantilla. Puede desactivar la casilla situada junto a cualquier dimensión para quitarla del cubo. Para quitar todas las dimensiones de la lista, desactive la casilla situada en la barra de título de la cuadrícula. Si no usa una plantilla, la cuadrícula muestra solo la dimensión de tiempo.  
   
- Para agregar dimensiones al cubo, use la cuadrícula situada debajo de **Agregar nuevas dimensiones**. Para agregar una dimensión, haga clic en la celda de la `Name` columna que contiene el texto **agregar nueva dimensión**y, a continuación, escriba un nombre para la dimensión. Para quitar una fila de la lista, haga clic en el icono de eliminar (**X**).  
+ Para agregar dimensiones al cubo, use la cuadrícula situada debajo de **Agregar nuevas dimensiones**. Para agregar una dimensión, haga clic en la celda en la `Name` columna que contiene el texto **agregar nueva dimensión**y, a continuación, escriba un nombre para la dimensión. Para quitar una fila de la lista, haga clic en el icono de eliminar (**X**).  
   
  Las cuadrículas **Seleccionar dimensiones de plantilla** y **Agregar nuevas dimensiones** muestran valores debajo de las columnas descritas en la tabla siguiente. Puede hacer clic en un valor de cualquier lista para cambiarlo.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36111049"
 |**Atributos**|Muestra los atributos que se crearán para la dimensión. Cada nombre de atributo de la lista está precedido del nombre de la dimensión. Esta lista es de solo lectura. Puede editar los atributos con el Diseñador de dimensiones una vez completado el asistente.|  
   
 ## <a name="defining-time-periods"></a>Definir períodos de tiempo  
- Use la página **Definir períodos de tiempo** del asistente para especificar el intervalo de fechas que desea incluir en la dimensión. Por ejemplo, puede elegir un intervalo que comience el 1 de enero del primer año de los datos y que incluya hasta unos años antes de la transacción más reciente. Las transacciones que están fuera del intervalo no aparecen o aparecerán como miembros desconocidos de la dimensión, dependiendo de la `UnknownMemberVisible` valor de propiedad para la dimensión. El `UnknownMemberName` propiedad especifica el título del miembro desconocido. También puede cambiar el primer día de la semana que se usará en los datos (el valor predeterminado es Domingo).  
+ Use la página **Definir períodos de tiempo** del asistente para especificar el intervalo de fechas que desea incluir en la dimensión. Por ejemplo, puede elegir un intervalo que comience el 1 de enero del primer año de los datos y que incluya hasta unos años antes de la transacción más reciente. Las transacciones que están fuera del intervalo no aparecen o aparecerán como miembros desconocidos en la dimensión, según la `UnknownMemberVisible` configuración de la propiedad de la dimensión. El `UnknownMemberName` propiedad especifica el título del miembro desconocido. También puede cambiar el primer día de la semana que se usará en los datos (el valor predeterminado es Domingo).  
   
 > [!NOTE]  
 >  La página **Definir períodos de tiempo** solo aparece si incluye una dimensión de tiempo en el cubo en la página **Definir nuevas dimensiones** del asistente.  

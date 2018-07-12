@@ -1,5 +1,5 @@
 ---
-title: Características en desuso de Analysis Services en SQL Server 2014 | Documentos de Microsoft
+title: Características en desuso de Analysis Services en SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, backward compatibility
 - SSAS, backward compatibility
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deprecated features [Analysis Services]
 ms.assetid: 2c96ecfe-a170-41d0-bee3-74503f880197
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 49a65a9ca1684a7bcec7b5f7f1d19d38b01f13d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e49169f4fd0264302feb35a7315fc527999c568
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259591"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>Características en desuso de Analysis Services en SQL Server 2014
   Este tema describe las características desusadas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que siguen estando disponibles en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
@@ -45,9 +45,9 @@ ms.locfileid: "36107753"
   
 |Categoría|Característica desusada|Sustituta|  
 |--------------|------------------------|-----------------|  
-|Modelos multidimensionales|Particiones remotas|Ninguno. Use particiones locales en su lugar. Vea [crear y administrar una partición Local &#40;Analysis Services&#41; ](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md) para obtener más información.|  
-|Modelos multidimensionales|Grupos de medida vinculados remotos|Un grupo de medida vinculado remoto es un grupo de medida vinculado que usa un origen de datos de un servidor remoto. Está previsto desusar la posibilidad de usar un origen de datos remoto para un grupo de medida vinculado.<br /><br /> No hay ningún reemplazo para esta característica. Se recomienda usar grupos de medida vinculados locales en su lugar. Vea [grupos de medida vinculados](multidimensional-models/linked-measure-groups.md) para obtener más información.|  
-|Modelos multidimensionales|Reescritura de dimensiones|Ninguno. Use la reescritura de particiones si necesita la capacidad de reescritura. Vea [Set Partition Writeback](multidimensional-models/set-partition-writeback.md) para obtener más información.|  
+|Modelos multidimensionales|Particiones remotas|Ninguno. Use particiones locales en su lugar. Consulte [crear y administrar una partición Local &#40;Analysis Services&#41; ](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md) para obtener más información.|  
+|Modelos multidimensionales|Grupos de medida vinculados remotos|Un grupo de medida vinculado remoto es un grupo de medida vinculado que usa un origen de datos de un servidor remoto. Está previsto desusar la posibilidad de usar un origen de datos remoto para un grupo de medida vinculado.<br /><br /> No hay ningún reemplazo para esta característica. Se recomienda usar grupos de medida vinculados locales en su lugar. Consulte [Linked Measure Groups](multidimensional-models/linked-measure-groups.md) para obtener más información.|  
+|Modelos multidimensionales|Reescritura de dimensiones|Ninguno. Use la reescritura de particiones si necesita la capacidad de reescritura. Consulte [Set Partition Writeback](multidimensional-models/set-partition-writeback.md) para obtener más información.|  
 |Modelos multidimensionales|Dimensiones vinculadas|Ninguno. Considere la posibilidad de copiar dimensiones a modelos adicionales en lugar de vincularse a una dimensión de otro modelo.|  
 |MDX|Propiedad Non_Empty_Behavior|Ninguno. Al crear un miembro calculado, establecer esta propiedad incorrectamente aumenta la probabilidad de devolver resultados no válidos. Las optimizaciones recientes para el motor OLAP han mejorado las operaciones en conjuntos de datos dispersos, lo que hace que esta propiedad sea menos relevante.|  
   

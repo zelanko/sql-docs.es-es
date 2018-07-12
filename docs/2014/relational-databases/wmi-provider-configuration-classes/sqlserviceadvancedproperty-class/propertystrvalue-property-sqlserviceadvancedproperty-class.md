@@ -1,5 +1,5 @@
 ---
-title: Propiedad PropertyStrValue (clase SqlServiceAdvancedProperty) | Documentos de Microsoft
+title: Propiedad PropertyStrValue (clase SqlServiceAdvancedProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyStrValue property
 ms.assetid: 637dd734-c294-4bfd-892d-882bac4708f5
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fabffe836580df1e28b683e6617d060244205043
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f6053f9d0374d2b70e204f01a9105d086ca3e723
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168246"
 ---
 # <a name="propertystrvalue-property-sqlserviceadvancedproperty-class"></a>Propiedad PropertyStrValue (clase SqlServiceAdvancedProperty)
   Obtiene el valor de cadena de la propiedad avanzada.  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>Partes  
  *object*  
- A [clase SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) objeto que representa una propiedad avanzada.  
+ Un [clase SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) objeto que representa una propiedad avanzada.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el valor de la propiedad avanzada.  

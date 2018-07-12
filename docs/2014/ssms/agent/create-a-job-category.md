@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
 - jobs [SQL Server Agent], categories
 - categories [SQL Server Agent jobs]
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d4ab1a7fdd56bf4586d3009c9c45bb29ecac0497
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4a855a78a6c37fa2327a88e0a052adbbc4ce85b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179112"
 ---
 # <a name="create-a-job-category"></a>Crear una categoría de trabajo
   En este tema se describe cómo crear una categoría de trabajo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] u Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -62,7 +62,7 @@ ms.locfileid: "36110866"
   
 8.  En el cuadro de diálogo **Administrar categorías de trabajos***nombre_de_servidor*, haga clic en **Actualizar** para asegurarse de que la nueva categoría de trabajo esté activa. Si todo se busca conforme a lo esperado, cierre este cuadro de diálogo.  
   
- Para obtener más información sobre estos cuadros de diálogo, vea [categorías de trabajo: administrar categorías de trabajos](job-categories-manage-job-categories.md) y [propiedades de categorías de trabajo y la nueva categoría de trabajo](job-categories-properties-new-job-category.md).  
+ Para obtener más información sobre estos cuadros de diálogo, vea [categorías de trabajo: administrar categorías de trabajos](job-categories-manage-job-categories.md) y [propiedades de las categorías de trabajo y la nueva categoría de trabajo](job-categories-properties-new-job-category.md).  
   
  
   

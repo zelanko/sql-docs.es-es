@@ -1,5 +1,5 @@
 ---
-title: Elemento Recommendation (DTA) | Documentos de Microsoft
+title: Elemento Recommendation (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Recommendation element
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 58535397a152ff1198cbb4cf713a6d0ec04a7eed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6bd7c8b2315f853166e4172030aa191748506b27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260071"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation (DTA, elemento)
   Contiene información sobre los índices hipotéticos que forman parte de una configuración especificada por el usuario.  
@@ -53,11 +53,11 @@ ms.locfileid: "36107348"
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Elemento de la tabla de esquema &#40;DTA&#41;](table-element-for-schema-dta.md)|  
-|**Elementos secundarios**|[Crear el elemento &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` Elemento. Para obtener más información, vea el [esquema XML del Asistente para la optimización de motor de base de datos](http://go.microsoft.com/fwlink/?linkid=43100).|  
+|**Elemento primario**|[Elemento de tabla de esquema &#40;DTA&#41;](table-element-for-schema-dta.md)|  
+|**Elementos secundarios**|[Crear elemento &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` elemento. Para obtener más información, vea el [esquema XML del Asistente para la optimización de motor de base de datos](http://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## <a name="remarks"></a>Notas  
- Este elemento tiene el nombre **RecommendationTypecomplexType** en el esquema XML del Asistente para la optimización de motor de base de datos. Se utiliza para especificar índices para una configuración hipotética. No confunda este `Recommendation` elemento con los otros tipos que puede utilizarse para especificar la creación de particiones (`RecommendationPType`) o vistas (`RecommendationViewType`). Para obtener información acerca de los demás `Recommendation` tipos de elementos, vea el [esquema XML del Asistente de optimización de motor de base de datos](http://go.microsoft.com/fwlink/?linkid=43100).  
+ Este elemento tiene el nombre **RecommendationTypecomplexType** en el esquema XML del Asistente para la optimización de motor de base de datos. Se utiliza para especificar índices para una configuración hipotética. No confunda este `Recommendation` elemento con los otros tipos que puede utilizarse para especificar la creación de particiones (`RecommendationPType`) o vistas (`RecommendationViewType`). Para obtener información acerca de los demás `Recommendation` tipos de elemento, consulte el [esquema XML del Asesor de optimización de motor de base de datos](http://go.microsoft.com/fwlink/?linkid=43100).  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

@@ -1,14 +1,11 @@
 ---
-title: Sys.sp_rda_test_connection (Transact-SQL) | Documentos de Microsoft
+title: Sys.sp_rda_test_connection (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,21 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c44c6c3974b10b442d4b6a5944276f7f3c3693e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 14f3c4f120e5ae940efd4431d7b996c65f7d9c15
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003912"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421334"
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Prueba la conexión de SQL Server para el servidor remoto de Azure y notifica problemas que podrían evitar la migración de datos.  
+  Prueba la conexión de SQL Server para el servidor remoto de Azure y notifica problemas que pueden impedir que la migración de datos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -57,7 +53,7 @@ EXECUTE sys.sp_rda_test_connection
   
 -   Si proporciona un valor para **@database_name**, pero la base de datos especificado no está habilitada para Stretch, entonces tendrá que proporcionar un valor para **@server_address**.  
   
--   Si proporciona un valor para **@database_name**y la base de datos especificada está habilitada para Stretch, a continuación, no tendrá que proporcionar un valor para **@server_address**. Si proporciona un valor para **@server_address**, el procedimiento almacenado pasa por alto y utiliza existentes ya servidor de Azure asociados a la base de datos habilitada para Stretch.  
+-   Si proporciona un valor para **@database_name**y la base de datos habilitadas para Stretch, entonces no tendrá que proporcionar un valor para **@server_address**. Si proporciona un valor para **@server_address**, el procedimiento almacenado pasa por alto y utiliza existente de servidor de Azure ya asociado a la base de datos habilitadas para Stretch.  
   
  @azure_username = N'*azure_username*  
  El nombre de usuario para el servidor remoto de Azure.  
@@ -66,23 +62,23 @@ EXECUTE sys.sp_rda_test_connection
  La contraseña para el servidor remoto de Azure.  
   
  @credential_name = N'*credential_name*'  
- En lugar de proporcionar un nombre de usuario y una contraseña, puede proporcionar el nombre de una credencial almacenada en la base de datos habilitada para Stretch.  
+ En lugar de proporcionar un nombre de usuario y una contraseña, puede proporcionar el nombre de una credencial almacenada en la base de datos habilitadas para Stretch.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- En caso de **correcto**, sp_rda_test_connection devuelve el error 14855 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_SUCCEEDED) con una gravedad EX_INFO y código de retorno de un estado correcto.  
+ En caso de **éxito**, sp_rda_test_connection devuelve el error 14855 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_SUCCEEDED) con una gravedad EX_INFO y código de retorno de un estado correcto.  
   
- En caso de **error**, sp_rda_test_connection devuelve el error 14856 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_FAILED) con una gravedad EX_USER y código de retorno de error.  
+ En caso de **error**, sp_rda_test_connection devuelve el error 14856 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_FAILED) con una gravedad EX_USER y código de retorno de un error.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|link_state|int|Uno de los siguientes valores, que corresponden a los valores para **link_state_desc**.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar (32)|Uno de los siguientes valores, que corresponden a los anteriores valores para **link_state**.<br /><br /> -CORRECTO<br />     El entre SQL Server y Azure remoto servidor es correcto.<br />-ERROR_AZURE_FIREWALL<br />     El firewall de Azure está impidiendo que el vínculo entre SQL Server y el servidor remoto de Azure.<br />-ERROR_NO_CONNECTION<br />     SQL Server no se puede establecer una conexión con el servidor remoto de Azure.<br />-ERROR_AUTH_FAILURE<br />     Un error de autenticación está impidiendo que el vínculo entre SQL Server y el servidor remoto de Azure.<br />: ERROR<br />     Un error que no es un problema de autenticación, un problema de conectividad o un problema de firewall impide el vínculo entre SQL Server y el servidor remoto de Azure.|  
-|error_number|int|El número del error. Si no hay ningún error, este campo es NULL.|  
+|link_state|INT|Uno de los valores siguientes, que corresponden a los valores de **link_state_desc**.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
+|link_state_desc|varchar (32)|Uno de los valores siguientes, que corresponden a los anteriores valores para **link_state**.<br /><br /> -CORRECTO<br />     El entre SQL Server y Azure remoto servidor es correcto.<br />-ERROR_AZURE_FIREWALL<br />     El firewall de Azure impide el vínculo entre SQL Server y el servidor remoto de Azure.<br />-ERROR_NO_CONNECTION<br />     SQL Server no se puede establecer una conexión con el servidor remoto de Azure.<br />-ERROR_AUTH_FAILURE<br />     Un error de autenticación está impidiendo que el vínculo entre SQL Server y el servidor remoto de Azure.<br />-ERROR<br />     Un error que no es un problema de autenticación, un problema de conectividad o un problema de firewall impide que el vínculo entre SQL Server y el servidor remoto de Azure.|  
+|error_number|INT|El número del error. Si no hay ningún error, este campo es NULL.|  
 |error_message|nvarchar(1024)|Mensaje de error. Si no hay ningún error, este campo es NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Se requieren permisos db_owner.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -99,7 +95,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|2|ERROR_NO_CONNECTION|*\<número de error relacionado con la conexión >*|*\<mensaje de error relacionado con la conexión >*|  
+|2|ERROR_NO_CONNECTION|*\<número de error relacionados con la conexión >*|*\<mensaje de error relacionados con la conexión >*|  
   
 ### <a name="check-the-azure-firewall"></a>Compruebe el firewall de Azure  
   
@@ -127,7 +123,7 @@ GO
   
 ```  
   
- Los resultados muestran que un error de autenticación impide el vínculo entre SQL Server y el servidor remoto de Azure.  
+ Los resultados muestran que un error de autenticación impide que el vínculo entre SQL Server y el servidor remoto de Azure.  
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
@@ -146,7 +142,7 @@ GO
   
 ```  
   
- Los resultados muestran que la conexión es correcto y que puede habilitar Stretch Database para la base de datos especificada.  
+ Los resultados muestran que la conexión es correcta y que puede habilitar Stretch Database para la base de datos especificado.  
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  

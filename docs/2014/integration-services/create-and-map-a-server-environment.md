@@ -1,5 +1,5 @@
 ---
-title: Crear y asignar un entorno de servidor | Documentos de Microsoft
+title: Crear y asignar un entorno de servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isenvprop.variables.f1
 - sql12.ssis.ssms.iscreateenv.f1
@@ -16,15 +16,15 @@ f1_keywords:
 - sql12.ssis.ssms.isenvprop.general.f1
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 caps.latest.revision: 11
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7b386dd13218d78bc8b70dacba6a0103bf9a8581
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e5650c579c1fab390b98b3bb7777e9c8f8f07595
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173106"
 ---
 # <a name="create-and-map-a-server-environment"></a>Crear y asignar un entorno de servidor
   Los entornos de servidor se crean al objeto de especificar valores en tiempo de ejecución para los paquetes contenidos en un proyecto que ha implementado en el servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Después puede asignar las variables de entorno a parámetros para un paquete concreto, para los paquetes de punto de entrada o para todos los paquetes de un proyecto determinado. Un paquete de punto de entrada suele ser un paquete primario que ejecuta un paquete secundario.  

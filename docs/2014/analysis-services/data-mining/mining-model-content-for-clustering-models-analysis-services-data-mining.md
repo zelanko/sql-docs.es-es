@@ -1,5 +1,5 @@
 ---
-title: 'Contenido del modelo de minería de datos para los modelos de clústeres (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Contenido del modelo de minería de datos para los modelos de clústeres (Analysis Services - minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - nearest neighbor [Data Mining]
 - clustering [Data Mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19b4b4192fd38fe4e3bab142c6a327e4c2510d5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc2d9ce1c0581d067b8a0a9be0ad52643ee6287a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153316"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de agrupación en clústeres (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de clústeres de Microsoft. Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "36112583"
 > [!NOTE]  
 >  La varianza representa la varianza total para el clúster. Cuando el valor para la varianza es pequeño, indica que la mayoría de los valores de la columna se hallaban bastante cerca de la media. Para obtener la desviación estándar, calcule la raíz cuadrada de la varianza.  
   
- Tenga en cuenta que para cada uno de los atributos no hay un `Missing` tipo de valor que indica cuántos casos carecían de datos para ese atributo. Los datos ausentes pueden ser relevantes y afectar a los cálculos de varias maneras, dependiendo del tipo de datos. Para más información, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
+ Tenga en cuenta que para cada atributo hay un `Missing` tipo de valor que indica cuántos casos carecían de datos para ese atributo. Los datos ausentes pueden ser relevantes y afectar a los cálculos de varias maneras, dependiendo del tipo de datos. Para más información, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## <a name="model-content-for-a-clustering-model"></a>Contenido del modelo para un modelo de agrupación en clústeres  
  Esta sección solo proporciona detalles y ejemplos para las columnas del contenido del modelo de minería de datos que son relevantes para los modelos de agrupación en clústeres.  
@@ -163,7 +163,7 @@ ms.locfileid: "36112583"
 >  La estructura y el contenido del modelo permanecen invariables, independientemente del método de agrupación en clústeres o de los parámetros utilizados.  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)   
  [Algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm.md)   
  [Consultas de minería de datos](data-mining-queries.md)  

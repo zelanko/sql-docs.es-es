@@ -1,5 +1,5 @@
 ---
-title: Conectarse a los datos de origen (cliente de minería de datos para Excel) | Documentos de Microsoft
+title: Conectarse al origen de datos (cliente de minería de datos para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections
 ms.assetid: 548672ce-e403-4aca-b67a-c2c797f053dd
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dacc0416cc7f86dbfb90adc8b74268ca8cb18857
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e750ec50aff2d4d69b90a974b28ddb77c54b068
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163606"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Conectar con los datos de origen (Cliente de minería de datos para Excel)
   En este tema se describe cómo crear y usar las conexiones utilizadas para almacenar modelos de minería de datos y para obtener acceso a datos externos almacenados en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -37,7 +37,7 @@ ms.locfileid: "36112127"
   
  Para conectarse a una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], debe tener permisos para obtener acceso al servidor de base de datos. Además, las sesiones de minería de datos deben estar habilitadas y se debe contar con permisos de lectura o de lectura y escritura en los objetos de base de datos almacenados en el servidor.  
   
-##  <a name="bkmk_connect"></a> Crear conexiones de servidor de minería de datos  
+##  <a name="bkmk_connect"></a> Creación de conexiones de servidor de minería de datos  
  El **conexiones** grupo en el cliente de minería de datos para Excel y las herramientas de análisis de tabla para Excel proporciona herramientas para administrar las conexiones a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 -   Puede crear la conexión cuando instale el complemento o agregar una conexión posteriormente.  
@@ -49,26 +49,26 @@ ms.locfileid: "36112127"
 -   Solo puede haber una conexión activa de cada vez.  
   
 ### <a name="connections-in-the-excel-add-ins"></a>Conexiones en los complementos de Excel  
- El **conexiones** grupo en el cliente de minería de datos para Excel y las herramientas de análisis de tabla para Excel es que administrar las conexiones a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ El **conexiones** grupo en el cliente de minería de datos para Excel y las herramientas de análisis de tabla para Excel es donde administra las conexiones a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ##### <a name="create-a-new-server-connection-in-the-excel-add-ins"></a>Crear una nueva conexión al servidor en los complementos de Excel  
   
-1.  Haga clic en el **conexión** situado en la **analizar** o **minería de datos** la cinta de opciones.  
+1.  Haga clic en el **conexión** situado en la **analizar** o **minería de datos** cinta de opciones.  
   
     > [!NOTE]  
     >  El texto del botón indica si existe una conexión. Cuando no se ha realizado ninguna conexión en la hoja de cálculo, el botón contiene el texto "\<ninguna conexión >." Si se estableció una conexión previamente en el libro, el nombre de ésta aparece en el botón.  
   
-2.  En el **conexiones de Analysis Services** cuadro de diálogo, haga clic en **nuevo**.  
+2.  En el **conexiones de Analysis Services** cuadro de diálogo, haga clic en **New**.  
   
 3.  En el **nueva conexión de Analysis Services** diálogo cuadro, escriba el nombre del servidor.  
   
 4.  Especifique el método de autenticación.  
   
-5.  Seleccione una base de datos de la **nombre del catálogo** lista desplegable. Si no existe ninguna base de datos en la instancia, seleccione **(valor predeterminado)**.  
+5.  Seleccione una base de datos desde el **CatalogName** lista desplegable. Si no existe ninguna base de datos en la instancia, seleccione **(valor predeterminado)**.  
   
 6.  Escriba un nombre descriptivo para la conexión.  
   
-7.  Haga clic en **Probar conexión** para comprobar que el servidor y la base de datos están disponibles.  
+7.  Haga clic en **Probar conexión** para comprobar que el servidor y base de datos están disponibles.  
   
 8.  Haga clic en **Aceptar**y, a continuación, en **Cerrar**.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36112127"
   
 ##### <a name="create-an-http-connection-to-analysis-services"></a>Crear una conexión HTTP a Analysis Services  
   
-1.  Abra la **nueva conexión de Analysis Services** cuadro de diálogo.  
+1.  Abra el **nueva conexión de Analysis Services** cuadro de diálogo.  
   
 2.  Para el nombre del servidor, escriba http:// seguido de la dirección URL asignada al servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
@@ -96,11 +96,11 @@ ms.locfileid: "36112127"
   
 2.  Arrastre la forma y colóquela en una página en blanco.  
   
-3.  En el **seleccionar un origen de datos** cuadro de diálogo, seleccione una de datos de origen de la lista o haga clic en **nuevo**.  
+3.  En el **seleccionar un origen de datos** cuadro de diálogo, seleccione una de datos de origen en la lista o haga clic en **New**.  
   
-4.  Si selecciona **nuevo**, siga el procedimiento descrito anteriormente para especificar un servidor y el nombre del catálogo, o se conecten a través de un servicio Web.  
+4.  Si selecciona **New**, siga el procedimiento descrito anteriormente para especificar un servidor y el nombre del catálogo, o se conecten a través de un servicio Web.  
   
-##  <a name="bkmk_change"></a> Cambiar conexiones  
+##  <a name="bkmk_change"></a> Cambio de conexiones  
  Es posible crear varias conexiones en la misma hoja de cálculo, aunque sólo puede haber una activa en cada momento. El nombre de la conexión actual se muestra en el **conexión** botón.  
   
  En el cliente de minería de datos para Excel, también puede comprobar la cadena de conexión y el estado de la conexión actual, haga clic en **seguimiento** y, a continuación, haga clic en **conexión actual**.  
@@ -109,7 +109,7 @@ ms.locfileid: "36112127"
   
 1.  Haga clic en **conexión**.  
   
-2.  En el **conexiones de Analysis Services** panel, seleccione una conexión de la **otras conexiones** lista y haga clic en **convertir en actual**.  
+2.  En el **conexiones de Analysis Services** panel, seleccione una conexión desde el **otras conexiones** lista y haga clic en **convertir en actual**.  
   
 3.  Haga clic en **Probar conexión** para comprobar que la conexión está disponible.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36112127"
      \<unidad: > \Users\\< myusername\>\AppData\Local\Microsoft\Data complemento de minería de datos  
   
 ##  <a name="bkmk_extconnections"></a> Conectarse a orígenes de datos externos  
- Mientras que las herramientas de la **analizar** funcionan exclusivamente con datos en Excel, las herramientas de la cinta de opciones la **minería de datos** la cinta de opciones le permite conectarse directamente a orígenes de datos externos que se usará como entradas para el modelo, o para muestreo.  
+ Mientras que las herramientas de la **analizar** funcionan exclusivamente con datos en Excel, las herramientas de la cinta de opciones la **minería de datos** cinta de opciones le permite conectarse directamente a orígenes de datos externos que se usará como entradas para el modelo, o para muestreo.  
   
  Las siguientes herramientas de estos complementos admiten el uso de datos externos para minería de datos:  
   

@@ -1,5 +1,5 @@
 ---
-title: resultados de elemento (XMLA) | Documentos de Microsoft
+title: da como resultado del elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - results element
 ms.assetid: 3249a17a-7bfa-4753-b605-8f611ba7ae2b
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 203ad5a79938c80e2bfccc798ff5f9551ac66d8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1e42f6aa620b57630df690ee92bdbbd849ab100b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165236"
 ---
 # <a name="results-element-xmla"></a>Elemento results (XMLA)
   Contiene una colección de elementos [root](root-element-xmla.md) devuelta por el método [Execute](../xml-elements-methods-execute.md) utilizando el comando [Batch](../xml-elements-commands/batch-element-xmla.md) .  
@@ -62,7 +62,7 @@ ms.locfileid: "36111016"
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[Valor devuelto](return-element-xmla.md)|  
+|Elementos primarios|[devolver](return-element-xmla.md)|  
 |Elementos secundarios|[raíz](root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notas  

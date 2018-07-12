@@ -1,5 +1,5 @@
 ---
-title: 'Lección 13: Analizar en Excel | Documentos de Microsoft'
+title: 'Lección 13: Analizar en Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: b1dea62cbd78ca375a52adb7f1e6fd2285ff35e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b9e50bda2a6168d54be78fd178d3d1d9161eff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200365"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>Lección 13: Analizar en Excel
   En esta lección, usará la característica Analizar en Excel de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para abrir Microsoft Excel, crear automáticamente una conexión de origen de datos al área de trabajo del modelo y agregará automáticamente una tabla dinámica a la hoja de cálculo. La característica Analizar en Excel se ha diseñado para proporcionar una manera rápida y sencilla de probar la eficacia del diseño de su modelo antes de implementarlo. No realizará ningún análisis de datos en esta lección. El propósito de esta lección es familiarizar al autor de modelos con las herramientas que puede usar para probar el diseño de sus modelos. Los usuarios finales no utilizarán la característica Analizar de Excel, que está destinada a los autores de modelos, sino que usarán aplicaciones de informes de cliente como Excel o [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] para conectarse a los datos del modelo implementados y explorarlos.  
@@ -42,7 +42,7 @@ ms.locfileid: "36111679"
   
      Excel se abrirá con un libro nuevo. Se crea una conexión de origen de datos con la cuenta de usuario actual y se utiliza la perspectiva predeterminada para definir los campos visibles. Se agrega automáticamente una tabla dinámica a la hoja de cálculo.  
   
-3.  En Excel, en la **lista de campos de tabla dinámica**, tenga en cuenta el **fecha** y **venta por Internet** aparecen medidas, así como el **cliente**,  **Fecha**, **Geography**, **producto**, **categoría de producto**, **subcategoría de producto**y **Venta por Internet** aparecen las tablas con todos sus respectivas columnas.  
+3.  En Excel, en el **lista de campos de tabla dinámica**, tenga en cuenta la **fecha** y **Internet Sales** aparecen las medidas, así como el **cliente**,  **Fecha**, **Geography**, **producto**, **categoría de producto**, **subcategoría de producto**y **Internet Sales** aparecen las tablas con todas sus columnas respectivas.  
   
 4.  Cierre Excel sin guardar el libro.  
   

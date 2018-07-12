@@ -1,5 +1,5 @@
 ---
-title: Editor de origen de archivo (página columnas) planos | Documentos de Microsoft
+title: Editor de origen de archivo (página columnas) planos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesourceadapter.columns.f1
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3be667dc6fe7dcaefdc183a831f762a566a56c99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d0007a98a02da095887aa0faedb12ba629f5e01
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171026"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>Editor de origen de archivos planos (página Columnas)
   Use el nodo **Columnas** del cuadro de diálogo **Editor de origen de archivos planos** para asignar una columna de salida a cada columna externa (origen).  
   
 > [!NOTE]  
->  El `FileNameColumnName` propiedad del origen de archivo sin formato y la `FastParse` propiedad de sus columnas de salida no están disponibles en la **Editor de origen de archivos planos**, pero se puede establecer mediante el uso de la **Editor avanzado** . Para obtener más información acerca de estas propiedades, vea la sección sobre el origen de archivos planos en [Flat File Custom Properties](data-flow/flat-file-custom-properties.md).  
+>  El `FileNameColumnName` propiedad del origen de archivo sin formato y la `FastParse` propiedad de sus columnas de salida no están disponibles en el **Editor de origen de archivos planos**, pero se puede establecer mediante el uso de la **Editor avanzado** . Para obtener más información acerca de estas propiedades, vea la sección sobre el origen de archivos planos en [Flat File Custom Properties](data-flow/flat-file-custom-properties.md).  
   
  Para obtener más información acerca del origen de archivo plano, vea [Flat File Source](data-flow/flat-file-source.md).  
   
@@ -45,8 +45,8 @@ ms.locfileid: "36111597"
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origen de archivos planos &#40;página Administrador de conexiones&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
- [Editor de origen de archivos planos &#40;página de salida de Error&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [Flat File Source Editor &#40;página Administrador de conexiones&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
+ [Flat File Source Editor &#40;página de salida de Error&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [Administrador de conexiones de archivos planos](connection-manager/file-connection-manager.md)  
   
   

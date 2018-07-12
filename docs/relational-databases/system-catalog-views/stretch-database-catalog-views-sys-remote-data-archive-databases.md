@@ -1,14 +1,11 @@
 ---
-title: Sys.remote_data_archive_databases (Transact-SQL) | Documentos de Microsoft
+title: Sys.remote_data_archive_databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -21,27 +18,26 @@ dev_langs:
 helpviewer_keywords:
 - sys.remote_data_archive_databases catalog view
 ms.assetid: 25bffb0c-9821-40b4-88cf-75f854891a09
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 599621bb64cb11ee70646204689a4b1d0bf43574
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 84234467e626e8168b0d0a9b2a29f5c9cb5ad70f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974310"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428234"
 ---
-# <a name="stretch-database-catalog-views---sysremotedataarchivedatabases"></a>Ajustar las vistas de catálogo de base de datos - sys.remote_data_archive_databases
+# <a name="stretch-database-catalog-views---sysremotedataarchivedatabases"></a>Stretch Database vistas de catálogo - sys.remote_data_archive_databases
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Contiene una fila por cada base de datos remota que almacena los datos de una base de datos local habilitada para Stretch.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**remote_database_id**|**int**|El identificador local generada automáticamente de la base de datos remota.|  
-|**remote_database_name**|**sysname**|El nombre de la base de datos remota.|  
-|**data_source_id**|**int**|El origen de datos utilizado para conectarse al servidor remoto|  
+|**remote_database_id**|**int**|El identificador local generado automáticamente de la base de datos remoto.|  
+|**remote_database_name**|**sysname**|El nombre de la base de datos remoto.|  
+|**data_source_id**|**int**|El origen de datos que se usa para conectarse al servidor remoto|  
   
 ## <a name="see-also"></a>Vea también  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  

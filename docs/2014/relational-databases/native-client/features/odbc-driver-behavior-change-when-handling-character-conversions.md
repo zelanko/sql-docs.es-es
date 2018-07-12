@@ -1,26 +1,24 @@
 ---
-title: Cambio de comportamiento de controlador ODBC al administrar las conversiones de caracteres | Documentos de Microsoft
+title: Cambio de comportamiento del controlador ODBC al administrar las conversiones de caracteres | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3fb5c006ac9f670eb8bc8f61cde000ae5ebecc41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: bcf868dde9f3ef6b019d06187696881509b9a568
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105131"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415634"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Cambio de comportamiento del controlador ODBC al administrar las conversiones de caracteres
   El [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] controlador de ODBC de Native Client (SQLNCLI11.dll) cambió la forma de SQL_WCHAR * (nchar y SQL_CHAR\* (narchar conversiones. Las funciones ODBC, como SQLGetData, SQLBindCol y SQLBindParameter, devuelven (-4) SQL_NO_TOTAL como el parámetro indicador de longitud al utilizar el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client. Las versiones anteriores del controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client devolvían un valor de longitud, que puede ser incorrecto.  
@@ -47,7 +45,7 @@ pBuffer = new WCHAR[(iSize/sizeof(WCHAR)) + 1];   // Allocate buffer
 SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // Retrieve data  
 ```  
   
- **SQLGetData** sólo se puede llamar para recuperar fragmentos de datos reales. Usar **SQLGetData** obtener el tamaño de los datos no se admite.  
+ **SQLGetData** solo se puede llamar para recuperar fragmentos de datos reales. Uso de **SQLGetData** obtener el tamaño de datos no se admite.  
   
  A continuación se muestra el impacto del cambio de controlador cuando se utiliza el patrón incorrecto. Esta aplicación realiza una consulta en una columna `varchar` y el enlace se especifica como Unicode (SQL_UNICODE/SQL_WCHAR):  
   
@@ -60,7 +58,7 @@ SQLGetData(hstmt, SQL_WCHAR, ….., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempt
 |Versión del controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client|Resultado de indicador o de longitud|Descripción|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client o anterior|6|El controlador suponía incorrectamente que la conversión de CHAR en WCHAR se podía conseguir como longitud * 2.|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versión 11.0.2100.60) o posterior|-4 (SQL_NO_TOTAL)|El controlador ya no se da por hecho que conversión de CHAR en WCHAR o de WCHAR en CHAR es un (multiplicar) \*2 o (dividir) / 2 acción.<br /><br /> Al llamar a **SQLGetData** ya no devuelve la longitud de la conversión esperada. El controlador detecta la conversión a o desde CHAR y WCHAR y devuelve (-4) SQL_NO_TOTAL en lugar del comportamiento *2 o /2, que podría ser incorrecto.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versión 11.0.2100.60) o posterior|-4 (SQL_NO_TOTAL)|El controlador ya no se da por supuesto que la conversión de CHAR en WCHAR o de WCHAR en CHAR es un (multiplicar) \*2 o (dividir) / 2 acción.<br /><br /> Una llamada a **SQLGetData** ya no devuelve la longitud de la conversión esperada. El controlador detecta la conversión a o desde CHAR y WCHAR y devuelve (-4) SQL_NO_TOTAL en lugar del comportamiento *2 o /2, que podría ser incorrecto.|  
   
  Use **SQLGetData** para recuperar los fragmentos de los datos. (Se muestra el pseudocódigo:)  
   
@@ -88,8 +86,8 @@ SQLBindCol(… SQL_W_CHAR, …)   // Only bound a buffer of WCHAR[4] – Expecti
   
 |Versión del controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client|Resultado de indicador o de longitud|Descripción|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
-|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client o anterior|20|-   **SQLFetch** informa de que hay un truncamiento a la derecha de los datos.<br />-Longitud es la longitud de los datos devueltos, no lo que estaba almacenado (se da por supuesto * 2 CHAR a la conversión de WCHAR que puede ser incorrecto para los glifos).<br />-Los datos almacenados en búfer son 123\0. Se garantiza que el búfer está terminado en NULL.|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versión 11.0.2100.60) o posterior|-4 (SQL_NO_TOTAL)|-   **SQLFetch** informa de que hay un truncamiento a la derecha de los datos.<br />-Longitud indica -4 (SQL_NO_TOTAL) debido a que no se convirtió el resto de los datos.<br />-Los datos almacenados en el búfer son 123\0. - Se garantiza que el búfer está terminado en NULL.|  
+|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client o anterior|20|-   **SQLFetch** notifica que hay un truncamiento en el lado derecho de los datos.<br />-Length es la longitud de los datos devueltos, no lo que se almacenó (se da por supuesto * 2 CHAR en conversión WCHAR que puede ser incorrecto para los glifos).<br />-Los datos almacenados en búfer son 123\0. Se garantiza que el búfer está terminado en NULL.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versión 11.0.2100.60) o posterior|-4 (SQL_NO_TOTAL)|-   **SQLFetch** notifica que hay un truncamiento en el lado derecho de los datos.<br />-Longitud indica -4 (SQL_NO_TOTAL) debido a que no se ha convertido el resto de los datos.<br />-Los datos almacenados en el búfer son 123\0. - Se garantiza que el búfer está terminado en NULL.|  
   
 ## <a name="sqlbindparameter-output-parameter-behavior"></a>SQLBindParameter (comportamiento del parámetro OUTPUT)  
  Consulta:  `create procedure spTest @p1 varchar(max) OUTPUT`  
@@ -103,14 +101,14 @@ SQLBindParameter(… SQL_W_CHAR, …)   // Only bind up to first 64 characters
 |Versión del controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client|Resultado de indicador o de longitud|Descripción|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client o anterior|2468|-   **SQLFetch** devuelve no hay más datos disponibles.<br />-   **SQLMoreResults** devuelve no hay más datos disponibles.<br />-Longitud indica el tamaño de los datos devueltos desde el servidor, no almacenado en búfer.<br />-Búfer original contiene 63 bytes y un terminador NULL. Se garantiza que el búfer está terminado en NULL.|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versión 11.0.2100.60) o posterior|-4 (SQL_NO_TOTAL)|-   **SQLFetch** devuelve no hay más datos disponibles.<br />-   **SQLMoreResults** devuelve no hay más datos disponibles.<br />-Longitud indica (-4) SQL_NO_TOTAL debido a que no se convirtió el resto de los datos.<br />-Búfer original contiene 63 bytes y un terminador NULL. Se garantiza que el búfer está terminado en NULL.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versión 11.0.2100.60) o posterior|-4 (SQL_NO_TOTAL)|-   **SQLFetch** devuelve no hay más datos disponibles.<br />-   **SQLMoreResults** devuelve no hay más datos disponibles.<br />-Longitud indica (-4) SQL_NO_TOTAL debido a que no se ha convertido el resto de los datos.<br />-Búfer original contiene 63 bytes y un terminador NULL. Se garantiza que el búfer está terminado en NULL.|  
   
 ## <a name="performing-char-and-wchar-conversions"></a>Realizar conversiones CHAR y WCHAR  
  El controlador ODBC de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ofrece varias maneras de realizar las conversiones CHAR y WCHAR. La lógica es similar a la manipulación de blobs (varchar(max), nvarchar(max), …):  
   
 -   Se guarda o se truncan en el búfer especificado al enlazar con datos **SQLBindCol** o **SQLBindParameter**.  
   
--   Si no enlaza, puede recuperar los datos en fragmentos mediante **SQLGetData** y **SQLParamData**.  
+-   Si no realiza el enlace, puede recuperar los datos en fragmentos mediante **SQLGetData** y **SQLParamData**.  
   
 ## <a name="see-also"></a>Vea también  
  [Características de SQL Server Native Client](sql-server-native-client-features.md)  

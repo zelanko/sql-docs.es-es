@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_COMMANDS | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_COMMANDS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_COMMANDS rowset
 ms.assetid: d228f265-05d9-4d2c-a622-44c73eab7a71
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14c4eb9ac8fe63422ee29f5880a8a5f1eb6329bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 860645ba09ee294b6421472f235a38d66f54abe8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157326"
 ---
 # <a name="discovercommands-rowset"></a>DISCOVER_COMMANDS, conjunto de filas
   Proporciona información de la actividad y el uso de recursos sobre los comandos que se están ejecutando actualmente o los que se ejecutaron los últimos en las conexiones abiertas en el servidor.  
@@ -30,7 +30,7 @@ ms.locfileid: "36111237"
  **Se aplica a:** modelos tabulares, modelos multidimensionales  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_COMMANDS` filas contiene las columnas siguientes.  
+ El `DISCOVER_COMMANDS` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Restricción|Descripción|  
 |-----------------|--------------------|-----------------|-----------------|  

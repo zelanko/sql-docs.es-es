@@ -1,5 +1,5 @@
 ---
-title: Definir dimensiones vinculadas | Documentos de Microsoft
+title: Definir dimensiones vinculadas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b4ddd7a9c833346956e3c5ccdde93873028f663
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 263d51971081fec9570c1e6787169c1b9ec50b42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155366"
 ---
 # <a name="define-linked-dimensions"></a>Definir dimensiones vinculadas
   Una dimensión vinculada se basa en una dimensión creada y almacenada en otra base de datos de Analysis Services de la misma versión y con el mismo nivel de compatibilidad. Con una dimensión vinculada, puede crear, almacenar y mantener una dimensión en una base de datos y permitir que esa dimensión esté disponible para los usuarios de varias bases de datos. Para los usuarios, una dimensión vinculada es como cualquier otra dimensión.  
@@ -66,7 +66,7 @@ ms.locfileid: "36112799"
   
 2.  En el Administrador de conexiones, compruebe que el proveedor está establecido en **Proveedor OLE DB de Microsoft\OLE DB nativo para Analysis Services 11.0**.  
   
-3.  Escriba el nombre del servidor (use *servername*\\*nombreDeInstancia* para una instancia con nombre)<sup>1</sup> o tipo **localhost** a conectarse a un servidor de Analysis Services que se ejecuta en el mismo equipo.  
+3.  Escriba el nombre del servidor (use *servername*\\*nombreDeInstancia* para una instancia con nombre)<sup>1</sup> o tipo **localhost** a conectarse a un servidor de Analysis Services que se está ejecutando en el mismo equipo.  
   
 4.  Use la autenticación de Windows para la conexión.  
   

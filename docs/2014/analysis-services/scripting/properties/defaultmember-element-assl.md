@@ -1,5 +1,5 @@
 ---
-title: Elemento DefaultMember (ASSL) | Documentos de Microsoft
+title: Elemento DefaultMember (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DefaultMember element
 ms.assetid: db4eea9f-f7cf-40de-abd0-b62014e7ec2d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71b8b2ecd1d5cd46ea50cceebe2a0105d9b7311f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd074ab38264bf45ad70a96c37a22bc3c3185d4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229685"
 ---
 # <a name="defaultmember-element-assl"></a>Elemento DefaultMember (ASSL)
   Contiene una expresión MDX (Expresiones multidimensionales) que identifica el miembro predeterminado del elemento primario.  
@@ -64,7 +64,7 @@ ms.locfileid: "36111882"
 ## <a name="remarks"></a>Notas  
  El elemento `DefaultMember` define el miembro predeterminado del elemento primario. Si `DefaultMember` no se especifica o se establece en una cadena vacía, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] elige un miembro que se usará como el miembro predeterminado.  
   
- Para los elementos `ManyToManyMeasureGroupDimension`, el elemento `DefaultMember` contiene una expresión MDX que especifica un miembro en la dimensión identificada en el elemento `CubeDimensionID` de `ManyToManyMeasureGroupDimension`. La expresión MDX es similar a la [StrToMember](/sql/mdx/strtomember-mdx) función MDX con la palabra clave CONSTRAINED, en que no puede incluir MDX o funciones definidas por el usuario.  
+ Para los elementos `ManyToManyMeasureGroupDimension`, el elemento `DefaultMember` contiene una expresión MDX que especifica un miembro en la dimensión identificada en el elemento `CubeDimensionID` de `ManyToManyMeasureGroupDimension`. La expresión MDX es similar a la [StrToMember](/sql/mdx/strtomember-mdx) función MDX con la palabra clave CONSTRAINED, en eso no se puede incluir MDX o funciones definidas por el usuario.  
   
  Para más información sobre los miembros predeterminados, vea [Definir un miembro predeterminado](../../multidimensional-models/attribute-properties-define-a-default-member.md).  
   

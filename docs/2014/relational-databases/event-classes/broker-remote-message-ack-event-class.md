@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Remote Message Ack event class
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7bd0cef1327e32dd5a773c3e422ec546014a0ef1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 49d5fba08da2929217252096ca8c2335a1f627d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177812"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack, clase de eventos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Remote Message Ack** cuando [!INCLUDE[ssSB](../../includes/sssb-md.md)] envía o recibe un reconocimiento de mensaje.  
@@ -39,7 +39,7 @@ ms.locfileid: "36112295"
 |**DatabaseID**|**int**|Id. de la base de datos especificada por la instrucción USE *database* . Si no se emitió ninguna instrucción USE *database* para una instancia determinada, el identificador de la base de datos predeterminada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**EventClass**|**int**|Tipo de clase de eventos capturado. Es siempre **149** para **Broker:Message Ack**.|27|no|  
 |**EventSequence**|**int**|Número de secuencia de este evento.|51|no|  
-|**EventSubClass**|**nvarchar**|Tipo de subclase de evento, que proporciona más información acerca de cada clase de eventos. Esta columna puede incluir los valores siguientes:<br /><br /> **Mensaje de confirmación enviada**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] se ha enviado un reconocimiento como parte de un mensaje en secuencia normal.<br /><br /> **Enviada la confirmación**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] se ha enviado un reconocimiento fuera de un mensaje en secuencia normal.<br /><br /> **Mensaje de confirmación recibida**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] se ha recibido un reconocimiento como parte de un mensaje en secuencia normal.<br /><br /> **Recibidas una confirmación**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] se ha recibido un reconocimiento fuera de un mensaje en secuencia normal.|21|Sí|  
+|**EventSubClass**|**nvarchar**|Tipo de subclase de evento, que proporciona más información acerca de cada clase de eventos. Esta columna puede incluir los valores siguientes:<br /><br /> **Mensaje de confirmación enviada**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] se ha enviado un reconocimiento como parte de un mensaje en secuencia normal.<br /><br /> **Enviada la confirmación**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] se ha enviado un reconocimiento fuera de un mensaje en secuencia normal.<br /><br /> **Mensaje de confirmación recibida**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] se ha recibido un reconocimiento como parte de un mensaje en secuencia normal.<br /><br /> **Confirmación recibida**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] se ha recibido un reconocimiento fuera de un mensaje en secuencia normal.|21|Sí|  
 |**GUID**|**uniqueidentifier**|Id. de conversación del diálogo. Este identificador se transmite como parte del mensaje y lo comparten ambas partes de la conversación.|54|no|  
 |**HonorBrokerPriority**|**Int**|Valor actual de la opción HONOR_BROKER_PRIORITY de la base de datos: 0 = OFF, 1 = ON.|32|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  

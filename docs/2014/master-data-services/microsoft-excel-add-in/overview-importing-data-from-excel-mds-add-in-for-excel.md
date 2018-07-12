@@ -1,5 +1,5 @@
 ---
-title: Publicación de datos (agregar de MDS para Excel) | Documentos de Microsoft
+title: Publicación de datos (complemento MDS para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 39acbad0925e8dfc250fcd4cc3913dbaf0ff0771
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f9fbee4ad70222c81f8f2fc40c460974f6f5ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155066"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>Publicar datos (complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede publicar los datos en el repositorio MDS si desea compartirlo con otros usuarios. En cuanto se publiquen los datos, estarán disponibles para otros usuarios del complemento para su descarga.  
@@ -39,7 +39,7 @@ ms.locfileid: "36113168"
   
 -   No puede anotar las eliminaciones, aunque se guardan como transacciones que un administrador puede invertir.  
   
--   Si cambia la **código** valor de un miembro, no se registra como una transacción y todas las transacciones anteriores para el miembro no están disponibles.  
+-   Si cambia el **código** valor para un miembro, no se registra como una transacción y todas las transacciones anteriores para el miembro no están disponibles.  
   
 -   Puede ver las transacciones realizadas por otros usuarios en un miembro. También puede ver todas las transacciones que ha realizado en un miembro, aunque ya no tenga permiso para los atributos concretos.  
   

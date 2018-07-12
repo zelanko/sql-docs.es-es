@@ -1,5 +1,5 @@
 ---
-title: Página nueva carpeta (Administrador de informes) | Documentos de Microsoft
+title: Página nueva carpeta (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5ec855928ab92734695594a79ed23e917b3bb8d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3464ba51b74343fdb7349b7622f08a68b3f25611
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162296"
 ---
 # <a name="new-folder-page-report-manager"></a>Página Nueva carpeta (Administrador de informes)
   Use la página Nueva carpeta para crear una carpeta nueva en la jerarquía de carpetas del servidor de informes. La carpeta será una carpeta virtual que se almacenará en una base de datos del servidor de informes. No se crea en el sistema de archivos del equipo.  
@@ -39,7 +39,7 @@ ms.locfileid: "36111094"
   
 ## <a name="options"></a>Opciones  
  **Nombre**  
- Especifique el nombre de la carpeta. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : @ & = +, $ / * \< > | "o / para especificar un nombre.  
+ Especifique el nombre de la carpeta. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : @ & = +, $ / * \< > | "o / al especificar un nombre.  
   
  **Descripción**  
  Escriba una descripción del contenido de la carpeta. La descripción aparece en la página Contenido de aquellos usuarios que tengan permiso de acceso a la carpeta.  

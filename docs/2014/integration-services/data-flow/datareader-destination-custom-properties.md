@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c7fb15f3dda170c866bb95840a7a3cde4c19ffa1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bda3a31cf3d498d59d4ec86c6c7b32bd2134385
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158636"
 ---
 # <a name="datareader-destination-custom-properties"></a>Propiedades personalizadas del destino DataReader
   El destino DataReader tiene propiedades personalizadas y propiedades comunes a todos los componentes de flujo de datos.  
   
- En la tabla siguiente se describen las propiedades personalizadas del destino DataReader. Todas las propiedades menos `DataReader` son de lectura/escritura.  
+ En la tabla siguiente se describen las propiedades personalizadas del destino DataReader. Todas las propiedades excepto `DataReader` son de lectura y escritura.  
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  

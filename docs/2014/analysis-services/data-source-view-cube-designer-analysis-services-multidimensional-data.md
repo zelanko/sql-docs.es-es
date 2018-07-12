@@ -1,5 +1,5 @@
 ---
-title: Vista (pestaña estructura de cubo, Diseñador de cubos) del origen de datos (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: (Pestaña estructura de cubo, Diseñador de cubos) de la vista del origen de datos (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.datasourcepane.f1
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5d1f33aab84cab344ba83478045d1b4bd4962c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0025792747cf0cea5fffd7b0a1a35c5efc7ea759
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185312"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Vista del origen de datos (pestaña Estructura de cubo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Utilice el panel **Vista del origen de datos** para ver tablas y columnas de la vista del origen de datos asociada al cubo seleccionado. Este panel se utiliza para crear grupos de medida y medidas arrastrando columnas desde el panel **Vista del origen de datos** hasta el panel **Medidas** .  
@@ -30,7 +30,7 @@ ms.locfileid: "36111684"
  **Vista del origen de datos**  
  Muestra la vista del origen de datos asociada al cubo seleccionado.  
   
- **(Mover el punto de vista)**  
+ **(Mover punto de vista)**  
  Haga clic en la esquina inferior derecha del panel, entre las barras de desplazamiento, para seleccionar el área del panel **Vista del origen de datos** que quiere ver.  
   
 ## <a name="diagram-context-menu"></a>Menú contextual del diagrama  

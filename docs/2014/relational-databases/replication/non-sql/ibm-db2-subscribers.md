@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 caps.latest.revision: 72
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1705586884d09aa847a6ba308ffb821faa1d6cac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6edc4c9ce7f19a6b9771966e9547d0bf1fd5bffc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230815"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite suscripciones de inserción a IBM DB2/AS 400, DB2/MVS y DB2/Universal Database a través de los proveedores de OLE DB incluidos con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
@@ -35,11 +35,11 @@ ms.locfileid: "36107396"
   
 1.  Instale la versión más reciente del proveedor OLE DB de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] para DB2 en el distribuidor:  
   
-    -   Si utilizas [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)], en la [descargas de SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=149256) página Web, en la **descargas relacionadas** sección, haga clic en el vínculo a la versión más reciente de Microsoft SQL Server 2008 Feature Pack. En la página web **Microsoft SQL Server 2008 Feature Pack** , busque **Microsoft OLE DB Provider for DB2**(Proveedor Microsoft OLE DB para DB2).  
+    -   Si usas [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)], en el [descargas de SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=149256) página Web, en el **descargas relacionadas** sección, haga clic en el vínculo a la versión más reciente de Microsoft SQL Server 2008 Feature Pack. En la página web **Microsoft SQL Server 2008 Feature Pack** , busque **Microsoft OLE DB Provider for DB2**(Proveedor Microsoft OLE DB para DB2).  
   
     -   Si usa [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard Edition, instale la versión más reciente del servidor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS), que contiene el proveedor.  
   
-     Además de instalar el proveedor, le recomendamos que instale la herramienta de acceso a datos, que se utiliza en el paso siguiente (se instala de forma predeterminada con la descarga de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). Para obtener más información sobre la instalación y uso de la Herramienta de acceso a datos, vea la documentación del proveedor o de HIS.  
+     Además de instalar el proveedor, le recomendamos que instale la herramienta de acceso a datos, que se usa en el paso siguiente (se instala de forma predeterminada con la descarga de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). Para obtener más información sobre la instalación y uso de la Herramienta de acceso a datos, vea la documentación del proveedor o de HIS.  
   
 2.  Cree una cadena de conexión para el suscriptor. La cadena de conexión se puede crear en cualquier editor de texto, pero se recomienda utilizar la Herramienta de acceso a datos. Para crear la cadena en la Herramienta de acceso a datos:  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36107396"
 |`geography`|IMAGE|  
 |`geometry`|IMAGE|  
 |`hierarchyid`|IMAGE|  
-|`image`|VARCHAR(0) FOR BIT DATA<sup>1</sup>|  
+|`image`|VARCHAR(0) PARA DATOS DE BITS<sup>1</sup>|  
 |`into`|INT|  
 |`money`|DECIMAL(19,4)|  
 |`nchar(1-4000)`|VARCHAR(1-4000)|  
@@ -143,20 +143,20 @@ ms.locfileid: "36107396"
 |`uniqueidentifier`|CHAR(38)|  
 |`varbinary(1-8000)`|VARCHAR(1-8000) FOR BIT DATA|  
 |`varchar(1-8000)`|VARCHAR(1-8000)|  
-|`varbinary(max)`|VARCHAR(0) FOR BIT DATA<sup>1</sup>|  
+|`varbinary(max)`|VARCHAR(0) PARA DATOS DE BITS<sup>1</sup>|  
 |`varchar(max)`|VARCHAR(0)<sup>1</sup>|  
 |`xml`|VARCHAR(0)<sup>1</sup>|  
   
- <sup>1</sup> vea la sección siguiente para obtener más información acerca de las asignaciones a VARCHAR(0).  
+ <sup>1</sup> vea la sección siguiente para obtener más información sobre las asignaciones a VARCHAR(0).  
   
 ### <a name="data-type-mapping-considerations"></a>Consideraciones acerca de la asignación de tipos de datos  
  Tenga en cuenta los siguientes problemas de asignación de tipos de datos al replicar en suscriptores de DB2:  
   
--   Al asignar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`, `varchar`, `binary` y `varbinary` a DB2 CHAR, VARCHAR, CHAR FOR BIT DATA y VARCHAR FOR BIT DATA, respectivamente, la replicación establece la longitud del tipo de datos de DB2 sea el mismo que el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo.  
+-   Al asignar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`, `varchar`, `binary` y `varbinary` a DB2 CHAR, VARCHAR, CHAR FOR BIT DATA y VARCHAR FOR BIT DATA, respectivamente, la replicación establece la longitud del tipo de datos DB2 a ser el mismo que el de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo.  
   
      Esto permite crear correctamente la tabla generada en el suscriptor, siempre que la restricción del tamaño de página de DB2 sea suficientemente grande como para admitir el tamaño máximo de la fila. Asegúrese de que el nombre de inicio de sesión que utiliza para obtener acceso a la base de datos de DB2 tiene permisos de acceso a espacios de tabla de tamaño suficiente para las tablas que se van a replicar en DB2.  
   
--   DB2 admite columnas VARCHAR de hasta 32 kilobytes (KB); por lo tanto, es posible que algunas columnas de objetos grandes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se puedan asignar correctamente a columnas VARCHAR de DB2. Sin embargo, el proveedor OLE DB que utiliza la replicación para DB2 no admite la asignación de objetos grandes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a objetos grandes de DB2. Por esta razón, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`, `varchar(max)`, `ntext`, y `nvarchar(max)` columnas se asignan a VARCHAR(0) en los scripts create generados. El valor de longitud 0 debe cambiarse a un valor apropiado antes de aplicar el script al suscriptor. Si no se cambia la longitud del tipo de datos, DB2 mostrará el error 604 cuando se intente crear la tabla en el suscriptor de DB2 (el error 604 indica que la precisión o el atributo de longitud de un tipo de datos no son válidos).  
+-   DB2 admite columnas VARCHAR de hasta 32 kilobytes (KB); por lo tanto, es posible que algunas columnas de objetos grandes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se puedan asignar correctamente a columnas VARCHAR de DB2. Sin embargo, el proveedor OLE DB que utiliza la replicación para DB2 no admite la asignación de objetos grandes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a objetos grandes de DB2. Por este motivo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`, `varchar(max)`, `ntext`, y `nvarchar(max)` columnas se asignan a VARCHAR(0) en los scripts de creación generados. El valor de longitud 0 debe cambiarse a un valor apropiado antes de aplicar el script al suscriptor. Si no se cambia la longitud del tipo de datos, DB2 mostrará el error 604 cuando se intente crear la tabla en el suscriptor de DB2 (el error 604 indica que la precisión o el atributo de longitud de un tipo de datos no son válidos).  
   
      Basándose en sus conocimientos de la tabla de origen que desea replicar, determine si es apropiado asignar un objeto grande de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un elemento de longitud variable de DB2 y especifique una longitud máxima apropiada en un script de creación personalizado. Para obtener información acerca de cómo especificar un script de creación personalizado, vea el paso 5 de la sección "Configuración de un suscriptor de IBM DB2", en este tema.  
   
@@ -165,9 +165,9 @@ ms.locfileid: "36107396"
   
      Si no hay ninguna asignación apropiada para una columna de objetos grandes, puede utilizar el filtrado de columna en el artículo para que no se replique. Para obtener más información, vea [Filtrar datos publicados](../publish/filter-published-data.md).  
   
--   Cuando se replican [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` y `nvarchar` DB2 CHAR y VARCHAR, la replicación utiliza el mismo especificador de longitud para el tipo de DB2 que para el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo. Sin embargo, es posible que la longitud del tipo de datos sea demasiado reducida para la tabla DB2 generada.  
+-   Cuando se replican [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` y `nvarchar` en DB2 CHAR y VARCHAR, la replicación utiliza el mismo especificador de longitud para el tipo de DB2 que para el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo. Sin embargo, es posible que la longitud del tipo de datos sea demasiado reducida para la tabla DB2 generada.  
   
-     En algunos entornos de DB2, un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` elemento de datos no se limita a caracteres de byte único; la longitud de un elemento CHAR o VARCHAR debe tenerlo en cuenta. También debe tener en cuenta los caracteres de *desplazamiento hacia dentro* y *desplazamiento hacia fuera* si se necesitan. Si desea replicar tablas con `nchar` y `nvarchar` columnas, tendrá que especificar una longitud máxima mayor para el tipo de datos en una secuencia de comandos de creación personalizado. Para obtener información acerca de cómo especificar un script de creación personalizado, vea el paso 5 de la sección "Configuración de un suscriptor de IBM DB2", en este tema.  
+     En algunos entornos de DB2, un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` elemento de datos no está restringido a los caracteres de byte único; la longitud de un elemento CHAR o VARCHAR debe tenerlo en cuenta. También debe tener en cuenta los caracteres de *desplazamiento hacia dentro* y *desplazamiento hacia fuera* si se necesitan. Si desea replicar tablas con `nchar` y `nvarchar` columnas, es posible que deba especificar una longitud máxima mayor para el tipo de datos en un script de creación personalizado. Para obtener información acerca de cómo especificar un script de creación personalizado, vea el paso 5 de la sección "Configuración de un suscriptor de IBM DB2", en este tema.  
   
 ## <a name="see-also"></a>Vea también  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 caps.latest.revision: 24
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 86aeaad34575eec0a411cb84c17950b479a3169b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a076691f045a5e9270a51b3500ea84f6b8756836
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177832"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
   OLTP en memoria incluye en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] los procedimientos almacenados compilados de forma nativa y las tablas optimizadas para memoria. Este artículo proporciona información general del procesamiento de consultas tanto para las tablas optimizadas para memoria como para los procedimientos almacenados compilados de forma nativa.  
@@ -230,7 +230,7 @@ Ejecución de los procedimientos almacenados compilados de forma nativa.
   
 2.  El analizador extrae los parámetros del nombre y del procedimiento almacenado.  
   
-     Si la instrucción se preparó, por ejemplo mediante `sp_prep_exec`, el analizador no necesita extraer el nombre del procedimiento y los parámetros en tiempo de ejecución.  
+     Si la instrucción se preparó, por ejemplo con `sp_prep_exec`, el analizador no necesita extraer el nombre del procedimiento y los parámetros en tiempo de ejecución.  
   
 3.  El runtime de OLTP en memoria encuentra el punto de entrada del archivo DLL para el procedimiento almacenado.  
   
@@ -240,7 +240,7 @@ Ejecución de los procedimientos almacenados compilados de forma nativa.
   
  Los procedimientos almacenados de [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado se compilan en la primera ejecución, a diferencia de los procedimientos almacenados compilados de forma nativa, que se compilan en el momento de su creación. Cuando los procedimientos almacenados interpretados se compilan al invocarlos, el optimizador usa los valores de los parámetros proporcionados para esta invocación al generar el plan de ejecución. Este uso de parámetros durante la compilación se denomina examen de parámetros.  
   
- El examen de parámetros no se utiliza para compilar procedimientos almacenados compilados de forma nativa. Todos los parámetros para el procedimiento almacenado se considera que tienen valores UNKNOWN. Interpreta como procedimientos almacenados, de forma nativa procedimientos almacenados también compatibilidad con la `OPTIMIZE FOR` sugerencia. Para obtener más información, vea [Sugerencias de consulta &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
+ El examen de parámetros no se utiliza para compilar procedimientos almacenados compilados de forma nativa. Todos los parámetros para el procedimiento almacenado se considera que tienen valores UNKNOWN. Los procedimientos almacenados interpretados como, compilados de forma nativa procedimientos almacenados también compatibilidad con la `OPTIMIZE FOR` sugerencia. Para obtener más información, vea [Sugerencias de consulta &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Recuperar un plan de ejecución de consultas para los procedimientos almacenados compilados de forma nativa  
  El plan de ejecución de consulta para un procedimiento almacenado compilado de forma nativa se puede recuperar con un **Plan de ejecución estimado** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]o con la opción SHOWPLAN_XML en [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Por ejemplo:  
@@ -304,7 +304,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   El examen de índice completo en IX_CustomerID se ha reemplazado por index seek. Esto provocó el examen de 5 filas en lugar de las 830 necesarias para el examen de índice completo.  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>Estadísticas y cardinalidad para las tablas con optimización para memoria  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantiene las estadísticas de nivel de columna para tablas optimizadas en memoria. Además, mantiene el recuento de filas real de la tabla. Sin embargo, a diferencia de las tablas basadas en disco, las estadísticas de las tablas optimizadas para memoria no se actualizan automáticamente. Por tanto, las estadísticas se deben actualizar manualmente cuando se produzcan cambios significativos en las tablas. Para obtener más información, vea [Estadísticas para las tablas con optimización para memoria](memory-optimized-tables.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantiene las estadísticas de nivel de columna para las tablas optimizadas para memoria. Además, mantiene el recuento de filas real de la tabla. Sin embargo, a diferencia de las tablas basadas en disco, las estadísticas de las tablas optimizadas para memoria no se actualizan automáticamente. Por tanto, las estadísticas se deben actualizar manualmente cuando se produzcan cambios significativos en las tablas. Para obtener más información, vea [Estadísticas para las tablas con optimización para memoria](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Tablas con optimización para memoria](memory-optimized-tables.md)  

@@ -1,5 +1,5 @@
 ---
-title: Informes en modo local frente al Modo conectado en el Visor de informes (Reporting Services en modo de SharePoint) | Documentos de Microsoft
+title: Informes en modo local frente al Modo conectado en el Visor de informes (Reporting Services en modo de SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a230a9bb-6046-401f-b5e5-53ff6edf2264
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b971bd46283911b81449565e5ad9410912ed456a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1094375d1c911934255878b0e8af6eb7174a761
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157806"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer-reporting-services-in-sharepoint-mode"></a>Informes en modo local frente al modo local en el Visor de informes (Reporting Services en modo de SharePoint)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] los informes pueden configurarse para ejecutarse en *modo local* o *modo conectado*, lo que permite aprovechar un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de informes. En su lugar, puede utilizar el Visor de informes para representar los informes de SharePoint directamente cuando la extensión de datos admite los informes en modo local. Este enfoque se denomina *modo local*. En versiones anteriores de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], fue necesario estar conectado a la granja de servidores de SharePoint un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] informes servidor configurado en modo de SharePoint para que el control de Visor de informes pudieron representar informes. Este enfoque se denomina *modo remoto* o *modo conectado*.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] los informes pueden configurarse para ejecutarse en *modo local* o *modo conectado*, lo que permite aprovechar un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de informes. En su lugar, puede utilizar el Visor de informes para representar los informes de SharePoint directamente cuando la extensión de datos admite los informes en modo local. Este enfoque se denomina *modo local*. En versiones anteriores de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], la granja de SharePoint tenía que estar conectado a un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] informe server configurado en modo de SharePoint para que el control de Visor de informes pudiera representar informes. Este enfoque se denomina *modo remoto* o *modo conectado*.  
   
  En *modo local* no hay ningún [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de informes. Debe instalar la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] complemento para productos de SharePoint, pero no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se requiere el servidor de informes. Con el modo local, los usuarios pueden ver informes pero no tendrán acceso a características del lado servidor como suscripciones y alertas de datos.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "36112186"
   
  La siguiente es una lista de las extensiones de procesamiento de datos que admite informes en modo local:  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] Extensión informes de Access 2010. Para más información sobre Access Services, vea [Uso de Servicios de Access con SQL Reporting Services: Instalación del complemento de SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686).  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Extensión de informes de Access 2010. Para más información sobre Access Services, vea [Uso de Servicios de Access con SQL Reporting Services: Instalación del complemento de SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686).  
   
--   Extensión de datos de lista de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint Para obtener más información sobre la extensión de datos de la lista de SharePoint, vea [orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
+-   Extensión de datos de lista de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint Para obtener más información sobre la extensión de datos de lista de SharePoint, vea [orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
  También se puede diseñar extensiones de procesamiento de datos personalizadas que admitan el modo local. Para obtener más información, vea [Implementing a Data Processing Extension](extensions/data-processing/implementing-a-data-processing-extension.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36112186"
  Para más información, vea [Uso de Servicios de Access con SQL Reporting Services: Instalación del complemento de SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686) y [Enable-SPSessionStateService](http://technet.microsoft.com/library/ff607857\(v=office.15\).aspx).  
   
 ## <a name="connected-mode"></a>modo conectado  
- Para ver la información más reciente sobre el uso de la extensión de ADS con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modo conectado, vea [informe de servicios de acceso en el sitio de SharePoint muestra un error en datos de extensión 'ADS'](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
+ Para obtener la información más reciente sobre el uso de la extensión de ADS con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modo conectado, consulte [informe de servicios de acceso en el sitio de SharePoint muestra un error en datos de extensión 'ADS'](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
 ## <a name="see-also"></a>Vea también  
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  

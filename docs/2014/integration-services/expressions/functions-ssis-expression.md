@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [Integration Services]
 - expressions [Integration Services], functions
@@ -19,13 +19,13 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 65c272c738877eef0d8f931c7ed3a9262eeeae72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b67a495d92d0bfc59288533d5f7c21e0f86d645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171036"
 ---
 # <a name="functions-ssis-expression"></a>Funciones (expresión de SSIS)
   El lenguaje de expresiones incluye un conjunto de funciones que pueden usarse en las expresiones. Las expresiones pueden usar una sola función, pero generalmente utilizan varias funciones, combinándolas con operadores.  
@@ -60,7 +60,7 @@ ms.locfileid: "36112306"
   
 |Función|Descripción|  
 |--------------|-----------------|  
-|[Punto de código &#40;expresión de SSIS&#41;](codepoint-ssis-expression.md)|Devuelve el valor de código Unicode del carácter más a la izquierda de una expresión de caracteres.|  
+|[CODEPOINT &#40;expresión de SSIS&#41;](codepoint-ssis-expression.md)|Devuelve el valor de código Unicode del carácter más a la izquierda de una expresión de caracteres.|  
 |[FINDSTRING &#40;expresión de SSIS&#41;](findstring-ssis-expression.md)|Devuelve el índice (de base 1) de la repetición especificada de una cadena de caracteres dentro de una expresión.|  
 |[HEX &#40;expresión de SSIS&#41;](hex-ssis-expression.md)|Devuelve una cadena que representa el valor hexadecimal de un entero.|  
 |[LEN &#40;expresión de SSIS&#41;](len-ssis-expression.md)|Devuelve el número de caracteres de una expresión de caracteres.|  

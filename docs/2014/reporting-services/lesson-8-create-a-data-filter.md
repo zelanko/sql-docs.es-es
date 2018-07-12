@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e3a0f9aac098f7bc9998cc657e937c04b438359
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cdc62c2e2fa4b4a6bfd662c1b20de6287fc8ff86
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108278"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278841"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lección 8: Crear un filtro de datos
   Después de agregar una acción de obtención de detalles en el informe primario, el paso siguiente consiste en crear un filtro de los datos de la tabla de datos que definió para el informe secundario.  
@@ -43,13 +43,13 @@ ms.locfileid: "36108278"
   
 3.  Haga clic en el **filtros** página y, a continuación, haga clic en **agregar**.  
   
-4.  En el **expresión** registrados, haga clic en `ProductID` en la lista desplegable. Es la columna a la que se aplica el filtro.  
+4.  En el **expresión** archivado, haga clic en `ProductID` en la lista desplegable. Es la columna a la que se aplica el filtro.  
   
 5.  Haga clic en el igual (**=**) operador en el **operador** lista desplegable.  
   
 6.  Haga clic en el botón de expresión junto a la **valor** , a continuación, haga clic en **parámetros** en el **categoría** área y, a continuación, haga doble clic en `productid` en el  **Valores** área. El campo **Establecer expresión para: Valor** ahora debe contener una expresión similar a **=Parameters!productid.Value**.  
   
-7.  Haga clic en **Aceptar,** y **Aceptar** en el **propiedades de Tablix** cuadro de diálogo.  
+7.  Haga clic en **Aceptar,** y **Aceptar** nuevo en el **propiedades de Tablix** cuadro de diálogo.  
   
 8.  Guarde el archivo .rdlc.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36108278"
   
 2.  Cree una nueva función que acepte un parámetro, `productid`, de tipo Integer y devuelva un objeto `datatable` y haga lo siguiente.  
   
-    1.  Crea una instancia del conjunto de datos, `DataSet2`, que se creó en el paso 2 de [lección 4: definir una conexión de datos y la tabla de datos para el informe secundario](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crea una instancia del conjunto de datos, `DataSet2`, que se creó en el paso 2 de [lección 4: definir una conexión de datos y una tabla de datos para el informe secundario](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
     2.  Cree una conexión a la base de datos de SQL Server para ejecutar la consulta definida en la **Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario**.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36108278"
   
 1.  Abra el archivo Default.aspx.  
   
-2.  Haga clic en el control de ReportViewer y, a continuación, haga clic en **propiedades.**  
+2.  A la derecha, haga clic en el control ReportViewer y, a continuación, haga clic en **propiedades.**  
   
 3.  En el **propiedades** página, haga clic en el **eventos** icono.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36108278"
   
     1.  Capture la referencia al objeto de informe secundario del parámetro *DrillthroughEventArgs* .  
   
-    2.  Llame a la función `GetPurchaseOrderDetail`  
+    2.  Llame a la función, `GetPurchaseOrderDetail`  
   
     3.  Enlace el DataTable `PurchaseOrderDetail` con el origen de datos de correspondiente del informe.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "36108278"
   
 2.  Cree una nueva función que acepte un parámetro, `productid`, de tipo Integer, y devuelva un objeto `datatable` y haga lo siguiente.  
   
-    1.  Crea una instancia del conjunto de datos, `DataSet2`, que se creó en el paso 2 de [lección 4: definir una conexión de datos y la tabla de datos para el informe secundario](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crea una instancia del conjunto de datos, `DataSet2`, que se creó en el paso 2 de [lección 4: definir una conexión de datos y una tabla de datos para el informe secundario](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
     2.  Cree una conexión a la base de datos de SQL Server para ejecutar la consulta definida en la **Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario**.  
   

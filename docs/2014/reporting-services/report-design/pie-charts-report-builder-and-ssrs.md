@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3c3a358c9403d6bf14bede017380fbf4872a51b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 578042b4ce8b5892b62916f5d41f271e5081271e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175074"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Gráficos circulares (Generador de informes y SSRS)
   Los gráficos circulares y los gráficos de anillos muestran los datos como una proporción del total. Los gráficos circulares se usan normalmente para realizar comparaciones entre grupos. Los gráficos circulares y de anillos, junto con los gráficos piramidales y de embudo, forman parte de un grupo de gráficos conocidos como gráficos de formas. Los gráficos de formas no tienen ejes. Cuando se coloca un campo numérico en un gráfico de formas, el gráfico calcula el porcentaje de cada valor en relación con el total. Para más información sobre los gráficos de formas, vea [Gráficos de formas &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
@@ -57,7 +57,7 @@ ms.locfileid: "36112171"
   
 -   Un gráfico circular requiere al menos dos valores para realizar una comparación válida entre las proporciones. Si el gráfico circular contiene solamente un color, compruebe que ha agregado un campo de categorías para realizar la agrupación. Si el gráfico circular no contiene categorías, agrega los valores del campo de datos en un valor para la presentación.  
   
--   Al igual que los demás tipos de gráficos, el gráfico circular genera los colores en función de los valores de color de la paleta predeterminada. Esto puede provocar que en un informe con varios gráficos circulares, los puntos de datos se coloreen de manera diferente en cada gráfico circular. Si tiene varios gráficos circulares en el informe, es posible que le interese establecer manualmente los colores para cada grupo de categorías; de este modo, podrá conservar el mismo color en todos los gráficos. Para obtener más información acerca de cómo definir los colores de un gráfico, consulte [dar formato a los colores de serie en un gráfico &#40;el generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
+-   Al igual que los demás tipos de gráficos, el gráfico circular genera los colores en función de los valores de color de la paleta predeterminada. Esto puede provocar que en un informe con varios gráficos circulares, los puntos de datos se coloreen de manera diferente en cada gráfico circular. Si tiene varios gráficos circulares en el informe, es posible que le interese establecer manualmente los colores para cada grupo de categorías; de este modo, podrá conservar el mismo color en todos los gráficos. Para obtener más información acerca de cómo definir los colores de un gráfico, vea [dar formato a los colores de serie en un gráfico &#40;generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="applying-drawing-styles-to-a-pie-chart"></a>Aplicar estilos de dibujo a un gráfico circular  
  Puede agregar estilos de dibujo especiales al gráfico circular para aumentar su impacto visual. Los estilos de dibujo incluyen efectos de bisel y efectos cóncavos. Estos efectos solo están disponibles en los gráficos circulares 2D. En la ilustración siguiente se muestra un ejemplo de estilo de dibujo con bisel y cóncavo en un gráfico circular.  
@@ -67,7 +67,7 @@ ms.locfileid: "36112171"
  Para más información, vea [Agregar estilos con bisel, relieve y textura a un gráfico &#40;Generador de informes y SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>Mostrar valores de porcentaje en un gráfico circular  
- Al igual que los demás gráficos de formas, los gráficos circulares representan proporciones del total. Como consecuencia, es frecuente dar formato a las etiquetas del gráfico circular como porcentajes. Para ser coherente con otros tipos de gráficos, el gráfico no muestra las etiquetas de los porcentajes de forma predeterminada. Para obtener más información acerca de cómo mostrar los valores como porcentajes en el gráfico, consulte [mostrar valores de porcentaje en un gráfico circular &#40;el generador de informes y SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md). Para más información sobre cómo dar formato a números como porcentajes en el informe, vea [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md).  
+ Al igual que los demás gráficos de formas, los gráficos circulares representan proporciones del total. Como consecuencia, es frecuente dar formato a las etiquetas del gráfico circular como porcentajes. Para ser coherente con otros tipos de gráficos, el gráfico no muestra las etiquetas de los porcentajes de forma predeterminada. Para obtener más información acerca de cómo mostrar los valores como porcentajes en el gráfico, vea [mostrar valores de porcentaje en un gráfico circular &#40;generador de informes y SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md). Para más información sobre cómo dar formato a números como porcentajes en el informe, vea [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
  ![Gráfico circular con etiquetas de punto como porcentajes](../media/rs-piechartpercentages.gif "Gráfico circular con etiquetas de punto como porcentajes")  
   
@@ -90,11 +90,11 @@ ms.locfileid: "36112171"
 -   Recopilar los sectores pequeños en un gráfico circular suplementario. El segundo gráfico circular no se muestra en el diseñador. En su lugar, durante el procesamiento del informe, el gráfico calcula si es necesario mostrar un segundo gráfico circular, basándose en los valores de los puntos de datos. En ese caso, los valores se agregan en otro gráfico circular.  
   
 ## <a name="see-also"></a>Vea también  
- [Las etiquetas de punto de datos de visualización fuera de un gráfico circular &#40;el generador de informes SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Punto de datos para mostrar las etiquetas fuera de un gráfico circular &#40;generador de informes y SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Recopilar segmentos pequeños en un gráfico circular &#40;Generador de informes y SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Mostrar valores de porcentaje en un gráfico circular &#40;Generador de informes y SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Tutorial: Agregar un gráfico circular a un informe &#40;Generador de informes&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Aplicar formato a la leyenda en un gráfico &#40;el generador de informes SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [Aplicar formato a la leyenda en un gráfico &#40;generador de informes y SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Puntos de datos vacíos y nulos en los gráficos &#40;Generador de informes y SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
   

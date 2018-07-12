@@ -1,13 +1,11 @@
 ---
-title: 'Capturar datos BLOB mediante IRow:: Open e ISequentialStream | Documentos de Microsoft'
+title: 'Capturar datos BLOB mediante IRow:: Open e ISequentialStream | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +15,18 @@ helpviewer_keywords:
 - BLOBs, fetching
 ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 29a3e0d1512e3b663249510f57ea627a4eaf3a01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 7604022093a63dd536648fd43a3370ac21c05fcb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103297"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418594"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Capturar datos BLOB mediante IRow::Open e ISequentialStream
-  **IRow:: Open** admite solo el tipo y DBGUID_NULL de objetos que se va a abrir.  
+  **IRow:: Open** es compatible con el único tipo DBGUID_STREAM y DBGUID_NULL de objetos que se va a abrirse.  
   
  La función siguiente utiliza **IRow:: Open** y **ISequentialStream** para capturar datos grandes.  
   

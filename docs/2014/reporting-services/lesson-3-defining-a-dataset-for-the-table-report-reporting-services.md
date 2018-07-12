@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 caps.latest.revision: 50
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 34595ca07e370bb0a66512c839a6843f8c38f5d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 719776a37cae748516d7a4882ea31e9796d01332
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202655"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lección 3: Definir un conjunto de datos para el informe de tabla (Reporting Services)
   Después de definir el origen de datos, necesita definir un conjunto de datos. En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], los datos que usa en los informes proceden de un *conjunto de datos*. Un conjunto de datos incluye un puntero a un origen de datos y la consulta que usará para el informe, así como campos y variables calculados.  
   
- Puede usar el Diseñador de consultas del Diseñador de informes para diseñar la consulta. Para este tutorial, creará una consulta que recupera información del pedido de ventas de la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** base de datos.  
+ Puede usar el Diseñador de consultas del Diseñador de informes para diseñar la consulta. Para este tutorial, creará una consulta que recupera información de pedido de ventas desde la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** base de datos.  
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>Para definir una consulta de Transact-SQL para los datos de informe  
   
@@ -61,9 +61,9 @@ ms.locfileid: "36111949"
     HAVING ppc.Name = 'Clothing'  
     ```  
   
-6.  (Opcional) Haga clic en el botón **Diseñador de consultas** . La consulta se muestra en el Diseñador de consultas basado en texto. Puede cambiar al diseñador gráfico de consultas si hace clic en **Editar como texto**. Ver los resultados de la consulta haciendo clic en la ejecución **(!)**  botón en la barra de herramientas de diseñador de consultas.  
+6.  (Opcional) Haga clic en el botón **Diseñador de consultas** . La consulta se muestra en el Diseñador de consultas basado en texto. Puede cambiar al diseñador gráfico de consultas si hace clic en **Editar como texto**. Ver los resultados de la consulta haciendo clic en la ejecución **(!)**  botón en la barra de herramientas Diseñador de consultas.  
   
-     Ver los datos procedentes de seis campos de cuatro tablas distintas de la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos. La consulta utiliza funcionalidad de Transact-SQL como los alias. Por ejemplo, la tabla SalesOrderHeader se denomina soh.  
+     Vea los datos procedentes de seis campos de cuatro tablas distintas de la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos. La consulta utiliza funcionalidad de Transact-SQL como los alias. Por ejemplo, la tabla SalesOrderHeader se denomina soh.  
   
      Haga clic en **Aceptar** para salir del diseñador de consultas.  
   

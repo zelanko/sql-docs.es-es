@@ -1,5 +1,5 @@
 ---
-title: El cuadro de diálogo de propiedades de Analysis Server (Analysis Services) | Documentos de Microsoft
+title: Cuadro de diálogo Propiedades de Analysis Server (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1
 - SQL12.ASVS.SQLSERVERSTUDIO.SERVERPROPERTIES.F1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Analysis Server Properties dialog box
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60183e1c37a7e94b4b3b88239b837530ef81826c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e3dfe081a2400c795b8c0bd08a5667eaa996268
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260039"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Cuadro de diálogo Propiedades de Analysis Server (Analysis Services)
   Use el cuadro de diálogo **Propiedades de Analysis Server** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para establecer la configuración general, de idioma o intercalación, y de seguridad para una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para mostrar el cuadro de diálogo **Propiedades de Analysis Server**, haga clic con el botón derecho en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el **Explorador de objetos** y seleccione **Propiedades** en el menú contextual. El cuadro de diálogo **Propiedades de Analysis Server** contiene las propiedades siguientes.  
@@ -81,7 +81,7 @@ ms.locfileid: "36107764"
   
 -   **Distinguir mayúsculas de minúsculas** se usa para ordenar y comparar datos según las reglas de diccionario del idioma o alfabeto asociados y para distinguir letras mayúsculas de minúsculas.  
   
-     Si no selecciona esta opción, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que las mayúsculas y las minúsculas son versiones de letras iguales. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no define si el orden de las letras en minúsculas es inferior o superior en relación con mayúsculas las letras cuando **entre mayúsculas y minúsculas** no está seleccionada.  
+     Si no selecciona esta opción, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que las mayúsculas y las minúsculas son versiones de letras iguales. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no define si el orden de las letras minúsculas es inferior o superior en relación con mayúscula las letras si **distingue mayúsculas de minúsculas** no está seleccionada.  
   
 -   **Distinguir acentos** se usa para ordenar y comparar datos según las reglas de diccionario proporcionadas para el idioma o alfabeto asociados y para distinguir los caracteres acentuados de los no acentuados. Por ejemplo, 'a' no es igual a 'á'.  
   
@@ -96,11 +96,11 @@ ms.locfileid: "36107764"
      Si no se selecciona esta opción, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que la representación de byte único y la de doble byte del mismo carácter son iguales.  
   
 ## <a name="security-properties"></a>Propiedades de seguridad  
- Use esta página para especificar las cuentas de usuario y de grupo de Windows que pertenecen al rol de administrador de servidor para una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . La pertenencia a este rol concede permiso para realizar tareas en todo el servidor, como crear o procesar una base de datos, modificar las propiedades del servidor, agregar o quitar otros miembros de este rol, o iniciar un seguimiento. Vea [conceder permisos de administrador de servidor &#40;Analysis Services&#41; ](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) para obtener más información.  
+ Use esta página para especificar las cuentas de usuario y de grupo de Windows que pertenecen al rol de administrador de servidor para una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . La pertenencia a este rol concede permiso para realizar tareas en todo el servidor, como crear o procesar una base de datos, modificar las propiedades del servidor, agregar o quitar otros miembros de este rol, o iniciar un seguimiento. Consulte [conceder permisos de administrador de servidor &#40;Analysis Services&#41; ](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) para obtener más información.  
   
 ## <a name="see-also"></a>Vea también  
  [Determinar el modo de servidor de una instancia de Analysis Services](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Configurar propiedades del servidor de Analysis Services](server-properties/server-properties-in-analysis-services.md)   
+ [Configurar las propiedades del servidor en Analysis Services](server-properties/server-properties-in-analysis-services.md)   
  [Metodologías de autenticación admitidas por Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Roles y permisos &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
  [Idiomas e intercalaciones &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  

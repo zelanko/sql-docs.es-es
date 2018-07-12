@@ -1,5 +1,5 @@
 ---
-title: Procesar el cuadro de diálogo de progreso (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Procesar el cuadro de diálogo de progreso (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processprogress.f1
 ms.assetid: f3bd5278-3a83-4fd9-9903-e81bdd4b6892
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 80bbb03d206bc3b87e27043de0ad29bb258a624d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f7ac5f499c857fda608fd9f6e66e9aa20f145312
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189232"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Progreso del proceso (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Progreso del proceso** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para supervisar los procesos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El cuadro de diálogo **Progreso del proceso** aparece cuando se inicia el procesamiento en un objeto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -30,7 +30,7 @@ ms.locfileid: "36109290"
  **Vista árbol de estado**  
  Muestra los mensajes de estado de la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] relacionados con los objetos que se están procesando, e incluye información sobre la hora de inicio, la hora de detención y el progreso. Haga clic con el botón derecho en un elemento y seleccione **Copiar** para copiar los detalles de un mensaje de estado en el Portapapeles o haga doble clic en un elemento para mostrar el cuadro de diálogo **Ver detalles**. Para más información sobre el cuadro de diálogo **Ver detalles**, vea [Cuadro de diálogo Ver detalles &#40;Analysis Services - Datos multidimensionales&#41;](view-details-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Descripción de estado**  
+ **Descripción del estado**  
  Muestra el estado de procesamiento actual de la operación.  
   
  **Detener**  

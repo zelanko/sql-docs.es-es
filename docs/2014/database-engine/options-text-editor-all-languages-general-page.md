@@ -1,5 +1,5 @@
 ---
-title: Opciones (página General del Editor de texto - todos los idiomas -) | Documentos de Microsoft
+title: Opciones (página General del Editor de texto - todos los idiomas -) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.General
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
 caps.latest.revision: 28
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4f04e097b7dec9d502848c9dc095c40ba8daa1ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39394ea71a428d634bcee27adc2b76a3fca4af02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189082"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Opciones (Editor de texto - Todos los idiomas - Página General)
   Utilice este cuadro de diálogo para establecer opciones generales de edición en los cinco editores de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para mostrar estas opciones, haga clic en **Opciones** en el menú **Herramientas** . Seleccione la carpeta **Editor de texto** , expanda la carpeta **Todos los lenguajes** y haga clic en **General**.  
@@ -48,7 +48,7 @@ ms.locfileid: "36111410"
  **Habilitar espacio virtual**  
  Permite colocar comentarios en un punto coherente junto al código. Si activa esta casilla, puede colocar el cursor después del último carácter de la fila. Cuando se escribe, se agregan tabuladores o espacios de forma automática para completar la fila hasta el punto de inserción.  
   
- **Ajuste automático de línea**  
+ **Ajuste de línea**  
  Muestra, en la siguiente línea, cualquier parte de una línea que se extienda horizontalmente fuera del área visible del editor. Cuando se selecciona esta casilla, se habilita la opción **Mostrar glifos visuales para ajuste de línea** .  
   
  **Mostrar glifos visuales para ajuste de línea**  
@@ -57,7 +57,7 @@ ms.locfileid: "36111410"
 > [!NOTE]  
 >  Estas flechas de recordatorio no se agregan al código y no se imprimen. Solo sirven como referencia. Esta característica no está disponible en todos los tipos de editores.  
   
- **Aplicar comandos Cortar o copiar a líneas en blanco si no hay selección**  
+ **Aplicar comandos Cortar o copiar a líneas en blanco cuando no hay ninguna selección**  
  Establece el comportamiento del editor cuando el punto de inserción se coloca en una línea en blanco, no se selecciona nada y se hace clic en **Copiar** o **Cortar**.  
   
  Cuando se selecciona esta casilla, se copia o se corta la línea en blanco. Si luego hace clic en **Pegar**, se insertará una nueva línea en blanco.  

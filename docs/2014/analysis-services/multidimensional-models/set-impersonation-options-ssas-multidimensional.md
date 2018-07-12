@@ -1,5 +1,5 @@
 ---
-title: Establezca las opciones de suplantación (SSAS - multidimensionales) | Documentos de Microsoft
+title: Establecer las opciones de suplantación (SSAS - Multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.impersonationinfo.f1
 helpviewer_keywords:
 - Impersonation Information dialog box
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58fa3381106f354d810ccbf6b6253ebb20bb55bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c41bd2f5f17ac90053f397b6bfd73cf4b346fd6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176992"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Establezca las opciones de suplantación (SSAS - multidimensional)
   Al crear un objeto de `data source` en un modelo de Analysis Services, uno de los valores que debe configurar es una opción de suplantación. Esta opción determina si Analysis Services asume la identidad de una cuenta de usuario de Windows concreta al realizar las operaciones locales relacionadas con la conexión, como cargar un proveedor de datos OLE DB o resolver la información de perfil de usuario en entornos que admiten perfiles de itinerancia.  
@@ -53,7 +53,7 @@ ms.locfileid: "36111656"
  Todas las opciones están disponibles en el cuadro de diálogo, pero no todas las opciones son adecuadas para cada escenario. Utilice la siguiente información para determinar la mejor opción para el escenario.  
   
  **Utilizar un nombre de usuario y una contraseña específicos**  
- Seleccione esta opción para que la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto utilice las credenciales de seguridad de una cuenta de usuario de Windows especificada en este formato:  *\<nombre de dominio >***\\***\<usuario nombre de cuenta >*.  
+ Seleccione esta opción para que la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos usar las credenciales de seguridad de una cuenta de usuario de Windows especificada en este formato:  *\<nombre de dominio >***\\***\<usuario nombre de cuenta >*.  
   
  Elija esta opción para usar una identidad de usuario de Windows dedicada con los privilegios mínimos que ha creado específicamente para el acceso a los datos. Por ejemplo, si suele crear una cuenta de uso general para leer los datos que se recuperan en los informes, puede especificar esa cuenta aquí.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36111656"
   
 ## <a name="see-also"></a>Vea también  
  [Crear un origen de datos &#40;SSAS multidimensional&#41;](create-a-data-source-ssas-multidimensional.md)   
- [Establecer las propiedades de origen de datos &#40;SSAS Multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md)   
- [Escenarios de implementación de DirectQuery &#40;SSAS Tabular&#41;](../directquery-deployment-scenarios-ssas-tabular.md)  
+ [Establecer las propiedades del origen de datos &#40;SSAS Multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md)   
+ [Escenarios de implementación de DirectQuery &#40;Tabular de SSAS&#41;](../directquery-deployment-scenarios-ssas-tabular.md)  
   
   

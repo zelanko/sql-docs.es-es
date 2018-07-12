@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Web publishing [SQL Server replication], about Web publishing
 - Web publishing [SQL Server replication]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Internet [SQL Server replication], publishing
 ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0f6f13733cb1547d35799e7c1c0fb6f8c046b00e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b448a51c55f45e113d23cdcac37ac51ff2930b19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258621"
 ---
 # <a name="replication-over-the-internet"></a>Replicación por Internet
   La replicación de datos por Internet permite a usuarios desconectados y remotos obtener acceso a los datos cuando los necesiten, por medio de una conexión a Internet. Los datos se replican a través de Internet mediante:  

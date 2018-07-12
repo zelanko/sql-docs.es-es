@@ -1,5 +1,5 @@
 ---
-title: Especificar tipos de tablas (Asistente para minería de datos) | Documentos de Microsoft
+title: Especificar tipos de tablas (Asistente para minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytabletypes.f1
 ms.assetid: 8209a707-faef-4ffc-8991-6c13bb350753
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74fdca1f619b063e32e37b29f1ce721666d752d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c753554dcab61c10bacaf4c118d1781ba3d157b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159076"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>Especificar tipos de tablas (Asistente para minería de datos)
   Utilice la página **Especificar tipos de tablas** para identificar las tablas que se van a utilizar para definir la estructura de minería de datos. Si una tabla no está seleccionada, ésta no se utilizará para definir la estructura de minería de datos.  
@@ -45,7 +45,7 @@ ms.locfileid: "36107051"
 >  Estas tablas deben tener una relación de varios a uno con la tabla de casos, no una relación de uno a varios. Debe especificar esta relación en la vista del origen de datos para poder seleccionar la tabla como anidada.  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda F1 del Asistente para minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Asistente para la Ayuda de F1 de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Seleccione la vista del origen de datos &#40;Asistente para minería de datos&#41;](select-data-source-view-data-mining-wizard.md)   
  [Especifique los datos de entrenamiento &#40;Asistente para minería de datos&#41;](specify-the-training-data-data-mining-wizard.md)  
   

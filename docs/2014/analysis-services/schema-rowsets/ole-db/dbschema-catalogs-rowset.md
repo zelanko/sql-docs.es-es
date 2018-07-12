@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DBSCHEMA_CATALOGS | Documentos de Microsoft
+title: Conjunto de filas DBSCHEMA_CATALOGS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DBSCHEMA_CATALOGS rowset
 ms.assetid: f02dc75d-5442-4eea-b33a-567dc816be7a
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df3b146d3e1015fd4a78254be0d8a7a6083991d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2151d55ce06a8111ab1707e5673ee6d6982ef05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187052"
 ---
 # <a name="dbschemacatalogs-rowset"></a>Conjunto de filas DBSCHEMA_CATALOGS
   Identifica los atributos físicos asociados a los catálogos que son accesibles desde el sistema de administración de bases de datos (DBMS).  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DBSCHEMA_CATALOGS` filas contiene las columnas siguientes.  
+ El `DBSCHEMA_CATALOGS` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "36104132"
  El conjunto de filas se ordena en `CATALOG_NAME`.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DBSCHEMA_CATALOGS` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DBSCHEMA_CATALOGS` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

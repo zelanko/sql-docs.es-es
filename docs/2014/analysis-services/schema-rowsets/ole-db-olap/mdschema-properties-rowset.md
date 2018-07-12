@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas MDSCHEMA_PROPERTIES | Documentos de Microsoft
+title: Conjunto de filas MDSCHEMA_PROPERTIES | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_PROPERTIES rowset
 ms.assetid: 95c480f7-c525-44ba-a59b-cd36f5855a4f
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c0e0506be8f531018285bba9145a587448e743e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f62a6e4f77053c1aec69fc2e16b8049193249466
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189222"
 ---
 # <a name="mdschemaproperties-rowset"></a>Conjunto de filas MDSCHEMA_PROPERTIES
   Describe las propiedades de los miembros de una base de datos.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `MDSCHEMA_PROPERTIES` filas contiene las columnas siguientes.  
+ El `MDSCHEMA_PROPERTIES` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "36106635"
 |`HIERARCHY_UNIQUE_NAME`|`DBTYPE_WSTR`||Nombre único de la jerarquía. Los proveedores que generan nombres únicos por calificación tienen delimitados todos los componentes del nombre.|  
 |`LEVEL_UNIQUE_NAME`|`DBTYPE_WSTR`||Nombre único del nivel al que pertenece esta propiedad. Si el proveedor no admite los niveles con nombre, debería devolver el valor `DIMENSION_UNIQUE_NAME` para este campo. Los proveedores que generan nombres únicos por calificación tienen delimitados todos los componentes del nombre.|  
 |`MEMBER_UNIQUE_NAME`|`DBTYPE_WSTR`||Nombre único del miembro al que pertenece esta propiedad. Se utiliza para los almacenes de datos que no admiten los niveles con nombre o tienen las propiedades miembro a miembro. Si la propiedad se aplica a todos los miembros en un nivel, esta columna es `NULL`. Los proveedores que generan nombres únicos por calificación tienen delimitados todos los componentes del nombre.|  
-|`PROPERTY_TYPE`|`DBTYPE_I2`||Un mapa de bits que especifica el tipo de propiedad:<br /><br /> -   `MDPROP_MEMBER` (`1`) identifica una propiedad de un miembro. Esta propiedad se puede utilizar en la cláusula DIMENSION PROPERTIES de la instrucción SELECT.<br />-   `MDPROP_CELL` (`2`) identifica una propiedad de una celda. Esta propiedad se puede utilizar en la cláusula CELL PROPERTIES que se produce al final de la instrucción SELECT.<br />-   `MDPROP_SYSTEM` (`4`) identifica una propiedad interna.<br />-   `MDPROP_BLOB` (`8`) identifica una propiedad que contiene un objeto binario grande (blob).|  
+|`PROPERTY_TYPE`|`DBTYPE_I2`||Un mapa de bits que especifica el tipo de propiedad:<br /><br /> -   `MDPROP_MEMBER` (`1`) identifica una propiedad de miembro. Esta propiedad se puede utilizar en la cláusula DIMENSION PROPERTIES de la instrucción SELECT.<br />-   `MDPROP_CELL` (`2`) identifica una propiedad de una celda. Esta propiedad se puede utilizar en la cláusula CELL PROPERTIES que se produce al final de la instrucción SELECT.<br />-   `MDPROP_SYSTEM` (`4`) identifica una propiedad interna.<br />-   `MDPROP_BLOB` (`8`) identifica una propiedad que contiene un objeto binario grande (blob).|  
 |`PROPERTY_NAME`|`DBTYPE_WSTR`||El nombre de la propiedad. Si la clave para la propiedad es igual que el nombre de la propiedad, `PROPERTY_NAME` estará en blanco.|  
 |`PROPERTY_CAPTION`|`DBTYPE_WSTR`||Una etiqueta o una descripción asociada a la propiedad, utilizados principalmente para fines de presentación. Si no existe ninguna descripción, devuelve `PROPERTY_NAME`.|  
 |`DATA_TYPE`|`DBTYPE_UI2`||El tipo de datos de la propiedad.|  
@@ -64,7 +64,7 @@ ms.locfileid: "36106635"
  Este conjunto de filas de esquema no está ordenado.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `MDSCHEMA_PROPERTIES` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `MDSCHEMA_PROPERTIES` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "36106635"
 |`PROPERTY_NAME`|`DBTYPE_WSTR`|Opcional|  
 |`PROPERTY_CONTENT_TYPE`|`DBTYPE_I2`|(Opcional) Una restricción predeterminada está instaurada en `MDPROP_MEMBER` O `MDPROP_CELL`.|  
 |`PROPERTY_ORIGIN`|`DBTYPE_UI2`|(Opcional) Una restricción predeterminada está instaurada en `MD_USER_DEFINED` O `MD_SYSTEM_ENABLED`.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(Opcional) Mapa de bits con uno de los siguientes valores válidos:<br /><br /> -CUBO 1<br />-DIMENSIÓN DE 2<br /><br /> La restricción predeterminada es un valor de 1.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(Opcional) Mapa de bits con uno de los siguientes valores válidos:<br /><br /> -1 CUBO<br />-DIMENSIÓN DE 2<br /><br /> La restricción predeterminada es un valor de 1.|  
 |`PROPERTY_VISIBILITY`|`DBTYPE_UI2`|(Opcional) Mapa de bits con uno de los siguientes valores válidos:<br /><br /> -1 Visible<br />-2 no visible<br /><br /> La restricción predeterminada es un valor de 1.|  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,5 +1,5 @@
 ---
-title: Elemento de columna de Index (DTA) | Documentos de Microsoft
+title: Elemento de la columna de índice (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Column element
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 58d8827fe160ef1acb300e7501fd9faeaa369efd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bfd0483abe0b5c5134f34361040cb46e033e6214
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175011"
 ---
 # <a name="column-element-for-index-dta"></a>Column (DTA, elemento de Index)
   Establece las columnas de una configuración especificada por el usuario en las que se va a crear el índice.  
@@ -60,7 +60,7 @@ ms.locfileid: "36104157"
 |Relación|Elementos|  
 |------------------|--------------|  
 |**Elemento primario**|[Elemento de índice &#40;DTA&#41;](index-element-dta.md)|  
-|**Elementos secundarios**|[El nombre de elemento de columna &#40;DTA&#41;](name-element-for-column-dta.md)|  
+|**Elementos secundarios**|[Nombre de elemento de columna &#40;DTA&#41;](name-element-for-column-dta.md)|  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

@@ -1,5 +1,5 @@
 ---
-title: 'Nueva asignación de roles: Editar página de asignación de roles (Administrador de informes) | Documentos de Microsoft'
+title: 'Nueva asignación de roles: Editar página de asignación de roles (Administrador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4c60917a0b4107b52d6573e87932eab9bab63799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d1635c6b9c801b5a2ad9a2eff107c3bf35cf23a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179652"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Nueva asignación de roles y Editar asignación de roles (páginas del Administrador de informes)
   Utilice la página Nueva Asignación de roles o Editar asignación de roles para conceder permisos a operaciones y elementos del servidor de informes. Cada usuario que requiere acceso a un servidor de informes debe poseer una asignación de roles que define el nivel de acceso. Puede crear las asignaciones de roles en el nodo raíz o en un determinado informe, modelo, carpeta, recurso u origen de datos compartido. La seguridad de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se establece a través de asignaciones de roles que se aplican a elementos. Una asignación de roles asocia grupos o usuarios a una definición de roles; cada definición de roles identifica las tareas que los grupos o usuarios pueden realizar respecto a un elemento específico.  
@@ -67,6 +67,6 @@ ms.locfileid: "36104648"
  [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
  [Asignaciones de roles](security/role-assignments.md)   
- [Usuario de conceder acceso a un servidor de informes &#40;el Administrador de informes&#41;](security/grant-user-access-to-a-report-server.md)  
+ [Conceda al usuario el acceso a un servidor de informes &#40;el Administrador de informes&#41;](security/grant-user-access-to-a-report-server.md)  
   
   

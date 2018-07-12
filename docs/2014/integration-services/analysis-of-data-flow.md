@@ -1,5 +1,5 @@
 ---
-title: Análisis de flujo de datos | Documentos de Microsoft
+title: Análisis del flujo de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 caps.latest.revision: 10
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cb8a2a6df2e3b43486329c023a1aaf948064b425
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa09e2c86581214a1ae001c90dba640276920aba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209845"
 ---
 # <a name="analysis-of-data-flow"></a>Análisis de flujo de datos
   Puede usar el [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` vista para analizar el flujo de datos de los paquetes de la base de datos. Esta vista muestra una fila cada vez que un componente de flujo de datos envía datos a un componente de nivel inferior. La información se puede utilizar para obtener una descripción más profunda de las filas que se envían a cada componente.  

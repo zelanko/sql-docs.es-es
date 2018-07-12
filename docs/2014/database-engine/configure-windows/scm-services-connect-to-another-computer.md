@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 147e23e4b2c717d36bf2774f0e3e1d049a46f9fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c0878b7cfa2ca6d77d5d43f6d0642d5ecaf42586
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167226"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Conectarse a otro equipo (Administrador de configuración de SQL Server)
   En este tema se describe cómo conectar con otro equipo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Siga el primer procedimiento para abrir [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (mmc) de Administración de equipos de Windows, conéctese al equipo y expanda el árbol Servicios y Aplicaciones. Siga el segundo procedimiento para crear un archivo con un vínculo al Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo remoto.  
@@ -49,7 +49,7 @@ ms.locfileid: "36107025"
   
 1.  En el menú **Inicio** , haga clic en **Ejecutar**.  
   
-2.  En el **abrir** , escriba `mmc -a` para abrir el [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console en el modo de autor.  
+2.  En el **abrir** , escriba `mmc -a` para abrir el [!INCLUDE[msCoName](../../includes/msconame-md.md)] consola de administración en el modo de autor.  
   
 3.  En el menú **Archivo** , haga clic en **Agregar o quitar complemento**.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36107025"
   
 11. En el menú **Ventana** , haga clic en **Raíz de consola**para regresar a la primera ventana y eliminar la ventana.  
   
-12. En el **archivo** menú, haga clic en **Guardar como**y guarde el archivo en la carpeta que desee, con un nombre adecuado con el `.msc` la extensión de archivo. Cierre [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
+12. En el **archivo** menú, haga clic en **Guardar como**y guarde el archivo en la carpeta que desee, con un nombre adecuado con la `.msc` la extensión de archivo. Cierre [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   
 13. Para abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo de destino, haga doble clic en el archivo. Si lo desea, guarde un vínculo al archivo en el escritorio o en el menú **Inicio** .  
   

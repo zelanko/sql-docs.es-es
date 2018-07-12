@@ -1,5 +1,5 @@
 ---
-title: Trabajar con objetos de base de datos | Documentos de Microsoft
+title: Trabajar con objetos de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - objects [SMO]
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1d0291713da7d8caccf5461eaf92de21207b0bd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 14156938fc2e80678af2d75d5cdc037532307673
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166716"
 ---
 # <a name="working-with-database-objects"></a>Trabajar con objetos de bases de datos
   Éstas son las fases de la creación de objetos SMO:  

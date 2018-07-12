@@ -1,12 +1,12 @@
 ---
-title: Biblioteca de cursores ODBC | Documentos de Microsoft
+title: Biblioteca de cursores ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,22 +23,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d46228b6f4562d72706c9dc6b53f91e3922c5a1
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1ff52345cf4afa65ebb4e183a9a012dd9d197419
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702776"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425614"
 ---
 # <a name="odbc-cursor-library"></a>Biblioteca de cursores ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Algunos controladores ODBC solo admiten la configuración de cursor predeterminado; estos controladores tampoco admiten las operaciones de cursor posicionadas, como **SQLSetPos**. La biblioteca de cursores ODBC es un componente de Microsoft Data Access Components (MDAC) que se utiliza para implementar cursores de bloque o estáticos en un controlador que normalmente no los admite. La biblioteca de cursores también implementa instrucciones UPDATE y DELETE posicionadas y **SQLSetPos** para los cursores que crea.  
+  Algunos controladores ODBC solo admiten los valores de cursor predeterminado; estos controladores tampoco admiten las operaciones de cursor posicionadas, como **SQLSetPos**. La biblioteca de cursores ODBC es un componente de Microsoft Data Access Components (MDAC) que se utiliza para implementar cursores de bloque o estáticos en un controlador que normalmente no los admite. La biblioteca de cursores también implementa instrucciones UPDATE y DELETE posicionadas y **SQLSetPos** para los cursores que crea.  
   
  La biblioteca de cursores ODBC se implementa como un nivel entre el Administrador de controladores ODBC y un controlador ODBC. Si se carga la biblioteca de cursores ODBC, el Administrador de controladores ODBC enruta todos los comandos relacionados con cursor a la biblioteca de cursores en lugar del controlador. Para implementar un cursor, la biblioteca de cursores implementa un cursor que captura el conjunto completo de resultados del controlador subyacente y lo almacena en la caché del cliente. Al utilizar la biblioteca de cursores ODBC, la aplicación se limita a la funcionalidad del cursor de la biblioteca de cursores; la aplicación no dispone de compatibilidad con funcionalidad adicional del cursor incluida en el controlador subyacente.  
   
- No hay gran necesidad de utilizar la biblioteca de cursores ODBC con el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ya que el propio controlador admite más funcionalidad de cursor que la biblioteca de cursores ODBC. La única razón para usar la biblioteca de cursores ODBC con el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC Native Client es porque el controlador implementa su compatibilidad con cursores a través de cursores de servidor y los cursores de servidor no admiten todas las instrucciones SQL. Considere la posibilidad de utilizar la biblioteca de cursores ODBC siempre que necesite disponer de un cursor estático con procedimientos almacenados, lotes o instrucciones SQL que contengan COMPUTE, COMPUTE BY, FOR BROWSE o INTO. Sin embargo, debe prestar atención si utiliza la biblioteca de cursores, ya que almacena en la memoria caché del cliente el conjunto de resultados completo, lo que puede consumir grandes cantidades de memoria y reducir el rendimiento.  
+ No hay gran necesidad de utilizar la biblioteca de cursores ODBC con el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ya que el propio controlador admite más funcionalidad de cursor que la biblioteca de cursores ODBC. La única razón para usar la biblioteca de cursores ODBC con el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client es porque el controlador implementa su compatibilidad con cursores a través de los cursores de servidor y los cursores de servidor no admiten todas las instrucciones SQL. Considere la posibilidad de utilizar la biblioteca de cursores ODBC siempre que necesite disponer de un cursor estático con procedimientos almacenados, lotes o instrucciones SQL que contengan COMPUTE, COMPUTE BY, FOR BROWSE o INTO. Sin embargo, debe prestar atención si utiliza la biblioteca de cursores, ya que almacena en la memoria caché del cliente el conjunto de resultados completo, lo que puede consumir grandes cantidades de memoria y reducir el rendimiento.  
   
  Una aplicación invoca la biblioteca de cursores conexión por conexión mediante [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para establecer el atributo de conexión SQL_ATTR_ODBC_CURSORS antes de conectarse a un origen de datos. SQL_ATTR_ODBC_CURSORS se establece en uno de tres valores:  
   
@@ -46,12 +46,12 @@ ms.locfileid: "35702776"
  Cuando esta opción se establece con el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client, la biblioteca de cursores ODBC invalida la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compatibilidad de cursores nativa del controlador ODBC de Native Client. En la conexión solo se pueden utilizar los tipos de cursor que admite la biblioteca de cursores; no se pueden utilizar cursores de servidor.  
   
  SQL_CUR_USE_DRIVER  
- Cuando esta opción está establecida, todas ellas del cursor admiten nativo para la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC Native Client puede utilizarse para la conexión. No se puede inicializar la biblioteca de cursores ODBC. Todos los cursores se implementan como cursores de servidor.  
+ Cuando se establece esta opción, todas del cursor de soporte técnico nativo para el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client puede utilizarse para la conexión. No se puede inicializar la biblioteca de cursores ODBC. Todos los cursores se implementan como cursores de servidor.  
   
  SQL_CUR_USE_IF_NEEDED  
- Cuando se establece esta opción, el efecto es el mismo que al utilizar SQL_CUR_USE_DRIVER cuando se usa con el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC Native Client. En tiempo de conexión, el Administrador de controladores ODBC se comprueba para ver si el controlador ODBC que se está conectado a es compatible con la opción SQL_FETCH_PRIOR de [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Si el controlador no admite la opción, el Administrador de controladores ODBC carga la biblioteca de cursores ODBC. Si el controlador admite la opción, el Administrador de controladores ODBC no carga la biblioteca de cursores ODBC y la aplicación utiliza la compatibilidad nativa del controlador. Dado que el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC Native Client admite SQL_FETCH_PRIOR, el Administrador de controladores ODBC no carga la biblioteca de cursores ODBC.  
+ Cuando se establece esta opción, el efecto es el mismo que al utilizar SQL_CUR_USE_DRIVER cuando se usa con el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client. En tiempo de conexión, el Administrador de controladores ODBC se comprueba para ver si el controlador ODBC que se está conectando a es compatible con la opción SQL_FETCH_PRIOR de [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Si el controlador no admite la opción, el Administrador de controladores ODBC carga la biblioteca de cursores ODBC. Si el controlador admite la opción, el Administrador de controladores ODBC no carga la biblioteca de cursores ODBC y la aplicación utiliza la compatibilidad nativa del controlador. Dado que el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite SQL_FETCH_PRIOR, el Administrador de controladores ODBC no carga la biblioteca de cursores ODBC.  
   
- La biblioteca de cursores permite a las aplicaciones utilizar varias instrucciones activas en una conexión, así como cursores desplazables y actualizables. La biblioteca de cursores debe estar cargada para admitir esta funcionalidad. Use [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para especificar cómo debería usarse la biblioteca de cursores y [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) para especificar el tamaño de tipo, simultaneidad y el conjunto de filas del cursor.  
+ La biblioteca de cursores permite a las aplicaciones utilizar varias instrucciones activas en una conexión, así como cursores desplazables y actualizables. La biblioteca de cursores debe estar cargada para admitir esta funcionalidad. Use [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para especificar cómo se debe usar la biblioteca de cursores y [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) para especificar el tamaño de tipo, simultaneidad y conjunto de filas del cursor.  
   
 ## <a name="see-also"></a>Vea también  
  [Cómo se implementan los cursores](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  

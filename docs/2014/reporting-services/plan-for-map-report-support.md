@@ -1,5 +1,5 @@
 ---
-title: Planear la compatibilidad de informe de mapa de | Documentos de Microsoft
+title: Planear la compatibilidad de informe de mapa de | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cf56a62b3ef129d9d725aa54d05544f776d4f6ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bfe76929c3f9b50e59cc276385b815973a0d06c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163756"
 ---
 # <a name="plan-for-map-report-support"></a>Planear la compatibilidad de informe de mapa
-  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] admite informes de mapa que utilizan orígenes de datos espaciales. Los datos espaciales pueden proceder de bases de datos de SQL Server, de archivos de forma ESRI o de la galería de mapas que se instala con Reporting Services o con el Generador de informes. Un mapa también puede mostrar un fondo de mosaicos de mapa de Bing. Un autor de informes puede crear un informe que especifique datos espaciales o mosaicos de mapa de Bing como dinámicos y recuperados en el tiempo de ejecución o como estáticos e incrustados en la definición de informe.  
+  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] admite informes de mapas que usan orígenes de datos espaciales. Los datos espaciales pueden proceder de bases de datos de SQL Server, de archivos de forma ESRI o de la galería de mapas que se instala con Reporting Services o con el Generador de informes. Un mapa también puede mostrar un fondo de mosaicos de mapa de Bing. Un autor de informes puede crear un informe que especifique datos espaciales o mosaicos de mapa de Bing como dinámicos y recuperados en el tiempo de ejecución o como estáticos e incrustados en la definición de informe.  
   
 ## <a name="support-for-bing-maps"></a>Compatibilidad con Bing Maps  
  Los mapas pueden incluir un nivel de fondo que muestra los mosaicos de mapa de Bing. Para ver un informe publicado que tenga una capa de mosaicos de mapas, el servidor de informes debe estar configurado para recuperar mosaicos de los servicios web de Bing Maps. Para más información, consulte [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md).  
@@ -51,9 +51,9 @@ ms.locfileid: "36104650"
   
 -   Cuando los datos de mapa deban ser incrustados, ajuste el centro de la ventanilla y el nivel de zoom para incluir solo los datos de mapa necesarios para el informe.  
   
- Para obtener más información, [mapas &#40;el generador de informes y SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
+ Para obtener más información, [mapas &#40;generador de informes y SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Solucionar problemas de informes: Informes de mapa &#40;el generador de informes SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de informes: Informes de mapa &#40;generador de informes y SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

@@ -1,12 +1,12 @@
 ---
-title: Objetos de origen de datos almacenados | Documentos de Microsoft
+title: Objetos de origen de datos persistentes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2872454d8ee32514b3efd46b30b7b96c53b1e7a9
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d8fd9e0cbb3ce90e40e53965000452d8a2dca1de
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700266"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419394"
 ---
 # <a name="persisted-data-source-objects"></a>Objetos de origen de datos persistentes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite objetos de origen de datos persistente con la **IPersistFile** interfaz.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite objetos de origen de datos persistente con el **IPersistFile** interfaz.  
   
 ## <a name="examples"></a>Ejemplos  
  **A. Conservar la inicialización del origen de datos:**  
@@ -144,7 +144,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Use la inicialización del origen de datos almacenados:**  
+ **B. Use la inicialización del origen de datos persistentes:**  
   
  En este ejemplo se utiliza un objeto de origen de datos guardado con propiedades de inicialización adicionales que proporcionan un inicio de sesión y una contraseña de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -232,7 +232,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- El **IPersistFile:: Save** se puede llamar antes o después de llamar al método **IDBInitialize:: Initialize**. Llamar al método después de una devolución correcta de **IDBInitialize:: Initialize** garantiza que se conserva una especificación de origen de datos válido.  
+ El **IPersistFile:: Save** antes o después de llamar al método que se puede llamar **IDBInitialize:: Initialize**. Una llamada al método después de una devolución correcta de **IDBInitialize:: Initialize** garantiza que se conserva una especificación de origen de datos válido.  
   
 ## <a name="see-also"></a>Vea también  
  [Objetos de origen de datos &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  

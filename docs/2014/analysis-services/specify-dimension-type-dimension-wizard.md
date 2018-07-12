@@ -1,5 +1,5 @@
 ---
-title: Especificar el tipo de dimensión (Asistente para dimensiones) | Documentos de Microsoft
+title: Especifique el tipo de dimensión (Asistente para dimensiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a5b5d77a8f54b24488b7152bba95ac705d5196d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bdbc0375dd2f6c77d81ab4028bb5118de93a021f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185323"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Especificar tipo de dimensión (Asistente para dimensiones)
   Use la página **Especificar tipo de dimensión** para definir el tipo de dimensión y agregar a la dimensión tipos de atributo especiales asociados con el tipo de dimensión seleccionado.  
@@ -36,7 +36,7 @@ ms.locfileid: "36106634"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**Cuentas**|Las dimensiones de cuenta contienen datos y metadatos que representan una lista de cuentas.<br /><br /> Para más información sobre las dimensiones de cuenta, vea [Crear una cuenta financiera de una dimensión de tipo primario-secundario](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
-|**Lista de materiales**|Las dimensiones de lista de materiales (o BOM) son dimensiones normales en las que los datos y los metadatos representan información de inventario o fabricación, como listas de piezas para productos.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**BillOfMaterials**|Las dimensiones de lista de materiales (o BOM) son dimensiones normales en las que los datos y los metadatos representan información de inventario o fabricación, como listas de piezas para productos.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Canal**|Las dimensiones de canal son dimensiones normales en las que los datos y los metadatos representan información de canales.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Moneda**|Las dimensiones de moneda contienen datos y metadatos que representan información de monedas.<br /><br /> Para más información sobre las dimensiones de moneda, vea [Crear una dimensión de tipo moneda](multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).|  
 |**Clientes**|Las dimensiones de cliente son dimensiones normales en las que los datos y los metadatos representan información de clientes o contactos.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
@@ -45,7 +45,7 @@ ms.locfileid: "36106634"
 |**Productos**|Las dimensiones de producto son dimensiones normales en las que los datos y los metadatos representan información de productos.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Promoción**|Las dimensiones de promoción son dimensiones normales en las que los datos y los metadatos representan información de promociones de mercadotecnia.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Cuantitativo**|Las dimensiones cuantitativas son dimensiones normales en las que los datos y los metadatos representan información cuantitativa.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Tasas**|Las dimensiones de tarifa son dimensiones normales en las que los datos y los metadatos representan información de tasa de cambio y conversión de monedas.|  
+|**Tarifas**|Las dimensiones de tarifa son dimensiones normales en las que los datos y los metadatos representan información de tasa de cambio y conversión de monedas.|  
 |**Regular**|Las dimensiones normales son el tipo de dimensión más común que se usa en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Escenario**|Las dimensiones de escenario son dimensiones normales en las que los datos y los metadatos representan información de análisis estratégico y de planes.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Time**|Las dimensiones de tiempo contienen datos y metadatos orientados al tiempo.<br /><br /> Para más información sobre las dimensiones de tiempo, vea [Crear una dimensión de tipo Date](multidimensional-models/database-dimensions-create-a-date-type-dimension.md).|  
@@ -66,7 +66,7 @@ ms.locfileid: "36106634"
  Seleccione el atributo de dimensión al que el Asistente para dimensiones asignará el tipo de atributo especial que se muestra en **Tipo de atributo**.  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente de dimensiones (Ayuda F1)](dimension-wizard-f1-help.md)   
+ [Ayuda de F1 del Asistente para dimensiones](dimension-wizard-f1-help.md)   
  [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

@@ -1,23 +1,22 @@
 ---
-title: Índices de almacén de columnas | Documentos de Microsoft
+title: Los índices de almacén de columnas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: d6fe4c71abe010e8420b424200c142175a5e292b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.topic: conceptual
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ff5226b8fcf48c9e0b56232ca54da8cf535a95cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154526"
 ---
 # <a name="columnstore-indexes"></a>Índices de almacén de columnas 
-Vea [el uso de índices no agrupados](../../database-engine/using-nonclustered-columnstore-indexes.md) y [con índices de almacén de columnas agrupado](../../database-engine/using-clustered-columnstore-indexes.md).
+Consulte [con índices de almacén de columnas no agrupado](../../database-engine/using-nonclustered-columnstore-indexes.md) y [con índices de almacén de columnas agrupado](../../database-engine/using-clustered-columnstore-indexes.md).

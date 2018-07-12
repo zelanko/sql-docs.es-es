@@ -1,5 +1,5 @@
 ---
-title: Acciones (Diseñador de cubos) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Acciones (Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionsview.f1
 ms.assetid: 50e3afbc-7789-46b1-bcd3-50497f5b493f
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ded2ebea0129c7402e805b9c4b35ee9d9138ae5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c338840ee08404d9d8ed797bb8468bcd9f06ed67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165756"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>Acciones (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use la pestaña **Acciones** en el Diseñador de cubos para ver y editar acciones, incluso acciones de obtención de detalles y acciones de informes, para el cubo seleccionado.  

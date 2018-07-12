@@ -1,5 +1,5 @@
 ---
-title: 'Lección 4: Crear predicciones de serie temporal utilizando DMX | Documentos de Microsoft'
+title: 'Lección 4: Crear predicciones de serie temporal con DMX | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b883e43-209d-489a-8dc3-9349f88acae8
 caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a345b37d13ade71baad6635cee0508e97d7755eb
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: afcc3fad2a1d8e9acd4859e51b3b8df78b338bd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161636"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Lección 4: Crear predicciones de serie temporal con DMX
-  En esta lección y en la siguiente lección, utilizará extensiones de minería de datos (DMX) para crear tipos distintos de predicciones basados en los modelos de serie temporal que creó en [lección 1: crear un modelo de minería de datos de serie temporal y su estructura de minería de datos](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)y [lección 2: agregar modelos de minería de datos a la estructura de minería de datos de serie temporal](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  
+  En esta lección y en la siguiente lección, usará las extensiones de minería de datos (DMX) para crear diferentes tipos de predicciones basados en los modelos de serie temporal que creó en [lección 1: creación de un modelo de minería de datos de serie temporal y la estructura de minería de datos](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)y [lección 2: agregar modelos de minería de datos a la estructura de minería de datos de serie temporal](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  
   
  Con un modelo de serie temporal, tiene muchas opciones para realizar predicciones:  
   
@@ -69,11 +69,11 @@ FROM [<mining model name>]
 WHERE [<criteria>]  
 ```  
   
- La lista de selección puede contener columnas del modelo, como el nombre del producto de línea que se va a crear las predicciones, o funciones de predicción, como [Lag &#40;DMX&#41; ](/sql/dmx/lag-dmx) o [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx), que son específicos para los modelos de minería de datos de serie temporal.  
+ La lista de selección puede contener columnas del modelo, como el nombre del producto de línea que va a crear las predicciones, o las funciones de predicción como [Lag &#40;DMX&#41; ](/sql/dmx/lag-dmx) o [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx), que están diseñadas específicamente para los modelos de minería de datos de serie temporal.  
   
 #### <a name="to-create-a-simple-time-series-prediction-query"></a>Para crear una consulta simple de predicción de serie temporal  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], seleccione **nueva consulta**y, a continuación, haga clic en **DMX**.  
+1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX**.  
   
      Se abre el Editor de consultas, que contiene una consulta nueva en blanco.  
   
@@ -139,7 +139,7 @@ WHERE [<criteria>]
   
 6.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
   
-7.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y un nombre al archivo `SimpleTimeSeriesPrediction.dmx`.  
+7.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `SimpleTimeSeriesPrediction.dmx`.  
   
 8.  En la barra de herramientas, haga clic en el **Execute** botón.  
   
@@ -148,12 +148,12 @@ WHERE [<criteria>]
  En la lección siguiente, creará una consulta que proporciona los datos nuevos al modelo y comparará los resultados de esa predicción con la recién creada.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Lección 5: Extender la serie temporal de modelo](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
+ [Lección 5: Extender el modelo de serie temporal](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
   
 ## <a name="see-also"></a>Vea también  
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)   
  [Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)   
  [Ejemplos de consultas de modelo de serie temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [Lección 2: Generar un escenario de previsión &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Lección 2: Creación de un escenario de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
   

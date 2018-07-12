@@ -1,5 +1,5 @@
 ---
-title: Elemento Write (ASSL) | Documentos de Microsoft
+title: Elemento Write (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Write element
 ms.assetid: d8f7a367-d7bf-4b40-acb4-19c8bc8c6c20
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1fcc05df0f670deb737b70e0de276e698501c85b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0f275ecb6ca20d22cedb1aed214fb2d0f78479b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176192"
 ---
 # <a name="write-element-assl"></a>Elemento Write (ASSL)
   Determina si se pueden escribir datos o metadatos para un determinado [CubeDimensionPermission](../data-type/permission-data-type-assl.md) o [permiso](../data-type/permission-data-type-assl.md) elemento.  

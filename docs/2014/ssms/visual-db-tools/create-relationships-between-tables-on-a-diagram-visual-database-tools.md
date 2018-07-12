@@ -1,5 +1,5 @@
 ---
-title: Crear relaciones entre tablas en un diagrama (Visual Database Tools) | Documentos de Microsoft
+title: Crear relaciones entre tablas en un diagrama (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagrams [SQL Server], designing
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 80aff8b6f574b21bf5287e8388201e959f65765d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 14d6a6334c4d618cf48b73e1bfa84f7dac517983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168063"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Crear relaciones entre tablas en un diagrama (Visual Database Tools)
   Puede crear relaciones entre columnas de diferentes tablas en el Diseñador de diagramas si se arrastran las columnas entre las tablas.  
@@ -51,7 +51,7 @@ ms.locfileid: "36104627"
      El Diseñador de bases de datos muestra una relación entre las columnas que haya elegido.  
   
 ## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo de las columnas y tablas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Las tablas y columnas, cuadro de diálogo &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Restricciones UNIQUE y restricciones Check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Trabajar con tablas en diagramas de base de datos &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)  
   

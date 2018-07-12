@@ -1,5 +1,5 @@
 ---
-title: Muestreo de los datos (datos de SQL Server a los complementos de minería de datos) | Documentos de Microsoft
+title: Muestreo de datos (datos de SQL Server a los complementos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
 - holdout
@@ -18,31 +18,31 @@ helpviewer_keywords:
 - mining models, testing
 ms.assetid: 35907ae6-887f-4cb3-a750-cff3d7683d90
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e7ea284256c53be5c0ffc62cf0938c288b965f22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5984bbbaa3dc2bb55ce8f20a59dd5132de0ca72a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178972"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>Datos de muestra (Complementos de minería de datos de SQL Server)
-  ![Asistente para datos de partición en la cinta de opciones de minería de datos](media/dmc-partition.gif "Asistente para crear particiones de datos en la cinta de opciones de minería de datos")  
+  ![Asistente para datos de partición en la cinta de opciones minería de datos](media/dmc-partition.gif "Asistente para crear particiones de datos en la cinta de opciones minería de datos")  
   
- El **datos de ejemplo** asistente facilita la dividir los datos de origen en dos conjuntos, uno para generar (aprendizaje) el modelo y otro para probar el modelo. Este asistente también dispone de una opción para volver a muestrear los datos con la que podrá generar un conjunto de datos nuevo que represente mejor el destino.  
+ El **datos de ejemplo** asistente facilita la tarea dividir los datos de origen en dos conjuntos, uno para generar (aprendizaje) el modelo y otro para probar el modelo. Este asistente también dispone de una opción para volver a muestrear los datos con la que podrá generar un conjunto de datos nuevo que represente mejor el destino.  
   
  La creación del tipo de datos más apropiado para entrenar y probar los modelos es una parte importante de la minería de datos, pero también puede resultar una tarea tediosa si no se dispone de las herramientas adecuadas. El asistente realiza el muestreo estratificado para asegurarse de que los conjuntos de entrenamiento y de prueba están bien equilibrados.  
   
 ## <a name="random-sampling-and-oversampling"></a>Muestreo aleatorio y sobremuestreo  
  . El muestreo aleatorio es la mejor manera de asegurarse de que los datos usados para probar un modelo constituyen una buena representación de los datos usados para crear el modelo. Puede realizar un muestreo aleatorio de los datos que se encuentran almacenados en Excel o en un origen de datos externos.  
   
- Si utiliza la opción de muestreo aleatorio, el **datos de ejemplo** asistente automáticamente crea conjuntos de datos de entrenamiento y prueba y los sitúa en hojas de cálculo de Excel independientes para consultarlos más adelante.  
+ Si usa la opción de muestreo aleatorio, el **datos de ejemplo** asistente crea conjuntos de datos de entrenamiento y prueba automáticamente y los resultados en hojas de cálculo de Excel independientes para consultarlos más adelante.  
   
- Si los datos se almacenan en un libro de Excel y no un origen de datos externos, también tiene la opción usar *sobremuestreo*. Con esta opción, especifica un valor de destino que podría ser escaso en los datos y el asistente recopilará un conjunto equilibrado que incluya más aparte del valor de destino. Puede dirigir el asistente para que alcance un porcentaje concreto o cree un cierto número de filas.  
+ Si los datos se almacenan en un libro de Excel y no un origen de datos externos, también tiene la opción para usar *sobremuestreo*. Con esta opción, especifica un valor de destino que podría ser escaso en los datos y el asistente recopilará un conjunto equilibrado que incluya más aparte del valor de destino. Puede dirigir el asistente para que alcance un porcentaje concreto o cree un cierto número de filas.  
   
- Si utiliza la opción de sobremuestreo, el **datos de ejemplo** asistente crea una nueva hoja de cálculo que contiene los datos de muestra recién equilibrados.  
+ Si usa la opción de sobremuestreo, el **datos de ejemplo** asistente crea una nueva hoja de cálculo que contiene los datos de muestra recién equilibrados.  
   
 ## <a name="using-the-sample-data-wizard"></a>Usar el Asistente para datos de muestra  
   
@@ -50,9 +50,9 @@ ms.locfileid: "36106212"
   
 1.  En el **minería de datos** la cinta de opciones, haga clic en **datos de ejemplo**.  
   
-2.  En el **seleccionar datos de origen** página, especifique si la **datos** que desea particionar está en un rango de Excel o una tabla o en un origen de datos externo.  
+2.  En el **seleccionar datos de origen** , especifique si la **datos** que desea particionar está en un rango de Excel o una tabla o en un origen de datos externo.  
   
-3.  En el **Seleccionar tipo de muestreo** página, especifique si desea crear entrenamiento y conjuntos de datos de pruebas muestreo aleatorio o crear un nuevo conjunto de datos gracias al sobremuestreo.  
+3.  En el **Seleccionar tipo de muestreo** , especifique si desea crear entrenamiento y conjuntos de datos de prueba mediante muestreo aleatorio o sobremuestreo crear un nuevo conjunto de datos.  
   
     > [!NOTE]  
     >  Si usa un origen de datos externos, solo estará disponible la opción de muestreo aleatorio. Si desea usar el sobremuestreo con datos externos, puede importar los datos a un libro de Excel mediante una conexión de datos de Excel y, a continuación, usar el Asistente para datos de muestra.  
@@ -84,9 +84,9 @@ ms.locfileid: "36106212"
 ## <a name="other-sampling-options"></a>Otras opciones de muestreo  
  Si las opciones de muestreo de este asistente no satisfacen sus necesidades, puede usar la transformación de muestreo de SQL Server Integration Services (SSIS) para muestrear filas de varios orígenes de datos.  
   
- Para obtener más información, consulte [transformación muestreo de fila](../integration-services/data-flow/transformations/row-sampling-transformation.md) y [transformación muestreo de porcentaje](../integration-services/data-flow/transformations/percentage-sampling-transformation.md).  
+ Para obtener más información, consulte [Row Sampling Transformation](../integration-services/data-flow/transformations/row-sampling-transformation.md) y [Percentage Sampling Transformation](../integration-services/data-flow/transformations/percentage-sampling-transformation.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Lista de comprobación de preparación para la minería de datos](checklist-of-preparation-for-data-mining.md)  
+ [Lista de comprobación de la preparación para la minería de datos](checklist-of-preparation-for-data-mining.md)  
   
   

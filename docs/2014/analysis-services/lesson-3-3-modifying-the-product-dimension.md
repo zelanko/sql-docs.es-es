@@ -1,5 +1,5 @@
 ---
-title: Modificar la dimensión Product | Documentos de Microsoft
+title: Modificar la dimensión Product | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 6d0fca02684392aaba37565d4b06b7cc0f1e265f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1163fdaf3e76734217fc8c2cca13a124e30f3b2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171736"
 ---
 # <a name="modifying-the-product-dimension"></a>Modificar la dimensión Product
   En las tareas de este tema, usará un cálculo con nombre para proporcionar nombres más descriptivos a las líneas de producto, definir una jerarquía en la dimensión Product y especificar el nombre de miembro (Todos) para dicha jerarquía. También agrupará los atributos en carpetas para mostrar.  
@@ -33,7 +33,7 @@ ms.locfileid: "36105022"
   
 2.  Al final de panel de diagrama, haga clic con el botón derecho en el encabezado de tabla **Product** y, después, haga clic en **Nuevo cálculo con nombre**.  
   
-3.  En el **crear cálculo con nombre** cuadro de diálogo, escriba `ProductLineName` en el **nombre de la columna** cuadro.  
+3.  En el **crear cálculo con nombre** cuadro de diálogo, escriba `ProductLineName` en el **nombre de columna** cuadro.  
   
 4.  En el cuadro **Expresión** , escriba o copie y pegue la siguiente instrucción **CASE** :  
   
@@ -83,9 +83,9 @@ ms.locfileid: "36105022"
   
 1.  Arrastre el atributo **Product Line** del panel **Atributos** al panel **Jerarquías** .  
   
-2.  Arrastre el **nombre del modelo** de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en el **jerarquías** panel, debajo del **Product Line** nivel.  
+2.  Arrastre el **Model Name** de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en el **jerarquías** panel, debajo del **Product Line** nivel.  
   
-3.  Arrastre el `Product Name` de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en el **jerarquías** panel, bajo el  **Nombre del modelo** nivel. (Cambió el nombre Product Key a Nombre del producto en la sección anterior).  
+3.  Arrastre el `Product Name` de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en la **jerarquías** panel debajo el  **Nombre del modelo** nivel. (Cambió el nombre Product Key a Nombre del producto en la sección anterior).  
   
 4.  En el **jerarquías** panel de la **estructura de dimensión** pestaña, haga clic en la barra de título de la **jerarquía** jerarquía, haga clic en **cambiar el nombre de** y, a continuación, escriba `Product Model Lines`.  
   
@@ -145,9 +145,9 @@ ms.locfileid: "36105022"
   
      Ahora ha agrupado estos atributos en una tercera carpeta para mostrar.  
   
-7.  Seleccione el `Product Model Lines` jerarquía en la **jerarquías** panel y, a continuación, cambie la **AllMemberName** propiedad en la ventana de propiedades para `All Products`.  
+7.  Seleccione el `Product Model Lines` jerarquía en la **jerarquías** panel y, a continuación, cambie el **AllMemberName** propiedad en la ventana Propiedades para `All Products`.  
   
-8.  Haga clic en un área abierta de la **jerarquías** panel y, a continuación, cambie la **AttributeAllMemberName** propiedad en la parte superior de la ventana de propiedades para `All Products`.  
+8.  Haga clic en un área abierta de la **jerarquías** panel y, a continuación, cambie el **AttributeAllMemberName** propiedad en la parte superior de la ventana Propiedades para `All Products`.  
   
      Hacer clic en un área abierta permite modificar las propiedades de la dimensión Product propiamente dicha. También puede hacer clic en **Product** en la parte superior de la lista de atributos del panel **Atributos** .  
   
@@ -180,7 +180,7 @@ ms.locfileid: "36105022"
   
 3.  Compruebe que `Product Model Lines` está seleccionado en el **jerarquía** lista y, a continuación, expanda `All Products`.  
   
-     Tenga en cuenta que el nombre de la **todos los** miembro aparece como `All Products`. Esto es debido a que cambió el **AllMemberName** propiedad para la jerarquía para `All Products` anteriormente en esta lección. Además, los miembros del nivel **Product Line** ahora tienen nombres descriptivos, en lugar de abreviaturas de una sola letra.  
+     Tenga en cuenta que el nombre de la **todas** miembro aparece como `All Products`. Esto es debido a que cambió la **AllMemberName** propiedad para la jerarquía para `All Products` anteriormente en esta lección. Además, los miembros del nivel **Product Line** ahora tienen nombres descriptivos, en lugar de abreviaturas de una sola letra.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Modificar la dimensión Date](lesson-3-4-modifying-the-date-dimension.md)  
@@ -188,6 +188,6 @@ ms.locfileid: "36105022"
 ## <a name="see-also"></a>Vea también  
  [Definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Crear jerarquías definidas por el usuario](multidimensional-models/user-defined-hierarchies-create.md)   
- [Configurar la &#40;todos los&#41; nivel para las jerarquías de atributo](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurar la &#40;todas&#41; nivel para las jerarquías de atributo](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

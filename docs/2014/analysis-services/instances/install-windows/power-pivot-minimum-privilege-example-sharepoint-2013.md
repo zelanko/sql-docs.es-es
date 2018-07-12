@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de una configuración con privilegios mínimos de PowerPivot para SharePoint 2013 | Documentos de Microsoft
+title: Ejemplo de configuración de PowerPivot para SharePoint 2013 con privilegios mínimos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 caps.latest.revision: 7
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2bc19d704534c36aebcef3618a2c6fc8dfe7ab04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ec782dab7b86b17f06a22bebf2e8549a08a55085
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200345"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Ejemplo de una configuración con privilegios mínimos de PowerPivot para SharePoint 2013
   En este tema se describe una configuración de ejemplo de PowerPivot para SharePoint 2013 con privilegios mínimos. La configuración emplea una cuenta diferente para cada uno de los tres componentes y cada cuenta tiene el nivel mínimo de privilegios.  
   
 ## <a name="summary-of-accounts"></a>Resumen de cuentas  
- PowerPivot para SharePoint 2013 admite el uso de la cuenta de servicio de red para la cuenta de servicio de Analysis Services. La cuenta de servicio de red no es un escenario admitido con SharePoint 2010. Para obtener más información sobre las cuentas de servicio, consulte [configurar cuentas de servicio de Windows y permisos](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ PowerPivot para SharePoint 2013 admite el uso de la cuenta de servicio de red para la cuenta de servicio de Analysis Services. La cuenta de servicio de red no es un escenario admitido con SharePoint 2010. Para obtener más información sobre las cuentas de servicio, consulte [Configure Windows Service Accounts and Permissions](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
   
  En la tabla siguiente se resumen las tres cuentas usadas en este ejemplo de configuración con privilegios mínimos.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36105276"
 |Cuenta de servicio de Analysis Services|**SPsvc**|  
   
 ### <a name="the-sharepoint-administrator-account-spadmin"></a>La cuenta de administrador de SharePoint (SpAdmin)  
- **SPAdmin** es una cuenta de dominio que se emplea para instalar y configurar la granja de servidores. Es la cuenta utilizada para ejecutar el Asistente para configuración de SharePoint y la herramienta de configuración de PowerPivot para SharePoint 2013 **SPAdmin** es la única cuenta que requiere derechos de administrador local. Antes de ejecutar la herramienta de configuración de PowerPivot, conceda el **SPAdmin** privilegios a la instancia de base de datos de SQL Server donde SharePoint crea bases de datos de contenido y la configuración de la cuenta. Para configurar la cuenta SPAdmin en un escenario de privilegios mínimos, debe ser miembro de los roles **securityadmin** y **dbcreator**.  
+ **SPAdmin** es una cuenta de dominio que se emplea para instalar y configurar la granja de servidores. Es la cuenta utilizada para ejecutar el Asistente para configuración de SharePoint y la herramienta de configuración de PowerPivot para SharePoint 2013 **SPAdmin** cuenta es la única cuenta que requiere derechos de administrador local. Antes de ejecutar la herramienta de configuración de PowerPivot, conceda el **SPAdmin** privilegios para la instancia de base de datos de SQL Server donde SharePoint crea bases de datos de contenido y la configuración de la cuenta. Para configurar la cuenta SPAdmin en un escenario de privilegios mínimos, debe ser miembro de los roles **securityadmin** y **dbcreator**.  
   
 ### <a name="the-farm-account-spfarm"></a>La cuenta de granja (SPFarm)  
  **SPFarm** es una cuenta de dominio que el servicio Temporizador de extensiones de SharePoint y la aplicación web de Administración central usan para acceder a la base de datos de contenido de SharePoint. No es necesario que esta cuenta sea administrador local. El Asistente para la configuración de SharePoint concede el privilegio mínimo adecuado en la base de datos back-end de SQL Server. La configuración de privilegios mínimos de SQL Server es la pertenencia a los roles **securityadmin** y **dbcreator**.  

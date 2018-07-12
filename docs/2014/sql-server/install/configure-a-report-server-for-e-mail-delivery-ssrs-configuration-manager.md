@@ -1,5 +1,5 @@
 ---
-title: Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS) | Documentos de Microsoft
+title: Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], distributing
 - report servers [Reporting Services], e-mail delivery
@@ -25,13 +25,13 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 5a8954f5ea5c2e38991868734a6347596883bd7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e189890845bad34153ebef4231465c260b538848
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179202"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una extensión de entrega por correo electrónico para distribuir informes mediante el correo electrónico. Según cómo defina la suscripción del correo electrónico, una entrega podría estar compuesta de una notificación, un vínculo, datos adjuntos o un informe incrustado. La extensión de entrega por correo electrónico funciona con la tecnología de servidor de correo existente. El servidor de correo debe ser un servidor SMTP o un reenviador. El servidor de informes se conecta a un servidor SMTP a través de bibliotecas de Collaboration Data Objects (CDO), cdosys.dll, que el sistema operativo proporciona.  
@@ -62,12 +62,12 @@ ms.locfileid: "36106269"
   
   
   
-##  <a name="bkmk_setting_email_delivery"></a> Establecer opciones de configuración para la entrega de correo electrónico  
+##  <a name="bkmk_setting_email_delivery"></a> Las opciones de configuración para la entrega de correo electrónico  
  Para poder utilizar la entrega por correo electrónico del servidor de informes, debe establecer valores de configuración que proporcionen información sobre qué servidor SMTP se debe utilizar.  
   
  Para configurar un servidor de informes para la entrega por correo electrónico, siga este procedimiento:  
   
--   Use el Administrador de configuración de Reporting Services si solo va a especificar un servidor SMTP y una cuenta de usuario que tenga permiso para enviar correo electrónico. Ésta es la configuración mínima necesaria para configurar la extensión de entrega por correo electrónico del servidor de informes. Para obtener más información, consulte [configuración de correo electrónico: Configuration Manager &#40;modo nativo de SSRS&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) y [entrega por correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+-   Use el Administrador de configuración de Reporting Services si solo va a especificar un servidor SMTP y una cuenta de usuario que tenga permiso para enviar correo electrónico. Ésta es la configuración mínima necesaria para configurar la extensión de entrega por correo electrónico del servidor de informes. Para obtener más información, consulte [configuración de correo electrónico - Administrador de configuración &#40;modo nativo de SSRS&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) y [entrega por correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 -   (Opcionalmente) Utilice un procesador de texto para especificar valores adicionales en el archivo RSreportserver.config. Este archivo contiene toda la configuración para la distribución del correo electrónico del servidor de informes. Si utiliza un servidor SMTP adicional o limita la entrega de correo electrónico a hosts específicos, debe configurar opciones adicionales en estos archivos. Para obtener más información sobre cómo buscar y modificar archivos de configuración, consulte [modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) en libros en pantalla de SQL Server.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36106269"
 
   
 ##  <a name="bkmk_example_config_file"></a> Configuración de correo electrónico del servidor de informes de ejemplo  
- El ejemplo siguiente muestra las opciones de configuración del archivo RSreportserver.config para un servidor SMTP remoto. Para obtener información acerca de las descripciones de la configuración y los valores válidos, consulte [archivo de configuración RSReportServer](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla o la documentación del producto CDO.  
+ El ejemplo siguiente muestra las opciones de configuración del archivo RSreportserver.config para un servidor SMTP remoto. Para obtener información acerca de las descripciones de la configuración y los valores válidos, vea [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla o la documentación del producto CDO.  
   
 ```  
 <RSEmailDPConfiguration>  
@@ -109,7 +109,7 @@ ms.locfileid: "36106269"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> Opciones de configuración para establecer el a: campo de un mensaje  
+##  <a name="bkmk_setting_TO_field"></a> Opciones de configuración para la configuración de la a: campo de un mensaje  
  Las suscripciones definidas por el usuario creadas según los permisos otorgados por la tarea **Administrar suscripciones individuales** contienen un nombre de usuario establecido previamente basado en la cuenta de usuario de dominio. Cuando el usuario crea la suscripción, el nombre del destinatario del campo **Para:** se rellena automáticamente mediante la cuenta de usuario de dominio de la persona que está creando la suscripción.  
   
  Si está utilizando un servidor SMTP o reenviador que emplee cuentas de correo electrónico distintas a la cuenta de usuario de dominio, la entrega del informe generará un error cuando el servidor SMTP intente entregar el informe al usuario.  
@@ -126,12 +126,12 @@ ms.locfileid: "36106269"
   
   
   
-##  <a name="bkmk_options_remote_SMTP"></a> Opciones de configuración para un servicio SMTP remoto  
+##  <a name="bkmk_options_remote_SMTP"></a> Opciones de configuración para el servicio SMTP remoto  
  La conexión entre el servidor de informes y un servidor o reenviador SMTP viene determinada por las opciones de configuración siguientes:  
   
 -   `SendUsing` Especifica un método para enviar mensajes. Se puede elegir entre un servicio SMTP de red o un directorio de recogida del servicio SMTP local. Para utilizar un servicio SMTP remoto, este valor debe establecerse en **2** en el archivo RSReportServer.config.  
   
--   `SMTPServer` Especifica el servidor SMTP remoto o un reenviador. Se trata de un valor necesario si utiliza un servidor o reenviador SMTP remoto.  
+-   `SMTPServer` Especifica el servidor SMTP o reenviador. Se trata de un valor necesario si utiliza un servidor o reenviador SMTP remoto.  
   
 -   `From` establece el valor que aparece en el **desde:** línea de un mensaje de correo electrónico. Se trata de un valor necesario si utiliza un servidor o reenviador SMTP remoto.  
   
@@ -145,8 +145,8 @@ ms.locfileid: "36106269"
   
 
   
-##  <a name="bkmk_options_local_SMTP"></a> Opciones de configuración para un servicio SMTP Local  
- Configurar un servicio SMTP local resulta útil si se está probando o solucionando problemas de la entrega por correo electrónico del servidor de informes. El servicio SMTP local no está habilitado de forma predeterminada. Para obtener instrucciones sobre cómo habilitarlo, consulte [configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) y [configuración de correo electrónico: Configuration Manager &#40;modo nativo de SSRS&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) .  
+##  <a name="bkmk_options_local_SMTP"></a> Opciones de configuración para el servicio SMTP Local  
+ Configurar un servicio SMTP local resulta útil si se está probando o solucionando problemas de la entrega por correo electrónico del servidor de informes. El servicio SMTP local no está habilitado de forma predeterminada. Para obtener instrucciones sobre cómo habilitarlo, consulte [configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) y [configuración de correo electrónico - Administrador de configuración &#40;modo nativo de SSRS&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) .  
   
  La conexión entre el servidor de informes y un servidor o reenviador SMTP local viene determinada por las opciones de configuración siguientes:  
   
@@ -155,7 +155,7 @@ ms.locfileid: "36106269"
 -   **SMTPServerPickupDirectory** se establece en una carpeta de la unidad local.  
   
     > [!NOTE]  
-    >  Asegúrese de que no se establece `SMTPServer` si usa un servidor SMTP local.  
+    >  Asegúrese de que no establezca `SMTPServer` si usa un servidor SMTP local.  
   
 -   `From` establece el valor que aparece en el **desde:** línea de un mensaje de correo electrónico. Este valor es necesario.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "36106269"
   
 8.  Guarde el archivo.  
   
-     El servidor de informes utilizará la nueva configuración de forma automática, por lo que no necesita reiniciar el servicio. Puede especificar valores adicionales para SMTP con el fin de configurar cómo se utilizará el servidor para la entrega por correo electrónico del servidor de informes. Para obtener más información, consulte [configurar un servidor de informes para la entrega de correo electrónico](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) y [archivo de configuración RSReportServer](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+     El servidor de informes utilizará la nueva configuración de forma automática, por lo que no necesita reiniciar el servicio. Puede especificar valores adicionales para SMTP con el fin de configurar cómo se utilizará el servidor para la entrega por correo electrónico del servidor de informes. Para obtener más información, consulte [configurar un servidor de informes para la entrega de correo electrónico](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) y [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
   
 
   

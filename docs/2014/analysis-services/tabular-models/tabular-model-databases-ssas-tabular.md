@@ -1,5 +1,5 @@
 ---
-title: Bases de datos de modelo tabular (SSAS Tabular) | Documentos de Microsoft
+title: Las bases de datos de modelo tabular (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0952d613290da279c5e044085ed79f415181bb9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1d74fe1e59121466acf3671e3ce036a6b3e4e89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259421"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Bases de datos de modelo tabular (SSAS tabular)
   Una base de datos de modelo tabular es una base de datos de Analysis Services que se crea en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mediante la plantilla de proyecto de modelo tabular de Analysis Services, donde las tablas y las relaciones son las estructuras principales para la representación de datos.  
@@ -28,18 +28,18 @@ ms.locfileid: "36104329"
  Las bases de datos de modelo tabular son más fáciles de generar que las bases de datos multidimensionales, especialmente si tiene un fondo de base de datos relacional. De lo contrario, las tareas administrativas son similares, si no idénticas, a la administración de base de datos de una base de datos multidimensional. Se aplican las mismas herramientas y enfoques.  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Soluciones de modelos tabulares &#40;SSAS Tabular&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [Soluciones de modelos tabulares &#40;Tabular de SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
  [Acceso a datos de modelos tabulares](tabular-model-data-access.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Procesar base de datos, tabla o partición](process-database-table-or-partition-analysis-services.md)  
   
- [Roles de modelos tabulares &#40;SSAS Tabular&#41;](tabular-model-roles-ssas-tabular.md)  
+ [Roles de modelos tabulares &#40;Tabular de SSAS&#41;](tabular-model-roles-ssas-tabular.md)  
   
- [Particiones de modelos tabulares &#40;SSAS Tabular&#41;](tabular-model-partitions-ssas-tabular.md)  
+ [Particiones de modelos tabulares &#40;Tabular de SSAS&#41;](tabular-model-partitions-ssas-tabular.md)  
   
- [Configurar el acceso de DirectQuery para una base de datos de modelo Tabular o en memoria](enable-directquery-mode-in-ssms.md)  
+ [Configurar el acceso In-Memory o DirectQuery para una base de datos modelo tabular](enable-directquery-mode-in-ssms.md)  
   
  [Conectarse a una base de datos de modelo Tabular &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   

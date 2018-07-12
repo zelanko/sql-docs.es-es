@@ -1,5 +1,5 @@
 ---
-title: Glosario | Documentos de Microsoft
+title: Glosario | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
 - glossary [SQL Server]
 - terminology [SQL Server]
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 caps.latest.revision: 1952
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 34fce852a5a3a06342bf5e8f16f4e1cd379e6d16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 390fedf55957e0038d10579fe444bb843a057d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106162"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164336"
 ---
 # Glosario
   
@@ -109,7 +109,7 @@ ms.locfileid: "36106162"
 |bloque|Instrucción Transact-SQL delimitadas por BEGIN y END.|  
 |cursor de bloque|Cursor con un tamaño de conjunto de filas mayor que 1.|  
 |transacción de bloqueo|Transacción que hace que otra transacción sufra un error.|  
-|expresión booleana|Expresión que produce un valor booleano (verdadero o falso). Estas expresiones pueden implicar comparaciones (probar valores para la igualdad o, para valores no booleanos, el \< [menor que] o > [mayor] relación) y combinación lógica (mediante operadores booleanos como AND, OR y XOR) de expresiones booleanas.|  
+|expresión booleana|Expresión que produce un valor booleano (verdadero o falso). Estas expresiones pueden implicar comparaciones (probar valores para la igualdad o, para valores no booleanos, el \< [menor] o > [mayor] relación) y combinación lógica (mediante operadores booleanos como AND, OR y XOR) de expresiones booleanas.|  
 |operador booleano|Operador diseñado para trabajar con valores booleanos. Los cuatro operadores booleanos más comunes en programación son AND (conjunción lógica), OR (inclusión lógica), XOR (OR exclusivo) y NOT (negación lógica).|  
 |flujo asociado|Flujo de eventos que contiene toda la información necesaria para generar eventos. La información puede ser un origen de datos que ya tiene instancias o bien es suficiente para que el servidor de StreamInsight inicie el origen de datos.|  
 |rectángulo de selección|Mínima área rectangular que rodeará un trazado, una forma o un grupo de objetos.|  
@@ -294,7 +294,7 @@ ms.locfileid: "36106162"
 |conflicto de simultaneidad|Conflicto que se produce cuando se cambia el mismo elemento o la misma unidad de cambio en dos réplicas distintas que se sincronizan posteriormente.|  
 |modelo de simultaneidad|Manera en que una aplicación puede estar diseñada para justificar operaciones simultáneas que usan los mismos datos almacenados en caché. Windows Server AppFabric admite modelos de simultaneidad optimistas y pesimistas.|  
 |operación simultánea|Operación informática en la que dos o más procesos (programas) tienen el acceso al tiempo del microprocesador y, por consiguiente, se llevan a cabo casi simultáneamente. Dado que un microprocesador puede funcionar con unidades de tiempo mucho más pequeñas que las personas pueden percibir, los procesos simultáneos parece que se están produciendo simultáneamente pero no lo están realmente.|  
-|expresión condicional|Expresión que produce un valor booleano (verdadero o falso). Estas expresiones pueden implicar comparaciones (probar valores para la igualdad o, para valores no booleanos, el \< [menor que] o > [mayor] relación) y combinación lógica (mediante operadores booleanos como AND, OR y XOR) de expresiones booleanas.|  
+|expresión condicional|Expresión que produce un valor booleano (verdadero o falso). Estas expresiones pueden implicar comparaciones (probar valores para la igualdad o, para valores no booleanos, el \< [menor] o > [mayor] relación) y combinación lógica (mediante operadores booleanos como AND, OR y XOR) de expresiones booleanas.|  
 |división condicional|Restauración de una copia de seguridad completa de la base de datos, la copia de seguridad diferencial más reciente (si existe) y las copias de seguridad de registros (si existe alguna) que se han realizado desde la copia de seguridad completa de la base de datos.|  
 |archivo config|Archivo que contiene especificaciones de funcionamiento para hardware o software legibles por el equipo o que contiene información sobre otro archivo o sobre un usuario específico, como el identificador de inicio de sesión del usuario.|  
 |configuración|Cuando se refiere a una sola microcomputadora, la suma de los componentes internos y externos de un sistema, incluidos la memoria, las unidades de disco, el teclado, el vídeo y, a menudo, el hardware complementario menos crítico, como un mouse, un módem o una impresora. Para "configurar la configuración" de modo que funcione correctamente se necesita: software (sistema operativo y diversos controladores de dispositivos), las opciones del usuario establecidas a través de archivos de configuración tales como los archivos AUTOEXEC.BAT y CONFIG.SYS en equipos de IBM y compatibles y, en ocasiones, hardware (conmutadores y puentes). Aunque la configuración del sistema se puede cambiar, por ejemplo agregando más memoria o capacidad de disco, la estructura básica del sistema (su arquitectura) sigue siendo la misma.|  
@@ -1338,7 +1338,7 @@ ms.locfileid: "36106162"
 |esquema SQL de repositorio|Conjunto de tablas estándar utilizado por el motor del repositorio para administrar todos los objetos, relaciones y colecciones del repositorio.|  
 |modelo de información de tipo de repositorio|Modelo de objetos básico que representa las definiciones de tipo de repositorio de Metadata Services.|  
 |republicador|Suscriptor que publica los datos que ha recibido de un publicador.|  
-|carácter reservado|Carácter del teclado que tiene un significado especial para un programa y que, como consecuencia, no se puede usar normalmente para asignar nombres a archivos, documentos y otras herramientas generadas por usuario, como macros. Normalmente, los caracteres reservados para usos especiales son el asterisco (*), reenvían barra diagonal (/), barra diagonal inversa (\\), signo de interrogación (?) y barra vertical (&#124;).|  
+|carácter reservado|Carácter del teclado que tiene un significado especial para un programa y que, como consecuencia, no se puede usar normalmente para asignar nombres a archivos, documentos y otras herramientas generadas por usuario, como macros. Caracteres normalmente reservados para usos especiales son el asterisco (*), reenvían una barra diagonal (/), barra diagonal inversa (\\), signo de interrogación (?) y barra vertical (&#124;).|  
 |estrategia de resolución|Conjunto de criterios que el motor del repositorio evalúa de forma secuencial cuando se selecciona un objeto, donde existen varias versiones y no se especifica la información de versión en el programa que llama.|  
 |resource|Variable especial que contiene una referencia a una conexión o instrucción de base de datos.|  
 |resource|Cualquier elemento de una base de datos del servidor de informes que no es un informe, carpeta ni elemento de origen de datos compartido.|  

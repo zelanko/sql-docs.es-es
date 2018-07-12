@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 95056bd4c6902f8f727af2cd77958e461bdbcb75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd49900daf397575c90be86d0370f47824cc4d8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150526"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurar conexiones SSL en un servidor de informes en modo nativo
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] El modo nativo usa el servicio HTTP SSL (Capa de sockets seguros) para establecer conexiones cifradas con un servidor de informes. Si tiene el archivo de certificado (.cer) instalado en un almacén de certificados local en el equipo del servidor de informes, puede enlazar el certificado a una reserva de direcciones URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para admitir las conexiones con el servidor de informes en un canal cifrado.  
@@ -81,7 +81,7 @@ ms.locfileid: "36105098"
 5.  Haga clic en la dirección URL para comprobar que funciona.  
   
 ## <a name="how-certificate-bindings-are-stored"></a>Cómo se almacenan los enlaces de certificados  
- Los enlaces de certificados se almacenarán en HTTP.SYS. Una representación de los enlaces que definió también se almacenará en la `URLReservations` sección del archivo RSReportServer.config. Los valores del archivo de configuración solo son una representación de los valores reales que se especifican en otro lugar. No modifique directamente los valores en el archivo de configuración. La configuración solo aparecerá en el archivo después de utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o el proveedor de Instrumental de administración de Windows (WMI) del servidor de informes para enlazar un certificado.  
+ Los enlaces de certificados se almacenarán en HTTP.SYS. También se almacenarán en una representación de los enlaces que definió el `URLReservations` sección del archivo RSReportServer.config. Los valores del archivo de configuración solo son una representación de los valores reales que se especifican en otro lugar. No modifique directamente los valores en el archivo de configuración. La configuración solo aparecerá en el archivo después de utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o el proveedor de Instrumental de administración de Windows (WMI) del servidor de informes para enlazar un certificado.  
   
 > [!NOTE]  
 >  Si configura un enlace con un certificado SSL en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y posteriormente desea quitar el certificado del equipo, asegúrese de quitar el enlace de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] antes de quitar el certificado del equipo. De lo contrario, no podrá quitar el enlace mediante la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o WMI y recibirá el error "Parámetro no válido". Si ya ha quitado el certificado del equipo, puede utilizar la herramienta Httpcfg.exe para quitar el enlace de HTTP.SYS. Para obtener más información sobre Httpcfg.exe, consulte la documentación del producto de Windows.  

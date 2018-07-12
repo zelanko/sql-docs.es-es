@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ae6c6adad91625ba5d5e898b7da36dc9e818d893
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: cc295fcd58d3e7609989f35a382e780614e9d7a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161906"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)
   Un gráfico de columnas muestra una serie como un conjunto de barras verticales agrupadas por categorías. Un gráfico de columnas puede ser útil para:  
@@ -37,17 +37,17 @@ ms.locfileid: "36104865"
 ##  <a name="BackToTop"></a> Qué aprenderá  
  En este tutorial, aprenderá a realizar las siguientes tareas:  
   
-1.  [Crear un gráfico a partir del Asistente para gráficos](#Chart)  
+1.  [Crear un gráfico desde el Asistente para gráficos](#Chart)  
   
 2.  [Elija el tipo de gráfico](#ChartType)  
   
-3.  [Formatear y etiquetar el eje Horizontal](#Horizontal)  
+3.  [Dar formato el eje Horizontal y etiquetarlo](#Horizontal)  
   
-4.  [Mueva la leyenda](#Legend)  
+4.  [Mover la leyenda](#Legend)  
   
 5.  [Título del gráfico](#ChartTitle)  
   
-6.  [Formatear y etiquetar el eje Vertical](#Vertical)  
+6.  [Dar formato y el eje Vertical](#Vertical)  
   
 7.  [Agregar una media móvil](#Average)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36104865"
  Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Chart"></a> 1. Crear un informe de gráfico a partir del Asistente para gráficos  
- Desde el **Introducción** cuadro de diálogo, utilice el Asistente para gráficos para crear un conjunto de datos incrustado, elegir un origen de datos compartido y crear un gráfico de columnas.  
+ Desde el **Introducción** cuadro de diálogo, use el Asistente para gráficos para crear un conjunto de datos incrustado, elegir un origen de datos compartido y crear un gráfico de columnas.  
   
 > [!NOTE]  
 >  En este tutorial, la consulta contiene los valores de datos, de forma que no necesita un origen de datos externo. Esto hace que la consulta requiera bastante tiempo. En un entorno empresarial, la consulta no contendría los datos. Esto es solo con fines de aprendizaje.  
@@ -76,7 +76,7 @@ ms.locfileid: "36104865"
      Aparecerá el cuadro de diálogo **Introducción** .  
   
     > [!NOTE]  
-    >  Si el **Introducción** cuadro de diálogo no aparece, desde el **Report Builder** botón, haga clic en **nuevo**.  
+    >  Si el **Introducción** no aparece el cuadro de diálogo, desde el **Report Builder** botón, haga clic en **New**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -172,11 +172,11 @@ ms.locfileid: "36104865"
   
 3.  Haga clic en el eje horizontal y, a continuación, haga clic en **propiedades del eje Horizontal**.  
   
-4.  En el **opciones del eje** página en **intervalo de eje y el intervalo**, tipo **3** para **intervalo**. El gráfico mostrará una fecha de cada tres.  
+4.  En el **opciones del eje** página **intervalo del eje y el intervalo**, tipo **3** para **intervalo**. El gráfico mostrará una fecha de cada tres.  
   
 5.  Haga clic en **Etiquetas**.  
   
-6.  En **cambiar las opciones de ajuste automático de etiqueta de eje**, seleccione **deshabilitar el ajuste automático**.  
+6.  En **cambiar opciones de ajuste automático de etiquetas de eje**, seleccione **deshabilitar el ajuste automático**.  
   
 7.  En **Ángulo de giro de etiqueta**, seleccione **-90**.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "36104865"
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Seleccione las palabras **título del gráfico** en la parte superior del gráfico y, a continuación, escriba el siguiente texto: **pedido de venta en tiendas**.  
+2.  Seleccione las palabras **título del gráfico** en la parte superior del gráfico y, a continuación, escriba el siguiente texto: **totales de pedidos de ventas de Store**.  
   
 3.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
@@ -228,7 +228,7 @@ ms.locfileid: "36104865"
   
 3.  En la cinta de opciones, en el **inicio** ficha la **número** grupo, haga clic en el **moneda** botón. Las etiquetas del eje cambiarán para mostrar el formato de moneda.  
   
-4.  En la cinta de opciones, en el **inicio** ficha la **número** grupo, haga clic en el **Disminuir decimales** botón dos veces, para mostrar el número redondeado al dólar más cercano.  
+4.  En la cinta de opciones, en el **inicio** ficha la **número** grupo, haga clic en el **Disminuir decimales** botón dos veces para mostrar el número redondeado al dólar más próximo.  
   
 5.  Haga clic en el eje vertical y haga clic en **propiedades del eje Vertical**.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "36104865"
   
 6.  Haga clic en **borde**.  
   
-7.  En **ancho de línea**, seleccione **3 pt conseguir**.  
+7.  En **ancho de línea**, seleccione **3pt**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -278,17 +278,17 @@ ms.locfileid: "36104865"
   
 2.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-3.  Tipo de **gráfico de ventas**, presione ENTRAR y, a continuación, escriba **enero a diciembre de 2009**, por lo que el siguiente aspecto:  
+3.  Tipo **gráfico de ventas**, presione ENTRAR y, a continuación, escriba **enero a diciembre de 2009**, por lo que este aspecto:  
   
      **Gráfico de ventas**  
   
      **Enero a diciembre de 2009**  
   
-4.  Seleccione **gráfico de ventas**y haga clic en el **negrita** botón en el **fuente** sección en la **inicio** ficha de la cinta de opciones.  
+4.  Seleccione **gráfico de ventas**y haga clic en el **negrita** situado en la **fuente** sección en la **inicio** pestaña de la cinta de opciones.  
   
 5.  Seleccione **enero a diciembre de 2009**y en el **fuente** sección en la **inicio** pestaña, establezca el tamaño de fuente en **10**.  
   
-6.  (Opcional) Puede que necesite realizar la **título** tamaño para dar cabida a las dos líneas de texto desplazando hacia abajo las flechas de dos puntas al hacer clic en Centro del borde inferior del cuadro de texto.  
+6.  (Opcional) Es posible que deba realizar la **título** más alto para dar cabida a las dos líneas de texto desplazando hacia abajo las flechas de dos puntas al hacer clic en Centro del borde inferior del cuadro de texto.  
   
      Este título aparecerá en la parte superior del informe. Cuando no hay ningún encabezado de página definido, los elementos de la parte superior del cuerpo del informe son equivalentes a un encabezado de informe.  
   

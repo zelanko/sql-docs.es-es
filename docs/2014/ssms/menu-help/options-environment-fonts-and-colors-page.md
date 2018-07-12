@@ -1,5 +1,5 @@
 ---
-title: 'Opciones (entorno: página fuentes y colores) | Documentos de Microsoft'
+title: 'Opciones (entorno: página fuentes y colores) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Fonts_And_Colors
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fb667cb31bdb718044b2c4298dcc8c174f3c0c19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9a88ae6c8205ea8267ca044f6dc978a725931f59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104391"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200785"
 ---
 # <a name="options-environment-fonts-and-colors-page"></a>Opciones (entorno: página fuentes y colores)
   El cuadro de diálogo **Opciones[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] le permite establecer una combinación personalizada de fuentes y colores para diversos elementos de la interfaz de usuario de**  [!INCLUDE[msCoName](../../includes/msconame-md.md)]. En el menú **Herramientas**, haga clic en **Opciones**, expanda la carpeta **Entorno** y seleccione **Fuentes y colores**.  
@@ -35,7 +35,7 @@ ms.locfileid: "36104391"
 |Término|Definición|  
 |----------|----------------|  
 |Editor de texto|Los cambios en la configuración del estilo, tamaño y color de fuente para el Editor de texto afectan a la apariencia del editor de texto predeterminado. Los documentos abiertos en un editor de texto fuera de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no afectarán a esta configuración.|  
-|Impresora|Los cambios en la configuración del estilo, tamaño y color de fuente para la impresora afectan a la apariencia del texto de los documentos impresos.<br /><br /> Sugerencia: Si es necesario, puede seleccionar una fuente predeterminada para imprimir distinta a la se usa para mostrar en el Editor de texto. Esta opción puede ser útil para imprimir código que contenga caracteres de un solo byte o de doble byte.|  
+|Impresora|Los cambios en la configuración del estilo, tamaño y color de fuente para la impresora afectan a la apariencia del texto de los documentos impresos.<br /><br /> Sugerencia: si es necesario, puede seleccionar una fuente predeterminada para imprimir distinta a la se usa para mostrarlo en el Editor de texto. Esta opción puede ser útil para imprimir código que contenga caracteres de un solo byte o de doble byte.|  
 |[Todas las ventanas de herramientas de texto **]**|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de las ventanas de herramientas que tienen paneles de resultados en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Por ejemplo, ventana Resultados, ventana TextResults, etc.<br /><br /> Nota: Los cambios en el texto de los elementos [Todas las ventanas de herramientas de texto] no surten efecto durante la sesión en la que se realizan. Puede evaluar dichos cambios abriendo otra instancia de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |Ventana Resultados de la búsqueda|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de la ventana FindResults.|  
 |Resultados (ventana)|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de la ventana Resultados.|  
@@ -57,7 +57,7 @@ ms.locfileid: "36104391"
  Muestra los elementos en los que puede modificar el color de primer plano y de fondo.  
   
 > [!NOTE]  
->  El elemento de presentación predeterminado es texto. De esta forma, las propiedades asignadas a Texto serán reemplazadas por las propiedades asignadas a otros elementos de muestra. Por ejemplo, si asigna el color azul a **Texto** y el color verde a Identificador, todos los identificadores aparecerán en verde. En este ejemplo, las propiedades de Identificador reemplazan a las propiedades de Texto.  
+>  El elemento predeterminado es texto. De esta forma, las propiedades asignadas a Texto serán reemplazadas por las propiedades asignadas a otros elementos de muestra. Por ejemplo, si asigna el color azul a **Texto** y el color verde a Identificador, todos los identificadores aparecerán en verde. En este ejemplo, las propiedades de Identificador reemplazan a las propiedades de Texto.  
   
  Algunos elementos de muestra son los siguientes:  
   

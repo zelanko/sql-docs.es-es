@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 267bbd228565337594039162d7f01ec90a38d303
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26b6d45a190a188f9091360583cf3f73c3097455
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156726"
 ---
 # <a name="script-task"></a>Tarea Script
   La tarea Script proporciona código para realizar funciones que no están disponibles en las tareas integradas ni en las transformaciones proporcionadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La tarea Script también puede combinar funciones en un script, en lugar de usar múltiples tareas y transformaciones. La tarea Script sirve para trabajos que se deben realizar una sola vez en un paquete (o una vez por objeto enumerado), en lugar de una vez por fila de datos.  
@@ -72,13 +72,13 @@ ms.locfileid: "36104945"
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|Informa sobre los resultados de la implementación del registro en el script. La tarea escribe una entrada del registro para cada llamada a la `Log` método de la `Dts` objeto. La tarea escribe estas entradas cuando se ejecuta el código. Para más información, consulte [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
+|`ScriptTaskLogEntry`|Informa sobre los resultados de la implementación del registro en el script. La tarea escribe una entrada de registro para cada llamada a la `Log` método de la `Dts` objeto. La tarea escribe estas entradas cuando se ejecuta el código. Para más información, consulte [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea los temas siguientes:  
   
--   [Editor de la tarea de secuencia de comandos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea script &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de la tarea de secuencia de comandos &#40;página secuencia de comandos&#41;](../script-task-editor-script-page.md)  
+-   [Editor de la tarea script &#40;página secuencia de comandos&#41;](../script-task-editor-script-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

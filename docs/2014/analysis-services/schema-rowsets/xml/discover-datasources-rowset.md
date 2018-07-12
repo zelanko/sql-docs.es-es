@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_DATASOURCES | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_DATASOURCES | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DISCOVER_DATASOURCES rowset
 ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32e7aa7327cce301cc8415f45635fda651d861f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e319b05d1d9aec74b01b73b671f613a2703d900f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185262"
 ---
 # <a name="discoverdatasources-rowset"></a>Conjunto de filas DISCOVER_DATASOURCES
   Devuelve una lista de los orígenes de datos del proveedor XML for Analysis (XMLA) que están disponibles en el servidor o servicio web. Los orígenes de datos publicados se devuelven desde una dirección URL del servidor web de la aplicación. El cliente puede conectarse a uno de los orígenes de datos de esta lista.  
@@ -36,9 +36,9 @@ ms.locfileid: "36104805"
  **Se aplica a:** modelos tabulares, modelos multidimensionales  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El cliente selecciona un origen de datos estableciendo el `DataSourceInfo` propiedad en el [propiedades](../../xmla/xml-elements-properties/properties-element-xmla.md) elemento que se envía junto con el [comando](../../xmla/xml-elements-properties/command-element-xmla.md) elemento por la [Execute](../../xmla/xml-elements-methods-execute.md) método. Un cliente no debería construir el contenido de la propiedad `DataSourceInfo` que se ha de enviar al servidor. En su lugar, el cliente debería utilizar el método `Discover` para buscar los orígenes de datos que el proveedor admite. El cliente devuelve a continuación el mismo valor para la propiedad `DataSourceInfo` que recupera del conjunto de filas `DISCOVER_DATASOURCES`.  
+ El cliente selecciona un origen de datos estableciendo el `DataSourceInfo` propiedad en el [propiedades](../../xmla/xml-elements-properties/properties-element-xmla.md) elemento que se envía junto con el [comando](../../xmla/xml-elements-properties/command-element-xmla.md) elemento por el [Execute](../../xmla/xml-elements-methods-execute.md) método. Un cliente no debería construir el contenido de la propiedad `DataSourceInfo` que se ha de enviar al servidor. En su lugar, el cliente debería utilizar el método `Discover` para buscar los orígenes de datos que el proveedor admite. El cliente devuelve a continuación el mismo valor para la propiedad `DataSourceInfo` que recupera del conjunto de filas `DISCOVER_DATASOURCES`.  
   
- El `DISCOVER_DATASOURCES` filas contiene las columnas siguientes.  
+ El `DISCOVER_DATASOURCES` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Restricción|Descripción|  
 |-----------------|--------------------|-----------------|-----------------|  

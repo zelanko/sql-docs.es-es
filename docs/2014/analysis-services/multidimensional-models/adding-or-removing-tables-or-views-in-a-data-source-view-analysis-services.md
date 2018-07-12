@@ -1,5 +1,5 @@
 ---
-title: Agregar o quitar tablas o vistas de un tipo de datos del origen de vista (Analysis Services) | Documentos de Microsoft
+title: Agregar o quitar tablas o vistas de un tipo de datos del origen de vista (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.tablespane.f1
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - tables [Analysis Services], data source views
 ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f5bd0cf48e266149a0666b5e8d21d4d44efe41e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ac190f75b626cf2007dee5c885c45672276ee35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179072"
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>Agregar o quitar tablas o vistas en una vista del origen de datos (Analysis Services)
   Después de crear una vista del origen de datos (DSV) en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puede modificarla en el Diseñador de vistas del origen de datos agregando o quitando tablas y columnas, incluidas las tablas y columnas procedentes de otro origen de datos.  
@@ -39,11 +39,11 @@ ms.locfileid: "36106852"
 >  Tenga cuidado al quitar una tabla. Al quitar una tabla se eliminan todas las columnas y relaciones asociadas de la DSV y se invalidan todos los objetos enlazados a esa tabla.  
   
 ## <a name="selecting-tables-or-views-to-add-or-remove"></a>Seleccionar las tablas o vistas que se van a agregar o quitar  
- El cuadro de diálogo **Agregar o quitar tablas** le permite mover tablas o vistas entre las listas **Objetos disponibles** y **Objetos incluidos** . La lista **Objetos disponibles** incluye inicialmente las tablas o vistas del origen de datos principal que no están ya incluidas en la vista del origen de datos. Si el origen de datos principal admite la `OPENROWSET` función, también puede agregar tablas o vistas desde otros orígenes de datos en el proyecto o base de datos.  
+ El cuadro de diálogo **Agregar o quitar tablas** le permite mover tablas o vistas entre las listas **Objetos disponibles** y **Objetos incluidos** . La lista **Objetos disponibles** incluye inicialmente las tablas o vistas del origen de datos principal que no están ya incluidas en la vista del origen de datos. Si el origen de datos principales admite la `OPENROWSET` función, también puede agregar tablas o vistas desde otros orígenes de datos en el proyecto o base de datos.  
   
  Si se agrega o se quita una tabla de una DSV, también se agrega o se quita la tabla del diagrama seleccionado actualmente en la DSV. Para obtener más información sobre los diagramas, vea [Work with Diagrams in Data Source View Designer &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md).  
   
- Después de mover una tabla a la lista **Objetos incluidos** del cuadro de diálogo **Agregar o quitar tablas** , puede agregar todas las tablas relacionadas. Esta operación agrega las tablas según las restricciones de clave externa del origen de datos, si existen. Si no existen restricciones de clave externa, puede usar el `NameMatchingCriteria` propiedad de la vista del origen de datos para determinar las relaciones mediante la especificación de un criterio de coincidencia de nombres de columna de las tablas para generar relaciones probables. Si el `NameMatchingCriteria`propiedad se especifica para la vista del origen de datos, haga clic en **agregar tablas relacionadas** para agregar las tablas del origen de datos que tienen nombres de columna coincidan. Para obtener más información acerca de la configuración del `NameMatchingCriteria` propiedad, vea [vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md).  
+ Después de mover una tabla a la lista **Objetos incluidos** del cuadro de diálogo **Agregar o quitar tablas** , puede agregar todas las tablas relacionadas. Esta operación agrega las tablas según las restricciones de clave externa del origen de datos, si existen. Si no existen restricciones de clave externa, puede usar el `NameMatchingCriteria` propiedad de la vista del origen de datos para determinar las relaciones mediante la especificación de un criterio de coincidencia de nombres de columna en las tablas para generar relaciones probables. Si el `NameMatchingCriteria`propiedad se especifica para la vista del origen de datos, haga clic en **agregar tablas relacionadas** para agregar las tablas del origen de datos que tienen nombres de columna coincidan. Para obtener más información sobre la configuración de la `NameMatchingCriteria` propiedad, vea [vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md).  
   
 > [!NOTE]  
 >  Agregar o quitar objetos de una vista del origen de datos no afecta al origen de datos subyacente.  

@@ -1,5 +1,5 @@
 ---
-title: Seleccionar tipo de componente de Script | Documentos de Microsoft
+title: Seleccionar el tipo de componente de Script | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.f1
 ms.assetid: 281a36c6-c2c2-4a25-8f48-5f372ed8b63f
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8db6b8e31c29045668ddbf4e52be8698d2a96817
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 438d8da5512394241656d6c03185192cc6161eac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148256"
 ---
 # <a name="select-script-component-type"></a>Seleccionar el tipo de componente de script
   Use el cuadro de diálogo **Seleccionar el tipo de componente de script** para especificar si se creará una transformación Script que está configurada previamente para utilizarse como origen, transformación o destino.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - configuration options [Reporting Services]
 - DeviceInfo settings
@@ -20,13 +20,13 @@ ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 201a3af8cfd9acad20539327f4dc9afbfcb2a435
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734710832b6c064aa2d2a76eec0a1dda7a9b6b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150246"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizar los parámetros de extensión de representación en RSReportServer.Config
   Es posible especificar parámetros de extensión de representación en el archivo de configuración RSReportServer para invalidar el comportamiento predeterminado de la representación de los informes que se ejecutan en un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Los parámetros de extensión de representación se pueden modificar para lograr los siguientes objetivos:  
@@ -46,12 +46,12 @@ ms.locfileid: "36107829"
   
 -   El `OverrideNames` elemento define el nombre para mostrar y el idioma de la extensión de representación.  
   
--   El `DeviceInfo` estructura XML define la configuración de información de dispositivo que se utiliza una extensión de representación. La mayoría de los parámetros de extensión de representación se especifican como valores de información de dispositivo.  
+-   El `DeviceInfo` estructura XML define la configuración de información de dispositivo que usa una extensión de representación. La mayoría de los parámetros de extensión de representación se especifican como valores de información de dispositivo.  
   
  Para modificarlo, se puede usar un editor de texto. El archivo RSReportServer.config se encuentra en la carpeta \Reporting Services\Report Server\Bin. Para más información sobre cómo modificar archivos de configuración, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="changing-the-display-name"></a>Cambiar el nombre para mostrar  
- El nombre para mostrar de una extensión de representación aparece en la lista Exportar de la barra de herramientas de informe. Algunos ejemplos de nombres para mostrar predeterminados son Archivo web, Archivo TIFF y Archivo PDF de Acrobat. Puede sustituir el nombre para mostrar predeterminado por un valor personalizado especificando el `OverrideNames` elemento en los archivos de configuración. Además, si se van a definir dos instancias de una extensión de representación, se puede utilizar el elemento `OverrideNames` para distinguirlas en la lista Exportar.  
+ El nombre para mostrar de una extensión de representación aparece en la lista Exportar de la barra de herramientas de informe. Algunos ejemplos de nombres para mostrar predeterminados son Archivo web, Archivo TIFF y Archivo PDF de Acrobat. Puede reemplazar el nombre para mostrar predeterminado por un valor personalizado especificando el `OverrideNames` elemento en los archivos de configuración. Además, si se van a definir dos instancias de una extensión de representación, se puede utilizar el elemento `OverrideNames` para distinguirlas en la lista Exportar.  
   
  Dado que los nombres para mostrar se traducen, debe establecer el `Language` atributo si va a sustituir el nombre para mostrar predeterminado por un valor personalizado. Si no, se pasará por alto cualquier nombre que se especifique. El valor de idioma que se establezca debe ser válido en el equipo del servidor de informes. Por ejemplo, si el servidor de informes se ejecuta en un sistema operativo en francés, deberá especificarse "fr-FR" como valor del atributo.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36107829"
 ```  
   
 ## <a name="changing-device-information-settings"></a>Cambiar la configuración de la información del dispositivo  
- Para modificar la configuración predeterminada de la información del dispositivo que utiliza una extensión de representación ya implementada en el servidor de informes, debe incluirse la estructura XML `DeviceInfo` en los archivos de configuración. Cada extensión de representación admite valores de información de dispositivo exclusivos para esa extensión. Para ver una lista completa de la configuración de la información de dispositivo, consulte [pasar la configuración de información de dispositivo para las extensiones de representación](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
+ Para modificar la configuración predeterminada de la información del dispositivo que utiliza una extensión de representación ya implementada en el servidor de informes, debe incluirse la estructura XML `DeviceInfo` en los archivos de configuración. Cada extensión de representación admite valores de información de dispositivo exclusivos para esa extensión. Para ver una lista completa de la configuración de la información de dispositivo, consulte [pasar la configuración de información de dispositivo a las extensiones de representación](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
  En el ejemplo siguiente se muestran la estructura XML y la sintaxis que modifica la configuración predeterminada de la extensión de representación en imágenes:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36107829"
   
 -   Especifique un nombre para mostrar único de manera que los usuarios entiendan las diferencias de cada formato de salida.  
   
-     Si va a configurar varias versiones de la misma extensión, se puede asignar a cada versión un nombre único, proporcionando un valor para `OverrideNames`. En caso contrario, todas las versiones de la extensión aparentemente tendrán el mismo nombre en la lista de opciones de exportación de la barra de herramientas de informe.  
+     Si configura varias versiones de la misma extensión, se puede asignar a cada versión un nombre único, proporcionando un valor para `OverrideNames`. En caso contrario, todas las versiones de la extensión aparentemente tendrán el mismo nombre en la lista de opciones de exportación de la barra de herramientas de informe.  
   
  En el siguiente ejemplo se muestra cómo utilizar la extensión de representación en imágenes predeterminada (que genera salida TIFF) para generar salida EMF en modo vertical, junto con una segunda instancia que genera informes en formato EMF en modo horizontal. Observe cómo el nombre de cada extensión es único. Cuando pruebe este ejemplo, no olvide elegir informes que no contengan funciones interactivas, como opciones de mostrar u ocultar, matrices o vínculos de obtención de detalles (las funciones interactivas no funcionan en la extensión de representación en imágenes):  
   

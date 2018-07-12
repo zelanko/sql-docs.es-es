@@ -1,12 +1,12 @@
 ---
-title: Preparar comandos | Documentos de Microsoft
+title: Preparar comandos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ca4dcd60cb419baafddbdb1b6f8ae211c01a7061
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0bb783907259eeb5ba40ed90a71671887cab3a74
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703446"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418324"
 ---
 # <a name="preparing-commands"></a>Preparar comandos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "35703446"
   
  La propiedad de inicialización SSPROP_INIT_USEPROCFORPREP específica del proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client controla la creación del procedimiento almacenado temporal. Si el valor de la propiedad es SSPROPVAL_USEPROCFORPREP_ON o SSPROPVAL_USEPROCFORPREP_ON_DROP, el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client intenta crear un procedimiento almacenado cuando se prepara un comando. La creación del procedimiento almacenado se realiza correctamente si el usuario de la aplicación tiene suficientes permisos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Los consumidores que se desconectan con poca frecuencia, la creación de procedimientos almacenados temporales puede requerir recursos significativos de **tempdb**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de datos del sistema en el que se crean objetos temporales. Si el valor de SSPROP_INIT_USEPROCFORPREP es SSPROPVAL_USEPROCFORPREP_ ON, los procedimientos almacenados temporales creados por el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client solamente se quitan cuando la sesión que creó el comando pierde su conexión con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si esa conexión es la conexión predeterminada creada durante la inicialización del origen de datos, el procedimiento almacenado temporal solamente se quita cuando se cancela la inicialización del origen de datos.  
+ Los consumidores que se desconectan con poca frecuencia, la creación de procedimientos almacenados temporales puede requerir recursos significativos de **tempdb**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos del sistema en el que se crean objetos temporales. Si el valor de SSPROP_INIT_USEPROCFORPREP es SSPROPVAL_USEPROCFORPREP_ ON, los procedimientos almacenados temporales creados por el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client solamente se quitan cuando la sesión que creó el comando pierde su conexión con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si esa conexión es la conexión predeterminada creada durante la inicialización del origen de datos, el procedimiento almacenado temporal solamente se quita cuando se cancela la inicialización del origen de datos.  
   
  Si el valor de SSPROP_INIT_USEPROCFORPREP es SSPROPVAL_USEPROCFORPREP_ON_DROP, los procedimientos almacenados temporales del proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se quitan cuando ocurre una de estas cosas:  
   
 -   El consumidor usa **ICommandText:: SetCommandText** para indicar un nuevo comando.  
   
--   El consumidor usa **ICommandPrepare:: Unprepare** para indicar que ya no se requiere el texto del comando.  
+-   El consumidor usa **ICommandPrepare:: Unprepare** para indicar que ya no requiere el texto del comando.  
   
 -   El consumidor libera todas las referencias al objeto de comando utilizando el procedimiento almacenado temporal.  
   

@@ -1,5 +1,5 @@
 ---
-title: Configurar la recopilación de datos de uso para (PowerPivot para SharePoint | Documentos de Microsoft
+title: Configurar la recopilación de datos de uso para (PowerPivot para SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de5ac4920baf8143a575e5697896542eae817c90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06dfd95c82aab8e3fed336863c75112728150247
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149766"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurar la recolección de datos de uso para PowerPivot para SharePoint
   La recopilación de datos de uso es una característica propia de SharePoint para las granjas. PowerPivot para SharePoint usa y extiende este sistema para proporcionar informes en el panel de administración de PowerPivot que muestran cómo se usan los datos y servicios PowerPivot. Según cómo haya instalado SharePoint, la recopilación de datos de uso podría estar desactivada para la granja. El administrador de una granja debe habilitar el registro de uso para crear los datos de uso que aparecen en el Panel de administración de PowerPivot.  
   
- Para obtener información sobre datos de uso en el panel de administración de PowerPivot, vea [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Para obtener información sobre los datos de uso en el panel de administración de PowerPivot, vea [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **En este tema:**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36105006"
   
  [Especificar con qué frecuencia se notifican las estadísticas de consulta al sistema de recopilación de datos de uso](#ttr)  
   
- [Abra la página de aplicación de servicio PowerPivot para acceder a la configuración](#openconfig)  
+ [Abra la página de aplicación de servicio PowerPivot en la configuración de acceso](#openconfig)  
   
  [La configuración predeterminada para la recopilación de datos de uso de PowerPivot](#defaultconfig)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36105006"
     |**Conexiones de PowerPivot**|El evento de conexión de PowerPivot se utiliza para supervisar las conexiones al servidor de PowerPivot que se realizan en nombre de un usuario.|  
     |**Uso de datos de carga de PowerPivot**|El uso de datos de descarga de PowerPivot se utiliza para supervisar las solicitudes que cargan datos PowerPivot en la memoria del servidor. Un evento de carga se genera para los archivos de datos PowerPivot cargados desde una base de datos de contenido o desde la memoria caché.|  
     |**Uso de datos de descarga de PowerPivot**|El uso de datos de descarga de PowerPivot se utiliza para supervisar las solicitudes de descarga de un origen de datos PowerPivot después de un período de inactividad. El almacenamiento en memoria caché de un origen de datos PowerPivot en el disco se notificará como un evento de descarga.|  
-    |**Uso de consultas de PowerPivot**|Uso de consultas de PowerPivot se emplea para supervisar los tiempos de procesamiento de consultas para los datos que se ha cargado un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instancia.|  
+    |**Uso de consultas de PowerPivot**|Uso de consultas de PowerPivot se utiliza para supervisar los tiempos de procesamiento de consultas para datos que se cargan en un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instancia.|  
   
     > [!NOTE]  
     >  El estado del servidor y las operaciones de actualización de datos también generan datos de uso, pero no hay ningún evento asociado a estos procesos.  
@@ -72,7 +72,7 @@ ms.locfileid: "36105006"
   
 6.  Haga clic en **Aceptar** para guardar los cambios.  
   
-7.  Opcionalmente, puede especificar si se registran todos los mensajes o solo los errores. Para obtener más información acerca de cómo limitar mensajes de eventos, vea [configurar y ver archivos de registro de SharePoint y el registro de diagnósticos &#40;PowerPivot para SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
+7.  Opcionalmente, puede especificar si se registran todos los mensajes o solo los errores. Para obtener más información acerca de cómo limitar los mensajes de eventos, consulte [configurar y ver archivos de registro de SharePoint y el registro de diagnóstico &#40;PowerPivot para SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 ##  <a name="configdb"></a> Establecer la ubicación de los archivos de registro  
  Los datos de uso de PowerPivot se almacenan inicialmente en archivos de registro de uso en el servidor local y, a continuación, se mueven periódicamente a las bases de datos de aplicación de servicio PowerPivot. La ubicación de los archivos de registro se establece en Administración central. La ubicación predeterminada es:  
@@ -129,7 +129,7 @@ ms.locfileid: "36105006"
   
 3.  Haga clic en **Aceptar**.  
   
- Para obtener más información acerca de cómo se recopilan y almacenan los datos de uso, consulte [recopilación de datos de uso de PowerPivot](power-pivot-usage-data-collection.md).  
+ Para obtener más información acerca de cómo se recopilan y almacenan los datos de uso, consulte [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Definir las categorías de respuesta a las consultas rápida, media y lenta a efectos de los informes  
  El rendimiento del procesamiento de las consultas se mide con las categorías predefinidas que definen un ciclo de solicitud-respuesta con el tiempo que se tarda en completarse. Las categorías predefinidas son: trivial, rápido, esperado, de ejecución prolongada y superada. Cada solicitud para un servidor de PowerPivot pertenecerá a una de las categorías en función del tiempo que tarde en completarse.  
@@ -167,7 +167,7 @@ ms.locfileid: "36105006"
   
 3.  Haga clic en **Aceptar**.  
   
-##  <a name="openconfig"></a> Abra la página de aplicación de servicio PowerPivot para acceder a la configuración  
+##  <a name="openconfig"></a> Abra la página de aplicación de servicio PowerPivot en la configuración de acceso  
  Debe ser administrador de un servicio o granja para modificar las configuraciones de las aplicaciones de servicio. Si definió varias aplicaciones de servicio PowerPivot en la granja, debe modificar cada una individualmente.  
   
 1.  En Administración central de SharePoint, en **Administración de aplicaciones**, haga clic en **Administrar aplicaciones de servicio**.  

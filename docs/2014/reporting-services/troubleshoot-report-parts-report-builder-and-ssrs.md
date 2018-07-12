@@ -1,5 +1,5 @@
 ---
-title: Solucionar problemas de elementos de informe (generador de informes y SSRS) | Documentos de Microsoft
+title: Solucionar problemas de elementos de informe (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d3f8e675ff62ec000b3b9dd3c7c692c63f7fc8b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce472be61a85aa1adfad529c38cd74c8dcd9d17a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148576"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>Solucionar problemas de elementos de informe (Generador de informes y SSRS)
   Estas sugerencias pueden ayudar al trabajar con elementos de informe.  
@@ -30,7 +30,7 @@ ms.locfileid: "36107811"
  Para ver qué permisos tienen usted y su colaborador, pregunte al administrador del servidor de informes.  
   
 ## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>Cuando busco elementos de informe que cargué en un servidor de SharePoint, no los veo. ¿Por qué no?  
- Los elementos de informe que ha cargado manualmente en una biblioteca de documentos de SharePoint, en lugar de publicarlos mediante el Generador de informes, podrían no aparecer en la galería de elementos de informe. El servidor de informes utilizado para la búsqueda en la galería podría tener que sincronizarse con el contenido de la biblioteca de documentos de SharePoint. Para obtener más información, consulte [activar la característica de sincronización de archivos del servidor de informes en Administración Central de SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [libros en pantalla](http://go.microsoft.com/fwlink/?LinkId=154888) en msdn.microsoft.com.  
+ Los elementos de informe que ha cargado manualmente en una biblioteca de documentos de SharePoint, en lugar de publicarlos mediante el Generador de informes, podrían no aparecer en la galería de elementos de informe. El servidor de informes utilizado para la búsqueda en la galería podría tener que sincronizarse con el contenido de la biblioteca de documentos de SharePoint. Para obtener más información, consulte [activar la característica de sincronización de archivos de servidor de informes en Administración Central de SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [libros](http://go.microsoft.com/fwlink/?LinkId=154888) en msdn.microsoft.com.  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>¿Por qué otros no pueden ver la imagen en sus informes?  
  Si publica un elemento de informe que es un vínculo a un archivo de imagen, el elemento de informe es en realidad solo un vínculo. Si otros no pueden ver la imagen cuando agregan el elemento de informe de imagen a sus informes, puede que no dispongan de los permisos para la imagen a la que les está vinculando.  
@@ -47,6 +47,6 @@ ms.locfileid: "36107811"
  Si los elementos de informe tienen una referencia circular, no podrá publicarlos como elementos de informe. Por ejemplo, un elemento de informe señala a un conjunto de datos, que a su vez señala a un parámetro. Por último, el parámetro también señala al conjunto de datos. Tendrá que eliminar una de las referencias para poder publicar el elemento de informe.  
   
 ## <a name="see-also"></a>Vea también  
- [Elementos de informe &#40;el generador de informes SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Elementos de informe &#40;generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

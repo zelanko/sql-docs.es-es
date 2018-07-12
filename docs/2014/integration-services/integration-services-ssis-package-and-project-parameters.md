@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) parámetros | Documentos de Microsoft
+title: (SSIS) parámetros de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d477f12cdce1063f765c9b6be2f39ba1fe30a505
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cd87c7c7b64b9adda2a49bf892004502d951665
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172956"
 ---
 # <a name="integration-services-ssis-parameters"></a>Parámetros de Integration Services (SSIS)
   Los parámetros de[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) permiten asignar valores a las propiedades de los paquetes en el momento de la ejecución de los mismos. Puede crear *parámetros de proyecto* en el nivel de proyecto y *parámetros de paquete* en el nivel de paquete. Los parámetros de proyecto se usan para proporcionar cualquier entrada externa que el proyecto recibe a uno o más paquetes del proyecto. Los parámetros de paquete permiten modificar la ejecución del paquete sin tener que modificarlo ni volver a implementarlo.  
   
- En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] puede crear, modificar o eliminar parámetros del proyecto en la ventana **Project.params** . Para crear, modificar y eliminar los parámetros de paquetes, use la pestaña **Parámetros** en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Puede asociar un parámetro nuevo o existente a una propiedad de tarea con el cuadro de diálogo **Parametrizar** . Para obtener más información sobre el uso de la **Project.params** ventana y **parámetros** pestaña, vea [crear parámetros](create-parameters.md). Para obtener más información sobre la **parametrizar** cuadro de diálogo, vea [cuadro de diálogo parametrizar](parameterize-dialog-box.md).  
+ En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] puede crear, modificar o eliminar parámetros del proyecto en la ventana **Project.params** . Para crear, modificar y eliminar los parámetros de paquetes, use la pestaña **Parámetros** en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Puede asociar un parámetro nuevo o existente a una propiedad de tarea con el cuadro de diálogo **Parametrizar** . Para obtener más información sobre el uso de la **Project.params** ventana y la **parámetros** pestaña, vea [Create Parameters](create-parameters.md). Para obtener más información sobre la **parametrizar** cuadro de diálogo, vea [Parameterize Dialog Box](parameterize-dialog-box.md).  
   
 ## <a name="parameters-and-package-deployment-model"></a>Parámetros y modelo de implementación de paquetes  
  En general, si implementa un paquete con el modelo de implementación de paquetes, debe utilizar configuraciones en lugar de parámetros.  
@@ -40,7 +40,7 @@ ms.locfileid: "36108128"
   
 -   [Cuadro de diálogo Configurar](catalog/configure-dialog-box.md)  
   
--   [Ejecutar paquete, cuadro de diálogo](../../2014/integration-services/execute-package-dialog-box.md)  
+-   [Ejecutar paquete (cuadro de diálogo)](../../2014/integration-services/execute-package-dialog-box.md)  
   
 ### <a name="parameter-values"></a>Valores de parámetros  
  Puede asignar hasta tres tipos de valores para un parámetro. Cuando se inicia la ejecución del paquete, se utiliza un único valor para el parámetro y el parámetro se resuelve en un valor literal final.  
@@ -103,7 +103,7 @@ ms.locfileid: "36108128"
 ## <a name="related-tasks"></a>Related Tasks  
  [Crear parámetros](create-parameters.md)  
   
- [Establecer valores de parámetro después de implementar el proyecto](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
+ [Establecimiento de valores de parámetro después de la implementación del proyecto](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  Entrada de blog, [Sugerencia rápida de SSIS: parámetros necesarios](http://go.microsoft.com/fwlink/?LinkId=239781), en mattmasson.com.  

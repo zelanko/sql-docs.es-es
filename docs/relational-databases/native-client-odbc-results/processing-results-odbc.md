@@ -1,12 +1,12 @@
 ---
-title: Procesar resultados (ODBC) | Documentos de Microsoft
+title: Procesar resultados (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 08a76e5a2c7a69fa2c333f1848698e008b4f1eb9
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d3b7ee0b89be4fc55eac3d14b7c85ce70476ce5e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701916"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423964"
 ---
 # <a name="processing-results-odbc"></a>Procesar los resultados (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "35701916"
   
  Las funciones de catálogo de ODBC también pueden recuperar los datos. Por ejemplo, [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md) recupera datos acerca de las columnas del origen de datos. Estos conjuntos de resultados pueden contener ninguna o más filas.  
   
- Otras instrucciones SQL, como GRANT o REVOKE, no devuelven conjuntos de resultados. Para estas instrucciones, el código de retorno de **SQLExecute** o **SQLExecDirect** suele ser la única indicación de la instrucción fue correcta.  
+ Otras instrucciones SQL, como GRANT o REVOKE, no devuelven conjuntos de resultados. Para estas instrucciones, el código de retorno de **SQLExecute** o **SQLExecDirect** suele ser la única indicación de la instrucción es correcta.  
   
- Cada instrucción INSERT, UPDATE y DELETE devuelve un conjunto de resultados que contiene solamente el número de filas afectado por la modificación. Este recuento estará disponible cuando la aplicación llama [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md). ODBC 3. *x* aplicaciones deben llamar a **SQLRowCount** para recuperar el resultado conjunto o [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) para cancelarla. Cuando una aplicación ejecuta un lote o procedimiento almacenado que contiene varias instrucciones INSERT, UPDATE o DELETE, el conjunto de resultados de cada instrucción de modificación debe procesarse utilizando **SQLRowCount** o cancelarse utilizando **SQLMoreResults**. Estos recuentos se pueden cancelar incluyendo una instrucción SET NOCOUNT ON en el lote o procedimiento almacenado.  
+ Cada instrucción INSERT, UPDATE y DELETE devuelve un conjunto de resultados que contiene solamente el número de filas afectado por la modificación. Este recuento se realiza llamadas disponibles cuando la aplicación [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md). ODBC 3. *x* aplicaciones deben llamar a **SQLRowCount** recuperar el resultado establecido o [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) para cancelarla. Cuando una aplicación ejecuta un lote o procedimiento almacenado que contiene varias instrucciones INSERT, UPDATE o DELETE, el conjunto de resultados de cada instrucción de modificación deben procesarse utilizando **SQLRowCount** o cancelarse utilizando **SQLMoreResults**. Estos recuentos se pueden cancelar incluyendo una instrucción SET NOCOUNT ON en el lote o procedimiento almacenado.  
   
- Transact-SQL incluye la instrucción SET NOCOUNT. Cuando la opción NOCOUNT está activada, SQL Server no devuelve los recuentos de las filas afectadas por una instrucción y **SQLRowCount** devuelve 0. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión del controlador ODBC de Native Client presenta un determinado controlador [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) opción, SQL_SOPT_SS_NOCOUNT_STATUS, para informar de si la opción NOCOUNT está activada o desactivada. En cualquier momento **SQLRowCount** devuelve 0, la aplicación debe probar SQL_SOPT_SS_NOCOUNT_STATUS. Si se devuelve SQL_NC_ON, el valor de 0 en **SQLRowCount** solamente indica que SQL Server no se ha devuelto un recuento de filas. Si devuelve sql_nc_off, significa que NOCOUNT está desactivado y el valor de 0 en **SQLRowCount** indica que la instrucción no afectó a ninguna fila. Las aplicaciones no deben mostrar el valor de **SQLRowCount** cuando SQL_SOPT_SS_NOCOUNT_STATUS es SQL_NC_OFF. Los procedimientos almacenados o lotes de gran tamaño pueden contener varias instrucciones SET NOCOUNT de modo que los programadores no puedan suponer que SQL_SOPT_SS_NOCOUNT_STATUS sigue siendo constante. La opción debe probarse cada vez que **SQLRowCount** devuelve 0.  
+ Transact-SQL incluye la instrucción SET NOCOUNT. Cuando la opción NOCOUNT está activada, SQL Server no devuelve los recuentos de las filas afectadas por una instrucción y **SQLRowCount** devuelve 0. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión del controlador ODBC de Native Client introduce una específicos del controlador [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) opción SQL_SOPT_SS_NOCOUNT_STATUS, para informar sobre si la opción NOCOUNT está activada o desactivada. En cualquier momento **SQLRowCount** devuelve 0, la aplicación debe probar SQL_SOPT_SS_NOCOUNT_STATUS. Si se devuelve SQL_NC_ON, el valor de 0 en **SQLRowCount** sólo indica que SQL Server no ha devuelto un recuento de filas. Si devuelve sql_nc_off, significa que NOCOUNT está desactivado y el valor de 0 en **SQLRowCount** indica que la instrucción no afectó a ninguna fila. Las aplicaciones no deben mostrar el valor de **SQLRowCount** cuando SQL_SOPT_SS_NOCOUNT_STATUS es SQL_NC_OFF. Los procedimientos almacenados o lotes de gran tamaño pueden contener varias instrucciones SET NOCOUNT de modo que los programadores no puedan suponer que SQL_SOPT_SS_NOCOUNT_STATUS sigue siendo constante. La opción debe probarse cada vez **SQLRowCount** devuelve 0.  
   
- Otras instrucciones Transact-SQL devuelven los datos en mensajes, en lugar de en conjuntos de resultados. Cuando el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC Native Client recibe estos mensajes, devuelve SQL_SUCCESS_WITH_INFO para permitir que la aplicación saber que los mensajes informativos están disponibles. A continuación, puede llamar la aplicación **SQLGetDiagRec** para recuperar estos mensajes. Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que funcionan de esta manera son:  
+ Otras instrucciones Transact-SQL devuelven los datos en mensajes, en lugar de en conjuntos de resultados. Cuando el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client recibe estos mensajes, devuelve SQL_SUCCESS_WITH_INFO para permitir que la aplicación sabe que están disponibles los mensajes informativos. A continuación, puede llamar la aplicación **SQLGetDiagRec** para recuperar estos mensajes. Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que funcionan de esta manera son:  
   
 -   DBCC  
   
@@ -55,7 +55,7 @@ ms.locfileid: "35701916"
   
 -   RAISERROR  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC Native Client devuelve SQL_ERROR en una instrucción RAISERROR con una gravedad de 11 o superior. Si la gravedad del RAISERROR es 19 o superior, se interrumpe además la conexión.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client devuelve SQL_ERROR en un RAISERROR con una gravedad de 11 o superior. Si la gravedad del RAISERROR es 19 o superior, se interrumpe además la conexión.  
   
  Para procesar los conjuntos de resultados de una instrucción SQL, la aplicación:  
   
@@ -85,6 +85,6 @@ ms.locfileid: "35701916"
   
 ## <a name="see-also"></a>Vea también  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Temas "Cómo..." de resultados para procesar &#40;ODBC&#41;](http://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
+ [Temas de procedimientos de los resultados de procesamiento &#40;ODBC&#41;](http://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
   
   

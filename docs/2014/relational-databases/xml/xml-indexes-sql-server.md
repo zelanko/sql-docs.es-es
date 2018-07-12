@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing indexes
 - deleting indexes
@@ -34,18 +34,18 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: aeb1c0f282e0cb46bcb1e35af933a67b84eb4e0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6842ef037bd8543a569449282886b9f943b8114f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152086"
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
-  Se pueden crear índices XML en `xml` columnas de tipo de datos. Se indizan todas las etiquetas, los valores y las rutas de acceso de las instancias XML de la columna y se mejora el rendimiento de las consultas. Un índice XML puede afectar positivamente a una aplicación en estas situaciones:  
+  Pueden crear índices XML en `xml` columnas de tipo de datos. Se indizan todas las etiquetas, los valores y las rutas de acceso de las instancias XML de la columna y se mejora el rendimiento de las consultas. Un índice XML puede afectar positivamente a una aplicación en estas situaciones:  
   
 -   Las consultas en columnas XML son habituales en su carga de trabajo. Es preciso considerar el costo de mantenimiento del índice XML durante la modificación de datos.  
   
@@ -81,7 +81,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
 ## <a name="primary-xml-index"></a>Índice XML principal  
  El índice XML principal incluye todas las etiquetas, los valores y las rutas de acceso de las instancias XML de una columna XML. Para crear un índice XML principal, la tabla que contiene la columna XML, debe tener un índice clúster en la clave principal de la tabla. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza esta clave principal para correlacionar las filas del índice XML principal con las filas de la tabla que contiene la columna XML.  
   
- El índice XML principal es una representación dividida y persistente de los BLOBs de XML en la `xml` columna tipo de datos. Para cada BLOB XML de la columna, el índice crea varias filas de datos. El número de filas del índice es prácticamente igual al número de nodos del BLOB XML. Cuando una consulta recupera la instancia XML completa, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona la instancia a partir de la columna XML. Las consultas dentro de instancias XML usan el índice XML principal y pueden devolver valores escalares o subárboles XML utilizando el propio índice.  
+ El índice XML principal es una representación dividida y persistente de los BLOBs de XML en el `xml` columna tipo de datos. Para cada BLOB XML de la columna, el índice crea varias filas de datos. El número de filas del índice es prácticamente igual al número de nodos del BLOB XML. Cuando una consulta recupera la instancia XML completa, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona la instancia a partir de la columna XML. Las consultas dentro de instancias XML usan el índice XML principal y pueden devolver valores escalares o subárboles XML utilizando el propio índice.  
   
  Cada fila almacena la siguiente información acerca del nodo:  
   
@@ -187,7 +187,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  En esta situación, se conoce el valor de búsqueda para <`number`>, pero puede aparecer en cualquier lugar de la instancia XML como elemento secundario del elemento <`telephoneNumber`>. Este tipo de consulta puede beneficiarse de una búsqueda de índice basada en un valor específico.  
   
 ### <a name="property-secondary-index"></a>Índice secundario PROPERTY  
- Las consultas que recuperan uno o varios valores de instancias XML individuales pueden beneficiarse del índice PROPERTY. Este escenario se produce al recuperar propiedades de objeto mediante la **value()** método de la `xml` tipo y cuando se conoce el valor de clave principal del objeto.  
+ Las consultas que recuperan uno o varios valores de instancias XML individuales pueden beneficiarse del índice PROPERTY. Este escenario se produce cuando se recuperan las propiedades del objeto utilizando el **value()** método de la `xml` tipo y cuando se conoce el valor de clave principal del objeto.  
   
  El índice PROPERTY se agrega a columnas (PK, Path y valor de nodo) del índice XML principal, donde PK es la clave principal de la tabla base.  
   
@@ -202,7 +202,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Salvo por las diferencias descritas más adelante en este tema, crear un índice XML en una`xml` columna de tipo es similar a crear un índice en una no`xml` columna de tipo. Las siguientes instrucciones DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden usarse para crear y administrar índices XML:  
+ Salvo por las diferencias descritas más adelante en este tema, crear un índice XML en un`xml` columna de tipo es similar a crear un índice en que no es`xml` columna de tipo. Las siguientes instrucciones DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden usarse para crear y administrar índices XML:  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   

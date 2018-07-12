@@ -1,5 +1,5 @@
 ---
-title: Elegir datos para minería de datos | Documentos de Microsoft
+title: Elegir datos para minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content type [data mining]
 - nested tables
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - discretized
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 014c39cea8baea721c51308e65f894e8216ae7e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d9466397115e3562deebb91b5b3e7506bae09c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170302"
 ---
 # <a name="choosing-data-for-data-mining"></a>Elegir datos para minería de datos
   Cuando comienza la minería de datos, podría preguntar "¿cuántos datos necesito?" o "¿hay algún requisito especial que debo conocer al limpiar o dar formato a mis datos?".  
@@ -67,7 +67,7 @@ ms.locfileid: "36107124"
   
 -   Cree varias versiones de los datos y genere varios modelos.  
   
- Para obtener sugerencias adicionales sobre cómo seleccionar, modificar y revisar los datos, consulte [lista de comprobación de preparación para la minería de datos](checklist-of-preparation-for-data-mining.md).  
+ Para obtener sugerencias adicionales sobre cómo seleccionar, modificar y revisar los datos, vea [lista de comprobación de preparación para la minería de datos](checklist-of-preparation-for-data-mining.md).  
   
 ### <a name="how-much-data-do-i-need"></a>¿Cuántos datos necesito?  
  Una regla general es no tener nunca menos de 50-100 filas de datos para los tipos y escenarios de modelos más simples. Por ejemplo, si va a predecir un solo atributo mediante un modelo Bayes naive y el conjunto de datos es correcto, es posible que pueda generar predicciones bastante precisas con 50-100 filas de datos.  
@@ -95,7 +95,7 @@ ms.locfileid: "36107124"
   
  No es posible crear un modelo de minería de datos con datos continuos y después tratar la columna como discreta. Los dos conjuntos de datos deben procesarse de forma diferente y se tratan en el back-end como estructuras de minería de datos independientes. Si no está seguro de la forma adecuada de tratar los datos, debe crear modelos independientes que controlen los datos de forma diferente. En cualquier caso, es conveniente obtener una perspectiva distinta de los datos y quizás resultados diferentes.  
   
- **Convertir números a texto**  
+ **Convertir números en texto**  
   
  Con mucha frecuencia, valores que deberían ser discretos, como Hombre y Mujer, se representan como datos numéricos mediante las etiquetas 1 y 2. Normalmente, esta codificación se realiza para simplificar la entrada de datos o ahorrar espacio de almacenamiento en una base de datos, pero puede llevar a ambigüedad acerca de la naturaleza o del significando de los valores. Es más, dado que los valores discretos se almacenan como números, al mover datos de una aplicación a otra podría hallar errores de conversión de tipo de datos, y los valores podrían calcularse o, por el contrario, ser tratados como continuos. Para evitar estos problemas, antes de comenzar la minería de datos, debería volver a convertir las etiquetas numéricas en etiquetas de texto discretas.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36107124"
   
  De forma predeterminada, cuando se importan datos numéricos en [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel, los números se almacenan en un formato decimal con dos posiciones decimales. Si este no es un formato de número adecuado, debería cambiar a otro formato numérico o modificar el número de decimales.  
   
- Una opción consiste en usar la [cambiar etiquetas](relabel-sql-server-data-mining-add-ins.md) herramienta para cambiar la manera en que los números se muestran o agrupan.  
+ Una opción consiste en usar el [cambiar etiquetas](relabel-sql-server-data-mining-add-ins.md) herramienta para cambiar la manera en que los números se muestran o agrupan.  
   
  No obstante, si los datos son demasiado complejos como para procesarlos con la herramienta **Cambiar etiquetas** , puede usar las funciones numéricas de Excel para convertir los datos en rangos discretos, guardar el resultado en una columna independiente y, posteriormente, usar la columna de datos discretos para la clasificación.  
   
@@ -160,17 +160,17 @@ ms.locfileid: "36107124"
   
 -   Este tipo de modelo tampoco puede predecir valores continuos. Por tanto, si desea predecir un número continuo como los ingresos (por ejemplo) primero debe discretizar los valores en rangos significativos. Si no está seguro de cuáles son los intervalos adecuados, puede usar el algoritmo de clústeres para identificar los grupos de números en los datos.  
   
--   Cuando se usa un asistente basado en este algoritmo (como [analizar Influenciadores clave &#40;herramientas de análisis de tabla para Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)), las columnas que son continuas se discretizarán por el asistente se.  
+-   Cuando se usa un asistente basado en este algoritmo (como [analizar Influenciadores clave &#40;herramientas de análisis de tabla para Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)), las columnas que son continuas se discretizarán por el asistente le.  
   
--   Si compila un modelo Bayes Naive utilizando la [avanzadas de modelado &#40;complementos minería de datos para Excel&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) opción, las columnas numéricas se quitarán del modelo. Si desea evitar este problema, use la [cambiar etiquetas &#40;complementos de minería de datos de SQL Server&#41; ](relabel-sql-server-data-mining-add-ins.md) herramienta para crear una nueva columna con valores discretizados.  
+-   Si compila un modelo Bayes Naive utilizando la [avanzadas de modelado &#40;complementos minería de datos para Excel&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) opción, las columnas numéricas se quitarán del modelo. Si desea evitar este problema, utilice el [cambiar etiquetas &#40;complementos de minería de datos de SQL Server&#41; ](relabel-sql-server-data-mining-add-ins.md) herramienta para crear una nueva columna con valores discretizados.  
   
  **Modelos de agrupación en clústeres**  
   
--   Las herramientas de agrupación en clústeres ([Asistente para clúster &#40;complementos minería de datos para Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) y [detectar categorías &#40;herramientas de análisis de tabla para Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)) no se puede usar continua números, pero ambas herramientas discretizarán automáticamente las columnas numéricas para usted.  
+-   Las herramientas de agrupación en clústeres ([Asistente para clúster &#40;complementos minería de datos para Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) y [detectar categorías &#40;herramientas de análisis de tabla para Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)) también no se puede usar continua números, pero ambas herramientas discretizarán automáticamente las columnas numéricas para usted.  
   
 -   Ambas herramientas le ofrecen la opción de elegir el número de categorías de salida en los resultados, pero si desea controlar la manera en la que se agrupan los valores de columnas individuales, debe crear una nueva columna con la agrupación que desee.  
   
- **Modelos de predicción**  
+ **Los modelos de pronóstico**  
   
 -   Todas las herramientas de pronóstico requieren que se prediga un número continuo. No puede predecir un número que se ha guardado como texto.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "36107124"
  `Continuous`  
  La columna contiene valores que representan datos numéricos en una escala que permite valores intermedios. Una columna continua representa medidas escalables; además, es posible que los datos contengan un número infinito de valores fraccionarios. Una columna de temperaturas es un ejemplo de una columna de atributos continua.  
   
- El `Continuous` tipo de contenido se puede utilizar con los siguientes tipos de datos: `Date`, `Double`, y `Long`.  
+ El `Continuous` tipo de contenido puede usarse con los siguientes tipos de datos: `Date`, `Double`, y `Long`.  
   
  `Discretized`  
  La columna contiene valores que representan grupos de valores que se han derivado de una columna continua. Los cubos se tratan como si fueran valores **ordenados** y discretos.  
@@ -209,7 +209,7 @@ ms.locfileid: "36107124"
   
  Normalmente, la columna de clave es un identificador numérico o de texto que no debe utilizarse para el análisis, sino para realizar el seguimiento de los registros. Las excepciones son las claves de serie temporal y las claves de secuencia.  
   
- **Claves de tabla anidada** se utiliza únicamente al obtener datos de un origen de datos externo que se ha definido como un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vista del origen de datos. Para obtener más información sobre las tablas anidadas, vea [ http://msdn.microsoft.com/library/ms175659.aspx ](http://msdn.microsoft.com/library/ms175659.aspx):  
+ **Claves de tabla anidada** se usan únicamente al obtener datos desde un origen de datos externo definido como un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vista del origen de datos. Para obtener más información sobre las tablas anidadas, vea [ http://msdn.microsoft.com/library/ms175659.aspx ](http://msdn.microsoft.com/library/ms175659.aspx):  
   
  Este tipo de contenido se puede utilizar con los siguientes tipos de datos: `Date`, `Double`, `Long` y `Text`.  
   
@@ -228,7 +228,7 @@ ms.locfileid: "36107124"
   
  Lo que significa es que cada fila de datos contiene realmente una tabla de datos anidada, con una o más columnas y una o más filas.  
   
- Las tablas anidadas son muy prácticas, pero se pueden usar únicamente con la [avanzadas de modelado &#40;complementos minería de datos para Excel&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) opciones de modelado. Por ejemplo, los datos de ejemplo para la [Asistente asociar &#40;cliente de minería de datos para Excel&#41; ](associate-wizard-data-mining-client-for-excel.md) asistente y [análisis de cesta de la compra &#40;herramientas de análisis de tabla para Excel&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md) herramienta contiene los datos que se ha aplanado de una tabla anidada.  
+ Las tablas anidadas son muy útiles, pero se puede utilizar solo con el [avanzadas de modelado &#40;complementos minería de datos para Excel&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) opciones de modelado. Por ejemplo, los datos de ejemplo para el [Asistente asociar &#40;cliente de minería de datos para Excel&#41; ](associate-wizard-data-mining-client-for-excel.md) asistente y [análisis de cesta de la compra &#40;herramientas de análisis de tabla para Excel&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md) herramienta contiene los datos que se han aplanado de una tabla anidada.  
 
   
   

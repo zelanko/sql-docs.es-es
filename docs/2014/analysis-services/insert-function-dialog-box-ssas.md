@@ -1,5 +1,5 @@
 ---
-title: Insertar función, cuadro de diálogo (SSAS) | Documentos de Microsoft
+title: Insertar función, cuadro de diálogo (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.INSERTFUNCTIONDB.F1
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf09d97be59c09e4ca727762c9be04d54fcd3cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77045c8ec5b542f8a01829adaa8074724a693092
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159676"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Cuadro de diálogo Insertar función (SSAS)
   El cuadro de diálogo **Insertar función** le permite elegir funciones en una lista y usarlas para generar fórmulas. Para obtener acceso a este cuadro de diálogo desde el diseñador de modelos, haga clic en el botón de función (**fx**) de la barra de fórmulas situada encima de cada tabla. Para obtener más información sobre cómo elegir las funciones que puede usar en las fórmulas, vea Introducción a DAX y Generar una fórmula.  
@@ -54,6 +54,6 @@ ms.locfileid: "36106862"
  El cuadro de diálogo **Insertar función** solo está disponible cuando se está generando una fórmula. Puede crear los cálculos en una columna calculada, en una tabla dinámica o en un gráfico dinámico. Las fórmulas que genera expresamente para usarse en una tabla dinámica también se denominan *medidas*. Para obtener más información, vea [Crear una columna calculada &#40;SSAS tabular&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md) y [Crear y administrar medidas &#40;SSAS tabular&#41;](tabular-models/measures-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Cálculos &#40;SSAS Tabular&#41;](tabular-models/calculations-ssas-tabular.md)  
+ [Cálculos &#40;Tabular de SSAS&#41;](tabular-models/calculations-ssas-tabular.md)  
   
   

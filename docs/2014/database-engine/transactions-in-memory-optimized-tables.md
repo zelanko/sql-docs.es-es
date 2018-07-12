@@ -1,5 +1,5 @@
 ---
-title: Las transacciones en tablas optimizadas en memoria | Documentos de Microsoft
+title: Las transacciones en tablas optimizadas para memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
 caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 7a1674d843f9701cf9eb2b2c41dad3dd4cbf7a0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4f3f8fcac44dc238440006eddaf44681f8cbaee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158876"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transacciones en tablas con optimización para memoria
   La versión de las filas de las tablas basadas en disco (con el aislamiento de instantánea o READ_COMMITTED_SNAPSHOT) proporciona una forma de control de simultaneidad optimista. Los lectores y los escritores no se bloquean entre sí. Con las tablas optimizadas para memoria, los escritores no bloquean a los escritores. Con las versiones de fila de las tablas basadas en disco, una transacción cierra la fila y se bloquean las transacciones simultáneas que intentan actualizar la fila. Con las tablas optimizadas para memoria, no hay bloqueos. En su lugar, si dos transacciones intentan actualizar la misma fila, se produciría un conflicto de escritura/escritura (error 41302).  
@@ -136,6 +136,6 @@ Duración de una transacción que tiene acceso a tablas optimizadas para memoria
 -   Las tablas con optimización para memoria no admiten bloqueos. Los bloqueos explícitos con sugerencias de bloqueo (como TABLOCK, XLOCK, ROWLOCK) no se admiten con las tablas optimizadas para memoria.  
   
 ## <a name="see-also"></a>Vea también  
- [Descripción de las transacciones en tablas optimizadas en memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)  
+ [Descripción de las transacciones en tablas optimizadas para memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
   

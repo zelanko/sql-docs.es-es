@@ -1,5 +1,5 @@
 ---
-title: 'Lección 3: Cargar una definición de informe desde el servidor de informes | Documentos de Microsoft'
+title: 'Lección 3: Cargar una definición de informe desde el servidor de informes | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
 caps.latest.revision: 16
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 912a149542133a4c2bbdf4dfecde2ac0313defd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2963895811f8567f5142ed9b49137123390ec8d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149436"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Lección 3: Cargar una definición de informe desde el servidor de informes
   Una vez que haya creado el proyecto y generado las clases con el esquema RDL, estará listo para cargar una definición de informe desde el servidor de informes.  
   
 ### <a name="to-load-a-report-definition"></a>Para cargar una definición de informe  
   
-1.  Agregue un campo privado en la parte superior de la `ReportUpdater` clase (módulo si utilizas [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) para la `Report` clase. Este campo se utilizará para mantener una referencia al informe que se ha cargado desde el servidor de informes para la duración de la aplicación.  
+1.  Agregue un campo privado en la parte superior de la `ReportUpdater` clase (módulo si usas [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) para el `Report` clase. Este campo se utilizará para mantener una referencia al informe que se ha cargado desde el servidor de informes para la duración de la aplicación.  
   
     ```csharp  
     private Report _report;  
@@ -101,7 +101,7 @@ ms.locfileid: "36108230"
     ```  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- En la siguiente lección escribirá el código para actualizar la definición de informe que se cargó desde el servidor de informes. Vea [lección 4: actualizar la definición de informe mediante programación](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
+ En la siguiente lección escribirá el código para actualizar la definición de informe que se cargó desde el servidor de informes. Consulte [lección 4: actualizar la definición de informe mediante programación](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Actualizar informes con clases generadas a partir del esquema RDL &#40;Tutorial de SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

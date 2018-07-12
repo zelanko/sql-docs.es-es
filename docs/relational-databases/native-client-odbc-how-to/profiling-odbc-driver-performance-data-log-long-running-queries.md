@@ -1,12 +1,12 @@
 ---
-title: Registrar consultas de larga duración (ODBC) | Documentos de Microsoft
+title: Registrar consultas de larga ejecución (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9dab917b4adbbb186b916f68f74481b4a3ccbf8b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 79bfcc0eb68dd60752078e001c805083d111181f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701026"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431814"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Generación de perfiles ODBC Driver Performance Data - registrar las consultas de larga ejecución
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35701026"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Para registrar las consultas de ejecución prolongada mediante el Administrador de ODBC  
   
-1.  En **el Panel de Control**, haga doble clic en **herramientas administrativas** y, a continuación, haga doble clic en **orígenes de datos (ODBC)**. (Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema).  
+1.  En **Panel de Control**, haga doble clic en **herramientas administrativas** y, a continuación, haga doble clic en **orígenes de datos (ODBC)**. (Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema).  
   
 2.  Haga clic en el **DSN de usuario**, **DSN de sistema**, o **DSN de archivo** ficha.  
   
@@ -43,15 +43,15 @@ ms.locfileid: "35701026"
   
 4.  Haga clic en **configurar**.  
   
-5.  En el Microsoft SQL Server Configure DSN Wizard, vaya a la página con **guardar consultas de larga duración en el archivo de registro**.  
+5.  En el Microsoft SQL Server Configure DSN Wizard, vaya a la página con **guardar consultas de larga ejecución en el archivo de registro**.  
   
-6.  Seleccione **guardar consultas de larga duración en el archivo de registro**. En el cuadro, coloque el nombre del archivo donde se deben registrar las consultas de ejecución prolongada. Si lo desea, haga clic en **examinar** para examinar el sistema de archivos para el registro de consultas.  
+6.  Seleccione **guardar consultas de larga ejecución en el archivo de registro**. En el cuadro, coloque el nombre del archivo donde se deben registrar las consultas de ejecución prolongada. Si lo desea, haga clic en **examinar** para examinar el sistema de archivos para el registro de consultas.  
   
-7.  Establecer un intervalo de tiempo de espera de consulta, en milisegundos, en el **tiempo máximo de consulta (milisegundos)** cuadro.  
+7.  Establezca un intervalo de tiempo de espera de consulta, en milisegundos, en el **tiempo máximo de consulta (milisegundos)** cuadro.  
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Para registrar los datos de las consultas de ejecución prolongada mediante programación  
   
-1.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_LOG y la ruta y el nombre completo del archivo de registro de consultas de larga duración. Por ejemplo:  
+1.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_LOG y la ruta de acceso y el nombre completo del archivo de registro de consultas de larga ejecución. Por ejemplo:  
   
     ```  
     C:\\Odbcqry.log  
@@ -59,9 +59,9 @@ ms.locfileid: "35701026"
   
 2.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_INTERVAL y establézcalo en el intervalo de tiempo de espera, en milisegundos.  
   
-3.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY y SQL_PERF_START para iniciar el registro de consultas de larga duración.  
+3.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY y SQL_PERF_START para iniciar el registro de consultas de larga ejecución.  
   
-4.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY y SQL_PERF_STOP para detener el registro de consultas de larga duración.  
+4.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY y SQL_PERF_STOP para detener el registro de consultas de larga ejecución.  
   
 ## <a name="example"></a>Ejemplo  
  Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384)). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
@@ -224,6 +224,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Temas "Cómo..." del rendimiento de controlador ODBC de generación de perfiles &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [Generación de perfiles de temas de procedimientos de ODBC Driver Performance &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

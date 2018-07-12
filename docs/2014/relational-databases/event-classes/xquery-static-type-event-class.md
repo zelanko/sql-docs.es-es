@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - XQuery Static Type event class
 ms.assetid: 30df7ba9-1e5f-432b-b90b-4310ef0473c0
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ee181ccdeb3411f30845e25652b8f309a4c8001f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2497810ab4c07358ad178cef4c603d3188fa89dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149856"
 ---
 # <a name="xquery-static-type-event-class"></a>XQuery Static Type, clase de eventos
   La clase de eventos XQuery Static Type tiene lugar cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una expresión XQuery. Esta clase de eventos proporciona el tipo estático de la expresión XQuery.  

@@ -1,5 +1,5 @@
 ---
-title: Elemento CrossProduct (XMLA) | Documentos de Microsoft
+title: Elemento CrossProduct (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CrossProduct element
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1324a3c9449383301242ab6d0e76f94c636d9b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a0d76cc463d39a3b33de41f1c342f5d9f8f800bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278254"
 ---
 # <a name="crossproduct-element-xmla"></a>Elemento CrossProduct (XMLA)
-  Contiene un producto cruzado entre los conjuntos ordenados de miembros de cada jerarquía para un [eje](axis-element-xmla.md) elemento que usa el [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) tipo de datos, devuelto por la [Execute](../xml-elements-methods-execute.md) método.  
+  Contiene un producto cruzado entre los conjuntos ordenados de miembros de cada jerarquía para un [eje](axis-element-xmla.md) elemento que usa el [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) tipo de datos devuelto por la [Execute](../xml-elements-methods-execute.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -69,13 +69,13 @@ ms.locfileid: "36105485"
   
 |Attribute|Descripción|  
 |---------------|-----------------|  
-|Tamaño|Necesario `Integer` atributo. Indica el número de tuplas contenido en el producto cruzado representado por el elemento `CrossProduct`.|  
+|Tamaño|Requiere `Integer` atributo. Indica el número de tuplas contenido en el producto cruzado representado por el elemento `CrossProduct`.|  
   
 ## <a name="remarks"></a>Notas  
- Cuando una aplicación cliente establece el `AxisFormat` propiedad *ClusterFormat*, los miembros en cada eje se dividen en clústeres en el que cada uno representa un producto cruzado entre los conjuntos ordenados de miembros de cada jerarquía. Un elemento `CrossProduct` representa cada clúster. Cada elemento `CrossProduct` contiene un elemento `Members` para cada jerarquía del eje. Un elemento `CrossProduct` puede contener los miembros de una sola jerarquía.  
+ Cuando una aplicación cliente establece el `AxisFormat` propiedad *ClusterFormat*, los miembros en cada eje se dividen en clústeres en el que cada clúster representa un producto cruzado entre los conjuntos ordenados de miembros de cada jerarquía. Un elemento `CrossProduct` representa cada clúster. Cada elemento `CrossProduct` contiene un elemento `Members` para cada jerarquía del eje. Un elemento `CrossProduct` puede contener los miembros de una sola jerarquía.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra la estructura de la `CrossProduct` elemento cuando un cliente especifica *ClusterFormat* para el `AxisFormat` propiedad XMLA, dado los siguientes miembros para el eje:  
+ El ejemplo siguiente muestra la estructura de la `CrossProduct` elemento cuando un cliente especifica *ClusterFormat* para el `AxisFormat` propiedad XMLA, dado los siguientes miembros para el eje:  
   
 ||||||  
 |-|-|-|-|-|  

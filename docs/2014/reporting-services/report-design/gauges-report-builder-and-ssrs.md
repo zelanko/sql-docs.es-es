@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10226"
 - "10264"
@@ -159,15 +159,15 @@ f1_keywords:
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8bf2cca5f2d87f6404555f170272cc18e244d2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ae0eda9c82e610289c6fad858578aaac440bbb7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150286"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Generador de informes y SSRS)
   La región de datos de medidor es una región de datos unidimensional que muestra un solo valor del conjunto de datos. Los medidores siempre se sitúan dentro de un panel de medidores, en el que pueden agregarse medidores secundarios o adyacentes. En el mismo panel de medidores, puede crear varios medidores que comparten funciones comunes como el filtrado, la agrupación o la ordenación.  
@@ -244,7 +244,7 @@ ms.locfileid: "36108279"
     > [!NOTE]  
     >  Este método no es aplicable cuando no hay ningún puntero en el medidor o el informe contiene más de un conjunto de datos y el panel de medidores no está asociado a un conjunto de datos.  
   
--   Haga clic con el botón derecho en el puntero del medidor y seleccione **Propiedades de puntero**. Para `Value`, seleccione un campo de la lista desplegable o defina una expresión de campo haciendo clic en el **expresión** (*fx*) botón.  
+-   Haga clic con el botón derecho en el puntero del medidor y seleccione **Propiedades de puntero**. Para `Value`, seleccione un campo en la lista desplegable o defina una expresión de campo haciendo clic en el **expresión** (*fx*) botón.  
   
 ### <a name="aggregating-fields-into-a-single-value"></a>Agregar campos en un solo valor  
  Cuando se agrega un campo a un medidor, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] calcula un agregado para el campo de forma predeterminada. Los tipos de datos numéricos se agregan con la función SUM. Los tipos de datos no numéricos se agregan con la función COUNT, que cuenta el número de instancias para un valor o campo determinado perteneciente al conjunto de datos o al grupo. Si el tipo de datos del campo de valores es String, el medidor no puede mostrar un valor numérico, aun cuando haya números en los campos. En su lugar, el medidor agrega los campos con cadenas mediante la función COUNT. Para evitar este comportamiento, asegúrese de que los campos que usa tienen tipos de datos numéricos, en lugar de cadenas que contienen números con formato. Puede usar una expresión de Visual Basic para convertir los valores de cadena en un tipo de datos numérico usando la constante CDbl o CInt. Por ejemplo, la expresión siguiente convierte un campo de cadena llamado MyField en valores numéricos.  
@@ -290,13 +290,13 @@ ms.locfileid: "36108279"
 ##  <a name="HowTo"></a> Temas de procedimientos  
  En esta sección se describen procedimientos que muestran, paso a paso, cómo trabajar con medidores en los informes; cómo obtener datos para mostrarlos eficazmente en medidores, y cómo agregar y configurar los medidores y sus elementos.  
   
--   [Agregar un medidor a un informe &#40;el generador de informes SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
+-   [Agregar un medidor a un informe &#40;generador de informes y SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
   
--   [Establecer un valor mínimo o máximo en un medidor &#40;el generador de informes SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Establecer un valor mínimo o máximo en un medidor &#40;generador de informes y SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Establecer un intervalo de ajuste en un medidor &#40;el generador de informes SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Establecer un intervalo de ajuste en un medidor &#40;generador de informes y SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Especificar una imagen como un puntero en un medidor &#40;el generador de informes SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Especificar una imagen como puntero en un medidor &#40;generador de informes y SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
   
   
 ##  <a name="InThisSection"></a> En esta sección  
@@ -305,9 +305,9 @@ ms.locfileid: "36108279"
 |||  
 |-|-|  
 |Término|Definición|  
-|[Aplicar formato a las escalas en un medidor &#40;el generador de informes SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Proporciona información general acerca de cómo dar formato a las escalas en los medidores e información detallada sobre las opciones de formato para las escalas en los medidores radiales y lineales.|  
-|[Aplicar formato a punteros de un medidor &#40;el generador de informes SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Proporciona información general acerca de cómo dar formato a los punteros en los medidores, e información detallada sobre las opciones de formato para los estilos de puntero disponibles para los medidores radiales y lineales.|  
-|[Dar formato a intervalos en un medidor &#40;el generador de informes SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Proporciona información acerca de cómo dar formato a intervalos en medidores para indicar una subsección importante de valores en el medidor o indicar visualmente cuándo el valor de puntero entra en un intervalo de valores determinado.|  
+|[Aplicar formato a las escalas de un medidor &#40;generador de informes y SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Proporciona información general acerca de cómo dar formato a las escalas en los medidores e información detallada sobre las opciones de formato para las escalas en los medidores radiales y lineales.|  
+|[Aplicar formato a los punteros de un medidor &#40;generador de informes y SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Proporciona información general acerca de cómo dar formato a los punteros en los medidores, e información detallada sobre las opciones de formato para los estilos de puntero disponibles para los medidores radiales y lineales.|  
+|[Aplicar formato a los intervalos de un medidor &#40;generador de informes y SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Proporciona información acerca de cómo dar formato a intervalos en medidores para indicar una subsección importante de valores en el medidor o indicar visualmente cuándo el valor de puntero entra en un intervalo de valores determinado.|  
   
   
 ## <a name="see-also"></a>Vea también  

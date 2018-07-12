@@ -1,5 +1,5 @@
 ---
-title: 'Lección 12: Crear Roles | Documentos de Microsoft'
+title: 'Lección 12: Creación de Roles | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 7c3b98fbbcbedca2a8bcdbefcd8e41e5d3d5c60b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 598491865120b2d401b0ca2447701cbebc12ce8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278511"
 ---
 # <a name="lesson-12-create-roles"></a>Lección 12: Crear roles
   En esta lección, creará roles. Los roles proporcionan seguridad a los objetos y datos de la base de datos del modelo limitando el acceso únicamente a los usuarios de Windows que sean miembros del rol. Cada rol se define con un permiso único: Ninguno, Lectura, Lectura y proceso, Proceso o Administrador. Los roles se pueden definir durante la creación del modelo mediante el cuadro de diálogo Administrador de roles de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Una vez implementado un modelo, los roles se pueden administrar con [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para obtener más información, consulte [Roles &#40;SSAS tabular&#41;](tabular-models/roles-ssas-tabular.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "36104818"
   
      Se agrega a la lista un nuevo rol con el permiso Ninguno.  
   
-3.  Haga clic en el nuevo rol y, a continuación, en la **nombre** columna, cambiar el nombre de la función para `Internet Sales Manager`.  
+3.  Haga clic en el nuevo rol y, a continuación, en el **nombre** columna, cambiar el nombre de la función para `Internet Sales Manager`.  
   
 4.  En la columna **Permisos** , haga clic en la lista desplegable y, después, seleccione el permiso **Lectura** .  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36104818"
   
      Se agrega a la lista un nuevo rol con el permiso Ninguno.  
   
-3.  Haga clic en el nuevo rol y, a continuación, en la **nombre** columna, cambiar el nombre de la función para `Internet Sales US`.  
+3.  Haga clic en el nuevo rol y, a continuación, en el **nombre** columna, cambiar el nombre de la función para `Internet Sales US`.  
   
 4.  En la columna **Permisos** , haga clic en la lista desplegable y, después, seleccione el permiso **Lectura** .  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36104818"
   
 1.  En el cuadro de diálogo **Administrador de roles** , haga clic en **Nuevo**.  
   
-2.  Haga clic en el nuevo rol y, a continuación, en la **nombre** columna, cambiar el nombre de la función para `Internet Sales Administrator`.  
+2.  Haga clic en el nuevo rol y, a continuación, en el **nombre** columna, cambiar el nombre de la función para `Internet Sales Administrator`.  
   
 3.  En la columna **Permisos** , haga clic en la lista desplegable y luego seleccione el permiso **Administrador** .  
   

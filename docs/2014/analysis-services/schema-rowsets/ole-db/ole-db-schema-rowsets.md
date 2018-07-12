@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de filas de esquema OLE DB | Documentos de Microsoft
+title: Conjuntos de filas de esquema OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 313efc520f63240d3e9fa19584fc7f3e620fdeee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a1d03d6fd8d527d48a9a4051f201368ff870882
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161196"
 ---
 # <a name="ole-db-schema-rowsets"></a>Conjuntos de filas de esquema OLE DB
   El proveedor XML for Analysis (XMLA) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] admite los conjuntos de filas de esquemas OLE DB siguientes. Use la `DISCOVER_ENUMERATORS` conjunto de filas con el [Discover](../../xmla/xml-elements-methods-discover.md) método para comprobar si un proveedor de origen de datos determinado admite un conjunto de filas.  
@@ -74,7 +74,7 @@ ms.locfileid: "36107314"
 |`DBSCHEMA_VIEW_TABLE_USAGE`|Identifica las tablas de las que dependen las tablas vistas, definidas en el catálogo y que pertenecen a un usuario determinado.|  
 |`DBSCHEMA_VIEWS`|Identifica las vistas definidas en el catálogo a las que puede tener acceso un usuario determinado.|  
   
- <sup>1</sup> indica conjuntos de filas de esquema admitidos por el proveedor de origen de datos MSOLAP para el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] proveedor XMLA.  
+ <sup>1</sup> indica los conjuntos de filas de esquema admitidos por el proveedor de origen de datos MSOLAP para el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] proveedor XMLA.  
   
 ## <a name="see-also"></a>Vea también  
  [Conjunto de filas DISCOVER_ENUMERATORS](../xml/discover-enumerators-rowset.md)   

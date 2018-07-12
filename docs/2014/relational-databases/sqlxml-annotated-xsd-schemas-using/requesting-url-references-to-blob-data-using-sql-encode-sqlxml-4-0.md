@@ -1,5 +1,5 @@
 ---
-title: 'Solicitar referencias URL para datos BLOB mediante sql: encode (SQLXML 4.0) | Documentos de Microsoft'
+title: 'Solicitar referencias URL a datos BLOB mediante sql: encode (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - Base 64-encoded format
 ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f18f3fb5676270bf01f0598aa29536259f7250f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d9bbcd45a0984a0c34a5759d5ec9774c211354b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258261"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Solicitar referencias URL a los datos BLOB mediante sql:encode (SQLXML 4.0)
   En un esquema XSD anotado, cuando un atributo (o elemento) se asigna a una columna de BLOB en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de Microsoft, los datos se devuelven en formato codificado de base 64 en XML.  
   
  Si desea obtener una referencia a los datos (un URI) que se van a devolver, que se pueden usar posteriormente para recuperar los datos BLOB en un formato binario, especifique la anotación `sql:encode`. Puede especificar `sql:encode` en un atributo o elemento de tipo simple.  
   
- Especifique la anotación `sql:encode` para indicar que se debe devolver al campo una dirección URL en lugar del valor del campo. `sql:encode` depende de la clave principal para generar un SELECT singleton en la dirección URL. La clave principal puede especificarse mediante la `sql:key-fields` anotación.  
+ Especifique la anotación `sql:encode` para indicar que se debe devolver al campo una dirección URL en lugar del valor del campo. `sql:encode` depende de la clave principal para generar un SELECT singleton en la dirección URL. Se puede especificar la clave principal mediante el `sql:key-fields` anotación.  
   
  La anotación `sql:encode` puede tener asignada la dirección "url" o el valor "predeterminado". Un valor de "valor predeterminado" devuelve los datos en formato codificado de base 64.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36104665"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. Especificar sql:encode para obtener una referencia de URL a los datos BLOB  
- En este ejemplo, se especifica el esquema de asignación `sql:encode` en el **LargePhoto** atributo para recuperar la referencia URI a una fotografía del producto determinada (en lugar de recuperar los datos binarios en formato codificado en Base 64).  
+ En este ejemplo, el esquema de asignación especifica `sql:encode` en el **LargePhoto** atributo para recuperar la referencia URI a una fotografía del producto determinada (en lugar de recuperar los datos binarios en formato codificado en Base 64).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

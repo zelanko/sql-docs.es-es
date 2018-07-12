@@ -1,12 +1,12 @@
 ---
-title: 'Capturar datos BLOB mediante IRow:: GetColumns e ISequentialStream | Documentos de Microsoft'
+title: 'Capturar datos BLOB mediante IRow:: GetColumns e ISequentialStream | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5d4ca5867d8f59db5a14ae3d875e744c51b7b898
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 437faea72feaad150d2b9b1fd28bc1478b27136b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694616"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414814"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>Capturar datos BLOB mediante IRow::GetColumns e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  La función siguiente utiliza **IRow:: GetColumns** y **ISequentialStream** para capturar los datos de gran tamaño:  
+  La función siguiente utiliza **IRow:: GetColumns** y **ISequentialStream** para capturar datos grandes:  
   
 ```  
 void InitializeAndExecuteCommand()  

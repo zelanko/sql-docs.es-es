@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.security.f1
 ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 722a2b825b0ec56b7932de29a74faf74627834f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cefcaaf281cf8b3981fec2383fd004ad8bd8f967
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153686"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>Propiedades del servidor (página de seguridad) - Reporting Services
   Use esta página para desactivar características que pueden poner en peligro un servidor de informes. Al desactivar estas características, se limitará alguna funcionalidad, pero puede mejorar la seguridad total del servidor de informes mitigando amenazas concretas.  
@@ -37,13 +37,13 @@ ms.locfileid: "36108502"
  **Habilitar la notificación ad hoc**  
  Especifica si los usuarios pueden realizar consultas ad hoc desde un informe del Generador de informes, en el que los nuevos informes se generan automáticamente cuando un usuario hace clic en los datos de interés.  
   
- Al establecer esta opción se determina si la propiedad `EnableLoadReportDefinition` en el servidor de informes está se establece en `True` o `False`. Si desactiva esta opción, la propiedad se establecerá `False` y el servidor no generará informes Click-through que se crean durante la exploración de datos de informe. Se bloquearán todas las llamadas al método `LoadReportDefinition`.  
+ Al establecer esta opción se determina si la propiedad `EnableLoadReportDefinition` en el servidor de informes está se establece en `True` o `False`. Si desactiva esta opción, la propiedad se establecerá en `False` y el servidor no generará informes Click-through que se crean durante la exploración de datos de informe. Se bloquearán todas las llamadas al método `LoadReportDefinition`.  
   
- Al desactivar esta opción, mitiga una amenaza para la que un usuario malintencionado inicia un ataque de denegación de servicio sobrecargando el servidor de informes con `LoadReportDefinition` solicitudes.  
+ Al desactivar esta opción mitiga una amenaza que un usuario malintencionado inicia un ataque de denegación de servicio sobrecargando el servidor de informes con `LoadReportDefinition` solicitudes.  
   
 ## <a name="see-also"></a>Vea también  
  [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Conectar con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Especifique credenciales e información de conexión para orígenes de datos de informes] (.. /Report-Data/Specify-Credential-and-Connection-Information-for-Report-Data-Sources.MD [servidor en Management Studio ayuda F1 de informes](report-server-in-management-studio-f1-help.md)  
+ [Especifique la información de credenciales y conexión para orígenes de datos de informes] (.. /Report-Data/Specify-Credential-and-Connection-Information-for-Report-Data-Sources.MD [servidor de informes en Management Studio ayuda F1](report-server-in-management-studio-f1-help.md)  
   
   

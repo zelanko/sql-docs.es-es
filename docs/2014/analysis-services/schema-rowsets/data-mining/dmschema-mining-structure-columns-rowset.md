@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DMSCHEMA_MINING_STRUCTURE_COLUMNS | Documentos de Microsoft
+title: Conjunto de filas DMSCHEMA_MINING_STRUCTURE_COLUMNS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,27 +18,27 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_STRUCTURE_COLUMNS rowset
 ms.assetid: 81f25502-ac90-42f1-8ddf-7b0f9752ebfd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98c8ec286e12cfe6198c36900067a26eefd5e1ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c98da6f1e843b08fac4b91baabec79ab0d9c341
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171586"
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>Conjunto de filas DMSCHEMA_MINING_STRUCTURE_COLUMNS
   Describe las columnas individuales de todas las estructuras de minería de datos implementadas en un servidor que ejecuta [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DMSCHEMA_MINING_STRUCTURE_COLUMNS` filas contiene las columnas siguientes.  
+ El `DMSCHEMA_MINING_STRUCTURE_COLUMNS` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
 |`STRUCTURE_CATALOG`|`DBTYPE_WSTR`||Nombre del catálogo.|  
 |`STRUCTURE_SCHEMA`|`DBTYPE_WSTR`||Nombre del esquema sin certificar. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no admite los esquemas, por lo que esta columna siempre es `NULL`.|  
-|`STRUCTURE_NAME`|`DBTYPE_WSTR`||Nombre de la estructura. Esta columna no puede contener una `NULL`.|  
+|`STRUCTURE_NAME`|`DBTYPE_WSTR`||Nombre de la estructura. Esta columna no puede contener un `NULL`.|  
 |`COLUMN_NAME`|`DBTYPE_WSTR`||Nombre de la columna. La unicidad solamente se garantiza entre las columnas que comparten el mismo patrón. Por ejemplo, dos columnas anidadas pueden tener el mismo nombre si pertenecen a dos tablas anidadas distintas dentro de la misma estructura.|  
 |`COLUMN_GUID`|`DBTYPE_GUID`||GUID de la columna. Los proveedores que no utilizan identificadores GUID para identificar las columnas, deben devolver `NULL` en esta columna.|  
 |`COLUMN_PROPID`|`DBTYPE_UI4`||Identificador de propiedad de la columna. Los proveedores que no asocian identificadores de propiedad a las columnas deben devolver `NULL` en esta columna. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Devuelve `NULL` para esta columna.|  
@@ -56,7 +56,7 @@ ms.locfileid: "36107509"
 |`DATETIME_PRECISION`|`DBTYPE_UI4`||Precisión DateTime (número de dígitos en la parte que indica las fracciones de segundo) de la columna si ésta es de tipo de fecha y hora o de intervalo. Si el tipo de datos de la columna no es de fecha y hora, este valor es `NULL`.|  
 |`CHARACTER_SET_CATALOG`|`DBTYPE_WSTR`||Nombre del catálogo en el que está definido el juego de caracteres. Si el proveedor no admite catálogos o distintos juegos de caracteres, su valor es `NULL`.|  
 |`CHARACTER_SET_SCHEMA`|`DBTYPE_WSTR`||Nombre del esquema no calificado en el que se define el juego de caracteres. Si el proveedor no admite esquemas o distintos juegos de caracteres, su valor es `NULL`.|  
-|`CHARACTER_SET_NAME`|`DBTYPE_WSTR`||El juego de caracteres nombre. Si el proveedor no admite distintos juegos de caracteres, su valor es `NULL`.|  
+|`CHARACTER_SET_NAME`|`DBTYPE_WSTR`||El carácter de nombre del conjunto. Si el proveedor no admite distintos juegos de caracteres, su valor es `NULL`.|  
 |`COLLATION_CATALOG`|`DBTYPE_WSTR`||Nombre del catálogo en el que está definida la intercalación. Si el proveedor no admite catálogos o intercalaciones diferentes, su valor es `NULL`.|  
 |`COLLATION_SCHEMA`|`DBTYPE_WSTR`||Nombre del esquema no calificado en el que se define la intercalación. Si el proveedor no admite esquemas o intercalaciones diferentes, su valor es `NULL`.|  
 |`COLLATION_NAME`|`DBTYPE_WSTR`||Nombre de intercalación. Si el proveedor no admite intercalaciones diferentes, su valor es `NULL`.|  
@@ -65,7 +65,7 @@ ms.locfileid: "36107509"
 |`DOMAIN_NAME`|`DBTYPE_WSTR`||Nombre del dominio. Si el proveedor no admite dominios, su valor es `NULL`.|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||Descripción de la columna en lenguaje natural. Si no hay ninguna descripción asociada a la columna, su valor es `NULL`.|  
 |`DISTRIBUTION_FLAG`|`DBTYPE_WSTR`||Distribución de la columna de estructura de minería de datos:<br /><br /> -   "`NORMAL`"<br />-"`LOG_NORM`AL"<br />-   "`UNIFORM`"|  
-|`CONTENT_TYPE`|`DBTYPE_WSTR`||Tipo de contenido de la columna de estructura de minería de datos:<br /><br /> -   "`KEY`"<br />-   "`DISCRETE`"<br />-   "`CONTINUOUS`"<br />-"`DISCRETIZED(`[args]`)`"<br />-   "`ORDERED`"<br />-   "`SEQUENCE_TIME`"<br />-   "`CYCLICAL`"<br />-   "`PROBABILITY`"<br />-   "`VARIANCE`"<br />-   "`STDEV`"<br />-   "`SUPPORT`"<br />-   "`PROBABILITY_VARIANCE`"<br />-   "`PROBABILITY_STDEV`"|  
+|`CONTENT_TYPE`|`DBTYPE_WSTR`||Tipo de contenido de la columna de estructura de minería de datos:<br /><br /> -   "`KEY`"<br />-   "`DISCRETE`"<br />-   "`CONTINUOUS`"<br />-"`DISCRETIZED(`[argumentos]`)`"<br />-   "`ORDERED`"<br />-   "`SEQUENCE_TIME`"<br />-   "`CYCLICAL`"<br />-   "`PROBABILITY`"<br />-   "`VARIANCE`"<br />-   "`STDEV`"<br />-   "`SUPPORT`"<br />-   "`PROBABILITY_VARIANCE`"<br />-   "`PROBABILITY_STDEV`"|  
 |`MODELING_FLAG`|`DBTYPE_WSTR`||Lista delimitada por comas de marcas de modelado. La única marca admitida para una columna de estructura es "`NOT NULL`".|  
 |`IS_RELATED_TO_KEY`|`DBTYPE_BOOL`||Valor booleano que indica si esta columna está relacionada con la clave.<br /><br /> Su valor es `VARIANT_TRUE` si la columna está relacionada con la clave; de lo contrario, `VARIANT_FALSE`. Si la clave es una columna única, el campo `RELATED_ATTRIBUTE` puede contener su nombre de columna opcionalmente.|  
 |`RELATED_ATTRIBUTE`|`DBTYPE_WSTR`||Nombre de la columna de destino con la que se relaciona la columna actual o de la que es una propiedad especial.|  
@@ -73,7 +73,7 @@ ms.locfileid: "36107509"
 |`IS_POPULATED`|`DBTYPE_BOOL`||Valor booleano que indica si esta columna ha obtenido información sobre un conjunto de valores posibles.<br /><br /> Su valor es `TRUE` si la columna ha obtenido información sobre un conjunto de valores posibles; de lo contrario, `FALSE`.|  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DMSCHEMA_MINING_STRUCTURE_COLUMNS` se puede restringir el conjunto de filas en las columnas de la tabla siguiente.  
+ El `DMSCHEMA_MINING_STRUCTURE_COLUMNS` conjunto de filas puede tener restricciones en las columnas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

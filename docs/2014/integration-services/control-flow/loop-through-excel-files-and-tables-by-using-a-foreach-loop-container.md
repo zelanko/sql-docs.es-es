@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
 - Excel [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9e0c80441798259750c9c24bc8062d7f8637cc37
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: df6de3a81b8ebd1f9ca23ffa1b004c4180c26e81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324659"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158996"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach
   Los procedimientos de este tema explican cómo crear bucles entre libros de Excel en una carpeta o entre tablas en un libro de Excel, mediante el contenedor de bucles Foreach con el enumerador correspondiente.  
@@ -53,7 +53,7 @@ ms.locfileid: "36324659"
   
 8.  Seleccione el nuevo administrador de conexiones de Excel, haga clic en la propiedad **Expresiones** en la ventana Propiedades y luego haga clic en los puntos suspensivos.  
   
-9. En el **Editor de expresiones de propiedad**, seleccione la `ConnectionString` propiedad y, a continuación, haga clic en el botón de puntos suspensivos.  
+9. En el **Editor de expresiones de propiedad**, seleccione el `ConnectionString` propiedad y, a continuación, haga clic en el botón de puntos suspensivos.  
   
 10. En el Generador de expresiones, escriba la siguiente expresión:  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36324659"
 9. Cree tareas en el contenedor de bucles Foreach que utilicen el administrador de conexiones con Excel para realizar las mismas operaciones en cada tabla de Excel en el libro especificado. Si usa una tarea Script para examinar el nombre de la tabla enumerada o para trabajar con cada tabla, recuerde agregar la variable de cadena a la propiedad ReadOnlyVariables de la tarea Script.  
   
 ## <a name="see-also"></a>Vea también  
- [Importar datos desde Excel o exportar datos a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [configurar un contenedor de bucles Foreach](foreach-loop-container.md)   
+ [Importar datos desde Excel o exportarlos a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [configurar un contenedor de bucles Foreach](foreach-loop-container.md)   
  [Agregar o cambiar una expresión de propiedad](../expressions/add-or-change-a-property-expression.md)   
  [Administrador de conexiones de Excel](../connection-manager/excel-connection-manager.md)   
  [Origen de Excel](../data-flow/excel-source.md)   

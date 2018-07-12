@@ -1,5 +1,5 @@
 ---
-title: Columnas de datos de auditoría de seguridad | Documentos de Microsoft
+title: Columnas de datos de auditoría de seguridad | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Security Audit event category [SQL Server]
 ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cf737330922500f8e9b33c7645fdd5e6b8b6b244
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0decf6588f44b6026608254fa1a196a310e37ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171566"
 ---
 # <a name="security-audit-data-columns"></a>Columnas de datos de Auditoría de seguridad
   La categoría de eventos Auditoría de seguridad tiene las siguientes clases de eventos:  
@@ -118,7 +118,7 @@ ms.locfileid: "36107112"
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventSubclass|1|1|EventSubclass proporciona información adicional sobre cada clase de eventos.<br /><br /> 1: copia de seguridad<br /><br /> 2: restaurar<br /><br /> 3: sincronizar<br /><br /> 4: separar<br /><br /> 5: adjuntar<br /><br /> 6: imageLoad<br /><br /> 7: ImageSave|  
+|EventSubclass|1|1|EventSubclass proporciona información adicional sobre cada clase de eventos.<br /><br /> 1: copia de seguridad<br /><br /> 2: restaurar<br /><br /> 3: sincronizar<br /><br /> 4: desconectar<br /><br /> 5: conectar<br /><br /> 6: imageLoad<br /><br /> 7: ImageSave|  
 |Severity|22|1|Nivel de gravedad de una excepción.|  
 |Correcto|23|1|1 = correcto. 0 = error (por ejemplo, 1 significa que se ha comprobado un permiso correctamente y 0 significa que se ha producido un error en la comprobación).|  
 |Error|24|1|Número de error de un evento dado.|  

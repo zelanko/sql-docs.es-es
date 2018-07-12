@@ -1,5 +1,5 @@
 ---
-title: Para establecer conexiones en ADOMD.NET | Documentos de Microsoft
+title: Establecer conexiones en ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ADOMD.NET, connections
 ms.assetid: 7b9610f5-6641-42cc-af4e-bd35771913d1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9779ae9f6791443d06b97aaf9e56254ce1d7934
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d7bf4529df77545cf2d0acf69af5d0b570ef750
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165306"
 ---
 # <a name="establishing-connections-in-adomdnet"></a>Establecer conexiones en ADOMD.NET
   En ADOMD.NET, usa el <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> objeto para abrir conexiones con orígenes de datos analíticos, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bases de datos. Cuando la conexión ya no sea necesaria, deberá cerrarla explícitamente.  
@@ -49,12 +49,12 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
 ```  
   
 ### <a name="opening-a-connection-to-the-data-source"></a>Abrir una conexión con el origen de datos.  
- Una vez especificada la cadena de conexión, debe utilizar el método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> para abrir la conexión. Al abrir un objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>, puede establecer varios niveles de seguridad para la conexión. El nivel de seguridad que se utiliza para la conexión depende del valor de configuración de la cadena de conexión `ProtectionLevel`. Para obtener más información acerca de cómo abrir conexiones seguras en ADOMD.NET, consulte [establecer conexiones seguras en ADOMD.NET](connections-in-adomd-net-establishing-secure-connections.md).  
+ Una vez especificada la cadena de conexión, debe utilizar el método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> para abrir la conexión. Al abrir un objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>, puede establecer varios niveles de seguridad para la conexión. El nivel de seguridad que se utiliza para la conexión depende del valor de configuración de la cadena de conexión `ProtectionLevel`. Para obtener más información acerca de cómo abrir las conexiones seguras en ADOMD.NET, vea [establecer conexiones seguras en ADOMD.NET](connections-in-adomd-net-establishing-secure-connections.md).  
   
 ## <a name="working-with-a-connection"></a>Trabajar con una conexión  
  Cada conexión abierta tiene lugar en una sesión, lo que proporciona compatibilidad con las operaciones con estado. Una sesión puede compartirse entre varias conexiones abiertas. Compartir una sesión permite que más de un cliente comparta el mismo contexto. Para obtener más información, consulte [trabajar con conexiones y sesiones en ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md).  
   
- Puede utilizar una conexión abierta para recuperar metadatos y datos y ejecutar comandos. Para obtener más información, consulte [recuperación de metadatos de un origen de datos analíticos](retrieving-metadata-from-an-analytical-data-source.md), [recuperar datos de un origen de datos analíticos](retrieving-data-from-an-analytical-data-source.md), y [ejecutar comandos en un datos analíticos Origen](executing-commands-against-an-analytical-data-source.md).  
+ Puede utilizar una conexión abierta para recuperar metadatos y datos y ejecutar comandos. Para obtener más información, consulte [recuperar metadatos desde un origen de datos analíticos](retrieving-metadata-from-an-analytical-data-source.md), [recuperar datos de un origen de datos analíticos](retrieving-data-from-an-analytical-data-source.md), y [ejecutar comandos contra un datos analíticos Origen](executing-commands-against-an-analytical-data-source.md).  
   
  Cuando la conexión está abierta, puede recuperar datos y metadatos y ejecutar comandos desde una transacción de lectura confirmada, en la que se mantienen los bloqueos compartidos mientras se leen los datos para evitar la lectura de datos sucios. Los datos se pueden cambiar antes de que finalice la transacción, lo que da como resultado lecturas no repetibles o datos fantasma. Para obtener más información, consulte [realizar transacciones en ADOMD.NET](../../relational-databases/native-client-ole-db-transactions/transactions.md).  
   
@@ -63,7 +63,7 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
   
  Es posible que una conexión que no se cierra explícitamente, pero a la que se le permite salir de su ámbito, no pueda liberar los recursos del servidor lo suficientemente rápido como para permitir que las aplicaciones cliente de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con simultaneidad elevada abran nuevas conexiones de forma eficaz. En función de cómo haya creado la conexión, la sesión utilizada por el objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> puede permanecer activa si no se cierra la conexión explícitamente.  
   
- Para obtener más información acerca de las sesiones, consulte [trabajar con conexiones y sesiones en ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md).  
+ Para obtener más información acerca de las sesiones, vea [trabajar con conexiones y sesiones en ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md).  
   
 > [!IMPORTANT]  
 >  En el método `Finalize` de cualquier clase implementada, no llame a los métodos `Close` o `Dispose` de un objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>, un objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> o cualquier otro objeto administrado. En un finalizador, libere solamente los recursos no administrados que pertenezcan directamente a la clase implementada. Si la clase implementada no es propietaria de ningún recurso no administrado, no incluya un método `Finalize` en la definición de clase.  

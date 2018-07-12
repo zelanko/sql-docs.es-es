@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 41368 (Database Engine error)
 ms.assetid: abc71559-4c4d-4cce-a08f-3299dd167842
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 96d33fc176330efe93077c02c6abfed3c137e33c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8619e3cfb8766caab9d9afbe5ed166761eeeb04f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105381"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409724"
 ---
 # <a name="mssqlserver41368"></a>MSSQLSERVER_41368
     
@@ -42,7 +41,7 @@ ms.locfileid: "36105381"
  Al obtener acceso a una tabla optimizada para memoria desde una transacción explícita iniciada con BEGIN TRANSACTION, o desde una transacción implícita, si IMPLICIT_TRANSACTIONS se establece en ON, no se admite el nivel de aislamiento READ COMMITTED.  
   
 ## <a name="user-action"></a>Acción del usuario  
- Utilice SNAPSHOT para tener acceso a una tabla optimizada para memoria desde una transacción READ COMMITTED explícita o implícita. Esto puede lograrse mediante el uso de la sugerencia de tabla WITH (SNAPSHOT) (para obtener más información, consulte [directrices para los niveles de aislamiento de transacciones con tablas con optimización para memoria](../in-memory-oltp/memory-optimized-tables.md)) o mediante el establecimiento de la base de datos de opción MEMORY_OPTIMIZED_ELEVATE_TO_ INSTANTÁNEA en ON (para obtener más información, consulte [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)).  
+ Utilice SNAPSHOT para tener acceso a una tabla optimizada para memoria desde una transacción READ COMMITTED explícita o implícita. Esto puede lograrse mediante el uso de la sugerencia de tabla WITH (SNAPSHOT) (para obtener más información, consulte [directrices para los niveles de aislamiento de transacciones con tablas optimizadas para memoria](../in-memory-oltp/memory-optimized-tables.md)) o mediante el establecimiento de la base de datos de opción MEMORY_OPTIMIZED_ELEVATE_TO_ INSTANTÁNEA en ON (para obtener más información, consulte [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)).  
   
 ## <a name="see-also"></a>Vea también  
  [OLTP en memoria &#40;optimización en memoria&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

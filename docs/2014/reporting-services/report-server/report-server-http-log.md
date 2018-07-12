@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 83d48cf33405988c9aedaceccc677ee238a7ea5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d697c1cb894028de8ccea5e3b87fc7d0cf155d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202605"
 ---
 # <a name="report-server-http-log"></a>Registro HTTP del servidor de informes
   Los archivos de registro HTTP del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mantienen un registro de cada solicitud y respuesta HTTP administradas por el servidor de informes. Dado que los errores de desbordamiento y de tiempo de espera de la solicitud no alcanzan el servidor de informes, no se graban en el archivo de registro.  
@@ -58,7 +58,7 @@ ms.locfileid: "36107129"
 ```  
   
 ## <a name="log-file-fields"></a>Campos del archivo de registro  
- En la tabla siguiente se describen los campos disponibles en el registro. La lista de campos es configurable; puede especificar qué campos desea incluir mediante el `HTTPTraceSwitches` de configuración. El **predeterminado** columna indica si el campo se incluirá en el archivo de registro automáticamente si no se especifica `HTTPTraceSwitches`.  
+ En la tabla siguiente se describen los campos disponibles en el registro. La lista de campos es configurable; puede especificar qué campos desea incluir mediante el `HTTPTraceSwitches` opción de configuración. El **predeterminado** columna especifica si el campo se incluirá en el archivo de registro automáticamente si no especifica `HTTPTraceSwitches`.  
   
 |Campo|Descripción|Valor predeterminado|  
 |-----------|-----------------|-------------|  

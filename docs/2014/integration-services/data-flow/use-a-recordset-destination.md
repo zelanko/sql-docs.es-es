@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a513f196b0dc099f890225048e4e96adab51d285
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db88be22f9bb3e92739957bfaf0f4b827e49f61d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277361"
 ---
 # <a name="use-a-recordset-destination"></a>Usar un destino de conjunto de registros
   El destino de conjunto de registros no guarda los datos en un origen de datos externo. En su lugar, guarda los datos en memoria, en un conjunto de registros que se almacena en una variable de paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del tipo de datos `Object`. Una vez que el destino de conjunto de registros guarda los datos, normalmente se utiliza un contenedor de bucles Foreach con el enumerador de ADO para Foreach para procesar una fila del conjunto de registros cada vez. El enumerador de ADO para Foreach guarda el valor de cada columna de la fila actual en una variable de paquete independiente. A continuación, las tareas que se configuran en el contenedor de bucles Foreach leen esos valores de las variables y realizan alguna acción con ellos.  
@@ -125,7 +125,7 @@ ms.locfileid: "36104734"
   
 5.  Abra el **Editor de destino de conjunto de registros**y configure el destino con los valores siguientes:  
   
-    1.  En el **propiedades de componente de** ficha, para `VariableName` propiedad, seleccione `User::BonusRecordset`.  
+    1.  En el **propiedades de componente** ficha, para `VariableName` propiedad, seleccione `User::BonusRecordset`.  
   
     2.  En la pestaña **Columnas de entrada** , seleccione las tres columnas disponibles.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "36104734"
   
     1.  En el **colección** página, para **enumerador**, seleccione **enumerador de ADO para Foreach**y para **variable de origen de objeto ADO**, seleccione `User::BonusRecordset`.  
   
-    2.  En el **asignaciones de variables** de mapa, página `User::EmailAddress` al índice 0, `User::FirstName` al índice 1 y `User::Bonus` al índice 2.  
+    2.  En el **asignaciones de variables** página, asigne `User::EmailAddress` al índice 0, `User::FirstName` al índice 1 y `User::Bonus` al índice 2.  
   
 3.  En la pestaña **Flujo de control** , en el contenedor de bucles Foreach, agregue una tarea Enviar correo.  
   

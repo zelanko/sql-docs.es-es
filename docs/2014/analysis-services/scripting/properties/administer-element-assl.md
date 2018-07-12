@@ -1,5 +1,5 @@
 ---
-title: Elemento Administer (ASSL) | Documentos de Microsoft
+title: Elemento Administer (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Administer element
 ms.assetid: 52924cd6-6176-47c8-ab17-4ee0e0ce42b1
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 099e5b9283acf8da6268e8b5abaaad73049ca076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29b09b2f28512600496a4d461f34994dc1bf177e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229695"
 ---
 # <a name="administer-element-assl"></a>Elemento Administer (ASSL)
   Indica si el permiso asociado incluye el derecho a administrar un [base de datos](../objects/database-element-assl.md) elemento.  
@@ -58,13 +58,13 @@ ms.locfileid: "36107041"
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[DatabasePermission](../objects/databasepermission-element-assl.md)|  
+|Elementos primarios|[Elemento DatabasePermission](../objects/databasepermission-element-assl.md)|  
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
  El elemento `Administer` indica si un usuario puede realizar funciones administrativas solo en la base de datos especificada. El rol de administrador del servidor puede realizar funciones administrativas en todas las bases de datos que contiene la instancia.  
   
- El elemento que corresponde al elemento primario de `Administer` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DatabasePermission>.  
+ El elemento que se corresponde con el elemento primario de `Administer` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DatabasePermission>.  
   
 ## <a name="see-also"></a>Vea también  
  [Tipo de datos Permission &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   

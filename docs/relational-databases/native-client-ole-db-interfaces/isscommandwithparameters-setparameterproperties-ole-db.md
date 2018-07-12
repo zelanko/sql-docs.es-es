@@ -1,12 +1,12 @@
 ---
-title: 'Isscommandwithparameters:: SetParameterProperties (OLE DB) | Documentos de Microsoft'
+title: 'Isscommandwithparameters:: SetParameterProperties (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 10b24720130c720a3b53fb879068a37abf2570f6
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: b4ccbc15cd4493f4d0d9654e9da130ac192f9f8c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699566"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416924"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,26 +44,26 @@ HRESULT SetParameterProperties(
   
 ## <a name="arguments"></a>Argumentos  
  *cParams*[in]  
- El número de estructuras SSPARAMPROPS en la *rgParamProperties* matriz. Si este número es cero, **isscommandwithparameters:: SetParameterProperties** eliminará todas las propiedades que pueden especificar para los parámetros en el comando.  
+ El número de estructuras SSPARAMPROPS en la *rgParamProperties* matriz. Si este número es cero, **isscommandwithparameters:: SetParameterProperties** eliminará todas las propiedades que es posible que se han especificado para los parámetros del comando.  
   
  *rgParamProperties*[in]  
  Una matriz de estructuras SSPARAMPROPS que se van a establecer.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- El **isscommandwithparameters:: SetParameterProperties** método devuelve los mismos códigos de error como el núcleo de OLE DB **ICommandProperties:: SetProperties** método.  
+ El **isscommandwithparameters:: SetParameterProperties** método devuelve los mismos códigos de error que el núcleo de OLE DB **ICommandProperties:: SetProperties** método.  
   
 ## <a name="remarks"></a>Notas  
- Establecer las propiedades de parámetro con este método está permitida en cada parámetro por ordinal o con una sola **isscommandwithparameters:: SetParameterProperties** llamar una vez que se ha generado SSPARAMPROPS desde la matriz de propiedades.  
+ Establecer propiedades de parámetro con este método se permite en una por cada parámetro por ordinal o con una sola **isscommandwithparameters:: SetParameterProperties** llamar una vez que se ha generado SSPARAMPROPS desde la matriz de propiedades.  
   
  El **SetParameterInfo** método debe llamarse antes de llamar a la **isscommandwithparameters:: SetParameterProperties** método. La llamada a `SetParameterProperties(0, NULL)` borra todas las propiedades de parámetro especificadas, en tanto que la llamada a `SetParameterInfo(0,NULL,NULL)` borra toda la información de parámetros, incluidas las propiedades que puedan estar asociadas a un parámetro.  
   
- Al llamar a **isscommandwithparameters:: SetParameterProperties** para especificar las propiedades de un parámetro que no es de tipo DBTYPE_XML o DBTYPE_UDT devuelve DB_E_ERRORSOCCURRED o DB_S_ERRORSOCCURRED y marca el  *dwStatus* campo de todas las DBPROP incluidas en SSPARAMPROPS para ese parámetro con DBPROPSTATUS_NOTSET. Se debe recorrer la matriz DBPROP de cada DBPROPSET incluido en SSPARAMPROPS para detectar a qué parámetro hace referencia DB_E_ERRORSOCCURRED o DB_S_ERRORSOCCURRED.  
+ Una llamada a **isscommandwithparameters:: SetParameterProperties** para especificar propiedades para un parámetro que no es de tipo DBTYPE_XML o DBTYPE_UDT devuelve DB_E_ERRORSOCCURRED o DB_S_ERRORSOCCURRED y marca el  *dwStatus* campo de todas las DBPROP incluidas en SSPARAMPROPS para ese parámetro con DBPROPSTATUS_NOTSET. Se debe recorrer la matriz DBPROP de cada DBPROPSET incluido en SSPARAMPROPS para detectar a qué parámetro hace referencia DB_E_ERRORSOCCURRED o DB_S_ERRORSOCCURRED.  
   
- Si **isscommandwithparameters:: SetParameterProperties** se llama para especificar las propiedades de parámetros cuya información de parámetro no se ha establecido aún con **SetParameterInfo**, el proveedor devuelve E_ INESPERADO con el siguiente mensaje de error:  
+ Si **isscommandwithparameters:: SetParameterProperties** se llama para especificar las propiedades de parámetros cuya información de parámetro no se ha establecido aún con **SetParameterInfo**, el proveedor devuelve E_ INESPERADO con el mensaje de error siguiente:  
   
  No se puede llamar al método SetParameterProperties para los parámetros especificados sin llamar primero al método SetParameterInfo. La información de parámetro debe configurarse antes que las propiedades de parámetro.  
   
- Si la llamada a **isscommandwithparameters:: SetParameterProperties** contiene algunos parámetros donde la información de parámetros ha sido conjunto y algunos parámetros donde la información de parámetros no se estableció, las propiedades dwStatus en el DBPROPSET del conjunto de propiedades SSPARAMPROPS devolverán dbstatus_notset.  
+ Si la llamada a **isscommandwithparameters:: SetParameterProperties** contiene algunos parámetros donde la información de parámetros ha sido conjunto y algunos parámetros donde la información de parámetros no se ha establecido, las propiedades dwStatus en el DBPROPSET del conjunto de propiedades SSPARAMPROPS devolverán dbstatus_notset.  
   
  La estructura SSPARAMPROPS se define del siguiente modo:  
   
@@ -77,7 +77,7 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- Mejoras en el motor de base de datos a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] permitir isscommandwithparameters:: SetParameterProperties obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores devueltos por isscommandwithparameters:: SetParameterProperties en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [de detección de metadatos](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Mejoras en el motor de base de datos a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] permitir isscommandwithparameters:: SetParameterProperties obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores devueltos por isscommandwithparameters:: SetParameterProperties en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [detección de metadatos](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 |Miembro|Descripción|  
 |------------|-----------------|  

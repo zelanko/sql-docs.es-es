@@ -1,5 +1,5 @@
 ---
-title: Jerarquías (SSAS Tabular) | Documentos de Microsoft
+title: Jerarquías (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 196c71a5fd1202e2c9cfb28934257c847b9fd5eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b371d1baecb2e9e7dea4aa81ac2d2e716d04a651
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107952"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180962"
 ---
 # <a name="hierarchies-ssas-tabular"></a>Jerarquías (SSAS tabular)
   Las jerarquías, en los modelos tabulares, son metadatos que definen las relaciones entre dos o más columnas de una tabla. Las jerarquías pueden aparecer por separado de otras columnas en una lista de campos del cliente de informes, facilitando la navegación de los usuarios del cliente y su inclusión en un informe.  
@@ -58,11 +58,11 @@ ms.locfileid: "36107952"
   
 |Tarea|Descripción|  
 |----------|-----------------|  
-|[Crear y administrar jerarquías &#40;SSAS Tabular&#41;](hierarchies-ssas-tabular.md)|Describe cómo crear y administrar jerarquías mediante la vista de diagrama del diseñador de modelos.|  
+|[Crear y administrar jerarquías &#40;Tabular de SSAS&#41;](hierarchies-ssas-tabular.md)|Describe cómo crear y administrar jerarquías mediante la vista de diagrama del diseñador de modelos.|  
   
 ## <a name="see-also"></a>Vea también  
- [Diseñador de modelos tabulares &#40;SSAS Tabular&#41;](../tabular-model-designer-ssas-tabular.md)   
- [Las perspectivas &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)   
- [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md)  
+ [Diseñador de modelos tabulares &#40;Tabular de SSAS&#41;](../tabular-model-designer-ssas-tabular.md)   
+ [Las perspectivas &#40;Tabular de SSAS&#41;](perspectives-ssas-tabular.md)   
+ [Roles &#40;Tabular de SSAS&#41;](roles-ssas-tabular.md)  
   
   

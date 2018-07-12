@@ -1,28 +1,25 @@
 ---
-title: Tipos definidos por el usuario CLR grandes | Documentos de Microsoft
+title: Tipos definidos por el usuario CLR grandes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types
 ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b5cadfa288f94f7713f7d33cb74cf9c183aec14e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 2d008d4976f72ca4b2c802ffa5df4c1d1702f02e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694509"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415434"
 ---
 # <a name="large-clr-user-defined-types"></a>Tipos definidos por el usuario de CLR grandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +30,11 @@ ms.locfileid: "35694509"
  Para obtener más información, consulte [Large CLR User-Defined tipos &#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md) y [Large CLR User-Defined tipos &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="use-cases"></a>Casos de uso  
- Para ODBC, la compatibilidad con UDT grandes incluye la capacidad de enviar los valores de UDT en partes como parámetros de datos en ejecución. Esto se realiza mediante SQLPutData.  
+ Para ODBC, la compatibilidad con UDT grandes incluye la capacidad de enviar los valores de UDT en partes como parámetros de datos en ejecución. Esto se hace mediante el uso de SQLPutData.  
   
- Para OLE DB, compatibilidad con UDT grandes incluye la capacidad para los valores UDT de flujo hacia y desde el servidor mediante el enlace de ISequentialStream.  
+ Para OLE DB, compatibilidad con UDT grandes incluye la capacidad para los valores UDT de flujo hacia y desde el servidor mediante el enlace ISequentialStream.  
   
- Los UDT con un tamaño menor o igual que 8.000 se comportarán como lo hacían en SQL Server 2005. Para OLE DB, aún puede transmitir los UDT pequeños mediante un enlace ISequentialStream.  
+ Los UDT con un tamaño menor o igual que 8.000 se comportarán como lo hacían en SQL Server 2005. Para OLE DB, aún puede transmitir los UDT pequeños usando el enlace ISequentialStream.  
   
  A veces el código nativo tendrá que entender el contenido de los UDT CLR, pero no tendrá que crear instancias de los objetos administrados. Si éste es el caso, puede utilizar la serialización personalizada para convertir los valores de UDT en el servidor en un formato bien conocido para los clientes.  
   

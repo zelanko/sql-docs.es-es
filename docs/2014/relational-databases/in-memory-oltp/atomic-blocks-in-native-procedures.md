@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 7832b3440ae08597a84f5f0e5f6c3a8d851c3ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2468e7debaa34b08d40ffedef0a7f078f44343a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182312"
 ---
 # <a name="atomic-blocks"></a>Bloques atomic
   `BEGIN ATOMIC` es parte del estándar ANSI SQL. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los bloques atomic solo en el nivel superior de los procedimientos almacenados compilados de forma nativa.  
@@ -33,7 +33,7 @@ ms.locfileid: "36107189"
 ## <a name="transactions-and-error-handling"></a>Transacciones y control de errores  
  Si una transacción ya existe en una sesión (porque un lote ejecutó una instrucción `BEGIN TRANSACTION` y la transacción permanece activa), iniciar a continuación un bloque atomic creará un punto de retorno de la transacción. Si el bloque sale sin una excepción, se confirma el punto de retorno que se creó para el bloque, pero la transacción no se confirmará hasta que se confirme en el nivel de sesión. Si el bloque produce una excepción, los efectos del bloque se revierten pero la transacción en el nivel de sesión continuará, a menos que la excepción invalide la transacción. Por ejemplo, un conflicto de escritura invalida la transacción, mientras que un error de conversión no la invalida.  
   
- Si no hay ninguna transacción activa en una sesión, `BEGIN ATOMIC` iniciará una nueva transacción. Si no se inicia una excepción fuera del ámbito del bloque, la transacción se confirmará al final del bloque. Si el bloque produce una excepción (es decir, la excepción no se detecta ni se controla en el bloque), la transacción se revertirá. Para las transacciones que ocupan un único bloque atomic (un solo procedimiento almacenado compilado forma nativa), no necesite escribir explícita `BEGIN TRANSACTION` y `COMMIT` o `ROLLBACK` las instrucciones.  
+ Si no hay ninguna transacción activa en una sesión, `BEGIN ATOMIC` iniciará una nueva transacción. Si no se inicia una excepción fuera del ámbito del bloque, la transacción se confirmará al final del bloque. Si el bloque produce una excepción (es decir, la excepción no se detecta ni se controla en el bloque), la transacción se revertirá. Para las transacciones que ocupan un único bloque atomic (un único procedimiento almacenado compilado nativamente), no tiene que escribir explícita `BEGIN TRANSACTION` y `COMMIT` o `ROLLBACK` instrucciones.  
   
  Compatibilidad con los procedimientos almacenados de forma nativa la `TRY`, `CATCH`, y `THROW` construcciones de control de errores. `RAISERROR` no se admite.  
   
@@ -130,7 +130,7 @@ GO
  Los mensajes de error siguientes específicos de las tablas optimizadas para memoria invalidan las transacciones. Si aparecen en el ámbito de un bloque atomic, causarán que se anulen las transacciones: 10772, 41301, 41302, 41305, 41325, 41332 y 41333.  
   
 ## <a name="session-settings"></a>Configuración de la sesión  
- Los parámetros de configuración de sesión de los bloques atomic son fijos cuando se compila el procedimiento almacenado. Algunos parámetros se pueden especificar con `BEGIN ATOMIC` mientras que otros están fijos siempre en el mismo valor.  
+ Los parámetros de configuración de sesión de los bloques atomic son fijos cuando se compila el procedimiento almacenado. Se pueden especificar algunas opciones de configuración con `BEGIN ATOMIC` mientras que otros están fijos siempre en el mismo valor.  
   
  Se requieren las siguientes opciones con `BEGIN ATOMIC`:  
   

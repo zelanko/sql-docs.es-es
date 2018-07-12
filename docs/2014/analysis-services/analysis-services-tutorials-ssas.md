@@ -1,5 +1,5 @@
 ---
-title: Tutoriales (SSAS) de Analysis Services | Documentos de Microsoft
+title: Tutoriales (SSAS) de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 4b933161864612d4bf150789ada911169a5f03d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 204166a6e87f2b8ebdca6b5d2e565b413400da00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183472"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Tutoriales de Analysis Services (SSAS)
   Esta sección contiene los tutoriales de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services.  
   
- [Creación de modelos tabular &#40;Tutorial de Adventure Works&#41;](tabular-modeling-adventure-works-tutorial.md)  
+ [Modelado tabular &#40;Tutorial de Adventure Works&#41;](tabular-modeling-adventure-works-tutorial.md)  
  Este tutorial proporciona lecciones sobre cómo crear un modelo tabular básico de Analysis Services para una empresa ficticia, Adventure Works, mediante [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  [Modelado multidimensional &#40;Tutorial de Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  

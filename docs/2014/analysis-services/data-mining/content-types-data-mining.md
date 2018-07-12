@@ -1,5 +1,5 @@
 ---
-title: Tipos (minería de datos) de contenido | Documentos de Microsoft
+title: (Minería de datos) de tipos de contenido | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], content types
 - KEY SEQUENCE column
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f283ff19a1947cfda208979b80482432ec6c597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 817de3b9232a755d94fe2790a0ab2e08a835c9dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163516"
 ---
 # <a name="content-types-data-mining"></a>Tipos de contenido (minería de datos)
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede definir tanto el tipo de datos físico de una columna en una estructura de minería como un tipo de datos lógico de la columna cuando se utilice en un modelo.  
@@ -72,9 +72,9 @@ ms.locfileid: "36107328"
  El tipo de contenido `Discretized` es compatible con los siguientes tipos de datos: `Date`, `Double`, `Long` y `Text`.  
   
 ## <a name="key"></a>Key  
- El tipo de contenido *clave* indica que la columna identifica una fila de forma inequívoca. Normalmente, en una tabla de casos, la columna de clave es un identificador numérico o de texto. Establece el tipo de contenido en `key` para indicar que la columna no debe utilizarse para el análisis, solo para registros de seguimiento.  
+ El tipo de contenido *clave* indica que la columna identifica una fila de forma inequívoca. Normalmente, en una tabla de casos, la columna de clave es un identificador numérico o de texto. Establece el tipo de contenido en `key` para indicar que la columna no debe utilizarse para el análisis, solo para los registros de seguimiento.  
   
- Las tablas anidadas también tienen claves, pero el uso de la clave de tabla anidada es ligeramente diferente. Establece el tipo de contenido en `key` en una tabla anidada si la columna es el atributo que desea analizar. Los valores de la clave de tabla anidada deben ser únicos para cada caso, pero puede haber duplicados en todo el conjunto de casos.  
+ Las tablas anidadas también tienen claves, pero el uso de la clave de tabla anidada es ligeramente diferente. Establece el tipo de contenido en `key` en una tabla anidada, si la columna es el atributo que desea analizar. Los valores de la clave de tabla anidada deben ser únicos para cada caso, pero puede haber duplicados en todo el conjunto de casos.  
   
  Por ejemplo, si está analizando los productos que compran los clientes, debe establecer el tipo de contenido en Key para la columna **CustomerID** de la tabla de casos, y también debe establecer el tipo de contenido en Key para la columna **PurchasedProducts** de la tabla anidada.  
   

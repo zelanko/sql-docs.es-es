@@ -1,13 +1,11 @@
 ---
-title: Cambiar las contraseñas mediante programación | Documentos de Microsoft
+title: Cambiar las contraseñas mediante programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,21 +21,21 @@ helpviewer_keywords:
 - modifying passwords
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7124d10bdb9d90adfd882d860e9571d4c2370ef7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6a89101132ebbad9edfcf8bd2c6190e8f86caf32
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105352"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408454"
 ---
 # <a name="changing-passwords-programmatically"></a>Cambiar las contraseñas mediante programación
-  En versiones anteriores de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], cuando expiraba una contraseña de usuario, solo el administrador podía restablecerla. A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client permite administrar la caducidad de contraseña mediante programación a través la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB y el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client y a través de los cambios en el **El inicio de sesión de SQL Server** cuadros de diálogo.  
+  En versiones anteriores de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], cuando expiraba una contraseña de usuario, solo el administrador podía restablecerla. A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client permite administrar la caducidad de contraseña mediante programación a través de ambos el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client y el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client y a través de los cambios realizados en el **El inicio de sesión de SQL Server** cuadros de diálogo.  
   
 > [!NOTE]  
->  Cuando sea posible, solicite a los usuarios que escriban las credenciales en tiempo de ejecución y eviten almacenarlas en un formato guardado. Si debe conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](http://go.microsoft.com/fwlink/?LinkId=64532). Para obtener más información sobre el uso de contraseñas, consulte [Strong Passwords](../../security/strong-passwords.md).  
+>  Cuando sea posible, solicite a los usuarios que escriban las credenciales en tiempo de ejecución y eviten almacenarlas en un formato guardado. Si tiene que conservar sus credenciales, debería cifrarlas con la [API de criptografía de Win32](http://go.microsoft.com/fwlink/?LinkId=64532). Para obtener más información sobre el uso de contraseñas, consulte [contraseñas seguras](../../security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Códigos de error de inicio de sesión de SQL Server  
  Cuando no se puede realizar una conexión debido a problemas de autenticación, uno de los códigos de error de SQL Server siguientes estará disponible para la aplicación para ayudar en el diagnóstico y recuperación.  
@@ -46,7 +44,7 @@ ms.locfileid: "36105352"
 |---------------------------|-------------------|  
 |15113|Error de inicio de sesión del usuario '%. * ls'. Motivo: error de validación de contraseña. Se ha bloqueado la cuenta.|  
 |18463|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no se puede utilizar en este momento.|  
-|18464|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de la directiva porque es demasiado corta.|  
+|18464|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado corta.|  
 |18465|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
 |18466|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque no es bastante compleja.|  
 |18467|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de la DLL de filtro de contraseña.|  
@@ -55,17 +53,17 @@ ms.locfileid: "36105352"
 |18488|Error de inicio de sesión del usuario '%.*ls'. Motivo: se debe cambiar la contraseña de la cuenta. |  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Proveedor OLE DB de SQL Server Native Client  
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB admite la expiración de contraseña aunque una interfaz de usuario y mediante programación.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite la expiración de contraseña aunque una interfaz de usuario y mediante programación.  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>Expiración de contraseñas de la interfaz de usuario de OLE DB  
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB admite la expiración de contraseña a través de los cambios realizados en el **el inicio de sesión de SQL Server** cuadros de diálogo. Si el valor de DBPROP_INIT_PROMPT está establecido en DBPROMPT_NOPROMPT, se producirá un error en el intento de conexión inicial si la contraseña ha expirado.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite la expiración de contraseña a través de los cambios realizados en el **el inicio de sesión de SQL Server** cuadros de diálogo. Si el valor de DBPROP_INIT_PROMPT está establecido en DBPROMPT_NOPROMPT, se producirá un error en el intento de conexión inicial si la contraseña ha expirado.  
   
- Si DBPROP_INIT_PROMPT se ha establecido en cualquier otro valor, el usuario ve el **el inicio de sesión de SQL Server** cuadro de diálogo, independientemente de si la contraseña ha expirado. El usuario puede hacer clic en el **opciones** botón y compruebe **cambiar contraseña** para cambiar la contraseña.  
+ Si DBPROP_INIT_PROMPT se ha establecido en cualquier otro valor, el usuario ve el **el inicio de sesión de SQL Server** cuadro de diálogo, independientemente de si la contraseña ha expirado. El usuario puede hacer clic en el **opciones** botón y comprobar **cambiar contraseña** para cambiar la contraseña.  
   
- Si el usuario hace clic en Aceptar y la contraseña ha expirado, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pide al usuario que escriba y confirme una nueva contraseña mediante el **cambiar contraseña de SQL Server** cuadro de diálogo.  
+ Si el usuario hace clic en Aceptar y la contraseña ha expirado, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pide al usuario que escriba y confirme una contraseña nueva mediante el **cambiar contraseña de SQL Server** cuadro de diálogo.  
   
 #### <a name="ole-db-prompt-behavior-and-locked-accounts"></a>Comportamiento de las solicitudes de OLE DB y cuentas bloqueadas  
- Los intentos de conexión pueden producir un error debido a que la cuenta está bloqueada. Si esto ocurre después de la presentación del **el inicio de sesión de SQL Server** cuadro de diálogo, se muestra el mensaje de error de servidor para el usuario y se anula el intento de conexión. También puede producirse después de la presentación de la **cambiar contraseña de SQL Server** cuadro de diálogo si el usuario escribe un valor incorrecto para la contraseña antigua. En este caso se muestra el mismo mensaje de error y se anula el intento de conexión.  
+ Los intentos de conexión pueden producir un error debido a que la cuenta está bloqueada. Si esto ocurre después de la presentación del **el inicio de sesión de SQL Server** cuadro de diálogo, el mensaje de error de servidor se muestra al usuario y se anula el intento de conexión. También puede producirse después de la presentación de la **cambiar contraseña de SQL Server** cuadro de diálogo si el usuario escribe un valor incorrecto para la contraseña antigua. En este caso se muestra el mismo mensaje de error y se anula el intento de conexión.  
   
 #### <a name="ole-db-connection-pooling-password-expiration-and-locked-accounts"></a>Agrupación de conexiones de OLE DB, expiración de contraseña y cuentas bloqueadas  
  Se puede bloquear una cuenta o puede expirar la contraseña cuando la conexión está activa todavía en un grupo de conexiones. El servidor comprueba las contraseñas expiradas y las cuentas bloqueadas en dos ocasiones. La primera vez es cuando se crea una conexión. La segunda ocasión es al restablecer una conexión, cuando se toma la conexión del grupo.  
@@ -73,7 +71,7 @@ ms.locfileid: "36105352"
  Cuando se produce un error en el intento de reinicio, la conexión se quita del grupo y se devuelve un error.  
   
 ### <a name="ole-db-programmatic-password-expiration"></a>Expiración de contraseña mediante programación de OLE DB  
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB admite la expiración de contraseña a través de la adición de la propiedad SSPROP_AUTH_OLD_PASSWORD (tipo VT_BSTR) que se ha agregado al conjunto de propiedades DBPROPSET_SQLSERVERDBINIT.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite la expiración de contraseña mediante la adición de la propiedad SSPROP_AUTH_OLD_PASSWORD (tipo VT_BSTR) que se ha agregado al conjunto de propiedades DBPROPSET_SQLSERVERDBINIT.  
   
  La propiedad "Contraseña" existente hace referencia a DBPROP_AUTH_PASSWORD y se utiliza para almacenar la nueva contraseña.  
   
@@ -87,26 +85,26 @@ ms.locfileid: "36105352"
   
  Recuerde que siempre que se establece la propiedad "Contraseña anterior", el proveedor asume que intenta cambiar la contraseña, a menos que se especifique también la Autenticación de Windows, en cuyo caso tiene siempre prioridad.  
   
- Si se usa la autenticación de Windows, especificar la contraseña anterior da como resultado DB_E_ERRORSOCCURRED o DB_S_ERRORSOCCURRED dependiendo de si se ha especificado la contraseña antigua como REQUIRED u OPTIONAL respectivamente y el valor de estado de DBPROPSTATUS_ Se devuelve CONFLICTINGBADVALUE en *dwStatus*. Esto se detecta cuando **IDBInitialize:: Initialize** se llama.  
+ Si se utiliza la autenticación de Windows, especificando la contraseña anterior da como resultado DB_E_ERRORSOCCURRED o DB_S_ERRORSOCCURRED dependiendo de si se ha especificado la contraseña antigua como REQUIRED u OPTIONAL respectivamente y el valor de estado de DBPROPSTATUS_ Se devuelve CONFLICTINGBADVALUE en *dwStatus*. Esto se detecta cuando **IDBInitialize:: Initialize** se llama.  
   
  Si el intento de cambiar la contraseña produce un error inesperadamente, el servidor devuelve el código de error 18468. Se devuelve un error OLEDB estándar del intento de conexión.  
   
  Para obtener más información sobre el conjunto de propiedades DBPROPSET_SQLSERVERDBINIT, vea [propiedades de inicialización y autorización](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Controlador ODBC de SQL Server Native Client  
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB admite la expiración de contraseña aunque una interfaz de usuario y mediante programación.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite la expiración de contraseña aunque una interfaz de usuario y mediante programación.  
   
 ### <a name="odbc-user-interface-password-expiration"></a>Expiración de contraseñas de la interfaz de usuario de ODBC  
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC Native Client admite la expiración de contraseña a través de los cambios realizados en el **el inicio de sesión de SQL Server** cuadros de diálogo.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite la expiración de contraseña a través de los cambios realizados en el **el inicio de sesión de SQL Server** cuadros de diálogo.  
   
- Si [SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md) se llama y el valor de **DriverCompletion** está establecido en SQL_DRIVER_NOPROMPT, el intento de conexión inicial se produce un error si la contraseña ha expirado. Las llamadas subsiguientes a devuelve el valor 28000 de SQLSTATE y el valor de código de error nativo 18487 **SQLError** o **SQLGetDiagRec**.  
+ Si [SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md) se llama y el valor de **DriverCompletion** está establecido en SQL_DRIVER_NOPROMPT, el intento de conexión inicial, se produce un error si la contraseña ha expirado. Se devuelven el valor 28000 de SQLSTATE y el valor de código de error nativo 18487 llamadas subsiguientes a **SQLError** o **SQLGetDiagRec**.  
   
- Si **DriverCompletion** se ha establecido en cualquier otro valor, el usuario ve el **el inicio de sesión de SQL Server** cuadro de diálogo, independientemente de si la contraseña ha expirado. El usuario puede hacer clic en el **opciones** botón y compruebe **cambiar contraseña** para cambiar la contraseña.  
+ Si **DriverCompletion** se ha establecido en cualquier otro valor, el usuario ve el **el inicio de sesión de SQL Server** cuadro de diálogo, independientemente de si la contraseña ha expirado. El usuario puede hacer clic en el **opciones** botón y comprobar **cambiar contraseña** para cambiar la contraseña.  
   
- Si el usuario hace clic en Aceptar y la contraseña ha expirado, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solicita que escriba y confirme una nueva contraseña mediante el **cambiar contraseña de SQL Server** cuadro de diálogo.  
+ Si el usuario hace clic en Aceptar y la contraseña ha expirado, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] indicaciones que escribas y confirmes una contraseña nueva mediante el **cambiar contraseña de SQL Server** cuadro de diálogo.  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>Comportamiento de las solicitudes de ODBC y cuentas bloqueadas  
- Los intentos de conexión pueden producir un error debido a que la cuenta está bloqueada. Si esto ocurre después de la presentación del **el inicio de sesión de SQL Server** cuadro de diálogo, se muestra el mensaje de error de servidor para el usuario y se anula el intento de conexión. También puede producirse después de la presentación de la **cambiar contraseña de SQL Server** cuadro de diálogo si el usuario escribe un valor incorrecto para la contraseña antigua. En este caso se muestra el mismo mensaje de error y se anula el intento de conexión.  
+ Los intentos de conexión pueden producir un error debido a que la cuenta está bloqueada. Si esto ocurre después de la presentación del **el inicio de sesión de SQL Server** cuadro de diálogo, el mensaje de error de servidor se muestra al usuario y se anula el intento de conexión. También puede producirse después de la presentación de la **cambiar contraseña de SQL Server** cuadro de diálogo si el usuario escribe un valor incorrecto para la contraseña antigua. En este caso se muestra el mismo mensaje de error y se anula el intento de conexión.  
   
 #### <a name="odbc-connection-pooling-password-expiry-and-locked-accounts"></a>Expiración de la agrupación de conexiones de ODBC y cuentas bloqueadas  
  Se puede bloquear una cuenta o puede expirar la contraseña cuando la conexión está activa todavía en un grupo de conexiones. El servidor comprueba las contraseñas expiradas y las cuentas bloqueadas en dos ocasiones. La primera vez es cuando se crea una conexión. La segunda ocasión es al restablecer una conexión, cuando se toma la conexión del grupo.  
@@ -114,11 +112,11 @@ ms.locfileid: "36105352"
  Cuando se produce un error en el intento de reinicio, la conexión se quita del grupo y se devuelve un error.  
   
 ### <a name="odbc-programmatic-password-expiration"></a>Expiración de contraseña mediante programación de ODBC  
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC Native Client admite la expiración de contraseña a través de la adición del atributo SQL_COPT_SS_OLDPWD que se establece antes de conectarse al servidor mediante el [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) función.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite la expiración de contraseña mediante la adición del atributo SQL_COPT_SS_OLDPWD que se establece antes de conectarse al servidor mediante el [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) función.  
   
  El atributo SQL_COPT_SS_OLDPWD del identificador de conexión hace referencia a la contraseña expirada. No hay ningún atributo de cadena de conexión para este atributo, porque esto interferiría con la agrupación de conexiones. Si el inicio de sesión tiene éxito, el controlador borra este atributo.  
   
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC Native Client devuelve SQL_ERROR en cuatro casos para esta característica: caducidad de contraseña, el conflicto de directivas de contraseña, bloqueo de cuentas, y cuando se establece la propiedad de contraseña anterior al utilizar autenticación de Windows. El controlador devuelve los mensajes de error adecuados al usuario cuando [SQLGetDiagField](../../native-client-odbc-api/sqlgetdiagfield.md) se invoca.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client devuelve SQL_ERROR en cuatro casos para esta característica: expiración de contraseña, el conflicto de directivas de contraseña, bloqueo de cuenta, y cuando se establece la propiedad de contraseña anterior al usar la autenticación de Windows. El controlador devuelve los mensajes de error adecuados al usuario cuando [SQLGetDiagField](../../native-client-odbc-api/sqlgetdiagfield.md) se invoca.  
   
 ## <a name="see-also"></a>Vea también  
  [Características de SQL Server Native Client](sql-server-native-client-features.md)  

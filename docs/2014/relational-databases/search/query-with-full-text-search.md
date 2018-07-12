@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [full-text search], about full-text queries
 - queries [full-text search], predicates
@@ -18,20 +17,20 @@ helpviewer_keywords:
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2edf2a5fbafb99287503d4b7ebe5475bd5604985
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 78351b4f710d84d6d8cb7f29d1de89d05ee763b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229015"
 ---
 # <a name="query-with-full-text-search"></a>Consultar con búsqueda de texto completo
   Para definir búsquedas de texto completo, las consultas de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan los predicados (CONTAINS y FREETEXT) y las funciones (CONTAINSTABLE y FREETEXTTABLE) de texto completo. Estas funciones y predicados admiten la sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)] enriquecida, que es compatible con diversos formatos de términos de consulta. Para escribir consultas de texto completo, es necesario saber cuándo y cómo deben usarse estos predicados y funciones.  
   
-##  <a name="OV_ft_predicates"></a> Información general de la búsqueda de texto completo predicados (CONTAINS y FREETEXT)  
+##  <a name="OV_ft_predicates"></a> Información general sobre el texto predicados (CONTAINS y FREETEXT)  
  Los predicados de CONTAINS y FREETEXT devuelven un valor TRUE o FALSE. Se pueden utilizar exclusivamente para especificar los criterios de selección a la hora de determinar si una fila determinada coincide con la consulta de texto completo. Las filas que coinciden se devuelven en el conjunto de resultados. CONTAINS y FREETEXT se especifican en la cláusula WHERE o HAVING de una instrucción SELECT. Pueden combinarse con cualquier otro predicado [!INCLUDE[tsql](../../includes/tsql-md.md)] , como LIKE y BETWEEN.  
   
 > [!NOTE]  
@@ -169,7 +168,7 @@ GO
   
  
   
-##  <a name="Using_Boolean_Operators"></a> Usar los operadores booleanos AND, OR y and NOT en CONTAINS y CONTAINSTABLE  
+##  <a name="Using_Boolean_Operators"></a> Uso de los operadores booleanos AND, OR y and NOT en CONTAINS y CONTAINSTABLE  
  El predicado CONTAINS y la función CONTAINSTABLE usan las mismas condiciones de búsqueda. Los dos admiten que se combinen varias condiciones de búsqueda con los operadores booleanos AND, OR y AND NOT para realizar operaciones lógicas. Por ejemplo, puede utilizar AND para buscar filas que contienen "latte" y "New York-style bagel". También puede, por ejemplo, utilizar AND NOT para buscar las filas que contienen "bagel" pero no contienen "cream cheese".  
   
 > [!NOTE]  
@@ -214,11 +213,11 @@ GO
   
 
   
-##  <a name="varbinary"></a> Consultar varbinary (max) y xml columnas  
+##  <a name="varbinary"></a> Consultar varbinary (max) y las columnas xml  
  Si una columna `varbinary(max)`, `varbinary` o `xml` está indizada con texto completo, se puede consultar usando los predicados de texto completo (CONTAINS y FREETEXT) y las funciones (CONTAINSTABLE y FREETEXTTABLE), igual que cualquier otra columna indizada de texto completo.  
   
 > [!IMPORTANT]  
->  La búsqueda de texto completo también funciona con las columnas de imagen. Sin embargo, el `image` tipo de datos se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar este tipo de datos en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente lo utilizan. Utilice el `varbinary(max)` en su lugar, el tipo de datos.  
+>  La búsqueda de texto completo también funciona con las columnas de imagen. Sin embargo, el `image` tipo de datos se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar este tipo de datos en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente lo utilizan. Use el `varbinary(max)` del tipo de datos en su lugar.  
   
 ### <a name="varbinarymax-or-varbinary-data"></a>datos varbinary(máximo) o varbinary  
  Una sola `varbinary(max)` o `varbinary` columna puede almacenar muchos tipos de documentos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite cualquier tipo de documento para el que tenga un filtro instalado que esté disponible en el sistema operativo. La extensión de archivo del documento identifica el tipo de cada documento. Por ejemplo, para la extensión de archivo .doc, la búsqueda de texto completo utiliza el filtro que admite los documentos de Microsoft Word. Para obtener una lista de los tipos de documentos disponibles, consulte la vista de catálogo [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
@@ -234,9 +233,9 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
  
   
 ### <a name="xml-data"></a>Datos xml  
- Un `xml` columna tipo de datos solo almacena los documentos XML y fragmentos y solo el filtro XML se utiliza para los documentos. Por consiguiente, una columna de tipo es innecesaria. En `xml` columnas, el índice de texto completo indiza el contenido de los elementos XML, pero omite el marcado XML. Los valores de los atributos se incluyen en el índice de texto completo a menos que sean valores numéricos. Las etiquetas de elemento se utilizan como límites de token. Se admiten fragmentos y documentos con formato XML o HTML correcto que contengan varios idiomas.  
+ Un `xml` columna tipo de datos solo almacena los documentos XML y fragmentos y se usa solo el filtro XML para los documentos. Por consiguiente, una columna de tipo es innecesaria. En `xml` columnas, el índice de texto completo indiza el contenido de los elementos XML, pero omite el marcado XML. Los valores de los atributos se incluyen en el índice de texto completo a menos que sean valores numéricos. Las etiquetas de elemento se utilizan como límites de token. Se admiten fragmentos y documentos con formato XML o HTML correcto que contengan varios idiomas.  
   
- Para obtener más información sobre las consultas en un `xml` columna, vea [usar la búsqueda de texto completo con columnas XML](../xml/use-full-text-search-with-xml-columns.md).  
+ Para obtener más información sobre cómo consultar con un `xml` columna, vea [usar la búsqueda de texto completo con columnas XML](../xml/use-full-text-search-with-xml-columns.md).  
   
  
   
@@ -257,8 +256,8 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 
   
-###  <a name="Simple_Term"></a> Buscar palabras específicas o frase (término Simple)  
- Puede usar [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)o [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) para buscar una frase específica en una tabla. Por ejemplo, si desea buscar en el `ProductReview` tabla el [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] base de datos para todos los comentarios acerca de un producto con la frase "learning curve", podría utilizar el predicado CONTAINS como sigue:  
+###  <a name="Simple_Term"></a> Buscar palabra o frase (término Simple) específica  
+ Puede usar [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)o [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) para buscar una frase específica en una tabla. Por ejemplo, si desea buscar el `ProductReview` tabla el [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] base de datos para todos los comentarios sobre un producto que contengan la frase "learning curve", se podría utilizar el predicado CONTAINS como sigue:  
   
 ```  
 USE AdventureWorks2012  
@@ -337,7 +336,7 @@ GO
   
 
   
-##  <a name="tokens"></a> Ver el resultado de tokenización de un separador de palabras, diccionario de sinónimos y combinación de la lista de palabras irrelevantes  
+##  <a name="tokens"></a> Ver el resultado de la tokenización de un separador de palabras, diccionario de sinónimos y combinación de la lista de palabras irrelevantes  
  Después de aplicar una combinación determinada de separador de palabras, diccionario de sinónimos y lista de palabras irrelevantes a la entrada de una cadena de consulta, puede ver el resultado de la tokenización mediante la vista de administración dinámica **sys.dm_fts_parser**. Para obtener más información, vea [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql).  
   
  

@@ -1,5 +1,5 @@
 ---
-title: Origen de elemento (XMLA) | Documentos de Microsoft
+title: (XMLA) del elemento de origen | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 4d4665ae-e20f-4baf-ab0f-848660caf500
 caps.latest.revision: 17
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 481b5c755b24c6bb8ae03e58b43759b4dce4e39a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 55123ac3a84cc42780550876f407e8eed11e4f18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182962"
 ---
 # <a name="source-element-xmla"></a>Elemento Source (XMLA)
   Representa una partición de origen que se combinará durante un [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) comando.  
@@ -70,7 +70,7 @@ ms.locfileid: "36107300"
  El elemento `Source` es una referencia de objeto a una partición única que se fusionará en una partición de destino especificada por el elemento `Target` del elemento primario `MergePartitions`.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se combinan las cuatro particiones del grupo de medida `Internet Sales` en la partición de destino `Internet_Sales_2004` . En el ejemplo se hace referencia a la **Adventure Works** cubo de la [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] ejemplo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos.  
+ En el ejemplo siguiente se combinan las cuatro particiones del grupo de medida `Internet Sales` en la partición de destino `Internet_Sales_2004` . El ejemplo hace referencia a la **Adventure Works** cubo de la [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] ejemplo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos.  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -87,7 +87,7 @@ ms.locfileid: "36107300"
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Elemento de destino &#40;XMLA&#41;](../xml-elements-properties/target-element-xmla.md)   
+ [Elemento Target &#40;XMLA&#41;](../xml-elements-properties/target-element-xmla.md)   
  [Propiedades &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

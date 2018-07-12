@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b3e1ff29abfaff5aa182019946c0a92d21395960
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 78aea34abfc3621ea7ebbd50a3236c81308f128b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152566"
 ---
 # <a name="application-level-partitioning"></a>Creación de particiones en el nivel de aplicación
   Este ejemplo muestra la creación de particiones de nivel de aplicación donde se almacenan los datos en una tabla optimizada en memoria o en una tabla basada en disco dependiendo de si el pedido se encuentra antes o después de una fecha específica. Todos los pedidos posteriores o iguales a *hotDate* se encuentran en la tabla optimizada en memoria y todos los pedidos antes de *hotDate* se encuentran en la tabla basada en disco. Suponga que hay un carga de trabajo de OLTP extrema con muchas transacciones simultáneas. Esta regla de negocios (pedidos recientes en una tabla optimizada para memoria) se debe aplicar incluso si varias transacciones simultáneas intentan cambiar *hotDate*.  

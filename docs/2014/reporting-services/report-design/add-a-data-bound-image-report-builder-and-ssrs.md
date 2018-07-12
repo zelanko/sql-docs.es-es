@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5d8659792dd9d816ce4310b7caa377c2374fdedb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c66e586e94dd1b86dbd079e692b0f7a8b72b1c55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230745"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>Agregar una imagen enlazada a datos (Generador de informes y SSRS)
   Un informe puede incluir una referencia a una imagen que está almacenada en una base de datos. Este tipo de imagen se conoce como *imagen enlazada a datos*. Las imágenes que aparecen junto a los nombres de producto de una lista de productos son ejemplos de imágenes enlazadas a datos.  
@@ -52,9 +52,9 @@ ms.locfileid: "36105469"
      Aparece un marcador de posición para la imagen en la superficie de diseño del informe.  
   
 ## <a name="see-also"></a>Vea también  
- [Imágenes &#40;el generador de informes SSRS&#41;](images-report-builder-and-ssrs.md)   
- [Incrustar una imagen en un informe &#40;el generador de informes SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Agregar una imagen externa &#40;el generador de informes SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
+ [Imágenes &#40;generador de informes y SSRS&#41;](images-report-builder-and-ssrs.md)   
+ [Incrustar una imagen en un informe &#40;generador de informes y SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Agregar una imagen externa &#40;generador de informes y SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
  [Cuadro de diálogo de Propiedades de la imagen, General &#40;Generador de informes y SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

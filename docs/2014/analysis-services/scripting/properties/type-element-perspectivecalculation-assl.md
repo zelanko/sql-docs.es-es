@@ -1,5 +1,5 @@
 ---
-title: Tipo de elemento (PerspectiveCalculation) (ASSL) | Documentos de Microsoft
+title: Type (elemento) (PerspectiveCalculation) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: d7b87aea-3265-4f3c-a7ee-4f3e90f9a0b7
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 242d4d779da87c155371047fd2bb21128da51abf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d95f248e6991b8386ce9f6b4a2c012057c42ef4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229575"
 ---
 # <a name="type-element-perspectivecalculation-assl"></a>Elemento Type (PerspectiveCalculation) (ASSL)
   Indica el tipo de la [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) elemento.  
@@ -67,11 +67,11 @@ ms.locfileid: "36108186"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |*Miembro*|miembro calculado|  
-|*conjunto*|Conjunto con nombre|  
+|*Conjunto*|Conjunto con nombre|  
   
  La enumeración que corresponde a los valores permitidos para `Type` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.PerspectiveCalculationType>.  
   
- El elemento que corresponde al elemento primario de `Type` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
+ El elemento que se corresponde con el elemento primario de `Type` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

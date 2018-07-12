@@ -1,5 +1,5 @@
 ---
-title: Propiedades (SSAS Tabular) del proyecto | Documentos de Microsoft
+title: Propiedades (SSAS Tabular) del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.depservconfig.f1
 - sql12.asvs.bidtoolset.semmodelprojprop.f1
 ms.assetid: 333c1fc0-361c-415a-bd68-4e057f67bcb7
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d1e60f7a649b15fbcfd91300b05465d314a6fba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d8d8371d2dedf54b82475c2cc6ed5adcfd9b1891
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278021"
 ---
 # <a name="project-properties-ssas-tabular"></a>Propiedades del proyecto (SSAS tabular)
   En este tema se describen las propiedades del proyecto de modelos. Todos los proyectos de modelos tabulares tienen propiedades de opciones de implementación y de servidor de implementación que especifican cómo se implementan el proyecto y el modelo. Por ejemplo, el servidor en el que se implementará el modelo y el nombre de la base de datos de modelo implementada. Estos valores son diferentes de las propiedades del modelo, que afectan a la base de datos del área de trabajo del modelo. Las propiedades del proyecto descritas a continuación se muestran en cuadro de diálogo de propiedades de modo, que es diferente de la ventana de propiedades utilizada para mostrar otros tipos de propiedades. Para ver las propiedades del proyecto modal, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y luego haga clic en **Propiedades**.  
@@ -31,7 +31,7 @@ ms.locfileid: "36104568"
   
 -   [Propiedades de proyecto](#bkmk_proj_properties)  
   
--   [Para configurar los valores de propiedades Opciones de implementación y servidor de implementación](#bkmk_conf_proj_settings)  
+-   [Para configurar las opciones de implementación y servidor de implementación de propiedades](#bkmk_conf_proj_settings)  
   
 ##  <a name="bkmk_proj_properties"></a> Propiedades del proyecto  
  **Opciones de implementación**  
@@ -48,7 +48,7 @@ ms.locfileid: "36104568"
 |--------------|---------------------|-----------------|  
 |**Server**|**localhost**|Especifica una instancia de Analysis Services. De forma predeterminada, los modelos se implementan en la instancia predeterminada de Analysis Services del equipo local. Puede cambiar este valor para especificar una instancia con nombre del equipo local o cualquier instancia de cualquier equipo remoto en que tenga permiso para crear objetos de Analysis Services. Normalmente, serán permisos de administrador.<br /><br /> El valor predeterminado de esta propiedad se puede modificar mediante la propiedad Servidor de implementación predeterminado de la página Implementación de la configuración de Analysis Server en el cuadro de diálogo Herramientas\Opciones. Para obtener más información, vea [Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](properties-ssas-tabular.md).|  
 |**Edición**|**Desarrollador**|Especifica la edición del servidor de Analysis Services en la que se implementará el modelo. La edición del servidor define varias características que se pueden incorporar al proyecto.|  
-|**Base de datos**|**Modelo**|Especifica el nombre de la base de datos de Analysis Services en la que se crearán instancias de los objetos de modelo durante la implementación. Este nombre se especificará en una conexión de datos o en un archivo de conexión de datos .rsds. Se recomienda que el nombre refleje el tipo de análisis que se realizará usando el modelo, por ejemplo, AdventureWorksSalesModel.<br /><br /> **\*\* Importante \* \***  para evitar los nombres duplicados para los modelos implementados, debe cambiar la **base de datos** configuración de nombre de propiedad para que refleje el propósito del modelo. Cuando los usuarios se conecten al modelo como origen de datos, este es el nombre que verán.|  
+|**Base de datos**|**Modelo**|Especifica el nombre de la base de datos de Analysis Services en la que se crearán instancias de los objetos de modelo durante la implementación. Este nombre se especificará en una conexión de datos o en un archivo de conexión de datos .rsds. Se recomienda que el nombre refleje el tipo de análisis que se realizará usando el modelo, por ejemplo, AdventureWorksSalesModel.<br /><br /> **\*\* Importante \* \***  para evitar que los nombres duplicados en los modelos implementados, debería cambiar el **base de datos** configuración de nombre de propiedad para que refleje el propósito del modelo. Cuando los usuarios se conecten al modelo como origen de datos, este es el nombre que verán.|  
 |**Nombre del cubo**|**Modelo**|Especifica el nombre del cubo de base de datos tal como se muestra en una conexión de datos del cliente de informes.|  
 |**Versión**|**11.0**|Versión de la instancia de Analysis Services en la que se implementará el proyecto.|  
   
@@ -58,15 +58,15 @@ ms.locfileid: "36104568"
 |--------------|---------------------|-----------------|  
 |**Configuración de suplantación**|**Default**|Especifica las credenciales utilizadas para conectar a los orígenes de datos de un modelo que se ejecuta en el modo DirectQuery. Estas credenciales son diferentes de las credenciales de suplantación que se usan en el modo In-Memory predeterminado. Para más información, vea [Suplantación &#40;SSAS tabular&#41;](impersonation-ssas-tabular.md).|  
   
-###  <a name="bkmk_conf_proj_settings"></a> Para configurar los valores de propiedades Opciones de implementación y servidor de implementación  
+###  <a name="bkmk_conf_proj_settings"></a> Para configurar las opciones de implementación y servidor de implementación de propiedades  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y, luego, haga clic en **Propiedades**.  
   
 2.  En la ventana **Propiedades** , haga clic en una propiedad y, a continuación, escriba un valor o haga clic en la flecha abajo para seleccionar una opción de configuración.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar las propiedades de implementación y predeterminadas de modelado de datos &#40;SSAS Tabular&#41;](properties-ssas-tabular.md)   
- [Propiedades de los modelos &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md)   
- [Implementación de la solución de modelo tabular &#40;SSAS Tabular&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Configurar las propiedades de implementación y modelado de datos predeterminada &#40;Tabular de SSAS&#41;](properties-ssas-tabular.md)   
+ [Propiedades de los modelos &#40;Tabular de SSAS&#41;](model-properties-ssas-tabular.md)   
+ [Implementación de la solución de modelo tabular &#40;Tabular de SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

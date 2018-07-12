@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10010"
 helpviewer_keywords:
 - query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2996f7cfb6f7c873e57619c60f49511a62f8d533
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1c596018bcef960d176cf41a49221972d5652f20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162126"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas basado en texto (Generador de informes)
   Use el diseñador de consultas basado en texto para especificar una consulta mediante el lenguaje de consulta admitido por el origen de datos, para ejecutar la consulta y para ver los resultados en tiempo de diseño. Puede especificar varias sintaxis de consulta, comandos o instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] para extensiones de procesamiento de datos personalizadas, y consultas que se especifican como expresiones. Dado que el generador de consultas basado en texto no procesa previamente la consulta y puede acomodar todo tipo de sintaxis de consulta, es la herramienta de generación de consultas predeterminada para varios tipos de orígenes de datos.  
@@ -60,7 +60,7 @@ ms.locfileid: "36107359"
 |Resultado|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** de la barra de herramientas.|  
   
 #### <a name="example"></a>Ejemplo  
- La siguiente consulta devuelve la lista de apellidos de la [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** base de datos `ContactType` de la tabla de la `Person` esquema.  
+ La consulta siguiente devuelve la lista de apellidos de la [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** base de datos `ContactType` de tabla para el `Person` esquema.  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -83,7 +83,7 @@ SELECT Name FROM Person.ContactType
 |Resultado|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** de la barra de herramientas.|  
   
 #### <a name="example"></a>Ejemplo  
- La consulta siguiente llama el [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** procedimiento almacenado `uspGetWhereUsedProductID`. Debe especificar un valor para el parámetro de número de identificación de producto al ejecutar la consulta.  
+ La siguiente consulta llama a la [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** procedimiento almacenado `uspGetWhereUsedProductID`. Debe especificar un valor para el parámetro de número de identificación de producto al ejecutar la consulta.  
   
 ```  
 uspGetWhereUsedProductID  

@@ -1,5 +1,5 @@
 ---
-title: Base de datos (modo nativo de SSRS) | Documentos de Microsoft
+title: Base de datos (modo nativo de SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.databasesetup.F1
 ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 4c8ff22e9edee8af2af4b948289b56c3078e4232
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7bce0a9aa3adcddb7363224138a7ec3f51a47622
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183942"
 ---
 # <a name="database-ssrs-native-mode"></a>Base de datos (Modo nativo de SSRS)
-  Utilice la página Base de datos para crear y configurar las bases de datos del servidor de informes que permiten el almacenamiento interno de una o varias instancias del servidor de informes. Si está configurando un servidor de informes para utilizar una base de datos del servidor de informes remoto, debe utilizar el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para crear la base de datos.  
+  Utilice la página Base de datos para crear y configurar las bases de datos del servidor de informes que permiten el almacenamiento interno de una o varias instancias del servidor de informes. Si está configurando un servidor de informes para utilizar una base de datos del servidor de informes remoto, debe usar el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para crear la base de datos.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -32,7 +32,7 @@ ms.locfileid: "36108049"
   
  Una base de datos del servidor de informes debe ser compatible con un modo de servidor específico. El modo predeterminado es el modo nativo, pero también puede crear una base de datos de servidor de informes para el modo integrado de SharePoint si está ejecutando un servidor de informes en una implementación de mayor tamaño de un producto o tecnología de SharePoint. Para más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
- Para abrir esta página, inicie la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager y haga clic en **base de datos** en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir esta página, inicie el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager y haga clic en **base de datos** en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opciones  
  **Nombre de SQL Server**  
@@ -48,10 +48,10 @@ ms.locfileid: "36108049"
  Inicie un asistente que le guíe por todos los pasos requeridos para crear o seleccionar una base de datos del servidor de informes.  
   
  **Tipo de credencial**  
- Especifica las credenciales que utiliza el servidor de informes para conectarse a la base de datos de servidor de informes. Tipos de credenciales que se puede especificar incluyen la cuenta de servicio, un usuario de dominio de Windows, el usuario local de Windows, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión de base de datos. Para obtener más información acerca de cómo seleccionar las credenciales, vea [configurar una conexión de base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Especifica las credenciales que utiliza el servidor de informes para conectarse a la base de datos de servidor de informes. Tipos de credenciales que se puede especificar incluyen la cuenta de servicio, un usuario de dominio de Windows, el usuario local de Windows, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión de base de datos. Para obtener más información acerca de cómo seleccionar credenciales, vea [configurar una conexión de base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Nombre de usuario**  
- Especifica una cuenta de usuario de dominio si está usando credenciales de Windows, o un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión si utilizas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credenciales. Si está usando credenciales de Windows, especifíquelas en este formato:  *\<dominio >\\< cuenta\>*.  
+ Especifica una cuenta de usuario de dominio si está usando credenciales de Windows o un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión si usas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credenciales. Si está usando credenciales de Windows, especifíquelas en este formato:  *\<dominio >\\< cuenta\>*.  
   
  **Contraseña**  
  Especifica la contraseña de la cuenta.  

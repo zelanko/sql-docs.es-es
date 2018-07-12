@@ -1,5 +1,5 @@
 ---
-title: Generar subcubos en MDX (MDX) | Documentos de Microsoft
+title: Generar subcubos en MDX (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], subcubes
 - subcubes [MDX]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - CREATE SUBCUBE statement
 ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8369d07c18f6f79359a12423c4668642d66727db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f63c776a1b5d095a7ae17c9e568c827bd660db88
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178942"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>Generar subcubos en MDX (MDX)
   Un subcubo es un subconjunto de un cubo en la representación de una vista filtrada de los datos subyacentes. El hecho de limitar un cubo a un subcubo permite mejorar el rendimiento de las consultas.  
@@ -53,7 +53,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
 -   Si se incluyen todos los miembros de un nivel, se deben incluir todos los miembros de la jerarquía. Los miembros de otras jerarquías quedan excluidos cuando no existen con miembros del nivel (por ejemplo, una jerarquía desequilibrada como puede ser una ciudad que no incluya clientes).  
   
--   Un subcubo siempre contendrá cada `(All)` miembro del cubo.  
+-   Un subcubo siempre contiene cada `(All)` miembro del cubo.  
   
  Otra característica es el cálculo visual del total de los valores agregados del subcubo. Por ejemplo, imaginemos un subcubo que incluya `USA`, `WA`y `OR`. El valor agregado de `USA` será la suma de `{WA,OR}` puesto que `WA` y `OR` son los únicos estados definidos por el subcubo. El resto de los estados se ignoran.  
   
@@ -72,6 +72,6 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
 ## <a name="see-also"></a>Vea también  
  [Establecer el contexto de cubo en una consulta &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
- [Aspectos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Aspectos básicos de consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

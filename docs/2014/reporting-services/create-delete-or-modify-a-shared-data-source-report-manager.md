@@ -1,5 +1,5 @@
 ---
-title: Crear, eliminar o modificar un origen de datos compartido (Administrador de informes) | Documentos de Microsoft
+title: Crear, eliminar o modificar un origen de datos compartidos (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
 - removing shared data sources
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
 caps.latest.revision: 47
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0f5f9b5397d1f50e460f4f8f483daa7a9b3ef23f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e48edf78d8b0a73c01871b47ac24fa1f0bf8babb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202695"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Crear, eliminar o modificar un origen de datos compartido (Administrador de informes)
   Un origen de datos compartido especifica las propiedades de conexión para un origen de datos. Si tiene un origen de datos usado por un gran número de informes, modelos o suscripciones controladas por datos, piense en crear un origen de datos compartido para eliminar la sobrecarga de tener que mantener la misma información de conexión en varios lugares.  
@@ -51,7 +51,7 @@ Icono de origen de datos compartido
   
 7.  En **Cadena de conexión**, especifique la cadena de conexión que utiliza el servidor de informes para conectarse al origen de datos. Se recomienda que no especifique credenciales en la cadena de conexión.  
   
-     En el ejemplo siguiente se muestra una cadena de conexión para conectarse a la variable local [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos:  
+     El ejemplo siguiente muestra una cadena de conexión para conectarse a la variable local [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -67,7 +67,7 @@ Icono de origen de datos compartido
   
     -   Si el origen de datos no usa credenciales (por ejemplo, si el origen de datos es un archivo XML al que se tiene acceso desde el sistema de archivos), haga clic en **No se necesitan credenciales**. Solo debería especificar este tipo de credencial si es válido para el origen de datos. Si selecciona esta opción para un origen de datos que requiere autenticación, se producirá un error en la conexión. Si selecciona esta opción, asegúrese de que configura la cuenta de ejecución desatendida que permite al servidor de informes conectar a otros equipos para recuperar datos o archivos cuando las credenciales del usuario no están disponibles.  
   
-     Para obtener más información acerca de cómo configurar las credenciales, vea [especificar credenciales y la información de conexión para orígenes de datos de informe](report-data/specify-credential-and-connection-information-for-report-data-sources.md). Para más información sobre la cuenta de ejecución desatendida, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Para obtener más información sobre cómo configurar credenciales, vea [especificar credenciales y la información de conexión de orígenes de datos de informe](report-data/specify-credential-and-connection-information-for-report-data-sources.md). Para más información sobre la cuenta de ejecución desatendida, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 9. Haga clic en el botón **Probar conexión** para validar la configuración del origen de datos.  
   
@@ -101,10 +101,10 @@ Icono de origen de datos compartido
          [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [El contenido de página &#40;el Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
- [Administrar los orígenes de datos de informe](report-data/manage-report-data-sources.md)   
- [Configurar las propiedades del origen de datos para un informe &#40;el Administrador de informes&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Administrar orígenes de datos de informe](report-data/manage-report-data-sources.md)   
+ [Configurar propiedades del origen de datos para un informe &#40;el Administrador de informes&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

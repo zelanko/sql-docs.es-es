@@ -1,5 +1,5 @@
 ---
-title: Finalización del asistente (Asistente para minería de datos) | Documentos de Microsoft
+title: Finalización del asistente (Asistente para minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.finish.f1
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d013993f9a8e99898b78cfa520c474c788ac294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 729d594d2ab714770ec168a347e044aa968d9865
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278431"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Finalización del asistente (Asistente para minería de datos)
   Use la página **Finalización del asistente** para revisar la estructura de minería de datos que se creará cuando finalice el asistente. También puede definir el nombre de la estructura de minería de datos.  
@@ -64,7 +64,7 @@ ms.locfileid: "36106474"
 >  Esta opción se encuentra disponible si ha seleccionado **A partir de un cubo existente** en la página **Seleccionar el método de definición** y si ha seleccionado **Crear dimensión de modelo de minería de datos** en la página actual del asistente.  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda F1 del Asistente para minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Asistente para la Ayuda de F1 de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Seleccione la vista del origen de datos &#40;Asistente para minería de datos&#41;](select-data-source-view-data-mining-wizard.md)   
  [Especifique los datos de entrenamiento &#40;Asistente para minería de datos&#41;](specify-the-training-data-data-mining-wizard.md)  
   

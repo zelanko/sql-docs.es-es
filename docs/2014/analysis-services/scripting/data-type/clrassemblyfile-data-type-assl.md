@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos ClrAssemblyFile (ASSL) | Documentos de Microsoft
+title: Tipo de datos ClrAssemblyFile (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ClrAssemblyFile data type
 ms.assetid: 91074677-c149-483b-a56d-0e35d959d9eb
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b542c4193d80fa80cc9aed6663f41e102266000b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ebfcf0080184294cbbda05e671776972be18f9a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277872"
 ---
 # <a name="clrassemblyfile-data-type-assl"></a>Tipo de datos ClrAssemblyFile (ASSL)
   Define un tipo de datos primitivo que representa uno de los archivos que componen un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] `Assembly` ([ClrAssembly](assembly-data-type-assl.md) elemento).  
@@ -68,7 +68,7 @@ ms.locfileid: "36106217"
  [Elemento Server &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [Elemento de la base de datos &#40;ASSL&#41;](../objects/database-element-assl.md)   
  [Elemento Assemblies &#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
- [Assembly (elemento) &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
+ [Elemento Assembly &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
  [Tipo de datos DataBlock &#40;ASSL&#41;](datablock-data-type-assl.md)   
  [Bloquea el elemento &#40;ASSL&#41;](../collections/blocks-element-assl.md)   
  [Bloquear elemento &#40;ASSL&#41;](../objects/block-element-assl.md)   

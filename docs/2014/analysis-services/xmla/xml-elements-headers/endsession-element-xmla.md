@@ -1,5 +1,5 @@
 ---
-title: Elemento EndSession (XMLA) | Documentos de Microsoft
+title: Elemento EndSession (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - EndSession element
 ms.assetid: e64f1da4-5c83-40a2-b15e-837f5451bafa
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1f54f1ec23fbb07744ffea1009f4df1aef11b6f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 32c76318f05dbb628dd23de825203429ee0a22f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148126"
 ---
 # <a name="endsession-element-xmla"></a>Elemento EndSession (XMLA)
   Utiliza el encabezado SOAP en un mensaje de solicitud SOAP para terminar una sesión existente en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

@@ -1,5 +1,5 @@
 ---
-title: Clasificar (complementos de minería de datos para Excel de datos) del Asistente | Documentos de Microsoft
+title: Clasificar (complementos de minería de datos para Excel de datos) del Asistente | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data modeling [data mining]
 - classification [data mining]
 ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5f71610a317be36a84fa90aff08bed8d6a50d8aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec1741a66564a9243e06e53c77aa0473dec1b040
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159566"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Asistente para clasificación (Complementos de minería de datos para Excel)
-  ![Asistente para clasificar en la cinta de opciones de minería de datos](media/dmc-classify.gif "Asistente para clasificar en la cinta de opciones de minería de datos")  
+  ![Asistente para clasificar en la cinta de opciones minería de datos](media/dmc-classify.gif "Asistente para clasificar en la cinta de opciones minería de datos")  
   
  El **clasificar** asistente le ayuda a crear un modelo de clasificación basado en datos existentes en una tabla de Excel, un rango de Excel o un origen de datos externo.  
   
@@ -41,19 +41,19 @@ ms.locfileid: "36109120"
   
 3.  En el **clasificación** página, elija la columna que desea clasificar.  
   
-     Revise las columnas en la lista, **columnas de entrada**y anule la selección de las columnas que tienen valores únicos y, por tanto, no son útiles para la creación de patrones, como números de identificación, nombres de cliente y así sucesivamente. También debe quitar las columnas que básicamente dupliquen la columna clasificable.  
+     Revise las columnas en la lista, **columnas de entrada**y anule la selección de todas las columnas que tienen valores únicos y, por tanto, no son útiles para la creación de patrones, como números de identificación, nombres de cliente y así sucesivamente. También debe quitar las columnas que básicamente dupliquen la columna clasificable.  
   
      Por ejemplo, si está clasificando la predicción de la categoría de un producto, debe excluir el campo de subcategoría si hay una regla de negocios conocida o la fortaleza de esa regla podría impedir que se detectaran otras correlaciones.  
   
 4.  Si lo desea, haga clic en **parámetros** para cambiar los parámetros del algoritmo y personalizar el comportamiento del modelo de agrupación en clústeres.  
   
-5.  En el **dividir los datos en conjuntos de prueba y entrenamiento** página, especifique la cantidad de datos son suficientes para realizar pruebas. El resto se utiliza siempre para entrenar el modelo.  
+5.  En el **dividir los datos en conjuntos de prueba y entrenamiento** , especifique la cantidad de datos son suficientes para las pruebas. El resto se utiliza siempre para entrenar el modelo.  
   
      La configuración predeterminada es tener un 30 % de datos de prueba y un 70 % de datos de entrenamiento.  
   
 6.  En el **finalizar** página, proporcione un nombre descriptivo para el conjunto de datos y el modelo y establecer las siguientes opciones que controlan cómo trabajar con el modelo terminado:  
   
-    -   **Examinar modelo**. Cuando se selecciona esta opción, tan pronto como el asistente termina de procesar el modelo, se abre un **examinar** ventana que le ayudarán a explorar los resultados. El contenido del visor depende del tipo de modelo que creó. Para obtener más información, consulte [examinar un modelo de árboles de decisión](browsing-a-decision-trees-model.md) y [examinar un modelo de red neuronal](browsing-a-neural-network-model.md).  
+    -   **Examinar modelo**. Cuando se selecciona esta opción, tan pronto como el asistente finaliza el procesamiento del modelo, se abre un **examinar** ventana que le ayudarán a explorar los resultados. El contenido del visor depende del tipo de modelo que creó. Para obtener más información, consulte [examinar un modelo de árboles de decisión](browsing-a-decision-trees-model.md) y [examinar un modelo de red neuronal](browsing-a-neural-network-model.md).  
   
     -   **Habilitar obtención de detalles**. Seleccione esta opción para ver los datos subyacentes desde el modelo terminado. Esta opción solo está disponible si se crea un modelo de árbol de decisión.  
   

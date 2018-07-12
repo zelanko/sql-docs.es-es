@@ -1,13 +1,11 @@
 ---
-title: Con el encabezado SQL Server Native Client y archivos de biblioteca | Documentos de Microsoft
+title: Con el encabezado SQL Server Native Client y los archivos de biblioteca | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|applications
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - ODBC applications, header files
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-caps.latest.revision: 63
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e7fcb33012d766c2585e11468e23a3591a4b2650
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42a657a4524a09ea8d6643d6b37e193c5c6b227f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952440"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416874"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Utilizar los archivos de encabezado y de biblioteca de SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +53,7 @@ ms.locfileid: "32952440"
  Las aplicaciones OLE DB que usan el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client solamente tienen que hacer referencia a sqlncli.h. Si una aplicación utiliza MDAC (SQLOLEDB) y el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, puede hacer referencia a sqloledb.h y a sqlncli.h, pero la referencia a sqloledb.h debe aparecer en primer lugar.  
   
 ## <a name="using-the-sql-server-native-client-header-file"></a>Usar el archivo de encabezado de SQL Server Native Client  
- Para usar el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] archivo de encabezado de Native Client, debe usar un **incluyen** instrucción en el código de programación de C o C++. En las secciones siguientes se describe cómo hacer esto para las aplicaciones OLE DB y ODBC.  
+ Para usar el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] archivo de encabezado de Native Client, debe usar un **incluyen** instrucción dentro de su código de programación de C o C++. En las secciones siguientes se describe cómo hacer esto para las aplicaciones OLE DB y ODBC.  
   
 > [!NOTE]  
 >  Los archivos de encabezado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y de biblioteca solo se pueden compilar utilizando Visual Studio C++ 2002 o posterior.  
@@ -83,13 +80,13 @@ include "sqlncli.h";
 ```  
   
 > [!NOTE]  
->  Si la aplicación usa API de ODBC y OLE DB, se debe omitir la primera línea de código mostrado anteriormente. Además, si la aplicación tiene una instrucción `#include` para odbcss.h, se debe quitar.  
+>  Si se utilizan OLE DB y ODBC API por la aplicación, se debe omitir la primera línea del código mostrado anteriormente. Además, si la aplicación tiene una instrucción `#include` para odbcss.h, se debe quitar.  
   
  Al crear una conexión a un origen de datos mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, utilice "SQL Server Native Client 11.0" como la cadena de nombre de controlador.  
   
 ## <a name="component-names-and-properties-by-version"></a>Nombres de componente y propiedades por versión  
   
-|Propiedad|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
+|Property|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
 |--------------|--------------------------------------------------|-------------------------------------------------------|---------------------------------------------------------------|----------|  
 |Nombre de controlador ODBC|SQL Native Client|SQL Server Native Client 10.0|SQL Server Native Client 11.0|SQL Server|  
 |Nombre de archivo de encabezado de ODBC|Sqlncli.h|Sqlncli.h|Sqlncli.h|Odbcss.h|  
@@ -110,6 +107,6 @@ include "sqlncli.h";
  Para obtener más información, vea realizar [realizar operaciones de copia masiva](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Creación de aplicaciones con SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Generar aplicaciones con SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

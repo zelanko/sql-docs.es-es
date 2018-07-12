@@ -1,5 +1,5 @@
 ---
-title: Elemento MaxActiveConnections (ASSL) | Documentos de Microsoft
+title: Elemento MaxActiveConnections (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MaxActiveConnections element
 ms.assetid: 0dc5b64d-061d-409f-95c0-4c63f87f5ee4
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df2dafc69a97d1beb954100413761c07878881d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71cc72a5b5b405a1548b08a331edbef10d0d3c60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259351"
 ---
 # <a name="maxactiveconnections-element-assl"></a>Elemento MaxActiveConnections (ASSL)
-  Contiene el número máximo de conexiones simultáneas permitido por un elemento que se deriva de la [DataSource](../data-type/datasource-data-type-assl.md) tipo de datos.  
+  Contiene el número máximo de conexiones simultáneas permitidas por un elemento que se deriva el [DataSource](../data-type/datasource-data-type-assl.md) tipo de datos.  
   
 ## <a name="syntax"></a>Sintaxis  
   

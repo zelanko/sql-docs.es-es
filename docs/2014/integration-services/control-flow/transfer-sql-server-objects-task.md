@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjectstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2fcff2e593b3b1eb5f235f56b398294b0bf2edf7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7122dbdf0f99e7bf490487cd98abb3f4d4e7c81a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184742"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tarea Transferir objetos de SQL Server
   La tarea Transferir objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transfiere uno o varios tipos de objetos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por ejemplo, la tarea puede copiar tablas y procedimientos almacenados. Dependiendo de la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se utilice como origen, hay diferentes tipos de objetos disponibles para copiar. Por ejemplo, solo en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se incluyen esquemas y agregados definidos por el usuario.  
@@ -92,7 +92,7 @@ ms.locfileid: "36109271"
   
 -   TransferSqlServerObjectsTaskFinishedTransferringObjects    Esta entrada del registro indica que ha finalizado la transferencia. La entrada del registro incluye la hora de finalización.  
   
- Además, una entrada del registro para un evento `OnInformation` indica el número de objetos del tipo seleccionado para la transferencia, el número de objetos transferidos y acciones, como el truncamiento de tablas cuando se transfieren datos con tablas. Una entrada del registro para el `OnWarning` evento se escribe para cada objeto que se sobrescribe en el destino.  
+ Además, una entrada del registro para un evento `OnInformation` indica el número de objetos del tipo seleccionado para la transferencia, el número de objetos transferidos y acciones, como el truncamiento de tablas cuando se transfieren datos con tablas. Una entrada del registro para el `OnWarning` se escribe el evento para cada objeto que se sobrescribe en el destino.  
   
 ## <a name="security-and-permissions"></a>Seguridad y permisos  
  El usuario debe tener permiso para examinar objetos en el servidor de origen, y para quitar y crear objetos en el servidor de destino; además, el usuario debe tener acceso a la base de datos especificada y a los objetos de la base de datos.  
@@ -112,7 +112,7 @@ ms.locfileid: "36109271"
   
 -   [Transferir el Editor de la tarea de objetos SQL Server &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Transferir el Editor de la tarea de objetos SQL Server &#40;objetos página&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
+-   [Transferir el Editor de la tarea de objetos SQL Server &#40;objetos de página&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

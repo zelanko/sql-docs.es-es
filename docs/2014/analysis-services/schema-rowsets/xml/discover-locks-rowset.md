@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_LOCKS | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_LOCKS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DISCOVER_LOCKS rowset
 ms.assetid: dea48167-212c-40b7-a416-434042a1b697
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 41af6b328b9083151bd3ef51bfc7df1d2986c1cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4458d9dac98fd35d54ff35c0d1d524a92b576ba5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167606"
 ---
 # <a name="discoverlocks-rowset"></a>DISCOVER_LOCKS, conjunto de filas
   Proporciona información sobre los bloqueos pendientes actuales en el servidor.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_LOCKS` filas contiene las columnas siguientes.  
+ El `DISCOVER_LOCKS` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "36107966"
  Este conjunto de filas de esquema no está ordenado.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DISCOVER_LOCKS` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DISCOVER_LOCKS` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

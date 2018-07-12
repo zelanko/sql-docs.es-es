@@ -1,5 +1,5 @@
 ---
-title: Especificar colores coherentes en varios gráficos de formas (generador de informes y SSRS) | Documentos de Microsoft
+title: Especificar colores coherentes en varios gráficos de formas (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3f91b9366038ebee7ac3a4fc9a9c9cc0c7dbe2b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 588df3c7dae6d5d2a96a3662123af5eca20398f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200725"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>Especificar colores coherentes en varios gráficos de formas (Generador de informes y SSRS)
-  En los gráficos de formas no, se selecciona un nuevo color de la paleta según el índice de series del gráfico. Por ejemplo, la primera serie del gráfico se asignará al primer color de la paleta. Sin embargo, este comportamiento difiere para los gráficos de formas. En los gráficos de formas, cada color de la paleta se asigna a un punto de datos del conjunto de datos. Por ejemplo, el punto de datos 1 se asigna al primer color de la paleta, el punto de datos 2 se asigna al segundo color de la paleta, etc.  
+  En los gráficos que no son de formas, se selecciona un nuevo color de la paleta en función del índice de series del gráfico. Por ejemplo, la primera serie del gráfico se asignará al primer color de la paleta. Sin embargo, este comportamiento difiere para los gráficos de formas. En los gráficos de formas, cada color de la paleta se asigna a un punto de datos del conjunto de datos. Por ejemplo, el punto de datos 1 se asigna al primer color de la paleta, el punto de datos 2 se asigna al segundo color de la paleta, etc.  
   
  Si un punto de datos no tiene ningún valor, se omite de la presentación en un gráfico de formas. Esto significa que el punto de datos no se colorea. Por ejemplo, si el punto 2 tiene un valor de cero, el punto 1 se asignará al primer color de la paleta y el punto 3 se asignará al segundo color de la paleta. Este método resulta útil porque los puntos vacíos del conjunto de datos de un gráfico circular no usan innecesariamente un color de la paleta cuando no es necesario dibujar el punto vacío.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36108503"
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Agregar estilos con bisel, relieve y textura a un gráfico &#40;Generador de informes y SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [Definir los colores de un gráfico mediante una paleta &#40;Generador de informes y SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [Agregar puntos vacíos al gráfico &#40;el generador de informes SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)   
+ [Agregar puntos vacíos al gráfico &#40;generador de informes y SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)   
  [Gráficos de formas &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   

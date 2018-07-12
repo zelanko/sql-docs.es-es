@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 caps.latest.revision: 8
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: c2912564cb2866090f428cd96a2adc9d83faf9cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7d6b390a88a652da41623e49437fb2c022b7e3b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198185"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Usar el Asistente para agregar réplica de Azure (SQL Server)
   Use el Asistente para agregar réplica de Azure para que le ayude a crear una nueva máquina virtual de Windows Azure en tecnologías informáticas híbridas y configurarla como una réplica secundaria para un grupo de disponibilidad AlwaysON nuevo o existente.  
@@ -35,7 +34,7 @@ ms.locfileid: "36109022"
 -   **Para agregar una réplica con:**  [Asistente Agregar réplica de Microsoft Azure (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
- Si nunca ha agregado una réplica de disponibilidad para un grupo de disponibilidad, consulte la "Instancias del servidor" y "grupos de disponibilidad y réplicas" secciones en [requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Si nunca ha agregado una réplica de disponibilidad a un grupo de disponibilidad, consulte la "Instancias del servidor" y "grupos de disponibilidad y réplicas" secciones en [requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
@@ -114,7 +113,7 @@ ms.locfileid: "36109022"
 -   [Agregar una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Agregar una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   

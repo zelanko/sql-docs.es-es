@@ -1,5 +1,5 @@
 ---
-title: Establecer propiedades de base de datos Multidimensional (Analysis Services) | Documentos de Microsoft
+title: Establecer las propiedades de la base de datos Multidimensional (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [Analysis Services], databases
 ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2ec653606418e1c3dea32b04cb1e923b54c98e45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1de79fd7eb257364069dfaa15146036dd617bdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200235"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Establecer propiedades de bases de datos multidimensionales (Analysis Services)
   Hay algunas propiedades de base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se pueden configurar en el diseñador de bases de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
@@ -32,7 +32,7 @@ ms.locfileid: "36104813"
   
 -   Puede proporcionar una descripción de la base de datos para que la lean los usuarios. También puede ver el nombre de la base de datos, pero no lo puede cambiar. Para cambiar el nombre de la base de datos, debe editar las propiedades del proyecto.  
   
--   Puede proporcionar traducciones para el nombre y la descripción de la base de datos en uno o varios idiomas. Para obtener más información, consulte [las traducciones de cubos](../multidimensional-models-olap-logical-cube-objects/cube-translations.md), [traducciones de dimensiones](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), y [traducciones &#40;Analysis Services&#41;](../translations-analysis-services.md).  
+-   Puede proporcionar traducciones para el nombre y la descripción de la base de datos en uno o varios idiomas. Para obtener más información, consulte [traducciones de cubos](../multidimensional-models-olap-logical-cube-objects/cube-translations.md), [traducciones de dimensiones](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), y [traducciones &#40;Analysis Services&#41;](../translations-analysis-services.md).  
   
 -   Puede ver y modificar las asignaciones de tipo de cuenta predeterminadas. Las asignaciones de tipo de cuenta se usan cuando una o varias medidas usan la función de agregación *ByAccount* . Para cada tipo de cuenta, puede especificar un alias y modificar la función de agregación predeterminada asociada al tipo de cuenta. Para obtener más información sobre cómo modificar la agregación predeterminada, vea [Definir el comportamiento de suma parcial](define-semiadditive-behavior.md).  
   

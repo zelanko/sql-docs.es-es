@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 070a39e8ef8d4010ac423fefa39baa39fc3a8304
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d64d6e7fa360bc66324cfbaaaf97548144234e0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172366"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Mejorar el rendimiento de las consultas de texto completo
   A continuación se ofrece una lista de recomendaciones que servirán para mejorar el rendimiento de las consultas de texto completo.  

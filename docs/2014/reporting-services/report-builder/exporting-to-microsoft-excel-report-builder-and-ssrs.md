@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 caps.latest.revision: 24
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6ae7c26bce8b52e58124b04c435af6be7d6dc84f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9c72123024fff48604919df0804694e0cd6ec480
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152106"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportar a Microsoft Excel (Generador de informes y SSRS)
   La extensión de representación de Excel [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] representa un informe en el formato nativo de [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Con la extensión de representación de Excel, el ancho de las columnas de Excel refleja más exactamente el ancho de las columnas de los informes.  
@@ -36,7 +36,7 @@ ms.locfileid: "36109222"
 >  Para obtener el service pack más reciente para [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], vea [cómo obtener el service pack más reciente para SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkId=402512)  
   
 > [!IMPORTANT]  
->  Cuando se define un parámetro de tipo `String`, se presentará al usuario un cuadro de texto que acepta cualquier valor. Si un parámetro de informe no está vinculado a un parámetro de consulta y los valores del parámetro se incluyen en el informe, un usuario del informe puede escribir sintaxis de expresión, un script o una dirección URL en el valor del parámetro y representar el informe en Excel. Si, posteriormente, otro usuario visualiza el informe y hace clic en el contenido del parámetro representado, el usuario podría ejecutar accidentalmente el script o el vínculo malintencionados.  
+>  Al definir un parámetro de tipo `String`, se presentará al usuario un cuadro de texto que puede tomar cualquier valor. Si un parámetro de informe no está vinculado a un parámetro de consulta y los valores del parámetro se incluyen en el informe, un usuario del informe puede escribir sintaxis de expresión, un script o una dirección URL en el valor del parámetro y representar el informe en Excel. Si, posteriormente, otro usuario visualiza el informe y hace clic en el contenido del parámetro representado, el usuario podría ejecutar accidentalmente el script o el vínculo malintencionados.  
 >   
 >  Para reducir el riesgo de ejecución accidental de scripts malintencionados, abra los informes representados exclusivamente desde orígenes de confianza. Para más información sobre cómo proteger informes, vea [Proteger informes y recursos](../security/secure-reports-and-resources.md).  
   
@@ -149,9 +149,9 @@ ms.locfileid: "36109222"
   
 -   El Generador de informes está en modo sin conexión y se obtiene la vista previa de un informe en el Generador de informes. El archivo de configuración RSReportServer reside en el servidor de informes, por lo que las herramientas o productos desde los que exporte informes se deben conectar con un servidor de informes para leer el archivo de configuración.  
   
-     Esto se produce tanto en el [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] y versiones independientes del generador de informes.  
+     Esto es así en el [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] y versiones independientes del generador de informes.  
   
--   Elemento de Web del Visor de informes en modo local y la granja de servidores de SharePoint no está integrado con un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] servidor de informes. Para más información, vea [Informes en modo local frente al modo conectado en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
+-   Elemento de Web del Visor de informes en modo local y la granja de SharePoint no está integrado con un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] servidor de informes. Para más información, vea [Informes en modo local frente al modo conectado en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
  Si el representador de la opción de menú **Excel 2003** se configura para que esté visible, las opciones de Excel y de Excel 2003 están disponibles en los escenarios siguientes:  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36109222"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- La extensión EXCELOPENXML define el representador de Excel para Excel 2007-2010. La extensión EXCEL define la versión de Excel 2003. `Visible = “false”` indica que el representador de Excel 2003 está oculto. Para obtener más información, consulte [archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md) y [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
+ La extensión EXCELOPENXML define el representador de Excel para Excel 2007-2010. La extensión EXCEL define la versión de Excel 2003. `Visible = “false”` indica que el representador de Excel 2003 está oculto. Para obtener más información, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) y [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
   
 ### <a name="differences-between-the-excel-2007-2010-and-excel-2003-renderers"></a>Diferencias entre los representadores de Excel 2007-2010 y de Excel 2003  
  Los informes, representados con los representadores de Excel o Excel 2003, suelen ser idénticos y solo en raras ocasiones observará diferencias entre los dos formatos. En la tabla siguiente se comparan los representadores de Excel y de Excel 2003.  
@@ -246,7 +246,7 @@ ms.locfileid: "36109222"
  En Excel se admiten algunos elementos interactivos. A continuación se describen sus comportamientos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar u ocultar  
- [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] tiene limitaciones en el modo de administrar elementos de informe ocultos y visibles cuando éstos se exportan. Los grupos, filas y columnas que contienen elementos de informe que pueden mostrarse y ocultarse se representan como esquemas de Excel. Excel crea esquemas que expanden y contraen filas y columnas completas, lo que puede provocar que se colapsen elementos de informe que no se deberían contraer. Además, los símbolos de esquema de Excel pueden mostrarse desordenados con esquemas superpuestos. Para solucionar estos problemas, al usar la extensión de representación en Excel se aplican las reglas de esquema siguientes:  
+ [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] tiene limitaciones en el modo de administrar los elementos de informe ocultos y visibles cuando éstos se exportan. Los grupos, filas y columnas que contienen elementos de informe que pueden mostrarse y ocultarse se representan como esquemas de Excel. Excel crea esquemas que expanden y contraen filas y columnas completas, lo que puede provocar que se colapsen elementos de informe que no se deberían contraer. Además, los símbolos de esquema de Excel pueden mostrarse desordenados con esquemas superpuestos. Para solucionar estos problemas, al usar la extensión de representación en Excel se aplican las reglas de esquema siguientes:  
   
 -   El elemento de informe que se puede mostrar y ocultar y que está situado en la esquina superior izquierda se podrá seguir mostrando y ocultando en Excel. Los elementos de informe que se pueden mostrar y ocultar y que comparten un espacio vertical u horizontal con el elemento de informe que se puede mostrar y ocultar y que está situado en la esquina superior izquierda no se podrán mostrar ni ocultar en Excel.  
   
@@ -283,7 +283,7 @@ ms.locfileid: "36109222"
 ## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;el generador de informes SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

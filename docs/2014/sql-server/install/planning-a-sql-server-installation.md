@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30acad1bce8a94a1cb3eedd5867977ebddc6d015
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e6b68b7cee6f530a8c5f24d54732654da4f89f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151786"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planear una instalación de SQL Server
   Para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], siga estos pasos:  
@@ -43,7 +43,7 @@ ms.locfileid: "36111486"
  [Novedades de la instalación de SQL Server](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)  
  En este tema se describen los detalles sobre las características nuevas o mejoradas de la instalación de esta versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- [Requisitos de hardware y Software para instalar SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Requisitos de hardware y software para instalar SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
  En este tema se enumeran los requisitos mínimos de hardware y software para instalar y ejecutar una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  [Consideraciones de seguridad para una instalación de SQL Server](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "36111486"
  En este tema se describen las versiones traducidas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Instalar a SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
+ [Instalar SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
  En esta sección se proporciona información general de las distintas opciones de instalación de que se dispone para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  [Instalar las características de BI de SQL Server 2014](install-sql-server-business-intelligence-features.md)  
@@ -82,6 +82,6 @@ ms.locfileid: "36111486"
  [Instalar a SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Soluciones de alta disponibilidad &#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   
  [Antes de instalar los clústeres de conmutación por error](../failover-clusters/install/before-installing-failover-clustering.md)   
- [Actualización a SQL Server 2014 mediante el Asistente para la instalación &#40;el programa de instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [Actualización a SQL Server 2014 mediante el Asistente para instalación &#40;el programa de instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

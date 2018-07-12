@@ -1,32 +1,29 @@
 ---
-title: Detección de metadatos | Documentos de Microsoft
+title: Detección de metadatos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 402730cba419ad49c5be791fefd7a5b2a7971e98
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 51421229b4d5e8799e4a3995b9aed680fdaa026a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700306"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423434"
 ---
 # <a name="metadata-discovery"></a>Detección de metadatos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  La mejora de la detección de metadatos en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dar formato a las aplicaciones cliente nativas para asegurarse de que metadatos de columna o parámetro devuelto de la ejecución de una consulta están idéntico al o ser compatible con los metadatos que especificó antes de ejecuta la consulta. Se producirá un error si los metadatos devueltos tras la ejecución de la consulta no son compatibles con el formato de los metadatos especificados antes de la ejecución de la consulta.  
+  La mejora de la detección de metadatos en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] las aplicaciones cliente nativas para asegurarse de que esos metadatos de columna o parámetro devuelto de la ejecución de una consulta están compatible con los metadatos o idéntico al formato especificado antes de ejecuta la consulta. Se producirá un error si los metadatos devueltos tras la ejecución de la consulta no son compatibles con el formato de los metadatos especificados antes de la ejecución de la consulta.  
   
  En el caso de las funciones bcp y ODBC y las interfaces IBCPSession e IBCPSession2, ahora se puede especificar una lectura diferida (detección de metadatos diferida) para evitar la detección de metadatos en operaciones de salida de consulta. De este modo, mejora el rendimiento y se eliminan los errores de detección de metadatos.  
   
@@ -65,9 +62,9 @@ ms.locfileid: "35700306"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters:: GetParameterInfo (vea [ICommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md) para obtener más información)  
+-   ICommandWithParameters:: GetParameterInfo (consulte [ICommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md) para obtener más información)  
   
- También verá una mejora del rendimiento cuando se especifica el formato de metadatos utilizando IBCPSession::BCPSetBulkMode  
+ También verá una mejora del rendimiento cuando se especifica el formato de metadatos mediante IBCPSession::BCPSetBulkMode  
   
  La detección del metadatos mejorada en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client es posible debido a la unión de dos procedimientos almacenados de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
   

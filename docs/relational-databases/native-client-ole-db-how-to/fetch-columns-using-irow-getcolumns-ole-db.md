@@ -1,12 +1,12 @@
 ---
-title: 'Capturar columnas mediante IRow:: GetColumns (OLE DB) | Documentos de Microsoft'
+title: 'Capturar columnas mediante IRow:: GetColumns (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,24 +17,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8899776b203a1071ee3e4add8692f8bea782d14d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: b8a13d1b87bc67e68f7a984f5ff213718413d222
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703766"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423924"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Capturar columnas mediante IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  El **IRow** interfaz permite el acceso directo a las columnas de una única fila del conjunto de resultados. Por lo tanto, **IRow** es una manera eficaz de recuperar las columnas de un conjunto de resultados con una fila.  
+  El **IRow** interfaz permite el acceso directo a las columnas de una sola fila del conjunto de resultados. Por lo tanto, **IRow** es una manera eficaz para recuperar las columnas de un conjunto de resultados con una fila.  
   
  Hay un ejemplo de código que muestra cómo capturar una fila única mediante **IRow**. En este ejemplo, se recupera una columna a la vez de la fila. El ejemplo muestra:  
   
 -   Cómo capturar un grupo de columnas (en secuencia).  
   
--   Cómo tener acceso dos veces a una columna. La primera vez se obtiene el ancho de columna real y después se tiene acceso a los datos reales. En la estructura DBCOLUMNACCESS, si **pData** es NULL y **cbMaxLen** es 0, la llamada a **IRow**-**> GetColumns()** Devuelve la longitud de columna real. En este caso, **IRow -> GetColumns()** se puede llamar nuevamente en la misma columna para recuperar los datos reales.  
+-   Cómo tener acceso dos veces a una columna. La primera vez se obtiene el ancho de columna real y después se tiene acceso a los datos reales. En la estructura DBCOLUMNACCESS, si **pData** es NULL y **cbMaxLen** es 0, la llamada a **IRow**-**> GetColumns()** Devuelve solo la longitud real de la columna. En este caso, **IRow -> GetColumns()** se puede llamar de nuevo en la misma columna para recuperar los datos reales.  
   
 > [!IMPORTANT]  
 >  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -62,7 +62,7 @@ ms.locfileid: "35703766"
   
  La primera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crea una tabla usada por el ejemplo.  
   
- Compile con ole32.lib oleaut32.lib y ejecute la segunda lista de código (C++). Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\\name", donde el nombre es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
+ Compile con ole32.lib oleaut32.lib y ejecute la segunda lista de código (C++). Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\\name", donde nombre es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
  La tercera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) elimina la tabla usada por el ejemplo.  
   

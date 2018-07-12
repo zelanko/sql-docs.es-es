@@ -1,5 +1,5 @@
 ---
-title: 'Opciones (página General del Editor de texto: texto sin formato -) | Documentos de Microsoft'
+title: 'Opciones (página General del Editor de texto: texto sin formato -) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.General
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 caps.latest.revision: 22
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e46857d3ea3078847e2c540999f37cef79d05091
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b66c8286d3ae062307175e689f222f33ea3be6a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110999"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150996"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Opciones (página General del Editor de texto: texto sin formato:)
   Utilice este cuadro de diálogo para cambiar el comportamiento de edición general del Editor de texto que se usa para editar un documento que no esté asociado a ningún lenguaje de desarrollo específico. Para mostrar estas opciones de configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda el **Editor de texto**, expanda **Texto simple** y, a continuación, haga clic en **General**.  
@@ -43,7 +43,7 @@ ms.locfileid: "36110999"
  **Habilitar espacio virtual**  
  Inserta espacios al final de cada línea de texto. Seleccione esta casilla para colocar comentarios en un punto coherente junto al texto.  
   
- **Ajuste automático de línea**  
+ **Ajuste de línea**  
  Muestra, en la siguiente línea, cualquier parte de una línea que se extienda horizontalmente fuera del área visible del editor. Cuando se selecciona esta casilla, se habilita la opción **Mostrar glifos visuales para ajuste de línea** .  
   
  **Mostrar glifos visuales para ajuste de línea**  
@@ -52,7 +52,7 @@ ms.locfileid: "36110999"
 > [!NOTE]  
 >  Estas flechas de recordatorio no se agregan al código y no se imprimen. Solo sirven como referencia.  
   
- **Aplicar comandos Cortar o copiar a líneas en blanco si no hay selección**  
+ **Aplicar comandos Cortar o copiar a líneas en blanco cuando no hay ninguna selección**  
  Establece el comportamiento del editor cuando el punto de inserción se coloca en una línea en blanco, no se selecciona nada y se hace clic en **Copiar** o **Cortar**.  
   
  Cuando se selecciona esta casilla, se copia o se corta la línea en blanco. Si luego hace clic en **Pegar**, se insertará una nueva línea en blanco.  

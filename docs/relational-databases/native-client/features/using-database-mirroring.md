@@ -1,12 +1,11 @@
 ---
-title: Mediante la creación de reflejo de base de datos | Documentos de Microsoft
+title: Mediante la creación de reflejo de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, database mirroring
 - SQL Server Native Client OLE DB provider, database mirroring
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
-caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0148570aa44220b4229f83bad45b67ffc9812d2d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
-ms.translationtype: MT
+ms.openlocfilehash: e799cb1d725cd756e271ba5706f97d655314c9a9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699506"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414914"
 ---
 # <a name="using-database-mirroring"></a>Usar la creación de reflejo de bases de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,11 +38,11 @@ ms.locfileid: "35699506"
   
  La creación de reflejo de la base de datos, introducida en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], es una solución de software para aumentar la disponibilidad de la base de datos y la redundancia de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client proporciona compatibilidad implícita con creación de reflejo de base de datos, por lo que el desarrollador no necesita escribir ningún código ni realizar ninguna otra acción una vez que se ha configurado para la base de datos.  
   
- La creación de reflejo, que se implementa en una base de cada base de datos, conserva una copia de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos de producción en un servidor en espera. Este servidor puede ser un servidor en estado de espera activa o semiactiva, dependiendo de la configuración y del estado de la sesión de creación de reflejo de la base de datos. Un servidor en estado de espera activa admite la conmutación por error rápida sin pérdida de las transacciones confirmadas, mientras que un servidor en estado de espera semiactiva admite la acción de forzar el servicio (con posible pérdida de datos).  
+ Creación de reflejo, que se implementa en una base por base de datos, conserva una copia de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos de producción en un servidor en espera. Este servidor puede ser un servidor en estado de espera activa o semiactiva, dependiendo de la configuración y del estado de la sesión de creación de reflejo de la base de datos. Un servidor en estado de espera activa admite la conmutación por error rápida sin pérdida de las transacciones confirmadas, mientras que un servidor en estado de espera semiactiva admite la acción de forzar el servicio (con posible pérdida de datos).  
   
- La base de datos de producción se llama el *base de datos principal*, y se llama a la copia en espera la *base de datos reflejada*. La base de datos principal y la base de datos reflejada deben residir en instancias independientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instancias de servidor), y debe residir en equipos distintos si es posible.  
+ Se llama a la base de datos de producción la *base de datos principal*, y se llama a la copia en espera la *base de datos reflejada*. La base de datos principal y la base de datos reflejada deben residir en instancias independientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instancias de servidor), y debe residir en equipos distintos si es posible.  
   
- La instancia de servidor de producción, llamada a la *servidor principal*, se comunica con la instancia de servidor en espera, llamada a la *servidor reflejado*. Los servidores principal y reflejado actúan como asociados en una creación de reflejo de base de datos *sesión*. Si se produce un error en el servidor principal, el servidor reflejado puede convertir su base de datos en la base de datos principal mediante un proceso denominado *conmutación por error*. Por ejemplo, Partner_A y Partner_B son dos servidores asociados, con la base de datos principal inicialmente en Partner_A como servidor principal y la base de datos reflejada en Partner_B como servidor reflejado. Si Partner_A se queda sin conexión, la base de datos de Partner_B puede realizar la conmutación por error para convertirse en la base de datos principal actual. Cuando Partner_A se vuelve a unir a la sesión de creación de reflejo, se convierte en el servidor reflejado y su base de datos pasa a ser la base de datos reflejada.  
+ La instancia del servidor de producción, llamada el *servidor principal*, se comunica con la instancia de servidor en espera, llamada el *servidor reflejado*. Los servidores principal y reflejado actúan como asociados dentro de una base de datos reflejada *sesión*. Si se produce un error en el servidor principal, el servidor reflejado puede convertir su base de datos en la base de datos principal mediante un proceso denominado *conmutación por error*. Por ejemplo, Partner_A y Partner_B son dos servidores asociados, con la base de datos principal inicialmente en Partner_A como servidor principal y la base de datos reflejada en Partner_B como servidor reflejado. Si Partner_A se queda sin conexión, la base de datos de Partner_B puede realizar la conmutación por error para convertirse en la base de datos principal actual. Cuando Partner_A se vuelve a unir a la sesión de creación de reflejo, se convierte en el servidor reflejado y su base de datos pasa a ser la base de datos reflejada.  
   
  Las configuraciones alternativas de creación de reflejo de la base de datos proporcionan diferentes niveles de rendimiento y de seguridad de los datos, y admiten varias formas de conmutación por error. Para obtener más información, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
@@ -66,14 +64,14 @@ ms.locfileid: "35699506"
 >  Además, los nombres de servidor no distinguen mayúsculas de minúsculas, pero los nombres de base de datos sí lo hacen. Debe asegurarse, por lo tanto, de utilizar la misma grafía en los nombres de origen de datos (DSN) y en las cadenas de conexión.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Proveedor OLE DB de SQL Server Native Client  
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB admite la creación de reflejo de base de datos a través de la conexión y los atributos de cadena de conexión. Se ha agregado la propiedad ssprop_init_failoverpartner al conjunto de propiedades DBPROPSET_SQLSERVERDBINIT y el **FailoverPartner** palabra clave es un nuevo atributo de cadena de conexión para DBPROP_INIT_PROVIDERSTRING. Para obtener más información, consulte [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite la creación de reflejo de base de datos a través de la conexión y los atributos de cadena de conexión. Se ha agregado la propiedad ssprop_init_failoverpartner al conjunto de propiedades DBPROPSET_SQLSERVERDBINIT y el **FailoverPartner** palabra clave es un nuevo atributo de cadena de conexión para DBPROP_INIT_PROVIDERSTRING. Para obtener más información, consulte [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- La caché de conmutación por error se mantiene mientras se carga el proveedor, que es hasta **CoUninitialize** se llama o siempre que la aplicación tiene una referencia a un objeto administrado por el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB como un objeto de origen de datos.  
+ La conmutación por error caché se mantiene siempre y cuando se carga el proveedor, que es hasta **CoUninitialize** se llama o siempre y cuando la aplicación tiene una referencia a algún objeto administrado por el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB como un objeto de origen de datos.  
   
- Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compatibilidad del proveedor OLE DB de Native Client con creación de reflejo de base de datos, vea [propiedades de inicialización y autorización](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] soporte técnico del proveedor Native Client OLE DB para la creación de reflejo de base de datos, vea [propiedades de inicialización y autorización](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Controlador ODBC de SQL Server Native Client  
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC Native Client admite la creación de reflejo de base de datos a través de la conexión y los atributos de cadena de conexión. En concreto, se ha agregado el atributo SQL_COPT_SS_FAILOVER_PARTNER para su uso con el [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) y [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) funciones; y la **Failover_Partner** se ha agregado la palabra clave como un nuevo atributo de cadena de conexión.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite la creación de reflejo de base de datos a través de la conexión y los atributos de cadena de conexión. En concreto, se ha agregado el atributo SQL_COPT_SS_FAILOVER_PARTNER para su uso con el [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) y [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) funciones; y la **Failover_Partner** se ha agregado la palabra clave como un nuevo atributo de cadena de conexión.  
   
  La memoria caché de conmutación por error se mantiene mientras la aplicación tiene asignado por lo menos un identificador de entorno. En cambio, se pierde cuando se cancela la asignación del último identificador de entorno.  
   

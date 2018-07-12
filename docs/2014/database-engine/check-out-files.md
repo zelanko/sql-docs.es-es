@@ -1,5 +1,5 @@
 ---
-title: Desproteger archivos | Documentos de Microsoft
+title: Desproteger los archivos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Visual Studio.SourceControl.CheckOutDialog
 helpviewer_keywords:
 - checking out files
 ms.assetid: cc033727-51bb-4b58-a12b-8977ce61ff56
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d8b36e03ff939cb7ddbc15bdec1d41532a87d9b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 319555e7a87922b65ff4846b8b5830041893d3c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167176"
 ---
 # <a name="check-out-files"></a>Desproteger archivos
   A menos que se haya configurado el entorno de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para que se permita modificar los archivos protegidos, es necesario desproteger un archivo antes de poder modificarlo. Al desproteger un archivo, una copia de la versión de ese archivo se copia en el disco local y se quita el atributo de solo lectura del mismo.  
@@ -33,7 +33,7 @@ ms.locfileid: "36107708"
  Utilice el comando **Desproteger** para desproteger proyectos y archivos controlados por código fuente. Si utiliza este comando para desproteger una solución o un proyecto, todos los archivos de la solución o el proyecto también se desprotegen. No obstante, el hecho de desproteger un archivo de código fuente individual no da lugar a la desprotección del proyecto o la solución a los que pertenece.  
   
 > [!NOTE]  
->  Si el [!INCLUDE[msCoName](../includes/msconame-md.md)] base de datos de Visual SourceSafe para el proyecto está configurada para permitir varias desprotecciones y desea desproteger un archivo de modo exclusivo, debe borrar la **permitir varias desprotecciones** opción en el  **Opciones de salida avanzadas** cuadro de diálogo antes de desproteger el archivo. Para que se aplique esta configuración, debe reiniciar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+>  Si el [!INCLUDE[msCoName](../includes/msconame-md.md)] base de datos de Visual SourceSafe para el proyecto está configurado para permitir varias desprotecciones y desea desproteger un archivo de modo exclusivo, debe borrar el **permitir varias desprotecciones** opción el  **Avanzadas opciones de desprotección** cuadro de diálogo antes de desproteger el archivo. Para que se aplique esta configuración, debe reiniciar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="to-check-out-a-file"></a>Para desproteger un archivo  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36107708"
   
 2.  En el menú **Archivo** , seleccione **Control de código fuente**y haga clic en **Desproteger para editar**.  
   
-3.  Si aparece el cuadro de diálogo **Desproteger para editar** , seleccione los elementos que desee y haga clic en **Desproteger**. Si ha configurado la [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] entorno no se muestre la **desproteger** cuadro de diálogo, los elementos seleccionados en el Explorador de soluciones y los elementos secundarios que puedan tener se desprotegen inmediatamente.  
+3.  Si aparece el cuadro de diálogo **Desproteger para editar** , seleccione los elementos que desee y haga clic en **Desproteger**. Si ha configurado el [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] entorno no se muestre el **desproteger** cuadro de diálogo, los elementos seleccionados en el Explorador de soluciones y los elementos secundarios que puedan tener se desprotegen inmediatamente.  
   
      **Check-out**  
      Desprotege todos los elementos seleccionados.  
@@ -52,7 +52,7 @@ ms.locfileid: "36107708"
      **Comentarios**  
      Especifique un comentario que se asociará a la operación de desprotección.  
   
-     **No mostrar desproteger el cuadro de diálogo al desproteger elementos**  
+     **No mostrar el cuadro de diálogo al desproteger elementos**  
      Suprime el cuadro de diálogo durante las operaciones de desprotección.  
   
      **Vista plana**  

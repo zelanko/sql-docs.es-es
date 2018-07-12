@@ -1,25 +1,24 @@
 ---
-title: Supervisar SQL Server Managed Backup to Windows Azure | Documentos de Microsoft
+title: Supervisar SQL Server Managed Backup en Windows Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 401b41399b7c62f7feeda6d83d2400dd4814d9d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ff97e8210c38bac14bd7bd88075c2dea16f77489
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149796"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>Supervisar la Copia de seguridad administrada de SQL Server para Microsoft Azure
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tiene medidas integradas para identificar los problemas y los errores durante los procesos de copia de seguridad y remediarlos con la acción correctiva, si es posible.  Aunque hay ciertas situaciones en las que se requiere la intervención del usuario. Este tema describe las herramientas que puede utilizar para determinar el estado de mantenimiento total de las copias de seguridad e identificar los errores que deban solucionarse.  
@@ -30,7 +29,7 @@ ms.locfileid: "36110779"
 ### <a name="configure-monitoring-parameters-for-includesssmartbackupincludesss-smartbackup-mdmd"></a>Configurar parámetros de supervisión para [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  El **smart_admin.sp_set_parameter** procedimiento almacenado del sistema le permite especificar la configuración de supervisión. En las secciones siguientes se recorre el proceso para habilitar Eventos extendidos y para habilitar la notificación por correo electrónico de los errores y las advertencias.  
   
- El **smart_admin.fn_get_parameter** función puede utilizarse para obtener el valor actual de un parámetro concreto o todos los parámetros configurados. Si los parámetros no se han configurado nunca, la función no devuelve ningún valor.  
+ El **smart_admin.fn_get_parameter** función puede utilizarse para obtener la configuración actual de un parámetro concreto o todos los parámetros configurados. Si los parámetros no se han configurado nunca, la función no devuelve ningún valor.  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
@@ -73,7 +72,7 @@ GO
   
     ```  
   
-     Para obtener más información acerca del procedimiento almacenado, vea [smart_admin.sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql).  
+     Para obtener más información sobre el procedimiento almacenado, vea [smart_admin.sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql).  
   
 3.  Para ver los eventos registrados, ejecute la consulta siguiente:  
   
@@ -116,7 +115,7 @@ GO
   
 ### <a name="aggregated-error-countshealth-status"></a>Estado de mantenimiento y recuentos de errores agregados  
  El **smart_admin.fn_get_health_status** función devuelve una tabla de recuentos de errores agregados para cada categoría que puede usarse para supervisar el estado de mantenimiento de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Esta misma función también la utiliza el mecanismo de notificación por correo electrónico configurado en el sistema que se describe más adelante en este tema.   
-Estos recuentos agregados se pueden utilizar para supervisar el estado del sistema. Por ejemplo, si la columna number_ of_retention_loops es 0 en 30 minutos, es posible que administración de la retención esté tardando mucho o incluso que no funcione correctamente. Las columnas de errores que no son cero pueden indicar que hay problemas y los registros de Eventos extendidos se deben comprobar para detectarlos. O bien, llamar a **smart_admin.sp_get_backup_diagnostics** procedimiento almacenado para buscar los detalles del error.  
+Estos recuentos agregados se pueden utilizar para supervisar el estado del sistema. Por ejemplo, si la columna number_ of_retention_loops es 0 en 30 minutos, es posible que la administración de la retención se tardan mucho tiempo o incluso no funciona correctamente. Las columnas de errores que no son cero pueden indicar que hay problemas y los registros de Eventos extendidos se deben comprobar para detectarlos. Como alternativa, llame a **smart_admin.sp_get_backup_diagnostics** procedimiento almacenado para encontrar los detalles del error.  
   
 ### <a name="using-agent-notification-for-assessing-backup-status-and-health"></a>Usar la notificación del agente para evaluar el estado de la copia de seguridad y los estados  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] incluye un mecanismo de notificación que se fundamenta en las directivas de administración basada en directivas de SQL Server.  
@@ -129,15 +128,15 @@ Estos recuentos agregados se pueden utilizar para supervisar el estado del siste
   
  **Arquitectura de notificación:**  
   
--   **Administración de basada en directivas:** dos directivas se establecen para supervisar el estado de copia de seguridad: **directiva de mantenimiento de sistema de administración inteligente**y el **directiva de estado de acción de usuario de administración inteligente**. La directiva de estado del sistema de Administración inteligente evalúa los errores críticos como la falta de credenciales de SQL o si no son válidas y los errores de conectividad y notifica el estado del sistema. Se suele requerir intervención para solucionar el problema subyacente. La directiva de estado de acción del usuario de Administración inteligente evalúa las advertencias, por ejemplo las copias de seguridad dañadas.  Estas pueden no requerir ninguna intervención sino que solo son una advertencia de un evento. Se espera que el agente [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se ocupe de tales problemas.  
+-   **Administración de basada en directivas:** dos directivas se establecen para supervisar el estado de copia de seguridad: **directiva de mantenimiento del sistema de administración inteligente**y el **directiva de estado de acción de usuario de administración inteligente**. La directiva de estado del sistema de Administración inteligente evalúa los errores críticos como la falta de credenciales de SQL o si no son válidas y los errores de conectividad y notifica el estado del sistema. Se suele requerir intervención para solucionar el problema subyacente. La directiva de estado de acción del usuario de Administración inteligente evalúa las advertencias, por ejemplo las copias de seguridad dañadas.  Estas pueden no requerir ninguna intervención sino que solo son una advertencia de un evento. Se espera que el agente [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se ocupe de tales problemas.  
   
--   **Agente SQL Server** trabajo: la notificación se realiza mediante un trabajo de agente SQL Server que consta de tres pasos de trabajo. En el primer paso, detecta si [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está configurado para una base de datos o una instancia. Si encuentra [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] habilitado y configurado, realiza el segundo paso: ejecuta el cmdlet de PowerShell que evalúa el estado evaluando las directivas de administración basada en directivas de SQL Server. Si detecta un error o una advertencia, da error y desencadena el tercer paso: envía una notificación por correo electrónico con el informe de la advertencia o el error.  Sin embargo, este trabajo del Agente SQL Server no está habilitado de forma predeterminada. Para habilitar el trabajo de notificación de correo electrónico, use la **smart_admin.sp_set_backup_parameter** procedimiento almacenado del sistema.  En el siguiente procedimiento se describen los pasos detalladamente:  
+-   **Agente SQL Server** trabajo: la notificación se realiza mediante un trabajo del Agente SQL Server que consta de tres pasos de trabajo. En el primer paso, detecta si [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está configurado para una base de datos o una instancia. Si encuentra [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] habilitado y configurado, realiza el segundo paso: ejecuta el cmdlet de PowerShell que evalúa el estado evaluando las directivas de administración basada en directivas de SQL Server. Si detecta un error o una advertencia, da error y desencadena el tercer paso: envía una notificación por correo electrónico con el informe de la advertencia o el error.  Sin embargo, este trabajo del Agente SQL Server no está habilitado de forma predeterminada. Para habilitar el trabajo de notificación de correo electrónico, use el **smart_admin.sp_set_backup_parameter** procedimiento almacenado del sistema.  En el siguiente procedimiento se describen los pasos detalladamente:  
   
 ##### <a name="enabling-email-notification"></a>Habilitar la notificación por correo electrónico  
   
-1.  Si ya no está configurado el correo electrónico de base de datos, siga los pasos descritos en [configurar correo electrónico de base de datos](../relational-databases/database-mail/configure-database-mail.md).  
+1.  Si ya no está configurado el correo electrónico de base de datos, utilice los pasos descritos en [configurar correo electrónico de base de datos](../relational-databases/database-mail/configure-database-mail.md).  
   
-2.  Base de datos de conjunto como el sistema de correo electrónico para el sistema de alerta de SQL Server: haga clic con el botón secundario en **Agente SQL Server**, seleccione **sistema de alerta**, compruebe la **Habilitar perfil de correo** cuadro, seleccione  **Correo electrónico de base de datos** como el **del sistema de correo**y seleccione un perfil de correo creado anteriormente.  
+2.  Conjunto de base de datos como el sistema de correo para el sistema de alerta de SQL Server: haga clic con el botón derecho en **del Agente SQL Server**, seleccione **sistema de alerta**, compruebe la **Habilitar perfil de correo** cuadro, seleccione  **Correo electrónico de base de datos** como el **sistema de correo**y seleccione un perfil de correo creado anteriormente.  
   
 3.  Ejecute la consulta siguiente en una ventana de consulta y proporcione la dirección de correo electrónico a la que desea que se envíe la notificación:  
   
@@ -201,7 +200,7 @@ EXEC msdb.smart_admin.sp_set_parameter
 ```  
   
 ### <a name="using-powershell-to-setup-custom-health-monitoring"></a>Usar PowerShell para configurar la supervisión personalizada del estado  
- El **Test-SqlSmartAdmin** cmdlet puede usarse para crear una supervisión personalizada del estado. Por ejemplo, la opción de notificación descrita en la sección anterior se puede configurar en el nivel de instancia.  Si tiene varias instancias de SQL Server configuradas para utilizar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], el cmdlet de PowerShell se puede utilizar para crear scripts y recopilar el estado de las copias de seguridad de todas las instancias.  
+ El **Test-SqlSmartAdmin** cmdlet puede usarse para crear la supervisión de estado personalizado. Por ejemplo, la opción de notificación descrita en la sección anterior se puede configurar en el nivel de instancia.  Si tiene varias instancias de SQL Server configuradas para utilizar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], el cmdlet de PowerShell se puede utilizar para crear scripts y recopilar el estado de las copias de seguridad de todas las instancias.  
   
  El **Test-SqlSmartAdmin** cmdlet evalúa los errores y advertencias devueltas por las directivas de administración de directivas en función de servidor de SQL y notifica el estado acumulado.  De forma predeterminada, este cmdlet utiliza las directivas del sistema. Para incluir una directiva personalizada, utilice el parámetro `–AllowUserPolicies`.  
   
@@ -220,7 +219,7 @@ PS C:\>PS SQLSERVER:\SQL\COMPUTER\DEFAULT> (get-sqlsmartadmin ).EnumHealthStatus
 ```  
   
 ### <a name="objects-in-msdb-database"></a>Objetos de la base de datos MSDB  
- Hay objetos que se instalan para implementar la funcionalidad. Estos objetos están reservados para uso interno. Sin embargo, hay una tabla del sistema que puede ser útil a la hora supervisar el estado de la copia de seguridad: smart_backup_files. La mayor parte de la información almacenada en esta tabla relevante para la supervisión como el tipo de base de datos de copia de seguridad, nombre, primero y último lsn, las fechas de expiración de copia de seguridad se exponen a través de la función del sistema [smart_admin.fn_available_backups &#40;Transact-SQL &#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql). No obstante, la columna state de la tabla smart_backup_files que indica el estado del archivo de copia de seguridad no está disponible con esa función. A continuación se muestra una consulta de ejemplo que puede utilizar para recuperar cierta información, incluido el estado de la tabla del sistema:  
+ Hay objetos que se instalan para implementar la funcionalidad. Estos objetos están reservados para uso interno. Sin embargo, hay una tabla del sistema que puede ser útil a la hora supervisar el estado de la copia de seguridad: smart_backup_files. La mayoría de la información almacenada en esta tabla relevante para la supervisión, como el tipo de base de datos de copia de seguridad, el nombre, primero y último lsn, las fechas de expiración de copia de seguridad se exponen a través de la función del sistema [smart_admin.fn_available_backups &#40;Transact-SQL &#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql). No obstante, la columna state de la tabla smart_backup_files que indica el estado del archivo de copia de seguridad no está disponible con esa función. A continuación se muestra una consulta de ejemplo que puede utilizar para recuperar cierta información, incluido el estado de la tabla del sistema:  
   
 ```  
 USE msdb  
@@ -260,7 +259,7 @@ smart_backup_files;
   
 -   **Error al copiar – F:** Similar a copia en curso, se trata de las bases de datos del grupo de disponibilidad de t específico. Si se produce un error en el proceso de copia, se marca el estado como F.  
   
--   **Dañado – C:** si [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] es no se puede comprobar el archivo de copia de seguridad en el almacenamiento mediante un comando RESTORE HEADER_ONLY incluso después de varios intentos, marca este archivo como un archivo dañado. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] programará una copia de seguridad para asegurarse de que el archivo dañado no produce una interrupción de la cadena de copia de seguridad.  
+-   **Dañado – C:** si [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] es no se puede comprobar el archivo de copia de seguridad en el almacenamiento mediante la realización de un comando RESTORE HEADER_ONLY incluso después de varios intentos, marca este archivo como dañado. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] programará una copia de seguridad para asegurarse de que el archivo dañado no produce una interrupción de la cadena de copia de seguridad.  
   
 -   **Eliminado – D:** no se encuentra el archivo correspondiente en el almacenamiento de Windows Azure. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] programará una copia de seguridad si el archivo eliminado produce una interrupción en la cadena de copia de seguridad.  
   

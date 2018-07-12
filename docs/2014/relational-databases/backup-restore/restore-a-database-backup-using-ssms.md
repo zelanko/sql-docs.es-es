@@ -1,14 +1,13 @@
 ---
-title: Restaurar una copia de seguridad de base de datos (SQL Server Management Studio) | Documentos de Microsoft
+title: Restaurar una copia de seguridad de base de datos (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.locatebackupfileazure.f1
 - sql12.swb.specifybackup.f1
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 caps.latest.revision: 73
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa6388416e41fac400d6b77ad603a305fad50e21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d765859981e2390c408a33b1a77965804519a587
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184752"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>Restaurar una copia de seguridad de base de datos (SQL Server Management Studio)
   En este tema se explica cómo restaurar una copia de seguridad completa de la base de datos.  
@@ -44,7 +43,7 @@ ms.locfileid: "36108369"
   
 2.  Expanda **Bases de datos**. En función de la base de datos, seleccione una base de datos de usuario o expanda **Bases de datos del sistema**y, a continuación, seleccione una base de datos del sistema.  
   
-3.  Haga clic en la base de datos, seleccione **tareas**, seleccione **restaurar**y, a continuación, haga clic en **base de datos**, que abre el **Restaurar base de datos** cuadro de diálogo.  
+3.  Haga clic en la base de datos, seleccione **tareas**, apunte a **restaurar**y, a continuación, haga clic en **base de datos**, lo que se abre el **Restaurar base de datos** cuadro de diálogo.  
   
 4.  En la página **General** , use la sección **Origen** para especificar el origen y la ubicación de los conjuntos de copias de seguridad que se deben restaurar. Seleccione una de las siguientes opciones:  
   
@@ -66,21 +65,21 @@ ms.locfileid: "36108369"
         > [!NOTE]  
         >  Esta lista solo está disponible cuando se selecciona la opción **Dispositivo** . Solo estarán disponibles las bases de datos que tienen copias de seguridad en el dispositivo seleccionado.  
   
-         **medios de copia de seguridad**  
+         **Medios de copia de seguridad**  
          Seleccione el medio de la operación de restauración: **archivo**, **cinta**, **URL**o **dispositivo de copia de seguridad**. La opción **Cinta** solo aparece si se ha montado una unidad de cinta en el sistema; la opción **Dispositivo de copia de seguridad** aparece únicamente si existe al menos un dispositivo de copia de seguridad.  
   
          **Ubicación de copia de seguridad**  
          Consulte, agregue o quite medios de la operación de restauración. La lista puede contener un máximo de 64 archivos, cintas o dispositivos de copia de seguridad.  
   
          **Agregar**  
-         Agrega la ubicación de un dispositivo de copia de seguridad para la **ubicaciónDeCopiaDeSeguridad** lista. En función del tipo de medio que seleccione en el campo **Medio para copia de seguridad** , al hacer clic en **Agregar** , se abrirá uno de los siguientes cuadros de diálogo.  
+         Agrega la ubicación de un dispositivo de copia de seguridad para el **ubicación de copia de seguridad** lista. En función del tipo de medio que seleccione en el campo **Medio para copia de seguridad** , al hacer clic en **Agregar** , se abrirá uno de los siguientes cuadros de diálogo.  
   
         |Tipo de medio|Cuadro de diálogo|Descripción|  
         |----------------|----------------|-----------------|  
         |**Archivo**|**Buscar archivo de copia de seguridad**|En este cuadro de diálogo, puede seleccionar un archivo local en el árbol, o bien especificar un archivo remoto mediante su nombre UNC (convención de nomenclatura universal) completo. Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
         |**Dispositivo**|**Seleccionar dispositivo de copia de seguridad**|En este cuadro de diálogo, puede seleccionar un dispositivo de una lista de dispositivos lógicos de copia de seguridad en la instancia del servidor.|  
         |**Cinta**|**Seleccionar cinta de copia de seguridad**|En este cuadro de diálogo, puede seleccionar una cinta de la lista de unidades de cinta que están conectadas físicamente al equipo en el que se ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-        |**Dirección URL**|De esta forma se inician dos cuadros de diálogo en el siguiente orden:<br /><br /> 1) **conectarse a Windows almacenamiento de Azure**<br /><br /> 2) **buscar el archivo de copia de seguridad de Windows Azure**|En el cuadro de diálogo **Conectar con Almacenamiento de Windows Azure**  , seleccione una credencial existente de SQL que almacena la información del nombre de cuenta y de tecla de acceso de Almacenamiento de Windows Azure, o cree la nueva credencial de SQL especificando el nombre de cuenta de almacenamiento y la información de las teclas de acceso de almacenamiento. Para obtener más información, consulte [conectar con el almacenamiento de Windows Azure &#40;restaurar&#41;](connect-to-microsoft-azure-storage-restore.md).<br /><br /> En el cuadro de diálogo **Buscar archivo de copia de seguridad** , puede seleccionar un archivo de la lista de contenedores mostrados en el marco de la izquierda.|  
+        |**Dirección URL**|De esta forma se inician dos cuadros de diálogo en el siguiente orden:<br /><br /> 1) **conectarse a Windows Azure Storage**<br /><br /> 2) **Buscar archivo de copia de seguridad en Windows Azure**|En el cuadro de diálogo **Conectar con Almacenamiento de Windows Azure**  , seleccione una credencial existente de SQL que almacena la información del nombre de cuenta y de tecla de acceso de Almacenamiento de Windows Azure, o cree la nueva credencial de SQL especificando el nombre de cuenta de almacenamiento y la información de las teclas de acceso de almacenamiento. Para obtener más información, consulte [conectar a Windows Azure Storage &#40;restaurar&#41;](connect-to-microsoft-azure-storage-restore.md).<br /><br /> En el cuadro de diálogo **Buscar archivo de copia de seguridad** , puede seleccionar un archivo de la lista de contenedores mostrados en el marco de la izquierda.|  
   
          Si la lista está completa, el botón **Agregar** no está disponible.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "36108369"
   
 9. Para ver o seleccionar las opciones avanzadas, en la página **Opciones** , en el panel **Opciones de restauración** , puede seleccionar cualquiera de las opciones siguientes si son apropiadas para su situación:  
   
-    1.  `WITH` Opciones (no es necesarios):  
+    1.  `WITH` Opciones (no es necesarias):  
   
         -   **Sobrescribir la base de datos existente (WITH REPLACE)**  
   

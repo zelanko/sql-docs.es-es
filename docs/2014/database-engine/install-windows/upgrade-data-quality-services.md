@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f1feb8292020b61d00705e662bda80d2b3af4eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ecbf266c87e5aebe47f0f7af9c7a244c0e8dfb20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171438"
 ---
 # <a name="upgrade-data-quality-services"></a>Actualizar Data Quality Services
   Este tema proporciona información sobre cómo actualizar la instalación existente de Data Quality Services (DQS) a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Como parte de la actualización de Data Quality Server de DQS a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], debe actualizar también el esquema de bases de datos de DQS.  
@@ -27,7 +27,7 @@ ms.locfileid: "36110767"
 > [!IMPORTANT]  
 >  -   Debe hacer una copia de seguridad de las bases de datos de DQS antes de actualizar DQS para impedir la pérdida accidental de datos durante la actualización del esquema. Para obtener información sobre la copia de seguridad de bases de datos de DQS, vea [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   Puede conectarse a la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de Data Quality Server a través de la versión actual o una versión anterior de Data Quality Client o la [transformación Limpieza de DQS](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) de Integration Services para realizar tareas de calidad de datos.  
-> -   Puede continuar con la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 de servicios del complemento Master Data Services para Excel después de actualizar Quality Data Services y Master Data Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Sin embargo, las versiones anteriores del complemento de Master Data Services para Excel no funcionarán después de actualizar a SQL Server 2014 CTP2. Puede descargar el [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 versión de Master Data Services Add-para Excel [aquí](http://go.microsoft.com/fwlink/?LinkId=328664).  
+> -   Puede continuar con la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 de servicios del complemento Master Data Services para Excel después de actualizar Quality Data Services y Master Data Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Sin embargo, las versiones anteriores del complemento de Master Data Services para Excel no funcionarán después de actualizar a SQL Server 2014 CTP2. Puede descargar el [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versión SP1 de Master Data Services complemento para Excel desde [aquí](http://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ##  <a name="Prerequisites"></a> Requisitos previos  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36110767"
         dqsinstaller.exe -upgrade  
         ```  
   
-    4.  El instalador le pregunta si desea realizar la copia de seguridad de las bases de datos DQS antes de continuar. Si ya ha hecho las bases de datos DQS, escriba `Y` o `Yes`, y, a continuación, presione ENTRAR para continuar con la actualización.  
+    4.  El instalador le pregunta si desea realizar la copia de seguridad de las bases de datos DQS antes de continuar. Si aún no ha hecho copia de las bases de datos DQS, escriba `Y` o `Yes`, y, a continuación, presione ENTRAR para continuar con la actualización.  
   
     5.  Se muestra un mensaje para indicar que la actualización del esquema de las bases de datos DQS se realizó.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Contenido para los modelos de árbol de decisión del modelo de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Contenido del modelo para los modelos de árboles de decisión de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, decision tree models
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7ced4dd7c81ab5c3851b180394d75d80d35c502f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae76bbfc4e85e0f01e384849bf6b67e52f4c574f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161666"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de árboles de decisión (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). Es importante recordar que el algoritmo de árboles de decisión de Microsoft es un algoritmo híbrido que puede crear modelos con funciones muy diferentes: un árbol de decisión puede representar asociaciones, reglas o incluso una regresión lineal. La estructura del árbol es básicamente la misma, pero la forma en la que se interpretará la información dependerá del propósito para el que creó el modelo.  
@@ -180,7 +180,7 @@ ms.locfileid: "36108473"
 |Age >= 30|Age >= 30 y Gender = Male|  
 ||Age >= 30 y Gender = Female|  
 |Age < 30|Age < 30 y Gender = Male|  
-||Edad \< 30 y Gender = mujer|  
+||Edad \< 30 y Gender = Female|  
   
  Cuando se usa un modelo de árboles de decisión para la predicción, el modelo toma los atributos proporcionados como argumentos y sigue la ruta de acceso de los atributos hacia abajo por el árbol. En general, todas las predicciones van a una hoja y los nodos interiores solo se usan para la clasificación.  
   
@@ -229,7 +229,7 @@ ms.locfileid: "36108473"
 |Age < 30|40|Age < 30 y Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 y Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- Se realiza un pequeño ajuste en todos los modelos para representar los posibles valores ausentes. Para los atributos continuos, cada valor o intervalo de valores está representado como un estado (por ejemplo, Age \<30, Age = 30 y Age > 30) y las probabilidades se calculan como se indica a continuación: estado existe (valor = 1), existe otro estado (valor = 0), estado es `Missing`. Para obtener más información sobre cómo se ajustan las probabilidades para representar valores ausentes, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
+ Se realiza un pequeño ajuste en todos los modelos para representar los posibles valores ausentes. Para los atributos continuos, cada valor o intervalo de valores está representado como un estado (por ejemplo, Age \<30, Age = 30 y Age > 30) y las probabilidades se calculan como se indica a continuación: estado existe (valor = 1), existe otro estado (valor = 0), el estado es `Missing`. Para obtener más información sobre cómo se ajustan las probabilidades para representar valores ausentes, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
   
  Las probabilidades para cada nodo se calculan casi directamente a partir de la distribución, de la siguiente manera:  
   
@@ -286,7 +286,7 @@ ms.locfileid: "36108473"
  Para obtener más información sobre los nodos de regresión, vea [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)   
  [Consultas de minería de datos](data-mining-queries.md)   
  [Algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm.md)  

@@ -1,5 +1,5 @@
 ---
-title: Pestaña (visores de modelos de minería de datos) del modelo | Documentos de Microsoft
+title: Pestaña (visores de modelos de minería de datos) del modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.decisiontree.f1
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 932874065a56b98f8eb532f62206430152c794ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ffed64e129b7c3a94e337ab7a749b6950cdae4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278471"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Pestaña Modelo (Visores de modelos de minería de datos)
   La pestaña **Modelo** del Visor de series temporales de Microsoft muestra una representación de una serie temporal como un nodo en un gráfico, similar a la utilizada en los modelos de árboles de decisión.  
@@ -74,7 +74,7 @@ ms.locfileid: "36105707"
  Cambie el número de niveles que se muestra en el árbol.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - designing DACs
 - How to [DAC]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3fb074e97422942dfe9cac25a84c47ff65bac9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 74e9a61fb053a1d861a6be732ae9a0ac0eb3060a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152506"
 ---
 # <a name="data-tier-applications"></a>Aplicaciones de capa de datos
   Una aplicación de capa de datos (DAC) es una entidad de administración de bases de datos lógicas que define todos los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asociados a una base de datos de usuario, como tablas, vistas y objetos de instancia, incluidos los inicios de sesión. Una DAC es una unidad independiente de implementación de bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite a los desarrolladores y los administradores de bases de datos en el nivel de capa de datos empaquetar objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un artefacto portátil denominado paquete DAC y también conocido como DACPAC.  
@@ -115,7 +115,7 @@ ms.locfileid: "36111583"
  Ambas funciones son compatibles con las herramientas de administración de bases de datos: Server Management Studio, Portal de administración de SQL Azure y API de DACFx.  
   
 ## <a name="permissions"></a>Permisos  
- Debe ser un miembro de la `dbmanager` rol o tener asignados `CREATE DATABASE` permisos para crear una base de datos, incluida la creación de una base de datos mediante la implementación de un paquete DAC. Debe ser un miembro de la `dbmanager` rol, o se han asignado `DROP DATABASE` permisos para quitar una base de datos.  
+ Debe ser un miembro de la `dbmanager` rol o asignado `CREATE DATABASE` permisos para crear una base de datos, incluida la creación de una base de datos mediante la implementación de un paquete DAC. Debe ser un miembro de la `dbmanager` rol, o se han asignado `DROP DATABASE` permisos para quitar una base de datos.  
   
 ## <a name="data-tier-application-tasks"></a>Tareas de la aplicación de capa de datos  
   

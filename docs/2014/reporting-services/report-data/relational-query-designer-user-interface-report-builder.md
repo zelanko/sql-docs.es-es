@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 helpviewer_keywords:
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 caps.latest.revision: 22
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cee2e73f65f0b6a70829ac91ce3c86be9ed5b6ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cbcbb6c64ef5a11db341d1a49c5d966991661a84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181872"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas relacionales (Generador de informes)
-  El generador de informes proporciona tanto un diseñador gráfico de consultas como un diseñador de consultas basado en texto para ayudarle a crear una consulta que especifique los datos que se va a recuperar de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] bases de datos relacionales y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] para un conjunto de datos de informe. Use el diseñador gráfico de consultas para explorar los metadatos, crear una consulta de forma interactiva y ver los resultados de la consulta. Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  
+  El generador de informes proporciona un diseñador gráfico de consultas y un diseñador de consultas basado en texto para ayudarle a crear una consulta que especifique los datos deben recuperarse [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] bases de datos relacionales y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] para un conjunto de datos. Use el diseñador gráfico de consultas para explorar los metadatos, crear una consulta de forma interactiva y ver los resultados de la consulta. Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  
   
 > [!NOTE]  
 >  En el Generador de informes, para especificar una consulta para los tipos de orígenes de datos Oracle, OLE DB, ODBC y Teradata, debe usarse el diseñador de consultas basado en texto. Para más información, vea [Interfaz de usuario del Diseñador de consultas basado en texto &#40;Generador de informes&#41;](text-based-query-designer-user-interface-report-builder.md).  
@@ -93,7 +93,7 @@ ms.locfileid: "36108525"
   
  Los agregados proporcionan resúmenes de datos y los datos se agrupan para admitir el agregado que ofrece los datos de resumen. Al utilizar un agregado en la consulta, los otros campos que devuelve se agrupan automáticamente y la consulta incluye la cláusula de SQL GROUP BY. Puede resumir los datos sin agregar un agregado utilizando solo la opción **Agrupar por** en la lista **Grupo y agregado** . Muchos de los agregados incluyen una versión que utiliza la palabra clave DISTINCT. Al incluir DISTINCT, se eliminan los valores duplicados.  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../../../includes/tsql-md.md)] y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] utiliza [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../../../includes/tsql-md.md)] y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] usa [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
   
  Para más información sobre [!INCLUDE[tsql](../../../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) en los [Libros en pantalla](http://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "36108525"
   
 -   **Tabla izquierda** : muestra el nombre de la primera tabla que forma parte de una relación de combinación.  
   
--   **Tipo de combinación** : muestra el tipo de instrucción JOIN de SQL que se usa en la consulta generada automáticamente. De forma predeterminada, si se detecta una restricción de clave externa, se utiliza INNER JOIN. Otros tipos de combinación pueden ser LEFT JOIN o RIGHT JOIN. Si no se aplica ninguno de estos tipos de combinación, la columna **Tipo de combinación** muestra **No relacionada**. No se crea ninguna combinación CROSS JOIN para las tablas no relacionadas; en su lugar, debe crear las relaciones manualmente combinando las columnas de las tablas izquierda y derecha. Para obtener más información acerca de los tipos de combinaciones, vea "Conceptos básicos" en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [libros en pantalla](http://go.microsoft.com/fwlink/?LinkId=141687) en msdn.microsoft.com...  
+-   **Tipo de combinación** : muestra el tipo de instrucción JOIN de SQL que se usa en la consulta generada automáticamente. De forma predeterminada, si se detecta una restricción de clave externa, se utiliza INNER JOIN. Otros tipos de combinación pueden ser LEFT JOIN o RIGHT JOIN. Si no se aplica ninguno de estos tipos de combinación, la columna **Tipo de combinación** muestra **No relacionada**. No se crea ninguna combinación CROSS JOIN para las tablas no relacionadas; en su lugar, debe crear las relaciones manualmente combinando las columnas de las tablas izquierda y derecha. Para obtener más información acerca de los tipos de combinaciones, vea "UNIR Fundamentals" en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [libros](http://go.microsoft.com/fwlink/?LinkId=141687) en msdn.microsoft.com...  
   
 -   **Tabla derecha** : muestra el nombre de la segunda tabla que forma parte de una relación de combinación.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - remote login errors [SQL Server]
 - standalone computer names [SQL Server]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - dropping remote logins
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: be2e580931a7932e560240aefae659e01f3015d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 66c8ddd5a5ab207f9e9f29367ace2c73b8d2811b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209665"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server
   Cuando se cambia el nombre del equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el nombre nuevo se reconoce durante el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No es necesario que vuelva a ejecutar el programa de instalación para restablecer el nombre del equipo. En su lugar, realice los siguientes pasos para actualizar los metadatos del sistema que están almacenados en sys.servers y que son notificados por la función de sistema @@SERVERNAME. Actualice los metadatos del sistema para reflejar los cambios de nombre de equipo de las conexiones remotas y las aplicaciones que usan @@SERVERNAME, o que consultan el nombre del servidor desde sys.servers.  
@@ -114,6 +114,6 @@ ms.locfileid: "36104959"
  **Nombres de alias de cliente:** la operación de cambio de nombre de equipo afectará a los alias de cliente que usen canalizaciones con nombre. Por ejemplo, si se creó un alias "PROD_SRVR" para señalar a SRVR1 y usa el protocolo de canalizaciones con nombre, el nombre de la canalización será similar a `\\SRVR1\pipe\sql\query`. Una vez cambiado el nombre del equipo, la ruta de acceso de la canalización con nombre ya no será válida. Para obtener más información sobre las canalizaciones con nombre, vea el tema sobre cómo [crear una cadena de conexión válida con canalizaciones con nombre](http://go.microsoft.com/fwlink/?LinkId=111063).  
   
 ## <a name="see-also"></a>Vea también  
- [Instalar a SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
+ [Instalar SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
   
   

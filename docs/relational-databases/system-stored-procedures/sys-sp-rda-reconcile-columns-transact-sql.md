@@ -1,14 +1,11 @@
 ---
-title: Sys.sp_rda_reconcile_columns (Transact-SQL) | Documentos de Microsoft
+title: Sys.sp_rda_reconcile_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,23 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_columns stored procedure
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ff66e1f9b9e78cd2eb4c4c68d4cdc3e931d58ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e53540b06850f380f6ea5cfe80ea7cc33455fd7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997702"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414214"
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Reconcilia las columnas de la tabla de Azure remota a las columnas de la en la tabla de SQL Server habilitada para Stretch.  
+  Reconcilia las columnas de la tabla remota de Azure a las columnas de la en la tabla de SQL Server habilitada para Stretch.  
     
-  **sp_rda_reconcile_columns** agrega columnas a la tabla remota que hay en la tabla de SQL Server habilitada para Stretch, pero no en la tabla remota. Estas columnas pueden ser columnas que eliminaron accidentalmente de la tabla remota. Sin embargo, **sp_rda_reconcile_columns** no elimina las columnas de la tabla remota que hay en la tabla remota, pero no en la tabla de SQL Server.
+  **sp_rda_reconcile_columns** agrega columnas a la tabla remota que hay en la tabla de SQL Server habilitada para Stretch, pero no en la tabla remota. Estas columnas pueden ser columnas que se ha eliminado accidentalmente de la tabla remota. Sin embargo, **sp_rda_reconcile_columns** no elimina las columnas de la tabla remota que hay en la tabla remota, pero no en la tabla de SQL Server.
   
   > [!IMPORTANT]
   > Cuando **sp_rda_reconcile_columns** vuelve a crear las columnas que eliminó por error de la tabla remota, no restaura los datos que había antes en las columnas eliminadas.
@@ -57,14 +53,14 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o >0 (error)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Se requieren permisos db_owner.  
    
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si hay columnas en la tabla remota de Azure que ya no existen en la tabla de SQL Server habilitada para Stretch, estas columnas adicionales no impiden que Stretch Database funcione con normalidad. También puede quitar estas columnas adicionales de forma manual.  
   
 ## <a name="example"></a>Ejemplo  
- Para conciliar el las columnas de la tabla de Azure remota, ejecute la siguiente instrucción.  
+ Para conciliar los las columnas de la tabla de Azure remota, ejecute la siguiente instrucción.  
   
 ```sql  
 EXEC sp_rda_reconcile_columns @objname = N'StretchEnabledTableName';  

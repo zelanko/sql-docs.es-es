@@ -1,5 +1,5 @@
 ---
-title: Temas de Ayuda F1 del Administrador de configuración (modo nativo de SSRS) de Reporting Services | Documentos de Microsoft
+title: Temas de Ayuda F1 del Administrador de configuración (modo nativo de SSRS) de Reporting Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: e38b7d703fb91c0f03f2db55b3f8a82fa4c5b4cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 874c69dcef4dd0704fa0c6fe59e96edfbffe9743
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177252"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Temas de Ayuda F1 del Administrador de configuración de Reporting Services (Modo nativo de SSRS)
   Esta sección proporciona la Ayuda F1 para el Administrador de configuración de Reporting Services.  
@@ -58,7 +58,7 @@ ms.locfileid: "36108242"
   
 -   [Restaurar clave de cifrado](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
   
--   [Implementación de ampliación horizontal](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
+-   [Implementación escalada](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Administrador de configuración de Reporting Services &#40;SUPR&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  

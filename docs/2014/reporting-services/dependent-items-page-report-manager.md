@@ -1,5 +1,5 @@
 ---
-title: Página elementos dependientes (Administrador de informes) | Documentos de Microsoft
+title: Página elementos dependientes (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0496334695c72a78afe3fedb87763cfaacd66e35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e483d24a2b7e9463c5fb43b9bc2f00fd41a3a070
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164116"
 ---
 # <a name="dependent-items-page-report-manager"></a>Página de elementos dependientes (Administrador de informes)
   Use la página Elementos dependientes para ver una lista de informes y modelos que hacen referencia a un origen de datos compartido. El icono de cada tipo de elemento indica si se trata de un informe o de un modelo. Esta página puede mostrarse en la vista de lista o en la vista Detalles. Use la vista Detalles para mostrar más información sobre cada elemento. Esta vista también incluye opciones de página adicionales. Para ayudarle a administrar el origen de datos compartido, esta página proporciona vínculos a los informes y modelos que usan el origen de datos, las métricas sobre cuándo se ejecutó o modificó el informe o el modelo por última vez, y los botones Eliminar y Mover de manera que pueda quitar los informes y modelos con facilidad que ya no se usan, o moverlos a una ubicación diferente mientras determina si todavía son necesarios.  
@@ -69,6 +69,6 @@ ms.locfileid: "36108050"
  [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
  [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [El contenido de página &#40;el Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

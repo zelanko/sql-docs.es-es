@@ -1,5 +1,5 @@
 ---
-title: Otros problemas de actualización de replicación | Documentos de Microsoft
+title: Otros problemas de actualización de replicación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system tables [SQL Server], replication
 - passwords [SQL Server replication]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ActiveX controls [SQL Server replication]
 ms.assetid: 8a5e74be-4992-4f17-b20c-c3dce8f49329
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1710220edea8623b0e1cb9ca61cd179461b14423
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1aa132e53e3d3328863c8f30fc86277fc6b394ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200685"
 ---
 # <a name="other-replication-upgrade-issues"></a>Otros problemas de actualización de replicación
   En este tema se analiza una serie de problemas de actualización que el Asesor de actualizaciones no notifica.  

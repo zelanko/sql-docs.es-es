@@ -5,10 +5,9 @@ ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b7f1393d97323a201022b4bd65066ed4cf3a49bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f4cf9c51abaaadff50a0dcc9b856eea0f6e76a57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201505"
 ---
 # <a name="control-transaction-durability"></a>Controlar la durabilidad de las transacciones
   Las confirmaciones de transacciones de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden ser totalmente durables (el valor predeterminado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) o durables diferidas (conocidas también como confirmaciones diferidas).  
@@ -69,13 +68,13 @@ ms.locfileid: "36108974"
  **Puede tolerar alguna pérdida de datos.**  
  Si puede tolerar cierta pérdida de datos, por ejemplo cuando los registros individuales no son críticos siempre y cuando tenga la mayoría de los datos, puede resultar útil usar la durabilidad diferida. Si no puede tolerar la pérdida de datos, no utilice la durabilidad diferida de transacciones.  
   
- **Está experimentando un cuello de botella en las escrituras de registro de transacciones.**  
+ **Está experimentando un cuello de botella en la escritura de registro de transacciones.**  
  Si los problemas de rendimiento se deben a la latencia en la escritura de registros de transacciones, seguramente la aplicación se beneficiará de utilizar la durabilidad diferida de transacciones.  
   
  **Las cargas de trabajo tienen un alto índice de contención.**  
  Si el sistema tiene cargas de trabajo con un alto índice de contención, se perderá mucho tiempo esperando a que se liberen los bloqueos. La durabilidad diferida de transacciones reduce el tiempo de confirmación y, por tanto, libera los bloqueos con mayor rapidez, lo que redunda en un mayor rendimiento.  
   
- **Garantías de durabilidad de transacción diferida**  
+ **Retrasa garantías de durabilidad de transacciones**  
   
 -   Una vez que la transacción se confirma correctamente, los cambios que realiza la transacción son visibles para las demás transacciones del sistema.  
   
@@ -165,8 +164,8 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
 |`DELAYED_DURABILITY = OFF` Transacciones de nivel de base de datos.|La transacción es totalmente durable.|La transacción es totalmente durable.|La transacción es de durabilidad diferida.|  
 |`DELAYED_DURABILITY = ON` Transacciones de nivel de base de datos.|La transacción es totalmente durable.|La transacción es de durabilidad diferida.|La transacción es de durabilidad diferida.|  
-|`DELAYED_DURABILITY = OFF` Entre la base de datos o transacciones distribuidas.|La transacción es totalmente durable.|La transacción es totalmente durable.|La transacción es totalmente durable.|  
-|`DELAYED_DURABILITY = ON` Entre la base de datos o transacciones distribuidas.|La transacción es totalmente durable.|La transacción es totalmente durable.|La transacción es totalmente durable.|  
+|`DELAYED_DURABILITY = OFF` Entre la base de datos o una transacción distribuida.|La transacción es totalmente durable.|La transacción es totalmente durable.|La transacción es totalmente durable.|  
+|`DELAYED_DURABILITY = ON` Entre la base de datos o una transacción distribuida.|La transacción es totalmente durable.|La transacción es totalmente durable.|La transacción es totalmente durable.|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>Cómo forzar un vaciado del registro de transacciones  
  Existen dos formas de forzar el vaciado en el disco del registro de transacciones.  
@@ -185,10 +184,10 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Entre bases de datos y DTC**  
  Si una transacción es entre bases de datos o distribuida, es totalmente durable, independientemente de cualquier configuración de confirmación de base de datos o de transacción.  
   
- **Siempre en grupos de disponibilidad y creación de reflejo**  
+ **La creación de reflejo o grupos de disponibilidad AlwaysOn**  
  Las transacciones de durabilidad diferida no garantizan la durabilidad del primario ni de los secundarios. Tampoco garantizan ningún conocimiento sobre la transacción en el secundario. Después de COMMIT, se devuelve el control al cliente antes de que se reciba algún reconocimiento desde un elemento secundario sincrónico.  
   
- **agrupación en clústeres de conmutación por error**  
+ **Agrupación en clústeres de conmutación por error**  
  Es posible que se pierdan algunas escrituras de transacciones durables diferidas.  
   
  **Replicación de transacciones**  
@@ -211,6 +210,6 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 ## <a name="see-also"></a>Vea también  
  [Niveles de aislamiento de transacción](../../database-engine/transaction-isolation-levels.md)   
- [Directrices para los niveles de aislamiento de transacciones con tablas optimizadas en memoria](../in-memory-oltp/memory-optimized-tables.md)  
+ [Instrucciones para los niveles de aislamiento de transacciones con tablas optimizadas para memoria](../in-memory-oltp/memory-optimized-tables.md)  
   
   

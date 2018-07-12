@@ -1,5 +1,5 @@
 ---
-title: Revisión de características | Documentos de Microsoft
+title: Revisión de características | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 180ea5799d178e6c722ea37da1d0799f00247a36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6b9293aeb938a5898ab80f94f4b3879e381b4848
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150036"
 ---
 # <a name="feature-review"></a>Revisión de características
   La página Revisión de características es una lista de solo lectura de las características que se han preparado y se configurarán y completarán al final del paso para completar la imagen. La lista de características está seleccionada durante el paso de preparación de la imagen y no se puede modificar durante el paso de compleción de imagen. Además de las características mostradas, una instancia preparada también incluye [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

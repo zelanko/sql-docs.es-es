@@ -1,5 +1,5 @@
 ---
-title: EntityType, elemento (CSDLBI) | Documentos de Microsoft
+title: EntityType, elemento (CSDLBI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,18 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 530608169372a06a50bdf613668f5650a5caecc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f4f2697b3616e2a47e32b87913c49f76e009153a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277601"
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType, elemento (CSDLBI)
-  El elemento `EntityType` es un tipo complejo que representa la estructura de una entidad de nivel superior, como un cliente o un pedido, en un modelo de datos. El `bi:EntityType` elemento extiende la definición de [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) utilizados en el [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
+  El elemento `EntityType` es un tipo complejo que representa la estructura de una entidad de nivel superior, como un cliente o un pedido, en un modelo de datos. El `bi:EntityType` elemento extiende la definición de [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) usado en el [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
   
  Se debe especificar un elemento EntityType para cada una de las entidades incluidas en el modelo de datos. Los subelementos de EntityType describen las columnas y medidas de la tabla. Las relaciones entre las tablas se incluyen en el elemento `EntityContainer`.  
   
@@ -33,11 +33,11 @@ ms.locfileid: "36105462"
 |Nombre|Es obligatorio|Descripción|  
 |----------|-----------------|-----------------|  
 |Contenido|no|Cadena que contiene los posibles tipos de datos de una columna. El valor se deriva del valor de DimensionAttributeTypeEnumType en el modelo de datos.<br /><br /> Si el valor de DimensionAttributeTypeEnumType es “ExtendedType”, el valor de Contents se deriva del elemento ExtendedType de DimensionAttribute. No es necesario que el cliente responda a estos valores.|  
-|DefaultDetails|no|Lista de referencias de propiedad que representan el conjunto de columnas de la tabla.<br /><br /> Vea [elemento DefaultDetails &#40;CSDLBI&#41;](defaultdetails-element-csdlbi.md).|  
-|DefaultImage|no|Referencia a una columna que contiene la imagen que ilustra la entidad.<br /><br /> En los modelos multidimensionales, este elemento corresponde a un atributo binario en el atributo de dimensión. Si este atributo está presente, el elemento debe contener exactamente un elemento MemberRef.<br /><br /> Vea [elemento MemberRef &#40;CSDLBI&#41;](memberref-element-csdlbi.md).|  
-|DefaultMeasure|no|Referencia a una medida de la entidad que se debe utilizar como valor predeterminado al realizar cálculos en dicha entidad. Si no se especifica, el valor predeterminado es SUM.<br /><br /> Vea [elemento MemberRef &#40;CSDLBI&#41;](memberref-element-csdlbi.md).|  
-|DisplayKey|no|Lista de referencias a columnas o a extremos de rol que constituye un identificador seguro que identifica de forma exclusiva una instancia de entidad.<br /><br /> Vea [elemento DisplayKey &#40;CSDLBI&#41;](displaykey-element-csdlbi.md).|  
-|Hierarchy|no|Lista de jerarquías del modelo.<br /><br /> Vea [Hierarchy, elemento &#40;CSDLBI&#41;](hierarchy-element-csdlbi.md).|  
+|DefaultDetails|no|Lista de referencias de propiedad que representan el conjunto de columnas de la tabla.<br /><br /> Consulte [elemento DefaultDetails &#40;CSDLBI&#41;](defaultdetails-element-csdlbi.md).|  
+|DefaultImage|no|Referencia a una columna que contiene la imagen que ilustra la entidad.<br /><br /> En los modelos multidimensionales, este elemento corresponde a un atributo binario en el atributo de dimensión. Si este atributo está presente, el elemento debe contener exactamente un elemento MemberRef.<br /><br /> Consulte [elemento MemberRef &#40;CSDLBI&#41;](memberref-element-csdlbi.md).|  
+|DefaultMeasure|no|Referencia a una medida de la entidad que se debe utilizar como valor predeterminado al realizar cálculos en dicha entidad. Si no se especifica, el valor predeterminado es SUM.<br /><br /> Consulte [elemento MemberRef &#40;CSDLBI&#41;](memberref-element-csdlbi.md).|  
+|DisplayKey|no|Lista de referencias a columnas o a extremos de rol que constituye un identificador seguro que identifica de forma exclusiva una instancia de entidad.<br /><br /> Consulte [elemento DisplayKey &#40;CSDLBI&#41;](displaykey-element-csdlbi.md).|  
+|Hierarchy|no|Lista de jerarquías del modelo.<br /><br /> Consulte [Hierarchy, elemento &#40;CSDLBI&#41;](hierarchy-element-csdlbi.md).|  
 |ReferenceName|Sí|Identificador que se puede utilizar para hacer referencia a esta entidad en una consulta de expresiones de análisis de datos (DAX).<br /><br /> Si este atributo no está presente, se utiliza el nombre de campo completo de la entidad.|  
 |SortMembers|no|Lista de propiedades según las que se ordena. El atributo SortDirection indica si el orden es ascendente o descendente.|  
   

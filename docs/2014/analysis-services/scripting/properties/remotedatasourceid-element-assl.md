@@ -1,5 +1,5 @@
 ---
-title: Elemento RemoteDatasourceID (ASSL) | Documentos de Microsoft
+title: Elemento RemoteDatasourceID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RemoteDatasourceID element
 ms.assetid: 2eaf0b9c-8c2d-4dc6-9bad-1db70a4b04b1
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da3552a13fc5f00aff194bb9eab265f893b469c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 021b242c80aedbc23a5cf34b35b54714dd21e557
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189112"
 ---
 # <a name="remotedatasourceid-element-assl"></a>Elemento RemoteDatasourceID (ASSL)
   Especifica el identificador (ID) del origen de datos OLAP que señala a la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que almacena la partición remota.  
@@ -64,7 +64,7 @@ ms.locfileid: "36107954"
 ## <a name="remarks"></a>Notas  
  Si `RemoteDatasourceID` es nulo, la partición es local.  
   
- El elemento que corresponde al elemento primario de `RemoteDatasourceID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Partition>.  
+ El elemento que se corresponde con el elemento primario de `RemoteDatasourceID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

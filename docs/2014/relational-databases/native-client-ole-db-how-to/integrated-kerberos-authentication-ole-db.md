@@ -1,31 +1,29 @@
 ---
-title: Integra la autenticación Kerberos (OLE DB) | Documentos de Microsoft
+title: Autenticación de Kerberos (OLE DB) integrada | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd1ccb608aec68f96671ea52cdb17c5ff66c7182
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f2ad40a930192dcaf91afeb14f2d54a7c08db0b7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105612"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410304"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Autenticación integrada de Kerberos (OLE DB)
   En este ejemplo se muestra cómo obtener la autenticación mutua de Kerberos utilizando OLE DB en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior.  
   
- Para obtener más información acerca de los SPN y la autenticación Kerberos, vea [nombre Principal de servicio &#40;SPN&#41; compatibilidad con conexiones de cliente](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Para obtener más información acerca de la autenticación de los SPN y Kerberos, vea [nombre Principal de servicio &#40;SPN&#41; compatibilidad en las conexiones de cliente](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Ejemplo  
  Se debe especificar siempre un servidor. En el archivo .cpp, cambie "MyServer" por un nombre de equipo que tenga una instancia de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior).  

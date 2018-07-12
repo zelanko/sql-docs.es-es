@@ -1,5 +1,5 @@
 ---
-title: Nombre coincidente (Data Source View Wizard) (Analysis Services) | Documentos de Microsoft
+title: El nombre coincidente (Data Source View Wizard) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.namematchingcriteria.f1
 ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcb6d01f55b450326efdea81d48135088d57fc3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 258b23cc260ea4d31296aa00964138df399da516
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155386"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Coincidencia de nombres (Asistente para vistas del origen de datos) (Analysis Services)
   Use la página **Coincidencia de nombres** para seleccionar el criterio que desea utilizar para detectar las posibles relaciones entre las tablas seleccionadas para la vista del origen de datos y las demás tablas del esquema. Si no existen relaciones de claves externas físicas entre las tablas, este criterio le permitirá identificar y agregar las tablas relacionadas a la vista del origen de datos. Las relaciones lógicas identificadas por la coincidencia de nombres también se agregan a la vista del origen de datos.  

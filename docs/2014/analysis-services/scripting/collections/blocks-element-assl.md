@@ -1,5 +1,5 @@
 ---
-title: Bloquea el elemento (ASSL) | Documentos de Microsoft
+title: Bloquea el elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Blocks element
 ms.assetid: d6fd4e6b-b5bd-43cd-9c28-48af57cf977c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf944cc053e7a8c32efec50d10f6cc176942cce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2776ea261c26bd8c53d3f78ba29231823bb659d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161326"
 ---
 # <a name="blocks-element-assl"></a>Elemento Blocks (ASSL)
   Contiene la colección de bloques de datos binarios que representan el contenido binario de un [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) elemento.  
@@ -60,14 +60,14 @@ ms.locfileid: "36108677"
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[Datos](../objects/data-element-assl.md) de tipo [DataBlock](../data-type/datablock-data-type-assl.md)|  
-|Elementos secundarios|[bloque](../objects/block-element-assl.md)|  
+|Elementos primarios|[Datos](../objects/data-element-assl.md) typu [DataBlock](../data-type/datablock-data-type-assl.md)|  
+|Elementos secundarios|[Bloque](../objects/block-element-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `Blocks` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+ El elemento que se corresponde con el elemento primario de `Blocks` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>Vea también  
- [Assembly (elemento) &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
+ [Elemento Assembly &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
  [Tipo de datos ClrAssembly &#40;ASSL&#41;](../data-type/assembly-data-type-assl.md)   
  [Archivos elemento &#40;ASSL&#41;](files-element-assl.md)   
  [Elemento file &#40;ASSL&#41;](../objects/file-element-assl.md)   

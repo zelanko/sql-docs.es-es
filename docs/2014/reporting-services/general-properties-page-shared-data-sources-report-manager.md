@@ -1,5 +1,5 @@
 ---
-title: Página Propiedades generales, los orígenes de datos (Administrador de informes) compartidos | Documentos de Microsoft
+title: Página Propiedades generales, comparten los orígenes de datos (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0a570567691692f008f6f71966b5ee0b01921dab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b729c41bf0ed0950c20b465bd1f0c70ebbee4a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162286"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>Página Propiedades generales, Orígenes de datos compartidos (Administrador de informes)
   Use la página de propiedades General para ver o modificar las propiedades de un elemento de origen de datos compartido. Al hacer clic en **Aplicar**, los cambios efectuados en las propiedades afectan a todos los informes que hagan referencia al elemento.  
@@ -54,13 +54,13 @@ ms.locfileid: "36108280"
  Tenga en cuenta que si está usando [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition con Advanced Services, solo puede elegir orígenes de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Cadena de conexión**  
- Especifique la cadena de conexión que utiliza el servidor de informes para conectarse al origen de datos. El tipo de conexión determina la sintaxis que debería usar. Por ejemplo, una cadena de conexión para la extensión de procesamiento de datos XML es una dirección URL a un documento XML. En la mayoría de los casos, la cadena de conexión típica especifica el servidor de bases de datos y un archivo de datos. En el ejemplo siguiente se muestra una cadena de conexión utilizada para conectarse a la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] base de datos:  
+ Especifique la cadena de conexión que utiliza el servidor de informes para conectarse al origen de datos. El tipo de conexión determina la sintaxis que debería usar. Por ejemplo, una cadena de conexión para la extensión de procesamiento de datos XML es una dirección URL a un documento XML. En la mayoría de los casos, la cadena de conexión típica especifica el servidor de bases de datos y un archivo de datos. El ejemplo siguiente muestra una cadena de conexión utilizada para conectarse a la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] base de datos:  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
 ```  
   
- **Conectar usando**  
+ **Conectar utilizando**  
  Especifica las opciones que determinan cómo se obtienen las credenciales.  
   
 > [!IMPORTANT]  
@@ -72,9 +72,9 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  Seleccione **Usar como credenciales de Windows para la conexión al origen de datos** si las credenciales que el usuario suministra son las credenciales de autenticación de Windows. No la active si va a utilizar la autenticación de la base de datos (por ejemplo, la autenticación de SQL Server).  
   
  **Credenciales almacenadas de forma segura en el servidor de informes**  
- Almacene un nombre de usuario y una contraseña cifrados en la base de datos del servidor de informes. Seleccione esta opción para ejecutar un informe de manera desatendida; por ejemplo, informes iniciados por programaciones o eventos en lugar de una acción del usuario. Si va a usar la seguridad predeterminada, el nombre de usuario debe ser una cuenta de dominio de Windows. Especifique la cuenta en este formato: \<dominio >\\< nombre de usuario\>. La cuenta que especifica debe tener permisos de inicio de sesión local en el equipo que hospeda el origen de datos usado por el informe.  
+ Almacene un nombre de usuario y una contraseña cifrados en la base de datos del servidor de informes. Seleccione esta opción para ejecutar un informe de manera desatendida; por ejemplo, informes iniciados por programaciones o eventos en lugar de una acción del usuario. Si va a usar la seguridad predeterminada, el nombre de usuario debe ser una cuenta de dominio de Windows. Especifique la cuenta con este formato: \<dominio >\\< nombre de usuario\>. La cuenta que especifica debe tener permisos de inicio de sesión local en el equipo que hospeda el origen de datos usado por el informe.  
   
- Active la casilla **Utilizar como credenciales de Windows para la conexión al origen de datos** si las credenciales son las credenciales de autenticación de Windows. No seleccione esta casilla de verificación si está usando la autenticación de base de datos (por ejemplo, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticación).  
+ Active la casilla **Utilizar como credenciales de Windows para la conexión al origen de datos** si las credenciales son las credenciales de autenticación de Windows. No seleccione esta casilla si está usando la autenticación de base de datos (por ejemplo, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticación).  
   
  Si está usando autenticación de la base de datos, seleccione **Suplantar al usuario autenticado después de realizar una conexión al origen de datos (Conectar utilizando)** para permitir la delegación de credenciales de la base de datos pero solo si un servidor de bases de datos admite la suplantación. Para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bases de datos, esta opción establece la función SETUSER.  
   
@@ -88,7 +88,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **No se necesitan credenciales**  
  Especifique que no se necesitan credenciales para obtener acceso al origen de datos. Tenga en cuenta que, si un origen de datos requiere un inicio de sesión de usuario, esta opción no tendrá ningún efecto. Elija esta opción solo si la conexión al origen de datos no requiere credenciales de usuario.  
   
- Para usar esta opción, debe haber configurado previamente la cuenta de ejecución desatendida para la implementación del servidor de informes. La cuenta de ejecución desatendida se usa para conectarse a los orígenes de datos externos cuando otros orígenes de credenciales no están disponibles. Si especifica esta opción y la cuenta no está configurada, se producirá un error en la conexión al origen de datos del informe y no se producirá el procesamiento de informes. Para obtener más información acerca de esta cuenta, consulte [configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Para usar esta opción, debe haber configurado previamente la cuenta de ejecución desatendida para la implementación del servidor de informes. La cuenta de ejecución desatendida se usa para conectarse a los orígenes de datos externos cuando otros orígenes de credenciales no están disponibles. Si especifica esta opción y la cuenta no está configurada, se producirá un error en la conexión al origen de datos del informe y no se producirá el procesamiento de informes. Para obtener más información acerca de esta cuenta, consulte [configurar la cuenta de ejecución desatendida &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  **Aplicar**  
  Haga clic para guardar los cambios.  

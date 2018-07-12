@@ -1,12 +1,12 @@
 ---
-title: Ejecutar comandos que contienen parámetros con valores de tabla | Documentos de Microsoft
+title: Ejecutar comandos que contienen parámetros con valores de tabla | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e6e5687c05230b0235da106dab6fa7e9c5319751
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 943dba9ff3fbd04e8344ac4d325114ee9f05a2e2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699926"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428356"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Ejecutar comandos que contienen parámetros con valores de tabla
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "35699926"
 ## <a name="table-valued-parameter-specification"></a>Especificación de parámetros con valores de tabla  
  El consumidor puede especificar el tipo del parámetro con valores de tabla. Esta información incluye el nombre del tipo del parámetro con valores de tabla. También incluye el nombre de esquema si el tipo de tabla definido por el usuario para el parámetro con valores de tabla no está en el esquema predeterminado actual para la conexión. Dependiendo de la compatibilidad del servidor, el consumidor también puede especificar información opcional sobre los metadatos, como el orden de las columnas, y puede especificar que todas las filas de ciertas columnas tengan valores predeterminados.  
   
- Para especificar un parámetro con valores de tabla, el consumidor llama ISSCommandWithParamter::SetParameterInfo y opcionalmente llama isscommandwithparameters:: SetParameterProperties. Para un parámetro con valores de tabla, el *pwszDataSourceType* los campos de la estructura DBPARAMBINDINFO tiene un valor de DBTYPE_TABLE. El *ulParamSize* campo se establece en ~ 0 para indicar que la longitud es desconocido. Determinadas propiedades para los parámetros con valores de tabla, como nombre de esquema, nombre de tipo, orden de las columnas y las columnas de forma predeterminada, se pueden establecer a través de isscommandwithparameters:: SetParameterProperties.  
+ Para especificar un parámetro con valores de tabla, el consumidor llama a ISSCommandWithParamter::SetParameterInfo y, opcionalmente, llama isscommandwithparameters:: SetParameterProperties. Para un parámetro con valores de tabla, el *pwszDataSourceType* campo de la estructura DBPARAMBINDINFO tiene un valor de DBTYPE_TABLE. El *ulParamSize* campo se establece en ~ 0 para indicar que la longitud es desconocido. Determinadas propiedades en los parámetros con valores de tabla, como nombre de esquema, nombre de tipo, orden de las columnas y columnas de forma predeterminada, se pueden establecer a través de isscommandwithparameters:: SetParameterProperties.  
   
 ## <a name="table-valued-parameter-binding"></a>Enlace de parámetros con valores de tabla  
  Un parámetro con valores de tabla puede ser cualquier objeto de conjunto de filas. Durante la ejecución, el proveedor lee en este objeto mientras envía los parámetros con valores de tabla al servidor.  
   
- Para enlazar el parámetro con valores de tabla, el consumidor llama a IAccessor:: CreateAccessor. El *wType* campo de la estructura DBBINDING para el parámetro con valores de tabla está establecido en DBTYPE_TABLE. El *pObject* miembro de la estructura DBBINDING es distinto de NULL y la *pObject*del *iid* miembro se establece en IID_IRowset o cualquier otro objeto de conjunto de filas de parámetro con valores de tabla interfaces. Los campos restantes de la estructura DBBINDING se deben establecer de la misma manera que los BLOB transmitidos.  
+ Para enlazar el parámetro con valores de tabla, el consumidor llama a IAccessor:: CreateAccessor. El *wType* campo de la estructura DBBINDING para el parámetro con valores de tabla está establecido en DBTYPE_TABLE. El *pObject* miembro de la estructura DBBINDING es distinto de NULL y el *pObject*del *iid* miembro se establece en IID_IRowset o cualquier otro objeto de conjunto de filas de parámetro con valores de tabla interfaces. Los campos restantes de la estructura DBBINDING se deben establecer de la misma manera que los BLOB transmitidos.  
   
  En los enlaces para el parámetro con valores de tabla y el objeto de conjunto de filas asociado a un parámetro con valores de tabla, se aplican las restricciones siguientes:  
   

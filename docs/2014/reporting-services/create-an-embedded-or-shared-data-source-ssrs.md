@@ -1,5 +1,5 @@
 ---
-title: Crear un origen de datos incrustado o compartido (SSRS) | Documentos de Microsoft
+title: Crear un origen de datos incrustado o compartido (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
 caps.latest.revision: 40
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 28609edfbfc504d3949abb6a19f7f04098fde07b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9cd820de9b6710e4524b39323bcc9837fad820b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230736"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>Crear un origen de datos incrustado o compartido (SSRS)
-  Un origen de datos de informe especifica la información de nombre y cadena de conexión. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite dos tipos de orígenes de datos: incrustados y compartidos. Un origen de datos incrustado se define en una definición de informe y se usa solamente en ese informe. Un origen de datos compartido se define como un elemento independiente y se puede usar en varios informes. Para obtener más información, consulte [incrustados y compartidos conexiones de datos u orígenes de datos &#40;el generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  
+  Un origen de datos de informe especifica la información de nombre y cadena de conexión. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite dos tipos de orígenes de datos: incrustados y compartidos. Un origen de datos incrustado se define en una definición de informe y se usa solamente en ese informe. Un origen de datos compartido se define como un elemento independiente y se puede usar en varios informes. Para obtener más información, consulte [incrustados y compartidos conexiones de datos u orígenes de datos &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  
   
  En el Generador de informes, puede desplazarse al servidor de informes o al sitio de SharePoint y seleccionar orígenes de datos o crear orígenes de datos incrustados. No puede crear orígenes de datos compartidos en el Generador de informes.  
   
- En el Diseñador de informes, puede crear orígenes de datos compartidos o incrustados. En el panel de datos del informe, comience a crear una referencia de origen de datos y, a continuación, seleccione la **New** opción. Después de crear la referencia de origen de datos, se agregará automáticamente un nuevo origen de datos compartido al Explorador de soluciones en la carpeta de orígenes de datos compartidos.  
+ En el Diseñador de informes, puede crear orígenes de datos compartidos o incrustados. En el panel datos de informe, comience a crear una referencia de origen de datos y, a continuación, seleccione el **New** opción. Después de crear la referencia de origen de datos, se agregará automáticamente un nuevo origen de datos compartido al Explorador de soluciones en la carpeta de orígenes de datos compartidos.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
@@ -50,7 +50,7 @@ ms.locfileid: "36107140"
   
     2.  Especifique una cadena de conexión usando una de las alternativas siguientes:  
   
-    -   Escriba la cadena de conexión directamente en el cuadro de texto **Cadena de conexión** . Para obtener una lista de cadenas de conexión de ejemplo, vea [las conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md) o [las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+    -   Escriba la cadena de conexión directamente en el cuadro de texto **Cadena de conexión** . Para obtener una lista de cadenas de conexión de ejemplo, vea [conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md) o [las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
     -   Haga clic en el botón de expresión (**fx** ) para crear una expresión que dé como resultado una cadena de conexión. En el cuadro de diálogo **Expresión** , escriba la expresión en el panel Expresión. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36107140"
   
          Rellene los campos del cuadro de diálogo **Propiedades de conexión** según corresponda para el tipo de origen de datos. Las propiedades de conexión incluyen el tipo de origen de datos, el nombre del origen de datos, y las credenciales que se deben usar. Después de especificar los valores en este cuadro de diálogo, haga clic en **Probar conexión** para comprobar que el origen de datos está disponible y que las credenciales que especificó son correctas. Para más información sobre tipos de orígenes de datos específicos, vea los temas en [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md).  
   
-4.  Para un origen de datos compartido, compruebe que **utilizar referencia de origen de datos compartido** está seleccionada.  
+4.  Para un origen de datos compartidos, comprobar que **utilizar referencia de origen de datos compartido** está seleccionada.  
   
     1.  Haga clic en **Nueva**. En el cuadro de diálogo de propiedades **Origen de datos compartido** , siga los pasos 2 y 3 para crear un nuevo origen de datos.  
   
@@ -80,18 +80,18 @@ ms.locfileid: "36107140"
   
 ### <a name="to-convert-an-embedded-data-source-to-a-shared-data-source-in-report-designer"></a>Para convertir un origen de datos incrustado en un origen de datos compartido en el Diseñador de informes  
   
--   En el panel de datos de informe, haga clic en el origen de datos y, a continuación, haga clic en **convertir en origen de datos compartido**.  
+-   En el panel datos de informe, haga clic en el origen de datos y, a continuación, haga clic en **convertir a origen de datos compartidos**.  
   
 ### <a name="to-convert-a-shared-data-source-to-an-embedded-data-source-in-report-builder"></a>Para convertir un origen de datos compartido en un origen de datos incrustado en el Generador de informes  
   
--   En el panel de datos de informe, haga clic en el origen de datos y abra **propiedades del origen de datos**.  
+-   En el panel datos de informe, haga clic en el origen de datos y abra **propiedades del origen de datos**.  
   
 -   Haga clic en **conexión incrustada** y termine de crear el origen de datos incrustado como se describe en el procedimiento anterior.  
   
 ## <a name="see-also"></a>Vea también  
  [Almacenamiento de las credenciales en un origen de datos de Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md)   
- [Incrustados y compartidos conexiones de datos u orígenes de datos &#40;el generador de informes SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Convertir un origen de datos incrustado en compartido &#40;el generador de informes SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
+ [Incrustados y compartidos de conexiones de datos u orígenes de datos &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Convertir un origen de datos incrustado en compartido &#40;generador de informes y SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
  [Enlazar un informe o modelo a un origen de datos compartido &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Configurar propiedades de origen de datos para un informe &#40;Administrador de informes&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)   
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  

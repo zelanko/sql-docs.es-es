@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Agregar datos | Documentos de Microsoft'
+title: 'Lección 2: Agregar datos | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 697c483d784f4d15682c9690c0c392268ad5b356
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e16182c535fe22a1efe631a42b68c038db365ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165516"
 ---
 # <a name="lesson-2-add-data"></a>Lección 2: Agregar datos
   En esta lección usará el Asistente para la importación de tablas de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para conectarse a la base de datos SQL AdventureWorksDW, seleccionar datos, obtener una vista previa, filtrar los datos e importarlos al área de trabajo del modelo.  
@@ -43,7 +43,7 @@ ms.locfileid: "36108219"
   
 2.  En el **Asistente para la importación de tablas**, bajo **Bases de datos relacionales**, haga clic en **Microsoft SQL Server**y después en **Siguiente**.  
   
-3.  En el **conectar a una base de datos de Microsoft SQL Server** página **nombre descriptivo de la conexión**, tipo `Adventure Works DB from SQL`.  
+3.  En el **conectarse a una base de datos de Microsoft SQL Server** página **nombre descriptivo de la conexión**, tipo `Adventure Works DB from SQL`.  
   
 4.  En **Nombre del servidor**, escriba el nombre del servidor en el que instaló la base de datos AdventureWorksDW.  
   

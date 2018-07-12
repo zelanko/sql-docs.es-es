@@ -1,5 +1,5 @@
 ---
-title: Notificaciones del servicio de Token de Windows (C2WTS) y Reporting Services | Documentos de Microsoft
+title: Notificaciones del servicio de Token de Windows (C2WTS) y Reporting Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - c2wts.exe.config
 - SharePoint mode
@@ -18,16 +18,16 @@ ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 479be89681f7c34558c5a7e89d54023feb110d60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a44f0beff9bd3351265caca0ee9490a7c6aeeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278191"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Notificaciones del servicio de token de Windows (C2WTS) y Reporting Services
-  Notificaciones del servicio de Token de Windows (c2WTS) se requiere con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] el modo de SharePoint si desea utilizar la autenticación de windows para orígenes de datos que se encuentran fuera de la granja de servidores de SharePoint. Esto es cierto incluso si el usuario accede a los orígenes de datos con la autenticación de Windows porque la comunicación entre el servicio front-end web (WFE) y el servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se realizará siempre con autenticación de notificaciones.  
+  Las notificaciones de SharePoint al servicio de Token de Windows (c2WTS) se requiere con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] el modo de SharePoint si desea usar la autenticación de windows para orígenes de datos que están fuera de la granja de SharePoint. Esto es cierto incluso si el usuario accede a los orígenes de datos con la autenticación de Windows porque la comunicación entre el servicio front-end web (WFE) y el servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se realizará siempre con autenticación de notificaciones.  
   
  c2WTS es necesario aunque los orígenes de datos estén en el mismo equipo que el servicio compartido. Sin embargo, en este escenario no es necesaria la delegación restringida.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36106036"
   
     -   Iniciar sesión como servicio  
   
-     La cuenta que utilice para c2WTS también tiene que estar configurada para delegación restringida con transición de protocolo y necesita permisos para delegar a los servicios se requiere para comunicarse con (es decir, SQL Server Engine, SQL Server Analysis Services). Para configurar la delegación puede utilizar el complemento de usuarios de Active Directory y el equipo.  
+     La cuenta que utilice para c2WTS también debe configurarse para la delegación restringida con transición de protocolo y necesita permisos para delegar a los servicios se requiere comunicación (es decir, motor SQL Server, SQL Server Analysis Services). Para configurar la delegación puede utilizar el complemento de usuarios de Active Directory y el equipo.  
   
     1.  Haga clic con el botón secundario en cada cuenta de servicio y abra el cuadro de diálogo de propiedades. En el cuadro de diálogo, haga clic en la pestaña **Delegación** .  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36106036"
   
 2.  Configurar "AllowedCallers" de c2WTS  
   
-     c2WTS requiere que las identidades de 'llamadores' explícitamente enumerados en el archivo de configuración, **c2wtshost.exe.config**. c2WTS no acepta solicitudes de todos los usuarios autenticados en el sistema a menos que esté configurado para ello. En este caso el "autor de la llamada" es el grupo de Windows WSS_WPG. El archivo c2wtshost.exe.confi se guarda en la ubicación siguiente:  
+     c2WTS requiere que las identidades de los 'autores de llamadas' explícitamente enumeradas en el archivo de configuración **c2wtshost.exe.config**. c2WTS no acepta solicitudes de todos los usuarios autenticados en el sistema a menos que esté configurado para ello. En este caso el "autor de la llamada" es el grupo de Windows WSS_WPG. El archivo c2wtshost.exe.confi se guarda en la ubicación siguiente:  
   
      **\Program Files\Windows identity Foundation\v3.5\c2wtshost.exe.config**  
   
@@ -104,6 +104,6 @@ ms.locfileid: "36106036"
   
 ## <a name="see-also"></a>Vea también  
  [Notificaciones al servicio de Token de Windows (c2WTS) (información generalhttp://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
- [Información general de la autenticación Kerberos para productos de Microsoft SharePoint 2010 (http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
+ [Introducción a la autenticación de Kerberos para productos de Microsoft SharePoint 2010 (http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
   
   

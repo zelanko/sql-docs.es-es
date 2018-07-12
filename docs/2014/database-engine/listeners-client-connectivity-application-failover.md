@@ -1,14 +1,13 @@
 ---
-title: Agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de aplicación (SQL Server) | Documentos de Microsoft
+title: Los agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de aplicación (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - read-only routing
@@ -20,13 +19,13 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 caps.latest.revision: 46
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 90dc94aeebdaa99fe2884dc0874f0c01ec8212cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd5187ffce3a34c038471681a5b730b5b92313ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197875"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación (SQL Server)
   Este tema contiene información acerca de las consideraciones de conectividad del cliente de [!INCLUDE[ssHADR](../includes/sshadr-md.md)] y la funcionalidad de conmutación por error de aplicaciones.  
@@ -122,13 +121,13 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- En este ejemplo de cadena de comparación, el cliente intenta conectarse a un agente de escucha del grupo de disponibilidad denominado `AGListener` en el puerto 1433 (también puede omitir el puerto si el agente de escucha del grupo de disponibilidad escucha en 1433).  La cadena de conexión tiene la `ApplicationIntent` propiedad establecida en `ReadOnly`, lo que la convierte un *cadena de conexión de intención de lectura*.  Sin este valor, el servidor no habría intentado un enrutamiento de solo lectura de la conexión.  
+ En este ejemplo de cadena de comparación, el cliente intenta conectarse a un agente de escucha del grupo de disponibilidad denominado `AGListener` en el puerto 1433 (también puede omitir el puerto si el agente de escucha del grupo de disponibilidad escucha en 1433).  La cadena de conexión tiene el `ApplicationIntent` propiedad establecida en `ReadOnly`, por lo que es un *cadena de conexión de intención de lectura*.  Sin este valor, el servidor no habría intentado un enrutamiento de solo lectura de la conexión.  
   
  La base de datos principal del grupo de disponibilidad procesa la solicitud de enrutamiento de solo lectura entrante e intenta localizar una réplica en línea de solo lectura que esté unida a la réplica principal y esté configurada para el enrutamiento de solo lectura.  El cliente recibe información de conexión del servidor de réplica principal y se conecta a la réplica de solo lectura identificada.  
   
  Observe que el intento de aplicación se puede enviar de un controlador de cliente a una instancia de nivel inferior de SQL Server.  En este caso, el intento de aplicación de solo lectura se omite y la conexión continúa normalmente.  
   
- Puede omitir el enrutamiento de solo lectura si no establece la propiedad application intent connection en `ReadOnly` (cuando no está designada, el valor predeterminado es `ReadWrite` durante el inicio de sesión) o si se conecta directamente a la instancia de la réplica principal de SQL Server en lugar de usar el nombre de agente de escucha del grupo de disponibilidad.  El enrutamiento de solo lectura tampoco se producirá si se conecta directamente a una réplica de solo lectura.  
+ Puede omitir el enrutamiento de solo lectura estableciendo la propiedad application intent connection no en `ReadOnly` (cuando no está designada, el valor predeterminado es `ReadWrite` durante el inicio de sesión) o si se conecta directamente a la instancia de la réplica principal de SQL Server en lugar de usar el nombre de agente de escucha del grupo de disponibilidad.  El enrutamiento de solo lectura tampoco se producirá si se conecta directamente a una réplica de solo lectura.  
   
 ####  <a name="RelatedTasksApps"></a> Tareas relacionadas  
   
@@ -161,7 +160,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 > [!NOTE]  
 >  Se recomienda esta configuración para las conexiones de una red y de varias subredes a los agentes de escucha del grupo de disponibilidad y a los nombres de instancia de clúster de conmutación por error de SQL Server.  La habilitación de esta opción agrega optimizaciones adicionales, incluso en escenarios de una sola subred.  
   
- El `MultiSubnetFailover` conexión opción solo funciona con el protocolo de red TCP y solo se admite cuando se conecta a un agente de escucha del grupo de disponibilidad y para cualquier nombre de red virtual se conecta a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+ El `MultiSubnetFailover` conexión opción solo funciona con el protocolo de red TCP y solo se admite al conectarse a un agente de escucha del grupo de disponibilidad y para cualquier nombre de la red virtual se conecta a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  El siguiente es un ejemplo de cadena de conexión del proveedor ADO.NET (System.Data.SqlClient) que habilita la conmutación por error de varias subredes:  
   
@@ -169,7 +168,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
 ```  
   
- El `MultiSubnetFailover` opción de conexión debe establecerse en `True` incluso si el grupo de disponibilidad solo abarque una única subred.  Esto permite preconfigurar nuevos clientes que puedan abarca en el futuro subredes sin necesidad de los cambios en la cadena de conexión de cliente y también optimiza el rendimiento de conmutación por error para conmutaciones por error de las subredes.  Mientras el `MultiSubnetFailover` opción de conexión no es necesaria, proporciona la ventaja de una conmutación por error más rápida de subred.  Esto se debe a que el controlador cliente intentará abrir un socket de TCP para cada dirección IP en paralelo asociada al grupo de disponibilidad.  El controlador cliente esperará que la primera dirección IP responda y, una vez que lo haga, la utilizará para la conexión.  
+ El `MultiSubnetFailover` se debe establecer la opción de conexión en `True` incluso si el grupo de disponibilidad solo abarque una única subred.  Esto permite preconfigurar nuevos clientes que puedan abarca en el futuro subredes sin necesidad de los cambios en la cadena de conexión de cliente y también optimiza el rendimiento de conmutación por error para conmutaciones por error de las subredes.  Mientras el `MultiSubnetFailover` opción de conexión no es necesaria, proporciona la ventaja de una conmutación por error de subred más rápida.  Esto se debe a que el controlador cliente intentará abrir un socket de TCP para cada dirección IP en paralelo asociada al grupo de disponibilidad.  El controlador cliente esperará que la primera dirección IP responda y, una vez que lo haga, la utilizará para la conexión.  
   
 ##  <a name="SSLcertificates"></a> Agentes de escucha del grupo de disponibilidad y certificados SSL  
  Al conectarse a un agente de escucha del grupo de disponibilidad, si las instancias participantes de SQL Server utilizan certificados SSL junto con cifrado de sesión, el controlador cliente de conexión deberá admitir el nombre alternativo del asunto del certificado SSL para forzar el cifrado.  La compatibilidad del controlador de SQL Server con el nombre alternativo del asunto del certificado está previsto para ADO.NET (SqlClient), Microsoft JDBC y SQL Native Client (SNAC).  
@@ -214,10 +213,10 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [Introducción al agente de escucha del grupo de la disponibilidad](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (un blog del equipo de SQL Server AlwaysOn)  
   
--   [Blog del equipo de AlwaysOn SQL Server: El Blog oficial del SQL Server AlwaysOn equipo](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog del equipo de AlwaysOn SQL Server: Oficial AlwaysOn Team Blog de SQL Server](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Conectividad de cliente de AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Secundarias activas: Réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   

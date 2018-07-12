@@ -1,26 +1,24 @@
 ---
-title: SQL Server Native Client Support for High Availability, Disaster Recovery | Documentos de Microsoft
+title: Compatibilidad de alta disponibilidad, recuperación ante desastres SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d4ca109f20ec60baba09920639a80970abb248c7
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
-ms.translationtype: MT
+ms.openlocfilehash: 496e105648b5153369400e47bf94a4603ea0179e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700116"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416894"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,9 +34,9 @@ ms.locfileid: "35700116"
 >  El aumento del tiempo de espera de la conexión y la implementación de la lógica de reintento de conexión aumentarán la probabilidad de que una aplicación se conecte a un grupo de disponibilidad. Además, dado que una conexión puede producir un error debido a la conmutación por error de un grupo de disponibilidad, es aconsejable implementar la lógica de reintento de conexión y hacer que una conexión que no se ha podido establecer se reintente hasta que vuelva a conectarse.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Conectarse a MultiSubnetFailover  
- Especifique siempre **MultiSubnetFailover=Yes** al conectarse a un agente de escucha de grupo de disponibilidad de SQL Server 2012 o a una instancia de clúster de conmutación por error de SQL Server 2012. **MultiSubnetFailover** permite más rápida conmutación por error para todos los grupos de disponibilidad y clústeres de conmutación por error de la instancia de SQL Server 2012 y reducen significativamente el tiempo de conmutación por error de múltiples subredes siempre en las topologías y. En un clúster de conmutación por error de varias subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client seguirá reintentando la conexión TCP.  
+ Especifique siempre **MultiSubnetFailover=Yes** al conectarse a un agente de escucha de grupo de disponibilidad de SQL Server 2012 o a una instancia de clúster de conmutación por error de SQL Server 2012. **MultiSubnetFailover** para todos los grupos de disponibilidad y clústeres de conmutación por error la instancia de SQL Server 2012 y reducen significativamente el tiempo de conmutación por error de múltiples subredes siempre en las topologías únicas y permite que más rápida conmutación por error. En un clúster de conmutación por error de varias subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client seguirá reintentando la conexión TCP.  
   
- La propiedad de conexión **MultiSubnetFailover** indica que la aplicación se implementa en un grupo de disponibilidad o una instancia de clúster de conmutación por error, y que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client intentará conectarse a la base de datos en la instancia principal de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intentando conectarse a todas las direcciones IP. Cuando se especifica **MultiSubnetFailover=Yes** para una conexión, el cliente reintenta la conexión TCP más deprisa que los intervalos de retransmisión TCP predeterminados del sistema operativo. Esto permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad AlwaysOn o un siempre en Failover Cluster Instance y es aplicable a único y múltiples subredes grupos de disponibilidad y las instancias de clúster de conmutación por error.  
+ La propiedad de conexión **MultiSubnetFailover** indica que la aplicación se implementa en un grupo de disponibilidad o una instancia de clúster de conmutación por error, y que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client intentará conectarse a la base de datos en la instancia principal de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intentando conectarse a todas las direcciones IP. Cuando se especifica **MultiSubnetFailover=Yes** para una conexión, el cliente reintenta la conexión TCP más deprisa que los intervalos de retransmisión TCP predeterminados del sistema operativo. Esto permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad AlwaysOn o una conmutación por error de instancia de clúster AlwaysOn y es aplicable a single y varias subredes grupos de disponibilidad y las instancias de clúster de conmutación por error.  
   
  Para más información sobre las palabras clave de cadena de conexión, vea [Usar palabras clave de cadena de conexión con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -80,7 +78,7 @@ ms.locfileid: "35700116"
 ## <a name="odbc"></a>ODBC  
  Se han agregado dos palabras clave de cadena de conexión ODBC para ser compatible con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
   
--   **Intención de aplicaciones**  
+-   **ApplicationIntent**  
   
 -   **MultiSubnetFailover**  
   
@@ -111,7 +109,7 @@ ms.locfileid: "35700116"
   
  Se ha agregado una palabra clave de cadena de conexión OLE DB para admitir [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
   
--   **Intento de aplicación**  
+-   **Intención de aplicaciones**  
   
  Para más información sobre las palabras clave de cadena de conexión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vea [Usar palabras clave de cadena de conexión con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -129,7 +127,7 @@ ms.locfileid: "35700116"
  **IDataInitialize:: GetDatasource**  
  **IDataInitialize::GetDataSource** toma una cadena de conexión de entrada que puede contener la palabra clave **Application Intent**.  
   
- **IDBProperties::GetProperties**  
+ **IDBProperties:: GetProperties**  
  **IDBProperties::GetProperties** recupera el valor de la propiedad que está establecida actualmente en el origen de datos.  Puede recuperar el valor de **Application Intent** a través de la propiedad DBPROP_INIT_PROVIDERSTRING y la propiedad SSPROP_INIT_APPLICATIONINTENT.  
   
  **IDBProperties:: SetProperties**  

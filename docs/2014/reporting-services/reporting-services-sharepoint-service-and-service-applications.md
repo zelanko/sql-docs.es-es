@@ -1,5 +1,5 @@
 ---
-title: Servicios de SharePoint y las aplicaciones de servicio de Reporting | Documentos de Microsoft
+title: Reporting Services SharePoint Service and Service Applications | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c3d32e750728e1b427b7c33179d4dcf3de6eb395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f612ac92f6741f83a92f29987cea03f662815e9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181502"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Aplicaciones de servicio y servicio de SharePoint de Reporting Services
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo de SharePoint se ha diseñado en la arquitectura de servicio de SharePoint y utiliza un servicio de SharePoint y una o varias aplicaciones de servicio. Al crear una aplicación de servicio, el servicio estará disponible y se generará la base de datos de aplicación del servicio. Puede crear varias aplicaciones de servicio de Reporting Services pero una aplicación de servicio es suficiente para la mayor parte de los escenarios de implementación.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo de SharePoint se ha diseñado como en la arquitectura de servicio de SharePoint y utiliza un servicio de SharePoint y una o varias aplicaciones de servicio. Al crear una aplicación de servicio, el servicio estará disponible y se generará la base de datos de aplicación del servicio. Puede crear varias aplicaciones de servicio de Reporting Services pero una aplicación de servicio es suficiente para la mayor parte de los escenarios de implementación.  
   
  Este tema contiene la información siguiente:  
   

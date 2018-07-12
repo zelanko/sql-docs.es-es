@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, upgrading
 - SSIS, upgrading
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 caps.latest.revision: 49
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6d37dffdbacba7315b48192d08f3b18f631d7eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b4e28772b88dbcf13a510931846972684499f45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201685"
 ---
 # <a name="upgrade-integration-services"></a>Actualizar Integration Services
   Si [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] está instalado actualmente en el equipo, puede realizar la actualización a [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -49,14 +49,14 @@ ms.locfileid: "36108996"
 > -   Tarea Ejecutar paquete DTS 2000  
 > -   Examen del Asesor de actualizaciones de paquetes DTS.  
 >   
->  Para obtener información sobre otras características, vea [ya no incluye funcionalidad de Integration Services en SQL Server 2014](../discontinued-integration-services-functionality-in-sql-server-2014.md).  
+>  Para obtener información sobre otras características, vea [no incluye funcionalidad de Integration Services en SQL Server 2014](../discontinued-integration-services-functionality-in-sql-server-2014.md).  
   
 ## <a name="upgrading-integration-services"></a>actualizar Integration Services  
  Puede actualizar con uno de los métodos siguientes:  
   
--   Ejecutar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] el programa de instalación y seleccione la opción de **actualizar desde SQL Server 2005, SQL Server 2008 o SQL Server 2008 R2**, o **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**.  
+-   Ejecute [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] el programa de instalación y seleccione la opción de **actualizar desde SQL Server 2005, SQL Server 2008 o SQL Server 2008 R2**, o **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**.  
   
--   Ejecutar **setup.exe** en el símbolo del sistema y especifique el `/ACTION=upgrade` opción. Para obtener más información, vea la sección "Scripts de instalación de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]," en [instalar SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+-   Ejecute **setup.exe** en el símbolo del sistema y especifique el `/ACTION=upgrade` opción. Para obtener más información, vea la sección "Scripts de instalación de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]," en [instalar SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
  No puede utilizar la actualización para realizar las acciones siguientes:  
   
@@ -97,14 +97,14 @@ ms.locfileid: "36108996"
   
 -   Para controlar el acceso a los paquetes, crea tres nuevos roles fijos de nivel de base de datos: db_ssisadmin, db_ssisltduser y db_ssisoperator. Los roles de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de db_dtsadmin, db_dtsltduser y db_dtsoperator no se quitan, sino que se convierten en miembros de los roles nuevos correspondientes.  
   
--   Si el [!INCLUDE[ssIS](../../includes/ssis-md.md)] almacén de paquetes (es decir, la ubicación de sistema de archivos administrada por el [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servicio) es la ubicación predeterminada bajo **\SQL Server\90**, **\SQL Server\100**, o **\SQL Server\110** mueve esos paquetes a la nueva ubicación predeterminada bajo **\SQL Server\120**.  
+-   Si el [!INCLUDE[ssIS](../../includes/ssis-md.md)] almacén de paquetes (es decir, la ubicación de sistema de archivos administrada por el [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service) es la ubicación predeterminada bajo **\SQL Server\90**, **\SQL Server\100**, o **\SQL Server\110** mueve esos paquetes a la nueva ubicación predeterminada bajo **\SQL Server\120**.  
   
 -   Actualiza el archivo de configuración del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para señalar a la instancia actualizada del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ### <a name="what-the-upgrade-process-does-not-do"></a>Qué no hace el proceso de actualización  
  El proceso de actualización no lleva a cabo las tareas siguientes:  
   
--   **No** quitar el [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] servicio.  
+-   **No** quitar el [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] service.  
   
 -   No migra los paquetes existentes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al nuevo formato de paquete que [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usa. Para obtener información sobre cómo migrar paquetes, vea [Actualizar paquetes de Integration Services](upgrade-integration-services-packages.md).  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36108996"
   
 -   Identificar la versión de los paquetes en la tabla del sistema msdb.dbo.sysssispackages comprobando el valor en la columna packageformat. La tabla tiene una columna packageformat que identifica la versión de cada paquete. Un valor de 2 en la columna packageformat indica un paquete de [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]; un valor de 3, un paquete de [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]. Hasta que migre los paquetes al nuevo formato de paquete, el valor de la columna packageformat no cambia.  
   
--   No se puede utilizar el [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] herramientas para diseñar, ejecutar ni administrar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquetes. Las herramientas de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] incluyen las versiones respectivas de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la Utilidad de ejecución de paquetes (dtexecui.exe). El proceso de actualización no quita la [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]herramientas. No obstante, no podrá usar estas herramientas para continuar trabajando con paquetes de [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] en un servidor que se haya actualizado.  
+-   No puede usar el [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] herramientas para diseñar, ejecutar ni administrar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquetes. Las herramientas de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] incluyen las versiones respectivas de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la Utilidad de ejecución de paquetes (dtexecui.exe). El proceso de actualización no quita el [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]herramientas. No obstante, no podrá usar estas herramientas para continuar trabajando con paquetes de [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] en un servidor que se haya actualizado.  
   
 -   De forma predeterminada, en una instalación de actualización, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se configura para registrar en el registro de eventos de aplicación los eventos relacionados con la ejecución de paquetes. Esta configuración podría generar demasiadas entradas en el registro de eventos al utilizar la característica de recopilador de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Los eventos que se registran incluyen EventID 12288, "Se ha iniciado el paquete" y EventID 12289, "El paquete finalizó correctamente". Para detener el registro de estos dos eventos en el registro de eventos de aplicación, abra el Registro para editarlo. A continuación, en el Registro, busque el nodo HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS y cambie el valor DWORD de la configuración LogPackageExecutionToEventLog de 1 a 0.  
   
@@ -136,14 +136,14 @@ ms.locfileid: "36108996"
 -   La instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] está en un equipo mientras que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y las herramientas cliente están en otro.  
   
 ### <a name="what-you-can-do-after-upgrading"></a>Lo que puede hacer después de actualizar  
- Las tablas del sistema que almacenan los paquetes en la instancia actualizada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] no son iguales que las que se usan en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Por lo tanto, la [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] versiones de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] no se puede detectar los paquetes en las tablas del sistema en la instancia actualizada de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Dado que estos paquetes no se pueden detectar, existen limitaciones en lo que se puede hacer con ellos:  
+ Las tablas del sistema que almacenan los paquetes en la instancia actualizada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] no son iguales que las que se usan en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Por lo tanto, el [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] versiones de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] no se puede detectar los paquetes en las tablas del sistema en la instancia actualizada de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Dado que estos paquetes no se pueden detectar, existen limitaciones en lo que se puede hacer con ellos:  
   
 -   No puede usar las herramientas de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ni de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ni de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], en otros equipos para cargar o administrar los paquetes de la instancia actualizada de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
     > [!NOTE]  
     >  Aunque los paquetes de la instancia actualizada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] no se hayan migrado aún al nuevo formato de paquete, las herramientas de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] no pueden detectarlos. Por lo tanto, las herramientas de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] no pueden usar los paquetes.  
   
--   No se puede utilizar [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] en otros equipos para ejecutar los paquetes que están almacenados en msdb en la instancia actualizada de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   No puede usar [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] en otros equipos para ejecutar los paquetes almacenados en msdb en la instancia actualizada de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   No puede usar los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en equipos con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para ejecutar los paquetes de [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] que estén almacenados en la instancia actualizada de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

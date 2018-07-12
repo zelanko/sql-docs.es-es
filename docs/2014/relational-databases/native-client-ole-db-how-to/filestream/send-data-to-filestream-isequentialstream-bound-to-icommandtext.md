@@ -1,26 +1,24 @@
 ---
-title: Enviar datos a una columna FILESTREAM utilizando ISequentialStream Bound to ICommandText Parameter (OLE DB) | Documentos de Microsoft
+title: Enviar datos a una columna FILESTREAM utilizando ISequentialStream Bound to ICommandText Parameter (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f927bed16f46e685970ec92d2ed43067355d29ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 95d1f78a78574064a2657d1de98b22ab526b81d7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105848"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407694"
 ---
 # <a name="send-data-to-a-filestream-column-using-isequentialstream-bound-to-icommandtext-parameter-ole-db"></a>Enviar datos a una columna FILESTREAM usando ISequentialStream enlazada al parámetro de ICommandText (OLE DB)
   En este ejemplo se usa una interfaz ISequentialStream enlazada a un parámetro ICommandText para enviar entre 4 MB y 4 GB de datos a una columna de secuencia de archivos.  

@@ -1,5 +1,5 @@
 ---
-title: Asignación predeterminada de atributos y elementos XSD a tablas y columnas (SQLXML 4.0) | Documentos de Microsoft
+title: Asignación predeterminada de atributos y elementos XSD a tablas y columnas (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbed4eee82d0bd7d57b7e4073d1f78f9150f9e6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 515cd325572904339bcb58d5fb5758cae70b0b75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240615"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Asignación predeterminada de elementos y atributos XSD a tablas y columnas (SQLXML 4.0)
   De forma predeterminada, un elemento de tipo complejo en un esquema XSD anotado se asigna a una tabla (vista) con el mismo nombre en la base de datos especificada, mientras que un elemento o atributo de tipo simple se asigna a la columna con el mismo nombre en la tabla.  
@@ -45,7 +45,7 @@ ms.locfileid: "36107371"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-default-mapping"></a>A. Especificar la asignación predeterminada  
- En este ejemplo, no hay ninguna anotación especificada en el esquema XSD. El  **\<Person.Contact >** elemento es de tipo complejo y, por lo tanto, se asigna de forma predeterminada a la tabla Person.Contact en la base de datos de AdventureWorks. Todos los atributos (ContactID, FirstName, LastName) de la  **\<Person.Contact >** elemento son de tipo simple y se asignan a las columnas con los mismos nombres en la tabla Person.Contact de forma predeterminada.  
+ En este ejemplo, no hay ninguna anotación especificada en el esquema XSD. El  **\<Person.Contact >** elemento es de tipo complejo y, por lo tanto, se asigna de forma predeterminada a la tabla Person.Contact en la base de datos AdventureWorks. Todos los atributos (ContactID, FirstName, LastName) de la  **\<Person.Contact >** elemento son de tipo simple y se asignan de forma predeterminada a las columnas con los mismos nombres en la tabla Person.Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -150,7 +150,7 @@ ms.locfileid: "36107371"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. Asignar un elemento XML a una columna de tipo de datos XML  
- En este ejemplo, la asignación predeterminada también tiene lugar debido a que no se usa ninguna anotación. El  **\<Production.ProductModel >** elemento es de tipo complejo y se asigna a la tabla con el mismo nombre en la base de datos. El **ProductModelID** atributo es del tipo simple y, por lo tanto, se asignan a las columnas con los mismos nombres. La única diferencia entre esto y los ejemplos anteriores es que la  **\<instrucciones >** elemento se asigna a una columna que usa el `xml` el tipo de datos mediante el `xsd:anyType` tipo.  
+ En este ejemplo, la asignación predeterminada también tiene lugar debido a que no se usa ninguna anotación. El  **\<Production.ProductModel >** elemento es de tipo complejo y se asigna a la tabla con el mismo nombre en la base de datos. El **ProductModelID** atributo es de tipo simple y, por lo tanto, se asignan a las columnas con los mismos nombres. La única diferencia entre esto y los ejemplos anteriores es que el  **\<instrucciones >** elemento se asigna a una columna que usa el `xml` el tipo de datos mediante el `xsd:anyType` tipo.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

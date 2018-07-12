@@ -1,5 +1,5 @@
 ---
-title: Alias de columna en la cláusula ORDER BY no pueden ir precedidos de alias de tabla | Documentos de Microsoft
+title: Alias de columna en la cláusula ORDER BY no pueden ir precedidos de alias de tabla | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - aliases [SQL Server], columns
 ms.assetid: fee7328f-6e8d-4005-930b-56fb6f17e0b2
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 18c65604efb2d1b0ff93d09b8d03f7ee6cb213cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bb0c12c4112383599b3f6ec67c7a097563a5944c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210715"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>El alias de tabla no puede asignar un prefijo a los alias de columna de la cláusula ORDER BY
   En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior, los alias de columna de la cláusula ORDER BY no pueden tener el prefijo del alias de tabla.  

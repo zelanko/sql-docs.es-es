@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbcommandtrans.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3903585642605114cca4441ea2192d69ef74c1fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5424c163c21d6161cbb6a584ba224815a0c70daa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162966"
 ---
 # <a name="ole-db-command-transformation"></a>transformación Comando de OLE DB
   La transformación Comando de OLE DB ejecuta una instrucción SQL para cada fila en un flujo de datos. Por ejemplo, puede ejecutar una instrucción SQL que inserte, actualice o elimine filas en una tabla de base de datos.  

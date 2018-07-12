@@ -1,5 +1,5 @@
 ---
-title: tablediff (utilidad) | Documentos de Microsoft
+title: tablediff, utilidad | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - comparing data
 - tablediff utility
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 851ba198020abf234c793ad65acf3f5dbbcd8e2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a6d073e95d896429e1827009c249b940ade2e7b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180972"
 ---
 # <a name="tablediff-utility"></a>tablediff, utilidad
   La utilidad **tablediff** se usa para comparar los datos de dos tablas para determinar la no convergencia y es especialmente útil para solucionar problemas de no convergencia en una topología de replicación. Esta utilidad se puede usar desde el símbolo del sistema o en un archivo por lotes para realizar las siguientes tareas:  
@@ -175,7 +175,7 @@ ms.locfileid: "36110857"
 ## <a name="remarks"></a>Notas  
  La utilidad **tablediff** no se puede usar con servidores que no son[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- Tablas con `sql_variant` no se admiten columnas de tipo de datos.  
+ Las tablas con `sql_variant` no se admiten columnas de tipo de datos.  
   
  De forma predeterminada, la utilidad **tablediff** admite las siguientes asignaciones de tipos de datos entre las columnas de origen y de destino.  
   

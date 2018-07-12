@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones (página General) varios archivos planos | Documentos de Microsoft
+title: Editor del Administrador de conexiones (página General) varios archivos planos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.general.f1
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 200a1ea8334c1347597f2364e624881c74a0e499
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbe0e78fab005c25ae1164fda1563818f29a5f3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172846"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>Editor del administrador de conexiones de varios archivos planos (página General)
   Utilice la página **General** del cuadro de diálogo **Editor del administrador de conexiones de varios archivos planos** para seleccionar un grupo de archivos que tengan el mismo formato de datos y para especificar su formato de datos. Una conexión de varios archivos planos permite que un paquete se conecte a un grupo de archivos de texto que tengan el mismo formato.  
@@ -87,7 +87,7 @@ ms.locfileid: "36110735"
 ## <a name="see-also"></a>Vea también  
  [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor del Administrador de conexiones de varios archivos planos &#40;página columnas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [Editor del Administrador de conexiones de varios archivos planos &#40;página avanzadas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Editor del Administrador de conexiones de varios archivos planos &#40;obtener una vista previa de página&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Editor del Administrador de conexiones de varios archivos planos &#40;página Opciones avanzadas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [Editor del Administrador de conexiones de varios archivos planos &#40;vista previa de página&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

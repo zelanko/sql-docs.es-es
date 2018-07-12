@@ -22,13 +22,13 @@ ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a5de5e4fa90e4c2919a37bc368e0c4bc3d5b344a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eddae0419ef55a8b0be368f1432edf9bb939b952
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197485"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Desarrollar un componente de flujo de datos personalizado
   La tarea de flujo de datos consta de componentes que se conectan a varios orígenes de datos y, a continuación, transforman y enrutan esos datos a alta velocidad. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona un modelo de objetos extensible que permite que los desarrolladores creen orígenes, transformaciones y destinos personalizados que se pueden utilizar en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] y en paquetes implementados. En esta sección se incluyen temas que le guiarán a la hora de desarrollar componentes de flujo de datos personalizados.  
@@ -115,10 +115,10 @@ ms.locfileid: "36108135"
  [Desarrollar un enumerador ForEach personalizado](../../extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  Describe cómo programar los enumeradores personalizados.  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
- [Extender el flujo de datos con el componente de Script] (.. /.. /Extending-Packages-scripting/Data-Flow-script-Component/Extending-the-Data-Flow-with-the-Script-Component.MD   
+ [Ampliar el flujo de datos con el componente de Script] (.. /.. /Extending-Packages-scripting/Data-Flow-script-Component/Extending-the-Data-Flow-with-the-Script-Component.MD   
  [Comparar soluciones de scripting y objetos personalizados](../../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   

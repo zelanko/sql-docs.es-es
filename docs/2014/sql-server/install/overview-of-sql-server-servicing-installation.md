@@ -1,5 +1,5 @@
 ---
-title: Información general sobre servicios de instalación de SQL Server | Documentos de Microsoft
+title: Información general sobre servicios de instalación de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6a9fd19b-2367-4908-b638-363b1e929e1e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a3484136b913cf691a836a3065913f18de4f96ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7906a576bab6ad6dd35da0f863a20ad02e56d342
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230165"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>Información general sobre la instalación de servicios de SQL Server
-  Puede aplicar una actualización a cualquier componente instalado de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con una actualización de servicio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Si el nivel de versión de un componente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] existente es posterior al nivel de versión de la actualización, el programa de instalación lo excluirá de la actualización. Para obtener más información sobre cómo aplicar un servicio de actualización, consulte [instalar actualizaciones de servicio de SQL Server 2014](../../database-engine/install-windows/install-sql-server-servicing-updates.md).  
+  Puede aplicar una actualización a cualquier componente instalado de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con una actualización de servicio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Si el nivel de versión de un componente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] existente es posterior al nivel de versión de la actualización, el programa de instalación lo excluirá de la actualización. Para obtener más información sobre cómo aplicar el conjunto de servicios de actualización, consulte [instalar actualizaciones de servicio de SQL Server 2014](../../database-engine/install-windows/install-sql-server-servicing-updates.md).  
   
  Al instalar las actualizaciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], deben tenerse en cuenta las consideraciones siguientes:  
   
--   Todas las características que pertenezcan a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben actualizarse al mismo tiempo. Por ejemplo, si actualiza [!INCLUDE[ssDE](../../includes/ssde-md.md)], también debe actualizar los componentes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si están instalados como parte de la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las características compartidas, como herramientas de administración, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], siempre debe actualizarse a la actualización más reciente. Si un componente o una instancia del árbol de características no está seleccionado, dicho componente o instancia no se actualizará.  
+-   Todas las características que pertenezcan a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben actualizarse al mismo tiempo. Por ejemplo, si actualiza [!INCLUDE[ssDE](../../includes/ssde-md.md)], también debe actualizar los componentes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si están instalados como parte de la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las características compartidas, como las herramientas de administración, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], siempre debe actualizarse a la actualización más reciente. Si un componente o una instancia del árbol de características no está seleccionado, dicho componente o instancia no se actualizará.  
   
--   De forma predeterminada, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] archivos de registro de actualización se guardan en % Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\LOG\\.  
+-   De forma predeterminada, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] los archivos de registro de actualización se guardan en % Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\LOG\\.  
   
--   La instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ahora puede integrar una actualización con el medio original para ejecutar el medio original y la actualización al mismo tiempo. Para obtener más información, consulte [What's New instalación de SQL Server](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md).  
+-   La instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ahora puede integrar una actualización con el medio original para ejecutar el medio original y la actualización al mismo tiempo. Para obtener más información, consulte [Novedades de instalación de SQL Server](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md).  
   
 -   Antes de aplicar una actualización de servicio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , se recomienda que haga una copia de seguridad de los datos.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36106895"
 ### <a name="prepare-for-a-includesscurrentincludessscurrent-mdmd-update-installation"></a>Preparar la instalación de actualizaciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Se recomienda encarecidamente que haga lo siguiente antes de instalar las actualizaciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
--   **Copia de seguridad de su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de datos de sistema** : antes de instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] actualizaciones, copia de seguridad la `master`, `msdb`, y `model` bases de datos. Al instalar una actualización de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], estas bases de datos se modifican y se vuelven incompatibles con versiones anteriores de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Las copias de seguridad de estas bases de datos son necesarias si decide volver a instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sin estas actualizaciones.  
+-   **Copia de seguridad de su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las bases de datos del sistema** : antes de instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] actualizaciones, copia de seguridad el `master`, `msdb`, y `model` las bases de datos. Al instalar una actualización de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], estas bases de datos se modifican y se vuelven incompatibles con versiones anteriores de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Las copias de seguridad de estas bases de datos son necesarias si decide volver a instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sin estas actualizaciones.  
   
      Asimismo, es una medida prudente hacer una copia de seguridad de las bases de datos de usuario.  
   
@@ -62,16 +62,16 @@ ms.locfileid: "36106895"
   
 -   **Haga una copia de seguridad de las bases de datos, el archivo de configuración y el repositorio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**: antes de actualizar una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], debe hacer una copia de seguridad de lo siguiente:  
   
-    -   Bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. De forma predeterminada, se instalan en C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID > \OLAP\Data\\. Para la instalación de WOW, la ruta de acceso predeterminada es C:\ProgramFiles (x86) \ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID > \OLAP\Data\\.  
+    -   Bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. De forma predeterminada, se instalan en C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< Iddeinstancia > \OLAP\Data\\. Para la instalación de WOW, la ruta de acceso predeterminada es C:\ProgramFiles (x86) \ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< Iddeinstancia > \OLAP\Data\\.  
   
-    -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] opción de configuración en el archivo de configuración msmdsrv.ini. De forma predeterminada, este se encuentra en C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID > \OLAP\Config\ directory.  
+    -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] opción de configuración en el archivo de configuración msmdsrv.ini. De forma predeterminada, se encuentra en los archivos de C:\Program\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< Iddeinstancia > \OLAP\Config\ directory.  
   
     -   (Opcional) La base de datos que contiene el repositorio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Este paso únicamente es necesario si se configuró [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para trabajar con la biblioteca de objetos de ayuda para la toma de decisiones (DSO).  
   
     > [!NOTE]  
     >  Si no realiza ninguna copia de seguridad de las bases de datos, del archivo de configuración y del repositorio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], no podrá revertir una instancia actualizada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a la versión anterior.  
   
--   **Compruebe que las bases de datos de sistema disponen de suficiente espacio libre** : si no se selecciona la opción de crecimiento automático para la `master` y `msdb` bases de datos de sistema, estas bases de datos deben tener como mínimo 500 KB de espacio libre. Para comprobar que las bases de datos tienen suficiente espacio, ejecute el procedimiento almacenado del sistema `sp_spaceused` en las bases de datos `master` y `msdb`. Si el espacio sin asignar de alguna de las bases de datos es inferior a 500 KB, aumente el tamaño de la base de datos.  
+-   **Compruebe que las bases de datos del sistema tienen espacio libre suficiente** : si no se selecciona la opción de crecimiento automático para el `master` y `msdb` bases de datos del sistema, estas bases de datos deben tener como mínimo 500 KB de espacio libre. Para comprobar que las bases de datos tienen suficiente espacio, ejecute el procedimiento almacenado del sistema `sp_spaceused` en las bases de datos `master` y `msdb`. Si el espacio sin asignar de alguna de las bases de datos es inferior a 500 KB, aumente el tamaño de la base de datos.  
   
 -   **Detener servicios y aplicaciones** : para evitar un posible reinicio del sistema, detenga todas las aplicaciones y los servicios que establezcan conexiones con las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se están actualizando antes de instalar las actualizaciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Incluyen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para más información, consulte [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   

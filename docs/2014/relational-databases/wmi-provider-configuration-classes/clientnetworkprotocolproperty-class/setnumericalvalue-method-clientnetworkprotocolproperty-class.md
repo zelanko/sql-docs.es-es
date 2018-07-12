@@ -1,5 +1,5 @@
 ---
-title: Método SetNumericalValue (clase ClientNetworkProtocolProperty) | Documentos de Microsoft
+title: Método SetNumericalValue (clase ClientNetworkProtocolProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - SetNumericalValue method
 ms.assetid: d4d6df52-9e68-4003-9e28-ece6716ba7f1
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1796c1e5ab1c5f5047072a6cfd80db53aae5af43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: b8adfe2eec24a8af8e785d6a8528d63050049e7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108524"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228875"
 ---
 # <a name="setnumericalvalue-method-clientnetworkprotocolproperty-class"></a>Método SetNumericalValue (clase ClientNetworkProtocolProperty)
-  Establece el valor numérico de la propiedad actual al que hace referencia el [propiedad PropertyIdx (clase ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) valor.  
+  Establece el valor numérico de la propiedad actual al que hace referencia el [Propertyidx (clase ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) valor.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>Partes  
  *object*  
- A [clase ClientNetworkProtocolProperty](clientnetworkprotocolproperty-class.md) objeto que representa un atributo de protocolo de red utilizado por el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente.  
+ Un [clase ClientNetworkProtocolProperty](clientnetworkprotocolproperty-class.md) objeto que representa un atributo del protocolo de red utilizado por el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente.  
   
 #### <a name="parameters"></a>Parámetros  
   

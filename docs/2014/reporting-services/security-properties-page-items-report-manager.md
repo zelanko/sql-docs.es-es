@@ -1,5 +1,5 @@
 ---
-title: Página de propiedades de seguridad, elementos (Administrador de informes) | Documentos de Microsoft
+title: Página de propiedades de seguridad, elementos (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c072df6e055cbf0bc0fc0dc503b6dfd55a4c8a29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59b44a164b321c0d5d82fce7016427ad7d639f1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230225"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Página de propiedades de seguridad, elementos (Administrador de informes)
   Use la página Propiedades de seguridad para ver o modificar la configuración de seguridad que determina el acceso a carpetas, informes, modelos, recursos y orígenes de datos compartidos. Esta página está disponible para los elementos para los que tenga permiso de protección.  

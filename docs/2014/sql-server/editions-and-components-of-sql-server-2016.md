@@ -1,5 +1,5 @@
 ---
-title: Ediciones y componentes de SQL Server 2014 | Documentos de Microsoft
+title: Ediciones y componentes de SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
 - Developer Edition [SQL Server]
@@ -34,26 +34,26 @@ helpviewer_keywords:
 - Setup [SQL Server]
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 caps.latest.revision: 111
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 450c54feb6d8e360ca812524778762751318aab7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0c27bcd84ddb567eaab1645fcee75f68d513855b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150116"
 ---
 # <a name="editions-and-components-of-sql-server-2014"></a>Ediciones y componentes de SQL Server 2014
   Los requisitos de instalación varían según las necesidades de las aplicaciones. Las distintas ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] han sido diseñadas para satisfacer los requisitos de rendimiento, tiempo de ejecución y precio propios de cada organización y cada persona. Los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que instale también dependen de sus necesidades concretas. Las secciones siguientes le servirán de ayuda para elegir la mejor opción entre las ediciones y los componentes disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="principal-editions-of-includesscurrentincludessscurrent-mdmd"></a>Ediciones principales de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- En la tabla siguiente se describen las principales ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea [características compatibles con las ediciones de SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+ En la tabla siguiente se describen las principales ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, consulte [características compatibles con las ediciones de SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 |Edición de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Definición|  
 |---------------------------------------|----------------|  
 |Enterprise (64 bits y 32 bits)|La mejor oferta, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise Edition proporciona capacidades de centro de datos de tecnología avanzada completas con un rendimiento ultrarápido, virtualización ilimitada y Business Intelligence integral, que habilita los mayores niveles de servicio para las cargas de trabajo de gran importancia y el acceso del usuario final a ideas claras de los datos.|  
-|Business Intelligence (64 bits y 32 bits)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence Edition ofrece una plataforma completa que capacita a las organizaciones para crear e implementar soluciones de BI seguras, escalables y fáciles de administrar. Proporciona funcionalidad emocionante, como exploración de datos y visualización, basada en el navegador capacidades de mashup de datos eficaces y gestión de la integración mejorada.|  
+|Business Intelligence (64 bits y 32 bits)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence Edition ofrece una plataforma completa que capacita a las organizaciones para crear e implementar soluciones de BI seguras, escalables y fáciles de administrar. Proporciona funcionalidad emocionante, como visualizarlos y explorarlos; basada en el explorador capacidades de mashup de datos eficaces y gestión de la integración mejorada.|  
 |Standard (64 bits y 32 bits)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard Edition proporciona de administración básica de bases de datos y base de datos de Business Intelligence para que los departamentos y pequeñas organizaciones ejecuten sus aplicaciones y admite las herramientas de desarrollo comunes, tanto locales como en la nube, que habilitan la administración eficaz de bases de datos con recursos de TI mínimos.|  
   
 ## <a name="specialized-editions-of-includesscurrentincludessscurrent-mdmd"></a>Ediciones especializadas de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
@@ -80,7 +80,7 @@ ms.locfileid: "36109139"
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>Usar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con aplicaciones cliente/servidor  
  Puede instalar solo los componentes de cliente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un equipo en el que se ejecuten aplicaciones cliente/servidor conectadas directamente a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Una instalación de componentes de cliente también es una buena opción si administra una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un servidor de bases de datos, o si tiene pensado desarrollar aplicaciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- La opción de herramientas cliente instala las características siguientes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] : componentes de compatibilidad con versiones anteriores, herramientas de datos de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], componentes de conectividad, herramientas de administración, kit de desarrollo de software y componentes de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener más información, consulte [instalar SQL Server 2014 desde el Asistente para la instalación &#40;el programa de instalación&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
+ La opción de herramientas cliente instala las características siguientes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] : componentes de compatibilidad con versiones anteriores, herramientas de datos de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], componentes de conectividad, herramientas de administración, kit de desarrollo de software y componentes de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener más información, consulte [instalar SQL Server 2014 desde el Asistente para instalación &#40;instalación&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 ## <a name="deciding-among-includessnoversionincludesssnoversion-mdmd-components"></a>Decidir entre componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Use la página Selección de características del Asistente para la instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para seleccionar los componentes que va a incluir en la instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. De forma predeterminada, ninguna de las características del árbol están seleccionadas.  
@@ -89,7 +89,7 @@ ms.locfileid: "36109139"
   
 |Componentes de servidor|Descripción|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] incluye el [!INCLUDE[ssDE](../includes/ssde-md.md)], el servicio principal para almacenar, procesar y proteger los datos, replicación, búsqueda de texto completo, herramientas para administrar relacionales y datos XML y el [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] servidor (DQS).|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] incluye el [!INCLUDE[ssDE](../includes/ssde-md.md)], el servicio principal para almacenar, procesar y proteger datos, replicación, búsqueda de texto completo, herramientas para administrar relacionales y datos XML y el [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] servidor (DQS).|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] incluye las herramientas para crear y administrar aplicaciones de procesamiento analítico en línea (OLAP) y de minería de datos.|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye componentes de servidor y de cliente para crear, administrar e implementar informes tabulares, matriciales, gráficos y de forma libre. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] es también una plataforma extensible que se puede usar para desarrollar aplicaciones de informes.|  
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es un conjunto de herramientas gráficas y objetos programables para mover, copiar y transformar datos. También incluye el componente de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].|  
@@ -111,6 +111,6 @@ ms.locfileid: "36109139"
   
 ## <a name="see-also"></a>Vea también  
  [Planear una instalación de SQL Server](install/planning-a-sql-server-installation.md)   
- [Instalar SQL Server 2014 desde el Asistente para la instalación &#40;el programa de instalación&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+ [Instalar SQL Server 2014 desde el Asistente para instalación &#40;el programa de instalación&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
 - Integration Services, security
@@ -23,13 +23,13 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f48f1805052debe3d7120fb55cb2777cb3e5c735
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef095dd196b4deacf7fcd6ade6d2d50d3756d6f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167136"
 ---
 # <a name="security-overview-integration-services"></a>Información general sobre seguridad (Integration Services)
   La seguridad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consta de varios niveles que proporcionan un entorno de seguridad rico y flexible. Estos niveles de seguridad incluyen el uso de firmas digitales, propiedades de paquete, roles de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y permisos del sistema operativo. La mayoría de estas características de seguridad pertenecen a las categorías de identidad y control de acceso.  
@@ -98,15 +98,15 @@ ms.locfileid: "36108374"
 ## <a name="related-tasks"></a>Related Tasks  
  La lista siguiente contiene vínculos a temas que muestran cómo realizar una determinada tarea relacionada con la seguridad.  
   
--   [Crear una función definida por el usuario](../create-a-user-defined-role.md)  
+-   [Crear un rol definido por el usuario](../create-a-user-defined-role.md)  
   
 -   [Asignar roles de lector y escritor a un paquete](../assign-a-reader-and-writer-role-to-a-package.md)  
   
--   [Implementar una directiva de firma estableciendo un valor del registro](../implement-a-signing-policy-by-setting-a-registry-value.md)  
+-   [Implementar una directiva de firma estableciendo un valor del Registro](../implement-a-signing-policy-by-setting-a-registry-value.md)  
   
--   [Firmar un paquete mediante un certificado Digital](../sign-a-package-by-using-a-digital-certificate.md)  
+-   [Firmar un paquete mediante un certificado digital](../sign-a-package-by-using-a-digital-certificate.md)  
   
--   [Establecer o cambiar el nivel de protección de paquetes](../set-or-change-the-protection-level-of-packages.md)  
+-   [Establecer o cambiar el nivel de protección de los paquetes](../set-or-change-the-protection-level-of-packages.md)  
   
 ## <a name="see-also"></a>Vea también  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

@@ -1,12 +1,12 @@
 ---
-title: Agregar una columna a una tabla de SQL Server | Documentos de Microsoft
+title: Agregar una columna a una tabla de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 890a825f5402929344186f7bc63e3af26eae2104
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 3367a8bbf0e25bb6a2fb6a7d2c5cd4089ecbef31
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694666"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421544"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Agregar una columna a una tabla de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,16 +36,16 @@ ms.locfileid: "35694666"
   
 -   Si DBPROP_COL_AUTOINCREMENT es VARIANT_TRUE, DBPROP_COL_NULLABLE debe ser VARIANT_FALSE.  
   
--   Si la columna se define mediante la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp** tipo de datos, DBPROP_COL_NULLABLE debe ser VARIANT_FALSE.  
+-   Si la columna se define utilizando el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp** tipo de datos, DBPROP_COL_NULLABLE debe ser VARIANT_FALSE.  
   
 -   Para cualquier otra definición de columna, DBPROP_COL_NULLABLE debe ser VARIANT_TRUE.  
   
  Los consumidores especifican el nombre de tabla como una cadena de caracteres Unicode en el *pwszName* miembro de la *uName* union en la *pTableID* parámetro. El *eKind* miembro de *pTableID* debe ser DBKIND_NAME.  
   
- El nuevo nombre de columna se especifica como una cadena de caracteres Unicode en el *pwszName* miembro de la *uName* union en la *dbcid* miembros del parámetro DBCOLUMNDESC *pColumnDesc*. El *eKind* miembro debe ser DBKIND_NAME.  
+ El nuevo nombre de columna se especifica como una cadena de caracteres Unicode en el *pwszName* miembro de la *uName* union en la *dbcid* miembro del parámetro DBCOLUMNDESC *pColumnDesc*. El *eKind* miembro debe ser DBKIND_NAME.  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas e índices](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)   
+ [Las tablas e índices](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Las notificaciones (cuadro de diálogo de opciones de almacenamiento) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Notificaciones (cuadro de diálogo Opciones de almacenamiento) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.setstorageoptions.notifications.f1
 ms.assetid: 5675cdbf-bfaa-4b6e-b716-31b8e9da72b4
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5b7dd3df8058b8c223d7737e4510ec74795ba75f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5833c07701cfb9ff6c07704683d606e80f204259
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183402"
 ---
 # <a name="notifications-storage-options-dialog-box-analysis-services---multidimensional-data"></a>Notificaciones (cuadro de diálogo Opciones de almacenamiento) (Analysis Services - Datos multidimensionales)
   Use la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para establecer el método de notificación y las configuraciones relacionadas para una dimensión, un cubo, un grupo de medida o una partición.  
@@ -37,7 +37,7 @@ ms.locfileid: "36108204"
 |**Habilitar almacenamiento en caché automático**|Habilitar el almacenamiento en caché automático.<br /><br /> Nota: Si no se selecciona esta opción, todas las opciones, excepto **Modo de almacenamiento** , quedarán deshabilitadas.|  
 |**SQL Server**|Usa un mecanismo de rastreo especializado en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para identificar cambios en tablas subyacentes para el objeto.|  
 |**Especificar tablas de seguimiento**|Especifique las tablas subyacentes de las que debe realizarse el seguimiento para el objeto y, después, escriba una lista de tablas delimitadas por el carácter de punto y coma (;) o haga clic en el botón de puntos suspensivos (**…**) para abrir el cuadro de diálogo **Objetos relacionales** y elija las tablas de las que debe realizarse el seguimiento. Para obtener más información, vea [Cuadro de diálogo Objetos relacionales &#40;Analysis Services - Datos multidimensionales&#41;](relational-objects-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Si esta opción no está seleccionada, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] intenta determinar la lista de tablas subyacentes de las que debe realizarse el seguimiento para el objeto, si se cumplen determinados requisitos. Para obtener más información sobre estos requisitos, vea [Almacenamiento en caché automático &#40;Particiones&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
-|**Cliente iniciado**|Seleccione esta opción para usar el código XML para el comando de Analysis (XMLA), `NotifyTableChange`, para identificar cambios en las tablas subyacentes para el objeto. Por lo general, esta opción se activa si se desea utilizar un proceso de notificación basado en el cliente.|  
+|**Cliente iniciado**|Seleccione esta opción para usar el código XML para el comando de Analysis (XMLA), `NotifyTableChange`para identificar cambios en las tablas subyacentes para el objeto. Por lo general, esta opción se activa si se desea utilizar un proceso de notificación basado en el cliente.|  
 |**Especificar tablas de seguimiento**|Seleccione esta opción para especificar las tablas subyacentes de las que debe realizarse el seguimiento para el objeto y, después, escriba una lista de tablas delimitadas por el carácter de punto y coma (;) o haga clic en el botón de puntos suspensivos (**…**) para abrir el cuadro de diálogo **Objetos relacionales** y elija las tablas de las que debe realizarse el seguimiento. Para obtener más información, vea [Cuadro de diálogo Objetos relacionales &#40;Analysis Services - Datos multidimensionales&#41;](relational-objects-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Si esta opción no está seleccionada, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] intenta determinar la lista de tablas subyacentes de las que debe realizarse el seguimiento para el objeto, si se cumplen determinados requisitos. Para obtener más información sobre estos requisitos, vea [Almacenamiento en caché automático &#40;Particiones&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
 |**Sondeo programado**|Utiliza un mecanismo de sondeo para identificar cambios ejecutando una serie de consultas en las tablas subyacentes para el objeto.|  
 |**Intervalo de sondeo**|Especifica el intervalo y las unidades de tiempo correspondientes al período que debe transcurrir antes de que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ejecute las consultas de sondeo y las consultas de procesamiento definidas en la cuadrícula de sondeo.|  

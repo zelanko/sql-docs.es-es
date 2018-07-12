@@ -1,5 +1,5 @@
 ---
-title: Elemento KpiID (ASSL) | Documentos de Microsoft
+title: Elemento KpiID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KpiID element
 ms.assetid: a76395bc-bc84-40f8-9770-6275842f93b5
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 03bbebbf255b5f42934d4fe1e28c78cc1bb54caf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1f363564a74e9f64ed126ceda98ca387561c852
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151276"
 ---
 # <a name="kpiid-element-assl"></a>Elemento KpiID (ASSL)
   Contiene un identificador (ID) que asocia un [Kpi](../objects/kpi-element-assl.md) elemento con un [perspectiva](../objects/perspective-element-assl.md) elemento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36111228"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `KpiID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.PerspectiveKpi>.  
+ El elemento que se corresponde con el elemento primario de `KpiID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.PerspectiveKpi>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades (ASSL)](properties-assl.md)  

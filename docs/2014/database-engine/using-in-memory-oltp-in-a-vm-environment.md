@@ -1,5 +1,5 @@
 ---
-title: Uso de OLTP en memoria en un entorno de máquinas virtuales | Documentos de Microsoft
+title: Uso de OLTP en memoria en un entorno de máquinas virtuales | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ac5bae341711dc0ded20efdf57fe1ac776ec208b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e048f54a3ba3824981c1561c7f2308571e72c450
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180322"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>Uso de OLTP en memoria en un entorno de máquina virtual
   La virtualización del servidor puede ayudar a reducir la inversión y los costos operativos de TI y aumentar la eficacia de TI con mejores procesos de aprovisionamiento, mantenimiento, disponibilidad, copia de seguridad y recuperación. Con los avances tecnológicos recientes, es más fácil consolidar cargas de trabajo de base de datos complejas gracias a la virtualización. En este tema se tratan los procedimientos recomendados para el uso de [!INCLUDE[hek_1](../includes/hek-1-md.md)] en un entorno virtualizado.  

@@ -1,5 +1,5 @@
 ---
-title: Orígenes de datos y enlaces (SSAS Multidimensional) | Documentos de Microsoft
+title: Orígenes de datos y enlaces (SSAS Multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], bindings
 - DSO, bindings
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d5386a2a09928f8a7dbc04248df74e8112749f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6009cfc820cb3eec8a0aa8499850546f31dba57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230205"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Orígenes de datos y enlaces (SSAS multidimensional)
   Es posible enlazar cubos, dimensiones y otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a un origen de datos. Un origen de datos puede ser uno de los objetos siguientes:  
@@ -159,18 +159,18 @@ ms.locfileid: "36107321"
   
  En un modelo de minería de datos OLAP, los enlaces de datos siguen estas reglas:  
   
--   Cada columna de tabla no anidada se enlaza a una medida en un cubo, a un atributo en una dimensión de cubo (especificando el `CubeDimension` para eliminar la ambigüedad en el caso de los roles de dimensión), o a un atributo en una dimensión.  
+-   Cada columna de tabla no anidada se enlaza a una medida de un cubo, a un atributo de una dimensión de cubo (especificando el `CubeDimension` para eliminar la ambigüedad en el caso de los roles de dimensión), o a un atributo de una dimensión.  
   
 -   Cada columna de tabla anidada se enlaza a una `CubeDimension`. Es decir, define cómo navegar desde una dimensión a un cubo relacionado o, en el caso menos común de tablas anidadas, desde un cubo a una de sus dimensiones.  
   
 ## <a name="out-of-line-bindings"></a>enlaces fuera de línea  
  Los enlaces fuera de línea permiten cambiar temporalmente los enlaces de datos existentes mientras dura un comando. Los enlaces fuera de línea hacen referencia a los enlaces incluidos en un comando y que no se conservan. Los enlaces fuera de línea solo se aplican mientras se ejecuta dicho comando concreto. En contraste, los enlaces insertados están contenidos en la definición de objeto de ASSL y se conservan con la definición de objeto dentro de los metadatos del servidor.  
   
- ASSL permite especificar cualquiera de los enlaces de fuera de línea un `Process` comando, si no está en un lote o en un `Batch` comando. Si los enlaces fuera de línea se especifican en el comando `Batch`, todos los enlaces especificados en el comando `Batch` crean un nuevo contexto de enlace en el que se ejecutan todos los comandos `Process` del lote. Este nuevo contexto de enlace incluye objetos que se procesan indirectamente debido al comando `Process`.  
+ ASSL permite especificar en cualquiera de los enlaces de fuera de línea un `Process` comando, si no está en un lote, o en un `Batch` comando. Si los enlaces fuera de línea se especifican en el comando `Batch`, todos los enlaces especificados en el comando `Batch` crean un nuevo contexto de enlace en el que se ejecutan todos los comandos `Process` del lote. Este nuevo contexto de enlace incluye objetos que se procesan indirectamente debido al comando `Process`.  
   
  Cuando los enlaces fuera de línea se especifican en un comando, invalidan los enlaces insertados contenidos en la DDL almacenada. Estos objetos procesados pueden incluir el objeto directamente nombrado en el `Process` comando, o pueden incluir otros objetos cuyo procesamiento se inicie automáticamente como parte del procesamiento.  
   
- Los enlaces fuera de línea se especifican incluyendo el objeto de colección opcional `Bindings` con el comando de procesamiento. Opcional `Bindings` colección contiene los elementos siguientes.  
+ Los enlaces fuera de línea se especifican incluyendo el objeto de colección opcional `Bindings` con el comando de procesamiento. El elemento opcional `Bindings` colección contiene los siguientes elementos.  
   
 |Property|Cardinalidad|Tipo|Descripción|  
 |--------------|-----------------|----------|-----------------|  
@@ -181,9 +181,9 @@ ms.locfileid: "36107321"
  Todos los elementos que se relacionan con los enlaces fuera de línea son opcionales. Para cualquier elemento no especificado, ASSL usa la especificación contenida en el DDL del objeto almacenado. La especificación de `DataSource` o `DataSourceView` en el comando `Process` es opcional. Si se especifican `DataSource` o `DataSourceView`, no se crean instancias de los mismos y no se almacenan después de que el comando `Process` se haya completado.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Definición del tipo de enlace fuera de línea  
- Dentro de la colección `Bindings` fuera de línea, ASSL permite una colección de enlaces para varios objetos, cada uno de ellos `Binding`. Cada `Binding` tiene una referencia de objeto extendida, similar a la referencia a objeto, pero que también puede hacer referencia a objetos secundarios (por ejemplo, atributos de dimensión y atributos de grupo de medidas). Este objeto toma la forma plana típica de la `Object` elemento `Process` comandos, excepto en que la \< *objeto*>\<*/objeto*> etiquetas no están presentes.  
+ Dentro de la colección `Bindings` fuera de línea, ASSL permite una colección de enlaces para varios objetos, cada uno de ellos `Binding`. Cada `Binding` tiene una referencia de objeto extendida, similar a la referencia a objeto, pero que también puede hacer referencia a objetos secundarios (por ejemplo, atributos de dimensión y atributos de grupo de medidas). Este objeto toma la forma plana típica del `Object` elemento `Process` comandos, excepto en que el \< *objeto*>\<*/objeto*> las etiquetas no están presentes.  
   
- Cada objeto para el que se especifica el enlace se identifica por un elemento XML del formulario \< *objeto*> ID (por ejemplo, `DimensionID`). Después de haber identificado el objeto de manera tan específica como sea posible con el formulario \< *objeto*> ID, a continuación, identifica el elemento para el que se especifica el enlace, que suele ser `Source`. Un caso común a tener en cuenta es en qué `Source` es una propiedad de la `DataItem`, que es el caso para enlaces de columna en un atributo. En este caso, no especifica la etiqueta `DataItem`; en su lugar, simplemente especifica la propiedad `Source`, como si estuviera directamente en la columna que se va a enlazar.  
+ Cada objeto para el que se especifica el enlace se identifica mediante un elemento XML del formulario \< *objeto*> ID (por ejemplo, `DimensionID`). Después de haber identificado el objeto de manera más específica posible con la forma \< *objeto*> ID, a continuación, identifica el elemento para el que se especifica el enlace, que suele ser `Source`. Un caso común tener en cuenta es en qué `Source` es una propiedad de la `DataItem`, que es el caso para enlaces de columna en un atributo. En este caso, no especifica la etiqueta `DataItem`; en su lugar, simplemente especifica la propiedad `Source`, como si estuviera directamente en la columna que se va a enlazar.  
   
  `KeyColumns` se identifican por su orden dentro de la colección `KeyColumns`. Allí no es posible especificar, por ejemplo, solo la primera y la tercera columna de clave de un atributo, porque no hay manera de indicar que se va a omitir la segunda columna de clave. Todas las columnas de clave deben encontrarse en el enlace fuera de línea para un atributo de dimensión.  
   

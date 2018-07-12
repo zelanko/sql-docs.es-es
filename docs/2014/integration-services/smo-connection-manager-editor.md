@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexión SMO | Documentos de Microsoft
+title: Editor del Administrador de conexiones SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.smoconnection.f1
 helpviewer_keywords:
 - SMO Connection Manager Editor
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 caps.latest.revision: 13
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8f8a8c5c4fd72f3eccd598e8fb0780dc604be7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a28a6acdba46037ed0a453f9adc3c2e1e6e81ff8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211585"
 ---
 # <a name="smo-connection-manager-editor"></a>administrador de conexiones SMO, editor del
   Utilice el **Editor del administrador de conexiones SMO** para configurar una conexión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para las diferentes tareas que transfieren objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

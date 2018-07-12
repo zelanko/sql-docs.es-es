@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos ReportAction (ASSL) | Documentos de Microsoft
+title: Tipo de datos ReportAction (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportAction data type
 ms.assetid: b22f0d52-ed3a-4239-840e-0eaf172d7276
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c2c5140f3d2723f0456b007bc9228c5f87bbaa6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bacb34e6a57126048253a5292fe19627838d21e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176402"
 ---
 # <a name="reportaction-data-type-assl"></a>Tipo de datos ReportAction (ASSL)
-  Define un tipo de datos derivado que representa una acción que genera una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] informes.  
+  Define un tipo de datos derivado que representa una acción que genera un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] informes.  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -1,12 +1,12 @@
 ---
-title: 'Ibcpsession:: BCPColFmt (OLE DB) | Documentos de Microsoft'
+title: 'Ibcpsession:: BCPColFmt (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 78d7776291a3043c18d30b694839a09f96915e33
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e11dc5983421ce89cf29131212c2d193fda20326
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703666"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432544"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,14 +75,14 @@ HRESULT BCPColFmt(
   
  No es necesario copiar todos los datos de un archivo de usuario en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para omitir una columna, debe especificar el formato de los datos de la columna estableciendo el parámetro idxServerCol en 0. Si desea omitir un campo, necesitará toda la información para que el método funcione correctamente.  
   
- **Tenga en cuenta** el [ibcpsession:: Bcpwritefmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) función puede utilizarse para conservar la especificación de formato proporcionada a través de **BCPColFmt**.  
+ **Tenga en cuenta** el [ibcpsession:: Bcpwritefmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) función se puede usar para conservar la especificación de formato proporcionada a través de **BCPColFmt**.  
   
 ## <a name="arguments"></a>Argumentos  
  *idxUserDataCol*[in]  
  Índice de campo del archivo de datos del usuario.  
   
  *eUserDataType*[in]  
- Tipo de datos de campo del archivo de datos del usuario. Los tipos de datos disponibles se enumeran en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el archivo de encabezado de Native Client (sqlncli.h) con BCP_TYPE_XXX formato, por ejemplo, BCP_TYPE_SQLINT4. Si se especifica el valor BCP_TYPE_DEFAULT, el proveedor intenta usar el mismo tipo que el tipo de columna de tabla o vista. Para operaciones de copia masiva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en un archivo cuando el **eUserDataType** argumento sea BCP_TYPE_SQLDECIMAL o BCP_TYPE_SQLNUMERIC:  
+ Tipo de datos de campo del archivo de datos del usuario. Los tipos de datos disponibles se enumeran en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el archivo de encabezado de Native Client (sqlncli.h) con bcp_type_xxx como formato, por ejemplo, BCP_TYPE_SQLINT4. Si se especifica el valor BCP_TYPE_DEFAULT, el proveedor intenta usar el mismo tipo que el tipo de columna de tabla o vista. Operaciones de copia masiva fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en un archivo cuando el **eUserDataType** argumento sea BCP_TYPE_SQLDECIMAL o BCP_TYPE_SQLNUMERIC:  
   
 -   Si la columna de origen no es decimal o numérica, se usarán la precisión y la escala predeterminadas.  
   
@@ -96,7 +96,7 @@ HRESULT BCPColFmt(
   
  Al establecer **cbUserData** en BCP_LENGTH_NULL se indica que todos los valores de los campos del archivo de datos están, o debería estar, establecidos en NULL. Al establecer **cbUserData** en BCP_LENGTH_VARIABLE se indica que el sistema debería determinar la longitud de datos para cada campo. Para algunos campos, esto podría significar que se genera un indicador de longitud o NULL que precede a los datos en una copia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o que se espera el indicador en los datos copiados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caracteres y tipos de datos binarios, **cbUserData** puede ser BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 o algún valor positivo. Si **cbUserData** es BCP_LENGTH_VARIABLE, el sistema usa el indicador de longitud, si está presente, o una secuencia de terminador que determina la longitud de los datos. Si se proporciona un indicador de longitud y una secuencia de terminador, la copia masiva usa aquél por el que se copia la mínima cantidad de datos. Si **cbUserData** es BCP_LENGTH_VARIABLE, los datos de tipo es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caracteres o tipo binaria, y si se especifica un indicador de longitud ni una secuencia de terminador, el sistema devuelve un mensaje de error.  
+ Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caracteres y tipos de datos binarios, **cbUserData** puede ser BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 o algún valor positivo. Si **cbUserData** es BCP_LENGTH_VARIABLE, el sistema usa el indicador de longitud, si está presente, o una secuencia de terminador que determina la longitud de los datos. Si se proporciona un indicador de longitud y una secuencia de terminador, la copia masiva usa aquél por el que se copia la mínima cantidad de datos. Si **cbUserData** es BCP_LENGTH_VARIABLE, los datos de tipo es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caracteres o tipo binaria, y si se especifica ni un indicador de longitud ni una secuencia de terminador, el sistema devuelve un mensaje de error.  
   
  Si **cbUserData** es 0 o un valor positivo, el sistema utiliza **cbUserData** como longitud de datos máxima. Sin embargo, si además de un valor de **cbUserData**positivo, se proporciona un indicador de longitud o una secuencia de terminador, el sistema determina la longitud de los datos utilizando el método por el que se copia la cantidad mínima de datos.  
   
@@ -122,10 +122,10 @@ HRESULT BCPColFmt(
  El método se ha llevado a cabo de forma correcta.  
   
  E_FAIL  
- Se produjo un error específico del proveedor, para obtener información detallada, use la [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interfaz.  
+ Se produjo un error específico del proveedor, para obtener información detallada, use el [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interfaz.  
   
  E_UNEXPECTED  
- No se esperaba la llamada al método. Por ejemplo, el [ibcpsession:: BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) no se llamó el método antes de llamar a este método.  
+ No se esperaba la llamada al método. Por ejemplo, el [ibcpsession:: BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) no se llamó al método antes de llamar a este método.  
   
  E_INVALIDARG  
  El argumento no era válido.  

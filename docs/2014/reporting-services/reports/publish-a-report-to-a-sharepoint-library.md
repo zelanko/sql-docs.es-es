@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], reports in SharePoint integrated mode
 - SharePoint integration [Reporting Services], publishing to a library
@@ -17,13 +17,13 @@ ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d19618eaa7997444e661ca9213a72f75bf1b3910
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb7689da40d81d716b9564c11f230f22ea4638bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150016"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>Publicar un informe en una biblioteca de SharePoint
   Para publicar un informe en un sitio de SharePoint configurado para la integración de SharePoint, debe establecer las propiedades del proyecto en el Diseñador de informes. En las propiedades de proyecto, todas las referencias a servidores, informes y orígenes de datos compartidos deben ser direcciones URL completas. En la definición de informe, todas las referencias a subinformes, informes detallados y recursos, como imágenes basadas en web, deben ser direcciones URL completas.  
@@ -44,9 +44,9 @@ ms.locfileid: "36110881"
   
      Si no se especifica ningún valor, se usa el valor **TargetReportFolder** .  
   
-6.  Para **TargetReportFolder**, escriba una dirección URL a una biblioteca o carpeta de la biblioteca (por ejemplo, *http://TestServer/TestSite/Documents/Reports)*.  
+6.  Para **TargetReportFolder**, escriba una dirección URL a una biblioteca o carpeta de biblioteca (por ejemplo, *http://TestServer/TestSite/Documents/Reports)*.  
   
-7.  Para **TargetServerURL**, escriba una dirección URL a un sitio de nivel superior o a un subsitio de SharePoint. Si no especifica un sitio, se utiliza el sitio de nivel superior predeterminado (por ejemplo, *http://servername*, *http://servername/site*, o *http://servername/site/subsite*).  
+7.  Para **TargetServerURL**, escriba una dirección URL a un sitio de nivel superior o a un subsitio de SharePoint. Si no especifica un sitio, se usa el sitio de nivel superior predeterminado (por ejemplo, *http://servername*, *http://servername/site*, o *http://servername/site/subsite*).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

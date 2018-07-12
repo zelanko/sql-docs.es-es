@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de Bike Buyer | Documentos de Microsoft'
+title: 'Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de Bike Buyer | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
 caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: f6d66faaa2a62d753ad865dd249078045960dc97
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 055450b7461accaa62b1c9bafe4273f6fc3f9dd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149556"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de Bike Buyer
-  En esta lección, agregará dos modelos de minería de datos a la estructura de minería de datos de Bike Buyer que creaste [lección 1: crear la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Estos modelos de minería de datos le permitirán explorar los datos usando un modelo y crear predicciones usando otro modelo.  
+  En esta lección, agregará dos modelos de minería de datos a la estructura de minería de datos de Bike Buyer que creó [lección 1: crear la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Estos modelos de minería de datos le permitirán explorar los datos usando un modelo y crear predicciones usando otro modelo.  
   
- Para explorar cómo los clientes potenciales se pueden clasificar según sus características, se creará un modelo de minería de datos basado en la [algoritmo de clústeres de Microsoft](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md). En una lección posterior, explorará cómo este algoritmo encuentra clústeres de clientes que comparten características parecidas. Por ejemplo, podría averiguar que ciertos clientes tienden a vivir cerca unos de otros, van al trabajo en bicicleta y tienen una formación parecida. Puede utilizar estos clústeres para comprender mejor cómo están relacionados distintos clientes y para utilizar la información para crear una estrategia de marketing dirigida a clientes concretos.  
+ Para explorar cómo los clientes potenciales se pueden clasificar según sus características, creará un modelo de minería de datos basado en la [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md). En una lección posterior, explorará cómo este algoritmo encuentra clústeres de clientes que comparten características parecidas. Por ejemplo, podría averiguar que ciertos clientes tienden a vivir cerca unos de otros, van al trabajo en bicicleta y tienen una formación parecida. Puede utilizar estos clústeres para comprender mejor cómo están relacionados distintos clientes y para utilizar la información para crear una estrategia de marketing dirigida a clientes concretos.  
   
- Para predecir si un cliente potencial es probable que compre una bicicleta, creará un modelo de minería de datos basado en la [Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Este algoritmo examina la información asociada a cada cliente potencial y encuentra características útiles para predecir si adquirirá una bicicleta. A continuación, compara los valores de las características de compradores de bicicletas anteriores con los nuevos clientes potenciales para determinar si es probable que éstos adquieran una bicicleta.  
+ Para predecir si un cliente potencial es probable que compren una bicicleta, creará un modelo de minería de datos basado en la [Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Este algoritmo examina la información asociada a cada cliente potencial y encuentra características útiles para predecir si adquirirá una bicicleta. A continuación, compara los valores de las características de compradores de bicicletas anteriores con los nuevos clientes potenciales para determinar si es probable que éstos adquieran una bicicleta.  
   
 ## <a name="alter-mining-structure-statement"></a>Instrucción ALTER MINING STRUCTURE  
  Para agregar un modelo de minería de datos a la estructura de minería de datos, se utiliza el [ALTER MINING STRUCTURE &#40;DMX&#41;] (instrucción (~/dmx/alter-mining-structure-dmx.md). El código de la instrucción se puede dividir en las partes siguientes:  
@@ -82,7 +82,7 @@ ADD MINING MODEL [<mining model name>]
 ) USING <algorithm name>( <algorithm parameters> )  
 ```  
   
- Para obtener más información acerca de los parámetros de algoritmo que puede ajustar, vea [Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md) y [algoritmo de clústeres de Microsoft](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md).  
+ Para obtener más información acerca de los parámetros del algoritmo que puede ajustar, vea [Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md) y [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md).  
   
  Puede especificar que una columna del modelo de minería de datos se utilice para la predicción mediante la sintaxis siguiente:  
   
@@ -90,7 +90,7 @@ ADD MINING MODEL [<mining model name>]
 <mining model column> PREDICT  
 ```  
   
- La última línea de código, que es opcional, define un filtro que se aplica durante el aprendizaje y prueba del modelo. Para obtener más información acerca de cómo aplicar filtros a los modelos de minería de datos, vea [filtros para modelos de minería de datos de &#40;Analysis Services: minería de datos&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ La última línea de código, que es opcional, define un filtro que se aplica durante el aprendizaje y prueba del modelo. Para obtener más información acerca de cómo aplicar filtros a los modelos de minería de datos, vea [filtros para modelos de minería de datos de &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
 ## <a name="lesson-tasks"></a>Tareas de la lección  
  En esta lección realizará las tareas siguientes:  
@@ -106,7 +106,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-a-decision-tree-mining-model"></a>Para agregar un modelo de minería de datos del árbol de decisión  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], seleccione **nueva consulta**y, a continuación, haga clic en **DMX** para abrir el Editor de consultas y una consulta en blanco.  
+1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX** para abrir el Editor de consultas y una nueva consulta en blanco.  
   
 2.  Copie el ejemplo genérico de la instrucción ALTER MINING STRUCTURE en la consulta en blanco.  
   
@@ -203,7 +203,7 @@ ADD MINING MODEL [<mining model name>]
   
 7.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
   
-8.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y un nombre al archivo `DT_Model.dmx`.  
+8.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `DT_Model.dmx`.  
   
 9. En la barra de herramientas, haga clic en el **Execute** botón.  
   
@@ -212,7 +212,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-a-clustering-mining-model"></a>Para agregar un modelo de minería de datos de agrupación en clústeres  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], seleccione **nueva consulta**y, a continuación, haga clic en **DMX** para abrir el Editor de consultas se abre y una nueva consulta en blanco.  
+1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX** para abrir una consulta en blanco y se abre el Editor de consultas.  
   
 2.  Copie el ejemplo genérico de la instrucción ALTER MINING STRUCTURE en la consulta en blanco.  
   
@@ -271,7 +271,7 @@ ADD MINING MODEL [<mining model name>]
   
 7.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
   
-8.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y un nombre al archivo `Clustering_Model.dmx`.  
+8.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `Clustering_Model.dmx`.  
   
 9. En la barra de herramientas, haga clic en el **Execute** botón.  
   

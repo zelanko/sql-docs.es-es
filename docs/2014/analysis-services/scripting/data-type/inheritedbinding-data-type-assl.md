@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos InheritedBinding (ASSL) | Documentos de Microsoft
+title: Tipo de datos InheritedBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - InheritedBinding data type
 ms.assetid: a61f58c5-62d6-44e8-a02f-db2b17d1f256
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e05749878a2ac542dd68c982709a8efe4f86368
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7fb5895ab8435ed92717df8b2e016bc7458efa84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151836"
 ---
 # <a name="inheritedbinding-data-type-assl"></a>Tipo de datos InheritedBinding (ASSL)
   Define un tipo de datos derivado que indica que un [MeasureGroupAttribute](measuregroupattribute-data-type-assl.md) elemento hereda sus enlaces del atributo.  
@@ -55,17 +55,17 @@ ms.locfileid: "36109116"
 |------------------|-------------|  
 |Elementos primarios|None|  
 |Elementos secundarios|None|  
-|Elementos derivados|Vea [enlace](binding-data-type-assl.md)|  
+|Elementos derivados|Consulte [enlace](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
- Para obtener información adicional sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, consulte [tipo de enlace de datos &#40;ASSL&#41; ](binding-data-type-assl.md) elemento.  
+ Para obtener más información sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, vea [tipo de enlace de datos &#40;ASSL&#41; ](binding-data-type-assl.md) elemento.  
   
- Para obtener información general de enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;SSAS multidimensionales&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obtener información general de los enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.InheritedBinding>.  
   
 ## <a name="see-also"></a>Vea también  
- [Tipo de datos de enlace &#40;ASSL&#41;](binding-data-type-assl.md)   
+ [Tipo de datos Binding &#40;ASSL&#41;](binding-data-type-assl.md)   
  [Orígenes de datos y enlaces &#40;SSAS Multidimensional&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)   
  [Tipos de datos XML de lenguaje Scripting de Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   

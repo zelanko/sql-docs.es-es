@@ -1,12 +1,12 @@
 ---
-title: SQLColAttribute | Documentos de Microsoft
+title: SQLColAttribute | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1228481d34256568947f9bc85ea2251f31f07db8
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9f00392098f45068d1ee0f19c31f7d1b0fdbe2b2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696796"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429944"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Puede usar **SQLColAttribute** para recuperar un atributo de una columna de conjunto de resultados para instrucciones ODBC preparadas o ejecutadas. Al llamar a **SQLColAttribute** en instrucciones preparadas provoca una ida y vuelta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC Native Client recibe datos de columna del conjunto de resultados como parte de la ejecución de la instrucción, por lo que una llamada a **SQLColAttribute** tras la finalización del **SQLExecute** o  **SQLExecDirect** implican un ida y vuelta del servidor.  
+  Puede usar **SQLColAttribute** para recuperar un atributo de una columna de conjunto de resultados para instrucciones ODBC preparadas o ejecutadas. Una llamada a **SQLColAttribute** en instrucciones preparadas provoca un ida y vuelta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client recibe datos de columna del conjunto de resultados como parte de la ejecución de la instrucción, por lo que una llamada a **SQLColAttribute** tras la finalización de **SQLExecute** o  **SQLExecDirect** implican un ida y vuelta del servidor.  
   
 > [!NOTE]  
 >  Los atributos de identificador de columna de ODBC no están disponibles en todos los conjuntos de resultados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "35696796"
 |SQL_DESC_TABLE_NAME|Disponible en conjuntos de resultados recuperados de instrucciones que generan cursores de servidor o en instrucciones SELECT ejecutadas que contienen una cláusula FOR BROWSE.|  
 |SQL_DESC_UNNAMED|SQL_NAMED en todas las columnas de un conjunto de resultados, a menos que una columna sea el resultado de una expresión que no contiene ninguna asignación de etiqueta como parte de la expresión. Cuando SQL_DESC_UNNAMED devuelve SQL_UNNAMED, todos los atributos de identificador de columna de ODBC contienen cadenas de longitud cero en la columna.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controlador ODBC de cliente nativo usa la instrucción SET FMTONLY para reducir la sobrecarga del servidor cuando **SQLColAttribute** llaman pero no ejecutadas instrucciones preparadas.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controlador ODBC de cliente nativo, utiliza la instrucción SET FMTONLY para reducir la sobrecarga del servidor cuando **SQLColAttribute** se llama para instrucciones preparadas pero no ejecutadas.  
   
  Para tipos de valor grande, **SQLColAttribute** devolverá los valores siguientes:  
   
@@ -61,7 +61,7 @@ ms.locfileid: "35696796"
   
  Para todas las versiones, solo se notifican los atributos de columna del primer conjunto de resultados cuando un lote preparado de instrucciones SQL genera varios conjuntos de resultados.  
   
- Los siguientes atributos de columna son extensiones expuestas por la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC Native Client. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC Native Client devuelve todos los valores de la *NumericAttrPtr* parámetro. Los valores se devuelven como SDWORD (largo con signo) excepto SQL_CA_SS_COMPUTE_BYLIST, que es un puntero a una matriz WORD.  
+ Los siguientes atributos de columna son extensiones expuestas por la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client devuelve todos los valores de la *NumericAttrPtr* parámetro. Los valores se devuelven como SDWORD (largo con signo) excepto SQL_CA_SS_COMPUTE_BYLIST, que es un puntero a una matriz WORD.  
   
 |Identificador de campo|Valor devuelto|  
 |----------------------|--------------------|  
@@ -81,7 +81,7 @@ ms.locfileid: "35696796"
   
  \*   Está disponible si el atributo SQL_SOPT_SS_HIDDEN_COLUMNS de la instrucción está establecido en SQL_HC_ON.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo campos descriptores específicos del controlador para proporcionar información adicional para indicar el nombre de colección de esquemas XML, el nombre de esquema y el nombre del catálogo, respectivamente. Estas propiedades no requieren comillas ni un carácter de escape si contienen caracteres no alfanuméricos. En la tabla siguiente se enumeran estos nuevos campos descriptores:  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] se introdujeron campos descriptores específicos del controlador para proporcionar información adicional que indicase el nombre de colección de esquemas XML, el nombre de esquema y el nombre del catálogo, respectivamente. Estas propiedades no requieren comillas ni un carácter de escape si contienen caracteres no alfanuméricos. En la tabla siguiente se enumeran estos nuevos campos descriptores:  
   
 |Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
@@ -101,9 +101,9 @@ ms.locfileid: "35696796"
  El identificador del campo descriptor SQL_DESC_TYPE_NAME existente se usa para indicar el nombre del UDT. El campo SQL_DESC_TYPE de una columna de tipo UDT es SQL_SS_UDT.  
   
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>Compatibilidad de SQLColAttribute con las características mejoradas de fecha y hora  
- Para los valores devueltos para los tipos de fecha y hora, vea la sección "Información devuelta en los campos IRD" en [parámetros y metadatos de resultados](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
+ Para los valores devueltos para los tipos de fecha y hora, vea la sección "Información devuelta en los campos IRD" de [Parameter and Result Metadata](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Para obtener más información, consulte [fecha y hora mejoras &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, consulte [mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>Compatibilidad de SQLColAttribute con UDT CLR grandes  
  **SQLColAttribute** admite tipos definidos por el usuario (UDT) CLR grandes. Para obtener más información, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  

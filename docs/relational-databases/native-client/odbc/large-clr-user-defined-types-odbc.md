@@ -1,5 +1,5 @@
 ---
-title: Tipos definidos por el usuario CLR grandes (ODBC) | Documentos de Microsoft
+title: Tipos definidos por el usuario CLR grandes (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,11 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ec957ad4bc1ea32c885b51a940a793f84dbc6b73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14dcac32a0e8e6af89cf3f9dc87b2458a986a2ef
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414424"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipos CLR grandes definidos por el usuario (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 
   En este tema se describen los cambios realizados en ODBC en SQL Server Native Client para admitir los tipos definidos por el usuario (UDT) de Common Language Runtime (CLR) grandes.  
   
- Para obtener un ejemplo que muestra la compatibilidad con ODBC UDT de CLR grandes, consulte [compatibilidad con UDT grandes](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md).  
+ Para obtener un ejemplo que muestra la compatibilidad de ODBC con UDT CLR grandes, consulte [compatibilidad con UDT grandes](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md).  
   
  Para obtener más información sobre la compatibilidad con UDT CLR grandes en SQL Server Native Client, vea [Large CLR User-Defined tipos](../../../relational-databases/native-client/features/large-clr-user-defined-types.md).  
   
@@ -42,11 +43,11 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se muestra la asignación de tipos de datos en parámetros y conjuntos de resultados:  
   
-|Tipo de datos de SQL Server|Tipo de datos SQL|Value|  
+|Tipo de datos de SQL Server|Tipo de datos SQL|Valor|  
 |--------------------------|-------------------|-----------|  
 |UDT CLR|SQL_SS_UDT|-151 (sqlncli.h)|  
   
- En la tabla siguiente se describe la estructura y el tipo C de ODBC correspondiente. Esencialmente, el UDT de CLR es una **varbinary** tipo con metadatos adicionales.  
+ En la tabla siguiente se describe la estructura y el tipo C de ODBC correspondiente. Básicamente, UDT de CLR es una **varbinary** tipo con metadatos adicionales.  
   
 |Tipo de datos SQL|Diseño de memoria|Tipo de datos C|Valor (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_DESC_TYPE_NAME|"udt"|"udt"|  
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|  
 |SQL_CA_SS_UDT_CATALOG_NAME|El nombre del catálogo que contiene el UDT.|El nombre del catálogo que contiene el UDT.|  
-|SQL_CA_SS_UDT_SCHEMA_NAME|Nombre del esquema que contiene el UDT.|El nombre del esquema de la contiene el UDT.|  
+|SQL_CA_SS_UDT_SCHEMA_NAME|Nombre del esquema que contiene el UDT.|El nombre del esquema el contiene el UDT.|  
 |SQL_CA_SS_UDT_TYPE_NAME|Nombre del UDT.|Nombre del UDT.|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|Nombre completo del UDT.|Nombre completo del UDT.|  
   
@@ -128,9 +129,9 @@ ms.lasthandoff: 05/03/2018
 |SS_UDT_SCHEMA_NAME|Nombre del esquema que contiene el UDT.|Nombre del esquema que contiene el UDT.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|Nombre completo del UDT.|Nombre completo del UDT.|  
   
- Las últimas tres columnas son columnas específicas del controlador. Se agregan después de las columnas definidas por ODBC, pero antes de las columnas específicas del controlador existentes del conjunto de resultados de SQLColumns o SQLProcedureColumns.  
+ Las últimas tres columnas son columnas específicas del controlador. Se agregan después de las columnas definidas en ODBC, pero antes de las columnas específicas del controlador existentes del conjunto de resultados de SQLColumns o SQLProcedureColumns.  
   
- No se devuelven filas por SQLGetTypeInfo, para los UDT individuales o para el tipo genérico "udt".  
+ SQLGetTypeInfo, no se devuelve ninguna fila para los UDT individuales o para el tipo genérico "udt".  
   
 ## <a name="bindings-and-conversions"></a>Enlaces y conversiones  
  Las conversiones compatibles de tipos de datos SQL a C son las siguientes:  
@@ -138,7 +139,7 @@ ms.lasthandoff: 05/03/2018
 |Conversión a y desde:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Admite *|  
-|SQL_C_BINARY|Compatible|  
+|SQL_C_BINARY|Admitida|  
 |SQL_C_CHAR|Admite *|  
   
  \* Datos binarios se convierten en una cadena hexadecimal.  
@@ -148,7 +149,7 @@ ms.lasthandoff: 05/03/2018
 |Conversión a y desde:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Admite *|  
-|SQL_C_BINARY|Compatible|  
+|SQL_C_BINARY|Admitida|  
 |SQL_C_CHAR|Admite *|  
   
  \* Se produce una cadena hexadecimal a la conversión de datos binarios.  

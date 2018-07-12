@@ -1,5 +1,5 @@
 ---
-title: Dimensiones (pestaña estructura de cubo, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Dimensiones (pestaña estructura de cubo, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.dimensionspane.f1
 ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: baa3754ed3fe72c19324ae830edf5c2e46a218a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed541a6abd2a6a966df88440d280aa67a1688dca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149166"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Dimensiones (pestaña Estructura de cubo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Dimensiones** para ver y editar dimensiones de cubo, incluidas las jerarquías y los atributos, en la pestaña **Estructura de cubo** del Diseñador de cubos.  

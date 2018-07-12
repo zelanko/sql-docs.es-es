@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos MiningModelColumn (ASSL) | Documentos de Microsoft
+title: Tipo de datos MiningModelColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningModelColumn data type
 ms.assetid: de8bf815-43b4-4983-bdb9-b67e8563be0e
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6943acb9e15e1133da5aba8c49e0a14f3c61377c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 983c164d32408182d943e9509ce5a125efb25f9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259671"
 ---
 # <a name="miningmodelcolumn-data-type-assl"></a>Tipo de datos MiningModelColumn (ASSL)
   Define un tipo de datos primitivo que representa información sobre una columna de un [MiningModel](../objects/miningmodel-element-assl.md) elemento.  
@@ -64,7 +64,7 @@ ms.locfileid: "36111233"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|None|  
-|Elementos secundarios|[Anotaciones](../collections/annotations-element-assl.md), [columnas](../collections/columns-element-assl.md), [descripción](../properties/description-element-assl.md), [identificador](../properties/id-element-assl.md), [ModelingFlags](../collections/modelingflags-element-assl.md), [nombre](../properties/name-element-assl.md) , [SourceColumnID](../properties/sourcecolumnid-element-assl.md), [traducciones](../collections/translations-element-assl.md), [uso](../properties/usage-element-dimensionattribute-assl.md)|  
+|Elementos secundarios|[Las anotaciones](../collections/annotations-element-assl.md), [columnas](../collections/columns-element-assl.md), [descripción](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [ModelingFlags](../collections/modelingflags-element-assl.md), [nombre](../properties/name-element-assl.md) , [SourceColumnID](../properties/sourcecolumnid-element-assl.md), [traducciones](../collections/translations-element-assl.md), [uso](../properties/usage-element-dimensionattribute-assl.md)|  
 |Elementos derivados|[Columna](../objects/column-element-assl.md) ([columnas](../collections/columns-element-assl.md), colección de [MiningModel](../objects/miningmodel-element-assl.md))|  
   
 ## <a name="remarks"></a>Notas  

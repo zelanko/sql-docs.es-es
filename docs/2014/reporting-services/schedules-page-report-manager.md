@@ -1,5 +1,5 @@
 ---
-title: Página de programaciones (Administrador de informes) | Documentos de Microsoft
+title: Programa de página (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8d460ad3e85f1884a101ad1ad52adc1cd04fe43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf66402ba021949bce1eb2810d634177ddf1916d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198515"
 ---
 # <a name="schedules-page-report-manager"></a>Página de Programaciones (Administrador de informes)
   Use la página Programaciones para crear, modificar, eliminar, pausar o reanudar programaciones compartidas. Una programación compartida es una programación con nombre que se puede crear y administrar independientemente de los informes, las suscripciones y los demás procesos que utilizan información de programación. Los usuarios pueden seleccionar las programaciones compartidas que proporcione.  
@@ -67,6 +67,6 @@ ms.locfileid: "36113091"
   
 ## <a name="see-also"></a>Vea también  
  [Crear, modificar y eliminar programaciones](subscriptions/create-modify-and-delete-schedules.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
 - search criteria [SQL Server], WHERE clause
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - excluding rows
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa82306f17c84c9751169339c8500272e2789997
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e58848432a2bd1973eee5f2a941a3fbe3ec9980f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278318"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>Incluir o excluir filas (Visual Database Tools)
   Para restringir el número de filas que debe devolver una consulta SELECT, puede crear condiciones de búsqueda o criterios de filtro. En SQL, las condiciones de búsqueda aparecen en la cláusula WHERE de la instrucción o, si está creando una consulta de funciones agregadas, en la cláusula HAVING.  

@@ -1,35 +1,33 @@
 ---
-title: Eliminar un origen de datos (ODBC) | Documentos de Microsoft
+title: Eliminar un origen de datos (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [ODBC]
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d3b18bfe882147e0c60033dac9efd9dc4e3a6057
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e870254043d9cc85d99203d76513816f67267560
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106740"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415194"
 ---
 # <a name="delete-a-data-source-odbc"></a>Eliminar un origen de datos (ODBC)
-  Puede eliminar un origen de datos mediante el Administrador de ODBC, mediante programación (utilizando [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), o mediante la eliminación de un archivo (si se trata de un nombre de origen de datos de archivo).  
+  Puede eliminar un origen de datos con el Administrador de ODBC, mediante programación (utilizando [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), o mediante la eliminación de un archivo (si se trata de un nombre de origen de datos de archivo).  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Para eliminar un origen de datos mediante el Administrador ODBC  
   
-1.  En **el Panel de Control**, abra **herramientas administrativas**y, a continuación, haga doble clic en **orígenes de datos (ODBC)**. Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema.  
+1.  En **Panel de Control**, abra **herramientas administrativas**y, a continuación, haga doble clic en **orígenes de datos (ODBC)**. Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema.  
   
 2.  Haga clic en el **DSN de usuario**, **DSN de sistema**, o **DSN de archivo** ficha.  
   
@@ -60,6 +58,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Configuración de los temas "Cómo..." del controlador ODBC de SQL Server](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
+ [Temas de procedimientos de configuración del controlador ODBC de SQL Server](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
   
   

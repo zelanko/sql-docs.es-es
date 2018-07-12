@@ -1,5 +1,5 @@
 ---
-title: Defina el cuadro de diálogo de relación (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Definir el cuadro de diálogo de relación (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusage.definerelationship.f1
 helpviewer_keywords:
 - Define Relationship dialog box
 ms.assetid: 0fcee7f1-f138-4c2e-ae8c-245395ee0fe8
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cb46c19a45b85e90a0484a5f0ac33eff0077298
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 93c76ad9d504e9ec6fc1ba417407a16bd93e8adf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165506"
 ---
 # <a name="define-relationship-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Definir relación (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Definir relación** para definir una relación entre una dimensión de cubo y un grupo de medida en el Diseñador de cubos. Puede mostrar el cuadro de diálogo **Definir relación** haciendo clic en los **...** de una celda del panel **Cuadrícula** que se encuentra en la pestaña **Uso de dimensiones** en el Diseñador de cubos.  
@@ -42,13 +42,13 @@ ms.locfileid: "36112575"
   
 |Tipo de relación|Descripción|Opción|  
 |-----------------------|-----------------|------------|  
-|**No hay ninguna relación**|No hay ninguna relación definida y no se muestran opciones en el panel **Detalle** .||  
+|**Ninguna relación**|No hay ninguna relación definida y no se muestran opciones en el panel **Detalle** .||  
 |**Regular**|Especifica una relación de dimensión normal. En el panel **Detalle** se muestran las siguientes opciones:|**Atributo de granularidad**: <br />                      Seleccione el atributo que define la granularidad del grupo de medida con respecto a la dimensión. Por lo general, este atributo es el atributo clave de la dimensión.|  
 |||**Tabla de dimensión**: muestra la tabla principal correspondiente a la dimensión.|  
 |||**Tabla de grupos de medida** : muestra la tabla de hechos para el grupo de medida.|  
 |||**relación**: muestra una cuadrícula de columnas de dimensión y columnas de grupo de medida en las que se basa la relación. La cuadrícula contiene las columnas siguientes:<br /><br /> **Columnas de dimensión**: muestra las columnas asociadas al atributo de granularidad seleccionado. Nota: Si aún no se ha generado la dimensión, esta opción se establece en **Generar**.<br />**Columnas de grupo de medida** :<br />                              Seleccione las columnas del grupo de medida que están relacionadas con las columnas de dimensión.|  
 |||**Avanzadas**:<br />                      Haga clic en esta opción para mostrar el cuadro de diálogo **Enlaces de grupo de medida** y editar las propiedades avanzadas, como el procesamiento de valores NULL, en las relaciones que se crearon entre las columnas de atributos y de grupos de medida. Para más información sobre el cuadro de diálogo **Enlaces de grupo de medida**, vea [Cuadro de diálogo Enlaces de grupo de medida &#40;Analysis Services - Datos multidimensionales&#41;](measure-group-bindings-dialog-box-analysis-services-multidimensional-data.md).|  
-|**hechos**|Especifica una relación de dimensión de hechos. En el panel **Detalle** se muestran las siguientes opciones:|**Atributo de granularidad**: seleccione el atributo que define la granularidad del grupo de medida con respecto a la dimensión. Por lo general, este atributo es el atributo clave de la dimensión.|  
+|**Hechos**|Especifica una relación de dimensión de hechos. En el panel **Detalle** se muestran las siguientes opciones:|**Atributo de granularidad**: seleccione el atributo que define la granularidad del grupo de medida con respecto a la dimensión. Por lo general, este atributo es el atributo clave de la dimensión.|  
 |||**Tabla de dimensiones** : muestra la tabla de dimensiones principal.|  
 |||**Tabla de grupos de medida**: <br />                      Muestra la tabla sobre la que se basa el grupo de medida.|  
 |**Al que hace referencia**|Especifica una relación de dimensión a la que se hace referencia. En el panel **Detalle** se muestran las siguientes opciones:|**Dimensión de referencia**: <br />                      Muestra la dimensión seleccionada.|  

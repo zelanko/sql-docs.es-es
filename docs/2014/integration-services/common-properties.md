@@ -1,5 +1,5 @@
 ---
-title: Propiedades comunes | Documentos de Microsoft
+title: Propiedades comunes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
 caps.latest.revision: 45
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3cf48911196d3bb96fa54a6d912fbf5a5646516f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5bc0d0f75f911c27ec8b117653aef978a615f3e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169351"
 ---
 # <a name="common-properties"></a>Propiedades comunes
   Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tienen propiedades comunes y propiedades personalizadas en el nivel del componente, de las entradas y salidas, y de las columnas de entrada y de salida. Muchas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
@@ -113,7 +113,7 @@ ms.locfileid: "36113441"
 |Descripción|String|Descripción de la entrada.|  
 |ErrorOrTruncationOperation|String|Cadena opcional que especifica los tipos de errores o truncamientos que pueden producirse al procesar una fila.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son `Fail component`, `Ignore failure`, y `Redirect row`.|  
-|HasSideEffects|Boolean|Indica si un componente puede quitarse del plan de ejecución del flujo de datos cuando no está conectado a un componente de nivel inferior y cuando `RunInOptimizedMode` es `true`.|  
+|HasSideEffects|Boolean|Indica si un componente puede quitarse del plan de ejecución del flujo de datos cuando no está asociado a un componente de nivel inferior y cuando `RunInOptimizedMode` es `true`.|  
 |Id.|Integer|Valor que identifica la entrada de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la entrada.|  
 |IsSorted|Boolean|Indica si los datos de la entrada están ordenados.|  
@@ -162,7 +162,7 @@ ms.locfileid: "36113441"
 |Id.|Integer|Valor que identifica la salida de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la salida.|  
 |IsErrorOut|Boolean|Indica si la salida es una salida de errores.|  
-|IsSorted|Boolean|Indica si la salida está ordenada. El valor predeterminado es `False`.<br /><br /> **\*\* Importante \* \***  establecer el valor de la `IsSorted` propiedad `True` no se ordenan los datos. Esta propiedad únicamente proporciona una sugerencia a los componentes de nivel inferior acerca de que los datos se han ordenado previamente. Para obtener más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|IsSorted|Boolean|Indica si la salida está ordenada. El valor predeterminado es `False`.<br /><br /> **\*\* Importante \* \***  estableciendo el valor de la `IsSorted` propiedad `True` no se ordenan los datos. Esta propiedad únicamente proporciona una sugerencia a los componentes de nivel inferior acerca de que los datos se han ordenado previamente. Para obtener más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Nombre|String|Nombre de la salida.|  
 |SynchronousInputID|Integer|El Id. de una entrada que es sincrónica con la salida.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. Los valores son `Fail component`, `Ignore failure`, y `Redirect row`.|  

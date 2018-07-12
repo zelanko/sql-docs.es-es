@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 caps.latest.revision: 48
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a1c5e302a72e2e810fed16db5b9b3d0fc8527720
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c6a5bbcbc994a3f5cc7e62a3fa80048505f88e26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168265"
 ---
 # <a name="report-server-web-service-methods"></a>Métodos de servicio web del servidor de informes
   Los servicios web del servidor de informes incluyen varias categorías de métodos que están basados en las características de componente. Estos métodos se proporcionan a través de varios extremos de servicios web (tres para la administración de informes y uno para la ejecución de informes) que se exponen como miembros de las clases <xref:ReportService2010.ReportingService2010> y <xref:ReportExecution2005.ReportExecutionService>. Estas clases se pueden generar a través de una herramienta de clase de proxy como wsdl.exe, que está incluida con el SDK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Para más información sobre los servicios web del servidor de informes y [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vea [Generar aplicaciones mediante el servicio web y .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "36113089"
 |[Métodos de autorización](authorization-methods.md)|Describe métodos que puede utilizar para administrar tareas, roles y directivas.|  
 |[Orígenes de datos y métodos de conexión](data-sources-and-connection-methods.md)|Describe métodos que puede utilizar para establecer y administrar una conexión a un origen de datos y la información de credenciales para los informes.|  
 |[Métodos de parámetros de informes](report-parameters-methods.md)|Describe métodos que puede utilizar para establecer y recuperar los parámetros para los informes.|  
-|[Métodos de modelos](../report-server-web-service.md)|Describe métodos que puede utilizar para administrar los modelos.|  
+|[Métodos de modelo](../report-server-web-service.md)|Describe métodos que puede utilizar para administrar los modelos.|  
 |[Métodos de representación y ejecución](rendering-and-execution-methods.md)|Describe métodos que puede utilizar para administrar la ejecución, representación y almacenamiento en memoria caché de los informes.|  
 |[Métodos de historial de informes](report-history-methods.md)|Describe métodos que puede utilizar para crear y administrar las instantáneas del historial de informes.|  
 |[Métodos de programación](scheduling-methods.md)|Describe métodos que puede utilizar para crear y administrar programaciones compartidas y planes de actualización de caché que utiliza el servidor de informes.|  

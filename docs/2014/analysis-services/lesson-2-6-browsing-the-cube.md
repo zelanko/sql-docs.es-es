@@ -1,5 +1,5 @@
 ---
-title: Examinar el cubo | Documentos de Microsoft
+title: Examinar el cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3819946e-d3fa-4c1d-afe3-599c938b1b2e
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: ca4f0a6ee14d46ce9229eb068e3554fe29e0db62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 763fea9f0ff216fab263edb1d30b56e8ca6a630f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239865"
 ---
 # <a name="browsing-the-cube"></a>Examinar el cubo
   Una vez implementado un cubo, los datos de este pueden verse en la pestaña **Explorador** del Diseñador de cubos y los datos de dimensión pueden verse en la pestaña **Explorador** del Diseñador de dimensiones. La exploración de los datos de cubos y dimensiones es una forma de comprobar el trabajo incrementalmente. Puede comprobar que los pequeños cambios en las propiedades, las relaciones y otros objetos tienen el efecto deseado una vez que se procesa el objeto. Si bien la pestaña Explorador se usa para ver datos de cubos y dimensiones, también ofrece diversas funciones dependiendo del objeto que se está examinando.  
@@ -34,7 +34,7 @@ ms.locfileid: "36110841"
   
 1.  Cambie al **Diseñador de dimensiones** para la dimensión Product en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para ello, haga doble clic en la dimensión **Product** del nodo **Dimensiones** del Explorador de soluciones.  
   
-2.  Haga clic en el **explorador** ficha para mostrar la **todos los** miembro de la `Product Key` jerarquía de atributo. En la lección tres, definirá una jerarquía de usuario para la dimensión Product que le permitirá examinar la dimensión.  
+2.  Haga clic en el **explorador** ficha para mostrar el **todas** miembro de la `Product Key` jerarquía de atributo. En la lección tres, definirá una jerarquía de usuario para la dimensión Product que le permitirá examinar la dimensión.  
   
 3.  Cambie a **Diseñador de cubos** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para ello, haga doble clic en el cubo **Tutorial de Analysis Services** en el nodo **Cubos** del Explorador de soluciones.  
   

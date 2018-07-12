@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], creating
 - articles [SQL Server replication], defining
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dbfa449e19f77b7537232e0fc8689a47f30ea1fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dee016784a438de226877d94d7271048749a859c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170326"
 ---
 # <a name="create-a-publication"></a>Create a Publication
   En este tema se describe cómo crear una publicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -114,7 +114,7 @@ ms.locfileid: "36113345"
   
     -   Si el conjunto de resultados está vacío, cree un trabajo de Agente de registro del LOG. En el publicador, ejecute [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Especifique las credenciales de Windows de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] con las que se ejecuta el agente para **@job_name** y **@password**. Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password**. Continúe en el paso 3.  
   
-3.  En el publicador, ejecute [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique un nombre de publicación para **@publication**y, para la **@repl_freq** parámetro, especifique un valor de `snapshot` para una publicación de instantáneas o un valor de `continuous` para un publicación transaccional. Especifique cualquier otra opción de publicación. Esto define la publicación.  
+3.  En el publicador, ejecute [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique un nombre de publicación para **@publication**y para el **@repl_freq** parámetro, especifique un valor de `snapshot` para una publicación de instantáneas o un valor de `continuous` para un publicación transaccional. Especifique cualquier otra opción de publicación. Esto define la publicación.  
   
     > [!NOTE]  
     >  Los nombres de publicación no pueden incluir los caracteres siguientes:  
@@ -172,7 +172,7 @@ ms.locfileid: "36113345"
   
 4.  Para una publicación transaccional, compruebe el valor de la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> . Si esta propiedad es `true`, ya existe un trabajo del agente de lectura de registro para esta base de datos. Si esta propiedad es `false`, realice lo siguiente:  
   
-    -   Establecer el <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> y <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> o <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> campos de <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> para proporcionar las credenciales para el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] de cuenta de Windows en la que se ejecuta el agente de lector del registro.  
+    -   Establecer el <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> y <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> o <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> campos de <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> para proporcionar las credenciales para el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows cuenta con la que se ejecuta el agente de lector del registro.  
   
         > [!NOTE]  
         >  Establecer <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> no es necesario cuando se crea la publicación por un miembro de la `sysadmin` rol fijo de servidor. En este caso, el agente suplantará a la cuenta del Agente SQL Server. Para más información, consulte [Modelo de seguridad del agente de replicación](../security/replication-agent-security-model.md).  

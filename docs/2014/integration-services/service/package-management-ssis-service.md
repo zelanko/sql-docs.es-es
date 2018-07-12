@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, managing
 - packages [Integration Services], managing
@@ -27,13 +27,13 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e792b995e73ba4a964bd5076134af8c9817642ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e41b4df0064343cadf6a7da042c243191c0561d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172966"
 ---
 # <a name="package-management-ssis-service"></a>Administración de paquetes (servicio SSIS)
   La administración de paquetes implica tareas entre las que se incluyen las siguientes:  

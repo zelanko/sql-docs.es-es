@@ -1,5 +1,5 @@
 ---
-title: Prueba y validación (minería de datos) | Documentos de Microsoft
+title: Pruebas y validación (minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - comparing mining models
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 caps.latest.revision: 60
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e83f8e0ad6227444f4dbc0962a83e1aedd8a5f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3fb68f21136da8236c653aaae71c9a9e461b432
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230161"
 ---
 # <a name="testing-and-validation-data-mining"></a>Prueba y validación (minería de datos)
   La validación es el proceso de evaluar cuál sería el rendimiento de sus modelos de minería de datos con datos reales. Es importante que valide sus modelos de minería de datos entendiendo su calidad y sus características antes de implementarlos en un entorno de producción.  
@@ -90,13 +90,13 @@ ms.locfileid: "36111252"
 |Temas|Vínculos|  
 |------------|-----------|  
 |Obtenga información sobre cómo configurar un conjunto de datos de prueba mediante un asistente o mediante los comandos DMX|[Conjuntos de datos de entrenamiento y de prueba](training-and-testing-data-sets.md)|  
-|Obtenga información sobre cómo probar la distribución y la representatividad de los datos de una estructura de minería de datos|[La validación cruzada &#40;Analysis Services: minería de datos&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Obtenga información sobre los tipos de gráficos de precisión proporcionados en [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Gráfico de elevación &#40;Analysis Services: minería de datos&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de beneficios &#40;Analysis Services: minería de datos&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersión &#40;Analysis Services: minería de datos&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Aprenda a crear una matriz de clasificación, a veces denominada una matriz de confusión, para evaluar el número de verdaderos positivos, falsos positivos, verdaderos negativos y falsos negativos.|[Matriz de clasificación &#40;Analysis Services: minería de datos&#41;](classification-matrix-analysis-services-data-mining.md)|  
+|Obtenga información sobre cómo probar la distribución y la representatividad de los datos de una estructura de minería de datos|[La validación cruzada &#40;Analysis Services - minería de datos&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Obtenga información sobre los tipos de gráficos de precisión proporcionados en [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Gráfico de elevación &#40;Analysis Services - minería de datos&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de beneficios &#40;Analysis Services - minería de datos&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersión &#40;Analysis Services - minería de datos&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Aprenda a crear una matriz de clasificación, a veces denominada una matriz de confusión, para evaluar el número de verdaderos positivos, falsos positivos, verdaderos negativos y falsos negativos.|[Matriz de clasificación &#40;Analysis Services - minería de datos&#41;](classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas de minería de datos](data-mining-tools.md)   
  [Soluciones de minería de datos](data-mining-solutions.md)   
- [Pruebas y las tareas de validación y procedimientos &#40;minería de datos&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Pruebas y validación tareas y procedimientos &#40;minería de datos&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

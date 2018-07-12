@@ -1,5 +1,5 @@
 ---
-title: Crear secciones CDATA mediante SQL-cdata (SQLXML 4.0) | Documentos de Microsoft
+title: 'Creación de secciones de CDATA mediante SQL: use-cdata (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - sql:use-cdata
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b8855ec04b30f7e92176f19ee8ed816e2870fe50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: eb7e3e0acc985dce3d3783de63bea95f9de6877f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175442"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Crear secciones CDATA mediante sql:use-cdata (SQLXML 4.0)
   En XML, las secciones CDATA se usan para establecer secuencias de escape en bloques de texto que contienen caracteres que, de lo contrario, se reconocerían como caracteres de marcado.  
   
- Una base de datos en Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a veces puede contener caracteres que se tratan como caracteres de marcado por el analizador XML; están entre corchetes angulares, por ejemplo, (\< y >), el símbolo menor o igual que (< =) y el "y" comercial (&) se se tratan como caracteres de marcado. Sin embargo, puede ajustar este tipo de caracteres especiales en una sección CDATA para evitar que se traten como caracteres de marcado. El analizador XML trata el texto de la sección CDATA como texto simple.  
+ Una base de datos en Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a veces pueden contener caracteres que se tratan como caracteres de marcado por el analizador XML; los corchetes angulares, por ejemplo, (\< y >), el símbolo menor o igual que (< =) y el "y" comercial (&) son se tratan como caracteres de marcado. Sin embargo, puede ajustar este tipo de caracteres especiales en una sección CDATA para evitar que se traten como caracteres de marcado. El analizador XML trata el texto de la sección CDATA como texto simple.  
   
  La anotación `sql:use-cdata` se usa para especificar que los datos que devuelve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se deberían ajustar en una sección CDATA (es decir, indica si el valor de una columna especificada a través de `sql:field` se debería agregar en una sección CDATA). La anotación `sql:use-cdata` únicamente se puede especificar en los elementos que asignan a una columna de base de datos.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36113545"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. Especificar sql:use-cdata en un elemento  
- En el siguiente esquema `sql:use-cdata` se establece en 1 (verdadero) para el  **\<AddressLine1 >** dentro de la  **\<dirección >** elemento. Como resultado, los datos se devuelven en una sección CDATA.  
+ En el siguiente esquema, `sql:use-cdata` está establecido en 1 (True) para el  **\<AddressLine1 >** dentro de la  **\<dirección >** elemento. Como resultado, los datos se devuelven en una sección CDATA.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

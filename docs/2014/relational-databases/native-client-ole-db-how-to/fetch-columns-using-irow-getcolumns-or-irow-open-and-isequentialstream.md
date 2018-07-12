@@ -1,13 +1,11 @@
 ---
-title: 'Capturar columnas mediante IRow:: GetColumns (o IRow:: Open) e ISequentialStream | Documentos de Microsoft'
+title: 'Capturar columnas mediante IRow:: GetColumns (o IRow:: Open) e ISequentialStream | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - GetColumns method
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 67c7206bb030f1e0e2390013657f97eeb8278aaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c4fef8e98871fe65e8f885e878d124468321ba9a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106089"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420754"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Capturar columnas mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
   Los datos grandes pueden enlazarse o recuperarse mediante la interfaz `ISequentialStream`. En el caso de las columnas enlazadas, la marca de estado DBSTATUS_S_TRUNCATED indica que se truncan los datos.  
@@ -42,9 +40,9 @@ ms.locfileid: "36106089"
   
     -   `IRow::Open()` puede utilizarse para abrir una interfaz `ISequentialStream` en la fila. Especifique DBGUID_STREAM para indicar que la columna contiene un flujo de datos binarios (`IStream` o `ISequentialStream` puede usarse a para leer los datos de la columna).  
   
-    -   Si `IRow::GetColumns()` se utiliza, el **pData** elemento de la estructura DBCOLUMNACCESS se establece para que apunte a un objeto de secuencia.  
+    -   Si `IRow::GetColumns()` se usa, la **pData** elemento de la estructura DBCOLUMNACCESS se establece para que apunte a un objeto de secuencia.  
   
-4.  Use **ISequentialStream::Read()** repetidamente para leer el número especificado de bytes en el búfer del consumidor.  
+4.  Use **ISequentialStream::Read()** repetidamente para leer el número de bytes especificado en el búfer del consumidor.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo capturar una sola fila con IRow. En este ejemplo se recupera una columna a la vez de la fila. En este ejemplo se ilustra el uso de IRow::Open() y de IRow::GetColumns(). Para leer los datos de la columna, en el ejemplo se usa ISequentialStream::Read.  
@@ -53,7 +51,7 @@ ms.locfileid: "36106089"
   
  La primera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crea una tabla usada por el ejemplo.  
   
- Compile con ole32.lib oleaut32.lib y ejecute el segundo listado de código (C++). Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\\name", donde el nombre es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
+ Compile con ole32.lib oleaut32.lib y ejecute la segunda lista de código (C++). Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\\name", donde nombre es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
  La tercera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) elimina la tabla usada por el ejemplo.  
   

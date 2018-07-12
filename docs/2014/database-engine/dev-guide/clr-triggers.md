@@ -1,5 +1,5 @@
 ---
-title: Los desencadenadores CLR | Documentos de Microsoft
+title: Los desencadenadores CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -27,18 +27,18 @@ helpviewer_keywords:
 - transactions [CLR integration]
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 caps.latest.revision: 67
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0f2f0d4d3c7dbe6ed46e169645de057492d55c42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c6702a9a3851e7ce41862f8f314d9aebdb7a5745
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160996"
 ---
 # <a name="clr-triggers"></a>Desencadenadores CLR
-  Debido a la integración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), es posible usar cualquier lenguaje [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para crear desencadenadores CLR. En esta sección se incluye información específica acerca de los desencadenadores implementados con la integración CLR. Para obtener una explicación completa de los desencadenadores, vea [desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md).  
+  Debido a la integración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), es posible usar cualquier lenguaje [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para crear desencadenadores CLR. En esta sección se incluye información específica acerca de los desencadenadores implementados con la integración CLR. Para obtener una explicación completa de los desencadenadores, consulte [desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md).  
   
 ## <a name="what-are-triggers"></a>Qué son los desencadenadores  
  Un desencadenador es un tipo especial de procedimiento almacenado que se ejecuta automáticamente cuando se produce un evento de lenguaje. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye dos tipos de desencadenadores: desencadenadores del lenguaje de manipulación de datos (DML) y desencadenadores del lenguaje de definición de datos (DDL). Los desencadenadores DML pueden usarse cuando las instrucciones `INSERT`, `UPDATE` o `DELETE` modifican los datos de una tabla o vista especificada. Los desencadenadores DDL activan procedimientos almacenados en respuesta a una serie de instrucciones DDL, principalmente instrucciones que comienzan por `CREATE`, `ALTER` y `DROP`. Los desencadenadores DDL pueden usarse en tareas administrativas, como la auditoría y regulación de operaciones de base de datos.  
@@ -76,10 +76,10 @@ ms.locfileid: "36112793"
   
 -   En el caso de los desencadenadores DDL, la lista de valores posibles de TriggerAction es bastante más larga. Para obtener más información, vea el tema relativo a la enumeración TriggerAction en el SDK de .NET Framework.  
   
-### <a name="using-the-inserted-and-deleted-tables"></a>Use las tablas Inserted y Deleted  
- Instrucciones de desencadenadores DML se usan dos tablas especiales: la **insertar** tabla y el **eliminado** tabla. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea y administra automáticamente ambas tablas. Puede usar estas tablas temporales para probar los efectos de determinadas modificaciones en los datos y para establecer condiciones para las acciones de los desencadenadores DML; sin embargo, no es posible modificar los datos de las tablas directamente.  
+### <a name="using-the-inserted-and-deleted-tables"></a>Uso de las tablas insertadas y eliminadas  
+ Se usan dos tablas especiales en las instrucciones de desencadenadores DML: el **insertado** tabla y el **eliminado** tabla. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea y administra automáticamente ambas tablas. Puede usar estas tablas temporales para probar los efectos de determinadas modificaciones en los datos y para establecer condiciones para las acciones de los desencadenadores DML; sin embargo, no es posible modificar los datos de las tablas directamente.  
   
- Los desencadenadores CLR pueden tener acceso a la **insertar** y **eliminado** tablas a través del proveedor en proceso CLR. Para ello, se obtiene un objeto `SqlCommand` del objeto SqlContext. Por ejemplo:  
+ Los desencadenadores CLR pueden tener acceso a la **insertado** y **eliminado** tablas a través del proveedor en proceso CLR. Para ello, se obtiene un objeto `SqlCommand` del objeto SqlContext. Por ejemplo:  
   
  C#  
   
@@ -235,7 +235,7 @@ End Class
  Para este ejemplo, considere un escenario donde se permita que el usuario elija el identificador que desee, pero usted desea saber qué usuarios en concreto han especificado una dirección de correo electrónico como identificador. El siguiente desencadenador detectará esa información y la registrará en una tabla de auditoría.  
   
 > [!NOTE]  
->  El envío de resultados y mensajes a través del objeto `SqlPipe` se muestra aquí únicamente como ejemplo y, en general, no se aconseja para el código de producción. Otros datos devueltos pueden producirse errores de aplicación inesperados y conducir a  
+>  El envío de resultados y mensajes a través del objeto `SqlPipe` se muestra aquí únicamente como ejemplo y, en general, no se aconseja para el código de producción. Otros datos devueltos pueden ser errores inesperados y conducir a aplicaciones  
   
 ```csharp  
 using System;  

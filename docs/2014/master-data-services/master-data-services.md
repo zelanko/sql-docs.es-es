@@ -1,5 +1,5 @@
 ---
-title: Master Data Services | Documentos de Microsoft
+title: Master Data Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 caps.latest.revision: 12
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ab4e08f960fa7ef72daad9ff5c751cdc17bbec2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce167bf5e95e67282aa37b002c32ccaa816c3be1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156486"
 ---
 # <a name="master-data-services"></a>Master Data Services
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) es la solución de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para la administración de datos maestros. La administración de datos maestros (MDM) describe los esfuerzos que realiza una organización para detectar y definir listas no transaccionales de datos con el objetivo de compilar listas maestras que se puedan mantener. Un proyecto de MDM generalmente incluye la evaluación y reestructuración de los procesos corporativos internos junto con la implementación de tecnología MDM. El resultado de una solución MDM correcta es la existencia de datos confiables y centralizados que se pueden analizar, lo que permite que las decisiones corporativas sean más inteligentes.  
@@ -40,10 +40,10 @@ ms.locfileid: "36196487"
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], que se usa para administrar datos y crear nuevas entidades y atributos.  
   
- Para obtener un resumen de los recursos MDS, consulte el [Portal de servicios de datos de SQL Server Master](http://go.microsoft.com/fwlink/?LinkID=214272).  
+ Para obtener un resumen de los recursos MDS, vea el [Portal de SQL Server Master Data Services](http://go.microsoft.com/fwlink/?LinkID=214272).  
   
 |||  
 |-|-|  
-|**Examinar contenido por área**<br /> ![Icono de carpeta de archivos pequeños](../../2014/integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [Introducción a Master Data Services](master-data-services-overview-mds.md)<br /><br /> ![Icono de carpeta de archivos pequeños](../../2014/integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [Master Data Services características y tareas](../../2014/master-data-services/master-data-services-features-and-tasks.md)<br /><br /> ![Icono de carpeta de archivos pequeños](../../2014/integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [referencia técnica (Master Data Services)](technical-reference-master-data-services.md)<br /><br /> ![Icono de carpeta de archivos pequeños](../../2014/integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [Guía del desarrollador (Master Data Services)](develop/master-data-services-developer-documentation.md)||  
+|**Examinar contenido por área**<br /> ![Icono carpeta de archivos pequeños](../../2014/integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [Introducción a Master Data Services](master-data-services-overview-mds.md)<br /><br /> ![Icono carpeta de archivos pequeños](../../2014/integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [Master Data Services, las características y tareas](../../2014/master-data-services/master-data-services-features-and-tasks.md)<br /><br /> ![Icono carpeta de archivos pequeños](../../2014/integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [referencia técnica (Master Data Services)](technical-reference-master-data-services.md)<br /><br /> ![Icono carpeta de archivos pequeños](../../2014/integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [Guía del desarrollador (Master Data Services)](develop/master-data-services-developer-documentation.md)||  
   
   

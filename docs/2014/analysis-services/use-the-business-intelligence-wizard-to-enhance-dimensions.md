@@ -1,5 +1,5 @@
 ---
-title: Usar el Asistente de Business Intelligence para mejorar dimensiones | Documentos de Microsoft
+title: Usar el Asistente de Business Intelligence para mejorar dimensiones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services]
 ms.assetid: 12d995d1-75ca-4890-bf4b-a2656910b8d0
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7256a297afcd711341a5dd567faf782bac562af3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e898e768379e96c45020a6b64f4fc090b6afcb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277581"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>Usar el Asistente de Business Intelligence para mejorar dimensiones
   Además de modificar las propiedades de las dimensiones y los objetos de dimensión directamente, también puede usar el Asistente de Business Intelligence para configurar y mejorar dimensiones.  

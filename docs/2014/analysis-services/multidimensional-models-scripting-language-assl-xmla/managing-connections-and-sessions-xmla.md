@@ -1,5 +1,5 @@
 ---
-title: Administrar conexiones y sesiones (XMLA) | Documentos de Microsoft
+title: Administrar conexiones y sesiones (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sessions [XML for Analysis]
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 39051880aa27e6f81cce4ca3a41e1af203c1b257
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16efaf9be9db55935cc7b6a3df0349f81d170b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192521"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Administrar conexiones y sesiones (XMLA)
-  *Disponibilidad de estados* es una condición durante el cual el servidor conserva la identidad y el contexto de un cliente entre las llamadas de método. *Dinamismo* es una condición durante el cual el servidor no recuerda la identidad y el contexto de un cliente al finalizar una llamada al método.  
+  *Disponibilidad de estados* es una condición durante el cual el servidor conserva la identidad y el contexto de un cliente entre las llamadas de método. *Dinamismo* es una condición durante el cual el servidor no recuerda la identidad y el contexto de un cliente después de que finalice una llamada al método.  
   
- Para proporcionar disponibilidad de Estados, XML for Analysis (XMLA) admite *sesiones* que permiten una serie de instrucciones que se va a realizarse conjuntamente. Un ejemplo de este tipo de serie de instrucciones sería la creación de un miembro calculado que se vaya a utilizar en consultas posteriores.  
+ Para proporcionar disponibilidad de Estados, XML for Analysis (XMLA) admite *sesiones* que permiten una serie de instrucciones que se deben realizar juntos. Un ejemplo de este tipo de serie de instrucciones sería la creación de un miembro calculado que se vaya a utilizar en consultas posteriores.  
   
  En general, en XMLA las sesiones se ajustan al comportamiento siguiente descrito por la especificación de OLE DB 2.6:  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36113061"
     </SOAP-ENV:Header>  
     ```  
   
-4.  Cuando la sesión ha terminado, la \<EndSession > etiqueta se utiliza, que contiene el valor de Id. de sesión relacionado.  
+4.  Una vez completada la sesión, el \<EndSession > etiqueta a la que se usa, que contiene el valor de Id. de sesión relacionado.  
   
     ```  
     <SOAP-ENV:Header>  

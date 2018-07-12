@@ -1,5 +1,5 @@
 ---
-title: Agregar o quitar un proyecto de Integration Services en una solución | Documentos de Microsoft
+title: Agregar o quitar un proyecto de Integration Services en una solución | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding projects
 - Integration Services projects, adding
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - projects [Integration Services], adding
 ms.assetid: f01f6475-b63c-41dc-82ac-b62162b3adf7
 caps.latest.revision: 47
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 20a8d1c2de2f71a8095145a413c2594467bd2e4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19ef4acffc6fabb5d69effe0f932b7ea45f52275
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211705"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>Agregar o quitar un proyecto de Integration Services en una solución
   Los procedimientos siguientes describen cómo agregar o quitar un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en una solución.  
@@ -74,6 +74,6 @@ ms.locfileid: "36112966"
   
 ## <a name="see-also"></a>Vea también  
  [Servicios de integración &#40;SSIS&#41; proyectos](integration-services-ssis-projects-and-solutions.md)   
- [Crear un nuevo proyecto de Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
+ [Crear un proyecto de Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
   
   

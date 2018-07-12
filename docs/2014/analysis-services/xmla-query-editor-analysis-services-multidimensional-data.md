@@ -1,5 +1,5 @@
 ---
-title: Editor de consultas XMLA (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Editor de consultas XMLA (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.editor.xmla.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Query Editor [XMLA]
 ms.assetid: 14623019-7839-4038-9d12-2f8953d2ec04
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b11ee4322f25377f3307c0767e839b6e69e09bef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 221ea55990b98a9723928f52cd5432f13760cc91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211435"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>Editor de consultas XMLA (Analysis Services - Datos multidimensionales)
   Utilice el Editor de consultas XMLA para diseñar y ejecutar instrucciones y scripts escritos en lenguaje de expresiones multidimensionales (XMLA).  
@@ -60,13 +60,13 @@ ms.locfileid: "36114117"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Ventana editor de consultas**|Escriba las instrucciones y scripts XMLA que desee ejecutar con el Editor de consultas XMLA.<br /><br /> El menú contextual del editor de consultas proporciona las siguientes opciones:<br /><br /> **Cortar**: copia la selección actual en el Portapapeles y quita la selección de la ventana del editor de consultas.<br />**Copiar**: copia la selección actual en el Portapapeles.<br />**Pegar**: pega el contenido del Portapapeles en la selección actual.<br />**Conectar**: abre el cuadro de diálogo **Conectar con el servidor** para establecer una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br />**Desconectar**: desconecta el editor de consultas actual de un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia.<br />**Desconectar todas las consultas**: desconecta todos los editores de consultas abiertos.<br />**Cambiar conexión**: abre el **conectar al servidor** cuadro de diálogo para establecer una conexión a otro [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia.<br />**Abrir servidor en el Explorador de objetos**: abre el [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia a la que está conectado el editor de consultas actual en **Explorador de objetos**.<br />**Ejecutar**: ejecuta el código seleccionado o, si no se ha seleccionado ningún código, ejecuta todo el código en el editor de consultas actual.<br />**Ventana propiedades**: muestra la **propiedades** ventana en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para la ventana de consulta actual.<br />**Opciones de consulta**: muestra la **opciones de consulta** cuadro de diálogo.|  
+|**Ventana editor de consultas**|Escriba las instrucciones y scripts XMLA que desee ejecutar con el Editor de consultas XMLA.<br /><br /> El menú contextual del editor de consultas proporciona las siguientes opciones:<br /><br /> **Cortar**: copia la selección actual en el Portapapeles y quita la selección de la ventana del editor de consultas.<br />**Copiar**: copia la selección actual en el Portapapeles.<br />**Pegar**: pega el contenido del Portapapeles en la selección actual.<br />**Conectar**: abre el cuadro de diálogo **Conectar con el servidor** para establecer una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br />**Desconectar**: desconecta el editor de consultas actual de un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia.<br />**Desconectar todas las consultas**: desconecta todos los editores de consultas abiertos.<br />**Cambiar conexión**: abre el **conectar al servidor** cuadro de diálogo para establecer una conexión a otro [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia.<br />**Abrir servidor en el Explorador de objetos**: abre el [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia al que está conectado el editor de consultas actual en **Explorador de objetos**.<br />**Ejecutar**: ejecuta el código seleccionado o, si se selecciona ningún código, ejecuta todo el código en el editor de consultas actual.<br />**Ventana propiedades**: muestra el **propiedades** ventana en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para la ventana de consulta actual.<br />**Opciones de consulta**: muestra el **opciones de consulta** cuadro de diálogo.|  
 |**Ventana de resultados**|Muestra los resultados de una instrucción o script XMLA en formato de texto.|  
 |**Ventana de mensajes**|Muestra información sobre cómo se ejecutan una instrucción o script XMLA. Por ejemplo, esta ventana muestra todos los errores encontrados durante la ejecución o el número de celdas recuperadas tras la ejecución.|  
   
 ## <a name="see-also"></a>Vea también  
  [Editor de consultas MDX &#40;Analysis Services - datos multidimensionales&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
- [Editor de consultas DMX &#40;Analysis Services: minería de datos&#41;](dmx-query-editor-analysis-services-data-mining.md)   
+ [Editor de consultas DMX &#40;Analysis Services - minería de datos&#41;](dmx-query-editor-analysis-services-data-mining.md)   
  [Editores de consultas y texto &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   
  [Métodos abreviados de teclado de SQL Server Management Studio](../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
   

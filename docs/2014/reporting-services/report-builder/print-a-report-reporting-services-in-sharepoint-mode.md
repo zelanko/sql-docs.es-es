@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - printing reports, SharePoint Web application
 - printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 caps.latest.revision: 10
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 21360969e4a653379b852af3ed00e6c67a8db8b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5707e43d3cc57a3015be1469591899ab7d072489
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175197"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Imprimir un informe (Reporting Services en el modo de SharePoint)
   Para un servidor de informes que se ejecuta en el modo integrado de SharePoint, existen tres formas de imprimir un informe desde una aplicación web de SharePoint:  

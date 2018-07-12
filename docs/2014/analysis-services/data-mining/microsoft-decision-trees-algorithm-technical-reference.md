@@ -1,5 +1,5 @@
 ---
-title: Referencia técnica del algoritmo de árboles de decisión de Microsoft | Documentos de Microsoft
+title: Referencia técnica del algoritmo de árboles de decisión de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
 - SPLIT_METHOD parameter
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edb2b9790ac2294f53c26b65e9897064f4050083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a73db73c49f50c49fdfd36d754f8d70ce651547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183412"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Referencia técnica del algoritmo de árboles de decisión de Microsoft
   El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo híbrido que incorpora distintos métodos para crear un árbol, y admite varias tareas de análisis, incluyendo la regresión, la clasificación y la asociación. El algoritmo de árboles de decisión de Microsoft admite el modelado de los atributos discretos y continuos.  
@@ -208,6 +208,6 @@ ms.locfileid: "36112860"
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm.md)   
  [Ejemplos de consultas de modelo de árboles de decisión](decision-trees-model-query-examples.md)   
- [Contenido para los modelos de árbol de decisión del modelo de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Contenido del modelo para los modelos de árboles de decisión de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

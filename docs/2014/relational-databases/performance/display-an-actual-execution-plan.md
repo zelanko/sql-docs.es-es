@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying execution plans
 - actual execution plans
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - execution plans [SQL Server], displaying
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 71c3239d474b6252ff36bc10fe33eb20024091b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9e50dab668154b2787ecb71fa2deeaf5fee7994e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240655"
 ---
 # <a name="display-an-actual-execution-plan"></a>Mostrar un plan de ejecución real
   En este tema se describe cómo generar planes de ejecución gráficos reales mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando se generan planes de ejecución reales, se ejecutan los lotes o consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] . El plan de ejecución que se ha generado muestra el plan de ejecución de consultas real que utiliza el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para ejecutar las consultas.  

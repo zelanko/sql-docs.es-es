@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_STORAGE_TABLES | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_STORAGE_TABLES | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,21 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 13df6f10-8efe-4fe9-83a6-96d108809ed1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae51d176ecef04060c58be629b72fe867cd51960
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97f5e645098da53c720d37814b4dc4dbfe6f1c76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169556"
 ---
 # <a name="discoverstoragetables-rowset"></a>DISCOVER_STORAGE_TABLES, conjunto de filas
   Permite al cliente determinar las tablas incluidas en una base de datos de Analysis Services que se ejecuta en modo Tabular o SharePoint.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_STORAGE_TABLES` filas contiene las columnas siguientes.  
+ El `DISCOVER_STORAGE_TABLES` conjunto de filas contiene las siguientes columnas.  
   
 |**Nombre de columna**|**Indicador de tipo**|**Longitud**|**Descripción**|  
 |---------------------|------------------------|----------------|---------------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "36112777"
 |`RIVIOLATION_COUNT`|`DBTYPE_UI4`||Número de filas con infracciones de integridad referencial.|  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DISCOVER_STORAGE_TABLES` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DISCOVER_STORAGE_TABLES` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |**Nombre de columna**|**Indicador de tipo**|**Estado de restricción**|  
 |---------------------|------------------------|---------------------------|  

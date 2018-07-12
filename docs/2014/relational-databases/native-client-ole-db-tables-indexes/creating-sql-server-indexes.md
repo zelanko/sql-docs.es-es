@@ -1,13 +1,11 @@
 ---
-title: Creación de índices de SQL Server | Documentos de Microsoft
+title: Creación de índices de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,48 +16,48 @@ helpviewer_keywords:
 - adding indexes
 ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa0d11ced42d58b7c1b75c2aef7755cbf64b7b69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d2f7d53307582dbacab0d4231a7f0a13710bd84a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105609"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425404"
 ---
 # <a name="creating-sql-server-indexes"></a>Crear índices de SQL Server
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client expone la **IIndexDefinition:: CreateIndex** función, lo que permite a los consumidores definir índices nuevos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tablas.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client crea los índices de tabla como índices o restricciones. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da privilegio de creación de restricciones al propietario de la tabla, el propietario de la base de datos y los miembros de ciertos roles administrativos. De forma predeterminada, solamente el propietario de la tabla puede crear un índice en una tabla. Por lo tanto, el éxito o fracaso de **CreateIndex** depende no solo de derechos de acceso del usuario de la aplicación sino también en el tipo de índice creado.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client crea los índices de tabla como índices o restricciones. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da privilegio de creación de restricciones al propietario de la tabla, el propietario de la base de datos y los miembros de ciertos roles administrativos. De forma predeterminada, solamente el propietario de la tabla puede crear un índice en una tabla. Por lo tanto, el éxito o fracaso de **CreateIndex** depende no solo los derechos de acceso de usuarios de la aplicación, sino también en el tipo de índice creado.  
   
  Los consumidores especifican el nombre de tabla como una cadena de caracteres Unicode en el *pwszName* miembro de la *uName* union en la *pTableID* parámetro. El *eKind* miembro de *pTableID* debe ser DBKIND_NAME.  
   
- El *pIndexID* parámetro puede ser NULL, si es así, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client crea un nombre único para el índice. El consumidor puede capturar el nombre del índice mediante la especificación de un puntero válido a un DBID en el *ppIndexID* parámetro.  
+ El *pIndexID* parámetro puede ser NULL, y si es así, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client crea un nombre único para el índice. El consumidor puede capturar el nombre del índice mediante la especificación de un puntero válido a un DBID en el *ppIndexID* parámetro.  
   
  El consumidor puede especificar el nombre del índice como una cadena de caracteres Unicode en el *pwszName* miembro de la *uName* union de la *pIndexID* parámetro. El *eKind* miembro de *pIndexID* debe ser DBKIND_NAME.  
   
  El consumidor especifica la columna o columnas que participan en el índice por nombre. Para cada estructura DBINDEXCOLUMNDESC utilizada en **CreateIndex**, *eKind* miembro de la *pColumnID* debe ser DBKIND_NAME. El nombre de la columna se especifica como una cadena de caracteres Unicode en el *pwszName* miembro de la *uName* union en la *pColumnID*.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admiten el orden ascendente de valores en el índice. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client devuelve E_INVALIDARG si el consumidor especifica DBINDEX_COL_ORDER_DESC en cualquier estructura DBINDEXCOLUMNDESC.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibilidad ascendente por los valores del índice. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client devuelve E_INVALIDARG si el consumidor especifica DBINDEX_COL_ORDER_DESC en cualquier estructura DBINDEXCOLUMNDESC.  
   
  **CreateIndex** interpreta las propiedades del índice como sigue.  
   
 |Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
-|DBPROP_INDEX_AUTOUPDATE|L/E lectura/escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no admite esta propiedad. Intenta establecer la propiedad **CreateIndex** hacer que un valor devuelto de DB_S_ERRORSOCCURRED. El *dwStatus* miembro de la estructura de la propiedad indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_CLUSTERED|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: controla la agrupación en clústeres de índices.<br /><br /> VARIANT_TRUE: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client intenta crear un índice agrupado en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite a lo sumo un índice clúster en cualquier tabla.<br /><br /> VARIANT_FALSE: La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client intenta crear un índice no agrupado en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla.|  
+|DBPROP_INDEX_AUTOUPDATE|L/E lectura/escritura<br /><br /> Predeterminado: ninguno<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no admite esta propiedad. Intenta establecer la propiedad **CreateIndex** hacer que un valor devuelto de DB_S_ERRORSOCCURRED. El *dwStatus* miembro de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_CLUSTERED|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: controla la agrupación en clústeres de índices.<br /><br /> VARIANT_TRUE: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client intenta crear un índice agrupado en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite a lo sumo un índice clúster en cualquier tabla.<br /><br /> VARIANT_FALSE: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client intenta crear un índice no agrupado en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla.|  
 |DBPROP_INDEX_FILLFACTOR|L/E lectura/escritura<br /><br /> Valor predeterminado: 0<br /><br /> Descripción: especifica el porcentaje de una página de índice utilizado para el almacenamiento. Para obtener más información, consulte [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql).<br /><br /> El tipo del variant es VT_I4. El valor debe ser mayor o igual que 1 y menor o igual que 100.|  
-|DBPROP_INDEX_INITIALIZE|L/E lectura/escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no admite esta propiedad. Intenta establecer la propiedad **CreateIndex** hacer que un valor devuelto de DB_S_ERRORSOCCURRED. El *dwStatus* miembro de la estructura de la propiedad indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_NULLCOLLATION|L/E lectura/escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no admite esta propiedad. Intenta establecer la propiedad **CreateIndex** hacer que un valor devuelto de DB_S_ERRORSOCCURRED. El *dwStatus* miembro de la estructura de la propiedad indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_NULLS|L/E lectura/escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no admite esta propiedad. Intenta establecer la propiedad **CreateIndex** hacer que un valor devuelto de DB_S_ERRORSOCCURRED. El *dwStatus* miembro de la estructura de la propiedad indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_INITIALIZE|L/E lectura/escritura<br /><br /> Predeterminado: ninguno<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no admite esta propiedad. Intenta establecer la propiedad **CreateIndex** hacer que un valor devuelto de DB_S_ERRORSOCCURRED. El *dwStatus* miembro de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_NULLCOLLATION|L/E lectura/escritura<br /><br /> Predeterminado: ninguno<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no admite esta propiedad. Intenta establecer la propiedad **CreateIndex** hacer que un valor devuelto de DB_S_ERRORSOCCURRED. El *dwStatus* miembro de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_NULLS|L/E lectura/escritura<br /><br /> Predeterminado: ninguno<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no admite esta propiedad. Intenta establecer la propiedad **CreateIndex** hacer que un valor devuelto de DB_S_ERRORSOCCURRED. El *dwStatus* miembro de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
 |DBPROP_INDEX_PRIMARYKEY|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE. Descripción: crea el índice como una integridad referencial, restricción PRIMARY KEY.<br /><br /> VARIANT_TRUE: el índice se crea para admitir la restricción PRIMARY KEY de la tabla. Las columnas no deben admitir valores NULL.<br /><br /> VARIANT_FALSE: el índice no se utiliza como una restricción PRIMARY KEY para los valores de fila de la tabla.|  
-|DBPROP_INDEX_SORTBOOKMARKS|L/E lectura/escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no admite esta propiedad. Intenta establecer la propiedad **CreateIndex** hacer que un valor devuelto de DB_S_ERRORSOCCURRED. El *dwStatus* miembro de la estructura de la propiedad indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_TEMPINDEX|L/E lectura/escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no admite esta propiedad. Intenta establecer la propiedad **CreateIndex** hacer que un valor devuelto de DB_S_ERRORSOCCURRED. El *dwStatus* miembro de la estructura de la propiedad indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_TYPE|L/E lectura/escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no admite esta propiedad. Intenta establecer la propiedad **CreateIndex** hacer que un valor devuelto de DB_S_ERRORSOCCURRED. El *dwStatus* miembro de la estructura de la propiedad indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_SORTBOOKMARKS|L/E lectura/escritura<br /><br /> Predeterminado: ninguno<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no admite esta propiedad. Intenta establecer la propiedad **CreateIndex** hacer que un valor devuelto de DB_S_ERRORSOCCURRED. El *dwStatus* miembro de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_TEMPINDEX|L/E lectura/escritura<br /><br /> Predeterminado: ninguno<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no admite esta propiedad. Intenta establecer la propiedad **CreateIndex** hacer que un valor devuelto de DB_S_ERRORSOCCURRED. El *dwStatus* miembro de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_TYPE|L/E lectura/escritura<br /><br /> Predeterminado: ninguno<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no admite esta propiedad. Intenta establecer la propiedad **CreateIndex** hacer que un valor devuelto de DB_S_ERRORSOCCURRED. El *dwStatus* miembro de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
 |DBPROP_INDEX_UNIQUE|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: crea el índice como una restricción UNIQUE en la columna o columnas participantes.<br /><br /> VARIANT_TRUE: el índice se utiliza para restringir de forma única los valores de fila de la tabla.<br /><br /> VARIANT_FALSE: el índice no restringe de forma exclusiva los valores de fila.|  
   
- En la propiedad específica del proveedor establezca DBPROPSET_SQLSERVERINDEX, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client define la siguiente propiedad de información de origen de datos.  
+ En la propiedad específica del proveedor establezca DBPROPSET_SQLSERVERINDEX, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client define las siguientes propiedades de información de origen de datos.  
   
 |Id. de propiedad|Descripción|  
 |-----------------|-----------------|  

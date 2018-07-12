@@ -1,28 +1,27 @@
 ---
-title: Reporting Services con grupos de disponibilidad AlwaysOn (SQL Server) | Documentos de Microsoft
+title: Reporting Services con grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 caps.latest.revision: 15
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: ec7c724049ad6ab85b72f2dee44ebcad0bf5ed07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fb5a36175e735393e079cdf7b611a11d3d50a834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153126"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services con grupos de disponibilidad AlwaysOn (SQL Server)
   Este tema contiene información acerca de la configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para que funcione con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Los tres escenarios para usar [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] son las bases de datos para orígenes de datos de informes, las bases de datos del servidor de informes y el diseñador de informes. La funcionalidad admitida y la configuración requerida son diferentes para los tres escenarios.  
@@ -58,7 +57,7 @@ ms.locfileid: "36113668"
   
  La cadena de conexión también puede contener nuevas propiedades de conexión AlwaysOn que configuren las solicitudes de consulta de informes para usar la réplica secundaria para los informes de solo lectura. El uso de réplicas secundarias para las solicitudes de notificación reducirá la carga en una réplica principal de lectura-escritura. La ilustración siguiente es un ejemplo de una configuración AG de tres réplicas en la que las cadenas de conexión del origen de datos [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se han configurado con ApplicationIntent=ReadOnly. En este ejemplo las solicitudes de consulta de informe se envían a una réplica secundaria y no a la réplica principal.  
   
- ![Origen de datos de SSRS utilizando grupos AG](../../media/rs-alwayson-basic.gif "origen de datos de SSRS utilizando grupos AG")  
+ ![Origen de datos SSRS utilizando grupos AG](../../media/rs-alwayson-basic.gif "origen de datos SSRS utilizando grupos AG")  
   
  El siguiente es un ejemplo de cadena de conexión en el que [AvailabilityGroupListenerName] es el **nombre DNS del agente de escucha** que se configuró cuando las réplicas se crearon:  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], running
 - scripts [SQL Server], traces
 ms.assetid: 6b0e2519-998d-40d5-b8ba-5e6a773f91a6
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbddb6363999585403f47bc1660bf2b1a26b4b04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 22c6b4b14d1d22dca9e981b1405aed11e432c159
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210425"
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>Crear un script de Transact-SQL para ejecutar un seguimiento (SQL Server Profiler)
   En este tema se describe cómo crear un script de Transact-SQL a partir de un archivo o una tabla de seguimiento existente mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

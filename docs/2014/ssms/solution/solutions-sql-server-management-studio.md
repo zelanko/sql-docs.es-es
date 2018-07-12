@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], solutions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0fb266037f7fcbca5328a0e14287f41662af5903
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 763b1976adcc9c2069c316cf20ca1ea3b25c2dc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155596"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Soluciones (SQL Server Management Studio)
   Una solución de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es una colección de uno o más proyectos relacionados. Los proyectos son contenedores que los desarrolladores de software usan para organizar los archivos relacionados, como conjuntos de scripts de uso común.  

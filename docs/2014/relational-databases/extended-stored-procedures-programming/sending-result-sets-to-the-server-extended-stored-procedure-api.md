@@ -1,5 +1,5 @@
 ---
-title: Enviar conjuntos de resultados en el servidor (API de procedimiento almacenado extendido) | Documentos de Microsoft
+title: Enviar conjuntos de resultados en el servidor (API de procedimiento almacenado extendido) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - result sets [SQL Server], extended stored procedures
 ms.assetid: 9d54673d-ea9d-4ac6-825a-f216ad8b0e34
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 090f0030063abfc0246b816d4143468eb7e4e52f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 590565f15ac9d53b7209fa6808c4c24baeee6344
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182252"
 ---
 # <a name="sending-result-sets-to-the-server-extended-stored-procedure-api"></a>Enviar conjuntos de resultados al servidor (API de procedimiento almacenado extendido)
     
@@ -34,9 +34,9 @@ ms.locfileid: "36114048"
   
 -   El **srv_sendmsg** función se puede llamar en cualquier orden antes o después de han enviado todas las filas (si existe) con **srv_sendrow**. Todos los mensajes se deben enviar al cliente antes de enviar el estado de finalización con **srv_senddone**.  
   
--   Se llama a la función **srv_sendrow** una vez por cada fila enviada al cliente. Todas las filas se deben enviar al cliente antes de los mensajes, los valores de estado o estado de finalización se envía con **srv_sendmsg**, **srv_status** argumento de **srv_pfield**, o **srv_senddone**.  
+-   Se llama a la función **srv_sendrow** una vez por cada fila enviada al cliente. Todas las filas se deben enviar al cliente antes de cualquier mensaje, el valor de estado o estado de finalización se envía con **srv_sendmsg**, **srv_status** argumento de **srv_pfield**, o **srv_senddone**.  
   
--   Envío de una fila que no se ha definido con todas sus columnas **srv_describe** hace que la aplicación genera un mensaje de error informativo y devuelva FAIL al cliente. En este caso, la fila no se envía.  
+-   Envío de una fila que no se ha definido con todas sus columnas **srv_describe** hace que la aplicación provoque un mensaje de error informativo y devuelva FAIL al cliente. En este caso, la fila no se envía.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear procedimientos almacenados extendidos](creating-extended-stored-procedures.md)  

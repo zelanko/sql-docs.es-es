@@ -1,5 +1,5 @@
 ---
-title: Elemento TableNotifications (ASSL) | Documentos de Microsoft
+title: Elemento TableNotifications (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - TableNotifications element
 ms.assetid: 4cecdfea-0d4d-4bd6-bbb3-4d0d2284c665
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 87a1328bf4e7e302b16fa4d0a45fc105ce820d54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c146f223d0819c8570b051d77d5764ae384d1b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163407"
 ---
 # <a name="tablenotifications-element-assl"></a>Elemento TableNotifications (ASSL)
-  Contiene la colección de [TableNotification](../objects/tablenotification-element-assl.md) elementos que proporcionan información para la [ProactiveCaching](../objects/proactivecaching-element-assl.md) elemento sobre las tablas o vistas en un origen de datos que se han modificado.  
+  Contiene la colección de [TableNotification](../objects/tablenotification-element-assl.md) elementos que proporcionan información para la [ProactiveCaching](../objects/proactivecaching-element-assl.md) elemento acerca de las tablas o vistas en un origen de datos que se han modificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   

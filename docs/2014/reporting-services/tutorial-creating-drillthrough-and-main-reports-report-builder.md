@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cb02d483de02ba4c9cc65a3e9597f5c04e3bb284
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2d857f5c04318c88050f9aa63706f75902c8b445
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200835"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)
   Este tutorial le enseña cómo crear dos tipos de informes: un informe detallado y un informe principal. Los datos de ventas de ejemplo utilizados en estos informes se recuperan de un cubo de Analysis Services. En la siguiente ilustración se muestran los informes que creará.  
@@ -31,9 +31,9 @@ ms.locfileid: "36113759"
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
 ## <a name="what-you-will-learn"></a>Aprendizaje  
- **En el informe de obtención de detalles, verá cómo:**  
+ **En el informe de obtención de detalles, aprenderá cómo:**  
   
-1.  [Crear un informe de matriz de obtención de detalles y el conjunto de datos de la tabla o el Asistente para matrices](#DMatrixAndDataset)  
+1.  [Crear un informe de matriz de obtención de detalles y un conjunto de datos de la tabla o el Asistente para matrices](#DMatrixAndDataset)  
   
     1.  [Especificar una conexión de datos](#DConnection)  
   
@@ -43,17 +43,17 @@ ms.locfileid: "36113759"
   
     4.  [Agregar subtotales y totales](#DTotals)  
   
-    5.  [Elija un estilo](#DStyle)  
+    5.  [Elegir un estilo](#DStyle)  
   
-2.  [Dar formato a datos como moneda](#DFormat)  
+2.  [Formato de datos como moneda](#DFormat)  
   
 3.  [Agregar columnas para mostrar valores de ventas en Minigráficos](#DSparkline)  
   
-4.  [Agregar un título de informe con el nombre de la categoría de producto](#DReportTitle)  
+4.  [Agregar un título de informe con el nombre de categoría de producto](#DReportTitle)  
   
-5.  [Actualizar propiedades de parámetro](#DParameter)  
+5.  [Actualizar las propiedades de parámetro](#DParameter)  
   
-6.  [Guarde el informe en una biblioteca de SharePoint](#DSave)  
+6.  [Guardar el informe en una biblioteca de SharePoint](#DSave)  
   
  **En el informe principal aprenderá cómo:**  
   
@@ -67,21 +67,21 @@ ms.locfileid: "36113759"
   
     4.  [Agregar subtotales y totales](#MTotals)  
   
-    5.  [Elija un estilo](#MStyle)  
+    5.  [Elegir un estilo](#MStyle)  
   
-2.  [Quitar la fila de Total general](#MGrandTotal)  
+2.  [Quitar la fila Total general](#MGrandTotal)  
   
-3.  [Configurar la acción de obtención de detalles del cuadro de texto](#MDrillthrough)  
+3.  [Configurar acción de obtención de detalles del cuadro de texto](#MDrillthrough)  
   
-4.  [Reemplazar los valores numéricos con indicadores](#MIndicators)  
+4.  [Reemplazar los valores numérico por indicadores](#MIndicators)  
   
-5.  [Actualizar propiedades de parámetro](#MParameter)  
+5.  [Actualizar las propiedades de parámetro](#MParameter)  
   
 6.  [Agregar un título de informe](#MTitle)  
   
-7.  [Guarde el informe en una biblioteca de SharePoint](#MSave)  
+7.  [Guardar el informe en una biblioteca de SharePoint](#MSave)  
   
-8.  [Ejecute el principal y los informes de obtención de detalles](#MRunReports)  
+8.  [Ejecute los informes principal y obtención de detalles](#MRunReports)  
   
  Tiempo estimado para completar este tutorial: 30 minutos.  
   
@@ -93,9 +93,9 @@ ms.locfileid: "36113759"
   
 #### <a name="to-create-a-new-report"></a>Para crear un informe nuevo  
   
-1.  Haga clic en **iniciar**, seleccione **programas**, seleccione [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
+1.  Haga clic en **iniciar**, apunte a **programas**, apunte a [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
   
-     El **Introducción** abre el cuadro de diálogo. Si no aparece, desde el **Report Builder** botón, haga clic en **nuevo**.  
+     El **Introducción** abre el cuadro de diálogo. Si no aparece, desde el **Report Builder** botón, haga clic en **New**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -216,7 +216,7 @@ ms.locfileid: "36113759"
   
 7.  Haga clic en **Siguiente**.  
   
-##  <a name="DLayout"></a> c de 1. Organizar los datos en grupos  
+##  <a name="DLayout"></a> 1C. Organizar los datos en grupos  
  Al seleccionar los campos por los que desea agrupar los datos, diseñe una matriz con filas y columnas que muestre datos detallados y datos agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar los datos en grupos  
@@ -242,7 +242,7 @@ ms.locfileid: "36113759"
   
 6.  Haga clic en **Siguiente**.  
   
-##  <a name="DTotals"></a> 1D. Agregar subtotales y totales  
+##  <a name="DTotals"></a> 1 día. Agregar subtotales y totales  
  Después de crear grupos, puede agregar filas y darles formato, donde se mostrarán los valores agregados para los campos. Puede decidir también si mostrar todos los datos o permitir que los usuarios expandan y contraigan de forma interactiva los datos agrupados.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Para agregar subtotales y totales  
@@ -398,7 +398,7 @@ ms.locfileid: "36113759"
   
 #### <a name="to-create-a-new-report"></a>Para crear un informe nuevo  
   
-1.  Haga clic en **iniciar**, seleccione **programas**, seleccione [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
+1.  Haga clic en **iniciar**, apunte a **programas**, apunte a [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
   
 2.  En el cuadro de diálogo **Introducción** , compruebe que está seleccionado **Nuevo informe** y, después, haga clic en **Asistente para tabla o matriz**.  
   
@@ -539,7 +539,7 @@ ms.locfileid: "36113759"
   
 6.  Haga clic en **Siguiente**.  
   
-##  <a name="MLayout"></a> c de 1. Organizar los datos en grupos  
+##  <a name="MLayout"></a> 1C. Organizar los datos en grupos  
  Al seleccionar los campos por los que desea agrupar los datos, diseñe una matriz con filas y columnas que muestre datos detallados y datos agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar los datos en grupos  
@@ -558,7 +558,7 @@ ms.locfileid: "36113759"
   
      Los pasos 3 y 4 especifican los datos que deben mostrarse en la matriz.  
   
-##  <a name="MTotals"></a> 1D. Agregar subtotales y totales  
+##  <a name="MTotals"></a> 1 día. Agregar subtotales y totales  
  Puede mostrar subtotales y totales generales en informes. Los datos del informe principal muestran como un indicador; quitará el total general cuando complete el asistente.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Agregar subtotales y totales generales  

@@ -1,5 +1,5 @@
 ---
-title: Crear ámbito de sesión (MDX) de conjuntos con nombre | Documentos de Microsoft
+title: Crear ámbito de sesión (MDX) de conjuntos con nombre | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE SET statement
 - session-scoped named sets [MDX]
 ms.assetid: b751e1e4-6d4c-4d36-a28d-ffdaaee0f1c7
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 101109dce04d6a31c4b78a47573ccb54f2c80f0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a3d6a1fd35c91733b32ecc3244f0fd3bafe6a07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167696"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>Crear conjuntos con nombre de ámbito de sesión (MDX)
   Para crear un conjunto con nombre que esté disponible en una sesión de expresiones multidimensionales (MDX), se usa la instrucción [CREATE SET](/sql/mdx/mdx-data-definition-create-set). Un conjunto con nombre creado mediante la instrucción CREATE SET no se quitará hasta que se cierre la sesión MDX.  

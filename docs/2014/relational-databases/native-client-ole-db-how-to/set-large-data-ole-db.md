@@ -1,28 +1,26 @@
 ---
-title: Establecer datos de gran tamaño (OLE DB) | Documentos de Microsoft
+title: Conjunto de datos de gran tamaño (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82e4a722f3abec281af12785a0b381f189ef4740
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b7eca258cc315a839f9f46185bcded8d8fc99aae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105368"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424344"
 ---
 # <a name="set-large-data-ole-db"></a>Establecer datos de gran tamaño (OLE DB)
   En este ejemplo, se muestra cómo establecer datos BLOB, crear una tabla, agregar un registro de ejemplo, capturar ese registro en el conjunto de filas y, después, establecer el valor del campo BLOB. Este ejemplo no es compatible con IA64.  
@@ -38,7 +36,7 @@ ms.locfileid: "36105368"
   
 #### <a name="to-set-blob-data"></a>Para establecer los datos BLOB  
   
-1.  Cree una estructura DBOBJECT que describa cómo se debe obtener acceso a la columna BLOB. Establecer el **dwFlag** elemento de la DBOBJECT estructurar en STGM_READ y establezca el elemento iid en `IID_ISequentialStream` (la interfaz que se puedan exponer).  
+1.  Cree una estructura DBOBJECT que describa cómo se debe obtener acceso a la columna BLOB. Establecer el **dwFlag** elemento de DBOBJECT estructurar en STGM_READ y establezca el elemento iid en `IID_ISequentialStream` (la interfaz para exponer).  
   
 2.  Establezca las propiedades en el grupo de propiedades DBPROPSET_ROWSET de modo que el conjunto de filas sea actualizable.  
   
@@ -53,7 +51,7 @@ ms.locfileid: "36105368"
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
- Compile con ole32.lib oleaut32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\\name", donde el nombre es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
+ Compile con ole32.lib oleaut32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\\name", donde nombre es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
 ### <a name="code"></a>código  
   

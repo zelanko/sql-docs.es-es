@@ -1,5 +1,5 @@
 ---
-title: La imagen de cuadro de diálogo de propiedades, tamaño (generador de informes y SSRS) | Documentos de Microsoft
+title: Imagen de cuadro de diálogo de propiedades, tamaño (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10054"
 - sql12.rtp.rptdesigner.pictureproperties.size.f1
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ff908363c05e9e2ccdcc5da6595f5b962540417e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20e2ee2d9669202a946fb0711b17c5f5f27cf492
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179592"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Cuadro de diálogo de Propiedades de la imagen, Tamaño (Generador de informes y SSRS)
   Seleccione **Tamaño** en el cuadro de diálogo **Propiedades de la imagen** para configurar el tamaño de las imágenes mostradas en un campo o en el área de diseño, o para cambiar la cantidad de espacio adicional entre el borde de una celda o un cuadro de texto y la imagen o el valor contenido dentro de la celda o el cuadro de texto.  
@@ -53,9 +53,9 @@ ms.locfileid: "36109422"
  Especifique el relleno (o espacio) que hay entre el borde inferior de una celda o un cuadro de texto y el valor mostrado dentro de la celda.  
   
 ## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo de propiedades General de la imagen &#40;el generador de informes SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Cuadro de diálogo de propiedades General de la imagen &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Imágenes &#40;el generador de informes SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Imágenes &#40;generador de informes y SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Ayuda del generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

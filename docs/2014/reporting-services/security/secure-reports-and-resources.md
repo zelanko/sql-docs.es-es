@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], reports
 - security [Reporting Services], resources
@@ -19,13 +19,13 @@ ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dfb47953b60ef2a37b5a2bc3ffd9c8fc16300526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95d8ca8474c23d2ef8ffac6baa4ed822700fca81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240375"
 ---
 # <a name="secure-reports-and-resources"></a>Proteger informes y recursos
   Puede establecer la seguridad para informes y recursos individuales a fin de controlar el grado de acceso de los usuarios a estos elementos. De manera predeterminada, solo los usuarios que pertenezcan al grupo integrado **Administradores** pueden ejecutar informes, ver recursos, modificar propiedades y eliminar elementos. Para los demás usuarios se deben crear asignaciones de roles que concedan acceso a un informe o recurso.  
@@ -65,7 +65,7 @@ ms.locfileid: "36109413"
  Para mitigar el riesgo de incluir vínculos en un informe que inadvertidamente ejecuten script malintencionado, enlace solo hipervínculos a datos de fuentes de confianza. Compruebe que los datos de los resultados de la consulta y las expresiones que enlazan los datos con los hipervínculos no crean vínculos de los que se pueda sacar provecho negativo. Por ejemplo, no base un hipervínculo en una expresión que concatena los datos de varios campos de conjunto de datos. Si es necesario, vaya al informe y use "Ver origen" para comprobar scripts sospechosos y URLS.  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>Mitigar los ataques por inyección de código SQL en un informe con parámetros  
- En cualquier informe que incluya un parámetro de tipo `String`, asegúrese de utilizar una lista de valores disponibles (también conocida como lista de valores válidos) y asegúrese de que los usuarios que ejecuten el informe solo tiene los permisos necesarios para ver los datos en el informe. Cuando se define un parámetro de tipo `String`, se presentará al usuario un cuadro de texto que acepta cualquier valor. Una lista de valores disponibles limita los valores que se pueden especificar. Si el parámetro de informe está asociado a un parámetro de consulta y no se utiliza una lista de valores disponibles, un usuario del informe podría escribir sintaxis SQL en el cuadro de texto y exponer el informe y el servidor a un ataque por inyección de código SQL. Si el usuario tiene permisos suficientes para ejecutar la nueva instrucción SQL, podría provocar resultados no deseados en el servidor.  
+ En cualquier informe que incluya un parámetro de tipo `String`, asegúrese de utilizar una lista de valores disponibles (también conocida como lista de valores válidos) y asegúrese de que los usuarios que ejecuten el informe tengan sólo los permisos necesarios para ver los datos en el informe. Al definir un parámetro de tipo `String`, se presentará al usuario un cuadro de texto que puede tomar cualquier valor. Una lista de valores disponibles limita los valores que se pueden especificar. Si el parámetro de informe está asociado a un parámetro de consulta y no se utiliza una lista de valores disponibles, un usuario del informe podría escribir sintaxis SQL en el cuadro de texto y exponer el informe y el servidor a un ataque por inyección de código SQL. Si el usuario tiene permisos suficientes para ejecutar la nueva instrucción SQL, podría provocar resultados no deseados en el servidor.  
   
  Si un parámetro de informe no está asociado a un parámetro de consulta y los valores de parámetro están incluidos en el informe, un usuario del informe podría escribir sintaxis de expresiones o una dirección URL en el valor de parámetro y representar el informe en Excel o HTML. Si, posteriormente, otro usuario visualiza el informe y hace clic en el contenido del parámetro representado, el usuario podría ejecutar accidentalmente el script o el vínculo malintencionados.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36109413"
   
 ## <a name="see-also"></a>Vea también  
  (crear-y-administrar-rol-assignments.md)   
- [Configurar el acceso del generador de informes](../report-server/configure-report-builder-access.md)   
+ [Configurar el acceso al generador de informes](../report-server/configure-report-builder-access.md)   
  [Conceder permisos en un servidor de informes en modo nativo](granting-permissions-on-a-native-mode-report-server.md)   
  [Protección de elementos de orígenes de datos compartidos](secure-shared-data-source-items.md)   
  [Almacenamiento de las credenciales en un origen de datos de Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md)  

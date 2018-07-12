@@ -1,5 +1,5 @@
 ---
-title: Traducciones (Diseñador de dimensiones) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Traducciones (Diseñador de dimensiones) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.translations.translationspane.f1
 ms.assetid: 7104cc5f-f3c9-468c-8567-d78c7d84e60b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 861ce121cb89f9366ba7f074db476c0d037eaa5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a11a6498320db3a3b9b4733771e2b07b503f000
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161096"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>Traducciones (Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use la pestaña **Traducciones** del Diseñador de dimensiones para definir y administrar las traducciones de la dimensión, así como las jerarquías y los atributos de la misma.  

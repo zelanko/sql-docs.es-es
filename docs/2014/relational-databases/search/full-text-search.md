@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d419f7a018817656ba9bb5910a71e2c2f810ae87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5b923b9b27fd7b67d61b25956f3d44102f1a5f79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158026"
 ---
 # <a name="full-text-search"></a>Búsqueda de texto completo
   La búsqueda de texto completo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permite a los usuarios y aplicaciones ejecutar consultas de texto completo en datos basados en caracteres en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para que las consultas de texto completo se puedan ejecutar en una tabla determinada, el administrador de bases de datos debe crear un índice de texto completo en la tabla. El índice de texto completo incluye una o varias columnas de caracteres en la tabla. Estas columnas pueden tener cualquiera de los siguientes tipos de datos: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, o `varbinary(max)` y FILESTREAM. Cada índice de texto completo indiza una o varias columnas de la tabla base y cada columna puede usar un idioma concreto.  
@@ -31,7 +30,7 @@ ms.locfileid: "36113563"
 > [!NOTE]  
 >  Búsqueda de texto completo es un componente opcional de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor de base de datos. Para obtener más información, consulte [instalar SQL Server 2014](../../database-engine/install-windows/install-sql-server.md).  
   
-##  <a name="benefits"></a> ¿Qué puedo hacer con búsqueda de texto completo?  
+##  <a name="benefits"></a> ¿Qué puedo hacer con la búsqueda de texto completo?  
  La búsqueda de texto completo es aplicable a una amplia gama de escenarios empresariales, como e-business: búsqueda de elementos en un sitio web; bufetes de abogados: búsqueda de historiales de casos legales en un repositorio de datos; o departamentos de recursos humanos: comparación de descripciones de trabajos con curriculum vitae almacenados. Las tareas administrativas y de desarrollo básicas de la búsqueda de texto completo son equivalentes independientemente de los escenarios empresariales. Sin embargo, en un escenario empresarial determinado, el índice y las consultas de texto completo se pueden ajustar a los objetivos empresariales. Por ejemplo, para un e-business podría ser más importante la maximización del rendimiento que la clasificación de resultados, la exactitud de la recuperación (cuántas de las coincidencias existentes devuelve realmente una consulta de texto completo) o la admisión de varios idiomas. Para un bufete de abogados, recuperar cada posible acierto (*recuperación total* de información) podría ser la consideración más importante.  
   
  [En este tema](#top)  
@@ -83,7 +82,7 @@ ms.locfileid: "36113563"
   
  [En este tema](#top)  
   
-##  <a name="architecture"></a> Componentes y arquitectura de búsqueda de texto completo  
+##  <a name="architecture"></a> Los componentes y la arquitectura de búsqueda de texto completo  
  La arquitectura de búsqueda de texto completo consta de los procesos siguientes:  
   
 -   Proceso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (sqlserver.exe).  
@@ -138,7 +137,7 @@ ms.locfileid: "36113563"
 ###  <a name="indexing"></a> Proceso de indización de texto completo  
  Cuando se inicia un rellenado de texto completo (también conocido como rastreo), el motor de texto completo inserta lotes grandes de datos en la memoria y lo notifica al host de demonio de filtro. El host filtra y establece separaciones de palabras en los datos, y convierte los datos convertidos en las listas de palabras invertidas. A continuación, la búsqueda de texto completo extrae los datos convertidos de las listas de palabras, procesa los datos para quitar las palabras irrelevantes y conserva las listas de palabras para un lote en uno o varios índices invertidos.  
   
- Al indizar los datos almacenados en una `varbinary(max)` o `image` columna, el filtro, que implementa el **IFilter** interfaz, extrae texto basándose en el formato de archivo especificado para los datos (por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). En algunos casos, los componentes de filtro requieren la `varbinary(max)`, o `image` datos se escriban en la carpeta de datos de filtro, en lugar de insertarse en la memoria.  
+ Al indizar los datos almacenados en un `varbinary(max)` o `image` columna, el filtro, que implementa el **IFilter** interfaz, extrae texto basándose en el formato de archivo especificado para los datos (por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). En algunos casos, los componentes de filtro requieren el `varbinary(max)`, o `image` datos se escriban en la carpeta filterdata, en lugar de insertarse en la memoria.  
   
  Como parte del procesamiento, los datos de texto recopilados se pasan a través de un separador de palabras para dividir el texto en tokens o palabras clave individuales. El idioma que se utiliza para la conversión en símbolos (tokens) se especifica en el nivel de columna o bien se identifica en los `varbinary(max)`, `image` o `xml` mediante el componente de filtro.  
   

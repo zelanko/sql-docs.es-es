@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], connections
 - administrator connections [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 caps.latest.revision: 62
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8b73b7a7c097285d242def37e9b77c87c2723f57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c30258edc86afd1a4844580553ce6d059edcb279
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209825"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Conexión de diagnóstico para administradores de bases de datos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una conexión de diagnóstico especial para los administradores cuando no son posibles las conexiones estándar con el servidor. La conexión de diagnóstico permite a un administrador tener acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar consultas de diagnóstico y solucionar problemas, incluso cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no responde a las solicitudes de conexión estándar.  
@@ -47,7 +47,7 @@ ms.locfileid: "36113216"
   
  Solo los miembros del rol sysadmin de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden conectarse utilizando la DAC.  
   
- La DAC está disponible y se admite a través de la utilidad del símbolo del sistema **sqlcmd** a través de un modificador de administrador especial (**-A**). Para obtener más información sobre cómo usar **sqlcmd**, vea [Usar sqlcmd con variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). También puede conectar agregando el prefijo `admin:`al nombre de instancia en el formato **sqlcmd - Sadmin: *** < nombre_instancia >.* También puede iniciar una DAC desde un [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas mediante la conexión a `admin:` \<* instance_name * >.  
+ La DAC está disponible y se admite a través de la utilidad del símbolo del sistema **sqlcmd** a través de un modificador de administrador especial (**-A**). Para obtener más información sobre cómo usar **sqlcmd**, vea [Usar sqlcmd con variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). También puede conectar agregando el prefijo `admin:`al nombre de la instancia en el formato **sqlcmd - Sadmin: *** < nombre_instancia >.* También puede iniciar una DAC desde un [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas mediante la conexión a `admin:` \<* instance_name * >.  
   
 ## <a name="restrictions"></a>Restrictions  
  Dado que la DAC existe únicamente para el diagnóstico de problemas de servidor en raras circunstancias, hay algunas restricciones en la conexión:  
@@ -101,7 +101,7 @@ ms.locfileid: "36113216"
   
  El registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra el número de puerto de la DAC, que es 1434 de forma predeterminada. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para aceptar solo conexiones DAC locales, conéctese mediante el adaptador de bucles invertidos con el comando siguiente:  
   
- **Sqlcmd: S127.0.0.1**,`1434`  
+ **Sqlcmd – S127.0.0.1**,`1434`  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo, un administrador observa que el servidor `URAN123` no responde y desea diagnosticar el problema. Para ello, el usuario activa la utilidad del símbolo del sistema `sqlcmd` y se conecta al servidor `URAN123` mediante `-A` para indicar la DAC.  

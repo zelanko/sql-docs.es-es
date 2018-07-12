@@ -1,5 +1,5 @@
 ---
-title: Actualizar diagramas de base de datos de ediciones anteriores (Visual Database Tools) | Documentos de Microsoft
+title: Actualizar diagramas de base de datos de ediciones anteriores (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - old diagrams [SQL Server]
 - previous database diagrams [SQL Server]
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - diagrams [SQL Server], upgrading
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 44b6f2f1f884d4c43cf1b8cd62706c78d7f5d187
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 44438695929f3eaed3529fcbc3fb14f66d3d5fd1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153636"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Actualizar diagramas de base de datos de ediciones anteriores (Visual Database Tools)
-  Los diagramas de bases de datos creados en las ediciones anteriores de bases de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se actualizan automáticamente al preparar la creación de diagramas de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más pasos para configurar diagramas, vea [establecer seguridad del Diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md).  
+  Los diagramas de bases de datos creados en las ediciones anteriores de bases de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se actualizan automáticamente al preparar la creación de diagramas de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más pasos de configuración de diagramas, vea [establecer seguridad del Diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>Para actualizar diagramas de base de datos heredados  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36114176"
      Así se actualizarán los diagramas almacenados en la base de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Comprender la propiedad de diagrama de base de datos &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
+ [Descripción de la propiedad del diagrama de base de datos &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
  [Configurar el Diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

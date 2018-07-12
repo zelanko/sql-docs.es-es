@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b2fa8916d222694c26e4a3bef50cb447eeafbeec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b232859f61efbfb6de2a0c27fb34af8cb99252c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183862"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Cambiar la extensión de entrega predeterminada de Reporting Services
   Puede modificar las opciones de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para cambiar la extensión de entrega predeterminada que aparece en la lista **Entregado por** de una página de definición de suscripción. Por ejemplo, puede modificar la configuración de modo que cuando los usuarios creen una nueva suscripción, la entrega de recurso compartido de archivos se seleccione de forma predeterminada en lugar de la entrega por correo electrónico. También puede cambiar el orden en que se muestran las extensiones de entrega en la interfaz de usuario.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] | Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]   
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye la entrega del correo electrónico y el recurso compartido de archivos de Windows son extensiones. El servidor de informes puede tener extensiones de entrega adicionales si ha implementado extensiones personalizadas o de otros fabricantes para admitir la entrega personalizada. La disponibilidad de una extensión de entrega depende de si está implementada en un servidor de informes.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye la entrega de correo electrónico y recurso compartido de archivos de Windows son extensiones. El servidor de informes puede tener extensiones de entrega adicionales si ha implementado extensiones personalizadas o de otros fabricantes para admitir la entrega personalizada. La disponibilidad de una extensión de entrega depende de si está implementada en un servidor de informes.  
   
 ## <a name="default-native-mode-report-server-configuration"></a>Configuración predeterminada del servidor de informes de modo nativo  
  El orden en el que una extensión de entrega aparece en el Administrador de informes en la lista **Entregado por** se basa en el orden de las entradas de extensión de entrega del archivo **RSReportServer.config** . Por ejemplo, la siguiente imagen muestra el correo electrónico primero en la lista y está seleccionado de forma predeterminada.  
@@ -55,7 +55,7 @@ ms.locfileid: "36113955"
   
 1.  Los pasos de este procedimiento modifican la configuración para que la entrega de recurso compartido aparece como la primera opción en la interfaz de usuario y es la selección predeterminada.  
   
-     Abra el archivo RSReportServer.config en un editor de texto. Para obtener más información sobre el archivo de configuración, consulte [archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md). Después de que cambie la configuración, la interfaz de usuario será similar a la siguiente imagen:  
+     Abra el archivo RSReportServer.config en un editor de texto. Para obtener más información sobre el archivo de configuración, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md). Después de que cambie la configuración, la interfaz de usuario será similar a la siguiente imagen:  
   
      ![lista de extensiones de entrega modificada](../media/ssrs-modified-delivery.png "lista de extensiones de entrega modificada")  
   
@@ -96,19 +96,19 @@ ms.locfileid: "36113955"
      Se ha modificado el archivo RSReportServer.config  
   
 ## <a name="sharepoint-mode-report-servers"></a>Servidores de informes en modo de SharePoint  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo de SharePoint almacena la información de las extensiones en las bases de datos de aplicación de servicio de SharePoint y no en el archivo RsrReportServer.config. En el modo de SharePoint, la configuración de la extensión de entrega se modifica con PowerShell.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo de SharePoint almacena la información de extensiones en las bases de datos de aplicación de servicio de SharePoint y no en el archivo RsrReportServer.config. En el modo de SharePoint, la configuración de la extensión de entrega se modifica con PowerShell.  
   
 #### <a name="configure-the-default-delivery-extension"></a>Configurar la extensión de entrega predeterminada  
   
 1.  Abra el **Shell de administración de SharePoint**.  
   
-2.  Puede omitir este paso si ya conoce el nombre de su [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] aplicación de servicio. Use el PowerShell siguiente a la lista el [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] aplicaciones de servicio en la granja de servidores de SharePoint.  
+2.  Puede omitir este paso si ya conoce el nombre de su [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] aplicación de servicio. Utilice el siguiente comando de PowerShell a la lista el [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] aplicaciones de servicio en la granja de SharePoint.  
   
     ```  
     get-sprsserviceapplication | format-list *  
     ```  
   
-3.  Ejecute el PowerShell siguiente para comprobar que la extensión de entrega predeterminada actual para la [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] "ssrsapp" de la aplicación de servicio.  
+3.  Ejecute el siguiente comando de PowerShell para comprobar que la extensión de entrega predeterminada actual para el [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] "ssrsapp" de la aplicación de servicio.  
   
     ```  
     $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  

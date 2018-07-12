@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de conjunto de datos de envío | Documentos de Microsoft
+title: Ejemplo de conjunto de datos de envío | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ffe7f23a8f20a325f84fe68df90778ec321e0885
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 03552b94c8a50bea83d1d5e69f589379baf81697
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171366"
 ---
 # <a name="send-dataset-sample"></a>Ejemplo de envío de conjunto de datos
   El ejemplo Send `DataSet` muestra cómo devolver un `DataSet` basado en ADO.NET dentro de un procedimiento almacenado basado en Common Language Runtime (CLR) del servidor como un conjunto de resultados para el cliente. Esto resulta útil, por ejemplo, cuando dicho procedimiento almacenado rellena un `DataSet` con los resultados de una consulta y, después, manipula los datos incluidos en ese `DataSet`. También es útil si el procedimiento almacenado crea y rellena un `DataSet` desde el principio. El ejemplo está compuesto por dos clases, `DataSetUtilities` y `TestSendDataSet`. El método `SendDataSet` de la clase `DataSetUtilities` implementa un modo general de transmitir el contenido de una instancia de un `DataSet` al cliente. El método `DoTest` definido en la clase `TestSendDataSet` comprueba que el método `SendDataSet` funciona creando un `DataSet` que rellena con datos del procedimiento almacenado de Transact-SQL `uspGetTwoBOMTestData` . `uspGetTwoBOMTestData` ejecuta el procedimiento almacenado de Transact-SQL `uspGetBillOfMaterials` dos veces para consultar de forma recursiva la lista de materiales de dos productos especificados como parámetros en el procedimiento almacenado `usp_GetTwoBOMTestData` . Generalmente, después de rellenar el conjunto de datos, los datos se modificarían antes de invocar a `SendDataSet` para entregar al cliente los datos del conjunto de datos en forma de conjunto de resultados. Para simplificar, este ejemplo devuelve los datos sin modificar.  

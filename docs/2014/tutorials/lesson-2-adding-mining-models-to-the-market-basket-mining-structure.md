@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de la cesta | Documentos de Microsoft'
+title: 'Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos Market Basket | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 6f50095f8bd5c46be96c7132b961477792e1fdd7
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 8d758ef319c61d7868c2114372f353a374c38230
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159716"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lección 2: Agregar modelos de minería a la estructura de minería cesta de la compra
-  En esta lección, agregará dos modelos de minería de datos a la estructura de minería de datos Market Basket que creó en [lección 1: crear la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Estos modelos de minería de datos le permitirán crear predicciones.  
+  En esta lección, agregará dos modelos de minería de datos a la estructura de minería de datos Market Basket que creó en [lección 1: creación de la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Estos modelos de minería de datos le permitirán crear predicciones.  
   
- Para predecir los tipos de productos que los clientes tienden a comprar al mismo tiempo, creará dos modelos de minería de datos mediante la [algoritmo de asociación de Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) y dos valores diferentes para la *MINIMUM_PROBABILTY* parámetro.  
+ Para predecir los tipos de productos que los clientes tienden a comprar al mismo tiempo, creará dos modelos de minería de datos mediante el [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) y dos valores diferentes para el *MINIMUM_PROBABILTY* parámetro.  
   
- *MINIMUM_PROBABILTY* es un [!INCLUDE[msCoName](../includes/msconame-md.md)] parámetro de algoritmo de asociación que ayuda a determinar el número de reglas que va a contener un modelo de minería de datos mediante la especificación de la probabilidad mínima que debe tener una regla. Por ejemplo, al establecer este valor en 0,4 se especifica que se puede generar una regla solo si la combinación de productos que la regla describe tiene al menos una probabilidad del 40 por ciento de que esto ocurra.  
+ *MINIMUM_PROBABILTY* es un [!INCLUDE[msCoName](../includes/msconame-md.md)] parámetro de algoritmo de asociación que ayuda a determinar el número de reglas que contendrá un modelo de minería de datos mediante la especificación de la probabilidad mínima que debe tener una regla. Por ejemplo, al establecer este valor en 0,4 se especifica que se puede generar una regla solo si la combinación de productos que la regla describe tiene al menos una probabilidad del 40 por ciento de que esto ocurra.  
   
  Verá el efecto de cambiar la *MINIMUM_PROBABILTY* parámetro en una lección posterior.  
   
@@ -71,7 +71,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- Para obtener información sobre la nomenclatura de un objeto de extensiones de minería de datos (DMX), consulte [identificadores &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Para obtener información sobre la nomenclatura de un objeto en extensiones de minería de datos (DMX), consulte [identificadores &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
   
  Las líneas siguientes del código definen las columnas de la estructura de minería de datos que usará el modelo de minería de datos:  
   
@@ -84,7 +84,7 @@ ADD MINING MODEL [<mining model name>]
   
  La primera columna de la lista de columnas del modelo de minería de datos debe ser la columna de clave en la estructura de minería de datos. Sin embargo, no es necesario escribir `KEY` después de la columna de clave para especificar el uso. Eso se debe a que ya ha definido la columna como una clave cuando creó la estructura de minería de datos.  
   
- Las líneas restantes especifican el uso de las columnas en el nuevo modelo de minería de datos. Puede especificar que una columna en el modelo de minería de datos se utilizará para la predicción mediante la sintaxis siguiente:  
+ Las líneas restantes especifican el uso de las columnas en el nuevo modelo de minería de datos. Puede especificar que una columna en el modelo de minería de datos se usará para la predicción mediante la sintaxis siguiente:  
   
 ```  
 <column name> PREDICT,  
@@ -106,11 +106,11 @@ ADD MINING MODEL [<mining model name>]
 -   Agregar un modelo de minería de datos de asociación a la estructura con una probabilidad modificada  
   
 ## <a name="adding-an-association-mining-model-to-the-structure-using-the-default-minimumprobability"></a>Agregar un modelo de minería de datos de asociación a la estructura con el valor predeterminado de MINIMUM_PROBABILITY  
- La primera tarea consiste en Agregar un nuevo modelo de minería de datos a la estructura de minería de datos Market Basket basado en la [!INCLUDE[msCoName](../includes/msconame-md.md)] con el valor predeterminado para el algoritmo de asociación *MINIMUM_PROBABILITY*.  
+ La primera tarea consiste en Agregar un nuevo modelo de minería de datos a la estructura de minería de datos Market Basket basado en el [!INCLUDE[msCoName](../includes/msconame-md.md)] con el valor predeterminado para el algoritmo de asociación *MINIMUM_PROBABILITY*.  
   
 #### <a name="to-add-an-association-mining-model"></a>Agregar un modelo de minería de datos de asociación  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], seleccione **nueva consulta**y, a continuación, haga clic en **DMX**.  
+1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX**.  
   
      Se abre el Editor de consultas, que contiene una consulta nueva en blanco.  
   
@@ -195,7 +195,7 @@ ADD MINING MODEL [<mining model name>]
   
 7.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
   
-8.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y un nombre al archivo `Default_Association_Model.dmx`.  
+8.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `Default_Association_Model.dmx`.  
   
 9. En la barra de herramientas, haga clic en el **Execute** botón.  
   
@@ -204,7 +204,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-an-association-mining-model"></a>Agregar un modelo de minería de datos de asociación  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], seleccione **nueva consulta**y, a continuación, haga clic en **DMX**.  
+1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX**.  
   
      Se abre el Editor de consultas, que contiene una consulta nueva en blanco.  
   
@@ -282,13 +282,13 @@ ADD MINING MODEL [<mining model name>]
   
 7.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
   
-8.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y un nombre al archivo `Modified Association_Model.dmx`.  
+8.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `Modified Association_Model.dmx`.  
   
 9. En la barra de herramientas, haga clic en el **Execute** botón.  
   
  En esta siguiente lección procesará la estructura de minería de datos Market Basket junto con sus modelos de minería de datos asociados.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 3: Procesar la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Lección 3: Procesar la estructura de minería de Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
   
   

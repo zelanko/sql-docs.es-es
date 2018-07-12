@@ -1,5 +1,5 @@
 ---
-title: Pasar parámetros a diagramas de actualización (SQLXML 4.0) | Documentos de Microsoft
+title: Pasar parámetros a diagramas de actualización (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - null values [SQLXML]
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fc95715341b5e7bf0194b6167f399acca92238c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 899dc3b4ae0de1b616e5d93d80d437c53e2d63da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148506"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Pasar parámetros a diagramas de actualización (SQLXML 4.0)
-  Los diagramas de actualización son plantillas; por consiguiente, se les pueden pasar parámetros. Para obtener más información acerca de cómo pasar parámetros a plantillas, consulte [consideraciones de seguridad de Updategram &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
+  Los diagramas de actualización son plantillas; por consiguiente, se les pueden pasar parámetros. Para obtener más información sobre cómo pasar parámetros a plantillas, consulte [consideraciones de seguridad de Updategram &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
   
  Los diagramas de actualización le permiten pasar NULL como un valor del parámetro. Para pasar el valor del parámetro NULL, especifique el atributo `nullvalue`. A continuación, el valor que se asigna al atributo `nullvalue` se proporciona como el valor del parámetro. Los diagramas de actualización tratan este valor como NULL.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36113769"
   
  Antes de usar los ejemplos del diagrama de actualización, tenga en cuenta lo siguiente:  
   
--   En los ejemplos se usa una asignación predeterminada (es decir, ningún esquema de asignación se especifica en el diagrama de actualización). Para obtener más ejemplos de los diagramas de actualización que utilizan los esquemas de asignación, consulte [especificar un esquema de asignación anotados en un diagrama de actualización &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   En los ejemplos se usa una asignación predeterminada (es decir, ningún esquema de asignación se especifica en el diagrama de actualización). Para obtener más ejemplos de diagramas de actualización que utilizan los esquemas de asignación, consulte [especificar un esquema de asignación anotados en un diagrama de actualización &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ### <a name="a-passing-parameters-to-an-updategram"></a>A. Pasar parámetros a un diagrama de actualización  
  En este ejemplo, el diagrama de actualización cambia el apellido de un empleado en la tabla HumanResources.Shift. Se pasan dos parámetros al diagrama de actualización: ShiftID, que se usa para identificar de manera única un cambio, y Nombre.  
@@ -67,7 +67,7 @@ ms.locfileid: "36113769"
   
 1.  Copie el diagrama de actualización anterior en el Bloc de notas y guárdelo en un archivo como UpdategramWithParameters.xml.  
   
-2.  Prepare el script de prueba de SQLXML 4.0 (Sqlxml4test.vbs) en [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) para ejecutar el diagrama de actualización mediante la adición de las siguientes líneas después de la `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Prepare el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) en [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) para ejecutar el diagrama de actualización agregando las líneas siguientes después de la `cmd.Properties("Output Stream").Value = outStream`:  
   
     ```  
     cmd.NamedParameters = True  
@@ -102,7 +102,7 @@ ms.locfileid: "36113769"
   
 1.  Copie el diagrama de actualización anterior en el Bloc de notas y guárdelo en un archivo como UpdategramPassingNullvalues.xml.  
   
-2.  Prepare el script de prueba de SQLXML 4.0 (Sqlxml4test.vbs) en [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) para ejecutar el diagrama de actualización mediante la adición de las siguientes líneas después de la `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Prepare el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) en [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) para ejecutar el diagrama de actualización agregando las líneas siguientes después de la `cmd.Properties("Output Stream").Value = outStream`:  
   
     ```  
     cmd.NamedParameters = True  

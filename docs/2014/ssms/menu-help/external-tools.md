@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.externaltools
 helpviewer_keywords:
 - External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ecaf04f54600f26489aa1b34ee1cbf69645752d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 42e289a8ec12b64841f190297be60cfee31e007f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157496"
 ---
 # <a name="external-tools"></a>Herramientas externas
   Utilice este cuadro de diálogo para agregar herramientas externas, como el Administrador de configuración de SQL Server o el Bloc de notas, al menú **Herramientas** . La adición de herramientas externas facilita el inicio de otras aplicaciones mientras se trabaja con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando inicie la herramienta, podrá especificar argumentos y un directorio de trabajo. Además, los resultados de algunas herramientas pueden mostrarse en la ventana Resultados. El cuadro de diálogo **Herramientas externas** está disponible en el menú **Herramientas** .  
@@ -78,7 +78,7 @@ ms.locfileid: "36196165"
   
 3.  En el **comando** , escriba la ruta de acceso a la [!INCLUDE[msCoName](../../includes/msconame-md.md)] ejecutable, como consola de administración `C:\WINNT\system32\mmc.exe`  
   
-4.  En el **argumentos** , escriba la ruta de acceso al archivo .msc, como `"C:\WINNT\system32\SQLServerManager.msc"`  
+4.  En el **argumentos** , escriba la ruta de acceso al archivo .msc, por ejemplo, `"C:\WINNT\system32\SQLServerManager.msc"`  
   
 > [!NOTE]  
 >  Vea las propiedades del acceso directo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en el menú **Inicio** para confirmar la ubicación de los archivos en el equipo.  

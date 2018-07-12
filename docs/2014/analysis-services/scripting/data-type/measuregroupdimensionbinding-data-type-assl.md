@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos MeasureGroupDimensionBinding (ASSL) | Documentos de Microsoft
+title: Tipo de datos MeasureGroupDimensionBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupDimensionBinding data type
 ms.assetid: 770e5ef8-aea1-4c9e-8e0a-2cbac43f2383
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e21b2fae30f35adf9ef3759e2d1d36fa31ce090f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01390833046c8a1f8b684035a6ab3ae0b1f16e62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165216"
 ---
 # <a name="measuregroupdimensionbinding-data-type-assl"></a>Tipo de datos MeasureGroupDimensionBinding (ASSL)
   Define un tipo de datos derivado que representa un enlace entre una dimensión y un grupo de medida.  
@@ -57,13 +57,13 @@ ms.locfileid: "36112541"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|None|  
-|Elementos secundarios|[CubeDimensionID](../properties/id-element-assl.md)|  
-|Elementos derivados|Vea [enlace](binding-data-type-assl.md)|  
+|Elementos secundarios|[Elemento CubeDimensionID](../properties/id-element-assl.md)|  
+|Elementos derivados|Consulte [enlace](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
- Para obtener información adicional sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, consulte [tipo de enlace de datos &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Para obtener más información sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, vea [tipo de enlace de datos &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- Para obtener información general de enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;SSAS multidimensionales&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obtener información general de los enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.MeasureGroupDimensionBinding>.  
   

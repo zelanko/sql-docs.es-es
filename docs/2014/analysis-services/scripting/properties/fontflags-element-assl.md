@@ -1,5 +1,5 @@
 ---
-title: Elemento FontFlags (ASSL) | Documentos de Microsoft
+title: Elemento FontFlags (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - FontFlags element
 ms.assetid: ea608da9-ab05-42ab-8872-c52cd9f3f546
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93dfd53940270fb444dd797bfd4d085ab459d200
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1896d01c47f7c2e2fa4289f09c10ef859eff1d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156846"
 ---
 # <a name="fontflags-element-assl"></a>Elemento FontFlags (ASSL)
   Describe las características de presentación relacionadas con la fuente de la [CalculationProperty](../objects/calculationproperty-element-assl.md) o [medida](../objects/measure-element-assl.md) elemento primario.  
@@ -62,7 +62,7 @@ ms.locfileid: "36113254"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El `FontFlags` propiedad contiene una expresión de expresiones multidimensionales (MDX) y se aplica a `CalculationProperty` elementos que tienen un [CalculationType](calculationtype-element-assl.md) de *miembro* o *celdas* .  
+ El `FontFlags` propiedad contiene una expresión MDX (expresiones multidimensionales) y se aplica a `CalculationProperty` los elementos que tienen un [CalculationType](calculationtype-element-assl.md) de *miembro* o *celdas* .  
   
  Los elementos que corresponden a los elementos primarios de `FontFlags` en el modelo de objetos de Analysis Management Objects (AMO) son <xref:Microsoft.AnalysisServices.CalculationProperty> y <xref:Microsoft.AnalysisServices.Measure>.  
   

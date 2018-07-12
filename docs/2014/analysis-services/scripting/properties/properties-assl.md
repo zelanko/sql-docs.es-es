@@ -1,5 +1,5 @@
 ---
-title: Propiedades (ASSL) | Documentos de Microsoft
+title: Propiedades (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ASSL, properties
 ms.assetid: 9a38cdc9-a210-421a-90e9-6391876765fa
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 72ec08342256fecbd63c791b6db6e343479bca65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a000f4f4c9a73698f04a0bd88882db55b8661e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173506"
 ---
 # <a name="properties-assl"></a>Propiedades (ASSL)
   Esta sección de referencia contiene información sobre sintaxis y utilización de cada uno de los elementos que actúan como una propiedad de objeto en el esquema del lenguaje de scripting de Analysis Services (ASSL).  
@@ -40,12 +40,12 @@ ms.locfileid: "36113058"
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[Obtener acceso a elemento &#40;ASSL&#41;](access-element-assl.md)|Indica el nivel de acceso dado a un [CellPermission](../objects/cellpermission-element-assl.md) elemento.|  
-|[Elemento de la cuenta &#40;ImpersonationInfo&#41; &#40;ASSL&#41;](account-element-impersonationinfo-assl.md)|Contiene el nombre de la cuenta de usuario para la [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) tipo de datos.|  
+|[Elemento de la cuenta &#40;ImpersonationInfo&#41; &#40;ASSL&#41;](account-element-impersonationinfo-assl.md)|Contiene el nombre de la cuenta de usuario para el [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) tipo de datos.|  
 |[Elemento AccountType &#40;ASSL&#41;](accounttype-element-assl.md)|Contiene el nombre de un tipo de cuenta definido en un [base de datos](../objects/database-element-assl.md) elemento.|  
 |[Elemento ActionID &#40;ASSL&#41;](id-element-assl.md)|Contiene el nombre de un [acción](../objects/action-element-assl.md) elemento definido en un [cubo](../objects/cube-element-assl.md) elemento que está disponible en un [perspectiva](../objects/perspective-element-assl.md) elemento como un [PerspectiveAction](../data-type/action-data-type-assl.md) elemento.|  
 |[Elemento Administer &#40;ASSL&#41;](administer-element-assl.md)|Indica si el permiso asociado incluye el derecho a administrar un elemento `Database`.|  
-|[Elemento AggregateFunction &#40;ASSL&#41;](aggregatefunction-element-assl.md)|Define el tipo de función de agregado usada por un [medida](../objects/measure-element-assl.md) elemento.|  
-|[Elemento AggregationDesignID &#40;ASSL&#41;](aggregationdesignid-element-assl.md)|Identifica la [AggregationDesign](../objects/aggregationdesign-element-assl.md) elemento asociado a la [partición](../objects/partition-element-assl.md) elemento.|  
+|[Elemento AggregateFunction &#40;ASSL&#41;](aggregatefunction-element-assl.md)|Define el tipo de función de agregado utilizado por un [medida](../objects/measure-element-assl.md) elemento.|  
+|[Elemento AggregationDesignID &#40;ASSL&#41;](aggregationdesignid-element-assl.md)|Identifica el [AggregationDesign](../objects/aggregationdesign-element-assl.md) elemento asociado con el [partición](../objects/partition-element-assl.md) elemento.|  
 |[Elemento AggregationFunction &#40;ASSL&#41;](aggregationfunction-element-assl.md)|Contiene la función de agregación que se usará para el tipo de cuenta.|  
 |[Elemento AggregationID &#40;ASSL&#41;](aggregationid-element-assl.md)|Identifica la definición de agregación del elemento `AggregationDesign` utilizada para crear la instancia de agregación.|  
 |[Elemento AggregationInstanceSource &#40;ASSL&#41;](aggregationinstancesource-element-assl.md)|Identifica el origen de datos para las instancias de agregación definidas por el usuario enlazadas a un elemento  `Partition`.|  
@@ -53,15 +53,15 @@ ms.locfileid: "36113058"
 |[Elemento AggregationStorage &#40;ASSL&#41;](aggregationstorage-element-assl.md)|Identifica el método de almacenamiento para las agregaciones.|  
 |[Elemento AggregationType &#40;ASSL&#41;](aggregationtype-element-assl.md)|Define el tipo de agregación almacenado por el elemento `Partition`.|  
 |[Elemento AggregationUsage &#40;ASSL&#41;](aggregationusage-element-assl.md)|Controles de cómo el Diseñador de agregaciones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] diseña las agregaciones.|  
-|[Elemento Algorithm &#40;ASSL&#41;](algorithm-element-assl.md)|Define el algoritmo usado por un [MiningModel](../objects/miningmodel-element-assl.md) elemento.|  
-|[Elemento alias &#40;ASSL&#41;](alias-element-assl.md)|Define un alias para una [cuenta](../objects/account-element-assl.md) elemento.|  
+|[Elemento Algorithm &#40;ASSL&#41;](algorithm-element-assl.md)|Define el algoritmo utilizado por un [MiningModel](../objects/miningmodel-element-assl.md) elemento.|  
+|[Elemento alias &#40;ASSL&#41;](alias-element-assl.md)|Define un alias para un [cuenta](../objects/account-element-assl.md) elemento.|  
 |[Elemento AllMemberAggregationUsage &#40;ASSL&#41;](allmemberaggregationusage-element-assl.md)|Controla cómo diseña las agregaciones el Diseñador de agregaciones de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Elemento AllMemberName &#40;ASSL&#41;](name-element-assl.md)|Contiene el título en el idioma predeterminado para el miembro All de un [jerarquía](../objects/hierarchy-element-assl.md) elemento.|  
-|[Elemento AllowBrowsing &#40;ASSL&#41;](allowbrowsing-element-assl.md)|Define si los miembros de un [rol](../objects/role-element-assl.md) elemento tiene permiso de exploración en un `MiningModel` elemento.|  
+|[Elemento AllowBrowsing &#40;ASSL&#41;](allowbrowsing-element-assl.md)|Define si los miembros de un [rol](../objects/role-element-assl.md) elemento tiene el permiso de exploración en un `MiningModel` elemento.|  
 |[Elemento AllowDrillThrough &#40;ASSL&#41;](allowdrillthrough-element-assl.md)|Determina si se permite la obtención de detalles para el elemento primario.|  
 |[Elemento AllowDuplicateNames &#40;ASSL&#41;](allowduplicatenames-element-assl.md)|Determina si se permiten nombres duplicados en un elemento `Hierarchy`.|  
 |[Elemento AllowedSet &#40;ASSL&#41;](allowedset-element-assl.md)|Contiene una expresión de conjunto que define el conjunto de permisos concedidos para un elemento `Role` en un atributo.|  
-|[Elemento Application &#40;ASSL&#41;](application-element-assl.md)|Identifica a la aplicación asociada con un elemento `Action`.|  
+|[Elemento de la aplicación &#40;ASSL&#41;](application-element-assl.md)|Identifica a la aplicación asociada con un elemento `Action`.|  
 |[Elemento AssociatedMeasureGroupID &#40;ASSL&#41;](measuregroupid-element-assl.md)|Contiene el identificador (ID) de la [MeasureGroup](../objects/group-element-assl.md) elemento asociado con un [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento o un [Kpi](../objects/kpi-element-assl.md) elemento.|  
 |[Elemento AttributeAllMemberName &#40;ASSL&#41;](attributeallmembername-element-assl.md)|Contiene el título en el idioma predeterminado para el miembro All de la dimensión.|  
 |[Elemento AttributeHierarchyDisplayFolder &#40;ASSL&#41;](displayfolder-element-assl.md)|Identifica la carpeta en la que se va a mostrar la jerarquía de atributos asociada.|  
@@ -76,10 +76,10 @@ ms.locfileid: "36113058"
 |[Elemento CacheMode &#40;ASSL&#41;](cachemode-element-assl.md)|Determina el mecanismo de almacenamiento en caché utilizado para los datos de aprendizaje recuperados al procesar una estructura de minería de datos.|  
 |[Elemento CalculationReference &#40;ASSL&#41;](calculationreference-element-assl.md)|Contiene el nombre del conjunto con nombre o de la celda calculada al que hace referencia el elemento `CalculationProperty`.|  
 |[Elemento CalculationType &#40;ASSL&#41;](calculationtype-element-assl.md)|Describe el tipo de cálculo definido en el elemento `CalculationProperty` asociado.|  
-|[Elemento CalendarEndDate &#40;ASSL&#41;](calendarenddate-element-assl.md)|Define la fecha final del período del calendario para un [TimeBinding](../data-type/binding-data-type-assl.md) elemento.|  
+|[Elemento CalendarEndDate &#40;ASSL&#41;](calendarenddate-element-assl.md)|Define la fecha de finalización del período del calendario para un [TimeBinding](../data-type/binding-data-type-assl.md) elemento.|  
 |[Elemento CalendarLanguage &#40;ASSL&#41;](language-element-assl.md)|Define el lenguaje del calendario utilizado para el elemento `TimeBinding`.|  
 |[Elemento CalendarStartDate &#40;ASSL&#41;](calendarstartdate-element-assl.md)|Define la fecha de inicio del período del calendario para el elemento `TimeBinding`.|  
-|[El título de elemento &#40;ASSL&#41;](caption-element-assl.md)|Contiene el título del elemento primario asociado.|  
+|[Elemento de leyenda &#40;ASSL&#41;](caption-element-assl.md)|Contiene el título del elemento primario asociado.|  
 |[Elemento CaptionIsMdx &#40;ASSL&#41;](captionismdx-element-assl.md)|Define si el título para del elemento `Action` es una expresión del tipo Expresiones multidimensionales (MDX).|  
 |[Elemento Cardinality &#40;ASSL&#41;](cardinality-element-assl.md)|Indica la cardinalidad de la relación descrita por un [AttributeRelationship](../objects/attributerelationship-element-assl.md) o [RegularMeasureGroupDimension](../data-type/dimension-data-type-assl.md).|  
 |[Elemento CaseCubeDimensionID &#40;ASSL&#41;](dimensionid-element-assl.md)|Contiene el Id. de la dimensión de cubo que relaciona la dimensión de la minería de datos con el grupo de medida.|  
@@ -87,13 +87,13 @@ ms.locfileid: "36113058"
 |[Elemento Collation &#40;ASSL&#41;](collation-element-assl.md)|Determina la intercalación utilizada por el elemento primario.|  
 |[Elemento ColumnID &#40;ColumnBinding&#41; &#40;ASSL&#41;](columnid-element-columnbinding-assl.md)|Contiene el Id. de la columna de la tabla a la que se enlaza el elemento de datos.|  
 |[Elemento ColumnID &#40;EventColumn&#41; &#40;ASSL&#41;](columnid-element-eventcolumn-assl.md)|Contiene el Id. de la columna de información que se va a capturar para un evento como parte de un elemento `Trace`.|  
-|[Elemento de la condición &#40;ASSL&#41;](condition-element-assl.md)|Contiene una expresión MDX que determina si el elemento primario `Action` se aplica al destino.|  
+|[Elemento de condición &#40;ASSL&#41;](condition-element-assl.md)|Contiene una expresión MDX que determina si el elemento primario `Action` se aplica al destino.|  
 |[Elemento ConnectionString &#40;ASSL&#41;](connectionstring-element-assl.md)|Contiene la cadena de conexión cifrada para un [DataSource](../objects/datasource-element-assl.md) elemento.|  
 |[Elemento ConnectionStringSecurity &#40;ASSL&#41;](connectionstringsecurity-element-assl.md)|Especifica si la contraseña del usuario se extrae de la cadena de conexión a un origen de datos por temas de seguridad.|  
 |[Elemento de contenido &#40;ASSL&#41;](content-element-assl.md)|Describe el contenido de la columna en la [MiningStructure](../objects/miningstructure-element-assl.md) elemento.|  
 |[Elemento CreatedTimestamp &#40;ASSL&#41;](createdtimestamp-element-assl.md)|Contiene la marca de tiempo de creación de solo lectura del elemento primario.|  
-|[Elemento CubeDimensionID &#40;ASSL&#41;](cubedimensionid-element-assl.md)|Identifica la [CubeDimension](../data-type/cubedimension-data-type-assl.md) elemento asociado con el elemento primario.|  
-|[Elemento CubeID &#40;ASSL&#41;](cubeid-element-assl.md)|Identifica la `Cube` elemento asociado con un [enlace](../data-type/binding-data-type-assl.md) elemento.|  
+|[Elemento CubeDimensionID &#40;ASSL&#41;](cubedimensionid-element-assl.md)|Identifica el [CubeDimension](../data-type/cubedimension-data-type-assl.md) asociado con el elemento primario del elemento.|  
+|[Elemento CubeID &#40;ASSL&#41;](cubeid-element-assl.md)|Identifica el `Cube` elemento asociado con un [enlace](../data-type/binding-data-type-assl.md) elemento.|  
 |[Elemento CurrentStorageMode &#40;ASSL&#41;](storagemode-element-assl.md)|Determina el modo de almacenamiento actual para el elemento primario.|  
 |[Elemento CurrentTimeMember &#40;ASSL&#41;](../objects/member-element-assl.md)|Define el miembro actual de una dimensión de tiempo asociada a un elemento `Kpi`.|  
 |[Elemento DataAggregation &#40;ASSL&#41;](../objects/aggregation-element-assl.md)|Determina si la instancia puede agregar datos persistentes o datos almacenados en caché para el `MeasureGroup`.|  
@@ -101,18 +101,18 @@ ms.locfileid: "36113058"
 |[Elemento DataSize &#40;ASSL&#41;](datasize-element-assl.md)|Contiene el tamaño en bytes de un [DataItem](../data-type/dataitem-data-type-assl.md) elemento.|  
 |[Elemento DataSourceID &#40;ASSL&#41;](datasourceid-element-assl.md)|Identifica el elemento `DataSource` asociado con el elemento primario.|  
 |[Elemento DataSourceImpersonationInfo &#40;ASSL&#41;](impersonationinfo-element-assl.md)|Contiene información utilizada para determinar el comportamiento de la suplantación al conectarse con el origen de datos para un elemento `Database`.|  
-|[Elemento DataSourceViewID &#40;ASSL&#41;](datasourceviewid-element-assl.md)|Identifica la [DataSourceView](../objects/datasourceview-element-assl.md) elemento asociado a la `Binding` elemento primario.|  
+|[Elemento DataSourceViewID &#40;ASSL&#41;](datasourceviewid-element-assl.md)|Identifica el [DataSourceView](../objects/datasourceview-element-assl.md) elemento asociado con el `Binding` elemento primario.|  
 |[Elemento DataType &#40;ASSL&#41;](datatype-element-assl.md)|Define el tipo de datos del elemento asociado.|  
-|[Elemento DbSchemaName &#40;ASSL&#41;](dbschemaname-element-assl.md)|Contiene el nombre del esquema utilizado por el elemento primario en la tabla identificada por la [DbTableName](dbtablename-element-assl.md) elemento.|  
+|[Elemento DbSchemaName &#40;ASSL&#41;](dbschemaname-element-assl.md)|Contiene el nombre del esquema utilizado por el elemento primario de la tabla identificada por el [DbTableName](dbtablename-element-assl.md) elemento.|  
 |[Elemento DbTableName &#40;ASSL&#41;](dbtablename-element-assl.md)|Contiene el nombre de la tabla a la que se enlaza el elemento primario.|  
-|[Predeterminado elemento &#40;ASSL&#41;](default-element-assl.md)|Determina si `DrillThroughAction` es la acción de obtención de detalles predeterminada.|  
+|[Default elemento &#40;ASSL&#41;](default-element-assl.md)|Determina si `DrillThroughAction` es la acción de obtención de detalles predeterminada.|  
 |[Elemento DefaultMeasure &#40;ASSL&#41;](defaultmeasure-element-assl.md)|Contiene una expresión de lenguaje MDX que define la medida predeterminada para el elemento `Cube` o `Perspective`.|  
 |[Elemento DefaultMember &#40;ASSL&#41;](defaultmember-element-assl.md)|Contiene una expresión MDX que identifica al miembro predeterminado del elemento primario.|  
 |[Elemento DefaultScript &#40;ASSL&#41;](defaultscript-element-assl.md)|Identifica el valor predeterminado [MdxScript](../objects/mdxscript-element-assl.md) elemento en el [MdxScripts](../collections/mdxscripts-element-assl.md) colección.|  
-|[Elemento DefaultValue &#40;ASSL&#41;](value-element-assl.md)|Contiene el valor predeterminado de solo lectura del asociado [ServerProperty](../objects/serverproperty-element-assl.md) elemento.|  
+|[Elemento DefaultValue &#40;ASSL&#41;](value-element-assl.md)|Contiene el valor predeterminado de solo lectura de asociado [ServerProperty](../objects/serverproperty-element-assl.md) elemento.|  
 |[Elemento DeniedSet &#40;ASSL&#41;](deniedset-element-assl.md)|Contiene una expresión de conjunto que define la lista de permisos que se deniegan en el atributo asociado.|  
 |[Elemento DependsOnDimensionID &#40;ASSL&#41;](dependsondimensionid-element-assl.md)|Contiene el Id. de otra dimensión de la que depende la dimensión primaria.|  
-|[Description (elemento) &#40;ASSL&#41;](description-element-assl.md)|Contiene la descripción del elemento primario.|  
+|[Elemento Description &#40;ASSL&#41;](description-element-assl.md)|Contiene la descripción del elemento primario.|  
 |[Elemento DimensionID &#40;ASSL&#41;](dimensionid-element-assl.md)|Contiene el Id. de la dimensión.|  
 |[Elemento DiscretizationBucketCount &#40;ASSL&#41;](discretizationbucketcount-element-assl.md)|Contiene el número de depósitos en los que discretizar.|  
 |[Elemento DiscretizationMethod &#40;ASSL&#41;](discretizationmethod-element-assl.md)|Define el método que se va a utilizar para la discretización.|  
@@ -121,13 +121,13 @@ ms.locfileid: "36113058"
 |[Elemento Distribution &#40;ASSL&#41;](distribution-element-assl.md)|Contiene un valor específico del proveedor que describe cómo los valores escalares se distribuyen dentro de una columna de un elemento `MiningStructure`.|  
 |[Elemento Edition &#40;ASSL&#41;](edition-element-assl.md)|Contiene la edición de solo lectura de la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] representado por la [Server](../objects/server-element-assl.md) elemento.|  
 |[Habilita el elemento &#40;ASSL&#41;](enabled-element-assl.md)|Indica si el elemento primario está habilitado.|  
-|[Elemento EndOfData &#40;ASSL&#41;](../objects/data-element-assl.md)|Indica el final de los datos recibidos de un [PushedDataSource](../data-type/datasource-data-type-assl.md) elemento.|  
+|[Elemento EndOfData &#40;ASSL&#41;](../objects/data-element-assl.md)|Indica el final de los datos recibidos desde un [PushedDataSource](../data-type/datasource-data-type-assl.md) elemento.|  
 |[Elemento EstimatedCount &#40;ASSL&#41;](estimatedcount-element-assl.md)|Contiene el número estimado de miembros para un atributo.|  
 |[Elemento EstimatedPerformanceGain &#40;ASSL&#41;](estimatedperformancegain-element-assl.md)|Contiene el porcentaje, de solo lectura, de ganancia de rendimiento estimada para la partición.|  
 |[Elemento EstimatedRows &#40;ASSL&#41;](estimatedrows-element-assl.md)|Contiene el número estimado de filas representadas por el elemento primario.|  
 |[Elemento EstimatedSize &#40;ASSL&#41;](estimatedsize-element-assl.md)|Contiene el tamaño estimado de solo lectura, en bytes, del elemento principal.|  
 |[Elemento EventID &#40;ASSL&#41;](eventid-element-assl.md)|Identifica de forma única un [eventos](../objects/event-element-assl.md) elemento que se debe capturar como parte de un `Trace` elemento.|  
-|[Elemento Expression &#40;ASSL&#41;](expression-element-assl.md)|Contiene una expresión MDX que define el contenido del elemento primario.|  
+|[Elemento de expresión &#40;ASSL&#41;](expression-element-assl.md)|Contiene una expresión MDX que define el contenido del elemento primario.|  
 |[Elemento Filter &#40;enlace&#41; &#40;ASSL&#41;](filter-element-binding-assl.md)|Contiene una expresión MDX que filtra el contenido del elemento primario.|  
 |[Elemento Filter &#40;seguimiento&#41; &#40;ASSL&#41;](filter-element-trace-assl.md)|Contiene un fragmento del documento XML que describe al filtro `Trace`.|  
 |[Elemento FirstDayOfWeek &#40;ASSL&#41;](firstdayofweek-element-assl.md)|Define el primer día de la semana para un elemento `TimeBinding`.|  
@@ -156,25 +156,25 @@ ms.locfileid: "36113058"
 |[Elemento IntermediateGranularityAttributeID &#40;ASSL&#41;](intermediategranularityattributeid-element-assl.md)|Contiene el Id. del atributo de granularidad en la dimensión del cubo intermedia que se utiliza para relacionar una dimensión de referencia con una dimensión intermedia.|  
 |[Elemento InvalidXmlCharacters &#40;ASSL&#41;](invalidxmlcharacters-element-assl.md)|Especifica el método de control para los caracteres XML de los datos de origen que no son válidos.|  
 |[Elemento Invocation &#40;ASSL&#41;](invocation-element-assl.md)|Especifica cómo se debería invocar una `Action`.|  
-|[El elemento IsAggregatable &#40;ASSL&#41;](isaggregatable-element-assl.md)|Especifica si los valores de la [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) se puede agregar el elemento.|  
+|[Elemento IsAggregatable &#40;ASSL&#41;](isaggregatable-element-assl.md)|Especifica si los valores de la [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) se puede agregar el elemento.|  
 |[Elemento IsKey &#40;ASSL&#41;](iskey-element-assl.md)|Indica si la columna proporciona la clave para el caso en un elemento `MiningStructure`.|  
-|[Elemento Isolation &#40;ASSL&#41;](isolation-element-assl.md)|Indica el nivel de aislamiento para un elemento que se deriva de la [DataSource](../data-type/datasource-data-type-assl.md) tipo de datos.|  
+|[Elemento Isolation &#40;ASSL&#41;](isolation-element-assl.md)|Indica el nivel de aislamiento para un elemento que se deriva el [DataSource](../data-type/datasource-data-type-assl.md) tipo de datos.|  
 |[Elemento KeyDuplicate &#40;ASSL&#41;](keyduplicate-element-assl.md)|Determina cómo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] administra un error de clave duplicada en caso de encontrarla durante el procesamiento.|  
 |[Elemento KeyErrorAction &#40;ASSL&#41;](keyerroraction-element-assl.md)|Especifica la acción que llevará a cabo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] cuando se produzca un error en una clave.|  
 |[Elemento KeyErrorLimit &#40;ASSL&#41;](keyerrorlimit-element-assl.md)|Contiene el número de errores aceptable durante el procesamiento.|  
-|[Elemento KeyErrorLimitAction &#40;ASSL&#41;](keyerrorlimitaction-element-assl.md)|Especifica la acción que [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] lleva a cabo cuando el recuento de los errores de clave que se especifica en el [KeyErrorLimit](keyerrorlimit-element-assl.md) se alcanza el elemento.|  
+|[Elemento KeyErrorLimitAction &#40;ASSL&#41;](keyerrorlimitaction-element-assl.md)|Especifica la acción que [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] lleva a cabo cuando el recuento de los errores de clave que se especifica en el [KeyErrorLimit](keyerrorlimit-element-assl.md) alcanza el elemento.|  
 |[Elemento KeyErrorLogFile &#40;ASSL&#41;](../objects/file-element-assl.md)|Contiene el nombre de archivo para registrar los errores de procesamiento.|  
 |[Elemento KeyNotFound &#40;ASSL&#41;](keynotfound-element-assl.md)|Especifica cómo responde [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] cuando encuentra un error de integridad referencial.|  
 |[Elemento KeyUniquenessGuarantee &#40;ASSL&#41;](keyuniquenessguarantee-element-assl.md)|Indica si se garantiza la validez de la relación entre la clave de atributo y su nombre y la relación con los atributos relacionados.|  
 |[Elemento KpiID &#40;ASSL&#41;](kpiid-element-assl.md)|Contiene un Id. que asocia un elemento `Kpi` con un elemento `Perspective`.|  
-|[Elemento del lenguaje &#40;ASSL&#41;](language-element-assl.md)|Contiene el identificador de lenguaje del elemento primario.|  
+|[Elemento de lenguaje &#40;ASSL&#41;](language-element-assl.md)|Contiene el identificador de lenguaje del elemento primario.|  
 |[Elemento LastProcessed &#40;ASSL&#41;](lastprocessed-element-assl.md)|Contiene la marca de tiempo de solo lectura que indica cuándo se procesó por última vez la base de datos que contiene el elemento primario.|  
 |[Elemento LastSchemaUpdate &#40;ASSL&#41;](lastschemaupdate-element-assl.md)|Contiene los metadatos de la marca de tiempo de actualización de solo lectura del elemento primario.|  
 |[Elemento LastUpdate &#40;ASSL&#41;](lastupdate-element-assl.md)|Contiene una marca de tiempo de solo lectura que indica la última vez que se modificaron la `Database` asociada o cualquiera de los objetos principales que la base de datos contiene.|  
 |[Elemento latency &#40;ASSL&#41;](latency-element-assl.md)|Define el "período de gracia" entre la notificación más antigua y el momento en el que se destruyen las imágenes MOLAP.|  
 |[Elemento LogFileAppend &#40;ASSL&#41;](logfileappend-element-assl.md)|Determina si el elemento `Trace` anexa la salida de su registro al archivo de registro existente, o lo sobrescribe.|  
 |[Elemento LogFileName &#40;ASSL&#41;](logfilename-element-assl.md)|Contiene el nombre del archivo de registro para el elemento `Trace`.|  
-|[Elemento LogFileRollover &#40;ASSL&#41;](logfilerollover-element-assl.md)|Especifica si el registro de `Trace` salida debería escribirse en un archivo nuevo o debería detenga la aplicación cuando el archivo de registro máximo tamaño especificado en [LogFileSize](logfilesize-element-assl.md) se alcanza.|  
+|[Elemento LogFileRollover &#40;ASSL&#41;](logfilerollover-element-assl.md)|Especifica si el registro de `Trace` salida debería escribirse en un archivo nuevo o debería detenerse en el archivo de registro máximo tamaño especificado en [LogFileSize](logfilesize-element-assl.md) se alcanza.|  
 |[Elemento LogFileSize &#40;ASSL&#41;](logfilesize-element-assl.md)|Especifica el tamaño máximo del archivo de registro, en megabytes.|  
 |[Elemento ManagedProvider &#40;ASSL&#41;](managedprovider-element-assl.md)|Contiene el nombre del proveedor administrado que utiliza un elemento que se deriva del tipo de datos `DataSource`.|  
 |[Elemento ManufacturingExtraMonthQuarter &#40;ASSL&#41;](manufacturingextramonthquarter-element-assl.md)|Define el mes del período de fabricación al que se asigna un mes adicional para un elemento `TimeBinding`.|  
@@ -210,7 +210,7 @@ ms.locfileid: "36113058"
 |[Elemento OverrideBehavior &#40;ASSL&#41;](overridebehavior-element-assl.md)|Indica el comportamiento de invalidación de la relación descrita por un elemento `AttributeRelationship`.|  
 |[Elemento PartitionID &#40;ASSL&#41;](partitionid-element-assl.md)|Asocia un elemento `Partition` con un elemento primario, enlace o enlace fuera de línea|  
 |[Elemento de contraseña &#40;ASSL&#41;](password-element-assl.md)|Contiene la contraseña de la cuenta de usuario para el elemento `ImpersonationInfo`.|  
-|[Elemento de la ruta &#40;ASSL&#41;](path-element-assl.md)|Contiene la ruta de acceso, tal y como se proporciona una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], de un informe utilizado por el [ReportAction](../data-type/reportaction-data-type-assl.md) elemento.|  
+|[Elemento path &#40;ASSL&#41;](path-element-assl.md)|Contiene la ruta de acceso, según lo proporcionado por una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], de un informe utilizado por el [ReportAction](../data-type/reportaction-data-type-assl.md) elemento.|  
 |[Elemento PendingValue &#40;ASSL&#41;](pendingvalue-element-assl.md)|Contiene el valor pendiente de solo lectura del elemento `ServerProperty` asociado.|  
 |[Elemento PermissionSet &#40;ASSL&#41;](permissionset-element-assl.md)|Identifica el conjunto de permisos asociado con un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ensamblado de .NET Framework.|  
 |[Elemento Persistence &#40;ASSL&#41;](persistence-element-assl.md)|Determina qué partes de los datos de origen enlazados son dinámicos y se comprueban para las actualizaciones con la frecuencia especificada por el [RefreshPolicy](refreshpolicy-element-assl.md) elemento.|  
@@ -225,7 +225,7 @@ ms.locfileid: "36113058"
 |[Elemento ReadDefinition &#40;ASSL&#41;](readdefinition-element-assl.md)|Determina si los miembros pueden leer la definición de la base de datos o la definición de objetos de la base de datos.|  
 |[Elemento ReadSourceData &#40;ASSL&#41;](readsourcedata-element-assl.md)|Determina cómo se generan los nombres únicos para las jerarquías contenidas en la `CubePermission`.|  
 |[Elemento RefreshInterval &#40;ASSL&#41;](refreshinterval-element-assl.md)|Especifica el intervalo de tiempo en el que se actualizarán los datos enlazados asociados con el elemento primario.|  
-|[Elemento RefreshPolicy &#40;ASSL&#41;](refreshpolicy-element-assl.md)|Determina la frecuencia con la parte dinámica del grupo de medida o dimensión (según lo especificado por el [persistencia](persistence-element-assl.md) elemento) está activada para los cambios.|  
+|[Elemento RefreshPolicy &#40;ASSL&#41;](refreshpolicy-element-assl.md)|Determina la frecuencia con la parte dinámica de la dimensión o grupo de medida (según lo especificado por el [persistencia](persistence-element-assl.md) elemento) está activada para los cambios.|  
 |[Elemento RelationshipType &#40;ASSL&#41;](relationshiptype-element-assl.md)|Indica si se pueden cambiar las relaciones de miembros para un `AttributeRelationship`.|  
 |[Elemento RemoteDatasourceID &#40;ASSL&#41;](remotedatasourceid-element-assl.md)|Especifica el Id. del origen de datos OLAP que señala a la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que almacena la partición remota.|  
 |[Elemento ReportingFirstMonth &#40;ASSL&#41;](reportingfirstmonth-element-assl.md)|Define el primer mes de informes para el elemento `TimeBinding`.|  
@@ -234,7 +234,7 @@ ms.locfileid: "36113058"
 |[Elemento ReportServer &#40;ASSL&#41;](reportserver-element-assl.md)|Contiene el nombre de la instancia de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que utiliza la `ReportAction`.|  
 |[Elemento RequiresRestart &#40;ASSL&#41;](requiresrestart-element-assl.md)|Contiene un valor de solo lectura asociado a un elemento `ServerProperty` que determina si es necesario reiniciar la instancia para que los cambios realizados en la propiedad del servidor surtan efecto.|  
 |[Elemento RoleID &#40;ASSL&#41;](roleid-element-assl.md)|Identifica el rol para el que se definen los permisos.|  
-|[Elemento root &#40;ASSL&#41;](root-element-assl.md)|Contiene los datos (conjunto de filas) para un origen de datos.|  
+|[Elemento raíz &#40;ASSL&#41;](root-element-assl.md)|Contiene los datos (conjunto de filas) para un origen de datos.|  
 |[Elemento RootMemberIf &#40;ASSL&#41;](rootmemberif-element-assl.md)|Determina cómo se identifican los miembros raíz de un atributo primario.|  
 |[Elemento de esquema &#40;ASSL&#41;](schema-element-assl.md)|Contiene el esquema de la vista del origen de datos.|  
 |[Elemento ScriptCacheProcessingMode &#40;ASSL&#41;](scriptcacheprocessingmode-element-assl.md)|Indica el servidor debería generar la caché de script durante o después del procesamiento.|  
@@ -254,23 +254,23 @@ ms.locfileid: "36113058"
 |[Elemento StorageLocation &#40;ASSL&#41;](storagelocation-element-assl.md)|Contiene la ubicación del sistema de almacenamiento de archivos para el contenido del elemento primario.|  
 |[Elemento StorageMode &#40;ASSL&#41;](storagemode-element-assl.md)|Determina el modo de almacenamiento para el elemento primario.|  
 |[Elemento TableID &#40;ASSL&#41;](tableid-element-assl.md)|Contiene el Id. de la tabla (a partir del elemento `DataSourceView`) asociada al elemento primario.|  
-|[Elemento de destino &#40;ASSL&#41;](target-element-assl.md)|Identifica el destino del elemento `Action`.|  
+|[Elemento Target &#40;ASSL&#41;](target-element-assl.md)|Identifica el destino del elemento `Action`.|  
 |[Elemento TargetType &#40;ASSL&#41;](targettype-element-assl.md)|Identifica el tipo de elemento del elemento identificado en el [destino](target-element-assl.md) elemento.|  
 |[Elemento de texto &#40;ASSL&#41;](text-element-assl.md)|Contiene el texto de un [comando](../objects/command-element-assl.md) elemento.|  
 |[Elemento timeout &#40;ASSL&#41;](timeout-element-assl.md)|Especifica el tiempo, en segundos, después del cual se producirá un error de tiempo de espera si se intentan recuperar los datos.|  
 |[Elemento de tendencia &#40;ASSL&#41;](trend-element-assl.md)|Contiene una expresión MDX que devuelve un indicador de tendencia para un elemento `Kpi`.|  
 |[Elemento TrendGraphic &#40;ASSL&#41;](trendgraphic-element-assl.md)|Contiene la representación gráfica recomendada de la tendencia del elemento `Kpi`.|  
 |[Elemento Trimming &#40;ASSL&#41;](trimming-element-assl.md)|Especifica cómo se recortan los datos del origen de datos.|  
-|[Elemento Type &#40;acción&#41; &#40;ASSL&#41;](type-element-action-assl.md)|Contiene el tipo del elemento `Action`.|  
-|[Elemento Type &#40;enlace&#41; &#40;ASSL&#41;](type-element-binding-assl.md)|Contiene el tipo del enlace de atributo.|  
-|[Elemento Type &#40;ClrAssemblyFile&#41; &#40;ASSL&#41;](type-element-clrassemblyfile-assl.md)|Especifica el tipo de archivo de uno de los archivos que pertenecen a un ensamblado de .NET Framework.|  
-|[Elemento Type &#40;dimensión&#41; &#40;ASSL&#41;](type-element-dimension-assl.md)|Proporciona información acerca del contenido de la dimensión.|  
-|[Elemento Type &#40;DimensionAttribute&#41; &#40;ASSL&#41;](type-element-dimensionattribute-assl.md)|Contiene el tipo del atributo.|  
-|[Elemento Type &#40;MeasureGroup&#41; &#40;ASSL&#41;](type-element-measuregroup-assl.md)|Especifica el tipo del `MeasureGroup`.|  
-|[Elemento Type &#40;MeasureGroupAttribute&#41; &#40;ASSL&#41;](type-element-measuregroupattribute-assl.md)|Contiene el tipo de un [MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md) elemento.|  
-|[Elemento Type &#40;MiningStructureColumn&#41; &#40;ASSL&#41;](type-element-miningstructurecolumn-assl.md)|Contiene el tipo de la [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) elemento.|  
-|[Elemento Type &#40;partición&#41; &#40;ASSL&#41;](type-element-partition-assl.md)|Contiene el tipo del elemento `Partition`.|  
-|[Elemento Type &#40;PerspectiveCalculation&#41; &#40;ASSL&#41;](type-element-perspectivecalculation-assl.md)|Indica el tipo de la [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) elemento.|  
+|[Tipo de elemento &#40;acción&#41; &#40;ASSL&#41;](type-element-action-assl.md)|Contiene el tipo del elemento `Action`.|  
+|[Tipo de elemento &#40;enlace&#41; &#40;ASSL&#41;](type-element-binding-assl.md)|Contiene el tipo del enlace de atributo.|  
+|[Tipo de elemento &#40;ClrAssemblyFile&#41; &#40;ASSL&#41;](type-element-clrassemblyfile-assl.md)|Especifica el tipo de archivo de uno de los archivos que pertenecen a un ensamblado de .NET Framework.|  
+|[Tipo de elemento &#40;dimensión&#41; &#40;ASSL&#41;](type-element-dimension-assl.md)|Proporciona información acerca del contenido de la dimensión.|  
+|[Tipo de elemento &#40;DimensionAttribute&#41; &#40;ASSL&#41;](type-element-dimensionattribute-assl.md)|Contiene el tipo del atributo.|  
+|[Tipo de elemento &#40;MeasureGroup&#41; &#40;ASSL&#41;](type-element-measuregroup-assl.md)|Especifica el tipo del `MeasureGroup`.|  
+|[Tipo de elemento &#40;MeasureGroupAttribute&#41; &#40;ASSL&#41;](type-element-measuregroupattribute-assl.md)|Contiene el tipo de un [MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md) elemento.|  
+|[Tipo de elemento &#40;MiningStructureColumn&#41; &#40;ASSL&#41;](type-element-miningstructurecolumn-assl.md)|Contiene el tipo de la [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) elemento.|  
+|[Tipo de elemento &#40;partición&#41; &#40;ASSL&#41;](type-element-partition-assl.md)|Contiene el tipo del elemento `Partition`.|  
+|[Tipo de elemento &#40;PerspectiveCalculation&#41; &#40;ASSL&#41;](type-element-perspectivecalculation-assl.md)|Indica el tipo de la [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) elemento.|  
 |[Elemento UnknownMember &#40;ASSL&#41;](unknownmember-element-assl.md)|Indica si el miembro desconocido está visible.|  
 |[Elemento UnknownMemberName &#40;ASSL&#41;](unknownmembername-element-assl.md)|Contiene el título, en el idioma predeterminado de la dimensión, del miembro desconocido de la dimensión.|  
 |[Elemento Usage &#40;DimensionAttribute&#41; &#40;ASSL&#41;](usage-element-dimensionattribute-assl.md)|Describe cómo se utiliza un atributo.|  
@@ -284,6 +284,6 @@ ms.locfileid: "36113058"
 |[Elemento WriteEnabled &#40;ASSL&#41;](writeenabled-element-assl.md)|Indica si las reescrituras de dimensión están disponibles (sujetas a permisos de seguridad).|  
   
 ## <a name="see-also"></a>Vea también  
- [Jerarquía Analysis Services Scripting Language XML elemento &#40;ASSL&#41;](../analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
+ [Jerarquía de elementos XML de lenguaje Scripting de Analysis Services &#40;ASSL&#41;](../analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   

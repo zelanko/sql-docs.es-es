@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 575f800e30587bb91bc0390379205ae905d99f33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d3acc601d3681efbf18f4f40a63bf7694bda8be9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259991"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Instalar las herramientas de cliente en un clúster de conmutación por error de SQL Server
   Las herramientas de cliente tales como [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] son características compartidas comunes a todas las instancias del mismo equipo. Son compatibles con versiones anteriores, con versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admitidas que se pueden instalar en paralelo. Solo existe una versión de las herramientas de cliente en un nodo a la vez.  
@@ -51,7 +51,7 @@ ms.locfileid: "36109410"
   
 2.  Para instalar solo las herramientas de administración básica de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ejecute el comando siguiente: Setup.exe/q/Action=Install Features=SSMS. De este modo se instalará la compatibilidad de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] con [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], la utilidad sqlcmd y el proveedor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell.  
   
-3.  Para instalar las herramientas de administración completa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ejecute el comando siguiente: Setup.exe/q/Action=Install /Features=ADV_SSMS. Para obtener más información acerca de los valores de parámetro para las características, vea [instalar SQL Server 2014 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+3.  Para instalar las herramientas de administración completa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ejecute el comando siguiente: Setup.exe/q/Action=Install /Features=ADV_SSMS. Para obtener más información acerca de los valores de parámetro para las características, consulte [instalar SQL Server 2014 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>Desinstalar las Herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Aparecen en Agregar o quitar programas en el Panel de control como **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** y se pueden quitar desde ahí. Si usa Quitar nodo para desinstalar una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del clúster de conmutación por error, los componentes cliente no se desinstalarán al mismo tiempo.  

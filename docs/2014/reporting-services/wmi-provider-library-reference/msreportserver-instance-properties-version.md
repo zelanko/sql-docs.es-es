@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Version property
 ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ad85fe878b81dd603cb925b187371292509ab87e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f5a4d4fa4d2c1a8d8508be6ea0e6a0aeff99c072
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166236"
 ---
 # <a name="version-property-wmi-msreportserverinstance"></a>Propiedad Version (MSReportServer_Instance de WMI)
   Devuelve la versión del servidor de informes en formato Major.Minor.Build.Revision. Solo lectura.  

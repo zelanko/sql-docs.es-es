@@ -1,5 +1,5 @@
 ---
-title: Clase SqlService | Documentos de Microsoft
+title: Clase SqlService | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SqlService class
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: edb7b1cc97f7dc1906214ec00f10a476c3e5569e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6a0cb192de294c831a884c4b11676d1db3a380e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179572"
 ---
 # <a name="sqlservice-class"></a>Clase SqlService
   La [Clase SqlService](sqlservice-class.md) representa una instancia de un servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

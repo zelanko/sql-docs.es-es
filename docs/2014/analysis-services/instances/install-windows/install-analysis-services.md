@@ -1,5 +1,5 @@
 ---
-title: Instalar Analysis Services en modo Tabular | Documentos de Microsoft
+title: Instalar Analysis Services en modo Tabular | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f6fabd9129e3f3e1e07e813935f36e7c70c48072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b6ee555e975e89da584c0efab3fab8bb9f9429a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183455"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>Instalar Analysis Services en mode tabular
   Si está instalando Analysis Services para usar las nuevas características de modelado tabular, debe instalar Analysis Services en un modo de servidor que admita ese tipo de modelo. El modo de servidor es Tabular y se configura durante la instalación.  
@@ -37,7 +37,7 @@ ms.locfileid: "36113262"
   
 2.  En la página Configuración de Analysis Services, asegúrese de seleccionar **Modo tabular**.  
   
-     ![Página de configuración con opciones de configuración de Analysis Services](../../../sql-server/install/media/ssas-setupasconfig.gif "página de configuración con opciones de configuración de Analysis Services")  
+     ![Página de configuración con las opciones de configuración de Analysis Services](../../../sql-server/install/media/ssas-setupasconfig.gif "página de configuración con las opciones de configuración de Analysis Services")  
   
  El modo tabular utiliza el motor analítico en memoria xVelocity (VertiPaq), que es el almacenamiento predeterminado para los modelos tabulares que se implementan en Analysis Services. Después de implementar las soluciones de modelo tabular en el servidor, puede configurar selectivamente las soluciones tabulares para utilizar el almacenamiento en disco de DirectQuery como una alternativa al almacenamiento enlazado a la memoria.  
   
@@ -60,12 +60,12 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
 |Valor|Descripción|  
 |-----------|-----------------|  
 |MULTIDIMENSIONAL|Este es el valor predeterminado. Si no establece `ASSERVERMODE`, el servidor está instalado en modo de servidor Multidimensional.|  
-|POWERPIVOT|Este valor es opcional. En ejercicio, si establece el parámetro `ROLE`, el modo de servidor se establece automáticamente en 1, haciendo que `ASSERVERMODE` sea opcional en una instalación de PowerPivot para SharePoint. Para obtener más información, consulte [instalar PowerPivot desde el símbolo del sistema](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md).|  
+|POWERPIVOT|Este valor es opcional. En ejercicio, si establece el parámetro `ROLE`, el modo de servidor se establece automáticamente en 1, haciendo que `ASSERVERMODE` sea opcional en una instalación de PowerPivot para SharePoint. Para obtener más información, consulte [instalar PowerPivot desde el símbolo](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md).|  
 |TABULAR|Se requiere este valor si va a instalar Analysis Services en modo tabular utilizando la instalación de la línea de comandos.|  
   
 ## <a name="see-also"></a>Vea también  
  [Determinar el modo de servidor de una instancia de Analysis Services](../determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Configurar el acceso de DirectQuery para una base de datos de modelo Tabular o en memoria](../../tabular-models/enable-directquery-mode-in-ssms.md)   
- [Creación de modelos tabular &#40;SSAS Tabular&#41;](../../tabular-models/tabular-models-ssas.md)  
+ [Modelado tabular &#40;Tabular de SSAS&#41;](../../tabular-models/tabular-models-ssas.md)  
   
   

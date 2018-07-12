@@ -1,5 +1,5 @@
 ---
-title: Ejecutar Scripts antes y después de aplicar una instantánea (SQL Server Management Studio) | Documentos de Microsoft
+title: Ejecutar Scripts antes y después de aplicar una instantánea (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], scripts
 - scripts [SQL Server replication], snapshots
 - snapshot replication [SQL Server], scripts
 ms.assetid: b7bb1e4c-5b48-4bb1-9dc8-47c911f2cc82
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1e22987419706c6449ca7dd501d1ee26f43aa14a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 46591477bfa12e7439dd5802f94ee15b14dc7f1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156136"
 ---
 # <a name="execute-scripts-before-and-after-a-snapshot-is-applied-sql-server-management-studio"></a>Ejecutar scripts antes y después de aplicar una instantánea (SQL Server Management Studio)
   Especifique un script opcional para que se ejecute antes o después de aplicar la instantánea en la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>**. Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d2829c12a38b75b5b50eb21c44b18252658b6a1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5671d2223c2518972f8947e9e715b6ffc4b7b55d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278801"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Crear una alerta de datos en el Diseñador de alertas de datos
   Las definiciones de alertas de datos se crean en el Diseñador de alertas de datos. Una vez guardadas las definiciones de alertas, es posible volver a abrirlas, modificarlas y volver a guardarlas en el Diseñador de alertas de datos. Para más información sobre cómo editar definiciones de alertas, vea [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md) y [Editar una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md).  
@@ -101,7 +101,7 @@ ms.locfileid: "36111299"
      De forma predeterminada, un mensaje de alerta no tiene ninguna fecha de detención.  
   
     > [!NOTE]  
-    >  La detención de un mensaje de alerta no elimina la definición de alerta. Después de detener un mensaje de alerta, puede reiniciarlo actualizando las fechas de inicio y detención. Para obtener información acerca de cómo eliminar las definiciones de alertas, consulte [administrar Mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md).  
+    >  La detención de un mensaje de alerta no elimina la definición de alerta. Después de detener un mensaje de alerta, puede reiniciarlo actualizando las fechas de inicio y detención. Para obtener información acerca de cómo eliminar definiciones de alertas, consulte [administrar Mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md).  
   
 18. Si lo desea, desactive la casilla **Enviar mensaje solo si cambian los resultados** .  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36111299"
   
 ## <a name="see-also"></a>Vea también  
  [Diseñador de alertas de datos](../../2014/reporting-services/data-alert-designer.md)   
- [Administrador de alertas de datos para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [Administrador de alertas de datos para los administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Alertas de datos de Reporting Services](../ssms/agent/alerts.md)  
   
   

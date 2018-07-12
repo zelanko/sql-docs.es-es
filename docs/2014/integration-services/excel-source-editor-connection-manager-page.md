@@ -1,5 +1,5 @@
 ---
-title: Editor de origen de Excel (página Administrador de conexiones) | Documentos de Microsoft
+title: Editor de origen de Excel (página Administrador de conexiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.connection.f1
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
 caps.latest.revision: 39
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eeb3af2f65be818c41dd88dc89028cb0f27cb36e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb74698304e70e1125003e5b15cef991f8511ed4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161036"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Editor de origen de Excel (página Administrador de conexiones)
   Utilice el nodo **Administrador de conexiones** del cuadro de diálogo **Editor de origen de Excel** para seleccionar el libro de [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] que utilizará el origen. El origen de Excel lee los datos de una hoja de cálculo o un rango con nombre de un libro existente.  
   
 > [!NOTE]  
->  El `CommandTimeout` propiedad del origen de Excel no está disponible en la **Editor de origen de Excel**, pero se puede establecer mediante el uso de la **Editor avanzado**. Para obtener más información acerca de esta propiedad, vea la sección Origen de Excel de [Excel Custom Properties](data-flow/excel-custom-properties.md).  
+>  El `CommandTimeout` propiedad del origen de Excel no está disponible en el **Editor de origen de Excel**, pero se puede establecer utilizando la **Editor avanzado**. Para obtener más información acerca de esta propiedad, vea la sección Origen de Excel de [Excel Custom Properties](data-flow/excel-custom-properties.md).  
   
  Para obtener más información acerca del origen de Excel, vea [Excel Source](data-flow/excel-source.md).  
   

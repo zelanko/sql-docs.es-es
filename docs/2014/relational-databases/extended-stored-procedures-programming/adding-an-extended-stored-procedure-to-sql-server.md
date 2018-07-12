@@ -1,5 +1,5 @@
 ---
-title: Agregar un total procedimiento almacenado a SQL Server | Documentos de Microsoft
+title: Agregar extendido procedimiento almacenado a SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - collations [SQL Server], extended stored procedures
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b69f6ba2dd0fc6c5b3b2ce4f93e70239d8868007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: c88e0640c41e7307144912cc05f9cdd21022fee6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211275"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>Agregar un procedimiento almacenado extendido a SQL Server
     
@@ -36,7 +36,7 @@ ms.locfileid: "36113363"
  Una vez que haya copiado en el servidor el archivo DLL de procedimiento almacenado extendido, un administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe registrar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cada una de las funciones de procedimiento almacenado extendido del archivo DLL. Para ello, debe utilizarse el procedimiento almacenado del sistema sp_addextendedproc.  
   
 > [!IMPORTANT]  
->  Antes de agregar el procedimiento almacenado extendido al servidor y otorgar permisos de ejecución a otros usuarios, el administrador del sistema debe revisarlo por completo para asegurarse de que no contenga código perjudicial o malintencionado.  Valide todos los datos proporcionados por el usuario. No concatene ninguna entrada de usuario antes de validarla. No ejecute nunca un comando creado a partir de una entrada de usuario no validada.  
+>  Antes de agregar el procedimiento almacenado extendido al servidor y otorgar permisos de ejecución a otros usuarios, el administrador del sistema debe revisarlo por completo para asegurarse de que no contenga código perjudicial o malintencionado.  Valide todos los datos proporcionados por el usuario. No concatene ninguna entrada del usuario antes de validarla. No ejecute nunca un comando creado a partir de una entrada de usuario no validada.  
   
  El primer parámetro de sp_addextendedproc especifica el nombre de la función y el segundo parámetro especifica el nombre del archivo DLL donde reside dicha función. Se recomienda especificar la ruta de acceso completa del archivo DLL.  
   

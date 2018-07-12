@@ -1,5 +1,5 @@
 ---
-title: Elemento Web Visor de informes en un sitio de SharePoint | Documentos de Microsoft
+title: Elemento Web Visor de informes en un sitio de SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
@@ -18,16 +18,16 @@ ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6be315ce2da4f17ab821a97c3a82f615e84cc181
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87498b7eca136eba037a8454416b875f5690cae3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198485"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Elemento web Visor de informes en un sitio de SharePoint
-  El elemento web del Visor de informes es un elemento web personalizado que se instala mediante el complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint. Puede usar el elemento web para ver, navegar, imprimir y exportar informes en un servidor de informes configurado para ejecutarse en el modo integrado de SharePoint. El elemento Web de Visor de informes está asociado a los archivos de definición (.rdl) de informes que se procesan por un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de informes. No puede usarlo con otros documentos de informe creados en otros productos de software.  
+  El elemento web del Visor de informes es un elemento web personalizado que se instala mediante el complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint. Puede usar el elemento web para ver, navegar, imprimir y exportar informes en un servidor de informes configurado para ejecutarse en el modo integrado de SharePoint. El elemento Web Visor de informes está asociado con los archivos de definición (.rdl) del informe que se procesan por un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de informes. No puede usarlo con otros documentos de informe creados en otros productos de software.  
   
  Para instalar el elemento web, debe ejecutar la instalación para el complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. No debería instalar o desinstalar el elemento web independientemente. Forma parte del complemento y solamente se puede instalar mediante el paquete de instalación del complemento. El nombre de archivo del elemento web Visor de informes es ReportViewer.dwp. Se encuentra en la carpeta Archivos de programa\Archivos comunes\Microsoft Shared\web server extensions\12\template\features\reportserver y no se debería mover a otras carpetas.  
   
@@ -68,12 +68,12 @@ ms.locfileid: "36113308"
  Los paneles**Credenciales** y **Parámetros** aparecen al lado del área de visualización. **Credenciales** aparece cuando la conexión del origen de datos del informe está configurada para solicitar al usuario una cuenta y una contraseña con derechos de acceso al origen de datos. **Parámetros** aparece cuando el informe acepta la entrada del usuario para los parámetros definidos en el informe.  
   
 ### <a name="setting-properties-on-the-report-viewer-web-part"></a>Establecer propiedades en el elemento web Visor de informes  
- Las propiedades del elemento web son propiedades personalizadas específicas para el Visor de informes y propiedades generales que puede establecer para cualquier elemento web. Para obtener más información, consulte [personalizar el elemento Web de Visor de informes](../../2014/reporting-services/customize-the-report-viewer-web-part.md).  
+ Las propiedades del elemento web son propiedades personalizadas específicas para el Visor de informes y propiedades generales que puede establecer para cualquier elemento web. Para obtener más información, consulte [personalizar el elemento Web Visor de informes](../../2014/reporting-services/customize-the-report-viewer-web-part.md).  
   
  De manera predeterminada, los informes se abren en modo de página completa. En el modo de página completa se muestra la barra de herramientas que proporciona las funciones de navegación en páginas, búsqueda y otras. Puede personalizar el elemento web para cambiar la apariencia o el comportamiento predeterminado.  
   
 ## <a name="see-also"></a>Vea también  
  [Instalar o desinstalar el complemento Servicios de informes para SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [Agregar el elemento Web de Visor de informes a una página Web &#40;modo integrado de Reporting Services en SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Agregar el elemento Web Visor de informes a una página Web &#40;modo integrado de Reporting Services en SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

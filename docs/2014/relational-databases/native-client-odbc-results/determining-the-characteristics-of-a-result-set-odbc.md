@@ -1,13 +1,11 @@
 ---
-title: Determinar las características de un resultado de establece (ODBC) | Documentos de Microsoft
+title: Determinar las características del resultado de un conjunto (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,20 +18,20 @@ helpviewer_keywords:
 - SQLNumResultCols function
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ddc884930f52a4b1067a516301d9821346705383
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fcf7c7fb126149de1e8e0355ac698eef1c95d36f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106088"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431584"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>Determinar las características de un conjunto de resultados (ODBC)
   Los metadatos son datos que describen otros datos. Por ejemplo, los metadatos de conjunto de resultados describen las características de un conjunto de resultados, como el número de columnas del conjunto de resultados, los tipos de datos de esas columnas, sus nombres, la precisión y la nulabilidad.  
   
- ODBC proporciona metadatos a las aplicaciones mediante las funciones de API de catálogo. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC Native Client implementa muchas de las funciones de catálogo de la API de ODBC como llamadas a correspondiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimiento de catálogo.  
+ ODBC proporciona metadatos a las aplicaciones mediante las funciones de API de catálogo. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client implementa muchas de las funciones de catálogo de API de ODBC como llamadas a correspondiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimiento de catálogo.  
   
  Las aplicaciones requieren metadatos para la mayoría de las operaciones de conjunto de resultados. Por ejemplo, la aplicación utiliza el tipo de datos de una columna para determinar qué tipo de variable se ha de enlazar a esa columna. Utiliza la longitud de bytes de una columna de caracteres para determinar cuánto espacio debe tener para mostrar datos de esa columna. El modo en que una aplicación determina los metadatos de una columna depende del tipo de la aplicación.  
   

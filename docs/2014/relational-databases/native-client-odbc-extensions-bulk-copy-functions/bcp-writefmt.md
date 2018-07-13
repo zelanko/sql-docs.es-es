@@ -1,13 +1,11 @@
 ---
-title: bcp_writefmt | Documentos de Microsoft
+title: bcp_writefmt | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_writefmt function
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1fe386d49ea68e8b6f33048f246c3a3afd037b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4f82c05a8d605b056619e22f7f711762b1555ac7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202940"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427884"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
   Crea un archivo de formato que contiene una descripción del formato del archivo de datos de la copia masiva actual.  
@@ -65,7 +63,7 @@ szFormatFile
  Para cargar un archivo de formato guardado, utilice [bcp_readfmt](bcp-readfmt.md).  
   
 > [!NOTE]  
->  El archivo de formato generado por **bcp_writefmt** solo es compatible con las versiones de la **bcp** utilidad se distribuye con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0 y versiones posterior.  
+>  El archivo de formato producido por **bcp_writefmt** solo es compatible con las versiones de la **bcp** utilidad se distribuye con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0 y versiones posterior.  
   
 ## <a name="example"></a>Ejemplo  
   

@@ -1,13 +1,11 @@
 ---
-title: SQLTables | Documentos de Microsoft
+title: SQLTables | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,24 +14,24 @@ helpviewer_keywords:
 - SQLTables function
 ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b57c9e62115f7e30dccee569fa32a12545dddaac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d918f1c64350e3a43976e2e13d1dd02f21620e6a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203171"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420984"
 ---
 # <a name="sqltables"></a>SQLTables
   SQLTables se puede ejecutar en un cursor de servidor estático. Un intento de ejecutar SQLTables en un cursor actualizable (dinámico o conjunto de claves) devolverá SQL_SUCCESS_WITH_INFO, que indica que se ha cambiado el tipo de cursor.  
   
  SQLTables informa de las tablas de todas las bases de datos cuando el *CatalogName* parámetro es SQL_ALL_CATALOGS y todos los demás parámetros contienen los valores predeterminados (punteros NULL).  
   
- Para notificar catálogos disponibles, esquemas y tipos de tabla, SQLTables hace un uso especial de cadenas vacías (punteros de bytes de longitud cero). Las cadenas vacías no son valores predeterminados (punteros NULL).  
+ Para notificar catálogos disponibles, esquemas y tipos de tabla, SQLTables hace un uso especial de las cadenas vacías (punteros de bytes de longitud cero). Las cadenas vacías no son valores predeterminados (punteros NULL).  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC Native Client permite notificar información de tablas en servidores vinculados aceptando un nombre de dos partes para el *CatalogName* parámetro: *nombre_servidor_vinculado.nombre_catálogo*.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client permite notificar información de tablas en servidores vinculados aceptando un nombre de dos partes para el *CatalogName* parámetro: *nombre_servidor_vinculado.nombre_catálogo*.  
   
  SQLTables devuelve información sobre las tablas cuyo nombres coinciden con *TableName* y son propiedad del usuario actual.  
   
@@ -59,7 +57,7 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [SQLTables, función](http://go.microsoft.com/fwlink/?LinkId=59374)   
+ [Función SQLTables](http://go.microsoft.com/fwlink/?LinkId=59374)   
  [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)  
   
   

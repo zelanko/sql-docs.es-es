@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1f6eb37de996e8956468efb54fa74535e419f44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16ca3b28e9b19c0f7935f2938d054939f0cc57a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155396"
 ---
 # <a name="data-quality-services-concepts"></a>Conceptos de Data Quality Services
   En este tema se proporciona un breve resumen de los conceptos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) en administración del conocimiento, proyectos de calidad de datos y administración de calidad de datos.  
@@ -43,7 +43,7 @@ ms.locfileid: "36204468"
   
  Puede usar los datos de referencia para validar, corregir y enriquecer los datos, aprovechando los servicios de compañías que garantizan la calidad de sus datos de referencia. Puede usar los servicios de Windows Azure MarketPlace para conectar con proveedores de datos de referencia o puede usar una conexión directa a un proveedor. Para más información, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
- Para obtener más información acerca de la administración del conocimiento en DQS, vea [dominios y Bases de conocimiento de DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Para obtener más información sobre la administración de conocimiento en DQS, vea [dominios y Bases de conocimiento de DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ##  <a name="Projects"></a> Conceptos de proyectos de calidad de los datos  
  El administrador de datos realiza las operaciones de calidad de los datos (limpiar y buscar coincidencias) mediante un proyecto de calidad de datos en la aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
@@ -73,7 +73,7 @@ ms.locfileid: "36204468"
   
  **Supervisión de actividades**  
   
- La supervisión de actividades muestra la situación y el estado de cada actividad realizada en un intervalo de datos, proporciona datos para cada actividad y permite a los administradores de DQS controlar una actividad. Para obtener más información, consulte [supervisar las actividades de DQS](../../2014/data-quality-services/monitor-dqs-activities.md).  
+ La supervisión de actividades muestra la situación y el estado de cada actividad realizada en un intervalo de datos, proporciona datos para cada actividad y permite a los administradores de DQS controlar una actividad. Para obtener más información, consulte [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   
  **Configuración**  
   
@@ -85,13 +85,13 @@ ms.locfileid: "36204468"
   
 -   Habilitar o deshabilitar las notificaciones de generación de perfiles. Para más información, vea [Habilitar o deshabilitar notificaciones de generación de perfiles en DQS](../../2014/data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md).  
   
--   Configurar niveles de gravedad para los archivos de registro de DQS en el nivel basado en actividad o en el nivel basado en módulo más avanzado. Para obtener más información, consulte [configurar niveles de gravedad de los archivos de registro de DQS](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md).  
+-   Configurar niveles de gravedad para los archivos de registro de DQS en el nivel basado en actividad o en el nivel basado en módulo más avanzado. Para obtener más información, consulte [Configure Severity Levels for DQS Log Files](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md).  
   
  **Seguridad de DQS**  
   
- En el mecanismo de seguridad de SQL Server se usan roles para proteger DQS. Hay tres roles de DQS que determinan el nivel de acceso de un usuario en la aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : dqs_administrator, dqs_kb_editor y dqs_kb_operator. No puede conceder roles a los usuarios mediante la aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; esto se realiza mediante SQL Server Management Studio. Para obtener más información, consulte [DQS Security](../../2014/data-quality-services/dqs-security.md).  
+ En el mecanismo de seguridad de SQL Server se usan roles para proteger DQS. Hay tres roles de DQS que determinan el nivel de acceso de un usuario en la aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : dqs_administrator, dqs_kb_editor y dqs_kb_operator. No puede conceder roles a los usuarios mediante la aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; esto se realiza mediante SQL Server Management Studio. Para obtener más información, consulte [seguridad de DQS](../../2014/data-quality-services/dqs-security.md).  
   
- Para obtener más información sobre la administración de DQS, vea [administración de DQS](../../2014/data-quality-services/dqs-administration.md).  
+ Para obtener más información acerca de la administración de DQS, vea [administración de DQS](../../2014/data-quality-services/dqs-administration.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Data Quality Services](../../2014/data-quality-services/data-quality-services.md)  

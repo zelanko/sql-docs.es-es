@@ -1,13 +1,11 @@
 ---
-title: Con el encabezado SQL Server Native Client y archivos de biblioteca | Documentos de Microsoft
+title: Con el encabezado SQL Server Native Client y los archivos de biblioteca | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f10805d7a28fbeb291244913ae602055f16a1462
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cf209f7897aed59e32d648e0305f9c7ba0e119a9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204163"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415080"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Utilizar los archivos de encabezado y de biblioteca de SQL Server Native Client
   Los archivos de encabezado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y de biblioteca se instalan con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Al desarrollar una aplicación, es importante copiar e instalar todos los archivos necesarios para el desarrollo en el entorno de desarrollo. Para obtener más información sobre la instalación y redistribución [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vea [instalar SQL Server Native Client](installing-sql-server-native-client.md).  
@@ -79,7 +77,7 @@ include "sqlncli.h";
 ```  
   
 > [!NOTE]  
->  Si la aplicación usa API de ODBC y OLE DB, se debe omitir la primera línea de código mostrado anteriormente. Además, si la aplicación tiene una instrucción `#include` para odbcss.h, se debe quitar.  
+>  Si se utilizan OLE DB y ODBC API por la aplicación, se debe omitir la primera línea del código mostrado anteriormente. Además, si la aplicación tiene una instrucción `#include` para odbcss.h, se debe quitar.  
   
  Al crear una conexión a un origen de datos mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, utilice "SQL Server Native Client 11.0" como la cadena de nombre de controlador.  
   

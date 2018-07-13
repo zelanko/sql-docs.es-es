@@ -1,13 +1,11 @@
 ---
-title: Compatibilidad con FILESTREAM | Documentos de Microsoft
+title: Compatibilidad con FILESTREAM | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - SQL Server Native Client [FILESTREAM support]
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 407bf9e6816a08af989b18cfeed3a52ee7fa8465
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b499fee530484c14297d04cc6ffe8db38983e214
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204160"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424334"
 ---
 # <a name="filestream-support"></a>Compatibilidad con FILESTREAM
-  FILESTREAM proporciona un modo de almacenar y obtener acceso a valores binarios grandes, ya sea a través de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o mediante acceso directo al sistema de archivos de Windows. Un valor binario grande es un valor superior a 2 gigabytes (GB). Para obtener más información acerca de la compatibilidad mejorada con FILESTREAM, vea [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md).  
+  FILESTREAM proporciona un modo de almacenar y obtener acceso a valores binarios grandes, ya sea a través de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o mediante acceso directo al sistema de archivos de Windows. Un valor binario grande es un valor superior a 2 gigabytes (GB). Para obtener más información sobre la compatibilidad mejorada con FILESTREAM, vea [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md).  
   
  Cuando se abra una conexión de base de datos, `@@TEXTSIZE` se establecerá en -1 ("ilimitado") de forma predeterminada.  
   
@@ -41,9 +39,9 @@ ms.locfileid: "36204160"
 -   [Obtener acceso a los datos FILESTREAM con OpenSqlFilestream](../../blob/access-filestream-data-with-opensqlfilestream.md)  
   
 ## <a name="querying-for-filestream-columns"></a>Consulta de columnas FILESTREAM  
- Los conjuntos de filas de esquema de OLE DB no notificarán si una columna es una columna FILESTREAM. ITableDefinition en OLE DB no puede utilizarse para crear una columna FILESTREAM.  
+ Los conjuntos de filas de esquema de OLE DB no notificarán si una columna es una columna FILESTREAM. ITableDefinition en OLE DB no se puede usar para crear una columna FILESTREAM.  
   
- Funciones de catálogo como SQLColumns de ODBC no notificará si una columna es una columna FILESTREAM.  
+ Funciones de catálogo como SQLColumns de ODBC no notificarán si una columna es una columna FILESTREAM.  
   
  Para crear columnas FILESTREAM o detectar qué columnas existentes son columnas FILESTREAM, puede usar el `is_filestream` columna de la [sys.columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) vista de catálogo.  
   
@@ -61,11 +59,11 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Compatibilidad con niveles inferiores  
- Si el cliente se compiló con la versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client que se incluía con [!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)], `varbinary(max)` comportamiento es compatible con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Es decir, el tamaño máximo de los datos devueltos se limitará a 2 GB. Para los valores de resultado mayor que 2 GB, se producirá un truncamiento y se devolverá una advertencia "cadena datos truncados por la derecha".  
+ Si el cliente se compiló con la versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client que se incluye con [!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)], `varbinary(max)` comportamiento será compatible con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Es decir, el tamaño máximo de los datos devueltos se limitará a 2 GB. Para los valores de resultado mayor que 2 GB, se truncarán y se devolverá una advertencia "cadena datos truncarán por la derecha".  
   
  Cuando la compatibilidad de tipo de datos se establezca en 80, el comportamiento del cliente será coherente con el comportamiento del cliente de nivel inferior.  
   
- Para los clientes que utilicen SQLOLEDB u otros proveedores que se hayan publicado antes el [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] Native Client, `varbinary(max)` se van a asignar a la imagen.  
+ Para los clientes que utilicen SQLOLEDB u otros proveedores que se publicaron antes del [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] Native Client, `varbinary(max)` se asignará a la imagen.  
   
 ## <a name="see-also"></a>Vea también  
  [Características de SQL Server Native Client](sql-server-native-client-features.md)  

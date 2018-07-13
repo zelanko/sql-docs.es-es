@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de datos de prueba y entrenamiento | Documentos de Microsoft
+title: Conjuntos de datos de aprendizaje y pruebas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing mining models
 - holdout [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0789d5f5ae4c141e8b7e53f7cab9938fae488a87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 770a5446b640cb3a2c5f5ce61f222e200f85ae3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173556"
 ---
 # <a name="training-and-testing-data-sets"></a>Conjuntos de datos de entrenamiento y de prueba
   Separar los datos en conjuntos de entrenamiento y de prueba es una parte importante de la evaluación de los modelos de minería de datos. Normalmente, al dividir un conjunto de datos en un conjunto de entrenamiento y un conjunto de prueba, la mayoría de los datos se usan para el entrenamiento y una parte menor se emplea para las pruebas. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestrea los datos de forma aleatoria para asegurarse de que los conjuntos de entrenamiento y de prueba son similares. Si usa datos similares para el entrenamiento y las pruebas, puede minimizar los efectos de las diferencias en los datos y comprender mejor las características del modelo.  
@@ -47,7 +47,7 @@ ms.locfileid: "36203772"
   
  También puede configurar el asistente para establecer un número máximo de casos de entrenamiento o bien, puede combinar los límites para permitir un porcentaje máximo de casos hasta un número máximo especificado de casos. Al especificar ambos un porcentaje máximo de casos y un número máximo de casos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa el menor de los dos límites como el tamaño del conjunto de pruebas. Por ejemplo, si especifica una exclusión del 30 por ciento para los casos de pruebas, y el número máximo de casos de pruebas como 1000, el tamaño del conjunto de pruebas nunca superará 1000 casos. Esto puede ser útil si desea asegurarse de que el tamaño de su conjunto de pruebas permanece coherente incluso si se agregan más datos de aprendizaje al modelo.  
   
- Si usa la misma vista del origen de datos para diferentes estructuras de minería de datos, y desea asegurarse de que los datos se dividen aproximadamente de la misma manera para todas las estructuras de minería de datos y sus modelos, debe especificar el valor de inicialización que se usa para inicializar el muestreo aleatorio. Cuando se especifica un valor para `HoldoutSeed`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizará ese valor para comenzar el muestreo. De lo contrario, el muestreo aplica un algoritmo hash al nombre de la estructura de minería de datos para crear el valor de inicialización.  
+ Si usa la misma vista del origen de datos para diferentes estructuras de minería de datos, y desea asegurarse de que los datos se dividen aproximadamente de la misma manera para todas las estructuras de minería de datos y sus modelos, debe especificar el valor de inicialización que se usa para inicializar el muestreo aleatorio. Cuando se especifica un valor para `HoldoutSeed`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizará ese valor para empezar el muestreo. De lo contrario, el muestreo aplica un algoritmo hash al nombre de la estructura de minería de datos para crear el valor de inicialización.  
   
 > [!NOTE]  
 >  Si crea una copia de la estructura de minería de datos mediante las instrucciones `EXPORT` e `IMPORT`, la nueva estructura de minería de datos tendrá los mismos conjuntos de datos de entrenamiento y de prueba porque el proceso de exportación crea un nuevo identificador, aunque usa el mismo nombre. Sin embargo, si dos estructuras de minería de datos usan el mismo origen de datos subyacente, pero tienen nombres diferentes, los conjuntos creados para cada estructura de minería de datos serán diferentes.  
@@ -91,7 +91,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 ## <a name="limitations-on-the-use-of-holdout-data"></a>Limitaciones en el uso de los datos de exclusión  
   
--   Para usar los datos de exclusión, la propiedad <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> de la estructura de minería de datos debe estar establecida en el valor predeterminado, `KeepTrainingCases`. Si cambia la `CacheMode` propiedad `ClearAfterProcessing`y, a continuación, vuelve a procesar la estructura de minería de datos, se perderá la partición.  
+-   Para usar los datos de exclusión, la propiedad <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> de la estructura de minería de datos debe estar establecida en el valor predeterminado, `KeepTrainingCases`. Si cambia el `CacheMode` propiedad `ClearAfterProcessing`y, a continuación, vuelve a procesar la estructura de minería de datos, se perderá la partición.  
   
 -   No puede quitar datos de un modelo de serie temporal; por consiguiente, no puede dividir los datos de origen en conjuntos de entrenamiento y de prueba. Si empieza a crear una estructura y un modelo de minería de datos, y elige el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , la opción que permite crear un conjunto de datos de exclusión aparece deshabilitada. También se deshabilita el uso de datos de exclusión si la estructura de minería de datos contiene una columna KEY TIME en el nivel de tabla anidada o caso.  
   
@@ -105,16 +105,16 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 |Temas|Vínculos|  
 |------------|-----------|  
-|Describe cómo interactúan los filtros de un modelo con los conjuntos de datos de entrenamiento y de prueba.|[Filtros para modelos de minería de datos de &#40;Analysis Services: minería de datos&#41;](mining-models-analysis-services-data-mining.md)|  
-|Describe cómo afecta a la validación cruzada el uso de los datos de entrenamiento y de prueba.|[La validación cruzada &#40;Analysis Services: minería de datos&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Describe cómo interactúan los filtros de un modelo con los conjuntos de datos de entrenamiento y de prueba.|[Filtros para modelos de minería de datos de &#40;Analysis Services - minería de datos&#41;](mining-models-analysis-services-data-mining.md)|  
+|Describe cómo afecta a la validación cruzada el uso de los datos de entrenamiento y de prueba.|[La validación cruzada &#40;Analysis Services - minería de datos&#41;](cross-validation-analysis-services-data-mining.md)|  
 |Proporciona información sobre las interfaces de programación para trabajar con conjuntos de entrenamiento y de prueba en una estructura de minería de datos.|[Modelo de objetos y conceptos de AMO](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](../scripting/objects/miningstructure-element-assl.md)|  
 |Proporciona la sintaxis DMX para crear conjuntos de datos de exclusión.|[CREAR ESTRUCTURA DE MINERÍA DE DATOS &AMP;#40;DMX&AMP;#41;](/sql/dmx/create-mining-structure-dmx)|  
-|Recupera información sobre los casos de los conjuntos de entrenamiento y de prueba.|[Conjuntos de filas de esquema de minería de datos](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Consultar los conjuntos de filas de esquema de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-schema-rowsets-ssas.md)|  
+|Recupera información sobre los casos de los conjuntos de entrenamiento y de prueba.|[Conjuntos de filas de esquema de minería de datos](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Consultar los conjuntos de filas de esquema de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas de minería de datos](data-mining-tools.md)   
  [Conceptos de minería de datos](data-mining-concepts.md)   
  [Soluciones de minería de datos](data-mining-solutions.md)   
- [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
+ [Pruebas y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
   
   

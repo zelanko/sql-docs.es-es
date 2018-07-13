@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 99a350febe4166293664e51a17978e66d7d25f97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ebbdf3a5f3f4402cca8da92295d5f9632d1e1e8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202555"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>Agregar efectos 3D a un gráfico (Generador de informes y SSRS)
   Se pueden usar efectos tridimensionales (3D) para dar profundidad y agregar impacto visual a un gráfico. Por ejemplo, si desea resaltar un sector específico de un gráfico circular seccionado, puede girar y cambiar la perspectiva del gráfico para que los usuarios se fijen primero en dicho sector. Cuando se aplican efectos 3D al gráfico, se deshabilitan todos los colores de degradado y los estilos de sombreado.  
@@ -33,7 +33,7 @@ ms.locfileid: "36204095"
   
 2.  En **Opciones 3D**, seleccione la opción **Habilitar 3D** .  
   
-3.  (Opcional) En **Opciones 3D**, puede establecer diversas propiedades relacionadas con opciones de ángulos y escenas 3D. Para obtener más información acerca de estas propiedades, vea [3D, bisel y otros efectos a un gráfico &#40;el generador de informes y SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md).  
+3.  (Opcional) En **Opciones 3D**, puede establecer diversas propiedades relacionadas con opciones de ángulos y escenas 3D. Para obtener más información acerca de estas propiedades, vea [3D, bisel y otros efectos a un gráfico &#40;generador de informes y SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md).  
   
 4.  Haga clic en **Aceptar**.  
   
@@ -88,8 +88,8 @@ ms.locfileid: "36204095"
     4.  Para la propiedad **DrawingStyle** , especifique el valor **Cylinder** .  
   
 ## <a name="see-also"></a>Vea también  
- [3D, bisel y otros efectos a un gráfico de &#40;el generador de informes SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [3D, bisel y otros efectos a un gráfico &#40;generador de informes y SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Gráficos &#40;el generador de informes SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Los gráficos &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

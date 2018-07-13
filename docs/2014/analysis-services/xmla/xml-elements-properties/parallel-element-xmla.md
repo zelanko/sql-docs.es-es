@@ -1,5 +1,5 @@
 ---
-title: Elemento (XMLA) en paralelo | Documentos de Microsoft
+title: Elemento (XMLA) en paralelo | Microsoft Docs
 ms.custom: ''
 ms.date: 2015-12-07
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Parallel element
 ms.assetid: 04726d94-37ee-460b-9744-d62b45f536b9
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b139996598786827c1eef20cbe099473e725a416
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b514732345cc8c4c7c0bc2c2f4f3fa0ad2d75993
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161026"
 ---
 # <a name="parallel-element-xmla"></a>Parallel Element (XMLA)
-  Identifica los comandos que puede ejecutar en paralelo por el elemento primario [lote](../xml-elements-commands/batch-element-xmla.md) comando.  
+  Identifica los comandos que se ejecuten en paralelo por el elemento primario [Batch](../xml-elements-commands/batch-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36202355"
   
 |Attribute|Descripción|  
 |---------------|-----------------|  
-|maxParallel|Opcional `Integer` atributo. Indica el número máximo de subprocesos en los que se ejecutan comandos en paralelo. Si no se especifica o se establece en 0, la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] determina el número óptimo de subprocesos en función del número de procesadores disponibles en el equipo.|  
+|maxParallel|Opcional `Integer` atributo. Indica el número máximo de subprocesos en los que se ejecutan comandos en paralelo. Si no se especifica o se establece en 0, la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] determina el número óptimo de subprocesos según el número de procesadores disponibles en el equipo.|  
   
 ## <a name="remarks"></a>Notas  
   

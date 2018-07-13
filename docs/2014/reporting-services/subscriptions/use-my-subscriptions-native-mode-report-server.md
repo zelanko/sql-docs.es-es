@@ -1,5 +1,5 @@
 ---
-title: Usar Mis suscripciones | Documentos de Microsoft
+title: Usar Mis suscripciones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], My Subscriptions page
 - My Subscriptions page [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c1125792543e3a926ddb98e3d33e0f600328d232
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d06913da04eebdaa249e424fa7b4d66c8e8aaa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153796"
 ---
 # <a name="use-my-subscriptions"></a>Usar Mis suscripciones
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] El Administrador de informes incluye un **Mis suscripciones** página que organiza todas las suscripciones en un solo lugar. Puede utilizar Mis suscripciones para ver, modificar y eliminar suscripciones existentes. Sin embargo, no puede utilizar esta página para crear suscripciones.  

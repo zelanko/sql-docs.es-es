@@ -1,5 +1,5 @@
 ---
-title: Proveedores de datos utilizados para las conexiones de Analysis Services | Documentos de Microsoft
+title: Proveedores de datos utilizados para las conexiones de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7eb84d1a796268414c7f28e3c46e8a3de6cd295e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 357849f815fcdd8310d7056caa2f199d70675e64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157206"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Proveedores de datos usados para las conexiones de Analysis Services
   Analysis Services proporciona tres proveedores de datos para el acceso al servidor y a datos. Todas las aplicaciones que se conectan a Analysis Services lo hacen mediante uno de estos proveedores. Dos de los proveedores, ADOMD.NET y Objetos de administración de Analysis Services (AMO), son proveedores de datos administrados. El proveedor OLE DB de Analysis Services (MSOLAP DLL) es un proveedor de datos nativo.  
@@ -43,7 +43,7 @@ ms.locfileid: "36204708"
 ##  <a name="bkmk_ServVers"></a> Cómo determinar la versión del servidor  
  Conocer la versión de la instancia de Analysis Services le ayudará a determinar si necesita instalar versiones más recientes de los proveedores de datos en las estaciones de trabajo de la organización.  
   
--   En SQL Server Management Studio, conéctese a la instancia de Analysis Services. Haga clic en la instancia que desee comprobar, seleccione **informes**y haga clic en **General**. La información de la edición y la compilación de versión aparece en el informe.  
+-   En SQL Server Management Studio, conéctese a la instancia de Analysis Services. Haga clic en la instancia que desee comprobar, vaya a **informes**y haga clic en **General**. La información de la edición y la compilación de versión aparece en el informe.  
   
  El mayor número de compilación de la versión inicial de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] es 12.0.2000.9.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36204708"
   
  El programa de instalación de SQL Server instala AMO y lo usan las aplicaciones cliente de SQL Server para conectarse a Analysis Services. También puede descargarlo e instalarlo de forma manual con AMO en código personalizado (vea [Cómo determinar la versión de los proveedores de datos de Analysis Services](#bkmk_LibUpdate) en este tema). AMO puede encontrarse en la memoria caché global de ensamblados global, como `Microsoft.AnalysisServices`.  
   
- Una conexión a través de AMO es suele ser mínima, que consta de "origen de datos =\<servername >". Una vez establecida una conexión, use la API para trabajar con colecciones de base de datos y los objetos principales. Tanto SSDT como SSMS usan AMO para conectarse a una instancia de Analysis Services.  
+ Una conexión mediante AMO es suele ser mínima, que consta de "origen de datos =\<servername >". Una vez establecida una conexión, use la API para trabajar con colecciones de base de datos y los objetos principales. Tanto SSDT como SSMS usan AMO para conectarse a una instancia de Analysis Services.  
   
  Para obtener más información sobre la conexión mediante programación, vea [Programming AMO Fundamental Objects](../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md).  
   

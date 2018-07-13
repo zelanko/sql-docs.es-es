@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row removal [SQL Server], Delete query
 - Delete query
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - deleting data
 ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b96039bb192985375a2261ac339a3d9eaba01f6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 792cf742948dba7768ad467d6cdf597d9bda802f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198505"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>Crear consultas de eliminación (Visual Database Tools)
   Puede eliminar todas las filas de una tabla utilizando una consulta de eliminación.  
@@ -52,7 +52,7 @@ ms.locfileid: "36204728"
  Al ejecutar una consulta de eliminación, no se muestra ningún resultado en el [panel Resultados](results-pane-visual-database-tools.md). En su lugar, aparece un mensaje que indica cuántas filas se han eliminado.  
   
 ## <a name="see-also"></a>Vea también  
- [Tipos de consulta admitidos &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
+ [Tipos de consultas compatibles &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
  [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

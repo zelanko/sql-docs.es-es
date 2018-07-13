@@ -1,53 +1,51 @@
 ---
-title: Temas de procedimientos de ODBC | Documentos de Microsoft
+title: Temas de procedimientos de ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbc9b3b5bcb554bfbd774491d3181c042393ff2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 97ee08999f393423798cb57e13ff0b3c42203b29
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203386"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422294"
 ---
 # <a name="odbc-how-to-topics"></a>Temas de procedimientos de ODBC
-  Para usar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC, debe ser capaz de crear orígenes de datos ODBC y asegúrese de que el servidor tiene la versión correcta de los procedimientos almacenados del catálogo. Para codificar una aplicación ODBC que usa SQL Server, debe saber cómo asignar identificadores de ODBC, establecer atributos, conectarse a una instancia de SQL Server, ejecutar consultas y procesar resultados.  
+  Para usar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC, debe ser capaz de crear orígenes de datos ODBC y asegúrese de que el servidor tiene la versión correcta de los procedimientos almacenados de catálogo. Para codificar una aplicación ODBC que usa SQL Server, debe saber cómo asignar identificadores de ODBC, establecer atributos, conectarse a una instancia de SQL Server, ejecutar consultas y procesar resultados.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Configuración de los temas "Cómo..." del controlador ODBC de SQL Server](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
+-   [Temas de procedimientos de configuración del controlador ODBC de SQL Server](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
   
 -   [Asignar identificadores y conectarse a SQL Server &#40;ODBC&#41;](allocate-handles-and-connect-to-sql-server-odbc.md)  
   
--   [Ejecutar consultas temas "Cómo..." &#40;ODBC&#41;](execute-queries/executing-queries-how-to-topics-odbc.md)  
+-   [Ejecutar consultas de temas de procedimientos &#40;ODBC&#41;](execute-queries/executing-queries-how-to-topics-odbc.md)  
   
--   [Temas "Cómo..." de resultados para procesar &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
+-   [Temas de procedimientos de los resultados de procesamiento &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
   
--   [Con los temas de procedimientos de los cursores &#40;ODBC&#41;](cursors/using-cursors-how-to-topics-odbc.md)  
+-   [Uso de temas de procedimientos de los cursores &#40;ODBC&#41;](cursors/using-cursors-how-to-topics-odbc.md)  
   
--   [Utilice Microsoft Distributed Transaction Coordinator &#40;ODBC&#41;](use-microsoft-distributed-transaction-coordinator-odbc.md)  
+-   [Utilice Microsoft Coordinador de transacciones distribuidas &#40;ODBC&#41;](use-microsoft-distributed-transaction-coordinator-odbc.md)  
   
 -   [Temas de procedimientos almacenados de ejecución &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
--   [Administrar en los temas de procedimientos de las columnas text e image &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
+-   [Administración de temas de procedimientos sobre las columnas de texto e imagen &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
--   [Temas "Cómo..." del rendimiento de controlador ODBC de generación de perfiles &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
+-   [Generación de perfiles de temas de procedimientos de ODBC Driver Performance &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
   
 -   [Procesar errores de ODBC &#40;ODBC&#41;](process-odbc-errors-odbc.md)  
   
--   [Copia masiva con los temas "Cómo..." del controlador ODBC de SQL Server &#40;ODBC&#41;](bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+-   [Copia masiva con los temas de procedimientos de controlador SQL Server ODBC &#40;ODBC&#41;](bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
 ## <a name="see-also"></a>Vea también  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  

@@ -1,5 +1,5 @@
 ---
-title: Diseñador de consultas relacionales (SSAS) | Documentos de Microsoft
+title: Diseñador de consultas relacionales (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.relquerydesginer.f1
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 301653a9279cec3690ea0451fe96771342bec030
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 386ac327689aa74028d28dc688dee28257568cae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259661"
 ---
 # <a name="relational-query-designer-ssas"></a>Diseñador de consultas relacionales (SSAS)
   El diseñador de consultas relacionales le ayuda a crear una consulta que especifica los datos que hay que recuperar de las bases de datos relacionales de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] y del [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]. Use el diseñador gráfico de consultas para explorar los metadatos, crear la consulta de forma interactiva y ver los resultados de la misma.  Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  
@@ -84,7 +84,7 @@ ms.locfileid: "36203293"
   
  Los agregados proporcionan resúmenes de datos y los datos se agrupan para admitir el agregado que ofrece los datos de resumen. Al utilizar un agregado en la consulta, los otros campos que devuelve se agrupan automáticamente y la consulta incluye la cláusula de SQL GROUP BY. Puede resumir los datos sin agregar un agregado utilizando solo la opción **Agrupar por** en la lista **Grupo y agregado** . Muchos de los agregados incluyen una versión que utiliza la palabra clave DISTINCT. Al incluir DISTINCT, se eliminan los valores duplicados.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../includes/tsql-md.md)] y [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] utiliza [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../includes/tsql-md.md)] y [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] usa [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
   
  Para más información sobre [!INCLUDE[tsql](../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) en los [Libros en pantalla](http://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "36203293"
   
 -   **Tabla izquierda** : muestra el nombre de la primera tabla que forma parte de una relación de combinación.  
   
--   **Tipo de combinación** : muestra el tipo de instrucción JOIN de SQL que se usa en la consulta generada automáticamente. De forma predeterminada, si se detecta una restricción de clave externa, se utiliza INNER JOIN. Otros tipos de combinación pueden ser LEFT JOIN o RIGHT JOIN. Si no se aplica ninguno de estos tipos de combinación, la columna **Tipo de combinación** muestra **No relacionada**. No se crea ninguna combinación CROSS JOIN para las tablas no relacionadas; en su lugar, debe crear las relaciones manualmente combinando las columnas de las tablas izquierda y derecha. Para obtener más información acerca de los tipos de combinaciones, vea "Conceptos básicos" en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [libros en pantalla](http://go.microsoft.com/fwlink/?LinkId=141687) en msdn.microsoft.com...  
+-   **Tipo de combinación** : muestra el tipo de instrucción JOIN de SQL que se usa en la consulta generada automáticamente. De forma predeterminada, si se detecta una restricción de clave externa, se utiliza INNER JOIN. Otros tipos de combinación pueden ser LEFT JOIN o RIGHT JOIN. Si no se aplica ninguno de estos tipos de combinación, la columna **Tipo de combinación** muestra **No relacionada**. No se crea ninguna combinación CROSS JOIN para las tablas no relacionadas; en su lugar, debe crear las relaciones manualmente combinando las columnas de las tablas izquierda y derecha. Para obtener más información acerca de los tipos de combinaciones, vea "UNIR Fundamentals" en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [libros](http://go.microsoft.com/fwlink/?LinkId=141687) en msdn.microsoft.com...  
   
 -   **Tabla derecha** : muestra el nombre de la segunda tabla que forma parte de una relación de combinación.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36203293"
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas. No todos los tipos de orígenes de datos admiten diseñadores gráficos de consultas.|  
 |**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivos sql y rdl.|  
 |![Ejecutar la consulta](media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta y muestra el conjunto de resultados en el panel Resultado.|  
-|**Tipo de comando**|Seleccione **Text**, **StoredProcedure**o **TableDirect**. Si un procedimiento almacenado tiene parámetros, el cuadro de diálogo **Definir parámetros de consulta** aparece al hacer clic en **Ejecutar** en la barra de herramientas; puede rellenar los valores según sea necesario.<br /><br /> Tenga en cuenta que si un procedimiento almacenado devuelve más de un conjunto de resultados, solo el primer conjunto de resultados se utiliza para rellenar el conjunto de datos. Tenga en cuenta también que <br />                      **TableDirect** solo está disponible para el tipo de origen de datos OLE DB.|  
+|**Tipo de comando**|Seleccione **Text**, **StoredProcedure**o **TableDirect**. Si un procedimiento almacenado tiene parámetros, el cuadro de diálogo **Definir parámetros de consulta** aparece al hacer clic en **Ejecutar** en la barra de herramientas; puede rellenar los valores según sea necesario.<br /><br /> Tenga en cuenta que si un procedimiento almacenado devuelve más de un conjunto de resultados, el primer conjunto de resultados se usa para rellenar el conjunto de datos. Tenga en cuenta también que <br />                      **TableDirect** solo está disponible para el tipo de origen de datos OLE DB.|  
   
 #### <a name="command-type-text"></a>Tipo de comando Text  
  Al crear un conjunto de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , el diseñador de consultas relacionales se abre de forma predeterminada. Para cambiar al diseñador de consultas basado en texto, haga clic en el botón de alternancia **Editar como texto** de la barra de herramientas. El diseñador de consultas basado en texto consta de dos paneles: el panel Consulta y el panel Resultado. En la siguiente ilustración se indica el nombre de cada panel.  
@@ -251,7 +251,7 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Haga clic en el botón **Ejecutar** (**!**). En la tabla siguiente proporciona un ejemplo de `uspGetWhereUsedProductID` parámetros para los que se proporcionan valores en el **definir parámetros de consulta** cuadro de diálogo.  
+ Haga clic en el botón **Ejecutar** (**!**). En la tabla siguiente proporciona un ejemplo de `uspGetWhereUsedProductID` parámetros para el que se proporcionan valores en el **definir parámetros de consulta** cuadro de diálogo.  
   
 |||  
 |-|-|  
@@ -266,6 +266,6 @@ uspGetWhereUsedProductID
   
  `ContactType`  
   
- Al escribir el nombre de tabla `ContactType`, es equivalente a crear la instrucción SQL `SELECT * FROM ContactType`.  
+ Al escribir el nombre de tabla `ContactType`, es el equivalente de la creación de la instrucción SQL `SELECT * FROM ContactType`.  
   
   

@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 833 (Database Engine error)
 ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 53f86ad23c967f573e66251430579475e64a0714
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e3e9519dce24bbe29f9cf30f89706fff9b42f9c7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204605"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428684"
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
     
@@ -34,7 +33,7 @@ ms.locfileid: "36204605"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|BUF_LONG_IO|  
-|Texto del mensaje|SQL Server ha detectado %d instancias de las solicitudes de E/S tarda más de %d segundos en completarse en el archivo [%ls] en la base de datos`[%ls] (%d)`.  El identificador de archivo del SO es 0x%p.  El desplazamiento de la operación de E/S más reciente y más larga es: %#016I64x.|  
+|Texto del mensaje|SQL Server ha detectado %d instancias de las solicitudes de E/S tarda más de %d segundos en completarse en el archivo [%ls] de base de datos`[%ls] (%d)`.  El identificador de archivo del SO es 0x%p.  El desplazamiento de la operación de E/S más reciente y más larga es: %#016I64x.|  
   
 ## <a name="explanation"></a>Explicación  
  Este mensaje indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha emitido una solicitud de lectura o escritura desde el disco y que la solicitud ha tardado más de 15 segundos en volver. Este error ha sido notificado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e indica un problema con el subsistema de E/S.  

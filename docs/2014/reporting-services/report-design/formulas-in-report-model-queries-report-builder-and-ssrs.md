@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6e4917b0e20c9046382e1ae7700388d758b08ab4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 0915cda96047732894ec848c861e83319888d6d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148676"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Utilizar fórmulas en consultas de modelo de informe (Generador de informes y SSRS)
   Las fórmulas son los cálculos que se realizan en los valores de un informe que utiliza un modelo de informe como origen de datos. Una fórmula puede contener funciones, operadores, constantes y referencias a campos o entidades. Las fórmulas permiten combinar, agregar, filtrar y evaluar datos numéricos y de texto. Puede crear fórmulas y guardarlas como campos nuevos, o puede modificar las fórmulas de campos existentes.  
@@ -56,7 +56,7 @@ ms.locfileid: "36204753"
  **Operador de concatenación de texto** Use la Y comercial (&) para unir, o concatenar, una o más cadenas de texto a fin de generar un único fragmento de texto.  
   
 ##  <a name="Constants"></a> Constantes  
- Una constante es un valor que no se calcula y que, por lo tanto, no cambia. Generador de informes utiliza las siguientes constantes: `True`, `False`, y `Empty`. Estas constantes se utilizan para evaluar campos booleanos. Por ejemplo, imagine que tiene un campo denominado IsDiscontinued. Los únicos valores válidos para este campo son True, False o Empty (" ").  
+ Una constante es un valor que no se calcula y que, por lo tanto, no cambia. Informe de generador utiliza las siguientes constantes: `True`, `False`, y `Empty`. Estas constantes se utilizan para evaluar campos booleanos. Por ejemplo, imagine que tiene un campo denominado IsDiscontinued. Los únicos valores válidos para este campo son True, False o Empty (" ").  
   
 ##  <a name="Functions"></a> Funciones  
  Las funciones son fórmulas predefinidas que realizan cálculos utilizando valores específicos, denominados *argumentos*, especificados en un orden concreto. Los argumentos pueden ser valores o campos literales, o combinaciones de ambos. Cuando se utilizan campos en las fórmulas, el nombre de campo representa a cada instancia del campo. Si el argumento es un valor literal, quizás deba indicar que lo es mediante caracteres específicos.  

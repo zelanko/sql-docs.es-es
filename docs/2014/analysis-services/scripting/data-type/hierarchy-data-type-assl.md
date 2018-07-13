@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos Hierarchy (ASSL) | Documentos de Microsoft
+title: Tipo de datos Hierarchy (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Hierarchy data type
 ms.assetid: 2e05917e-7e5d-4dd1-817b-4ff5647747ff
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14354458e3441c6f8f2691350e9236f2aecb6cdd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b20bed156e97c33a1c9f9df02677ef403767e472
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230015"
 ---
 # <a name="hierarchy-data-type-assl"></a>Tipo de datos Hierarchy (ASSL)
   Define un tipo de datos primitivo que representa una jerarquía en una dimensión.  
@@ -64,7 +64,7 @@ ms.locfileid: "36203756"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|None|  
-|Elementos secundarios|[AllMemberName](../properties/name-element-assl.md), [AllMemberTranslations](../collections/translations-element-assl.md), [AllowDuplicateNames](../properties/allowduplicatenames-element-assl.md), [anotaciones](../collections/annotations-element-assl.md), [descripción](../properties/description-element-assl.md), [ DisplayFolder](../properties/displayfolder-element-assl.md), [identificador](../properties/id-element-assl.md), [niveles](../collections/levels-element-assl.md), [MemberNamesUnique](../properties/membernamesunique-element-assl.md), [nombre](../properties/name-element-assl.md), [ Traducciones](../collections/translations-element-assl.md)|  
+|Elementos secundarios|[AllMemberName](../properties/name-element-assl.md), [AllMemberTranslations](../collections/translations-element-assl.md), [AllowDuplicateNames](../properties/allowduplicatenames-element-assl.md), [anotaciones](../collections/annotations-element-assl.md), [descripción](../properties/description-element-assl.md), [ DisplayFolder](../properties/displayfolder-element-assl.md), [ID](../properties/id-element-assl.md), [niveles](../collections/levels-element-assl.md), [MemberNamesUnique](../properties/membernamesunique-element-assl.md), [nombre](../properties/name-element-assl.md), [ Traducciones](../collections/translations-element-assl.md)|  
 |Elementos derivados|[Hierarchy](../objects/hierarchy-element-assl.md)|  
   
 ## <a name="remarks"></a>Notas  

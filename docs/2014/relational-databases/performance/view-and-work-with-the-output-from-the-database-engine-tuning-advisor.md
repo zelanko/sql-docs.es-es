@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.reports.f1
 - sql12.dta.sessionmonitor.f1
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7474f3ca2ae832a343c2b356a1bccd7d0947a92a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 83b44addd88b83b424e9cd956dcc4bd7621ee118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167106"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos
   Cuando el Asistente para la optimización de motor de base de datos optimiza bases de datos, crea resúmenes, recomendaciones, informes y registros de optimización. Puede utilizar la salida de registro de optimización para solucionar problemas de las sesiones de optimización del Asistente para la optimización de motor de base de datos. Puede usar los resúmenes, recomendaciones e informes para determinar si desea implementar las recomendaciones de optimización o continuar con la optimización hasta alcanzar las mejoras de rendimiento de consultas que necesita para la instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener información acerca de cómo usar el Asistente para la optimización de bases de datos para crear cargas de trabajo y optimizar una base de datos, vea [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](database-engine-tuning-advisor.md).  
@@ -152,7 +152,7 @@ ms.locfileid: "36204594"
   
 2.  En el menú **Archivo** , haga clic en **Exportar resultados de sesión** y guarde la exportación como archivo XML.  
   
-3.  Abra el archivo XML creado en el paso 2 en un editor XML, un editor de texto o en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Desplácese hacia abajo hasta la `Configuration` elemento. Copie y pegue el `Configuration` sección del elemento en un documento XML de entrada de plantilla de archivo después de la `TuningOptions` elemento. Guarde este archivo de entrada XML.  
+3.  Abra el archivo XML creado en el paso 2 en un editor XML, un editor de texto o en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Desplácese hacia abajo hasta la `Configuration` elemento. Copie y pegue el `Configuration` después de la plantilla del archivo de entrada de sección del elemento en un archivo XML la `TuningOptions` elemento. Guarde este archivo de entrada XML.  
   
 4.  En el archivo de entrada XML nuevo que creó en el paso 3, especifique todas las opciones de optimización que desee en el elemento `TuningOptions`, modifique la sección del elemento `Configuration` (agregue o elimine las estructuras de diseño físico según sea necesario para su análisis), guarde el archivo y valídelo según el esquema XML del Asistente para la optimización de motor de base de datos. Para obtener información sobre cómo modificar este archivo XML, vea [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
@@ -167,7 +167,7 @@ ms.locfileid: "36204594"
   
 2.  Copie y pegue el [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) en el editor XML o en un editor de texto. Use este ejemplo para crear un archivo de entrada XML para su sesión de optimización. Para obtener información sobre la realización de esta tarea, vea la sección "Crear archivos de entrada XML" en [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](database-engine-tuning-advisor.md).  
   
-3.  Editar la `TuningOptions` y `Configuration` elementos en el archivo de entrada de XML de ejemplo. En el `TuningOptions` elemento, especifique las estructuras de diseño físico que desea Database Engine Tuning Advisor para tener en cuenta durante la sesión de optimización. En el elemento `Configuration`, especifique las estructuras de diseño físico que coincidan con la configuración hipotética de las estructuras de diseño físico de la base de datos que desea que analice el Asistente para la optimización de motor de base de datos. Para obtener información sobre los atributos y elementos secundarios puede usar con el `TuningOptions` y `Configuration` elementos primarios, consulte [referencia del archivo de entrada XML &#40;el Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Editar el `TuningOptions` y `Configuration` elementos en el archivo de entrada de XML de ejemplo. En el `TuningOptions` elemento, especifique las estructuras de diseño físico que desea Database Engine Tuning Advisor a tener en cuenta durante la sesión de optimización. En el elemento `Configuration`, especifique las estructuras de diseño físico que coincidan con la configuración hipotética de las estructuras de diseño físico de la base de datos que desea que analice el Asistente para la optimización de motor de base de datos. Para obtener información sobre los atributos y elementos secundarios puede usar con el `TuningOptions` y `Configuration` elementos primarios, consulte [referencia del archivo de entrada XML &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Guarde el archivo de entrada con la extensión **.xml** .  
   
@@ -179,7 +179,7 @@ ms.locfileid: "36204594"
   
      El esquema XML del Asistente para la optimización de motor de base de datos también se encuentra disponible en línea en [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta).  
   
-6.  Tras crear una carga de trabajo y un archivo de entrada XML, está preparado para enviar el archivo de entrada a la utilidad de línea de comandos **dta** para el análisis. Asegúrese de especificar un nombre de archivo de salida XML para el argumento de la utilidad **-ox** . Esto crea un archivo de salida XML con la configuración recomendada especificada en el `Configuration` elemento. Si desea ejecutar Database Engine Tuning Advisor nuevo para comprobar otra configuración hipotética que se basa en el resultado, puede copiar y pegar la `Configuration` contenido de elemento desde el archivo de salida en un nuevo o el archivo de entrada XML original. Para obtener información acerca del uso del archivo de entrada XML con la utilidad **dta** , vea la sección "Optimizar una base de datos mediante la utilidad dta" en [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](database-engine-tuning-advisor.md).  
+6.  Tras crear una carga de trabajo y un archivo de entrada XML, está preparado para enviar el archivo de entrada a la utilidad de línea de comandos **dta** para el análisis. Asegúrese de especificar un nombre de archivo de salida XML para el argumento de la utilidad **-ox** . Esto crea un archivo de salida XML con una configuración recomendada especificada en el `Configuration` elemento. Si desea ejecutar Database Engine Tuning Advisor nuevo para comprobar otra configuración hipotética basada en la salida, puede copiar y pegar el `Configuration` contenido del elemento desde el archivo de salida en un nuevo o el archivo de entrada XML original. Para obtener información acerca del uso del archivo de entrada XML con la utilidad **dta** , vea la sección "Optimizar una base de datos mediante la utilidad dta" en [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](database-engine-tuning-advisor.md).  
   
      Una vez finalizada la optimización, puede utilizar la GUI del Asistente para la optimización de motor de base de datos para ver los informes de la optimización, o bien puede abrir el archivo de salida XML para ver los elementos `TuningSummary` y `Configuration` y comprobar las recomendaciones del Asistente para la optimización de motor de base de datos. Para obtener información acerca de cómo ver los resultados de la sesión de optimización, revise [Ver la salida de optimización](#View) anteriormente en este tema. Tenga en cuenta también que el archivo de salida XML puede contener informes de análisis del Asistente para la optimización de motor de base de datos.  
   

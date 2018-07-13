@@ -1,5 +1,5 @@
 ---
-title: Consultar un modelo Tabular | Documentos de Microsoft
+title: Consultar un modelo Tabular | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 396685b9b6a4ffbfa46db64a16ee3e401b0b9042
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5936ef813b8533d72c8ebdd3d801f1ccfb6d3a7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204475"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188822"
 ---
 # <a name="querying-a-tabular-model"></a>Consultar un modelo tabular
   Cuando un programador consulta un modelo tabular, implica la recuperación de datos de la base de datos tabular (TDS); para lograr este objetivo tiene dos opciones: usar consultas de tabla de uso en DAX o usar MDX y recuperar los datos como si provinieran de un cubo. Sin embargo, según el modo subyacente del modelo tabular, podría tener que limitarse a usar solo consultas de tabla DAX; el modo DirectQuery requiere el uso de consultas de tabla DAX.  

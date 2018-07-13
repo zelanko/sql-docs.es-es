@@ -1,5 +1,5 @@
 ---
-title: Acepte los términos de licencia | Documentos de Microsoft
+title: Acepte los términos de licencia | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - license terms
 helpviewer_keywords:
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Registration Information page
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55d500b13cc3ab3c859474bb3050e29a7487f4a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b060499f9b3a008e0106455afde5f1a7691d90f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260101"
 ---
 # <a name="accept-license-terms"></a>Aceptar los términos de licencia
-  Use la **Aceptar los términos de licencia** página de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Asistente para la instalación para aceptar los términos de licencia para esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Use la **Aceptar los términos de licencia** página de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para aceptar los términos de licencia para esta versión del Asistente para la instalación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Puede imprimir el contrato de licencia o copiarlo al Portapapeles. Para continuar, acepte los términos de licencia y, a continuación, haga clic en **Siguiente**. Para cerrar la instalación, haga clic en **Cancelar**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36204084"
   
  Información sobre el uso de características se envía a [!INCLUDE[msCoName](../../includes/msconame-md.md)], donde se almacena con acceso limitado.  
   
- Para deshabilitar los informes del CEIP una vez completada la instalación, utilice la  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informes de errores y uso** herramienta en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **herramientas de configuración** menú.  
+ Para deshabilitar los informes del CEIP una vez completada la instalación, utilice el  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informes de errores y uso** herramienta en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **herramientas de configuración** menú.  
   
  En el caso de acciones del programa de instalación como la instalación, actualización, reparación, etc., la información se recopila y se carga únicamente durante la ejecución del mismo  
   
@@ -64,10 +64,10 @@ ms.locfileid: "36204084"
  Use la **configuración de informes de uso y errores** página de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Asistente para la instalación para habilitar para la funcionalidad de informes de uso y errores de la característica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="options"></a>Opciones  
- De forma predeterminada, la recopilación de datos de uso de las características y funciones de informe de errores están deshabilitadas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus componentes en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ De forma predeterminada, la recopilación de datos de uso de las características y funciones de informe de errores están deshabilitados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus componentes en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Informes de errores  
- Si habilita la característica informe de errores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para enviar un informe a [!INCLUDE[msCoName](../../includes/msconame-md.md)] automáticamente si se produce un error irrecuperable en alguno de los siguientes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes:  
+ Si habilita la característica informes de errores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para enviar un informe a [!INCLUDE[msCoName](../../includes/msconame-md.md)] automáticamente si se produce un error irrecuperable en alguno de los siguientes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes:  
   
 -   El [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36204084"
   
 -   REPLICATION  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] utiliza los informes de errores para mejorar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionalidad y trata toda la información de forma confidencial.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa los informes de errores para mejorar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionalidad y trata toda la información como confidencial.  
   
  La información sobre los errores se envía a través de una conexión segura (https) a [!INCLUDE[msCoName](../../includes/msconame-md.md)], donde se almacena con limitación de acceso. O bien, puede enviar los informes de errores a su propio servidor de informes de errores corporativo.  
   
@@ -103,9 +103,9 @@ ms.locfileid: "36204084"
   
  Si habilita Informes de errores y se produce un error irrecuperable, podría ver en el registro de eventos de Windows una respuesta procedente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] que apunte a un artículo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base que trate sobre un error específico.  
   
- Para deshabilitar informe de errores o uso de características para todas las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus componentes una vez completada la instalación, vaya a la **configuración de informes de uso y errores** cuadro de diálogo y desactive las casillas de verificación para **uso de características** . Si **informe de errores de** está habilitado para varios componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y componentes compartidos) puede deshabilitar informe de errores para cada instancia de un usuario individual componente, así como los componentes compartidos, que aparece como **otros**.  
+ Para deshabilitar informe de Error o el uso de características para todas las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus componentes una vez completada la instalación, vaya a la **configuración de informes de uso y errores** cuadro de diálogo y desactive las casillas de verificación para **del uso de características** . Si **informe de errores de** está habilitado para varios componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y los componentes compartidos) puede deshabilitar informe de errores para cada instancia de un usuario individual componente, así como los componentes compartidos, aparece como **otros**.  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca de los términos de licencia SQL Server](../../../2014/getting-started/about-the-sql-server-license-terms.md)  
+ [Acerca de los términos de licencia de SQL Server](../../../2014/getting-started/about-the-sql-server-license-terms.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2c794413b64aa564433352fa30beb99bf927a258
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d50f6bb85aa013ece08c2c7ce12c9b1c7f05a731
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155726"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Cuadro de diálogo Elegir carpetas de búsqueda (Visual Studio)
   Le permite reunir, guardar y revisar sus propios conjuntos con nombre de carpetas de búsqueda, y especificar el orden en que deben realizarse las búsquedas. Para que se muestre este cuadro de diálogo, seleccione el botón **Examinar (...)** situado junto a la lista desplegable **Buscar en** en Buscar en archivos o Reemplazar en archivos, en la ventana Buscar y reemplazar.  

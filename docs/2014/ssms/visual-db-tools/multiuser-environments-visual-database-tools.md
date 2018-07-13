@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [SQL Server], multiuser environments
 - conflict resolution [Visual Database Tools]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], multiuser environments
 ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 53b8335617a012c136a243d7b1063dac406195ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f3da5b458f358ba8823eaf65a00991291a71709c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183512"
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>Entornos multiusuario (Visual Database Tools)
   Un entorno multiusuario es un entorno al que otros usuarios pueden conectarse y en el que pueden realizar cambios en la misma base de datos en la que usted está trabajando. Como resultado, es posible que varios usuarios estén trabajando con los mismos objetos de base de datos a la vez. De este modo, en un entorno multiusuario es posible que la base de datos se vea afectada por los cambios realizados por otros usuarios mientras está trabajando y viceversa.  

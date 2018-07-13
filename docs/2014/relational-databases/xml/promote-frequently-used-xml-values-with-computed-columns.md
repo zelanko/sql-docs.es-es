@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6b9737311798edfe7f65ea74d03d7a941a145ef4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d7a43e9ff408c185abf91a4ef71e7ccc734a3cb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278821"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover los valores XML usados con frecuencia con columnas calculadas
   Si se efectúan consultas principalmente en una cantidad pequeña de valores de elementos y atributos, puede que sea conveniente promover estas cantidades a columnas relacionales. Esto es útil cuando se ejecutan consultas en una pequeña parte de los datos XML mientras se recupera toda la instancia XML. No es necesario crear un índice XML en la columna XML. En lugar de ello, se puede indizar la columna promocionada. Las consultas se deben escribir de modo que usen la columna promocionada. Es decir, que el optimizador de consultas no dirige de nuevo las consultas de la columna XML a la columna promocionada.  
@@ -82,7 +82,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   Cree desencadenadores en la columna XML para mantener las tablas de propiedades. En los desencadenadores, realice una de las siguientes operaciones:  
   
-    -   Use `xml` métodos, tipo de datos como **nodos()** y **value()**, para insertar y eliminar filas de las tablas de propiedades.  
+    -   Use `xml` métodos, tipo de datos, como **nodes()** y **value()**, para insertar y eliminar filas de las tablas de propiedades.  
   
     -   Cree funciones de transmisión por secuencias con valores de tabla en Common Language Runtime (CLR) para insertar y eliminar filas de las tablas de propiedades.  
   

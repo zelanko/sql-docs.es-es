@@ -5,25 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event groups
 - DDL event groups
 - DDL triggers, event groups
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
-caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dc199e525afee8a7293ac310d39c76d97ba0d2d7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: d034c52b9b2ebde245d286718dc38d2df42f69b1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201778"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431494"
 ---
 # <a name="ddl-event-groups"></a>grupos de eventos DDL
   En las tablas siguientes se muestran los grupos de eventos DDL que se pueden usar para ejecutar un desencadenador DDL o una notificación de eventos, así como las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que comprenden. Observe la naturaleza inclusiva de los grupos de eventos. Por ejemplo, un desencadenador DDL o una notificación de eventos que especifica FOR DDL_TABLE_EVENTS (10018) cubre las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE y DROP TABLE. Un desencadenador DLL o una notificación de eventos que especifica FOR DDL_TABLE_VIEW_EVENTS (10017) cubre todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] bajo los tipos DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS y DDL_STATISTICS_EVENTS.  

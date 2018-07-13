@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.unionalltrans.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 27547f95d50bd4552e766184f163dcd3b94a3bb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2de7c1d89f528598efe52b48f0291f0125ac384b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166766"
 ---
 # <a name="union-all-transformation"></a>Unión de todo, transformación
   La transformación Unión de todo combina varias entradas en una salida. Por ejemplo, las salidas de cinco orígenes de archivos planos distintos pueden ser entradas de la transformación Unión de todo y combinarse en una salida.  

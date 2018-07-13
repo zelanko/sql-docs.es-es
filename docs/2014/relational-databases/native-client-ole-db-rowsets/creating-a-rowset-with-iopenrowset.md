@@ -1,13 +1,11 @@
 ---
-title: Crear un conjunto de filas con IOpenRowset | Documentos de Microsoft
+title: Crear un conjunto de filas con IOpenRowset | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,20 +15,20 @@ helpviewer_keywords:
 - OLE DB rowsets, creating
 ms.assetid: e8bc3de7-4b97-4de9-8df8-e11947d24045
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7cdce7632aa726d2992a0383d19691569ed57c0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 30ba5a4d1cbe326be567a3be18cd7a76371f7e49
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203936"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417944"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>Crear un conjunto de filas con IOpenRowset
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el proveedor OLE DB de Native Client la **IOpenRowset:: OpenRowset** método con las restricciones siguientes:  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite el **IOpenRowset:: OpenRowset** método con las siguientes restricciones:  
   
--   Una tabla base o vista debe especificarse en una base de datos (DBID) de Id. de la estructura que la *pTableID* parámetro señala.  
+-   Una tabla base o vista debe especificarse en una base de datos (DBID) Id. de estructura que el *pTableID* parámetro señala.  
   
 -   El DBID *eKind* miembro debe indicar DBKIND_NAME.  
   
@@ -38,7 +36,7 @@ ms.locfileid: "36203936"
   
 -   El *pIndexID* parámetro de **OpenRowset** debe ser NULL.  
   
- El conjunto de resultados de **IOpenRowset:: OpenRowset** contiene un único conjunto de filas. Conjuntos de resultados que contienen un único conjunto de filas pueden ser compatibles con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los cursores. La compatibilidad de cursor permite que el programador utilice mecanismos de simultaneidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ El conjunto de resultados de **IOpenRowset:: OpenRowset** contiene un único conjunto de filas. Se admiten conjuntos de resultados que contienen un único conjunto de filas por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores. La compatibilidad de cursor permite que el programador utilice mecanismos de simultaneidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
  [Conjuntos de filas](rowsets.md)  

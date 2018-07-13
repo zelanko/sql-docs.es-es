@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RemoveURL method
 ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a847215e1870a7d93ee7f741c06bf9f9dcca5d65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 464a37912e7751b4fa33b5a134b29e456a6ae573
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258291"
 ---
 # <a name="removeurl-method-wmi-msreportserverconfigurationsetting"></a>Método RemoveURL (MSReportServer_ConfigurationSetting de WMI)
   Quita una dirección URL reservada para el servidor de informes. Si es necesario quitar varias direcciones URL, esta operación debe realizarse una a una llamando a esta API.  
@@ -61,7 +61,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
 ## <a name="remarks"></a>Notas  
  *UrlString* no incluye el nombre del directorio virtual: el [Método SetVirtualDirectory &#40;MSReportServer_ConfigurationSetting de WMI&#41;](configurationsetting-method-setvirtualdirectory.md) se proporciona para ese propósito.  
   
- Antes de llamar a la [ReserveURL](configurationsetting-method-reserveurl.md) método, debe proporcionar un valor para la propiedad de configuración VirtualDirectory para la *aplicación* parámetro. Use el [Método SetVirtualDirectory &#40;MSReportServer_ConfigurationSetting de WMI&#41;](configurationsetting-method-setvirtualdirectory.md) para establecer la propiedad VirtualDirectory.  
+ Antes de llamar a la [ReserveURL](configurationsetting-method-reserveurl.md) método, debe proporcionar un valor para la propiedad de configuración VirtualDirectory el *aplicación* parámetro. Use el [Método SetVirtualDirectory &#40;MSReportServer_ConfigurationSetting de WMI&#41;](configurationsetting-method-setvirtualdirectory.md) para establecer la propiedad VirtualDirectory.  
   
  Si [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ha proporcionado un certificado SSL y ninguna otra dirección URL lo necesita, se quita.  
   

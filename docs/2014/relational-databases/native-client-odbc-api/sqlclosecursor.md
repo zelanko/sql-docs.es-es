@@ -1,13 +1,11 @@
 ---
-title: SQLCloseCursor | Documentos de Microsoft
+title: SQLCloseCursor | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - SQLCloseCursor function
 ms.assetid: e7134d65-5c1c-4ae2-b119-d9b4b9a42483
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b78467ae9648639051480f16eb073a9c48ccb645
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1ec1f623d2a770664897fce1247af1c94f506b04
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204173"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425304"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
-  **SQLCloseCursor** reemplaza [SQLFreeStmt](sqlfreestmt.md) con una *opción* valor de SQL_CLOSE. Tras la recepción de **SQLCloseCursor**, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC Native Client descarta filas del conjunto de resultados pendientes. Observe que los enlaces de parámetro y columna de la instrucción (si existen) quedan inalterados por **SQLCloseCursor**.  
+  **SQLCloseCursor** reemplaza [SQLFreeStmt](sqlfreestmt.md) con un *opción* valor de SQL_CLOSE. En el recibo de **SQLCloseCursor**, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client descarta las filas del conjunto de resultados pendientes. Observe que los enlaces de parámetro y columna de la instrucción (si existen) quedan inalterados por **SQLCloseCursor**.  
   
 ## <a name="see-also"></a>Vea también  
  [SQLCloseCursor](http://go.microsoft.com/fwlink/?LinkId=59331)   

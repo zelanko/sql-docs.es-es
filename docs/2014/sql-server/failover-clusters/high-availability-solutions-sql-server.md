@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - high availability [SQL Server], solutions
 - Database Engine [SQL Server], availability
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - server availability [SQL Server]
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 caps.latest.revision: 80
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 061606f86a28216e78409e6521c78cc301d4c738
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9a6e16e57cf7d196f4210ea7a1624e5501f84523
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260034"
 ---
 # <a name="high-availability-solutions-sql-server"></a>Soluciones de alta disponibilidad (SQL Server)
   En este tema se presentan varias soluciones de alta disponibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que mejoran la disponibilidad de los servidores o las bases de datos. Una solución de alta disponibilidad enmascara los efectos de un error de hardware o software y mantiene la disponibilidad de las aplicaciones a fin de minimizar el tiempo de inactividad que perciben los usuarios.  
@@ -70,6 +69,6 @@ ms.locfileid: "36204540"
 ## <a name="see-also"></a>Vea también  
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Creación de reflejo de la base de datos: interoperabilidad y coexistencia &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
- [Características del motor de base de datos en desuso en SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
+ [Características desusadas del motor de base de datos de SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

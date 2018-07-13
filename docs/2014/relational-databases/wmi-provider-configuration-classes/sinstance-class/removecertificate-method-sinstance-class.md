@@ -1,5 +1,5 @@
 ---
-title: Método RemoveCertificate (clase SInstance) | Documentos de Microsoft
+title: Método RemoveCertificate (clase SInstance) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - RemoveCertificate method
 ms.assetid: 7e5dbafa-a634-4617-9622-510514fce0ce
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a2854c7ecf62565a8cb9099382a72f9ab00bde8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 56fcc69e20517602e906057f411d97fbaa7191e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258501"
 ---
 # <a name="removecertificate-method-sinstance-class"></a>Método RemoveCertificate (clase SInstance)
   Quita el certificado de seguridad actual de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -52,6 +52,6 @@ object
 ## <a name="remarks"></a>Notas  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurar protocolos de red de servidor y las bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Obtener ayuda acerca de SQL Server | Documentos de Microsoft
+title: Obtener ayuda acerca de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - offline resources [SQL Server]
 - Books Online [SQL Server], additional resources
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - SQL Server Solution Center
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ac98b9aa879844e1a458e9f9ed59cd14c10804c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171166"
 ---
 # <a name="getting-sql-server-assistance"></a>Obtener ayuda sobre SQL Server
   Hay tres fuentes principales de información de [!INCLUDE[msCoName](../includes/msconame-md.md)] acerca de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  

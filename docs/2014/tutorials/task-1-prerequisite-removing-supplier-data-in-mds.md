@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 1 (requisito previo): Quitar datos de proveedor en MDS | Documentos de Microsoft'
+title: 'Tarea 1 (requisito previo): Quitar datos de proveedor en MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,23 +10,23 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1189c064ec1a55da1c77837d1533855266ed4274
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7cf9ccd921ecdef56560e712415604355b97b2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172006"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Tarea 1 (requisito previo): quitar datos de proveedor en MDS
   En esta tarea, quitará los datos de proveedor almacenados en MDS. En la lección anterior cargó los datos manualmente mediante el **complemento MDS para Excel** . El paquete de SSIS que cree en esta lección cargará los datos en MDS automáticamente. Por tanto, antes de probar el paquete de SSIS, necesita quitar los datos de proveedor de MDS, quitar la jerarquía derivada, quitar las entidades Proveedor y Estado, y crear la entidad Proveedor sin datos.  
   
-1.  Iniciar **Master Data Manager** , vaya a **http://localhost/MDS** o el sitio Web y aplicación que especificó al configurar MDS. Si dejó **Master Data Manager** abierto, haga clic en **SQL Server 2012 Master Data Services** en la parte superior para cambiar a la **página principal**.  
+1.  Iniciar **Master Data Manager** yendo a **http://localhost/MDS** o el sitio Web y la aplicación que especificó al configurar MDS. Si dejó **Master Data Manager** abierto, haga clic en **SQL Server 2012 Master Data Services** en la parte superior para cambiar a la **página principal**.  
   
 2.  Haga clic en **Administración del sistema** en la sección **Tareas administrativas** .  
   
@@ -89,6 +89,6 @@ ms.locfileid: "36204512"
 22. Haga clic en **Explorador**. Observe que se crea la entidad **Proveedor** con todos los atributos **sin ningún valor**.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 2 &#40;opcional&#41;: crear una vista de suscripciones de MDS con Master Data Manager](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
+ [Tarea 2 &#40;opcional&#41;: creación de una vista de suscripciones de MDS con Master Data Manager](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
   
   

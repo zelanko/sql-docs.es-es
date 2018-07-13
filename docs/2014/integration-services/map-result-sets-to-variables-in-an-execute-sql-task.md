@@ -1,5 +1,5 @@
 ---
-title: Asignar conjuntos de resultados a Variables en una tarea Ejecutar SQL | Documentos de Microsoft
+title: Asignar conjuntos de resultados a Variables en una tarea Ejecutar SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 62dab9509a080e00edc4d990cd3f23fa67c93113
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cdd76b3f0b1665fa6336e82536ca474c0b5e1fab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277381"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Asignar conjuntos de resultados a variables en una tarea Ejecutar SQL
   Este tema describe cómo crear una asignación entre un conjunto de resultados y una variable en una tarea Ejecutar SQL. La asignación de un conjunto de resultados a una variable hace que el conjunto de resultados esté disponible para otros elementos del paquete. Por ejemplo, un script de la tarea Script puede leer la variable y luego utilizar los valores del conjunto de resultados, o un origen XML puede consumir el conjunto de resultados almacenados en una variable. Si un paquete primario genera el conjunto de resultados, este conjunto de resultados se puede poner a disposición de un paquete secundario llamado por la tarea Ejecutar paquete asignando el conjunto de resultados a una variable del paquete primario, y luego creando una configuración de variable de paquete primario en el paquete secundario a fin de almacenar el valor de la variable primaria.  
@@ -38,7 +38,7 @@ ms.locfileid: "36203984"
   
 3.  Haga clic en la pestaña **Flujo de control** .  
   
-4.  Si el paquete no incluye en ese momento una tarea Ejecutar SQL, agregue una al flujo de control del paquete. Para obtener más información, vea [agregar o eliminar una tarea o un contenedor en un flujo de Control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  Si el paquete no incluye en ese momento una tarea Ejecutar SQL, agregue una al flujo de control del paquete. Para obtener más información, consulte [agregar o eliminar una tarea o un contenedor en un flujo de Control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 5.  Haga doble clic en la tarea Ejecutar SQL.  

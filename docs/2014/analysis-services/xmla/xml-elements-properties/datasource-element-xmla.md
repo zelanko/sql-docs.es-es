@@ -1,5 +1,5 @@
 ---
-title: Elemento DataSource (XMLA) | Documentos de Microsoft
+title: Elemento DataSource (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DataSource element
 ms.assetid: adc0713a-3927-40f3-8b87-012130908f34
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f0af7343a1d359bae1e02763b71fa80bdf557d82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 40efe20736e6e2e6364ddcf5aa41a92409a2e68c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167166"
 ---
 # <a name="datasource-element-xmla"></a>Elemento DataSource (XMLA)
-  Contiene un enlace de origen de datos fuera de línea para el elemento primario [lote](../xml-elements-commands/batch-element-xmla.md) o [proceso](../xml-elements-commands/process-element-xmla.md) elemento.  
+  Contiene un enlace de origen de datos fuera de línea para el elemento primario [Batch](../xml-elements-commands/batch-element-xmla.md) o [proceso](../xml-elements-commands/process-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -67,9 +67,9 @@ ms.locfileid: "36204236"
 |Elementos secundarios|[DatabaseID](id-element-xmla.md), [DataSourceID](datasourceid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notas  
- El `DataSource` elemento representa un enlace fuera de línea para un origen de datos, utilizado por el `Batch` o `Process` comando para anular temporalmente el enlace de origen de datos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos procesados por el comando.  
+ El `DataSource` elemento representa un enlace fuera de línea a un origen de datos, utilizado por el `Batch` o `Process` command to tempoarily override data source binding Fo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos procesados por el comando.  
   
- Para obtener más información acerca de los enlaces fuera de línea, consulte [orígenes de datos y enlaces &#40;SSAS multidimensionales&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obtener más información sobre los enlaces fuera de línea, consulte [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;XMLA&#41;](xml-elements-properties.md)  

@@ -1,5 +1,5 @@
 ---
-title: Objeto de elemento (XMLA) | Documentos de Microsoft
+title: Objeto de elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Object element
 ms.assetid: 99470537-2c4a-4072-9613-940c41c12487
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 02d27280ab74e907558c07ece457d114f8dcbd1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 678838cd084fb8d3c7905f3e7363059fea28f541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229585"
 ---
 # <a name="object-element-xmla"></a>Elemento Object (XMLA)
   Contiene una referencia de objeto usada por el elemento primario.  
@@ -56,7 +56,7 @@ ms.locfileid: "36202792"
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|None|  
 |Valor predeterminado|None|  
-|Cardinalidad|Antecesor o elemento primario: [Alter](../xml-elements-commands/create-element-xmla.md) &#124; 0-1: elemento opcional que puede aparecer una sola vez.<br /><br /> Antecesor o elemento primario: todos los demás &#124; 1-1: elemento necesario que se produce una vez y solo una vez.|  
+|Cardinalidad|Antecesor o elemento primario: [Alter](../xml-elements-commands/create-element-xmla.md) &#124; 0-1: elemento opcional que puede aparecer solo una vez.<br /><br /> Antecesor o elemento primario: todos los demás &#124; 1-1: elemento necesario que se produce solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   

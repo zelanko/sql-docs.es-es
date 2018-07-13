@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_INSTANCES | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_INSTANCES | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DISCOVER_INSTANCES rowset
 ms.assetid: e0842e63-089d-468d-869f-634da343d9fb
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f3118b5de343a28dd26d3507d56c8e98fc09d512
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5d949861a9208b60788e0085de2340bdd26f4700
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200135"
 ---
 # <a name="discoverinstances-rowset"></a>Conjunto de filas DISCOVER_INSTANCES
   Describe las instancias en el servidor.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_INSTANCES` filas contiene las columnas siguientes.  
+ El `DISCOVER_INSTANCES` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "36202809"
  Este conjunto de filas de esquema no está ordenado.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DISCOVER_INSTANCES` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DISCOVER_INSTANCES` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de consultas de modelo de agrupación en clústeres | Documentos de Microsoft
+title: Ejemplos de consultas de modelo agrupación en clústeres | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cee82332d6098544df5db02a223efc23b19d8820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6420e75c9961a094691a7be05e6e2b26fad45933
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200635"
 ---
 # <a name="clustering-model-query-examples"></a>Ejemplos de consultas de modelos de agrupación en clústeres
   Al crear una consulta en un modelo de minería de datos, puede recuperar metadatos sobre el modelo o crear una consulta de contenido que proporcione detalles sobre los patrones detectados en el análisis. También puede crear una consulta de predicción, que usa los patrones del modelo para realizar predicciones para los nuevos datos. Cada tipo de consulta proporcionará información diferente. Por ejemplo, una consulta de contenido puede proporcionar detalles adicionales sobre los clústeres encontrados, mientras que una consulta de predicción puede indicar a qué clúster pertenece con mayor probabilidad un nuevo punto de datos.  
@@ -261,7 +261,7 @@ WHERE IsInNode('001')
  [Volver al principio](#bkmk_top2)  
   
 ###  <a name="bkmk_Query8"></a> Consulta de ejemplo 8: predecir resultados de un modelo de agrupación en clústeres  
- Si el modelo de agrupación en clústeres creado contiene un atributo de predicción, puede utilizar el modelo para realizar predicciones sobre los resultados. Sin embargo, el modelo procesa el atributo de predicción diferente dependiendo de si se establece la columna de predicción `Predict` o `PredictOnly`. Si establece el uso de la columna a `Predict`, los valores para ese atributo se agregan al modelo de agrupación en clústeres y aparecen como atributos en el modelo acabado. Sin embargo, si establece el uso de la columna en `PredictOnly`, los valores no se utilizan para crear clústeres. En su lugar, una vez completado el modelo, el algoritmo de clústeres crea nuevos valores para el `PredictOnly` atributo basándose en los clústeres al que pertenece cada caso.  
+ Si el modelo de agrupación en clústeres creado contiene un atributo de predicción, puede utilizar el modelo para realizar predicciones sobre los resultados. Sin embargo, el modelo procesa el atributo de predicción forma distinta dependiendo de si se establece la columna de predicción en `Predict` o `PredictOnly`. Si establece el uso de la columna a `Predict`, los valores para ese atributo se agregan al modelo de agrupación en clústeres y aparecen como atributos en el modelo terminado. Sin embargo, si establece el uso de la columna en `PredictOnly`, los valores no se utilizan para crear clústeres. En su lugar, una vez completado el modelo, el algoritmo de clústeres crea nuevos valores para el `PredictOnly` basada en atributos en los clústeres a la que pertenece cada caso.  
   
  La consulta siguiente proporciona al modelo un único caso nuevo, en que la única información sobre el caso es la edad y el género. La instrucción SELECT especifica el par atributo/valor de predicción en que está interesado y la función [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) indica la probabilidad de que un caso con esos atributos tenga el resultado deseado.  
   
@@ -275,7 +275,7 @@ NATURAL PREDICTION JOIN
   'F' AS [Gender]) AS t  
 ```  
   
- Ejemplo de resultados cuando el uso se establece en `Predict`:  
+ Ejemplo de resultados cuando uso se establece en `Predict`:  
   
 |Bike Buyer|Expresión|  
 |----------------|----------------|  
@@ -332,7 +332,7 @@ NATURAL PREDICTION JOIN
 |--------------|----------------|  
 |Clúster 2|0.397918596951617|  
   
- **Tenga en cuenta** de forma predeterminada, la `ClusterProbability` función devuelve la probabilidad de que el clúster más probable. Sin embargo, puede especificar otro clúster utilizando la sintaxis `ClusterProbability('cluster name')`. Si lo hace, sea consciente de que los resultados de cada función de predicción son independientes de los demás resultados. Por consiguiente, la puntuación de probabilidad en la segunda columna podría hacer referencia a un clúster distinto del clúster mencionado en la primera columna.  
+ **Tenga en cuenta** de forma predeterminada, el `ClusterProbability` función devuelve la probabilidad de que el clúster más probable. Sin embargo, puede especificar otro clúster utilizando la sintaxis `ClusterProbability('cluster name')`. Si lo hace, sea consciente de que los resultados de cada función de predicción son independientes de los demás resultados. Por consiguiente, la puntuación de probabilidad en la segunda columna podría hacer referencia a un clúster distinto del clúster mencionado en la primera columna.  
   
  [Volver al principio](#bkmk_top2)  
   

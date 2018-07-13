@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - opening View Designer
 - View Designer, opening
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - opening Query Designer
 ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e822f9facf894ccebf4408316d2ed8166ff64d5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 21c6185322364fe4d8f612b29f9ef081852dae2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204070"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259931"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>Abrir el Diseñador de consultas y vistas (Visual Database Tools)
   El Diseñador de consultas y vistas se ejecuta cuando se abre la definición de una vista, cuando se muestran los resultados de una consulta o una vista, o cuando se crea o se abre una consulta. Se compone de cuatro paneles diferentes:  

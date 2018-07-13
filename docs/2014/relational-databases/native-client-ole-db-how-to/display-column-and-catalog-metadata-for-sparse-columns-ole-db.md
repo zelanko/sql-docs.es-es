@@ -1,31 +1,29 @@
 ---
-title: Columna de presentación y los metadatos de catálogo para columnas dispersas (OLE DB) | Documentos de Microsoft
+title: Columna de presentación y los metadatos de catálogo para columnas dispersas (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7145bc647411817996cbef9dffce406f37d4375d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 22b1e8512a1a6bd92416504ee48883715cef9a3b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204577"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411554"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Mostrar metadatos de columna y del catálogo para columnas dispersas (OLE DB)
   En este ejemplo se crea una tabla con tres columnas: una columna dispersa, otra que no es dispersa y una tercera de conjunto de columnas. A continuación, el ejemplo muestra las marcas OLE DB que muestran los metadatos de columna y de catálogo para la columna no dispersa y para la columna de conjunto de columnas.  
   
- En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior. Para obtener más información sobre las columnas dispersas, vea [Sparse Columns Support in SQL Server Native Client](../native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
+ En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior. Para obtener más información sobre las columnas dispersas, vea [con las columnas dispersas en SQL Server Native Client](../native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## <a name="example"></a>Ejemplo  
  Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  

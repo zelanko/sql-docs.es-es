@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 66738f617a6b882e1b72c526fb66aad5f438f969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c4b2c799771c6ff5e87100e4906411b4a8a613bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240405"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Representar elementos de informe (Generador de informes y SSRS)
   El número, tamaño y ubicación de los elementos de informe afectan a la manera en que los representadores paginan el cuerpo del informe. A continuación se incluye una descripción de cómo se representan los distintos elementos de informe.  
@@ -81,11 +81,11 @@ ms.locfileid: "36203808"
   
 -   Encabezados de columna y encabezados de fila repetidos.  
   
-     Los encabezados tienen prioridad sobre los pies de página. Los grupos repetidos internos tienen prioridad sobre los grupos externos. Elementos donde la `RepeatWith` propiedad se establece que están más cerca de la región de datos de destino tienen prioridad sobre los elementos situados más lejos de la región de datos.  
+     Los encabezados tienen prioridad sobre los pies de página. Los grupos repetidos internos tienen prioridad sobre los grupos externos. Elementos donde el `RepeatWith` propiedad se establece que están más cerca de la región de datos de destino tienen prioridad sobre los elementos situados más lejos de la región de datos.  
   
 -   Elementos de informe pequeños, como cuadros de texto o rectángulos, con una propiedad KeepTogether explícita establecida en `true`.  
   
--   Elementos de informe de gran tamaño, como subinformes o un miembro de tablix no más interno, con una propiedad KeepTogether explícita establecida en `true`.  
+-   Elementos de informe de gran tamaño, como subinformes o un miembro de tablix que no sean más interno, con una propiedad KeepTogether explícita establecida en `true`.  
   
 -   Regiones de datos Tablix con una propiedad KeepTogether explícita establecida en `true`.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36203808"
 ## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;el generador de informes SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;generador de informes y SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Listas &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

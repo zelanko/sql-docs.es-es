@@ -1,5 +1,5 @@
 ---
-title: Asistentes de la interfaz de usuario para el análisis de minería de datos | Documentos de Microsoft
+title: Asistentes de la interfaz de usuario para el análisis de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services wizards
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81fdccdf00ddda9ab92421703001cedb6b1dca1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44737c26f9940b34866406f7fe8fbfb50a112a93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151406"
 ---
 # <a name="ui-wizards-for-data-mining-analysis"></a>Asistentes de la interfaz de usuario para el análisis de minería de datos
 
-Esta sección contiene documentación acerca de los asistentes de interfaz de usuario para el análisis de minería de datos.
+Esta sección contiene documentación sobre los asistentes de interfaz (IU) del usuario para el análisis de minería de datos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

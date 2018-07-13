@@ -1,5 +1,5 @@
 ---
-title: Definir la inteligencia de dimensiones (Asistente de Business Intelligence) | Documentos de Microsoft
+title: Definir la inteligencia de dimensiones (Asistente de Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.dimensionintelligence.adddimensionintelligence.f1
 ms.assetid: 1089a788-763f-4c3e-80e3-b625e0728343
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdb8d119a787d6444dcaa4eef1bc70ec612dc742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96f90e84bdd66d4b301193a4b3974964a6a7301e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171726"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>Definir la inteligencia de dimensiones (Asistente de Business Intelligence)
   Utilice la página **Definir la inteligencia de dimensiones** para asignar atributos de dimensiones existentes a los tipos de atributos del tipo de dimensión especificado.  
@@ -43,7 +43,7 @@ ms.locfileid: "36202622"
  Seleccione el atributo de dimensión existente al que se asignará el tipo de atributo correspondiente.  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda de F1 de Asistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Asistente de Business Intelligence F1 Ayuda](business-intelligence-wizard-f1-help.md)   
  [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

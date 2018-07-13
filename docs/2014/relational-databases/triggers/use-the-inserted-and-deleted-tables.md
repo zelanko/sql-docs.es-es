@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserted tables
 - UPDATE statement [SQL Server], DML triggers
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 11e879ddc8687bb7daeb7e20158bd4d65fcd0d60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f5a195b0cd15716b87f050db5dd835c602303a2f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199315"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427644"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar las tablas insertadas y eliminadas
   En las instrucciones de desencadenadores DML se usan dos tablas especiales: la tabla inserted y la tabla deleted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea y administra automáticamente ambas tablas. Puede utilizar estas tablas temporales residentes en memoria para probar los efectos de determinadas modificaciones de datos y para establecer condiciones para las acciones de los desencadenadores DML. No puede modificar directamente los datos de estas tablas ni realizar en ellas operaciones de lenguaje de definición de datos (DDL), como CREATE INDEX.  
@@ -74,7 +72,7 @@ ms.locfileid: "36199315"
   
 -   Las instrucciones INSERT deben suministrar valores para todas las columnas NOT NULL que no tienen restricciones DEFAULT.  
   
--   Cualquier, excepto para columnas calculadas, de identidad o `timestamp` columnas, los valores son opcionales para cualquier columna que admita valores NULL o cualquier columna NOT NULL que tiene una definición DEFAULT.  
+-   Cualquier, excepto para columnas calculadas, de identidad o `timestamp` columnas, los valores son opcionales para cualquier columna que admita valores NULL, o cualquier columna NOT NULL que tiene una definición DEFAULT.  
   
  Cuando una instrucción INSERT, UPDATE o DELETE hace referencia a una vista que tiene un desencadenador INSTEAD OF, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] llama al desencadenador en lugar de realizar una acción directa en cualquier tabla. El desencadenador utiliza la información de las tablas inserted y deleted a fin de generar las instrucciones necesarias para implementar la acción solicitada en las tablas base, incluso si el formato de la información de las tablas inserted y deleted generadas para la vista es distinto del formato de los datos de las tablas base.  
   

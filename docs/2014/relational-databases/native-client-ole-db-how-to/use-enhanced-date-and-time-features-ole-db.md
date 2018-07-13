@@ -1,26 +1,24 @@
 ---
-title: Uso mejorado de características de fecha y hora (OLE DB) | Documentos de Microsoft
+title: Uso mejorado de características de fecha y hora (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ca129ec485bdfbc0583a2761f09a7f16cf9e78a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 96a296a7d041223c214afe59b7d10b047b32c869
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204166"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428654"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Uso mejorado de características de fecha y hora (OLE DB)
   En este ejemplo, se muestra cómo usar las características de fecha y hora que se incluyeron en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. El ejemplo usa los cuatro nuevos tipos de fecha y hora (`date`, **tiempo**, `datetime2`, y `datetimeoffset`) para ejecutar comandos con parámetros y recuperar los resultados de conjunto de filas.  
@@ -33,7 +31,7 @@ ms.locfileid: "36204166"
 ## <a name="example"></a>Ejemplo  
  La primera lista de código  ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crea un procedimiento almacenado que se usa en el ejemplo.  
   
- Compile con ole32.lib oleaut32.lib y ejecute la segunda lista de código (C++). Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\\name", donde el nombre es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
+ Compile con ole32.lib oleaut32.lib y ejecute la segunda lista de código (C++). Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\\name", donde nombre es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
  La tercera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) elimina el procedimiento almacenado que se usa en el ejemplo.  
   

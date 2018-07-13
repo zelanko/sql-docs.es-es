@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos PerspectiveCalculation (ASSL) | Documentos de Microsoft
+title: Tipo de datos PerspectiveCalculation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveCalculation data type
 ms.assetid: 5a5173d2-c96d-4a55-a35c-0cbfd5b0e599
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1214bc349c09f02f522569b26dd48e82d5e42b99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bec56d06fe2e2957f9409a43be3502b4e0196427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185152"
 ---
 # <a name="perspectivecalculation-data-type-assl"></a>Tipo de datos PerspectiveCalculation (ASSL)
   Define un tipo de datos primitivo que representa la relación entre un cálculo y un [perspectiva](../objects/perspective-element-assl.md) elemento.  
@@ -58,7 +58,7 @@ ms.locfileid: "36204695"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|None|  
-|Elementos secundarios|[Anotaciones](../collections/annotations-element-assl.md), [nombre](../properties/name-element-assl.md), [tipo](../properties/type-element-perspectivecalculation-assl.md)|  
+|Elementos secundarios|[Las anotaciones](../collections/annotations-element-assl.md), [nombre](../properties/name-element-assl.md), [tipo](../properties/type-element-perspectivecalculation-assl.md)|  
 |Elementos derivados|[Cálculo](../objects/calculation-element-assl.md) ([cálculos](../collections/calculations-element-assl.md) colección de [perspectiva](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Notas  

@@ -1,5 +1,5 @@
 ---
-title: Propiedades que se pueden establecer mediante expresiones de flujo de datos | Documentos de Microsoft
+title: Las propiedades que se pueden establecer mediante expresiones de flujo de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0dccc1a7bb932ae044f6d1e2491c7521652e9033
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9855c21e19e4e2ef0e9f9d7ab88d6d12fdadda16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173176"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propiedades de flujo de datos que se pueden establecer utilizando expresiones
   Los valores de ciertas propiedades de objetos de flujo de datos se pueden especificar utilizando expresiones de propiedades disponibles en el contenedor de tareas Flujo de Datos.  
@@ -88,6 +88,6 @@ ms.locfileid: "36204437"
  [Usar expresiones de propiedad en paquetes](expressions/use-property-expressions-in-packages.md)   
  [Propiedades comunes](../../2014/integration-services/common-properties.md)   
  [Propiedades personalizadas de transformación](data-flow/transformations/transformation-custom-properties.md)   
- [Propiedades de ruta de acceso](../../2014/integration-services/path-properties.md)  
+ [Propiedades de la ruta de acceso](../../2014/integration-services/path-properties.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Instalar SQL Server 2014 mediante SysPrep | Documentos de Microsoft
+title: Instalar SQL Server 2014 con SysPrep | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2534337a9b1d4d244ade4f76c9bb08b6af1c573a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7be73952adef9269f9cf3811c8c4aa6fe3696403
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239755"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Instalar SQL Server 2014 mediante SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relacionadas con SysPrep. La página **Avanzadas** del **Centro de instalación** tiene dos opciones: **Preparar imagen de una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** y **Completar imagen de una instancia independiente preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Las secciones [Preparar](#prepare) y [Completar](#complete) describen el proceso de instalación en detalle. Para obtener más información, vea [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
   
  También puede preparar y completar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el símbolo del sistema o un archivo de configuración. Para obtener más información, vea:  
   
--   [Instalar a SQL Server 2014 desde el símbolo del sistema](install-sql-server-from-the-command-prompt.md)  
+-   [Instalar SQL Server 2014 desde el símbolo del sistema](install-sql-server-from-the-command-prompt.md)  
   
 -   [Instalar SQL Server 2014 mediante un archivo de configuración](install-sql-server-using-a-configuration-file.md)  
   
@@ -180,7 +180,7 @@ ms.locfileid: "36204036"
 8.  En la página **Revisión de características** , verá las características seleccionadas y los componentes incluidos en la instalación durante el paso de preparación. Si desea agregar a su instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] más características no incluidas en la instancia preparada, primero debe realizar este paso para completar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, a continuación, agregar las características desde **Agregar características** en el **Centro de instalación**.  
   
     > [!NOTE]  
-    >  Puede agregar las características que estén disponibles para la versión de producto que está instalando. Para obtener más información, vea [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+    >  Puede agregar las características que estén disponibles para la versión de producto que está instalando. Para obtener más información, consulte [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 9. En la página Configuración de instancia, especifique el nombre de la instancia preparada. Este es el nombre de la instancia después de haber completado la configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para continuar, haga clic en **Siguiente** .  
   

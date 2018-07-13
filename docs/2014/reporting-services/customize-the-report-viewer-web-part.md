@@ -1,5 +1,5 @@
 ---
-title: Personalizar el elemento Web de Visor de informes | Documentos de Microsoft
+title: Personalizar el elemento Web Visor de informes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d59a29eef3b45596a99ffeb9dd2bb45d6761357e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a56fdc024d15a24463fb0a7cf593ad23ca85aa34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162256"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar el elemento web Visor de informes
   Puede usar el elemento web Visor de informes para ver informes que se ejecutan en un servidor de informes configurado para la integración de SharePoint. Entre los informes que puede mostrar se incluyen archivos de definición de informe (.rdl) e informes del Generador de informes. Los informes se abren automáticamente en el elemento web Visor de informes en una página nueva, aunque también puede agregar un elemento web Visor de informes a una página o un sitio web existentes si desea que un informe concreto esté siempre visible en la página.  
@@ -65,7 +65,7 @@ ms.locfileid: "36204362"
 |Property|Descripción|  
 |--------------|-----------------|  
 |Informe|Ruta de acceso completa a un informe que esté en el sitio de SharePoint actual o en un sitio dentro de la misma aplicación o conjunto de servidores web. Para obtener los mejores resultados al establecer propiedades adicionales, haga clic en Aplicar después de especificar la dirección URL del informe.|  
-|Destino de hipervínculo|HTML estándar que especifica el marco de destino para mostrar el contenido vinculado en el documento actual. Para informes que incluyen hipervínculos a sitios web externos, puede especificar si un documento de destino reemplaza el informe existente en la ventana actual o si se abre en una nueva ventana del explorador. Los valores válidos son `_Top`, `_Blank`, y `_Self`. `_Top` usa la ventana actual, `_Blank` carga el documento en una nueva ventana del explorador y `_Self` abre el documento dentro del marco actual. Aunque `_Parent` es un valor válido para el atributo de destino en HTML, no lo use para un elemento web Visor de informes que se incrusta en una página.|  
+|Destino de hipervínculo|HTML estándar que especifica el marco de destino para mostrar el contenido vinculado en el documento actual. Para informes que incluyen hipervínculos a sitios web externos, puede especificar si un documento de destino reemplaza el informe existente en la ventana actual o si se abre en una nueva ventana del explorador. Los valores válidos incluyen `_Top`, `_Blank`, y `_Self`. `_Top` usa la ventana actual, `_Blank` carga el documento en una nueva ventana del explorador y `_Self` abre el documento dentro del marco actual. Aunque `_Parent` es un valor válido para el atributo de destino en HTML, no lo use para un elemento web Visor de informes que se incrusta en una página.|  
 |Generar automáticamente el título del elemento web|Un título generado que incluye el nombre del elemento web Visor de informes más el nombre del informe, separados por un guión. Si el informe no tiene ningún título, se usa el nombre del archivo de informe. El título es visible cuando se agrega un elemento web a una página. Si esta casilla está activada, el título se generará cada vez que se actualice la página.|  
 |Generar automáticamente el vínculo de detalles del elemento web|Un hipervínculo generado que aparece encima del elemento web. Puede hacer clic en el vínculo para abrir el informe en una nueva página, en modo de página completa.|  
 |Mostrar elemento del menú del generador de informes|Muestra u oculta la opción del menú **Acciones** para abrir el Generador de informes.|  
@@ -78,10 +78,10 @@ ms.locfileid: "36204362"
 |Mostrar controles de búsqueda|Muestra u oculta los controles de búsqueda en la barra de herramientas. Los controles de búsqueda permiten que los usuarios busquen el texto en el informe representado. Esta opción cambia la visibilidad de todos los controles de búsqueda.|  
 |Mostrar control de zoom|Muestra u oculta el zoom en la barra de herramientas.|  
 |Mostrar botón de fuente ATOM|Muestra u oculta el botón de fuente ATOM en la barra de herramientas.<br /><br /> ![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
-|Ubicación de la barra de herramientas|Determina la ubicación de la barra de herramientas dentro del visor de informes. Los valores válidos son `Top` y `Bottom`.|  
-|Área de mensajes|Los valores válidos son `Displayed`, `Collapsed`, y `Hidden`. `Displayed` Muestra el área de parámetros para los informes que incluyen valores con parámetros y que requieren una entrada de usuario antes de que se ejecutará el informe. Use `Hidden` si han especificado todos los parámetros del informe y no desea que los usuarios puedan ver el área de parámetros.|  
+|Ubicación de la barra de herramientas|Determina la ubicación de la barra de herramientas dentro del visor de informes. Los valores válidos incluyen `Top` y `Bottom`.|  
+|Área de mensajes|Los valores válidos incluyen `Displayed`, `Collapsed`, y `Hidden`. `Displayed` Muestra el área de parámetros para los informes que incluyen valores con parámetros y que requieren intervención del usuario antes de que se ejecutará el informe. Use `Hidden` si se especifican todos los parámetros de informe y no desea que los usuarios puedan ver el área de parámetros.|  
 |Ancho del área de parámetros|Puede elegir la medida y el valor. El valor predeterminado es 200 píxeles. El único requisito de esta propiedad es que sea mayor que cero.|  
-|Mapa del documento|Control de navegación en informes definido en el informe y usado para proporcionar acceso mediante un clic a secciones específicas de un informe. Está disponible en informes HTML. El mapa del documento se muestra en un área contraíble situada junto al área de visualización de informes. Los valores válidos son `Displayed`, `Collapsed`, y `Hidden`. Si se define un mapa del documento para un informe, el área se expande de manera predeterminada a menos que se marque como oculta o contraída en las propiedades del elemento web. Si el mapa del documento está contraído, puede hacer clic en la flecha para expandirlo.|  
+|Mapa del documento|Control de navegación en informes definido en el informe y usado para proporcionar acceso mediante un clic a secciones específicas de un informe. Está disponible en informes HTML. El mapa del documento se muestra en un área contraíble situada junto al área de visualización de informes. Los valores válidos incluyen `Displayed`, `Collapsed`, y `Hidden`. Si se define un mapa del documento para un informe, el área se expande de manera predeterminada a menos que se marque como oculta o contraída en las propiedades del elemento web. Si el mapa del documento está contraído, puede hacer clic en la flecha para expandirlo.|  
 |Ancho del área de mapa del documento|Puede elegir la medida y el valor. El valor predeterminado es 200 píxeles. El único requisito de esta propiedad es que sea mayor que cero.|  
 |Cargar parámetros|Recupere las propiedades de parámetros para el informe. No todos los informes tienen parámetros. Si el informe no tiene parámetros, no se devolverá ningún valor. Si está estableciendo las propiedades de un informe que acaba de cargar, puede aparecer un error en el que se indica que la conexión con el origen de datos se ha eliminado. Si esto ocurre, restablezca la conexión y termine de establecer las propiedades de los parámetros después de especificar la conexión. Para más información sobre cómo establecer la conexión, vea [Crear y administrar orígenes de datos compartidos &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).<br /><br /> Para obtener los mejores resultados, haga clic en **Aplicar** antes de hacer clic en Cargar parámetros.<br /><br /> Después de cargar las propiedades de los parámetros, puede establecerlas igual que lo haría en las páginas de propiedades de los parámetros en el informe. Para más información sobre cómo establecer los parámetros, vea [Establecer parámetros en un informe publicado &#40;Reporting Services en el modo integrado de SharePoint&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
   
@@ -97,6 +97,6 @@ ms.locfileid: "36204362"
   
 ## <a name="see-also"></a>Vea también  
  [Elemento de Web del Visor de informes en un sitio de SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Agregar el elemento Web de Visor de informes a una página Web &#40;modo integrado de Reporting Services en SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Agregar el elemento Web Visor de informes a una página Web &#40;modo integrado de Reporting Services en SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

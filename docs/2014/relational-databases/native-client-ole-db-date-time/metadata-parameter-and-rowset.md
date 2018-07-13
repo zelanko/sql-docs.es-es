@@ -1,28 +1,26 @@
 ---
-title: Parámetros y metadatos del conjunto de filas | Documentos de Microsoft
+title: Parámetros y metadatos del conjunto de filas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a8b3365cdf3a2773b6627dfd49edd20b839ef9a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d2f6d55777a6f11e968a75be0f3d5509294c484d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204804"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427864"
 ---
 # <a name="parameter-and-rowset-metadata"></a>Parámetros y metadatos de conjuntos de filas
   En este tema se proporciona información acerca de los siguientes tipos y miembros de tipo relacionados con las mejoras de fecha y hora de OLE DB.  
@@ -67,11 +65,11 @@ ms.locfileid: "36204804"
 |datetime2 o DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- El *bPrecision* parámetro se ignora.  
+ El *bPrecision* parámetro se omite.  
   
- No se tiene en cuenta "DBPARAMFLAGS_SS_ISVARIABLESCALE" al enviar los datos al servidor. Las aplicaciones pueden exigir el uso de tipos heredados de flujo TDS mediante los nombres de tipo específico del proveedor "`datetime`" y "`smalldatetime`". Cuando se conecta a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior) servidores, "`datetime2`"se usará el formato y una conversión implícita de servidor, se producirá si es necesario, cuando el nombre de tipo es"`datetime2`" o "DBTYPE_DBTIMESTAMP". *bScale* se omite si los nombres de tipo específico del proveedor "`datetime`"o"`smalldatetime`" se usan. De lo contrario, las aplicaciones deben asegurarse que *bScale* se ha establecido correctamente. Las aplicaciones actualizadas de MDAC y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] que usan "DBTYPE_DBTIMESTAMP" se producirá un error si no se establece *bScale* correctamente. Cuando se conecta a instancias de servidor anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], *bScale* valor distinto de 0 ó 3 con "DBTYPE_DBTIMESTAMP" es un error y se devolverá E_FAIL.  
+ No se tiene en cuenta "DBPARAMFLAGS_SS_ISVARIABLESCALE" al enviar los datos al servidor. Las aplicaciones pueden exigir el uso de tipos heredados de flujo TDS mediante los nombres de tipo específico del proveedor "`datetime`" y "`smalldatetime`". Cuando se conecta a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior) de los servidores, "`datetime2`"se usará el formato e implícita de servidor se producirá una conversión, si es necesario, cuando el nombre de tipo es"`datetime2`" o "DBTYPE_DBTIMESTAMP". *bScale* se omite si los nombres de tipo específico del proveedor "`datetime`"o"`smalldatetime`" se usan. En caso contrario, las aplicaciones deben asegurarse que *bScale* se ha establecido correctamente. Las aplicaciones actualizadas de MDAC y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] que usan "DBTYPE_DBTIMESTAMP" se producirá un error si no se establece *bScale* correctamente. Cuando se conecta a instancias de servidor anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], un *bScale* valor distinto de 0 ó 3 con "DBTYPE_DBTIMESTAMP" es un error y se devolverá E_FAIL.  
   
- Cuando no se llama a ICommandWithParameters:: SetParameterInfo, el proveedor implica el servidor de tipo en el tipo de enlace como se especifica en IAccessor:: CreateAccessor como se indica a continuación:  
+ Cuando no se llama a ICommandWithParameters:: SetParameterInfo, el proveedor implica el servidor escriba en el tipo de enlace como se especifica en IAccessor:: CreateAccessor como sigue:  
   
 |Tipo de enlace|*pwszDataSourceType*<br /><br /> (depende del proveedor)|  
 |------------------|----------------------------------------------------|  
@@ -144,7 +142,7 @@ ms.locfileid: "36204804"
   
  Se pueden establecer las marcas restantes (DBCOLUMNFLAGS_ISNULLABLE, DBCOLUMNFLAGS_MAYBENULL, DBCOLUMNFLAGS_WRITE y DBCOLUMNFLAGS_WRITEUNKNOWN).  
   
- Una nueva marca DBCOLUMNFLAGS_SS_ISVARIABLESCALE se proporciona en *dwFlags* para permitir que una aplicación determinar el tipo de servidor de columnas, donde *wType* es DBTYPE_DBTIMESTAMP. *bScale* también debe utilizarse para identificar el tipo de servidor.  
+ Una nueva marca DBCOLUMNFLAGS_SS_ISVARIABLESCALE se proporciona en *dwFlags* para permitir que una aplicación determinar el tipo de servidor de columnas, donde *wType* es DBTYPE_DBTIMESTAMP. *bScale* también debe usarse para identificar el tipo de servidor.  
   
 ## <a name="see-also"></a>Vea también  
  [Metadatos &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  

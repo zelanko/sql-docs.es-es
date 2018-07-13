@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 caps.latest.revision: 39
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 70f554444431c06d14d67bf7e39d46240581b23a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3e56757b73f01709bca2a989f2610269a5c2556
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178108"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Paso 3: Agregar redirección de flujo de errores
   Como se ha mostrado en la tarea anterior, la transformación Lookup Currency Key no puede generar una coincidencia cuando la transformación intenta procesar el archivo plano de ejemplo dañado que ha generado un error. Puesto que la transformación utiliza la configuración de salida de error predeterminada, cualquier error da lugar a un error de la transformación. Cuando se produce un error en la transformación, también se produce un error en el resto del paquete.  
@@ -52,9 +52,9 @@ ms.locfileid: "36204431"
   
 8.  En la página **Entradas y salidas** , expanda **Salida 0**, haga clic en **Columnas de salida**y, a continuación, en **Agregar columna**.  
   
-9. En el `Name` propiedad, escriba **ErrorDescription** y establezca el `DataType` propiedad **cadena Unicode [DT_WSTR]**.  
+9. En el `Name` propiedad, tipo **ErrorDescription** y establezca el `DataType` propiedad **cadena Unicode [DT_WSTR]**.  
   
-10. En el **Script** , comprueba que la `LocaleID` propiedad está establecida en **inglés (Estados Unidos.**  
+10. En el **Script** , comprueba que el `LocaleID` propiedad está establecida en **inglés (Estados Unidos.**  
   
 11. Haga clic en **Editar script** para abrir [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). En el método `Input0_ProcessInputRow`, escriba o pegue el código siguiente.  
   

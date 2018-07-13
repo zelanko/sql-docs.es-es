@@ -5,32 +5,30 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ole
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - return codes [SQL Server]
 - OLE Automation [SQL Server], return codes
 - OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
-caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 782655aa435ba69a38f4de1d854c1ff9837a6778
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 57614db23c50236c6af783d7f913c897fda3e8df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203370"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414024"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Códigos de retorno e información de error de OLE Automation
-  Los procedimientos almacenados del sistema de OLE Automation devuelven un código de retorno `int` que es el HRESULT devuelto por la operación de OLE Automation subyacente. Un HRESULT con el valor 0 indica que la operación se realizó correctamente. Un valor de HRESULT distinto de cero es un código de error OLE de formato hexadecimal 0 x 800*nnnnn*, pero cuando se devuelve como un `int` valor en un código de retorno de procedimiento almacenado, HRESULT no tiene el formato 214*nnnnnnn*.  
+  Los procedimientos almacenados del sistema de OLE Automation devuelven un código de retorno `int` que es el HRESULT devuelto por la operación de OLE Automation subyacente. Un HRESULT con el valor 0 indica que la operación se realizó correctamente. Un valor de HRESULT distinto de cero es un código de error de formato hexadecimal 0 x 800 OLE*nnnnn*, pero cuando se devuelve como un `int` valor en un procedimiento almacenado código de retorno, tiene el formato 214*nnnnnnn*.  
   
- Por ejemplo, si se pasa un nombre de objeto no válido (SQLDMO. (Xyzzy) a sp_OACreate hace que el procedimiento devuelva un `int` HRESULT de 2147221005, que es 0x800401f3 en formato hexadecimal.  
+ Por ejemplo, pasar un nombre de objeto no válido (SQLDMO. (Xyzzy) a sp_OACreate hace que el procedimiento devuelva un `int` HRESULT de 2147221005, que es 0x800401f3 en formato hexadecimal.  
   
- Puede utilizar `CONVERT(binary(4), @hresult)` para convertir un HRESULT `int` en un valor `binary`. Sin embargo, el uso de `CONVERT(char(10), CONVERT(binary(4), @hresult))` da como resultado una cadena ilegible, porque cada byte de HRESULT se convierte en un carácter ASCII. Puede utilizar el siguiente procedimiento almacenado hextochar como de ejemplo para convertir un `int` HRESULT a un `char` valor que contiene una cadena hexadecimal legible.  
+ Puede utilizar `CONVERT(binary(4), @hresult)` para convertir un HRESULT `int` en un valor `binary`. Sin embargo, el uso de `CONVERT(char(10), CONVERT(binary(4), @hresult))` da como resultado una cadena ilegible, porque cada byte de HRESULT se convierte en un carácter ASCII. Puede usar el siguiente procedimiento almacenado hextochar como de ejemplo para convertir un `int` HRESULT para un `char` valor que contiene una cadena hexadecimal legible.  
   
 ```  
 USE AdventureWorks2012;  

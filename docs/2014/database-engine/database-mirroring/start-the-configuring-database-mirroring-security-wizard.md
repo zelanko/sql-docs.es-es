@@ -1,28 +1,27 @@
 ---
-title: Iniciar Asistente de seguridad (SQL Server Management Studio) de creación de reflejo de base de datos de configuración | Documentos de Microsoft
+title: Iniciar la base de datos de configurar la creación de reflejo Asistente de seguridad (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], security
 - Configuring Database Mirroring Security Wizard
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d74b73cdc23c9e54f23ad2a1f0f0343ba026c16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 68bb6245dc7975f5dd65fa0c4547462364211294
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162826"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard-sql-server-management-studio"></a>Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos (SQL Server Management Studio)
   El Asistente para la configuración de seguridad de la creación de reflejo de bases de datos se puede usar para configurar inicialmente los parámetros de seguridad de algunas o todas las instancias de servidor que intervienen en la creación del reflejo. Este asistente trabaja junto con la página **Creación de reflejo** del cuadro de diálogo **Propiedades de la base de datos** .  

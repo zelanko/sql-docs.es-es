@@ -1,13 +1,11 @@
 ---
-title: 'Issasynchstatus:: GetStatus (OLE DB) | Documentos de Microsoft'
+title: 'Issasynchstatus:: GetStatus (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - GetStatus method
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: baf7204719e865b93b7037e76f7b493e841644c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c9b12653f05171514c3a311edd42b2a3af9f58da
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202704"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413134"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
   Devuelve el estado de una operación de ejecución asincrónica.  
@@ -112,7 +110,7 @@ HRESULT GetStatus(
  Se produjo un error específico del proveedor.  
   
 ## <a name="remarks"></a>Notas  
- El **issasynchstatus:: GetStatus** método se comporta exactamente igual que el **idbasynchstatus:: GetStatus** método salvo que si el objeto de origen de la inicialización de los datos se anula, se devuelve E_UNEXPECTED en su lugar de DB_E_CANCELED (aunque [issasynchstatus:: Waitforasynchcompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) devolverá DB_E_CANCELED). Esto se debe a que el objeto de origen de datos no queda en el estado inerte habitual que sigue a una interrupción para que puedan intentarse otras operaciones de inicialización.  
+ El **issasynchstatus:: GetStatus** método se comporta exactamente como el **idbasynchstatus:: GetStatus** método salvo que se anula si la inicialización de datos de un objeto de origen, se devuelve E_UNEXPECTED en su lugar de DB_E_CANCELED (aunque [issasynchstatus:: Waitforasynchcompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) devolverá DB_E_CANCELED). Esto se debe a que el objeto de origen de datos no queda en el estado inerte habitual que sigue a una interrupción para que puedan intentarse otras operaciones de inicialización.  
   
  Si el conjunto de filas se inicializa o rellena de forma asincrónica, debe admitir este método.  
   
@@ -127,7 +125,7 @@ HRESULT GetStatus(
  Al llamar a **ISSAsynchStatus::GetStatus** en un objeto de origen de datos inicializado o en un conjunto de filas rellenado o al pasar un valor a *eOperation* distinto de DBASYNCHOP_OPEN, se devuelve S_OK con los parámetros *pulProgress* y *pulProgressMax* establecidos en el mismo valor. Si se llama a **ISSAsynchStatus::GetStatus** en un objeto creado a partir de la ejecución de un comando que actualiza, elimina o inserta filas, tanto *pulProgress* como *pulProgressMax* indican el número total de filas afectadas por el comando.  
   
 ## <a name="see-also"></a>Vea también  
- [Realizar las operaciones asincrónicas](../native-client/features/performing-asynchronous-operations.md)   
+ [Realización de operaciones asincrónicas](../native-client/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](issasynchstatus-ole-db.md)  
   
   

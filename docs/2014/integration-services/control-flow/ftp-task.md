@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ed0f6532cf3bdfcffaa5775be28851681f33b678
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 605fe5f676b94d05a6f3da141ac59ced8b265282
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164812"
 ---
 # <a name="ftp-task"></a>Tarea FTP
   La tarea FTP descarga y carga archivos de datos, y administra directorios en servidores. Por ejemplo, un paquete puede descargar archivos de datos de un servidor remoto o de una ubicación de Internet como parte de un flujo de trabajo de paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Puede usar la tarea FTP para los siguientes fines:  
@@ -80,7 +80,7 @@ ms.locfileid: "36204874"
   
 ## <a name="see-also"></a>Vea también  
  [Editor de la tarea FTP &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)   
- [Editor de la tarea FTP &#40;página de transferencia de archivos&#41;](../ftp-task-editor-file-transfer-page.md)   
+ [Editor de la tarea FTP &#40;página transferencia de archivos&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Tareas de Integration Services](integration-services-tasks.md)   
  [Flujo de control](control-flow.md)  
   

@@ -1,42 +1,40 @@
 ---
-title: Comportamiento con las versiones anteriores de servidor SQL (ODBC) el tipo mejoradas de fecha y hora | Documentos de Microsoft
+title: Comportamiento con versiones anteriores de servidor SQL (ODBC) de tipos mejorada de fecha y hora | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0c0d2cd04460e7fd53db4a4c291c65cfcaa64ebc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 91052172849df1cd0234fe73cd39130d4568f131
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204809"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422964"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Comportamiento mejorado de tipos de fecha y hora con versiones anteriores de SQL Server (ODBC)
   En este tema se describe el comportamiento esperado cuando una aplicación cliente que usa las características de fecha y hora mejoradas se comunica con una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], y cuando una aplicación cliente que usa Microsoft Data Access Components, Windows Data Access Components o una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] envía los comandos a un servidor que admite las características de fecha y hora mejoradas.  
   
 ## <a name="down-level-client-behavior"></a>Comportamiento del cliente de nivel inferior  
- Las aplicaciones cliente que se compilaron mediante una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client ven los nuevos tipos de fecha y hora como columnas nvarchar. El contenido de las columnas es las representaciones literales, tal como se describe en la sección "Formatos de datos: cadenas y literales" de [compatibilidad de tipos de datos ODBC de fecha y hora mejoras](data-type-support-for-odbc-date-and-time-improvements.md). El tamaño de columna es la longitud máxima literal de la precisión de fracciones de segundos especificada para la columna.  
+ Las aplicaciones cliente que se compilaron mediante una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client ven los nuevos tipos de fecha y hora como columnas nvarchar. El contenido de la columna es las representaciones literales, como se describe en la sección "Formatos de datos: cadenas y literales" de [compatibilidad con tipos de datos de ODBC mejoras de fecha y hora](data-type-support-for-odbc-date-and-time-improvements.md). El tamaño de columna es la longitud máxima literal de la precisión de fracciones de segundos especificada para la columna.  
   
  Las API de catálogo devolverán metadatos coherentes con el código del tipo de datos de nivel inferior que se devuelve al cliente (por ejemplo, nvarchar) y la representación asociada de nivel inferior (por ejemplo, el formato de literal adecuado). Sin embargo, el nombre del tipo de datos devuelto será el nombre del tipo real de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Metadatos de instrucción devueltos por SQLDescribeCol, SQLDescribeParam, SQGetDescField y SQLColAttribute devolverán metadatos que sean coherente con el tipo de nivel inferior en todos los aspectos, incluido el nombre de tipo. Un ejemplo de este tipo de nivel inferior es `nvarchar`.  
+ Metadatos de instrucción devueltos por SQLDescribeCol, SQLDescribeParam, SQGetDescField y SQLColAttribute devolverán los metadatos que son coherente con el tipo de nivel inferior en todos los respectos, incluyendo el nombre de tipo. Un ejemplo de este tipo de nivel inferior es `nvarchar`.  
   
- Cuando se ejecuta una aplicación de cliente de nivel inferior en un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior) en los cambios de esquema a la fecha y hora se realizaron los tipos de servidor, el comportamiento esperado es como sigue:  
+ Cuando se ejecuta una aplicación de cliente de nivel inferior en un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior) en que los cambios de esquema a la fecha y hora se realizaron los tipos de servidor, el comportamiento esperado es como sigue:  
   
-|Tipo de SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior) Tipo de|Tipo de cliente ODBC|Conversión del resultado (SQL a C)|Conversión de parámetros (C a SQL)|  
+|Tipo de SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior) Tipo|Tipo de cliente ODBC|Conversión del resultado (SQL a C)|Conversión de parámetros (C a SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
 |DATETIME|date|SQL_C_TYPE_DATE|Aceptar|ACEPTAR (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Los campos de hora se establecen en cero.|OK (2)<br /><br /> Se produce un error si el campo de hora es distinto de cero. Funciona con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
@@ -45,7 +43,7 @@ ms.locfileid: "36204809"
 ||Time(7)|SQL_C_TIME|Se produce un error: literal de hora no válido.|ACEPTAR (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Se produce un error: literal de hora no válido.|ACEPTAR (1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|Aceptar|ACEPTAR (1)|  
-||Datetime2(7)|SQL_C_TYPE_TIMESTAMP|Aceptar|El valor se redondeará a la fracción 1/300 de segundo por conversión del cliente.|  
+||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|Aceptar|El valor se redondeará a la fracción 1/300 de segundo por conversión del cliente.|  
 |Smalldatetime|date|SQL_C_TYPE_DATE|Aceptar|Aceptar|  
 |||SQL_C_TYPE_TIMESTAMP|Los campos de hora se establecen en cero.|OK (2)<br /><br /> Se produce un error si el campo de hora es distinto de cero. Funciona con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|Aceptar|Aceptar|  
@@ -114,6 +112,6 @@ ms.locfileid: "36204809"
  Cuando se conecta a una instancia de servidor de una versión anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], cualquier intento de usar los nuevos tipos de servidor o códigos de metadatos asociados y campos de descriptor hará que se devuelva un SQL_ERROR. Se generará un registro de diagnóstico con SQLSTATE HY004 y un mensaje que indica que el tipo de datos SQL para la versión del servidor en la conexión no es válido o con 07006 y "Infracción del atributo de tipo de datos restringido".  
   
 ## <a name="see-also"></a>Vea también  
- [Fecha y hora mejoras &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Mejoras de fecha y hora &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

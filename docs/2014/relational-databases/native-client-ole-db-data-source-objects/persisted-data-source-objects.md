@@ -1,13 +1,11 @@
 ---
-title: Objetos de origen de datos almacenados | Documentos de Microsoft
+title: Objetos de origen de datos persistentes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +15,18 @@ helpviewer_keywords:
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e99fbda459ba57838ba60b8fcf3f126b50b1cb1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a44176c06f105fd4a560718ee5b757f5c71ff1cf
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203402"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423554"
 ---
 # <a name="persisted-data-source-objects"></a>Objetos de origen de datos persistentes
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite objetos de origen de datos persistente con la **IPersistFile** interfaz.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite objetos de origen de datos persistente con el **IPersistFile** interfaz.  
   
 ## <a name="examples"></a>Ejemplos  
  **A. Conservar la inicialización del origen de datos:**  
@@ -142,7 +140,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Use la inicialización del origen de datos almacenados:**  
+ **B. Use la inicialización del origen de datos persistentes:**  
   
  En este ejemplo se utiliza un objeto de origen de datos guardado con propiedades de inicialización adicionales que proporcionan un inicio de sesión y una contraseña de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -230,7 +228,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- El **IPersistFile:: Save** se puede llamar antes o después de llamar al método **IDBInitialize:: Initialize**. Llamar al método después de una devolución correcta de **IDBInitialize:: Initialize** garantiza que se conserva una especificación de origen de datos válido.  
+ El **IPersistFile:: Save** antes o después de llamar al método que se puede llamar **IDBInitialize:: Initialize**. Una llamada al método después de una devolución correcta de **IDBInitialize:: Initialize** garantiza que se conserva una especificación de origen de datos válido.  
   
 ## <a name="see-also"></a>Vea también  
  [Objetos de origen de datos &#40;OLE DB&#41;](data-source-objects-ole-db.md)  

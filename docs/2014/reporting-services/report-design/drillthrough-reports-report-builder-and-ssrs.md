@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ececfced738b8ea71b8cbedef4c7495607522309
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6cea127909617ef7230dfd59e995f878274291a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230625"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Informes detallados (Generador de informes y SSRS)
   Un informe detallado es un informe que los usuarios abren al hacer clic en un vínculo de otro informe. Este tipo de informes suele incluir información detallada acerca de los elementos del informe de resumen original. Por ejemplo, en esta ilustración, el informe de resumen de ventas enumera los pedidos de ventas y los totales. Cuando el usuario hace clic en un número de pedido de la lista resumida, se abre otro informe con los detalles del pedido en cuestión.  
@@ -55,6 +55,6 @@ ms.locfileid: "36202866"
  Para ver un informe de resumen con vínculos de obtención de detalles una vez publicado, debe asegurarse de que los informes detallados residan en el mismo servidor de informes que el informe de resumen. En todos los casos, los usuarios deben tener permisos sobre el informe detallado para poder verlo.  
   
 ## <a name="see-also"></a>Vea también  
- [Obtención de detalles, obtención de detalles, subinformes y regiones de datos anidadas &#40;el generador de informes SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;generador de informes y SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

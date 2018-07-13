@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 48164ff35e06c6aa9cd2a8ac0c9ba39fcf37310e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 832034620db797bdbd602cf8f7c99fd51c804bbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175177"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Dar formato a texto (Generador de informes)
   En este tutorial, puede practicar el proceso de dar formato al texto de varias maneras. Después de configurar el informe en blanco con el origen de datos y el conjunto de datos, puede escoger y elegir los pasos que desea explorar.  
@@ -30,7 +30,7 @@ ms.locfileid: "36204537"
   
  En un paso puede cometer un error voluntario para ver por qué es un error. A continuación, corrija el error para lograr el efecto deseado.  
   
- Una versión mejorada del informe que creará en este tutorial está disponible como informe de ejemplo del Generador de informes de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener más información acerca de cómo descargar este ejemplo y otros informes, consulte [informes del generador de informes de ejemplo](http://go.microsoft.com/fwlink/?LinkId=184851).  
+ Una versión mejorada del informe que creará en este tutorial está disponible como informe de ejemplo del Generador de informes de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener más información acerca de cómo descargar este ejemplo y otros informes, vea [informe del generador de informes de ejemplo](http://go.microsoft.com/fwlink/?LinkId=184851).  
   
 ##  <a name="BackToTop"></a> Qué aprenderá  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36204537"
 ### <a name="pick-and-choose"></a>Escoger y elegir  
  [Agregar un hipervínculo al informe](#AddHyperlink)  
   
- [Girar el texto en el informe](#RotateText)  
+ [Girar texto en el informe](#RotateText)  
   
  [Mostrar texto con formato HTML](#FormatHTML)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36204537"
   
 #### <a name="to-create-a-blank-report"></a>Para crear un informe en blanco  
   
-1.  Haga clic en **iniciar**, seleccione **programas**, seleccione [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
+1.  Haga clic en **iniciar**, apunte a **programas**, apunte a [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
   
     > [!NOTE]  
     >  Debería aparecer el cuadro de diálogo **Introducción** . Si no hace, en el botón Generador de informes haga clic **Nuevo**.  
@@ -145,11 +145,11 @@ ms.locfileid: "36204537"
   
 1.  Arrastre el campo **FullName** desde el panel Datos de informe hasta la superficie de diseño.  
   
-     El generador de informes crea un cuadro de texto con una expresión en él, representado como \<Expr >.  
+     El generador de informes crea un cuadro de texto con una expresión en él, representada como \<Expr >.  
   
 2.  Haga clic en **Ejecutar**.  
   
-     Tenga en cuenta que hay un solo registro, **Fernando Ross**, que es alfabéticamente el primer registro de la consulta. El campo no se repite para mostrar los otros registros de ese campo.  
+     Tenga en cuenta que hay sólo un registro, **Fernando Ross**, que es alfabéticamente el primer registro de la consulta. El campo no se repite para mostrar los otros registros de ese campo.  
   
 3.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "36204537"
 7.  Seleccione el cuadro de lista y presione la tecla ELIMINAR.  
   
 ##  <a name="AddTable"></a> Agregar una tabla a la superficie de diseño de informe  
- Cree esta tabla para que tendrá un lugar para colocar los hipervínculos y el texto girado.  
+ Cree esta tabla, por lo que tendrá un lugar para colocar los hipervínculos y el texto girado.  
   
 #### <a name="to-add-a-table-to-the-report"></a>Para agregar una tabla al informe  
   
@@ -202,9 +202,9 @@ ms.locfileid: "36204537"
   
 2.  En el **elegir un conjunto de datos** página del Asistente para nueva tabla o matriz, haga clic en **elegir un conjunto de datos existente en este informe o un conjunto de datos compartido**y haga clic en **TextDataset (en este informe)** y, a continuación, haga clic en **siguiente**.  
   
-3.  En el **organizar campos** página, arrastre el **territorio**, **LinkText**, y **producto** campos para **degruposdefilas**, arrastre el **ventas** campo **valores**y, a continuación, haga clic en **siguiente**.  
+3.  En el **organizar campos** página, arrastre el **territorio**, **LinkText**, y **producto** campos al **degruposdefilas**, arrastre el **ventas** campo **valores**y, a continuación, haga clic en **siguiente**.  
   
-4.  En el **elegir el diseño** página, desactive la **expandir o contraer grupos** casilla de verificación para que pueda ver la totalidad de la tabla y, a continuación, haga clic en **siguiente**.  
+4.  En el **elegir el diseño** página, desactive la **expandir o contraer grupos** casilla de verificación para que pueda ver toda la tabla y, a continuación, haga clic en **siguiente**.  
   
 5.  En el **elegir un estilo** página, haga clic en **Pizarra**y, a continuación, haga clic en **finalizar**.  
   
@@ -212,15 +212,15 @@ ms.locfileid: "36204537"
   
 7.  Haga clic en **Ejecutar**.  
   
-     La tabla parece correcta, pero tiene dos filas con el título Total. El **LinkText** campo no es necesario que una fila de totales.  
+     La tabla parece correcta, pero tiene dos filas con el título Total. El **LinkText** campo no necesita una fila Total.  
   
 8.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
 9. Haga clic en el cuadro de texto que contiene `[LinkText]`y haga clic en **dividir celdas**.  
   
-10. Seleccione la celda vacía debajo la `[LinkText]` la celda y, a continuación, mantenga presionada la tecla MAYÚS y seleccione las dos celdas a su derecha: la **Total** de celda en el **producto** columna y la `[Sum(Sales)]` celda en el  **Ventas** columna.  
+10. Seleccione la celda vacía debajo el `[LinkText]` la celda y, a continuación, mantenga presionada la tecla MAYÚS y seleccione las dos celdas a su derecha: la **Total** de celda en la **producto** columna y el `[Sum(Sales)]` celda en la  **Ventas** columna.  
   
-11. Con esas tres celdas seleccionadas, haga clic en una de esas celdas y haga clic en **Eliminar fila**.  
+11. Con esas tres celdas seleccionadas, haga clic en uno de esas celdas y haga clic en **Eliminar fila**.  
   
 12. Haga clic en **Ejecutar**.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "36204537"
   
 7.  Seleccione `[LinkText]`.  
   
-8.  En el **fuente** sección de la **inicio** , haga clic en el **subrayado** botón y, a continuación, haga clic en la flecha de lista desplegable junto a la **Color** botón, y haga clic en **azul**.  
+8.  En el **fuente** sección de la **inicio** pestaña, haga clic en el **subrayado** botón y, a continuación, haga clic en la flecha desplegable situada junto a la **Color** botón, y haga clic en **azul**.  
   
 9. Haga clic en **Ejecutar**.  
   
@@ -251,7 +251,7 @@ ms.locfileid: "36204537"
   
 10. Haga clic en un vínculo. Si el equipo está conectado a Internet, un explorador abrirá a un tema de la Ayuda del Generador de informes.  
   
-##  <a name="RotateText"></a> Girar el texto en el informe  
+##  <a name="RotateText"></a> Girar texto en el informe  
  En esta sección, girará parte del texto de la tabla de las secciones anteriores.  
   
 #### <a name="to-rotate-text"></a>Para girar el texto  
@@ -271,7 +271,7 @@ ms.locfileid: "36204537"
   
 6.  En el cuadro de lista, haga clic en **Rotate270**.  
   
-7.  En el **inicio** pestaña en el **párrafo** sección, haga clic en el **central** y **Center** botones para colocar el texto en el centro de la celda vertical y horizontalmente.  
+7.  En el **inicio** pestaña en el **párrafo** sección, haga clic en el **intermedio** y **Center** botones para colocar el texto en el centro de la celda vertical y horizontalmente.  
   
 8.  Haga clic en Ejecutar (**!**).  
   
@@ -327,7 +327,7 @@ ms.locfileid: "36204537"
   
 3.  En la pestaña **Inicio** , en el grupo **Número** , haga clic en el botón **Moneda** .  
   
-4.  (Opcional) En el **inicio** ficha la **número** grupo, haga clic en el **estilos de marcador de posición** y haga clic en **valores de ejemplo** para ver cómo se realizarán los números el formato.  
+4.  (Opcional) En el **inicio** ficha la **número** grupo, haga clic en el **estilos de marcador de posición** y haga clic en **valores de ejemplo** para ver cómo se realizarán los números tener el formato.  
   
 5.  (Opcional) En la pestaña **Inicio** , en el grupo **Número** , haga clic dos veces en el botón **Disminuir decimales** para mostrar las cifras en dólares sin centavos.  
   

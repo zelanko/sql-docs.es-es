@@ -1,5 +1,5 @@
 ---
-title: Pestaña distinción (Visor de modelos de minería de datos) del clúster | Documentos de Microsoft
+title: Pestaña distinción del (Visor de modelos de minería de datos) del clúster | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.discrimination.f1
 ms.assetid: ae7cfff7-ab1c-4cf5-9a91-97b21d15d85f
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8c23aeea11db212ce065baa04d5fc38280fe26a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 992ef4a9145a3137975220ac2febdab3028507c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179044"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>Pestaña Distinción del clúster (Visor de modelos de minería de datos)
   Utilice la pestaña **Distinción del clúster** para comparar dos clústeres que existan en un modelo de agrupación en clústeres. Puede ver cómo las diferentes combinaciones de atributos y valores se representan dentro de los clústeres.  
@@ -44,18 +44,18 @@ ms.locfileid: "36202404"
  **Clúster 2**  
  Seleccione un segundo clúster de la lista de clústeres del modelo de minería de datos para compararlo con el **Clúster 1**. También puede comparar un clúster con su complemento, es decir, con todos los casos del modelo excepto los del clúster seleccionado.  
   
- **Puntuaciones de distinción para \<, clúster 1 > y \<clúster 2 >**  
+ **Puntuaciones de distinción para \<clúster 1 > y \<clúster 2 >**  
  Las columnas del gráfico proporcionan información sobre cómo se relaciona cada par de atributo-valor con los dos clústeres seleccionados.  
   
 |||  
 |-|-|  
 |**Variables**|Un atributo del modelo de minería de datos.|  
 |**Valores**|Un valor del atributo seleccionado en **Variables**.|  
-|**Favorece \<, clúster 1 >**|El gráfico de barras de la izquierda representa la probabilidad de que el par de atributo-valor seleccionado sea representativo del clúster seleccionado en **Clúster 1**. Puede detener el mouse sobre la barra ver el valor, representado como un porcentaje. Tenga en cuenta que aun cuando el valor sea cero, no significa necesariamente que el par de atributo-valor falte en el clúster, solo que la distribución favorece más a un clúster sobre el otro.|  
+|**Favorece \<clúster 1 >**|El gráfico de barras de la izquierda representa la probabilidad de que el par de atributo-valor seleccionado sea representativo del clúster seleccionado en **Clúster 1**. Puede detener el mouse sobre la barra ver el valor, representado como un porcentaje. Tenga en cuenta que aun cuando el valor sea cero, no significa necesariamente que el par de atributo-valor falte en el clúster, solo que la distribución favorece más a un clúster sobre el otro.|  
 |**Favorece \<clúster 2 >**|El gráfico de barras de la derecha representa la probabilidad de que el par de atributo-valor seleccionado sea representativo del clúster seleccionado en **Clúster 2**.|  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   

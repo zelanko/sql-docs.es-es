@@ -1,13 +1,11 @@
 ---
-title: Fecha y hora mejoras (ODBC) | Documentos de Microsoft
+title: Mejoras de fecha y hora (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,20 +13,20 @@ helpviewer_keywords:
 - ODBC, date/time improvements
 ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 19c4e63fc9e101379af2ac7b6bc859daa783ae6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 034c0957d4214b24fd9903b7b5ebb4e4a700bb4e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203617"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413425"
 ---
-# <a name="date-and-time-improvements-odbc"></a>Fecha y hora mejoras (ODBC)
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ha introducido nuevos tipos de datos de fecha y hora. En esta sección se describe la forma en que estos nuevos tipos se exponen como extensiones en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  Para obtener información general de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para el nuevo valor de fecha y tipos de datos de hora, vea [fecha y hora mejoras](../native-client/features/date-and-time-improvements.md). Para obtener un ejemplo que muestra la compatibilidad de la fecha y hora ODBC, vea [Use tipos de fecha y hora](../native-client-odbc-how-to/use-date-and-time-types.md).  
+# <a name="date-and-time-improvements-odbc"></a>Mejoras de fecha y hora (ODBC)
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ha introducido nuevos tipos de datos de fecha y hora. En esta sección se describe la forma en que estos nuevos tipos se exponen como extensiones en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  Para obtener información general de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client con la nueva fecha y tipos de datos de hora, vea [mejoras de fecha y hora](../native-client/features/date-and-time-improvements.md). Para obtener un ejemplo que muestra la compatibilidad de la fecha y hora ODBC, vea [Use tipos de fecha y hora](../native-client-odbc-how-to/use-date-and-time-types.md).  
   
- Para obtener más información acerca de los tipos de datos de fecha y hora, vea [datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql).  
+ Para obtener información general acerca de los tipos de datos de fecha y hora, vea [datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Compatibilidad con tipos de datos para mejoras de fecha y hora de ODBC](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)  
@@ -37,7 +35,7 @@ ms.locfileid: "36203617"
  [Metadatos &#40;ODBC&#41;](../../database-engine/dev-guide/metadata-odbc.md)  
  Describe información devuelta en los campos del descriptor de parámetro de implementación (IPD) y el descriptor de fila de implementación (IRD), así como los metadatos de columna devueltos por `SQLColumns` y `SQLProcedureColumns`. También describe metadatos de tipo de datos devueltos por `SQLGetTypeInfo`.  
   
- [Conversiones de tipos de datos de fecha y hora &#40;ODBC&#41;](datetime-data-type-conversions-odbc.md)  
+ [las conversiones de tipos de datos de fecha y hora &#40;ODBC&#41;](datetime-data-type-conversions-odbc.md)  
  Describe cómo convertir entre valores datetime y datetimeoffset.  
   
  [Compatibilidad con sql_variant para tipos de fecha y hora](sql-variant-support-for-date-and-time-types.md)  
@@ -46,8 +44,8 @@ ms.locfileid: "36203617"
  [Cambios en la copia de forma masiva para tipos mejorada fecha y hora &#40;de OLE DB y ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  
  Describe las mejoras de fecha y hora para admitir operaciones de copia masiva.  
   
- [Comportamiento con versiones anteriores de SQL Server el tipo mejoradas de fecha y hora &#40;ODBC&#41;](enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc.md)  
- Describe el comportamiento esperado cuando una aplicación cliente mediante las características mejorada fecha y hora se comunica con una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y cuando un cliente compilado con una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client envía comandos a un servidor que admite características de fecha y hora mejoradas.  
+ [Comportamiento con versiones anteriores de SQL Server de tipos mejorada de fecha y hora &#40;ODBC&#41;](enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc.md)  
+ Describe el comportamiento esperado cuando una aplicación cliente mediante las características mejorada fecha y hora se comunica con una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y cuando un cliente compilado con una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client envía comandos a un servidor que admite mejoradas características de fecha y hora.  
   
  [Las API de ODBC admiten las características mejoradas de fecha y hora](odbc-api-support-for-enhanced-date-and-time-features.md)  
  Hace una lista de las funciones ODBC que admiten la funcionalidad mejorada de fecha y hora.  

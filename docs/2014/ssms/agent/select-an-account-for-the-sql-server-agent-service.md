@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
 - SQL Server Agent, accounts
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - security [SQL Server], SQL Server Agent
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab05d53c3c9f989252ab248305f000033ff54ccf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d82cf9589289c9646950174081a19f3449accb46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210485"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Seleccionar una cuenta para el servicio Agente SQL Server
   La cuenta de inicio del servicio define la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus permisos de red. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como una cuenta de usuario especificada. Se puede seleccionar una cuenta para el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , donde se pueden elegir las opciones siguientes:  
@@ -82,7 +82,7 @@ ms.locfileid: "36204308"
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Cuenta de dominio de Windows (miembro del grupo de administradores de Windows)|Admitida|Admitida|Admitida|  
 |Cuenta de dominio de Windows (no administrativa)|Admite<sup>1</sup>|Admite<sup>1</sup>|Admite<sup>1</sup>|  
-|Cuenta de servicio de red (NT AUTHORITY\NetworkService)|Admite<sup>-1, 3 y 4</sup>|No compatible|No compatible|  
+|Cuenta de servicio de red (NT AUTHORITY\NetworkService)|Admite<sup>1, 3, 4</sup>|No compatible|No compatible|  
 |Cuenta de usuario local (no administrativa)|Admite<sup>1</sup>|No compatible|No aplicable|  
 |Cuenta del sistema local (NT AUTHORITY\System)|Admite<sup>2</sup>|No compatible|Admite<sup>2</sup>|  
 |Cuenta del servicio local (NT AUTHORITY\LocalService)|No compatible|No compatible|No compatible|  

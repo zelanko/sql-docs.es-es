@@ -1,5 +1,5 @@
 ---
-title: Descripción de la generación Incremental | Documentos de Microsoft
+title: Descripción de la generación Incremental | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental generation [Analysis Services]
 - Schema Generation Wizard, incremental generation
 - relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38116af87dc9fe02232994aac7085945ce695215
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a22eb09d21e1ef63a52ae7248fd6fa2a54832c15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177072"
 ---
 # <a name="understanding-incremental-generation"></a>Descripción de la generación incremental
   Tras la generación del esquema inicial, es posible cambiar las definiciones de cubo y de dimensión mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]y volver a ejecutar el Asistente para generar esquemas. El asistente actualiza el esquema de la base de datos del área de asunto y de la vista de origen de datos asociada para reflejar los cambios y conservar los datos que existen actualmente en las tablas que se van a volver a generar, en la medida de lo posible. Si las tablas han cambiado tras la generación inicial, el Asistente para generar esquemas conservará en la medida de lo posible los cambios siguiendo estas reglas:  

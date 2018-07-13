@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Crear una credencial de SQL Server | Documentos de Microsoft'
+title: 'Lección 2: Crear una credencial de SQL Server | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 64f8805c-1ddc-4c96-a47c-22917d12e1ab
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b16012ed7ff12783e69add14cf8e51011668845e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 358c88c0fef9c4ffaf7c7fc93458be1b1563d94e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163825"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Lección 2: Crear una credencial de SQL Server
-  **Credencial:** una credencial de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es un objeto que se usa para almacenar la información de autenticación necesaria para conectarse a un recurso fuera de SQL Server.  En este caso, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] procesos de copia de seguridad y restauración usan credenciales para autenticarse en el servicio de almacenamiento de blobs de Windows Azure. La credencial contiene los valores de nombre y la **clave de acceso** de la cuenta de almacenamiento. Una vez creada la credencial, se debe especificar en la opción WITH CREDENTIAL al emitir las instrucciones BACKUP y RESTORE. Para obtener más información sobre cómo ver, copiar o regenerar **access keys**de cuentas de almacenamiento, vea [Ver, copiar y regenerar las claves de acceso de una cuenta de almacenamiento de Windows Azure](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+  **Credencial:** una credencial de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es un objeto que se usa para almacenar la información de autenticación necesaria para conectarse a un recurso fuera de SQL Server.  En este caso, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] procesos de copia de seguridad y restauración usan credenciales para autenticarse al servicio de almacenamiento de blobs de Windows Azure. La credencial contiene los valores de nombre y la **clave de acceso** de la cuenta de almacenamiento. Una vez creada la credencial, se debe especificar en la opción WITH CREDENTIAL al emitir las instrucciones BACKUP y RESTORE. Para obtener más información sobre cómo ver, copiar o regenerar **access keys**de cuentas de almacenamiento, vea [Ver, copiar y regenerar las claves de acceso de una cuenta de almacenamiento de Windows Azure](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
  Para obtener información general sobre las credenciales, vea [Credenciales](http://msdn.microsoft.com/library/ms161950.aspx).  
   
@@ -49,13 +49,13 @@ ms.locfileid: "36202406"
   
     ```  
   
-     ![asignación de cuenta de almacenamiento de las credenciales sql](../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "asignar la cuenta de almacenamiento a las credenciales de sql")  
+     ![asignación de cuenta de almacenamiento a las credenciales de sql](../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "asignar la cuenta de almacenamiento a las credenciales de sql")  
   
 5.  Compruebe la instrucción T-SQL y haga clic en **Ejecutar**.  
   
- Para obtener más información acerca del servicio de almacenamiento de blobs de Windows Azure para conceptos de copia de seguridad y los requisitos, consulte [SQL Server Backup and Restore con el servicio de almacenamiento de blobs de Windows Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Para obtener más información sobre el servicio de almacenamiento Blob de Windows Azure para conceptos de copia de seguridad y los requisitos, consulte [SQL Server Backup and Restore with Windows Azure Blob Storage Service](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ### <a name="next-lesson"></a>Lección siguiente  
- [Lección 3: Escribir una copia de seguridad completa de la base de datos en el servicio de almacenamiento de Windows Azure Blob](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md).  
+ [Lección 3: Escribir una copia de seguridad de base de datos completa en el servicio de Windows Azure Blob Storage](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md).  
   
   

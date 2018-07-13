@@ -1,5 +1,5 @@
 ---
-title: No se puede actualizar las bases de datos de solo lectura | Documentos de Microsoft
+title: No se puede actualizar las bases de datos de solo lectura | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database cannot be upgraded
 ms.assetid: 27964211-ea30-4390-b791-dcf225fb9ae7
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 11f94ceed205d8984ed5a253e1d989211012f10f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8ce09bf818efcedca3fdfce7f138219236a254f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183832"
 ---
 # <a name="read-only-databases-cannot-be-upgraded"></a>No se pueden actualizar bases de datos de solo lectura
   El Asesor de actualizaciones ha determinado que no se pueden actualizar algunas bases de datos de esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "36204345"
  Se ha detectado una base de datos de solo lectura. Para actualizarla, el programa de instalación debe poder escribir en ella.  
   
 ## <a name="corrective-action"></a>Acción correctora  
- Cuando nadie utiliza la base de datos, utilice la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el Administrador corporativo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], o la instrucción ALTER DATABASE para cambiar la base de datos de lectura y escritura. La instrucción siguiente cambia la base de datos al modo de lectura y escritura.  
+ Cuando nadie está utilizando la base de datos, utilice el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el Administrador corporativo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], o la instrucción ALTER DATABASE para cambiar la base de datos de lectura y escritura. La instrucción siguiente cambia la base de datos al modo de lectura y escritura.  
   
 ```  
 USE master;  

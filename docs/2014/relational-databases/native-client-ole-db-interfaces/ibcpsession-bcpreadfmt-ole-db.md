@@ -1,13 +1,11 @@
 ---
-title: 'Ibcpsession:: Bcpreadfmt (OLE DB) | Documentos de Microsoft'
+title: 'Ibcpsession:: Bcpreadfmt (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - BCPReadFmt method
 ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f47369cb66f6695ca7a235beb72536ce34495bb5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: aa0f1501955db61889bb437e545cda95dfe8b31f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204395"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428264"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
   Lee la información de formato de cada columna en el archivo de formato.  
@@ -40,7 +38,7 @@ const wchar_t *pwszFormatFile);
 ```  
   
 ## <a name="remarks"></a>Notas  
- El método **BCPReadFmt** se utiliza para leer datos de un archivo de formato que especifica el formato de datos en el archivo de datos. Este método es capaz de detectar la versión correcta del archivo de formato. Puede detectar automáticamente si el archivo de formato está en xml o en el formato de texto de estilo anterior y se comporta en consecuencia. Las versiones de archivo de formato admitidas por la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client BCP son de la versión 6.0 o posterior.  
+ El método **BCPReadFmt** se utiliza para leer datos de un archivo de formato que especifica el formato de datos en el archivo de datos. Este método es capaz de detectar la versión correcta del archivo de formato. Puede detectar automáticamente si el archivo de formato está en xml o en el formato de texto de estilo anterior y se comporta en consecuencia. Las versiones de archivo de formato admitidas por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client BCP son la versión 6.0 o posterior.  
   
  Después de la **BCPReadFmt** método lee los valores de formato, realiza las llamadas adecuadas a la [ibcpsession:: BCPColumns](ibcpsession-bcpcolumns-ole-db.md) y [ibcpsession:: BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) métodos. No es necesario que analice un archivo de formato y realice estas llamadas.  
   
@@ -57,13 +55,13 @@ const wchar_t *pwszFormatFile);
  El método se ha llevado a cabo de forma correcta.  
   
  E_FAIL  
- Se produjo un error específico del proveedor, para obtener información detallada, use la [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) interfaz.  
+ Se produjo un error específico del proveedor, para obtener información detallada, use el [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) interfaz.  
   
  E_OUTOFMEMORY  
  Error de memoria insuficiente.  
   
  E_UNEXPECTED  
- No se esperaba la llamada al método. Por ejemplo, el [ibcpsession:: BCPInit](ibcpsession-bcpinit-ole-db.md) no se llamó el método antes de llamar a este método.  
+ No se esperaba la llamada al método. Por ejemplo, el [ibcpsession:: BCPInit](ibcpsession-bcpinit-ole-db.md) no se llamó al método antes de llamar a este método.  
   
 ## <a name="see-also"></a>Vea también  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   

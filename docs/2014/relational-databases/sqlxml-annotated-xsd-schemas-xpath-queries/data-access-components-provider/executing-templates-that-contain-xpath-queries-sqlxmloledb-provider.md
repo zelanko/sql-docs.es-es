@@ -1,5 +1,5 @@
 ---
-title: Ejecutar plantillas que contienen consultas XPath (proveedor SQLXMLOLEDB) | Documentos de Microsoft
+title: Ejecutar plantillas que contienen consultas XPath (proveedor SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XML templates [SQLXML]
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c51d8b0480a7a6dc86e1b878fef153604405266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: eef3ff7d70d3287d70becd45d73b24d715440c14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202835"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Ejecutar plantillas que contienen consultas XPath (Proveedor SQLXMLOLEDB)
   En este ejemplo se muestra cómo utilizar las siguientes propiedades SQLXMLOLEDB específicas del proveedor:  
@@ -39,16 +39,16 @@ ms.locfileid: "36204566"
   
 -   Esquema de asignación  
   
- En esta aplicación ADO de ejemplo, una plantilla XML que consta de una consulta XPath (raíz) se especifica en el esquema de asignación XSD (MySchema.xml) que se describe en [ejecutar consultas de XPath &#40;proveedor SQLXMLOLEDB&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
+ En esta aplicación ADO de ejemplo, se especifica una plantilla XML que consta de una consulta de XPath (raíz) en el esquema de asignación XSD (MySchema.xml) que se describe en [ejecutar consultas XPath &#40;proveedor SQLXMLOLEDB&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
   
- La propiedad de esquema de asignación proporciona el esquema de asignación XSD en el que se ejecuta la consulta XPath. La propiedad de ruta de acceso Base proporciona la ruta de acceso de archivo para el esquema de asignación.  
+ La propiedad de esquema de asignación proporciona el esquema de asignación XSD en el que se ejecuta la consulta XPath. La propiedad de ruta de acceso Base proporciona la ruta de acceso al esquema de asignación.  
   
- Clientsidexml, propiedad se establece en True. Por lo tanto, el documento XML se genera en el cliente.  
+ El clientsidexml, propiedad se establece en True. Por lo tanto, el documento XML se genera en el cliente.  
   
  En la aplicación, se especifica una consulta XPath directamente. Por lo tanto, debe estar incluido el lenguaje {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
   
 > [!NOTE]  
->  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión. Además, este ejemplo especifica el uso de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) para el proveedor de datos que requiere la instalación de software de cliente de red adicional. Para obtener más información, consulte [requisitos del sistema para SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
+>  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión. Además, este ejemplo especifica el uso de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) para el proveedor de datos que requiere el software de cliente de red adicional para instalarse. Para obtener más información, consulte [requisitos del sistema para SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

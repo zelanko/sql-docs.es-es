@@ -1,5 +1,5 @@
 ---
-title: Proveedor WMI para eventos de servidor clases y propiedades | Documentos de Microsoft
+title: Proveedor WMI para eventos de servidor clases y propiedades | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - classes [WMI]
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ddfa4b5a540ad48f18bc4713ad68eeb2335ff1d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 53e9629a8e3bad2ee14f61453a15dfe558165f05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152236"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Proveedor WMI de clases y propiedades de eventos de servidor
   Los eventos de servidor siguientes componen el modelo de programación del proveedor WMI de eventos de servidor. Hay dos categorías principales de eventos que se pueden consultar emitiendo las consultas WQL contra el proveedor. Son eventos del lenguaje de definición de datos (DDL) y eventos de seguimiento. También se puede consultar los eventos de Service Broker BROKER_QUEUE_DISABLED y QUEUE_ACTIVATION. Tenga en cuenta la naturaleza inclusiva de los diagramas del árbol siguientes. El evento DDL_ASSEMBLY_EVENTS, por ejemplo, incluye los eventos ALTER_ASSEMBLY, DROP_ASSEMBLY y CREATE_ASSEMBLY. De igual forma, el evento TRC_FULL_TEXT incluye los eventos FT_CRAWL_ABORTED, FT_CRAWL_STOPPED y FT_CRAWL_STARTED. ALL_EVENTS cubre todos los eventos DDL, eventos de seguimiento, QUEUE_ACTIVATION y BROKER_QUEUE_DISABLED.  
@@ -40,14 +40,14 @@ ms.locfileid: "36203357"
   
  **Eventos de lenguaje de definición de datos y grupos de eventos**  
   
- ![Proveedor WMI de árbol de eventos de eventos de servidor](../../../2014/database-engine/dev-guide/media/sql-wmi-ddl-events-ktm.gif "proveedor WMI de árbol de eventos de eventos de servidor")  
+ ![Proveedor WMI para eventos evento árbol](../../../2014/database-engine/dev-guide/media/sql-wmi-ddl-events-ktm.gif "del proveedor WMI de árbol de eventos de los eventos de servidor")  
   
  **Grupos de eventos y eventos de seguimiento**  
   
- ![Eventos y grupos de eventos de seguimiento](../../../2014/database-engine/dev-guide/media/sql-wmi-trc-all-events.gif "y grupos de eventos de seguimiento")  
+ ![Y grupos de eventos de seguimiento](../../../2014/database-engine/dev-guide/media/sql-wmi-trc-all-events.gif "y grupos de eventos de seguimiento")  
   
 ## <a name="see-also"></a>Vea también  
- [Proveedor WMI para eventos conceptos del servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
+ [Proveedor WMI para conocer los conceptos de los eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
  [Usar WQL con el proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
   
   

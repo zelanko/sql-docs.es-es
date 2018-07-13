@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], null values
 - bulk importing [SQL Server], default values
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7840877066f5f941050d96c3274ab7bf6698326c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f99b040dc2a2caa0b7df7847760e978fef010fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258781"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantener valores NULL o usar valores predeterminados durante la importación masiva (SQL Server)
   De manera predeterminada, cuando se importan datos en una tabla, el comando **bcp** y la instrucción BULK INSERT aplican los valores predeterminados definidos para las columnas de la tabla. Por ejemplo, si un archivo de datos contiene un campo NULL, en su lugar, se cargará el valor predeterminado para la columna. El comando **bcp** y la instrucción BULK INSERT permiten especificar que se mantengan los valores NULL.  
@@ -37,7 +36,7 @@ ms.locfileid: "36201810"
  Por el contrario, una instrucción INSERT normal mantiene el valor NULL en lugar de insertar un valor predeterminado. La instrucción INSERT ... SELECT * FROM OPENROWSET(BULK...) proporciona el mismo comportamiento básico que la instrucción INSERT regular, pero además admite una sugerencia de tabla para insertar los valores predeterminados.  
   
 > [!NOTE]  
->  Para archivos de formato de ejemplo que omiten una columna de tabla, vea [usar un archivo de formato para omitir una columna de tabla &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md).  
+>  Para los archivos de formato de ejemplo que omiten una columna de tabla, vea [usar un archivo de formato para omitir una columna de tabla &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md).  
   
 ## <a name="sample-table-and-data-file"></a>Tabla y archivo de datos de ejemplo  
  Para ejecutar los ejemplos de este tema, es necesario crear una tabla y un archivo de datos de ejemplo.  
@@ -86,7 +85,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |**bcp**|`-k`|Switch|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|Argumento|  
   
- <sup>1</sup> para BULK INSERT, si los valores predeterminados no están disponibles, la columna de tabla se debe definir para permitir valores null.  
+ <sup>1</sup> para BULK INSERT, si los valores predeterminados no están disponibles, la columna de tabla debe definirse para permitir valores null.  
   
 > [!NOTE]  
 >  Estos calificadores deshabilitan la comprobación de definiciones DEFAULT en una tabla mediante los comandos de importación masiva. Sin embargo, para cualquier instrucción INSERT simultánea, se esperan definiciones DEFAULT.  
@@ -103,7 +102,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- Para insertar "`NULL`"en lugar de"`Default value of Col2`", debe usar el `-k` conmutador o la opción KEEPNULL, como se muestra en la siguiente **bcp** y ejemplos de BULK INSERT.  
+ Para insertar "`NULL`"en lugar de"`Default value of Col2`", deberá usar el `-k` switch o la opción KEEPNULL, como se muestra en la siguiente **bcp** y ejemplos de BULK INSERT.  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>Usar bcp y mantener valores NULL  
  En el siguiente ejemplo se muestra cómo mantener valores NULL en un comando **bcp** . El comando **bcp** contiene los siguientes modificadores:  
@@ -122,7 +121,7 @@ bcp AdventureWorks..MyTestDefaultCol2 in C:\MyTestEmptyField2-c.Dat -f C:\MyTest
 ```  
   
 #### <a name="using-bulk-insert-and-keeping-null-values"></a>Usar BULK INSERT y mantener valores NULL  
- En el siguiente ejemplo se muestra el uso de la opción KEEPNULLS en una instrucción BULK INSERT. En una herramienta de consulta, como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas, ejecute:  
+ En el siguiente ejemplo se muestra el uso de la opción KEEPNULLS en una instrucción BULK INSERT. Desde una herramienta de consulta, como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas, ejecute:  
   
 ```  
 USE AdventureWorks;  
@@ -160,7 +159,7 @@ GO
 |`1`|`NULL`|`DataField3`|  
 |`2`|`NULL`|`DataField3`|  
   
- Para insertar el valor predeterminado, "`Default value of Col2`", en lugar de "`NULL`", es necesario usar la sugerencia de tabla KEEPDEFAULTS, como se muestra en el siguiente ejemplo. En una herramienta de consulta, como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas, ejecute:  
+ Para insertar el valor predeterminado, "`Default value of Col2`", en lugar de "`NULL`", es necesario usar la sugerencia de tabla KEEPDEFAULTS, como se muestra en el siguiente ejemplo. Desde una herramienta de consulta, como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas, ejecute:  
   
 ```  
 USE AdventureWorks;  

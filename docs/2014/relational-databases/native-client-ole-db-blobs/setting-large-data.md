@@ -1,13 +1,11 @@
 ---
-title: Configurar datos grandes | Documentos de Microsoft
+title: Definir datos grandes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,22 +16,22 @@ helpviewer_keywords:
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6fd64ccaa9d5b4abb87123bc6cb1d9977c6ef03b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fa1b0857b155f077920f60eee85cbcebb2ef4250
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199900"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423024"
 ---
 # <a name="setting-large-data"></a>Definir datos grandes
-  Con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client, puede establecer datos BLOB pasando un puntero a un objeto de almacenamiento del consumidor.  
+  Con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB, puede establecer datos BLOB pasando un puntero a un objeto de almacenamiento del consumidor.  
   
  El consumidor crea un objeto de almacenamiento que contiene los datos y pasa al proveedor un puntero a este objeto de almacenamiento. A continuación, el proveedor lee los datos del objeto de almacenamiento del consumidor y los escribe en la columna BLOB.  
   
- Para pasar un puntero a su propio objeto de almacenamiento, el consumidor crea un descriptor de acceso que enlaza el valor de la columna BLOB. El consumidor llama a continuación, el **IRowsetChange:: SetData** o **IRowsetChange:: insertRow** método con el descriptor de acceso que enlaza la columna BLOB. Pasa un puntero a una interfaz de almacenamiento en el objeto de almacenamiento del consumidor.  
+ Para pasar un puntero a su propio objeto de almacenamiento, el consumidor crea un descriptor de acceso que enlaza el valor de la columna BLOB. El consumidor, a continuación, llama a la **IRowsetChange:: SetData** o **IRowsetChange:: insertRow** método con el descriptor de acceso que enlaza la columna BLOB. Pasa un puntero a una interfaz de almacenamiento en el objeto de almacenamiento del consumidor.  
   
  En este tema se hace referencia a la funcionalidad disponible con las funciones siguientes:  
   
@@ -46,17 +44,17 @@ ms.locfileid: "36199900"
 ## <a name="how-to-set-large-data"></a>Cómo establecer datos grandes  
  Para pasar un puntero a su propio objeto de almacenamiento, el consumidor crea un descriptor de acceso que enlaza el valor de la columna BLOB y, a continuación, llama a los métodos **IRowsetChange::SetData** o **IRowsetChange::InsertRow** . Para establecer datos BLOB:  
   
-1.  Cree una estructura DBOBJECT que describa cómo se debe obtener acceso a la columna BLOB. Establecer el *dwFlag* elemento de la estructura DBOBJECT en STGM_READ y establezca el *iid* elemento en IID_ISequentialStream (la interfaz que se puedan exponer).  
+1.  Cree una estructura DBOBJECT que describa cómo se debe obtener acceso a la columna BLOB. Establecer el *dwFlag* elemento de la estructura DBOBJECT en STGM_READ y establezca el *iid* elemento en IID_ISequentialStream (la interfaz para exponer).  
   
 2.  Establezca las propiedades en el grupo de propiedades DBPROPSET_ROWSET de modo que el conjunto de filas sea actualizable.  
   
-3.  Cree un conjunto de enlaces (uno de cada columna) utilizando una matriz de estructuras DBBINDING. Establecer el *wType* elemento de la estructura DBBINDING en DBTYPE_IUNKNOWN y *pObject* elemento para que apunte a la estructura DBOBJECT creada.  
+3.  Cree un conjunto de enlaces (uno de cada columna) utilizando una matriz de estructuras DBBINDING. Establecer el *wType* elemento de la estructura DBBINDING en DBTYPE_IUNKNOWN y el *pObject* elemento para que apunte a la estructura DBOBJECT creada.  
   
 4.  Cree un descriptor de acceso utilizando la información de enlace de la matriz de estructuras DBBINDINGS.  
   
 5.  Llame a **GetNextRows** para capturar las filas siguientes en el conjunto de filas. Llame a **GetData** para leer los datos del conjunto de filas.  
   
-6.  Crear un objeto de almacenamiento que contiene los datos (y también el indicador de longitud) y, a continuación, llame a **IRowsetChange:: SetData** (o **IRowsetChange:: insertRow**) con el descriptor de acceso que enlaza la columna BLOB que se va a establecer los datos.  
+6.  Crear un objeto de almacenamiento que contiene los datos (y también el indicador de longitud) y, a continuación, llame a **IRowsetChange:: SetData** (o **IRowsetChange:: insertRow**) con el descriptor de acceso que enlaza la columna BLOB para establecer los datos.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo establecer datos BLOB. El ejemplo crea una tabla, agrega un registro de ejemplo, captura este registro en el conjunto de filas y, después, establece el valor del campo BLOB:  

@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 2: Asignar columnas de Excel a dominios DQS | Documentos de Microsoft'
+title: 'Tarea 2: Asignar columnas de Excel a dominios de DQS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,31 +10,31 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ff48d56555d3eca2bbcb961d753a47d8db38c69e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89be07ed1cdd07fc8cd923d9672147b87a165d71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202035"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Tarea 2: asignar columnas de Excel a dominios de DQS
     
 1.  En la página **Asignación** , seleccione **Archivo de Excel** en **Origen de datos**.  
   
-2.  Haga clic en **examinar**, seleccione **Suppliers.xlsx**y haga clic en **abiertos**.  
+2.  Haga clic en **examinar**, seleccione **Suppliers.xlsx**y haga clic en **abierto**.  
   
 3.  Seleccione **IncomingSuppliers$** para el **hoja de cálculo**.  
   
-4.  Asigne las columnas como se muestra en la tabla y en la captura de pantalla siguientes. Al crear asignaciones para la **estado** dominio, haga clic en **agregar una asignación de columna** situado en la barra de herramientas justo encima de la lista.  
+4.  Asigne las columnas como se muestra en la tabla y en la captura de pantalla siguientes. Al crear asignaciones para la **estado** dominio, haga clic en **agregar una asignación de columna** botón en la barra de herramientas se encuentra justo encima de la lista.  
   
     > [!TIP]  
-    >  No está usando **Id. de proveedor** columna/dominio para la limpieza. Usará el **Id. de proveedor** dominio más adelante en la actividad de coincidencia.  
+    >  No usa **Id. de proveedor** dominio o de columna para la limpieza. Usará el **Id. de proveedor** dominio más adelante en la actividad de coincidencia.  
   
     |Columna de Excel|Dominio de DQS|  
     |------------------|----------------|  
@@ -55,6 +55,6 @@ ms.locfileid: "36202199"
 6.  Haga clic en **siguiente** para cambiar a la **Cleanse** página.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 3: Limpieza de datos con la Base de conocimiento proveedores](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
+ [Tarea 3: Limpiar datos con la base de conocimiento Proveedores](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
   
   

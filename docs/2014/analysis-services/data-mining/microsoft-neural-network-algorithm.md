@@ -1,5 +1,5 @@
 ---
-title: Algoritmo de red neuronal de Microsoft | Documentos de Microsoft
+title: Algoritmo de red neuronal de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
 - output neurons [Analysis Services]
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc557e9a063b5f3031d6a817b0bf85325b94e086
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8845e1bee588c8f79046e12015b6a9bed021ba4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202055"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de red neuronal combina cada posible estado del atributo de entrada con cada posible estado del atributo de predicción y utiliza los datos de entrenamiento para calcular las probabilidades. Posteriormente, puede usar estas probabilidades para la clasificación o la regresión, así como para predecir un resultado del atributo de predicción basándose en los atributos de entrada.  
+  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de red neuronal combina cada posible estado del atributo de entrada con cada posible estado del atributo predecible y usa los datos de entrenamiento para calcular las probabilidades. Posteriormente, puede usar estas probabilidades para la clasificación o la regresión, así como para predecir un resultado del atributo de predicción basándose en los atributos de entrada.  
   
  Los modelos de minería de datos construidos con el algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] pueden contener varias redes, en función del número de columnas que se utilizan para la entrada y la predicción, o solo para la predicción. El número de redes que contiene un único modelo de minería de datos depende del número de estados que contienen las columnas de entrada y las columnas de predicción que utiliza el modelo.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36201246"
 ## <a name="how-the-algorithm-works"></a>Cómo funciona el algoritmo  
  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de red neuronal crea una red que se compone de tres niveles de neuronas. Estos niveles son: un nivel de entrada, un nivel oculto opcional y un nivel de salida.  
   
- **Nivel de entrada:** neuronas de entrada definen todos los valores de atributo de entrada para el modelo de minería de datos y sus probabilidades.  
+ **Nivel de entrada:** las neuronas de entrada definen todos los valores de atributo de entrada para el modelo de minería de datos así como sus probabilidades.  
   
  **Nivel oculto:** las neuronas ocultas reciben entradas de neuronas de entrada y proporcionan salidas a las neuronas de salida. El nivel oculto es donde se asignan pesos a las distintas probabilidades de las entradas. Un peso describe la relevancia o importancia de una entrada determinada para la neurona oculta. Cuanto mayor sea el peso asignado a una entrada, más importante será el valor de dicha entrada. Los pesos pueden ser negativos, lo que significa que la entrada puede impedir, en lugar de activar, un resultado concreto.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36201246"
   
 ## <a name="see-also"></a>Vea también  
  [Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md)   
- [Contenido del modelo para los modelos de red neuronal de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Los modelos de red neuronal contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Ejemplos de consultas de modelo de red neuronal](neural-network-model-query-examples.md)   
  [Algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm.md)  
   

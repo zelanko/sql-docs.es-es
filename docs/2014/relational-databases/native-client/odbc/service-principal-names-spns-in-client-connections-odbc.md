@@ -1,29 +1,27 @@
 ---
-title: Nombres de entidad de servicio (SPN) en conexiones de cliente (ODBC) | Documentos de Microsoft
+title: Nombres de entidad de servicio (SPN) en conexiones de cliente (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1d60cb30-4c46-49b2-89ab-701e77a330a2
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c8fdc4c20be572ec2f4ce3d502201a72fead81f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 92231cca501a2b1d79a3c4a2cdbf15f1310af904
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198888"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423002"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>Nombres de entidad de seguridad del servicio (SPN) en conexiones de cliente (ODBC)
-  En este tema se describen las funciones y atributos ODBC que admiten nombres principales de servicio (SPN) en aplicaciones cliente. Para obtener más información acerca de los SPN en aplicaciones cliente, consulte [nombre Principal de servicio &#40;SPN&#41; compatibilidad con conexiones de cliente](../features/service-principal-name-spn-support-in-client-connections.md) y [obtener la autenticación mutua de Kerberos](../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  
+  En este tema se describen las funciones y atributos ODBC que admiten nombres principales de servicio (SPN) en aplicaciones cliente. Para obtener más información acerca de los SPN en aplicaciones cliente, consulte [nombre Principal de servicio &#40;SPN&#41; compatibilidad en las conexiones de cliente](../features/service-principal-name-spn-support-in-client-connections.md) y [obtener la autenticación mutua de Kerberos](../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  
   
 ## <a name="connection-string-keywords"></a>Palabras clave de cadena de conexión  
  Las siguientes palabras clave de cadena de conexión permiten a las aplicaciones cliente especificar un SPN.  

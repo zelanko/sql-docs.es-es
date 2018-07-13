@@ -1,27 +1,26 @@
 ---
-title: Nueva lista de propiedades de búsqueda | Documentos de Microsoft
+title: Nueva lista de propiedades de búsqueda | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.newsearchpropertylist.f1
 ms.assetid: ffca78e9-8608-4b15-bd38-b2d78da4247a
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b9d37bad141f61ceadafc03d883f36f422965996
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3019133dd0fa326a1595f2815698e10eb9586427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159312"
 ---
 # <a name="new-search-property-list"></a>Nueva lista de propiedades de búsqueda
   Utilice este cuadro de diálogo para crear una lista de propiedades de búsqueda.  
@@ -42,17 +41,17 @@ ms.locfileid: "36203695"
  **Crear a partir de una lista de propiedades de búsqueda existente**  
  Copia las propiedades de una lista de propiedades de búsqueda existente en otra lista nueva. Las listas de propiedades de búsqueda son objetos de base de datos, por lo que debe especificar la base de datos que contiene la lista de propiedades que desea copiar.  
   
- **base de datos de origen**  
+ **Base de datos de origen**  
  Especifique el nombre de la base de datos a la que pertenece la lista de palabras de búsqueda existente. De manera predeterminada, se selecciona la base de datos actual. Si lo desea, puede usar el cuadro de lista para seleccionar otra base de datos, siempre y cuando la conexión actual esté asociada con un identificador de usuario de esa base de datos.  
   
  **Lista de propiedades de búsqueda de origen**  
  Seleccione el nombre de una de las listas de propiedades de búsqueda existentes que pertenecen a la base de datos seleccionada.  
   
 ## <a name="permissions"></a>Permisos  
- Vea [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql).  
+ Consulte [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql).  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>Para usar SQL Server Management Studio con el fin de administrar listas de propiedades de búsqueda  
- Para obtener información acerca de cómo crear, ver, cambiar o eliminar una lista de propiedades de búsqueda y sobre cómo configurar un índice de texto completo para búsqueda de propiedades, vea [buscar propiedades de documento con listas de propiedades de búsqueda](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+ Para obtener información acerca de cómo crear, ver, cambiar o eliminar una lista de propiedades de búsqueda y sobre cómo configurar un índice de texto completo para búsqueda de propiedades, vea [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="see-also"></a>Vea también  
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   

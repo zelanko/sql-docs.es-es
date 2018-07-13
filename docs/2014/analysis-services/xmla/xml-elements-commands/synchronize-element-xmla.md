@@ -1,5 +1,5 @@
 ---
-title: Elemento Synchronize (XMLA) | Documentos de Microsoft
+title: Elemento Synchronize (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Synchronize command
 ms.assetid: 9401323c-feff-409a-a9da-94aee47e0563
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 367d237cab7ea63b85e000433742d866466b3f62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3f88b07721d391c1f834ed93d21039753728081d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187102"
 ---
 # <a name="synchronize-element-xmla"></a>Elemento Synchronize (XMLA)
-  Sincroniza una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos con otra base de datos existente.  
+  Sincroniza un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos con otra base de datos existente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36200420"
  Para obtener más información acerca de cómo sincronizar las bases de datos, vea [realizar copias de seguridad, restaurar y sincronizar bases de datos &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Elemento de la copia de seguridad &#40;XMLA&#41;](backup-element-xmla.md)   
+ [Elemento de copia de seguridad &#40;XMLA&#41;](backup-element-xmla.md)   
  [Elemento de lote &#40;XMLA&#41;](batch-element-xmla.md)   
  [Elemento en paralelo &#40;XMLA&#41;](../xml-elements-properties/parallel-element-xmla.md)   
  [Elemento restore &#40;XMLA&#41;](restore-element-xmla.md)   

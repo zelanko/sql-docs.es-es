@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - memory [Reporting Services]
 - memory thresholds [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dbeb12e4fcf59b7336d9a1cf05e0887cf118d4ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6958198b0482c792a952efea5c3792a182df8564
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198293"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurar la memoria disponible para las aplicaciones del servidor de informes
   Aunque [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] puede usar toda la memoria disponible, puede invalidar el comportamiento predeterminado configurando un límite superior en la cantidad total de los recursos de memoria asignados a las aplicaciones de servidor [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . También puede establecer umbrales que hacen que el servidor de informes cambie la manera de asignar prioridades y procesa las solicitudes dependiendo de si la presión de memoria es baja, media o alta. En niveles bajos de presión de memoria, el servidor de informes responde concediendo una prioridad ligeramente superior al procesamiento de informes a petición o interactivo. En los niveles altos de presión de memoria, el servidor de informes usa varias técnicas para seguir siendo operativo usando los recursos limitados que están disponibles para él.  
@@ -60,7 +60,7 @@ ms.locfileid: "36201097"
   
 -   `WorkingSetMaximum` y `WorkingSetMinimum` definen el intervalo de memoria disponible. Puede configurar estos valores para establecer un intervalo de memoria disponible para las aplicaciones del servidor de informes. Esto puede resultar útil si está hospedando varias aplicaciones en el mismo equipo y determina que el servidor de informes está usando una cantidad desproporcionada de recursos del sistema en relación con otras aplicaciones del mismo equipo.  
   
--   `MemorySafetyMargin` y `MemoryThreshold` establecen los límites de baja, Media y niveles altos de presión de memoria. Para cada estado, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adopta acciones correctoras para asegurarse de que informe al procesamiento y otras solicitudes se controlan adecuadamente en relación con la cantidad de memoria que está disponible en el equipo. Puede especificar los valores de configuración que determinan la delineación entre los niveles de presión bajo, alto y medio.  
+-   `MemorySafetyMargin` y `MemoryThreshold` establecen los límites de baja, Media y altos niveles de presión de memoria. Para cada estado, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adopta acciones correctoras para asegurarse de que informe al procesamiento y otras solicitudes se controlan apropiadamente en relación con la cantidad de memoria que está disponible en el equipo. Puede especificar los valores de configuración que determinan la delineación entre los niveles de presión bajo, alto y medio.  
   
      Aunque puede cambiar los valores de configuración, al hacerlo no se mejorará el rendimiento del procesamiento de informes. El cambio de los valores de configuración solamente resulta útil si se quitan las solicitudes antes de completarlas. La mejor manera de mejorar el rendimiento del servidor es implementar el servidor de informes o las aplicaciones del servidor de informes individuales en equipos dedicados.  
   
@@ -68,12 +68,12 @@ ms.locfileid: "36201097"
   
  ![Valores de configuración para el estado de la memoria](../media/rs-memoryconfigurationzones.gif "Valores de configuración para el estado de la memoria")  
   
- La tabla siguiente describe `WorkingSetMaximum`, `WorkingSetMinimum`, `MemorySafetyMargin`, y `MemoryThreshold` configuración. Opciones de configuración se especifican en el [archivo RSReportServer.config](rsreportserver-config-configuration-file.md).  
+ La tabla siguiente se describen `WorkingSetMaximum`, `WorkingSetMinimum`, `MemorySafetyMargin`, y `MemoryThreshold` configuración. Opciones de configuración se especifican en el [archivo RSReportServer.config](rsreportserver-config-configuration-file.md).  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|`WorkingSetMaximum`|Especifica un umbral de memoria después de que no se conceda ninguna nueva solicitud de asignación de memoria a las aplicaciones del servidor de informes.<br /><br /> De forma predeterminada, el servidor de informes establece `WorkingSetMaximum` en la cantidad de memoria disponible en el equipo. Este valor se detecta cuando se inicia el servicio.<br /><br /> Este valor no aparece en el archivo RSReportServer.config a menos que lo agregue manualmente. Si desea que el servidor de informes use menos memoria, puede modificar el archivo RSReportServer.config y agregar el elemento y el valor. El intervalo de valores válidos es de 0 al entero máximo. Este valor se expresa en kilobytes.<br /><br /> Cuando se alcanza el valor de `WorkingSetMaximum`, el servidor de informes no acepta nuevas solicitudes. Las solicitudes que se encuentran en curso actualmente podrán completarse. Las nuevas solicitudes se aceptan solo cuando el uso de memoria cae por debajo del valor especificado mediante `WorkingSetMaximum`.<br /><br /> Si las solicitudes existentes continúan consumiendo memoria adicional después del `WorkingSetMaximum` se ha alcanzado el valor, se reciclará todos los dominios de aplicación de servidor de informes. Para obtener más información, vea [Application Domains for Report Server Applications](application-domains-for-report-server-applications.md).|  
-|`WorkingSetMinimum`|Especifica un límite inferior para el consumo de recursos; el servidor de informes no liberará memoria si el uso de memoria total se encuentra por debajo de este límite.<br /><br /> De forma predeterminada, el valor se calcula al inicio del servicio. El cálculo es que la solicitud de asignación de memoria inicial es para el 60 por ciento de `WorkingSetMaximum`.<br /><br /> Este valor no aparece en el archivo RSReportServer.config a menos que lo agregue manualmente. Si desea personalizar este valor, debe agregar el `WorkingSetMinimum` elemento en el archivo RSReportServer.config. El intervalo de valores válidos es de 0 al entero máximo. Este valor se expresa en kilobytes.|  
+|`WorkingSetMaximum`|Especifica un umbral de memoria después de que no se conceda ninguna nueva solicitud de asignación de memoria a las aplicaciones del servidor de informes.<br /><br /> De forma predeterminada, el servidor de informes establece `WorkingSetMaximum` en la cantidad de memoria disponible en el equipo. Este valor se detecta cuando se inicia el servicio.<br /><br /> Este valor no aparece en el archivo RSReportServer.config a menos que lo agregue manualmente. Si desea que el servidor de informes use menos memoria, puede modificar el archivo RSReportServer.config y agregar el elemento y el valor. El intervalo de valores válidos es de 0 al entero máximo. Este valor se expresa en kilobytes.<br /><br /> Cuando se alcanza el valor de `WorkingSetMaximum`, el servidor de informes no acepta nuevas solicitudes. Las solicitudes que se encuentran en curso actualmente podrán completarse. Las nuevas solicitudes se aceptan solo cuando el uso de memoria cae por debajo del valor especificado mediante `WorkingSetMaximum`.<br /><br /> Si las solicitudes existentes continúan consumiendo memoria adicional después de la `WorkingSetMaximum` se ha alcanzado el valor, se reciclarán todos los dominios de aplicación de servidor de informes. Para obtener más información, vea [Application Domains for Report Server Applications](application-domains-for-report-server-applications.md).|  
+|`WorkingSetMinimum`|Especifica un límite inferior para el consumo de recursos; el servidor de informes no liberará memoria si el uso de memoria total se encuentra por debajo de este límite.<br /><br /> De forma predeterminada, el valor se calcula al inicio del servicio. El cálculo es que la solicitud de asignación de memoria inicial es para el 60 por ciento de `WorkingSetMaximum`.<br /><br /> Este valor no aparece en el archivo RSReportServer.config a menos que lo agregue manualmente. Si desea personalizar este valor, debe agregar el `WorkingSetMinimum` elemento al archivo RSReportServer.config. El intervalo de valores válidos es de 0 al entero máximo. Este valor se expresa en kilobytes.|  
 |`MemoryThreshold`|Especifica un porcentaje de `WorkingSetMaximum` que define el límite entre los escenarios de presión alta y Media. Si el uso de memoria del servidor de informes alcanza este valor, el servidor de informes ralentiza el procesamiento de la solicitud y cambia la cantidad de memoria asignada a aplicaciones de servidor diferentes. El valor predeterminado es 90. Este valor debe ser mayor que el valor establecido para `MemorySafetyMargin`.|  
 |`MemorySafetyMargin`|Especifica un porcentaje de `WorkingSetMaximum` que define el límite entre el los escenarios de presión media y baja. Este valor es el porcentaje de memoria disponible que se reserva para el sistema y no se puede usar para las operaciones del servidor de informes. El valor predeterminado es 80.|  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36201097"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>Acerca de los valores de configuración de memoria de ASP.NET  
- Aunque el servicio Web del servidor de informes y el Administrador de informes son [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplicaciones, ninguna aplicación responde a los valores de configuración de memoria que se especifican en el `processModel` sección del archivo machine.config para [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] las aplicaciones que ejecutar en modo de compatibilidad de IIS 5.0. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] lee los valores de configuración de memoria del archivo RSReportServer.config.  
+ Aunque el servicio Web del servidor de informes y el Administrador de informes son [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplicaciones, ninguna aplicación responde a los valores de configuración de memoria que especifique en el `processModel` sección del archivo machine.config para [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] las aplicaciones que ejecutar en modo de compatibilidad de IIS 5.0. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] lee los valores de configuración de memoria del archivo RSReportServer.config.  
   
 ## <a name="see-also"></a>Vea también  
  [Archivo de configuración RSReportServer](rsreportserver-config-configuration-file.md)   

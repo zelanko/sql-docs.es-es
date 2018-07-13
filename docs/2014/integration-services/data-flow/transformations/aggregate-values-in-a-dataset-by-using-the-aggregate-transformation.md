@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - aggregate values [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21f4e4749518036a1c2c40496102617c556f6aec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab590e5016b7230124aa88a4a7fa73b0fcd7f4ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200999"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180392"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Agregar valores en un conjunto de datos mediante la transformación Agregado
   Para agregar y configurar una transformación Agregado, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  
@@ -58,7 +58,7 @@ ms.locfileid: "36200999"
     > [!NOTE]  
     >  Al proporcionar el número de valores distintos, sea exacto o aproximado, se optimiza el rendimiento, dado que la transformación puede asignar previamente una cantidad apropiada de memoria para realizar el trabajo.  
   
-12. Opcionalmente, haga clic en **Avanzado** y actualice el nombre de la salida de transformación Agregado. Si las agregaciones incluyen una `Group By` operación, puede seleccionar un recuento aproximado de valores de clave de agrupación la **escala de claves** columna o especifique un número exacto de valores de clave de agrupación la **claves** columna.  
+12. Opcionalmente, haga clic en **Avanzado** y actualice el nombre de la salida de transformación Agregado. Si las agregaciones incluyen una `Group By` operación, puede seleccionar un recuento aproximado de agrupación de valores de clave en el **escala de claves** columna o especifique un número exacto de agrupar valores de clave en el **claves** columna.  
   
     > [!NOTE]  
     >  Al proporcionar el número de valores distintos, sea exacto o aproximado, se optimiza el rendimiento, dado que la transformación puede asignar previamente una cantidad apropiada de memoria para realizar el trabajo.  

@@ -1,5 +1,5 @@
 ---
-title: Elemento SolveOrder (ASSL) | Documentos de Microsoft
+title: Elemento SolveOrder (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SolveOrder element
 ms.assetid: ec43e055-97dd-4f2a-9a7c-2df2e1119e56
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed5092f93494162179dc2ee142a6769eddd5d6da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: defbaca134f92df4cf765dda68ad2fb30c848800
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173296"
 ---
 # <a name="solveorder-element-assl"></a>Elemento SolveOrder (ASSL)
   Indica el orden de resolución en el que el [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento se aplica a un miembro calculado o una definición de celda calculada.  
@@ -64,7 +64,7 @@ ms.locfileid: "36201899"
 ## <a name="remarks"></a>Notas  
  El `SolveOrder` propiedad se aplica a `CalculationProperty` elementos con un [CalculationType](calculationtype-element-assl.md) de *miembro* o *celdas*.  
   
- El elemento que corresponde al elemento primario de `SolveOrder` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ El elemento que se corresponde con el elemento primario de `SolveOrder` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento CalculationProperties &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

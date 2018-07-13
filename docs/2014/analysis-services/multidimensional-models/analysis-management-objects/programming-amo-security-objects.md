@@ -1,5 +1,5 @@
 ---
-title: Programar objetos de seguridad AMO | Documentos de Microsoft
+title: Programar objetos de seguridad AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - AMO, security
 ms.assetid: 5d963721-6e6e-46eb-bc9b-18724dd0b751
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 660afdf9a8c6c51c1dc97b8ee8de22ba6853708d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e110e71630a43d30f29be89cd56197ab8f18fd7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197955"
 ---
 # <a name="programming-amo-security-objects"></a>Programar objetos de seguridad AMO
   En [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], programar objetos de seguridad o ejecutar aplicaciones que usan objetos de seguridad AMO requiere ser miembro del grupo Administrador del servidor o el grupo de administradores de base de datos. Administrador del servidor y Administrador de base de datos son un acceso niveles proporcionado por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -146,7 +146,7 @@ static public void CreateRolesAndPermissions(Database db, Cube cube)
 ## <a name="see-also"></a>Vea también  
  <xref:Microsoft.AnalysisServices>   
  [Introducción a las clases AMO](amo-classes-introduction.md)   
- [Programar objetos de seguridad de AMO](programming-amo-security-objects.md)   
+ [Programar objetos de seguridad AMO](programming-amo-security-objects.md)   
  [Permisos y derechos de acceso &#40;Analysis Services - datos multidimensionales&#41;](https://msdn.microsoft.com/library/ms174786(v=sql.120).aspx)   
  [Protección de la instancia de Analysis Services](https://technet.microsoft.com/library/ms175663\(v=sql.110\).aspx)   
  [Arquitectura lógica &#40;Analysis Services - datos multidimensionales&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   

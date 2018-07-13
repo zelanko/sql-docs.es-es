@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos ComAssembly (ASSL) | Documentos de Microsoft
+title: Tipo de datos ComAssembly (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ComAssembly data type
 ms.assetid: 23c0f4b3-b6ac-4ec8-9254-74d2f84f5244
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bfe3a7791d02d97b4283b63a1aedd3b6702fe563
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 824fb508bb392f6ef84ede39645a5bac0da645e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171556"
 ---
 # <a name="comassembly-data-type-assl"></a>Tipo de datos ComAssembly (ASSL)
   Define un tipo de datos derivado que representa una biblioteca COM asociada con un [Server](../objects/server-element-assl.md) o [base de datos](../objects/database-element-assl.md) elemento.  
@@ -52,7 +52,7 @@ ms.locfileid: "36201019"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipos de datos base|[ensamblado](../objects/assembly-element-assl.md)|  
+|Tipos de datos base|[Ensamblado](../objects/assembly-element-assl.md)|  
 |Tipos de datos derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relaciones entre tipos de datos  
@@ -61,7 +61,7 @@ ms.locfileid: "36201019"
 |------------------|-------------|  
 |Elementos primarios|None|  
 |Elementos secundarios|[Source](../properties/source-element-comassembly-assl.md)|  
-|Elementos derivados|Vea [ensamblado](../objects/assembly-element-assl.md) ([ensamblados](../collections/assemblies-element-assl.md) colección de [base de datos](../objects/database-element-assl.md) o [Server](../objects/server-element-assl.md))|  
+|Elementos derivados|Consulte [ensamblado](../objects/assembly-element-assl.md) ([ensamblados](../collections/assemblies-element-assl.md) colección de [base de datos](../objects/database-element-assl.md) o [Server](../objects/server-element-assl.md))|  
   
 ## <a name="remarks"></a>Notas  
  El `ComAssembly` elemento contiene una referencia (el nombre de archivo completo o el identificador de programación) a una biblioteca COM asociada con una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] o con una base de datos en una instancia de [!INCLUDE[ssAS](../../../includes/ssas-md.md)].  

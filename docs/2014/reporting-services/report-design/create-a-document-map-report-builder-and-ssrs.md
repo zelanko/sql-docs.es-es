@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 95647eaf64c59078aeda48ec0dc7281d8af27d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 259de5dd91dfdc50958b25589b90fdadde4ac005
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174965"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Crear un mapa del documento (Generador de informes y SSRS)
   Un mapa del documento proporciona un conjunto de vínculos de navegación a los elementos de informe de un informe representado. Cuando se ve un informe que incluya un mapa del documento, aparece un panel lateral separado junto al informe. Un usuario puede hacer clic en los vínculos del mapa del documento para saltar a la página del informe que muestra el elemento. Las secciones y los grupos del informe se organizan en una jerarquía de vínculos. Cada vez que se hace clic en un elemento del mapa del documento, se actualiza el informe y se muestra el área del mismo correspondiente a dicho elemento en el mapa del documento.  
   
- Para agregar vínculos al mapa del documento, se establece la `DocumentMapLabel` propiedad del elemento de informe a texto creados por usted o a una expresión que se evalúa como el texto que se desea mostrar en el mapa del documento. También puede agregar los valores únicos para un grupo de tablas o de matrices al mapa del documento. Por ejemplo, para un grupo basado en colores, cada color único es un vínculo a la página del informe que muestra la instancia de grupo para ese color.  
+ Para agregar vínculos al mapa del documento, se establece la `DocumentMapLabel` propiedad del elemento de informe para el texto que se cree o en una expresión que se evalúa como el texto que se desea mostrar en el mapa del documento. También puede agregar los valores únicos para un grupo de tablas o de matrices al mapa del documento. Por ejemplo, para un grupo basado en colores, cada color único es un vínculo a la página del informe que muestra la instancia de grupo para ese color.  
   
  También puede crear una dirección URL a un informe que invalide la presentación del mapa del documento, lo que le permite ejecutar el informe sin mostrar el mapa del documento y, después, hacer clic en el botón **Mostrar u ocultar mapa del documento** de la barra de herramientas del visor de informes para alternar la presentación.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36202875"
     > [!NOTE]  
     >  Para seleccionar una región de datos Tablix, haga clic en cualquier celda para mostrar los identificadores de fila y de columna y, a continuación, haga clic en el controlador de tabla.  
   
-2.  En el panel Propiedades, escriba el texto que desea que aparezca en el mapa del documento en el `DocumentMapLabel` propiedad, o escriba una expresión que se evalúe como una etiqueta. Por ejemplo, escriba **Gráfico de ventas**.  
+2.  En el panel Propiedades, escriba el texto que desea que aparezcan en el mapa del documento en el `DocumentMapLabel` propiedad, o escriba una expresión que se evalúa como una etiqueta. Por ejemplo, escriba **Gráfico de ventas**.  
   
     > [!NOTE]  
     >  Si no ve el panel de propiedades, en la pestaña **Vista** , en el grupo **Mostrar u ocultar** , seleccione **Propiedades**.  
@@ -123,6 +123,6 @@ ms.locfileid: "36202875"
  
   
 ## <a name="see-also"></a>Vea también  
- [Buscar y ver informes en el Administrador de informes &#40;el generador de informes SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Buscar y ver informes en el Administrador de informes &#40;generador de informes y SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

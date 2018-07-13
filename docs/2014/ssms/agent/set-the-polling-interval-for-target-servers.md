@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interval for polling [SQL Server]
 - target servers [SQL Server], polling interval
 - polling interval [SQL Server]
 ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db2913badf1b5ecf8bda10a810f7d2f604354cf9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c6ec96e9b728d5b00b15b5258895e1f17b119e18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165788"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Establecer el intervalo de sondeo para servidores de destino
   En este tema se describe cómo establecer la frecuencia con la que el Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualiza la información del servidor maestro en los servidores de destino. Un trabajo es una serie especificada de acciones que realiza el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un trabajo multiservidor es un trabajo que ejecuta un servidor maestro en uno o más servidores de destino.  
   
 -   **Antes de empezar:**  [Seguridad](#Security)  
   
--   **Para establecer el intervalo de sondeo para servidores de destino, mediante:**[SQL Server Management Studio](#SSMS), [Transact-SQL  ](#TSQL)  
+-   **Para establecer el intervalo de sondeo para servidores de destino, utilizando:**[SQL Server Management Studio](#SSMS), [Transact-SQL  ](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
  Cada servidor de destino puede ejecutar una instancia del mismo trabajo al mismo tiempo. Cada servidor de destino sondea periódicamente al servidor maestro, descarga una copia de cualquier nuevo trabajo asignado al servidor de destino y, a continuación, se desconecta. El servidor de destino ejecuta el trabajo de manera local y, a continuación, se vuelve a conectar al servidor maestro para cargar el estado del resultado del trabajo.  

@@ -1,13 +1,11 @@
 ---
-title: 'Issabort:: Abort (OLE DB) | Documentos de Microsoft'
+title: 'Issabort:: Abort (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - Abort method
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0729183a2e5be91d3cdb30eae3ae5990f8398103
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 05673bb90cd0958344a6a12550f15c122489219a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196440"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416294"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
   Cancela el conjunto de filas actual y los comandos en lotes asociados al comando actual.  
@@ -44,7 +42,7 @@ HRESULT Abort(void);
  Después de que **ISSAbort::Abort** devuelva S_OK, la interfaz **IMultipleResults** asociada inicia un estado inutilizable y devuelve DB_E_CANCELED a todas las llamadas a método (excepto en los métodos que define la interfaz **IUNKNOWN** ) hasta que se libera. Si se ha obtenido una interfaz **IRowset** de **IMultipleResults** antes de una llamada a **Anular**, también inicia un estado inutilizable y devuelve DB_E_CANCELED a todas las llamadas a método (excepto en los métodos que define la interfaz **IUNKNOWN** e **IRowset::ReleaseRows**) hasta que se libera después de una llamada correcta a **ISSAbort::Abort**.  
   
 > [!NOTE]  
->  A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], si el estado de servidor XACT_ABORT es ON, ejecutar **issabort:: Abort** finalizará y revertir una transacción implícita o explícita actual cuando se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no anularán la transacción actual.  
+>  A partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], si el servidor de estado XACT_ABORT está establecido en, la ejecución **issabort:: Abort** finalizará y revertirá cualquier transacción implícita o explícita actual cuando se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no anularán la transacción actual.  
   
 ## <a name="arguments"></a>Argumentos  
  Ninguno.  
@@ -60,7 +58,7 @@ HRESULT Abort(void);
  El lote no se ha cancelado.  
   
  E_FAIL  
- Se produjo un error específico del proveedor; Para obtener información detallada, use la [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) interfaz.  
+ Se produjo un error específico del proveedor; Para obtener información detallada, use el [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) interfaz.  
   
  E_UNEXPECTED  
  No se esperaba la llamada al método. Por ejemplo, el objeto está en un estado zombi porque ya se ha llamado a **ISSAbort::Abort** .  

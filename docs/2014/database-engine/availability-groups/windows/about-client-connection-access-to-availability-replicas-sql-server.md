@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], readable secondary replicas
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: 14
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: ec36639f591beaa3094855d8f42d2bcca3d3073e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f0582293082f6c1ec5b2333575431d2887929afe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228515"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Acerca del acceso de conexión de cliente a réplicas de disponibilidad (SQL Server)
   En un grupo de disponibilidad AlwaysOn, puede configurar una o varias réplicas de disponibilidad para permitir conexiones de solo lectura cuando se ejecutan en el rol secundario (es decir, cuando se ejecutan como réplica secundaria). También puede configurar cada réplica de disponibilidad para permitir o excluir conexiones de solo lectura cuando se ejecutan bajo el rol principal (es decir, cuando se ejecutan como réplica principal).  
@@ -57,7 +56,7 @@ ms.locfileid: "36199763"
  No se permiten conexiones de usuario. Las bases de datos secundarias no están disponibles para acceso de lectura. este es el comportamiento predeterminado del rol secundario.  
   
  Solo conexiones de intención de lectura  
- Bases de datos secundarias están disponibles solo para la conexión que el `Application Intent` propiedad de conexión se establece en `ReadOnly` (*las conexiones de lectura*).  
+ Las bases de datos secundarias solo están disponibles para la conexión para el que el `Application Intent` propiedad de conexión se establece en `ReadOnly` (*las conexiones de intención de lectura*).  
   
  Para obtener información acerca de esta conexión, vea [Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
@@ -73,7 +72,7 @@ ms.locfileid: "36199763"
  Se permiten conexiones de lectura/escritura y de solo lectura a las bases de datos principales. Este es el comportamiento predeterminado para el rol principal.  
   
  Permitir solo conexiones de lectura/escritura  
- Cuando el `Application Intent` propiedad de conexión se establece en **ReadWrite** o no se establece, se permite la conexión. Conexiones para que la `Application Intent` palabra clave de cadena de conexión se establece en `ReadOnly` no están permitidas. La acción de permitir conexiones de lectura/escritura puede impedir que los clientes conecten una carga de trabajo de intención de lectura a la réplica principal por error.  
+ Cuando el `Application Intent` propiedad de conexión se establece en **ReadWrite** o no se establece, se permite la conexión. Las conexiones para que el `Application Intent` palabra clave de cadena de conexión se establece en `ReadOnly` no se permiten. La acción de permitir conexiones de lectura/escritura puede impedir que los clientes conecten una carga de trabajo de intención de lectura a la réplica principal por error.  
   
  Para obtener información acerca de esta conexión, vea [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -124,10 +123,10 @@ ms.locfileid: "36199763"
   
 -   [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog del equipo de AlwaysOn SQL Server: El Blog oficial del SQL Server AlwaysOn equipo](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog del equipo de AlwaysOn SQL Server: Oficial AlwaysOn Team Blog de SQL Server](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Estadísticas](../../../relational-databases/statistics/statistics.md)  
   

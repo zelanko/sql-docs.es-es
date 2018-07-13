@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], marks
 - STOPBEFOREMARK option [RESTORE statement]
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ca2529a4dbe6e237b3d8e833659a7c3df1fc941
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8fc37a9704dde533ae9d626a9853ccfb147cb06a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188612"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recuperación de bases de datos relacionadas que contienen transacciones marcadas
   Este tema solo es pertinente para las bases de datos que contienen transacciones marcadas y utilizan los modelos de recuperación completa u optimizado para cargas masivas de registros.  
@@ -58,7 +57,7 @@ ms.locfileid: "36199695"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- El registro de transacciones registra el nombre de marca (nombre de transacción), la descripción, la base de datos, el usuario, `datetime` información y el número de secuencia de registro (LSN). El `datetime` información se usa con el nombre de marca para identificar la marca de forma exclusiva.  
+ El registro de transacciones registra el nombre de marca (nombre de transacción), descripción, base de datos, usuario, `datetime` información y el número de secuencia de registro (LSN). El `datetime` información se usa con el nombre de marca para identificar la marca de forma exclusiva.  
   
  Para obtener información sobre cómo insertar una marca en una transacción que abarca varias bases de datos, vea [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](use-marked-transactions-to-recover-related-databases-consistently.md).  
   
@@ -69,7 +68,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
      STOPATMARK pone al día hasta la marca e incluye la transacción marcada en la puesta al día.  
   
--   Utilizar WITH STOPBEFOREMARK = **'*`<mark_name>`*'** cláusula para especificar que el registro que está inmediatamente antes de que la marca es el punto de recuperación.  
+-   Utilice WITH STOPBEFOREMARK = **'*`<mark_name>`*'** cláusula para especificar que el registro que está inmediatamente antes de que la marca es el punto de recuperación.  
   
      STOPBEFOREMARK pone al día hasta la marca y excluye la transacción marcada de la puesta al día.  
   

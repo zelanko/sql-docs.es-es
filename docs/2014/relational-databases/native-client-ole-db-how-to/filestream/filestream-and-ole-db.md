@@ -1,26 +1,24 @@
 ---
-title: FileStream y OLE DB | Documentos de Microsoft
+title: FileStream y OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8801f091-2241-4085-87b7-33e031328c9c
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 477f0045cf7f1c65c95734ff27ac0e1ee4e22c80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 69d2e4d131e0de1fe3d443b643da129a175e4278
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199121"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424824"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream y OLE DB
   Esta sección contiene cuatro ejemplos que muestran cómo utilizar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB con la característica de secuencia de archivo:  

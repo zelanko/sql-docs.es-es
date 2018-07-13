@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos MiningModelingFlag (ASSL) | Documentos de Microsoft
+title: Tipo de datos MiningModelingFlag (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningModelingFlag data type
 ms.assetid: aaa72ba8-051e-4b01-b1e9-9c8d83b8b752
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32ee744bdfcd084c4be88511ecba025ca9a270de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ece92d63c0d66c1ef845ce2d28d3317b2f65d66f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167526"
 ---
 # <a name="miningmodelingflag-data-type-assl"></a>Tipo de datos MiningModelingFlag (ASSL)
   Define un tipo de datos primitivo que representa las marcas de modelado disponibles para un [ModelingFlag](../objects/modelingflag-element-assl.md) elemento.  
@@ -66,7 +66,7 @@ ms.locfileid: "36201248"
 |*NO ES NULL*|La columna no puede aceptar valores NULL.|  
 |*REGRESSOR*|La columna proporciona valores de regresor para los casos de prueba.|  
   
- Marcas específicas del proveedor adicionales pueden usarse si se han agregado los proveedores de minería de datos de OLE DB o datos de terceros en la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Otras marcas específicas del proveedor pueden usarse si se han agregado proveedores de minería de datos de OLE DB o datos de otros fabricantes en la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  Un elemento estrechamente relacionado del modelo de objetos Objetos de administración de análisis (AMO) es <xref:Microsoft.AnalysisServices.MiningModelingFlags>.  
   

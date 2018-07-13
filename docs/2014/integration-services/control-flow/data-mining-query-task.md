@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2cda01c434fda1a17be4b26352629dc2bc0abb5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a075f3ed6dde5bccb648318c11bf8a456c5a1123
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277151"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   La tarea Consulta de minería de datos ejecuta consultas de predicción basadas en modelos de minería de datos integrados en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La consulta de predicción crea una predicción para datos nuevos a partir de modelos de minería de datos. Por ejemplo, una consulta de predicción puede predecir cuántos barcos de vela es probable vender durante los meses de verano, así como generar una lista de clientes que podrían estar interesados en comprar uno.  
@@ -59,7 +59,7 @@ ms.locfileid: "36198978"
   
 -   [Editor de tareas de consulta de minería de datos &#40;ficha consulta&#41;](../data-mining-query-task-editor-query-tab.md)  
   
--   [Editor de tareas de consulta de minería de datos &#40;ficha de salida&#41;](../data-mining-query-task-editor-output-tab.md)  
+-   [Editor de tareas de consulta de minería de datos &#40;salida (pestaña)&#41;](../data-mining-query-task-editor-output-tab.md)  
   
 > [!NOTE]  
 >  El Editor de la tarea Consulta de minería de datos no tiene página Expresiones. Utilice en su lugar la ventana **Propiedades** para tener acceso a las herramientas de creación y administración de expresiones de propiedades para las propiedades de la tarea Consulta de minería de datos.  

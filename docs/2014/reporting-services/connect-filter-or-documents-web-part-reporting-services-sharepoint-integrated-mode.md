@@ -1,5 +1,5 @@
 ---
-title: Conectar un filtro o el elemento Web documentos (Reporting Services en modo integrado de SharePoint) | Documentos de Microsoft
+title: Conectar el elemento filtro o documentos Web (Reporting Services en modo integrado de SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Filter Web Part [Reporting Services]
 - SharePoint integration [Reporting Services], Web Parts
@@ -18,13 +18,13 @@ ms.assetid: 6a303135-c0ef-44cd-a423-1cea8df3dcf3
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f43de4f4118ca7b43370eb8493fe56cd072db2a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 697726db338c9165bdd909b0c324ecf52a472013
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199849"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240165"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>Conectar un elemento web Filtro o Documentos (Reporting Services en el modo integrado de SharePoint)
   Si utiliza un producto de SharePoint, puede crear un panel o una página de elementos web que incluya un elemento web Filtro o un elemento web Documentos, y un elemento web Visor de informes. Las versiones admitidas son [!INCLUDE[SPF2010](../includes/spf2010-md.md)] o [!INCLUDE[SPS2010](../includes/sps2010-md.md)]. También se admiten [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] u [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007. Mediante la conexión de un elemento web Filtro, los usuarios que seleccionan valores de filtro en un elemento web Filtro pueden enviar el valor a un informe con parámetros en la misma página. Mediante la conexión de un elemento web Documentos, los usuarios que hacen clic en informes en la biblioteca de documentos pueden ver el informe en un elemento web Visor de informes adyacente.  
@@ -80,7 +80,7 @@ ms.locfileid: "36199849"
 11. Proteja sus cambios y guarde la página.  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar el elemento Web de Visor de informes a una página Web &#40;modo integrado de Reporting Services en SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
+ [Agregar el elemento Web Visor de informes a una página Web &#40;modo integrado de Reporting Services en SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
  [Elemento de Web del Visor de informes en un sitio de SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Personalización del elemento web Visor de informes](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating number attributes
 - creating number attributes [Master Data Services]
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a572422ea432977364bc49c5826d49c88053b79d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 88811e8d6a571f8b51a8362310829b92bb2a57d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149266"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>Crear un atributo numérico (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un atributo numérico cuando desee que los usuarios escriban un número como valor de un atributo.  
@@ -69,7 +69,7 @@ ms.locfileid: "36201394"
   
 11. En el cuadro **Decimales** , escriba la cantidad de números que se pueden escribir después de un decimal.  
   
-12. Desde el **máscara de entrada** lista, seleccione un formato para los números negativos.  
+12. Desde el **máscara de entrada** lista, seleccione un formato para números negativos.  
   
 13. Si lo desea, seleccione **Habilitar seguimiento de cambios** para realizar el seguimiento de los cambios en los grupos de atributos. Consulte [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) para obtener más información.  
   

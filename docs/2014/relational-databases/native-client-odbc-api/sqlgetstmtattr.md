@@ -1,13 +1,11 @@
 ---
-title: SQLGetStmtAttr | Documentos de Microsoft
+title: SQLGetStmtAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,26 +14,26 @@ helpviewer_keywords:
 - SQLGetStmtAttr function
 ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5c6f1220685b2e9f72df52ddea9c1f676453b856
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: bcd3e96325433f5adb7c91b8a12e2b156f1bf4cb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201370"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428384"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC Native Client extiende SQLGetStmtAttr para exponer atributos de instrucción específicos del controlador.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client extiende SQLGetStmtAttr para exponer atributos de instrucción específicos del controlador.  
   
- [SQLSetStmtAttr](sqlsetstmtattr.md) listas de los atributos de instrucción tanto de lectura y escritura. En este tema se enumeran los atributos de instrucción de solo lectura.  
+ [SQLSetStmtAttr](sqlsetstmtattr.md) enumera los atributos de instrucción que ambos son de lectura y escritura. En este tema se enumeran los atributos de instrucción de solo lectura.  
   
 ## <a name="sqlsoptsscurrentcommand"></a>SQL_SOPT_SS_CURRENT_COMMAND  
  El atributo SQL_SOPT_SS_CURRENT_COMMAND expone el comando actual de un lote de comandos. El retorno es un entero que especifica la ubicación del comando en el lote. El valor de *ValuePtr* es de tipo SQLLEN.  
   
 ## <a name="sqlsoptssnocountstatus"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
- El atributo SQL_SOPT_SS_NOCOUNT_STATUS indica la configuración actual de la NOCOUNT opción, que controla si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] notifica los números de filas afectadas por una instrucción cuando [SQLRowCount](sqlrowcount.md) se llama. El valor de *ValuePtr* es de tipo SQLLEN.  
+ El atributo SQL_SOPT_SS_NOCOUNT_STATUS indica el valor actual de la NOCOUNT opción, que controla si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] notifica los números de filas afectadas por una instrucción cuando [SQLRowCount](sqlrowcount.md) se llama. El valor de *ValuePtr* es de tipo SQLLEN.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -55,7 +53,7 @@ ms.locfileid: "36201370"
  Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
- [SQLSetStmtAttr, función](http://go.microsoft.com/fwlink/?LinkId=59370)   
+ [Función SQLSetStmtAttr](http://go.microsoft.com/fwlink/?LinkId=59370)   
  [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)  
   
   

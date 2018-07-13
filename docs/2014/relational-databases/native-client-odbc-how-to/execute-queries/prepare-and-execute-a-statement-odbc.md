@@ -1,13 +1,11 @@
 ---
-title: Preparar y ejecutar una instrucción (ODBC) | Documentos de Microsoft
+title: Preparar y ejecutar una instrucción (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 58a3ecf2419f0b3e3b74ba6e3b1a6293d928d550
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3d7520d040f55962821b3c0e863400c68f5fd35d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198694"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420364"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Preparar y ejecutar una instrucción (ODBC)
     
@@ -35,7 +33,7 @@ ms.locfileid: "36198694"
   
 3.  Para cada uno de los parámetros de la instrucción preparada, puede hacer lo siguiente:  
   
-    -   Llame a [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) para obtener información sobre los parámetros.  
+    -   Llame a [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) para obtener información de parámetros.  
   
     -   Enlazar cada parámetro a una variable de programa utilizando [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md). Configurar cualquier parámetro de datos en ejecución.  
   
@@ -63,7 +61,7 @@ ms.locfileid: "36198694"
   
 3.  Puede llamar a [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) para determinar el número de parámetros de la instrucción preparada.  
   
-4.  Opcionalmente, para cada parámetro de la instrucción preparada, llame a SQLDescribeParam para obtener información sobre los parámetros.  
+4.  Opcionalmente, para cada parámetro de la instrucción preparada, llame a SQLDescribeParam para obtener información de parámetros.  
   
 5.  Para cada marcador de parámetro:  
   
@@ -83,7 +81,7 @@ ms.locfileid: "36198694"
   
     -   Llame a SQLExecute para ejecutar la instrucción preparada.  
   
-    -   Si se utilizan parámetros de entrada de datos en ejecución, SQLExecute devuelve SQL_NEED_DATA. Enviar los datos en fragmentos mediante SQLParamData y SQLPutData.  
+    -   Si se usan parámetros de entrada de datos en ejecución, SQLExecute devuelve SQL_NEED_DATA. Enviar los datos en fragmentos mediante SQLParamData y SQLPutData.  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>Para preparar una instrucción con parámetros enlazados de modo de fila  
   
@@ -113,9 +111,9 @@ ms.locfileid: "36198694"
   
     -   Llame a SQLExecute para ejecutar la instrucción preparada. El controlador ejecuta eficazmente la instrucción SQL S veces, una vez para cada conjunto de parámetros.  
   
-    -   Si se utilizan parámetros de entrada de datos en ejecución, SQLExecute devuelve SQL_NEED_DATA. Enviar los datos en fragmentos mediante SQLParamData y SQLPutData.  
+    -   Si se usan parámetros de entrada de datos en ejecución, SQLExecute devuelve SQL_NEED_DATA. Enviar los datos en fragmentos mediante SQLParamData y SQLPutData.  
   
 ## <a name="see-also"></a>Vea también  
- [Ejecutar consultas temas "Cómo..." &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+ [Ejecutar consultas de temas de procedimientos &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

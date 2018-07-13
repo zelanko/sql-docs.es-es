@@ -1,5 +1,5 @@
 ---
-title: Vincular un informe a un modelo como informe Click-through | Documentos de Microsoft
+title: Vincular un informe a un modelo como informe Click-through | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - customizing clickthrough reports
 - clickthrough reports, customizing
@@ -17,13 +17,13 @@ ms.assetid: 3af42de3-67ef-41c2-bc8a-7045baec6f63
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9dfe16933e0c2b335cf68816113c336561aac1ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3df0b140c8d1eb08fc3b1502eb2a627be7f175c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210735"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Vincular un informe a un modelo como informe click-through
   En lugar de utilizar las plantillas del informe click-through predeterminadas, puede crear un informe del Generador de informes y, a continuación, hacer clic en una entidad específica en el modelo de informe. Cuando la persona que ve el informe hace clic en los datos interactivos del informe principal, éste se muestra como un informe click-through. Para vincular un informe a una entidad, utilice [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] el Administrador de informes.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - large reports
 - maximum report size
@@ -20,13 +20,13 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 525f1af5c7ca1aadd909c306a3397134d9275a93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15925e061103c12f869dae722b1b5881f4146919
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159886"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Límites de tamaño de informes e instantáneas
   Los responsables de administrar una implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pueden usar la información de este tema para conocer los límites de tamaño de los informes cuando se publican en un servidor de informes, cuando se representan en tiempo de ejecución y cuando se guardan en el sistema de archivos. En este tema también se incluyen directrices prácticas para medir el tamaño de una base de datos del servidor de informes y se describe cómo afecta el tamaño de las instantáneas al rendimiento del servidor.  
@@ -38,7 +38,7 @@ ms.locfileid: "36198609"
   
  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] impone un límite máximo en los archivos publicados para reducir la amenaza de ataques de denegación de servicio en el servidor. Al aumentar el valor del límite superior, se elimina parte de la protección que ofrece este límite. Aumente el valor solo si está seguro de que las ventajas de hacerlo compensan los riesgos de seguridad adicionales.  
   
- Tenga en cuenta que el valor establecido para el elemento `maxRequestLength` debe ser mayor que los límites de tamaño reales que desea aplicar. Tiene que usar un valor mayor para tener en cuenta el aumento inevitable del tamaño de la solicitud HTTP que se produce una vez encapsulados todos los parámetros en un sobre SOAP y aplicada la codificación Base64 a ciertos parámetros, como el parámetro Definition de los métodos <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> y <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>. La codificación Base64 aumenta el tamaño de los datos originales en un 33 % aproximadamente. Por tanto, el valor que especifique para el `maxRequestLength` elemento debe ser aproximadamente un 33% mayor que el tamaño del elemento utilizable real. Por ejemplo, si especifica un valor de 64 MB para `maxRequestLength`, puede esperar de forma realista que el tamaño máximo de los archivos de informe que se envían al servidor de informes sea aproximadamente 48 MB.  
+ Tenga en cuenta que el valor establecido para el elemento `maxRequestLength` debe ser mayor que los límites de tamaño reales que desea aplicar. Tiene que usar un valor mayor para tener en cuenta el aumento inevitable del tamaño de la solicitud HTTP que se produce una vez encapsulados todos los parámetros en un sobre SOAP y aplicada la codificación Base64 a ciertos parámetros, como el parámetro Definition de los métodos <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> y <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>. La codificación Base64 aumenta el tamaño de los datos originales en un 33 % aproximadamente. Por tanto, el valor especifique para el `maxRequestLength` elemento debe ser aproximadamente un 33% mayor que el tamaño del elemento utilizable real. Por ejemplo, si especifica un valor de 64 MB para `maxRequestLength`, puede esperar de forma realista que el tamaño máximo de los archivos de informe que se envían al servidor de informes sea aproximadamente 48 MB.  
   
 ## <a name="report-size-in-memory"></a>Tamaño de informes en memoria  
  Cuando se ejecuta un informe, el tamaño del informe es igual a la cantidad de datos que se devuelven en el informe más el tamaño del flujo de salida. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no impone un límite máximo en cuanto al tamaño de un informe representado. La memoria del sistema determina el límite superior del tamaño (de forma predeterminada, un servidor de informes usa toda la memoria configurada disponible al representar un informe), pero puede especificar los ajustes de configuración para establecer umbrales de memoria y directivas de administración de memoria. Para obtener más información, vea [Configurar la memoria disponible para las aplicaciones del servidor de informes](../report-server/configure-available-memory-for-report-server-applications.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "36198609"
   
  Para calcular el tamaño de un informe representado en el disco, se puede exportar el informe y, después, guardarlo en el sistema de archivos (el archivo guardado incluye los datos y la información de formato del informe).  
   
- Existen límites claros para el tamaño de un informe cuando se representa en formato Excel. Las hojas de cálculo no pueden tener más de 65536 filas o 256 columnas. Los demás formatos de representación no tienen estos límites, por lo que su tamaño solamente depende de la cantidad de recursos del servidor. Para obtener más información acerca de los límites de archivo de Excel, vea [exportar un informe como otro tipo de archivo &#40;el generador de informes y SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
+ Existen límites claros para el tamaño de un informe cuando se representa en formato Excel. Las hojas de cálculo no pueden tener más de 65536 filas o 256 columnas. Los demás formatos de representación no tienen estos límites, por lo que su tamaño solamente depende de la cantidad de recursos del servidor. Para obtener más información acerca de los límites de archivo de Excel, vea [exportar un informe como otro tipo de archivo &#40;generador de informes y SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  El procesamiento y la representación de los informes se producen en memoria. Si los informes son grandes o hay muchos usuarios, asegúrese de planear la capacidad de alguna manera para garantizar que la implementación del servidor de informes funciona en un grado que sea satisfactorio para los usuarios. Para obtener más información sobre herramientas e instrucciones, vea las publicaciones siguientes en MSDN: [Planning for Scalability and Performance with Reporting Services](http://go.microsoft.com/fwlink/?LinkID=70650) y [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](http://go.microsoft.com/fwlink/?LinkID=77519).  

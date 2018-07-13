@@ -1,5 +1,5 @@
 ---
-title: Clases de minería de datos AMO | Documentos de Microsoft
+title: Clases de minería de datos AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 091d68fedffc16d57834a02cfcbd8ef3a6c2d087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbea4d55066e2de5061d75c2b40092b84e8008ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171646"
 ---
 # <a name="amo-data-mining-classes"></a>Clases de minería de datos de AMO
   Las clases de minería de datos ayudan a crear, modificar, eliminar y procesar objetos de minería de datos. Trabajar con objetos de minería de datos incluye crear estructuras y modelos de minería de datos y procesar los modelos.  
   
- Para obtener más información acerca de cómo configurar el entorno y sobre <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, y <xref:Microsoft.AnalysisServices.DataSourceView> los objetos, vea [clases fundamentales de AMO](amo-fundamental-classes.md).  
+ Para obtener más información acerca de cómo configurar el entorno y unos <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, y <xref:Microsoft.AnalysisServices.DataSourceView> objetos, vea [clases fundamentales de AMO](amo-fundamental-classes.md).  
   
  La definición de objetos en AMO requiere establecer varias propiedades en cada objeto para configurar el contexto correcto. Los objetos complejos, como los objetos OLAP y de minería de datos, requieren una codificación larga y detallada.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36200238"
   
  Para crear un objeto <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, éste se agrega al objeto <xref:Microsoft.AnalysisServices.MiningStructureCollection> primario y el objeto <xref:Microsoft.AnalysisServices.MiningStructure> primario se actualiza en el servidor mediante el método Update.  
   
- Para quitar un <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, éste se debe quitar de la colección del elemento primario <xref:Microsoft.AnalysisServices.MiningStructure>y el elemento primario <xref:Microsoft.AnalysisServices.MiningStructure> objeto debe actualizarse en el servidor mediante el método Update.  
+ Para quitar un <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, se debe quitar de la colección del elemento primario <xref:Microsoft.AnalysisServices.MiningStructure>y el elemento primario <xref:Microsoft.AnalysisServices.MiningStructure> objeto debe actualizarse en el servidor mediante el método Update.  
   
 #### <a name="tableminingstructurecolumn"></a>TableMiningStructureColumn  
  Un objeto <xref:Microsoft.AnalysisServices.TableMiningStructureColumn> simple se compone de información básica y columnas escalares.  
@@ -101,9 +101,9 @@ ms.locfileid: "36200238"
   
  Las columnas son una colección de las columnas utilizadas por el algoritmo y su definición de uso.  
   
- A <xref:Microsoft.AnalysisServices.MiningModel> se crea al agregarla a la <xref:Microsoft.AnalysisServices.MiningModelCollection> de la base de datos y actualizar la <xref:Microsoft.AnalysisServices.MiningModel> objeto en el servidor mediante el método Update.  
+ Un <xref:Microsoft.AnalysisServices.MiningModel> se crea al agregarlo a la <xref:Microsoft.AnalysisServices.MiningModelCollection> de la base de datos y actualizar la <xref:Microsoft.AnalysisServices.MiningModel> objeto en el servidor mediante el método Update.  
   
- Para quitar un objeto <xref:Microsoft.AnalysisServices.MiningModel>, se tiene que hacer mediante el método Drop de <xref:Microsoft.AnalysisServices.MiningModel>. Quitar un <xref:Microsoft.AnalysisServices.MiningModel> de la colección no afecta al servidor.  
+ Para quitar un objeto <xref:Microsoft.AnalysisServices.MiningModel>, se tiene que hacer mediante el método Drop de <xref:Microsoft.AnalysisServices.MiningModel>. Quitar un <xref:Microsoft.AnalysisServices.MiningModel> de la colección no afectan al servidor.  
   
  Una vez creado, <xref:Microsoft.AnalysisServices.MiningModel> se puede procesar mediante su propio método de proceso o bien cuando un objeto primario se procese con su propio método de proceso.  
   

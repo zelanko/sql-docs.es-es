@@ -1,13 +1,11 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) | Documentos de Microsoft
+title: IBCPSession::BCPDone (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 099618fccdf11dba2acb56303e2fec2d7a496ab0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 50f7fe4d747692ff11ffa130bf48b88d3252c994
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201362"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420714"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   Confirma las filas restantes que van a enviarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -39,7 +37,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Notas  
- Ninguna otra operación puede llamarse en el [IBCPSession](ibcpsession-ole-db.md) interfaz después de llamar a la **BCPDone** método. La única posibilidad es llamar a la [ibcpsession:: BCPInit](ibcpsession-bcpinit-ole-db.md) método para iniciar una nueva operación de copia masiva. Esto es similar a llamar a la [IRowsetFastLoad:: Commit](irowsetfastload-commit-ole-db.md) método.  
+ Ninguna otra operación que se puede llamar en el [IBCPSession](ibcpsession-ole-db.md) interfaz después de llamar a la **BCPDone** método. La única posibilidad es llamar a la [ibcpsession:: BCPInit](ibcpsession-bcpinit-ole-db.md) método para iniciar una nueva operación de copia masiva. Esto es similar a llamar a la [IRowsetFastLoad:: Commit](irowsetfastload-commit-ole-db.md) método.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  S_OK  
@@ -67,7 +65,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Podría utilizar BCP para volver a agregar estos datos a la tabla con el comando siguiente:  
   
- **bcp master.. fltest en el archivo outfile.dat - n -T -S** *server*  
+ **bcp master.. fltest en este archivo - n -T -S** *server*  
   
  Tendrá que especificar sqlncli11.lib al compilar este ejemplo.  
   

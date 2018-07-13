@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
 - QUIT command
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ebfb7cbe8a000a751243d1117d904056295d294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bd66af98effae023f2a1436b6eb88e76c78a2e44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240005"
 ---
 # <a name="osql-utility"></a>osql (utilidad)
   La utilidad **osql** permite especificar archivos de script, procedimientos del sistema e instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] . Esta herramienta utiliza ODBC para comunicarse con el servidor.  
@@ -116,7 +116,7 @@ C:\>osql
  Especifica el número de filas que se van a imprimir entre los encabezados de las columnas. La opción predeterminada es imprimir los encabezados una vez para cada conjunto de resultados de la consulta. Utilice -1 para especificar que no desea imprimir los encabezados. Si usa -1, no debe dejar espacio entre el parámetro y el valor (**-h-1**, no **-h -1**).  
   
  **-s** *col_separator*  
- Especifica el carácter separador de columnas que, de forma predeterminada, es un espacio en blanco. Para utilizar caracteres que tienen un significado especial para el sistema operativo (por ejemplo, |; & \< >), escríbalos entre comillas dobles (").  
+ Especifica el carácter separador de columnas que, de forma predeterminada, es un espacio en blanco. Use caracteres que tienen un significado especial para el sistema operativo (por ejemplo, |; & \< >), incluya el carácter de comillas dobles (").  
   
  **-w** *column_width*  
  Permite al usuario ajustar el ancho de la pantalla para la salida. El valor predeterminado es 80 caracteres. Cuando una línea de salida ha alcanzado el ancho máximo de pantalla, se divide en varias líneas.  
@@ -329,7 +329,7 @@ RAISERROR(50001, 10, 127)
      Error de conversión al seleccionar el valor devuelto.  
   
 ## <a name="displaying-money-and-smallmoney-data-types"></a>Mostrar tipos de datos money y smallmoney  
- **osql** muestra la `money` y `smallmoney` tipos de datos con dos posiciones decimales, aunque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] almacena internamente el valor con cuatro decimales. Observe el ejemplo:  
+ **osql** muestra el `money` y `smallmoney` tipos de datos con dos posiciones decimales, aunque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] almacena internamente el valor con cuatro decimales. Observe el ejemplo:  
   
 ```  
 SELECT CAST(CAST(10.3496 AS money) AS decimal(6, 4))  

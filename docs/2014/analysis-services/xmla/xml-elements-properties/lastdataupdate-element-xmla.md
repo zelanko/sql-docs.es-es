@@ -1,5 +1,5 @@
 ---
-title: Elemento LastDataUpdate (XMLA) | Documentos de Microsoft
+title: Elemento LastDataUpdate (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - LastDataUpdate element
 ms.assetid: 66e43b17-844f-4ec2-bd1d-35608e7b6524
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fb67f459f49a39c75147d9313f8b18ba7b30f538
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 63c596e522b3429209626d1c033b982b750d38e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185162"
 ---
 # <a name="lastdataupdate-element-xmla"></a>Elemento LastDataUpdate (XMLA)
   Contiene la fecha y hora en que se actualizaron por última vez los datos del cubo representados por el elemento primario [Cube](cube-element-olapinfo-xmla.md) .  

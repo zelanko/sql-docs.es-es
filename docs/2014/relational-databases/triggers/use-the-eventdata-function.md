@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 610822ec0eb896180ebfffa40d53198749df0428
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: e45ee2308f7f399c08053f8ff4cd6b862b3978df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196188"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427604"
 ---
 # <a name="use-the-eventdata-function"></a>Usar la función EVENTDATA
   La información acerca de un evento que activa un desencadenador DDL se captura mediante la función EVENTDATA. Esta función devuelve un valor `xml`. El esquema XML incluye información acerca de lo siguiente:  
@@ -53,7 +51,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- La instrucción `EVENTDATA()` del desencadenador DDL captura el texto de la instrucción `CREATE TABLE` que no se admite. Esto se consigue mediante una instrucción XQuery en el `xml` datos generados por EVENTDATA y recuperando el \<CommandText > elemento. Para obtener más información, vea [Referencia del lenguaje XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
+ La instrucción `EVENTDATA()` del desencadenador DDL captura el texto de la instrucción `CREATE TABLE` que no se admite. Esto se logra mediante el uso de una instrucción XQuery en el `xml` datos generados por EVENTDATA y recuperando el \<CommandText > elemento. Para obtener más información, vea [Referencia del lenguaje XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 > [!CAUTION]  
 >  EVENTDATA captura los datos de los eventos CREATE_SCHEMA, así como el >schema_element< de la definición CREATE SCHEMA correspondiente, si existe. Además, EVENTDATA reconoce la definición <schema_element> como un evento aparte. Por lo tanto, un desencadenador DDL creado en un evento CREATE_SCHEMA y en un evento representado por el <schema_element> de la definición CREATE SCHEMA, puede devolver los mismos datos de evento dos veces, por ejemplo, datos `TSQLCommand`. Por ejemplo, considere un desencadenador DDL creado en los eventos CREATE_SCHEMA y CREATE_TABLE, y que se ejecute el siguiente lote:  
@@ -99,7 +97,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
 -   La instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que contenía el evento.  
   
- Una vez más, los dos últimos elementos se capturan mediante XQuery con el `xml` datos generados por EVENTDATA.  
+ Nuevamente, los dos últimos elementos se capturan mediante XQuery con el `xml` datos generados por EVENTDATA.  
   
 ```  
 USE AdventureWorks2012;  
@@ -129,7 +127,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Para devolver datos de eventos, se recomienda usar el método XQuery `value()` en lugar del método `query()`. El `query()` método devuelve XML y "y" comercial con caracteres de escape un retorno de carro y avance de línea (CRLF) instancias en la salida, mientras que la `value()` método representa instancias de CRLF invisibles en el resultado.  
+>  Para devolver datos de eventos, se recomienda usar el método XQuery `value()` en lugar del método `query()`. El `query()` método devuelve XML, escape "y" comercial un retorno de carro y avance de línea (CRLF) instancias de la salida, mientras que el `value()` método representa instancias de CRLF invisibles en el resultado.  
   
  Un ejemplo de desencadenador DDL parecido se proporciona con la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para obtener el ejemplo, localice la carpeta Database Triggers mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta carpeta se encuentra en la carpeta **Programación** de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Haga clic con el botón derecho en **ddlDatabseTriggerLog** y seleccione **Incluir desencadenador de base de datos como**. De forma predeterminada, el desencadenador DDL **ddlDatabseTriggerLog** está deshabilitado.  
   

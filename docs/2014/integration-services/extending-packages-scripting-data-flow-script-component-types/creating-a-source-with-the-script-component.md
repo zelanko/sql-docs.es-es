@@ -20,13 +20,13 @@ ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47cfd1ceab750a105fb38ca4827b50f9ba727aca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c837c1cefbc05118bc3880122438e0be9f7b0cbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150846"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Crear un origen con el componente de script
   Los componentes de origen del flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se usan para cargar datos de un origen de datos y pasarlos a transformaciones y destinos de nivel inferior. Normalmente la conexión al origen de datos se realiza a través de un administrador de conexiones existente.  
@@ -74,9 +74,9 @@ ms.locfileid: "36200176"
  Para obtener más información acerca de la página **Entradas y salidas** del **Editor de transformación Script**, vea [Script Transformation Editor &#40;Inputs and Outputs Page&#41;](../script-transformation-editor-inputs-and-outputs-page.md) (Editor de transformación Script [página Entradas y salidas]).  
   
 ### <a name="adding-variables"></a>Agregar variables  
- Si hay cualquier variables existentes cuyos valores desea utilizar en la secuencia de comandos, puede agregarlos en el `ReadOnlyVariables` y `ReadWriteVariables` campos de propiedades en el **Script** página de la **Editor de transformación Script**.  
+ Si hay variables existentes cuyos valores desea utilizar en el script, puede agregarlas en los `ReadOnlyVariables` y `ReadWriteVariables` campos de propiedades el **Script** página de la **Editor de transformación Script**.  
   
- Al introducir diversas variables en los campos de propiedades, separe los nombres de éstas por comas. También puede especificar varias variables haciendo clic en los puntos suspensivos (**...** ) situado junto a la `ReadOnlyVariables` y `ReadWriteVariables` campos de propiedades y seleccione las variables de la **seleccionar variables** cuadro de diálogo.  
+ Al introducir diversas variables en los campos de propiedades, separe los nombres de éstas por comas. También puede especificar varias variables, haga clic en el botón de puntos suspensivos (**...** ) situado junto a la `ReadOnlyVariables` y `ReadWriteVariables` campos de propiedades y seleccione las variables en el **seleccionar variables** cuadro de diálogo.  
   
  Para obtener información general sobre la forma de usar variables con el componente de script, vea [Using Variables in the Script Component](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md) (Uso de variables con el componente de script).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36200176"
   
  La clase `ScriptMain` incluye un código auxiliar para el método `CreateNewOutputRows`. `CreateNewOutputRows` es el método más importante en un componente de origen.  
   
- Si abre el **el Explorador de proyectos** ventana en VSTA, puede ver que el componente de Script también ha generado de solo lectura `BufferWrapper` y `ComponentWrapper` elementos de proyecto. La clase `ScriptMain` hereda de la clase `UserComponent` en el elemento de proyecto `ComponentWrapper`.  
+ Si abre el **Explorador de proyectos** ventana en VSTA, puede ver que el componente de Script también ha generado de solo lectura `BufferWrapper` y `ComponentWrapper` elementos de proyecto. La clase `ScriptMain` hereda de la clase `UserComponent` en el elemento de proyecto `ComponentWrapper`.  
   
  En tiempo de ejecución, el motor de flujo de datos invoca el método `PrimeOutput` de la clase `UserComponent`, lo que invalida el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> de la clase primaria <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. El método `PrimeOutput` a su vez llama a los métodos siguientes:  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36200176"
  En los ejemplos siguientes se muestra el código personalizado que se necesita en la clase `ScriptMain` para crear un componente de origen.  
   
 > [!NOTE]  
->  Estos ejemplos utilizan la **Person.Address** tabla el `AdventureWorks` base de datos de ejemplo y pasar sus columnas primeros y cuarto, el **intAddressID** y **ciudad nvarchar (30)** columnas, a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino de esta sección. Se documentan requisitos previos y suposiciones adicionales para cada ejemplo.  
+>  Estos ejemplos se usa el **Person.Address** de tabla en la `AdventureWorks` base de datos de ejemplo y pasar sus columnas primeros y cuarta, las **intAddressID** y **nvarchar (30) City**columnas, a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino de esta sección. Se documentan requisitos previos y suposiciones adicionales para cada ejemplo.  
   
 ### <a name="adonet-source-example"></a>Ejemplo de origen de ADO.NET  
  En este ejemplo se muestra un componente de origen que utiliza un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existente para cargar datos de una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el flujo de datos.  
@@ -260,7 +260,7 @@ ms.locfileid: "36200176"
   
  Si desea ejecutar este código de ejemplo, debe configurar el paquete y el componente de la siguiente forma:  
   
-1.  Use la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard para exportar la **Person.Address** tabla desde el `AdventureWorks` base de datos de ejemplo en un archivo sin formato delimitado por comas. En este ejemplo se utiliza el nombre de archivo ExportedAddresses.txt.  
+1.  Use la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importación y exportación para exportar el **Person.Address** tabla desde el `AdventureWorks` base de datos de ejemplo en un archivo sin formato delimitado por comas. En este ejemplo se utiliza el nombre de archivo ExportedAddresses.txt.  
   
 2.  Cree un administrador de conexiones de archivos planos que se conecte al archivo de datos exportado.  
   
@@ -391,7 +391,7 @@ ms.locfileid: "36200176"
     }  
     ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Creating a Destination with the Script Component (Crear un destino con el componente de script)](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   

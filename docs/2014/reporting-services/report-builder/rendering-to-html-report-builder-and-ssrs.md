@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1457c44ed95f09891bb8e8617968d2f9b9cbfbc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2776ccbb78346ad6243e5b6a4ed1e7c5827d31bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157836"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Representar en HTML (Generador de informes y SSRS)
   La extensión de representación en HTML representa un informe en formato HTML. La extensión de representación también puede generar páginas HTML completas o fragmentos de HTML para incrustarlos en otras páginas HTML. Todos los HTML se generan con la codificación UTF-8.  
   
  La extensión de representación en HTML es la predeterminada para los informes que se visualizan en un explorador, lo que incluye también cuando se ejecutan en el Administrador de informes.  
   
- La extensión de representación en HTML es la predeterminada para los informes que se visualizan en un explorador, lo que incluye también cuando se ejecutan en el Administrador de informes. La extensión de representación en HTML puede representar HTML como un fragmento o como un documento HTML completo. Si el código HTML es un fragmento, el `HEAD`, `HTML`, y `BODY` se quitan las etiquetas del documento HTML. Solo se representa el contenido de la etiqueta `BODY`. Esto resulta de gran utilidad para incrustar el HTML en HTML generado en otra aplicación.  
+ La extensión de representación en HTML es la predeterminada para los informes que se visualizan en un explorador, lo que incluye también cuando se ejecutan en el Administrador de informes. La extensión de representación en HTML puede representar HTML como un fragmento o como un documento HTML completo. Si el código HTML es un fragmento, el `HEAD`, `HTML`, y `BODY` se quitan etiquetas del documento HTML. Solo se representa el contenido de la etiqueta `BODY`. Esto resulta de gran utilidad para incrustar el HTML en HTML generado en otra aplicación.  
   
  En algunos escenarios, los parámetros de informe se pueden utilizar para iniciar ataques de inserción de script al representar los informes en HTML. Para más información sobre cómo proteger informes, vea [Proteger informes y recursos](../security/secure-reports-and-resources.md).  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36201101"
 ## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;el generador de informes SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

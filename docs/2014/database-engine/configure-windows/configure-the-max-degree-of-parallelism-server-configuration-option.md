@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parallel queries [SQL Server]
 - processors [SQL Server], parallel queries
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - max degree of parallelism option
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: aca180298fef5edde0d2923e6676a535915bb5ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c05af3dbd8a05ebe91822eb6bc68481a4c60ca38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241215"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Establecer la opción de configuración del servidor Grado máximo de paralelismo
-  Este tema describe cómo configurar la `max degree of parallelism` opción de configuración de servidor de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cuando una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un equipo con más de un microprocesador o CPU, detecta el mejor grado de paralelismo, es decir, el número de procesadores que se emplea para ejecutar una única instrucción en cada ejecución de planes en paralelo. Puede utilizar la opción `max degree of parallelism` para limitar el número de procesadores utilizados en la ejecución de planes paralelos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera los planes de ejecución en paralelo para las consultas y las operaciones DDL (lenguaje) de definición de datos de índice, rellenado de cursor estático y controlado por conjunto de claves.  
+  En este tema se describe cómo configurar el `max degree of parallelism` opción de configuración de servidor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cuando una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un equipo con más de un microprocesador o CPU, detecta el mejor grado de paralelismo, es decir, el número de procesadores que se emplea para ejecutar una única instrucción en cada ejecución de planes en paralelo. Puede utilizar la opción `max degree of parallelism` para limitar el número de procesadores utilizados en la ejecución de planes paralelos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera los planes de ejecución en paralelo para las consultas, las operaciones de índice data definition language (DDL) y el rellenado de cursor estático y controlado por.  
   
  **En este tema**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36201014"
   
      [Seguridad](#Security)  
   
--   **Para configurar el grado máximo de paralelismo opción, mediante:**  
+-   **Para configurar el grado máximo de paralelismo opción, utilizando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4db31968d249659890924917be5c40533c0e19af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ea0a37304bbde2ac84e5092e67744226a03b0db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239405"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabajar con el servicio CDC de Oracle
   En esta sección se describen algunos conceptos importantes del servicio CDC de Oracle. Los conceptos incluidos en esta sección son:  
@@ -32,7 +32,7 @@ ms.locfileid: "36199406"
   
      En esta sección se proporciona una breve descripción de las bases de datos CDC. Estas bases de datos se crean mediante la Consola del diseñador CDC de Oracle. Vea la documentación incluida con la instalación de la Consola del diseñador CDC para obtener más información acerca de las bases de datos CDC.  
   
--   [Usar la línea de comandos para configurar el servicio CDC](#BKMK_CommandConfigCDC)  
+-   [Uso de la línea de comandos para configurar el servicio CDC](#BKMK_CommandConfigCDC)  
   
      En esta sección se describen los comandos de la línea de comandos que se pueden usar para configurar el servicio CDC de Oracle.  
   
@@ -112,13 +112,13 @@ ms.locfileid: "36199406"
 |ref_count|Este elemento cuenta el número de equipos donde está instalado el mismo servicio CDC de Oracle. Se incrementa con cada adición de un servicio CDC de Oracle con el mismo nombre y disminuye cuando se quita un servicio. Cuando el contador llega a cero, se elimina esta fila.|  
 |active_service_node|Nombre del nodo de Windows que controla actualmente el servicio CDC. Cuando el servicio se detiene correctamente, esta columna se establece en NULL, lo que indica que ya no hay un servicio activo.|  
 |active_service_heartbeat|Este elemento hace un seguimiento del servicio CDC actual para determinar si sigue estando activo.<br /><br /> Este elemento se actualiza periódicamente con la marca de tiempo UTC actual de la base de datos para el servicio CDC activo. El intervalo predeterminado es de 30 segundos, aunque se puede configurar.<br /><br /> Cuando un servicio CDC pendiente detecta que el latido no se actualizó una vez transcurrido el intervalo configurado, el servicio pendiente intenta asumir el rol del servicio CDC activo.|  
-|opciones|Este elemento especifica las opciones secundarias, como el seguimiento o la optimización. Se escribe con el formato **nombre[=valor][; ]**. La cadena de opciones emplea la misma semántica que la cadena de conexión ODBC. Si la opción es booleana (con un valor de sí/no), el valor solo puede incluir el nombre.<br /><br /> seguimiento tiene los siguientes valores posibles:<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> off<br /><br /> \<nombre de clase > [, nombre de clase >]<br /><br /> El valor predeterminado es **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** es el intervalo de tiempo (en segundos) para que el servicio actualice la columna active_service_heartbeat. El valor predeterminado es **30**. El valor máximo es **3600**.<br /><br /> **service_config_polling_interval** es el intervalo de sondeo (en segundos) para que el servicio CDC compruebe si hay cambios de configuración. El valor predeterminado es **30**. El valor máximo es **3600**.<br /><br /> **sql_command_timeout** es el tiempo de espera de comandos que funciona con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El valor predeterminado es **1**. El valor máximo es **3600**.|  
+|opciones|Este elemento especifica las opciones secundarias, como el seguimiento o la optimización. Se escribe con el formato **nombre[=valor][; ]**. La cadena de opciones emplea la misma semántica que la cadena de conexión ODBC. Si la opción es booleana (con un valor de sí/no), el valor solo puede incluir el nombre.<br /><br /> Trace tiene los siguientes valores posibles:<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> off<br /><br /> \<nombre de clase > [, nombre de clase >]<br /><br /> El valor predeterminado es **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** es el intervalo de tiempo (en segundos) para que el servicio actualice la columna active_service_heartbeat. El valor predeterminado es **30**. El valor máximo es **3600**.<br /><br /> **service_config_polling_interval** es el intervalo de sondeo (en segundos) para que el servicio CDC compruebe si hay cambios de configuración. El valor predeterminado es **30**. El valor máximo es **3600**.<br /><br /> **sql_command_timeout** es el tiempo de espera de comandos que funciona con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El valor predeterminado es **1**. El valor máximo es **3600**.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Los procedimientos almacenados de la base de datos MSXDBCDC  
  En esta sección se describen los siguientes procedimientos almacenados de la base de datos MSXDBCDC.  
   
--   [dbo.xcbcdc_reset_db (nombre de base de datos)](#BKMK_dboxcbcdc_reset_db)  
+-   [dbo.xcbcdc_reset_db (nombre de la base de datos)](#BKMK_dboxcbcdc_reset_db)  
   
 -   [dbo.xdbcdc_disable_db(dbname)](#BKMK_dboxdbcdc_disable_db)  
   

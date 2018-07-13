@@ -1,5 +1,5 @@
 ---
-title: Elemento ProactiveCaching (ASSL) | Documentos de Microsoft
+title: Elemento ProactiveCaching (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ProactiveCaching element
 ms.assetid: 85f9ed44-2ede-406f-b0ca-237ab2f49722
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: daf0a3020932646bac1aae797c7ddbe247de5f78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e66238759e38f9f8b42ebf0604b739d74f851832
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211725"
 ---
 # <a name="proactivecaching-element-assl"></a>Elemento ProactiveCaching (ASSL)
   Define la configuración de almacenamiento en caché automático para el elemento primario.  

@@ -5,10 +5,9 @@ ms.date: 09/22/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server 2014
@@ -41,15 +40,15 @@ helpviewer_keywords:
 - groups [SQL Server], roles
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 981112bd47f6a75bd633e5baa1046abf56e14669
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 337252b4b5203003bc6bec6b44b12d86183ab343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188062"
 ---
 # <a name="database-level-roles"></a>Roles de nivel de base de datos
   Para administrar con facilidad los permisos en las bases de datos, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona varios *roles* , que son las entidades de seguridad que agrupan a otras entidades de seguridad. Son como los ***grupos*** del sistema operativo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Los roles de nivel de base de datos se aplican a toda la base de datos en lo que respecta a su ámbito de permisos.  
@@ -86,7 +85,7 @@ ms.locfileid: "36200091"
 |`dc_admin`<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|Los miembros de estos roles de base de datos pueden administrar y utilizar el recopilador de datos. Para obtener más información, consulte [Data Collection](../../data-collection/data-collection.md).|  
 |**PolicyAdministratorRole**|Los miembros del rol de base de datos **db_ PolicyAdministratorRole** pueden realizar todas las actividades de mantenimiento y configuración en las condiciones y directivas de Administración basada en directivas. Para obtener más información, vea [Administrar servidores mediante administración basada en directivas](../../policy-based-management/administer-servers-by-using-policy-based-management.md).|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|Los miembros de estos roles de base de datos pueden administrar y utilizar grupos de servidores registrados.|  
-|**dbm_monitor**|Creado en la `msdb` cuando se registra la primera base de datos en el Monitor de creación de reflejo de base de datos de la base de datos. El rol **dbm_monitor** no tiene miembros hasta que un administrador del sistema asigna usuarios al rol.|  
+|**dbm_monitor**|Creado en el `msdb` cuando se registra la primera base de datos en el Monitor de creación de reflejo de base de datos de la base de datos. El rol **dbm_monitor** no tiene miembros hasta que un administrador del sistema asigna usuarios al rol.|  
   
 > [!IMPORTANT]  
 >  Los miembros del rol db_ssisadmin y del rol dc_admin quizá puedan elevar sus privilegios a sysadmin. Esta elevación de privilegio se puede producir porque estos roles pueden modificar los paquetes de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y los paquetes de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] los puede ejecutar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizando el contexto de seguridad de sysadmin del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que ejecutan paquetes para utilizar una cuenta de proxy con privilegios limitados o agregar solo los miembros de sysadmin a los roles dc_admin y db_ssisadmin.  

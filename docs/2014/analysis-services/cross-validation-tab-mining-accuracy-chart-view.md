@@ -1,5 +1,5 @@
 ---
-title: Pestaña validación cruzada (vista de gráfico de precisión de minería de datos) | Documentos de Microsoft
+title: Pestaña validación cruzada (vista Gráfico de precisión de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.crossvalidation.f1
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5b39187ddfc3e4ce0fa8ef0fc7e0402ef54b129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a30cf9ce920f7e0416e46dd87044ef7e3d52318c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169826"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Pestaña Validación cruzada (vista Gráfico de precisión de minería de datos)
   La validación cruzada le permite dividir una estructura de minería de datos en secciones transversales y entrenar y probar de forma iterativa los modelos con cada sección transversal. Se especifican varios subconjuntos en los que se dividirán los datos, y cada uno se usa a su vez como datos de pruebas, mientras que los datos restantes se usan para entrenar un nuevo modelo. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a continuación, genera un conjunto de métricas de precisión estándar para cada modelo. Al comparar las medidas de los modelos generados para cada sección transversal, puede hacerse una idea del grado de confiabilidad del modelo de minería con respecto a todo el conjunto de datos.  
@@ -100,12 +100,12 @@ ms.locfileid: "36199578"
   
  Por ejemplo, suponga que se hacen tres predicciones para un estado de destino determinado, y las probabilidades de cada predicción son 0,05, 0,15 y 0,8. Si establece el umbral en 0,5, solamente se tiene en cuenta una predicción como correcta. Si establece **Umbral** **de destino** en 0,10, se tienen en cuenta dos predicciones como correctas.  
   
- Cuando **destino** **umbral** se establece en `null`, que es el valor predeterminado, la predicción más probable para cada caso se cuenta como correcta. En el ejemplo recién citado, 0,05, 0,15 y 0,8 son las probabilidades de las predicciones de tres casos diferentes. Aunque las probabilidades son muy distintas, cada una se contaría como correcta, porque cada caso genera solo una predicción y éstas son las mejores predicciones para estos casos.  
+ Cuando **destino** **umbral** está establecido en `null`, que es el valor predeterminado, la predicción más probable para cada caso se cuenta como correcta. En el ejemplo recién citado, 0,05, 0,15 y 0,8 son las probabilidades de las predicciones de tres casos diferentes. Aunque las probabilidades son muy distintas, cada una se contaría como correcta, porque cada caso genera solo una predicción y éstas son las mejores predicciones para estos casos.  
   
 ## <a name="see-also"></a>Vea también  
- [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)   
- [La validación cruzada &#40;Analysis Services: minería de datos&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
+ [Pruebas y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)   
+ [La validación cruzada &#40;Analysis Services - minería de datos&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
  [Medidas en el informe de validación cruzada](data-mining/measures-in-the-cross-validation-report.md)   
- [Procedimientos almacenados de minería de datos &#40;Analysis Services: minería de datos&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Procedimientos almacenados de minería de datos &#40;Analysis Services - minería de datos&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

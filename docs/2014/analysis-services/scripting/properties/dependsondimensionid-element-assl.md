@@ -1,5 +1,5 @@
 ---
-title: Elemento DependsOnDimensionID (ASSL) | Documentos de Microsoft
+title: Elemento DependsOnDimensionID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DependsOnDimensionID element
 ms.assetid: 66ec20dd-b475-4895-a92c-7ac0e7e1c675
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91af48b0b912a290798dead33c82f4bb2729c950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bda178f067cb8bf1a3cfe4bf7341c6916659a65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171406"
 ---
 # <a name="dependsondimensionid-element-assl"></a>Elemento DependsOnDimensionID (ASSL)
   Contiene el identificador (Id.) de otra dimensión de la que depende la dimensión primaria.  
@@ -64,7 +64,7 @@ ms.locfileid: "36202172"
 ## <a name="remarks"></a>Notas  
  Una dimensión dependiente utiliza el elemento `DependsOnDimensionID` para identificar la dimensión de la que depende.  
   
- El elemento que corresponde al elemento primario de `DependsOnDimensionID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Dimension>.  
+ El elemento que se corresponde con el elemento primario de `DependsOnDimensionID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

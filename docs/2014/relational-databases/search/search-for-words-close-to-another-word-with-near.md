@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 caps.latest.revision: 64
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c64662a9bbfa8a4d36ed406b6fb7529961b693da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 260183c80e3efaa53ba5c0e7000c54a1102425e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179732"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Buscar palabras cerca de otra palabra con NEAR
   Puede usar un término de proximidad (NEAR) en un predicado [CONTAINS](/sql/t-sql/queries/contains-transact-sql) o en una función [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) para buscar palabras o frases que están cerca unas de otras. También puede especificar el número máximo de términos de no búsqueda que separan el primero y el último término de búsqueda. Además, puede buscar palabras o frases en cualquier orden o puede buscar palabras y frases en el orden en el que las especifique. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite tanto el anterior [término de proximidad genérico](#Generic_NEAR), que está en desuso y el [término de proximidad personalizado](#Custom_NEAR), que es nuevo en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -160,7 +159,7 @@ GO
 ##  <a name="Generic_NEAR"></a> El término de proximidad genérico desusado  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se recomienda que realice la [término de proximidad personalizado](#Custom_NEAR).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se recomienda que use el [término de proximidad personalizado](#Custom_NEAR).  
   
  Un término de proximidad genérico indica que todos los términos de búsqueda especificados deben estar en un documento para que se devuelva una coincidencia, independientemente del número de términos de no búsqueda (la *distancia*) que haya entre los términos de búsqueda. La sintaxis básica es:  
   

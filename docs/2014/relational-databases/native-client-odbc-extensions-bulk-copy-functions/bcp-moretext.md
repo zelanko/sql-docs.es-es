@@ -1,13 +1,11 @@
 ---
-title: bcp_moretext | Documentos de Microsoft
+title: bcp_moretext | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22b9c6345b3dcdbb2a1b6bc5db735dcb2d635f5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 30ddae53cc452796de0617bb5718d04156dcda41
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196909"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430184"
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
   Envía parte de un valor de tipo de datos largo, de longitud variable a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -64,19 +62,19 @@ pData
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Notas  
- Esta función puede utilizarse junto con [bcp_bind](bcp-bind.md) y [bcp_sendrow](bcp-sendrow.md) long, copiar valores de datos de longitud variable a SQL Server en un número de fragmentos más pequeños. **bcp_moretext** puede utilizarse con columnas que tienen los siguientes tipos de datos de SQL Server: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, tipo definido por el usuario (UDT) y XML. **bcp_moretext** admite conversiones de datos, los datos proporcionados deben coincidir con el tipo de datos de la columna de destino.  
+ Esta función puede utilizarse junto con [bcp_bind](bcp-bind.md) y [bcp_sendrow](bcp-sendrow.md) long, copiar los valores de datos de longitud variable a SQL Server en un número de fragmentos más pequeños. **bcp_moretext** puede utilizarse con columnas que tienen los siguientes tipos de datos de SQL Server: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, tipo definido por el usuario (UDT) y XML. **bcp_moretext** admite conversiones de datos, los datos proporcionados deben coincidir con el tipo de datos de la columna de destino.  
   
- Si **bcp_bind** se llama con un NULL *pData* parámetro para los tipos de datos que son compatibles con **bcp_moretext**, `bcp_sendrow` envía el valor de datos completa, sin tener en cuenta de longitud. Si es, sin embargo, **bcp_bind** tiene un valor nulo *pData* parámetro para los tipos de datos admitidos, **bcp_moretext** puede utilizarse para copiar datos inmediatamente después de una devolución correcta de `bcp_sendrow` que indica que se han procesado las columnas enlazadas con los datos presentes.  
+ Si **bcp_bind** se denomina con un nonNULL *pData* parámetro para los tipos de datos que son compatibles con **bcp_moretext**, `bcp_sendrow` envía el valor de datos completa, sin tener en cuenta de longitud. Si es, sin embargo, **bcp_bind** tiene un valor nulo *pData* parámetro para los tipos de datos admitidos, **bcp_moretext** puede utilizarse para copiar los datos inmediatamente después de una devolución correcta de `bcp_sendrow` que indica que se han procesado las columnas enlazadas con datos presentes.  
   
- Si usa **bcp_moretext** para enviar una columna de tipo de datos admitidos en una fila, también debe utilizarlo para enviar todas las demás columnas de tipo de datos admitidos en la fila. No se puede omitir ninguna columna. Los tipos de datos admitidos son SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT y SQLXML. SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY y SQLVARBINARY también pertenecen a esta categoría si la columna es de tipo varchar (max), nvarchar (max) o varbinary (max), respectivamente.  
+ Si usas **bcp_moretext** para enviar una columna de tipo de datos admitidos en una fila, debe también usarla para enviar todas las demás columnas de tipo de datos admitidos en la fila. No se puede omitir ninguna columna. Los tipos de datos admitidos son SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT y SQLXML. SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY y SQLVARBINARY también pertenecen a esta categoría si la columna es de tipo varchar (max), nvarchar (max) o varbinary (max), respectivamente.  
   
- Una llamada a **bcp_bind** o [bcp_collen](bcp-collen.md) establece la longitud total de todos los elementos de datos que se copiará en la columna de SQL Server. Un intento de envío de SQL Server más bytes que los especificados en la llamada a **bcp_bind** o `bcp_collen` genera un error. Este error se producirá, por ejemplo, en una aplicación que utiliza `bcp_collen` para establecer la longitud de datos disponibles para un servidor SQL Server `text` columna a 4500, a continuación, se denomina **bcp_moretext** cinco veces al que se indica en cada llamada que los datos de longitud del búfer era de 1000 bytes.  
+ Al llamar a **bcp_bind** o [bcp_collen](bcp-collen.md) establece la longitud total de todos los elementos de datos que se copiarán en la columna de SQL Server. Intento de envío de SQL Server más bytes que los especificados en la llamada a **bcp_bind** o `bcp_collen` genera un error. Este error se producirá, por ejemplo, en una aplicación que usa `bcp_collen` para establecer la longitud de los datos disponibles para un servidor SQL `text` , a continuación, llama la columna a 4500, **bcp_moretext** cinco veces indicando en cada llamada que los datos de la longitud del búfer era 1000 bytes de longitud.  
   
- Si una fila copiada contiene más de una columna larga, de longitud variable, **bcp_moretext** envía primero sus datos con el menor número ordinal de columna, seguida por el siguiente más bajo número ordinal de columna y así sucesivamente. Es importante una configuración correcta de la longitud total de datos esperados. No hay ninguna manera de indicar, fuera de la configuración de longitud, que la copia masiva ha recibido todos los datos de una columna.  
+ Si una fila copiada contiene más de una columna larga, de longitud variable, **bcp_moretext** envía primero sus datos a la más baja columna seguido de la siguiente con el número ordinal más bajo número ordinal de columna y así sucesivamente. Es importante una configuración correcta de la longitud total de datos esperados. No hay ninguna manera de indicar, fuera de la configuración de longitud, que la copia masiva ha recibido todos los datos de una columna.  
   
- Cuando `var(max)` valores se envían al servidor con bcp_sendrow y bcp_moretext, no es necesario llamar a bcp_collen para establecer la longitud de columna. En su lugar, únicamente para estos tipos, el valor termina con bcp_sendrow que realiza la llamada con una longitud de cero.  
+ Cuando `var(max)` los valores se envían al servidor mediante bcp_sendrow y bcp_moretext, no es necesario llamar a bcp_collen para establecer la longitud de columna. En su lugar, únicamente para estos tipos, el valor termina con bcp_sendrow que realiza la llamada con una longitud de cero.  
   
- Una aplicación suele llamar `bcp_sendrow` y **bcp_moretext** dentro de los bucles para enviar un número de filas de datos. Este es un resumen de cómo hacer esto en una tabla que contiene dos `text` columnas:  
+ Una aplicación suele llamar a `bcp_sendrow` y **bcp_moretext** dentro de bucles para enviar un número de filas de datos. Aquí tiene un resumen de cómo hacer esto para una tabla que contiene dos `text` columnas:  
   
 ```  
 while (there are still rows to send)  
@@ -96,7 +94,7 @@ bcp_moretext(hdbc, 0, NULL);
 ```  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo muestra cómo usar **bcp_moretext** con **bcp_bind** y `bcp_sendrow`:  
+ En este ejemplo se muestra cómo usar **bcp_moretext** con **bcp_bind** y `bcp_sendrow`:  
   
 ```  
 // Variables like henv not specified.  

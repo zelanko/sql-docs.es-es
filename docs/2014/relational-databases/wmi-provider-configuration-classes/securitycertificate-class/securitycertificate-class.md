@@ -1,5 +1,5 @@
 ---
-title: Clase SecurityCertificate | Documentos de Microsoft
+title: Clase SecurityCertificate | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SecurityCertificate class
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d7415e610eddb5b16f827a9f430e214936e8cd69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0954783d3f9a7d7e3b97ce4faf9f82f4fa381d49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258491"
 ---
 # <a name="securitycertificate-class"></a>Clase SecurityCertificate
   El [clase SecurityCertificate] securitycertificate-class.md) representa un certificado de seguridad. Un certificado es una instrucción firmada digitalmente que enlaza el valor de una clave pública con la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], que contiene la clave privada correspondiente. El certificado lo emite una entidad de certificación.  

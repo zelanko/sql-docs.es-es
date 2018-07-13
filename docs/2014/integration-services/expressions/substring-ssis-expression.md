@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SUBSTRING function
 - part of expression returned [Integration Services]
@@ -16,13 +16,13 @@ ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 552dbfe88f0f201e689fe5182f180f1523c50915
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc77781f2ee4a8a12a5c150ea29ebae3ca4d4cdf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241005"
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING (expresión de SSIS)
   Devuelve la parte de una expresión de caracteres que empieza en la posición especificada y tiene la longitud especificada. Los parámetros *position* y *length* deben ser números enteros.  

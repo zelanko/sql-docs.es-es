@@ -1,5 +1,5 @@
 ---
-title: Utilidad ssbdiagnose (Service Broker) | Documentos de Microsoft
+title: ssbdiagnose (Service Broker) de la utilidad | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
 - Service Broker, command prompt utilities
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37b52dd752b04c9aacb6ee49e1dbc2d4c590332a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fc76263bfc2be9d35839444b8fcd2cf8c116bc66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172336"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>utilidad ssbdiagnose (Service Broker)
   La utilidad **ssbdiagnose** informa de la existencia de problemas en las conversaciones de [!INCLUDE[ssSB](../../includes/sssb-md.md)] o en la configuración de los servicios de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Las comprobaciones de la configuración se pueden realizar en dos servicios o en un único servicio. La existencia de problemas se indica en la ventana del símbolo del sistema en forma de texto legible, o como XML con formato que se puede redirigir a un archivo o a otro programa.  
@@ -187,21 +187,21 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Un identificador único que identifica un extremo de conversación en una aplicación. Los identificadores de conversación son únicos para cada extremo de la conversación; los extremos de destino e iniciador tienen identificadores de conversación independientes.  
   
- Identificadores de conversación se devuelven a las aplicaciones la *@dialog_handle* parámetro de la **BEGIN DIALOG** (instrucción) y el `conversation_handle` columna del conjunto de resultados de una **recepción**  instrucción.  
+ Identificadores de conversación se devuelven a las aplicaciones la *@dialog_handle* parámetro de la **BEGIN DIALOG** instrucción y el `conversation_handle` conjunto de columnas en el resultado de una **recepción**  instrucción.  
   
  Identificadores de conversación se presentan en el `conversation_handle` columna de la **sys.transmission_queue** y **sys.conversation_endpoints** vistas de catálogo.  
   
  *conversation_group_id*  
  El identificador único que identifica un grupo de conversación.  
   
- Id. de grupo de conversación se devuelven a las aplicaciones la *@conversation_group_id* parámetro de la **GET CONVERSATION GROUP** instrucción y la `conversation_group_id` columna del conjunto de resultados de una **Recepción** instrucción.  
+ Se devuelven los identificadores de conversación a las aplicaciones la *@conversation_group_id* parámetro de la **GET CONVERSATION GROUP** instrucción y el `conversation_group_id` columna del conjunto de resultados de una **Recepción** instrucción.  
   
- Identificadores de grupo de conversación se presentan en el `conversation_group_id` columnas de la **sys.conversation_groups** y **sys.conversation_endpoints** vistas de catálogo.  
+ Los identificadores de conversación se notifican en la `conversation_group_id` columnas de la **sys.conversation_groups** y **sys.conversation_endpoints** vistas de catálogo.  
   
  *conversation_id*  
  El identificador único que identifica una conversación. Los identificadores de conversación son los mismos para los extremos de destino e iniciador de una conversación.  
   
- Identificadores de conversación se presentan en el `conversation_id` columna de la **sys.conversation_endpoints** vista de catálogo.  
+ Los identificadores de conversación se presentan en el `conversation_id` columna de la **sys.conversation_endpoints** vista de catálogo.  
   
  **-TIMEOUT** *timeout_interval*  
  Especifica el número de segundos durante los que se debe ejecutar un informe **RUNTIME** . Si no se especifica **-TIMEOUT** , el informe RUNTIME se ejecuta de forma indefinida. **-TIMEOUT** solo se usa en informes **RUNTIME** , no en informes **CONFIGURATION** . Use CTRL+C para salir de **ssbdiagnose** si no se ha especificado **-TIMEOUT** o si quiere finalizar un informe RUNTIME antes de que expire el intervalo de tiempo de espera.**-** *timeout_interval* debe ser un número comprendido entre 1 y 2 147 483 647.  

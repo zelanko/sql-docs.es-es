@@ -1,13 +1,11 @@
 ---
-title: Generación de perfiles de rendimiento del controlador ODBC | Documentos de Microsoft
+title: Generación de perfiles de rendimiento del controlador ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 71db4f4331a71927b54131d1ddd8d984e507091d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: dc80bf8e33d07abb487700989ce124442d17446d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200118"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409984"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Generar perfiles del rendimiento del controlador ODBC
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client puede generar perfiles de dos tipos de datos de rendimiento:  
@@ -46,7 +44,7 @@ ms.locfileid: "36200118"
   
 -   Conectándose a un origen de datos que especifique el registro.  
   
--   Al llamar a [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) para establecer atributos específicos del controlador ese control de la generación de perfiles.  
+-   Una llamada a [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) para establecer atributos específicos del controlador de ese control de la generación de perfiles.  
   
  Cada proceso de la aplicación obtiene su propia copia del controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y los perfiles se generan de forma global para la combinación de una copia del controlador y un proceso de la aplicación. Cuando algo en la aplicación activa la generación de perfiles, el proceso de generación de perfiles registra información de todas las conexiones activas en el controlador de esa aplicación. Se incluyen incluso las conexiones que no llamaron específicamente para la generación de perfiles.  
   
@@ -54,7 +52,7 @@ ms.locfileid: "36200118"
   
  Si una aplicación empieza a generar perfiles en un archivo de registro y una segunda aplicación intenta empezar a generar perfiles en el mismo archivo de registro, la segunda aplicación no puede registrar ningún dato de generación de perfiles. Si la segunda aplicación empieza a generar perfiles después de que la primera haya descargado su controlador, la segunda aplicación sobrescribirá el archivo de registro de la primera aplicación.  
   
- Si una aplicación se conecta a un origen de datos que tiene habilitada de la generación de perfiles, el controlador devuelve SQL_ERROR si la aplicación llama **SQLSetConnectOption** para iniciar el registro. Una llamada a **SQLGetDiagRec** , a continuación, devuelve lo siguiente:  
+ Si una aplicación se conecta a un origen de datos que tiene la generación de perfiles habilitada, el controlador devuelve SQL_ERROR si la aplicación llama a **SQLSetConnectOption** para iniciar el registro. Una llamada a **SQLGetDiagRec** , a continuación, devuelve lo siguiente:  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -124,6 +122,6 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ## <a name="see-also"></a>Vea también  
  [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
- [Temas "Cómo..." del rendimiento de controlador ODBC de generación de perfiles &#40;ODBC&#41;](../../native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [Generación de perfiles de temas de procedimientos de ODBC Driver Performance &#40;ODBC&#41;](../../native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

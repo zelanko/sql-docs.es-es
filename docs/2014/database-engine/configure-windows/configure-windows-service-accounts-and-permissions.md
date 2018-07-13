@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -53,15 +53,15 @@ helpviewer_keywords:
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 caps.latest.revision: 182
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b2b624caf289f0f6962d5dbdd9e72b1bf95cc7c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4029c7a9b0296b3320342b90f064d0e8f3b3feb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239892"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar los permisos y las cuentas de servicio de Windows
   Cada servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] representa a un proceso o conjunto de procesos para administrar la autenticación de las operaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Windows. En este tema se describe la configuración predeterminada de los servicios en esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], así como las opciones de configuración de los servicios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se pueden establecer durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y después.  
@@ -71,7 +71,7 @@ ms.locfileid: "36202196"
   
 -   [Servicios instalados por SQL Server](#Service_Details)  
   
--   [Configuración y propiedades del servicio](#Serv_Prop)  
+-   [Configuración y las propiedades del servicio](#Serv_Prop)  
   
     -   [Cuentas de servicio predeterminadas](#Default_Accts)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36202196"
   
     -   [Derechos y privilegios de Windows](#Windows)  
   
-    -   [Permisos de sistema de archivos concedidos a SID por servicio SQL Server o grupos locales de Windows](#Reviewing_ACLs)  
+    -   [Permisos de sistema de archivos concedidos a SID por servicio SQL Server o grupos de Windows Local](#Reviewing_ACLs)  
   
     -   [Permiso de sistema de archivos concedidos a otras cuentas de usuario de Windows o grupos](#File_System_Other)  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36202196"
   
     -   [Aprovisionamiento de SSRS](#SSRS)  
   
--   [Actualizar desde versiones anteriores](#Upgrade)  
+-   [Actualización desde versiones anteriores](#Upgrade)  
   
 -   [Apéndice](#Appendix)  
   
@@ -191,7 +191,7 @@ ms.locfileid: "36202196"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[SERVICIO LOCAL](#Local_Service)|[SERVICIO LOCAL](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[SISTEMA LOCAL](#Local_System)|[SISTEMA LOCAL](#Local_System)|  
   
- <sup>*</sup> Cuando los recursos externos a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equipo son necesarias, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda el uso de una cuenta de servicio de administrada (MSA), configurada con los privilegios mínimos necesarios.  
+ <sup>*</sup> Cuando los recursos externos a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equipo son necesarios, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda el uso de una cuenta de servicio de administradas (MSA), configurado con los privilegios mínimos necesarios.  
   
  **Instancia de clústeres de conmutación por error de SQL Server**  
   
@@ -278,9 +278,9 @@ ms.locfileid: "36202196"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|DRU_CTLR, CTLRSVCACCOUNT, CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
   
- <sup>1</sup>para obtener más información y sintaxis de ejemplo para las instalaciones desatendidas, consulte [instalar SQL Server 2014 desde el símbolo del sistema](../install-windows/install-sql-server-from-the-command-prompt.md).  
+ <sup>1</sup>para obtener más información y ejemplos de sintaxis sobre instalaciones desatendidas, consulte [instalar SQL Server 2014 desde el símbolo del sistema](../install-windows/install-sql-server-from-the-command-prompt.md).  
   
- <sup>2</sup>el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente se deshabilita en instancias de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] y [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] con Advanced Services.  
+ <sup>2</sup>el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente está deshabilitado en las instancias de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] y [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] con Advanced Services.  
   
 ###  <a name="Firewall"></a> Puerto de firewall  
  En la mayoría de los casos, cuando se instala inicialmente, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede conectarse con herramientas como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] instaladas en el mismo equipo que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no abre los puertos en el firewall de Windows. Las conexiones desde otros equipos pueden no ser posibles hasta que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] se configura para escuchar en un puerto TCP y el puerto adecuado se abre para las conexiones en el firewall de Windows. Para obtener más información vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
@@ -338,7 +338,7 @@ ms.locfileid: "36202196"
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller:**|**Iniciar sesión como servicio** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client:**|**Iniciar sesión como servicio** (SeServiceLogonRight)|  
   
- <sup>1</sup>el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente se deshabilita en instancias de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+ <sup>1</sup>el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente está deshabilitado en las instancias de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
 ###  <a name="Reviewing_ACLs"></a> Permisos del sistema de archivos concedidos a SID por servicio de SQL Server o grupos locales de Windows  
  Las cuentas de servicio de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben tener acceso a los recursos. Las listas de control de acceso se establecen para el SID por servicio o el grupo local de Windows.  
@@ -423,7 +423,7 @@ ms.locfileid: "36202196"
 ||\<ToolsDir>\DReplayClient\IRTemplate.tdf|Lectura, Ejecución, Mostrar el contenido de la carpeta|  
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|Lectura, Ejecución, Mostrar el contenido de la carpeta|  
   
- <sup>1</sup>el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente se deshabilita en instancias de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] y [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] con Advanced Services.  
+ <sup>1</sup>el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente está deshabilitado en las instancias de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] y [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] con Advanced Services.  
   
  Cuando los archivos de base de datos se almacenan en una ubicación definida por el usuario, se debe conceder acceso a dicha ubicación al SID por servicio. Para obtener más información sobre la concesión de permisos del sistema de archivos a un SID por servicio, vea [Configurar permisos del sistema de archivos para el acceso al motor de base de datos](configure-file-system-permissions-for-database-engine-access.md).  
   
@@ -435,7 +435,7 @@ ms.locfileid: "36202196"
 |MSSQLServer|Usuarios del registro de rendimiento|Instid\MSSQL\binn|Mostrar el contenido de la carpeta|  
 ||Usuarios del monitor de sistema|Instid\MSSQL\binn|Mostrar el contenido de la carpeta|  
 ||Usuarios del registro de rendimiento, Usuarios del monitor de rendimiento|\WINNT\system32\sqlctr120.dll|Lectura, Ejecución|  
-||Solo el administrador|\\\\.\root\Microsoft\SqlServer\ServerEvents\\< nombre_instancia_SQL ><sup>1</sup>|Control total|  
+||Solo el administrador|\\\\.\root\Microsoft\SqlServer\ServerEvents\\< valores ><sup>1</sup>|Control total|  
 ||Administradores, sistema|\tools\binn\schemas\sqlserver\2004\07\showplan|Control total|  
 ||Usuarios|\tools\binn\schemas\sqlserver\2004\07\showplan|Lectura, Ejecución|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Cuenta de servicio web del servidor de informes>|*\<instalación>* \Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
@@ -451,7 +451,7 @@ ms.locfileid: "36202196"
 ||Usuario de Terminal Services|Claves del Servidor de informes (subárbol Instid)|Consultar valor<br /><br /> Establecer valor<br /><br /> Crear subclave<br /><br /> Enumerar subclave<br /><br /> Notificar<br /><br /> DELETE<br /><br /> Controles de lectura|  
 ||Usuarios avanzados|Claves del Servidor de informes (subárbol Instid)|Consultar valor<br /><br /> Establecer valor<br /><br /> Crear subclave<br /><br /> Enumerar subclaves<br /><br /> Notificar<br /><br /> DELETE<br /><br /> Controles de lectura|  
   
- <sup>1</sup>es el espacio de nombres de proveedor WMI.  
+ <sup>1</sup>trata el espacio de nombres del proveedor WMI.  
   
 ###  <a name="Unusual_Locations"></a> Permisos del sistema de archivos relacionados con las ubicaciones inusuales de los discos  
  La unidad predeterminada para las ubicaciones de instalación es **systemdrive**, normalmente la unidad C: al instalar bases de datos tempdb o de usuario  

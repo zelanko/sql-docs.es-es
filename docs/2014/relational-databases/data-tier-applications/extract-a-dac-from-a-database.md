@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.extractdacwizard.buildandsave.f1
 - sql12.swb.extractdacwizard.setdacproperties.f1
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0da72e16f77d6f3c850a41f85caa453123afc802
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9eb33630708143700d7f5ce6749cf720c71a65fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211505"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extraer una DAC de una base de datos
   Use el **Asistente para extraer aplicación de capa de datos** o un script de Windows PowerShell para extraer un paquete de aplicación de capa de datos (DAC) de una base de datos de SQL Server existente. El proceso de extracción crea un archivo de paquete DAC que contiene definiciones de los objetos de base de datos y sus elementos relacionados a nivel de instancia. Por ejemplo, un archivo de paquete DAC contiene las tablas de base de datos, procedimientos almacenados, vistas y usuarios, junto con los inicios de sesión que se asignan a los usuarios de la base de datos.  
@@ -90,9 +90,9 @@ ms.locfileid: "36200407"
   
  **Nombre:** este nombre identifica la DAC. Puede ser distinto del nombre del archivo de paquete DAC y debe describir la aplicación. Por ejemplo, si la base de datos se usa para una aplicación de finanzas, puede llamar Finanza a la DAC.  
   
- **Versión (use xx.xx.xx.xx, donde x es un número):** valor numérico que identifica la versión de la DAC. La versión de DAC se usa en Visual Studio para identificar la versión de la DAC en la que están trabajando los desarrolladores. Al implementar una DAC, la versión se almacena en la `msdb` la base de datos y más tarde se pueden ver en la **Data-tier Applications** nodo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ **Versión (use xx.xx.xx.xx, donde x es un número):** valor numérico que identifica la versión de la DAC. La versión de DAC se usa en Visual Studio para identificar la versión de la DAC en la que están trabajando los desarrolladores. Al implementar una DAC, la versión se almacena en el `msdb` de base de datos y más adelante se pueden ver en el **aplicaciones de capa de datos** nodo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Descripción:** opcional. Describe la DAC. Al implementar una DAC, la descripción se almacena en la `msdb` la base de datos y más tarde se pueden ver en la **Data-tier Applications** nodo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ **Descripción:** opcional. Describe la DAC. Al implementar una DAC, la descripción se almacena en el `msdb` de base de datos y más adelante se pueden ver en el **aplicaciones de capa de datos** nodo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  **Guardar en archivo de paquete DAC (incluye extensión .dacpac con nombre de archivo):** guarda la DAC en un archivo de paquete DAC, con una extensión .dacpac. Haga clic en el botón **Examinar** para especificar el nombre y la ubicación del archivo.  
   

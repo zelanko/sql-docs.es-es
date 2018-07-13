@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], changing name
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 94112254829868dbdf10972390359b7156dc1e45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a9160e39403d314a5b01e012e6c238400a2854d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164932"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Cambiar el nombre de un grupo de atributos (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede cambiar el nombre de un grupo de atributos.  
@@ -49,7 +49,7 @@ ms.locfileid: "36203216"
   
 7.  Haga clic en **Editar elemento seleccionado**.  
   
-8.  En el **nombre de grupo hoja** cuadro, **nombre del grupo consolidado** cuadro, o **nombre de grupo de la colección** , escriba el nombre actualizado del grupo de atributos.  
+8.  En el **nombre de grupo hoja** cuadro, **nombre del grupo consolidado** cuadro, o **el nombre del grupo de recopilación** , escriba el nombre actualizado del grupo de atributos.  
   
 9. Haga clic en **Guardar grupo**.  
   

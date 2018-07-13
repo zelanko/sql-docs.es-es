@@ -1,5 +1,5 @@
 ---
-title: Elemento LogFileName (ASSL) | Documentos de Microsoft
+title: Elemento LogFileName (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - LogFileName element
 ms.assetid: 80c7530d-ef73-44c3-88b5-c11c0f290946
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3038ae45e740b52662f6e580808096541b7b386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78f8a9cfa6462f7932e69323b0f7622d0f12064a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171346"
 ---
 # <a name="logfilename-element-assl"></a>Elemento LogFileName (ASSL)
   Contiene el nombre de archivo del archivo de registro para el [seguimiento](../objects/trace-element-assl.md) elemento.  
@@ -64,7 +64,7 @@ ms.locfileid: "36199991"
 ## <a name="remarks"></a>Notas  
  El archivo de registro se guarda en la carpeta de registro de la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- El elemento que corresponde al elemento primario de `LogFileName` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Trace>.  
+ El elemento que se corresponde con el elemento primario de `LogFileName` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Vea también  
  [Realiza un seguimiento de elemento &#40;ASSL&#41;](../collections/traces-element-assl.md)   

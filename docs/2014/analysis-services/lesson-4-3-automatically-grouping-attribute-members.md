@@ -1,5 +1,5 @@
 ---
-title: Agrupar miembros de atributo automáticamente | Documentos de Microsoft
+title: Agrupar miembros de atributo automáticamente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: eef5ca79172be96af5ded2c01a8c3f01e633caa7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10a6ae9dee61d211c178a42e38087ad104344343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183432"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Agrupar miembros de atributo automáticamente
   Cuando se examina un cubo, generalmente se dimensionan los miembros de una jerarquía de atributo según los miembros de otra jerarquía de atributo. Por ejemplo, puede agrupar las ventas de cliente por ciudad, producto comprado o género. No obstante, con determinados tipos de atributo, resulta útil hacer que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cree automáticamente grupos de miembros de atributos en función de la distribución de los miembros en una jerarquía de atributo. Por ejemplo, puede hacer que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cree grupos de valores de ingresos anuales de los clientes. Al hacerlo, los usuarios que examinen la jerarquía de atributo verán los nombres y los valores de los grupos en lugar de los miembros propiamente dichos. Esto limita el número de niveles que se presentan a los usuarios, lo que puede resultar más útil para el análisis.  
@@ -48,11 +48,11 @@ ms.locfileid: "36200025"
   
 4.  En el panel **Atributos** , seleccione **Yearly Income**.  
   
-5.  En la ventana Propiedades, cambie el valor de la **DiscretizationMethod** propiedad **automática** y cambie el valor de la **DiscretizationBucketCount** propiedad para `5`.  
+5.  En la ventana Propiedades, cambie el valor para el **DiscretizationMethod** propiedad **automática** y cambie el valor de la **DiscretizationBucketCount** propiedad para `5`.  
   
      En la imagen siguiente se muestran las propiedades modificadas para **Yearly Income**.  
   
-     ![Las propiedades modificadas de Yearly Income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "modificar propiedades para los ingresos anuales")  
+     ![Las propiedades modificadas de Yearly Income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "propiedades modificadas de Yearly Income")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Agrupar miembros de la jerarquía de atributo en la dimensión Employee  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36200025"
   
 6.  En el panel **Atributos** , seleccione **Vacation Hours**.  
   
-7.  En la ventana Propiedades, cambie el valor de la **DiscretizationMethod** propiedad a **Equalareas** y cambie el valor de la **DiscretizationBucketCount** propiedad para `5`.  
+7.  En la ventana Propiedades, cambie el valor para el **DiscretizationMethod** propiedad **Equalareas** y cambie el valor de la **DiscretizationBucketCount** propiedad para `5`.  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Examinar las jerarquías de atributo modificadas  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36200025"
   
      En la imagen siguiente se muestran las ventas dimensionadas por horas de baja por enfermedad de los empleados.  
   
-     ![Horas de baja de ventas dimensionadas por baja por enfermedad del empleado](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Sales con dimensión por baja por enfermedad del empleado deje horas")  
+     ![Horas de baja Sales con dimensión por baja por enfermedad del empleado](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Sales con dimensión por baja por enfermedad del empleado deje horas")  
   
 10. Elimine la jerarquía de atributo **Sick Leave Hours** del área de columnas del panel **Datos** .  
   

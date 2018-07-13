@@ -1,13 +1,11 @@
 ---
-title: SQLSetConnectAttr | Documentos de Microsoft
+title: SQLSetConnectAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 caps.latest.revision: 105
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5627aaa5799c4dffaafa50ed95bce60f0b9f1403
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 963104ee755daba6514403ddd7f5dca76507cf5a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199936"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432534"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pasa por alto la configuración de SQL_ATTR_CONNECTION_TIMEOUT.  
@@ -93,7 +91,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, …) // restores to pre-connect attr
 |SQL_AD_ON|Predeterminado: La conexión usa el comportamiento ANSI predeterminado para administrar comparaciones de valores NULL, relleno, advertencias y concatenaciones de valores NULL.|  
 |SQL_AD_OFF|La conexión usa la administración definida por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de valores NULL, relleno de tipo de datos de caracteres y advertencias.|  
   
- Si utiliza la agrupación de conexiones, SQL_COPT_SS_ANSI_NPW debe establecerse en la cadena de conexión, en lugar de con SQLSetConnectAttr. Una vez realizada una conexión, cualquier intento por cambiar este atributo cuando se use la agrupación de conexiones dará lugar a un error que no se notificará.  
+ Si usa la agrupación de conexiones, SQL_COPT_SS_ANSI_NPW debe establecerse en la cadena de conexión, en lugar de con SQLSetConnectAttr. Una vez realizada una conexión, cualquier intento por cambiar este atributo cuando se use la agrupación de conexiones dará lugar a un error que no se notificará.  
   
 ## <a name="sqlcoptssapplicationintent"></a>SQL_COPT_SS_APPLICATION_INTENT  
  Declara el tipo de carga de trabajo de la aplicación al conectarse a un servidor. Los valores posibles son `Readonly` y `ReadWrite`. Por ejemplo:  
@@ -102,10 +100,10 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, …) // restores to pre-connect attr
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- El valor predeterminado es `ReadWrite`. Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibilidad de Native Client para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG, consulte [SQL Server nativo compatibilidad del cliente con High Availability, Disaster Recovery](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ El valor predeterminado es `ReadWrite`. Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibilidad del cliente nativo para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG, consulte [SQL Server Native cliente admite para alta disponibilidad y recuperación ante desastres](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## <a name="sqlcoptssattachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
- SQL_COPT_SS_ATTACHDBFILENAME especifica el nombre del archivo principal de una base de datos adjuntable. Esta base de datos se adjunta y se convierte en la base de datos predeterminada para la conexión. Para usar SQL_COPT_SS_ATTACHDBFILENAME debe especificar el nombre de la base de datos como el valor del atributo de conexión SQL_ATTR_CURRENT_CATALOG o en la base de datos = parámetro de un [SQLDriverConnect](sqldriverconnect.md). Si la base de datos se ha adjuntado previamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no volverá a adjuntarla.  
+ SQL_COPT_SS_ATTACHDBFILENAME especifica el nombre del archivo principal de una base de datos adjuntable. Esta base de datos se adjunta y se convierte en la base de datos predeterminada para la conexión. Para usar SQL_COPT_SS_ATTACHDBFILENAME debe especificar el nombre de la base de datos como el valor del atributo de conexión SQL_ATTR_CURRENT_CATALOG, o en la base de datos = el parámetro de un [SQLDriverConnect](sqldriverconnect.md). Si la base de datos se ha adjuntado previamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no volverá a adjuntarla.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -120,7 +118,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_BCP_ON|Las funciones de copia masiva están disponibles en la conexión.|  
   
 ## <a name="sqlcoptssbrowseconnect"></a>SQL_COPT_SS_BROWSE_CONNECT  
- Este atributo se utiliza para personalizar el conjunto de resultados devuelto por [SQLBrowseConnect](sqlbrowseconnect.md). SQL_COPT_SS_BROWSE_CONNECT habilita o deshabilita la devolución de información adicional de una instancia enumerada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta información puede incluir datos como si el servidor es un clúster, nombres de instancias distintas y el número de versión.  
+ Este atributo se usa para personalizar el conjunto de resultados devuelto por [SQLBrowseConnect](sqlbrowseconnect.md). SQL_COPT_SS_BROWSE_CONNECT habilita o deshabilita la devolución de información adicional de una instancia enumerada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta información puede incluir datos como si el servidor es un clúster, nombres de instancias distintas y el número de versión.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -128,11 +126,11 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_MORE_INFO_YES|**SQLBrowseConnect** devuelve una cadena extendida de propiedades del servidor.|  
   
 ## <a name="sqlcoptssbrowseserver"></a>SQL_COPT_SS_BROWSE_SERVER  
- Este atributo se utiliza para personalizar el conjunto de resultados devuelto por **SQLBrowseConnect**. SQL_COPT_SS_BROWSE_SERVER especifica el nombre del servidor para el que **SQLBrowseConnect** devuelve la información.  
+ Este atributo se usa para personalizar el conjunto de resultados devuelto por **SQLBrowseConnect**. SQL_COPT_SS_BROWSE_SERVER especifica el nombre del servidor para el que **SQLBrowseConnect** devuelve la información.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|computername|**SQLBrowseConnect** devuelve una lista de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo especificado. Barras diagonales inversas dobles (\\\\) no debe usarse para el nombre del servidor (por ejemplo, en lugar de \\se debe usar \MyServer, MyServer).|  
+|computername|**SQLBrowseConnect** devuelve una lista de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo especificado. Las barras diagonales inversas dobles (\\\\) no debe usarse para el nombre del servidor (por ejemplo, en lugar de \\\MyServer, MyServer se debe usar).|  
 |NULL|Predeterminado: **SQLBrowseConnect** devuelve información para todos los servidores del dominio.|  
   
 ## <a name="sqlcoptssconcatnull"></a>SQL_COPT_SS_CONCAT_NULL  
@@ -154,7 +152,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_EN_OFF|La conexión no se cifrará. Ésta es la opción predeterminada.|  
   
 ## <a name="sqlcoptssenlistindtc"></a>SQL_COPT_SS_ENLIST_IN_DTC  
- El cliente llama el Coordinador de transacciones distribuidas de Microsoft (MS DTC) OLE DB **ITransactionDispenser:: BeginTransaction** método para iniciar una transacción de MS DTC y crear un objeto de transacción de MS DTC que representa la transacción. A continuación, la aplicación llama a `SQLSetConnectAttr` con la opción SQL_COPT_SS_ENLIST_IN_DTC para asociar el objeto de transacción con la conexión ODBC. Toda la actividad de base de datos relacionada se realizará bajo la protección de la transacción MS DTC. La aplicación llama `SQLSetConnectAttr` con SQL_DTC_DONE para finalizar la asociación de conexión DTC.  
+ El cliente llama a la Microsoft Distributed Transaction Coordinator (MS DTC) de OLE DB **ITransactionDispenser:: BeginTransaction** método para iniciar una transacción MS DTC y crear un objeto de transacción de MS DTC que representa el transacción. La aplicación, a continuación, llama a `SQLSetConnectAttr` con la opción SQL_COPT_SS_ENLIST_IN_DTC para asociar el objeto de transacción a la conexión de ODBC. Toda la actividad de base de datos relacionada se realizará bajo la protección de la transacción MS DTC. La aplicación llama a `SQLSetConnectAttr` con SQL_DTC_DONE para finalizar la asociación DTC de la conexión.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -162,7 +160,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_DTC_DONE|Delimita el final de una transacción DTC.|  
   
 ## <a name="sqlcoptssenlistinxa"></a>SQL_COPT_SS_ENLIST_IN_XA  
- Para iniciar una transacción con un procesador de transacción (TP) compatible con XA, el cliente llama a Open Group **tx_begin** (función). A continuación, la aplicación llama a `SQLSetConnectAttr` con un parámetro sql_copt_ss_enlist_in_xa establecido en TRUE para asociar la transacción XA a la conexión de ODBC. Toda la actividad de base de datos relacionada se realizará bajo la protección de la transacción XA. Para finalizar una asociación XA con una conexión ODBC, el cliente debe llamar a `SQLSetConnectAttr` con un parámetro sql_copt_ss_enlist_in_xa establecido en FALSE. Para obtener más información, vea la documentación de Microsoft DTC (Coordinador de transacciones distribuidas).  
+ Para iniciar una transacción con un procesador de transacciones (TP) compatible con XA, el cliente llama a the Open Group **tx_begin** función. La aplicación, a continuación, llama a `SQLSetConnectAttr` con el parámetro sql_copt_ss_enlist_in_xa establecido en TRUE para asociar la transacción XA a la conexión de ODBC. Toda la actividad de base de datos relacionada se realizará bajo la protección de la transacción XA. Para finalizar una asociación XA con una conexión ODBC, el cliente debe llamar a `SQLSetConnectAttr` con el parámetro sql_copt_ss_enlist_in_xa establecido en FALSE. Para obtener más información, vea la documentación de Microsoft DTC (Coordinador de transacciones distribuidas).  
   
 ## <a name="sqlcoptssfallbackconnect"></a>SQL_COPT_SS_FALLBACK_CONNECT  
  Este atributo ya no se admite.  
@@ -199,7 +197,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
 ```  
   
- Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibilidad de Native Client para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG, consulte [SQL Server nativo compatibilidad del cliente con High Availability, Disaster Recovery](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibilidad del cliente nativo para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG, consulte [SQL Server Native cliente admite para alta disponibilidad y recuperación ante desastres](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -248,12 +246,12 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
  SQL_COPT_SS_PERF_QUERY_LOG asigna el nombre de un archivo de registro para grabar los datos de consulta de ejecución prolongada. El nombre del archivo de registro es una cadena ANSI o Unicode terminada en NULL, en función de la compilación de la aplicación. El *StringLength* argumento debe ser SQL_NTS o la longitud de la cadena en bytes.  
   
 ## <a name="sqlcoptsspreservecursors"></a>SQL_COPT_SS_PRESERVE_CURSORS  
- Este atributo permite consultar y establecer si la conexión conservará o no los cursores al confirmar o revertir una transacción. El valor es SQL_PC_ON o SQL_PC_OFF. El valor predeterminado es SQL_PC_OFF. Esta configuración controla si el controlador cerrará los cursores automáticamente cuando se llama a [SQLEndTran](sqlendtran.md) (o SQLTransact).  
+ Este atributo permite consultar y establecer si la conexión conservará o no los cursores al confirmar o revertir una transacción. El valor es SQL_PC_ON o SQL_PC_OFF. El valor predeterminado es SQL_PC_OFF. Esta configuración controla si el controlador cerrará cursores automáticamente cuando se llama a [SQLEndTran](sqlendtran.md) (o SQLTransact).  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|SQL_PC_OFF|Predeterminado: Los cursores se cierran cuando se confirma o revierte la transacción crear copia mediante **SQLEndTran**.|  
-|SQL_PC_ON|No se cierran los cursores cuando se confirma o revierte la transacción crear copia mediante **SQLEndTran**, excepto cuando se utiliza un cursor estático o de conjunto de claves en modo asincrónico. Si se emite una reversión antes de que se complete el rellenado del cursor, se cierra el cursor.|  
+|SQL_PC_OFF|Predeterminado: Los cursores se cierran cuando se confirma o revierte la transacción hacer una copia con **SQLEndTran**.|  
+|SQL_PC_ON|No se cierran los cursores cuando se confirma o revierte la transacción hacer una copia con **SQLEndTran**, excepto cuando se utiliza un cursor estático o de conjunto de claves en modo asincrónico. Si se emite una reversión antes de que se complete el rellenado del cursor, se cierra el cursor.|  
   
 ## <a name="sqlcoptssquotedident"></a>SQL_COPT_SS_QUOTED_IDENT  
  SQL_COPT_SS_QUOTED_IDENT permite el uso de identificadores entre comillas en instrucciones ODBC y Transact-SQL enviadas en la conexión. Si se especifican identificadores entre comillas, el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admite nombres de objeto no válidos, como "Mi Tabla", que contiene un carácter de espacio en el identificador. Para obtener más información, vea SET QUOTED_IDENTIFIER.  
@@ -307,9 +305,9 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_WARN_NO|(Valor predeterminado) No generar advertencias cuando se produzca la pérdida de datos durante la conversión de la página de códigos.|  
   
 ## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>Compatibilidad de SQLSetConnectAttr con los nombres principales de servicio (SPN)  
- SQLSetConnectAttr puede usarse para establecer el valor de los nuevos atributos de conexión SQL_COPT_SS_SERVER_SPN y SQL_COPT_SS_FAILOVER_PARTNER_SPN. Estos atributos no pueden establecerse cuando hay una conexión abierta; si intenta establecer estos atributos cuando hay una conexión abierta, se devuelve el error HY011 con el mensaje "Operación no válida en este momento". (SQLSetConnectOption también se puede utilizar para establecer estos valores.)  
+ SQLSetConnectAttr puede usarse para establecer el valor de los nuevos atributos de conexión SQL_COPT_SS_SERVER_SPN y SQL_COPT_SS_FAILOVER_PARTNER_SPN. Estos atributos no pueden establecerse cuando hay una conexión abierta; si intenta establecer estos atributos cuando hay una conexión abierta, se devuelve el error HY011 con el mensaje "Operación no válida en este momento". (SQLSetConnectOption también se puede usar para establecer estos valores.)  
   
- Para obtener más información acerca de los SPN, vea [nombres principales de servicio &#40;SPN&#41; en las conexiones de cliente &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Para obtener más información acerca de los SPN, vea [Service Principal Names &#40;SPN&#41; en conexiones cliente &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="sqlcoptssconnectiondead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  Este atributo es de solo lectura.  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [hierarchyid]
 - hierarchyid [Database Engine], tutorial
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a3d380b0ad7eb1fb6120d959e3b7fb303466c010
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1a9282da58d26e29c3f88a005e72fc431bf1e57a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168356"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>Tutorial: Uso del tipo de datos hierarchyid
   Este tutorial está destinado a usuarios con experiencia en [!INCLUDE[tsql](../../includes/tsql-md.md)], pero que desconocen los tipos de datos de `hierarchyid`.  
@@ -46,7 +46,7 @@ ms.locfileid: "36202239"
 -   Internet Explorer versión 6 o posterior.  
   
 ## <a name="see-also"></a>Vea también  
- [Tutorial: Introducción al motor de base de datos](../tutorial-getting-started-with-the-database-engine.md)   
+ [Tutorial: Introducción con el motor de base de datos](../tutorial-getting-started-with-the-database-engine.md)   
  [Tutorial: Escribir instrucciones Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)   
  [Referencia de los métodos del tipo de datos hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
  [Datos jerárquicos &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   

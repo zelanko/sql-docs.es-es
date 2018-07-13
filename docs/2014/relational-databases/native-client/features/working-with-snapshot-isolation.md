@@ -1,13 +1,11 @@
 ---
-title: Trabajar con aislamiento de instantánea | Documentos de Microsoft
+title: Trabajar con aislamiento de instantánea | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: 39e87eb1-677e-45dd-bc61-83a4025a7756
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d5c2c3e77e352db45d728e1936fcb1973d5fe332
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5ae5580b817a6719973eb297819440ee87facd60
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113587"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423534"
 ---
 # <a name="working-with-snapshot-isolation"></a>Trabajar con aislamiento de instantánea
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introdujo un nuevo nivel de aislamiento de "instantánea" pensado para mejorar la simultaneidad en las aplicaciones de procesamiento de transacciones en línea (OLTP). En versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la simultaneidad se basada únicamente en el bloqueo, lo que podía provocar problemas de bloqueo e interbloqueo en algunas aplicaciones. El aislamiento de instantánea depende de las mejoras de las versiones de fila y está pensado para mejorar el rendimiento evitando situaciones de bloqueo de lectura-escritura.  
@@ -63,13 +61,13 @@ ms.locfileid: "36113587"
  Para obtener información acerca de cómo se admite el aislamiento de instantánea en transacciones, vea [compatibilidad con transacciones locales](../../native-client-ole-db-transactions/transactions.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Controlador ODBC de SQL Server Native Client  
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC Native Client proporciona compatibilidad para el aislamiento de instantánea aunque las mejoras realizadas en el [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) y [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) funciones.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client proporciona compatibilidad con aislamiento de instantánea aunque las mejoras realizadas en el [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) y [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) funciones.  
   
 ### <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
  El **SQLSetConnectAttr** función ahora admite el uso del atributo SQL_COPT_SS_TXN_ISOLATION. Si SQL_COPT_SS_TXN_ISOLATION se establece en SQL_TXN_SS_SNAPSHOT, significa que la transacción tendrá lugar en el nivel de aislamiento de instantáneas.  
   
 ### <a name="sqlgetinfo"></a>SQLGetInfo  
- El [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) función ahora es compatible con el valor SQL_TXN_SS_SNAPSHOT que se ha agregado para el tipo de información SQL_TXN_ISOLATION_OPTION.  
+ El [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) función ahora es compatible con el valor SQL_TXN_SS_SNAPSHOT que se ha agregado al tipo de información SQL_TXN_ISOLATION_OPTION.  
   
  Para obtener información acerca de cómo se admite el aislamiento de instantánea en transacciones, vea [Cursor Transaction Isolation Level](../../native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
   

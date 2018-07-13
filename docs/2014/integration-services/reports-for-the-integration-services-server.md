@@ -1,5 +1,5 @@
 ---
-title: Informes para el servidor de Integration Services | Documentos de Microsoft
+title: Los informes del servidor de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9809de19a363c94365c0da88655d4e54b81b80cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c035c2d8dacf29f8ca4d81b13c0ace5500a2dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180302"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Informes para el servidor de Integration Services
   En la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], existen informes estándares en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ayudarle a supervisar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proyectos que se han implementado en el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. Estos informes le ayudan a ver el estado y historial de los paquetes y, si es necesario, identificar la causa de los errores de ejecución de paquetes.  
@@ -83,9 +83,9 @@ ms.locfileid: "36203226"
  Para obtener instrucciones sobre cómo agregar y agregar un informe personalizado, vea [Add a Custom Report to Management Studio](../ssms/object/add-a-custom-report-to-management-studio.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Ver los informes para el servidor de Integration Services](../../2014/integration-services/view-reports-for-the-integration-services-server.md)  
+ [Ver informes del servidor de Integration Services](../../2014/integration-services/view-reports-for-the-integration-services-server.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Supervisión de ejecuciones de paquetes y otras operaciones](performance/monitor-running-packages-and-other-operations.md)  
+ [Supervisar las ejecuciones de paquetes y otras operaciones](performance/monitor-running-packages-and-other-operations.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos ScalarMiningStructureColumn (ASSL) | Documentos de Microsoft
+title: Tipo de datos ScalarMiningStructureColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ScalarMiningStructureColumn data type
 ms.assetid: 8f4afc15-601c-4189-bc45-f5a216aed879
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15e88a5e82dc960e3428587b8d74a046781b90ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90f855bf55292b310e32a167dc005ab2f2f81c14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211695"
 ---
 # <a name="scalarminingstructurecolumn-data-type-assl"></a>Tipo de datos ScalarMiningStructureColumn (ASSL)
-  Define un tipo de datos derivado que representa un [MiningStructureColumn](miningstructurecolumn-data-type-assl.md) elemento que contiene valores escalares, a diferencia de las tablas anidadas asociadas a la [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md) elemento que contiene tablas anidadas.  
+  Define un tipo de datos derivado que representa un [MiningStructureColumn](miningstructurecolumn-data-type-assl.md) elemento que contiene valores escalares, en lugar de las tablas anidadas asociadas con el [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md) elemento que contiene tablas anidadas.  
   
 ## <a name="syntax"></a>Sintaxis  
   

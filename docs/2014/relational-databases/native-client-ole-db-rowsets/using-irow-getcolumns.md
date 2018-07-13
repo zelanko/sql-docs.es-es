@@ -1,13 +1,11 @@
 ---
-title: 'Mediante IRow:: GetColumns | Documentos de Microsoft'
+title: 'Mediante IRow:: GetColumns | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,20 +17,20 @@ helpviewer_keywords:
 - GetColumns method
 ms.assetid: 1f5d2e03-e6fe-4ea1-b71d-55d02b5d59ae
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37c7895a888852a8acb0b73a4b44e297e1ea3318
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 21046f1ab8c25a9f929f8e6cf95281e74c157ae6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114018"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430054"
 ---
 # <a name="using-irowgetcolumns"></a>Usar IRow::GetColumns
-  El **IRow** implementación permite el acceso secuencial de solo avance y solo a las columnas. Se pueden tener acceso a todas las columnas de la fila con una sola llamada a **IRow:: GetColumns** o llamar a **IRow:: GetColumns** varias veces, cada vez que tener acceso a varias columnas de la fila.  
+  El **IRow** implementación permite el acceso secuencial de solo avance a las columnas. Puede obtener acceso a todas las columnas de la fila con una sola llamada a **IRow:: GetColumns** o llamar a **IRow:: GetColumns** varias veces cada vez que tenga acceso de varias columnas en la fila.  
   
- Varias llamadas a **IRow:: GetColumns** no debe superponerse. Por ejemplo, si la primera llamada a **IRow:: GetColumns** recupera columnas 1, 2 y 3, la segunda llamada a **IRow:: GetColumns** debería llamar a para las columnas 4, 5 y 6. Si más adelante se llama a **IRow:: GetColumns** se superponen, el indicador de estado (campo dwstatus en DBCOLUMNACCESS) se establece en DBSTATUS_E_UNAVAILABLE.  
+ Varias llamadas a **IRow:: GetColumns** no debe superponerse. Por ejemplo, si la primera llamada a **IRow:: GetColumns** recupera columnas 1, 2 y 3, la segunda llamada a **IRow:: GetColumns** debe llamar a las columnas 4, 5 y 6. Si las llamadas posteriores a **IRow:: GetColumns** se superponen, el indicador de estado (campo dwstatus en DBCOLUMNACCESS) se establece en DBSTATUS_E_UNAVAILABLE.  
   
 ## <a name="see-also"></a>Vea también  
  [Capturar una única fila con IRow](fetching-a-single-row-with-irow.md)  

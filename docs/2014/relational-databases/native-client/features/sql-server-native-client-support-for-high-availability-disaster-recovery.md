@@ -1,26 +1,24 @@
 ---
-title: SQL Server Native Client Support for High Availability, Disaster Recovery | Documentos de Microsoft
+title: Compatibilidad de alta disponibilidad, recuperación ante desastres SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 2016-08-31
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0fc26bfb2fc61cebd781c04b200f5e285b25666f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 72fb6497563e4f1d15e9470eb6d60743d67f83a5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201374"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427494"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres
   En este tema se explica la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (incorporada en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para más información sobre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) y [Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
@@ -39,7 +37,7 @@ ms.locfileid: "36201374"
   
  Para más información sobre las palabras clave de cadena de conexión, vea [Usar palabras clave de cadena de conexión con SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Especificar `MultiSubnetFailover=Yes` al conectarse a algo distinto de un agente de escucha del grupo de disponibilidad o una instancia de clúster de conmutación por error puede producir un impacto negativo en el rendimiento y no se admite.  
+ Especificar `MultiSubnetFailover=Yes` al conectarse a algo que no sea un agente de escucha del grupo de disponibilidad o una instancia de clúster de conmutación por error puede provocar un impacto negativo en el rendimiento y no se admite.  
   
  Utilice las siguientes instrucciones para conectarse a un servidor en un grupo de disponibilidad o una instancia de clúster de conmutación por error:  
   
@@ -61,12 +59,12 @@ ms.locfileid: "36201374"
   
 2.  Si una aplicación utiliza `ApplicationIntent=ReadWrite` (se explica a continuación) y la ubicación de réplica secundaria está configurada para el acceso de solo lectura.  
   
- Una conexión se producirá un error si una réplica principal está configurada para rechazar las cargas de trabajo de solo lectura y contiene la cadena de conexión `ApplicationIntent=ReadOnly`.  
+ Una conexión producirá un error si una réplica principal está configurada para rechazar cargas de trabajo de solo lectura y contiene la cadena de conexión `ApplicationIntent=ReadOnly`.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Actualizar para utilizar clústeres de varias subredes a partir de la creación de reflejo de la base de datos  
  Se producirá un error de conexión si las palabras clave de conexión `MultiSubnetFailover` y `Failover_Partner` se encuentran en la cadena de conexión. También se producirá un error si se utiliza `MultiSubnetFailover` y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devuelve una respuesta del asociado de conmutación por error que indica que forma parte de un par de creación de reflejo de la base de datos.  
   
- Si actualiza una aplicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client que utilice actualmente la creación de reflejo de la base de datos en un escenario de varias subredes, debe quitar la propiedad de conexión `Failover_Partner` y reemplazarla con `MultiSubnetFailover` establecida en `Yes` y reemplazar el nombre de servidor en la cadena de conexión con un agente de escucha de grupo de disponibilidad. Si usa una cadena de conexión `Failover_Partner` y `MultiSubnetFailover=Yes`, el controlador generará un error. Sin embargo, si usa una cadena de conexión `Failover_Partner` y `MultiSubnetFailover=No` (o `ApplicationIntent=ReadWrite`), la aplicación usará creación de reflejo de base de datos.  
+ Si actualiza una aplicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client que utilice actualmente la creación de reflejo de la base de datos en un escenario de varias subredes, debe quitar la propiedad de conexión `Failover_Partner` y reemplazarla con `MultiSubnetFailover` establecida en `Yes` y reemplazar el nombre de servidor en la cadena de conexión con un agente de escucha de grupo de disponibilidad. Si usa una cadena de conexión `Failover_Partner` y `MultiSubnetFailover=Yes`, el controlador generará un error. Sin embargo, si usa una cadena de conexión `Failover_Partner` y `MultiSubnetFailover=No` (o `ApplicationIntent=ReadWrite`), la aplicación usará la creación de reflejo de base de datos.  
   
  El controlador devuelve un error si la creación de reflejo de la base de datos se usa en la base de datos principal del grupo de disponibilidad y si `MultiSubnetFailover=Yes` se utiliza en la cadena de conexión que se conecta a una base de datos principal en lugar de a un agente de escucha del grupo de disponibilidad.  
   

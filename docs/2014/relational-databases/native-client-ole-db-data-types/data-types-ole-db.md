@@ -1,13 +1,11 @@
 ---
-title: Tipos de datos (OLE DB) | Documentos de Microsoft
+title: Tipos de datos (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +15,18 @@ helpviewer_keywords:
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b24b5425fb89794e7af3129039219d699769427
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 31083fe39332d15afa357045103a39114f1b4f6d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197603"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412774"
 ---
 # <a name="data-types-ole-db"></a>Tipos de datos (OLE DB)
-  Para ejecutar [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones y procesar los resultados utilizando la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client, debe saber cómo el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapas del proveedor OLE DB de Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos a tipos de datos de OLE DB al enlazar parámetros o columnas en un conjunto de filas y, cuando usa el **ITableDefinition** interfaz para crear una tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Para ejecutar [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones y procesar los resultados mediante el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client, debe saber cómo el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapas del proveedor OLE DB de Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos a tipos de datos OLE DB al enlazar los parámetros o columnas en un conjunto de filas y, cuando usa el **ITableDefinition** interfaz para crear una tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
   

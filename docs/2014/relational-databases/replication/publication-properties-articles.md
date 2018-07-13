@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.articles.f1
 ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 50e95bf76f3d06dcde7b8e15318cd09134779f15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bc899a11663a877cfc6cd2ff8013992a828e08a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162276"
 ---
 # <a name="publication-properties-articles"></a>Propiedades de la publicación, Artículos
   La página **Artículos** del cuadro de diálogo **Propiedades de la publicación** contiene información acerca de los artículos incluidos en una publicación, le permite agregar artículos a publicaciones existentes o quitarlos de las mismas y le permite cambiar las propiedades de los artículos y los filtros de columnas.  

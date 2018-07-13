@@ -1,33 +1,31 @@
 ---
-title: Obtener la autenticación mutua de Kerberos | Documentos de Microsoft
+title: Obtener la autenticación mutua de Kerberos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4a6feeb04fcb807b6b32168b8ea285240d08ccfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c0622e1ebac261085b341056e6178e72d02d66d0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114241"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426324"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Obtener la autenticación mutua de Kerberos
   En este ejemplo se muestra cómo obtener la autenticación mutua de Kerberos utilizando ODBC en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  No funcionará con ninguna versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Para obtener más información, consulte [nombre Principal de servicio &#40;SPN&#41; compatibilidad con conexiones de cliente](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Para obtener más información, consulte [nombre Principal de servicio &#40;SPN&#41; compatibilidad en las conexiones de cliente](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Ejemplo  
  Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  

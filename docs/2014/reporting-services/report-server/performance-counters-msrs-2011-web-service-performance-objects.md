@@ -1,5 +1,5 @@
 ---
-title: Contadores de rendimiento para el servicio Web de MSRS 2014 y objetos de rendimiento de MSRS 2014 Windows Service (modo nativo) | Documentos de Microsoft
+title: Contadores de rendimiento para el servicio Web de MSRS 2014 y objetos de rendimiento de MSRS 2014 Windows Service (modo nativo) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - Report Server Web service, performance counters
@@ -20,13 +20,13 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2606c760b03225a5cbb9d82db0aecd18ef4753ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99e19d3cf5ead97dca19e982b6d9255b296c8d93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150126"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>Contadores de rendimiento para los objetos de rendimiento de MSRS 2014 Web Service y MSRS 2014 Windows Service (modo nativo)
   En este tema se describe los contadores de rendimiento para el `MSRS 2014 Web Service` y `MSRS 2014 Windows Service` objetos de rendimiento  
@@ -38,7 +38,7 @@ ms.locfileid: "36201311"
   
  Los objetos de rendimiento están disponibles en el Monitor de rendimiento de Windows (**Perfmon.exe**). Para más información, consulte la documentación de Windows, [Generar perfiles en tiempo de ejecución](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
   
- Para obtener información relacionada con los contadores de rendimiento del modo de SharePoint, vea [contadores de rendimiento para el modo de SharePoint de MSRS 2014 Web Service y objetos de rendimiento del modo de SharePoint de MSRS 2014 Windows Service &#40;el modo de SharePoint&#41; ](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
+ Para obtener información relacionada con los contadores de rendimiento del modo de SharePoint, vea [contadores de rendimiento para el modo de SharePoint de MSRS 2014 Web Service y los objetos de rendimiento del modo de SharePoint de MSRS 2014 Windows Service &#40;el modo de SharePoint&#41; ](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
   
  **En este tema:**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36201311"
 -   [Usar cmdlets de PowerShell para devolver listas](#bkmk_powershell)  
   
 ##  <a name="bkmk_webservice"></a> Contadores de rendimiento de MSRS 2014 Web Service  
- El objeto de rendimiento `MSRS 2014 Web Service` supervisa el rendimiento del servidor de informes. Este objeto de rendimiento incluye una colección de contadores que se usan para realizar el seguimiento del procesamiento del servidor de informes que se suele iniciar mediante operaciones interactivas de visualización de informes. Cuando se configura este contador, puede aplicar el contador de todas las instancias de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] o puede seleccionar instancias concretas. Estos contadores se restablecen siempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] detiene el servicio Web del servidor de informes.  
+ El objeto de rendimiento `MSRS 2014 Web Service` supervisa el rendimiento del servidor de informes. Este objeto de rendimiento incluye una colección de contadores que se usan para realizar el seguimiento del procesamiento del servidor de informes que se suele iniciar mediante operaciones interactivas de visualización de informes. Al configurar este contador, puede aplicar el contador de todas las instancias de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] o puede seleccionar instancias concretas. Estos contadores se restablecen siempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] detiene el servicio Web del servidor de informes.  
   
  En la tabla siguiente se enumera los contadores que se incluyen con el `MSRS 2014 Web Service` objeto de rendimiento.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36201311"
 |`Memory Cache Misses/Sec`|Número de veces por segundo que no se han podido recuperar informes de la memoria caché en memoria.|  
 |`Next Session Requests/Sec`|Número de solicitudes por segundo de informes que se abren en una sesión existente (como informes que se representan a partir de una instantánea de sesión).|  
 |`Report Requests`|Número de informes actualmente activos que el servidor de informes administra.|  
-|`Reports Executed/Sec`|Número de ejecuciones de informes logradas por segundo. Este contador proporciona estadísticas sobre el volumen de informes. Utilice este contador con `Request/Sec` para comparar la ejecución de informes para las solicitudes de informes que pueden devolverse desde la memoria caché.|  
+|`Reports Executed/Sec`|Número de ejecuciones de informes logradas por segundo. Este contador proporciona estadísticas sobre el volumen de informes. Utilice este contador con `Request/Sec` para comparar la ejecución de informes a las solicitudes de informes que pueden devolverse desde la memoria caché.|  
 |`Requests/Sec`|Número de solicitudes por segundo realizadas al servidor de informes. Este contador realiza un seguimiento de todos los tipos de solicitudes que administra el servidor de informes.|  
 |`Total Cache Hits`|Número total de solicitudes de informes de la memoria caché después del inicio del servicio. Este contador se restablece siempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.|  
 |`Total Cache Hits (Semantic Models)`|Número total de solicitudes del modelo de la memoria caché después del inicio del servicio. Este contador se restablece siempre que ASP.NET detiene el servicio web del servidor de informes.|  
@@ -79,7 +79,7 @@ ms.locfileid: "36201311"
 |`Total Requests`|Número total de solicitudes efectuadas al servidor de informes después del inicio del servicio. Este contador se restablece siempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.|  
   
 ##  <a name="bkmk_windowsservice"></a> Contadores de rendimiento de MSRS 2014 Windows Service  
- La `MSRS 2014 Windows Service` objeto de rendimiento supervisa el servicio de Windows del servidor de informes. Este objeto de rendimiento incluye una colección de contadores que se usan para realizar el seguimiento del procesamiento de informes que se inicia mediante operaciones programadas. Entre las operaciones programadas se incluyen la suscripción y la entrega, las instantáneas de ejecución de informes y el historial del informe. Cuando se configura este contador, puede aplicar el contador de todas las instancias de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] o puede seleccionar instancias concretas.  
+ La `MSRS 2014 Windows Service` objeto de rendimiento supervisa el servicio de Windows del servidor de informes. Este objeto de rendimiento incluye una colección de contadores que se usan para realizar el seguimiento del procesamiento de informes que se inicia mediante operaciones programadas. Entre las operaciones programadas se incluyen la suscripción y la entrega, las instantáneas de ejecución de informes y el historial del informe. Al configurar este contador, puede aplicar el contador de todas las instancias de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] o puede seleccionar instancias concretas.  
   
  En la tabla siguiente se enumera los contadores que se incluyen en el `MSRS 2014 Windows Service` objeto de rendimiento.  
   
@@ -102,10 +102,10 @@ ms.locfileid: "36201311"
 |`Requests/Sec`|Número total de solicitudes correctas que el servicio del servidor de informes procesó por segundo.|  
 |`Snapshot Updates/Sec`|Número total de actualizaciones de instantánea de ejecución de informes por segundo.|  
 |`Total App Domain Recycles`|Número total de ciclos de dominio de aplicación después del inicio del servicio Windows del servidor de informes.|  
-|**Total de vaciados de caché**|Número total de actualizaciones de memoria caché del servidor de informes después del inicio del servicio. Este contador se restablece tras los reciclamientos de dominio de aplicación. Vea `Cache Flushes/Sec`.|  
-|`Total Cache Hits`|Número total de solicitudes de informes procesadas directamente desde la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación. Vea `Cache Hits/Sec`.|  
-|`Total Cache Hits (Semantic Models)`|Número total de solicitudes de modelos procesadas directamente desde la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación. Vea `Cache Hits/Sec`.|  
-|`Total Cache Misses`|Número total de veces que no se ha podido devolver un informe de la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación. Vea `Cache Misses/Sec`.|  
+|**Total de vaciados de caché**|Número total de actualizaciones de memoria caché del servidor de informes después del inicio del servicio. Este contador se restablece tras los reciclamientos de dominio de aplicación. Consulte `Cache Flushes/Sec`.|  
+|`Total Cache Hits`|Número total de solicitudes de informes procesadas directamente desde la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación. Consulte `Cache Hits/Sec`.|  
+|`Total Cache Hits (Semantic Models)`|Número total de solicitudes de modelos procesadas directamente desde la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación. Consulte `Cache Hits/Sec`.|  
+|`Total Cache Misses`|Número total de veces que no se ha podido devolver un informe de la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación. Consulte `Cache Misses/Sec`.|  
 |`Total Cache Misses (Semantic Models)`|Número total de veces que no se ha podido devolver un modelo de la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación.|  
 |`Total Deliveries`|Número total de informes entregados a través del Procesador de entrega y programación para todas las extensiones de entrega. Este contador se restablece tras los reciclamientos de dominio de aplicación.|  
 |`Total Events`|Número total de eventos después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación.|  
@@ -132,7 +132,7 @@ get-counter -listset msr*
   
 ## <a name="see-also"></a>Vea también  
  [Supervisar el rendimiento del servidor de informes](monitoring-report-server-performance.md)   
- [Contadores de rendimiento para el modo de SharePoint de MSRS 2014 Web Service y objetos de rendimiento del modo de SharePoint de MSRS 2014 Windows Service &#40;el modo de SharePoint&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Contadores de rendimiento para el modo de SharePoint de MSRS 2014 Web Service y los objetos de rendimiento del modo de SharePoint de MSRS 2014 Windows Service &#40;el modo de SharePoint&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service](performance-counters-reportserver-service-performance-objects.md)  
   
   

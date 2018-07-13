@@ -1,5 +1,5 @@
 ---
-title: Ayuda del generador para los cuadros de diálogo, paneles y asistentes de informes | Documentos de Microsoft
+title: Ayuda para cuadros de diálogo, paneles y asistentes del generador de informes | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10426"
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - user interface, dialog boxes
 ms.assetid: 2da24891-0b6d-4d3c-8b18-81b98752642f
 caps.latest.revision: 16
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 53b7024e19ccbe6b4da412933d37852f60261cad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74d2444467bca850c88f6f8af180012e3b71d5ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230595"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes
   Esta sección contiene Ayuda para muchos de los asistentes, vistas, paneles y cuadros de diálogo del Generador de informes. También puede abrir la Ayuda presionando F1 o haciendo clic en el botón Ayuda que se muestra en el cuadro de diálogo.  

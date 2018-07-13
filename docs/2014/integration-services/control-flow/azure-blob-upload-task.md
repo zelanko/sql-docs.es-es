@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpblobuptask.f1
 - sql11.dts.designer.afpblobuptask.f1
@@ -16,16 +16,16 @@ ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: df2e6673be9e257c71784211c53ba86309dc16de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0f0e4123a16eb82000c6506dc7bcb62b353a268
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188562"
 ---
 # <a name="azure-blob-upload-task"></a>Tarea de carga de blobs de Azure
-  La tarea de cargar blobs de Azure permite que un paquete SSIS cargar archivos en un almacenamiento de blobs de Azure.   
+  La tarea de carga de blobs de Azure permite que un paquete SSIS cargar archivos en Azure blob storage.   
 Para agregar una **tarea de carga de blobs de Azure**, arrástrela y colóquela en el Diseñador SSIS, haga doble clic o haga clic con el botón derecho y, luego, haga clic en **Editar** para ver el siguiente cuadro de diálogo del **Azure Blob Upload Task Editor** (Editor de la tarea de carga de blobs de Azure).  
   
  En la tabla siguiente se proporcionan las descripciones de los campos de este cuadro de diálogo.  

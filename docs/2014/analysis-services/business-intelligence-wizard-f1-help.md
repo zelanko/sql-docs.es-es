@@ -1,5 +1,5 @@
 ---
-title: Ayuda de F1 de Asistente de Business Intelligence | Documentos de Microsoft
+title: Asistente de Business Intelligence F1 Ayuda | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Wizard
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1fbdaa3573d77306993a024513895426e91d1ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9fa73095aa52b5c5c5f1ec53dcce18884731b4b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163596"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>Asistente de Business Intelligence (Ayuda F1)
   Utilice el Asistente de Business Intelligence para definir características de Business Intelligence y establecer opciones avanzadas para cubos y dimensiones. El asistente permite establecer propiedades en objetos existentes, crear objetos y generar scripts de expresiones multidimensionales (MDX) a fin de proporcionar características tales como inteligencia de dimensiones y conversión de moneda.  
@@ -58,11 +58,11 @@ ms.locfileid: "36199236"
   
 -   [Definir la inteligencia de cuentas &#40;dimensión&#41; &#40;Asistente de Business Intelligence&#41;](define-account-intelligence-dimension-business-intelligence-wizard.md)  
   
--   [Configurar atributos de dimensión &#40;Asistente de Business Intelligence&#41;](configure-dimension-attributes-business-intelligence-wizard.md)  
+-   [Configurar los atributos de dimensión &#40;Asistente de Business Intelligence&#41;](configure-dimension-attributes-business-intelligence-wizard.md)  
   
 -   [Definir la inteligencia de cuentas &#40;Asistente de Business Intelligence&#41;](define-account-intelligence-business-intelligence-wizard.md)  
   
--   [Establecer las opciones de la inteligencia de dimensiones &#40;Asistente de Business Intelligence&#41;](set-dimension-intelligence-options-business-intelligence-wizard.md)  
+-   [Establecer las opciones de inteligencia de dimensiones &#40;Asistente de Business Intelligence&#41;](set-dimension-intelligence-options-business-intelligence-wizard.md)  
   
 -   [Definir la inteligencia de dimensiones &#40;Asistente de Business Intelligence&#41;](define-dimension-intelligence-business-intelligence-wizard.md)  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36199236"
   
 -   [Seleccione una columna del cuadro de diálogo &#40;Asistente de Business Intelligence&#41;](select-a-column-dialog-box-business-intelligence-wizard.md)  
   
--   [Finalización del Asistente para &#40;Asistente de Business Intelligence&#41;](completing-the-wizard-business-intelligence-wizard.md)  
+-   [Finalización del asistente &#40;Asistente de Business Intelligence&#41;](completing-the-wizard-business-intelligence-wizard.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   

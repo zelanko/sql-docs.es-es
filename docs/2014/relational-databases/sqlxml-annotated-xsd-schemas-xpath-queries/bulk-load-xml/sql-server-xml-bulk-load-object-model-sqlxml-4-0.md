@@ -1,5 +1,5 @@
 ---
-title: Modelo de objeto para la carga de forma masiva SQL Server XML (SQLXML 4.0) | Documentos de Microsoft
+title: Modelo de objeto para la carga de forma masiva SQL Server XML (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -33,18 +33,18 @@ helpviewer_keywords:
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bb60aaf57869dbbd108c0815ed3fc02b07ed4bf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1157095c31a62c86530f1e8ed669700357adf982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278891"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modelo de objetos de carga masiva XML de SQL Server (SQLXML 4.0)
-  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sqlxmlbulkload, objeto está formada por el modelo de objetos de carga masiva XML. Este objeto admite los métodos y propiedades siguientes.  
+  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el sqlxmlbulkload, objeto formado por el modelo de objetos de carga masiva XML. Este objeto admite los métodos y propiedades siguientes.  
   
 ## <a name="methods"></a>Métodos  
  Execute  
@@ -52,7 +52,7 @@ ms.locfileid: "36202473"
   
 ## <a name="properties"></a>Propiedades  
  Carga masiva  
- Especifica si se debe realizar una carga masiva. Esta propiedad es útil si desea generar únicamente los esquemas (vea las propiedades SchemaGen, SGDropTables y SGUseID que van a continuación) y no pueda realizar una carga masiva. Ésta es una propiedad Boolean. Cuando la propiedad está establecida en TRUE, se ejecuta la carga masiva XML. Cuando está establecida en FALSE, no se ejecuta la carga masiva XML.  
+ Especifica si se debe realizar una carga masiva. Esta propiedad es útil si desea generar sólo los esquemas (vea las propiedades SchemaGen, SGDropTables y SGUseID que sigan) y no realizar una carga masiva. Ésta es una propiedad Boolean. Cuando la propiedad está establecida en TRUE, se ejecuta la carga masiva XML. Cuando está establecida en FALSE, no se ejecuta la carga masiva XML.  
   
  El valor predeterminado es TRUE.  
   
@@ -69,14 +69,14 @@ ms.locfileid: "36202473"
  Tenga en cuenta que si se realiza la propagación de identificadores, esta opción no se aplica y quedará activa la comprobación de restricciones. Esto se produce cuando `KeepIdentity=False` y hay una relación definida donde el elemento primario es un campo de identidad y se proporciona el valor al elemento secundario cuando se genera.  
   
  ConnectionCommand  
- Identifica un objeto de conexión existente (por ejemplo, el objeto de comando ADO o ICommand) que debe usar la carga masiva XML. Puede usar la propiedad ConnectionCommand en lugar de especificar una cadena de conexión con la propiedad ConnectionString. La propiedad de transacción debe establecerse en TRUE si utiliza ConnectionCommand.  
+ Identifica un objeto de conexión existente (por ejemplo, el objeto de comando ADO o ICommand) que debe usar la carga masiva XML. Puede usar la propiedad ConnectionCommand en lugar de especificar una cadena de conexión con la propiedad ConnectionString. La propiedad de transacción debe establecerse en TRUE si usas ConnectionCommand.  
   
- Si usa propiedades tanto la cadena de conexión y ConnectionCommand, carga masiva XML usa la última propiedad especificada.  
+ Si usa la ConnectionString y ConnectionCommand propiedades, carga masiva XML usa la última propiedad especificada.  
   
  El valor predeterminado es NULL.  
   
  ConnectionString  
- Identifica la cadena de conexión OLE DB que proporciona la información necesaria para establecer una conexión a una instancia de la base de datos. Si usa propiedades tanto la cadena de conexión y ConnectionCommand, carga masiva XML usa la última propiedad especificada.  
+ Identifica la cadena de conexión OLE DB que proporciona la información necesaria para establecer una conexión a una instancia de la base de datos. Si usa la ConnectionString y ConnectionCommand propiedades, carga masiva XML usa la última propiedad especificada.  
   
  El valor predeterminado es NULL.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36202473"
  IgnoreDuplicateKeys  
  Especifica qué hacer si se intenta insertar valores duplicados en una columna de clave. Si esta propiedad está establecida en TRUE y se intenta insertar un registro con un valor duplicado en una columna de clave, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no inserta ese registro. Pero inserta el registro subsiguiente; así, no se produce un error en la operación de carga masiva. Si esta propiedad está establecida en FALSE, se produce un error en la carga masiva cuando se intenta insertar un valor duplicado en una columna de clave.  
   
- Cuando la propiedad IgnoreDuplicateKeys se establece en TRUE, se emite una instrucción COMMIT para cada registro insertado en la tabla. Esto ralentiza el rendimiento. La propiedad puede establecerse en TRUE solo cuando la propiedad de transacción se establece en FALSE, porque el comportamiento transaccional se implementa utilizando los archivos.  
+ Cuando la propiedad IgnoreDuplicateKeys se establece en TRUE, se emite una instrucción COMMIT para cada registro insertado en la tabla. Esto ralentiza el rendimiento. La propiedad puede establecerse en "true" sólo cuando la propiedad de transacción se establece en FALSE, porque el comportamiento transaccional se implementa utilizando los archivos.  
   
  El valor predeterminado es FALSE.  
   
@@ -121,15 +121,15 @@ ms.locfileid: "36202473"
  El valor predeterminado es FALSE.  
   
  SchemaGen  
- Especifica si se van a crear las tablas necesarias antes de realizar una operación de carga masiva. Ésta es una propiedad Boolean. Si esta propiedad está establecida en TRUE, se crean las tablas identificadas en el esquema de asignación (debe existir la base de datos) . Si una o varias de las tablas ya existen en la base de datos, sgdroptables, propiedad determina si estas tablas preexistentes se quitará y volver a crear.  
+ Especifica si se van a crear las tablas necesarias antes de realizar una operación de carga masiva. Ésta es una propiedad Boolean. Si esta propiedad está establecida en TRUE, se crean las tablas identificadas en el esquema de asignación (debe existir la base de datos) . Si una o varias de las tablas ya existen en la base de datos, el sgdroptables, propiedad determina si estas tablas preexistentes se elimina y vuelve a crear.  
   
- El valor predeterminado de la propiedad SchemaGen es FALSE. SchemaGen no crea restricciones PRIMARY KEY en las tablas recién creadas. SchemaGen, crear sin embargo, las restricciones FOREIGN KEY en la base de datos si puede encontrar coincidencia `sql:relationship` y `sql:key-fields` anotaciones en el esquema de asignación y si el campo de clave está compuesto de una sola columna.  
+ El valor predeterminado para la propiedad SchemaGen es FALSE. SchemaGen no crea restricciones PRIMARY KEY en las tablas recién creadas. SchemaGen, crear sin embargo, las restricciones FOREIGN KEY en la base de datos si puede encontrar la coincidencia `sql:relationship` y `sql:key-fields` las anotaciones en el esquema de asignación y si el campo de clave está compuesto de una sola columna.  
   
  Tenga en cuenta que si establece la propiedad SchemaGen en TRUE, carga masiva XML hace lo siguiente:  
   
 -   Crea las tablas necesarias a partir de los nombres de atributo y elemento. Por consiguiente, es importante que no utilice las palabras reservadas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para los nombres de atributo y elemento en el esquema.  
   
--   Devuelve datos del desbordamiento para las columnas designadas utilizando la [SQL: overflow-campo](annotation-interpretation-sql-overflow-field.md) en [tipo de datos xml](/sql/t-sql/xml/xml-transact-sql) formato.  
+-   Devuelve datos del desbordamiento para las columnas designadas utilizando el [Overflow-campo](annotation-interpretation-sql-overflow-field.md) en [tipo de datos xml](/sql/t-sql/xml/xml-transact-sql) formato.  
   
  SGDropTables  
  Especifica si se deben quitar las tablas existentes y volver a crearlas. Utilice esta propiedad cuando la propiedad SchemaGen está establecida en TRUE. Si SGDropTables es FALSE, se conservan las tablas existentes. Cuando esta propiedad es TRUE, se eliminan las tablas existentes y se vuelven a crear.  
@@ -137,7 +137,7 @@ ms.locfileid: "36202473"
  El valor predeterminado es FALSE.  
   
  SGUseID  
- Especifica si el atributo del esquema de asignación que se identifica como tipo `id` se puede utilizar para crear una restricción PRIMARY KEY cuando se crea la tabla. Utilice esta propiedad cuando la propiedad SchemaGen está establecida en TRUE. Si SGUseID es TRUE, la utilidad SchemaGen utiliza un atributo para el que `dt:type="id"` se especifica como columna de clave principal y agrega la restricción PRIMARY KEY adecuada al crear la tabla.  
+ Especifica si el atributo del esquema de asignación que se identifica como tipo `id` se puede utilizar para crear una restricción PRIMARY KEY cuando se crea la tabla. Use esta propiedad cuando la propiedad SchemaGen está establecida en TRUE. Si SGUseID es TRUE, la utilidad SchemaGen utiliza un atributo para el que `dt:type="id"` se especifica como columna de clave principal y agrega la restricción PRIMARY KEY adecuada al crear la tabla.  
   
  El valor predeterminado es FALSE.  
   
@@ -145,10 +145,10 @@ ms.locfileid: "36202473"
  Especifica la ruta de acceso del archivo donde la carga masiva XML crea los archivos temporales para una carga masiva llevada a cabo. (Esta propiedad solo es útil cuando la propiedad Transaction está establecida en TRUE). Debe asegurarse de que la cuenta de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se utiliza para la carga masiva XML tiene acceso a esta ruta. Si no se establece esta propiedad, la carga masiva XML almacena los archivos temporales en la ubicación especificada en la variable de entorno TEMP.  
   
  Transaction  
- Especifica si la carga masiva se debe hacer como una transacción, en cuyo caso se garantiza la reversión si se produce un error en la carga masiva. Ésta es una propiedad Boolean. Si la propiedad está establecida en TRUE, la carga masiva se produce en un contexto transaccional. La propiedad TempFilePath es útil solo cuando la transacción se establece en TRUE.  
+ Especifica si la carga masiva se debe hacer como una transacción, en cuyo caso se garantiza la reversión si se produce un error en la carga masiva. Ésta es una propiedad Boolean. Si la propiedad está establecida en TRUE, la carga masiva se produce en un contexto transaccional. La propiedad TempFilePath es útil sólo cuando la transacción se establece en TRUE.  
   
 > [!NOTE]  
->  Si va a cargar los datos binarios (como bin.hex, bin.base64 tipos de datos XML del archivo binario, de la imagen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de datos), la propiedad de transacción debe establecerse en FALSE.  
+>  Si va a cargar los datos binarios (como el bin.hex, bin.base64 los tipos de datos XML al archivo binario, de la imagen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de datos), la propiedad de transacción debe establecerse en FALSE.  
   
  El valor predeterminado es FALSE.  
   

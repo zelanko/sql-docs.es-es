@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de transacciones de CLR | Documentos de Microsoft
+title: Ejemplo de transacciones de CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e1bf79778ca7c4376545570a538e41c5fa8db17f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 581510c786e31ab83399bb1ca0d21dd8391ff547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154986"
 ---
 # <a name="clr-transactions-sample"></a>Ejemplo de transacciones de CLR
   En este ejemplo, se muestra el control de transacciones con las API administradas que se encuentran en el espacio de nombres `System.Transactions` . En especial, se usa la clase `System.Transactions.TransactionScope` para establecer un límite de transacciones con el fin de asegurar que las cifras del inventario no están ajustadas a menos que haya inventario suficiente para cubrir la solicitud y, si lo hay, que la transferencia del inventario de una ubicación a otra se produce de forma indivisible. El registro automático de una transacción distribuida se demuestra registrando los cambios en el inventario en una base de datos de auditoría que está almacenada en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente.  
@@ -57,7 +57,7 @@ ms.locfileid: "36202347"
   
 -   La base de datos de AdventureWorks debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando.  
   
--   Si no es un administrador para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia que esté utilizando, debe tener un administrador le conceden **CreateAssembly** permiso para completar la instalación.  
+-   Si no es un administrador para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia utiliza, debe tener un administrador le conceda **CreateAssembly** permiso para completar la instalación.  
   
 ## <a name="building-the-sample"></a>Generar el ejemplo  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36202347"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  Copia la [!INCLUDE[tsql](../../includes/tsql-md.md)] código de instalación de base de datos en un archivo y guárdelo como `installDB.sql` en el directorio de ejemplo.  
+7.  Copia el [!INCLUDE[tsql](../../includes/tsql-md.md)] código de instalación de base de datos en un archivo y guárdelo como `installDB.sql` en el directorio de ejemplo.  
   
 8.  Instale la base de datos de auditoría ejecutando  
   

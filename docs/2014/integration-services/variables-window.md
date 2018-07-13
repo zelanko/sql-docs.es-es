@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variables.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23a20f733fd9a6fb2ca3c6e00eb4d1e84b7cb654
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59c097bcc9ee8e2e1b6872ab84cf807deec9d9ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162856"
 ---
 # <a name="variables-window"></a>Ventana Variables
   Use la ventana **Variables** para crear y modificar variables definidas por el usuario y ver variables del sistema.  
@@ -33,7 +33,7 @@ ms.locfileid: "36199158"
  También puede ver la ventana **Variables** si asigna el comando View.Variables a una combinación de teclas que desee en la página **Teclado** del cuadro de diálogo **Opciones** .  
   
 > [!NOTE]  
->  Los valores de la `Name` y `Namespace` propiedades deben comenzar con una letra del carácter alfabético de acuerdo con el estándar Unicode 2.0, o un carácter de subrayado (_). Los caracteres siguientes pueden ser letras o números, tal como se define en el Estándar Unicode 2.0, o el carácter de subrayado (\_).  
+>  Los valores de la `Name` y `Namespace` propiedades deben comenzar con una letra del carácter alfabético como se define en el estándar Unicode 2.0, o un carácter de subrayado (_). Los caracteres siguientes pueden ser letras o números, tal como se define en el Estándar Unicode 2.0, o el carácter de subrayado (\_).  
   
 ## <a name="options"></a>Opciones  
  **Agregar variable**  
@@ -68,7 +68,7 @@ ms.locfileid: "36199158"
  Presenta el valor de la variable. Puede actualizar el valor de la variable para variables definidas por el usuario. Este valor puede ser un literal o una expresión y el valor puede ser una cadena de varias líneas. Para asignar una expresión variable, haga clic en el botón de la elipse que se encuentra junto a la columna **Expresión** en la ventana **Variables** .  
   
  `Namespace`  
- Presenta el nombre del espacio de nombres. Las variables definidas por el usuario se crean inicialmente en el **usuario** espacio de nombres, pero se puede cambiar el nombre de espacio de nombres en el `Namespace` campo. Para mostrar esta columna, haga clic en **Opciones de cuadrícula**.  
+ Presenta el nombre del espacio de nombres. Las variables definidas por el usuario se crean inicialmente en el **usuario** espacio de nombres, pero puede cambiar el nombre del espacio de nombres en el `Namespace` campo. Para mostrar esta columna, haga clic en **Opciones de cuadrícula**.  
   
  **Raise Change Event**  
  Indica si se activa un evento `OnVariableValueChanged` cuando un valor cambia. Puede actualizar el valor de la variable para variables definidas por el usuario y el sistema. De manera predeterminada, la ventana **Variables** no muestra esta columna. Para mostrar esta columna, haga clic en **Opciones de cuadrícula**.  

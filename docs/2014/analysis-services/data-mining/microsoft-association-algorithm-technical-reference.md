@@ -1,5 +1,5 @@
 ---
-title: Referencia técnica del algoritmo de asociación de Microsoft | Documentos de Microsoft
+title: Referencia técnica del algoritmo de asociación de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE parameter
 - MAXIMUM_SUPPORT parameter
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1179752b5a1870af925463687056f3f767318aac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4f787b070c72c2cc8c1f071fee9cc6bcdd3d96e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171996"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Referencia técnica del algoritmo de asociación de Microsoft
   El algoritmo Reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es una implementación sencilla del conocido algoritmo Apriori.  
@@ -77,7 +77,7 @@ ms.locfileid: "36201055"
  El algoritmo Reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite varios parámetros que influyen en el comportamiento, el rendimiento y la precisión del modelo de minería de datos resultante.  
   
 ### <a name="setting-algorithm-parameters"></a>Establecer parámetros del algoritmo  
- Puede cambiar los parámetros para un modelo de minería de datos en cualquier momento mediante el Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. También puede cambiarlos mediante programación utilizando la <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> colección en AMO, o mediante el [miningmodels, elemento &#40;ASSL&#41; ](../scripting/collections/miningmodels-element-assl.md) en XMLA. Estos parámetros se describen en la tabla siguiente.  
+ Puede cambiar los parámetros para un modelo de minería de datos en cualquier momento mediante el Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. También puede cambiar los parámetros mediante programación utilizando la <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> colección en AMO, o mediante el [elemento MiningModels &#40;ASSL&#41; ](../scripting/collections/miningmodels-element-assl.md) en XMLA. Estos parámetros se describen en la tabla siguiente.  
   
 > [!NOTE]  
 >  No se pueden cambiar los parámetros en un modelo existente usando una instrucción de DMX; se deben especificar los parámetros en las instrucciones DMX CREATE MODEL o ALTER STRUCTURE… ADD MODEL cuando se crea el modelo.  
@@ -168,6 +168,6 @@ ms.locfileid: "36201055"
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de asociación de Microsoft](microsoft-association-algorithm.md)   
  [Ejemplos de consultas de modelo de asociación](association-model-query-examples.md)   
- [Contenido del modelo para los modelos de asociación de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Contenido para los modelos de asociación del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

@@ -1,28 +1,26 @@
 ---
-title: Parámetros y metadatos de resultado | Documentos de Microsoft
+title: Parameter and Result Metadata | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a898b9aa7a816b93afea875c8d304b520864f40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f07127b8ae80ff212f671d94f55a311584552c58
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197941"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420194"
 ---
 # <a name="parameter-and-result-metadata"></a>Metadatos de parámetros y resultados
   En este tema se describe la información que se devuelve en los campos descriptor de parámetros de implementación (IPD) y descriptor de filas de implementación (IRD) para los tipos de datos de fecha y hora.  
@@ -53,7 +51,7 @@ ms.locfileid: "36197941"
   
  SQL_CA_SS_VARIANT_SQL_TYPE es un nuevo campo descriptor. Este campo se agregó a IRD e IPD para permitir que las aplicaciones especificasen el tipo de valor asociado a las columnas y parámetros `sqlvariant` (SQL_SSVARIANT).  
   
- SQL_CA_SS_SERVER_TYPE es un nuevo campo solo IPD que permite a las aplicaciones controlar la forma en que se envían al servidor los valores para parámetros enlazados como SQL_TYPE_TYPETIMESTAMP (o como SQL_SS_VARIANT con un tipo C SQL_C_TYPE_TIMESTAMP). Si SQL_DESC_CONCISE_TYPE es SQL_TYPE_TIMESTAMP (o es SQL_SS_VARIANT y el tipo de C es SQL_C_TYPE_TIMESTAMP) cuando se llama a SQLExecute o SQLExecDirect, el valor de SQL_CA_SS_SERVER_TYPE determina el tipo de (TDS) del valor del parámetro de secuencia de los datos tabulares , como se indica a continuación:  
+ SQL_CA_SS_SERVER_TYPE es un nuevo campo solo IPD que permite a las aplicaciones controlar la forma en que se envían al servidor los valores para parámetros enlazados como SQL_TYPE_TYPETIMESTAMP (o como SQL_SS_VARIANT con un tipo C SQL_C_TYPE_TIMESTAMP). Si SQL_DESC_CONCISE_TYPE es SQL_TYPE_TIMESTAMP (o es SQL_SS_VARIANT y el tipo C es SQL_C_TYPE_TIMESTAMP) cuando se llama a SQLExecute o SQLExecDirect, el valor de SQL_CA_SS_SERVER_TYPE determina el tipo de (TDS) del valor del parámetro de secuencia de los datos tabulares , como se indica a continuación:  
   
 |Valor de SQL_CA_SS_SERVER_TYPE|Valores válidos para SQL_DESC_PRECISION|Valores válidos para SQL_DESC_LENGTH|Tipo de TDS|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  
@@ -67,7 +65,7 @@ ms.locfileid: "36197941"
   
 -   En tiempo de preparación o ejecución (cuando se llama a SQLExecute, SQLExecDirect, SQLSetPos o SQLBulkOperations).  
   
--   Cuando una preparación no aplazada llamando SQLPrepare con las fuerzas aplicación aplazados preparar a deshabilitado, o mediante una llamada a SQLNumResultCols, SQLDescribeCol o SQLDescribeParam para una instrucción que se prepara pero no ejecutado.  
+-   Cuando una fuerza de la aplicación una preparación no aplazada llamando SQLPrepare con aplaza preparar a deshabilitado, o mediante una llamada a SQLNumResultCols, SQLDescribeCol o SQLDescribeParam para una instrucción que se prepara pero no ejecutado.  
   
  Cuando SQL_CA_SS_SERVER_TYPE se establece mediante una llamada a SQLSetDescField, su valor debe ser SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME o SQL_SS_TYPE_DATETIME. En caso contrario, se devuelve SQL_ERROR y se registra un error de diagnóstico con SQLState HY092 y el mensaje "Identificador de opción o atributo o no válido".  
   

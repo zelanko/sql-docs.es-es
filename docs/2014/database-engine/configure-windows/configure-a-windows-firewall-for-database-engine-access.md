@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], firewall systems
 - firewall systems, [Database Engine]
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 caps.latest.revision: 55
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dceef388586398fbeb5129f7859d1245f3f86ef9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ad31b37014261e3545a206cfbd546113afd8c51a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188992"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurar Firewall de Windows para el acceso al motor de base de datos
   En este tema se describe cómo configurar un firewall de Windows para el acceso al motor de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el Administrador de configuración de SQL Server. Los sistemas de firewall ayudan a evitar el acceso no autorizado a los recursos de los equipos. Para obtener acceso a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] a través de un firewall, debe configurar el firewall en el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que permita el acceso.  
@@ -72,7 +72,7 @@ ms.locfileid: "36199758"
   
 3.  En el cuadro de diálogo **Tipo de regla** , seleccione **Puerto**y, a continuación, haga clic en **Siguiente**.  
   
-4.  En el cuadro de diálogo **Protocolo y puertos** , seleccione **TCP**. Seleccione **puertos locales específicos**y, a continuación, escriba el número de puerto de la instancia de la [!INCLUDE[ssDE](../../includes/ssde-md.md)], como `1433` para la instancia predeterminada. Haga clic en **Siguiente**.  
+4.  En el cuadro de diálogo **Protocolo y puertos** , seleccione **TCP**. Seleccione **puertos locales específicos**y, a continuación, escriba el número de puerto de la instancia de la [!INCLUDE[ssDE](../../includes/ssde-md.md)], tales como `1433` para la instancia predeterminada. Haga clic en **Siguiente**.  
   
 5.  En el cuadro de diálogo **Acción** , seleccione **Permitir la conexión**y, a continuación, haga clic en **Siguiente**.  
   

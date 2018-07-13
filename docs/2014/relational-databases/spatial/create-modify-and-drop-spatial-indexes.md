@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
 - spatial indexes [SQL Server], dropping
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 188c001672c31b4fdf4b72490553b7f65ccf0cb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 595a45a89413359861dc9298068622a076c693e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181641"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Crear, modificar y quitar índices espaciales
   Un índice espacial puede realizar de manera más eficaz determinadas operaciones en una columna de la `geometry` o `geography` tipo de datos (un *columna espacial*). Se puede especificar más de un índice espacial en una columna espacial. Por ejemplo, esto es útil para indizar diferentes parámetros de teselación en una columna única.  
@@ -67,7 +67,7 @@ ms.locfileid: "36199646"
   
 11. En la página **Espacial** , especifique los valores que desee usar para las propiedades espaciales del índice.  
   
-     Al crear un índice en una `geometry` columna de tipo, debe especificar el **(*`X-min`*,*`Y-min`*)** y **(*`X-max`*,*`Y-max`*)** coordenadas del cuadro de límite. Para un índice de un `geography` columna de tipo, los campos del cuadro de límite se convierten en solo lectura después de especificar el **cuadrícula de geografía** esquema de teselación, porque la teselación de cuadrícula de geografía no usa un cuadro de límite.  
+     Al crear un índice en una `geometry` columna de tipo, debe especificar el **(*`X-min`*,*`Y-min`*)** y **(*`X-max`*,*`Y-max`*)** las coordenadas del rectángulo. Para un índice de un `geography` columna de tipo, los campos del cuadro de límite serán de solo lectura después de especificar el **cuadrícula de geografía** esquema de teselación, porque la teselación de cuadrícula de geografía no usa un cuadro de límite.  
   
      Opcionalmente, puede especificar valores no predeterminados para el campo **Celdas por objeto** y para la densidad de cuadrícula en cualquier nivel del esquema de teselación. El número predeterminado de celdas por objeto es 16 para [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] u 8 para [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o posterior y la densidad de cuadrícula predeterminada es **Media** para [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   

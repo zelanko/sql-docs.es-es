@@ -1,5 +1,5 @@
 ---
-title: Crear un modelo de minería de datos | Documentos de Microsoft
+title: Creación de un modelo de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining models, creating
 - forecasting [data mining]
@@ -20,25 +20,25 @@ helpviewer_keywords:
 - classification [data mining]
 ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3c08737f07db68bd0e598844325d82172c3b1b44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2bb6c2b6ada95816cc45288c68bc784eb0ef2a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239925"
 ---
 # <a name="creating-a-data-mining-model"></a>Crear un modelo de minería de datos
   Modelado de datos es el paso de minería de datos donde se generan patrones y tendencias aplicando *algoritmos* a los datos. Después, puede utilizar esos patrones para el análisis, o para realizar predicciones.  
   
  Los Complementos de minería de datos para Office admiten la minería de datos a través de asistentes que facilitan la creación de modelos. Los asistentes analizan los datos, identifican las correlaciones, calculan la importancia estadística de todas las variables y seleccionan automáticamente el mejor modelo.  
   
- Aunque esta funcionalidad es tan eficaz como los herramientas proporcionadas por de minería de datos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], la combinación de asistentes y la conocida interfaz de Excel facilita el proceso crear, modificar y utilizar la minería de datos.  
+ Aunque esta funcionalidad es tan eficaz como las herramientas proporcionadas por minería de datos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], la combinación de los asistentes y la conocida interfaz de Excel facilita la tarea crear, modificar y utilizar la minería de datos.  
   
 ## <a name="advanced-data-mining"></a>Avanzados (Minería de datos)  
- Los asistentes avanzados permiten crear nuevos modelos de minería de datos, basados en datos almacenados en Excel, mediante uno de los algoritmos de minería de datos en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Los asistentes avanzados permiten crear nuevos modelos de minería de datos, basados en datos almacenados en Excel, mediante uno de los algoritmos de minería de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ### <a name="create-mining-structure"></a>Crear estructura de minería de datos  
  El Asistente para crear estructuras de minería de datos le permite generar una nueva estructura de minería de datos que podrá usar como base para varios modelos de minería de datos. El asistente le da la opción de reservar una parte de los datos y usarla como conjunto de prueba; de este modo, podrá evaluar todos los modelos que usan los mismos datos de acuerdo con un estándar de pruebas coherente.  
@@ -53,7 +53,7 @@ ms.locfileid: "36199233"
 ## <a name="analyze-key-influencers-analyze"></a>Analizar influenciadores clave (Analizar)  
  Elija una columna o valor de salida de interés y el algoritmo analizará todos los datos de entrada para identificar los factores que ejercen mayor influencia en el destino. Opcionalmente, puede crear un informe que compare dos valores, de modo que pueda ver cómo cambian los influenciadores.  
   
- El **analizar Influenciadores clave** herramienta utiliza el algoritmo Bayes Naïve de Microsoft.  
+ El **analizar Influenciadores clave** herramienta usa el algoritmo Bayes Naïve de Microsoft.  
   
  [Analizar Influenciadores clave &#40;herramientas de análisis de tabla para Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36199233"
  [Asistente para clasificar &#40;datos complementos de minería de datos para Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
   
 ## <a name="cluster-data-mining"></a>Clúster (Minería de datos)  
- El **clúster** asistente genera un modelo de agrupación en clústeres que detecta grupos de filas que comparten características similares. Agrupación en clústeres (a veces denominado *segmentación*) es una técnica de aprendizaje no supervisada que resulta muy útil al intentar entender patrones y agrupaciones de nuevos datos.  
+ El **clúster** asistente genera un modelo de agrupación en clústeres que detecta grupos de filas que comparten características similares. Agrupación en clústeres (a veces denominado *segmentación*) es una técnica de aprendizaje que resulta muy útil al tratar de comprender los patrones y agrupaciones en nuevos datos.  
   
  El algoritmo de clústeres de secuencia de Microsoft admite varias modalidades de agrupación en clústeres Expectation maximization (EM) y mediana-K  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36199233"
 ## <a name="detect-categories-analyze"></a>Detectar categorías (Analizar)  
  El **detectar categorías** herramienta le permite agregar cualquier conjunto de datos y aplicar la agrupación en clústeres para buscar agrupaciones de datos. Es útil para buscar similitudes y crear grupos para analizarlos después más a fondo.  
   
- El **detectar categorías** herramienta utiliza el algoritmo Microsoft Clustering.  
+ El **detectar categorías** herramienta usa el algoritmo Microsoft Clustering.  
   
  [Detectar categorías &#40;herramientas de análisis de tabla para Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)  
   
@@ -89,14 +89,14 @@ ms.locfileid: "36199233"
 ## <a name="fill-from-example-analyze"></a>Rellenar desde ejemplo (Analizar)  
  El **rellenar desde ejemplo** herramienta le ayuda a imputar valores ausentes. Proporcione algunos ejemplos de cómo deben ser los valores ausentes, y la herramienta creará patrones basados en todos los datos de la tabla; a continuación, recomendará nuevos valores basados en patrones de los datos.  
   
- El **rellenar desde ejemplo** herramienta utiliza el algoritmo de regresión logística de Microsoft.  
+ El **rellenar desde ejemplo** herramienta usa el algoritmo de regresión logística de Microsoft.  
   
  [Rellenar desde ejemplo &#40;herramientas de análisis de tabla para Excel&#41;](fill-from-example-table-analysis-tools-for-excel.md)  
   
 ## <a name="forecast-analyze"></a>Pronóstico (Analizar)  
  El **previsión** herramienta toma los datos que cambian con el tiempo y predice valores futuros.  
   
- El **previsión** herramienta utiliza el algoritmo de serie temporal de Microsoft.  
+ El **previsión** herramienta usa el algoritmo de serie temporal de Microsoft.  
   
  [Previsión &#40;herramientas de análisis de tabla para Excel&#41;](forecast-table-analysis-tools-for-excel.md)  
   
@@ -108,21 +108,21 @@ ms.locfileid: "36199233"
 ## <a name="highlight-exceptions-analyze"></a>Resaltar excepciones (Analizar)  
  El **Resaltar excepciones** herramienta analiza patrones en una tabla de datos y busca filas y valores que no se ajustan al patrón. Seguidamente, puede revisarlos, corregirlos y volver a ejecutar el modelo o marcar valores para acciones posteriores.  
   
- El **Resaltar excepciones** herramienta utiliza el algoritmo Microsoft Clustering.  
+ El **Resaltar excepciones** herramienta usa el algoritmo Microsoft Clustering.  
   
  [Resaltar excepciones &#40;herramientas de análisis de tabla para Excel&#41;](highlight-exceptions-table-analysis-tools-for-excel.md)  
   
 ## <a name="prediction-calculator-analyze"></a>Cálculo de predicción (Analizar)  
  Esta herramienta crea un modelo que analiza los factores que producen los resultados buscados, y después predice un resultado para cualquier nueva entrada, en función de criterios derivados de estos patrones. También genera una hoja de cálculo interactiva de toma de decisiones que permite puntuar nuevas entradas. También puede crear una versión impresa de la hoja de cálculo de puntuaciones para su uso sin conexión.  
   
- El **cálculo de predicción** herramienta utiliza el algoritmo de regresión logística de Microsoft.  
+ El **cálculo de predicción** herramienta usa el algoritmo de regresión logística de Microsoft.  
   
  [Cálculo de predicción &#40;herramientas de análisis de tabla para Excel&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
   
 ## <a name="scenario-goal-seek-analyze"></a>Escenario: Buscar objetivo (Analizar)  
  En el **Buscar objetivo** herramienta, especifique un valor de destino y la herramienta identifica los factores subyacentes que deben cambiar para alcanzar dicho destino. Por ejemplo, si sabe que debe aumentar la satisfacción de las llamadas en un 20 %, puede pedir al modelo que prediga los factores que deben cambiar para producir ese objetivo.  
   
- El **Buscar objetivo** herramienta utiliza el algoritmo de regresión logística de Microsoft.  
+ El **Buscar objetivo** herramienta usa el algoritmo de regresión logística de Microsoft.  
   
  detalles  
   
@@ -131,18 +131,18 @@ ms.locfileid: "36199233"
 ## <a name="scenario-what-if-scenario-analyze"></a>Escenario: Escenario Y si (Analizar)  
  El **el análisis de hipótesis** herramienta complementa el **Buscar objetivo** herramienta. Con esta herramienta, se introduce el valor que se desea cambiar y el modelo predice si el cambio será suficiente para obtener el resultado deseado. Por ejemplo, podría solicitar al modelo que infiera si la adición de un operador de llamadas adicional incrementaría la satisfacción del cliente en un punto.  
   
- El **condicionales** herramienta utiliza el algoritmo de regresión logística de Microsoft.  
+ El **hipótesis** herramienta usa el algoritmo de regresión logística de Microsoft.  
   
  [Escenario y si &#40;herramientas de análisis de tabla para Excel&#41;](what-if-scenario-table-analysis-tools-for-excel.md)  
   
 ## <a name="shopping-basket-analysis-analyze"></a>Análisis de la cesta de compras (Analizar)  
- El **análisis de cesta de la compra** herramienta crea grupos de productos que se suelen comprar juntos, para identificar patrones que se pueden usar en las ventas cruzadas o en las ventas de seguridad. También genera informes basados en el precio y el costo de paquetes de productos relacionados, para ayudar a la toma de decisiones.  
+ El **análisis de cesta de la compra** herramienta crea grupos de productos que se suelen comprar juntos, para identificar patrones que se pueden usar en las ventas cruzadas o ventas cruzadas arriba. También genera informes basados en el precio y el costo de paquetes de productos relacionados, para ayudar a la toma de decisiones.  
   
  También puede utilizar esta herramienta para los eventos que ocurren juntos con frecuencia, los factores que dan como resultado un diagnóstico o para cualquier otro posible conjunto de causas y resultados.  
   
- El **análisis de cesta de la compra** herramienta utiliza el algoritmo Microsoft Association.  
+ El **análisis de cesta de la compra** herramienta usa el algoritmo Microsoft Association.  
   
- [Análisis de cesta de la compra &#40;herramientas de análisis de tabla para Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)  
+ [Análisis de cesta &#40;herramientas de análisis de tabla para Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Exploración y limpieza de datos](exploring-and-cleaning-data.md)   

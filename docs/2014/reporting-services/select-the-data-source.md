@@ -1,5 +1,5 @@
 ---
-title: Seleccione el origen de datos | Documentos de Microsoft
+title: Seleccione el origen de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
 caps.latest.revision: 31
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8cb8cb384b83c4d5ca8ba16e017cbf79d53f3742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 888e3415163fafee1d5300b2a62c5063f61c8621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155796"
 ---
 # <a name="select-the-data-source"></a>Seleccionar el origen de datos
   Utilice esta página del Asistente para informes para definir un origen de datos para el informe.  
@@ -40,7 +40,7 @@ ms.locfileid: "36202649"
  Seleccione el tipo de origen de datos que está usando (por ejemplo, si está usando una base de datos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], elija [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]).  
   
  **Cadena de conexión**  
- Escriba una cadena de conexión para el origen de datos. Para obtener más información acerca de las cadenas de conexión, vea [las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ Escriba una cadena de conexión para el origen de datos. Para obtener más información acerca de las cadenas de conexión, consulte [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
  Haga clic en **Editar** para especificar el servidor del origen de datos en el cuadro de diálogo **Propiedades de conexión** . Puede especificar un origen de datos local o remoto.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "36202649"
  Seleccione esta opción para almacenar el origen de datos en el proyecto como origen de datos compartido, en lugar de en el informe. De ese modo, puede utilizarlo como origen de datos para otros informes en el proyecto.  
   
 ## <a name="see-also"></a>Vea también  
- [Incrustados y compartidos conexiones de datos u orígenes de datos &#40;el generador de informes SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Incrustados y compartidos de conexiones de datos u orígenes de datos &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Servidor de informes de Reporting Services](../../2014/reporting-services/reporting-services-report-server.md)   
  [Archivo de configuración RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)   
- [Las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Ayuda del Asistente para informes](../../2014/reporting-services/report-wizard-help.md)  
   
   

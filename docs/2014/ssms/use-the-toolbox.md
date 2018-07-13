@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding controls
 - Toolbox [SQL Server Management Studio]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - designer controls [SQL Server Management Studio]
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6e29019df2d10653b69ce03b56d5414310dd6a01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d5d8ef26cb4d9717682c47bf6680dd87694bdba1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172046"
 ---
 # <a name="use-the-toolbox"></a>Utilizar el cuadro de herramientas
   Se pueden seleccionar y arrastrar elementos, texto y controles del cuadro de herramientas a formularios, páginas y diseñadores, y arrastrar de nuevo elementos de estos orígenes al cuadro de herramientas para volver a usarlos más adelante. Por ejemplo, en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] puede arrastrar una tarea a un plan de mantenimiento.  

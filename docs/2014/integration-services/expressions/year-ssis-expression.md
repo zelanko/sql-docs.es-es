@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], YEAR
 - YEAR function
@@ -16,13 +16,13 @@ ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 90304da60ff77cf4bba98b0fb6b3b682801f318c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4877e321e55d8dbe34d7be73be3b02b4158cd3fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162996"
 ---
 # <a name="year-ssis-expression"></a>YEAR (expresión de SSIS)
   Devuelve un entero que representa la parte del año de una fecha.  

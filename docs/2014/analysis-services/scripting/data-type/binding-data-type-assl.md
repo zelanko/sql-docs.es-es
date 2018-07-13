@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos (ASSL) Binding | Documentos de Microsoft
+title: Tipo de datos (ASSL) Binding | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Binding data type
 ms.assetid: 0a777219-b885-4961-ac66-b76faeb520db
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24847c70a0baf6ee12c1de6364cdd1e8d4327f91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a34209ea08d1cdfd0100bd5e2402edc0f592f066
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169546"
 ---
 # <a name="binding-data-type-assl"></a>Tipo de datos Binding (ASSL)
   Define un tipo de datos primitivo abstracto que representa una relación de dependencia entre dos objetos en los que los datos o metadatos de uno de los objetos dependen de los datos o metadatos de un objeto enlazado.  
@@ -47,7 +47,7 @@ ms.locfileid: "36200226"
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipos de datos básicos|None|  
-|Tipos de datos derivados|[AttributeBinding](binding-data-type-assl.md), [ColumnBinding](columnbinding-data-type-assl.md), [CubeAttributeBinding](cubeattributebinding-data-type-assl.md), [CubeDimensionBinding](dimensionbinding-data-type-assl.md), [DataSourceViewBinding](datasourceviewbinding-data-type-assl.md), [DimensionBinding](dimensionbinding-data-type-assl.md), [InheritedBinding](inheritedbinding-data-type-assl.md), [MeasureBinding](measurebinding-data-type-assl.md), [MeasureGroupBinding](measuregroupbinding-data-type-assl.md), [MeasureGroupDimensionBinding](measuregroupdimensionbinding-data-type-assl.md), [ProactiveCachingBinding](proactivecachingbinding-data-type-assl.md), [RowBinding](rowbinding-data-type-assl.md), [TabularBinding](tabularbinding-data-type-assl.md), [TimeAttributeBinding](timeattributebinding-data-type-assl.md), [TimeBinding](timebinding-data-type-assl.md), [UserDefinedGroupBinding](userdefinedgroupbinding-data-type-assl.md)|  
+|Tipos de datos derivados|[AttributeBinding](binding-data-type-assl.md), [ColumnBinding](columnbinding-data-type-assl.md), [CubeAttributeBinding](cubeattributebinding-data-type-assl.md), [CubeDimensionBinding](dimensionbinding-data-type-assl.md), [DataSourceViewBinding](datasourceviewbinding-data-type-assl.md), [DimensionBinding](dimensionbinding-data-type-assl.md), [InheritedBinding](inheritedbinding-data-type-assl.md), [MeasureBinding](measurebinding-data-type-assl.md), [MeasureGroupBinding](measuregroupbinding-data-type-assl.md), [ MeasureGroupDimensionBinding](measuregroupdimensionbinding-data-type-assl.md), [ProactiveCachingBinding](proactivecachingbinding-data-type-assl.md), [RowBinding](rowbinding-data-type-assl.md), [TabularBinding](tabularbinding-data-type-assl.md), [ TimeAttributeBinding](timeattributebinding-data-type-assl.md), [TimeBinding](timebinding-data-type-assl.md), [UserDefinedGroupBinding](userdefinedgroupbinding-data-type-assl.md)|  
   
 ## <a name="data-type-relationships"></a>Relaciones entre tipos de datos  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36200226"
 ## <a name="remarks"></a>Notas  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.Binding>.  
   
- Para obtener más información sobre el enlace de datos, vea [orígenes de datos y enlaces &#40;SSAS multidimensionales&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obtener más información sobre el enlace de datos, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="elements-of-type-binding"></a>Elemento de tipo Binding  
  En la siguiente tabla se enumeran los elementos de tipo `Binding`.  
@@ -70,7 +70,7 @@ ms.locfileid: "36200226"
 |[AttributeTranslation](../properties/source-element-binding-assl.md) de [CaptionColumn](../objects/column-element-assl.md) (de tipo [DataItem](dataitem-data-type-assl.md))|Tipo de la `Binding` debe ser [AttributeBinding](binding-data-type-assl.md) o [ColumnBinding](columnbinding-data-type-assl.md)|  
 |[Cubo](../objects/cube-element-assl.md)|[Source](../properties/source-element-binding-assl.md)|Tipo de la `Binding` debe ser [DataSourceViewBinding](datasourceviewbinding-data-type-assl.md)|  
 |[CubeBinding (fuera de línea)](../objects/group-element-assl.md)|Tipo de la `Binding` debe ser [MeasureGroupBinding](measuregroupbinding-data-type-assl.md)|  
-|[Elemento de datos](dataitem-data-type-assl.md)|[Source](../properties/source-element-binding-assl.md)|`Binding` puede ser de cualquier tipo|  
+|[DataItem](dataitem-data-type-assl.md)|[Source](../properties/source-element-binding-assl.md)|`Binding` puede ser de cualquier tipo|  
 |[Dimension](../objects/dimension-element-assl.md)|[Source](../properties/source-element-binding-assl.md)|Tipo de la `Binding` debe ser [CubeDimensionBinding](dimensionbinding-data-type-assl.md), [DataSourceViewBinding](datasourceviewbinding-data-type-assl.md), [DimensionBinding](dimensionbinding-data-type-assl.md), o [TimeBinding](timebinding-data-type-assl.md)|  
 |[DimensionAttribute](dimensionattribute-data-type-assl.md)|[Source](../properties/source-element-binding-assl.md)|Tipo de la `Binding` debe ser [AttributeBinding](binding-data-type-assl.md) o [UserDefinedGroupBinding](userdefinedgroupbinding-data-type-assl.md)|  
 |[DrillThroughAction](action-data-type-assl.md)|[Columna](../objects/column-element-assl.md)|Tipo de la `Binding` debe ser [CubeAttributeBinding](cubeattributebinding-data-type-assl.md) o [MeasureBinding](measurebinding-data-type-assl.md)|  
@@ -85,7 +85,7 @@ ms.locfileid: "36200226"
 |[MiningStructure](../objects/miningstructure-element-assl.md)|[Source](../properties/source-element-binding-assl.md)|Tipo de la `Binding` debe ser [CubeDimensionBinding](dimensionbinding-data-type-assl.md), [DataSourceViewBinding](datasourceviewbinding-data-type-assl.md), o [DimensionBinding](dimensionbinding-data-type-assl.md)|  
 |[Partición](../objects/partition-element-assl.md)|[Source](../properties/source-element-binding-assl.md)|Tipo de la `Binding` debe ser [TabularBinding](tabularbinding-data-type-assl.md)|  
 |[ProactiveCaching](../objects/proactivecaching-element-assl.md)|[Source](../properties/source-element-binding-assl.md)|Tipo de la `Binding` debe ser [ProactiveCachingBinding](proactivecachingbinding-data-type-assl.md)|  
-|[ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md)|[Source](../properties/source-element-binding-assl.md)|Tipo de la `Binding` debe ser [AttributeBinding](binding-data-type-assl.md), [tipo de datos CubeAttributeBinding &#40;ASSL&#41;](cubeattributebinding-data-type-assl.md), o [MeasureBinding, tipo de datos &#40;ASSL&#41;](measurebinding-data-type-assl.md)|  
+|[ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md)|[Source](../properties/source-element-binding-assl.md)|Tipo de la `Binding` debe ser [AttributeBinding](binding-data-type-assl.md), [tipo de datos CubeAttributeBinding &#40;ASSL&#41;](cubeattributebinding-data-type-assl.md), o [tipo de datos MeasureBinding &#40;ASSL&#41;](measurebinding-data-type-assl.md)|  
 |[TableMiningStructureColumn](../objects/sourcemeasuregroup-element-assl.md)|Tipo de la `Binding` debe ser [MeasureGroupBinding](measuregroupbinding-data-type-assl.md)|  
   
 ## <a name="see-also"></a>Vea también  

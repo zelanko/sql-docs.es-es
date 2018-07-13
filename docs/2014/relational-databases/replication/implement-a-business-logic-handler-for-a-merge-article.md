@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - BusinessLogicModule class
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b94705cc21951287df954e74ad322d2efc754052
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a0404175f22e6edcb80e4179083555d23acf7db1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169078"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementar un controlador de lógica de negocios para un artículo de mezcla
   En este tema se describe cómo implementar un controlador de lógica de negocios para un artículo de mezcla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante programación de la replicación o Replication Management Objects (RMO).  
@@ -103,7 +103,7 @@ ms.locfileid: "36198887"
   
 1.  En el publicador, ejecute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) para comprobar que el ensamblado aún no se ha registrado como un controlador de lógica de negocios.  
   
-2.  En el distribuidor, ejecute [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), especificar un nombre descriptivo para el controlador de lógica de negocios para **@article_resolver**, un valor de `true`para **@is_dotnet_assembly**, el nombre del ensamblado para **@dotnet_assembly_name**y el nombre completo de la clase que invalida <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para  **@dotnet_class_name**.  
+2.  En el distribuidor, ejecute [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), especificando un nombre descriptivo para el controlador de lógica de negocios para **@article_resolver**, un valor de `true`para **@is_dotnet_assembly**, el nombre del ensamblado para **@dotnet_assembly_name**y el nombre completo de la clase que invalida <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para  **@dotnet_class_name**.  
   
     > [!NOTE]  
     >  Si el ensamblado no está implementado en el mismo directorio que el ejecutable del Agente de mezcla, en el mismo directorio que la aplicación que inicia de forma sincrónica dicho agente o en la caché de ensamblados global (GAC), debe especificar la ruta de acceso completa con el nombre del ensamblado para **@dotnet_assembly_name**. Al usar la sincronización web, debe especificar la ubicación de ensamblado en el servidor web.  
@@ -218,7 +218,7 @@ ms.locfileid: "36198887"
   
 4.  Establezca la conexión del paso 1 para la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, significa que las propiedades del artículo en el paso 3 se definieron incorrectamente o no existe el artículo. Para más información, consulte [View and Modify Article Properties](publish/view-and-modify-article-properties.md).  
+5.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, las propiedades del artículo en el paso 3 se definieron incorrectamente o el artículo no existe. Para más información, consulte [View and Modify Article Properties](publish/view-and-modify-article-properties.md).  
   
 6.  Establezca el nombre descriptivo del controlador de negocios para <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>. Este es el valor de la propiedad <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> especificado al registrar el controlador de lógica de negocios.  
   

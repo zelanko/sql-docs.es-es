@@ -1,5 +1,5 @@
 ---
-title: Obtención de detalles en modelos de minería de datos | Documentos de Microsoft
+title: Obtención de detalles en modelos de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f5b59e0a921e27bd5bdc62867130e71bbc67ffa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd0bb8838b9b012d1951f6b6fe0bde67ed09842d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192947"
 ---
 # <a name="drillthrough-on-mining-models"></a>Obtención de detalles en modelos de minería de datos
   La*obtención de detalles* se refiere a la capacidad de consultar un modelo o una estructura de minería de datos y obtener datos detallados que no se exponen en el modelo.  
@@ -52,7 +52,7 @@ ms.locfileid: "36200829"
 |Algoritmo Bayes Naïve de Microsoft|No compatible.<br /><br /> Estos algoritmos no asignan casos a nodos específicos del contenido.|  
 |Algoritmo de red neuronal de Microsoft|No compatible.<br /><br /> Estos algoritmos no asignan casos a nodos específicos del contenido.|  
 |Algoritmo de regresión logística de Microsoft|No compatible.<br /><br /> Estos algoritmos no asignan casos a nodos específicos del contenido.|  
-|Algoritmo de regresión lineal de Microsoft|Compatible.<br /><br /> Sin embargo, dado que el modelo crea un único nodo, `All`, obtención de detalles devuelve todos los casos de entrenamiento para el modelo. Si el conjunto de entrenamiento es grande, la carga de resultados puede tardar mucho tiempo.|  
+|Algoritmo de regresión lineal de Microsoft|Compatible.<br /><br /> Sin embargo, dado que el modelo crea un único nodo, `All`, obtención de detalles devuelve todos los casos de entrenamiento del modelo. Si el conjunto de entrenamiento es grande, la carga de resultados puede tardar mucho tiempo.|  
 |Algoritmo de serie temporal de Microsoft|Compatible.<br /><br /> Sin embargo, no puede obtener información de estructuras o casos mediante el **Visor de modelos de minería de datos** en el Diseñador de minería de datos. En su lugar, debe crear una consulta de DMX.<br /><br /> Tampoco puede obtener detalles de nodos específicos, ni escribir una consulta DMX para recuperar casos en nodos específicos de un modelo de serie temporal. Puede recuperar datos de casos del modelo o la estructura usando otros criterios, como valores de fecha o de atributo.<br /><br /> Si quiere ver detalles de los nodos ARTXP y ARIMA creados por el algoritmo de serie temporal de Microsoft, podría ser más fácil usar [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).|  
   
 ## <a name="related-tasks"></a>Related Tasks  

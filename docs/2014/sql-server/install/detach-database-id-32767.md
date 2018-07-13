@@ -1,5 +1,5 @@
 ---
-title: Desasociar la base de datos ID 32767 | Documentos de Microsoft
+title: Separar base de datos ID 32767 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database IDs [SQL Server]
 ms.assetid: e0826010-8aa4-4ed7-8d32-2bebfeff9a71
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e2604b97a0285c551be52ea9b4af349b7a67e9d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d8b33dc9e6bf4dc63f6eb8e9adc4d48d7f202c93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163766"
 ---
 # <a name="detach-database-id-32767"></a>Desasociar la base de datos ID 32767
   El Asesor de actualizaciones detectó una base de datos con la base de datos ID 32767. En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]y versiones posteriores, este identificador de base de datos está reservado. Separe la base de datos antes de la actualización. Puede asociar la base de datos después de la actualización.  

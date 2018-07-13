@@ -1,5 +1,5 @@
 ---
-title: Especificar convenciones de nomenclatura (Asistente para generación de esquemas) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Especificar convenciones de nomenclatura (Asistente para generación de esquemas) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.namingconventions.f1
 ms.assetid: 02d830ea-5b1f-4485-9f94-d64b8bea592b
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93be42d99f0f255807caa23cdf91582e24a8a132
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a984b84c485c24302288eb16747cb3a964794156
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151536"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Especificar convenciones de nomenclatura (Asistente para generar esquemas) (Analysis Services - Datos multidimensionales)
   Utilice la página **Especificar convenciones de nomenclatura** para definir las convenciones de nomenclatura que el Asistente para generar esquemas utiliza al crear objetos de esquemas.  
@@ -35,9 +35,9 @@ ms.locfileid: "36202169"
 |**Separador**|Especifica el carácter que separa las palabras en el nombre de un objeto. En la columna **Valor** , seleccione **Carácter de subrayado**, **Espacio**o **Ninguno**. El valor predeterminado es **Carácter de subrayado**.|  
 |**Prefijo de columna de clave principal**|Especifica la cadena del prefijo correspondiente al nombre de cada columna de clave principal. El valor predeterminado es **PK**.|  
 |**Prefijo de columna de clave externa**|Especifica la cadena del prefijo correspondiente al nombre de cada columna de clave externa. El valor predeterminado es **FK**.|  
-|**Sufijo del nombre del atributo**|Especifica la cadena que se debe anexar al nombre de cada columna de atributos. El valor predeterminado es **Nombre**.|  
+|**Sufijo de nombre de atributo**|Especifica la cadena que se debe anexar al nombre de cada columna de atributos. El valor predeterminado es **Nombre**.|  
 |**Sufijo del resumen personalizado**|Especifica la cadena que se debe anexar al nombre de cada columna de resúmenes. El valor predeterminado es **CustomRollup**.|  
-|**Sufijo de propiedades del resumen personalizado**|Especifica la cadena que se debe anexar al nombre de cada columna de propiedades del resumen. El valor predeterminado es **CustomRollupProperties**.|  
+|**Sufijo de propiedades de resúmenes personalizados**|Especifica la cadena que se debe anexar al nombre de cada columna de propiedades del resumen. El valor predeterminado es **CustomRollupProperties**.|  
 |**Sufijo del operador unario**|Especifica la cadena que se debe anexar al nombre de cada columna de operador unario. El valor predeterminado es **UnaryOperator**.|  
   
  **Value**  

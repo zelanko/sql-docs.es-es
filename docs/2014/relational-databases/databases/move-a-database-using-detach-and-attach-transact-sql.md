@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database attaching [SQL Server]
 - moving databases [SQL Server]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efd99fbc8c1b9b477ac778c3d71fbab19a413fbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a0f6c25060fa70c1b269f884a3c33ba86b3b115f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160526"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Mover una base de datos mediante Separar y Adjuntar (Transact-SQL)
   En este tema se describe cómo mover una base de datos separada a otra ubicación y volver a adjuntarla a la misma instancia de servidor o a otra en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. No obstante, se recomienda mover las bases de datos mediante el procedimiento de reubicación programada ALTER DATABASE, en lugar usar las operaciones de separar y adjuntar. Para más información, consulte [Move User Databases](move-user-databases.md).  
@@ -53,9 +53,9 @@ ms.locfileid: "36201610"
 3.  Adjunte los archivos copiados. Para más información, consulte [Attach a Database](attach-a-database.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se crea una copia de la [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] las instrucciones se ejecutan en una ventana del Editor de consultas que está conectada a la instancia del servidor al que está conectada.  
+ En el ejemplo siguiente se crea una copia de la [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] instrucciones se ejecutan en una ventana del Editor de consultas que está conectada a la instancia del servidor al que está conectada.  
   
-1.  Separar la [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] instrucciones:  
+1.  Desasociar la [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] instrucciones:  
   
     ```  
     USE master;  

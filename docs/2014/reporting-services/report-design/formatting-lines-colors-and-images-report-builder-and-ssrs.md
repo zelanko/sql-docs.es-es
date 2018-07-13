@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.border.f1
 - "10502"
@@ -24,15 +24,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.reportbody.border.f1
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8b40615a063e9dfe24fa7a3373867047f0583485
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a4ea6769c88498b15b3145992c3f7024aaf240b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258211"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Aplicar formato a líneas, colores e imágenes (Generador de informes y SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le permite dar formato a las líneas, los colores, las regiones de datos, las imágenes y otros elementos de informe.  
@@ -60,8 +60,8 @@ ms.locfileid: "36199075"
  También puede agregar imágenes, como los logotipos, al fondo de su informe o a un rectángulo, cuadro de texto, tabla, matriz o algunas partes de un gráfico o a las secciones de página y al cuerpo de un informe. Para obtener más información, vea [Imágenes &#40;Generador de informes y SSRS&#41;](images-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a texto y marcadores de posición &#40;el generador de informes SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Aplicar formato a números y fechas &#40;el generador de informes SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Aplicar formato a texto y marcadores de posición &#40;generador de informes y SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Aplicar formato a números y fechas &#40;generador de informes y SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [Cuadro de diálogo Relleno &#40;Generador de informes y SSRS&#41;](../fill-dialog-box-report-builder-and-ssrs.md)  
   

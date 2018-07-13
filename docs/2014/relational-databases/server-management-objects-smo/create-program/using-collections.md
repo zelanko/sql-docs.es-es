@@ -1,5 +1,5 @@
 ---
-title: Uso de colecciones | Documentos de Microsoft
+title: Uso de colecciones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - collections [SMO]
 ms.assetid: 209eb175-2514-4de1-bc32-b2e6a469d945
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e0743b27b996266e546bc04787cda009af5ec005
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e3a56d7b6335734f8ddc90ea1a4438e6b6ae1763
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179622"
 ---
 # <a name="using-collections"></a>Usar colecciones
   Una colección es una lista de objetos construidos desde la misma clase de objeto y que comparten el mismo objeto primario. El objeto de colección contiene siempre el nombre del tipo de objeto con el sufijo Collection. Por ejemplo, para tener acceso a las columnas de una tabla determinada, use el tipo de objeto <xref:Microsoft.SqlServer.Management.Smo.ColumnCollection>. Contiene todos los objetos <xref:Microsoft.SqlServer.Management.Smo.Column> que pertenecen al mismo objeto <xref:Microsoft.SqlServer.Management.Smo.Table>.  
   
- El [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] `For...Each` instrucción o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] `foreach` instrucción puede utilizarse para recorrer en iteración todos los miembros de la colección.  
+ El [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] `For...Each` instrucción o el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] `foreach` instrucción puede usarse para iterar por cada miembro de la colección.  
   
 ## <a name="examples"></a>Ejemplos  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
@@ -57,12 +57,12 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("LastName
 ```  
   
 ## <a name="iterating-through-the-members-of-a-collection-in-visual-basic"></a>Recorrer en iteración los miembros de una colección en Visual Basic  
- Este ejemplo de código recorre en iteración la <xref:Microsoft.AnalysisServices.Server.Databases%2A> propiedad de colección y se muestran todas las conexiones a la instancia de la base de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Este ejemplo de código se recorre el <xref:Microsoft.AnalysisServices.Server.Databases%2A> propiedad de colección y se muestran todas las conexiones a la instancia de la base de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBCollections2](SMO How to#SMO_VBCollections2)]  -->  
   
 ## <a name="iterating-through-the-members-of-a-collection-in-visual-c"></a>Recorrer en iteración los miembros de una colección en Visual C#  
- Este ejemplo de código recorre en iteración la <xref:Microsoft.AnalysisServices.Server.Databases%2A> propiedad de colección y se muestran todas las conexiones a la instancia de la base de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Este ejemplo de código se recorre el <xref:Microsoft.AnalysisServices.Server.Databases%2A> propiedad de colección y se muestran todas las conexiones a la instancia de la base de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```  
 //Connect to the local, default instance of SQL Server.   

@@ -1,13 +1,11 @@
 ---
-title: Ejecutar procedimientos almacenados (OLE DB) | Documentos de Microsoft
+title: Ejecutar procedimientos almacenados (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,20 +14,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1ddff98bca54c41d94d4d3545d59495a995e1d33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9d1b2470c5d75a6a161459c615a093e0cfd83fc9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201578"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425055"
 ---
 # <a name="running-stored-procedures-ole-db"></a>Ejecutar procedimientos almacenados (OLE DB)
-  Al ejecutar las instrucciones, puede proporcionar una llamada a un procedimiento almacenado en el origen de datos (en lugar de ejecutar o preparar directamente una instrucción en la aplicación cliente):  
+  Al ejecutar las instrucciones, llamar a un procedimiento almacenado en el origen de datos (en lugar de ejecutar o preparar directamente una instrucción en la aplicación cliente) puede proporcionar:  
   
--   Mayor rendimiento.  
+-   Un mayor rendimiento.  
   
 -   Sobrecarga de red reducida.  
   

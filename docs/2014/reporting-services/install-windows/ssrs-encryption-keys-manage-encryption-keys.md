@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
 - private keys [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: bea136573490ba06fba1ce5f8ca7c7a47a17d3f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95ba14d23db8c606e66db48b5be5b865879de7c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187982"
 ---
 # <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>Configurar y administrar claves de cifrado (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utiliza claves de cifrado para proteger las credenciales y la información de conexión que se almacena en una base de datos del servidor de informes. En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el cifrado se puede realizar a través de una combinación de claves públicas, privadas y simétricas que se utilizan para proteger la información confidencial. La clave simétrica se crea al inicializar el servidor de informes durante su instalación o configuración, y el servidor de informes la utiliza para cifrar los datos confidenciales que almacena. El sistema operativo crea las claves públicas y privadas, y se utilizan para proteger la clave simétrica. Para cada instancia del servidor de informes que almacena datos confidenciales en una base de datos del servidor de informes se crea un par de claves pública y privada.  
@@ -55,16 +55,16 @@ ms.locfileid: "36199852"
  [Copia de seguridad y restauración de claves de cifrado de Reporting Services](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
  Explica cómo realizar copias de seguridad de claves de cifrado y cómo restaurarlas para recuperar o migrar una instalación del servidor de informes.  
   
- [Almacenar datos del servidor de informes cifrados &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Store los datos del servidor de informes cifrados &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
  Describe el cifrado en un servidor de informes.  
   
  [Eliminar y volver a crear las claves de cifrado &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
  Explica cómo reemplazar una clave simétrica por una nueva versión y cómo empezar de nuevo si no se pueden validar las claves simétricas.  
   
- [Agregar y quitar claves de cifrado para la implementación de ampliación horizontal &#40;Administrador de configuración de SSRS&#41;](add-and-remove-encryption-keys-for-scale-out-deployment.md)  
+ [Agregar y quitar claves de cifrado para la implementación escalada &#40;Administrador de configuración de SSRS&#41;](add-and-remove-encryption-keys-for-scale-out-deployment.md)  
  Explica como agregar y quitar claves de cifrado para controlar qué servidores de informes forman parte de una implementación escalada.  
   
 ## <a name="see-also"></a>Vea también  
- [Almacenar datos del servidor de informes cifrados &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Store los datos del servidor de informes cifrados &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

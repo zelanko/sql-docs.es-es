@@ -1,5 +1,5 @@
 ---
-title: Crear, modificar y eliminar suscripciones estándar (Reporting Services en modo nativo) | Documentos de Microsoft
+title: Crear, modificar y eliminar suscripciones estándares (Reporting Services en modo nativo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
@@ -16,13 +16,13 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 508ffaa05c0f5d30204832b49dcdf2b3b791c567
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8c38acc8b25853db76bf89008189928c4cef578
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230395"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Crear, modificar, y eliminar suscripciones estándar (Reporting Services en modo nativo)
   Una suscripción estándar es la que crean usuarios individuales que desean recibir un informe por correo electrónico o en una carpeta compartida. Una suscripción estándar siempre se define a través del informe en el que se basa.  
@@ -32,7 +32,7 @@ ms.locfileid: "36201549"
 > [!NOTE]  
 >  A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] puede transferir la propiedad de una suscripción mediante programación. No hay ninguna interfaz de usuario que pueda utilizar para transferir la propiedad de las suscripciones. Para obtener más información, vea <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
- Según los valores del archivo de configuración **RSReportServer.config** , es posible que los usuarios puedan agregar más usuarios a una suscripción (por ejemplo, un supervisor agrega las direcciones de correo electrónico de sus subordinados para que reciban una copia del informe). La posibilidad de utilizar esta función depende de si el campo Para: está visible cuando se definen las suscripciones individuales. Para obtener más información, consulte [configurar un servidor de informes para la entrega de correo electrónico &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+ Según los valores del archivo de configuración **RSReportServer.config** , es posible que los usuarios puedan agregar más usuarios a una suscripción (por ejemplo, un supervisor agrega las direcciones de correo electrónico de sus subordinados para que reciban una copia del informe). La posibilidad de utilizar esta función depende de si el campo Para: está visible cuando se definen las suscripciones individuales. Para obtener más información, consulte [configurar un servidor de informes para la entrega de correo electrónico &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
  Este tema proporciona información sobre las suscripciones estándar que los usuarios individuales crean y administran. Las suscripciones controladas por datos tienen diferentes requisitos y pasos, y se tratan en otro tema. Para obtener más información, consulte [crear, modificar y eliminar una suscripción controlada por datos](data-driven-subscriptions.md).  
   
@@ -59,9 +59,9 @@ ms.locfileid: "36201549"
   
 -   Para utilizar la entrega por correo electrónico, el servidor de informes debe estar configurado para una conexión de puerta de enlace o servidor SMTP antes de crear la suscripción.  
   
--   Para utilizar la entrega a recursos compartidos de archivos, se debe haber definido la carpeta de destino. Para obtener más información, consulte [configurar un servidor de informes para la entrega de correo electrónico &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+-   Para utilizar la entrega a recursos compartidos de archivos, se debe haber definido la carpeta de destino. Para obtener más información, consulte [configurar un servidor de informes para la entrega de correo electrónico &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
- Antes de que pueda suscribirse a un informe, hay que configurar el origen de datos del informe de modo que utilice credenciales almacenadas o ninguna credencial. Para obtener más información, consulte [las credenciales del almacén en un origen de datos de Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). De lo contrario, el botón **Nueva suscripción** no está disponible.  
+ Antes de que pueda suscribirse a un informe, hay que configurar el origen de datos del informe de modo que utilice credenciales almacenadas o ninguna credencial. Para obtener más información, consulte [Store credenciales en un origen de datos de Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). De lo contrario, el botón **Nueva suscripción** no está disponible.  
   
  En este tema no se explica cómo crear una suscripción controlada por datos. Para obtener instrucciones sobre cómo se crea una suscripción controlada por datos, vea [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md) o la Ayuda en pantalla de la página Crear una suscripción controlada por datos del Administrador de informes.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36201549"
   
 6.  Seleccione **Agregar una extensión de archivo cuando se crea el archivo**. Esta opción agrega una extensión de archivo de tres caracteres al nombre del archivo. La extensión de archivo está determinada por el formato de salida de informes seleccionado.  
   
-7.  En el **ruta de acceso** texto, escriba una ruta de acceso de convención de nomenclatura universal (UNC, Universal Naming Convention) a una carpeta existente en la que desea entregar los informes (por ejemplo, \\ \\< servername\>\\< misinformes\>). Incluya dos barras diagonales inversas al comienzo de la ruta de acceso. No escriba una barra diagonal inversa al final.  
+7.  En el **ruta** texto, escriba una ruta de acceso de convención de nomenclatura Universal (UNC) a una carpeta existente en la que desee entregar los informes (por ejemplo, \\ \\< servername\>\\< misinformes\>). Incluya dos barras diagonales inversas al comienzo de la ruta de acceso. No escriba una barra diagonal inversa al final.  
   
 8.  En Formato de representación, seleccione un formato de salida de informes para la entrega de archivos. Elija el formato correspondiente a la aplicación de escritorio que utilizará para abrir el informe. Evite formatos que no representen los informes en un solo flujo o que especifiquen una interactividad no admitida en un archivo estático (por ejemplo, HTML 4.0).  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36201549"
   
 3.  En **Entregado por**, seleccione **Correo electrónico**. Si este tipo de entrega no está disponible, su servidor de informes no se ha configurado para las suscripciones de correo electrónico.  
   
-4.  En el cuadro de texto **Para** , el nombre del destinatario del campo Para: se rellena automáticamente mediante su cuenta de usuario de dominio. La configuración del servidor de informes determina si el campo **Para** se rellena automáticamente mediante su cuenta de usuario. Para obtener más información acerca de cómo cambiar las direcciones de correo electrónico configuración, consulte [configurar un servidor de informes para la entrega de correo electrónico &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+4.  En el cuadro de texto **Para** , el nombre del destinatario del campo Para: se rellena automáticamente mediante su cuenta de usuario de dominio. La configuración del servidor de informes determina si el campo **Para** se rellena automáticamente mediante su cuenta de usuario. Para obtener más información acerca de cómo cambiar las direcciones de correo electrónico configuración, consulte [configurar un servidor de informes para la entrega de correo electrónico &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
     > [!NOTE]  
     >  Dependiendo de sus permisos, podrá escribir la dirección de correo electrónico donde desea recibir el informe. Para especificar varias direcciones de correo electrónico, sepárelas con un punto y coma (;). También puede escribir direcciones de correo electrónico adicionales en los cuadros de texto **CC**, **CCO**y **Responder a** . Esto requiere que tenga permiso para administrar todas las suscripciones.  

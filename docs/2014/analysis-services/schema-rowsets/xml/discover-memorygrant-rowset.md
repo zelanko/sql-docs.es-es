@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_MEMORYGRANT | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_MEMORYGRANT | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d254e42d-9918-47ce-b6df-47f1f0b432dd
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3066a924b572324fcf70dbec7aa726b9ba05f846
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cae85df7e3c76afd9243771032f21f8f91861f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229995"
 ---
 # <a name="discovermemorygrant-rowset"></a>Conjunto de filas DISCOVER_MEMORYGRANT
   Devuelve una lista de concesiones de cuota de memoria interna utilizadas por los trabajos que se están ejecutando actualmente en el servidor. Para averiguar si un trabajo está ejecutando en el servidor, use `Select * from $System.Discover_Jobs`.  
@@ -28,7 +28,7 @@ ms.locfileid: "36200000"
  **Se aplica a:** modelos tabulares, modelos multidimensionales  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_MEMORYGRANT` filas contiene las columnas siguientes.  
+ El `DISCOVER_MEMORYGRANT` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Restricción|Descripción|  
 |-----------------|--------------------|-----------------|-----------------|  

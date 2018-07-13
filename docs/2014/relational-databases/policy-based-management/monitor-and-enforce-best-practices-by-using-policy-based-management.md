@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 540b7ec825fa8cacb5fe3852e4ad3e8ea8e096f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0bc95e67c4fc29beb61dc518d2f33b203dcae3fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240575"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas
-  La administración basada en directivas permite supervisar los procedimientos recomendados para el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proporciona un conjunto de archivos de directivas que puede importar como directivas de procedimientos recomendados y, a continuación, evalúa las directivas con un conjunto de destinos que incluye instancias, objetos de instancia, bases de datos u objetos de base de datos. Puede evaluar manualmente las directivas y establecer directivas para evaluar un conjunto de destinos según una programación o para evaluar un conjunto de destinos según un evento. Para obtener más información sobre la administración basada en directivas, vea [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md).  
+  La administración basada en directivas permite supervisar los procedimientos recomendados para el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proporciona un conjunto de archivos de directivas que puede importar como mejor las directivas de prácticas y, a continuación, evalúa las directivas con un conjunto de destinos que incluye instancias, objetos de instancia, bases de datos u objetos de base de datos. Puede evaluar manualmente las directivas y establecer directivas para evaluar un conjunto de destinos según una programación o para evaluar un conjunto de destinos según un evento. Para obtener más información sobre la administración basada en directivas, vea [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Directivas y reglas para el motor de base de datos  
  En la tabla siguiente se muestra las directivas que se incluyen con la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e incluye información sobre las reglas de prácticas recomendadas que evalúa cada directiva. Las directivas se almacenan como archivos XML y se deben importar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre cómo importar directivas, vea [Importar una directiva de administración basada en directivas](import-a-policy-based-management-policy.md).  
@@ -42,8 +42,8 @@ ms.locfileid: "36197596"
 |Permisos de invitado|[Permisos de invitado en bases de datos de usuario](guest-permissions-on-user-databases.md)|  
 |Fecha de la última copia de seguridad correcta|[Copia de seguridad no actualizada](outdated-backup.md)|  
 |Permisos de servidor público no concedidos|[Permisos públicos de servidor](server-public-permissions.md)|  
-|Solapamiento de máscara de afinidad de 32 bits SQL Server|[Máscara de afinidad correcto y solapamiento de máscara de afinidad de entrada y salida](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
-|Solapamiento de máscara de afinidad de SQL Server de 64 bits|[Máscara de afinidad correcto y solapamiento de máscara de afinidad de entrada y salida](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Superposición de máscara de afinidad de 32 bits SQL Server|[Máscara de afinidad correcto y superposición de máscara de afinidad de entrada y salida](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Solapamiento de máscara de afinidad de SQL Server de 64 bits|[Máscara de afinidad correcto y superposición de máscara de afinidad de entrada y salida](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |Máscara de afinidad de SQL Server|[Mantener el valor predeterminado de la máscara de afinidad](keep-the-affinity-mask-default-value.md)|  
 |Umbral de procesos bloqueados de SQL Server|[Aumentar o deshabilitar el umbral de procesos bloqueados](increase-or-disable-blocked-process-threshold.md)|  
 |Seguimiento predeterminado de SQL Server|[Archivos de registro de seguimiento predeterminados deshabilitados](default-trace-log-files-disabled.md)|  
@@ -64,10 +64,10 @@ ms.locfileid: "36197596"
 |Error por daños en recursos de disco de clúster del registro de eventos de Windows|[Detectar problemas de adaptadores de host SCSI](detect-scsi-host-adapter-issues.md)|  
 |Error del control de controlador de dispositivo del registro de eventos de Windows|[Error de control del controlador de dispositivo](device-driver-control-error.md)|  
 |Error por dispositivo no listo del registro de eventos de Windows|[Error por dispositivo no listo](device-not-ready-error.md)|  
-|Error en comprobación de solicitud de E/S del registro de eventos de Windows|[Detectar errores de entrada y salida solicitud](detect-failed-input-and-output-requests.md)|  
+|Error en comprobación de solicitud de E/S del registro de eventos de Windows|[Detectar solicitud de entrada y salida con error](detect-failed-input-and-output-requests.md)|  
 |Advertencia por retraso de E/S del registro de eventos de Windows|[Comprobación del subsistema de entrada y salida de disco para problemas de retraso de E/S](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |Error de E/S durante error de página en disco del registro de eventos de Windows|[Error de entrada y salida durante otro error de página en disco](input-and-output-error-during-hard-page-fault.md)|  
-|Error por reintento de lectura del registro de evento de Windows|[Comprobar el subsistema de entrada y salida de disco si hay problemas de reintento de lectura](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
+|Error por reintento de lectura del registro de evento de Windows|[Comprobación de la existencia de problemas de reintento de lectura en el subsistema de entrada y salida del disco](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Error por superación de tiempo de espera de E/S en sistema de registro de eventos de Windows|[Tiempo de espera de entrada y salida del sistema de almacenamiento](storage-system-input-output-time-out.md)|  
 |Error del sistema del registro de eventos de Windows|[Errores del sistema inesperados](unexpected-system-failures.md)|  
   

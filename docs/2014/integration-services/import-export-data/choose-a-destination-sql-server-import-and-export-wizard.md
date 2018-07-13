@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6f0bfcc4ed838cccd0088cbf0011f6e630ee1fc5
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 75a9ef3ae1c496c2469ea27d766eedf317af5bf2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176162"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Elegir un destino (Asistente para importación y exportación de SQL Server)
   Use la **elegir un destino** página para especificar el destino de los datos que se van a copiar.  
@@ -59,7 +59,7 @@ ms.locfileid: "36324629"
  Proporcione la contraseña para la conexión de la base de datos cuando use la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Base de datos**  
- Seleccione en la lista de bases de datos en la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o cree una nueva base de datos haciendo clic en **nuevo**.  
+ Seleccione en la lista de bases de datos en la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o cree una nueva base de datos haciendo **New**.  
   
  **Actualizar**  
  Para restaurar la lista de bases de datos disponibles, haga clic en **Actualizar**.  
@@ -101,19 +101,19 @@ ms.locfileid: "36324629"
 ### <a name="destination--microsoft-excel"></a>Destino = Microsoft Excel  
   
 > [!NOTE]  
->  Seleccione **Microsoft Excel** únicamente si desea conectarse a un origen de datos que utiliza Excel 2003 o versiones anteriores. Para conectarse a un origen de datos que usa Excel 2007, seleccione **Microsoft Office 12.0 Access Database Engine OLE DB Provider**, haga clic en **propiedades**y, a continuación, en la **todos los** pestaña de la **Propiedades de vínculo de datos** cuadro de diálogo para **propiedades extendidas**, escriba `Excel 12.0`.  
+>  Seleccione **Microsoft Excel** únicamente si desea conectarse a un origen de datos que utiliza Excel 2003 o versiones anteriores. Para conectarse a un origen de datos que usa Excel 2007, seleccione **Microsoft Office 12.0 Access Database Engine OLE DB Provider**, haga clic en **propiedades**y, a continuación, en el **todas** pestaña de la **Propiedades de vínculo de datos** cuadro de diálogo para **propiedades extendidas**, escriba `Excel 12.0`.  
   
  **Ruta de acceso del archivo Excel**  
- Especifique la ruta de acceso y nombre de archivo para el libro en el que se va a almacenar los datos (por ejemplo, C:\MyData.xls, \\\Sales\Database\Northwind.xls). O bien, haga clic en **Examinar** para buscar un libro.  
+ Especifique la ruta de acceso y nombre de archivo del libro en el que se va a almacenar los datos (por ejemplo, C:\MyData.xls, \\\Sales\Database\Northwind.xls). O bien, haga clic en **Examinar** para buscar un libro.  
   
  **Examinar**  
- Localice un libro de Excel mediante el **abiertos** cuadro de diálogo.  
+ Localice un libro de Excel mediante el uso de la **abierto** cuadro de diálogo.  
   
  **Versión de Excel**  
  Seleccione la versión de Excel que utiliza el libro de destino.  
   
 > [!NOTE]  
->  Al exportar datos a un [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] destino, el asistente utiliza el [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] componente de destino de Excel. Para obtener información sobre algunas consideraciones de uso y problemas conocidos, consulte [destino de Excel](../data-flow/excel-destination.md).  
+>  Al exportar datos a un [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] destino, el asistente usa el [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] componente de destino de Excel. Para obtener información sobre algunas consideraciones de uso y problemas conocidos, vea [destino de Excel](../data-flow/excel-destination.md).  
   
 ### <a name="destination--microsoft-access"></a>Destino = Microsoft Access  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36324629"
  Especifique la ruta de acceso y nombre de archivo para el archivo de base de datos en el que se va a almacenar los datos (por ejemplo, C:\MyData.mdb, \\\Sales\Database\Northwind.mdb). O bien, haga clic en **Examinar** para buscar un archivo de base de datos.  
   
  **Examinar**  
- Busque el archivo de base de datos mediante el uso de la **abiertos** cuadro de diálogo.  
+ Busque el archivo de base de datos mediante el uso de la **abierto** cuadro de diálogo.  
   
  **Nombre de usuario.**  
  Especifique un nombre de usuario válido para la conexión de base de datos si hay un archivo de información de grupo de trabajo asociado a la base de datos.  

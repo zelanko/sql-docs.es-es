@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10245"
 - "10252"
@@ -16,18 +16,18 @@ f1_keywords:
 - sql12.rtp.rptdesigner.seriesproperties.borders.f1
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f3760096e00a6c418af3a0d8203f822b65c00508
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 22be979236bd7c42ba231cea42d98c7a47c15ab8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278521"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a los colores de serie de un gráfico (Generador de informes y SSRS)
-  Reporting Services proporciona varias paletas integradas para los gráficos, pero también se puede definir una paleta personalizada. De forma predeterminada, los gráficos de usan la integrada **BrightPastel** paleta de colores para rellenar cada serie. Estos colores también aparecen en la leyenda. Cuando se agregan varias series al gráfico, este asigna un color a cada serie siguiendo el orden en el que se han definido los colores en la paleta.  
+  Reporting Services proporciona varias paletas integradas para los gráficos, pero también se puede definir una paleta personalizada. De forma predeterminada, los gráficos usan la integrada **BrightPastel** paleta de colores para rellenar las series. Estos colores también aparecen en la leyenda. Cuando se agregan varias series al gráfico, este asigna un color a cada serie siguiendo el orden en el que se han definido los colores en la paleta.  
   
  Si hay más series que colores en la paleta, el gráfico comenzará a repetir los colores, por lo que podría darse el caso de que dos series tuvieran el mismo color. Esto suele ser habitual en los gráficos de formas, donde cada punto de datos tiene asignado un color de la paleta. Para evitar confusiones, defina una paleta personalizada que tenga como mínimo tantos colores como series hay en el gráfico.  
   
@@ -49,14 +49,14 @@ ms.locfileid: "36198388"
 ## <a name="using-a-color-fill-on-each-series"></a>Usar un relleno en color para cada serie  
  También puede definir sus propios colores para el gráfico especificando un color para cada serie. Para ello, abra el cuadro de diálogo **Propiedades de la serie** y establezca la propiedad **Color** para **Relleno**. Esto invalidará todas las paletas definidas. Normalmente, es mejor usar una paleta personalizada para definir los colores porque el número de series del conjunto de datos no se suele conocer hasta que se procesa el informe.  
   
- Esta opción resulta más conveniente si se desea establecer los colores de la serie de forma condicional en función de una expresión.  Para obtener más información, consulte [puntos de datos de formato en un gráfico &#40;el generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ Esta opción resulta más conveniente si se desea establecer los colores de la serie de forma condicional en función de una expresión.  Para obtener más información, consulte [puntos de datos de formato de un gráfico &#40;generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Especificar colores coherentes en varios gráficos de formas &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
  [Definir los colores de un gráfico mediante una paleta &#40;Generador de informes y SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
- [Resaltar datos en el gráfico agregando franjas &#40;el generador de informes SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
+ [Resaltar datos en el gráfico agregando franjas &#40;generador de informes y SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   

@@ -1,13 +1,11 @@
 ---
-title: Parámetros con valores de tabla (ODBC) | Documentos de Microsoft
+title: Parámetros con valores de tabla (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 955ae0daa3a2c15a5b1e6146c269c8d4095fb146
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ce0cd9e87d4bd594fb2c2be4a01e9f2cf8ef4a27
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200529"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421794"
 ---
 # <a name="table-valued-parameters-odbc"></a>Parámetros con valores de tabla (ODBC)
   La compatibilidad con ODBC para parámetros con valores de tabla permite a una aplicación cliente enviar datos parametrizados al servidor más eficazmente, enviando varias filas al servidor con una llamada.  
@@ -68,7 +66,7 @@ ms.locfileid: "36200529"
  Describe cómo una aplicación puede obtener metadatos para una llamada a procedimiento preparada.  
   
  [Metadatos de parámetros con valores de tabla adicionales](additional-table-valued-parameter-metadata.md)  
- Describe cómo usar SQLColumns, SQLProcedureColumns y SQLTables para recuperar metadatos para un parámetro con valores de tabla.  
+ Describe cómo utilizar SQLColumns, SQLProcedureColumns y SQLTables para recuperar metadatos para un parámetro con valores de tabla.  
   
  [Conversión de datos de parámetros con valores de tabla y otros errores y advertencias](table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  Describe cómo procesar los errores en valores de columna de parámetro con valores de tabla.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 136335f0e56433a9478ddee37d0b8f585564776e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc37afd9e91b23ebef0e7f53fc5690f845f49d28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152136"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
   En esta lección, utilizará las páginas de suscripción controladas por datos para conectar a un origen de datos de suscripción, crear una consulta que recupera datos de suscripción y asignar el conjunto de resultados a las opciones de informe y entrega.  
@@ -31,11 +31,11 @@ ms.locfileid: "36200864"
   
  En este tema:  
   
--   [Iniciar al Asistente para suscripciones controladas por datos](#bkmk_startwizard)  
+-   [Iniciar al Asistente para la suscripción controlada por datos](#bkmk_startwizard)  
   
 -   [Paso 1: definir una descripción](#bkmk_definesubscription)  
   
--   [Paso 2: definir una conexión al origen de datos del suscriptor](#bkmk_defineconnectiontosubscriber)  
+-   [Paso 2: definir una conexión al origen de datos de suscriptor](#bkmk_defineconnectiontosubscriber)  
   
 -   [Paso 3: definir una consulta para recuperar datos del suscriptor](#bkmk_definequery)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36200864"
   
 -   [Paso 6: programar una suscripción](#bkmk_schedule_subscription)  
   
-##  <a name="bkmk_startwizard"></a> Iniciar al Asistente para suscripciones controladas por datos  
+##  <a name="bkmk_startwizard"></a> Iniciar al Asistente para la suscripción controlada por datos  
   
 1.  En el Administrador de informes, haga clic en **Inicio**y navegue hasta la carpeta que contiene el informe **Sales Orders** .  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36200864"
   
 3.  Seleccione **Especifique solo esta suscripción**y, a continuación, haga clic en **Siguiente**.  
   
-##  <a name="bkmk_defineconnectiontosubscriber"></a> Paso 2: definir una conexión al origen de datos del suscriptor  
+##  <a name="bkmk_defineconnectiontosubscriber"></a> Paso 2: definir una conexión al origen de datos de suscriptor  
   
 1.  Seleccione **Microsoft SQL Server** como tipo de origen de datos.  
   
@@ -139,13 +139,13 @@ ms.locfileid: "36200864"
   
  ![Resultados de suscripción en el administrador de informes](../../2014/tutorials/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.gif "Resultados de suscripción en el administrador de informes")  
   
- Con este paso finaliza el tutorial "Definir una suscripción controlada por datos". Para obtener más información sobre otros [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tutoriales, vea [tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md).  
+ Con este paso finaliza el tutorial "Definir una suscripción controlada por datos". Para obtener más información sobre otros [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tutoriales, consulte [tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Suscripciones controladas por datos](subscriptions/data-driven-subscriptions.md)   
  [Crear, modificar y eliminar una suscripción controlada por datos](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Usar un origen de datos externo para los datos del suscriptor &#40;suscripción controlada por datos&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [Usar un origen de datos externos para los datos del suscriptor &#40;suscripción controlada por datos&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

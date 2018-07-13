@@ -1,5 +1,5 @@
 ---
-title: Opciones (página script en el Explorador de objeto de SQL Server) | Documentos de Microsoft
+title: Opciones (página Scripting en el Explorador de objetos de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.ObjectExplorerScripting
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74dfa7eec9ed7f014e9baf09cf4ddcf30cd12901
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 094fd9d740501fafee8c75eff162a132c01e08ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170226"
 ---
-# <a name="options-sql-server-object-explorer-scripting-page"></a>Opciones (página script en el Explorador de objeto de SQL Server)
+# <a name="options-sql-server-object-explorer-scripting-page"></a>Opciones (página Scripting en el Explorador de objetos de SQL Server)
   Use esta página para establecer las opciones de scripting que se aplican a los siguientes comandos en los menús contextuales de objetos del **Explorador de objetos**:  
   
 -   Comandos **Editar** para las tablas y vistas del usuario.  
@@ -36,7 +36,7 @@ ms.locfileid: "36199048"
 -   Esta página también establece los valores predeterminados de las opciones de scripting del **Asistente para generar scripts de SQL Server**.  
   
 ## <a name="remarks"></a>Notas  
- El **editar** y **modificar** comandos podrían producir resultados diferentes de los **Script \<objeto > como** comando para el mismo valor de opción. Los comandos **Editar** y **Modificar** están diseñados para modificar objetos en la base de datos actual durante una sesión del Editor de consultas. El **Script \<objeto > como** comando está diseñado para generar un script para que se puede utilizar más adelante para crear objetos.  
+ El **editar** y **modificar** comandos podrían producir resultados diferentes de los **Script \<objeto > como** el comando para el mismo valor de opción. Los comandos **Editar** y **Modificar** están diseñados para modificar objetos en la base de datos actual durante una sesión del Editor de consultas. El **Script \<objeto > como** comando está diseñado para generar un script que se puede usar posteriormente para crear objetos.  
   
 ## <a name="options"></a>Opciones  
  Para especificar las opciones de scripts, seleccione las opciones de configuración disponibles en la lista situada a la derecha de cada opción.  
@@ -68,7 +68,7 @@ ms.locfileid: "36199048"
  Genera un script para objetos adicionales que son necesarios cuando se ejecuta el script para el objeto seleccionado. El valor predeterminado es False.  
   
  **Incluir cláusula IF NOT EXISTS**  
- Incluye una instrucción para comprobar que los objetos no existen en la base de datos antes de intentar crear el objeto. El valor predeterminado es False. Para obtener más información, vea [IF... ELSE &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/if-else-transact-sql) y [EXISTS &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/exists-transact-sql).  
+ Incluye una instrucción para comprobar que los objetos no existen en la base de datos antes de intentar crear el objeto. El valor predeterminado es False. Para obtener más información, consulte [IF... ELSE &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/if-else-transact-sql) y [EXISTS &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/exists-transact-sql).  
   
  **Nombres de objeto de certificación de esquema**  
  Califica nombres de objeto con el esquema de objetos. El valor predeterminado es False. Para más información, consulte [Crear un esquema de base de datos](../../relational-databases/security/authentication-access/create-a-database-schema.md).  

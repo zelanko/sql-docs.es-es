@@ -1,5 +1,5 @@
 ---
-title: Utilidades UDT | Documentos de Microsoft
+title: Utilidades UDT | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 655bfd340dd7ad45c4e4266461058e7a4908cf22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bd4617a057a768522064546806dfd23e99366656
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211535"
 ---
 # <a name="udt-utilities"></a>Utilidades UDT
   El ejemplo sobre funciones de la utilidad UDT contiene una serie de funciones de utilidades. Entre ellas se incluyen funciones para exponer metadatos de ensamblado en Transact-SQL, ejemplos de funciones con valores de tabla (TVF) de transmisión para devolver los tipos de datos de un ensamblado en forma de tabla, así como funciones para devolver los campos, los métodos y las propiedades en un tipo de datos definido por el usuario. Algunas de las tecnologías que se muestran son las funciones con valores de tabla de transmisión de datos, las API de reflexión de .NET Framework y la invocación de funciones con valores de tabla de Transact-SQL.  

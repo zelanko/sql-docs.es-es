@@ -1,5 +1,5 @@
 ---
-title: Detalles de traducción (pestaña traducciones, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Detalles de traducción (pestaña traducciones, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.translations.translationspane.translationdetails.f1
 ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7f6c03a5a9f656bc32752c2dfacb242d0b9fac9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 401c69274fad3e88b29d06bcb3446dd0c1e3bf59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185282"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Detalles de traducción (pestaña Traducciones, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Detalles de transacción** de la pestaña **Transacciones** en el Diseñador de cubos para definir y administrar traducciones en el cubo seleccionado.  
@@ -35,7 +35,7 @@ ms.locfileid: "36201440"
   
 -   Grupo de medida  
   
-     `Caption` propiedad  
+     `Caption` Propiedad  
   
 -   Measure  
   
@@ -43,11 +43,11 @@ ms.locfileid: "36201440"
   
 -   Dimensión  
   
-     `Caption` propiedad  
+     `Caption` Propiedad  
   
 -   Perspective  
   
-     `Caption` propiedad  
+     `Caption` Propiedad  
   
 -   Indicador clave de rendimiento (KPI)  
   
@@ -55,17 +55,17 @@ ms.locfileid: "36201440"
   
 -   Acción  
   
-     `Caption` propiedad  
+     `Caption` Propiedad  
   
 -   Conjunto con nombre  
   
-     `Caption` propiedad  
+     `Caption` Propiedad  
   
 -   miembro calculado  
   
-     `Caption` propiedad  
+     `Caption` Propiedad  
   
- **\<Idioma >**  
+ **\<Lenguaje >**  
  Escriba el valor de la propiedad del objeto de cubo en el idioma seleccionado.  
   
 ## <a name="context-menu"></a>Menú contextual  

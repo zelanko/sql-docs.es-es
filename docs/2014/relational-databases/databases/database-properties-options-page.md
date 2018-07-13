@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 caps.latest.revision: 65
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6747eb3df75a585236e85de6bc0103241f5b6d8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 30a0bf869529c81b86e05a9bf6a8be8b43573705
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187022"
 ---
 # <a name="database-properties-options-page"></a>Propiedades de la base de datos (página Opciones)
   Utilice esta página para ver o modificar opciones de la base de datos seleccionada. Para obtener más información sobre las opciones disponibles en esta página, vea [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
@@ -61,9 +61,9 @@ ms.locfileid: "36202103"
  **Actualizar estadísticas automática y asincrónicamente**  
  Cuando `True`, las consultas que inician una actualización automática de estadísticas obsoletas no esperan que las estadísticas se actualicen antes de la compilación. Las consultas posteriores utilizan las estadísticas actualizadas si están disponibles.  
   
- Cuando `False`, las consultas que inician una actualización automática de las estadísticas obsoletas esperan hasta que las estadísticas actualizadas se pueden utilizar en el plan de optimización de consultas.  
+ Cuando `False`, las consultas que inician una actualización automática de las estadísticas obsoletas esperan hasta que se pueden usar las estadísticas actualizadas en el plan de optimización de consultas.  
   
- Establecer esta opción en `True` no tiene ningún efecto a menos que **actualizar estadísticas automáticamente** también se establece en `True`.  
+ Si esta opción `True` no tiene ningún efecto a menos que **actualizar estadísticas automáticamente** también se establece en `True`.  
   
 ## <a name="containment"></a>Containment  
  En las bases de datos independientes, algunos valores que se suelen configurar en el nivel de servidor se pueden configurar en el nivel de base de datos.  
@@ -90,7 +90,7 @@ ms.locfileid: "36202103"
  Especifique si los cursores se cierran tras confirmar la transacción que abre el cursor. Los valores posibles son `True` y `False`. Cuando es `True`, se cierran los cursores que estuvieran abiertos al confirmar o revertir una transacción. Cuando es `False`, estos cursores se mantienen abiertos al confirmarse una transacción. Cuando es `False`, si se revierte una transacción, se cierran todos los cursores, excepto los definidos como INSENSITIVE o STATIC. Para obtener más información, vea [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-cursor-close-on-commit-transact-sql).  
   
  **Cursor predeterminado**  
- Especifica el comportamiento predeterminado del cursor. Cuando es `True`, el valor predeterminado de las declaraciones de cursor es LOCAL. Cuando `False`, [!INCLUDE[tsql](../../includes/tsql-md.md)] cursores como valor predeterminado GLOBAL.  
+ Especifica el comportamiento predeterminado del cursor. Cuando es `True`, el valor predeterminado de las declaraciones de cursor es LOCAL. Cuando `False`, [!INCLUDE[tsql](../../includes/tsql-md.md)] cursores predeterminado global.  
   
 ## <a name="filestream"></a>FILESTREAM  
  **Nombre de directorio de FILESTREAM**  
@@ -101,7 +101,7 @@ ms.locfileid: "36202103"
   
 ## <a name="miscellaneous"></a>Varios  
  **Valor ANSI NULL predeterminado**  
- Permitir valores null para todos los tipos de datos definidos por el usuario o las columnas que no se definan explícitamente como `NOT NULL` durante un `CREATE TABLE` o `ALTER TABLE` instrucción (estado predeterminado). Para obtener más información, vea [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) y [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql).  
+ Permitir valores null para todos los tipos de datos definido por el usuario o las columnas que no se definen explícitamente como `NOT NULL` durante un `CREATE TABLE` o `ALTER TABLE` instrucción (el estado predeterminado). Para obtener más información, vea [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) y [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql).  
   
  **Valores NULL ANSI habilitados**  
  Especifica el comportamiento de los operadores de comparación Es igual a (`=`) y No es igual a (`<>`) cuando se usan con valores NULL. Los valores posibles son `True` (activado) y `False` (desactivado). Cuando es `True`, todas las comparaciones con un valor NULL se evalúan como UNKNOWN. Cuando `False`, las comparaciones de valores no UNICODE con un valor null se evalúan como `True` si ambos valores son NULL. Para obtener más información, vea [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql).  
@@ -124,10 +124,10 @@ ms.locfileid: "36202103"
  **Optimización de correlación de fechas habilitada**  
  Cuando `True`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene estadísticas de correlación entre dos tablas cualesquiera de la base de datos que estén vinculadas mediante una restricción FOREIGN KEY y tengan `datetime` columnas.  
   
- Cuando `False`, no se mantienen estadísticas de correlación.  
+ Cuando `False`, no se mantienen las estadísticas de correlación.  
   
  **Anulación exacta numérica**  
- Especifique cómo controla la base de datos los errores de redondeo. Los valores posibles son `True` y `False`. Cuando es `True`, se genera un error si se produce una pérdida de precisión en una expresión. Cuando `False`, las pérdidas de precisión no generan mensajes de error y el resultado se redondea con la precisión de la columna o variable que lo almacena. Para obtener más información, vea [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).  
+ Especifique cómo controla la base de datos los errores de redondeo. Los valores posibles son `True` y `False`. Cuando es `True`, se genera un error si se produce una pérdida de precisión en una expresión. Cuando `False`, las pérdidas de precisión no generan mensajes de error y el resultado se redondea a la precisión de la columna o variable que almacene el resultado. Para obtener más información, vea [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).  
   
  **Parametrización**  
  Cuando es **SIMPLE**, las consultas se parametrizan en función del comportamiento predeterminado de la base de datos. Cuando es **FORCED**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parametriza todas las consultas de la base de datos.  
@@ -139,7 +139,7 @@ ms.locfileid: "36202103"
  Especifique si los desencadenadores pueden activar otros desencadenadores. Los valores posibles son `True` y `False`. Cuando se establece en `True`, se habilita la activación recursiva de desencadenadores. Cuando se establece en `False`, solo se impide la recursividad directa. Para deshabilitar la repetición indirecta, establezca la opción nested triggers del servidor en 0 con sp_configure. Para obtener más información, vea [Crear desencadenadores anidado](../triggers/create-nested-triggers.md).  
   
  `Trustworthy`  
- Al mostrar `True`, esta opción de solo lectura indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite el acceso a recursos externos a la base de datos en un contexto de suplantación establecido en la base de datos. Se pueden establecer contextos de suplantación dentro de la base de datos mediante la instrucción de usuario EXECUTE AS o la cláusula EXECUTE AS en módulos de base de datos.  
+ Al mostrar `True`, esta opción de solo lectura indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite el acceso a recursos fuera de la base de datos en un contexto de suplantación establecido en la base de datos. Se pueden establecer contextos de suplantación dentro de la base de datos mediante la instrucción de usuario EXECUTE AS o la cláusula EXECUTE AS en módulos de base de datos.  
   
  Para obtener acceso, el propietario de la base de datos también debe disponer del permiso AUTHENTICATE SERVER en el nivel de servidor.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "36202103"
   
  TRUSTWORTHY se establece en `False` siempre que la base de datos se conecte al servidor.  
   
- El método recomendado para tener acceso a recursos externos a la base de datos en un contexto de suplantación es utilizar certificados y firmas, en lugar del `Trustworthy` opción.  
+ El enfoque recomendado para tener acceso a recursos externos a la base de datos en un contexto de suplantación es utilizar certificados y firmas, en lugar de la `Trustworthy` opción.  
   
  Para establecer esta propiedad, utilice la instrucción ALTER DATABASE.  
   

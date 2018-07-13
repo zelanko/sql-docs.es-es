@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], excluding
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d64a01cf9df6865790b39510ad5c6222d8d6fd87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a51bf291ebdf7904fbce836cfaddb3cceb5e17cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172952"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>Excluir una regla de negocios (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], excluya una regla de negocios cuando no desee eliminar la regla permanentemente, pero no desee validar los datos con ella.  
@@ -43,11 +43,11 @@ ms.locfileid: "36200563"
   
 4.  En la lista **Entidad** , seleccione una entidad.  
   
-5.  Desde el **tipo de miembro** , seleccione un tipo de miembro.  
+5.  Desde el **tipo de miembro** lista, seleccione un tipo de miembro.  
   
 6.  En la lista **Atributo** , seleccione un atributo o deje el valor predeterminado de **Todos**.  
   
-7.  En la cuadrícula, en la fila de la regla de negocios, active la casilla de verificación en la **excluir** columna. El valor de la **estado** columna es **exclusión pendiente**.  
+7.  En la cuadrícula, en la fila de la regla de negocios, seleccione la casilla de verificación en la **excluir** columna. El valor de la **estado** columna es **exclusión pendiente**.  
   
 8.  Haga clic en **Publicar reglas de negocios**.  
   

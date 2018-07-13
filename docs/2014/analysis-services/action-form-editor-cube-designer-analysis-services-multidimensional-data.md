@@ -1,5 +1,5 @@
 ---
-title: Editor de formulario de acción (pestaña acciones, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Editor de formulario de acción (pestaña acciones, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.action.f1
 ms.assetid: c363a29b-6099-473c-9625-460cc15b3d95
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7ce8acc1630b9944b2ac858ba27a1f515bb19adc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f51a23b7dddddc0365809fd6bc92c922fdd402fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239965"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de acción (pestaña Acciones, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel del Editor de Formulario de acción de la pestaña **Acciones** del Diseñador de cubos para crear y modificar acciones estándar.  

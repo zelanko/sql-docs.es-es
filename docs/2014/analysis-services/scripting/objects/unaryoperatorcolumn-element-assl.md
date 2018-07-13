@@ -1,5 +1,5 @@
 ---
-title: Elemento UnaryOperatorColumn (ASSL) | Documentos de Microsoft
+title: Elemento UnaryOperatorColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UnaryOperatorColumn element
 ms.assetid: 10889e51-69e5-4f50-9749-ecbc66c247d3
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d52b742916c6e5876d76fbeb1ba112672ea5b225
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2e4bd33bc95b1322e5a3125e6222dc9cdfb1b05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161166"
 ---
 # <a name="unaryoperatorcolumn-element-assl"></a>Elemento UnaryOperatorColumn (ASSL)
   Define los detalles de una columna que proporciona un operador unario.  
@@ -50,7 +50,7 @@ ms.locfileid: "36198752"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|[Elemento de datos](../data-type/dataitem-data-type-assl.md)|  
+|Tipo y longitud de los datos|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Valor predeterminado|None|  
 |Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36198752"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- Para obtener más información sobre la `DataItem` tipo, incluida una tabla de objetos de Analysis Services Scripting Language (ASSL) y las propiedades de la `DataItem` los tipos, vea [tipo de datos DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+ Para obtener más información sobre la `DataItem` tipo, incluida una tabla de objetos de Analysis Services Scripting Language (ASSL) y las propiedades de la `DataItem` , vea [tipo de datos DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- El elemento que corresponde al elemento primario de `UnaryOperatorColumn` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ El elemento que se corresponde con el elemento primario de `UnaryOperatorColumn` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vea también  
  [Objetos &#40;ASSL&#41;](objects-assl.md)  

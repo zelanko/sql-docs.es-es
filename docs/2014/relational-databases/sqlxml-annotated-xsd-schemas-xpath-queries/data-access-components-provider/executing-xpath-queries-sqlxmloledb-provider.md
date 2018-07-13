@@ -1,5 +1,5 @@
 ---
-title: Ejecutar consultas XPath (proveedor SQLXMLOLEDB) | Documentos de Microsoft
+title: Ejecutar consultas XPath (proveedor SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Mapping Schema property
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: da43bc10ea80c1019e9cd7ae785024bb78fcbe9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 34acdfc5c7957476534b2d637077a401144fc29e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181670"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Ejecutar consultas XPath (proveedor SQLXMLOLEDB)
   En este ejemplo se muestra el uso de las siguientes propiedades SQLXMLOLEDB específicas del proveedor:  
@@ -59,14 +59,14 @@ ms.locfileid: "36200083"
 </xsd:schema>  
 ```  
   
- La propiedad de esquema de asignación proporciona el esquema de asignación en el que se ejecuta la consulta XPath. El esquema de asignación puede ser un esquema XSD o XDR. La propiedad de ruta de acceso Base proporciona la ruta de acceso de archivo para el esquema de asignación.  
+ La propiedad de esquema de asignación proporciona el esquema de asignación en la que se ejecutó la consulta XPath. El esquema de asignación puede ser un esquema XSD o XDR. La propiedad de ruta de acceso Base proporciona la ruta de acceso al esquema de asignación.  
   
- Clientsidexml, propiedad se establece en True. Por lo tanto, el documento XML se genera en el cliente.  
+ El clientsidexml, propiedad se establece en True. Por lo tanto, el documento XML se genera en el cliente.  
   
  En la aplicación, se especifica una consulta XPath directamente. Por ello, debe incluirse el dialecto XPath {ec2a4293-e898-11d2-b1b7-00c04f680c56}.  
   
 > [!NOTE]  
->  En el código, debe suministrarse el nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión. Además, este ejemplo especifica el uso de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) para el proveedor de datos que requiere la instalación de software de cliente de red adicional. Para obtener más información, consulte [requisitos del sistema para SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
+>  En el código, debe suministrarse el nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión. Además, este ejemplo especifica el uso de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) para el proveedor de datos que requiere el software de cliente de red adicional para instalarse. Para obtener más información, consulte [requisitos del sistema para SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

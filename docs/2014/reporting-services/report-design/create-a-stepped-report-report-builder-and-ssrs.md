@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a20097a87111ad7cbedc9b7de7599741e2a4e360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 69b6d59bce9eb4de36ad8cc33192cdee7b583f1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155746"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Crear un informe escalonado (Generador de informes y SSRS)
   Un informe escalonado muestra las filas de detalles o los grupos secundarios con una sangría debajo de un grupo primario en la misma columna, tal como se muestra en el ejemplo siguiente:  
@@ -108,7 +108,7 @@ ms.locfileid: "36201746"
 3.  Cambie el relleno para la celda que muestra los datos del grupo.  
   
 ## <a name="see-also"></a>Vea también  
- [Encabezados y pies de página &#40;el generador de informes SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Encabezados y pies de página &#40;generador de informes y SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tablas &#40;Generador de informes y SSRS&#41;](tables-report-builder-and-ssrs.md)   

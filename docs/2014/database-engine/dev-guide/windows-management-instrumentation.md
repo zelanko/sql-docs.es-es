@@ -1,5 +1,5 @@
 ---
-title: Instrumental de administración de Windows | Documentos de Microsoft
+title: Instrumental de administración de Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 80f1e02c-5e71-4610-ae62-fde62c4189d6
 caps.latest.revision: 3
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5538b575fe1e1dadfaa99084fc9fa1edba77138c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5643d328ac4a7f9a814643557ab96d851212ba03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167196"
 ---
 # <a name="windows-management-instrumentation"></a>Instrumental de administración de Windows
   Esta sección contiene los siguientes temas:  

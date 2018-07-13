@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - organizar columnas | Documentos de Microsoft
+title: SQL Server Profiler - organizar columnas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.organize.columns.f1
 ms.assetid: bf5674f4-da5e-43f9-aeb2-76ca37993790
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69622d02bbe0eae497f7d6e463ea6d40eb6536cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1bfa74b1d6f8eb7f3c13c294aba37bfb88f7e995
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162916"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>SQL Server Profiler (Organizar columnas)
   Utilice el cuadro de diálogo **Organizar columnas** para seleccionar columnas de datos y agrupar o agregar eventos que se muestran en un seguimiento; esto facilita la lectura y el análisis de los archivos o tablas de seguimiento grandes.  
@@ -52,9 +52,9 @@ ms.locfileid: "36200601"
  Después de seleccionar una columna de datos, haga clic en **Bajar** para quitar las columnas de **Grupos**. También puede hacer clic en **Bajar** para volver a organizar la visualización de las columnas en la ventana de seguimiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Organizar las columnas mostradas en un seguimiento &#40;analizador de SQL Server&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
- [Crear un seguimiento &#40;analizador de SQL Server&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [Crear una plantilla de seguimiento &#40;analizador de SQL Server&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Organizar las columnas mostradas en un seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
+ [Crear un seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Crear una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   

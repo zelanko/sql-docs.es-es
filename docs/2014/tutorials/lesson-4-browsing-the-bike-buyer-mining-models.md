@@ -1,5 +1,5 @@
 ---
-title: 'Lección 4: Examinar los modelos de minería de datos Bike Buyer | Documentos de Microsoft'
+title: 'Lección 4: Examinar los modelos de minería de Bike Buyer | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a4144b7613b1af93f17a50381ec7b3b68507824c
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 5866ebce4673033bf9be78b81bb65ad705dd331a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278181"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lección 4: Examinar los modelos de minería de datos de Bike Buyer
-  En esta lección, va a usar el [SELECT (DMX)](/sql/dmx/select-dmx) modelos de instrucción para explorar el contenido en el árbol de decisión y el clúster de minería de datos que haya creado en [lección 2: agregar modelos de minería a la estructura de minería de datos de predicción](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+  En esta lección, usará el [SELECT (DMX)](/sql/dmx/select-dmx) instrucción para explorar el contenido en el árbol de decisión y agrupación en clústeres de minería de datos que haya creado en los modelos [lección 2: agregar modelos de minería a la estructura de minería de datos predictivos](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
  Las columnas incluidas en un modelo de minería de datos no son las columnas definidas por la estructura de minería de datos, sino un conjunto específico de columnas que describen las tendencias y los patrones encontrados por el algoritmo. Estas columnas del modelo de minería de datos se describen en la [de filas DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md) de filas de esquema. Por ejemplo, la columna MODEL_NAME del conjunto de filas del esquema de contenido incluye el nombre del modelo de minería de datos. Para un modelo de minería de datos de agrupación en clústeres, la columna NODE_CAPTION contiene el nombre de cada clúster y la columna NODE_DESCRIPTION, una descripción de las características de cada clúster. Puede examinar estas columnas mediante el uso de SELECT FROM \<modelo >. Instrucción contenido en DMX. También puede utilizar esta instrucción para explorar los datos utilizados para crear el modelo de minería de datos. La obtención de detalles debe estar habilitada en la estructura de minería de datos para poder usar esta instrucción. Para obtener más información acerca de la instrucción, consulte [SELECT FROM &#60;modelo&#62;. CASOS &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
   
@@ -38,9 +38,9 @@ ms.locfileid: "36312583"
 -   Explorar los distintos estados disponibles para una columna discreta específica  
   
 ## <a name="returning-the-content-of-a-mining-model"></a>Devolver el contenido de un modelo de minería de datos  
- En esta lección, utilizará la [SELECT FROM &#60;modelo&#62;. CONTENIDO &#40;DMX&#41; ](/sql/dmx/select-from-model-dimension-content-dmx) instrucción para devolver el contenido del modelo de agrupación en clústeres.  
+ En esta lección, usará el [SELECT FROM &#60;modelo&#62;. CONTENIDO &#40;DMX&#41; ](/sql/dmx/select-from-model-dimension-content-dmx) instrucción para devolver el contenido del modelo de agrupación en clústeres.  
   
- Éste es un ejemplo genérico de SELECT FROM \<modelo >. Instrucción de contenido:  
+ El siguiente es un ejemplo genérico de SELECT FROM \<modelo >. Instrucción de contenido:  
   
 ```  
 SELECT <select list> FROM [<mining model>].CONTENT  
@@ -71,11 +71,11 @@ WHERE NODE_SUPPORT > 100
   
 #### <a name="to-return-the-content-of-the-clustering-mining-model"></a>Para devolver el contenido del modelo de minería de datos de agrupación en clústeres  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], seleccione **nueva consulta**y, a continuación, haga clic en **DMX**.  
+1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX**.  
   
      Se abre el Editor de consultas, que contiene una consulta nueva en blanco.  
   
-2.  Copie el ejemplo genérico de SELECT FROM \<modelo >. Instrucción contenido en la consulta en blanco.  
+2.  Copie el ejemplo genérico de SELECT FROM \<modelo >. Instrucción de contenido en la consulta en blanco.  
   
 3.  Reemplace lo siguiente:  
   
@@ -111,16 +111,16 @@ WHERE NODE_SUPPORT > 100
   
 5.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
   
-6.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y un nombre al archivo `SELECT_CONTENT.dmx`.  
+6.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `SELECT_CONTENT.dmx`.  
   
 7.  En la barra de herramientas, haga clic en el **Execute** botón.  
   
      La consulta devuelve el contenido del modelo de minería de datos.  
   
 ## <a name="use-drillthrough"></a>Usar la obtención de detalles  
- El paso siguiente es usar la instrucción de obtención de detalles para devolver el muestreo de los casos utilizados para entrenar el modelo de minería de datos del árbol de decisión. En esta lección, utilizará la [SELECT FROM &#60;modelo&#62;. CASOS &#40;DMX&#41; ](/sql/dmx/select-from-model-content-dmx) instrucción para devolver el contenido del modelo de árbol de decisión.  
+ El paso siguiente es usar la instrucción de obtención de detalles para devolver el muestreo de los casos utilizados para entrenar el modelo de minería de datos del árbol de decisión. En esta lección, usará el [SELECT FROM &#60;modelo&#62;. CASOS &#40;DMX&#41; ](/sql/dmx/select-from-model-content-dmx) instrucción para devolver el contenido del modelo de árbol de decisión.  
   
- Éste es un ejemplo genérico de SELECT FROM \<modelo >. Instrucción de casos:  
+ El siguiente es un ejemplo genérico de SELECT FROM \<modelo >. Instrucción de casos:  
   
 ```  
 SELECT <select list>   
@@ -146,11 +146,11 @@ WHERE IsInNode('<node id>')
   
 #### <a name="to-return-the-cases-that-were-used-to-train-the-mining-model"></a>Para devolver los casos utilizados para entrenar el modelo de minería de datos  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], seleccione **nueva consulta**y, a continuación, haga clic en **DMX**.  
+1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX**.  
   
      Se abre el Editor de consultas, que contiene una consulta nueva en blanco.  
   
-2.  Copie el ejemplo genérico de SELECT FROM \<modelo >. Instrucción de casos en la consulta en blanco.  
+2.  Copie el ejemplo genérico de SELECT FROM \<modelo >. Instrucción de los casos en la consulta en blanco.  
   
 3.  Reemplace lo siguiente:  
   
@@ -187,7 +187,7 @@ WHERE IsInNode('<node id>')
   
 5.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
   
-6.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y un nombre al archivo `SELECT_DRILLTHROUGH.dmx`.  
+6.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `SELECT_DRILLTHROUGH.dmx`.  
   
 7.  En la barra de herramientas, haga clic en el **Execute** botón.  
   
@@ -213,7 +213,7 @@ SELECT DISTINCT [<column>]
   
 #### <a name="to-return-the-states-of-a-discrete-column"></a>Para devolver los estados de una columna discreta  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], seleccione **nueva consulta**y, a continuación, haga clic en **DMX**.  
+1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX**.  
   
      Se abre el Editor de consultas, que contiene una consulta nueva en blanco.  
   
@@ -252,7 +252,7 @@ SELECT DISTINCT [<column>]
   
 5.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
   
-6.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y un nombre al archivo `SELECT_DISCRETE.dmx`.  
+6.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `SELECT_DISCRETE.dmx`.  
   
 7.  En la barra de herramientas, haga clic en el **Execute** botón.  
   

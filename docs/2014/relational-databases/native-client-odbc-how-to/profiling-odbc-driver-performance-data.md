@@ -1,38 +1,36 @@
 ---
-title: Generar perfiles de datos de rendimiento del controlador (ODBC) | Documentos de Microsoft
+title: Generar perfiles de datos de rendimiento del controlador (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - driver performance data [ODBC]
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5eac379b8a77a071571982cade36e88c8831bacd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e72536c0e5922949650f8bb1ecb6008e75a20dc3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198219"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432524"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>Crear perfiles de datos de rendimiento del controlador (ODBC)
-  En este ejemplo se muestran las opciones específicas del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para registrar estadísticas de rendimiento. El ejemplo crea un archivo: Odbcperf.log ejemplo muestra la creación de un archivo de registro de datos de rendimiento y mostrar los datos de rendimiento directamente desde la estructura de datos SQLPERF (la estructura SQLPERF se define en Odbcss.h.). Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  
+  En este ejemplo se muestran las opciones específicas del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para registrar estadísticas de rendimiento. El ejemplo crea un archivo: Odbcperf.log muestra la creación de un archivo de registro de datos de rendimiento y mostrar los datos de rendimiento directamente desde la estructura de datos SQLPERF (la estructura SQLPERF se define en Odbcss.h.). Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  
   
 > [!IMPORTANT]  
 >  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>Para registrar los datos de rendimiento del controlador mediante el Administrador ODBC  
   
-1.  En **el Panel de Control**, haga doble clic en **herramientas administrativas** y, a continuación, haga doble clic en **orígenes de datos (ODBC)**. De modo alternativo, puede invocar odbcad32.exe.  
+1.  En **Panel de Control**, haga doble clic en **herramientas administrativas** y, a continuación, haga doble clic en **orígenes de datos (ODBC)**. De modo alternativo, puede invocar odbcad32.exe.  
   
 2.  Haga clic en el **DSN de usuario**, **DSN de sistema**, o **DSN de archivo** ficha.  
   
@@ -40,9 +38,9 @@ ms.locfileid: "36198219"
   
 4.  Haga clic en **configurar**.  
   
-5.  En el Microsoft SQL Server Configure DSN Wizard, vaya a la página con **estadísticas del controlador ODBC del registro al archivo de registro**.  
+5.  En el Microsoft SQL Server Configure DSN Wizard, vaya a la página con **estadísticas del controlador ODBC del registro en el archivo de registro**.  
   
-6.  Seleccione **estadísticas del controlador ODBC del registro al archivo de registro**. En el cuadro, incluya el nombre del archivo donde se deben registrar las estadísticas. Si lo desea, haga clic en **examinar** para examinar el sistema de archivos para el registro de estadísticas.  
+6.  Seleccione **estadísticas del controlador ODBC del registro en el archivo de registro**. En el cuadro, incluya el nombre del archivo donde se deben registrar las estadísticas. Si lo desea, haga clic en **examinar** para examinar el sistema de archivos para el registro de estadísticas.  
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>Para registrar mediante programación los datos de rendimiento del controlador  
   
@@ -243,7 +241,7 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Temas "Cómo..." del rendimiento de controlador ODBC de generación de perfiles &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)   
+ [Generación de perfiles de temas de procedimientos de ODBC Driver Performance &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)   
  [Generar perfiles del rendimiento del controlador ODBC](../native-client/odbc/profiling-odbc-driver-performance.md)  
   
   

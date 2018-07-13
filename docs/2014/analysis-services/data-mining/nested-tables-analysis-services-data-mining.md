@@ -1,5 +1,5 @@
 ---
-title: 'Tablas anidadas (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Tablas anidadas (Analysis Services - minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], nested tables
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: acb00a14c6fb59a223727c8f551e74fb636a7ee6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b072c134c047f9833f3b5297688bf30d68a6050
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167736"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tablas anidadas (Analysis Services - Minería de datos)
   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los datos se deben incluir en un algoritmo de minería de datos como una serie de casos contenidos dentro de una tabla de casos. Sin embargo, no todos los casos pueden describirse mediante una sola fila de datos. Por ejemplo, un caso puede derivarse de dos tablas: una que contenga la información del cliente y otra que contenga las compras de ese cliente. Un solo cliente de la tabla de información de clientes podría tener varios elementos en la tabla de compras del cliente, lo que dificulta describir los datos mediante una sola fila. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona un método único para tratar estos casos, mediante *tablas anidadas*. El concepto de una tabla anidada se muestra en la siguiente ilustración.  
   
- ![Dos tablas se combinan mediante una tabla anidada](../media/nested-tables.gif "dos tablas se combinan mediante una tabla anidada")  
+ ![Combinan dos tablas mediante el uso de una tabla anidada](../media/nested-tables.gif "dos tablas se combinan mediante una tabla anidada")  
   
  En este diagrama, la primera tabla, que es la tabla primaria, contiene información sobre los clientes y asocia cada cliente con un único identificador. La segunda tabla, la tabla secundaria, contiene las compras de cada cliente. Las compras de la tabla secundaria se relacionan con la tabla primaria mediante el identificador único, la columna **CustomerKey** . La tercera tabla del diagrama muestra cómo se combinan ambas tablas.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36198795"
  Para obtener más información sobre cómo crear y usar filtros de modelos, vea [Filtros para modelos de minería &#40;Analysis Services - Minería de datos&#41;](mining-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Estructuras de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-structures-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structures-analysis-services-data-mining.md)  
   
   

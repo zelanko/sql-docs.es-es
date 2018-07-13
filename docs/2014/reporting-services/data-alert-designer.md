@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editing, data alerts
 - updating, data alerts
@@ -20,13 +20,13 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d9da14f27b15da351263653d33616621cb4f7b84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0b0e8d5d18b45d15feb0f1af8f7ef2671053ab1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155706"
 ---
 # <a name="data-alert-designer"></a>Diseñador de alertas de datos
   Las definiciones de alertas de datos se crean y editan en el Diseñador de alertas de datos. Una definición de alerta es una colección de metadatos, que incluye los datos del informe de su interés, las reglas que deben satisfacer los datos del informe para que se creen instancias de alertas de datos y se envíen mensajes de alertas de datos, los destinatarios del mensaje de alerta, etc.  
@@ -74,7 +74,7 @@ ms.locfileid: "36203985"
 ### <a name="alert-name"></a>Nombre de la alerta  
  De forma predeterminada, la definición de la alerta tiene el mismo nombre que el informe. Puede cambiar el nombre de la alerta para que sea más significativo. Esto facilita la administración de las alertas, así como determinar las alertas que es preciso actualizar, eliminar, etcétera.  
   
- Puede crear varias alertas en un informe. Es posible tener varias definiciones de alertas con el mismo nombre, pero se recomienda que use nombres únicos para las alertas. Facilita la labor de distinguir y administrar las definiciones de alertas. Puede ver una lista de todas las alertas que ha creado en el Administrador de alertas de datos. Para obtener más información, consulte [Data Alert Manager para los administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) y [administrar Mis alertas de datos en Data Alert Manager](manage-my-data-alerts-in-data-alert-manager.md).  
+ Puede crear varias alertas en un informe. Es posible tener varias definiciones de alertas con el mismo nombre, pero se recomienda que use nombres únicos para las alertas. Facilita la labor de distinguir y administrar las definiciones de alertas. Puede ver una lista de todas las alertas que ha creado en el Administrador de alertas de datos. Para obtener más información, consulte [Data Alert Manager para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) y [administrar Mis alertas de datos en Data Alert Manager](manage-my-data-alerts-in-data-alert-manager.md).  
   
 ### <a name="rules-and-clauses"></a>Reglas y cláusulas  
  El ámbito de los cambios en los datos y las reglas de la alerta definen los cambios en los datos que desencadenan la alerta. El ámbito de los cambios en los datos es el siguiente:  

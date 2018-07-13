@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - dynamic management views [SQL Server], AlwaysOn Availability Groups
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - catalog views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 caps.latest.revision: 48
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 7ad2fed0ddfe6b06b66567dd86d0c343e6cdbff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 666b6487673c5a64ccdf955a4344e61717d9038b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239495"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Supervisar grupos de disponibilidad (Transact-SQL)
   Para supervisar réplicas y grupos de disponibilidad y las bases de datos asociado utilizando [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] proporciona un conjunto de vistas de administración dinámica y de catálogo y propiedades del servidor. Mediante instrucciones SELECT de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , puede utilizar las vistas para supervisar los grupos de disponibilidad y sus réplicas y bases de datos. La información devuelta para un grupo de disponibilidad determinado depende de si está conectado a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal o una réplica secundaria.  
@@ -84,7 +83,7 @@ ms.locfileid: "36198522"
 > [!NOTE]  
 >  Vea también **sys.dm_hadr_availability_replica_cluster_nodes** y **sys.dm_hadr_availability_replica_cluster_states** en la sección [Supervisar réplicas de disponibilidad](#AvReplicas) y **sys.availability_databases_cluster** y **sys.dm_hadr_database_replica_cluster_states** en la sección [Supervisar las bases de datos de disponibilidad](#AvDbs) más adelante en este tema.  
   
- Para obtener información acerca de WSFC clústeres y [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server] ((.. /.. /.. / sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) y [de agrupación en clústeres de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md).  
+ Para obtener información sobre cómo WSFC clústeres y [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server] ((.. /.. /.. / sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) y [agrupación en clústeres de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="AvGroups"></a> Supervisar grupos de disponibilidad  
  Para supervisar los grupos de disponibilidad para los que la instancia de servidor hospeda una réplica de disponibilidad, utilice las vistas siguientes:  
@@ -278,7 +277,7 @@ ms.locfileid: "36198522"
   
 ## <a name="see-also"></a>Vea también  
  [Grupos de disponibilidad AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)   
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Lección 6: Ejecutar la aplicación del esquema RDL (VB-C#) | Documentos de Microsoft'
+title: 'Lección 6: Ejecutar la aplicación del esquema RDL (VB-C#) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a2cd2386-2df8-4b69-ab81-9ad1a31f6d27
 caps.latest.revision: 15
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 95ef194a66d6c5480f8a83cbd0b78547e79804e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a56a29edc9b30577dca3db245d3ace5e4c7814d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169796"
 ---
 # <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>Lección 6: Ejecutar la aplicación del esquema RDL (VB-C#)
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ofrece dos métodos para generar y ejecutar una aplicación de consola desde el entorno de desarrollo integrado (IDE):  

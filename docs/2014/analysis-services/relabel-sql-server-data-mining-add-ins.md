@@ -1,5 +1,5 @@
 ---
-title: Cambiar etiquetas (datos de SQL Server a los complementos de minería de datos) | Documentos de Microsoft
+title: Cambiar etiquetas (datos de SQL Server a los complementos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data preparation
 - relabel
 - data cleaning
 ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 50dd1a2c4cd425243c55ef9181387a08c5d935ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46a05e8f54a6c307dba5b82572ad8158b305f4bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157176"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>Cambiar etiquetas (Complementos de minería de datos de SQL Server)
   ![Icono de Office 13 para la herramienta Relabel](media/dm13-relabel.gif "icono de Office 13 para la herramienta Relabel")  
@@ -40,17 +40,17 @@ ms.locfileid: "36200002"
   
 ## <a name="using-the-relabel-wizard"></a>Usar el Asistente para cambiar etiquetas  
   
-1.  En el **minería de datos** la cinta de opciones, haga clic en **limpiar** y, a continuación, seleccione **cambiar etiquetas**.  
+1.  En el **minería de datos** la cinta de opciones, haga clic en **Clean** y, a continuación, seleccione **cambiar etiquetas**.  
   
 2.  Seleccione la tabla o el intervalo de datos que tenga los datos que desee corregir.  
   
 3.  En el **cambiar etiquetas** página del asistente, seleccione una sola columna, seleccionando la columna en la lista desplegable o haciendo clic en la columna en la **muestras de datos** panel.  
   
-     El **muestras de datos** panel solo muestra aproximadamente 50 filas de datos, pero están muestreadas para asegurarse de que vean una amplia representación de valores.  
+     El **muestras de datos** panel solo muestra aproximadamente 50 filas de datos, pero están muestreadas para asegurarse de que ve una amplia representación de valores.  
   
-     Haga clic en el encabezado de columna **recuento** para ordenar por el recuento de cada valor.  
+     Haga clic en el encabezado de columna para **recuento** para ordenar por recuento de cada valor.  
   
-     También puede ordenar por **etiquetas originales**, lo que resulta práctico si desea cambiar etiquetas de primero todos los valores mayores o menores.  
+     También puede ordenar por **etiquetas originales**, que es útil si desea cambiar etiquetas de primero todos los valores mayores o menores.  
   
 4.  En el **cambiar etiquetas** página de datos del asistente, revise los valores de la **etiquetas originales** columna y decidir cómo desea agruparlos o modificarlos.  
   

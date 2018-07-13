@@ -1,5 +1,5 @@
 ---
-title: Elemento AllMemberTranslations (ASSL) | Documentos de Microsoft
+title: Elemento AllMemberTranslations (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllMemberTranslations element
 ms.assetid: 982ee2bf-c88d-4da5-a679-7a6b08a48a0d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2a1a8b9b72895c69cb8d415d00d633be99ebc99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 977168f25f81c1755b6c25e442bae4b7e6e3bfa7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171546"
 ---
 # <a name="allmembertranslations-element-assl"></a>Elemento AllMemberTranslations (ASSL)
   Contiene la colección de [traducción](../objects/translation-element-assl.md) elementos para el título del miembro All de un [jerarquía](../objects/hierarchy-element-assl.md) elemento.  

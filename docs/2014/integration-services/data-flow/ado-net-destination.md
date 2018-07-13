@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8f795c264fb46076ec203e4a21ca8d5fa6ccd82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0233bc6dad87580764f67eea68f20171bcb5e82e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164846"
 ---
 # <a name="ado-net-destination"></a>Destino ADO NET
   El destino ADO NET carga datos en una serie de bases de datos compatibles con [!INCLUDE[vstecado](../../includes/vstecado-md.md)]que usan una tabla o vista de base de datos. Tiene la opción de cargar estos datos en una tabla o vista existente, o bien puede crear una nueva tabla y cargar los datos en ella.  
@@ -51,11 +51,11 @@ ms.locfileid: "36199494"
   
  Para obtener más información sobre las propiedades que se pueden establecer en el cuadro de diálogo **Editor de destino ADO NET** , haga clic en uno de los siguientes temas:  
   
--   [Editor de destino de ADO NET &#40;página Administrador de conexiones&#41;](../ado-net-destination-editor-connection-manager-page.md)  
+-   [Editor de destinos de ADO NET &#40;página Administrador de conexiones&#41;](../ado-net-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de ADO NET &#40;página asignaciones&#41;](../ado-net-destination-editor-mappings-page.md)  
+-   [Editor de destinos de ADO NET &#40;página asignaciones&#41;](../ado-net-destination-editor-mappings-page.md)  
   
--   [Editor de destino de ADO NET &#40;página de salida de Error&#41;](../ado-net-destination-editor-error-output-page.md)  
+-   [Editor de destinos de ADO NET &#40;página de salida de Error&#41;](../ado-net-destination-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   

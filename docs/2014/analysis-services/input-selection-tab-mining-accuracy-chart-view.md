@@ -1,5 +1,5 @@
 ---
-title: Pestaña selección (vista de gráfico de precisión de minería de datos) de entrada | Documentos de Microsoft
+title: Selección de pestaña (vista Gráfico de precisión de minería de datos) de entrada | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.columnmapping.f1
 ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5abde47c5da9405f7768f1167496fdd603f04f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbee4807b3e68c79edd9e06fbbf85379dc49354b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198215"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Pestaña Selección de entrada (vista Gráfico de precisión de minería de datos)
   Utilice la pestaña **Selección de entrada** del diseñador **Gráfico de precisión de minería de datos** para especificar el origen de datos que se utiliza para probar el modelo y generar el gráfico de precisión.  
@@ -34,7 +34,7 @@ ms.locfileid: "36203066"
   
  **Nota** : esta opción no está seleccionada de forma predeterminada. Solamente debería activar esta casilla en los casos en los que sepa que dos columnas de estructura de minería de datos se derivan del mismo origen multidimensional o relacional subyacente, y en los que las columnas contengan los mismos estados o se hayan discretizado del mismo modo.  
   
- **Seleccione columnas del modelo de predicción de minería de datos que se mostrarán en el gráfico de elevación**  
+ **Seleccione las columnas del modelo de predicción de minería de datos para mostrar en el gráfico de elevación**  
  Cuadrícula que contiene columnas para controlar qué modelos se incluyen en el gráfico de elevación y cómo se utilizan en éste.  
   
 |Valor|Descripción|  
@@ -44,7 +44,7 @@ ms.locfileid: "36203066"
 |**Nombre de columna de predicción**|Seleccione una columna de predicción que esté contenida dentro de los modelos de minería de datos que se utilizarán para crear el gráfico de elevación.|  
 |**Valor de predicción**|Seleccione un valor para la columna de predicción. Si deja esta opción en blanco, el gráfico de elevación predice en qué medida será satisfactoria la realización del modelo para todos los estados de la columna de predicción.|  
   
- **Seleccionar un conjunto de datos que se usará para el gráfico de precisión**  
+ **Seleccione el conjunto de datos que se usará para el gráfico de precisión**  
  Grupo de opciones que contiene tres opciones para especificar los datos de las pruebas de precisión.  
   
 |Valor|Descripción|  
@@ -60,7 +60,7 @@ ms.locfileid: "36203066"
   
  Si no creó un conjunto de exclusiones para las pruebas cuando creó la estructura de minería de datos, puede seleccionar esta opción y, a continuación, especificar la vista del origen de datos original como conjunto de pruebas. Con esta solución alternativa, puede establecer también filtros en el conjunto de datos original.  
   
- **Especificar una asignación de columna**  
+ **Especificar asignación de columnas**  
  Abre el cuadro de diálogo **Especificar asignación de columnas**, en el que se selecciona el origen de datos, se especifican el caso y las tablas anidadas y se asignan columnas de datos externas a las columnas de estructura de minería de datos.  
   
  Para más información, vea [Cuadro de diálogo Especificar asignación de columna &#40;gráfico de precisión de minería de datos&#41;](specify-column-mapping-dialog-box-mining-accuracy-chart.md).  
@@ -72,9 +72,9 @@ ms.locfileid: "36203066"
  Abre el cuadro de diálogo **Filtro de conjunto de datos** , que le permite seleccionar las tablas externas y establecer condiciones en las columnas de la tabla de casos, y el cuadro de diálogo **Filtro** , que le ayuda a generar las condiciones que se aplican a las columnas individuales de la tabla seleccionada, o a las columnas de las tablas anidadas.  
   
 ## <a name="see-also"></a>Vea también  
- [Pruebas y las tareas de validación y procedimientos &#40;minería de datos&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Diseñador de gráficos de precisión de minería de datos &#40;minería de datos&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Pruebas y validación tareas y procedimientos &#40;minería de datos&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Diseñador gráfico de precisión de minería de datos &#40;minería de datos&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Aplicar un filtro a un modelo de minería de datos](data-mining/apply-a-filter-to-a-mining-model.md)   
- [Filtros para modelos de minería de datos de &#40;Analysis Services: minería de datos&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
+ [Filtros para modelos de minería de datos de &#40;Analysis Services - minería de datos&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

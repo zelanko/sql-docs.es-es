@@ -1,5 +1,5 @@
 ---
-title: Proyectos de minería de datos | Documentos de Microsoft
+title: Proyectos de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 035a8a822ffa49502ec93978b2ce8b619fff9630
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e0c9df62ccc0c76dead70001e4ae253ff51cc9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259721"
 ---
 # <a name="data-mining-projects"></a>Proyectos de minería de datos
   Un proyecto de minería de datos forma parte de una solución de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante el proceso de diseño, los objetos que crea en este proyecto están disponibles para probarlos y consultarlos como parte de una base de datos del área de trabajo. Cuando desee que los usuarios puedan consultar o examinar los objetos del proyecto, debe implementarlo en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecute en modo multidimensional.  
@@ -33,7 +33,7 @@ ms.locfileid: "36197875"
  Si crea un proyecto de minería de datos en una solución existente, de forma predeterminada los objetos de minería de datos se implementan en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con el mismo nombre que el archivo de solución. Puede cambiar este nombre y el servidor de destino mediante el cuadro de diálogo **Propiedades del proyecto** . Para obtener más información, vea [Configurar las propiedades de un proyecto de Analysis Services &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 > [!WARNING]  
->  Para generar e implementar correctamente el proyecto, debe tener acceso a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecute en modo de minería de datos y OLAP. No se puede desarrollar o implementar soluciones de minería de datos en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que admita modelos tabulares, ni puede utilizar los datos directamente desde un libro de PowerPivot o desde un modelo tabular que utiliza el almacén de datos en memoria. Para determinar si la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que tiene admite la minería de datos, vea [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+>  Para generar e implementar correctamente el proyecto, debe tener acceso a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecute en modo de minería de datos y OLAP. No puede desarrollar ni implementar soluciones de minería de datos en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que admita modelos tabulares, ni puede utilizar los datos directamente desde un libro de PowerPivot o de un modelo tabular que use el almacén de datos en memoria. Para determinar si la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que tiene admite la minería de datos, vea [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
  Dentro de cada proyecto de minería de datos que cree, seguirá estos pasos:  
   
@@ -201,16 +201,16 @@ ms.locfileid: "36197875"
 |Tareas|Temas|  
 |-----------|------------|  
 |Describe cómo trabajar con columnas de estructura de minería de datos|[Crear una estructura de minería de datos relacional](create-a-relational-mining-structure.md)|  
-|Proporciona más información sobre cómo agregar nuevos modelos de minería de datos y procesar una estructura y los modelos|[Agregar modelos de minería de datos a una estructura &#40;Analysis Services: minería de datos&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Proporciona más información sobre cómo agregar nuevos modelos de minería de datos y procesar una estructura y los modelos|[Agregar modelos de minería de datos a una estructura &#40;Analysis Services - minería de datos&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Proporciona vínculos a recursos que ayudan a personalizar los algoritmos que generan modelos de minería de datos|[Personalizar la estructura y los modelos de minería de datos](customize-mining-models-and-structure.md)|  
 |Proporciona vínculos a información sobre cada uno de los visores de modelos de minería de datos|[Visores de modelos de minería de datos](data-mining-model-viewers.md)|  
-|Proporciona información sobre cómo crear un gráfico de elevación, un gráfico de beneficios o una matriz de clasificación, o probar una estructura de minería de datos|[Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)|  
+|Proporciona información sobre cómo crear un gráfico de elevación, un gráfico de beneficios o una matriz de clasificación, o probar una estructura de minería de datos|[Pruebas y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)|  
 |Proporciona información sobre los permisos y las opciones de procesamiento|[Procesar objetos de minería de datos](processing-data-mining-objects.md)|  
-|Proporciona información acerca de Analysis Services|[Las bases de datos de modelo multidimensional &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Proporciona información acerca de Analysis Services|[Bases de datos modelo multidimensionales &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Diseñador de minería de datos](data-mining-designer.md)   
- [Crear multidimensionales modelos mediante las herramientas de datos SQL Server &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Base de datos del área de trabajo &#40;SSAS Tabular&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
+ [Crear multidimensionales modelos utilizando herramientas de datos SQL Server &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Base de datos del área de trabajo &#40;Tabular de SSAS&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   
   

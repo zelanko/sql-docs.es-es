@@ -1,5 +1,5 @@
 ---
-title: Variar polígono, línea, presentación y puntos usando reglas y datos analíticos (generador de informes y SSRS) | Documentos de Microsoft
+title: Variar polígono, línea, presentación y puntos usando reglas y datos analíticos (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapembeddedpolygonlayerproperties.general.f1
 - sql12.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
@@ -21,15 +21,15 @@ f1_keywords:
 - "10536"
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ffe78fc097b8c51f490642d5dc857f0257c806b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5ee62f82416bcac56211bd29548070926abff1bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149776"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos (Generador de informes y SSRS)
   Las opciones de presentación de polígonos, líneas y puntos en una capa de mapa se controlan estableciendo las opciones de la capa y las reglas para los elementos de mapa de la capa, o invalidando las opciones de elementos de mapa insertados concretos de una capa.  
@@ -133,7 +133,7 @@ ms.locfileid: "36200483"
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|Muestra los valores numéricos reales del principio y el fin del intervalo.|10 - 790|  
   
 ## <a name="see-also"></a>Vea también  
- [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;el generador de informes SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
+ [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;generador de informes y SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   

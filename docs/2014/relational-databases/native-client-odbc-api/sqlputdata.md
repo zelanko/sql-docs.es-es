@@ -1,13 +1,11 @@
 ---
-title: SQLPutData | Documentos de Microsoft
+title: SQLPutData | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,37 +14,37 @@ helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: abce5378b6df9bcce36bf6e1a2c9ed884f977824
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 37ac1dd3c6c5c3cce2084fa604ad1876c885e422
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196911"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419484"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-  Las siguientes restricciones se aplican al usar SQLPutData para enviar más de 65.535 bytes de datos (para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 4. 21a) o 400 KB de datos (para SQL Server versión 6.0 y versiones posterior) para un SQL_LONGVARCHAR (`text`), SQL_WLONGVARCHAR (`ntext`) o SQL_LONGVARBINARY (`image`) columna:  
+  Las restricciones siguientes se aplican al usar SQLPutData para enviar más de 65.535 bytes de datos (para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 4. 21a) o 400 KB de datos (para SQL Server versión 6.0 y versiones posterior) para un SQL_LONGVARCHAR (`text`), SQL_WLONGVARCHAR (`ntext`) o SQL_LONGVARBINARY (`image`) columna:  
   
 -   El parámetro que se hace referencia puede ser el *insert_value* en una instrucción INSERT.  
   
 -   El parámetro que se hace referencia puede ser un *expresión* en la cláusula SET de una instrucción UPDATE.  
   
- Cancelar una secuencia de llamadas de SQLPutData que proporcionan datos en bloques a un servidor que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produce una actualización parcial del valor de la columna cuando se usa la versión 6.5 o anterior. El `text`, `ntext`, o `image` columna que se hizo referencia cuando se llamó a SQLCancel se establece en un valor de marcador de posición intermedio.  
+ Cancelación de una secuencia de llamadas de SQLPutData que proporcionan datos en bloques a un servidor que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hace que una actualización parcial del valor de la columna cuando se usa la versión 6.5 o anterior. El `text`, `ntext`, o `image` columna que se hizo referencia cuando se llamó a SQLCancel está establecida en un valor de marcador de posición intermedio.  
   
 > [!NOTE]  
 >  El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client no permite la conexión con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 6.5 y anteriores.  
   
 ## <a name="diagnostics"></a>Diagnósticos  
- Hay un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLSTATE específico de Native Client para SQLPutData:  
+ Hay un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLSTATE específico de cliente nativo de SQLPutData:  
   
 |SQLSTATE|Error|Descripción|  
 |--------------|-----------|-----------------|  
 |22026|Datos de cadena, desigualdad de longitud|Si la longitud de datos en bytes que se enviarán se ha especificado por una aplicación, por ejemplo, con SQL_LEN_DATA_AT_EXEC (*n*) donde *n* es mayor que 0, el número total de bytes proporcionado por la aplicación a través de SQLPutData debe coincidir con la longitud especificada.|  
   
 ## <a name="sqlputdata-and-table-valued-parameters"></a>SQLPutData y parámetros con valores de tabla  
- SQLPutData es utilizado por una aplicación cuando se usa el enlace de filas variable con parámetros con valores de tabla. El *StrLen_Or_Ind* parámetro indica que está listo para el controlador recopilar datos de la siguiente fila o filas de datos del parámetro con valores de tabla, o que no hay más filas disponibles:  
+ SQLPutData está usando una aplicación cuando se usa el enlace de filas variable con parámetros con valores de tabla. El *StrLen_Or_Ind* parámetro indica que está listo para el controlador recopilar datos de la siguiente fila o filas de datos del parámetro con valores de tabla, o que no hay más filas disponibles:  
   
 -   Un valor mayor que 0 indica que el conjunto siguiente de valores de fila está disponible.  
   
@@ -54,22 +52,22 @@ ms.locfileid: "36196911"
   
 -   Cualquier valor menor que 0 es un error tiene como resultado un registro de diagnóstico que se registra con con SQLState HY090 y el mensaje "Longitud de búfer o cadena no válida".  
   
- El *DataPtr* parámetro se pasa por alto, pero debe establecerse en un valor distinto de NULL. Para obtener más información, vea la sección sobre el enlace de filas Variable TVP en [enlace y Data Transfer of Table-Valued parámetros y valores de columna](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
+ El *DataPtr* parámetro se omite, pero debe establecerse en un valor distinto de NULL. Para obtener más información, vea la sección sobre el enlace de filas Variable TVP en [enlace y Data Transfer of Table-Valued parámetros y valores de columna](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
  Si *StrLen_Or_Ind* tiene cualquier valor distinto de SQL_DEFAULT_PARAM o un número entre 0 y el parámetro SQL_PARAMSET_SIZE (es decir, el *ColumnSize* parámetro de SQLBindParameter), es un error. Este error hace que SQLPutData devuelva SQL_ERROR: SQLSTATE=HY090, "Longitud de búfer o cadena no válida".  
   
  Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlputdata-support-for-enhanced-date-and-time-features"></a>Compatibilidad de SQLPutData con las características mejoradas de fecha y hora  
- Valores de parámetro de tipos de fecha y hora se convierten como se describe en [conversiones de C a SQL](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md).  
+ Los valores de parámetro de tipos de fecha y hora se convierten como se describe en [conversiones de C a SQL](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md).  
   
- Para obtener más información, consulte [fecha y hora mejoras &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, consulte [mejoras de fecha y hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>Compatibilidad de SQLPutData con los UDT CLR grandes  
  `SQLPutData` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
- [SQLPutData, función](http://go.microsoft.com/fwlink/?LinkId=59365)   
+ [Función SQLPutData](http://go.microsoft.com/fwlink/?LinkId=59365)   
  [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)  
   
   

@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: af7fe1fceeacc7b49daff9514f5ba1e10fc20518
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8d1d96273c21f2b22b3482a74b5b55370b09589e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230185"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Agregar un informe nuevo o existente a un proyecto de informe (SSRS)
-  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puede agregar un nuevo informe mediante el Asistente para informes o agregando un nuevo informe en blanco al proyecto. También puede agregar un informe existente. Después de agregar un informe, puede ver el nombre de informe en la lista que se muestra bajo la carpeta **Informes** del proyecto.  
+  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puede agregar un nuevo informe de utilizando el Asistente para informes o agregando un nuevo informe en blanco al proyecto. También puede agregar un informe existente. Después de agregar un informe, puede ver el nombre de informe en la lista que se muestra bajo la carpeta **Informes** del proyecto.  
   
 > [!NOTE]  
->  Para obtener la vista previa de un informe con orígenes de datos existentes, debe tener permisos en el origen de datos del cliente de creación de informes. Para obtener más información, consulte [crear un incrustado o un origen de datos compartido &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md).  
+>  Para obtener la vista previa de un informe con orígenes de datos existentes, debe tener permisos en el origen de datos del cliente de creación de informes. Para obtener más información, consulte [crear incrustado o a un origen de datos compartido &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md).  
   
  Después de agregar un informe, puede definir orígenes de datos, conjuntos de datos y establecer un diseño de informe. Para comenzar, vea [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md) y [Tablas &#40;Generador de informes y SSRS&#41;](../report-design/tables-report-builder-and-ssrs.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36198097"
     -   **Elija un estilo.** El siguiente paso es aplicar un estilo al informe mediante una plantilla de estilo. Seleccione una plantilla para aplicar estilos al informe, como fuente, color y borde. El Diseñador de informes proporciona seis plantillas de estilo: Pizarra, Bosque, Corporativo, Negrita, Océano y Genérico. También puede agregar otras plantillas de estilo.  
   
         > [!NOTE]  
-        >  Puede modificar las plantillas existentes o agregar otras nuevas editando el archivo StyleTemplates.XML situado en la \Program Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles\\< lang\>carpeta, donde \<lang > es el idioma que está utilizando (por ejemplo, si está utilizando la versión en inglés de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], el nombre de la carpeta es "EN"). Esta carpeta se encuentra en el equipo donde está instalado el Diseñador de informes. Hay dos copias del archivo StyleTemplates.xml. Para modificar los estilos que se aplican mediante el Asistente para informes, modifique el archivo que se encuentra en la carpeta creada para el idioma que está usando.  
+        >  Puede modificar las plantillas existentes o agregar algunas nuevas editando el archivo StyleTemplates.XML situado en la \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles\\< lang\>carpeta, donde \<lang > es el lenguaje que utilizas (por ejemplo, si está utilizando la versión de idioma inglés [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], el nombre de la carpeta será "EN"). Esta carpeta se encuentra en el equipo donde está instalado el Diseñador de informes. Hay dos copias del archivo StyleTemplates.xml. Para modificar los estilos que se aplican mediante el Asistente para informes, modifique el archivo que se encuentra en la carpeta creada para el idioma que está usando.  
   
     -   **Asignar nombre al informe.**  El paso final es asignar un nombre al informe y comprobar los campos que se incluirán en el mismo. Una vez completados todos los pasos, el Diseñador de informes crea el informe y lo agrega al proyecto del servidor de informes.  
   

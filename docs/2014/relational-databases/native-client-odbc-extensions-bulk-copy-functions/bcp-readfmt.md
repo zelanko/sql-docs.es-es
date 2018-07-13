@@ -1,13 +1,11 @@
 ---
-title: bcp_readfmt | Documentos de Microsoft
+title: bcp_readfmt | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_readfmt function
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3d700f752a3194821065dc21ddd6ab96fa6a8f26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: dbf545e694ac6d5368a4abf23aba6ca0a6d32119
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200883"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428734"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
   Lee una definición de formato de archivo de datos del archivo de formato especificado.  
@@ -60,7 +58,7 @@ szFormatFile
 ## <a name="remarks"></a>Notas  
  Después de `bcp_readfmt` lee los valores de formato, realiza las llamadas adecuadas a [bcp_columns](bcp-columns.md) y [bcp_colfmt](bcp-colfmt.md). No es necesario que analice un archivo de formato y realice estas llamadas.  
   
- Para conservar un archivo de formato, llame a [bcp_writefmt](bcp-writefmt.md). Las llamadas a `bcp_readfmt` pueden hacer referencia a formatos guardados. Para obtener más información, consulte [bcp_init](bcp-init.md).  
+ Para conservar un archivo de formato, llame a [bcp_writefmt](bcp-writefmt.md). Las llamadas a `bcp_readfmt` puede hacer referencia a formatos guardados. Para obtener más información, consulte [bcp_init](bcp-init.md).  
   
  Como alternativa, la utilidad de copia masiva (**bcp**) puede guardar formatos de datos definido por el usuario en archivos que pueden hacer referencia a `bcp_readfmt`. Para obtener más información sobre la **bcp** utilidad y la estructura de **bcp** archivos de formato de datos, vea [importación y exportación de datos &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
   

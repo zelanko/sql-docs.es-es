@@ -1,5 +1,5 @@
 ---
-title: Minería de datos (SSAS) | Documentos de Microsoft
+title: Minería de datos (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b118f03580aeb0053203cd2535bafecd1649ccb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ff1d223cee1ce86851b3021bad15582db156639
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163436"
 ---
 # <a name="data-mining-ssas"></a>Minería de datos (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona una plataforma integrada para las soluciones que incorporan la minería de datos. Puede usar datos relacionales o de cubo para crear soluciones de Business Intelligence con análisis predictivos.  
@@ -55,13 +55,13 @@ ms.locfileid: "36199025"
   
 -   [Conceptos de minería de datos](data-mining-concepts.md)  
   
--   [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+-   [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [Estructuras de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-structures-analysis-services-data-mining.md)  
+-   [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structures-analysis-services-data-mining.md)  
   
--   [Modelos de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-models-analysis-services-data-mining.md)  
+-   [Los modelos de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-models-analysis-services-data-mining.md)  
   
--   [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
+-   [Pruebas y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
   
 -   [Consultas de minería de datos](data-mining-queries.md)  
   

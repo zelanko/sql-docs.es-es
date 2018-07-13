@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6c0dad60d1141b937e1208fd6154690b9f670000
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 49a07579db92eb50f7e5a3d1c82cdd9ce4d94cca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187992"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Prepararse para implementar una extensión de procesamiento de datos
   Antes de implementar la extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], debería definir las interfaces que se van a implementar. Puede que quiera proporcionar implementaciones específicas de la extensión del conjunto completo de interfaces o simplemente centrar la implementación en un subconjunto, como las interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> y <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> en las que los clientes interactuarían principalmente con un conjunto de resultados como un objeto **DataReader** y usarían la extensión de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] como un puente entre el conjunto de resultados y el origen de datos.  

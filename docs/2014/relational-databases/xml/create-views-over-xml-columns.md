@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec628981acc51d660a0e8a99dba991d957955e9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3f575b1a21efa30d2317cff644b65c73150c4ac1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170186"
 ---
 # <a name="create-views-over-xml-columns"></a>Crear vistas sobre columnas XML
-  Puede usar un `xml` columna de tipo al crear vistas. En el ejemplo siguiente se crea una vista en la que el valor de un `xml` columna de tipo se recupera utilizando la `value()` método de la `xml` tipo de datos.  
+  Puede usar un `xml` columna de tipo para crear vistas. El ejemplo siguiente crea una vista en la que el valor de un `xml` columna de tipo se recupera utilizando la `value()` método de la `xml` tipo de datos.  
   
 ```  
 -- Create the table.  
@@ -59,11 +59,11 @@ ProductID   PName
 1           SomeName   
 ```  
   
- Tenga en cuenta los siguientes puntos acerca del uso de la `xml` tipo de datos para crear vistas:  
+ Tenga en cuenta los siguientes puntos acerca de cómo utilizar el `xml` tipo de datos para crear vistas:  
   
 -   El tipo de datos xml se puede crear en una vista materializada. La vista materializada no puede basarse en un método de tipo de datos xml. Sin embargo, puede convertirse en una colección de esquemas XML distinta del tipo de columna xml de la tabla base.  
   
--   El `xml` no se puede usar el tipo de datos en vistas con particiones distribuidas.  
+-   El `xml` no se puede utilizar el tipo de datos en vistas con particiones distribuidas.  
   
 -   Los predicados de SQL que se ejecutan con la vista no se insertarán en la expresión XQuery de la definición de vista.  
   

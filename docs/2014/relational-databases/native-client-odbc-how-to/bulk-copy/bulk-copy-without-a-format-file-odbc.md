@@ -1,13 +1,11 @@
 ---
-title: Copia masiva sin un archivo de formato (ODBC) | Documentos de Microsoft
+title: Copia masiva sin un archivo de formato (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85bb42550829c875324c10de358312cdf3d05295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6896cc412a01aaa6ce73c80250b15709f78771ae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200116"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425684"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>Realizar una copia masiva sin un archivo de formato (ODBC)
   Este ejemplo muestra cómo utilizar las funciones de copia masiva para crear un archivo de datos de modo nativo, sin archivo de formato. Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  
@@ -160,6 +158,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Copia masiva con los temas "Cómo..." del controlador ODBC de SQL Server &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [Copia masiva con los temas de procedimientos de controlador SQL Server ODBC &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

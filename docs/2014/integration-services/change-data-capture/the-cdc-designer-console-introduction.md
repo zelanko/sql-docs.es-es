@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ae16ede1cf9a1fc51f0b7f7f31cc0b65a4565b9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bbbaf9e86f3a75f57c61099475f0692e8a017cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171006"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Introducción a la Consola del diseñador CDC
   En esta sección se describen los procedimientos de instalación del Diseñador de captura de datos modificados para Oracle de Attunity.  
   
 ## <a name="installation"></a>Installation  
- En esta sección se describen los procedimientos de instalación del Diseñador de captura de datos modificados para Oracle de Attunity. Para instalar la consola del diseñador CDC, ejecute manualmente **AttunityOracleCdcDesigner.msi** desde el medio de instalación de SQL Server.  Paquetes de instalación para x86 y x64 se encuentran en **.\Tools\AttunityCDCOracle\\**  en el medio de instalación de SQL Server.  
+ En esta sección se describen los procedimientos de instalación del Diseñador de captura de datos modificados para Oracle de Attunity. Para instalar la consola del diseñador CDC, ejecute manualmente **AttunityOracleCdcDesigner.msi** desde los medios de instalación de SQL Server.  Paquetes de instalación para x86 y x64 se encuentran en **.\Tools\AttunityCDCOracle\\**  en los medios de instalación de SQL Server.  
   
 ## <a name="supported-windows-environments"></a>Entornos de Windows admitidos  
  La Consola del diseñador CDC se puede ejecutar en los entornos de Windows siguientes:  

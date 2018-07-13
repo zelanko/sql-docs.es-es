@@ -1,5 +1,5 @@
 ---
-title: Propiedad IssuedTo (clase SecurityCertificate) | Documentos de Microsoft
+title: Propiedad IssuedTo (clase SecurityCertificate) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IssuedTo property
 ms.assetid: 47a4fcc7-6e8c-4ea2-a68a-f2789151c25f
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1713bb93d1b1fd1970f10f0129ca0c1804462c5c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 5a7754bfd9c03aea7a46ce42a31859c5703cf7fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168106"
 ---
 # <a name="issuedto-property-securitycertificate-class"></a>Propiedad IssuedTo (clase SecurityCertificate)
   Obtiene el objeto al que se emite el certificado de seguridad.  
@@ -51,6 +51,6 @@ object
 ## <a name="remarks"></a>Notas  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurar protocolos de red de servidor y las bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

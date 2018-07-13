@@ -1,5 +1,5 @@
 ---
-title: Cambiar el cuadro de diálogo de configuración (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Cambie el cuadro de diálogo de configuración (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.batchsettingsdialog.f1
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 57dd66ac41586aa1732d7a3a5aeb915450b7c9f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c9a70f95f552ee5a614f8f44e1f8436c0aa35e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151746"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Cambiar configuración (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Cambiar configuración** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para cambiar la configuración que controla el procesamiento de los objetos enumerados en el cuadro de diálogo **Procesar** . Para mostrar el cuadro de diálogo **Cambiar configuración** , haga clic en **Cambiar configuración** en el cuadro de diálogo **Proceso** .  
@@ -67,10 +67,10 @@ ms.locfileid: "36200830"
  **Errores de clave de dimensión**  
  Utilice esta pestaña para modificar la configuración relacionada con la configuración de errores de la operación de procesamiento. Esta pestaña contiene las siguientes opciones:  
   
- **Utilizar la configuración predeterminada de error**  
+ **Use la configuración de error predeterminada**  
  Seleccione esta opción para utilizar la configuración de errores predeterminada para los objetos en la operación de procesamiento.  
   
- **Utilizar la configuración de errores personalizados**  
+ **Utilizar la configuración de error personalizado**  
  Seleccione esta opción para definir la configuración de error para los objetos de la operación de procesamiento.  
   
  **Acción del error de clave**  

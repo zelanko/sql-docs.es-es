@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQL:BatchStarting event class
 ms.assetid: b99c2b73-5f77-45c1-a0f4-cfef7921dc84
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fedbb8be0238d4052a159142e10d84d7cfffdf61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 10cd96615881cc64954226e01e2891485992294f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169246"
 ---
 # <a name="sqlbatchstarting-event-class"></a>SQL:BatchStarting [clase de eventos]
   La clase de eventos SQL:BatchStarting indica que se está iniciando un lote [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

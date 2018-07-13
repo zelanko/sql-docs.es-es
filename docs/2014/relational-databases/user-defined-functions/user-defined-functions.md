@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 27830819baa6b5381b8e9b9c41a62067e66f65e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1d8b8569a35a67d2700c0ce48c9c1cd4b29da7e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196879"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427474"
 ---
 # <a name="user-defined-functions"></a>Funciones definidas por el usuario
   Al igual que las funciones de los lenguajes de programación, las funciones definidas por el usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son rutinas que aceptan parámetros, realizan una acción, como un cálculo complejo, y devuelven el resultado de esa acción como un valor. El valor devuelto puede ser un valor escalar único o un conjunto de resultados.  
@@ -37,7 +35,7 @@ ms.locfileid: "36196879"
   
  [Instrucciones válidas en una función](#ValidStatements)  
   
- [Funciones enlazadas a esquemas](#SchemaBound)  
+ [Funciones enlazadas a esquema](#SchemaBound)  
   
  [Especificación de parámetros](#Parameters)  
   
@@ -65,7 +63,7 @@ ms.locfileid: "36196879"
   
 ##  <a name="FunctionTypes"></a> Tipos de funciones  
  Función escalar  
- Las funciones escalares definidas por el usuario devuelven un único valor de datos del tipo definido en la cláusula RETURNS. En una función escalar insertada no hay cuerpo de la función; el valor escalar es el resultado de una sola instrucción. Para una función escalar de varias instrucciones, el cuerpo de la función, definido en un bloque BEGIN...END, contiene una serie de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que devuelven el único valor. El tipo de valor devuelto puede ser cualquier tipo de datos excepto `text`, `ntext`, `image`, `cursor`, y `timestamp`.  
+ Las funciones escalares definidas por el usuario devuelven un único valor de datos del tipo definido en la cláusula RETURNS. En una función escalar insertada no hay cuerpo de la función; el valor escalar es el resultado de una sola instrucción. Para una función escalar de varias instrucciones, el cuerpo de la función, definido en un bloque BEGIN...END, contiene una serie de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que devuelven el único valor. El tipo de valor devuelto puede ser cualquier tipo de datos, excepto `text`, `ntext`, `image`, `cursor`, y `timestamp`.  
   
  Funciones con valores de tabla  
  Las funciones con valores de tabla definido por el usuario devuelven un `table` tipo de datos. Las funciones insertada con valores de tabla no tienen cuerpo; la tabla es el conjunto de resultados de una sola instrucción SELECT.  

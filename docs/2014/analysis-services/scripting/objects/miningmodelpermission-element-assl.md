@@ -1,5 +1,5 @@
 ---
-title: Elemento MiningModelPermission (ASSL) | Documentos de Microsoft
+title: Elemento MiningModelPermission (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MiningModelPermission element
 ms.assetid: 4bd2f7e7-ff0d-404e-96fb-7e2c4eeb91e9
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 42a02eedcc2c054269872e4c0f9523ab63632eda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb714eb08fac3a6611669d48bf10aaee3580ee8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176442"
 ---
 # <a name="miningmodelpermission-element-assl"></a>Elemento MiningModelPermission (ASSL)
-  Define los miembros de los permisos de un [rol](role-element-assl.md) elemento tiene en un individuo [MiningModel](miningmodel-element-assl.md) elemento.  
+  Define los miembros de los permisos de un [rol](role-element-assl.md) tiene elemento individual [MiningModel](miningmodel-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36200436"
 |Elementos secundarios|[AllowBrowsing](../properties/allowbrowsing-element-assl.md), [AllowDrillThrough](../properties/allowdrillthrough-element-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
- En [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], puede habilitar la obtención de detalles en estructuras de minería de datos mediante la adición de la `AllowDrillthrough` permiso para el [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md) colección. Si `AllowDrillthrough` está habilitada en la estructura de minería de datos y el modelo de minería de datos, cualquier miembro de un rol que tiene [elemento AllowDrillThrough &#40;ASSL&#41; ](../properties/allowdrillthrough-element-assl.md) permisos en el modelo pueden consultar el modelo de minería de datos y devolver columnas de estructura que no se incluyeron en el modelo, utilizando la sintaxis siguiente:  
+ En [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], puede habilitar la obtención de detalles en estructuras de minería de datos agregando el `AllowDrillthrough` permiso para el [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md) colección. Si `AllowDrillthrough` está habilitada en la estructura de minería de datos y el modelo de minería de datos, cualquier miembro de un rol que tiene [elemento AllowDrillThrough &#40;ASSL&#41; ](../properties/allowdrillthrough-element-assl.md) permisos en el modelo pueden consultar el modelo de minería de datos y volver columnas de estructura que no se incluyeron en el modelo, mediante la sintaxis siguiente:  
   
 ```  
 SELECT StructureColumn('<column name>') FROM <model>.CASES  

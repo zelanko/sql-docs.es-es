@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos PerspectiveMeasureGroup (ASSL) | Documentos de Microsoft
+title: Tipo de datos PerspectiveMeasureGroup (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveMeasureGroup data type
 ms.assetid: 5927120d-f30e-4f87-8523-6d17012817d7
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc1978c2ae733b07071c7c95d3fd232c207d2853
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da4817ba23f7e4be50eb11aa97a3163e48536425
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154956"
 ---
 # <a name="perspectivemeasuregroup-data-type-assl"></a>Tipo de datos PerspectiveMeasureGroup (ASSL)
   Define un tipo de datos primitivo que representa información sobre un grupo de medida en un [perspectiva](../objects/perspective-element-assl.md) elemento.  
@@ -58,7 +58,7 @@ ms.locfileid: "36200815"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|None|  
-|Elementos secundarios|[Anotaciones](../collections/annotations-element-assl.md), [MeasureGroupID](../properties/id-element-assl.md), [medidas](../collections/measures-element-assl.md)|  
+|Elementos secundarios|[Las anotaciones](../collections/annotations-element-assl.md), [MeasureGroupID](../properties/id-element-assl.md), [medidas](../collections/measures-element-assl.md)|  
 |Elementos derivados|[MeasureGroup](../objects/group-element-assl.md) ([MeasureGroups](../collections/groups-element-assl.md) colección de [perspectiva](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Notas  

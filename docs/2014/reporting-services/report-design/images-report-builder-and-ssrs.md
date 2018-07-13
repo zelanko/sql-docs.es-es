@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a4fb5fa5f0ac040c5642d4a14279407c7b3b7bbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4fcb1a4246968e0f42b99ec5c0c596b8d7d36b2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278291"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Imágenes (Generador de informes y SSRS)
   Una imagen es un elemento de informe que contiene una referencia a una imagen incrustada en el informe, o almacenada en una base de datos, en el servidor de informes o en cualquier lugar de Internet. Una imagen puede ser una imagen que se repite con filas de datos. También se puede utilizar una imagen como fondo para determinados elementos del informe.  
@@ -79,18 +79,18 @@ ms.locfileid: "36198124"
 
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
- [Agregar una imagen externa &#40;el generador de informes SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
+ [Agregar una imagen externa &#40;generador de informes y SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
   
- [Incrustar una imagen en un informe &#40;el generador de informes SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
+ [Incrustar una imagen en un informe &#40;generador de informes y SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
   
- [Agregar una imagen de fondo &#40;el generador de informes SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
+ [Agregar una imagen de fondo &#40;generador de informes y SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
   
- [Agregar una imagen enlazada a datos &#40;el generador de informes SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
+ [Agregar una imagen enlazada a datos &#40;generador de informes y SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
   
   
   
 ## <a name="see-also"></a>Vea también  
- [Exportar a un archivo de imagen &#40;el generador de informes SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
+ [Exportar a un archivo de imagen &#40;generador de informes y SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

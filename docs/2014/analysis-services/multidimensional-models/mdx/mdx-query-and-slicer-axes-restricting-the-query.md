@@ -1,5 +1,5 @@
 ---
-title: Restringir la consulta con ejes de consulta y segmentador (MDX) | Documentos de Microsoft
+title: Restringir la consulta con ejes de consulta y segmentador (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], axes
 - queries [MDX], axes
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - MDX [Analysis Services], axes
 ms.assetid: a64b8172-cd73-42f9-8847-52e967b9697a
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e727b432afec1f42a6a111442c2263d6c48784de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b5b06d8449c778e9f50751120c42133189d6f57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157596"
 ---
 # <a name="restricting-the-query-with-query-and-slicer-axes-mdx"></a>Restringir la consulta con ejes de consulta y segmentador (MDX)
   Cuando se formula una instrucción SELECT de Expresiones multidimensionales (MDX), una aplicación normalmente examina un cubo y divide el conjunto de jerarquías en dos subconjuntos:  
@@ -39,6 +39,6 @@ ms.locfileid: "36200819"
   
 ## <a name="see-also"></a>Vea también  
  [Trabajar con miembros, tuplas y conjuntos &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Aspectos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Aspectos básicos de consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

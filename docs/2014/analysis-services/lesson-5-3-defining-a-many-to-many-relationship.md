@@ -1,5 +1,5 @@
 ---
-title: Definir una relación de varios a varios | Documentos de Microsoft
+title: Definir una relación muchos a muchos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 89ec38cf3bd3b197c6a58a5d51758ee6c6f29269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 868c814c1031f9ffb499f80da2d7e9314d80e3bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189242"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definir una relación de varios a varios
   Generalmente, cuando se define una dimensión cada hecho se combina con un único miembro de dimensión, mientras que un mismo miembro puede estar asociado a varios hechos distintos. Por ejemplo, cada cliente puede tener varios pedidos, pero cada pedido pertenece a un solo cliente. En terminología de bases de datos relacionales, esto se conoce como *relación uno a varios*. No obstante, algunas veces un único hecho puede combinarse con varios miembros de dimensión. En terminología de bases de datos relacionales, esto se conoce como *relación de varios a varios*. Por ejemplo, un cliente puede tener varios motivos para realizar una compra, y un motivo de compra puede estar asociado a varias compras. Para definir los motivos de venta que se relacionan con cada compra, se utiliza una tabla de combinación. Una dimensión de motivo de venta creada a partir de relaciones de este tipo tendría varios miembros que estarían relacionados a una única transacción de venta. Las dimensiones de varios a varios amplían el modelo dimensional más allá del esquema de estrella y admiten análisis complejos cuando las dimensiones no están directamente relacionadas con una tabla de hechos.  
@@ -39,7 +39,7 @@ ms.locfileid: "36199771"
   
 1.  Abra el Diseñador de vistas del origen de datos para la vista del origen de datos **Adventure Works DW 2012** .  
   
-2.  Haga clic en cualquier lugar en el **organizador de diagramas** panel, haga clic en **nuevo diagrama**y especifique `Internet Sales Order Reasons` como el nombre de este nuevo diagrama.  
+2.  Haga clic en cualquier lugar en el **organizador** panel, haga clic en **nuevo diagrama**y especifique `Internet Sales Order Reasons` como el nombre de este nuevo diagrama.  
   
 3.  Arrastre la tabla **InternetSales** al panel **Diagrama** desde el panel **Tablas** .  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36199771"
   
 6.  En el menú **Formato** , seleccione **Diseño automático**y haga clic en **Diagrama**.  
   
-7.  En la ventana Propiedades, cambie la **FriendlyName** propiedad de la **DimSalesReason** tabla a `SalesReason`y, a continuación, cambie la **FriendlyName** propiedad de la **FactInternetSalesReason** tabla a `InternetSalesReason`.  
+7.  En la ventana Propiedades, cambie la **FriendlyName** propiedad de la **DimSalesReason** tabla `SalesReason`y, a continuación, cambie el **FriendlyName** propiedad de la **FactInternetSalesReason** tabla `InternetSalesReason`.  
   
 8.  En el panel **Tablas** , expanda **InternetSalesReason (dbo.FactInternetSalesReason)**, haga clic en **SalesOrderNumber**y luego revise la propiedad **DataType** para esta columna de datos en la ventana Propiedades.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36199771"
   
      Observe que, para cada número de línea de cada pedido, un valor clave identifica el motivo de venta para la compra del artículo de la línea, como se muestra en la imagen siguiente.  
   
-     ![Valor para identificar el motivo de venta para las compras de la clave](../../2014/tutorials/media/l5-many-to-many-1.gif "valor para identificar el motivo de venta para las compras de clave")  
+     ![Valor para identificar el motivo de venta de las compras de la clave](../../2014/tutorials/media/l5-many-to-many-1.gif "clave, valor para identificar el motivo de venta para adquisiciones")  
   
 ## <a name="defining-the-intermediate-measure-group"></a>Definir el grupo de medida intermedio  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36199771"
   
      En la ilustración siguiente se muestran las propiedades de la medida **Internet Sales Reason Count** .  
   
-     ![Propiedades de medida Internet Sales Reason Count](../../2014/tutorials/media/l5-many-to-many-2.gif "propiedades de medida Internet Sales Reason Count")  
+     ![Las propiedades de la medida Internet Sales Reason Count](../../2014/tutorials/media/l5-many-to-many-2.gif "propiedades para la medida Internet Sales Reason Count")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>Definir la dimensión de varios a varios  
   
@@ -119,9 +119,9 @@ ms.locfileid: "36199771"
   
 12. En el **atributos** panel del Diseñador de dimensiones para la **Sales Reason** dimensión, seleccione **Sales Reason Key**y, a continuación, cambie el **nombre**propiedad en la ventana Propiedades para `Sales Reason.`  
   
-13. En el **jerarquías** panel del Diseñador de dimensiones, cree un **Sales Reasons** jerarquía de usuario que contiene el `Sales Reason Type` nivel y la **Sales Reason** nivel en ese orden.  
+13. En el **jerarquías** panel del Diseñador de dimensiones, cree un **Sales Reasons** jerarquía de usuario que contiene el `Sales Reason Type` nivel y el **Sales Reason** nivel en ese orden.  
   
-14. En la ventana Propiedades, defina `All Sales Reasons` como el valor de la **AllMemberName** propiedad de la jerarquía Sales Reasons.  
+14. En la ventana Propiedades, definir `All Sales Reasons` como el valor de la **AllMemberName** propiedad de la jerarquía Sales Reasons.  
   
 15. Definir `All Sales Reasons` como el valor de **AttributeAllMemberName** propiedad de la dimensión Sales Reason.  
   

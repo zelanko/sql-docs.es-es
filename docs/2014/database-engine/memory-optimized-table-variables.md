@@ -1,5 +1,5 @@
 ---
-title: Las Variables de tabla optimizada en memoria | Documentos de Microsoft
+title: Las Variables de tabla optimizado para memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f8b24a1ea77e579fcde558e4f58e3448efc4aed1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1ec91cf243fbaa131ca85e7585e448ddb93f36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157076"
 ---
 # <a name="memory-optimized-table-variables"></a>Variables de tabla con optimización para memoria
-  Además, para tablas optimizadas en memoria (para acceso de datos eficaz) y de forma nativa de los procedimientos almacenados (para el procesamiento de consultas eficaz y la ejecución de la lógica de negocios) compilados [!INCLUDE[hek_2](../includes/hek-2-md.md)] introduce una tercera clase de objeto: el tipo de tabla optimizada en memoria. Una variable de tabla creada mediante un tipo de tabla optimizada para memoria es una variable de tabla optimizada para memoria.  
+  Además de a las tablas optimizadas para memoria (para acceso de datos eficaz) y nativa de los procedimientos almacenados (para el procesamiento de consultas eficaz y la ejecución de lógica de negocios) compilados [!INCLUDE[hek_2](../includes/hek-2-md.md)] introduce una tercera clase de objeto: el tipo de tabla optimizada para memoria. Una variable de tabla creada mediante un tipo de tabla optimizada para memoria es una variable de tabla optimizada para memoria.  
   
  Las variables de tabla con optimización para memoria proporcionan las ventajas siguientes en comparación con las variables de tabla basadas en disco:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36200602"
   
 -   Se pueden usar variables de tabla para simular cursores en los procedimientos almacenados compilados de forma nativa, lo que puede ayudarle a evitar limitaciones del área expuesta en procedimientos almacenados compilados de forma nativa.  
   
- Al igual que las tablas optimizadas en memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera un archivo DLL para cada tipo de tabla optimizada en memoria. (Se invoca la compilación cuando se crea el tipo de tabla optimizada para memoria y no cuando se utiliza para crear variables de tabla optimizada para memoria). Este archivo DLL incluye las funciones para obtener acceso a los índices y recuperar los datos de las variables de tabla. Cuando una variable de tabla optimizada para memoria se declara basándose en el tipo de tabla, se crea una instancia de las estructuras de tabla y de índice correspondientes al tipo de tabla en la sesión de usuario. La variable de tabla se puede usar del mismo modo que las variables de tabla basadas en disco. Puede insertar, actualizar y eliminar filas en la variable de tabla, y puede usar las variables en las consultas de [!INCLUDE[tsql](../includes/tsql-md.md)]. También puede pasar las variables a procedimientos almacenados compilados de forma nativa e interpretados, como parámetros con valores de tabla (TVP).  
+ Al igual que las tablas optimizadas para memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera un archivo DLL para cada tipo de tabla optimizada para memoria. (Se invoca la compilación cuando se crea el tipo de tabla optimizada para memoria y no cuando se utiliza para crear variables de tabla optimizada para memoria). Este archivo DLL incluye las funciones para obtener acceso a los índices y recuperar los datos de las variables de tabla. Cuando una variable de tabla optimizada para memoria se declara basándose en el tipo de tabla, se crea una instancia de las estructuras de tabla y de índice correspondientes al tipo de tabla en la sesión de usuario. La variable de tabla se puede usar del mismo modo que las variables de tabla basadas en disco. Puede insertar, actualizar y eliminar filas en la variable de tabla, y puede usar las variables en las consultas de [!INCLUDE[tsql](../includes/tsql-md.md)]. También puede pasar las variables a procedimientos almacenados compilados de forma nativa e interpretados, como parámetros con valores de tabla (TVP).  
   
  En el ejemplo siguiente se muestra un tipo de tabla optimizada para memoria del ejemplo de OLTP en memoria basado en AdventureWorks ([Ejemplo de OLTP en memoria de SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   

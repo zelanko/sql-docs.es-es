@@ -1,5 +1,5 @@
 ---
-title: Requisitos del sistema | Documentos de Microsoft
+title: Requisitos del sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - requirements [SMO]
 ms.assetid: 5fd1dbcd-b3bb-4da0-8582-db2e5eeac9a3
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 703df7e2934cbadbe6aa755c318e4e4db00e7dda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f82d99f820556630c846557f6c93d8dbdf56fa9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156996"
 ---
 # <a name="system-requirements"></a>Requisitos del sistema
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objetos de administración (SMO) usa el [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` controlador de objetos para conectarse y comunicarse con instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -35,6 +35,6 @@ ms.locfileid: "36203254"
  Para desarrollar aplicaciones utilizando SMO, debe tener [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008 instalado.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general sobre la instalación de SQL Server](http://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
+ [Información general de la instalación de SQL Server](http://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
   
   

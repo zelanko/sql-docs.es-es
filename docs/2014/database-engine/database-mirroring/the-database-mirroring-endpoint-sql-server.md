@@ -5,10 +5,9 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - database mirroring [SQL Server], endpoint
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 060ab17ca1f86e2b5b1da0c900bd7e49a7103ab0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e9250860dbdc750bda53e28e52a31bcbe0e038b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185175"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>El extremo de creación de reflejo de la base de datos (SQL Server)
   Para participar en la creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , una instancia de servidor requiere su propio *extremo de creación de reflejo de la base de datos*dedicado. Se trata de un extremo especial que se utiliza exclusivamente para recibir conexiones procedentes de otras instancias de servidor. En una instancia de servidor determinada, todas las conexiones de creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a cualquier otra instancia de servidor utilizan un único extremo de creación de reflejo de la base de datos.  
@@ -71,7 +70,7 @@ ms.locfileid: "36201871"
   
 -   Si alguna instancia de servidor se ejecuta en una cuenta integrada (como sistema local, servicio local o servicio de red) o una cuenta que no es de dominio, debe utilizar certificados para la autenticación de extremos. Si utiliza certificados para los extremos de creación de reflejo de la base de datos, el administrador del sistema debe configurar cada instancia del servidor de modo que se utilicen certificados en las conexiones entrantes y salientes.  
   
-     No hay ningún método automatizado para configurar la seguridad de creación de reflejo de la base de datos mediante certificados. Debe usar CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o `New-SqlHadrEndpoint` cmdlet de PowerShell. Para obtener más información, vea [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Para obtener información acerca de cómo habilitar la autenticación de certificados en una instancia del servidor, consulte [usar certificados para un extremo de creación de reflejo de base de datos &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+     No hay ningún método automatizado para configurar la seguridad de creación de reflejo de la base de datos mediante certificados. Deberá usar CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o el `New-SqlHadrEndpoint` cmdlet de PowerShell. Para obtener más información, vea [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Para obtener información acerca de cómo habilitar la autenticación de certificados en una instancia del servidor, consulte [usar certificados para un extremo de creación de reflejo de base de datos &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  

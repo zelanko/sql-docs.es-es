@@ -1,13 +1,11 @@
 ---
-title: SQLGetDescField | Documentos de Microsoft
+title: SQLGetDescField | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,30 +14,30 @@ helpviewer_keywords:
 - SQLGetDescField function
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 23de7c344effa1093f75705f6dd0f2b27f852208
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0527b8260f954764ed894b1b5db60278ff483d31
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196682"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427534"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC Native Client expone campos descriptores específicos del controlador para la fila descriptor de implementación (IRD) únicamente. En IRD, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] campos de descriptor hace referencia a través de atributos de columna específicos del controlador. Para obtener información acerca de cómo obtener una lista completa de campos descriptores específicos del controlador disponibles, consulte [SQLColAttribute](sqlcolattribute.md).  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client expone los campos descriptores específicos del controlador para la fila descriptor de implementación (IRD) solo. En IRD, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] campos de descriptor que se hace referencia a través de los atributos de columna específicos del controlador. Para obtener información sobre una lista completa de campos de descriptor específicos del controlador disponibles, vea [SQLColAttribute](sqlcolattribute.md).  
   
  Los campos de descriptor que contienen cadenas de identificador de columna son a menudo cadenas de longitud cero. Todos los valores de campos de descriptor específicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son de solo lectura.  
   
  Al igual que los atributos se recuperan con SQLColAttribute, campos de descriptor que se notifican los atributos de nivel de fila de informe (como SQL_CA_SS_COMPUTE_ID) para todas las columnas del conjunto de resultados.  
   
 ## <a name="sqlgetdescfield-and-table-valued-parameters"></a>SQLGetDescField y parámetros con valores de tabla  
- SQLGetDescField puede utilizarse para obtener valores de atributos extendidos de parámetros con valores de tabla y las columnas de parámetros con valores de tabla. Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ SQLGetDescField puede utilizarse para obtener los valores de atributos extendidos de parámetros con valores de tabla y las columnas de parámetros con valores de tabla. Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>SQLGetDescField admite las características mejoradas de fecha y hora  
- Para obtener información acerca de los campos de descriptor disponibles con los tipos de fecha y hora nueva, vea [parámetros y metadatos de resultados](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
+ Para obtener información sobre los campos de descriptor disponibles con los tipos de fecha y hora nuevas, vea [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Para obtener más información, consulte [fecha y hora mejoras &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, consulte [mejoras de fecha y hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
  A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], puede devolver SQLGetDescField `SQL_C_SS_TIME2` (para `time` tipos) o `SQL_C_SS_TIMESTAMPOFFSET` (para `datetimeoffset`) en lugar de `SQL_C_BINARY`, si su aplicación utiliza ODBC 3.8.  
   
@@ -47,7 +45,7 @@ ms.locfileid: "36196682"
  `SQLGetDescField` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>SQLGetDescField admite columnas dispersas  
- SQLGetDescField puede utilizarse para consultar el nuevo campo IRD sql_ca_ss_is_column_set y determinar si una columna es una `column_set` columna.  
+ SQLGetDescField puede usarse para consultar el nuevo campo IRD SQL_CA_SS_IS_COLUMN_SET y determinar si una columna es una `column_set` columna.  
   
  Para obtener más información, consulte [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
@@ -157,7 +155,7 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Sqlgetdescfield, función](http://go.microsoft.com/fwlink/?LinkId=59351)   
+ [Función SQLGetDescField](http://go.microsoft.com/fwlink/?LinkId=59351)   
  [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)  
   
   

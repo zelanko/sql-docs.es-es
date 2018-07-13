@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 caps.latest.revision: 71
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6d46d44f2071d473fbe62a6f15cce3a250751576
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9b2ab20a31fb36c7ca648a2363861e75e25c9179
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153814"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services en SQL Server Data Tools (SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] es un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] entorno con mejoras específicas para soluciones de business intelligence. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] se incluye con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] es un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] entorno con mejoras específicas para soluciones de inteligencia empresarial. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] se incluye con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Use [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] para crear y administrar soluciones y proyectos de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y elementos relacionados con los informes. [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] proporciona el entorno de creación del Diseñador de informes. En el Diseñador de informes, puede abrir, modificar, obtener una vista previa, guardar e implementar definiciones de informe, orígenes de datos compartidos, conjuntos de datos compartidos y elementos de informe.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36200081"
 ##  <a name="bkmk_ReportServerProjects"></a> Proyectos de servidor de informes  
  Cuando se instala [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], pasan a estar disponibles las siguientes plantillas de proyecto en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]:  
   
--   **Proyecto de servidor de informes.** Cuando se selecciona un proyecto de servidor de informes, se abre el Diseñador de informes. Un proyecto de servidor de informes es una plantilla de proyectos de Business Intelligence instalada por [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] que está disponible en la **nuevo proyecto** cuadro de diálogo. Para más información, vea [Agregar un informe nuevo o existente a un proyecto de informe &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Las propiedades de proyecto del servidor de informes se aplican a todos los informes y todos los orígenes de datos compartidos de un proyecto de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Estas propiedades incluyen la dirección URL del servidor de informes y los nombres de carpeta de los informes y orígenes de datos compartidos. Use el cuadro de diálogo **Páginas de propiedades del proyecto** para ver los valores de propiedad actuales. Para abrir este cuadro de diálogo, en la **proyecto** menú, haga clic en  *\<nombre del proyecto >* **propiedades**.  
+-   **Proyecto de servidor de informes.** Cuando se selecciona un proyecto de servidor de informes, se abre el Diseñador de informes. Un proyecto de servidor de informes es una plantilla de proyectos de Business Intelligence instalada por [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] que está disponible en el **nuevo proyecto** cuadro de diálogo. Para más información, vea [Agregar un informe nuevo o existente a un proyecto de informe &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Las propiedades de proyecto del servidor de informes se aplican a todos los informes y todos los orígenes de datos compartidos de un proyecto de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Estas propiedades incluyen la dirección URL del servidor de informes y los nombres de carpeta de los informes y orígenes de datos compartidos. Use el cuadro de diálogo **Páginas de propiedades del proyecto** para ver los valores de propiedad actuales. Para abrir este cuadro de diálogo, en el **proyecto** menú, haga clic en  *\<nombre del proyecto >* **propiedades**.  
   
 -   **Asistente de proyectos de servidor de informes.** Cuando se selecciona un proyecto de asistente de proyectos de servidor de informes, se crea automáticamente un proyecto de servidor de informes y se abre el Asistente para informes. En el asistente, puede crear un informe siguiendo las instrucciones de cada página para crear una cadena de conexión a un origen de datos, establecer las credenciales del origen de datos, diseñar una consulta, agregar una región de datos de tabla o matriz, especificar datos y grupos de informe, elegir un estilo de fuente y color, publicar el informe en un servidor de informes y obtener una vista previa del informe localmente. Después de crear un informe con el asistente, puede modificar los datos del informe y el diseñador de informes mediante el Diseñador de informes en el proyecto de servidor de informes.  
   
@@ -71,10 +71,10 @@ ms.locfileid: "36200081"
   
 -   **Imágenes** La lista de imágenes disponibles para incluir como elemento del informe Imagen en un informe.  
   
- Los orígenes de datos y conjuntos de datos del panel Datos de informe representan los elementos en la definición de informe. El panel Datos de informe es una característica compatible con varios entornos de creación de informes. En el Generador de informes, es el único panel disponible para administrar los orígenes de datos y conjuntos de datos. En el Diseñador de informes, el panel Datos de informe trabaja con el Explorador de soluciones, que incluye orígenes de datos compartidos y conjuntos de datos compartidos como archivos. Los orígenes de datos compartidos y los conjuntos de datos compartidos del panel Datos de informe deben apuntar a los orígenes de datos compartidos y los conjuntos de datos compartidos del Explorador de soluciones. Los elementos del panel Datos de informe contienen después una referencia a los archivos de datos en el Explorador de soluciones. Las propiedades del proyecto determinan si los orígenes de datos compartidos y los conjuntos de datos compartidos se implementan en el servidor de informes o en el sitio de SharePoint. Para obtener más información, consulte [convertir un origen de datos de incrustada en Shared &#40;el generador de informes y SSRS&#41;](../report-data/convert-data-sources-report-builder-and-ssrs.md).  
+ Los orígenes de datos y conjuntos de datos del panel Datos de informe representan los elementos en la definición de informe. El panel Datos de informe es una característica compatible con varios entornos de creación de informes. En el Generador de informes, es el único panel disponible para administrar los orígenes de datos y conjuntos de datos. En el Diseñador de informes, el panel Datos de informe trabaja con el Explorador de soluciones, que incluye orígenes de datos compartidos y conjuntos de datos compartidos como archivos. Los orígenes de datos compartidos y los conjuntos de datos compartidos del panel Datos de informe deben apuntar a los orígenes de datos compartidos y los conjuntos de datos compartidos del Explorador de soluciones. Los elementos del panel Datos de informe contienen después una referencia a los archivos de datos en el Explorador de soluciones. Las propiedades del proyecto determinan si los orígenes de datos compartidos y los conjuntos de datos compartidos se implementan en el servidor de informes o en el sitio de SharePoint. Para obtener más información, consulte [convertir un origen de datos de incrustado en compartido &#40;generador de informes y SSRS&#41;](../report-data/convert-data-sources-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Si no ve el panel datos de informe, en la **vista** menú, haga clic en **datos de informe**. Si el panel Datos de informe está flotando, puede anclarlo. Para más información, vea [Acoplar el panel Datos de informe en el Diseñador de informes &#40;SSRS&#41;](dock-the-report-data-pane-in-report-designer-ssrs.md).  
+>  Si no ve el panel datos de informe, en el **vista** menú, haga clic en **datos de informe**. Si el panel Datos de informe está flotando, puede anclarlo. Para más información, vea [Acoplar el panel Datos de informe en el Diseñador de informes &#40;SSRS&#41;](dock-the-report-data-pane-in-report-designer-ssrs.md).  
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
   
@@ -258,7 +258,7 @@ ms.locfileid: "36200081"
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] se puede integrar con los complementos de origen. Use las páginas Proyectos y Soluciones del cuadro de diálogo **Opciones** para especificar el complemento y configurar las propiedades.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Plantillas de informe personalizadas  
- Para usar informes personalizados como plantillas para los informes nuevos, basta con copiarlas en la carpeta ReportProject del equipo en el que [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] está instalado. De forma predeterminada, esta carpeta se encuentra en \<unidad >: \Program Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject. Al agregar un elemento nuevo al proyecto de informe, el informe personalizado aparece en el panel de plantillas.  
+ Para usar informes personalizados como plantillas para los informes nuevos, basta con copiarlas en la carpeta ReportProject del equipo en el que [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] está instalado. De forma predeterminada, esta carpeta se encuentra en \<unidad >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject. Al agregar un elemento nuevo al proyecto de informe, el informe personalizado aparece en el panel de plantillas.  
   
  También puede agregar estilos personalizados al Asistente para informes.  
   
@@ -271,7 +271,7 @@ ms.locfileid: "36200081"
   
 -   Al menos un conjunto de propiedades de configuración, por ejemplo, Debug o Release.  
   
- Para obtener más información, consulte [publicar orígenes de datos e informes](../reports/publishing-data-sources-and-reports.md).  
+ Para obtener más información, consulte [informes y orígenes de datos de publicación](../reports/publishing-data-sources-and-reports.md).  
   
  En un proyecto de servidor de informes, puede especificar las opciones siguientes desde la línea de comandos:  
   

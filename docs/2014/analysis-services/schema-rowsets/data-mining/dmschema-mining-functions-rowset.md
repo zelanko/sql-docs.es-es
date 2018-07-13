@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DMSCHEMA_MINING_FUNCTIONS | Documentos de Microsoft
+title: Conjunto de filas DMSCHEMA_MINING_FUNCTIONS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_FUNCTIONS rowset
 ms.assetid: 9ace7493-a7b1-45ca-93de-3cb2f3597017
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5a60e18a57c15976e7a7bd5d5e31729e255869a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b726c81df5a6085ee52b177d95b4917d7cb8be1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169655"
 ---
 # <a name="dmschemaminingfunctions-rowset"></a>Conjunto de filas DMSCHEMA_MINING_FUNCTIONS
   Describe las funciones de minería de datos que son compatibles con los algoritmos de minería de datos disponibles en un servidor que ejecuta [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DMSCHEMA_MINING_FUNCTIONS` filas contiene las columnas siguientes.  
+ El `DMSCHEMA_MINING_FUNCTIONS` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "36201245"
 |`HELP_CONTEXT`|`DBTYPE_I4`||Id. del contexto de Ayuda para esta función.|  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DMSCHEMA_MINING_FUNCTIONS` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DMSCHEMA_MINING_FUNCTIONS` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

@@ -1,5 +1,5 @@
 ---
-title: Plantillas SQL Server Profiler | Documentos de Microsoft
+title: Plantillas de SQL Server Profiler | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default SQL Server Profiler templates
 - templates [SQL Server], SQL Server Profiler
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 380d73cf217d8ee006daadc0d05b826c45bccc1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9772140475683ed1c98dc228318d213c10f36ba4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228685"
 ---
 # <a name="sql-server-profiler-templates"></a>Plantillas de SQL Server Profiler
   Puede utilizar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para crear plantillas que definan las clases de eventos y columnas de datos que desea incluir en los seguimientos. Después de definir y guardar la plantilla, ejecute un seguimiento que registre los datos de cada clase de evento que ha seleccionado. Una sola plantilla puede utilizarse en varios seguimientos puesto que la plantilla no se ejecuta como tal.  
@@ -64,7 +64,7 @@ ms.locfileid: "36203319"
 >  La plantilla predeterminada es específica para un tipo de servidor concreto. Si la cambia para un tipo de servidor, seguirá siendo la misma para el resto de tipos de servidor. Para obtener más información sobre cómo configurar una plantilla predeterminada para un servidor específico, vea [Configurar los valores predeterminados de definición de seguimiento &#40;SQL Server Profiler&#41;](set-trace-definition-defaults-sql-server-profiler.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Crear una plantilla de seguimiento &#40;analizador de SQL Server&#41;](create-a-trace-template-sql-server-profiler.md)   
+ [Crear una plantilla de seguimiento &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [Modificar una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [Exportar una plantilla de seguimiento &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)   
  [Importar una plantilla de seguimiento &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)  

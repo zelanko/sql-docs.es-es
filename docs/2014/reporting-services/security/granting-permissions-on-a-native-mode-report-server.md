@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
 - authorization [Reporting Services]
@@ -25,13 +25,13 @@ ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d889c606718bca0f917322cbf031f9c89c0ede3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9628b3e6393c6fe33bcff6b5bf14933b46c2dd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260131"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Conceder permisos en un servidor de informes en modo nativo
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la autorización basada en roles y un subsistema de autenticación para determinar quién puede realizar operaciones y tener acceso a los elementos de un servidor de informes. La autorización basada en roles divide en roles el conjunto de acciones que puede realizar un usuario o un grupo. La autenticación se basa en la autenticación de Windows integrada o en un módulo de autenticación personalizado proporcionado por el usuario. Puede usar los roles predefinidos o los personalizados con cualquier tipo de autenticación.  
@@ -43,7 +43,7 @@ ms.locfileid: "36200854"
   
  Para conceder acceso a operaciones y elementos del servidor de informes, siga estas directrices:  
   
-1.  Revise los roles predefinidos para determinar si puede utilizarlos tal y como están. Si necesita ajustar las tareas o definir roles adicionales, conviene que lo haga antes de empezar a asignar usuarios a roles específicos. Para obtener más información acerca de cada función, consulte [Roles predefinidos](role-definitions-predefined-roles.md).  
+1.  Revise los roles predefinidos para determinar si puede utilizarlos tal y como están. Si necesita ajustar las tareas o definir roles adicionales, conviene que lo haga antes de empezar a asignar usuarios a roles específicos. Para obtener más información acerca de cada rol, consulte [Roles predefinidos](role-definitions-predefined-roles.md).  
   
 2.  Identifique qué usuarios y grupos requieren acceso al servidor de informes y en qué nivel. A la mayoría de los usuarios se les debería asignar el rol **Explorador** o el rol **Generador de informes** . A un pequeño número de usuarios se les debería asignar el rol **Publicador** . A el rol **Administrador de contenido**conviene asignar muy pocos usuarios.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "36200854"
 |Herramienta|Tareas|  
 |----------|-----------|  
 |Management Studio: se usa para ver, modificar, crear y eliminar definiciones de roles.|[Crear, eliminar o modificar un rol &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)|  
-|Administrador de informes: se usa para asignar usuarios y grupos a los roles.|[Usuario de conceder acceso a un servidor de informes &#40;el Administrador de informes&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [Modificar o eliminar una asignación de roles &#40;Administrador de informes&#41;](role-assignments-modify-or-delete.md)|  
+|Administrador de informes: se usa para asignar usuarios y grupos a los roles.|[Conceda al usuario el acceso a un servidor de informes &#40;el Administrador de informes&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [Modificar o eliminar una asignación de roles &#40;Administrador de informes&#41;](role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Roles predefinidos](role-definitions-predefined-roles.md)   
- [Conceder permisos sobre elementos de servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Autenticación con el servidor de informes](authentication-with-the-report-server.md)   
  (crear-y-administrar-rol-assignments.md)   
  [Seguridad y protección de Reporting Services](reporting-services-security-and-protection.md)   

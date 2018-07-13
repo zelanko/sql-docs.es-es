@@ -1,5 +1,5 @@
 ---
-title: Elemento FiscalYearName (ASSL) | Documentos de Microsoft
+title: Elemento FiscalYearName (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - FiscalYearName element
 ms.assetid: ce613a21-6890-4796-aac5-b029eca46255
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6e60ce6332e049f0528316a83c0dc62374c2bb4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2564345c916d73c5984be851523a234d2be6bbe4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197895"
 ---
 # <a name="fiscalyearname-element-assl"></a>Elemento FiscalYearName (ASSL)
   Define la convención de nomenclatura para el nombre del año fiscal para un [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  

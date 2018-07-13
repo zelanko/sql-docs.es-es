@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4943247f5364991efe937ca56759c09ed5617e32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 143f549a4f3b1961c02587b4a913d56d6002bbe6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172306"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   Una `CompoundCurve` es una recopilación de cero o más instancias de `CircularString` o `LineString` de tipos de geometría o de geografía.  
   
 > [!IMPORTANT]  
->  Para obtener una descripción detallada y ejemplos de las nuevas características espaciales de esta versión, incluido el `CompoundCurve` subtipo, descargue las notas del producto, [nuevas características espaciales de SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obtener una descripción detallada y ejemplos de las nuevas características espaciales en esta versión, incluido el `CompoundCurve` subtipo, descargue las notas del producto, [nuevas características espaciales de SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Se puede crear una instancia vacía de `CompoundCurve`, pero para que una `CompoundCurve` sea válida debe cumplir los siguientes criterios:  
   
-1.  Debe contener al menos un `CircularString` o `LineString` instancia.  
+1.  Debe contener al menos una `CircularString` o `LineString` instancia.  
   
 2.  La secuencia de `CircularString` o `LineString` instancias deben ser continuas.  
   
- Si un `CompoundCurve` contiene una secuencia de varias `CircularString` y `LineString` instancias, el extremo final para cada instancia, salvo la última instancia debe ser el extremo inicial de la siguiente instancia de la secuencia. Esto significa que si el punto final de una instancia anterior de la secuencia es (4 3 7 2), el punto inicial para la instancia siguiente de la secuencia debe ser (4 3 7 2). Observe que los valores M (medida) y Z (elevación) para el punto también deben ser iguales. Si hay diferencia entre ambos puntos, se produce una excepción `System.FormatException` . Puntos en un `CircularString` no tienen que tener un valor Z o M. Si no se proporcionan valores Z o M para el punto final de la instancia anterior, el punto inicial de la instancia siguiente no puede incluir valores Z o M. Si el punto final para la secuencia anterior es (4 3), el punto inicial para la secuencia siguiente debe ser (4 3); no puede ser (4 3 7 2). Todos los puntos de un `CompoundCurve` instancia debe tener ningún valor Z o el mismo valor Z.  
+ Si un `CompoundCurve` contiene una secuencia de varias `CircularString` y `LineString` instancias, el extremo final de cada instancia, salvo el último debe ser el extremo inicial de la siguiente instancia de la secuencia. Esto significa que si el punto final de una instancia anterior de la secuencia es (4 3 7 2), el punto inicial para la instancia siguiente de la secuencia debe ser (4 3 7 2). Observe que los valores M (medida) y Z (elevación) para el punto también deben ser iguales. Si hay diferencia entre ambos puntos, se produce una excepción `System.FormatException` . Puntos en un `CircularString` no tiene que tener valor Z o M. Si no se proporcionan valores Z o M para el punto final de la instancia anterior, el punto inicial de la instancia siguiente no puede incluir valores Z o M. Si el punto final para la secuencia anterior es (4 3), el punto inicial para la secuencia siguiente debe ser (4 3); no puede ser (4 3 7 2). Todos los puntos de un `CompoundCurve` instancia debe tener ningún valor Z o el mismo valor Z.  
   
 ## <a name="compoundcurve-instances"></a>Instancias de CompoundCurve  
  La siguiente ilustración muestra válida `CompoundCurve` tipos.  
@@ -52,7 +52,7 @@ ms.locfileid: "36202672"
   
 3.  Ninguna de las instancias contenidas son instancias vacías.  
   
- En el ejemplo siguiente se muestra aceptado `CompoundCurve` instancias.  
+ El ejemplo siguiente se muestra aceptado `CompoundCurve` instancias.  
   
 ```  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
@@ -73,7 +73,7 @@ DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0)
   
 2.  Todas las instancias de segmento de arco circular contenidas en la instancia `CompoundCurve` son instancias válidas.  
   
- En el ejemplo siguiente se muestra válido `CompoundCurve` instancias.  
+ El ejemplo siguiente se muestra válido `CompoundCurve` instancias.  
   
 ```  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
@@ -83,7 +83,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
 ```  
   
- `@g3` es válido porque la instancia `CircularString` es válida. Para obtener más información sobre la validez de la `CircularString` de la instancia, consulte [CircularString](circularstring.md).  
+ `@g3` es válido porque la instancia `CircularString` es válida. Para obtener más información sobre la validez de la `CircularString` la instancia, vea [CircularString](circularstring.md).  
   
  El siguiente ejemplo muestra instancias de `CompoundCurve` no válidas.  
   
@@ -94,7 +94,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g1` no es válida porque la segunda instancia no es una instancia válida de LineString. `@g2` no es válida porque la instancia de `LineString` no es válida. `@g3` no es válida porque la instancia de `CircularString` no es válida. Para obtener más información sobre válido `CircularString` y `LineString` instancias, vea [CircularString](circularstring.md) y [LineString](linestring.md).  
+ `@g1` no es válida porque la segunda instancia no es una instancia válida de LineString. `@g2` no es válida porque la instancia de `LineString` no es válida. `@g3` no es válida porque la instancia de `CircularString` no es válida. Para obtener más información sobre válido `CircularString` y `LineString` instancias, consulte [CircularString](circularstring.md) y [LineString](linestring.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -130,7 +130,7 @@ SET @g2 = geometry::Parse('COMPOUNDCURVE((1 1, 1 3, 3 3, 3 1, 1 1))');
 SELECT @g1.STLength(), @g2.STLength();  
 ```  
   
- Las longitudes de `@g1` y `@g2` son iguales. Observe en el ejemplo que una `CompoundCurve` instancia puede almacenar una o más instancias de `LineString`.  
+ Las longitudes de `@g1` y `@g2` son iguales. Observe en el ejemplo que un `CompoundCurve` instancia puede almacenar una o varias instancias de `LineString`.  
   
 ### <a name="e-instantiating-a-geometry-instance-using-a-compoundcurve-with-multiple-circularstrings"></a>E. Crear una instancia de geometry usando una CompoundCurve con varias CircularStrings  
  En el siguiente ejemplo, se muestra cómo utilizar dos instancias `CircularString` diferentes para inicializar una `CompoundCurve`.  

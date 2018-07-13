@@ -1,5 +1,5 @@
 ---
-title: Particiones (SSAS Tabular) | Documentos de Microsoft
+title: Particiones (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 09af0cce9aa8058ea02b597236b48fc0fd58b190
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0797d22b66a40c0cf13fcd9c394d0072827b8e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239705"
 ---
 # <a name="partitions-ssas-tabular"></a>Particiones (SSAS tabular)
   Las particiones dividen una tabla en partes lógicas. A continuación, cada partición se puede procesar (actualizar) de forma independiente de las demás particiones. Las particiones que se crean mediante el cuadro de diálogo Particiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante la creación de modelos se aplican a la base de datos del área de trabajo del modelo. Una vez implementado el modelo, las particiones definidas para la base de datos del área de trabajo del modelo se duplican en la base de datos del modelo implementada. Además, puede crear y administrar particiones para una base de datos del modelo implementada usando el cuadro de diálogo Particiones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  En este tema se describen las particiones que se crean durante la creación de modelos con el cuadro de diálogo Administrador de particiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obtener información sobre cómo crear y administrar particiones para un modelo implementado, vea [Crear y administrar particiones de modelos tabulares &#40;SSAS tabular&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
@@ -52,11 +52,11 @@ ms.locfileid: "36201448"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Crear y administrar particiones en la base de datos del área de trabajo &#40;SSAS Tabular&#41;](workspace-database-ssas-tabular.md)|Describe cómo crear y administrar las particiones de la base de datos del área de trabajo del modelo con el Administrador de particiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
-|[Procesar particiones en la base de datos del área de trabajo &#40;SSAS Tabular&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)|Describe cómo procesar (actualizar) particiones en la base de datos del área de trabajo del modelo.|  
+|[Crear y administrar particiones en la base de datos del área de trabajo &#40;Tabular de SSAS&#41;](workspace-database-ssas-tabular.md)|Describe cómo crear y administrar las particiones de la base de datos del área de trabajo del modelo con el Administrador de particiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
+|[Procesar particiones en la base de datos del área de trabajo &#40;Tabular de SSAS&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)|Describe cómo procesar (actualizar) particiones en la base de datos del área de trabajo del modelo.|  
   
 ## <a name="see-also"></a>Vea también  
  [Modo DirectQuery &#40;SSAS tabular&#41;](directquery-mode-ssas-tabular.md)   
- [Procesar datos &#40;SSAS Tabular&#41;](../process-data-ssas-tabular.md)  
+ [Procesar datos &#40;Tabular de SSAS&#41;](../process-data-ssas-tabular.md)  
   
   

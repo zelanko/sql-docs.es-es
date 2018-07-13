@@ -1,5 +1,5 @@
 ---
-title: Ayuda de F1 del Asistente de diseño de agregación | Documentos de Microsoft
+title: Asistente de diseño de agregaciones (Ayuda de F1) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregation Design Wizard
 ms.assetid: 39e23cf1-6405-4fb6-bc14-ba103314362d
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cc9101bf9f5d733ea00d50c90de1981c611d6aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9926d41c221356f89633d8b3130069c28181a32a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201914"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259701"
 ---
 # <a name="aggregation-design-wizard-f1-help"></a>Asistente para diseñar agregaciones (Ayuda F1, SSAS)
   Las agregaciones proporcionan mejoras de rendimiento al permitir que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recupere los totales calculados previamente de forma directa desde el almacenamiento del cubo en vez de tener que volver a calcular datos de un origen de datos subyacente para cada consulta.  
@@ -48,7 +48,7 @@ ms.locfileid: "36201914"
   
 -   [Establecer las opciones de agregaciones &#40;Asistente para diseñar agregaciones&#41;](set-aggregation-options-aggregation-design-wizard.md)  
   
--   [Finalización del Asistente para &#40;Asistente para diseñar agregaciones&#41;](completing-the-wizard-aggregation-design-wizard.md)  
+-   [Finalización del asistente &#40;Asistente para diseñar agregaciones&#41;](completing-the-wizard-aggregation-design-wizard.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Las agregaciones y diseños de agregaciones](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   

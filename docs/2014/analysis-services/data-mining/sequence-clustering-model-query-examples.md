@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de consultas de modelo de clústeres de secuencia | Documentos de Microsoft
+title: Ejemplos de consultas de modelo de clústeres de secuencia | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d55120355f3b862372ca58098a044ec00ab4a34b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d8ab6d3d16cff232107a4e2467d5a7d71dd59e8b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192985"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Ejemplos de consultas de modelos de clústeres de secuencia
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre la información almacenada en el modelo, o se puede crear una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones según los datos nuevos que se proporcionen. En un modelo de agrupación en clústeres de secuencia, las consultas de contenido normalmente proporcionan detalles adicionales sobre los clústeres que se encontraron o las transiciones dentro de esos clústeres. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  
@@ -277,8 +277,8 @@ AS t
   
 ## <a name="see-also"></a>Vea también  
  [Consultas de minería de datos](data-mining-queries.md)   
- [Referencia técnica del algoritmo de agrupación en clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Referencia técnica del algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm.md)   
- [Contenido del modelo para los modelos de clústeres de secuencia de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Para los modelos de clústeres de secuencia de contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

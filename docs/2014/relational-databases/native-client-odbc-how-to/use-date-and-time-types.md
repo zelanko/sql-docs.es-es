@@ -1,29 +1,27 @@
 ---
-title: Usar fecha y hora tipos | Documentos de Microsoft
+title: Tipos de usar la fecha y hora | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 99ca6432eb5d29e9ce7a0c01e80ed2bae4ddf3da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: edbf18a7ab523e88a2a7d2a8a0b2c723a1cae327
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200347"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427594"
 ---
 # <a name="use-date-and-time-types"></a>Usar tipos de fecha y hora
-  En este ejemplo, se muestra cómo inicializar las estructuras de datos de fecha y hora que se agregaron en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. A continuación, se preparan los valores de entrada, se enlazan los parámetros y se ejecuta la consulta. Para obtener más información acerca del uso de estos tipos, vea [fecha y hora mejoras &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+  En este ejemplo, se muestra cómo inicializar las estructuras de datos de fecha y hora que se agregaron en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. A continuación, se preparan los valores de entrada, se enlazan los parámetros y se ejecuta la consulta. Para obtener más información sobre el uso de estos tipos, vea [mejoras de fecha y hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="example"></a>Ejemplo  
  Necesitará un origen de datos ODBC denominado DateTime. La base de datos predeterminada para DateTime debe ser tempdb. Este origen de datos debe estar basado en el controlador ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

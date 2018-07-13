@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collations [SQL Server], database
 - database collations [SQL Server]
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 769adcde56f3e77cee0a2458b1d32b9e763792f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1284c5ea161942ab96d974549147f24cd72ae8ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158556"
 ---
 # <a name="set-or-change-the-database-collation"></a>Establecer o cambiar la intercalación de base de datos
   En este tema se describe cómo establecer y cambiar la intercalación de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si no se especifica ninguna intercalación, se utiliza la del servidor.  
@@ -61,7 +61,7 @@ ms.locfileid: "36203197"
   
     -   Todos los parámetros `char`, `varchar`, `text`, `nchar`, `nvarchar` o `ntext` y valores devueltos escalares existentes para los procedimientos almacenados y las funciones definidas por el usuario se cambian a la nueva intercalación.  
   
-    -   El `char`, `varchar`, `text`, `nchar`, `nvarchar`, o `ntext` tipos de datos del sistema y todos los tipos de datos definidos por el usuario basados en estos tipos de datos del sistema se cambian a la nueva intercalación predeterminada.  
+    -   El `char`, `varchar`, `text`, `nchar`, `nvarchar`, o `ntext` tipos de datos del sistema y todos los tipos de datos definido por el usuario basados en estos tipos de datos del sistema se cambian a la nueva intercalación predeterminada.  
   
 -   Para cambiar la intercalación de cualquier objeto nuevo creado en una base de datos de usuario, utilice la cláusula COLLATE de la instrucción [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) . Esta instrucción no modifica la intercalación de las columnas de ninguna de las tablas definidas por el usuario existentes. Para modificarlas, utilice la cláusula COLLATE de [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql).  
   

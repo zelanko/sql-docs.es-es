@@ -1,5 +1,5 @@
 ---
-title: Marcar como tabla de cuadro de diálogo (SSAS) fecha | Documentos de Microsoft
+title: Marcar como tabla de cuadro de diálogo (SSAS) fecha | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.createdatetable.f1
 ms.assetid: 698b5ef1-b79b-4d76-9847-39669b4f5bb9
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 88cac2df0119fe432eeebd0f970bb1c2b6899973
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59a0483b697132c2da56d4b2c937bf942d9792ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210265"
 ---
 # <a name="mark-as-date-table-dialog-box-ssas"></a>Cuadro de diálogo Marcar como tabla de fechas (SSAS)
   El cuadro de diálogo **Marcar como tabla de fechas** aparece al hacer clic en el menú **Tabla** , seguido de **Fecha**y de **Marcar como tabla de fechas**. Las tablas de fecha se usan con funciones de inteligencia de tiempo. Para crear una relación con una tabla de datos, debe especificar una columna con valores únicos que se usará como identificador único de la tabla.  

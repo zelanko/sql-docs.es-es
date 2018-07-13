@@ -1,5 +1,5 @@
 ---
-title: Opciones (Editor de texto - página de extensión de archivo) | Documentos de Microsoft
+title: Opciones (Editor de texto - página extensión de archivo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.File_Extension
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 307d7f6fbf3405d0ff84d1c2672c1de2c90bf092
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4fd0abdb6c1bc93d730ccb502d6eb1c2facf891a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176422"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Opciones (Editor de texto - Página Extensión de archivo)
   Use el cuadro de diálogo **Opciones** para especificar cómo [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] administra todos los archivos con determinadas extensiones. Puede seleccionar un editor para cada extensión que escriba. De este modo, puede elegir el editor de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para abrir los documentos de un tipo determinado. Para abrir las opciones de extensión de archivo, haga clic en **Opciones** en el menú **Herramientas**, expanda el **Editor de texto** y haga clic en **Extensión de archivo**.  

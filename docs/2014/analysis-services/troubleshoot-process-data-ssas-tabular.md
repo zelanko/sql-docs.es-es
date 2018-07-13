@@ -1,5 +1,5 @@
 ---
-title: Solucionar problemas de procesamiento de datos (SSAS Tabular) | Documentos de Microsoft
+title: Solución de problemas de procesamiento de datos (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8ddebb4bb6a2e1c3e3d4bc53052ff207d7bb1d40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d066eaa1702d096e7e1d0919c988e6ea6e6bdbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239505"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Solucionar problemas del procesamiento de datos (SSAS tabular)
   Este tema incluye información sobre el procesamiento (actualización) de los datos de un modelo cuando este se crea con [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]; no incluye información sobre el procesamiento de datos de modelos implementados en una instancia de servidor de Analysis Services. Para obtener más información sobre el procesamiento de los datos de un modelo implementado, vea [Crear scripts para tareas administrativas en Analysis Services](script-administrative-tasks-in-analysis-services.md).  
@@ -109,7 +109,7 @@ ms.locfileid: "36197010"
 -   No se pueden seleccionar varias columnas de distintas tablas y cambiar las propiedades de las columnas. Solo se puede trabajar con tablas o vistas de una en una.  
   
 ## <a name="see-also"></a>Vea también  
- [Procesar manualmente los datos &#40;SSAS Tabular&#41;](manually-process-data-ssas-tabular.md)   
- [Editar una conexión de origen de datos existente &#40;SSAS Tabular&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
+ [Procesar manualmente los datos &#40;Tabular de SSAS&#41;](manually-process-data-ssas-tabular.md)   
+ [Editar una conexión de origen de datos existente &#40;Tabular de SSAS&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

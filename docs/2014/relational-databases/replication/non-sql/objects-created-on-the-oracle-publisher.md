@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ae4f1bb60dbe467855b43bd4c2408c439e194196
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 671058db0556f58d6bd29b8960212b6e180862be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166912"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
   La replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala objetos de base de datos en el publicador de Oracle para habilitar el seguimiento y reenvío de los cambios ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no instala ningún archivo binario en el publicador de Oracle). En la siguiente tabla se muestran los objetos que se crean en el publicador de Oracle cuando se identifica como publicador en el distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Las descripciones de los objetos se proporcionan solo como información. Estos objetos no se deben modificar.  

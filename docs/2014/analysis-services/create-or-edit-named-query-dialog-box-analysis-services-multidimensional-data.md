@@ -1,5 +1,5 @@
 ---
-title: Crear o editar el cuadro de diálogo de consulta con nombre (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Crear o editar el cuadro de diálogo de consulta con nombre (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createnamedquery.f1
 helpviewer_keywords:
 - Create Named Query dialog box
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f97b06c3fb67080e7ebc3adc3c1e4d84d3fdea61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe4ebd6e0ecaff7d6aed1aecef906bb1a8519e98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149626"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Crear o Editar consulta con nombre (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Crear/Editar consulta con nombre** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear o editar una consulta con nombre en el **Diseñador de vistas del origen de datos**. Una consulta con nombre puede tratarse como una tabla en la que se pueden basar otros objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Puede mostrar el cuadro de diálogo **Crear/Editar consulta con nombre** de distintas maneras:  
@@ -89,7 +89,7 @@ ms.locfileid: "36197872"
 > [!IMPORTANT]  
 >  No es posible cambiar los tipos de consulta en el cuadro de diálogo.  
   
- **Panel Cuadrícula**  
+ **Panel de cuadrícula**  
  Muestra en una cuadrícula los objetos a los que se hace referencia en la consulta. Puede usar este panel para agregar y quitar columnas en la consulta, y para cambiar la configuración de cada columna.  
   
 > [!NOTE]  

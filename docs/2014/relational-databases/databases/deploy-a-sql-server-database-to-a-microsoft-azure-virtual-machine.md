@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploymentwizard.deploymentsettings.f1
 - sql12.swb.deploymentwizard.progress.f1
@@ -43,18 +43,18 @@ helpviewer_keywords:
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 976bd24095536f6ae13cf40fab8129154b14864b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dc5399a395a53f2e37103b5516b0e707eb8c0335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158516"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implementar una base de datos de SQL Server en una máquina virtual de Microsoft Azure
-  Use la **implementar una base de datos de SQL Server en Windows Azure VM** Asistente para implementar una base de datos de una instancia de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una máquina Virtual (VM de Windows Azure). El asistente emplea una operación de copia de seguridad completa de la base de datos, por lo que siempre copia todo el esquema de la base de datos y los datos de una base de datos de usuario de SQL Server. El asistente también realiza toda la configuración de Azure VM, por lo que no se requiere ninguna configuración previa de la VM.  
+  Use la **implementar una base de datos de SQL Server en una máquina virtual de Windows Azure** Asistente para implementar una base de datos de una instancia de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una máquina Virtual de Azure de Windows (VM). El asistente emplea una operación de copia de seguridad completa de la base de datos, por lo que siempre copia todo el esquema de la base de datos y los datos de una base de datos de usuario de SQL Server. El asistente también realiza toda la configuración de Azure VM, por lo que no se requiere ninguna configuración previa de la VM.  
   
  No puede usar el asistente para las copias de seguridad diferenciales porque no sobrescribirá una base de datos existente que tenga el mismo nombre de base de datos. Para reemplazar una base de datos existente en la VM, debe quitar primero la base de datos existente o cambiar el nombre de la base de datos. Si hay un conflicto de nombres entre el nombre de la base de datos para una operación de implementación en ejecución y una base de datos existente en la VM, el asistente sugerirá un nombre de base de datos anexado para la base de datos en ejecución de manera que pueda completar la operación.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36199380"
   
 -   Credenciales con privilegios de operador de copia de seguridad en la base de datos que pretende implementar, desde la instancia de origen de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para obtener más información acerca de cómo ejecutar SQL Server en máquinas virtuales de Windows Azure, consulte [preparar la migración a SQL Server en máquinas virtuales de Windows Azure](http://msdn.microsoft.com/library/dn133142.aspx).  
+ Para obtener más información sobre la ejecución de SQL Server en máquinas virtuales de Windows Azure, consulte [preparar la migración a SQL Server en Microsoft Azure Virtual Machines](http://msdn.microsoft.com/library/dn133142.aspx).  
   
  En los equipos que ejecutan sistemas operativos Windows Server, debe usar la configuración siguiente para ejecutar este asistente:  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36199380"
 ###  <a name="permissions"></a> Permissions  
  La base de datos que se implementa debe estar en un estado normal, la base de datos debe ser accesible para la cuenta de usuario que ejecuta el asistente y la cuenta de usuario debe tener permisos para realizar una operación de copia de seguridad.  
   
-##  <a name="launch_wizard"></a> Uso de la base de datos implementar Asistente de Azure VM de Windows  
+##  <a name="launch_wizard"></a> Uso de la base de datos de implementación para el Asistente para la máquina virtual de Azure de Windows  
  **Para iniciar el asistente, realice los pasos siguientes:**  
   
 1.  Use SQL Server Management Studio para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la base de datos que desea implementar.  
@@ -200,7 +200,7 @@ ms.locfileid: "36199380"
 -   **Ayuda** : inicia el tema de Ayuda de MSDN para el asistente.  
   
 ##  <a name="Source_settings"></a> Configuración de origen  
- Utilice esta página para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos que desea implementar en la VM de Windows Azure. También especificará una ubicación temporal para que los archivos se guarden del equipo local antes de que se transfieran a Windows Azure. Esta puede ser una ubicación de red compartida.  
+ Utilice esta página para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos que desea implementar en la máquina virtual de Windows Azure. También especificará una ubicación temporal para que los archivos se guarden del equipo local antes de que se transfieran a Windows Azure. Esta puede ser una ubicación de red compartida.  
   
  **Opciones**  
   

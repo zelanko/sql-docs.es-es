@@ -1,5 +1,5 @@
 ---
-title: Crear un informe detallado (RDLC) con parámetros mediante ReportViewer (Tutorial de SSRS) | Documentos de Microsoft
+title: Crear un informe detallado (RDLC) con parámetros mediante ReportViewer (Tutorial de SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2124efb2b773f76b6d117d9163b159affb79ffac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bb5bb2c0a02de9d4be433203996072bb218b8c0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157826"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>Crear un informe detallado (RDLC) con parámetros mediante ReportViewer (Tutorial de SSRS)
   Un informe [detallado](http://technet.microsoft.com/library/ff519554.aspx) es un informe que los usuarios abren al hacer clic en un vínculo de otro informe. Este tipo de informes suele incluir información detallada acerca de los elementos del informe de resumen original. Este tutorial le guía a través de las lecciones siguientes para crear un informe detallado con parámetros y una consulta, en [informes en modo local](http://msdn.microsoft.com/library/ff487969.aspx).  
   
 ## <a name="requirements"></a>Requisitos  
- Para usar este tutorial, debe tener acceso a la **AdventureWorks2008** base de datos de ejemplo. La consulta usada en este tutorial también funcionará con **AdventureWorks2012** base de datos. Para obtener más información sobre cómo obtener el **AdventureWorks2008** base de datos de ejemplo, vea [Tutorial: instalar la base de datos de AdventureWorks](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) para Microsoft Visual Studio 2010.  
+ Para usar este tutorial, debe tener acceso a la **AdventureWorks2008** base de datos de ejemplo. La consulta usada en este tutorial también funcionará con **AdventureWorks2012** base de datos. Para obtener más información sobre cómo obtener el **AdventureWorks2008** base de datos de ejemplo, vea [Tutorial: instalar la base de datos AdventureWorks](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) para Microsoft Visual Studio 2010.  
   
- En este tutorial se da por supuesto que está familiarizado con las consultas Transaction-SQL y ADO.NET [conjunto de datos](http://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) y [DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) objetos.  
+ En este tutorial se da por supuesto que está familiarizado con las consultas Transaction-SQL y ADO.NET [DataSet](http://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) y [DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) objetos.  
   
  Utilice Visual Studio 2010 o Visual Studio 2012 y el sitio Web ASP.NET para crear una página Web ASP.NET con un control ReportViewer. El control se configura para ver un informe que cree. En este tutorial, crea la aplicación en Microsoft Visual C#.  
   

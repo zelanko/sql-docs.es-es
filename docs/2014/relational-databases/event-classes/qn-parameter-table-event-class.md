@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Parameter Table
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e3f5cdbece8396bcc75250146bd43ce79da7f5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5681c630cc3c45d0f2de06d3b5baa981bebe8c85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184662"
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table (clase de eventos)
   El evento QN:Parameter table ofrece información acerca de las operaciones necesarias para crear y quitar las tablas internas que almacenan la información de parámetros, así como para mantener los recuentos de referencia de las mismas. Este evento también informa de la actividad interna para restablecer el recuento de utilización de una tabla de parámetros.  
@@ -38,7 +38,7 @@ ms.locfileid: "36198900"
 |DatabaseName|`nvarchar`|Nombre de la base de datos en que se ejecuta la instrucción del usuario.|35|Sí|  
 |EventClass|`Int`|Tipo de evento = 200.|27|no|  
 |EventSequence|`int`|Número de secuencia de este evento.|51|no|  
-|EventSubClass|`nvarchar`|Tipo de subclase de evento que proporciona más información acerca de cada clase de evento. Esta columna puede incluir los valores siguientes:<br /><br /> Tabla creada: indica una tabla de parámetros se ha creado en la base de datos.<br /><br /> Table drop attempt Failed: indica que la base de datos ha intentado quitar automáticamente una tabla de parámetros no utilizada para liberar recursos.<br /><br /> Table drop attempt failed error: indica que la base de datos intentó quitar una tabla de parámetros y no se pudo. [!INCLUDE[ssDE](../../includes/ssde-md.md)] volverá a programar automáticamente la eliminación de la tabla de parámetros para liberar recursos.<br /><br /> Tabla colocada: indica que la base de datos quitó correctamente una tabla de parámetros.<br /><br /> Tabla anclado: indica que se ha marcado la tabla de parámetros para el uso actual por el procesamiento interno.<br /><br /> Tabla unpinned: indica que la tabla de parámetros se ha liberado. El procesamiento interno ha terminado de usar la tabla.<br /><br /> Número de usuarios aumenta: indica que ha aumentado el número de suscripciones de notificación de consulta que hacen referencia a una tabla de parámetros.<br /><br /> Número de usuarios reducidos: indica que ha disminuido el número de suscripciones de notificación de consulta que hacen referencia a una tabla de parámetros.<br /><br /> Restablecer contador LRU: indica que se ha reiniciado el recuento de utilización de la tabla de parámetros.<br /><br /> Tarea de limpieza iniciada: indica cuándo se ha iniciado la limpieza de todas las suscripciones de esta tabla de parámetros. Esto sucede cuando se inicia la base de datos o cuando se elimina una tabla que subyace a las suscripciones de esta tabla de parámetros.<br /><br /> Tarea de limpieza finalizó: indica cuándo ha finalizado la limpieza de todas las suscripciones de esta tabla de parámetros.|21|Sí|  
+|EventSubClass|`nvarchar`|Tipo de subclase de evento que proporciona más información acerca de cada clase de evento. Esta columna puede incluir los valores siguientes:<br /><br /> Tabla creada: indica que se ha creado una tabla de parámetros en la base de datos.<br /><br /> Table drop attempt Failed: indica que la base de datos ha intentado quitar automáticamente una tabla de parámetros no utilizada para liberar recursos.<br /><br /> No se pudo Table drop attempt Failed: indica que la base de datos intentó quitar una tabla de parámetros y no se pudo. [!INCLUDE[ssDE](../../includes/ssde-md.md)] volverá a programar automáticamente la eliminación de la tabla de parámetros para liberar recursos.<br /><br /> Tabla colocada: indica que la base de datos quitó correctamente una tabla de parámetros.<br /><br /> Tabla anclado: indica que la tabla de parámetros se marca para su uso actual por el procesamiento interno.<br /><br /> Table unpinned: indica que la tabla de parámetros se ha liberado. El procesamiento interno ha terminado de usar la tabla.<br /><br /> Número de usuarios incrementado: indica que ha aumentado el número de suscripciones de notificación de consulta que hacen referencia a una tabla de parámetros.<br /><br /> Número de usuarios reducidos: indica que ha disminuido el número de suscripciones de notificación de consulta que hacen referencia a una tabla de parámetros.<br /><br /> Restablecer contador LRU: indica que se restableció el recuento de utilización de la tabla de parámetros.<br /><br /> Tarea de limpieza iniciada: indica cuándo se ha iniciado la limpieza de todas las suscripciones de esta tabla de parámetros. Esto sucede cuando se inicia la base de datos o cuando se elimina una tabla que subyace a las suscripciones de esta tabla de parámetros.<br /><br /> Tarea de limpieza finalizó: indica cuándo ha finalizado la limpieza de todas las suscripciones de esta tabla de parámetros.|21|Sí|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IsSystem|`int`|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario.<br /><br /> 0 = usuario<br /><br /> 1 = sistema|60|no|  

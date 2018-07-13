@@ -1,5 +1,5 @@
 ---
-title: Actualizar a una edición diferente de SQL Server 2014 (programa de instalación) | Documentos de Microsoft
+title: Actualización a una edición diferente de SQL Server 2014 (programa de instalación) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f2b3739bf23e2e7405d95e856df7e776e498709
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1d88903151c3557ec48b9457a50d4a257075eb04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182862"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Actualizar a una edición diferente de SQL Server 2014 (programa de instalación)
   La instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la actualización de edición entre las diferentes ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener información sobre rutas de actualización de ediciones admitidas, vea [Actualizaciones de ediciones y versiones admitidas](supported-version-and-edition-upgrades.md). Antes de que se inicie la actualización de edición de una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte los temas siguientes:  
@@ -30,7 +30,7 @@ ms.locfileid: "36199518"
   
 -   [Límites de la capacidad de cálculo de cada edición de SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
--   [Requisitos de hardware y Software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Requisitos de hardware y software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
 >  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un entorno en clúster:** basta con actualizar la edición en uno de los nodos del clúster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este nodo puede ser activo o pasivo, y el motor no pone los recursos sin conexión durante la actualización de la edición. Después de actualizar la edición, es necesario reiniciar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o conmutar por error a otro nodo diferente.  
@@ -53,7 +53,7 @@ ms.locfileid: "36199518"
   
 4.  El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, haga clic en **Aceptar**.  
   
-5.  En la página Clave del producto, haga clic en un botón de opción para indicar si está actualizando a una edición gratuita de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o si tiene una clave de PID para una versión de producción del producto. Para obtener más información, consulte [ediciones y componentes de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) y [actualizaciones de ediciones y versiones admitidas](supported-version-and-edition-upgrades.md).  
+5.  En la página Clave del producto, haga clic en un botón de opción para indicar si está actualizando a una edición gratuita de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o si tiene una clave de PID para una versión de producción del producto. Para obtener más información, consulte [ediciones y componentes de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) y [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md).  
   
 6.  En la página Términos de licencia, lea el contrato de licencia y active la casilla para aceptar los términos y condiciones de la licencia. Para continuar, haga clic en **Siguiente**. Para salir del programa de instalación, haga clic en **Cancelar**.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36199518"
 -   Las bases de datos de plantilla permanecen en el equipo después de la actualización.  
   
 ## <a name="see-also"></a>Vea también  
- [Actualizar a SQL Server 2014](upgrade-sql-server.md)   
+ [Actualización a SQL Server 2014](upgrade-sql-server.md)   
  [Compatibilidad con versiones anteriores](../../getting-started/backward-compatibility.md)  
   
   

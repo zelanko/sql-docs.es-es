@@ -1,5 +1,5 @@
 ---
-title: Validación cruzada (datos de SQL Server a los complementos de minería de datos) | Documentos de Microsoft
+title: Validación cruzada (datos de SQL Server a los complementos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cross-validation
 - partitioning data [data mining]
 - mining models, testing
 ms.assetid: bf9483b3-4099-41c4-bbc5-da7005e07bcd
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0176eab7e0671f4a87bb099f5493878fe0beebc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01876b099a764676eb82dd2ac8cea12cdabbc4b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172106"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Validación cruzada (Complementos de minería de datos de SQL Server)
-  ![Botón validación cruzada, cinta de opciones de minería de datos](media/dmc-xvalid.gif "botón validación cruzada, cinta de opciones de minería de datos")  
+  ![Botón validación cruzada, cinta de opciones minería de datos](media/dmc-xvalid.gif "botón validación cruzada, cinta de opciones minería de datos")  
   
  La validación cruzada es una herramienta estándar de análisis que resulta muy útil a la hora de desarrollar y ajustar modelos de minería de datos. La validación cruzada se usa después de crear un modelo de minería de datos para determinar la validez del modelo y comparar sus resultados con otros modelos de minería de datos relacionados.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36199479"
   
 -   Especifique el número de secciones transversales, o *subconjuntos*, en el que desea crear particiones de la estructura de datos.  
   
- El **validación cruzada** Asistente para, a continuación, crea un nuevo modelo en cada uno de los subconjuntos, prueba el modelo en los subconjuntos y, a continuación, informa sobre la precisión del modelo. Al finalizar, el **validación cruzada** asistente crea un informe que muestra las métricas para cada plegamiento y proporciona un resumen del modelo en forma agregada. Esta información se puede usar para determinar la idoneidad de los datos subyacentes para un determinado modelo, o para comparar modelos distintos generados a partir de los mismos datos.  
+ El **validación cruzada** asistente, a continuación, crea un nuevo modelo en cada uno de los subconjuntos, prueba el modelo en los subconjuntos y, a continuación, informa de la precisión del modelo. Al finalizar, el **validación cruzada** asistente crea un informe que muestra las métricas para cada plegamiento y proporciona un resumen del modelo en forma agregada. Esta información se puede usar para determinar la idoneidad de los datos subyacentes para un determinado modelo, o para comparar modelos distintos generados a partir de los mismos datos.  
   
 ## <a name="using-the-cross-validation-wizard"></a>Usar el Asistente para validaciones cruzadas  
  Puede usar la validación cruzada tanto en modelos temporales como en modelos almacenados en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -47,11 +47,11 @@ ms.locfileid: "36199479"
   
 1.  En el **precisión y validación** grupo de la **minería de datos** la cinta de opciones, haga clic en **validación cruzada**.  
   
-2.  En el **seleccionar estructura o modelo** cuadro de diálogo, seleccione una estructura de minería de datos existente o el modelo de minería de datos. Si selecciona una estructura, el asistente usará la validación cruzada en todos los modelos basados en esa estructura que tengan el mismo atributo de predicción. Si selecciona un modelo, el asistente usará la validación cruzada solo en ese modelo.  
+2.  En el **seleccionar estructura o modelo** cuadro de diálogo, seleccione una estructura de minería de datos existente o un modelo de minería de datos. Si selecciona una estructura, el asistente usará la validación cruzada en todos los modelos basados en esa estructura que tengan el mismo atributo de predicción. Si selecciona un modelo, el asistente usará la validación cruzada solo en ese modelo.  
   
-3.  En el **especificar parámetros de validación cruzada** cuadro de diálogo, en la **recuento de plegamientos** cuadro, elija el número de plegamientos entre los que se va a dividir el conjunto de datos. Un plegamiento es una sección transversal de los datos seleccionada de forma aleatoria.  
+3.  En el **especificar parámetros de validación cruzada** cuadro de diálogo el **recuento de plegamientos** , seleccione el número de plegamientos entre los que se va a dividir el conjunto de datos. Un plegamiento es una sección transversal de los datos seleccionada de forma aleatoria.  
   
-4.  Además, puede establecer el número máximo de filas que desea usar en la validación cruzada escribiendo un número en el **número máximo de filas** cuadro de texto.  
+4.  Opcionalmente, establecer el número máximo de filas que desea usar en la validación cruzada escribiendo un número en el **número máximo de filas** cuadro de texto.  
   
     > [!NOTE]  
     >  Cuántas más filas use, más precisos serán los resultados. Sin embargo, el tiempo de proceso también puede aumentar de forma significativa. El número que elija dependerá de los datos pero, en general, debe elegir el mayor número posible sin sacrificar el rendimiento. Para mejorar el rendimiento, también puede especificar menos plegamientos.  
@@ -79,9 +79,9 @@ ms.locfileid: "36199479"
  Si elige una estructura que admite tanto modelos de agrupación en clústeres como otros tipos de modelos, los primeros no se probarán.  
   
 ## <a name="understanding-cross-validation-results"></a>Descripción de los resultados de la validación cruzada  
- Los resultados de la validación cruzada se muestran en una hoja de cálculo nueva, denominada **informe de validación cruzada para \<nombre de atributo >**. La nueva hoja de cálculo contiene varias secciones: la primera sección es un resumen que proporciona metadatos importantes sobre el modelo que se probó para que pueda saber a qué modelo o estructura corresponden los resultados.  
+ Los resultados de la validación cruzada se muestran en una nueva hoja de cálculo, denominada **informe de validación cruzada para \<nombre_atributo >**. La nueva hoja de cálculo contiene varias secciones: la primera sección es un resumen que proporciona metadatos importantes sobre el modelo que se probó para que pueda saber a qué modelo o estructura corresponden los resultados.  
   
- La segunda sección del informe proporciona un resumen estadístico que indica el grado de eficacia del modelo original. En este resumen, se analizan las diferencias entre los modelos creados para cada uno de tres medidas claves: *error cuadrático medio*, *desviación*, y *depuntuaciónderegistro*. Éstas son medidas estadísticas estándar que se usan no solo en la minería de datos, sino también en la mayoría de los análisis estadísticos.  
+ La segunda sección del informe proporciona un resumen estadístico que indica el grado de eficacia del modelo original. En este resumen, se analizan las diferencias entre los modelos creados para cada plegamiento tres medidas clave: *error cuadrático medio*, *error medio absoluto*, y *depuntuaciónderegistro*. Éstas son medidas estadísticas estándar que se usan no solo en la minería de datos, sino también en la mayoría de los análisis estadísticos.  
   
  Para cada una de estas medidas, el Asistente para validaciones cruzadas calcula la media y la desviación estándar en todo el modelo. Esto indica la coherencia del modelo al realizar predicciones en distintos subconjuntos de datos. Por ejemplo, si la desviación estándar es muy grande, esto indica que los modelos creados para cada plegamiento tienen resultados muy diferentes y, por lo tanto, es posible que el modelo se haya entrenado para un grupo muy determinado de datos y no se pueda aplicar a otros conjuntos de datos.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36199479"
 #### <a name="classification-passfail"></a>Clasificación: Éxito/error  
  Esta medida se usa en modelos de clasificación cuando no se especifica un valor de destino para el atributo de predicción. Por ejemplo, si crea un modelo que predice varias posibilidades, esta medida le indica el grado de eficiencia del modelo a la hora de predecir todos los valores posibles.  
   
- Superado o no se calcula el recuento de casos que cumplen las condiciones siguientes: **pasar** si el estado predicho con la probabilidad más alta es el mismo que el estado de entrada y probabilidad es mayor que el valor especificado para **State Threshold**; en caso contrario, **producirá un error en**.  
+ Correcto/incorrecto se calcula contando los casos que cumplen las condiciones siguientes: **pasar** si el estado predicho con la máxima probabilidad es igual que el estado de entrada y probabilidad es mayor que el valor que especificó para **State Threshold**; en caso contrario, **producirá un error en**.  
   
 #### <a name="classification-true-or-false-positives-and-negatives"></a>Clasificación: verdaderos o falsos positivos y negativos  
  Esta prueba se usa para todos los modelos de clasificación que tienen un destino especificado. Esta medida indica cómo se clasifica cada caso en respuesta a estas preguntas: qué predijo el modelo y cuál fue el resultado real.  
@@ -115,7 +115,7 @@ ms.locfileid: "36199479"
 |Falso negativo|Recuento de casos que cumplen estas condiciones:<br /><br /> El valor real no es igual al valor de destino.<br /><br /> El modelo predijo que el caso no contendría el valor de destino.|  
   
 #### <a name="lift"></a>Mejora respecto al modelo predictivo  
- *Elevación* es una medida que está asociada a la probabilidad. Si un resultado es más probable cuando se usa el modelo que cuando se hace una estimación aleatoria, se dice que el modelo para proporcionar *positivo elevación*. Sin embargo, si el modelo realiza predicciones que están menos probables que la estimación aleatoria, la puntuación de elevación es *negativo*. Por consiguiente, esta métrica indica la cantidad de mejoras que se pueden lograr usando el modelo, donde una puntuación más alta es mejor.  
+ *Elevación* es una medida que está asociada con la probabilidad. Si un resultado es más probable es que cuando se usa el modelo que cuando se hace una estimación aleatoria, se dice que el modelo para proporcionar *elevación positivo*. Sin embargo, si el modelo realiza predicciones que tienen menos probabilidades de que la estimación aleatoria, la puntuación de elevación es *negativo*. Por consiguiente, esta métrica indica la cantidad de mejoras que se pueden lograr usando el modelo, donde una puntuación más alta es mejor.  
   
  La mejora respecto al modelo predictivo se calcula como la proporción entre la probabilidad de predicción real y la probabilidad marginal en los casos de prueba.  
   
@@ -125,12 +125,12 @@ ms.locfileid: "36199479"
  Mientras que las puntuaciones sin formato pueden tener distribuciones muy irregulares o sesgadas, un logaritmo es similar a un porcentaje.  
   
 #### <a name="root-mean-square-error"></a>Error cuadrático medio  
- *Error cuadrático medio* (RMSE) es un método estándar en estadística para examinando se comparan dos conjuntos de datos diferentes y suavizar las diferencias que pueden producirse debido a la escala de las entradas.  
+ *Error cuadrático medio* (RMSE) es un método estándar en estadística para mirar la comparación diferentes conjuntos de datos y suavizar las diferencias que se pueden introducir la escala de las entradas.  
   
  RMSE representa el error promedio del valor de predicción al compararlo con el valor real. Se calcula como la raíz cuadrada del error promedio para todos los casos de partición, dividido por el número de casos en la partición, excluidas las filas que tienen valores ausentes para los atributos de destino.  
   
-#### <a name="mean-absolute-error"></a>Desviación media  
- El *desviación* es el error promedio del valor predicho con el valor real. Se calcula obteniendo la suma absoluta de los errores y buscando la media de esos errores.  
+#### <a name="mean-absolute-error"></a>Error medio absoluto  
+ El *error medio absoluto* es el error promedio del valor predicho en el valor real. Se calcula obteniendo la suma absoluta de los errores y buscando la media de esos errores.  
   
  Este valor le ayuda a entender en qué medida varían las puntuaciones con relación a la media.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f54e95b0b9bee1e989d9d9ccf85f513210302367
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6f201b93b3469278d0335cbc60bcc00aa679e6b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228755"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de barras a un informe (Generador de informes)
   Un gráfico de barras muestra los datos de categoría horizontalmente. Esto puede ayudar a:  
@@ -37,7 +37,7 @@ ms.locfileid: "36197893"
 ##  <a name="BackToTop"></a> Qué aprenderá  
  En este tutorial, aprenderá a realizar las siguientes tareas:  
   
-1.  [Crear un gráfico a partir del Asistente para gráficos](#Chart)  
+1.  [Crear un gráfico desde el Asistente para gráficos](#Chart)  
   
 2.  [Elija el tipo de gráfico](#ChartType)  
   
@@ -45,11 +45,11 @@ ms.locfileid: "36197893"
   
 4.  [Modificar la presentación de nombres en el eje Vertical](#Sort)  
   
-5.  [Mueva la leyenda](#Legend)  
+5.  [Mover la leyenda](#Legend)  
   
 6.  [Mover el título del gráfico](#ChartTitle)  
   
-7.  [Formatear y etiquetar el eje Horizontal](#Horizontal)  
+7.  [Dar formato el eje Horizontal y etiquetarlo](#Horizontal)  
   
 8.  [Agregar un filtro para mostrar cinco valores superiores](#Filter)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36197893"
  Para obtener más información sobre los requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Chart"></a> 1. Crear un informe de gráfico a partir del Asistente para gráficos  
- Desde el **Introducción** cuadro de diálogo, crear un conjunto de datos incrustado, elegir un origen de datos compartido y crear un gráfico de barras mediante el Asistente para gráficos.  
+ Desde el **Introducción** cuadro de diálogo, crear un conjunto de datos incrustado, elegir un origen de datos compartido y crear un gráfico de barras con el Asistente para gráficos.  
   
 > [!NOTE]  
 >  En este tutorial, la consulta contiene los valores de datos, de forma que no necesita un origen de datos externo. Esto hace que la consulta requiera bastante tiempo. En un entorno empresarial, la consulta no contendría los datos. Esto es solo con fines de aprendizaje.  
@@ -78,7 +78,7 @@ ms.locfileid: "36197893"
      Aparecerá el cuadro de diálogo **Introducción** .  
   
     > [!NOTE]  
-    >  Si el **Introducción** cuadro de diálogo no aparece, haga clic en el botón Generador de informes y, a continuación, haga clic en **nuevo**.  
+    >  Si el **Introducción** cuadro de diálogo no aparece, haga clic en el botón Generador de informes y, a continuación, haga clic en **New**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -162,7 +162,7 @@ ms.locfileid: "36197893"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  Haga clic en vertical **título del eje** y desactive el **Mostrar título del eje** casilla de verificación.  
+5.  Haga clic en la vertical **título del eje** y desactive el **Mostrar título del eje** casilla de verificación.  
   
 6.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
@@ -216,7 +216,7 @@ ms.locfileid: "36197893"
   
 7.  Haga clic en **Aceptar**.  
   
-8.  En el **propiedades del grupo de categorías** página, en la **orden** lista desplegable, seleccione **Z a**. De este modo se selecciona el orden alfabético inverso para que los nombres aparezcan ordenados de arriba abajo.  
+8.  En el **propiedades del grupo de categorías** página, en el **orden** lista desplegable, seleccione **Z a**. De este modo se selecciona el orden alfabético inverso para que los nombres aparezcan ordenados de arriba abajo.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -319,7 +319,7 @@ ms.locfileid: "36197893"
   
 1.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-2.  Tipo de **gráfico de barras de ventas**, presione ENTRAR y, a continuación, escriba **cinco vendedores superiores de 2009**, por lo que el siguiente aspecto:  
+2.  Tipo **gráfico de barras de ventas**, presione ENTRAR y, a continuación, escriba **cinco vendedores superiores para 2009**, por lo que este aspecto:  
   
      **Gráfico de barras de ventas**  
   
@@ -327,7 +327,7 @@ ms.locfileid: "36197893"
   
 3.  Seleccione **Gráfico de barras de ventas**y haga clic en el botón **Negrita** .  
   
-4.  Seleccione **cinco vendedores superiores de 2009**y en el **fuente** sección en la **inicio** pestaña, establezca el tamaño de fuente en **10**.  
+4.  Seleccione **cinco vendedores superiores para 2009**y en el **fuente** sección en la **inicio** pestaña, establezca el tamaño de fuente en **10**.  
   
 5.  (Opcional) Es posible que necesite hacer más alto el cuadro de texto Título para que quepan las dos líneas de texto.  
   

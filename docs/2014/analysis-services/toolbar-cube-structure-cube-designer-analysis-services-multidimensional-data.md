@@ -1,5 +1,5 @@
 ---
-title: Barra de herramientas (pestaña estructura de cubo, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Barra de herramientas (pestaña estructura de cubo, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bb13932-350d-4c6c-96f7-893d6cbdf449
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 22857975aee349abdb1a258f9aa013ffe2adf1d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28f8711f832d4dd06b5ea66e4e2a587db1c57cec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209905"
 ---
 # <a name="toolbar-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Estructura de cubo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Barra de herramientas** para realizar acciones comunes, como procesar o crear nuevos grupos de medida, en la pestaña **Estructura de cubo** del Diseñador de cubos.  
@@ -42,6 +42,6 @@ ms.locfileid: "36198527"
 |**Ocultar tabla**|Haga clic para ocultar la tabla seleccionada en el panel **Vista del origen de datos** .<br /><br /> Nota: Esta opción se deshabilitará si no se selecciona una tabla del panel **Vista del origen de datos** .|  
 |**Buscar tabla**|Haga clic para mostrar el cuadro de diálogo **Buscar tabla** y buscar una tabla en el panel **Vista origen de datos** .|  
 |**Zoom**|Haga clic para recorrer las opciones de porcentaje de zoom o para seleccionar una opción de porcentaje de zoom disponible para el panel **Vista del origen de datos** .|  
-|**Mostrar**|Haga clic para recorrer las siguientes opciones o seleccione una de las siguientes opciones para cambiar la vista del panel **Vista del origen de datos** .<br /><br /> **Vista de árbol**: muestra tablas, consultas con nombre, columnas, cálculos con nombre y las relaciones en una vista de árbol.<br /><br /> **Vista de diagrama**: muestra tablas, consultas con nombre, columnas, cálculos con nombre y las relaciones en un diagrama de base de datos.|  
+|**Mostrar**|Haga clic para recorrer las siguientes opciones o seleccione una de las siguientes opciones para cambiar la vista del panel **Vista del origen de datos** .<br /><br /> **Vista de árbol**: muestra tablas, con el nombre de las consultas, columnas, cálculos con nombre y relaciones en una vista de árbol.<br /><br /> **Vista de diagrama**: muestra tablas, con el nombre de las consultas, columnas, cálculos con nombre y relaciones en un diagrama de base de datos.|  
   
   

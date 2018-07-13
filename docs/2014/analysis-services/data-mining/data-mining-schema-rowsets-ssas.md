@@ -1,5 +1,5 @@
 ---
-title: 'Consultar los conjuntos de filas de esquema de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Consultar los conjuntos de filas de esquema de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schema rowsets [Analysis Services], data mining
 - data mining [Analysis Services], queries
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data mining [Analysis Services], troubleshooting
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5f794266fa1a4658199e617333ae7c6ae280bb79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 410c9a657bfd639650d1b2deee3253356ea62060
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148646"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>Consultar los conjuntos de filas de esquema de minería de datos (Analysis Services - Minería de datos)
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],muchos de los conjuntos de filas de esquema de minería de datos de OLE DB existentes se han expuesto como un conjunto de tablas del sistema que puede consultar con facilidad utilizando las instrucciones de Extensiones de minería de datos (DMX). Creando consultas para el conjunto de filas de esquema de minería de datos, puede identificar los servicios que están disponibles, obtener actualizaciones sobre el estado de los modelos y estructuras, y obtener detalles sobre el contenido o los parámetros del modelo. Para obtener una descripción de los conjuntos de filas de esquema de minería de datos, vea [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
@@ -81,6 +81,6 @@ FROM $system.DBSCHEMA_TABLES
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Conceptos de solución de problemas (Analysis Services: minería de datos)](https://msdn.microsoft.com/library/cc645881.aspx)  
+ [Conceptos de solución de problemas (Analysis Services - minería de datos)](https://msdn.microsoft.com/library/cc645881.aspx)  
   
   

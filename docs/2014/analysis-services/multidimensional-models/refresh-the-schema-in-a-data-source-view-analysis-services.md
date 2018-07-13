@@ -1,5 +1,5 @@
 ---
-title: Actualizar el esquema de una vista del origen de datos (Analysis Services) | Documentos de Microsoft
+title: Actualizar el esquema de una vista del origen de datos (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], schema updates
 - refreshing data source views
 - data source views [Analysis Services], refreshing
 ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 517c3e9c0c608a0e38d79fd6aff8147a68403671
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06859536c3f63e35bca7ab43593eac44b3bba22a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239775"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Actualizar el esquema de una vista del origen de datos (Analysis Services)
   Después de definir una vista del origen de datos (DSV) en un proyecto o base de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], el esquema de un origen de datos subyacente puede cambiar. Estos cambios no se detectan ni se actualizan automáticamente en un proyecto de desarrollo. Además, si implementó el proyecto en un servidor y Analysis Services no puede establecer conexión con el origen de datos externo, se producirán errores de procesamiento.  
@@ -52,7 +52,7 @@ ms.locfileid: "36112798"
   
  Durante la actualización, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] consulta todos los orígenes de datos relacionales subyacentes para determinar si ha habido cambios en las tablas o en las vistas incluidas en la DSV. Si se pueden establecer conexiones con todos los orígenes de datos subyacentes y se han producido cambios, los verá en el cuadro de diálogo **Actualizar vista del origen de datos** .  
   
- ![Actualizar el cuadro de diálogo de vista del origen de datos](../media/ssas-olapdsv-refresh.gif "cuadro de diálogo Actualizar vista del origen de datos")  
+ ![Actualizar vista del origen de datos cuadro de diálogo](../media/ssas-olapdsv-refresh.gif "cuadro de diálogo Actualizar vista del origen de datos")  
   
  El cuadro de diálogo muestra las tablas, columnas, restricciones y relaciones que se eliminarán o agregarán en la DSV. El informe también muestra cualquier cálculo o consulta con nombre que no se haya preparado correctamente. Los objetos afectados se muestran en una vista de árbol con columnas y relaciones anidadas bajo tablas y el tipo de cambio (eliminación o adición) indicado para cada objeto. Los iconos de objeto de vista del origen de datos estándar indican el tipo de objeto afectado.  
   

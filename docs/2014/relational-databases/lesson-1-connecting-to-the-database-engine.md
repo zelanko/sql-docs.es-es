@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02942c1f5e223cdf996cb691a4e7d42cc95c1b81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0dd6a74e002a6eb8dcb266d2ede766becc89813b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184260"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: conectarse al motor de base de datos
   Al instalar [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], las herramientas instaladas dependen de la edición y de las opciones que seleccione al realizar la instalación. En esta lección se revisan las herramientas principales y se muestra cómo conectarse y realizar una función básica (autorizar a más usuarios).  
@@ -40,7 +40,7 @@ ms.locfileid: "36197417"
   
 ##### <a name="to-start-sql-server-management-studio"></a>Para iniciar SQL Server Management Studio  
   
--   En el **iniciar** menú, elija **todos los programas**, seleccione [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]y, a continuación, haga clic en **SQL Server Management Studio**.  
+-   En el **iniciar** menú, elija **todos los programas**, apunte a [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]y, a continuación, haga clic en **SQL Server Management Studio**.  
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>Para iniciar el Administrador de configuración de SQL Server  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36197417"
 1.  Inicie una sesión en Windows como miembro del grupo Administradores y abra [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
     > [!IMPORTANT]  
-    >  Si se está conectando a [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] en [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] o [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (o más reciente), puede que necesite haga [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] y, a continuación, haga clic en **ejecutar como administrador** para conectar con el administrador credenciales. A partir de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], el programa de instalación agrega inicios de sesión seleccionados a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], por lo que las credenciales de administrador no son necesarias.  
+    >  Si se conecta a [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] en [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] o [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (o más reciente), es posible que deba haga [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] y, a continuación, haga clic en **ejecutar como administrador** con el fin de conectarse con el administrador credenciales. A partir de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], el programa de instalación agrega inicios de sesión seleccionados a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], por lo que las credenciales de administrador no son necesarias.  
   
 2.  En el cuadro de diálogo **Conectar con el servidor** , haga clic en **Cancelar**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36197417"
   
      Aparece el cuadro de diálogo **Inicio de sesión - Nuevo** .  
   
-2.  En el **General** página, en la **nombre de inicio de sesión** , escriba un inicio de sesión de Windows en el formato  *\<dominio >\\< inicio de sesión\>*.  
+2.  En el **General** página, en el **nombre de inicio de sesión** , escriba un inicio de sesión de Windows en el formato  *\<dominio >\\< inicio de sesión\>*.  
   
 3.  En el cuadro **Base de datos predeterminada** , seleccione [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , si está disponible. Si no lo está, seleccione **master**.  
   

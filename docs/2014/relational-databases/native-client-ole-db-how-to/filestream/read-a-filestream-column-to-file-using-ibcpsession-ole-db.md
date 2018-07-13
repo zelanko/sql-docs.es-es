@@ -1,26 +1,24 @@
 ---
-title: Leer una columna FILESTREAM en el archivo utilizando IBCPSession (OLE DB) | Documentos de Microsoft
+title: Leer una columna FILESTREAM en un archivo utilizando IBCPSession (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 872a6abbb963338b75e77ff2656416da1af8d0e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2298503d85090cebc234fcaedc39bb9fee61cf4b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112281"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412874"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Leer una columna FILESTREAM en un archivo utilizando IBCPSession (OLE DB)
   En este ejemplo se lee una columna FILESTREAM en un archivo mediante la interfaz IBCPSession y escribe un archivo de formato.  

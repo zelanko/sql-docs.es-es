@@ -1,5 +1,5 @@
 ---
-title: Eventos de seguimiento de Analysis Services | Documentos de Microsoft
+title: Eventos de seguimiento de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c400772f757dcd852ddfd2cf696a966261c60c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4c4631e20227cb1d3aeba34337d7b36c8a84c62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163447"
 ---
 # <a name="analysis-services-trace-events"></a>Eventos de seguimiento de Analysis Services
   Puede seguir la actividad de una instancia de Microsoft SQL Server Analysis Services (SSAS) capturando y analizando los eventos de seguimiento generados por la instancia.  Los eventos de seguimiento están agrupados para que pueda encontrar más fácilmente aquellos que estén relacionados.  Cada uno de los eventos de seguimiento contiene un conjunto de datos sobre el evento; no todos los datos están relacionados con todos los eventos.  
   
- Los eventos de seguimiento se puede iniciar y capturar mediante **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, consulte [usar SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md), o se puede iniciar desde un comando XMLA como **SQL Server Eventos extendidos** y analizarse posteriormente, vea [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
+ Eventos de seguimiento se puede iniciar y capturar mediante **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, consulte [Use SQL Server Profiler para supervisar Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md), o puede iniciarse desde un comando XMLA como **SQL Server Eventos extendidos** y analizarse posteriormente, vea [Use SQL Server Extended Events &#40;XEvents&#41; para supervisar Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
     
  En las tablas siguientes se describen las categorías de eventos y los eventos pertenecientes a cada una de ellas.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36198275"
  Descripción del evento  
  Breve descripción del evento.  
   
- **[Categoría de eventos de eventos de comandos](command-events-event-category.md)**  
+ **[Categoría de eventos de eventos de comando](command-events-event-category.md)**  
   
  Colección de eventos para los comandos.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36198275"
 |15|Command Begin|Inicio del comando.|  
 |16|Command End|Final del comando.|  
   
- **[Detectar la categoría de eventos](discover-events-event-category.md)**  
+ **[Categoría de eventos eventos de detección](discover-events-event-category.md)**  
   
  Colección de eventos para las solicitudes de detección.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36198275"
 |------------------|--------------------|---------------------------|  
 |17|Error|Error del servidor.|  
   
- **[Categoría de evento y guardar archivos de carga](file-load-and-save-event-category.md)**  
+ **[Categoría de eventos y guardar archivos de carga](file-load-and-save-event-category.md)**  
   
  Colección de eventos para los informes de las operaciones de carga y guardado de archivos.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "36198275"
 |7|Progress Report Current|Informe de progreso en curso.|  
 |8|Progress Report Error|Error del informe de progreso.|  
   
- **[Categoría eventos de consultas](queries-events-category.md)**  
+ **[Categoría de eventos de consultas](queries-events-category.md)**  
   
  Colección de eventos para las consultas.  
   

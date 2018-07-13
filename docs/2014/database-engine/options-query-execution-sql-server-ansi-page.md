@@ -1,5 +1,5 @@
 ---
-title: Opciones (página de servidor ANSI SQL de ejecución de consulta) | Documentos de Microsoft
+title: Opciones (página de servidor ANSI SQL de ejecución de consulta) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
 caps.latest.revision: 24
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4d2e08a89e68c15d2d665fd0468610d2324fd800
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f8c5e7e322358a12db2bfa8aebb0983951053502
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173366"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>Opciones (página de servidor ANSI SQL de ejecución de consulta)
   Conjuntamente, estas opciones SET del estándar ANSI (ISO) definen el entorno de procesamiento de consultas durante la consulta del usuario, la ejecución de un desencadenador o un procedimiento almacenado. Sin embargo, estas opciones SET no son todas las necesarias para ajustarse al estándar ISO. Utilice esta página para especificar que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ejecutará las consultas utilizando todos o parte de los valores de configuración especificados en el estándar ISO. Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de las consultas actuales, haga clic en **Opciones de consulta** en el menú **Consulta** o haga clic con el botón derecho en la ventana Consulta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y seleccione **Opciones de consulta**. En el cuadro de diálogo **Opciones de consulta** , en **Ejecución**, haga clic en **ANSI**.  

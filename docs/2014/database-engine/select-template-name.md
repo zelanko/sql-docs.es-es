@@ -1,5 +1,5 @@
 ---
-title: Seleccionar nombre de plantilla | Documentos de Microsoft
+title: Seleccionar nombre de plantilla | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.f1
 helpviewer_keywords:
 - Select Template Name dialog box
 ms.assetid: 30ac38b8-0c14-474c-b245-d2b8393d2f36
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 08a22aa4b3877cc338197e2d21e8d20d0eda0120
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b703b2a02146ab66ee3e0dee98dc920a70ef4a45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241185"
 ---
 # <a name="select-template-name"></a>Seleccionar nombre de plantilla
   Utilice el cuadro de diálogo **Seleccionar nombre de plantilla** para seleccionar una plantilla de seguimiento del [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] existente para exportarla a un archivo del sistema operativo. También puede utilizar este cuadro de diálogo para seleccionar o escribir un nombre distinto para guardar una plantilla de seguimiento como cuando se edita una plantilla de seguimiento existente. Para tener acceso a este cuadro de diálogo cuando se exporta una plantilla, en el menú [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **del** , seleccione **Plantillas**y, a continuación, haga clic en **Exportar plantilla**. Para tener acceso a este cuadro de diálogo cuando se cambia el nombre de una plantilla, en el menú **Archivo** , seleccione **Plantillas**, **Editar plantilla**y, a continuación, haga clic en **Guardar como**.  

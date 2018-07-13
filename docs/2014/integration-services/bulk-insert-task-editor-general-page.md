@@ -1,5 +1,5 @@
 ---
-title: Editor de la tarea de inserción (página General) de forma masiva | Documentos de Microsoft
+title: Editor de la tarea de inserción (página General) de forma masiva | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.general.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d70cc6a4745e2965dcf28ea97bcc52ccfdc66133
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8debd4ea8acc8e27dde18970110b6792ee7a9109
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198736"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158846"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>Editor de la tarea Inserción masiva (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Inserción masiva** para asignar un nombre y describir la tarea Inserción masiva.  

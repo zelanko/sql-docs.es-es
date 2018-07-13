@@ -1,35 +1,33 @@
 ---
-title: compatibilidad con tipos de fecha y hora de sql_variant | Documentos de Microsoft
+title: compatibilidad con tipos de fecha y hora de sql_variant | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sql_variant data type
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba207a78704e8e8582bffdd4df2b2846673ff58c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e16fe8289ae2e92ee21a59c378b4093c0380e1ac
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196443"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409094"
 ---
 # <a name="sqlvariant-support-for-date-and-time-types"></a>compatibilidad con tipos de fecha y hora de sql_variant
   En este tema se describe la forma en que el tipo de datos `sql_variant` admite una funcionalidad de fecha y hora mejorada.  
   
- El atributo de columna SQL_CA_SS_VARIANT_TYPE se usa para devolver el tipo C de una columna de resultados variant. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Introduce un atributo adicional, SQL_CA_SS_VARIANT_SQL_TYPE, que establece el tipo SQL de una columna de resultados variant en el descriptor de fila de implementación (IRD). SQL_CA_SS_VARIANT_SQL_TYPE también puede utilizarse en el descriptor de parámetro de implementación (IPD) para especificar el tipo SQL de un SQL_SS_TIME2 o parámetro SQL_SS_TIMESTAMPOFFSET que tiene el tipo de C SQL_C_BINARY enlazado al tipo SQL_SS_VARIANT.  
+ El atributo de columna SQL_CA_SS_VARIANT_TYPE se usa para devolver el tipo C de una columna de resultados variant. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Introduce un atributo adicional, SQL_CA_SS_VARIANT_SQL_TYPE, que establece el tipo SQL de una columna de resultados variant en el descriptor de fila de implementación (IRD). SQL_CA_SS_VARIANT_SQL_TYPE también puede usarse en el descriptor de parámetro de implementación (IPD) para especificar el tipo SQL de un SQL_SS_TIME2 o parámetro SQL_SS_TIMESTAMPOFFSET que tiene un tipo SQL_C_BINARY de C enlazado al tipo SQL_SS_VARIANT.  
   
- Los nuevos tipos SQL_SS_TIME2 y SQL_SS_TIMESTAMPOFFSET pueden establecerse SQLColAttribute. SQLGetDescField puede devolver SQL_CA_SS_VARIANT_SQL_TYPE.  
+ Se pueden establecer los nuevos tipos SQL_SS_TIME2 y SQL_SS_TIMESTAMPOFFSET SQLColAttribute. SQLGetDescField puede devolver SQL_CA_SS_VARIANT_SQL_TYPE.  
   
  Para las columnas de resultados, el controlador convertirá el tipo variant en un tipo de fecha y hora. Para obtener más información, consulte [conversiones de SQL a C](datetime-data-type-conversions-from-sql-to-c.md). Al realizar un enlace a SQL_C_BINARY, la longitud del búfer debe ser lo suficientemente grande como para recibir la estructura correspondiente al tipo SQL.  
   
@@ -58,11 +56,11 @@ ms.locfileid: "36196443"
 |SQL_C_TYPE_DATE|Date|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
 |SQL_C_TYPE_TIME|time(0)|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
 |SQL_C_TYPE_TIMESTAMP|datetime2|Escala se establece en SQL_DESC_PRECISION (el *ColumnSize* parámetro de `SQLBindParameter`).|  
-|SQL_C_NUMERIC|Decimal|Precisión se establece en SQL_DESC_PRECISION (el *ColumnSize* parámetro de `SQLBindParameter`).<br /><br /> Escala se establece en SQL_DESC_SCALE (el *ColumnSize* parámetro de SQLBindParameter).|  
+|SQL_C_NUMERIC|Decimal|Precisión se establece en SQL_DESC_PRECISION (el *ColumnSize* parámetro de `SQLBindParameter`).<br /><br /> Conjunto de escalado en SQL_DESC_SCALE (el *ColumnSize* parámetro de SQLBindParameter).|  
 |SQL_C_SS_TIME2|time|Se ignora SQL_CA_SS_VARIANT_SQL_TYPE.|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|Se ignora SQL_CA_SS_VARIANT_SQL_TYPE.|  
   
 ## <a name="see-also"></a>Vea también  
- [Fecha y hora mejoras &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Mejoras de fecha y hora &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying job step information
 - jobs [SQL Server Agent], viewing
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - viewing job step information
 ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 92c4699a2fb4515e159b87865ab1ef889499c7f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 593fd5a27d57c18f87bfb8949a64295d6a04d30b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179052"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
   Este tema explica cómo ver detalles de pasos de trabajo en el cuadro de diálogo Propiedades de paso de trabajo. También incluye información sobre cómo ver la salida de pasos de trabajo.  

@@ -1,5 +1,5 @@
 ---
-title: Las extensiones de personalización de Analysis Services | Documentos de Microsoft
+title: Las extensiones de personalización de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,30 +14,30 @@ helpviewer_keywords:
 - personalization extensions [Multidimensional Databases]
 ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9354e441f3b94205b1be055f48dcf4b279fc708a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff8ef3d5455693d19ec82b0a5905939671c03037
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171666"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Extensiones de personalización de Analysis Services
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización constituyen el fundamento de la idea de implementar una arquitectura de complemento. En una arquitectura de este tipo se pueden desarrollar de forma dinámica nuevos objetos y funcionalidad de cubo, y compartirlos fácilmente con otros programadores. Por lo tanto, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización proporcionan la funcionalidad que permite lograr lo siguiente:  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización son el fundamento de la idea de implementar una arquitectura de complemento. En una arquitectura de este tipo se pueden desarrollar de forma dinámica nuevos objetos y funcionalidad de cubo, y compartirlos fácilmente con otros programadores. Por lo tanto, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización proporcionan la funcionalidad que permite lograr lo siguiente:  
   
--   **Diseño e implementación dinámicos** inmediatamente después de diseñar e implementar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensiones de personalización, los usuarios tienen acceso a los objetos y la funcionalidad al principio de la siguiente sesión de usuario.  
+-   **Diseño e implementación dinámicos** inmediatamente después de diseñar e implementar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización, los usuarios tienen acceso a los objetos y funcionalidad al principio de la siguiente sesión de usuario.  
   
--   **Independencia de la interfaz** independientemente de la interfaz que se usa para crear el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensiones de personalización, los usuarios pueden utilizar cualquier interfaz para tener acceso a objetos y funcionalidades.  
+-   **Independencia de la interfaz** independientemente de la interfaz que se usa para crear el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización, los usuarios pueden utilizar cualquier interfaz para tener acceso a los objetos y funcionalidad.  
   
--   **Contexto de la sesión** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensiones de personalización no son objetos permanentes en la infraestructura existente y no se requieren que se vuelva a procesar el cubo. Se exponen y se crean para el usuario en el momento en que este se conecta a la base de datos, y permanecen disponibles durante esa sesión de usuario.  
+-   **Contexto de la sesión** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización no son objetos permanentes en la infraestructura existente y no requieren que se vuelva a procesar el cubo. Se exponen y se crean para el usuario en el momento en que este se conecta a la base de datos, y permanecen disponibles durante esa sesión de usuario.  
   
--   **Distribución rápida** recurso compartido [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensiones de personalización con otros desarrolladores de software sin tener que entrar en especificaciones detalladas sobre dónde o cómo buscar esta funcionalidad extendida.  
+-   **Distribución rápida** Share [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización con otros desarrolladores de software sin tener que entrar en especificaciones detalladas sobre dónde o cómo buscar esta funcionalidad extendida.  
   
- Las extensiones de personalización de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tienen muchos usos. Por ejemplo, supongamos que su compañía tiene ventas que implican monedas diferentes. Crea un miembro calculado que devuelve las ventas consolidadas en la moneda local de la persona que está teniendo acceso al cubo. Crea este miembro como una extensión de personalización. A continuación, comparte este miembro calculado con un grupo de usuarios. Una vez compartido, los usuarios tienen acceso inmediato al miembro calculado en cuanto se conectan al servidor. Tienen acceso aunque no usen la misma interfaz que la que se usó para crear el miembro calculado.  
+ Las extensiones de personalización de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tienen muchos usos. Por ejemplo, supongamos que su compañía tiene ventas que implican monedas diferentes. Crea un miembro calculado que devuelve las ventas consolidadas en la moneda local de la persona que está teniendo acceso al cubo. Crea este miembro como una extensión de personalización. A continuación, comparte este miembro calculado con un grupo de usuarios. Una vez compartido, esos usuarios tienen acceso inmediato al miembro calculado en cuanto se conectan al servidor. Tienen acceso aunque no usen la misma interfaz que la que se usó para crear el miembro calculado.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización son una modificación simple y elegante de la arquitectura de ensamblado administrado existente y se exponen en la [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> objeto modelo, la sintaxis de expresiones multidimensionales (MDX) y conjuntos de filas de esquema.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización son una modificación sencilla y elegante de la arquitectura de ensamblado administrado existente y se exponen a lo largo de la [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> objeto de modelo, la sintaxis de expresiones multidimensionales (MDX) y conjuntos de filas de esquema.  
   
 ## <a name="logical-architecture"></a>Arquitectura lógica  
  La arquitectura de las extensiones de personalización de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] se basa en la arquitectura de ensamblado administrado y en los cuatro elementos básicos siguientes:  
@@ -48,12 +48,12 @@ ms.locfileid: "36198094"
 > [!NOTE]  
 >  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] define los atributos personalizados como una manera de describir el código e influir en el comportamiento en tiempo de ejecución. Para obtener más información, vea el tema "[Attributes Overview](http://go.microsoft.com/fwlink/?LinkId=82929)," en el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Guía del desarrollador en MSDN.  
   
- Para todas las clases con el <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> atributo personalizado, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sus constructores predeterminados, se invoca. Invocar todos los constructores en el inicio proporciona una ubicación común para generar nuevos objetos y que es independiente de cualquier actividad de usuario.  
+ Para todas las clases con el <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> atributo personalizado, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] invoca sus constructores predeterminados. Invocar todos los constructores en el inicio proporciona una ubicación común desde el que se va a crear nuevos objetos y que es independiente de cualquier actividad de usuario.  
   
  Además de generar una pequeña memoria caché de información sobre la creación y administración de las extensiones de personalización, el constructor de clase se suscribe normalmente a los eventos <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened> y <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing>. Si no se produce la suscripción a estos eventos, es posible que el recolector de elementos no utilizados de Common Language Runtime (CLR) marque de forma inadecuada la clase para la limpieza.  
   
  Contexto de la sesión  
- Para los objetos que se basan en extensiones de personalización, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crea un entorno de ejecución durante la sesión del cliente y genera dinámicamente la mayor parte de esos objetos en este entorno. Como cualquier otro ensamblado de CLR, este entorno de ejecución también tiene acceso a otras funciones y procedimientos almacenados. Cuando finaliza la sesión de usuario, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] quita los objetos creados de forma dinámica y se cierra el entorno de ejecución.  
+ Para los objetos que se basan en extensiones de personalización, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crea un entorno de ejecución durante la sesión del cliente y genera dinámicamente la mayor parte de esos objetos en este entorno. Como cualquier otro ensamblado de CLR, este entorno de ejecución también tiene acceso a otras funciones y procedimientos almacenados. Cuando finaliza la sesión de usuario, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] quita los objetos creados dinámicamente y cierra el entorno de ejecución.  
   
  Eventos  
  Los eventos de sesión `On-Cube-OpenedCubeOpened` y `On-Cube-ClosingCubeClosing` desencadenan la creación de objetos.  
@@ -122,24 +122,24 @@ ms.locfileid: "36198094"
   
 -   [Instrucción CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
   
--   [Declaración de miembro UPDATE &#40;MDX&#41;](/sql/mdx/mdx-data-definition-update-member)  
+-   [UPDATE MEMBER, instrucción &#40;MDX&#41;](/sql/mdx/mdx-data-definition-update-member)  
   
 -   [DROP MEMBER, instrucción &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-member)  
   
 -   [Instrucción CREATE SET &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
   
--   [Instrucción de conjunto de DROP &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-set)  
+-   [Instrucción DROP &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-set)  
   
 -   [Instrucción CREATE KPI &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-kpi)  
   
--   [Instrucción de DROP KPI &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-kpi)  
+-   [DROP KPI, instrucción &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-kpi)  
   
 ### <a name="mdx-extensions-and-enhancements"></a>Extensiones y mejoras de MDX  
  El comando CREATE MEMBER se mejora con las propiedades `caption`, `display_folder` y `associated_measure_group`.  
   
  El comando UPDATE MEMBER se agrega para no tener que crear de nuevo los miembros cuando se necesita una actualización con la consiguiente pérdida de prioridad en la resolución de cálculos. Las actualizaciones no pueden cambiar el ámbito del miembro calculado, mover el miembro calculado a un elemento primario diferente o definir un `solveorder` distinto.  
   
- El comando CREATE SET se mejora con las propiedades `caption` y `display_folder`, y la nueva palabra clave `STATIC | DYNAMIC`. *Estática* significa que el conjunto se evalúa solo en el momento de creación. *Dinámica* significa que el conjunto se evalúa cada vez que el conjunto se utiliza en una consulta. El valor predeterminado es `STATIC` si se omite una palabra clave.  
+ El comando CREATE SET se mejora con las propiedades `caption` y `display_folder`, y la nueva palabra clave `STATIC | DYNAMIC`. *Estática* significa que el conjunto se evalúa solo en tiempo de creación. *Dinámica* significa que el conjunto se evalúa cada vez que se utiliza el conjunto en una consulta. El valor predeterminado es `STATIC` si se omite una palabra clave.  
   
  Los comandos CREATE KPI y DROP KPI se agregan a la sintaxis de MDX. Las KPI se pueden crear dinámicamente a partir de cualquier script MDX.  
   

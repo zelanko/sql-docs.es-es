@@ -1,31 +1,29 @@
 ---
-title: Enviar datos como un parámetro con valores de tabla con todos los valores en la memoria (ODBC) | Documentos de Microsoft
+title: Enviar datos como un parámetro con valores de tabla con todos los valores de memoria (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1d60ed42fd1c568c9efe9fc693ce408929525608
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f2e154cbbba13ac1eb017a90fbb6abd7b0532b50
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108958"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422244"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Enviar datos como un parámetro con valores de tabla con todos los valores en memoria (ODBC)
-  En este tema se describe cómo enviar datos a un procedimiento almacenado como un parámetro con valores de tabla cuando todos los valores están en memoria. Para obtener otro ejemplo que muestra parámetros con valores de tabla, vea [usar parámetros &#40;ODBC&#41;](table-valued-parameters-odbc.md).  
+  En este tema se describe cómo enviar datos a un procedimiento almacenado como un parámetro con valores de tabla cuando todos los valores están en memoria. Para obtener otro ejemplo que muestra los parámetros con valores de tabla, vea [usar parámetros &#40;ODBC&#41;](table-valued-parameters-odbc.md).  
   
 ## <a name="prerequisite"></a>Requisito previo  
  En este procedimiento se supone que se ha ejecutado el siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] en el servidor:  
@@ -91,7 +89,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  La segunda fase del enlace de parámetros consiste en enlazar las columnas para el parámetro con valores de tabla. En primer lugar, se establece el foco en el ordinal del parámetro con valores de tabla. A continuación, las columnas de los valores de tabla se enlazan mediante SQLBindParameter de la misma manera como lo serían si fueran parámetros del procedimiento almacenado, pero con ordinales de columna para ParameterNumber. Si hubiera más parámetros con valores de tabla, se establecería el foco en cada una de ellas y se enlazarían sus columnas. Finalmente, el foco del parámetro se restablece en 0.  
+3.  La segunda fase del enlace de parámetros consiste en enlazar las columnas para el parámetro con valores de tabla. En primer lugar, se establece el foco en el ordinal del parámetro con valores de tabla. A continuación, las columnas del valor de tabla están enlazadas mediante SQLBindParameter de la misma manera como lo serían si fueran parámetros del procedimiento almacenado, pero con ordinales de columna para ParameterNumber. Si hubiera más parámetros con valores de tabla, se establecería el foco en cada una de ellas y se enlazarían sus columnas. Finalmente, el foco del parámetro se restablece en 0.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  

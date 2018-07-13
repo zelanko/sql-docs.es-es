@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cd6fb05217c0bde25dcc00e5f520dfd126385ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4847340ab6bb40a4a5c6e247a4b9f2e33034ca8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181682"
 ---
 # <a name="deploying-a-rendering-extension"></a>Implementar una extensión de representación
   Después de haber escrito y compilado la extensión de representación de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en una biblioteca de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], es necesario hacer que el servidor de informes y el Diseñador de informes la puedan reconocer. Para ello, copie la extensión en el directorio adecuado y agregue las entradas a los archivos de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adecuados.  
@@ -69,7 +69,7 @@ ms.locfileid: "36197899"
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     El valor de **Name** es el nombre único de la extensión de representación. El valor de **Type** es una lista separada por comas que incluye una entrada para el espacio de nombres completo de la implementación de <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, seguida del nombre del ensamblado (sin incluir la extensión de archivo .dll). De forma predeterminada, las extensiones de representación están visibles. Para ocultar una extensión de las interfaces de usuario, por ejemplo, el Administrador de informes, agregue un **Visible** atribuir a la `Extension` elemento y establézcalo en `false`.  
+     El valor de **Name** es el nombre único de la extensión de representación. El valor de **Type** es una lista separada por comas que incluye una entrada para el espacio de nombres completo de la implementación de <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, seguida del nombre del ensamblado (sin incluir la extensión de archivo .dll). De forma predeterminada, las extensiones de representación están visibles. Para ocultar una extensión de las interfaces de usuario, por ejemplo, el Administrador de informes, agregue un **Visible** atributo a la `Extension` elemento y establézcalo en `false`.  
   
 ## <a name="verifying-the-deployment"></a>Comprobación de la implementación  
  Puede abrir también el Administrador de informes y comprobar que la extensión está incluida en la lista de tipos de exportación disponibles para un informe.  

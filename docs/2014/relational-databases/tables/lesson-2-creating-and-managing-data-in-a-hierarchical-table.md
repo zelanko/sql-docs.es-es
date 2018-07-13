@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9e41a27da214ac7486506762a327af3e250fc1ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e86268cb83887027159629069195fee60b5e85fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160226"
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Lección 2: Crear y administrar los datos de una tabla jerárquica
   En la lección 1, se modificó una tabla existente para utilizar el tipo de datos `hierarchyid` y se rellenó la columna `hierarchyid` con la representación de los datos existentes. En esta lección, se iniciará con una nueva tabla e insertará los datos utilizando los métodos jerárquicos. A continuación, se consultarán y manipularán los datos utilizando los métodos jerárquicos.  

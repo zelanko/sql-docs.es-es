@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DMSCHEMA_MINING_MODEL_CONTENT | Documentos de Microsoft
+title: Conjunto de filas DMSCHEMA_MINING_MODEL_CONTENT | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODEL_CONTENT rowset
 ms.assetid: 1e85d9e7-3b74-42ac-b94e-f52f76d8a25d
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6eb96e8a4a277ee5b7e198fca3d96062bd6d486
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76724967936008e52cb43f7af02bbb7a833475d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165456"
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>Conjunto de filas DMSCHEMA_MINING_MODEL_CONTENT
   Permite a la aplicación cliente examinar el contenido de un modelo de minería de datos. Las aplicaciones cliente pueden utilizar las restricciones de las operaciones de árbol especiales descritas al final de este tema para navegar por el contenido del modelo de minería de datos.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DMSCHEMA_MINING_MODEL_CONTENT` filas contiene las columnas siguientes.  
+ El `DMSCHEMA_MINING_MODEL_CONTENT` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "36197040"
 |`ATTRIBUTE_NAME`|`DBTYPE_WSTR`||Nombres de los atributos que corresponden a este nodo.|  
 |`NODE_NAME`|`DBTYPE_WSTR`||Nombre del nodo. Actualmente, esta columna contiene el mismo valor que `NODE_UNIQUE_NAME`, aunque esto podría cambiar en versiones futuras.|  
 |`NODE_UNIQUE_NAME`|`DBTYPE_WSTR`||Nombre único del nodo.|  
-|`NODE_TYPE`|`DBTYPE_I4`||El tipo de nodo. Generará uno de los siguientes valores (los algoritmos de minería de datos desarrollados por terceros pueden ampliar esta lista):<br /><br /> -   `DM_NODE_TYPE_CLASSIFICATION_TREE_ROOT` (`2`)<br />-   `DM_NODE_TYPE_TREE_INTERIOR` (`3`)<br />-   `DM_NODE_TYPE_TREE_DISTRIBUTION` (`4`)<br />-   `DM_NODE_TYPE_CLUSTER` (`5`)<br />-   `DM_NODE_TYPE_UNKNOWN` (`6`)<br />-   `DM_NODE_TYPE_ITEMSET` (`7`)<br />-   `DM_NODE_TYPE_ASSOCIATION_RULE` (`8`)<br />-   `DM_NODE_TYPE_NB_PREDICTABLE_ATTRIBUTE` (`9`)<br />-   `DM_NODE_TYPE_NB_INPUT_ATTRIBUTE` (`10`)<br />-   `DM_NODE_TYPE_NB_INPUT_ATTRIBUTE_STATE` (`11`)<br />-   `DM_NODE_TYPE_SEQUENCE` (`13`)<br />-   `DM_NODE_TYPE_TRANSITION` (`14`)<br />-   `DM_NODE_TYPE_TIME_SERIES` (`15`)<br />-   `DM_NODE_TYPE_TS_TREE` (`16`)<br />-   `DM_NODE_TYPE_NN_SUBNETWORK` (`17`) Red neuronal, subred<br />-   `DM_NODE_TYPE_NN_INPUT_LAYER` (`18`) Red neuronal, nivel de entrada (elemento primario de los nodos de entrada)<br />-   **DM_NODE_TYPE_NN_HIDDEN_LAYER** (`19`) Red neuronal, nivel oculto (elemento primario de los nodos ocultos)<br />-   `DM_NODE_TYPE_NN_OUTPUT_LAYER` (`20`) Red neuronal, nivel de salida (elemento primario de nodos de salida)<br />-   `DM_NODE_TYPE_NN_INPUT_NODE` (`21`) Red neuronal, nodo de entrada<br />-   `DM_NODE_TYPE_NN_HIDDEN_NODE` (`22`) Red neuronal, nodo oculto<br />-   `DM_NODE_TYPE_NN_OUTPUT_NODE` (`23`) Red neuronal, nodo de salida<br />-   `DM_NODE_TYPE_NN_MARGINAL_STAT_NODE` (`24`) Red neuronal, nodo de estadísticas marginales<br />-   **DM_NODE_TYPE_REGRESSION_TREE_ROOT** (`25`)<br />-   `DM_NODE_TYPE_NB_MARGINAL_STAT_NODE` (`26`) Red neuronal, nodo de estadísticas marginales|  
+|`NODE_TYPE`|`DBTYPE_I4`||El tipo de nodo. Generará uno de los siguientes valores (los algoritmos de minería de datos desarrollados por terceros pueden ampliar esta lista):<br /><br /> -   `DM_NODE_TYPE_CLASSIFICATION_TREE_ROOT` (`2`)<br />-   `DM_NODE_TYPE_TREE_INTERIOR` (`3`)<br />-   `DM_NODE_TYPE_TREE_DISTRIBUTION` (`4`)<br />-   `DM_NODE_TYPE_CLUSTER` (`5`)<br />-   `DM_NODE_TYPE_UNKNOWN` (`6`)<br />-   `DM_NODE_TYPE_ITEMSET` (`7`)<br />-   `DM_NODE_TYPE_ASSOCIATION_RULE` (`8`)<br />-   `DM_NODE_TYPE_NB_PREDICTABLE_ATTRIBUTE` (`9`)<br />-   `DM_NODE_TYPE_NB_INPUT_ATTRIBUTE` (`10`)<br />-   `DM_NODE_TYPE_NB_INPUT_ATTRIBUTE_STATE` (`11`)<br />-   `DM_NODE_TYPE_SEQUENCE` (`13`)<br />-   `DM_NODE_TYPE_TRANSITION` (`14`)<br />-   `DM_NODE_TYPE_TIME_SERIES` (`15`)<br />-   `DM_NODE_TYPE_TS_TREE` (`16`)<br />-   `DM_NODE_TYPE_NN_SUBNETWORK` (`17`) Red neuronal, subred<br />-   `DM_NODE_TYPE_NN_INPUT_LAYER` (`18`) Red neuronal, nivel de entrada (elemento primario de los nodos de entrada)<br />-   **DM_NODE_TYPE_NN_HIDDEN_LAYER** (`19`) Red neuronal, nivel oculto (elemento primario de los nodos ocultos)<br />-   `DM_NODE_TYPE_NN_OUTPUT_LAYER` (`20`) Red neuronal, nivel de salida (elemento primario de los nodos de salida)<br />-   `DM_NODE_TYPE_NN_INPUT_NODE` (`21`) Red neuronal, nodo de entrada<br />-   `DM_NODE_TYPE_NN_HIDDEN_NODE` (`22`) Red neuronal, nodo oculto<br />-   `DM_NODE_TYPE_NN_OUTPUT_NODE` (`23`) Red neuronal, nodo de salida<br />-   `DM_NODE_TYPE_NN_MARGINAL_STAT_NODE` (`24`) Red neuronal, nodo de estadísticas marginales<br />-   **DM_NODE_TYPE_REGRESSION_TREE_ROOT** (`25`)<br />-   `DM_NODE_TYPE_NB_MARGINAL_STAT_NODE` (`26`) Red neuronal, nodo de estadísticas marginales|  
 |`NODE_GUID`|`DBTYPE_GUID`||GUID del nodo. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no admite esta columna; siempre contiene `NULL`.|  
 |`NODE_CAPTION`|`DBTYPE_WSTR`||Etiqueta o título asociado al nodo. Esta propiedad se usa principalmente para la presentación.|  
 |`CHILDREN_CARDINALITY`|`DBTYPE_UI4`||Cálculo del número de elementos secundarios que tiene el nodo.|  
@@ -59,7 +59,7 @@ ms.locfileid: "36197040"
 |`MSOLAP_NODE_SHORT_CAPTION`|`DBTYPE_WSTR`||Título corto para el nodo que se puede utilizar para la visualización a fin de mejorar la legibilidad.|  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DMSCHEMA_MINING_MODEL_CONTENT` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DMSCHEMA_MINING_MODEL_CONTENT` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

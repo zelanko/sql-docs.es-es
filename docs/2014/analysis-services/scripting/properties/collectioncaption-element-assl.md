@@ -1,5 +1,5 @@
 ---
-title: Elemento CollectionCaption (ASSL) | Documentos de Microsoft
+title: Elemento CollectionCaption (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 33929373-11df-4f89-8d2e-d63923c44f53
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bba7c2ab2cffb2287b1eff84c5e9fc9f385119cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 336c87e48d2e65e7aa9bfd858ff07e2fc2436f34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198533"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209965"
 ---
 # <a name="collectioncaption-element-assl"></a>Elemento CollectionCaption (ASSL)
   Contiene el nombre plural del elemento primario.  
@@ -50,6 +50,6 @@ ms.locfileid: "36198533"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `CollectionCaption` en el objeto de Analysis Management Objects (AMO) modelo es relationshipendtranslation.  
+ El elemento que se corresponde con el elemento primario de `CollectionCaption` en el objeto de Analysis Management Objects (AMO) el modelo es relationshipendtranslation.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento NamingTemplateTranslation (ASSL) | Documentos de Microsoft
+title: Elemento NamingTemplateTranslation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NamingTemplateTranslation element
 ms.assetid: 4a97a31d-23bc-4afd-a4dc-bc0ad7121f08
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dc6c6689f4028c0983267a38435c76e7258768a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a2832ae5ffe9d5b834fc03f84154fa398b7a19fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167556"
 ---
 # <a name="namingtemplatetranslation-element-assl"></a>Elemento NamingTemplateTranslation (ASSL)
   Proporciona una traducción adaptada de la [NamingTemplate](../properties/namingtemplate-element-assl.md) (elemento) para un elemento primario [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) tipo de datos.  
@@ -60,9 +60,9 @@ ms.locfileid: "36197698"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El valor de la `NamingTemplateTranslation` elemento se utiliza únicamente por los atributos primarios (en otras palabras, el valor de la [uso](../properties/usage-element-dimensionattribute-assl.md) elemento de la `DimensionAttribute` primario se establece en *primario*) para almacenar la versión traducida traducción de la `NamingTemplate` valor para un idioma determinado.  
+ El valor de la `NamingTemplateTranslation` elemento es utilizado únicamente por los atributos primarios (en otras palabras, el valor de la [uso](../properties/usage-element-dimensionattribute-assl.md) elemento de la `DimensionAttribute` primario se establece en *primario*) para almacenar la versión traducida traducción de la `NamingTemplate` valor para un idioma determinado.  
   
- El elemento que corresponde al elemento primario de `NamingTemplateTranslations` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ El elemento que se corresponde con el elemento primario de `NamingTemplateTranslations` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento NamingTemplate &#40;ASSL&#41;](../properties/namingtemplate-element-assl.md)   

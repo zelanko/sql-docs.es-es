@@ -1,5 +1,5 @@
 ---
-title: Ver recomendaciones de optimización | Documentos de Microsoft
+title: Ver recomendaciones de optimización | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3152ba823577308d846bfe5862af16681008f64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f21cb4a4e5142cd0410153daf37b05ef181be9d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157716"
 ---
 # <a name="viewing-tuning-recommendations"></a>Ver recomendaciones de optimización
   En esta tarea, se utiliza la sesión de optimización que creó en [Tuning a Workload](lesson-1-1-tuning-a-workload.md). Después de optimizar la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] mediante el script [!INCLUDE[tsql](../../includes/tsql-md.md)] MyScript.sql, el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] muestra los resultados en la pestaña **Recomendaciones** . La tarea siguiente trata sobre la pestaña **Recomendaciones** de la interfaz gráfica de usuario (GUI) del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y le guía para que explore la información que proporciona sobre los resultados de la sesión de optimización.  
@@ -48,7 +48,7 @@ ms.locfileid: "36199257"
   
 7.  En el menú **Acciones** , haga clic en **Evaluar recomendaciones**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea una nueva sesión de optimización en la que puede evaluar un subconjunto de las recomendaciones originales de MySession.  
   
-8.  Tipo de `EvaluateMySession` para el nuevo **nombre de la sesión**y haga clic en el **iniciar análisis** botón en la barra de herramientas. Puede repetir los pasos 2 y 3 con esta nueva sesión de optimización para ver las recomendaciones.  
+8.  Tipo `EvaluateMySession` para el nuevo **nombre de la sesión**y haga clic en el **iniciar análisis** en la barra de herramientas. Puede repetir los pasos 2 y 3 con esta nueva sesión de optimización para ver las recomendaciones.  
   
 ## <a name="summary"></a>Resumen  
  Ha visto el contenido de la pestaña **Recomendaciones** para la sesión de optimización MySession y ha evaluado un subconjunto de recomendaciones en la nueva sesión de optimización EvaluateMySession.  

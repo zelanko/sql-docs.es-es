@@ -1,5 +1,5 @@
 ---
-title: Ver modelos de minería de datos en Visio (complementos de minería de datos) | Documentos de Microsoft
+title: Ver modelos de minería de datos en Visio (complementos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagram, modifying
 - templates [Visio]
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - diagram
 ms.assetid: 5841adea-6650-4fae-8526-26af33edbede
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 572bbd3b2c3bbcebbd1b5a829ac193ac0bb909a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9dbb4e78685982dc3b7cd981fc6df6db9bf40a13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259361"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Ver los modelos de minería de datos en Visio (Complementos de minería de datos)
   Las formas de Visio para minería de datos le permiten conectarse a un servidor y crear un diagrama que represente un modelo de minería de datos existente. Posteriormente, se pueden personalizar los diagramas mediante los controles de Visio, pero también puede explorar en profundidad datos, exponer algunas de las estadísticas subyacentes y trabajar con el modelo subyacente.  
   
 ## <a name="building-a-model-diagram"></a>Crear un diagrama del modelo  
- Cuando se abre el archivo que contiene las formas de Visio para minería de datos, el **formas** panel muestra las formas siguientes.  
+ Al abrir el archivo que contiene las formas de Visio para minería de datos, el **formas** panel muestra las formas siguientes.  
   
  Si no ve las formas de minería de datos al abrir Visio, abra el archivo de plantilla desde la carpeta de instalación.  
   

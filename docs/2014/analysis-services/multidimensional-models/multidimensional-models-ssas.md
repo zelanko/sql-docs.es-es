@@ -1,5 +1,5 @@
 ---
-title: Multidimensional de modelado (SSAS) | Documentos de Microsoft
+title: Multidimensional de modelado (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9300e8e8aefbe436ca3acba141f8800779e6e637
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 078ed4d8a791aba089255c725ddbedaa313920ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171676"
 ---
 # <a name="multidimensional-modeling-ssas"></a>Modelado multidimensional (SSAS)
   Una solución multidimensional de Analysis Services usa estructuras de cubierta para analizar datos de negocio en varias dimensiones. El modo multidimensional es el modo de servidor predeterminado de Analysis Services. Incluye un motor de cálculo y consulta de datos OLAP, con los modos de almacenamiento MOLAP, ROLAP y ROLAP para equilibrar el rendimiento con los requisitos de datos escalables. El motor OLAP de Analysis Services es un servidor OLAP principal del sector que funciona con una amplia variedad de herramientas de BI. La mayoría de las implementaciones de Analysis Services se instalan como servidores OLAP clásicos.  
@@ -32,7 +32,7 @@ ms.locfileid: "36198289"
 ## <a name="in-this-section"></a>En esta sección  
  [Soluciones de modelos multidimensionales &#40;SSAS&#41;](multidimensional-model-solutions-ssas.md)  
   
- [Las bases de datos de modelo multidimensional &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Bases de datos modelo multidimensionales &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
  [Procesamiento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)  
   
@@ -40,6 +40,6 @@ ms.locfileid: "36198289"
   
  [Power View para modelos multidimensionales](power-view-for-multidimensional-models.md)  
   
- [Administración de ensamblados de modelos multidimensionales](multidimensional-model-assemblies-management.md)  
+ [Administración de los ensamblados de modelos multidimensionales](multidimensional-model-assemblies-management.md)  
   
   

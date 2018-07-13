@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
 - max server memory option
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 caps.latest.revision: 76
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5ddbf4ccd432a7ba7ff9f4d946572dfcc6500dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4ae726d4a8706b5fbb04c8d10c8a14c3aeeb0790
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160966"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opciones de configuración de memoria del servidor
   Use las dos opciones de memoria de servidor **Memoria de servidor mínima** y **Memoria de servidor máxima**para reconfigurar la cantidad de memoria (en megabytes) administrada por el Administrador de memoria de SQL Server para un proceso de SQL Server usado por una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -87,14 +87,14 @@ ms.locfileid: "36197676"
 3.  Si está seleccionada la opción **Maximizar el rendimiento para aplicaciones de red** , elija cualquier otra opción, haga clic en **Aceptar**y, a continuación, cierre el resto de cuadros de diálogo.  
   
 ## <a name="lock-pages-in-memory"></a>Bloquear páginas en la memoria  
- Esta directiva de Windows determina qué cuentas pueden usar un proceso para mantener los datos en la memoria física, impidiendo que el sistema realice la paginación de los datos en la memoria virtual del disco. El bloqueo de páginas en memoria puede mantener el servidor activo cuando se produce la paginación en la memoria del disco. El servidor SQL Server **Lock Pages in Memory** opción está establecida en ON en instancias de 32 bits y 64 bits de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition y posterior cuando la cuenta con privilegios para ejecutar sqlservr.exe se le ha concedido el "páginas bloqueada en Derecho de usuario de "Memoria" (LPIM). En versiones anteriores de SQL Server, establecer la opción de bloqueo de páginas para una instancia de 32 bits de SQL Server requiere que la cuenta con privilegios para ejecutar sqlservr.exe tenga el derecho del usuario LPIM y que la opción de configuración “awe_enabled” esté establecida en ON.  
+ Esta directiva de Windows determina qué cuentas pueden usar un proceso para mantener los datos en la memoria física, impidiendo que el sistema realice la paginación de los datos en la memoria virtual del disco. El bloqueo de páginas en memoria puede mantener el servidor activo cuando se produce la paginación en la memoria del disco. El servidor SQL Server **Lock Pages in Memory** opción está establecida en ON en las instancias de 32 bits y 64 bits de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition y posterior cuando la cuenta con privilegios para ejecutar sqlservr.exe se le ha otorgado el Windows "bloqueado en páginas Derecho de usuario de "Memoria" (LPIM). En versiones anteriores de SQL Server, establecer la opción de bloqueo de páginas para una instancia de 32 bits de SQL Server requiere que la cuenta con privilegios para ejecutar sqlservr.exe tenga el derecho del usuario LPIM y que la opción de configuración “awe_enabled” esté establecida en ON.  
   
  Para deshabilitar la opción de **Bloquear páginas en la memoria** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quite el derecho de usuario “Bloquear páginas en la memoria” para la cuenta de inicio de SQL Server.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>Para deshabilitar Bloquear páginas en la memoria  
  **Para deshabilitar la opción Bloquear páginas en memoria:**  
   
-1.  En el menú **Inicio** , haga clic en **Ejecutar**. En el **abiertos** , escriba `gpedit.msc`.  
+1.  En el menú **Inicio** , haga clic en **Ejecutar**. En el **abierto** , escriba `gpedit.msc`.  
   
      Se abrirá el cuadro de diálogo **Directiva de grupo** .  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36197676"
   
  ***/3gb** es un parámetro de arranque del sistema operativo. Para obtener más información, visite [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- ** WOW64 (Windows on Windows 64) es un modo en que 32 bits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un sistema operativo de 64 bits. Para obtener más información, visite [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ ** WOW64 (Windows on Windows 64) es un modo en que 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un sistema operativo de 64 bits. Para obtener más información, visite [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## <a name="examples"></a>Ejemplos  
   

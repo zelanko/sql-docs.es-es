@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
 - impersonation [Reporting Services]
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 caps.latest.revision: 59
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3e3dc577cf7b0db69fbcc8140996ce33a4802040
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cb7ef033bc481772f0acbb524988fc8e85a2e91d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210745"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar información de credenciales y conexión para los orígenes de datos de informes
   Un servidor de informes utiliza credenciales para conectarse a orígenes de datos externos que proporcionan contenido a informes o información de destinatarios a una suscripción controlada por datos. Puede especificar credenciales que utilicen la autenticación de Windows, la autenticación de la base de datos, la autenticación personalizada o que no utilicen autenticación. Al enviar una solicitud de conexión a través de la red, el servidor de informes suplantará una cuenta de usuario o una cuenta de ejecución desatendida. Para obtener más información acerca del contexto de seguridad en el que se realiza una solicitud de conexión, vea [Configuración de orígenes de datos y conexiones de red](#DataSourceConfigurationConnections) más adelante en este tema.  
@@ -45,7 +45,7 @@ ms.locfileid: "36197894"
 > [!NOTE]  
 >  Las credenciales también sirven para autenticar a usuarios que tengan acceso a un servidor de informes. La información acerca de la autenticación de usuarios en un servidor de informes se proporciona en otro tema.  
   
- La conexión a un origen de datos externo se define cuando se crea el informe. Una vez publicado éste, se puede administrar por separado. Puede especificar una cadena de conexión estática o una expresión que permita a los usuarios seleccionar un origen de datos de una lista dinámica. Para obtener más información sobre cómo especificar una cadena de conexión y tipo de origen de datos, vea [las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ La conexión a un origen de datos externo se define cuando se crea el informe. Una vez publicado éste, se puede administrar por separado. Puede especificar una cadena de conexión estática o una expresión que permita a los usuarios seleccionar un origen de datos de una lista dinámica. Para obtener más información sobre cómo especificar una cadena de conexión y el tipo de origen de datos, vea [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
 ## <a name="using-remote-data-sources"></a>Usar orígenes de datos remotos  
  Si el informe recupera datos de un servidor de bases de datos remoto, compruebe lo siguiente:  
@@ -114,7 +114,7 @@ ms.locfileid: "36197894"
     2.  Si aparece la cuenta en la lista, selecciónela y, a continuación, haga clic en **Quitar**.  
   
 #### <a name="using-impersonation-with-stored-credentials"></a>Usar la suplantación con credenciales almacenadas  
- También puede utilizar las credenciales para suplantar la identidad de otro usuario. Las bases de datos de SQL Server, debe usar la suplantación opciones establece la [SETUSER](/sql/t-sql/statements/setuser-transact-sql) función.  
+ También puede utilizar las credenciales para suplantar la identidad de otro usuario. Las bases de datos de SQL Server, debe usar la suplantación opciones establece el [SETUSER](/sql/t-sql/statements/setuser-transact-sql) función.  
   
 > [!IMPORTANT]  
 >  No utilice la suplantación para informes que admitan suscripciones o que utilicen programaciones para generar el historial del informe o para actualizar una instantánea de ejecución de informes.  
@@ -145,10 +145,10 @@ ms.locfileid: "36197894"
   
 ## <a name="see-also"></a>Vea también  
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Administrar los orígenes de datos de informe](../../integration-services/connection-manager/data-sources.md)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Administrar orígenes de datos de informe](../../integration-services/connection-manager/data-sources.md)   
  [El Administrador de informes &#40;modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Crear, eliminar o modificar un origen de datos compartido &#40;el Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Configurar las propiedades del origen de datos para un informe &#40;el Administrador de informes&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [Configurar propiedades del origen de datos para un informe &#40;el Administrador de informes&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

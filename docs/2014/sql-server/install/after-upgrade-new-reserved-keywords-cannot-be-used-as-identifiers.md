@@ -1,5 +1,5 @@
 ---
-title: Después de la actualización, las nuevas palabras clave reservadas no se pueden utilizar como identificadores | Documentos de Microsoft
+title: Después de la actualización, las nuevas palabras clave reservadas no se puede utilizar como identificadores | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - keywords [SQL Server], after upgrade
 - keywords [SQL Server], reserved
 - keywords [SQL Server]
 ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 177c36aaeca8e6cc9d84aae21e1f99fe0bb96867
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bc7569837d0442b23e16c365ea1076b734f23892
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172126"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>Después de la actualización, las nuevas palabras clave reservadas no se pueden utilizar como identificadores
   El Asesor de actualizaciones detectó el uso de palabras que son palabras clave reservadas. Una palabra clave reservada no se puede utilizar como identificador o nombre de objeto a menos que el nombre se delimite.  
@@ -53,7 +53,7 @@ ms.locfileid: "36199062"
   
 -   Conserve el valor de nivel de compatibilidad de la base de datos en 90 o inferior.  
   
--   Consulte el objeto utilizando identificadores delimitados. Por ejemplo, la instrucción `CREATE TABLE [MERGE] ([MERGE] int);` utiliza corchetes para delimitar el nombre de objeto MERGE.  
+-   Consulte el objeto utilizando identificadores delimitados. Por ejemplo, la instrucción `CREATE TABLE [MERGE] ([MERGE] int);` usa corchetes para delimitar el nombre de objeto MERGE.  
   
 ## <a name="external-resources"></a>Recursos externos  
  [Palabras clave reservadas &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  

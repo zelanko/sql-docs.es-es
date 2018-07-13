@@ -1,5 +1,5 @@
 ---
-title: 'Lección 4: Almacenar datos de proveedor en MDS | Documentos de Microsoft'
+title: 'Lección 4: Almacenar datos de proveedor en MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 40f09aa6544bc38378e547c5b6e94dd26956a549
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c366d18c9f8c4606da6cc864df7a7d399151c6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180952"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>Lección 4: almacenar datos de proveedor en MDS
   Master Data Services (MDS) es la solución de SQL Server para la administración de datos maestros. La administración de datos maestros (MDM) describe los esfuerzos realizados por una organización para detectar y definir listas no transaccionales de datos.  
@@ -55,6 +55,6 @@ ms.locfileid: "36199263"
 8.  Crear y usar una jerarquía derivada mediante la relación de atributo basado en dominio entre las entidades **Proveedor** y **Estado** (el atributo Estado de la entidad Proveedor es de tipo entidad Estado) mediante **Master Data Manager**.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 1: Crear el modelo de proveedores mediante Master Data Manager](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
+ [Tarea 1: Crear el modelo Proveedores mediante Master Data Manager](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
   
   

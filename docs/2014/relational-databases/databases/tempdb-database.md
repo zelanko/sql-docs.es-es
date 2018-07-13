@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
 - tempdb database [SQL Server], about tempdb
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 048386695f2b3d3736ce2b399caa9fa286e0d80c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 251ca5f656425a3a77952b4bfdb6e0b79ee8367d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154336"
 ---
 # <a name="tempdb-database"></a>Base de datos tempdb
   La base de datos del sistema **tempdb** es un recurso global disponible para todos los usuarios conectados a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se utiliza para incluir lo siguiente:  
@@ -47,7 +47,7 @@ ms.locfileid: "36197931"
 |Datos principales|tempdev|tempdb.mdf|Crecimiento automático del 10 por ciento hasta llenar el disco|  
 |Log|templog|templog.ldf|Crecimiento automático del 10 por ciento hasta un máximo de 2 terabytes|  
   
- El tamaño de **tempdb** puede afectar al rendimiento de un sistema. Por ejemplo, si la **tempdb** tamaño es demasiado pequeño, el procesamiento del sistema podría ser demasiado ocupado con el crecimiento la base de datos para que admita su requisito de carga de trabajo cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede evitar esta sobrecarga, aumente el tamaño de **tempdb**.  
+ El tamaño de **tempdb** puede afectar al rendimiento de un sistema. Por ejemplo, si la **tempdb** tamaño es demasiado pequeño, el procesamiento del sistema podría estar demasiado ocupado con el crecimiento automático para admitir los requisitos de la carga de trabajo cada vez que se inicia la base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede evitar esta sobrecarga, aumente el tamaño de **tempdb**.  
   
 ## <a name="performance-improvements-in-tempdb"></a>Mejoras en el rendimiento de tempdb  
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el rendimiento de **tempdb** se mejora de las siguientes maneras:  

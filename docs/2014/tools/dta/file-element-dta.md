@@ -1,5 +1,5 @@
 ---
-title: Archivo de elemento (DTA) | Documentos de Microsoft
+title: Archivo de elemento (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - File element
 ms.assetid: 73dce835-9a80-4aef-8e0f-9dcf07dd5b80
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 856ca7cb2ef9c0ab70eeb410db3ef6748b159bcf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0cf6b51bf7f6d4f90a8a575326beb457e42e5d99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159766"
 ---
 # <a name="file-element-dta"></a>File (DTA, elemento)
   Especifica el archivo de carga de trabajo. Una carga de trabajo es un conjunto de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecuta en una o varias bases de datos que se desean optimizar. Los archivos de carga de trabajo pueden ser scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] (.sql) o archivos de seguimiento (.trc). Para más información, consulte [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "36198318"
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Workload, elemento &#40;DTA&#41;](workload-element-dta.md)|  
+|**Elemento primario**|[Elemento de la carga de trabajo &#40;DTA&#41;](workload-element-dta.md)|  
 |**Elementos secundarios**|Ninguno.|  
   
 ## <a name="example"></a>Ejemplo  

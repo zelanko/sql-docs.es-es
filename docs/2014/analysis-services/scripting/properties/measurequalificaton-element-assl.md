@@ -1,5 +1,5 @@
 ---
-title: Elemento MeasureQualificaton (ASSL) | Documentos de Microsoft
+title: Elemento MeasureQualificaton (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MeasureQualification element
 ms.assetid: 754a037c-f20b-4717-a6e8-12f495e8e3b4
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795e2b7b10f9d7e9988747025c322b25ffa0af47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb84c39d7d7a3b69ea3c13e43dfda0b331c548e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149506"
 ---
 # <a name="measurequalificaton-element-assl"></a>Elemento MeasureQualificaton (ASSL)
   Determina si un prefijo se aplica a las medidas de la [MeasureGroup](../objects/group-element-assl.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "36197473"
 |*PrefixMeasureGroup*|El nombre único y el título de cada medida de este grupo de medidas tiene como prefijo el nombre del grupo de medidas y un espacio único.|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `MeasureQualification` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MeasureGroup>.  
+ El elemento que se corresponde con el elemento primario de `MeasureQualification` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento de cubo &#40;ASSL&#41;](../objects/cube-element-assl.md)   

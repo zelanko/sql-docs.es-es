@@ -1,5 +1,5 @@
 ---
-title: Elemento KPIs (ASSL) | Documentos de Microsoft
+title: Elemento KPIs (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Kpis element
 ms.assetid: da4e32a0-1416-4d32-8b7f-7d74be23c9d4
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 892e5997802b2d24d23ac9cb7e3be4ecb1b401c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0947535590d2484ac8022a3fa845dc4b85c96d4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197785"
 ---
 # <a name="kpis-element-assl"></a>Elemento Kpis (ASSL)
   Contiene la colección de indicadores clave de rendimiento ([Kpi](../objects/kpi-element-assl.md) elementos) asociado con el elemento primario.  
@@ -66,7 +66,7 @@ ms.locfileid: "36197283"
 |Antecesor o elemento primario|Elemento secundario|  
 |------------------------|-------------------|  
 |[Cubo](../objects/cube-element-assl.md)|[KPI](../objects/kpi-element-assl.md)|  
-|[Perspectiva](../objects/perspective-element-assl.md)|[KPI](../objects/kpi-element-assl.md) de tipo [PerspectiveKpi](../data-type/perspectivekpi-data-type-assl.md)|  
+|[Perspectiva](../objects/perspective-element-assl.md)|[KPI](../objects/kpi-element-assl.md) typu [PerspectiveKpi](../data-type/perspectivekpi-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.KpiCollection>.  

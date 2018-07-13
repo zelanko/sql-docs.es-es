@@ -1,5 +1,5 @@
 ---
-title: Programar tareas administrativas con AMO | Documentos de Microsoft
+title: Programar tareas administrativas con AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Analysis Management Objects, programming
 ms.assetid: 91d846cf-704d-409a-9198-87674a8fb49a
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 95267e9d51a0c7908c49bb91d0f02cf5a882fa28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1563187c936c76c41759d94a6af2949094e83cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197845"
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>Programar tareas administrativas con AMO
   Objetos de administración de análisis (AMO) es una biblioteca de programación que se utiliza desde las aplicaciones cliente para administrar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. En esta sección, aprenderá a programar usando los objetos AMO.  

@@ -1,5 +1,5 @@
 ---
-title: Elemento Cancel (XMLA) | Documentos de Microsoft
+title: Elemento Cancel (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Cancel command
 ms.assetid: de4062c1-7434-44dc-9f01-29fcf78963bd
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cd0fdd50a1dcddb51d167ab76cd5408b631bb3ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fb71b55e514a2e058d50cd1c923a3e0b794ac8f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173276"
 ---
 # <a name="cancel-element-xmla"></a>Elemento Cancel (XMLA)
   Cancela un comando que se está ejecutando un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia.  
@@ -73,7 +73,7 @@ ms.locfileid: "36199451"
   
  Normalmente, el comando `Cancel` se utiliza para cancelar comandos que se están ejecutando actualmente en la sesión activa. En ese caso, no se debe especificar ninguno de los elementos secundarios del comando `Cancel`. Los administradores también pueden utilizar el comando `Cancel` para cancelar comandos que se ejecutan en conexiones o sesiones que no sean la sesión activa actualmente. Los miembros de un rol que tiene permisos de administración de una base de datos determinada pueden cancelar comandos de conexiones y sesiones aplicables a esa base de datos, mientras que los administradores del servidor pueden cancelar comandos de conexiones y sesiones de una instancia de los Analysis Service determinada.  
   
- Para recuperar información sobre las conexiones y sesiones actuales de una instancia [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], se puede ejecutar el método `Discover` para solicitar conjuntos de filas de esquema DISCOVER_CONNECTIONS y DISCOVER_SESSIONS, respectivamente. Los miembros de un rol que tienen permisos de administración para una base de datos determinada solo pueden devolver sesiones de una base de datos determinada especificando esa base de datos en la columna de restricción de SESSION_CURRENT_DATABASE para el conjunto de filas de esquema de DISCOVER_SESSIONS. Para obtener más información sobre la `Discover` método, consulte [método detectar &#40;XMLA&#41;](../xml-elements-methods-discover.md).  
+ Para recuperar información sobre las conexiones y sesiones actuales de una instancia [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], se puede ejecutar el método `Discover` para solicitar conjuntos de filas de esquema DISCOVER_CONNECTIONS y DISCOVER_SESSIONS, respectivamente. Los miembros de un rol que tienen permisos de administración para una base de datos determinada solo pueden devolver sesiones de una base de datos determinada especificando esa base de datos en la columna de restricción de SESSION_CURRENT_DATABASE para el conjunto de filas de esquema de DISCOVER_SESSIONS. Para obtener más información sobre la `Discover` método, consulte [método Discover &#40;XMLA&#41;](../xml-elements-methods-discover.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento de lote &#40;XMLA&#41;](batch-element-xmla.md)   

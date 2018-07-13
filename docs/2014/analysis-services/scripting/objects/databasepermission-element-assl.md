@@ -1,5 +1,5 @@
 ---
-title: Elemento DatabasePermission (ASSL) | Documentos de Microsoft
+title: Elemento DatabasePermission (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DatabasePermission element
 ms.assetid: 6dcb9136-a40d-42e3-ad3b-b8ce8c7ca78c
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e47203616cc76fa09c0fd0658e7dad8a89c90a9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0fbfd9544e5305169e0d25b1b0157197d39cc002
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259531"
 ---
 # <a name="databasepermission-element-assl"></a>Elemento DatabasePermission (ASSL)
   Define los permisos predeterminados en un [base de datos](database-element-assl.md) (elemento) para un determinado [rol](role-element-assl.md) elemento.  

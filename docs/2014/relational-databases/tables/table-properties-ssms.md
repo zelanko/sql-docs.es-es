@@ -1,5 +1,5 @@
 ---
-title: Propiedades de la tabla | Documentos de Microsoft
+title: Propiedades de la tabla | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
 - sql12.SWB.SELECTCOLUMNS.F1
@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.swb.tableproperties.changetracking.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e5b9ecfeafbb989f5baae832225475e65137a9ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 858be4ef2443a92f2a2999535714084fe60a67f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181772"
 ---
 # <a name="table-properties"></a>Propiedades de tabla
   En este tema se describen las propiedades de la tabla que se muestran en el cuadro de diálogo Propiedades de tabla en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información sobre cómo mostrar estas propiedades, vea [Ver la definición de tabla](view-the-table-definition.md).  
@@ -145,7 +145,7 @@ ms.locfileid: "36199304"
   
 ### <a name="general"></a>General  
  **El formato de almacenamiento Vardecimal está habilitado**  
- Cuando `True`, este valor de solo lectura indica que `decimal` y `numeric` tipos de datos se almacenan con el formato de almacenamiento vardecimal. Para cambiar esta opción, use la `vardecimal storage format` opción de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). El formato de almacenamiento Vardecimal está en desuso. En su lugar, use la compresión de fila.  
+ Cuando `True`, este valor de solo lectura indica que `decimal` y `numeric` tipos de datos se almacenan con el formato de almacenamiento vardecimal. Para cambiar esta opción, utilice el `vardecimal storage format` opción de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). El formato de almacenamiento Vardecimal está en desuso. En su lugar, use la compresión de fila.  
   
  **Espacio de índice**  
  La cantidad de espacio en megabytes que ocupan los índices en la tabla. Este valor no incluye el uso del espacio del índice XML en la tabla. Si los índices XML pertenecen a la tabla, use [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) en su lugar.  

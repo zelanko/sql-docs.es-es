@@ -1,5 +1,5 @@
 ---
-title: Configurar el uso de espacio en disco (PowerPivot para SharePoint) | Documentos de Microsoft
+title: Configurar el uso de espacio en disco (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76f4688acd348f8ee2bcbe87d8832f5f770ba4b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 538efc15ea53c9c7666589c71c039ce21fa21b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151496"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurar el uso del espacio en disco (PowerPivot para SharePoint)
   Una implementación de PowerPivot para SharePoint usa el espacio en disco del equipo host para almacenar en memoria caché las bases de datos PowerPivot para obtener recargas más rápidas. Cada base de datos PowerPivot que se carga en la memoria primero se almacena en la memoria caché en el disco para que se pueda volver a cargar rápidamente más tarde para atender las nuevas solicitudes. De forma predeterminada, PowerPivot para SharePoint utiliza todo el espacio en disco disponible para almacenar en memoria caché las bases de datos, pero puede modificar este comportamiento estableciendo las propiedades que restringen cuánto espacio en disco se utiliza.  
@@ -95,9 +95,9 @@ ms.locfileid: "36198298"
 5.  Haga clic en **Aceptar** para guardar los cambios.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Una instalación de PowerPivot para SharePoint proporciona reglas de estado para que pueda realizar una acción correctora cuando se detecten problemas en el estado, la configuración o la disponibilidad del servidor. Algunas de estas reglas utilizan la configuración para determinar las condiciones en las que se desencadenan las reglas de estado. Si va a optimizar activamente el rendimiento del servidor, puede que también desee consultar estos valores para garantizar que los predeterminados son la mejor opción para el sistema. Para obtener más información, consulte [configurar reglas de mantenimiento de PowerPivot -](configure-power-pivot-health-rules.md).  
+ Una instalación de PowerPivot para SharePoint proporciona reglas de estado para que pueda realizar una acción correctora cuando se detecten problemas en el estado, la configuración o la disponibilidad del servidor. Algunas de estas reglas utilizan la configuración para determinar las condiciones en las que se desencadenan las reglas de estado. Si va a optimizar activamente el rendimiento del servidor, puede que también desee consultar estos valores para garantizar que los predeterminados son la mejor opción para el sistema. Para obtener más información, consulte [reglas de mantenimiento de PowerPivot - configurar](configure-power-pivot-health-rules.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Administración de servidor de PowerPivot y configuración en Administración Central](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Administración y configuración del servidor PowerPivot en Administración central](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

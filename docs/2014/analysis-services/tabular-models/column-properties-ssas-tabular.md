@@ -1,5 +1,5 @@
 ---
-title: Propiedades de columna (SSAS Tabular) | Documentos de Microsoft
+title: Propiedades de columna (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.columnprop.f1
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e091df45f6531dfd0922c795105fe8aadd69b4bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 437f225da3d771298a0fcf7af864a45953b194be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169306"
 ---
 # <a name="column-properties-ssas-tabular"></a>Pestaña Propiedades de columna (SSAS tabular)
   En este tema se describen las propiedades de columna del modelo tabular.  
@@ -65,8 +65,8 @@ ms.locfileid: "36197465"
 2.  En la ventana **Propiedades** , haga clic en una propiedad y, a continuación, escriba un valor o haga clic en la flecha abajo para seleccionar una opción de configuración.  
   
 ## <a name="see-also"></a>Vea también  
- [Power ver propiedades de informes &#40;SSAS Tabular&#41;](properties-ssas-tabular.md)   
- [Ocultar o Inmovilizar columnas &#40;SSAS Tabular&#41;](hide-or-freeze-columns-ssas-tabular.md)   
- [Agregar columnas a una tabla &#40;SSAS Tabular&#41;](add-columns-to-a-table-ssas-tabular.md)  
+ [Power ver propiedades de informes &#40;Tabular de SSAS&#41;](properties-ssas-tabular.md)   
+ [Ocultar o Inmovilizar columnas &#40;Tabular de SSAS&#41;](hide-or-freeze-columns-ssas-tabular.md)   
+ [Agregar columnas a una tabla &#40;Tabular de SSAS&#41;](add-columns-to-a-table-ssas-tabular.md)  
   
   

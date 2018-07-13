@@ -1,5 +1,5 @@
 ---
-title: Ver los datos de sesión de eventos | Documentos de Microsoft
+title: Ver datos de sesión de eventos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 503c9d39631ff2ec0e1ebafa437180dd7dc39739
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a6602ceccaf574827dfc49e4a90cd84c9422522b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239465"
 ---
 # <a name="view-event-session-data"></a>Ver datos de sesiones de eventos
   En este tema describe cómo usar la interfaz de usuario de presentación para ver y analizar datos de eventos extendidos:  
@@ -48,7 +48,7 @@ ms.locfileid: "36113863"
   
 -   Para un destino event_file, vea los datos del destino de archivo (archivo .XEL) mediante uno de los métodos siguientes:  
   
-    -   Utilice un archivo -> Abrir en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+    -   Usar el archivo -> Abrir en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
     -   Arrastre y coloque el archivo en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36113863"
  En el panel **Detalles** se muestran todas las columnas del evento seleccionado, incluidos los campos y las acciones. Puede agregar una columna a la tabla de datos de destino haciendo clic con el botón secundario en una fila en el panel **Detalles** y seleccionando **Mostrar columna en tabla**.  
   
 ### <a name="create-modify-or-delete-merged-columns"></a>Crear, modificar o eliminar columnas combinadas  
- Una columna combinada permite combinar un conjunto de campos para que se muestren en una sola columna. La columna combinada mostrará los datos del primer campo distinto de NULL según el orden en que se agregaron a la lista de campos. Esto es similar a lo que se ve en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, donde una columna específica puede mostrar datos diferentes en función del evento (el ejemplo más común de esto es el campo TextData en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generador de perfiles). Para obtener un ejemplo, puede combinar los campos statement y batch_text de los eventos sql_statement_completed y sql_batch_completed, respectivamente, en un campo denominado myStatement. Cuando se muestre la columna myStatement en la tabla, esta mostrará los datos correspondientes al evento asociado.  
+ Una columna combinada permite combinar un conjunto de campos para que se muestren en una sola columna. La columna combinada mostrará los datos del primer campo distinto de NULL según el orden en que se agregaron a la lista de campos. Esto es similar a lo que ve en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, donde una columna específica puede mostrar datos diferentes dependiendo del evento (el ejemplo más común de esto es el campo TextData en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler). Para obtener un ejemplo, puede combinar los campos statement y batch_text de los eventos sql_statement_completed y sql_batch_completed, respectivamente, en un campo denominado myStatement. Cuando se muestre la columna myStatement en la tabla, esta mostrará los datos correspondientes al evento asociado.  
   
  Puede crear, modificar o eliminar columnas combinadas:  
   

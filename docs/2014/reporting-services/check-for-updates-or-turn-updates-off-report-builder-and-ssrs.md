@@ -1,5 +1,5 @@
 ---
-title: Busque las actualizaciones o Turn Off (generador de informes y SSRS) | Documentos de Microsoft
+title: Comprobación de actualizaciones o desactivar actualizaciones (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c355099f67128f90a958d59f91de5f0d21c68a19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e88dda740e842ad4b7a96d1e1b73dd9bf7b14844
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201225"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Buscar o desactivar actualizaciones (Generador de informes y SSRS)
   Cada vez que abre un informe, el Generador de informes comprueba si las instancias publicadas de los elementos de informe se han actualizado en el servidor de informes o en el sitio de SharePoint integrado con un servidor de informes. También comprueba los cambios de los elementos dependientes de elementos de informe, como el conjunto de datos y los parámetros. Si algún elemento de informe o sus dependencias se han actualizado en el servidor o en el sitio, una barra de información del informe muestra el número de componentes actualizados. Puede elegir ver, y aceptar o rechazar las actualizaciones, o bien descartar la barra de información.  
@@ -30,7 +30,7 @@ ms.locfileid: "36197563"
   
 1.  Haga clic en el botón Generador de informes y, a continuación, haga clic en **opciones**.  
   
-2.  En el **opciones** cuadro de diálogo, en la **recursos** ficha, active o desactive el **Mostrar actualizaciones de elementos de informe en Mis informes** casilla de verificación.  
+2.  En el **opciones** cuadro de diálogo el **recursos** ficha, active o desactive el **Mostrar actualizaciones de elementos de informe en Mis informes** casilla de verificación.  
   
 > [!NOTE]  
 >  Se trata de una opción de usuario. Estará deshabilitada en todos los informes que abra.  
@@ -40,10 +40,10 @@ ms.locfileid: "36197563"
 -   Haga clic en la superficie de diseño fuera del informe o en el cuerpo del informe y haga clic en **buscar actualizaciones**.  
   
 ## <a name="see-also"></a>Vea también  
- [Elementos de informe &#40;el generador de informes SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
- [Publicar y volver a publicar elementos de informe &#40;el generador de informes SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
- [Buscar elementos de informe y establecer una carpeta predeterminada &#40;el generador de informes SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
- [Solucionar problemas de elementos de informe &#40;el generador de informes SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Elementos de informe &#40;generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [Publicar y volver a publicar elementos de informe &#40;generador de informes y SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
+ [Buscar elementos de informe y establecer una carpeta predeterminada &#40;generador de informes y SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
+ [Solucionar problemas de elementos de informe &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Elementos de informe y conjuntos de datos en el Generador de informes](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

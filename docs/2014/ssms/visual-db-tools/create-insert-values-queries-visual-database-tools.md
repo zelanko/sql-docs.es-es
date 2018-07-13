@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserting values
 - queries [SQL Server], types
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - table values [SQL Server]
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fdca52b519f60fddbd1f42a9e44e08f85a5879b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9501d3d35f35195112c328af22daf4948d115966
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157616"
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>Crear consultas de inserción de valores (Visual Database Tools)
   Puede crear una nueva fila en la tabla actual mediante una consulta de inserción de valores. Cuando se crea una consulta de inserción de valores, se especifica:  
@@ -71,7 +71,7 @@ VALUES   ('BU9876', 'Creating Web Pages', 'business', '1389', '29.99')
  Cuando se ejecuta una consulta de inserción de valores, los resultados no se muestran en el [panel Resultados](results-pane-visual-database-tools.md). En su lugar, aparece un mensaje que indica el número de filas que se han modificado.  
   
 ## <a name="see-also"></a>Vea también  
- [Tipos de consulta admitidos &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
+ [Tipos de consultas compatibles &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
  [Diseñar temas de procedimientos de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Realizar operaciones básicas con consultas (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   

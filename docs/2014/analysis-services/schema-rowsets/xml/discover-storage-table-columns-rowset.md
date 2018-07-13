@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_STORAGE_TABLE_COLUMNS | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_STORAGE_TABLE_COLUMNS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 24abb88e-33a9-4ae2-829d-cdef0ff22ec1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b3fed7add23dda2242000dbad63bb6cc2def0fb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e480f60aa857506a1d192452b299cede3f7161e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153156"
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMNS, conjunto de filas
   Proporciona información en el nivel de columna acerca de las tablas de almacenamiento que usa una base de datos de Analysis Services que se ejecuta en modo Tabular o de SharePoint.  
@@ -28,7 +28,7 @@ ms.locfileid: "36199548"
  **Se aplica a:** modelos tabulares  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_STORAGE_TABLE_COLUMNS` filas contiene las columnas siguientes.  
+ El `DISCOVER_STORAGE_TABLE_COLUMNS` conjunto de filas contiene las siguientes columnas.  
   
 |**Nombre de columna**|**Indicador de tipo**|**Restricción**|**Descripción**|  
 |---------------------|------------------------|---------------------|---------------------|  
@@ -41,7 +41,7 @@ ms.locfileid: "36199548"
 |`COLUMN_ID`|`DBTYPE_ WSTR`||El identificador de la columna. El identificador de columna es interno al motor de análisis de memoria de xVelocity (VertiPaq) y tiene un fin informativo únicamente.|  
 |`COLUMN_TYPE`|`DBTYPE_WSTR`||Tipo de columna. El tipo de columna es interno al motor de análisis de memoria de xVelocity (VertiPaq) y tiene un fin informativo únicamente.<br /><br /> -BASIC_DATA<br />-HIERARCHY_DATAID_TO_POSITION<br />-HIERARCHY_POSITION_TO_DATAID<br />-LA RELACIÓN|  
 |`COLUMN_ENCODING`|`DBTYPE_UI8`||Entero que representa el tipo de codificación utilizado para los datos de la columna.<br /><br /> -   **0**, que se usa con `COLUMN_TYPE`: HIERARCHY_DATAID_TO_POSITION, HIERARCHY_POSITION_TO_DATAID, relación<br />-   **1**, que se usa con `COLUMN_TYPE`: BASIC_DATA<br />-   **2**, que se usa con `COLUMN_TYPE`: BASIC_DATA|  
-|`DATATYPE`|`DBTYPE_WSTR`||Tipo de datos de la columna. Puede tener estos valores:<br /><br /> -DBTYPE_BOOL<br />-DBTYPE_CY<br />-DBTYPE_DATE<br />-DBTYPE_I4<br />-DBTYPE_I8<br />-DBTYPE_R8<br />-DBTYPE_WSTR<br />-NO DISPONIBLE|  
+|`DATATYPE`|`DBTYPE_WSTR`||Tipo de datos de la columna. Puede tener estos valores:<br /><br /> -DBTYPE_BOOL<br />-DBTYPE_CY<br />-DBTYPE_DATE<br />-DBTYPE_I4<br />-DBTYPE_I8<br />-DBTYPE_R8<br />-DBTYPE_WSTR<br />: N/D|  
 |`ISKEY`|`DBTYPE_BOOL`||`True` si la columna se usa como clave principal o externa; en caso contrario `false`.|  
 |`ISUNIQUE`|`DBTYPE_BOOL`||`True` si los valores de la columna son únicos; en caso contrario `false`.|  
 |`ISNULLABLE`|`DBTYPE_BOOL`||`True` si la columna admite valores NULL; en caso contrario `false`.|  

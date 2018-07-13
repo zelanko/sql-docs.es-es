@@ -1,5 +1,5 @@
 ---
-title: Trabajar con tipos de datos | Documentos de Microsoft
+title: Trabajar con tipos de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - SMO [SQL Server], data types
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b92c749f6992ee32e57c74a912c5d1dbaaf13cfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 306b227a4b193811c7207f111fc35a48148e4bbf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228925"
 ---
 # <a name="working-with-data-types"></a>Trabajar con tipos de datos
-  Los datos se presentan en diversos tipos y tamaños como, por ejemplo, una cadena con una longitud definida, un número con una precisión específica o un tipo de datos definido por el usuario que es otro objeto que tiene su propio conjunto de reglas. El <xref:Microsoft.SqlServer.Management.Smo.DataType> objeto clasifica el tipo de datos para que pueda ser controlada correctamente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El objeto <xref:Microsoft.SqlServer.Management.Smo.DataType> está asociada a objetos que aceptan datos. El siguiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objetos Management Objects (SMO) aceptan los datos que deben estar definidos por un <xref:Microsoft.SqlServer.Management.Smo.DataType> propiedad de objeto:  
+  Los datos se presentan en diversos tipos y tamaños como, por ejemplo, una cadena con una longitud definida, un número con una precisión específica o un tipo de datos definido por el usuario que es otro objeto que tiene su propio conjunto de reglas. El <xref:Microsoft.SqlServer.Management.Smo.DataType> objeto clasifica el tipo de datos para que se pueda administrar correctamente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El objeto <xref:Microsoft.SqlServer.Management.Smo.DataType> está asociada a objetos que aceptan datos. La siguiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) aceptan datos que deben estar definidos por un <xref:Microsoft.SqlServer.Management.Smo.DataType> propiedad de objeto:  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Column>  
   
@@ -48,13 +48,13 @@ ms.locfileid: "36198873"
   
 -   Utilice el constructor predeterminado y especifique <xref:Microsoft.SqlServer.Management.Smo.DataType> explícitamente propiedades del objeto  
   
--   Utilice un constructor sobrecargado y especifique el <xref:Microsoft.SqlServer.Management.Smo.DataType> propiedades como parámetros.  
+-   Use un constructor sobrecargado y especifique el <xref:Microsoft.SqlServer.Management.Smo.DataType> propiedades como parámetros.  
   
 -   Especifique el <xref:Microsoft.SqlServer.Management.Smo.DataType> insertado en el constructor del objeto.  
   
 -   Use uno de los miembros estáticos de la clase <xref:Microsoft.SqlServer.Management.Smo.DataType> como, por ejemplo, `Int`. De esta forma, se devolverá una instancia de un objeto <xref:Microsoft.SqlServer.Management.Smo.DataType>.  
   
- El objeto <xref:Microsoft.SqlServer.Management.Smo.DataType> tiene varias propiedades que definen el tipo de datos. Por ejemplo, la propiedad <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> especifica el tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los valores constantes que representan [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de datos se muestran en la <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> enumeración. Se trata de tipos de datos como `varchar`, `nchar`, `currency`, `integer`, `float` y `datetime`.  
+ El objeto <xref:Microsoft.SqlServer.Management.Smo.DataType> tiene varias propiedades que definen el tipo de datos. Por ejemplo, la propiedad <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> especifica el tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los valores constantes que representan [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se enumeran los tipos de datos en el <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> enumeración. Se trata de tipos de datos como `varchar`, `nchar`, `currency`, `integer`, `float` y `datetime`.  
   
  Al establecer el tipo de datos, deben establecerse propiedades concretas para los datos. Por ejemplo, si es un tipo `nchar`, la longitud de los datos de cadena debe establecerse en la propiedad `Length`. Esto mismo se aplica a los valores numéricos, en los que debe especificarse una precisión y una escala.  
   
@@ -89,14 +89,14 @@ dt = new DataType(SqlDataType.Decimal, 10, 2);
 ```  
   
 ## <a name="constructing-a-datatype-object-by-using-the-default-constructor-in-visual-basic"></a>Construir un objeto DataType utilizando el constructor predeterminado de Visual Basic  
- Este ejemplo de código muestra cómo utilizar el constructor predeterminado para crear instancias de tipos de datos que se basan en diferentes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de datos. Después, las propiedades se utilizan para especificar el tipo de datos.  
+ Este ejemplo de código muestra cómo usar el constructor predeterminado para crear instancias de tipos de datos que se basan en diferentes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de datos. Después, las propiedades se utilizan para especificar el tipo de datos.  
   
  **Tenga en cuenta** el <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>, y todos los tipos XML requieren un valor de nombre para identificar el objeto.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBDataTypes2](SMO How to#SMO_VBDataTypes2)]  -->  
   
 ## <a name="constructing-a-datatype-object-by-using-the-default-constructor-in-visual-c"></a>Construir un objeto DataType utilizando el constructor predeterminado de Visual C#  
- Este ejemplo de código muestra cómo utilizar el constructor predeterminado para crear instancias de tipos de datos que se basan en diferentes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de datos. Después, las propiedades se utilizan para especificar el tipo de datos.  
+ Este ejemplo de código muestra cómo usar el constructor predeterminado para crear instancias de tipos de datos que se basan en diferentes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de datos. Después, las propiedades se utilizan para especificar el tipo de datos.  
   
  **Tenga en cuenta** el <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>, y todos los tipos XML requieren un valor de nombre para identificar el objeto.  
   

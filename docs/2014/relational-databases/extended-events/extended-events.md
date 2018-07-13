@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c95d2988eb0e1415355fdd86f37f9a580a5c81ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9fe49812e889cf360bce9d853b9bc9160da0c4ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151116"
 ---
 # <a name="extended-events"></a>Eventos extendidos
   Los eventos extendidos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen una arquitectura muy escalable y configurable que permite a los usuarios recopilar la información justa y necesaria para solucionar o identificar un problema de rendimiento.  
@@ -86,11 +86,11 @@ ms.locfileid: "36199700"
 |----------------------|-----------|  
 |Utilice el **Explorador de objetos** para administrar sesiones de eventos.|[Administrar sesiones de eventos en el Explorador de objetos](../../ssms/object/object-explorer.md)|  
 |Describe cómo crear una sesión de Extended Events.|[Crear una sesión de eventos extendidos](../../database-engine/create-an-extended-events-session.md)|  
-|Describe cómo ver y restaurar los datos de destino.|[Ver datos de sesión de eventos](../../database-engine/view-event-session-data.md)|  
+|Describe cómo ver y restaurar los datos de destino.|[Ver datos de sesiones de eventos](../../database-engine/view-event-session-data.md)|  
 |Describe cómo usar las herramientas de Extended Events para crear administrar sesiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events.|[Herramientas de eventos extendidos](extended-events-tools.md)|  
 |Describe cómo alterar una sesión de Extended Events.|[Modificar una sesión de eventos extendidos](alter-an-extended-events-session.md)|  
 |Describe cómo copiar o exportar datos de destino.|[Copiar o exportar datos de destino](../../database-engine/copy-or-export-target-data.md)|  
-|Describe cómo modificar la vista de los resultados de seguimiento para personalizar el modo en el que desea analizar los datos.|[Modificar la vista de resultados de seguimiento](../../database-engine/modify-the-trace-results-view.md)|  
+|Describe cómo modificar la vista de los resultados de seguimiento para personalizar el modo en el que desea analizar los datos.|[Modificar la vista de resultados del seguimiento](../../database-engine/modify-the-trace-results-view.md)|  
 |Describe cómo obtener información acerca de los campos asociados a los eventos.|[Obtener los campos de todos los eventos](../../database-engine/get-the-fields-for-all-events.md)|  
 |Describe cómo determinar los eventos que están disponibles en los paquetes registrados.|[Ver los eventos de los paquetes registrados](../../database-engine/view-the-events-for-registered-packages.md)|  
 |Describe cómo determinar los destinos de eventos extendidos que están disponibles en los paquetes registrados.|[Ver los destinos de eventos extendidos de los paquetes registrados](../../database-engine/view-the-extended-events-targets-for-registered-packages.md)|  
@@ -107,6 +107,6 @@ ms.locfileid: "36199700"
  [Implementar una aplicación de capa de datos](../data-tier-applications/deploy-a-data-tier-application.md)   
  [Supervisar aplicaciones de capa de datos](../data-tier-applications/monitor-data-tier-applications.md)   
  [Vistas de administración dinámica de eventos extendidos](../views/views.md)   
- [Extendidos vistas de catálogo de eventos &#40;Transact-SQL&#41;] (~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
+ [Vistas de catálogo de eventos de extended &#40;Transact-SQL&#41;] (~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
   
   

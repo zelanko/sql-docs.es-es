@@ -1,13 +1,11 @@
 ---
-title: Crear un archivo de formato de copia masiva (ODBC) | Documentos de Microsoft
+title: Crear un archivo de formato de copia masiva (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03ab22f08f4364bf3cd4852f960d861c9dcdad7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9ccdf90bedcafb36676c8e727f2ee98b818e2f1a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112689"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414184"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Crear un archivo de formato de copia masiva (ODBC)
   En este ejemplo se muestra cómo usar las funciones de copia masiva para crear tanto un archivo de datos como un archivo de formato. Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  
@@ -53,7 +51,7 @@ ms.locfileid: "36112689"
   
 6.  Llame a [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) para cada columna defina sus características en el archivo de datos.  
   
-7.  Llame a [bcp_writefmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) para crear un archivo de formato que describa el archivo de datos que se creará en la operación de copia masiva.  
+7.  Llame a [bcp_writefmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) para crear un archivo de formato que describa el archivo de datos que va a crear la operación de copia masiva.  
   
 8.  Llame a [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) para ejecutar la operación de copia masiva.  
   
@@ -217,7 +215,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Copia masiva con los temas "Cómo..." del controlador ODBC de SQL Server &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Copia masiva con los temas de procedimientos de controlador SQL Server ODBC &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Utilizar archivos de datos y archivos de formato](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

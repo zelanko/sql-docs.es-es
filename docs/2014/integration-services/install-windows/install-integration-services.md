@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, installing
 - SSIS, installing
@@ -21,25 +21,25 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 caps.latest.revision: 100
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7e495ce5090ad33f6584250db739898ab3ca6dda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd10fc638ed7a1d9c42b926190eebc0df5dd37b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156545"
 ---
 # <a name="install-integration-services"></a>Instalar Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un único programa de instalación para instalar alguno de sus componentes o todos, incluido [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Mediante el programa de instalación puede instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con o sin otros componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un único equipo.  
   
  En este tema se destacan consideraciones importantes que se deberían conocer antes de instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La información de este tema le ayudará a evaluar las opciones de instalación para que pueda realizar selecciones que deriven en una instalación correcta.  
   
- En este tema no se incluyen instrucciones para iniciar el programa de instalación, usar el Asistente para la instalación o ejecutarlo desde la línea de comandos. Para obtener instrucciones paso a paso sobre cómo iniciar el programa de instalación y seleccionar los componentes para instalar, consulte [inicio rápido de instalación de SQL Server 2014](../../getting-started/quick-start-installation-of-sql-server-2014.md). Para obtener información acerca de las opciones de línea de comandos para la instalación de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [instalar SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+ En este tema no se incluyen instrucciones para iniciar el programa de instalación, usar el Asistente para la instalación o ejecutarlo desde la línea de comandos. Para obtener instrucciones paso a paso sobre cómo iniciar el programa de instalación y seleccionar los componentes para instalar, consulte [-inicio rápido de instalación de SQL Server 2014](../../getting-started/quick-start-installation-of-sql-server-2014.md). Para obtener información acerca de las opciones de línea de comandos para instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [instalar SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="preparing-to-install-integration-services"></a>Preparar la instalación de Integration Services  
  Antes de instalar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], revise los siguientes requisitos:  
   
--   [Requisitos de hardware y Software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Requisitos de hardware y software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Comprobar los parámetros del Comprobador de configuración del sistema](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36198776"
 >   
 >  Para obtener instrucciones acerca de cómo conceder permisos, vea [Grant Permissions to Integration Services Service](../grant-permissions-to-integration-services-service.md).  
   
- Si está usando el Asistente para la instalación con el fin de instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], usará una serie de páginas para especificar los componentes y las opciones. Los siguientes son páginas de Asistente para la instalación, donde las opciones que seleccione afecten a la instalación de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con las recomendaciones de selección:  
+ Si está usando el Asistente para la instalación con el fin de instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], usará una serie de páginas para especificar los componentes y las opciones. Los siguientes son las páginas del Asistente de configuración donde las opciones que seleccione afecten a la instalación de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con recomendaciones de selección:  
   
 -   **Selección de características**  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36198776"
   
     -   Si el equipo de 64 bits está ejecutando el sistema operativo de x86, seleccione **SQL Server Data Tools** o **herramientas de administración - completa**.  
   
-    -   Si el equipo de 64 bits está ejecutando el [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] sistema operativo, seleccione **herramientas de administración - completa**.  
+    -   Si el equipo de 64 bits está ejecutando el [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] del sistema operativo, seleccione **herramientas de administración - completa**.  
   
      **Instalar en un servidor dedicado para ETL:** para usar un servidor dedicado para los procesos de extracción, transformación y carga de datos (ETL), recomendamos que instale una instancia local de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] al instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] suele almacenar los paquetes en una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y se basa en el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para programar estos paquetes. Si el servidor ETL no tiene ninguna instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)], tendrá que programar o ejecutar los paquetes desde un servidor que sí tenga una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Esto significa que los paquetes no se ejecutarán en el servidor ETL, sino en el servidor desde el que se iniciaron. Como resultado, los recursos del servidor ETL dedicado no se utilizan como se pretendía. Además, los procesos ETL en ejecución pueden agotar los recursos de otros servidores.  
   

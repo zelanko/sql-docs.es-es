@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 486c0e39c34c706128fc5191ecb15394eb584247
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0ece1fccdfc4fab42bd2b5cd2913dfcd238e9b40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167016"
 ---
 # <a name="programmatically-monitor-replication"></a>Supervisar la replicación mediante programación
   El Monitor de replicación es una herramienta gráfica que permite supervisar una topología de replicación. Puede tener acceso a los mismos datos de supervisión mediante programación usando los procedimientos de almacenamiento de replicación de [!INCLUDE[tsql](../../../includes/tsql-md.md)] o Replication Management Objects (RMO). Estos objetos permiten programar las tareas siguientes:  
@@ -132,7 +132,7 @@ ms.locfileid: "36198440"
   
 5.  Con el Id. de sesión obtenido en el paso 3, llame a uno de los métodos siguientes para devolver información sobre los detalles de una sesión determinada:  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> -Devuelve una matriz de <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> objetos para suministrado *sessionID*.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> -Devuelve una matriz de <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> objetos para el valor *sessionID*.  
   
     -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -Devuelve un <xref:System.Data.DataSet> objeto con la información para el elemento especificado *sessionID*.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36198440"
   
 2.  Obtenga un objeto <xref:Microsoft.SqlServer.Replication.PublisherMonitor> de alguna de estas maneras.  
   
-    -   Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Establezca las propiedades <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> del publicador, y establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creada en el paso 1. Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, significa que el nombre del publicador se definió incorrectamente o la publicación no existe.  
+    -   Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Establezca las propiedades <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> del publicador, y establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creada en el paso 1. Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, ya sea el nombre del publicador se definió incorrectamente o no existe la publicación.  
   
     -   De <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> al que obtuvo acceso por medio de la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> de un objeto <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> existente.  
   
@@ -275,10 +275,10 @@ ms.locfileid: "36198440"
         |1|`expiration` : supervisa la expiración inminente de suscripciones a publicaciones transaccionales.|  
         |2|`latency` -supervisa el rendimiento de las suscripciones a publicaciones transaccionales.|  
         |4|`mergeexpiration` : supervisa la expiración inminente de suscripciones a publicaciones de mezcla.|  
-        |5|`mergeslowrunduration` : supervisa la duración de sincronizaciones de mezcla en conexiones de ancho de banda bajo (acceso telefónico).|  
-        |6|`mergefastrunduration` : supervisa la duración de sincronizaciones de mezcla en conexiones de ancho de banda alto (LAN).|  
+        |5|`mergeslowrunduration` : supervisa la duración de sincronizaciones de mezcla en conexiones de poco ancho de banda (acceso telefónico).|  
+        |6|`mergefastrunduration` : supervisa la duración de sincronizaciones de mezcla en conexiones de alto y ancho de banda (LAN).|  
         |7|`mergefastrunspeed`: supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de red de área local (LAN) de gran ancho de banda.|  
-        |8|`mergeslowrunspeed` : supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de ancho de banda bajo (acceso telefónico).|  
+        |8|`mergeslowrunspeed` : supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de poco ancho de banda (acceso telefónico).|  
   
     -   *enable* - <xref:System.Boolean> que indica si la métrica está habilitada para la publicación.  
   

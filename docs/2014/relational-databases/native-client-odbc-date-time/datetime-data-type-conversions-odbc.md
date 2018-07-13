@@ -1,13 +1,11 @@
 ---
-title: fecha y hora conversiones de tipo de datos (ODBC) | Documentos de Microsoft
+title: fecha y hora de las conversiones de tipo de datos (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - ODBC, bindings and conversions
 ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 922328981884624c0bfdc9650ba4ece2766912db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: eb600fd98f6741084d725140bd6f9b326e4cf250
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106085"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431694"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>Conversiones del tipo de datos de fecha y hora (ODBC)
   Las conversiones siguientes ya están definidas por ODBC o son una extensión coherente de ODBC. La comunidad atendida por el proveedor determina las conversiones proporcionadas por cada proveedor y, a consecuencia de ello, hay incoherencias a menudo entre los proveedores. Los valores entre corchetes son opcionales.  
@@ -35,7 +33,7 @@ ms.locfileid: "36106085"
   
 -   El formato de las cadenas de fecha es 'aaaa-mm-dd'  
   
- Las conversiones de las cadenas permiten flexibilidad en los espacios en blanco y el ancho de campo. Para obtener más información, vea la sección "Formatos de datos: cadenas y literales" de [compatibilidad de tipos de datos ODBC de fecha y hora mejoras](data-type-support-for-odbc-date-and-time-improvements.md).  
+ Las conversiones de las cadenas permiten flexibilidad en los espacios en blanco y el ancho de campo. Para obtener más información, vea la sección "Formatos de datos: cadenas y literales" de [compatibilidad con tipos de datos de ODBC mejoras de fecha y hora](data-type-support-for-odbc-date-and-time-improvements.md).  
   
  A continuación figuran las reglas de conversión generales:  
   
@@ -63,6 +61,6 @@ ms.locfileid: "36106085"
  Se enumeran los problemas a tener en cuenta al convertir de tipos de fecha y hora de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a tipos de C.  
   
 ## <a name="see-also"></a>Vea también  
- [Fecha y hora mejoras &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Mejoras de fecha y hora &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

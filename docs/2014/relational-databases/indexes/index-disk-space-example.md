@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online index disk space
 - disk space [SQL Server], indexes
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b371198e36cc2e8047ab88275331dab076e0b97b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6e2fc74a9134a03c69e6d436c11de84ef2867b1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182272"
 ---
 # <a name="index-disk-space-example"></a>Ejemplo de espacio en disco del índice
   Cuando se crea, regenera o quita un índice, se necesita espacio en disco para las estructuras antiguas (origen) y nuevas (destino) en los archivos y grupos de archivos correspondientes. La asignación de la estructura antigua no se cancela hasta que no se confirma la transacción de creación del índice. También puede resultar necesario espacio en disco temporal adicional para operaciones de ordenación. Para más información, consulte [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md).  

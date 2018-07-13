@@ -1,5 +1,5 @@
 ---
-title: Elemento NonEmptyBehavior (ASSL) | Documentos de Microsoft
+title: Elemento NonEmptyBehavior (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NonEmptyBehavior element
 ms.assetid: b4c78af4-b049-4189-a35b-206e3938d1db
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d328b41ee8c40497019fe918d40925b3ce2a1436
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eda18e3ed67884e964439e80e0ae0103f522e116
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183302"
 ---
 # <a name="nonemptybehavior-element-assl"></a>Elemento NonEmptyBehavior (ASSL)
   Determina el comportamiento de no vacío asociado al elemento primario de la [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento.  
@@ -64,7 +64,7 @@ ms.locfileid: "36196311"
 ## <a name="remarks"></a>Notas  
  El `NonEmptyBehavior` propiedad se aplica a `CalculationProperty` elementos con un [CalculationType](calculationtype-element-assl.md) establecido en *miembro*.  
   
- El elemento que corresponde al elemento primario de `NonEmptyBehavior` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ El elemento que se corresponde con el elemento primario de `NonEmptyBehavior` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento CalculationProperties &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

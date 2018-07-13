@@ -1,5 +1,5 @@
 ---
-title: Utilizar ADO para ejecutar SQLXML 4.0 consulta | Documentos de Microsoft
+title: Utilizar ADO para ejecutar SQLXML 4.0 consultas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a53e88a28a7be770b1bc6541f9118ca64e3fc7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 91ccb8afcc1de50498695da442ba1f20a0942d27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201195"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Utilizar ADO para ejecutar consultas SQLXML 4.0
   En versiones anteriores de SQLXML, la ejecución de consultas basadas en HTTP se admitía mediante la utilización de directorios virtuales de SQLXML IIS y el filtro SQLXML ISAPI. En SQLXML 4.0, estos componentes se han quitado ya que se ofrece una funcionalidad similar superpuesta a través de servicios web XML nativos a partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -117,7 +117,7 @@ ms.locfileid: "36196891"
   
 1.  Compruebe tal como se indica a continuación que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client está instalado:  
   
-    1.  Desde el **iniciar** menú, elija **configuración**y, a continuación, haga clic en **el Panel de Control**.  
+    1.  Desde el **iniciar** menú, elija **configuración**y, a continuación, haga clic en **Panel de Control**.  
   
     2.  En el Panel de Control, abra **agregar o quitar programas**  
   

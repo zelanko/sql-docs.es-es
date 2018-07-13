@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos ProactiveCachingBinding (ASSL) | Documentos de Microsoft
+title: Tipo de datos ProactiveCachingBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ProactiveCachingBinding data type
 ms.assetid: 02e6ff2f-2f18-4607-9198-bb46f113f9ac
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 881e593fda57d63a4041e469c48807d434324856
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d440911eefa33981ef435240c4e440378da34a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189102"
 ---
 # <a name="proactivecachingbinding-data-type-assl"></a>Tipo de datos ProactiveCachingBinding (ASSL)
-  Define un tipo de datos derivado abstracto que representa información para el [ProactiveCaching](../objects/proactivecaching-element-assl.md) elemento sobre los cambios de origen de datos que requieren volver a generar la memoria caché o sobre el estado del proceso de regeneración.  
+  Define un tipo de datos derivado abstracto que representa información para el [ProactiveCaching](../objects/proactivecaching-element-assl.md) elemento acerca de los cambios del origen de datos que requieren volver a generar la memoria caché o sobre el estado del proceso de regeneración.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,9 +58,9 @@ ms.locfileid: "36113898"
 |Elementos derivados|None|  
   
 ## <a name="remarks"></a>Notas  
- Para obtener más información sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, consulte [tipo de datos de enlace &#40;ASSL &#41;](binding-data-type-assl.md).  
+ Para obtener más información sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, vea [tipo de enlace de datos &#40;ASSL &#41;](binding-data-type-assl.md).  
   
- Para obtener información general de enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;SSAS multidimensionales&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obtener información general de los enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.ProactiveCachingBinding>.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f40638174ebd432a96ce61ea27805ea77fd5a151
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 65d72bac30b1a531d332e88c4b8e59afc73f7afb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193352"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modificar tablas con optimización para memoria
   No se admite la realización de operaciones ALTER en las tablas optimizadas para memoria. Esto incluye operaciones tales como cambiar el bucket_count, agregar o quitar un índice y agregar o quitar una columna. En este tema se proporcionan instrucciones sobre cómo actualizar las tablas optimizadas para memoria.  
@@ -67,13 +67,13 @@ ms.locfileid: "36114050"
     select @permissions  
     ```  
   
-4.  Cree una copia de la tabla y copie los datos de la tabla original en ella. La copia se puede crear usando los siguientes [!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>.  
+4.  Cree una copia de la tabla y copie los datos de la tabla original en ella. La copia se puede crear mediante los siguientes [!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>.  
   
     ```tsql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     Si no hay suficiente memoria disponible, `T_copy` puede ser una tabla con optimización para memoria, lo que hace que los datos más rápida de copiar.<sup> 2</sup>  
+     Si no hay suficiente memoria disponible, `T_copy` puede ser una tabla optimizada para memoria, lo que hace que los datos de copiar con mayor rapidez.<sup> 2</sup>  
   
 5.  Quite los objetos enlazados al esquema que hacen referencia a la tabla original.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36114050"
   
 -   Quite la tabla temporal.  
   
- El script para el paso 4 debe actualizarse para reflejar los cambios deseados en el esquema. Si hay algún cambio en las columnas de la tabla, las secuencias de comandos para los pasos 5 (copiar los datos de tabla temporal) y 6 (volver a crear los procedimientos almacenados) deben actualizarse según sea necesario.  
+ El script para el paso 4 debe actualizarse para reflejar los cambios deseados en el esquema. Si hay algún cambio en las columnas de la tabla, las secuencias de comandos para conocer los pasos 5 (copiar datos de tabla temporal) y 6 (volver a crear procedimientos almacenados) deben actualizarse según sea necesario.  
   
 ```tsql  
 # Prepare for schema changes by scripting out the table, as well as associated permissions  

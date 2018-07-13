@@ -1,5 +1,5 @@
 ---
-title: Comparar las predicciones para la predicción de modelos (Tutorial de minería de datos intermedios) | Documentos de Microsoft
+title: Comparar las predicciones (Tutorial de minería de datos intermedios) de los modelos de predicción | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: de7605f1dbb65987e147069e32e19e36b99956a6
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: a8ff27b38e2268ead42a1238250902b6ebf9cf18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165780"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Comparar las predicciones de los modelos de predicción (Tutorial intermedio de minería de datos)
   En los pasos anteriores de este tutorial, ha creado varios modelos de serie temporal:  
@@ -51,16 +51,16 @@ ms.locfileid: "36313093"
 |----------------------|-----------------------------|------------------------------------|-------------------------|  
 |25-7/2008|**65**|32|**65**|  
 |25-8/2008|**54**|37|**54**|  
-|25-9/2008|**61**|32|**61**|  
-|25-10/2008|Sin datos|36|32|  
-|25-11/2008|Sin datos|31|41|  
+|9-25-2008|**61**|32|**61**|  
+|10-25-2008|Sin datos|36|32|  
+|11-25-2008|Sin datos|31|41|  
 |25-12-2008|Sin datos|34|32|  
   
  Puede observar que los pronósticos con los datos extendidos (que se muestran aquí en negrita) repiten exactamente los puntos de datos reales. La repetición es por diseño. Mientras haya puntos de datos reales para usar, la consulta de predicción devolverá los valores reales y generará nuevos valores de predicción solo después de que se hayan usado los nuevos puntos de datos reales.  
   
  En general, el algoritmo pondera los cambios en los datos nuevos más que los datos del principio de los datos del modelo. Sin embargo, en este caso, las nuevas cifras de ventas representan un incremento de solo el 20-30 por ciento durante el período anterior, por lo que hubo tan solo un ligero repunte de las ventas previstas, tras el cual las proyecciones de ventas vuelven a descender, más en línea con la tendencia de los meses anteriores a los datos nuevos.  
   
-##  <a name="bkmk_REPLACE"></a> Comparar los resultados Original y la predicción cruzada  
+##  <a name="bkmk_REPLACE"></a> Comparar los resultados originales y la predicción cruzada  
  Recuerde que el modelo de minería de datos original revelaba grandes diferencias entre las regiones y las líneas de productos. Por ejemplo, las ventas para el modelo M200 fueron muy marcadas, mientras que las ventas del modelo T1000 fueron bastante bajas en todas las regiones. Además, algunas series no tenían muchos datos. Las series eran desiguales, lo que significa que no tenían el mismo punto inicial.  
   
  ![Serie que predice la cantidad de M200 y T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "serie que predice la cantidad de M200 y T1000")  
@@ -69,7 +69,7 @@ ms.locfileid: "36313093"
   
  El siguiente diagrama se basa solo en una línea de productos, M200. En el gráfico se comparan las predicciones del modelo de minería de datos inicial con las predicciones que usan el modelo de minería de datos agregado.  
   
- ![Gráfico de Excel que compara las predicciones](../../2014/tutorials/media/m200-predictions-compared.gif "comparar las predicciones de gráfico de Excel")  
+ ![Gráfico de Excel, comparar las predicciones](../../2014/tutorials/media/m200-predictions-compared.gif "comparar las predicciones de gráfico de Excel")  
   
  En este diagrama, se puede ver que el modelo de minería agregado conserva los intervalos y tendencias generales de los valores, a la vez que reduce las fluctuaciones de las series de datos individuales.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36313093"
  Ha aprendido a crear modelos que se pueden usar para la predicción cruzada y ha utilizado el parámetro REPLACE_MODEL_CASES y aplicado el modelo a una serie de datos diferente.  
   
 ## <a name="see-also"></a>Vea también  
- [Intermedio de Tutorial de minería de datos &#40;Analysis Services: minería de datos&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
+ [Tutorial de minería de datos de datos intermedio &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Ejemplos de consultas de modelos de serie temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   

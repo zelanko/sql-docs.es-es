@@ -1,5 +1,5 @@
 ---
-title: Buscar texto, números o fechas en un informe (Reporting Services en modo integrado de SharePoint) | Documentos de Microsoft
+title: Buscar texto, números o fechas en un informe (Reporting Services en modo integrado de SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6fe713a9ef49efdf6cb1a04da094f877fc614582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e1f744568bcce20528df364ca2faf638eb677784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278287"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>Buscar texto, números o fechas en un informe (Reporting Services en el modo integrado de SharePoint)
   Puede buscar contenido del informe si escribe una palabra o una frase que se desee encontrar (el valor máximo de un término de búsqueda es 256 caracteres). La búsqueda es una técnica de navegación que encuentra un valor coincidente en el informe y se centra en la parte del informe que contiene ese valor.  
@@ -47,6 +47,6 @@ ms.locfileid: "36112893"
 4.  Para buscar más repeticiones del mismo valor, haga clic en **Siguiente**.  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar el elemento Web de Visor de informes a una página Web &#40;modo integrado de Reporting Services en SharePoint&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Agregar el elemento Web Visor de informes a una página Web &#40;modo integrado de Reporting Services en SharePoint&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Obtención de detalles, obtención de detalles, subinformes y regiones de datos anidadas (generador de informes y SSRS) | Documentos de Microsoft
+title: Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 67d8ad863c6af2737aef283424a5c8f1cc469f50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4a951ab61a50ddf9983678a50989e5560d40f85e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228835"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas (Generador de informes y SSRS)
   Puede organizar los datos de distintas formas para mostrar la relación entre lo general y lo detallado.  Puede incluir todos los datos en el informe, pero establecer que permanezcan ocultos hasta que un usuario haga clic para mostrar los detalles; esta es una acción *de obtención de detalles* . Puede mostrar los datos en una región de datos, como una tabla o un gráfico, que *está anidada* en otra, como una tabla o matriz. Puede mostrar los datos en un *subinforme* que esté completamente incluido dentro de un informe principal. O también, puede colocar los datos detallados en informes *detallados* , informes independientes que se muestran cuando un usuario hace clic en un vínculo.  
@@ -86,19 +86,19 @@ ms.locfileid: "36196389"
 
   
 ##  <a name="InThisSection"></a> En esta sección  
- [Informes de obtención de detalles &#40;el generador de informes SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
+ [Los informes detallados &#40;generador de informes y SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
  Se explican los informes que se abren cuando un usuario hace clic en un vínculo de un informe principal.  
   
- [Subinformes &#40;el generador de informes SSRS&#41;](subreports-report-builder-and-ssrs.md)  
+ [Los subinformes &#40;generador de informes y SSRS&#41;](subreports-report-builder-and-ssrs.md)  
  Se explican los informes que se muestran dentro del cuerpo de un informe principal.  
   
- [Regiones de datos anidadas &#40;el generador de informes SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
+ [Regiones de datos anidadas &#40;generador de informes y SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
  Se explica cómo anidar una región de datos dentro de otra; por ejemplo, un gráfico anidado en el interior de una matriz.  
   
- [Acción de obtención de detalles &#40;el generador de informes SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
+ [Acción de obtención de detalles &#40;generador de informes y SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
  Explica cómo utilizar la acción de obtención de detalles para ocultar y mostrar elementos de informe.  
   
- [Especificar las rutas de acceso a los elementos externos &#40;el generador de informes SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [Especificar rutas de acceso a los elementos externos &#40;generador de informes y SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  Explica cómo hacer referencia a elementos que están fuera del archivo de definición de informe.  
   
 ## <a name="see-also"></a>Vea también  

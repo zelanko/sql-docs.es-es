@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d897047a117d2c715f24bab4884f58a88d03e161
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4d0191085ac2a294d1dce8a30b9292a1cd7cf8ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171176"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics, clase de eventos
   La clase de eventos Performance Statistics se puede utilizar para supervisar el rendimiento de las consultas, los procedimientos almacenados y los desencadenadores que se están ejecutando. Cada una de las seis subclases de evento indica un evento en la vigencia de las consultas, los procedimientos almacenados y los desencadenadores dentro del sistema. Si usa la combinación de estas subclases de evento y las vistas de administración dinámica asociadas sys.dm_exec_query_stats, sys.dm_exec_procedure_stats y sys.dm_exec_trigger_stats, puede reconstituir el historial de rendimiento de cualquier consulta, procedimiento almacenado o desencadenador dados.  

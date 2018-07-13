@@ -1,5 +1,5 @@
 ---
-title: Implementar extremos | Documentos de Microsoft
+title: Implementar extremos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - endpoints [SMO]
 ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 716088ea64e5747b4230bb916f1e510e47c67f3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1d953dc37ea474eec1dd7cc56b07726ba2488466
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148486"
 ---
 # <a name="implementing-endpoints"></a>Implementar extremos
-  Un extremo es un servicio que puede escuchar originalmente las solicitudes. SMO es compatible con varios tipos de extremos utilizando el <xref:Microsoft.SqlServer.Management.Smo.Endpoint> objeto. Puede crear un servicio de extremos que administre un tipo específico de carga útil, que utiliza un protocolo concreto, creando una instancia de un objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint> y estableciendo sus propiedades.  
+  Un extremo es un servicio que puede escuchar originalmente las solicitudes. SMO admite varios tipos de extremos utilizando el <xref:Microsoft.SqlServer.Management.Smo.Endpoint> objeto. Puede crear un servicio de extremos que administre un tipo específico de carga útil, que utiliza un protocolo concreto, creando una instancia de un objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint> y estableciendo sus propiedades.  
   
  El <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> propiedad de la <xref:Microsoft.SqlServer.Management.Smo.Endpoint> objeto puede utilizarse para especificar los siguientes tipos de carga:  
   
@@ -47,14 +47,14 @@ ms.locfileid: "36196889"
   
  Si ha especificado el tipo de carga, la carga real puede establecerse mediante el <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> propiedad de objeto. La propiedad de objeto <xref:Microsoft.SqlServer.Management.Smo.Payload> proporciona una referencia a un objeto de carga útil del tipo especificado, para el que se pueden modificar las propiedades.  
   
- Para el objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>, debe especificar el rol de creación de reflejo y si el cifrado está habilitado. La <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> objeto requiere información sobre el reenvío de mensajes, el número máximo de conexiones permitido y el modo de autenticación. El objeto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> exige establecer varias propiedades incluida la propiedad de objeto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A>, que especifica los métodos de carga útil de SOAP disponibles para los clientes (procedimientos almacenados y funciones definidas por el usuario).  
+ Para el objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>, debe especificar el rol de creación de reflejo y si el cifrado está habilitado. La <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> objeto requiere información sobre el reenvío de mensajes, el modo de autenticación y el número máximo de conexiones permitidas. El objeto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> exige establecer varias propiedades incluida la propiedad de objeto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A>, que especifica los métodos de carga útil de SOAP disponibles para los clientes (procedimientos almacenados y funciones definidas por el usuario).  
   
  De igual forma, el protocolo actual se puede establecer utilizando la propiedad de objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> que hace referencia a un objeto de protocolo del tipo especificado por propiedad <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>. El objeto <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> requiere una lista de direcciones IP restringidas y la información sobre el puerto, sitio web y autenticación. La <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> objeto también requiere una lista de direcciones IP restringidas e información del puerto.  
   
  Si se ha creado el extremo y se ha definido totalmente, se puede conceder, revocar y denegar el acceso a los usuarios de la base de datos, grupos, roles e inicio de sesión.  
   
 ## <a name="example"></a>Ejemplo  
- Para el siguiente ejemplo de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) y [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para el siguiente ejemplo de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) y [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-database-mirroring-endpoint-service-in-visual-basic"></a>Crear un servicio de extremo de creación de reflejo de base de datos en Visual Basic  
  En el ejemplo de código se muestra cómo crear un extremo de creación de reflejo de base de datos en SMO. Esto es necesario antes de crear un espejo de la base de datos. Utilice <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> y otras propiedades en el objeto <xref:Microsoft.SqlServer.Management.Smo.Database> para crear un espejo de la base de datos.  

@@ -1,5 +1,5 @@
 ---
-title: Método SetDefaults (clase CInstance) | Documentos de Microsoft
+title: Método SetDefaults (clase CInstance) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetDefaults method
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba36da4d47b8c9c9a2aa973e143bb44f00b9da43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: c17a12c4fa35594482599491071f8342c2118ccf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157996"
 ---
 # <a name="setdefaults-method-cinstance-class"></a>Método SetDefaults (clase CInstance)
   Establece todos los valores predeterminados para la instancia de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente con la opción para sobrescribir los datos existentes.  

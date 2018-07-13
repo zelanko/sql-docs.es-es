@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting attribute groups [Master Data Services]
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ebf2b900457a7c358c86e3df2c0abe06c69b98c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: dcd85163a292cd6c8125619124d346ba876e6acc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152476"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Eliminar un grupo de atributos (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine un grupo de atributos cuando ya no necesite que la pestaña se muestre en el área funcional del **explorador** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  

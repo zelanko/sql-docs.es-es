@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingmodeltrainingdest.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 27cea5c0c206774508eacd9b38431e9314400a65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bb23745ab0858cb598fd668d5f066f0e247d817
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171016"
 ---
 # <a name="data-mining-model-training-destination"></a>entrenamiento del modelo de minería de datos, destino
   El destino de Entrenamiento del modelo de minería de datos entrena los modelos de minería de datos pasando los datos que recibe el destino por los algoritmos de modelos de minería de datos. Un destino puede entrenar varios modelos de minería de datos si los modelos se generan sobre la misma estructura de minería de datos. Para obtener más información, consulte [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) y [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "36196712"
   
  Para obtener más información sobre las propiedades que se pueden establecer en el cuadro de diálogo **Editor de entrenamiento de modelos de minería de datos** , haga clic en uno de los siguientes temas:  
   
--   [Editor de entrenamiento de modelos de minería de datos &#40;pestaña conexión&#41;](../data-mining-model-training-editor-connection-tab.md)  
+-   [Editor de entrenamiento de modelos de minería de datos &#40;ficha conexión&#41;](../data-mining-model-training-editor-connection-tab.md)  
   
 -   [Editor de entrenamiento de modelos de minería de datos &#40;pestaña columnas&#41;](../data-mining-model-training-editor-columns-tab.md)  
   

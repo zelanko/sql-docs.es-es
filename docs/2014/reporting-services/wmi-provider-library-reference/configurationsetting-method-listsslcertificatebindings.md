@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ListSSLCertificateBindings method
 ms.assetid: d12d280c-9b6f-47a8-bcd9-34cde31c8886
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 208e408bf2add9144f792c96c7cd4cf6b9671338
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 66de4c245aeb16af2667381b8ec6a42133a60099
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166126"
 ---
 # <a name="listsslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>Método ListSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting)
   Devuelve una lista de los certificados SSL instalados en el equipo.  

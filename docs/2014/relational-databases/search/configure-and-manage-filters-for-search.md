@@ -5,31 +5,30 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], filters
 - filters [full-text search]
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ccafb0bccab01286534a0c5499fe474da1262d5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7b19f9141df65be952551dbb899b6cb30544e9a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278931"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurar y administrar filtros para búsquedas
   Indexación de documentos en un `varbinary`, `varbinary(max)`, `image`, o `xml` columna tipo de datos requiere un procesamiento adicional. Un filtro debe realizar este procesamiento. El filtro extrae la información de texto del documento y quita el formato. A continuación, el filtro envía el texto al componente separador de palabras correspondiente al idioma asociado a la columna de la tabla.  
   
  Un filtro determinado es específico de un tipo de documento concreto (.doc, .pdf, .xls, .xml, etc.). Estos filtros implementan la interfaz IFilter. Para obtener más información de estos tipos de documento, consulte la vista de catálogo [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
   
- Los documentos binarios se pueden almacenar en una sola columna de tipo  `varbinary(max)` o `image`. Para cada documento, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] elige el filtro correcto de acuerdo con la extensión de archivo. Dado que la extensión de archivo no está visible cuando el archivo se almacena en un `varbinary(max)` o `image` columna, la extensión de archivo (.doc, .xls, .pdf etc.) debe almacenarse en una columna independiente en la tabla, denominada columna de tipo. Esta columna de tipo debe ser de cualquier tipo de datos basado en caracteres y debe contener la extensión del archivo, como .doc para los documentos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word. En el **documento** tabla [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], **documento** columna es de tipo `varbinary(max)`y la columna de tipo, **FileExtension**, es de tipo `nvarchar(8)`.  
+ Los documentos binarios se pueden almacenar en una sola columna de tipo  `varbinary(max)` o `image`. Para cada documento, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] elige el filtro correcto de acuerdo con la extensión de archivo. Dado que la extensión de archivo no está visible cuando el archivo se almacena en un `varbinary(max)` o `image` columna, la extensión de archivo (.doc, .xls, .pdf etc.) debe almacenarse en una columna independiente en la tabla, denominada columna de tipo. Esta columna de tipo debe ser de cualquier tipo de datos basado en caracteres y debe contener la extensión del archivo, como .doc para los documentos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word. En el **documento** tabla [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], **documento** columna es de tipo `varbinary(max)`y la columna de tipo **FileExtension**, es de tipo `nvarchar(8)`.  
   
 > [!NOTE]  
 >  Un filtro podría ser capaz de tratar los incrustados en el objeto primario, dependiendo de su implementación. Sin embargo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no configura los filtros para seguir los vínculos a otros objetos.  

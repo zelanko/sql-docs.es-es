@@ -1,5 +1,5 @@
 ---
-title: Configuración de referencia (PowerPivot para SharePoint) | Documentos de Microsoft
+title: Configuración de la configuración de referencia (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 340800620360ed34ab8bcc2aaee7d71118e451df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c819c7bfee1d028d9eb2795620ec9aa4bdf02150
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173566"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>Referencia de las opciones de configuración (PowerPivot para SharePoint)
   En este tema se proporciona documentación de referencia para la configuración que utilizan las aplicaciones de servicio PowerPivot en una granja de servidores de SharePoint. Si está utilizando un script de PowerShell para configurar un servidor, o si desea buscar información de un valor concreto, la información de este tema proporciona descripciones detalladas.  
@@ -81,8 +81,8 @@ ms.locfileid: "36196552"
 |Hora de inicio|04:00 a. m.|1 a 12 horas, donde el valor es un entero válido dentro de ese intervalo.<br /><br /> El tipo es Time.|Establece el límite inferior de un intervalo del horario laboral.|  
 |Hora de finalización|08:00 p. m.|1 a 12 horas, donde el valor es un entero válido dentro de ese intervalo.<br /><br /> El tipo es Time.|Establece el límite superior de un intervalo del horario laboral.|  
 |Cuenta de actualización de datos desatendida de PowerPivot|None|Identificador de una aplicación de destino|Esta cuenta se utiliza para ejecutar los trabajos de actualización de datos en nombre del propietario de una programación.<br /><br /> Se debe definir de antemano la cuenta de actualización de datos desatendida para poder hacer referencia a ella en la página de configuración de la aplicación del servicio. Para obtener más información, consulte [configurar la cuenta de actualización de datos desatendida de PowerPivot &#40;PowerPivot para SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).|  
-|Permitirles a los usuarios especificar credenciales de Windows personalizadas|Habilitado|Boolean|Determina si la página de configuración de la actualización de datos programada muestra una opción que permita al propietario de una programación especificar una cuenta de usuario de Windows y una contraseña para ejecutar un trabajo de actualización de datos.<br /><br /> El Servicio de almacenamiento seguro debe estar habilitado para que esta opción funcione. Para obtener más información, consulte [configurar las credenciales almacenadas para la actualización de datos de PowerPivot &#40;PowerPivot para SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).|  
-|Longitud máxima de historial de procesamiento|365|1 a 5000 días|Determina cuánto tiempo se conserva el historial de actualización de datos en la base de datos de aplicación de servicio PowerPivot. Para obtener más información, consulte [recopilación de datos de uso de PowerPivot](power-pivot-usage-data-collection.md).|  
+|Permitirles a los usuarios especificar credenciales de Windows personalizadas|Habilitado|Boolean|Determina si la página de configuración de la actualización de datos programada muestra una opción que permita al propietario de una programación especificar una cuenta de usuario de Windows y una contraseña para ejecutar un trabajo de actualización de datos.<br /><br /> El Servicio de almacenamiento seguro debe estar habilitado para que esta opción funcione. Para obtener más información, consulte [configurar las credenciales almacenadas para la actualización de datos PowerPivot &#40;PowerPivot para SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).|  
+|Longitud máxima de historial de procesamiento|365|1 a 5000 días|Determina cuánto tiempo se conserva el historial de actualización de datos en la base de datos de aplicación de servicio PowerPivot. Para obtener más información, consulte [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).|  
   
 ##  <a name="UsageData"></a> Recopilación de datos de uso  
  Los informes de uso que aparecen en el Panel de administración de PowerPivot pueden proporcionar información importante acerca de cómo se utilizan los libros habilitados para PowerPivot. Los siguientes valores de configuración controlan los aspectos de la recopilación de datos de uso para los eventos de servidor de PowerPivot que se presentan después en los informes de actividad o de uso.  
@@ -98,7 +98,7 @@ ms.locfileid: "36196552"
   
 ## <a name="see-also"></a>Vea también  
  [Crear y configurar una aplicación de servicio PowerPivot en Administración Central](create-and-configure-power-pivot-service-application-in-ca.md)   
- [Actualización de datos de PowerPivot con SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)   
+ [Actualización de datos PowerPivot con SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)   
  [Configurar la recopilación de datos de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [Configurar cuentas de servicio PowerPivot](configure-power-pivot-service-accounts.md)   
  [Panel de administración de PowerPivot y datos de uso](power-pivot-management-dashboard-and-usage-data.md)  

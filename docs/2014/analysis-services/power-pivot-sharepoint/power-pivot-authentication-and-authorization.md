@@ -1,5 +1,5 @@
 ---
-title: PowerPivot Authentication and Authorization | Documentos de Microsoft
+title: PowerPivot Authentication and Authorization | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e24a764afb7aae49194847354800e580da88a9a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cea8b8e9d6f883d6933ed72591da20de73d55326
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210225"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Autenticación y autorización de PowerPivot
   Una implementación de PowerPivot para SharePoint que se ejecuta dentro de una granja de servidores de SharePoint 2010 usa el subsistema de autenticación y el modelo de autorización que proporcionan los servidores de SharePoint. La infraestructura de seguridad de SharePoint se extiende al contenido y a las operaciones de PowerPivot porque todo el contenido relacionado con PowerPivot está almacenado en bases de datos de contenido de SharePoint, y todas las operaciones relacionadas con PowerPivot las realizan los servicios compartidos de PowerPivot en la granja. Los usuarios que solicitan un libro que contiene los datos PowerPivot se autentican usando una identidad de usuario de SharePoint que se basa en su identidad de usuario de Windows. Los permisos para ver el libro determinan si la solicitud se concede o se deniega.  
@@ -75,7 +75,7 @@ ms.locfileid: "36197265"
   
 -   La carga de datos PowerPivot de la memoria caché o de una biblioteca, si los datos no están disponibles de otra forma. Si se realiza una solicitud de conexión de datos para datos PowerPivot que aún no está cargados en el sistema, la instancia de [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] usará la identidad del usuario de SharePoint para recuperar el origen de datos de una biblioteca de contenido y cargarlo en la memoria.  
   
--   Las operaciones de actualización de datos que guardan una copia actualizada del origen de datos al libro en una biblioteca de contenido. En este caso, se realiza un registro real de la operación utilizando el nombre de usuario y la contraseña que se recuperan de una aplicación de destino en el Servicio de almacenamiento seguro. Las credenciales pueden ser la cuenta de actualización de datos desatendida de PowerPivot o las credenciales que se almacenaron con la programación de actualización de datos al crearse. Para obtener más información, consulte [configurar las credenciales almacenadas para la actualización de datos de PowerPivot &#40;PowerPivot para SharePoint&#41; ](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) y [configurar la cuenta de actualización de datos desatendida de PowerPivot &#40; PowerPivot para SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
+-   Las operaciones de actualización de datos que guardan una copia actualizada del origen de datos al libro en una biblioteca de contenido. En este caso, se realiza un registro real de la operación utilizando el nombre de usuario y la contraseña que se recuperan de una aplicación de destino en el Servicio de almacenamiento seguro. Las credenciales pueden ser la cuenta de actualización de datos desatendida de PowerPivot o las credenciales que se almacenaron con la programación de actualización de datos al crearse. Para obtener más información, consulte [configurar las credenciales almacenadas para la actualización de datos PowerPivot &#40;PowerPivot para SharePoint&#41; ](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) y [configurar la cuenta de actualización de datos desatendida de PowerPivot &#40; PowerPivot para SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
   
 ##  <a name="Permissions"></a> Permisos de SharePoint para el acceso a datos PowerPivot  
  La publicación, administración y protección de un libro PowerPivot solamente se admite a través de la integración de SharePoint. Los servidores de SharePoint proporcionan subsistemas de autenticación y autorización que se aseguran de que se produce un acceso legítimo a los datos. No hay ningún escenario admitido para implementar de forma segura un libro PowerPivot fuera de una granja de servidores de SharePoint.  

@@ -1,28 +1,27 @@
 ---
-title: Requisitos previos para la migración de trasvase de registros a grupos de disponibilidad AlwaysOn (SQL Server) | Documentos de Microsoft
+title: Requisitos previos para migrar de trasvase de registros a grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 caps.latest.revision: 21
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: e01e7b373318e64370cc48ff79002c130bd0838a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 511a8e6425cf49060be396b0737d72943136842d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178372"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Requisitos previos para migrar desde grupos de trasvase de registros a grupos de disponibilidad AlwaysOn (SQL Server)
   En este tema se describen los requisitos previos para convertir una base de datos principal de trasvase de registros junto con una o varias de sus bases de datos secundarias en una base de datos principal AlwaysOn y una o varias bases de datos secundarias.  
@@ -75,7 +74,7 @@ ms.locfileid: "36196735"
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
  **Trasvase de registros**  
   
--   [Actualizar a SQL Server 2014 de trasvase de registros &#40;Transact-SQL&#41;](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [Actualizar el trasvase de registros a SQL Server 2014 &#40;Transact-SQL&#41;](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [Quitar el trasvase de registros &#40;SQL Server&#41;](../../log-shipping/remove-log-shipping-sql-server.md)  
   
@@ -101,13 +100,13 @@ ms.locfileid: "36196735"
   
      [Agregue una base de datos principal de trasvase de registros y una base de datos secundaria a un grupo de disponibilidad](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
   
-     [Blogs del equipo de AlwaysOn SQL Server: El Blog oficial del SQL Server AlwaysOn equipo](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Blogs del equipo de AlwaysOn SQL Server: Oficial AlwaysOn Team Blog de SQL Server](http://blogs.msdn.com/b/sqlalwayson/)  
   
      [Blogs de los ingenieros de SQL Server de CSS](http://blogs.msdn.com/b/psssql/)  
   
 -   **Notas del producto:**  
   
-     [Guía de migración: Migrar a grupos de disponibilidad AlwaysOn desde implementaciones anteriores que combinan creación de reflejo de la base de datos y trasvase de registros](http://msdn.microsoft.com/library/jj635217)  
+     [Guía de migración: Migrar a grupos de disponibilidad AlwaysOn desde implementaciones anteriores que combinan creación de reflejo de base de datos y trasvase de registros](http://msdn.microsoft.com/library/jj635217)  
   
      [Notas del producto de Microsoft para SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36196735"
   
 ## <a name="see-also"></a>Vea también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
   

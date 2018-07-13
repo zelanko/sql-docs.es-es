@@ -1,5 +1,5 @@
 ---
-title: Atributo relaciones (Diseñador de dimensiones) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Relaciones (Diseñador de dimensiones) de los atributos (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.f1
 ms.assetid: 228d1d91-7524-4773-9c83-39b04e8534d3
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2c73d5df25005013e3dc826a7d1b6bf5c9e3dd44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca3bbc6b9967ae1a4ec90965b51171aee54feb26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230055"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>Relación de los atributos (Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use la pestaña **Relación de los atributos** en el Diseñador de dimensiones para crear, modificar o eliminar las relaciones de atributo de la dimensión seleccionada.  

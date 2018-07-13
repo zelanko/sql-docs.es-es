@@ -1,5 +1,5 @@
 ---
-title: Elemento CellInfo (XMLA) | Documentos de Microsoft
+title: Elemento CellInfo (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CellInfo element
 ms.assetid: 8b6420f1-e9a7-4975-b580-1439fa11f5ca
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 803640fe83ccc3137b4597b8c1b78850abeb55c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fda3576bb50314c28dd01474e576ff2b5b333cb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176392"
 ---
 # <a name="cellinfo-element-xmla"></a>Elemento CellInfo (XMLA)
   Representa los metadatos de celda contenidos por el elemento primario [OlapInfo](olapinfo-element-xmla.md) elemento.  
@@ -74,9 +74,9 @@ ms.locfileid: "36114324"
 <CellPropertyDefinition name="string" type"string" />  
 ```  
   
- Las propiedades disponibles y sus valores pueden obtenerse mediante el tipo de solicitud DISCOVER_PROPERTIES con el `Discover` método. No existe ningún requerimiento acerca del orden de las propiedades que aparecen listadas en el elemento `PropertyList`.  
+ Se pueden obtener las propiedades disponibles y sus valores con el tipo de solicitud DISCOVER_PROPERTIES con el `Discover` método. No existe ningún requerimiento acerca del orden de las propiedades que aparecen listadas en el elemento `PropertyList`.  
   
- Opcionalmente, un proveedor puede especificar los valores predeterminados para ciertos miembros o para propiedades de la celda en la sección `AxisInfo` o `CellInfo`. Los valores predeterminados pueden proporcionar menos resultados si la propiedad tiene siempre o casi siempre el mismo valor. Para indicar un valor predeterminado para una propiedad, el`Default` , opcionalmente, se puede especificar el elemento como un elemento secundario de uno de los elementos de definición de la propiedad de celda. Por consiguiente, la ausencia de un miembro o de una propiedad de la celda en el resultado indica que el valor predeterminado expresado es el valor para la propiedad de la celda.  
+ Opcionalmente, un proveedor puede especificar los valores predeterminados para ciertos miembros o para propiedades de la celda en la sección `AxisInfo` o `CellInfo`. Los valores predeterminados pueden proporcionar menos resultados si la propiedad tiene siempre o casi siempre el mismo valor. Para indicar un valor predeterminado para una propiedad, el`Default` , opcionalmente, se puede especificar el elemento como elemento secundario de uno de los elementos de definición de propiedad de celda. Por consiguiente, la ausencia de un miembro o de una propiedad de la celda en el resultado indica que el valor predeterminado expresado es el valor para la propiedad de la celda.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra cómo se representan las propiedades de celda VALUE, FORMATTED_VALUE y FORMAT_STRING en el elemento `CellInfo`.  

@@ -1,5 +1,5 @@
 ---
-title: Análisis de la cesta de compras (herramientas de análisis de tabla para Excel) | Documentos de Microsoft
+title: Análisis de la cesta de compras (herramientas de análisis de tabla para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - shopping basket analysis
 - mining model, association
@@ -17,42 +17,42 @@ helpviewer_keywords:
 - market basket analysis
 ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 593a854d689268b753b8ebeab544bbf51d2d0455
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 975e989be25dce3e51a3563c91fe43beac745a3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163401"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>Análisis de la cesta de compras (Herramientas de análisis de tabla para Excel)
-  ![Herramienta de cesta de la compra](media/tat-shopbskt.gif "herramienta de cesta de la compra")  
+  ![Herramienta cesta](media/tat-shopbskt.gif "herramienta cesta de la compra")  
   
- El **análisis de cesta de la compra** herramienta le ayuda a encontrar `associations` en los datos. Una asociación podría indicarle cuáles son los artículos que se suelen comprar al mismo tiempo. En la minería de datos, esta técnica es un método muy conocido que se conoce como *análisis de cesta*, que se usa para analizar el comportamiento de compra de clientes en conjuntos de datos muy grandes. Los vendedores pueden usar la información para realizar recomendaciones a los clientes sobre productos relacionados y promocionar estos colocándolos muy cerca unos de otros en páginas Web, catálogos o en la misma estantería.  
+ El **análisis de cesta de la compra** herramienta le ayuda a encontrar `associations` en los datos. Una asociación podría indicarle cuáles son los artículos que se suelen comprar al mismo tiempo. En la minería de datos, esta técnica es un método muy conocido que se conoce como *análisis de cesta*, que se usa para analizar los hábitos de compra de los clientes de grandes conjuntos de datos. Los vendedores pueden usar la información para realizar recomendaciones a los clientes sobre productos relacionados y promocionar estos colocándolos muy cerca unos de otros en páginas Web, catálogos o en la misma estantería.  
   
  Para usar el análisis de la cesta de compras, los artículos que desea analizar deben estar relacionados por un identificador de transacción. Por ejemplo, si está analizando todos los pedidos recibidos a través de un sitio Web, cada uno de ellos tendrá un identificador de pedido o de transacción que estará relacionado con uno o más de los productos adquiridos.  
   
  Cuando el asistente termina de analizar los datos, se crean dos nuevas hojas de cálculo, **Shopping Basket Item Groups** y **Shopping Basket Rules**.  
   
- El **Shopping Basket Item Groups** hoja de cálculo contiene una lista de los elementos que suelen aparecer juntos en las transacciones. Estas agrupaciones comunes se denominan *conjuntos de elementos*. La hoja de cálculo también contiene estadísticas, como *admite* y *elevación*, para ayudarle a entender la importancia del conjunto de elementos. Si la información sobre el precio está disponible, la hoja de cálculo también crea una suma del valor de todos los elementos relacionados, con objeto de proporcionar una indicación del valor total de las transacciones.  
+ El **Shopping Basket Item Groups** hoja de cálculo contiene una lista de los elementos que suelen aparecer juntos en las transacciones. Estas agrupaciones comunes se denominan *conjuntos de elementos*. La hoja de cálculo también contiene estadísticas, como *admite* y *elevación*, que le ayudarán a entender la importancia del conjunto de elementos. Si la información sobre el precio está disponible, la hoja de cálculo también crea una suma del valor de todos los elementos relacionados, con objeto de proporcionar una indicación del valor total de las transacciones.  
   
- Puede filtrar y ordenar las columnas del informe. Por ejemplo, puede ver sólo los conjuntos de elementos con 2 o más productos, u ordenarlos por **Average Basket Value**.  
+ Puede filtrar y ordenar las columnas del informe. Por ejemplo, es posible que desee ver solo los conjuntos de elementos con 2 o más productos, u ordenarlos por **Average Basket Value**.  
   
- El **Shopping Basket Rules** hoja de cálculo utiliza las estadísticas derivadas del análisis para crear reglas sobre cómo se relacionan los elementos. Por ejemplo, una regla podría ser que si los clientes compran el producto A, es muy probables que compren el producto B. Las reglas pueden utilizarse para crear recomendaciones. Cada regla dispone de estadísticas que le permiten evaluar su solidez potencial, de forma que pueda realizar una recomendación solo si la regla supera un cierto umbral de probabilidad.  
+ El **Shopping Basket Rules** hoja de cálculo utiliza las estadísticas derivadas del análisis para crear reglas sobre cómo se relacionan los elementos. Por ejemplo, una regla podría ser que si los clientes compran el producto A, están muy probables que compren el producto B. Las reglas se pueden usar para crear recomendaciones. Cada regla dispone de estadísticas que le permiten evaluar su solidez potencial, de forma que pueda realizar una recomendación solo si la regla supera un cierto umbral de probabilidad.  
   
 ## <a name="using-the-shopping-basket-analysis-tool"></a>Usar la herramienta Análisis de la cesta de compras  
   
 1.  Abra una tabla de Excel que contenga datos apropiados. En el libro de ejemplo, haga clic en la hoja de cálculo Associate.  
   
-2.  Haga clic en **análisis de cesta de la compra**.  
+2.  Haga clic en **análisis de cesta**.  
   
 3.  En el **análisis de cesta de la compra** cuadro de diálogo, elija la columna que contiene el identificador de transacción y, a continuación, elija la columna que contiene los elementos o los productos que desea analizar.  
   
 4.  Si lo desea, puede agregar una columna que contenga valores de producto.  
   
-5.  Haga clic en**avanzadas**para abrir el **configuración avanzada de parámetros** cuadro de diálogo. Aumente el valor de **soporte mínimo** para reducir el número de productos que se agrupan como conjuntos de elementos. Aumente la **probabilidad de regla mínima** para filtrar los conjuntos de elementos muy comunes.  
+5.  Haga clic en**avanzadas**para abrir el **configuración avanzada de los parámetros** cuadro de diálogo. Aumente el valor de **soporte mínimo** para reducir el número de productos que se agrupan como conjuntos de elementos. Aumentar la **probabilidad de regla mínima** para filtrar los conjuntos de elementos muy comunes.  
   
 ### <a name="requirements"></a>Requisitos  
  Para usar el **análisis de cesta de la compra** herramienta, los datos deben almacenarse en una tabla de Excel y debe contener las columnas siguientes:  
@@ -77,9 +77,9 @@ ms.locfileid: "36114134"
  A medida que el conjunto de datos aumenta de tamaño, el número de posibles agrupaciones de elementos y reglas puede resultar abrumador. Sin embargo, puede controlar el número de resultados generados por la herramienta para centrarse sólo en los conjuntos de elementos y reglas más valiosos. Puede establecer estas opciones el **Shopping Basket Advanced parámetros Dialog Box**.  
   
 ### <a name="minimum-support"></a>Compatibilidad mínima  
- *Soporte mínimo* hace referencia al número de transacciones que debe contener un conjunto de elementos determinado para el conjunto de elementos que se consideran significativas. Por ejemplo, puede no estar interesado en un conjunto de elementos a menos que se haya comprado en al menos 10 transacciones diferentes. Hay dos maneras de controlar el umbral de importancia del conjunto de elementos, y ambas usan el **soporte mínimo** parámetro.  
+ *Soporte mínimo* significa el número de transacciones que debe contener un conjunto de elementos determinado para el conjunto de elementos que se consideran significativas. Por ejemplo, puede no estar interesado en un conjunto de elementos a menos que se haya comprado en al menos 10 transacciones diferentes. Hay dos maneras de controlar el umbral de importancia del conjunto de elementos, y ambas usan el **soporte mínimo** parámetro.  
   
- **Como un valor absoluto:** escriba un número que representa el número de transacciones que contienen los elementos de destino. Por ejemplo, si escribe 10, cualquier conjunto de elementos que aparezca en al menos 10 cestas de la compra estará incluido en los resultados.  
+ **Como un valor absoluto:** escriba un número que representa el recuento de transacciones que contienen los elementos de destino. Por ejemplo, si escribe 10, cualquier conjunto de elementos que aparezca en al menos 10 cestas de la compra estará incluido en los resultados.  
   
  **Como un porcentaje:** escriba un número que representa un porcentaje de toda la colección de conjuntos de elementos. Por ejemplo, si especifica 10, se cuentan todos los conjuntos de elementos y el conjunto de elementos de destino debe constituir al menos el 10 por ciento del número total de conjuntos de elementos. Si tiene un conjunto de datos de gran tamaño, el uso de porcentajes en lugar de recuentos puede ayudarle a centrarse en las agrupaciones de elementos más importantes.  
   
@@ -94,12 +94,12 @@ ms.locfileid: "36114134"
  Conviene que experimente con estos valores para ver los distintos resultados y determinar qué valor produce las reglas más interesantes.  
   
 ## <a name="understanding-the-reports"></a>Descripción de los informes  
- El **análisis de cesta de la compra** herramienta crea dos informes complementarios. El primer informe, denominado **grupos significativa de los elementos identificados durante el análisis**, proporciona una lista de todos los conjuntos de elementos que se encontraron. Puede usar las nuevas herramientas de tabla de Microsoft Excel para ordenar, filtrar y explorar los datos.  
+ El **análisis de cesta de la compra** herramienta crea dos informes complementarios. El primer informe, denominado **grupos significativos de los elementos identificados durante el análisis**, proporciona una lista de todos los conjuntos de elementos que se han encontrado. Puede usar las nuevas herramientas de tabla de Microsoft Excel para ordenar, filtrar y explorar los datos.  
   
  El segundo informe, denominado **Shopping Basket Rules**, indica el tipo de inferencias se puede realizar basándose en los conjuntos de elementos enumerados en el primer informe. Mientras que la lista de conjuntos de elementos es más útil para explorar y entender los datos, la lista de reglas es más útil para realizar predicciones y recomendaciones.  
   
 ### <a name="shopping-basket-item-groups-report"></a>Informe Shopping Basket Item Groups  
- Este informe contiene una lista de todas las posibles combinaciones de elementos encontradas en el conjunto de datos. Por ejemplo, si los datos de transacción contienen pedidos para cada pedido de la **análisis de cesta de la compra** herramienta calcula cuántas veces se ha pedido el elemento individual y, a continuación, calcula todas las combinaciones de ese elemento con otros elementos.  
+ Este informe contiene una lista de todas las posibles combinaciones de elementos encontradas en el conjunto de datos. Por ejemplo, si los datos de transacción contienen pedidos de cada pedido el **análisis de cesta de la compra** herramienta calcula cuántas veces se ha pedido el elemento individual y, a continuación, calcula todas las combinaciones de ese elemento con otros elementos.  
   
  El informe muestra los conjuntos de elementos encontrados ordenados por la mejora respecto al modelo predictivo. La mejora respecto al modelo predictivo es una puntuación que le indica la importancia del conjunto de elementos.  
   
@@ -121,8 +121,8 @@ ms.locfileid: "36114134"
   
 |Columna del informe|¿Qué indica|  
 |----------------------|-----------------------|  
-|Existing Items|Muestra los elementos necesarios para realizar una recomendación.<br /><br /> En la minería de datos, se dice que estos elementos se encuentren en el *lado izquierdo* de la regla de asociación.|  
-|Predicted Item|Muestra el elemento que se va a recomendar.<br /><br /> En la minería de datos, se dice que estos elementos se encuentren en el *derecha* de la regla de asociación.|  
+|Existing Items|Muestra los elementos necesarios para realizar una recomendación.<br /><br /> En la minería de datos, estos elementos se dice que en el *lado izquierdo* de la regla de asociación.|  
+|Predicted Item|Muestra el elemento que se va a recomendar.<br /><br /> En la minería de datos, estos elementos se dice que en el *derecha* de la regla de asociación.|  
 |Probabilidad|Muestra la probabilidad de que esta regla sea correcta.|  
 |Soporte técnico|Indica el número de casos en los datos existentes que constituyen una prueba para esta regla.|  
 |Rule Value|Si proporciona un valor para los elementos de la cesta de compras, esta columna calcula el valor de la predicción basándose en el costo de los elementos.|  
@@ -134,6 +134,6 @@ ms.locfileid: "36114134"
  Para obtener más información sobre el algoritmo usado para realizar este análisis, vea el tema sobre el algoritmo de asociación de Microsoft en los Libros en pantalla de SQL Server.  
   
 ## <a name="see-also"></a>Vea también  
- [Herramientas de análisis de tabla para Excel](table-analysis-tools-for-excel.md)  
+ [Herramientas de análisis de tablas para Excel](table-analysis-tools-for-excel.md)  
   
   

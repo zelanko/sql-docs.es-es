@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e623374290e9620d048d651683a58bfcd3ddf573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3fc2b74413f2ecb7f0a1f72684494f85ecf82ca9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152176"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Función Count (Generador de informes y SSRS)
   Devuelve un recuento de los valores no NULL especificados por la expresión, que se evalúa en el contexto del ámbito indicado.  
@@ -36,10 +36,10 @@ Count(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parámetros  
  *expression*  
- (`Variant` o `Binary`) expresión en la que se lleva a cabo la agregación, por ejemplo, `=Fields!FieldName.Value`.  
+ (`Variant` o `Binary`) expresión en la que se va a realizar la agregación, por ejemplo, `=Fields!FieldName.Value`.  
   
  *ámbito*  
- (`String`) El nombre de un conjunto de datos, grupo o región de datos que contiene el informe de elementos que se va a aplicar la función de agregado. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
+ (`String`) Nombre de un conjunto de datos, grupo o región de datos que contiene el informe de elementos que se va a aplicar la función de agregado. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
   
  *recursivos*  
  (**Tipo enumerado**) Opcional. `Simple` (valor predeterminado) o `RdlRecursive`. Especifica si se debe realizar la agregación de forma recursiva.  
@@ -56,7 +56,7 @@ Count(expression, scope, recursive)
   
 -   *Scope* , para los agregados anidados, no puede ser el nombre de un conjunto de datos.  
   
--   *Expresión* no debe contener `First`, `Last`, `Previous`, o `RunningValue` funciones.  
+-   *Expresión* no puede contener `First`, `Last`, `Previous`, o `RunningValue` funciones.  
   
 -   *Expression* no debe contener a los agregados anidados que especifican *recursive*.  
   
@@ -80,9 +80,9 @@ Count(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Expresión que se utiliza en los informes &#40;el generador de informes SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;el generador de informes SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

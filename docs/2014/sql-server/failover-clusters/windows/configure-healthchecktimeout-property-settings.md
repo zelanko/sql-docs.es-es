@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 6cd514ae1b9581a52e7dfdb382bc8fded757fb47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d975ed562e5343ceeb921358160309c20ff0bb4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260081"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Configurar los valores de la propiedad HealthCheckTimeout
-  El valor HealthCheckTimeout se utiliza para especificar el período de tiempo, en milisegundos, que la DLL de recursos de SQL Server debe esperar la información devuelta por la [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) procedimiento almacenado antes de informar el Conmutación por error de clúster de instancia (FCI) AlwaysOn no responde. Los cambios que se realizan en la configuración del tiempo de espera son vigentes de forma inmediata y no requieren reiniciar el recurso de SQL Server.  
+  El valor HealthCheckTimeout se utiliza para especificar el período de tiempo, en milisegundos, que debe esperar la DLL de recursos de SQL Server para la información devuelta por la [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) procedimiento almacenado antes de notificar a la Conmutación por error de clúster de instancia (FCI) AlwaysOn no responde. Los cambios que se realizan en la configuración del tiempo de espera son vigentes de forma inmediata y no requieren reiniciar el recurso de SQL Server.  
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#Limits), [Seguridad](#Security)  
   
@@ -46,10 +45,10 @@ ms.locfileid: "36111939"
   
 2.  Importe el módulo `FailoverClusters` para habilitar los cmdlets de clúster.  
   
-3.  Usar el `Get-ClusterResource` para encontrar el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recurso, a continuación, utilice `Set-ClusterParameter` cmdlet para establecer el **HealthCheckTimeout** propiedad para la instancia de clúster de conmutación por error.  
+3.  Usar el `Get-ClusterResource` para encontrar el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recursos, a continuación, usar `Set-ClusterParameter` cmdlet para establecer el **HealthCheckTimeout** propiedad para la instancia de clúster de conmutación por error.  
   
 > [!TIP]  
->  Cada vez que abre una nueva ventana de PowerShell, necesita importar el `FailoverClusters` módulo.  
+>  Cada vez que abre una nueva ventana de PowerShell, deberá importar el `FailoverClusters` módulo.  
   
 ### <a name="example-powershell"></a>Ejemplo (PowerShell)  
  En el ejemplo siguiente se cambia el valor de HealthCheckTimeout en el recurso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] "`SQL Server (INST1)`" a 60000 milisegundos.  

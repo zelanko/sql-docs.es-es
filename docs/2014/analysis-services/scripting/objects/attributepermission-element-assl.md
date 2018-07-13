@@ -1,5 +1,5 @@
 ---
-title: Elemento Attributepermissions (ASSL) | Documentos de Microsoft
+title: Elemento Attributepermissions (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributePermission element
 ms.assetid: efc8aa63-3959-4b2e-98f8-2a9c424298c2
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ee5d846cdf849959bc1a916dd82fd95de60e6e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c39047b1f63f0abbab109e2d1e8f82ca2a4c863
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277881"
 ---
 # <a name="attributepermission-element-assl"></a>Elemento AttributePermissions (ASSL)
   Define los permisos que los miembros de un [rol](role-element-assl.md) elemento tiene los atributos de una dimensión concreta en un [cubo](cube-element-assl.md) elemento.  

@@ -1,5 +1,5 @@
 ---
-title: Importar informes desde Microsoft Access (Reporting Services) | Documentos de Microsoft
+title: Importar informes desde Microsoft Access (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Access reports [Reporting Services]
 - importing reports
 ms.assetid: 4f29d5b8-b77d-4714-a84a-05523df55646
 caps.latest.revision: 39
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ec0461f278bfe6556d4a1fa221d5b33426d8ed01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: afe85933463aed7e1af3c598f7e8565a9b074677
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155686"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>Importar informes desde Microsoft Access (Reporting Services)
   En el Diseñador de informes, puede importar informes desde un [!INCLUDE[msCoName](../includes/msconame-md.md)] base de datos o proyecto. Deberá instalar Access 2002 o una versión posterior en el mismo equipo en el que está instalado el Diseñador de informes.  
@@ -36,11 +36,11 @@ ms.locfileid: "36197331"
   
 1.  Abra o cree el proyecto al que desea importar los informes.  
   
-2.  En el **proyecto** menú, elija **importar informes**y, a continuación, haga clic en **Microsoft Access**. O bien, haga clic en el proyecto en el Explorador de soluciones, seleccione **importar informes**y, a continuación, haga clic en **Microsoft Access**.  
+2.  En el **proyecto** menú, elija **importar informes**y, a continuación, haga clic en **Microsoft Access**. Como alternativa, haga clic en el proyecto en el Explorador de soluciones, seleccione **importar informes**y, a continuación, haga clic en **Microsoft Access**.  
   
-3.  En el **abiertos** cuadro de diálogo, seleccione la base de datos de Access (.mdb, .accdb) o un proyecto (.adp) que contiene los informes y, a continuación, haga clic en **abiertos**. Todos los informes existentes en el archivo de base de datos o de proyecto se importan y se especifican en la carpeta de informes en el Explorador de soluciones.  
+3.  En el **abierto** cuadro de diálogo, seleccione la base de datos de Access (.mdb, .accdb) o un proyecto (.adp) que contiene los informes y, a continuación, haga clic en **abierto**. Todos los informes existentes en el archivo de base de datos o de proyecto se importan y se especifican en la carpeta de informes en el Explorador de soluciones.  
   
-4.  Compruebe el **lista de tareas** ventana para errores de compilación. Para ver el **lista de tareas** ventana, abra el **vista** menú, elija **otras ventanas**y, a continuación, haga clic en **lista de tareas**.  
+4.  Compruebe el **lista de tareas** ventana para errores de compilación. Para ver el **lista de tareas** ventana, abra el **vista** menú, elija **Other Windows**y, a continuación, haga clic en **lista de tareas**.  
   
 ## <a name="see-also"></a>Vea también  
  [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  

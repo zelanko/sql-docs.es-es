@@ -1,5 +1,5 @@
 ---
-title: Definir los parámetros en el Diseñador de consultas MDX para Analysis Services (generador de informes y SSRS) | Documentos de Microsoft
+title: Definir parámetros en el Diseñador de consultas MDX para Analysis Services (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], MDX
 - Multidimensional Expressions [Reporting Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0ed9044a9d9719ec67cff1f79d21882a7578129f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c46a722ce7f06e816a6625297ab35c9f5548c236
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179582"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definir parámetros en el diseñador de consultas MDX para Analysis Services (Generador de informes y SSRS)
   Si desea incluir parámetros en una consulta MDX para un origen de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , debe agregar un parámetro de consulta a la consulta. En el diseñador de consultas MDX, puede agregar un parámetro de consulta tanto en el modo de diseño como en el modo de consulta mediante la especificación de un filtro. Después de definir la consulta con un parámetro de consulta, Reporting Services crea automáticamente un parámetro de informe y un conjunto de datos para proporcionar la lista de valores válidos. Esto permite al usuario especificar un valor que se pasa directamente a la consulta.  
@@ -35,7 +35,7 @@ ms.locfileid: "36197328"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>Para definir un parámetro de consulta en MDX en el modo de diseño  
   
-1.  En el panel de datos de informe, haga doble clic en un conjunto de datos creado a partir de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo de origen de datos y, a continuación, haga clic en **consulta**. El diseñador de consultas MDX se abre en el modo de diseño.  
+1.  En el panel datos de informe, haga doble clic en un conjunto de datos creado a partir de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo de origen de datos y, a continuación, haga clic en **consulta**. El diseñador de consultas MDX se abre en el modo de diseño.  
   
 2.  Arrastre una dimensión hacia el área de filtro y colóquela en la primera celda de la columna **Dimensión** .  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36197328"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>Para definir un parámetro de consulta en MDX en el modo de consulta  
   
-1.  En el panel de datos de informe, haga doble clic en un conjunto de datos creado a partir de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo de origen de datos y, a continuación, haga clic en **consulta**. El diseñador de consultas MDX se abre en el modo de diseño.  
+1.  En el panel datos de informe, haga doble clic en un conjunto de datos creado a partir de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo de origen de datos y, a continuación, haga clic en **consulta**. El diseñador de consultas MDX se abre en el modo de diseño.  
   
 2.  En la barra de herramientas, haga clic en **Diseño** para cambiar al modo de consulta.  
   

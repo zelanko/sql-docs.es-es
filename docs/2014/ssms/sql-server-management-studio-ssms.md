@@ -1,5 +1,5 @@
 ---
-title: SQL Server Management Studio | Documentos de Microsoft
+title: SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e6bb90d0f5aa4c92ac8b92898e65361d745418f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 893b4c108feb62f6cd076090bf4f0506765df819
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179001"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es un entorno integrado para administrar la infraestructura de SQL Server. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] proporciona herramientas para configurar, para supervisar, y administrar instancias de SQL Server. También proporciona herramientas para implementar, supervisar y actualizar los componentes de capa de datos, como bases de datos y almacenamientos de datos usados por aplicaciones, y para compilar consultas y scripts.  
   
 ## <a name="benefits-of-sql-server-management-studio"></a>Ventajas de SQL Server Management Studio  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es una herramienta completa para la administración de SQL Server objetos que combina una interfaz gráfica fácil de usar con funciones completas de scripting. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] puede usarse para administrar [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], y [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es una herramienta completa para la administración de SQL Server (AMO) que combina una interfaz gráfica fácil de usar con funciones completas de scripting. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] puede usarse para administrar [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], y [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ## <a name="sql-server-management-studio-components"></a>Componentes de SQL Server Management Studio  
   

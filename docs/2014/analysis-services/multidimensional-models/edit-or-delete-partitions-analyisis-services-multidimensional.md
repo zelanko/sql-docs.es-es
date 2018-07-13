@@ -1,5 +1,5 @@
 ---
-title: Editar o eliminar particiones (Analysis Services - Multidimensional) | Documentos de Microsoft
+title: Editar o eliminar particiones (Analysis Services - Multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying partitions
 - partitions [Analysis Services], modifying
 ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 693550400db63b73b29d01a7a9d198d5924893dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 333caebbfff1870341696ee9d5a6d215288459bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180932"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>Editar o eliminar particiones (Analysis Services - Multidimensional)
   Las particiones de cubo se modifican mediante la pestaña **Particiones** del Diseñador de cubos en [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]. La pestaña **Particiones** presenta una lista de las particiones de todos los grupos de medida de un cubo. También muestra una lista de las particiones de reescritura que tienen habilitada esta característica.  
@@ -39,7 +39,7 @@ ms.locfileid: "36196749"
 ## <a name="partition-source"></a>Origen de la partición  
  Especifica la tabla o la consulta con nombre origen de la partición. Para cambiar la tabla de origen, haga clic en la celda y, después, haga clic en el botón Examinar (**…**).  
   
- ![Columna de origen en el panel de la partición](../media/ssas-partitionsource.png "columna de origen en el panel de partición")  
+ ![Columna de origen en el panel de la partición](../media/ssas-partitionsource.png "columna de origen en el panel de la partición")  
   
  Si la partición se basa en una consulta, haga clic en el botón Examinar (**…**) para editar la consulta. Esto edita la propiedad **Origen** de la partición. Para más información, consulte [Cambiar el origen de una partición para usar una tabla de hechos diferente](change-a-partition-source-to-use-a-different-fact-table.md).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36196749"
   
 ## <a name="see-also"></a>Vea también  
  [Crear y administrar una partición Local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [Diseñar agregaciones &#40;de Analysis Services - Multidimensional&#41;](designing-aggregations-analysis-services-multidimensional.md)   
+ [Diseño de agregaciones &#40;de Analysis Services - Multidimensional&#41;](designing-aggregations-analysis-services-multidimensional.md)   
  [Mezclar particiones en Analysis Services &#40;SSAS - multidimensionales&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

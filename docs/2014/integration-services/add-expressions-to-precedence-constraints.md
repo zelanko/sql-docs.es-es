@@ -1,5 +1,5 @@
 ---
-title: Agregar expresiones a las restricciones de precedencia | Documentos de Microsoft
+title: Agregar expresiones a las restricciones de precedencia | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precedence executables [Integration Services]
 - precedence constraints [Integration Services], adding expressions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4066b5b5c6ebd18d6dbbf02f6a150770d5e3b51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc4a614af4bd20a4209d323902c17db1c0a61ece
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161046"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Agregar expresiones a las restricciones de precedencia
   Una restricción de precedencia puede utilizar una expresión para definir la restricción entre dos aplicaciones ejecutables: el ejecutable de precedencia y el ejecutable restringido. Los ejecutables pueden ser tareas o contenedores. La expresión se puede usar por sí sola o combinada con el resultado de la ejecución del ejecutable de precedencia. El resultado de la ejecución de un ejecutable es su ejecución correcta o un error. Cuando configura el resultado de ejecución de una restricción de precedencia, puede establecer el resultado de ejecución en `Success`, `Failure` o `Completion`. `Success` exige la ejecución correcta del ejecutable de precedencia, `Failure` requiere que el ejecutable de precedencia genere un error y `Completion` indica que el ejecutable restringido se debe ejecutar independientemente de si la tarea de precedencia se ejecuta correctamente o genera un error. Para más información, consulte [Precedence Constraints](control-flow/precedence-constraints.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "36196514"
   
 ### <a name="to-add-an-expression-to-a-precedence-constraint"></a>Para agregar una expresión a una restricción de precedencia  
   
--   [Utilizar una expresión en una restricción de precedencia](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
+-   [Usar una expresión en una restricción de precedencia](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
   
 -   [Establecer las propiedades de una restricción de precedencia](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  
   

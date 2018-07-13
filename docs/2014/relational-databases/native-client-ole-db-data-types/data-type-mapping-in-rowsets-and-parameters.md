@@ -1,13 +1,11 @@
 ---
-title: Asignación de tipo de datos en conjuntos de filas y los parámetros | Documentos de Microsoft
+title: Asignación de tipos de datos en parámetros y conjuntos de filas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,18 +21,18 @@ helpviewer_keywords:
 - OLE DB, data types
 ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 48fd34103d517a27e179ede68751b2c0718ea8ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 77b7718febb0a6b8e8a8575ff776ffb44364b68a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108091"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422684"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Asignar tipos de datos en conjuntos de filas y parámetros
-  En conjuntos de filas y como valores de parámetro, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] representa el proveedor OLE DB de Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos mediante el uso de las siguientes DB OLE definen tipos de datos, notificados en las funciones **IColumnsInfo:: GetColumnInfo** y  **ICommandWithParameters:: GetParameterInfo**.  
+  En los conjuntos de filas y como valores de parámetro, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] representa el proveedor OLE DB de Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos mediante el uso de las siguientes DB OLE definen los tipos de datos, notificados en las funciones **IColumnsInfo:: GetColumnInfo** y  **ICommandWithParameters:: GetParameterInfo**.  
   
 |Tipo de datos de SQL Server|Tipo de datos de OLE DB|  
 |--------------------------|----------------------|  
@@ -68,17 +66,17 @@ ms.locfileid: "36108091"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite conversiones de datos solicitadas por el consumidor como se muestra en la ilustración.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite conversiones solicitadas por el consumidor de datos tal como se muestra en la ilustración.  
   
- El **sql_variant** objetos pueden contener datos de cualquier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de tipo de datos excepto texto, ntext, image, varchar (max), nvarchar (max), varbinary (max), xml, timestamp y common language runtime (CLR) de Microsoft .NET Framework tipos definidos por el usuario. Una instancia de datos sql_variant no puede tener sql_variant como tipo de datos base subyacente. Por ejemplo, la columna puede contener **smallint** valores en algunas filas, **float** valores en otras filas y **char**/**nchar**valores en el resto.  
+ El **sql_variant** objetos pueden contener datos de cualquier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de tipos de datos, excepto el texto, ntext, image, varchar (max), nvarchar (max), varbinary (max), xml, timestamp y common language runtime (CLR) de Microsoft .NET Framework tipos definidos por el usuario. Una instancia de datos sql_variant no puede tener sql_variant como tipo de datos base subyacente. Por ejemplo, la columna puede contener **smallint** valores para algunas filas, **float** valores en otras filas y **char**/**nchar**valores en el resto.  
   
 > [!NOTE]  
 >  El **sql_variant** tipo de datos es similar al tipo de datos Variant en Microsoft Visual Basic® y DBTYPE_VARIANT, DBTYPE_SQLVARIANT de OLEDB.  
   
- Cuando **sql_variant** datos se capturan como DBTYPE_VARIANT, se coloca en una estructura VARIANT en el búfer. Pero los subtipos de la estructura VARIANT no se pueden asignar a los subtipos definidos en el **sql_variant** tipo de datos. El **sql_variant** datos se deben capturar como DBTYPE_SQLVARIANT en orden para todos los subtipos coincidan.  
+ Cuando **sql_variant** los datos se capturan como DBTYPE_VARIANT, se incluyen en una estructura VARIANT en el búfer. Pero los subtipos de la estructura VARIANT no se pueden asignar a los subtipos definidos en el **sql_variant** tipo de datos. El **sql_variant** datos se deben capturar como DBTYPE_SQLVARIANT en orden para todos los subtipos coincidan.  
   
 ## <a name="dbtypesqlvariant-data-type"></a>Tipo de datos DBTYPE_SQLVARIANT  
- Para admitir la **sql_variant** tipo de datos, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client expone un tipo de datos específico del proveedor denominado DBTYPE_SQLVARIANT. Cuando **sql_variant** datos se capturan como DBTYPE_SQLVARIANT, se almacena en una estructura SSVARIANT específica del proveedor. La estructura SSVARIANT contiene todos los subtipos que coinciden con los subtipos de los **sql_variant** tipo de datos.  
+ Para admitir la **sql_variant** tipo de datos, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client expone un tipo de datos específico del proveedor denominado DBTYPE_SQLVARIANT. Cuando **sql_variant** en los datos se capturan como DBTYPE_SQLVARIANT, se almacena en una estructura SSVARIANT específica del proveedor. La estructura SSVARIANT contiene todos los subtipos que coinciden con los subtipos de los **sql_variant** tipo de datos.  
   
  La propiedad SSPROP_ALLOWNATIVEVARIANT de la sesión también debe estar establecida en TRUE.  
   

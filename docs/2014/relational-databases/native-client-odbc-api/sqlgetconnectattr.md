@@ -1,13 +1,11 @@
 ---
-title: SQLGetConnectAttr | Documentos de Microsoft
+title: SQLGetConnectAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7db4e37d5fa06373bdb60ea9c2288ff7808ec70d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b31b14603777a98a623dbd80144d400a069a2136
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108583"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415674"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-  El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define los atributos de conexión específicos del controlador. Algunos de los atributos están disponibles para `SQLGetConnectAttr`, y la función se utiliza para notificar sus valores actuales. Los valores presentados para estos atributos no se garantizan hasta después de que se ha realizado una conexión o se ha establecido el atributo con [SQLSetConnectAttr](sqlsetconnectattr.md).  
+  El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define los atributos de conexión específicos del controlador. Algunos de los atributos están disponibles para `SQLGetConnectAttr`, y la función se utiliza para notificar sus valores actuales. Los valores presentados para estos atributos no se garantizan hasta que una vez que se ha realizado una conexión o se ha establecido el atributo mediante [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
  En este tema se enumeran los atributos de solo lectura. Para obtener información acerca de las demás [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atributos de conexión específicos del controlador ODBC de Native Client, vea [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
@@ -59,7 +57,7 @@ ms.locfileid: "36108583"
 |SQL_SUCCESS|La conexión se realizó correctamente. El identificador de conexión del cliente se encuentra en el búfer de salida.|  
   
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
- El atributo SQL_COPT_SS_PERF_DATA devuelve un puntero a una estructura SQLPERF que contiene las estadísticas de rendimiento del controlador actual. `SQLGetConnectAttr` Devuelve NULL si no está habilitado el registro de rendimiento. El controlador no actualiza de manera dinámica las estadísticas en la estructura SQLPERF. Llame a `SQLGetConnectAttr` cada vez que las estadísticas de rendimiento deben actualizarse.  
+ El atributo SQL_COPT_SS_PERF_DATA devuelve un puntero a una estructura SQLPERF que contiene las estadísticas de rendimiento del controlador actual. `SQLGetConnectAttr` devolverá NULL si no está habilitado el registro de rendimiento. El controlador no actualiza de manera dinámica las estadísticas en la estructura SQLPERF. Llame a `SQLGetConnectAttr` cada vez que se puede actualizar las estadísticas de rendimiento.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -78,13 +76,13 @@ ms.locfileid: "36108583"
 |Cualquier otro valor|Un puntero a los datos de usuario.|  
   
 ## <a name="sqlgetconnectattr-support-for-service-principal-names-spns"></a>Compatibilidad de SQLGetConnectAttr con los Nombres principales de servicio (SPN)  
- SQLGetConnectAttr puede utilizarse para consultar el valor de los nuevos atributos de conexión SQL_COPT_SS_SERVER_SPN, SQL_COPT_SS_FAILOVER_PARTNER_SPN, SQL_COPT_SS_MUTUALLY_AUTHENTICATED y SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD. (SQLGetConnectOption también se puede utilizar para consultar estos valores.)  
+ SQLGetConnectAttr puede usarse para consultar el valor de los nuevos atributos de conexión SQL_COPT_SS_SERVER_SPN, SQL_COPT_SS_FAILOVER_PARTNER_SPN, SQL_COPT_SS_MUTUALLY_AUTHENTICATED y SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD. (SQLGetConnectOption también se puede usar para consultar estos valores.)  
   
  SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD solo está disponible para las conexiones abiertas que usan la autenticación de Windows.  
   
  Si no se ha establecido SQL_COPT_SS_SERVER_SPN o SQL_COPT_SS_FAILOVER_PARTNER, se devuelve el valor predeterminado (una cadena vacía).  
   
- Para obtener más información acerca de los SPN, vea [nombres principales de servicio &#40;SPN&#41; en las conexiones de cliente &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Para obtener más información acerca de los SPN, vea [Service Principal Names &#40;SPN&#41; en conexiones cliente &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Función SQLGetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=59347)   

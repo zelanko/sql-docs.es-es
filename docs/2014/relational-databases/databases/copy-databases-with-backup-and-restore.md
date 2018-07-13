@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
 - restoring databases [SQL Server], previous SQL Server versions
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5901a8fcdd3a2d24b84fe43d5af1fb2b46d56b39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 551677d78685c5e491d5f1c2dd347bc77f37a437
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164896"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bases de datos con Copias de seguridad y restauración
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede crear una base de datos nueva restaurando una copia de seguridad de una base de datos de usuario creada utilizando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior. Sin embargo, las copias de seguridad de las bases de datos **maestra**, **modelo** y **msdb** creadas utilizando una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pueden restaurarse con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Asimismo, las copias de seguridad de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no se pueden restaurar con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -63,7 +63,7 @@ ms.locfileid: "36114053"
   
     -   Si el archivo existente no se puede sobrescribir, se producirá un error de restauración.  
   
- Para evitar errores y consecuencias no deseadas, antes de la operación de restauración, puede usar el [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) tabla de historial para buscar los archivos de base de datos y de registro en la copia de seguridad que va a restaurar.  
+ Para evitar errores y consecuencias no deseadas, antes de la operación de restauración, puede usar el [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) tabla de historial para buscar los archivos de base de datos y registro en la copia de seguridad que va a restaurar.  
   
 ## <a name="moving-the-database-files"></a>Mover los archivos de base de datos  
  Si no se pueden restaurar los archivos de la copia de seguridad de la base de datos en el equipo de destino debido a las razones mencionadas anteriormente, es necesario mover los archivos a una nueva ubicación a medida que se restauran. Por ejemplo:  
@@ -124,7 +124,7 @@ ms.locfileid: "36114053"
   
 -   [sp_changedbowner &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
- **Para copiar una base de datos mediante objetos de administración de SQL Server (SMO)**  
+ **Para copiar una base de datos mediante SQL Server Management Objects (SMO)**  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A>  
   

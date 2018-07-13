@@ -1,13 +1,11 @@
 ---
-title: bcp_control | Documentos de Microsoft
+title: bcp_control | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_control function
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1339e256e1adc6aa38cf46d93b4e1937a6d47e90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 46e834874b35e81791f027b380ab2f905bc8fbde
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105674"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426424"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   Cambia la configuración predeterminada de varios parámetros de control para una copia masiva entre un archivo y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -58,17 +56,17 @@ iValue
  Es uno de los siguientes valores:  
   
  BCPABORT  
- Detiene una operación de copia masiva que ya está en curso. Llame a **bcp_control** con una *eOption* de establecido en BCPABORT desde otro subproceso para detener un ejecución operación de copia de forma masiva. El *iValue* parámetro se ignora.  
+ Detiene una operación de copia masiva que ya está en curso. Llame a **bcp_control** con un *eOption* de establecido en BCPABORT desde otro subproceso para detener un ejecución operación de copia de forma masiva. El *iValue* parámetro se omite.  
   
  BCPBATCH  
  Es el número de filas por lote. El valor predeterminado es 0, que indica todas las filas de una tabla, cuando se extraen los datos, o todas las filas del archivo de datos del usuario, cuando los datos se copian en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un valor inferior a 1 restablece el valor predeterminado para BCPBATCH.  
   
  BCPDELAYREADFMT  
- Un valor booleano, si establece en true, hará que [bcp_readfmt](bcp-readfmt.md) para leer en la ejecución. Si false (valor predeterminado), bcp_readfmt le inmediatamente leer el archivo de formato. Se producirá un error de secuencia si BCPDELAYREADFMT es true y se llama bcp_columns o bcp_setcolfmt.  
+ Un valor booleano, si establece en true, hará que [bcp_readfmt](bcp-readfmt.md) para leer en la ejecución. Si es false (valor predeterminado), bcp_readfmt le inmediatamente leer el archivo de formato. Se producirá un error de secuencia si BCPDELAYREADFMT es true y se llama bcp_columns o bcp_setcolfmt.  
   
  También se producirá un error de secuencia si se llama a `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` después de llamar a `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` y bcp_writefmt.  
   
- Para obtener más información, consulte [de detección de metadatos](../native-client/features/metadata-discovery.md).  
+ Para obtener más información, consulte [detección de metadatos](../native-client/features/metadata-discovery.md).  
   
  BCPFILECP  
  *iValue* contiene el número de la página de códigos del archivo de datos. Puede especificar el número de la página de códigos, como 1252 o 850, o uno de estos valores:  
@@ -80,7 +78,7 @@ iValue
  BCPFILE_RAW: los datos del archivo están en la página de códigos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  BCPFILEFMT  
- Número de versión del formato de archivo de datos. Esto puede ser 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), o 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 es el valor predeterminado. Esto resulta útil para exportar e importar datos en formatos admitidos en versiones anteriores del servidor. Por ejemplo, para importar los datos que se obtienen de una columna de texto en un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server en un **varchar (max)** columna en un [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] servidor o posterior, debe especificar 80. De forma similar, si especifica 80 al exportar datos desde una **varchar (max)** columna, éstos se guardarán al igual que las columnas de texto se guardan en el [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] de formato y se pueden importar en una columna de texto de un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.  
+ Número de versión del formato de archivo de datos. Esto puede ser 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), o 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 es el valor predeterminado. Esto resulta útil para exportar e importar datos en formatos admitidos en versiones anteriores del servidor. Por ejemplo, para importar los datos que se obtienen de una columna de texto en un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server en un **varchar (max)** columna en un [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] servidor o posterior, debe especificar 80. De forma similar, si especifica 80 al exportar datos desde un **varchar (max)** columna, éstos se guardarán al igual que las columnas de texto se guardan en el [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] dar formato y se pueden importar a una columna de texto de un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.  
   
  BCPFIRST  
  Es la primera fila de datos del archivo o la tabla que va a copiarse. El valor predeterminado es 1; un valor menor que 1 reinicializa esta opción a su valor predeterminado.  
@@ -107,7 +105,7 @@ iValue
  Cuando *iValue* es TRUE, especifica que las funciones de copia masiva insertan valores de datos proporcionados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las columnas definidas con una restricción de identidad. El archivo de entrada debe proporcionar valores para las columnas de identidad. Si no se establece, se generan nuevos valores de identidad para las filas insertadas. No se tiene en cuenta ningún dato presente en el archivo para las columnas de identidad.  
   
  BCPKEEPNULLS  
- Especifica si los valores de datos vacíos del archivo se convertirán en valores NULL en la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando *iValue* es TRUE, valores vacíos se convertirá en NULL en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla. Con el valor predeterminado, los valores vacíos se convierten en un valor predeterminado para la columna en la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si existe un valor predeterminado.  
+ Especifica si los valores de datos vacíos del archivo se convertirán en valores NULL en la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando *iValue* es TRUE, los valores vacíos se convierten en NULL en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla. Con el valor predeterminado, los valores vacíos se convierten en un valor predeterminado para la columna en la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si existe un valor predeterminado.  
   
  BCPLAST  
  Es la última fila que va a copiarse. Con el valor predeterminado se copian todas las filas; un valor inferior a 1 restablece esta opción a su valor predeterminado.  
@@ -120,12 +118,12 @@ iValue
  El *iValue* parámetro debe ser la dirección de un entero de 64 bits con signo que contiene el valor. El valor máximo que se puede pasar a BCPLASTEX es 2^63-1.  
   
  BCPMAXERRS  
- Es el número de errores permitido antes de que la operación de copia masiva genere un error. El valor predeterminado es 10; un valor menor que 1 restablece esta opción a su valor predeterminado. La copia masiva impone un máximo de 65.535 errores. Si se intenta establecer esta opción en un valor mayor que 65.535, la opción se establece en 65.535.  
+ Es el número de errores permitido antes de que la operación de copia masiva genere un error. El valor predeterminado es 10. un valor menor que 1 restablece esta opción a su valor predeterminado. La copia masiva impone un máximo de 65.535 errores. Si se intenta establecer esta opción en un valor mayor que 65.535, la opción se establece en 65.535.  
   
  BCPODBC  
- Cuando es TRUE, especifica que **datetime** y **smalldatetime** valores guardados en el formato de caracteres usará el prefijo de la secuencia de escape ODBC marca de tiempo y el sufijo. La opción BCPODBC solo se aplica a BCP_OUT.  
+ Cuando es TRUE, especifica que **datetime** y **smalldatetime** valores guardados en formato de caracteres usará el prefijo de secuencia de escape de marca de tiempo ODBC y el sufijo. La opción BCPODBC solo se aplica a BCP_OUT.  
   
- Cuando sea FALSE, una **datetime** valor que corresponde al 1 de enero de 1997 se convierte en la cadena de caracteres: 00:00:00.000 1997-01-01. Cuando es TRUE, el mismo **datetime** valor se representa como: {ts ' 1997-01-01 00:00:00.000'}.  
+ Cuando sea FALSE, un **datetime** valor que representa el 1 de enero de 1997 se convierte en la cadena de caracteres: 00:00:00.000 1997-01-01. Cuando es TRUE, el mismo **datetime** valor se representa como: {ts ' 1997-01-01 00:00:00.000'}.  
   
  BCPROWCOUNT  
  Devuelve el número de filas afectado por la operación actual (o última) de BCP.  
@@ -145,9 +143,9 @@ iValue
 ## <a name="remarks"></a>Notas  
  Esta función establece varios parámetros de control para operaciones de copia masiva, incluido el número de errores permitidos antes de cancelar una copia masiva, los números de la primera y la última fila que van a copiarse de un archivo de datos y el tamaño del lote.  
   
- Esta función también se utiliza para especificar la instrucción SELECT cuando la copia masiva del conjunto de resultados de una instrucción SELECT no se realiza desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Establecer *eOption* en BCPHINTS y establezca *iValue* a tiene un puntero a una cadena SQLTCHAR que contiene la instrucción SELECT.  
+ Esta función también se utiliza para especificar la instrucción SELECT cuando la copia masiva del conjunto de resultados de una instrucción SELECT no se realiza desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Establecer *eOption* en BCPHINTS y establezca *iValue* para tener un puntero a una cadena SQLTCHAR que contiene la instrucción SELECT.  
   
- Estos parámetros de control solo son significativos cuando la copia se realiza entre un archivo de usuario y una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Configuración de parámetros de control no tiene ningún efecto sobre las filas copiadas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [bcp_sendrow](bcp-sendrow.md).  
+ Estos parámetros de control solo son significativos cuando la copia se realiza entre un archivo de usuario y una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Configuración de parámetros de control no tiene ningún efecto en las filas copiadas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [bcp_sendrow](bcp-sendrow.md).  
   
 ## <a name="example"></a>Ejemplo  
   

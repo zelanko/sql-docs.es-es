@@ -1,5 +1,5 @@
 ---
-title: Atributo de cuadro de diálogo traducción de datos (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Atributo de cuadro de diálogo traducción de datos (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.dimensionstoragesettings.f1
 helpviewer_keywords:
 - Attribute Data Translation dialog box
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1b8d7f28696e04045ca5ac3f11bf38d4c67f60c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b17c7aba04bc832fd3554d82dd885e8add05214
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210365"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Traducción de datos de atributos (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Traducción de datos de atributos** para establecer la columna que contiene los datos del título de la traducción, así como la intercalación y el orden que desea utilizar en los datos traducidos. Para mostrar el cuadro de diálogo **Traducción de datos de atributos** :  
@@ -59,14 +59,14 @@ ms.locfileid: "36197055"
  **Distingue mayúsculas de minúsculas**  
  Seleccione esta opción para ordenar y comparar datos según las reglas de los diccionarios del idioma o alfabeto asociado y distinguir letras mayúsculas de minúsculas.  
   
- Si no selecciona esta opción, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que las mayúsculas y las minúsculas son versiones de letras iguales. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no define si el orden de las letras en minúsculas es inferior o superior en relación con mayúsculas las letras cuando **entre mayúsculas y minúsculas** no está seleccionada.  
+ Si no selecciona esta opción, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que las mayúsculas y las minúsculas son versiones de letras iguales. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no define si el orden de las letras minúsculas es inferior o superior en relación con mayúscula las letras si **distingue mayúsculas de minúsculas** no está seleccionada.  
   
- **Con distinción de acentos**  
+ **Distinguir acentos**  
  Seleccione esta opción para ordenar y comparar datos según las reglas de los diccionarios del idioma o alfabeto asociado y distinguir los caracteres acentuados de los no acentuados. Por ejemplo, 'a' no es igual a 'á'.  
   
  Si no está seleccionada, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que las letras con y sin acentos son iguales.  
   
- **Kana confidencial**  
+ **Distinguir Kana**  
  Seleccione esta opción para ordenar y comparar datos según las reglas de los diccionarios del idioma o alfabeto asociado y distinguir los dos tipos de caracteres kana japoneses: hiragana y katakana.  
   
  Si no está seleccionada, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que los caracteres hiragana y katakana son iguales.  

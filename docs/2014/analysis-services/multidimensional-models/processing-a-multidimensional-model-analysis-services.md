@@ -1,5 +1,5 @@
 ---
-title: Procesamiento de objetos de modelo multidimensional | Documentos de Microsoft
+title: Procesamiento de objetos de modelo multidimensional | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online mode [Analysis Services]
 - processing objects [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b933c003e840d0ef145159f278b9054b1637956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9f95df4ac7d0bd9e0dd93c1a55189e9e46f747c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180982"
 ---
 # <a name="multidimensional-model-object-processing"></a>Procesamiento de objetos del modelo multidimensional
   El procesamiento es el paso, o serie de pasos, en los que Analysis Services carga datos de un origen de datos relacional en un modelo multidimensional. Para los objetos que utilizan el almacenamiento MOLAP, los datos se guardan en el disco en la carpeta de archivos de base de datos. Para el almacenamiento ROLAP, el procesamiento se produce a petición, en respuesta a una consulta MDX en un objeto. Para los objetos que utilizan el almacenamiento ROLAP, el procesamiento hace referencia a la actualización de la memoria caché antes de devolver los resultados de la consulta.  
@@ -49,7 +49,7 @@ ms.locfileid: "36197262"
   
 ##  <a name="bkmk_prereq"></a> Requisitos previos  
   
--   El procesamiento requiere permisos administrativos en la instancia de Analysis Services. Si está procesando de forma interactiva desde [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], debe ser miembro del rol de administrador de servidor de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para el procesamiento que se ejecuta de forma desatendida, por ejemplo mediante un paquete de SSIS que se programa mediante el Agente SQL Server, la cuenta utilizada para ejecutar el paquete debe ser miembro del rol administrador del servidor. Para obtener más información acerca de los permisos de administrador de configuración, consulte [conceder permisos de administrador de servidor &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+-   El procesamiento requiere permisos administrativos en la instancia de Analysis Services. Si está procesando de forma interactiva desde [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], debe ser miembro del rol de administrador de servidor de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para el procesamiento que se ejecuta de forma desatendida, por ejemplo mediante un paquete de SSIS que se programa mediante el Agente SQL Server, la cuenta utilizada para ejecutar el paquete debe ser miembro del rol administrador del servidor. Para obtener más información sobre cómo establecer permisos de administrador, consulte [conceder permisos de administrador de servidor &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 -   La cuenta utilizada para recuperar los datos se especifica en el objeto de origen de datos, ya sea como opción de suplantación si utiliza la autenticación de Windows, o como el nombre de usuario en la cadena de conexión si utiliza la autenticación de base de datos. La cuenta debe tener permisos de lectura en orígenes de datos relacionales que utiliza el modelo.  
   

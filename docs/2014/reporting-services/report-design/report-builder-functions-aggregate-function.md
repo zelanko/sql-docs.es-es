@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3d05f8d71c3ce12722f139429e48a2a48e8efd8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 31ccc6a6ad07831ef4d26baf4fb3708ee5fa81b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196867"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172346"
 ---
 # <a name="aggregate-function-report-builder-and-ssrs"></a>Función de agregado (Generador de informes y SSRS)
   Devuelve un agregado personalizado de la expresión especificada, según esté definido en el proveedor de datos.  
@@ -39,7 +39,7 @@ Aggregate(expression, scope)
  Expresión en la que se lleva a cabo la agregación. La expresión debe ser una referencia de campo sencilla.  
   
  *ámbito*  
- (`String`) El nombre de un conjunto de datos, grupo o región de datos que contiene el informe de elementos que se va a aplicar la función de agregado. *Scope* tiene que ser una constante de cadena y no puede ser una expresión. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
+ (`String`) Nombre de un conjunto de datos, grupo o región de datos que contiene el informe de elementos que se va a aplicar la función de agregado. *Scope* tiene que ser una constante de cadena y no puede ser una expresión. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
   
 ## <a name="return-type"></a>Tipo devuelto  
  El tipo de valor devuelto viene determinado por el proveedor de datos. Devuelve `Nothing` si el proveedor de datos no admite esta función o datos no están disponibles.  
@@ -49,12 +49,12 @@ Aggregate(expression, scope)
   
  Cuando se muestra la combinación de valores agregados y valores de conjunto de datos de detalle en las filas de detalles de una región de datos Tablix, normalmente no se incluyen los agregados de servidor porque no son datos de detalle. Sin embargo, es probable que desee mostrar todos los valores recuperados para el conjunto de datos y personalizar la forma en que se calculan y se muestran los datos agregados.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] detecta el uso de la `Aggregate` función en expresiones en el informe para determinar si se deben mostrar los agregados de servidor en las filas de detalles. Si incluye `Aggregate` en una expresión en una región de datos, agregados de servidor solo pueden aparecer en el grupo total o grand total de filas, no en las filas de detalle. Si desea mostrar los agregados de servidor en las filas de detalles, no use la función `Aggregate`.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] detecta el uso de la `Aggregate` función en las expresiones del informe con el fin de determinar si se mostrarán los agregados de servidor en las filas de detalles. Si incluye `Aggregate` en una expresión en una región de datos, los agregados de servidor solo pueden aparecer en el grupo total o grand total de filas, no en las filas de detalle. Si desea mostrar los agregados de servidor en las filas de detalles, no use la función `Aggregate`.  
   
  Para cambiar este comportamiento predeterminado, cambie el valor de la opción **Interpretar los subtotales como filas de detalles** en el cuadro de diálogo **Propiedades del conjunto de datos** . Si esta opción se establece en `True`, todos los datos, incluidos los agregados de servidor, aparecen como datos de detalle. Si se establece en `False`, los agregados de servidor aparecen como totales. El valor de esta propiedad afecta a todas las regiones de datos que están vinculadas a este conjunto de datos.  
   
 > [!NOTE]  
->  Todos los grupos contenedores del elemento de informe que hacen referencia a  `Aggregate` deben incluir referencias de campo sencillas en sus expresiones de grupo; por ejemplo, `[FieldName]`. No se puede utilizar `Aggregate` en una región de datos que se utiliza expresiones de grupo complejas. Para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] extensión de procesamiento de datos, la consulta debe incluir campos MDX de tipo `LevelProperty` (no `MemberProperty`) para admitir la agregación mediante la `Aggregate`función.  
+>  Todos los grupos contenedores del elemento de informe que hacen referencia a  `Aggregate` deben incluir referencias de campo sencillas en sus expresiones de grupo; por ejemplo, `[FieldName]`. No puede usar `Aggregate` en una región de datos que usa expresiones de grupo complejas. Para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] extensión de procesamiento de datos, la consulta debe incluir campos MDX del tipo `LevelProperty` (no `MemberProperty`) para admitir la agregación con el `Aggregate`función.  
   
  *Expression* puede contener las llamadas a las funciones de agregados anidados con las siguientes excepciones y condiciones:  
   
@@ -62,7 +62,7 @@ Aggregate(expression, scope)
   
 -   *Scope* , para los agregados anidados, no puede ser el nombre de un conjunto de datos.  
   
--   *Expresión* no debe contener `First`, `Last`, `Previous`, o `RunningValue` funciones.  
+-   *Expresión* no puede contener `First`, `Last`, `Previous`, o `RunningValue` funciones.  
   
 -   *Expression* no debe contener a los agregados anidados que especifican *recursive*.  
   
@@ -71,7 +71,7 @@ Aggregate(expression, scope)
  Para más información sobre los agregados recursivos, vea [Crear un grupo de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 ## <a name="comparing-the-aggregate-and-sum-functions"></a>Diferencias entre las funciones Aggregate y Sum  
- El `Aggregate` función difiere de las funciones agregadas numéricas como `Sum` en que la `Aggregate` función devuelve un valor que se calcula mediante la extensión de procesamiento de datos o proveedor de datos. Las funciones agregadas numéricas como `Sum` devuelve un valor calculado por el procesador de informes en un conjunto de datos del conjunto de datos que viene determinado por la *ámbito* parámetro. Para más información, vea la lista de funciones de agregado en [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
+ El `Aggregate` función difiere de las funciones agregadas numéricas como `Sum` en que el `Aggregate` función devuelve un valor que se calcula mediante la extensión de procesamiento de datos o proveedor de datos. Las funciones agregadas numéricas como `Sum` devuelven un valor calculado por el procesador de informes en un conjunto de datos del conjunto de datos que viene determinada por la *ámbito* parámetro. Para más información, vea la lista de funciones de agregado en [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo de código siguiente muestra una expresión que recupera un agregado de servidor para el campo `LineTotal`. La expresión se agrega a una celda de una fila que pertenece al grupo `GroupbyOrder`.  
@@ -81,9 +81,9 @@ Aggregate(expression, scope)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Expresión que se utiliza en los informes &#40;el generador de informes SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;el generador de informes SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

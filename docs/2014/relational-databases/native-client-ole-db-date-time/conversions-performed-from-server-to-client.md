@@ -1,34 +1,32 @@
 ---
-title: Las conversiones realizan de servidor a cliente | Documentos de Microsoft
+title: Las conversiones realizan de servidor a cliente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9898b4d4bfd811076ca8eb93aba1679ed3c96140
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 28d992cdc8536fc0c8e8b93322de191c614b7c51
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106546"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430864"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversiones realizadas de servidor a cliente
   En este tema se describen las conversiones de fecha y hora realizadas entre [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior) y una aplicación cliente escrita con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.  
   
 ## <a name="conversions"></a>Conversiones  
- En la tabla siguiente se describen las conversiones entre el tipo devuelto al cliente y el tipo del enlace. Para los parámetros de salida, si se ha llamado ICommandWithParameters:: SetParameterInfo y el tipo especificado en *pwszDataSourceType* no coincide con el tipo real en el servidor, una conversión implícita se realizará por el servidor , y el tipo devuelto al cliente coincidirá con el tipo especificado mediante ICommandWithParameters:: SetParameterInfo. Esto puede conducir a resultados de conversión inesperados cuando las reglas de conversión del servidor son distintas de las descritas en este tema. Por ejemplo, cuando se debe proporcionar una fecha predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza 1900-1-1 en lugar de 1899-12-30.  
+ En la tabla siguiente se describen las conversiones entre el tipo devuelto al cliente y el tipo del enlace. Para los parámetros de salida, si se ha llamado a ICommandWithParameters:: SetParameterInfo y el tipo especificado en *pwszDataSourceType* no coincide con el tipo real en el servidor, una conversión implícita se realizará por el servidor , y el tipo devuelto al cliente coincidirá con el tipo especificado a través de ICommandWithParameters:: SetParameterInfo. Esto puede conducir a resultados de conversión inesperados cuando las reglas de conversión del servidor son distintas de las descritas en este tema. Por ejemplo, cuando se debe proporcionar una fecha predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza 1900-1-1 en lugar de 1899-12-30.  
   
 |A -><br /><br /> De|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
@@ -52,7 +50,7 @@ ms.locfileid: "36106546"
 |------------|-------------|  
 |Aceptar|No es necesaria la conversión.|  
 |-|No se admite la conversión. Si el enlace se valida cuando se llama a IAccessor:: CreateAccessor, se devuelve DBBINDSTATUS_UPSUPPORTEDCONVERSION en *rgStatus*. Cuando se aplaza la comprobación de descriptor de acceso, se establece DBSTATUS_E_BADACCESSOR.|  
-|1|Los campos de hora se establecen en cero.|  
+|1|Los campos de tiempo se establecen en cero.|  
 |2|Se establece DBSTATUS_E_CANTCONVERTVALUE.|  
 |3|La zona horaria se establece en cero.|  
 |4|Si el búfer del cliente no es bastante grande, se establece DBSTATUS_S_TRUNCATED. Cuando el tipo de servidor incluye fracciones de segundo, el número de dígitos de la cadena de resultado coincide exactamente con la escala del tipo de servidor.|  

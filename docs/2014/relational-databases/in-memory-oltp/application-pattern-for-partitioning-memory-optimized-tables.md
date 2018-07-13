@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ef7be1ca170df9efb0a4b76ab4b7f451b6742dbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ad61c1d762a412d9a314b5e41cc2908c0cca704f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188502"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Patrón de aplicación para crear particiones de tablas con optimización para memoria
   
-            [!INCLUDE[hek_2](../../includes/hek-2-md.md)] admite un patrón en el que una cantidad limitada de datos activos se conserva en una tabla optimizada para memoria, mientras que los datos a los que se tiene acceso con menor frecuencia se procesan en disco. Normalmente, esto sería un escenario donde se almacenan los datos en función de un `datetime` clave.  
+            [!INCLUDE[hek_2](../../includes/hek-2-md.md)] admite un patrón en el que una cantidad limitada de datos activos se conserva en una tabla optimizada para memoria, mientras que los datos a los que se tiene acceso con menor frecuencia se procesan en disco. Normalmente, esto sería un escenario donde se almacenan los datos según un `datetime` clave.  
   
  Se pueden emular las tablas con particiones con tablas optimizadas para memoria manteniendo una tabla con particiones y una tabla optimizada para memoria con un esquema común. Los datos actuales se insertarían y actualizarían en la tabla optimizada para memoria, mientras que los datos a los que se tiene acceso con menor frecuencia se conservarían en la tabla con particiones tradicional.  
   

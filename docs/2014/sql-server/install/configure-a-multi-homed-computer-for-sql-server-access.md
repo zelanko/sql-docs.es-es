@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72ea93688420a150d0193c9f91feb26dad91cffe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aa768aea67d95a107380600fee663f2f0ffa5ee8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183902"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurar un equipo de host múltiple para el acceso a SQL Server
   Cuando un servidor debe proporcionar una conexión a dos o más redes o subredes de la red, un escenario típico utiliza un equipo de host múltiple. Con frecuencia, este equipo se encuentra en una red perimetral (también conocida como DMZ, zona desmilitarizada o subred filtrada). En este tema se describe cómo configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Firewall de Windows con seguridad avanzada para proporcionar las conexiones de red a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un entorno de host múltiple.  
@@ -103,7 +103,7 @@ ms.locfileid: "36196371"
   
 8.  En la página **Protocolos y puertos** , seleccione **TCP**.  
   
-9. Seleccione **Puertos locales especificados**. Escriba los números de puertos separados por comas y, a continuación, haga clic en **Siguiente**. En este ejemplo, configurará el puerto predeterminado; por lo tanto, escriba `1433`.  
+9. Seleccione **Puertos locales especificados**. Escriba los números de puertos separados por comas y, a continuación, haga clic en **Siguiente**. En este ejemplo, va a configurar el puerto predeterminado; por lo tanto, escriba `1433`.  
   
 10. En la página **Acción** , revise las opciones. En este ejemplo no se usa el firewall para aplicar conexiones seguras. Por lo tanto, haga clic en **Permitir la conexión**y, a continuación, haga clic en **Siguiente**.  
   

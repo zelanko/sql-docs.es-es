@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10058"
 - "10057"
@@ -16,18 +16,18 @@ f1_keywords:
 - sql12.rtp.rptdesigner.deletecolumns.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a15db177426dc39d10363abbfb2b160ef82d7ab5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8e064d68544b72844d364047b51ba90cda39c63b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163832"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celdas, filas y columnas de la región de datos Tablix (Generador de informes y SSRS)
-  Para controlar el modo en que las filas y columnas de una región de datos Tablix muestran los datos en un informe, debe entender cómo especificar las filas y columnas para los datos de detalle, los datos de grupo, las etiquetas y los totales. En muchos casos, puede usar las estructuras predeterminadas de una tabla, matriz o lista para mostrar los datos. Para obtener más información, consulte [tablas &#40;el generador de informes y SSRS&#41;](tables-report-builder-and-ssrs.md), [Matrices &#40;el generador de informes y SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), o [enumera &#40;el generador de informes y SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+  Para controlar el modo en que las filas y columnas de una región de datos Tablix muestran los datos en un informe, debe entender cómo especificar las filas y columnas para los datos de detalle, los datos de grupo, las etiquetas y los totales. En muchos casos, puede usar las estructuras predeterminadas de una tabla, matriz o lista para mostrar los datos. Para obtener más información, consulte [tablas &#40;generador de informes y SSRS&#41;](tables-report-builder-and-ssrs.md), [Matrices &#40;generador de informes y SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), o [enumera &#40;el generador de informes y SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
  Una región de datos Tablix muestra los datos detallados en filas y columnas de detalles, y los datos agrupados en filas y columnas de grupo. Al agregar grupos de filas y de columnas a una región de datos Tablix, las filas y las columnas en las que van a mostrarse los datos se agregan automáticamente. Puede agregar y quitar manualmente filas y columnas para personalizar una región de datos Tablix y controlar cómo se muestran los datos en el informe.  
   
@@ -124,6 +124,6 @@ ms.locfileid: "36196172"
  Puede dividir una celda combinada con anterioridad. Las celdas se pueden dividir horizontalmente por columnas o verticalmente por filas. Para dividir una celda en un bloque de celdas, primero divida horizontalmente la celda y, a continuación, divídala verticalmente tantas veces como sea necesario.  
   
 ## <a name="see-also"></a>Vea también  
- [Región de datos Tablix &#40;el generador de informes SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Región de datos Tablix &#40;generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

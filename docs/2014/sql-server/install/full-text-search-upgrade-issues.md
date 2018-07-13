@@ -1,5 +1,5 @@
 ---
-title: Problemas de actualización de búsqueda de texto completo | Documentos de Microsoft
+title: Problemas de actualización de búsqueda de texto completo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: d104a0c3-0492-4de6-8ce5-eacee47c978f
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 094ea66272d450b6cc8da3e5760dba3112d2cfc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e41b6753b54120c0c31ac67348a3e8e73beac31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192455"
 ---
 # <a name="full-text-search-upgrade-issues"></a>Problema de actualización de búsqueda de texto completo
   Los temas de esta sección describen los problemas de la búsqueda de texto completo que podrían afectar a la actualización. Los temas describen acciones que se pueden llevar a cabo para mitigar el efecto de estos cambios en el entorno.  
   
 ## <a name="see-also"></a>Vea también  
  [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
- [Resolver problemas de actualización](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
+ [Resolver problemas de la actualización](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

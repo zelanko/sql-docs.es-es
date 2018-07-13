@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledest.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc290b7be9c9b97d06432d677b2337cc855389a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8898d3932b809596bbbc0aa415c34bfdb4200c72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239285"
 ---
 # <a name="raw-file-destination"></a>destino de archivo sin formato
   El destino de archivo sin formato escribe datos sin procesar en un archivo. Como el formato de los datos es el nativo del destino, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo. Esto significa que el destino de archivo sin formato puede escribir datos más rápidamente que otros destinos, como el destino de archivo plano o los destinos de OLE DB.  
@@ -117,7 +117,7 @@ ms.locfileid: "36111401"
   
 1.  Establezca la propiedad WriteOption en **CreateOnce** o **CreateAlways**y ejecute una iteración del bucle. Se crea el archivo. Así se garantiza que los metadatos de los datos agregados y del archivo sean iguales.  
   
-2.  Restablece la propiedad WriteOption en **anexado** y establezca la propiedad ValidateExternalMetadata en `False`.  
+2.  Restablece la propiedad WriteOption en **Append** y establezca la propiedad ValidateExternalMetadata en `False`.  
   
  Si usa la opción **TruncateAppend** en lugar de la opción **Append** , truncará las filas que se agregaron en toda iteración anterior y anexará filas nuevas. Con la opción **TruncateAppend** también es necesario que los datos tengan el mismo formato que el archivo.  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, column sets
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec3a9c752a3ba03f61b21e6280afe47361435784
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6c6807bbb743b39177e282f965916e5d5d78e4bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258221"
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de columnas
   Las tablas que utilizan columnas dispersas pueden designar un conjunto de columnas que devuelva todas las columnas dispersas de la tabla. Un conjunto de columnas es una representación XML sin tipo que combina todas las columnas dispersas de una tabla en una salida estructurada. Un conjunto de columnas se asemeja a una columna calculada en que el conjunto no se almacena físicamente en la tabla. Un conjunto de columnas difiere de una columna calculada en que el conjunto de columnas se puede actualizar directamente.  
@@ -97,7 +97,7 @@ ms.locfileid: "36113335"
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>Insertar o modificar datos en un conjunto de columnas  
  La manipulación de los datos de una columna dispersa se puede llevar a cabo usando el nombre de las columnas individuales, o bien haciendo referencia al nombre del conjunto de columnas y especificando sus valores usando el formato XML de dicho conjunto. Las columnas dispersas pueden aparecer en cualquier orden en la columna XML.  
   
- Cuando se insertan valores de columnas dispersas o se actualizan mediante el conjunto de columnas XML, los valores que se insertan en las columnas dispersas subyacentes se convierten implícitamente desde el `xml` tipo de datos. En el caso de columnas numéricas, un valor en blanco en el XML para la columna numérica se convierte en una cadena vacía. Esto hace que se inserte un cero en la columna numérica, tal y como se muestra en el ejemplo siguiente.  
+ Cuando los valores de columna dispersa se insertan o actualizan mediante el conjunto de columnas XML, los valores que se insertan en las columnas dispersas subyacentes se convierten implícitamente de la `xml` tipo de datos. En el caso de columnas numéricas, un valor en blanco en el XML para la columna numérica se convierte en una cadena vacía. Esto hace que se inserte un cero en la columna numérica, tal y como se muestra en el ejemplo siguiente.  
   
 ```  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
@@ -111,7 +111,7 @@ GO
  En este ejemplo, no se ha especificado ningún valor para la columna `i`, pero se ha insertado el valor `0` .  
   
 ## <a name="using-the-sqlvariant-data-type"></a>Usar el tipo de datos sql_variant  
- El `sql_variant` date (tipo) puede almacenar varios tipos de datos diferentes, como `int`, `char`, y `date`. Los conjuntos de columnas generan la información sobre el tipo de datos, como la escala, la precisión y la información de configuración regional que se asocia a un valor `sql_variant`, como atributos en la columna XML generada. Si intenta proporcionar estos atributos en una instrucción XML generada de forma personalizada como una entrada para una operación de inserción o de actualización en un conjunto de columnas, algunos de dichos atributos son obligatorios y a otros se les asigna un valor predeterminado. En la tabla siguiente se enumeran los tipos de datos y los valores predeterminados que genera el servidor cuando no se proporciona el valor.  
+ El `sql_variant` tipo fecha puede almacenar varios tipos de datos diferentes, tales como `int`, `char`, y `date`. Los conjuntos de columnas generan la información sobre el tipo de datos, como la escala, la precisión y la información de configuración regional que se asocia a un valor `sql_variant`, como atributos en la columna XML generada. Si intenta proporcionar estos atributos en una instrucción XML generada de forma personalizada como una entrada para una operación de inserción o de actualización en un conjunto de columnas, algunos de dichos atributos son obligatorios y a otros se les asigna un valor predeterminado. En la tabla siguiente se enumeran los tipos de datos y los valores predeterminados que genera el servidor cuando no se proporciona el valor.  
   
 |Tipo de datos|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Longitud máxima|Precisión|Escala|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  

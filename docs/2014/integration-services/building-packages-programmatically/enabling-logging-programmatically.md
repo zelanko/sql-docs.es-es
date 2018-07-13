@@ -27,13 +27,13 @@ ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a4e30670b2ba7241b38b3200d94804f085d0cdaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69210fcc9a629384bf231d020cff6be755913f29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182722"
 ---
 # <a name="enabling-logging-programmatically"></a>Habilitar el registro mediante programación
   El motor en tiempo de ejecución proporciona una colección de objetos <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> que permiten capturar información específica del evento durante la validación y ejecución de paquetes. Los objetos <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> están disponibles para los objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>, incluidos los objetos <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> y <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. El registro se habilita en contenedores individuales o en el paquete completo.  
@@ -119,7 +119,7 @@ Module Module1
 End Module  
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md)  

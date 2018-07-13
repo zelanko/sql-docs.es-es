@@ -1,5 +1,5 @@
 ---
-title: Conceder permisos para una dimensión (Analysis Services) | Documentos de Microsoft
+title: Conceder permisos en una dimensión (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensions.f1
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - permissions [Analysis Services], dimensions
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 212f89372b510b7a3a1d73702ee231d641fd465b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 553416d7dd8395e53ca5bbf4be5cdfa9b9d2fc5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177052"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Otorgar permisos para una dimensión (Analysis Services)
   La seguridad de dimensión se usa para establecer permisos en un objeto de dimensión, no en sus datos. Por lo general, el principal objetivo a la hora de establecer permisos en una dimensión es permitir o denegar el acceso a las operaciones de procesamiento.  
@@ -55,7 +55,7 @@ ms.locfileid: "36196751"
   
      De forma predeterminada, los permisos se establecen en **Lectura**.  
   
-     Aunque **Lectura y escritura** está disponible, se recomienda no usar este permiso. **Lectura y escritura** se usa en escenarios de reescritura de dimensiones, que están en desuso. Vea [características en desuso de Analysis Services en SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md).  
+     Aunque **Lectura y escritura** está disponible, se recomienda no usar este permiso. **Lectura y escritura** se usa en escenarios de reescritura de dimensiones, que están en desuso. Consulte [características en desuso de Analysis Services en SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md).  
   
      Si lo prefiere, puede establecer permisos de **Leer definición** y **Procesar** en objetos de dimensión individuales, siempre que esos permisos no se hayan establecido al nivel de la base de datos. Vea [Otorgar permisos de procesamiento &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) y [Otorgar permisos Leer definición en metadatos de objetos &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) para obtener más información.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36196751"
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Roles** para la base de datos correspondiente en Explorador de objetos y, después, haga clic en un rol de base de datos (o cree un rol de base de datos).  
   
-2.  En el **dimensiones** panel, el cambio de la dimensión se establece en \<nombre del cubo > **dimensiones de cubo**.  
+2.  En el **dimensiones** panel, cambie la dimensión conjunto a \<cubo-name > **dimensiones del cubo**.  
   
      De forma predeterminada, los permisos se heredan de la dimensión de base de datos que corresponda. Desactive la casilla **Heredar** para modificar los permisos de **Lectura** a **Lectura y escritura**. Antes de usar **Lectura y escritura**, asegúrese de leer la nota de la sección anterior.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36196751"
  [Roles y permisos &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
  [Conceder permisos para cubos o modelos &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [Conceder permisos en las estructuras de minería de datos y modelos &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Conceder acceso personalizado a los datos de la dimensión &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Conceder acceso personalizado a los datos de las celdas &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [Conceder acceso personalizado a datos de dimensión &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Conceder acceso personalizado a datos de la celda &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento Filter (Trace) (ASSL) | Documentos de Microsoft
+title: Elemento Filter (Trace) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Filter element
 ms.assetid: 411a598e-3bb1-487b-9f37-cce4b57a67b4
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8997c652883a70572fa83351be51b3381a6fdb7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17f062bf17436a1f177c29deef8654402ffd7d6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159356"
 ---
 # <a name="filter-element-trace-assl"></a>Elemento Filter (Trace) (ASSL)
-  Contiene un fragmento del documento XML que describe la [seguimiento](../objects/trace-element-assl.md) filtro.  
+  Contiene un fragmento del documento XML que describe el [seguimiento](../objects/trace-element-assl.md) filtro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36196317"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `Filter` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Trace>.  
+ El elemento que se corresponde con el elemento primario de `Filter` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: KPI (Diseñador de cubos) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: KPI (Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpisview.f1
 ms.assetid: 3cd99acc-368d-4e21-ad18-298fff056acd
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6fcfa1911804a74719a9cbaa84c92b3f30536d0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a1e1ebf0f90e0266061ff60e6aed6cbf8111bcb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192513"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>KPI (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use la pestaña **KPI** del Diseñador de cubos para ver y editar indicadores clave de rendimiento (KPI) en el cubo seleccionado.  

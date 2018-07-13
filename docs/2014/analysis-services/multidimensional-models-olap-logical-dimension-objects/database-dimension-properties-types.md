@@ -1,5 +1,5 @@
 ---
-title: Tipos de dimensión | Documentos de Microsoft
+title: Tipos de dimensiones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -29,18 +29,18 @@ helpviewer_keywords:
 - Type property
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1fe0311a992f0f8c067ba6e7096698f96f8bc4bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fe72ba73f73d2c2d87672642e403c5ed0e4f541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189052"
 ---
 # <a name="dimension-types"></a>Tipos de dimensiones
-  El valor de la propiedad `Type` proporciona información acerca del contenido de una dimensión al servidor y a las aplicaciones cliente. En algunos casos, el valor de `Type` solo constituye una guía para las aplicaciones cliente y es opcional. En otros casos, como en las dimensiones `Accounts` o `Time`, la configuración de la propiedad `Type` para la dimensión y sus atributos determina comportamientos específicos basados en el servidor y puede que sea necesario implementar ciertos comportamientos en el cubo. Por ejemplo, la propiedad `Type` de una dimensión se puede establecer en `Accounts` para indicar a las aplicaciones cliente que la dimensión estándar contiene atributos de cuenta. Para obtener más información sobre el tiempo, cuenta y las dimensiones de moneda, vea [crear una dimensión de tipo de fecha](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [crear una cuenta financiera de dimensión de tipo de elementos primarios y secundarios](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), y [crear una divisa tipo de dimensión](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
+  El valor de la propiedad `Type` proporciona información acerca del contenido de una dimensión al servidor y a las aplicaciones cliente. En algunos casos, el valor de `Type` solo constituye una guía para las aplicaciones cliente y es opcional. En otros casos, como en las dimensiones `Accounts` o `Time`, la configuración de la propiedad `Type` para la dimensión y sus atributos determina comportamientos específicos basados en el servidor y puede que sea necesario implementar ciertos comportamientos en el cubo. Por ejemplo, la propiedad `Type` de una dimensión se puede establecer en `Accounts` para indicar a las aplicaciones cliente que la dimensión estándar contiene atributos de cuenta. Para obtener más información sobre el tiempo, la cuenta y las dimensiones de moneda, vea [crear una dimensión de tipo Date](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [crear una cuenta financiera de dimensión de tipo de elementos primarios y secundarios](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), y [crear una moneda tipo de dimensión](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
   
  El valor predeterminado para el tipo de dimensión es `Regular`, que no realiza suposiciones acerca del contenido de la dimensión. Se trata del valor predeterminado para todas las dimensiones al definir inicialmente una dimensión, a menos que se especifique `Time` al definir la dimensión mediante el Asistente para Dimensiones. También se debe dejar `Regular` como tipo de dimensión si el Asistente para dimensiones no muestra un tipo adecuado para el tipo de dimensión.  
   

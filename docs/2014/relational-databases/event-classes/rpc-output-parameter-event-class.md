@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - RPC Output Parameter event class
 ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 20e518b7a9b7bf9770e5983b5d8e4b79bc049508
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 425d99b10c80d29196abd94e19c37750a78994b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211375"
 ---
 # <a name="rpc-output-parameter-event-class"></a>RPC Output Parameter [clase de eventos]
   La clase de eventos RPC Output Parameter realiza el seguimiento de los valores de los parámetros de salida de las llamadas a procedimiento remoto (RPC) después de su ejecución.  

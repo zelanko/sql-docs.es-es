@@ -1,5 +1,5 @@
 ---
-title: Propiedades de características | Documentos de Microsoft
+title: Característica propiedades | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQMSupportEnabled property
 - ComUdfEnabled property
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - UseCachedPageAllocators property
 ms.assetid: a34d046a-6562-4d98-b827-37cebc6d77b4
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c91c6d037bbb01c47f22159d846b40f8e1bbcca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ae26995283bcfa50a33f78ab55536f8aac75453
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188962"
 ---
 # <a name="feature-properties"></a>Propiedades de características
   Las propiedades de características corresponden a las características del producto, la mayor parte de ellas avanzadas, incluidas las propiedades que controlan los vínculos entre las instancias de servidor.  
@@ -52,7 +52,7 @@ ms.locfileid: "36114126"
 |`ResourceMonitoringEnabled`|1|Una propiedad booleana que indica si los contadores de supervisión de recursos internos están habilitados. Esta propiedad está activada de forma predeterminada. Cuando se habilita, esta propiedad permite a los contadores recopilar datos de uso acerca de la actividad de la E/S, la memoria y la CPU.<br /><br /> Los contadores de supervisión de recursos internos se usan en las Vistas de administración dinámica (DVM) que informan de la utilización de los recursos. Si deshabilita esta propiedad, las consultas DMV siguen ejecutándose, pero el conjunto de resultados no será válido. Entre las consultas DMV que dependen de esta propiedad se incluyen las siguientes:<br />**Conjunto de filas DISCOVER_OBJECT_ACTIVITY**<br />**Conjunto de filas DISCOVER_COMMAND_OBJECTS**<br />**DISCOVER_SESSIONS** (para SESSION_READS, SESSION_WRITES, SESSION_CPU_TIME_MS)<br /><br /> <br /><br /> En un sistema de varios núcleos que usa la arquitectura NUMA, si se deshabilita esta propiedad, puede mejorar el rendimiento de las consultas, en particular para altas cargas de trabajo multi-usuario. Tendrá que ejecutar pruebas comparativas para determinar si el rendimiento de las consultas mejora al cambiar esta propiedad. Para obtener las prácticas recomendadas para realizar pruebas comparativas, como es borrar la memoria caché y evitar errores comunes, vea la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).|  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar propiedades del servidor de Analysis Services](server-properties-in-analysis-services.md)   
+ [Configurar las propiedades del servidor en Analysis Services](server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Usar vistas de administración dinámica &#40;DMV&#41; supervisar Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   

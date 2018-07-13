@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 22ec8f6785e33323931c5d1199b1c308285be088
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bb750196b31823e604d86a99aabda508a0a06779
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161976"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Agregar datos de orígenes de datos externos (SSRS)
   Para recuperar datos de un origen de datos externo, use una conexión de datos. La información de la conexión de datos la suele proporcionar el propietario del origen de datos externo, que es responsable de otorgar los permisos y de especificar qué tipos de credenciales se han de usar. La información de la conexión de datos se guarda como un origen de datos de informe. El tipo de origen de datos especifica qué extensión de datos usar para recuperar los datos.  
@@ -73,7 +73,7 @@ ms.locfileid: "36114200"
 ##  <a name="HowTo"></a> Temas de procedimientos  
  Esta sección contiene instrucciones paso a paso para trabajar con conexiones de datos, orígenes de datos y conjuntos de datos.  
   
- [Agregar y comprobar una conexión de datos o un origen de datos &#40;el generador de informes SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36114200"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-datasets-ssrs.md)|Proporciona información general sobre cómo obtener acceso a los datos del informe.|  
+|[Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)|Proporciona información general sobre cómo obtener acceso a los datos del informe.|  
 |[Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)|Proporciona información sobre las conexiones de datos y los orígenes de datos.|  
 |[Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Proporciona información sobre conjuntos de datos compartidos e incrustados.|  
 |[Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)|Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.|  
@@ -116,7 +116,7 @@ ms.locfileid: "36114200"
 
   
 ## <a name="see-also"></a>Vea también  
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-datasets-ssrs.md)   
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)   
  [Diseñadores de consultas &#40;Generador de informes&#41;](../query-designers-report-builder.md)  
   
   

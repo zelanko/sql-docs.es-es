@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos CubeHierarchy (ASSL) | Documentos de Microsoft
+title: Tipo de datos CubeHierarchy (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubeHierarchy data type
 ms.assetid: cd633409-0c14-4dd9-97cc-3d30e25df24f
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48176b4096b7fa7ba8e1847750410be0f65da552
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d719b6c841b27df473599514dc12c4e90644610
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176202"
 ---
 # <a name="cubehierarchy-data-type-assl"></a>Tipo de datos CubeHierarchy (ASSL)
   Define un tipo de datos primitivo que representa información sobre un [jerarquía](../objects/hierarchy-element-assl.md) elemento en un [cubo](../objects/cube-element-assl.md) elemento.  
@@ -53,7 +53,7 @@ ms.locfileid: "36196321"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|None|  
-|Elementos secundarios|[Anotaciones](../collections/annotations-element-assl.md), [habilitado](../properties/enabled-element-assl.md), [HierarchyID](../properties/id-element-assl.md), [nombre](../properties/name-element-assl.md), [OptimizedState](../properties/state-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
+|Elementos secundarios|[Las anotaciones](../collections/annotations-element-assl.md), [habilitado](../properties/enabled-element-assl.md), [HierarchyID](../properties/id-element-assl.md), [nombre](../properties/name-element-assl.md), [OptimizedState](../properties/state-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
 |Elementos derivados|[Jerarquía](../objects/hierarchy-element-assl.md) ([jerarquías](../collections/hierarchies-element-assl.md) colección de [CubeDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Notas  

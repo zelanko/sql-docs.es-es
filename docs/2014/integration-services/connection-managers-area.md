@@ -1,5 +1,5 @@
 ---
-title: Área de administradores de conexión | Documentos de Microsoft
+title: Área de administradores de conexión | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.connectionstray.f1
 ms.assetid: 0d0c4862-19c0-4513-a5f4-3fe97f635cf6
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 572b51b4d55fc25d5c02a34a52e2643080d0ba00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3fd4548a65895141d5a1748453536a5872f3a0bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158736"
 ---
 # <a name="connection-managers-area"></a>Área de administradores de conexión
   Los paquetes utilizan administradores de conexión para conectar con orígenes de datos como archivos, bases de datos relacionales y servidores.  

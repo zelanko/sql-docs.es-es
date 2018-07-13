@@ -1,31 +1,29 @@
 ---
-title: Fecha y hora mejoras | Documentos de Microsoft
+title: Mejoras de fecha y hora | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a30f330bf4d7e5976d3873bec5e6042f498c9c95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0a6b3b37f1265601ab63f1db370a3aa95a3420d2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107170"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428854"
 ---
-# <a name="date-and-time-improvements"></a>Fecha y hora mejoras
+# <a name="date-and-time-improvements"></a>Mejoras de fecha y hora
   En este tema se describe la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con los nuevos tipos de datos de fecha y hora que se introdujeron en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   
- Para obtener más información acerca de las mejoras de fecha y hora, vea [fecha y hora mejoras &#40;OLE DB&#41; ](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md) y [fecha y hora mejoras &#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información acerca de las mejoras de fecha y hora, vea [mejoras de fecha y hora &#40;OLE DB&#41; ](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md) y [mejoras de fecha y hora &#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
  Para obtener información acerca de las aplicaciones de ejemplo que muestran esta característica, consulte [ejemplos de programación de datos de SQL Server](http://msftdpprodsamples.codeplex.com/).  
   
@@ -38,7 +36,7 @@ ms.locfileid: "36107170"
 ### <a name="use-time-as-a-distinct-data-type"></a>Usar time como un tipo de datos distinto  
  OLE DB ya tiene un tipo de datos que solamente contiene la hora, DBTYPE_DBTIME, que ofrece una precisión de 1 segundo. En ODBC, el tipo equivalente es SQL_TYPE_TIME (SQL_TIME para aplicaciones ODBC 2.0).  
   
- El nuevo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiempo en el tipo de datos tiene fracciones de segundos con precisión de 100 nanosegundos. Para ello, nuevos tipos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client: DBTYPE_DBTIME2 (OLE DB) y SQL_SS_TIME2 (ODBC). Las aplicaciones existentes escritas para utilizar horas sin fracciones de segundo pueden utilizar columnas time(0). Los tipos existentes DBTYPE_TIME de OLE DB y SQL_TYPE_TIME de ODBC y sus estructuras correspondientes deben funcionar correctamente, a menos que las aplicaciones se basen en el tipo devuelto en los metadatos.  
+ El nuevo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiempo de tipo de datos tiene fracciones de segundos con precisión de 100 nanosegundos. Esto requiere nuevos tipos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client: DBTYPE_DBTIME2 (OLE DB) y SQL_SS_TIME2 (ODBC). Las aplicaciones existentes escritas para utilizar horas sin fracciones de segundo pueden utilizar columnas time(0). Los tipos existentes DBTYPE_TIME de OLE DB y SQL_TYPE_TIME de ODBC y sus estructuras correspondientes deben funcionar correctamente, a menos que las aplicaciones se basen en el tipo devuelto en los metadatos.  
   
 ### <a name="use-time-as-a-distinct-data-type-with-extended-fractional-seconds-precision"></a>Usar time como un tipo de datos distinto con una precisión ampliada para las fracciones de segundo  
  Algunas aplicaciones, como las aplicaciones de fabricación y control de procesos, exigen la capacidad de controlar los datos de hora con una precisión de hasta 100 nanosegundos. Para este propósito, se han introducido los nuevos tipos DBTYPE_DBTIME2 (OLE DB) y SQL_SS_TIME2 (ODBC).  

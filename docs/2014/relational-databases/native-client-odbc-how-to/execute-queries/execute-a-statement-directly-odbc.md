@@ -1,28 +1,26 @@
 ---
-title: Ejecutar directamente una instrucción (ODBC) | Documentos de Microsoft
+title: Ejecutar directamente una instrucción (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statement execution
 ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 81426fde012be101c793b84bbc61c353b7ecd7a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5dd4c28a6d1c025352db117d1aa163d3464989eb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108081"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421534"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>Ejecutar directamente una instrucción (ODBC)
     
@@ -91,6 +89,6 @@ ms.locfileid: "36108081"
  **Nota** Los enlaces de modo de columna y de modo de fila se usan con mayor frecuencia con [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360) y [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) que con [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
   
 ## <a name="see-also"></a>Vea también  
- [Ejecutar consultas temas "Cómo..." &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+ [Ejecutar consultas de temas de procedimientos &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

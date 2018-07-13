@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0d9d1e3076c19df548eb2a1714a2093046fd352
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 2893a0fdb04e834e2eeab0343b23888c244fd036
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157546"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Compute Capacity Limits by Edition of SQL Server
   En este tema se describen los límites de la capacidad de cálculo para diferentes ediciones de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] y sus diferencias en entornos físicos y virtualizados con los procesadores hyperthreaded.  
@@ -86,7 +86,7 @@ ms.locfileid: "36196605"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edición|Capacidad máxima de cálculo que usa una sola instancia ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacidad máxima de cálculo que usa una sola instancia (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Enterprise Edition: Licencia basada en núcleo<sup>1</sup>|Sistema operativo máximo|Sistema operativo máximo|  
+|Enterprise Edition: Licencia Core<sup>1</sup>|Sistema operativo máximo|Sistema operativo máximo|  
 |Desarrollador|Sistema operativo máximo|Sistema operativo máximo|  
 |Evaluation|Sistema operativo máximo|Sistema operativo máximo|  
 |Business Intelligence|Limitada a menos de 4 sockets o 16 núcleos|Sistema operativo máximo|  
@@ -96,7 +96,7 @@ ms.locfileid: "36196605"
 |Express con herramientas|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|  
 |Express con Advanced Services|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|  
   
- <sup>1</sup> Enterprise Edition con el servidor y cliente acceso licencia (CAL) en función de licencias (no disponible para nuevos contratos) está limitado a un máximo de 20 núcleos por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancia. No hay ningún límite en el modelo de licencias de servidor basado en núcleos.  
+ <sup>1</sup> Enterprise Edition con el servidor y cliente acceso licencia (CAL) en función de licencias (no disponible para nuevos contratos) está limitada a un máximo de 20 núcleos por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancia. No hay ningún límite en el modelo de licencias de servidor basado en núcleos.  
   
  En un entorno virtualizado, el límite de la capacidad de cálculo se basa en el número de procesadores lógicos, no en el de núcleos, porque la arquitectura de procesador no está visible para las aplicaciones invitadas.  Por ejemplo, un servidor con cuatro sockets poblados con procesadores de cuatro núcleos y la capacidad de habilitar dos hyperthreads por núcleo contiene 32 procesadores lógicos el hyperthreading habilitado, pero solo 16 procesadores lógicos con el hyperthreading deshabilitado. Los procesadores lógicos se pueden asignar a máquinas virtuales en el servidor con la carga de cálculo de las máquinas virtuales del procesador lógico asignada a un subproceso de ejecución en el procesador físico del servidor host.  
   

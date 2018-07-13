@@ -1,13 +1,11 @@
 ---
-title: Frente a enlazado. Sin enlazar columnas Text e Image | Documentos de Microsoft
+title: Texto delimitado frente a. Sin enlazar columnas Text e Image | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,20 +20,20 @@ helpviewer_keywords:
 - image columns [ODBC]
 ms.assetid: ffd3442e-d880-46e9-b848-2365a09a2406
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c5129c6b865723721bbb6f176893c950cdf905fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5d77a71aae13c9601acc0ba56146e7882e6ee6e7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106735"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430634"
 ---
-# <a name="bound-vs-unbound-text-and-image-columns"></a>Frente a enlazado. Columnas sin enlazar Text e Image
-  Cuando se utilizan cursores de servidor, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC Native Client está optimizado para no transmitir los datos sin delimitar **texto**, **ntext**, o **imagen** columnas en la tiempo **SQLFetch** se lleva a cabo. El **texto**, **ntext**, o **imagen** datos no se recuperan realmente desde el servidor hasta que los problemas de aplicaciones [SQLGetData](../native-client-odbc-api/sqlgetdata.md) para el columna.  
+# <a name="bound-vs-unbound-text-and-image-columns"></a>Texto delimitado frente a. Texto sin delimitar y columnas de imagen
+  Cuando se utilizan cursores de servidor, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client está optimizado para no transmitir los datos sin delimitar **texto**, **ntext**, o **imagen** columnas en el tiempo **SQLFetch** se lleva a cabo. El **texto**, **ntext**, o **imagen** datos no se recuperan realmente desde el servidor hasta que los problemas de aplicaciones [SQLGetData](../native-client-odbc-api/sqlgetdata.md) para el columna.  
   
- Muchas aplicaciones se pueden escribir para que no **texto**, **ntext**, o **imagen** se muestran los datos mientras un usuario se desplaza hacia arriba y hacia abajo en un cursor. Cuando un usuario selecciona una fila para obtener más detalles, la aplicación, a continuación, puede llamar a **SQLGetData** para recuperar la **texto**, **ntext**, o **imagen** datos. Esto evitará que transmitir la **texto**, **ntext**, o **imagen** datos para cualquiera de las filas, el usuario no seleccione y, por tanto, evitar la transmisión de grandes cantidades de datos.  
+ Muchas aplicaciones pueden escribirse para que ningún **texto**, **ntext**, o **imagen** se muestran los datos mientras que un usuario se desplaza hacia arriba y hacia abajo en un cursor. Cuando un usuario selecciona una fila para obtener más detalles, la aplicación, a continuación, puede llamar a **SQLGetData** para recuperar el **texto**, **ntext**, o **imagen** datos. Esto evitará que transmita el **texto**, **ntext**, o **imagen** datos para cualquiera de las filas que el usuario no seleccione y, por tanto, puede evitar la transmisión de muy gran tamaño cantidades de datos.  
   
 ## <a name="see-also"></a>Vea también  
  [Administrar columnas Text e Image](managing-text-and-image-columns.md)   

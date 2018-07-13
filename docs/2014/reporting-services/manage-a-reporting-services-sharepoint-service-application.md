@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7f33036175d395359efbdb5708a422b27bf711db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6539627f9b1fc5fc41b9cc535efd5cb4c5949ecc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153876"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Administrar una aplicación de servicio de SharePoint para Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Las aplicaciones de servicio se administran desde Administración Central de SharePoint. Las páginas Administración y Propiedades permiten actualizar la configuración de la aplicación de servicio así como las tareas de administración comunes.  
@@ -94,7 +94,7 @@ ms.locfileid: "36197110"
   
 |Configuración|Comentarios|  
 |-------------|--------------|  
-|Habilitar el registro de la ejecución|El valor predeterminado es TRUE.<br /><br /> Especifique si el servidor de informes genera registros de seguimiento y el número de días que debe guardarse el registro. . Los registros se almacenan en el equipo del servidor de informes, en la carpeta \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Se inicia un nuevo archivo de registro cada vez que se reinicia el servicio. Para obtener más información acerca de los archivos de registro, consulte [registro de seguimiento de servicio de servidor de informes](report-server/report-server-service-trace-log.md)|  
+|Habilitar el registro de la ejecución|El valor predeterminado es TRUE.<br /><br /> Especifique si el servidor de informes genera registros de seguimiento y el número de días que debe guardarse el registro. . Los registros se almacenan en el equipo del servidor de informes, en la carpeta \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Se inicia un nuevo archivo de registro cada vez que se reinicia el servicio. Para obtener más información acerca de los archivos de registro, consulte [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)|  
 |Días de almacenamiento del registro de ejecución|El valor predeterminado es 60 días.|  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite el registro ULS de SharePoint.  Para más información, vea [Activar eventos de Reporting Services para el registro de seguimiento de SharePoint &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
@@ -131,7 +131,7 @@ ms.locfileid: "36197110"
   
 |Página|Descripción|  
 |----------|-----------------|  
-|Copia de seguridad de clave de cifrado|1) Escriba una contraseña en los cuadros **Contraseña** y **Confirmar contraseña** , y haga clic en **Exportar**. Verá una advertencia si la contraseña especificada no satisface los requisitos de complejidad de la directiva de dominio.<br /><br /> 2) Se le pedirá una ubicación para guardar el archivo de claves. Puede almacenar el archivo de claves en un equipo independiente de la que se está ejecutando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. El nombre de archivo predeterminado es el mismo que el de la aplicación de servicio.|  
+|Copia de seguridad de clave de cifrado|1) Escriba una contraseña en los cuadros **Contraseña** y **Confirmar contraseña** , y haga clic en **Exportar**. Verá una advertencia si la contraseña especificada no satisface los requisitos de complejidad de la directiva de dominio.<br /><br /> 2) Se le pedirá una ubicación para guardar el archivo de claves. Debería considerar almacenar el archivo de clave en un equipo independiente de la que se está ejecutando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. El nombre de archivo predeterminado es el mismo que el de la aplicación de servicio.|  
 |Restaurar clave de cifrado|1) Escriba o busque el archivo de claves en el cuadro **Ubicación del archivo** .<br /><br /> 2) En el cuadro **Contraseña** , escriba la contraseña que ha usado para realizar la copia de seguridad del archivo de cifrado.<br /><br /> 3) Haga clic en **Aceptar**.|  
 |Cambiar la clave de cifrado|Esta operación creará una nueva clave y volverá a cifrar el contenido cifrado. Si tiene mucho contenido, esta operación puede durar varias horas.<br /><br /> Cuando se complete la operación de cambio de la clave de cifrado, es recomendable que haga una copia de seguridad de la nueva clave.|  
 |Contenido cifrado eliminado|El contenido eliminado no se puede recuperar.<br /><br /> **\*\* Importante \*\*** La acción de eliminar y volver a crear la clave simétrica no puede revertirse ni deshacerse. Eliminar o regenerar la clave puede tener consecuencias importantes en la instalación actual. Si elimina la clave, los datos existentes cifrados con la clave simétrica también se eliminan. Entre los datos eliminados se incluyen cadenas de conexión a orígenes de datos de informes externos, cadenas de conexión almacenadas y algunos datos de suscripción.|  

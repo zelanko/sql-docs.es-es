@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) proyectos | Documentos de Microsoft
+title: Integration Services (SSIS), proyectos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
 - folders [Integration Services], projects
@@ -19,18 +19,18 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c012e6802465df8db1060bebc47920e834620d40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6777494c1d1c204fcef589eda42357fd0d50a9bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158966"
 ---
 # <a name="integration-services-ssis-projects"></a>Proyectos de Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para el desarrollo de paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
- Cuando implemente paquetes en una base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o en el Almacén de paquetes de [!INCLUDE[ssIS](../includes/ssis-md.md)] , utilice el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para administrar los paquetes. El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] solo está disponible en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para más información sobre el servicio, vea [Servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md). Para obtener más información acerca de la implementación de paquete, consulte [implementación de paquetes &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+ Cuando implemente paquetes en una base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o en el Almacén de paquetes de [!INCLUDE[ssIS](../includes/ssis-md.md)] , utilice el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para administrar los paquetes. El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] solo está disponible en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para más información sobre el servicio, vea [Servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md). Para obtener más información acerca de la implementación de paquetes, consulte [la implementación del paquete &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
   
  Al implementar proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], utilice los procedimientos almacenados y las vistas de Transact-SQL de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para administrarlos. Para obtener más información acerca de la implementación de proyectos, vea [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md). Para más información sobre el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vea [Integration Services &#40;SSIS&#41; Server (Servidor de Integration Services &#40;SSIS&#41;)](catalog/integration-services-ssis-server-and-catalog.md).  
   
@@ -83,13 +83,13 @@ ms.locfileid: "36197433"
 ## <a name="related-tasks"></a>Related Tasks  
  [Agregar o quitar un proyecto de Integration Services en una solución](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   
- [Crear un nuevo proyecto de Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
+ [Crear un proyecto de Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
   
- [Agregar que un elemento a la integración de un proyecto de servicios](../../2014/integration-services/add-an-item-to-an-integration-services-project.md)  
+ [Agregar un elemento a un proyecto de Integration Services](../../2014/integration-services/add-an-item-to-an-integration-services-project.md)  
   
- [Copiar elementos de proyecto](../../2014/integration-services/copy-project-items.md)  
+ [Copiar los elementos de proyectos](../../2014/integration-services/copy-project-items.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Desarrollo de la integración de una proyecto de servicios](../../2014/integration-services/development-of-an-integration-services-project.md)  
+ [Desarrollo de un proyecto de Integration Services](../../2014/integration-services/development-of-an-integration-services-project.md)  
   
   

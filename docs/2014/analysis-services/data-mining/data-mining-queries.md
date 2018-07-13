@@ -1,5 +1,5 @@
 ---
-title: Las consultas de minería de datos | Documentos de Microsoft
+title: Consultas de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
 - queries [DMX], creating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c7d67cd0b51a8bd2a7219558d1488afebf50651b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e735d73e8bad733c330d0d5134f13905c1ef8e15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170206"
 ---
 # <a name="data-mining-queries"></a>Consultas de minería de datos
   Las consultas de minería de datos son útiles para muchos propósitos. Puede hacer lo siguiente:  
@@ -106,13 +106,13 @@ ms.locfileid: "36113283"
   
 -   **Funciones de predicción personalizadas:** cada tipo modelo proporciona un conjunto de funciones de predicción diseñado para trabajar con los modelos creados por ese algoritmo.  
   
-     Por ejemplo, la función `Lag` se proporciona para los modelos de serie temporal, para que pueda ver los datos históricos utilizados para el modelo. Para los modelos de agrupación en clústeres, las funciones como `ClusterDistance` tienen más sentido.  
+     Por ejemplo, la función `Lag` se proporciona para los modelos de serie temporal, para que pueda ver los datos históricos utilizados para el modelo. Para los modelos de clústeres, las funciones como `ClusterDistance` tienen más sentido.  
   
      Para obtener más información sobre las funciones que se admiten para cada tipo de modelo, vea los siguientes vínculos:  
   
     |||  
     |-|-|  
-    |[Ejemplos de consultas del modelo de asociación](association-model-query-examples.md)|[Algoritmo Bayes Naive de Microsoft](microsoft-naive-bayes-algorithm.md)|  
+    |[Ejemplos de consultas del modelo de asociación](association-model-query-examples.md)|[Algoritmo Bayes naive de Microsoft](microsoft-naive-bayes-algorithm.md)|  
     |[Ejemplos de consultas de modelos de agrupación en clústeres](clustering-model-query-examples.md)|[Ejemplos de consultas de modelos de red neuronal](neural-network-model-query-examples.md)|  
     |[Ejemplos de consultas de modelos de árboles de decisión](decision-trees-model-query-examples.md)|[Ejemplos de consultas de modelos de clústeres de secuencia](sequence-clustering-model-query-examples.md)|  
     |[Ejemplos de consultas de modelos de regresión lineal](linear-regression-model-query-examples.md)|[Ejemplos de consultas de modelos de serie temporal](time-series-model-query-examples.md)|  
@@ -128,7 +128,7 @@ ms.locfileid: "36113283"
   
 -   **Estadísticas personalizadas:** se proporcionan funciones de apoyo adicionales para cada tipo de modelo, para generar estadísticas que sean pertinentes a la tarea analítica concreta.  
   
-     Por ejemplo, cuando se trabaja con un modelo de agrupación en clústeres, puede usar la función `PredictCaseLikelihood`para devolver la puntuación de probabilidad asociada a un determinado caso y clúster. Sin embargo, si creara un modelo de regresión lineal, le interesaría más recuperar el coeficiente y la intersección, lo que puede hacer mediante una consulta de contenido.  
+     Por ejemplo, cuando se trabaja con un modelo de agrupación en clústeres, puede usar la función, `PredictCaseLikelihood`, para devolver la puntuación de probabilidad asociada con un determinado caso y clúster. Sin embargo, si creara un modelo de regresión lineal, le interesaría más recuperar el coeficiente y la intersección, lo que puede hacer mediante una consulta de contenido.  
   
 -   **Funciones de modelo de contenido:** el *contenido* de todos los modelos se representa en un formato normalizado que permite recuperar información con una consulta simple. Puede crear consultas en el modelo de contenido mediante DMX. También puede obtener algún tipo de contenido del modelo de minería de datos utilizando los conjuntos de filas de esquema de minería de datos.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36113283"
   
 |Tareas|Vínculos|  
 |-----------|-----------|  
-|Ver tutoriales y visitas guiadas sobre las consultas de minería de datos|[Lección 6: Crear y trabajar con predicciones &#40;Tutorial de minería de datos básicos&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)<br /><br /> [Tutorial DMX de predicción de Series temporales](../../tutorials/time-series-prediction-dmx-tutorial.md)|  
+|Ver tutoriales y visitas guiadas sobre las consultas de minería de datos|[Lección 6: Crear y trabajar con predicciones &#40;Tutorial de minería de datos básicos&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)<br /><br /> [Tutorial DMX de predicción de series temporales](../../tutorials/time-series-prediction-dmx-tutorial.md)|  
 |Usar las herramientas de consulta de minería de datos en SQL Server Management Studio y en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Crear una consulta DMX en SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Crear una consulta de predicción con el Generador de consultas de predicción](create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Aplicar funciones de predicción a un modelo](apply-prediction-functions-to-a-model.md)<br /><br /> [Editar manualmente una consulta de predicción](manually-edit-a-prediction-query.md)|  
 |Trabajar con los datos externos usados en consultas de predicción|[Elegir y asignar datos de entrada para una consulta de predicción](choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [Elegir y asignar datos de entrada para una consulta de predicción](choose-and-map-input-data-for-a-prediction-query.md)|  
 |Trabajar con los resultados de las consultas|[Ver y guardar los resultados de una consulta de predicción](view-and-save-the-results-of-a-prediction-query.md)|  
@@ -171,7 +171,7 @@ ms.locfileid: "36113283"
 |Usar los componentes de minería de datos en Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Contenido del modelo de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)  
   
   

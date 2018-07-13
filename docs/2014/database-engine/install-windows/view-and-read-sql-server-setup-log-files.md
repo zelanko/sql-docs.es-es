@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing logs
 - displaying log files
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 464719261c375f01b2831f37481c330e9b00a246
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 365c5dca84514169082859900a1a3e065770f358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163356"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Ver y leer los archivos de registro de instalación de SQL Server
   Cada ejecución del programa de instalación crea archivos de registro con una nueva carpeta de registro con marca de tiempo en % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\. El formato del nombre de la carpeta de registro con marca de tiempo es AAAAMMDD_hhmmss. Cuando el programa de instalación se ejecuta en modo desatendido, los registros se crean en % temp%\sqlsetup*.log. Todos los archivos de la carpeta de registro se almacenan en el archivo Log\*.cab en su carpeta respectiva.  
@@ -152,7 +152,7 @@ ms.locfileid: "36196975"
 -   \<Característica>_\<Arquitectura>\_\<>\_\<flujo de trabajo>.log  
   
 ### <a name="location"></a>Ubicación  
- Los archivos de registro MSI se encuentran en % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< aaaammdd_hhmm >\\< nombre\>. registro.  
+ Los archivos de registro MSI se encuentran en % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< aaaammdd_hhmm >\\< nombre\>. log.  
   
  Al final del archivo se encuentra un resumen de la ejecución que incluye el estado de corrección o error y las propiedades. Para encontrar el error en el archivo de MSI, busque "value 3" y, normalmente, los errores se mostrarán cerca de la cadena.  
   
@@ -174,6 +174,6 @@ ms.locfileid: "36196975"
   
 ## <a name="see-also"></a>Vea también  
  [Temas de procedimientos de instalación](../../sql-server/install/installation-how-to-topics.md)   
- [Instalar a SQL Server 2014](install-sql-server.md)  
+ [Instalar SQL Server 2014](install-sql-server.md)  
   
   

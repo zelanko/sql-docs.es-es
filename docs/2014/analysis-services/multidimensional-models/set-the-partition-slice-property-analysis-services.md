@@ -1,5 +1,5 @@
 ---
-title: Establecer la propiedad de división de particiones (Analysis Services) | Documentos de Microsoft
+title: Establezca la propiedad Slice de particiones (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2015
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data slices [Analysis Services]
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b122622e4bd90f9b78e994a5d5aba55f33bc120d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 539cef78d7c9f9333688f4db1e5fbf35461479ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230085"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Establecer la propiedad Slice de particiones (Analysis Services)
   Un segmento de datos es una característica de optimización importante que ayuda a dirigir consultas a los datos de las particiones adecuadas. Establecer explícitamente la propiedad Slice puede mejorar el rendimiento de las consultas invalidando los sectores predeterminados generados para las particiones MOLAP y ROLAP. Además, la propiedad Slice proporciona una comprobación de validación adicional al procesar la partición.  

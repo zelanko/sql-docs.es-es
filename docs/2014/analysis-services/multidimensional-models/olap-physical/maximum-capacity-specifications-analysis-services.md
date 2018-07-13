@@ -1,5 +1,5 @@
 ---
-title: Especificaciones de capacidad máxima (Analysis Services) | Documentos de Microsoft
+title: Especificaciones de capacidad máxima (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - objects [Analysis Services], maximum size
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 52c77297ad9b5db79f235611a4ddf47357445629
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 04307fb9eb5525c9ce4d91af7eda44ea3783b3b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200275"
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Especificaciones de capacidad máxima (Analysis Services)
   En las siguientes tablas se especifican el tamaño y la cantidad máximos de diversos objetos definidos en los componentes de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en distintos modos de implementación de servidor.  
@@ -62,9 +62,9 @@ ms.locfileid: "36196564"
 |Número máximo de estados distintos de una columna de atributo de modelo de minería de datos|2^31-1 = 2,147,483,647|  
 |Número máximo de atributos considerados (selección de características)|2^31-1 = 2,147,483,647|  
   
- Para obtener más información acerca de las directrices de nomenclatura de objetos, consulte [ASSL y características de objetos](../scripting-language-assl/assl-objects-and-object-characteristics.md).  
+ Para obtener más información sobre las directrices de nomenclatura de objetos, consulte [ASSL y características de objetos](../scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
- Para obtener más información acerca de las limitaciones de origen de datos de procesamiento analítico en línea (OLAP) y minería de datos, vea [orígenes de datos admitidos &#40;SSAS multidimensionales&#41;](../supported-data-sources-ssas-multidimensional.md), [orígenes de datos admitidos &#40;SSAS multidimensionales&#41;](../supported-data-sources-ssas-multidimensional.md), y [ASSL y características de objetos](../scripting-language-assl/assl-objects-and-object-characteristics.md).  
+ Para obtener más información acerca de las limitaciones de procesamiento analítico en línea (OLAP) y minería de datos en el origen de datos, vea [Data Sources Supported &#40;Multidimensional de SSAS&#41;](../supported-data-sources-ssas-multidimensional.md), [Data Sources Supported &#40;Multidimensional de SSAS&#41;](../supported-data-sources-ssas-multidimensional.md), y [ASSL y características de objetos](../scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
 ##  <a name="bkmk_sharepoint"></a> SharePoint (DeploymentMode = 1)  
   
@@ -72,14 +72,14 @@ ms.locfileid: "36196564"
 |------------|----------------------------|  
 |Bases de datos en una instancia|2^31-1 = 2,147,483,647|  
 |Tablas de una base de datos|2^31-1 = 2,147,483,647|  
-|Columnas de una tabla|2 ^ 31-1 = 2.147.483.647 **advertencia:** número Total de columnas de una tabla depende del número total de medidas y columnas calculadas asociadas a la misma tabla. El número máximo de 'Columnas + Medidas + Columnas calculadas' de una tabla es 2^31-1 = 2.147.483.647|  
+|Columnas de una tabla|2 ^ 31-1 = 2.147.483.647 **advertencia:** número Total de columnas en una tabla depende del número total de medidas y columnas calculadas asociadas a la misma tabla. El número máximo de 'Columnas + Medidas + Columnas calculadas' de una tabla es 2^31-1 = 2.147.483.647|  
 |Filas de una tabla|Ilimitado **advertencia:** con la restricción de que ninguna columna puede contener más de 1.999.999.997 valores distintos.|  
 |Jerarquías de una tabla|2^31-1 = 2,147,483,647|  
 |Niveles de una jerarquía|2^31-1 = 2,147,483,647|  
 |Relaciones|2^31-1 = 2,147,483,647|  
 |Columnas de clave de una tabla|2^31-1 = 2,147,483,647|  
 |Medidas de una tabla|2 ^ 31-1 = 2.147.483.647 **advertencia:** número Total de medidas en una tabla depende del número total de columnas y columnas calculadas asociadas a la misma tabla. El número máximo de 'Columnas + Medidas + Columnas calculadas' de una tabla es 2^31-1 = 2.147.483.647|  
-|Columnas calculadas de una tabla|2 ^ 31-1 = 2.147.483.647 **advertencia:** número Total de columnas calculadas de una tabla depende del número total de columnas y las medidas asociadas a la misma tabla. El número máximo de 'Columnas + Medidas + Columnas calculadas' de una tabla es 2^31-1 = 2.147.483.647|  
+|Columnas calculadas de una tabla|2 ^ 31-1 = 2.147.483.647 **advertencia:** número Total de columnas calculadas en una tabla depende del número total de columnas y medidas asociadas a la misma tabla. El número máximo de 'Columnas + Medidas + Columnas calculadas' de una tabla es 2^31-1 = 2.147.483.647|  
 |Celdas devueltas por una consulta|2^31-1 = 2,147,483,647|  
 |Tamaño del registro de la consulta de origen|64K|  
 |Longitud de nombres de objeto|100 caracteres|  
@@ -90,14 +90,14 @@ ms.locfileid: "36196564"
 |------------|----------------------------|  
 |Bases de datos en una instancia|2^31-1 = 2,147,483,647|  
 |Tablas de una base de datos|2^31-1 = 2,147,483,647|  
-|Columnas de una tabla|2 ^ 31-1 = 2.147.483.647 **advertencia:** número Total de columnas de una tabla depende del número total de medidas y columnas calculadas asociadas a la misma tabla. El número máximo de 'Columnas + Medidas + Columnas calculadas' de una tabla es 2^31-1 = 2.147.483.647|  
+|Columnas de una tabla|2 ^ 31-1 = 2.147.483.647 **advertencia:** número Total de columnas en una tabla depende del número total de medidas y columnas calculadas asociadas a la misma tabla. El número máximo de 'Columnas + Medidas + Columnas calculadas' de una tabla es 2^31-1 = 2.147.483.647|  
 |Filas de una tabla|Ilimitado **advertencia:** con la restricción de que ninguna columna de la tabla puede tener más de 1.999.999.997 valores distintos.|  
 |Jerarquías de una tabla|2^31-1 = 2,147,483,647|  
 |Niveles de una jerarquía|2^31-1 = 2,147,483,647|  
 |Relaciones|2^31-1 = 2,147,483,647|  
 |Columnas de clave de una tabla|2^31-1 = 2,147,483,647|  
 |Medidas de una tabla|2 ^ 31-1 = 2.147.483.647 **advertencia:** número Total de medidas en una tabla depende del número total de columnas y columnas calculadas asociadas a la misma tabla. El número máximo de 'Columnas + Medidas + Columnas calculadas' de una tabla es 2^31-1 = 2.147.483.647|  
-|Columnas calculadas de una tabla|2 ^ 31-1 = 2.147.483.647 **advertencia:** número Total de columnas calculadas de una tabla depende del número total de columnas y las medidas asociadas a la misma tabla. El número máximo de 'Columnas + Medidas + Columnas calculadas' de una tabla es 2^31-1 = 2.147.483.647|  
+|Columnas calculadas de una tabla|2 ^ 31-1 = 2.147.483.647 **advertencia:** número Total de columnas calculadas en una tabla depende del número total de columnas y medidas asociadas a la misma tabla. El número máximo de 'Columnas + Medidas + Columnas calculadas' de una tabla es 2^31-1 = 2.147.483.647|  
 |Celdas devueltas por una consulta|2^31-1 = 2,147,483,647|  
 |Tamaño del registro de la consulta de origen|64K|  
 |Longitud de nombres de objeto|100 caracteres|  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ad258c2be4e7df3ff353a9fd1a1f9e7c083991d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94f58681e368ce3eff15a5b6ec78afbc7be2018f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258431"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lección 2: Crear una suscripción a la publicación de combinación
   En esta lección, creará una suscripción con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Luego establecerá los permisos en la base de datos de suscripciones y generará manualmente la instantánea de datos filtrados para la nueva suscripción. Para realizar esta lección es necesario haber completado la lección anterior, [Lección 1: Publicar datos con la replicación de mezcla](lesson-1-publishing-data-using-merge-replication.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36112664"
   
 5.  En la página Ubicación del Agente de mezcla, haga clic en **Ejecutar cada agente en su suscriptor**y, luego, en **Siguiente**.  
   
-6.  En la página suscriptores, seleccione el nombre de instancia de servidor del suscriptor y en **base de datos de suscripción**, seleccione  **\<nueva base de datos >** en la lista.  
+6.  En la página suscriptores, seleccione el nombre de instancia del servidor del suscriptor y, en **base de datos de suscripción**, seleccione  **\<nueva base de datos >** en la lista.  
   
 7.  En el cuadro de diálogo **Nueva base de datos** , escriba **SalesOrdersReplica** en el cuadro **Nombre de la base de datos** , haga clic en **Aceptar**y, después, haga clic en **Siguiente**.  
   

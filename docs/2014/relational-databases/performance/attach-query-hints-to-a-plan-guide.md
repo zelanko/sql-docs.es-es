@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-plan-guides
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2da0188ce5457717292019362fde12ba91ac850a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f0306c668a71d918e8f41130f237ac99a00f43f3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105845"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428144"
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>Asociar sugerencias de consulta a una guía de plan
   En una guía de plan se puede usar cualquier combinación de sugerencias de consulta válidas. Cuando una guía de plan coincide con una consulta, la cláusula OPTION especificada en la cláusula de sugerencia de una guía de plan se agrega a la consulta antes de la compilación y optimización. Si una consulta que coincide con una guía de plan ya tiene una cláusula OPTION, las sugerencias de consulta especificadas en la guía de plan sustituirán a las de la consulta. Sin embargo, para que una guía de plan coincida con una consulta que ya tiene una cláusula OPTION, debe incluir esta cláusula de la consulta al especificar el texto con el que debe coincidir la instrucción sp_create_plan_guide. Si desea que las sugerencias especificadas en la guía de plan se agreguen a las que ya existen en la consulta, en lugar de sustituirlas, debe especificar tanto las originales como las adicionales en la cláusula OPTION de la guía de plan.  

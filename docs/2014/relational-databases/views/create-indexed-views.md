@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-views
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexed views [SQL Server], creating
 - clustered indexes, views
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 77
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5498cda83c3b33d0f6b3c6898954e1442e6e21cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d56783347d9c5aaf59a1b45b24e2003a35df96df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150426"
 ---
 # <a name="create-indexed-views"></a>Crear vistas indizadas
   En este tema se describe cómo crear una vista indizada en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. El primer índice creado en una vista debe ser un índice clúster único. Después de haber creado el índice clúster único, puede crear más índices no clúster. La creación de un índice clúster único en una vista mejora el rendimiento de la consulta porque la vista se almacena en la base de datos de la misma manera que se almacena una tabla con un índice clúster. El optimizador de consultas puede utilizar vistas indizadas para acelerar la ejecución de las consultas. No es necesario hacer referencia a la vista en la consulta para que el optimizador tenga en cuenta esa vista al hacer una sustitución.  
@@ -49,7 +48,7 @@ ms.locfileid: "36196197"
 ###  <a name="Restrictions"></a> Opciones SET requeridas para vistas indizadas  
  La evaluación de la misma expresión puede producir resultados diferentes en el [!INCLUDE[ssDE](../../includes/ssde-md.md)] cuando hay diferentes opciones SET activas cuando se ejecuta la consulta. Por ejemplo, después de establecer la opción SET CONCAT_NULL_YIELDS_NULL en ON, la expresión **'** abc **'** + NULL devuelve el valor NULL, aunque al establecer CONCAT_NULL_YIEDS_NULL en OFF, la misma expresión genera **'** abc **'**.  
   
- Para asegurar el correcto mantenimiento de las vistas y la generación de resultados coherentes, las vistas indizadas requieren valores fijos para varias opciones SET. Las opciones SET de la siguiente tabla se deben establecer en los valores mostrados en la **RequiredValue** columna cada vez que se producen las condiciones siguientes:  
+ Para asegurar el correcto mantenimiento de las vistas y la generación de resultados coherentes, las vistas indizadas requieren valores fijos para varias opciones SET. Se deben establecer las opciones SET de la tabla siguiente para los valores mostrados en la **RequiredValue** columna cada vez que se producen las condiciones siguientes:  
   
 -   Se crean la vista y los índices siguientes en la vista.  
   
@@ -128,14 +127,14 @@ ms.locfileid: "36196197"
     |Conjuntos de columnas dispersas|Funciones insertadas o con valores de tabla de múltiples instrucciones|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*La vista indizada puede contener `float` columnas; sin embargo, esas columnas no se pueden incluir en la clave de índice agrupado.  
+     \*La vista indizada puede contener `float` columnas; sin embargo, estas columnas no pueden incluirse en la clave de índice agrupado.  
   
 -   Si GROUP BY está presente, la definición de VIEW debe contener COUNT_BIG(*) y no debe contener HAVING. Estas restricciones GROUP BY solo se pueden aplicar a la definición de vista indizada. Una consulta puede utilizar una vista indizada en su plan de ejecución aun cuando no satisfaga estas restricciones GROUP BY.  
   
 -   Si la definición de vista contiene una cláusula GROUP BY, la clave del índice clúster único solo puede hacer referencia a las columnas especificadas en esta cláusula.  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
- Cuando haga referencia a los literales de cadena `datetime` y `smalldatetime` de las vistas indizadas, se recomienda convertir explícitamente el literal al tipo de datos deseado mediante un estilo de formato de fecha determinista. Para obtener una lista de los estilos de formato de fecha deterministas, vea [CAST y CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Las expresiones que impliquen la conversión implícita de cadenas de caracteres en `datetime` o `smalldatetime` se consideran no deterministas. Esto se debe a que los resultados dependen de los valores LANGUAGE y DATEFORMAT de la sesión de servidor. Por ejemplo, los resultados de la expresión `CONVERT (datetime, '30 listopad 1996', 113)` dependen del valor de LANGUAGE porque la cadena '`listopad`' significa distintos meses en distintos idiomas. De forma similar, en la expresión `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretará la cadena `'2000-12-01'` en función del valor de DATEFORMAT.  
+ Cuando haga referencia a los literales de cadena `datetime` y `smalldatetime` de las vistas indizadas, se recomienda convertir explícitamente el literal al tipo de datos deseado mediante un estilo de formato de fecha determinista. Para obtener una lista de los estilos de formato de fecha deterministas, vea [CAST y CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Las expresiones que implican la conversión implícita de cadenas de caracteres a `datetime` o `smalldatetime` se consideran no deterministas. Esto se debe a que los resultados dependen de los valores LANGUAGE y DATEFORMAT de la sesión de servidor. Por ejemplo, los resultados de la expresión `CONVERT (datetime, '30 listopad 1996', 113)` dependen del valor de LANGUAGE porque la cadena '`listopad`' significa distintos meses en distintos idiomas. De forma similar, en la expresión `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretará la cadena `'2000-12-01'` en función del valor de DATEFORMAT.  
   
  La conversión implícita de los datos de caracteres no Unicode entre intercalaciones también se considera no determinista.  
   

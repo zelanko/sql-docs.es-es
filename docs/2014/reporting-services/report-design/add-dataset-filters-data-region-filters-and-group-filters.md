@@ -1,5 +1,5 @@
 ---
-title: Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo (generador de informes y SSRS) | Documentos de Microsoft
+title: Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4c92a62b97f4f0af7985afbc20c5dd1e9c6a85ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7f133be198e7a141d13f0fded3ec17388308d44c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200815"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo (Generador de informes y SSRS)
   En un informe, un filtro es una parte de un conjunto de datos, una región de datos o un grupo de regiones de datos que se crea para restringir los datos que se usan en el informe. Los filtros pueden ayudarle a controlar los datos de informe si no puede cambiar la consulta de conjunto de datos, por ejemplo si usa un conjunto de datos compartido.  
@@ -65,7 +65,7 @@ ms.locfileid: "36113964"
  En las secciones siguientes, se describe cada una de las partes de la ecuación de filtro.  
   
 ### <a name="expression"></a>Expresión  
- Cuando el procesador de informes evalúe la ecuación de filtro en tiempo de ejecución, los tipos de datos de la expresión y el valor deberán ser los mismos. La extensión de procesamiento de datos o el proveedor de datos que se usa para recuperar los datos del origen de datos determinará el tipo de datos del campo que seleccione en **Expresión** . El tipo de datos de la expresión que especifique para `Value` viene determinado por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] los valores predeterminados. Los tipos de datos admitidos para una definición de informe determinan las opciones para el tipo de datos. El proveedor de datos puede convertir los valores de la base de datos en un tipo CLR.  
+ Cuando el procesador de informes evalúe la ecuación de filtro en tiempo de ejecución, los tipos de datos de la expresión y el valor deberán ser los mismos. La extensión de procesamiento de datos o el proveedor de datos que se usa para recuperar los datos del origen de datos determinará el tipo de datos del campo que seleccione en **Expresión** . El tipo de datos de la expresión que especifique para `Value` viene determinada por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] los valores predeterminados. Los tipos de datos admitidos para una definición de informe determinan las opciones para el tipo de datos. El proveedor de datos puede convertir los valores de la base de datos en un tipo CLR.  
   
 ### <a name="data-type"></a>Tipo de datos  
  Para que el procesador de informes pueda comparar dos valores, los tipos de datos deben ser los mismos. En la tabla siguiente, se especifica la asignación entre los tipos de datos CLR y los tipos de datos de la definición de informe. Los datos que recupere de un origen de datos pueden convertirse en un tipo de datos diferente cuando sean datos de informe.  
@@ -99,7 +99,7 @@ ms.locfileid: "36113964"
  Este valor también puede incluir una referencia de parámetro para permitir al usuario seleccionar de forma interactiva el valor por el que va a filtrarse.  
   
 ## <a name="see-also"></a>Vea también  
- [Expresión que se utiliza en los informes &#40;el generador de informes SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md)  
   
   

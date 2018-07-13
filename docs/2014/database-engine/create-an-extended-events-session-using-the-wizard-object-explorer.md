@@ -1,5 +1,5 @@
 ---
-title: Crear una sesión de eventos extendidos utilizando el Asistente (Explorador de objetos) | Documentos de Microsoft
+title: Crear una sesión de eventos extendidos utilizando el Asistente (Explorador de objetos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.ssms.XeWizard.Summary.f1
 - Sql12.ssms.XeWizard.SetSessionProperties.f1
@@ -32,15 +32,15 @@ helpviewer_keywords:
 - Sql11.ssms.XeWizard.SelectEvents.f1
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69a63b1b360a1ba1c0e9a106dbb78f215f9eca71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dc5a2f60cfeff0289bb0a16476fb2506c3beda6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155236"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>Crear una sesión de Extended Events utilizando el asistente (Explorador de objetos)
   Para ayudarle a seleccionar y capturar eventos en el servidor, los eventos extendidos incluyen un Asistente para nueva sesión que le guía a través de los pasos necesarios para crear una sesión de eventos extendidos. El Asistente para nueva sesión expone la mayor parte de la funcionalidad de Extended Events. El [cuadro de diálogo Nueva sesión](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) también permite definir una sesión de Eventos extendidos que capture, presente y analice los datos. El cuadro de diálogo Nueva sesión expone toda la funcionalidad de Extended Events.  
@@ -55,7 +55,7 @@ ms.locfileid: "36197235"
   
 -   [Introducción](#BKMK_Welcome)  
   
--   [Establecer las propiedades de sesión](#BKMK_SetSessionProperties)  
+-   [Establecer propiedades de sesión](#BKMK_SetSessionProperties)  
   
 -   [Elegir plantilla](#BKMK_ChooseTemplate)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36197235"
   
 -   [Establecer filtros de eventos de sesión](#BKMK_SetSessionEventFilters)  
   
--   [Especifica el almacenamiento de datos de sesión](#BKMK_SpecifySessionDataOutput)  
+-   [Especificar almacenamiento de datos de sesión](#BKMK_SpecifySessionDataOutput)  
   
 -   [Resumen](#BKMK_Summary)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36197235"
   
      Active la casilla **No volver a mostrar esta página** si va a usar el asistente más de una vez y no quiere leer la introducción cada vez que se inicie el asistente.  
   
-##  <a name="BKMK_SetSessionProperties"></a> Establecer las propiedades de sesión  
+##  <a name="BKMK_SetSessionProperties"></a> Establecer propiedades de sesión  
  En la página **Establecer propiedades de la sesión** realice lo siguiente:  
   
 -   En el cuadro **Nombre de sesión** , escriba un nombre descriptivo para la sesión de eventos.  
@@ -134,7 +134,7 @@ ms.locfileid: "36197235"
     > [!NOTE]  
     >  Cuando configure una cláusula de grupo para el filtro, se quitarán los paréntesis redundantes del filtro después de guardar el resultado. Por ejemplo, si crea un filtro que agrupe **Cláusula 1** y **Cláusula 2**, aparecerán paréntesis alrededor de las cláusulas. Después de guardar el filtro, se quitan los paréntesis redundantes. La eliminación de los paréntesis no afecta a la lógica del filtro.  
   
-##  <a name="BKMK_SpecifySessionDataOutput"></a> Especifica el almacenamiento de datos de sesión  
+##  <a name="BKMK_SpecifySessionDataOutput"></a> Especificar almacenamiento de datos de sesión  
  Utilice la página **Especificar almacenamiento de datos de la sesión** para especificar cómo desea recopilar los datos para el análisis. SQL Server Extended Events utiliza destinos para la salida de datos. Los destinos almacenan los datos de evento y pueden realizar acciones como escribir en un archivo y agregar datos de evento. Decida cómo desea recopilar los datos para el análisis y, en la página **Especificar almacenamiento de datos de la sesión** , realice lo siguiente:  
   
 1.  Para los conjuntos de datos grandes y para la creación de registros históricos, active la casilla **Guardar los datos en un archivo para su posterior análisis** y, a continuación, realice lo siguiente:  
@@ -174,6 +174,6 @@ ms.locfileid: "36197235"
 2.  Haga clic en **Observar datos en directo en la pantalla mientras se capturan** para ver los datos en directo de la sesión de eventos. Los datos en directo iniciarán la presentación del seguimiento inmediatamente después de crearse la sesión.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear una sesión de eventos extendidos utilizando el cuadro de diálogo nueva sesión](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
+ [Crear una sesión de eventos extendidos utilizando el cuadro de diálogo Nueva sesión](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
   
   

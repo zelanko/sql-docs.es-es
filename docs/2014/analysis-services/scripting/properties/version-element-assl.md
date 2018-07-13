@@ -1,5 +1,5 @@
 ---
-title: Elemento Version (ASSL) | Documentos de Microsoft
+title: Elemento Version (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Version element
 ms.assetid: fb26fe5d-de40-443b-a8bc-031c950552e6
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1d6f87dbdfec7af7b330cc24c5d8f227eb7a75c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 64c2f90d1d12f9595098ee6a9fc8c20e1ccc36dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239605"
 ---
 # <a name="version-element-assl"></a>Elemento Version (ASSL)
   Contiene el número de versión de solo lectura de la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] representado por la [Server](../objects/server-element-assl.md) elemento.  
@@ -64,7 +64,7 @@ ms.locfileid: "36113249"
 ## <a name="remarks"></a>Notas  
  El elemento `Version` describe qué versión de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] está instalada.  
   
- El elemento que corresponde al elemento primario de `Version` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Server>.  
+ El elemento que se corresponde con el elemento primario de `Version` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Server>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento Edition &#40;ASSL&#41;](edition-element-assl.md)   

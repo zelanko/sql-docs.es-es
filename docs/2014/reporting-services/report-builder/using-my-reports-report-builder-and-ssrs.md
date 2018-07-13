@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1f94d8b56a17c5a9fbf9ea61468a75ed9419b94a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: a91ef7af12ec523c9c97ffb09690134069a4d6d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240365"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Usar Mis informes (Generador de informes y SSRS)
   En un servidor de informes configurado en modo nativo, la carpeta Mis informes es un área de trabajo personal que puede usar para trabajar con sus informes y para almacenarlos. Otras carpetas del servidor de informes son públicas y suelen requerir que los usuarios dispongan de permisos avanzados para agregar o modificar su contenido. En cambio, la carpeta Mis informes es un área de trabajo que administra el propio usuario. Así, es posible agregar o quitar informes y carpetas, o guardar informes vinculados, con una configuración personalizada.  
@@ -28,7 +28,7 @@ ms.locfileid: "36111735"
   
  La función Mis informes es opcional y los administradores del servidor de informes pueden deshabilitarla. Cuando está habilitada, la carpeta Mis informes aparece en la carpeta Inicio, a la que se puede tener acceso mediante el Administrador de informes o un explorador web. Para más información, vea [Buscar y ver informes en el Administrador de informes &#40;Generador de informes y SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md).  
   
- En un servidor de informes configurado en el modo integrado de SharePoint, no hay equivalente a la carpeta Mis informes. Para obtener más información, consulte [buscar, ver y administrar informes &#40;el generador de informes y SSRS &#41; ](finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ En un servidor de informes configurado en el modo integrado de SharePoint, no hay equivalente a la carpeta Mis informes. Para obtener más información, consulte [buscar, ver y administrar informes &#40;generador de informes y SSRS &#41; ](finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a57374d5a33afe95539b00b3cb3eeb4801915064
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ce41539fc2dfadf7e2499a0828ad44752948666e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157736"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>Puntos de datos vacíos y nulos en los gráficos (Generador de informes y SSRS)
   Si decide mostrar los campos con valores vacíos o nulos en su gráfico, el gráfico podría no tener el aspecto esperado. Los gráficos procesan los valores vacíos de forma distinta según el tipo de gráfico especificado:  
   
--   Si se trata de un tipo de gráfico lineal (de barras, de columnas, de dispersión, de líneas, de áreas o de intervalos), los valores vacíos se muestran como espacios vacíos o "huecos" en el gráfico. Si desea indicar los puntos vacíos, debe agregar marcadores de posición de punto vacíos. Para obtener más información, consulte [agregar puntos de vacíos al gráfico &#40;el generador de informes y SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   Si se trata de un tipo de gráfico lineal (de barras, de columnas, de dispersión, de líneas, de áreas o de intervalos), los valores vacíos se muestran como espacios vacíos o "huecos" en el gráfico. Si desea indicar los puntos vacíos, debe agregar marcadores de posición de punto vacíos. Para obtener más información, consulte [agregar puntos vacíos al gráfico &#40;generador de informes y SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Si el tipo de gráfico es un tipo de gráfico contiguo y lineal (áreas, barras, columnas, líneas, dispersión), se agregan puntos de datos vacíos al gráfico para mantener la continuidad de la serie.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36197093"
 ## <a name="see-also"></a>Vea también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Agregar un gráfico a un informe &#40;el generador de informes SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
- [Solucionar problemas de gráficos &#40;el generador de informes SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [Agregar un gráfico a un informe &#40;generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
+ [Solucionar problemas de gráficos &#40;generador de informes y SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
   
   

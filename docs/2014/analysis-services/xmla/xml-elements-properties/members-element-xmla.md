@@ -1,5 +1,5 @@
 ---
-title: Elemento Members (XMLA) | Documentos de Microsoft
+title: Elemento Members (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Members element
 ms.assetid: 55f9ec3a-5a41-4b3a-acd6-c07598868c46
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5d812d0eea48c4f2b54352f61a176462b280071a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 37eb0532f56fd4aff8ca760b843697f30f3c9585
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201965"
 ---
 # <a name="members-element-xmla"></a>Elemento Members (XMLA)
   Contiene una colección de [miembro](member-element-xmla.md) elementos contenidos por el elemento primario [CrossProduct](crossproduct-element-xmla.md) elemento.  
@@ -68,13 +68,13 @@ ms.locfileid: "36197242"
   
 |Attribute|Descripción|  
 |---------------|-----------------|  
-|Hierarchy|Necesario `String` atributo. El nombre de la jerarquía a la que pertenecen los miembros incluidos en el elemento `Members`.|  
+|Hierarchy|Requiere `String` atributo. El nombre de la jerarquía a la que pertenecen los miembros incluidos en el elemento `Members`.|  
   
 ## <a name="remarks"></a>Notas  
- Cuando una aplicación cliente establece el `AxisFormat` propiedad *ClusterFormat*, los miembros en cada eje se dividen en clústeres en el que cada uno representa un producto cruzado entre los conjuntos ordenados de miembros de cada jerarquía. Cada elemento `Axis` consta de uno o varios elementos `CrossProduct`. Cada elemento `CrossProduct` contiene un elemento `Members` para cada jerarquía del eje. El elemento `Members`, a su vez, contiene un elemento `Member` para cada miembro de la jerarquía especificada que se incluye en el producto cruzado.  
+ Cuando una aplicación cliente establece el `AxisFormat` propiedad *ClusterFormat*, los miembros en cada eje se dividen en clústeres en el que cada clúster representa un producto cruzado entre los conjuntos ordenados de miembros de cada jerarquía. Cada elemento `Axis` consta de uno o varios elementos `CrossProduct`. Cada elemento `CrossProduct` contiene un elemento `Members` para cada jerarquía del eje. El elemento `Members`, a su vez, contiene un elemento `Member` para cada miembro de la jerarquía especificada que se incluye en el producto cruzado.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra la estructura de la `Members` elemento cuando un cliente especifica *ClusterFormat* para el `AxisFormat` propiedad XMLA, dado los siguientes miembros para el eje:  
+ El ejemplo siguiente muestra la estructura de la `Members` elemento cuando un cliente especifica *ClusterFormat* para el `AxisFormat` propiedad XMLA, dado los siguientes miembros para el eje:  
   
 ||||||  
 |-|-|-|-|-|  

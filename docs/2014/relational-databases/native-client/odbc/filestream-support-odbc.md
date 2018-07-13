@@ -1,13 +1,11 @@
 ---
-title: Compatibilidad con FILESTREAM (ODBC) | Documentos de Microsoft
+title: Compatibilidad con FILESTREAM (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,20 +13,20 @@ helpviewer_keywords:
 - ODBC, FILESTREAM support
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f4441a357652c00db89a8b96c2e95c1164ef851
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f45ccb411eeaafb072b7e2832f5628068431f9cc
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111335"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410314"
 ---
 # <a name="filestream-support-odbc"></a>Compatibilidad con FILESTREAM (ODBC)
   ODBC en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite la característica mejorada FILESTREAM. Para obtener más información sobre esta característica, consulte [compatibilidad con FILESTREAM](../features/filestream-support.md). Para obtener un ejemplo que muestra la compatibilidad de ODBC con FILESTREAM, vea [enviar y recibir datos incrementalmente con FILESTREAM &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
   
- Para enviar y recibir `varbinary(max)` valores superiores a 2 GB, una aplicación debe enlazar parámetros utilizando SQLBindParameter con *ColumnSize* establecido en `SQL_SS_LENGTH_UNLIMITED`y establecer el contenido de *StrLen_or_IndPtr* a `SQL_DATA_AT_EXEC` antes de SQLExecDirect o SQLExecute.  
+ Para enviar y recibir `varbinary(max)` valores mayores que 2 GB, una aplicación debe enlazar parámetros utilizando SQLBindParameter con *ColumnSize* establecido en `SQL_SS_LENGTH_UNLIMITED`y establecer el contenido de *StrLen_or_IndPtr* a `SQL_DATA_AT_EXEC` antes SQLExecDirect o SQLExecute.  
   
  Como con cualquier parámetro de datos en ejecución, los datos se proporcionarán con SQLParamData y SQLPutData.  
   
@@ -36,7 +34,7 @@ ms.locfileid: "36111335"
   
  Puede actualizar los datos FILESTREAM si está enlazada con SQLBindCol.  
   
- Si se llama a SQLFetch en una columna enlazada, recibirá una advertencia "datos truncados" si el búfer no es suficientemente grande como para contener el valor completo. Pasar por alto esta advertencia y actualizar los datos en esta columna enlazada con llamadas SQLParamData y SQLPutData. Puede actualizar los datos FILESTREAM mediante SQLSetPos si está enlazada a SQLBindCol.  
+ Si se llama a SQLFetch en una columna enlazada, recibirá una advertencia "datos truncados" si el búfer no es suficientemente grande como para contener el valor completo. Omita esta advertencia y actualizar los datos en esta columna enlazada con llamadas SQLParamData y SQLPutData. Puede actualizar los datos FILESTREAM mediante el uso de SQLSetPos si está enlazada con SQLBindCol.  
   
 ## <a name="example"></a>Ejemplo  
  Las columnas FILESTREAM se comportan exactamente igual que las columnas `varbinary(max)`, pero sin límite de tamaño. Se enlazan como SQL_VARBINARY. (SQL_LONGVARBINARY se utiliza con columnas de imagen y hay restricciones en este tipo. Por ejemplo, SQL_LONGVARBINARY no se puede utilizar como un parámetro de salida.) En los ejemplos siguientes se muestra el acceso NTFS directo para las columnas FILESTREAM. En estos ejemplos se entiende que se ha ejecutado el siguiente código [!INCLUDE[tsql](../../../includes/tsql-md.md)] en la base de datos:  

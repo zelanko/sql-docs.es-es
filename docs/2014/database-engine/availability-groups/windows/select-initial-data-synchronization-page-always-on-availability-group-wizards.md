@@ -1,29 +1,28 @@
 ---
-title: Seleccione la página de sincronización de datos iniciales (asistentes para grupos de disponibilidad AlwaysOn) | Documentos de Microsoft
+title: Seleccione la página de sincronización de datos iniciales (asistentes del grupo de disponibilidad AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.selectinitialdatasync.f1
 - sql12.swb.adddatabasewizard.selectinitialdatasync.f1
 - sql12.swb.newagwizard.selectinitialdatasync.f1
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 caps.latest.revision: 36
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2c949bd5ec421ac41d602b28af2d087153b0358c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f9a3f04a5d6ea060cd905d2bf81d628c27d99eb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211775"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>Página Seleccionar sincronización de datos iniciales (asistentes para grupos de disponibilidad AlwaysOn)
   Use la página de AlwaysOn **Seleccionar sincronización de datos iniciales** para indicar sus preferencias para la sincronización de datos inicial de las nuevas bases de datos secundarias. Esta página es compartida por tres asistentes: [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], el [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]y el [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
@@ -102,7 +101,7 @@ ms.locfileid: "36113883"
   
      **Para obtener más información:**  
   
-     [Requisitos previos para la migración de trasvase de registros a grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+     [Requisitos previos para migrar de trasvase de registros a grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
      [Configurar la copia de seguridad en réplicas de disponibilidad &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -127,6 +126,6 @@ ms.locfileid: "36113883"
 -   [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

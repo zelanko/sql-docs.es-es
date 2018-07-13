@@ -1,5 +1,5 @@
 ---
-title: Utilizar WQL y Languages de Scripting con el proveedor WMI para la administración de configuración | Documentos de Microsoft
+title: Uso de WQL y lenguajes de Scripting con el proveedor WMI de administración de configuración | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, scripts
 ms.assetid: c1e64905-3c2b-4974-88f4-abf17cf7e289
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4dc000220a4ced29074489bbc06556bbc07a18ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7a55fc42e5186615dbe3e455668eb8cc5f7c199c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202885"
 ---
 # <a name="using-wql-and-scripting-languages-with-the-wmi-provider-for-configuration-management"></a>Utilizar WQL y languages de scripting con el proveedor WMI para la administración de configuración
   Las aplicaciones de administración obtienen acceso a los servicios y la configuración de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el proveedor de Instrumental de administración de Windows (WMI) para los objetos de administración de configuración de dos maneras:  
@@ -37,12 +37,12 @@ ms.locfileid: "36203592"
   
 -   Mediante un lenguaje de scripting, como VBScript.  
   
- Alternativamente, los servicios y la configuración de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden administrar mediante programación usando los objetos administrados WMI en SMO. Para obtener más información sobre la programación de WMI objetos administrados, vea [administrar servicios y la configuración de red usando el proveedor de WMI](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md).  
+ Alternativamente, los servicios y la configuración de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden administrar mediante programación usando los objetos administrados WMI en SMO. Para obtener más información sobre la programación de WMI objetos administrados, consulte [administrar servicios y la configuración de red utilizando el proveedor de WMI](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md).  
   
- Se puede tener acceso al proveedor WMI para administración de configuración mediante elAdministrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console. Para obtener más información sobre cómo tener acceso al proveedor WMI de una interfaz de usuario, consulte [temas de procedimientos de servicios de administración de &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md).  
+ Se puede tener acceso al proveedor WMI para administración de configuración mediante elAdministrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console. Para obtener más información sobre el acceso al proveedor WMI de una interfaz de usuario, consulte [temas de procedimientos de servicios de administración de &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Acceso al proveedor WMI para la administración de configuración mediante WQL](access-wmi-provider-for-configuration-management-using-wql.md)   
- [Modificar servicio propiedades avanzadas SQL Server mediante VBScript](access-wmi-provider-for-configuration-management-using-vbscript.md)  
+ [Acceso al proveedor de WMI para la administración de configuración mediante WQL](access-wmi-provider-for-configuration-management-using-wql.md)   
+ [Modificar propiedades avanzadas de servicios SQL Server mediante VBScript](access-wmi-provider-for-configuration-management-using-vbscript.md)  
   
   

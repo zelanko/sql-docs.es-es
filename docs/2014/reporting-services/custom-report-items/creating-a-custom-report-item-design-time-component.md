@@ -14,15 +14,15 @@ helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14ff967c6b21fbf4438db3c44d28eb86e9738281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 996e70b70e2cf253212baae972dd6caa6acdf7c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149276"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Crear un componente de tiempo de diseño de elemento de informe personalizado
   Un componente de tiempo de diseño de elemento de informe personalizado es un control que se puede utilizar en el entorno de Visual Studio Report Designer. El componente de tiempo de diseño de elemento de informe personalizado proporciona una superficie de diseño activada que puede aceptar las operaciones de arrastrar y colocar, la integración con el explorador de propiedades de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], y la capacidad de proporcionar los editores de propiedades personalizados.  
@@ -189,7 +189,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Utilizar las opciones gráficas  
- Las clases de elemento de informe personalizado también pueden implementar una clase `Microsoft.ReportDesigner.Design.Adornment`. Una opción gráfica permite al control de elemento de informe personalizado proporcionar las áreas fuera del rectángulo principal de la superficie de diseño. Estas áreas pueden administrar los eventos de interfaz de usuario, como los clics del mouse y las operaciones de arrastrar y colocar. El `Adornment` clase que se define en el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` espacio de nombres es una implementación paso a través de la <xref:System.Windows.Forms.Design.Behavior.Adorner> encontrar la clase en formularios Windows Forms. Para obtener documentación completa sobre la `Adorner` de clases, consulte [Introducción al servicio de comportamiento](http://go.microsoft.com/fwlink/?LinkId=116673) en MSDN library. Para el código de ejemplo que implementa un `Microsoft.ReportDesigner.Design.Adornment` de clases, consulte [muestras de producto de SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Las clases de elemento de informe personalizado también pueden implementar una clase `Microsoft.ReportDesigner.Design.Adornment`. Una opción gráfica permite al control de elemento de informe personalizado proporcionar las áreas fuera del rectángulo principal de la superficie de diseño. Estas áreas pueden administrar los eventos de interfaz de usuario, como los clics del mouse y las operaciones de arrastrar y colocar. El `Adornment` clase que se define en el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` espacio de nombres es una implementación paso a través de la <xref:System.Windows.Forms.Design.Behavior.Adorner> clase se encuentra en Windows Forms. Para obtener documentación completa sobre la `Adorner` de clases, vea [información general sobre el servicio de comportamiento](http://go.microsoft.com/fwlink/?LinkId=116673) en MSDN library. Código de ejemplo que implementa un `Microsoft.ReportDesigner.Design.Adornment` de clases, vea [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
  Para obtener más información acerca de cómo programar y usar Windows Forms en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vea estos temas en MSDN Library:  
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento Security (XMLA) | Documentos de Microsoft
+title: Elemento Security (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Security element
 ms.assetid: 0b601f69-d16d-4d10-9361-b8afaa6ed357
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4811ae03eb6f30c4b9f4557e791339920161b4ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 138b93043cbfeba51472dfa61816cf9023a3f2c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155026"
 ---
 # <a name="security-element-xmla"></a>Elemento Security (XMLA)
-  Especifica cómo hacer una copia o restaurar definiciones de seguridad, como los roles y permisos, durante un [copia de seguridad](../xml-elements-commands/backup-element-xmla.md) o [restaurar](../xml-elements-commands/restore-element-xmla.md) comando.  
+  Especifica cómo realizar copias de seguridad o restaurar definiciones de seguridad, como roles y permisos, durante un [copia de seguridad](../xml-elements-commands/backup-element-xmla.md) o [restaurar](../xml-elements-commands/restore-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36204247"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El `Security` elemento determina si las definiciones de seguridad, como los roles y permisos, definidas en una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos se copia o se restauran durante, respectivamente, un `Backup` o `Restore` comando. Este elemento determina también si las cuentas de usuario de Windows y los grupos definidos como miembros de las definiciones de seguridad se incluyen como parte del comando `Backup` o `Restore`.  
+ El `Security` elemento determina si las definiciones de seguridad, como roles y permisos, definen en un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos son una copia de seguridad o se restauran durante, respectivamente, un `Backup` o `Restore` comando. Este elemento determina también si las cuentas de usuario de Windows y los grupos definidos como miembros de las definiciones de seguridad se incluyen como parte del comando `Backup` o `Restore`.  
   
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   

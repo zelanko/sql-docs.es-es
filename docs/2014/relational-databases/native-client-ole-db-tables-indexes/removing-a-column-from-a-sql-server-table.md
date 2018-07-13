@@ -1,13 +1,11 @@
 ---
-title: Quitar una columna de una tabla de SQL Server | Documentos de Microsoft
+title: Quitar una columna de una tabla de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, columns
 ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9cecee484e16f2394e9bbef33ff5ed258a0f1752
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d7b5173ad5f617eccf41f8e8d60a81305ff1ca48
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201147"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409934"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Quitar una columna de una tabla de SQL Server
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client expone la **ITableDefinition:: Dropcolumn** función. Esto permite que los consumidores puedan quitar una columna de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla.  

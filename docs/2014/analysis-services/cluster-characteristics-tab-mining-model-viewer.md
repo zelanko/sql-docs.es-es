@@ -1,5 +1,5 @@
 ---
-title: Ficha de características (Visor de modelos de minería de datos) del clúster | Documentos de Microsoft
+title: Pestaña características (Visor de modelos de minería de datos) del clúster | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.characteristics.f1
 ms.assetid: 8e33ed1d-1ce4-405d-895b-7e995b2c910d
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4e5dcac98dd53edbd5e894c639c067106288e7e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f3b5076884e44926457437ef1c31fd595418edd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203539"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172086"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>Pestaña Características del clúster (Visor de modelos de minería de datos)
   La pestaña **Características del clúster** le permite explorar las características de un clúster en un modelo de agrupación en clústeres o el conjunto de todos los casos del modelo. El gráfico muestra la importancia de cada par de atributo-valor como una característica que define el clúster, comparado con otros clústeres.  
@@ -51,7 +51,7 @@ ms.locfileid: "36203539"
 |**Probabilidad**|La barra indica la fuerza del par de atributo-valor como una característica distintiva de este clúster. Si sitúa el mouse sobre la barra, puede ver el valor de probabilidad, representado como un porcentaje. Lo que esto indica es, dado este atributo y combinación de valores en un caso determinado, cuál es la probabilidad de que el caso pertenezca a este clúster.|  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   

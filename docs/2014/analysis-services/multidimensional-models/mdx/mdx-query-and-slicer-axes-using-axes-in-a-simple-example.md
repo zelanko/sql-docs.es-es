@@ -1,5 +1,5 @@
 ---
-title: Con ejes de consulta y segmentador en un ejemplo Simple (MDX) | Documentos de Microsoft
+title: Uso de ejes de consulta y segmentador en un ejemplo Simple (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - slicer axis
 - query axis [MDX]
 ms.assetid: 85bcb26f-5971-4153-b334-61f8d8b475b5
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0be467a75ed63c91e97b7fcd9aeef2e59944f09b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b6eb6140795995f2fb035e9972a7c89396fd83a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197915"
 ---
 # <a name="using-query-and-slicer-axes-in-a-simple-example-mdx"></a>Usar los ejes de consulta y segmentador en un ejemplo simple (MDX)
   En este sencillo ejemplo se ilustran los conceptos en los que se basa la especificación y el uso de los ejes de consulta y segmentador.  

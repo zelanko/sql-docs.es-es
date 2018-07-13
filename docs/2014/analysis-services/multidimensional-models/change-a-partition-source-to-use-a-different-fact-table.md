@@ -1,5 +1,5 @@
 ---
-title: Cambiar el origen de una partición para usar una tabla de hechos diferentes | Documentos de Microsoft
+title: Cambiar el origen de una partición para usar una tabla de hechos diferentes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - fact tables [Analysis Services]
 - partitions [Analysis Services], fact tables
 ms.assetid: 5508312f-8e46-4802-9362-6688ca03d098
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7355f5f7430a5e74cd06ffa73c1b6ed68e11a7c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 403e34a69d5007ca09404ed6d720493b899b0419
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159326"
 ---
 # <a name="change-a-partition-source-to-use-a-different-fact-table"></a>Cambiar el origen de una partición para usar una tabla de hechos diferente
   Cuando se crea una partición para un cubo, se puede usar una tabla de hechos diferente. Las tablas diferentes pueden proceder de una única vista del origen de datos, de diferentes vistas del origen de datos o de diferentes orígenes de datos. Una vista del origen de datos también puede contener tablas diferentes de más de un origen de datos.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.target.post.f1
 ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 220dd0f5c1e23b42a0386d47ab4f341ff35285a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fe9badde8462288cd9e1cbdae6b6430a5a2f1210
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259981"
 ---
 # <a name="post-download-instructions"></a>Exponer instrucciones de descarga
   Utilice esta página para especificar las instrucciones de descarga de un servidor de destino.  

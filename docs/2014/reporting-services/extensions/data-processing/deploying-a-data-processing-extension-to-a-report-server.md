@@ -15,15 +15,15 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 caps.latest.revision: 44
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 87409bbf8d057e30b458f79b4746e7048e51f363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 47092d05e9908e68722dbebea88e110f58170000
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160076"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Cómo implementar una extensión de procesamiento de datos en un servidor de informes
   Los servidores de informes utilizan las extensiones de procesamiento de datos para recuperar y procesar los datos en informes representados. Debería implementar el ensamblado de extensión de procesamiento de datos en un servidor de informes como un ensamblado privado. También tiene que realizar una entrada en el archivo de configuración del servidor de informes, RSReportServer.config.  
@@ -39,7 +39,7 @@ ms.locfileid: "36203359"
   
 2.  Una vez copiado el archivo de ensamblado, abra el archivo RSReportServer.config. El archivo RSReportServer.config se encuentra en el directorio ReportServer. Tiene que realizar una entrada en el archivo de configuración para el archivo de ensamblado de extensión de procesamiento de datos. Puede abrir el archivo de configuración con Visual Studio o con un procesador de texto sencillo como el Bloc de notas.  
   
-3.  Busque la `Data` elemento en el archivo RSReportServer.config. En la ubicación siguiente se debería realizar una entrada para la extensión de procesamiento de datos creada recientemente:  
+3.  Busque el `Data` elemento en el archivo RSReportServer.config. En la ubicación siguiente se debería realizar una entrada para la extensión de procesamiento de datos creada recientemente:  
   
     ```  
     <Extensions>  
@@ -49,7 +49,7 @@ ms.locfileid: "36203359"
     </Extensions>  
     ```  
   
-4.  Agregue una entrada para su extensión de procesamiento de datos. La entrada debería incluir una `Extension` elemento con los valores para `Name` y `Type` y podría ser similar al siguiente:  
+4.  Agregue una entrada para su extensión de procesamiento de datos. La entrada debería incluir un `Extension` elemento con los valores para `Name` y `Type` y podría parecerse a lo siguiente:  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, MyExtensionAssembly" />  

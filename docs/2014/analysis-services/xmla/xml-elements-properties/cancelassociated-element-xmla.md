@@ -1,5 +1,5 @@
 ---
-title: Elemento CancelAssociated (XMLA) | Documentos de Microsoft
+title: Elemento CancelAssociated (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CancelAssociated element
 ms.assetid: fd890440-d1a7-4c05-9e81-c81e6b8c274c
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1e747815b30daf86edff4ad976d6fb5370bf9c3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 66a866a9f00a745e24fe2c83a4fce31ac67b2f34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159236"
 ---
 # <a name="cancelassociated-element-xmla"></a>Elemento CancelAssociated (XMLA)
   Indica si el elemento primario [Cancel](../xml-elements-commands/cancel-element-xmla.md) debería cancelar todos los comandos asociados.  
@@ -64,7 +64,7 @@ ms.locfileid: "36204017"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- Si se especifica este elemento y se establece en `True`, cada conexión correspondiente, la sesión y el comando identificado en el elemento primario `Cancel` se cancela el comando.  
+ Si se especifica este elemento y se establece en `True`, cada conexión correspondiente, sesiones y comando identificado en el elemento primario `Cancel` se cancela el comando.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento ConnectionID &#40;XMLA&#41;](id-element-xmla.md)   

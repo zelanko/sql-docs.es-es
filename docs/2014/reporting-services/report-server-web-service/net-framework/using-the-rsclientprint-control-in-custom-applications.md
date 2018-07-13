@@ -17,15 +17,15 @@ helpviewer_keywords:
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 caps.latest.revision: 30
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0c1f08f222fa1d902232373051e8d584b673ba5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5c8d0419dc923fc8fc7e6f2cb58d74ee70d46f68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203045"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181564"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usar el control RSClientPrint en aplicaciones personalizadas
   El control ActiveX de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] **RSPrintClient** proporciona impresión del lado cliente para los informes mostrados en el Visor HTML. Proporciona un cuadro de diálogo **Imprimir** para que un usuario pueda iniciar un trabajo de impresión, obtener una vista previa de un informe, especificar las páginas que se van a imprimir y cambiar los márgenes. Durante una operación de impresión del lado cliente, el servidor de informes representa el informe en la extensión de representación en imágenes (EMF) y utiliza las capacidades de impresión del sistema operativo para crear el trabajo de impresión y enviarlo a una impresora.  
@@ -78,7 +78,7 @@ ms.locfileid: "36203045"
 |MarginBottom|Doble|RW|Valor del informe|Obtiene o establece el margen inferior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
 |PageWidth|Doble|RW|Valor del informe|Obtiene o establece el ancho de página. El valor predeterminado, si no lo ha establecido el desarrollador o no está incluido en la definición de informe, es de 215,9 milímetros.|  
 |PageHeight|Doble|RW|Valor del informe|Obtiene o establece el alto de página. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está incluido en la definición de informe, es 279,4 milímetros.|  
-|Culture|Int32|RW|Configuración regional del explorador|Especifica el identificador de configuración regional (LCID). Este valor determina la unidad de medida para la entrada del usuario. Por ejemplo, si un usuario escribe `3`, el valor se medirá en milímetros si el idioma es francés o pulgadas, si el idioma es el inglés (Estados Unidos). Los valores válidos son: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052 y 3082.|  
+|Culture|Int32|RW|Configuración regional del explorador|Especifica el identificador de configuración regional (LCID). Este valor determina la unidad de medida para la entrada del usuario. Por ejemplo, si un usuario escribe `3`, el valor se medirá en milímetros si el idioma es francés o pulgadas, si el idioma es inglés (Estados Unidos). Los valores válidos son: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052 y 3082.|  
 |UICulture|String|RW|Valor de cultura del cliente|Especifica la traducción de las cadenas del cuadro de diálogo. El texto del cuadro de diálogo Imprimir está traducido a los idiomas que se indican a continuación: alemán, chino simplificado, chino tradicional, coreano, español, francés, inglés, italiano y japonés. Los valores válidos son: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052 y 3082.|  
 |Authenticate|Boolean|RW|False|Especifica si el control envía un comando GET en el servidor de informes para iniciar una conexión para la impresión fuera de sesión.|  
   

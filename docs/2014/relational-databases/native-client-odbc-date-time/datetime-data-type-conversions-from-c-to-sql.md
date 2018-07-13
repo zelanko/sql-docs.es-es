@@ -1,31 +1,29 @@
 ---
-title: Conversiones de C a SQL | Documentos de Microsoft
+title: Conversiones de C a SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2941f9d95c8513762e8f77f8a84fcd34f682eafe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 638f3acea8ba4d9925851a26bd84ab20f76c38c9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202709"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410083"
 ---
 # <a name="conversions-from-c-to-sql"></a>Conversiones de C a SQL
-  En este tema se enumera problemas para tener en cuenta al convertir de tipos C [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de fecha y hora.  
+  En este tema se enumera los problemas para tener en cuenta al convertir de tipos C [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de fecha y hora.  
   
  Las conversiones descritas en la tabla siguiente se aplican a conversiones realizadas en el cliente. En los casos en que el cliente especifica para un parámetro una precisión de fracciones de segundo diferente de la definida en el servidor, la conversión puede llegar a realizarse en el cliente pero el servidor devolverá un error cuando se llame a `SQLExecute` o `SQLExecuteDirect`. Concretamente, ODBC trata cualquier truncamiento de fracciones de segundo como un error, mientras que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza un redondeo; por ejemplo, el redondeo se produce cuando se pasa de `datetime2(6)` a `datetime2(2)`. Los valores de las columnas datetime se redondean a la fracción 1/300 de segundo, mientras que para las columnas smalldatetime, el servidor establece los segundos en cero.  
   
@@ -68,6 +66,6 @@ ms.locfileid: "36202709"
 |N/D|Se mantiene el comportamiento de las versiones actuales y anteriores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
   
 ## <a name="see-also"></a>Vea también  
- [Fecha y hora mejoras &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Mejoras de fecha y hora &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

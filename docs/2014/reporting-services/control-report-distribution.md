@@ -1,5 +1,5 @@
 ---
-title: Controlar la distribución de informes | Documentos de Microsoft
+title: Controlar la distribución de informes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
 - subscriptions [Reporting Services], e-mail
@@ -21,19 +21,19 @@ ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0b184eadeefa4b9f1177597172476b743094de8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d73a5e483219df7a8b7c06a3c4719850aaf7a3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160186"
 ---
 # <a name="control-report-distribution"></a>Controlar la distribución de informes
   Puede configurar un servidor de informes para reducir los riesgos de seguridad asociados a la distribución por correo electrónico y a recursos compartidos de archivos.  
   
 ## <a name="securing-reports"></a>Proteger informes  
- El primer paso para controlar la distribución de informes consiste en proteger el informe contra accesos no autorizados. Para poder utilizarse en una suscripción, el informe debe utilizar un conjunto almacenado de credenciales que no varíen para las entregas individuales. Cualquier usuario con acceso al informe en el servidor de informes puede ejecutarlo y posiblemente distribuirlo. Para impedir que esto ocurra, debe limitar el acceso al informe únicamente a aquellos usuarios que lo necesiten. Para obtener más información, consulte [proteger informes y recursos](security/secure-reports-and-resources.md) y [carpetas seguras](security/secure-folders.md).  
+ El primer paso para controlar la distribución de informes consiste en proteger el informe contra accesos no autorizados. Para poder utilizarse en una suscripción, el informe debe utilizar un conjunto almacenado de credenciales que no varíen para las entregas individuales. Cualquier usuario con acceso al informe en el servidor de informes puede ejecutarlo y posiblemente distribuirlo. Para impedir que esto ocurra, debe limitar el acceso al informe únicamente a aquellos usuarios que lo necesiten. Para obtener más información, consulte [proteger informes y recursos](security/secure-reports-and-resources.md) y [proteger carpetas](security/secure-folders.md).  
   
  Los informes extremadamente confidenciales que utilicen la seguridad de base de datos para autorizar el acceso no pueden distribuirse mediante una suscripción.  
   

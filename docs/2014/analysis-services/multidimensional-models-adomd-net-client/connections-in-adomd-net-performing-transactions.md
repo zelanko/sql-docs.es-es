@@ -1,5 +1,5 @@
 ---
-title: Realizar transacciones en ADOMD.NET | Documentos de Microsoft
+title: Realizar transacciones en ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - AdomdTransaction object
 ms.assetid: 7978c28b-c255-43c0-ad05-f38604d4d8fe
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b37257b647dc9c1675e36c0f0b6a9b06bbf08d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 04157786e3a3d9349c2f1e324291a3a0bda5928d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167602"
 ---
 # <a name="performing-transactions-in-adomdnet"></a>Realizar transacciones en ADOMD.NET
   En ADOMD.NET, usa el objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> para administrar el contexto de transacción para un objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> determinado. Esta funcionalidad le permite ejecutar varios comandos dentro del mismo contexto. Cada comando leerá los mismos datos sin los datos de la lectura que cambian entre cada ejecución de comandos.  
@@ -45,13 +45,13 @@ AdomdTransaction objTransaction = objConnection.BeginTransaction();
 ```  
   
 ## <a name="rolling-back-a-transaction"></a>Revertir una transacción  
- Para revertir una transacción existente e incompleta, debe llamar al método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction.Rollback%2A> del objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction>. Si se llama a este método en una transacción existente y completa, se produce una excepción.  
+ Para revertir una transacción existente e incompleta, debe llamar al método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction.Rollback%2A> del objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction>. Si llama a este método en una transacción existente y completa, se produce una excepción.  
   
 ## <a name="committing-a-transaction"></a>Confirmar una transacción  
  Después de llamar al método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.BeginTransaction%2A> para iniciar una transacción, puede completar la transacción llamando al método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction.Commit%2A> del objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction>. Si llama a este método en una transacción existente y completa, se produce una excepción.  
   
 ## <a name="see-also"></a>Vea también  
- [Para establecer conexiones en ADOMD.NET](connections-in-adomd-net.md)   
+ [Establecer conexiones en ADOMD.NET](connections-in-adomd-net.md)   
  [Programación del cliente de ADOMD.NET](adomd-net-client-programming.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Gráfico (visores de modelos de minería de datos) de la ficha | Documentos de Microsoft
+title: Gráfico (visores de modelos de minería de datos) de la pestaña | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.chart.f1
 ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 08c1fbe446555e34354330b18ffe5bc5c4d80ef5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd1c2cf7ecc6a4cc734197a55365fb4a661b1b36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169806"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Pestaña Gráfico (Visores de modelos de minería de datos)
   Utilice el panel **Gráfico** para mostrar los datos históricos utilizados para entrenar un modelo de serie temporal, junto con los valores de predicción. El eje vertical del gráfico representa el valor de la serie y el eje horizontal representa el tiempo. Las predicciones futuras se representan mediante una línea de puntos.  
@@ -50,7 +50,7 @@ ms.locfileid: "36203768"
  **ABS**  
  Cambie entre dos vistas gráficas: en la vista predeterminada los números se representan mediante un gráfico en relación a la distribución global (como porcentaje). Si hace clic en **Abs**, los números se representan mediante un gráfico como valores absolutos.  
   
- **Copiar el gráfico en el Portapapeles**  
+ **Copiar el gráfico al Portapapeles**  
  Copie el gráfico completo al Portapapeles.  
   
  **Mostrar desviaciones**  
@@ -63,7 +63,7 @@ ms.locfileid: "36203768"
  Abra un cuadro de diálogo desde el que puede seleccionar la serie que desea incluir en el visor.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   

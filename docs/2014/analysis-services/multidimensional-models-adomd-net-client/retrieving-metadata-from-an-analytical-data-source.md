@@ -1,5 +1,5 @@
 ---
-title: Recuperar metadatos de un origen de datos analíticos | Documentos de Microsoft
+title: Recuperar metadatos de un origen de datos analíticos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - retrieving metadata
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3a49a4ddc8687cd2e0cfdd47e4025e9bc51eefe6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2beb806c4a76aa3ac6062f8e6ae0e44c007520ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151676"
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>Recuperar metadatos de un origen de datos analíticos
   Los metadatos son importantes para las aplicaciones que recuperan y trabajan con datos analíticos. Al recuperar datos de un origen de datos relacional, la dimensionalidad de tales datos es predecible, incluso con conjuntos de datos anidados. Los conjuntos de resultados de una base de datos relacional suelen ser bidimensionales o escalares en estructura. Sin embargo, los datos que se recuperan de los orígenes de datos analíticos pueden ser de dimensionalidad variable, organizados a lo largo de jerarquías potencialmente profundas.  
@@ -33,7 +33,7 @@ ms.locfileid: "36204288"
  **El modelo de objetos**  
  Normalmente, el modelo de objetos ADOMD.NET es más fácil de usar que los conjuntos de filas de esquema. En la mayoría de las situaciones, puede tener acceso a los metadatos de varios objetos de base de datos simplemente utilizando el modelo de objetos. ADOMD.NET expone el modelo de objetos a través de <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
- Para obtener más información: [trabajar con el modelo de objetos de ADOMD.NET](retrieving-metadata-working-with-adomd-net-object-model.md)  
+ Para obtener más información: [trabajar con el modelo de objetos ADOMD.NET](retrieving-metadata-working-with-adomd-net-object-model.md)  
   
  **Conjuntos de filas de esquema**  
  Un método completo para recuperar metadatos, pero más difícil, consiste en usar conjuntos de filas de esquema. Un conjunto de filas de esquema es un conjunto de filas OLE DB que encapsula la descripción de todos los objetos de un tipo determinado en la base de datos. La información de esquema en un origen de datos analíticos incluye las bases de datos o los catálogos disponibles en dicho origen de datos, los cubos y los modelos de minería de datos de una base de datos, los roles que existen para los cubos en el origen de datos, etc. Estos metadatos se pueden recuperar mediante el método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.GetSchemaDataSet%2A>, pasando `GUID` o un nombre XML for Analysis (XMLA).  

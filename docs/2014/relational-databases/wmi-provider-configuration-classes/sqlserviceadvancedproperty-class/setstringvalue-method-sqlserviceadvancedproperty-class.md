@@ -1,5 +1,5 @@
 ---
-title: Método SetStringValue (clase SqlServiceAdvancedProperty) | Documentos de Microsoft
+title: Método SetStringValue (clase SqlServiceAdvancedProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetStringValue method
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a62c17ed296d7d35be0ee4954583d0f6ab7b1e29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: be05ab6bccb772ef4f2bb0a65eed716f9633edff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166726"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>Método SetStringValue (clase SqlServiceAdvancedProperty)
   Establece el valor de cadena de una propiedad.  

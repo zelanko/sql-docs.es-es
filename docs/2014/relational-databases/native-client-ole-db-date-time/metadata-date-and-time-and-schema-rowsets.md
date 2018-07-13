@@ -1,28 +1,26 @@
 ---
-title: Fecha y hora y conjuntos de filas de esquema | Documentos de Microsoft
+title: Fecha y hora y conjuntos de filas de esquema | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9faf2104ffb2f49281fe677d8e7ff4f23887338d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8a87b2ecdcce3b50eaebcc73471b44f6db48f04b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202022"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431684"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>Fecha y hora y conjuntos de filas de esquema
   En este tema se proporciona información sobre los conjuntos de filas COLUMNS y PROCEDURE_PARAMETERS. Esta información está relacionada con las mejoras realizadas en la fecha y la hora de OLE DB introducidas en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -90,7 +88,7 @@ ms.locfileid: "36202022"
 |TYPELIB|NULL|NULL|NULL|NULL|NULL|NULL|  
 |VERSION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_LONG|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE a menos que se dé uno de los siguientes casos:<br /><br /> : Es el cliente conectado a un servidor de nivel inferior.<br />-La propiedad de conexión de compatibilidad de tipo de datos especifica un nivel de compatibilidad que es igual a 80.|VARIANT_TRUE a menos que se dé uno de los siguientes casos:<br /><br /> : Es el cliente conectado a un servidor de nivel inferior.<br />-La propiedad de conexión de compatibilidad de tipo de datos especifica un nivel de compatibilidad que es igual a 80.|VARIANT_TRUE|  
+|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE a menos que se dé uno de los siguientes casos:<br /><br /> : Es el cliente conectado a un servidor de nivel inferior.<br />-La propiedad de conexión de compatibilidad de tipo de datos especifica un nivel de compatibilidad es igual a 80.|VARIANT_TRUE a menos que se dé uno de los siguientes casos:<br /><br /> : Es el cliente conectado a un servidor de nivel inferior.<br />-La propiedad de conexión de compatibilidad de tipo de datos especifica un nivel de compatibilidad es igual a 80.|VARIANT_TRUE|  
 |IS_FIXEDLENGTH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
   
  OLE DB solamente define MINIMUM_SCALE y MAXIMUM_SCALE para tipos numéricos y decimales, de modo que el uso que hace [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client de estas columnas para time, datetime2 y datetimeoffset no es estándar.  

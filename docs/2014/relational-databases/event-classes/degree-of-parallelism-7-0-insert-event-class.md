@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Degree of Parallelism event class
 ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03f723987ebce872068a128bec80be6bb8cfe10b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: aa223f74da700517ed957e83f96114ea75703822
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158256"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert), clase de eventos
   La clase de eventos **Degree of Parallelism (7.0 Insert)** se produce cada vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SELECT, INSERT, UPDATE o DELETE.  
@@ -35,7 +35,7 @@ ms.locfileid: "36204405"
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
-|**BinaryData**|**imagen**|Número de CPU utilizadas para completar el proceso según los valores siguientes:<br /><br /> 0 x 00000000: indica un plan en serie se ejecuta en serie.<br /><br /> 0 x 01000000 indica un plan paralelo que se ejecuta en serie.<br /><br /> > = 0x02000000: indica un plan paralelo que se ejecutan en paralelo.|2|no|  
+|**BinaryData**|**imagen**|Número de CPU utilizadas para completar el proceso según los valores siguientes:<br /><br /> 0 x 00000000: indica un plan en serie que se ejecutan en serie.<br /><br /> 0 x 01000000 indica un plan paralelo que se ejecutan en serie.<br /><br /> > = 0 x 02000000: indica un plan paralelo que se ejecutan en paralelo.|2|no|  
 |**ClientProcessID**|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona su identificador de proceso.|9|Sí|  
 |**DatabaseID**|**int**|Identificador de la base de datos especificada mediante la instrucción USE database o la base de datos predeterminada si no se emite la instrucción USE database para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7ae6615491a300a5e5270f417522e9613914319
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e5e75f62bc6d0b5d8da6a0ce244dfde1939155e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203375"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188342"
 ---
 # <a name="sql-trace"></a>Seguimiento de SQL
   En Seguimiento de SQL, los eventos se recopilan si se enumeran instancias de clases de eventos en la definición del seguimiento. Estos eventos pueden filtrarse para quitarlos del seguimiento o ponerse en cola para su destino. El destino puede ser un archivo u Objetos de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO), que pueden usar la información del seguimiento en aplicaciones que administran [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -83,13 +83,13 @@ ms.locfileid: "36203375"
 |**ClientProcessID** <sup>1</sup>|9|Id. que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona su identificador de proceso.|  
 |**ColumnPermissions**|44|Indica si se estableció un permiso de columna. Puede analizar el texto de la instrucción para determinar los permisos que se aplicaron a las columnas.|  
 |**CPU**|18|Cantidad de tiempo de CPU (en milisegundos) utilizada por el evento.|  
-|**Id. de la base de datos** <sup>1</sup>|3|Identificador de la base de datos especificada mediante la instrucción USE *database_name* o el identificador de la base de datos predeterminada si no se emite la instrucción USE *database_name*para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|  
+|**Id. de base de datos** <sup>1</sup>|3|Identificador de la base de datos especificada mediante la instrucción USE *database_name* o el identificador de la base de datos predeterminada si no se emite la instrucción USE *database_name*para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|  
 |**DatabaseName**|35|Nombre de la base de datos en que se ejecuta la instrucción del usuario.|  
 |**DBUserName** <sup>1</sup>|40|Nombre de usuario de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del cliente.|  
 |**Duración**|13|Duración (en microsegundos) del evento.<br /><br /> El servidor informa de la duración del evento en microsegundos (una millonésima parte de un segundo o 10<sup>-6</sup>segundos) y la cantidad de tiempo de CPU que usa el evento en milisegundos (una milésima de segundo o 10<sup>-3</sup>segundos). La interfaz gráfica de usuario de [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] muestra la columna **Duración** en milisegundos de manera predeterminada, pero cuando se guarda un seguimiento en un archivo o en una tabla de base de datos, el valor de la columna **Duración** se escribe en microsegundos.|  
 |**EndTime**|15|Hora a la que finalizó el evento. Esta columna no se rellena para las clases de eventos que hacen referencia al inicio de un evento, como **SQL:BatchStarting** o **SP:Starting**.|  
 |**Error**|31|Número de error de un evento específico. A menudo, es el número de error almacenado en **sysmessages**.|  
-|**Clase de eventos** <sup>1</sup>|27|Tipo de clase de evento capturado.|  
+|**EventClass** <sup>1</sup>|27|Tipo de clase de evento capturado.|  
 |**EventSequence**|51|Número de secuencia de este evento.|  
 |**EventSubClass** <sup>1</sup>|21|Tipo de subclase de evento, que proporciona más información acerca de cada clase de evento. Por ejemplo, los valores de la subclase de evento de la clase de evento **Execution Warning** representan el tipo de advertencia de ejecución:<br /><br /> **1** = Espera de consulta. La consulta debe esperar a los recursos para poder ejecutarse; por ejemplo, la memoria.<br /><br /> **2** = Tiempo de espera de la consulta. Se ha agotado el tiempo de espera de la consulta mientras esperaba a los recursos necesarios para su ejecución. Esta columna de datos no se llena para todas las clases de evento.|  
 |**GUID**|54|Valor GUID que depende de la clase de evento especificada en el seguimiento.|  

@@ -1,5 +1,5 @@
 ---
-title: Configuración de nodo (completa) del clúster | Documentos de Microsoft
+title: La configuración de nodo (completo) del clúster | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 64174d54-edee-49b8-9b43-039574bf2ca1
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 61643e7a5d21d106430d0bc9fbd4672efe0924f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3d8f058d6ace313c5de013a90ebd62f44802e2e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230125"
 ---
 # <a name="cluster-node-configuration-complete"></a>Configuración de nodo de clúster (Completar)
   Utilice la página Configuración de nodo de clúster (completada) para especificar una instancia existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ha preparado para la agrupación en clústeres. Para instalar o actualizar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe ejecutar el programa de instalación en cada nodo del clúster de conmutación por error. Para agregar un nodo a un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente, debe ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el nodo que se va a agregar a la instancia del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

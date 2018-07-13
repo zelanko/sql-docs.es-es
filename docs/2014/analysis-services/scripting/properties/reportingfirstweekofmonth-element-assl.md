@@ -1,5 +1,5 @@
 ---
-title: Elemento ReportingFirstWeekOfMonth (ASSL) | Documentos de Microsoft
+title: Elemento ReportingFirstWeekOfMonth (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReportingFirstWeekOfMonth element
 ms.assetid: 29818404-ad45-403f-8fd9-3e3246d301ad
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8f1e3383fe311ca82ee85c5f72d0b56cc00503fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d73251f225fc3fecc489ad9e2fb1ba85de15f9b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209895"
 ---
 # <a name="reportingfirstweekofmonth-element-assl"></a>Elemento ReportingFirstWeekOfMonth (ASSL)
   Define la primera semana del mes de informes para la [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36202371"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `ReportingFirstWeekOfMonth` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ El elemento que se corresponde con el elemento primario de `ReportingFirstWeekOfMonth` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -20,13 +20,13 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cd1a3a39045330283b12aa74acbce64b1420c6ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52729044444db0668870cc9878ee3184f17b49b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163046"
 ---
 # <a name="precedence-constraints"></a>Restricciones de precedencia
   Las restricciones de precedencia vinculan ejecutables, contenedores y tareas de paquetes en un flujo de control, y especifican condiciones que determinan si se ejecutan los ejecutables. Un ejecutable puede ser un contenedor de bucles For, de bucles Foreach o de secuencia, o bien una tarea o un controlador de eventos. Los controladores de eventos usan las restricciones de precedencia para vincular sus ejecutables en un flujo de control.  
@@ -64,7 +64,7 @@ ms.locfileid: "36204223"
   
 -   Una expresión o una restricción que usa los resultados de la ejecución del ejecutable de precedencia o los resultados de devolución de la evaluación de la expresión.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] El diseñador utiliza el color para identificar el tipo de restricción de precedencia. La restricción de operación realizada correctamente es verde, la de error es roja y la de conclusión es azul. Para mostrar etiquetas de texto en el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] que muestran el tipo de la restricción, debe configurar las características de accesibilidad del Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Usa colores para identificar el tipo de restricción de precedencia. La restricción de operación realizada correctamente es verde, la de error es roja y la de conclusión es azul. Para mostrar etiquetas de texto en el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] que muestran el tipo de la restricción, debe configurar las características de accesibilidad del Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] .  
   
  La expresión debe ser una expresión de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] válida y puede incluir funciones, operadores y variables del sistema y personalizadas. Para obtener más información, vea [Expresiones de Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md) y [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   

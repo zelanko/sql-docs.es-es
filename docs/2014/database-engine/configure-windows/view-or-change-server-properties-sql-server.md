@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing server properties
 - server properties [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - servers [SQL Server], viewing
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 61db0b7975ba948e139eb8e78ef14baab11bd9a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 15463850f20ac660c6ef23f5df6c5c6ed14c267a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182922"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Ver o cambiar las propiedades del servidor (SQL Server)
   En este tema se describe cómo ver o cambiar las propiedades de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o el Administrador de configuración de SQL Server.  
@@ -63,7 +63,7 @@ ms.locfileid: "36203479"
 ####  <a name="Permissions"></a> Permissions  
  Para obtener más información, vea [Roles de nivel de servidor](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
- Permisos de ejecución en `sp_configure` sin parámetros o con solo el primer parámetro se conceden a todos los usuarios de forma predeterminada. Para ejecutar `sp_configure` con dos parámetros para cambiar una opción de configuración o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso de nivel de servidor ALTER SETTINGS. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
+ Permisos de ejecución `sp_configure` sin parámetros o con solo el primer parámetro que se conceden a todos los usuarios de forma predeterminada. Para ejecutar `sp_configure` con ambos parámetros para cambiar una opción de configuración o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en nivel de servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   

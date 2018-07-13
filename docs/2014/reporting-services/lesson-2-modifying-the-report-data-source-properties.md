@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f2d985681028cf919e1f56d1138863497b931c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f7ede1d878eb966ec810098a3a8c1cd6475c4d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175248"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
   En esta lección, usará el Administrador de informes para seleccionar un informe que se entregará a los destinatarios. La suscripción controlada por datos que va a definir distribuirá el informe **Sales Order** creado en el tutorial [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). En los pasos siguientes, modificará la información de conexión del origen de datos que el informe utiliza para obtener los datos. Solo los informes que usan **credenciales almacenadas** para obtener acceso a un origen de datos del informe se pueden distribuir a través de una suscripción controlada por datos. Las credenciales almacenadas son necesarias para el procesamiento desatendido de informes.  
@@ -56,15 +56,15 @@ ms.locfileid: "36204101"
   
 6.  Haga clic en **Credenciales almacenadas de forma segura en el servidor de informes**.  
   
-7.  Escriba su nombre de usuario (utilizando el formato *dominio\usuario*) y la contraseña. Si no tiene permiso para tener acceso a la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] la base de datos, especifique un inicio de sesión que realice.  
+7.  Escriba su nombre de usuario (utilizando el formato *dominio\usuario*) y la contraseña. Si no tiene permiso para acceder a la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] de base de datos, especifique un inicio de sesión que hace.  
   
-8.  Haga clic en **Usar como credenciales de Windows para la conexión al origen de datos**y, a continuación, en **Aceptar**. Si no usa una cuenta de dominio (por ejemplo, si usas un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inicio de sesión), no Active esta casilla.  
+8.  Haga clic en **Usar como credenciales de Windows para la conexión al origen de datos**y, a continuación, en **Aceptar**. Si no usa una cuenta de dominio (por ejemplo, si usas un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inicio de sesión), no hace clic en esta casilla de verificación.  
   
 9. Haga clic en **Probar conexión** para comprobar que puede conectarse al origen de datos.  
   
 10. Haga clic en **Aplicar**.  
   
-11. Visualice el informe para comprobar que se ejecuta con las credenciales que ha especificado. Para ver el informe, haga clic en la pestaña **Ver** . Tenga en cuenta que, una vez abierto el informe, debe seleccionar un nombre de empleado y, a continuación, haga clic en el **Ver informe** botón para ver el informe.  
+11. Visualice el informe para comprobar que se ejecuta con las credenciales que ha especificado. Para ver el informe, haga clic en la pestaña **Ver** . Tenga en cuenta que, una vez abierto el informe, debe seleccionar un nombre de empleado y, a continuación, haga clic en el **Ver informe** para ver el informe.  
   
 ##  <a name="bkmk_modify_dataset"></a> Para modificar AdventureWorksDataset  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36204101"
   
 6.  Haga clic en **Aceptar**. El parámetro se agregará a la carpeta **Panel Datos de informe** y tendrá una apariencia similar a la de la imagen siguiente:  
   
-     ![El nuevo parámetro se agrega al panel de datos de informe](../../2014/tutorials/media/ssrs-tutorial-datadriven-parameter.gif "el nuevo parámetro se agrega al panel de datos de informe")  
+     ![El nuevo parámetro se agrega al panel datos de informe](../../2014/tutorials/media/ssrs-tutorial-datadriven-parameter.gif "el nuevo parámetro se agrega al panel datos de informe")  
   
 7.  Haga clic en la pestaña **Vista previa** para ejecutar el informe. Observe el cuadro de entrada del parámetro en la parte superior del informe. Puede elegir entre lo siguiente:  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36204101"
  Ha configurado correctamente el informe para obtener datos utilizando credenciales almacenadas. A continuación, especifica la suscripción usando las páginas de suscripción controlada por datos en el Administrador de informes. Consulte la [Lección 3: Definir una suscripción controlada por datos](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Administrar los orígenes de datos de informe](report-data/manage-report-data-sources.md)   
+ [Administrar orígenes de datos de informe](report-data/manage-report-data-sources.md)   
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  

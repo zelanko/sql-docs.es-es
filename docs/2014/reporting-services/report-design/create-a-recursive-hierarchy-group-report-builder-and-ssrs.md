@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a82a52b230564b81261cece8f61ea56cdb21da8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3c4144787ac5085c4713781569d7e6d364ff7951
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203576"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172176"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Crear un grupo de jerarquía recursiva (Generador de informes y SSRS)
   Un grupo de jerarquía recursiva organiza los datos existentes en un único conjunto de datos de informe donde existen varios niveles jerárquicos, como puede ser la estructura de mando para las relaciones entre jefes y empleados en una jerarquía de organización.  
@@ -54,22 +54,22 @@ ms.locfileid: "36203576"
     > [!NOTE]  
     >  Si el panel Propiedades no está visible, en la pestaña **Ver** , haga clic en **Propiedades** .  
   
-2.  En el panel Propiedades, expanda el `Padding` nodo, haga clic en **izquierda**y en la lista desplegable, seleccione  **\<expresión... >**.  
+2.  En el panel Propiedades, expanda el `Padding` nodo, haga clic en **izquierda**y en la lista desplegable, seleccione  **\<Expression... >**.  
   
 3.  En el panel Expresión, escriba la expresión siguiente:  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Las propiedades de relleno requieren una cadena con el formato *nnyy*, donde *nn* es un número e *yy* es la unidad de medida. La expresión de ejemplo genera una cadena que utiliza el `Level` función para aumentar el tamaño del relleno según el nivel de recursividad. Por ejemplo, una fila que tenga un nivel de 1 daría lugar a un relleno de (2 + (1\*10))=12pt, y una fila que tenga un nivel de 3 se traduciría en un relleno de (2 + (3\*10))=32pt. Para obtener información sobre la `Level` función, vea [nivel](report-builder-functions-level-function.md).  
+     Las propiedades de relleno requieren una cadena con el formato *nnyy*, donde *nn* es un número e *yy* es la unidad de medida. La expresión de ejemplo genera una cadena que usa el `Level` función para aumentar el tamaño del relleno según el nivel de recursividad. Por ejemplo, una fila que tenga un nivel de 1 daría lugar a un relleno de (2 + (1\*10))=12pt, y una fila que tenga un nivel de 3 se traduciría en un relleno de (2 + (3\*10))=32pt. Para obtener información sobre la `Level` de función, vea [nivel](report-builder-functions-level-function.md).  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      Ejecute el informe. El informe muestra una vista jerárquica de los datos agrupados.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear grupos de jerarquía recursiva &#40;el generador de informes SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Creación de grupos de jerarquía recursiva &#40;generador de informes y SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Referencia a las funciones de agregado &#40;el generador de informes SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Referencia a las funciones de agregado &#40;generador de informes y SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Tablas &#40;Generador de informes y SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrices &#40;Generador de informes y SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Listas &#40;Generador de informes y SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

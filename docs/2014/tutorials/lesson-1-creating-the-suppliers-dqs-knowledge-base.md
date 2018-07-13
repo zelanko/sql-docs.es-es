@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Crear la Base de conocimiento DQS proveedores | Documentos de Microsoft'
+title: 'Lección 1: Crear la Base de conocimiento DQS proveedores | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 58f787d1204cde60dee3a10fdaf587b52cf6dfa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 744658b00253b96bf6110f4382a7a6a8a8d7abfc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151866"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lección 1: crear la base de conocimiento de DQS Proveedores
   En esta lección, creará una base de conocimiento de DQS denominada **Proveedores** con el conocimiento (los metadatos) sobre los datos de proveedor. Usará la base de conocimiento para realizar las actividades de limpieza y coincidencia sobre los datos de proveedor de entrada. La actividad de limpieza identifica los datos incorrectos o no válidos, corrige los datos incorrectos, propone correcciones y sugerencias, normaliza los datos y enriquece los datos con más información. La actividad de coincidencia compara los datos e identifica los registros similares (pero ligeramente diferentes) en los datos, lo que ayuda a quitar duplicados de los datos.  
@@ -49,6 +49,6 @@ ms.locfileid: "36204061"
 -   Publicar la base de conocimiento para que se pueda usar en las actividades de limpieza y coincidencia.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 1: Crear una Base de conocimiento y dominios](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
+ [Tarea 1: Crear una base de conocimiento y dominios](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
   
   

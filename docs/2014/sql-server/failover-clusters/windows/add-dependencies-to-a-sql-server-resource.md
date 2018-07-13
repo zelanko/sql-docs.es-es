@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - resource dependencies [SQL Server]
 - failover clustering [SQL Server], dependencies
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - dependencies [SQL Server], clustering
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 caps.latest.revision: 32
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: cb08a5a5848aca29f62446893dad7b20ac9519f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 50ebb66342697ba514c3e0b344072424fafdf80c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161936"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Agregar dependencias a un recurso de SQL Server
   En este tema se describe cómo se agregan dependencias a un recurso de instancia de clúster de conmutación por error (FCI) AlwaysOn con el complemento Administrador de clústeres de conmutación por error. El complemento Administrador de clústeres de conmutación por error es la aplicación de administración de clústeres del servicio de clústeres de conmutación por error de Windows Server (WSFC).  

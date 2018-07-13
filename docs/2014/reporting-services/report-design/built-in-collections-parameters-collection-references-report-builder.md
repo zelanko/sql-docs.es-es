@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a036b16073f19c106b507653921185fcb8df0bbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a33777cd395bf461f85a93ba6cb625acc1436866
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210885"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>Usar referencias a la colección de parámetros (Generador de informes y SSRS)
   Los parámetros de informe son una de las colecciones integradas a las que se puede hacer referencia desde una expresión. Al incluir parámetros en una expresión, puede personalizar los datos y el aspecto de los informes basándose en las opciones seleccionadas por el usuario. Se pueden usar expresiones para cualquier propiedad de elemento de informe o de cuadro de texto que proporcione la opción (*Fx*) o \<**Expresión**>. Las expresiones también se usan para controlar el contenido y el aspecto de los informes de otras maneras. Para más información, vea [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
   
- Cuando se comparan los valores de los parámetros en tiempo de ejecución con los valores de los campos del conjunto de datos, los tipos de datos de los dos elementos que se comparan deben coincidir. Los parámetros de informe pueden ser de uno de los tipos siguientes: Boolean, DateTime, Integer, Float, o Text, que representa el tipo de datos subyacente String. Es posible que tenga que convertir el tipo de datos del valor del parámetro para que coincida con el valor del conjunto de datos. Para obtener más información, consulte [tipos de datos en expresiones &#40;el generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md).  
+ Cuando se comparan los valores de los parámetros en tiempo de ejecución con los valores de los campos del conjunto de datos, los tipos de datos de los dos elementos que se comparan deben coincidir. Los parámetros de informe pueden ser de uno de los tipos siguientes: Boolean, DateTime, Integer, Float, o Text, que representa el tipo de datos subyacente String. Es posible que tenga que convertir el tipo de datos del valor del parámetro para que coincida con el valor del conjunto de datos. Para obtener más información, consulte [Data Types in Expressions &#40;generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
  Para incluir una referencia de parámetro en una expresión, debe entender cómo especificar la sintaxis correcta para la referencia de parámetro, que varía dependiendo de si el parámetro es de un solo valor o de varios valores.  
   
@@ -55,16 +55,16 @@ ms.locfileid: "36203344"
 |`=Parameters!` *\<NombreDeParámetroConVariosValores>* `.Value(0)`|Devuelve el primer valor de un parámetro de varios valores.|  
 |`=Parameters!` *\<NombreDeParámetroConVariosValores>* `.Value(Parameters!` *\<NombreDeParámetroConVariosValores>* `.Count-1)`|Devuelve el último valor de un parámetro de varios valores.|  
 |`=Split("Value1,Value2,Value3",",")`|Devuelve una matriz de valores.<br /><br /> Cree una matriz de valores para un parámetro de varios valores de tipo `String`. Puede utilizar cualquier delimitador del segundo parámetro para Split. Esta expresión puede utilizarse para establecer valores predeterminados para un parámetro de varios valores o para crear un parámetro de varios valores que se enviará a un subinforme o a un informe detallado.|  
-|`=Join(Parameters!` *\<NombreDeParámetroConVariosValores>* `.Value,", ")`|Devuelve un `String` que consta de una lista delimitada por comas de valores de parámetros de varios valores. Puede utilizar cualquier delimitador del segundo parámetro para Join.|  
+|`=Join(Parameters!` *\<NombreDeParámetroConVariosValores>* `.Value,", ")`|Devuelve un `String` que consta de una lista delimitada por comas de valores de parámetro de varios valores. Puede utilizar cualquier delimitador del segundo parámetro para Join.|  
   
  Para más información sobre cómo usar parámetros en los filtros, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Filtros de uso frecuente &#40;Generador de informes y SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)   
- [Agregar, cambiar o eliminar un parámetro de informe &#40;el generador de informes SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Agregar, cambiar o eliminar un parámetro de informe &#40;generador de informes y SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Tutorial: Agregar un parámetro a un informe &#40;Generador de informes&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Tutoriales &#40;generador de informes&#41;](../report-builder-tutorials.md)   
- [Colecciones integradas en expresiones &#40;el generador de informes SSRS&#41;](built-in-collections-in-expressions-report-builder.md)  
+ [Colecciones integradas en expresiones &#40;generador de informes y SSRS&#41;](built-in-collections-in-expressions-report-builder.md)  
   
   

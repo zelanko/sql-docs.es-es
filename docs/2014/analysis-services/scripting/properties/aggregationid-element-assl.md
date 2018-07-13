@@ -1,5 +1,5 @@
 ---
-title: Elemento AggregationID (ASSL) | Documentos de Microsoft
+title: Elemento AggregationID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - AggregationID element
 ms.assetid: 6056da1d-b6b4-4074-84db-45be719df49a
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cc757076c638075466cd0d49ad4340c983a8294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fadf9884d769402e962c64ec00d86338a71328a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277821"
 ---
 # <a name="aggregationid-element-assl"></a>Elemento AggregationID (ASSL)
-  Identifica la definición de agregación de la [AggregationDesign](../objects/aggregationdesign-element-assl.md) elemento utilizado para crear la instancia de agregación.  
+  Identifica la definición de agregación desde la [AggregationDesign](../objects/aggregationdesign-element-assl.md) elemento utilizado para crear la instancia de agregación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -56,13 +56,13 @@ ms.locfileid: "36201235"
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[AggregationInstance](../objects/aggregationinstance-element-assl.md)|  
+|Elementos primarios|[Elemento AggregationInstance](../objects/aggregationinstance-element-assl.md)|  
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
  Si este elemento falta o está establecido en una cadena vacía, `AggregationInstance` representa una agregación definida por el usuario.  
   
- El elemento que corresponde al elemento primario de `AggregationID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.AggregationInstance>.  
+ El elemento que se corresponde con el elemento primario de `AggregationID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.AggregationInstance>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

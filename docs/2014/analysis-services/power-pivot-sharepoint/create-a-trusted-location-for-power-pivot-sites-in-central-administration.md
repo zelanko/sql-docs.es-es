@@ -1,5 +1,5 @@
 ---
-title: Crear una ubicación de confianza para sitios PowerPivot en Administración Central | Documentos de Microsoft
+title: Crear una ubicación de confianza para sitios PowerPivot en Administración Central | Microsoft Docs
 ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56bc807ef54538a0d72bab8f3136df9304b6615e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5661842742c4f0f80b56186704a6b9ac967e8db8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153336"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Crear una ubicación de confianza para los sitios PowerPivot en Administración central
   Servicios de Excel permite especificar qué ubicaciones son repositorios válidos para los libros que se abren en un servidor de SharePoint. Estas ubicaciones se denominan 'ubicaciones de confianza' y puede utilizar opciones de configuración diferentes para cada ubicación de confianza que cree. En una implementación de PowerPivot para SharePoint, podría considerar crear una ubicación de confianza para los sitios que contienen libros PowerPivot. de modo que pueda aplicar la configuración que funcione mejor para el acceso a datos PowerPivot, al tiempo que conserva la configuración predeterminada para el resto de la granja.  
@@ -57,7 +57,7 @@ ms.locfileid: "36202810"
   
 7.  Acepte toda la configuración predeterminada para las propiedades de Administración de sesiones, Propiedades del libro y Comportamiento del cálculo.  
   
-8.  En Propiedades del libro, establezca **Tamaño máximo del libro** en **50**. De esta forma, se alinea el límite superior del tamaño de archivo al límite superior para las cargas de archivo en la aplicación del sitio web principal. Si los libros son mayores de 50 megabytes, debe aumentar el límite del tamaño de archivo. Para obtener más información, consulte [configurar tamaño máximo de archivo de carga &#40;PowerPivot para SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
+8.  En Propiedades del libro, establezca **Tamaño máximo del libro** en **50**. De esta forma, se alinea el límite superior del tamaño de archivo al límite superior para las cargas de archivo en la aplicación del sitio web principal. Si los libros son mayores de 50 megabytes, debe aumentar el límite del tamaño de archivo. Para obtener más información, consulte [configuración tamaño máximo de archivo de carga &#40;PowerPivot para SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
   
 9. En Datos externos, compruebe que Permitir datos externos está establecido en **Bibliotecas de conexiones de datos de confianza e incrustadas**. Este valor se requiere para el acceso a datos PowerPivot en un libro.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "36202810"
 11. Haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Galería de PowerPivot](../../2014-toc/books-online-for-sql-server-2014.md)   
+ [La Galería de PowerPivot](../../2014-toc/books-online-for-sql-server-2014.md)   
  [Crear y personalizar la Galería de PowerPivot](create-and-customize-power-pivot-gallery.md)   
- [Use la Galería de PowerPivot](use-power-pivot-gallery.md)  
+ [Usar la galería de PowerPivot](use-power-pivot-gallery.md)  
   
   

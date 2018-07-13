@@ -1,5 +1,5 @@
 ---
-title: Elementos XML (XMLA) | Documentos de Microsoft
+title: Elementos XML (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - elements [XML for Analysis]
 ms.assetid: 40ab2360-efb6-4ba6-bf23-e84964e51008
 caps.latest.revision: 32
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 84775d7d4bb7499d8c1d5e5326ca3fa2d1fb27ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5e4de4bbe0b87068ead6ccc9b80f8625bf8014c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200255"
 ---
 # <a name="xml-elements-xmla"></a>Elementos XML (XMLA)
-  Los temas siguientes describen el XML para categorías de elementos de Analysis (XMLA) admite diversos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  Los temas siguientes describen el XML para las categorías del elemento Analysis (XMLA) admite diversos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
   

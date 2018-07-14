@@ -1,5 +1,5 @@
 ---
-title: Filtrar seguimientos con SQL Server Profiler | Documentos de Microsoft
+title: Filtrar seguimientos con SQL Server Profiler | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], filters
 - filters [SQL Server], events
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b18c4b4450f3e009ae484cb9733e4bdebe90e8fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 82b24c2ce9324f0cddc917849f3158e8ae0bd62d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247805"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>Filtrar seguimientos con SQL Server Profiler
   Puede definir filtros en las columnas de datos de los eventos de seguimiento de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para capturar información únicamente de los eventos que le interesan. Los filtros de seguimiento reducen el impacto de supervisar el rendimiento del sistema porque se capturan menos eventos en el seguimiento. Los filtros también facilitan la lectura de la salida porque hay que buscar en menos eventos.  

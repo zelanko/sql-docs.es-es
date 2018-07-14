@@ -5,25 +5,24 @@ ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: da8d7d3b5a6cbe5864d7628ef58c61189fec6c7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cdaae11d21d1018e0c855036c4c82221c57a905d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223341"
 ---
 # <a name="the-transaction-log-sql-server"></a>El registro de transacciones (SQL Server)
   Todas las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen un registro de transacciones que registra todas las transacciones y las modificaciones que cada transacción realiza en la base de datos. El registro de transacciones se debe truncar periódicamente para evitar que se llene. Sin embargo, algunos factores pueden retrasar el truncamiento del registro, por lo que es importante supervisar el tamaño del registro. Algunas operaciones se pueden registrar mínimamente para reducir su impacto sobre el tamaño del registro de transacciones.  
@@ -39,7 +38,7 @@ ms.locfileid: "36105133"
   
 -   [Truncamiento del registro de transacciones](#Truncation)  
   
--   [Factores que pueden retrasar el truncamiento del registro](#FactorsThatDelayTruncation)  
+-   [Factores que pueden ralentizar el truncamiento del registro](#FactorsThatDelayTruncation)  
   
 -   [Operaciones que pueden registrar mínimamente](#MinimallyLogged)  
   
@@ -72,7 +71,7 @@ ms.locfileid: "36105133"
 > [!NOTE]  
 >  El truncamiento del registro no reduce el tamaño del archivo de registro físico. Para reducir el tamaño físico de un archivo de registro físico, se debe reducir el archivo de registro. Para obtener información sobre cómo reducir el tamaño de un archivo de registro físico, vea [Manage the Size of the Transaction Log File](manage-the-size-of-the-transaction-log-file.md).  
   
-##  <a name="FactorsThatDelayTruncation"></a> Factores que pueden retrasar el truncamiento del registro  
+##  <a name="FactorsThatDelayTruncation"></a> Factores que pueden ralentizar el truncamiento del registro  
  Cuando las entradas de registro permanecen activas durante una transacción de larga duración, se retrasa el truncamiento del registro y es posible que se llene el registro de transacciones.  
   
 > [!IMPORTANT]  
@@ -86,18 +85,18 @@ ms.locfileid: "36105133"
 |1|CHECKPOINT|No se ha producido ningún punto de comprobación desde el último truncamiento o el encabezado del registro no se ha movido más allá de un archivo de registro virtual. (Todos los modelos de recuperación)<br /><br /> Este es un motivo habitual para retrasar el truncamiento. Para obtener más información, vea [Puntos de comprobación de base de datos &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|Se requiere una copia de seguridad del registro para que se pueda truncar el registro de transacciones. (Solo modelos de recuperación completa u optimizada para cargas masivas de registros)<br /><br /> Cuando se completa la siguiente copia de seguridad de registros, es posible que se pueda reutilizar parte del espacio de registro.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|Existe una recuperación o copia de seguridad de datos en curso (todos los modelos de recuperación).<br /><br /> Si la copia de seguridad de una base de datos impide el truncamiento del registro, la cancelación de la operación de copia de seguridad podría ayudar a solucionar el problema inmediato.|  
-|4|ACTIVE_TRANSACTION|Existe una transacción activa (todos los modelos de recuperación).<br /><br /> Podría existir una transacción de larga duración en el inicio de la copia de seguridad del registro. En este caso, para liberar espacio se podría requerir otra copia de seguridad del registro. Tenga en cuenta que una transacciones de ejecución prolongada impiden el truncamiento del registro en todos los modelos de recuperación, incluido el modelo de recuperación simple, en la que se suele truncar el registro de transacciones en cada punto de comprobación automático.<br /><br /> Una transacción está diferida. Una *transacción diferida* es efectivamente una transacción activa cuya reversión se bloquea debido a algún recurso no disponible. Para obtener más información sobre las causas de las transacciones diferidas y cómo sacarlas del estado diferido, vea [Transacciones diferidas &#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md). <br /><br />Las transacciones de larga ejecución también podrían llenar el registro de transacciones de tempdb. Las transacciones de usuario usan implícitamente tempdb para objetos internos como tablas de trabajo para ordenar, archivos de trabajo para crear valores hash, tablas de trabajo de cursor y versiones de fila. Incluso si la transacción de usuario incluye sólo lectura de datos (consultas SELECT), los objetos internos pueden pueden crear y usar en las transacciones de usuario. Después, se puede rellenar el registro de transacciones de tempdb.|  
+|4|ACTIVE_TRANSACTION|Existe una transacción activa (todos los modelos de recuperación).<br /><br /> Podría existir una transacción de larga duración en el inicio de la copia de seguridad del registro. En este caso, para liberar espacio se podría requerir otra copia de seguridad del registro. Tenga en cuenta que un transacciones de larga ejecución impiden el truncamiento de registro en todos los modelos de recuperación, incluido el modelo de recuperación simple, en la que se suele truncar el registro de transacciones en cada punto de comprobación automático.<br /><br /> Una transacción está diferida. Una *transacción diferida* es efectivamente una transacción activa cuya reversión se bloquea debido a algún recurso no disponible. Para obtener más información sobre las causas de las transacciones diferidas y cómo sacarlas del estado diferido, vea [Transacciones diferidas &#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md). <br /><br />Las transacciones de larga ejecución también podrían llenar el registro de transacciones de tempdb. Las transacciones de usuario usan implícitamente tempdb para objetos internos como tablas de trabajo para ordenar, archivos de trabajo para crear valores hash, tablas de trabajo de cursor y versiones de fila. Incluso si la transacción de usuario incluye datos (consultas SELECT) de solo lectura, los objetos internos se pueden crear y usar en las transacciones de usuario. Después, se puede rellenar el registro de transacciones de tempdb.|  
 |5|DATABASE_MIRRORING|Se realiza una pausa en la creación de reflejo de la base de datos o, en el modo de alto rendimiento, la base de datos reflejada está notablemente detrás de la base de datos principal. (Solo para el modelo de recuperación completa)<br /><br /> Para obtener más información, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |6|REPLICATION|Durante las replicaciones transaccionales, las transacciones pertinentes para las publicaciones no se han entregado aún a la base de datos de distribución. (Solo para el modelo de recuperación completa)<br /><br /> Para obtener información acerca de la replicación transaccional, vea [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).|  
 |7|DATABASE_SNAPSHOT_CREATION|Se está creando una instantánea de base de datos. (Todos los modelos de recuperación)<br /><br /> Este es un motivo habitual, por lo general breve, para retrasar el truncamiento del registro.|  
 |8|LOG_SCAN|Se está realizando un examen de registro. (Todos los modelos de recuperación)<br /><br /> Este es un motivo habitual, por lo general breve, para retrasar el truncamiento del registro.|  
-|9|AVAILABILITY_REPLICA|Una réplica secundaria de un grupo de disponibilidad está aplicando entradas del registro de transacciones de esta base de datos a una base de datos secundaria correspondiente. (Modelo de recuperación completa)<br /><br /> Para obtener más información, consulte [información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+|9|AVAILABILITY_REPLICA|Una réplica secundaria de un grupo de disponibilidad está aplicando entradas del registro de transacciones de esta base de datos a una base de datos secundaria correspondiente. (Modelo de recuperación completa)<br /><br /> Para obtener más información, consulte [información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
 |10|—|Exclusivamente para uso interno.|  
 |11|—|Exclusivamente para uso interno.|  
 |12|—|Exclusivamente para uso interno.|  
 |13|OLDEST_PAGE|Si una base de datos está configurada para usar puntos de comprobación indirectos, la página más antigua de la base de datos podría ser anterior al LSN del punto de comprobación. En este caso, la página más antigua puede retrasar el truncamiento del registro. (Todos los modelos de recuperación)<br /><br /> Para obtener más información sobre los puntos de comprobación indirectos, vea [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|No se utiliza este valor actualmente.|  
-|16|XTP_CHECKPOINT|Cuando una base de datos tiene un grupo de archivos con optimización para memoria, el registro de transacciones no se puede truncar hasta automático [!INCLUDE[hek_2](../../includes/hek-2-md.md)] punto de control se desencadena (lo que sucede cada 512 MB de crecimiento del registro).<br /><br /> Nota: Para truncar el registro de transacciones antes de tamaño de 512 MB, activa el comando Checkpoint manualmente en la base de datos en cuestión.|  
+|16|XTP_CHECKPOINT|Cuando una base de datos tiene un grupo de archivos optimizados para memoria, el registro de transacciones no se puede truncar hasta automático [!INCLUDE[hek_2](../../includes/hek-2-md.md)] punto de control se desencadena (lo que sucede cada 512 MB de crecimiento del registro).<br /><br /> Nota: Para truncar el registro de transacciones antes de 512 MB de tamaño, se activan el comando Checkpoint manualmente en la base de datos en cuestión.|  
   
 ##  <a name="MinimallyLogged"></a> Operaciones que pueden registrar mínimamente  
  El*registro mínimo* implica registrar únicamente la cantidad de información necesaria para recuperar la transacción sin permitir la recuperación a un momento dado. En este tema se identifican las operaciones que se registran mínimamente en el modelo de recuperación optimizado para cargas masivas de registros (y en el modelo de recuperación simple, excepto cuando se está ejecutando una copia de seguridad).  

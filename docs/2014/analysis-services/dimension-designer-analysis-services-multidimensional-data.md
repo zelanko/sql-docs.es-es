@@ -1,5 +1,5 @@
 ---
-title: Dimensión diseñador (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: (Analysis Services - datos multidimensionales) del Diseñador de dimensiones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Dimension Designer
 ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cd1efb474f3e9c70641496fcc023ef0795b579f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7c5920ede56424510e1a6edca52e6de8d56b099
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208115"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Diseñador de dimensiones (Analysis Services - Datos multidimensionales)
   Use el Diseñador de dimensiones de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para examinar los datos que contiene la dimensión, y para modificar las distintas propiedades de una dimensión existente: atributos, jerarquías, niveles, relaciones de atributo y traducciones.  

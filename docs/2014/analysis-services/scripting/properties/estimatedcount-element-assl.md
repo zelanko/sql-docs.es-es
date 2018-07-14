@@ -1,5 +1,5 @@
 ---
-title: Elemento EstimatedCount (ASSL) | Documentos de Microsoft
+title: Elemento EstimatedCount (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - EstimatedCount element
 ms.assetid: ce84b54a-8ab2-42f4-a7dd-e10a3d41cb4d
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c865a89d1c67bcb4155aa771ee6709a0068a7bbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a69d67554d0090e0e586421986bc97ba556c84a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300855"
 ---
 # <a name="estimatedcount-element-assl"></a>Elemento EstimatedCount (ASSL)
   Contiene el número estimado de miembros para un atributo, definido por el usuario.  
@@ -62,7 +62,7 @@ ms.locfileid: "36103629"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- Este valor se asigna por el usuario y se usa por la [AggregationDesign, elemento &#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md).  
+ Este valor se asigna por el usuario y está usando el [elemento AggregationDesign &#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md).  
   
  Los elementos que corresponden a los elementos primarios de `EstimatedCount` en el modelo de objetos de Analysis Management Objects (AMO) son <xref:Microsoft.AnalysisServices.AggregationDesignAttribute> y <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f43faad4-2182-4b43-a76a-0e3b405816d1
 caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: d66ad56ad529b7eca3156bf53816361a58a3732f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b91eecf5ea3a9c8e8107d83e119262c70e40113d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272871"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>Problemas de migración para los procedimientos almacenados compilados de forma nativa
   En esta sección se presentan varios problemas relacionados con la creación de procedimientos almacenados compilados de forma nativa.  
@@ -36,7 +36,7 @@ ms.locfileid: "36104898"
   
 -   [Implementar una combinación externa](implementing-an-outer-join.md)  
   
--   [Implementar el operador OR (operador) en los procedimientos almacenados compilados de forma nativa](../../database-engine/implementing-the-or-operator-in-natively-compiled-stored-procedures.md)  
+-   [Implementar el operador OR en procedimientos almacenados compilados de forma nativa](../../database-engine/implementing-the-or-operator-in-natively-compiled-stored-procedures.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Migrar a OLTP en memoria](migrating-to-in-memory-oltp.md)  

@@ -1,5 +1,5 @@
 ---
-title: Elemento NullProcessing (ASSL) | Documentos de Microsoft
+title: Elemento NullProcessing (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NullProcessing element
 ms.assetid: 697be5c6-e9a6-4f74-9ff4-5f31400c2178
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 54b75b2e1a7bddd6f7b5df1aeda0311c1b60ff99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc55d97fabaf3f2391beb5c33e3889f6866738d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104334"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246115"
 ---
 # <a name="nullprocessing-element-assl"></a>NullProcessing Element (ASSL)
   Define cómo se procesan los valores nulos.  
@@ -58,7 +58,7 @@ ms.locfileid: "36104334"
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elemento primario|[Elemento de datos](../data-type/dataitem-data-type-assl.md)|  
+|Elemento primario|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  

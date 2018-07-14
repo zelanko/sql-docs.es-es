@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - custom data processing extensions [Reporting Services]
 - IDbConnection interface, connection strings
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], connections
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a1577c387561a74356bc31e9ce8058cf804b0235
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: a0d1026ad56474a974d261c85adf86145671c414
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222965"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Especificar conexiones para extensiones de procesamiento de datos personalizadas
   Puede crear o usar extensiones de procesamiento de datos personalizadas de otros fabricantes en un servidor de informes con el fin de mejorar la capacidad de procesamiento de datos de orígenes de datos admitidos o proporcionar compatibilidad con orígenes de datos adicionales que no estén disponibles en una instalación predeterminada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las conexiones se tratan de forma diferente en función de la implementación. Las implementaciones siguientes están disponibles para extensiones de procesamiento de datos:  
@@ -50,14 +50,14 @@ ms.locfileid: "36105105"
  En versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se llamaba a todas las extensiones de procesamiento de datos personalizadas mediante la suplantación de usuarios. En esta versión, la suplantación de usuarios solo se usa para llamar al método Open. Si tiene una extensión de procesamiento de datos que necesite seguridad integrada, es necesario que modifique el código para que use el método Open o que almacene el objeto de identidad de usuario.  
   
 ## <a name="connections-for-custom-net-framework-data-providers"></a>Conexiones para proveedores de datos personalizados de .NET Framework  
- Al configurar un informe para que utilice un origen de datos concreto, se establecen propiedades que determinan el tipo de origen de datos, la cadena de conexión y las credenciales que se utilizarán para tener acceso al origen de datos. La tabla siguiente describe los tipos de credenciales compatibles con proveedores de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para obtener más información acerca de cómo establecer propiedades del origen de datos de informes, consulte [especificar credenciales y la información de conexión para orígenes de datos de informe](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Al configurar un informe para que utilice un origen de datos concreto, se establecen propiedades que determinan el tipo de origen de datos, la cadena de conexión y las credenciales que se utilizarán para tener acceso al origen de datos. La tabla siguiente describe los tipos de credenciales compatibles con proveedores de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para obtener más información acerca de cómo establecer propiedades del origen de datos de informe, vea [especificar credenciales y la información de conexión de orígenes de datos de informe](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 |Credenciales|Conexiones|  
 |-----------------|-----------------|  
-|Seguridad integrada|Si su proveedor de datos lo admite, puede utilizar la seguridad integrada de Windows. La solicitud se envía utilizando las credenciales del usuario actual.<br /><br /> Al definir la cadena de conexión, no olvide incluir argumentos que especifican la seguridad integrada (por ejemplo, una conexión a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origen de datos podría incluir `Integrated Security=SSPI` en la cadena de conexión).|  
-|Autenticación de Windows|Si su proveedor de datos lo admite, puede utilizar una cuenta de usuario de dominio de Windows. El servidor de informes suplantará la cuenta de usuario antes de que se llame a la extensión de procesamiento de datos.<br /><br /> Al definir la cadena de conexión, no olvide incluir argumentos que especifican la seguridad integrada (por ejemplo, una conexión a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origen de datos podría incluir `Integrated Security=SSPI` en la cadena de conexión).|  
+|Seguridad integrada|Si su proveedor de datos lo admite, puede utilizar la seguridad integrada de Windows. La solicitud se envía utilizando las credenciales del usuario actual.<br /><br /> Al definir la cadena de conexión, no olvide incluir los argumentos que especifiquen seguridad integrada (por ejemplo, una conexión a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origen de datos podría incluir `Integrated Security=SSPI` en la cadena de conexión).|  
+|Autenticación de Windows|Si su proveedor de datos lo admite, puede utilizar una cuenta de usuario de dominio de Windows. El servidor de informes suplantará la cuenta de usuario antes de que se llame a la extensión de procesamiento de datos.<br /><br /> Al definir la cadena de conexión, no olvide incluir los argumentos que especifiquen seguridad integrada (por ejemplo, una conexión a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origen de datos podría incluir `Integrated Security=SSPI` en la cadena de conexión).|  
 |Credenciales de base de datos|La autenticación de base de datos no admite conexiones realizadas a través de un proveedor de datos personalizado de .NET. El servidor de informes generará un error de conexión en todos los casos.|  
-|Sin credenciales|Puede utilizar la opción Sin credenciales con proveedores de datos personalizados de .NET. Si especifica una cuenta de ejecución desatendida, la cadena de conexión determinará las credenciales que se utilizarán. El servidor de informes suplantará la cuenta de ejecución desatendida para realizar la conexión.<br /><br /> Si no se ha definido la cuenta de ejecución desatendida, el servidor de informes generará un error de conexión. Para obtener más información acerca de cómo definir la cuenta, consulte [configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
+|Sin credenciales|Puede utilizar la opción Sin credenciales con proveedores de datos personalizados de .NET. Si especifica una cuenta de ejecución desatendida, la cadena de conexión determinará las credenciales que se utilizarán. El servidor de informes suplantará la cuenta de ejecución desatendida para realizar la conexión.<br /><br /> Si no se ha definido la cuenta de ejecución desatendida, el servidor de informes generará un error de conexión. Para obtener más información acerca de cómo definir la cuenta, consulte [configurar la cuenta de ejecución desatendida &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
   
 ## <a name="connections-for-idbconnection"></a>Conexiones para IDbConnection  
  Si usa una extensión de procesamiento de datos personalizada que solo admita <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, tiene que especificar la conexión del modo siguiente:  
@@ -68,25 +68,25 @@ ms.locfileid: "36105105"
   
 3.  Incluya las credenciales utilizadas para conectarse al origen de datos en la cadena de conexión.  
   
- Cuando se utiliza `IDbConnection`, no se admiten los siguientes tipos de credenciales: seguridad integrada, las cuentas de usuario de Windows y las credenciales de la base de datos. Si alguna conexión del origen de datos utiliza estas opciones, generará error en el servidor de informes.  
+ Cuando se usa `IDbConnection`, no se admiten los siguientes tipos de credenciales: seguridad integrada, las cuentas de usuario de Windows y las credenciales de la base de datos. Si alguna conexión del origen de datos utiliza estas opciones, generará error en el servidor de informes.  
   
 ## <a name="connections-for-idbconnectionextension"></a>Conexiones para IDbConnectionExtension  
  Si usa una extensión de procesamiento de datos personalizada compatible con <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>, puede especificar la conexión de las formas siguientes:  
   
 |Credenciales|Conexiones|  
 |-----------------|-----------------|  
-|Seguridad integrada|Si su proveedor de datos lo admite, puede usar seguridad integrada de Windows con extensiones de procesamiento de datos personalizadas que utilicen `IDbConnectionExtension`.<br /><br /> Al definir la cadena de conexión, no olvide incluir argumentos que especifican la seguridad integrada (por ejemplo, una conexión a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origen de datos podría incluir `Integrated Security=SSPI` en la cadena de conexión).|  
-|Autenticación de Windows|Si su proveedor de datos lo admite, puede usar una cuenta de usuario de dominio de Windows para extensiones de procesamiento de datos personalizadas que utilicen `IDbConnectionExtension`.<br /><br /> El servidor de informes suplantará la cuenta de usuario antes de que se llame a la extensión de procesamiento de datos. Al definir la cadena de conexión, no olvide incluir argumentos que especifican la seguridad integrada (por ejemplo, una conexión a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origen de datos podría incluir `Integrated Security=SSPI` en la cadena de conexión).|  
+|Seguridad integrada|Si su proveedor de datos lo admite, puede usar seguridad integrada de Windows con extensiones de procesamiento de datos personalizadas que utilicen `IDbConnectionExtension`.<br /><br /> Al definir la cadena de conexión, no olvide incluir los argumentos que especifiquen seguridad integrada (por ejemplo, una conexión a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origen de datos podría incluir `Integrated Security=SSPI` en la cadena de conexión).|  
+|Autenticación de Windows|Si su proveedor de datos lo admite, puede usar una cuenta de usuario de dominio de Windows para extensiones de procesamiento de datos personalizadas que utilicen `IDbConnectionExtension`.<br /><br /> El servidor de informes suplantará la cuenta de usuario antes de que se llame a la extensión de procesamiento de datos. Al definir la cadena de conexión, no olvide incluir los argumentos que especifiquen seguridad integrada (por ejemplo, una conexión a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origen de datos podría incluir `Integrated Security=SSPI` en la cadena de conexión).|  
 |Credenciales de base de datos|Puede utilizar la autenticación de base de datos para configurar conexiones para extensiones de procesamiento de datos personalizadas que utilicen `IDbConnectionExtension`.|  
 |Sin credenciales|Si especifica una cuenta de ejecución desatendida, la cadena de conexión determinará las credenciales que se utilizarán.<br /><br /> Si no se ha definido la cuenta de ejecución desatendida, el servidor de informes generará un error de conexión.|  
   
 ## <a name="see-also"></a>Vea también  
  [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md)   
- [Las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Implementar una extensión de procesamiento de datos](../extensions/data-processing/implementing-a-data-processing-extension.md)   
  [El Administrador de informes &#40;modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Crear, eliminar o modificar un origen de datos compartido &#40;el Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Configurar las propiedades del origen de datos para un informe &#40;el Administrador de informes&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [Configurar propiedades del origen de datos para un informe &#40;el Administrador de informes&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

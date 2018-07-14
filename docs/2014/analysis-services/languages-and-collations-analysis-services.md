@@ -1,5 +1,5 @@
 ---
-title: Idiomas e intercalaciones (Analysis Services) | Documentos de Microsoft
+title: Idiomas e intercalaciones (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows collations [Analysis Services]
 - default collations
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3279919a5a089991b09a3eea6807bec8589f7a64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e2c52f657ce161edbb82c16eda2f6f0c3084c8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293725"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Idiomas e intercalaciones (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite los idiomas e intercalaciones que proporcionan los sistemas operativos [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Las propiedades de `Language` y `Collation` se establecen inicialmente en el nivel de instancia durante la instalación, pero se pueden cambiar más tarde en diferentes niveles de la jerarquía de objetos.  
@@ -121,7 +121,7 @@ ms.locfileid: "36103215"
      La intercalaciones binarias se ordenan en puntos de código Unicode, no en valores lingüísticos. Por ejemplo, Latin1_General_BIN y Japanese_BIN generan resultados de ordenación idénticos en datos Unicode. Mientras que una ordenación lingüística podría producir resultados como aAbBcCdD, una ordenación binaria sería ABCDabcd porque el punto de código de todos los caracteres en mayúsculas es colectivamente superior a los puntos de código de los caracteres en minúsculas.  
   
 ###  <a name="bkmk_sortorder"></a> Opciones de orden  
- Las opciones de ordenación se utilizan para refinar las reglas de ordenación y comparación por distinción de mayúsculas y minúsculas, de acentos, de caracteres kana y de ancho. Por ejemplo, el valor predeterminado de la `Collation` propiedad de configuración para [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] es Latin1_General_AS_CS, especifica que se utiliza la intercalación Latin1_General, con un criterio de ordenación de distinción de acentos, distingue mayúsculas de minúsculas.  
+ Las opciones de ordenación se utilizan para refinar las reglas de ordenación y comparación por distinción de mayúsculas y minúsculas, de acentos, de caracteres kana y de ancho. Por ejemplo, el valor predeterminado de la `Collation` propiedad de configuración para [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] es Latin1_General_AS_CS, especifica que se utiliza la intercalación Latin1_General con un criterio de ordenación de distinción de acentos, distingue mayúsculas de minúsculas.  
   
  Tenga en cuenta que BIN y BIN2 son mutuamente excluyentes de otras opciones de ordenación, si desea utilizar BIN o BIN2, desactive la opción de ordenación de distinción de acentos. De manera similar, si selecciona BIN2, no estarán disponibles las opciones de distinción de mayúsculas y minúsculas, sin distinción de mayúsculas y minúsculas, distinción de acentos, sin distinción de acentos, distinción de caracteres kana y distinción de ancho.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36103215"
   
 -   Volver a procesar las particiones y dimensiones después de actualizar la intercalación.  
   
- Puede usar SQL Server Management Studio o PowerShell AMO para cambiar la configuración de idioma o intercalación predeterminada en el nivel de servidor. Como alternativa, puede modificar el  **\<idioma >** y  **\<nombreDeIntercalación >** valores en el archivo msmdsrv.ini, especificando el LCID del idioma.  
+ Puede usar SQL Server Management Studio o PowerShell AMO para cambiar la configuración de idioma o intercalación predeterminada en el nivel de servidor. Como alternativa, puede modificar el  **\<lenguaje >** y  **\<CollationName >** valores en el archivo msmdsrv.ini, especificando el LCID del idioma.  
   
 1.  En Management Studio, haga clic con el botón derecho en el nombre del servidor | **Propiedades** | **Idioma/Intercalación**.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "36103215"
 4.  Vuelva a procesar el cubo.  
   
 ##  <a name="bkmk_enablefast1033"></a> Aumente el rendimiento de las configuraciones regionales de inglés mediante EnableFast1033Locale  
- Si usa el identificador de idioma inglés (Estados Unidos) (0 x 0409 o 1033) como el idioma predeterminado para la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia, puede obtener ventajas adicionales en el rendimiento estableciendo la `EnableFast1033Locale` propiedad de configuración, una configuración avanzada propiedad solo está disponible para ese identificador de idioma. Al establecer el valor de esta propiedad en **true** , [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] puede utilizar un algoritmo más rápido en las comparaciones y los algoritmos hash de cadenas. Para más información sobre cómo establecer las propiedades de configuración, vea [Configurar las propiedades de servidor en Analysis Services](server-properties/server-properties-in-analysis-services.md).  
+ Si usa el identificador de idioma de inglés (Estados Unidos) (0 x 0409 o 1033) como el idioma predeterminado para el [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia, puede obtener ventajas de rendimiento adicionales si establece la `EnableFast1033Locale` propiedad de configuración, una configuración avanzada propiedad solo está disponible para ese identificador de idioma. Al establecer el valor de esta propiedad en **true** , [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] puede utilizar un algoritmo más rápido en las comparaciones y los algoritmos hash de cadenas. Para más información sobre cómo establecer las propiedades de configuración, vea [Configurar las propiedades de servidor en Analysis Services](server-properties/server-properties-in-analysis-services.md).  
   
 ##  <a name="bkmk_gb18030"></a> Compatibilidad con GB18030 en Analysis Services  
  GB18030 es un estándar independiente que se usa en la República Popular China para codificar caracteres chinos. En GB18030, los caracteres pueden tener una longitud de 1, 2 o 4 bytes. En Analysis Services, no se produce ninguna conversión de datos al procesar datos de orígenes externos. Los datos simplemente se almacenan como datos Unicode. En el momento de la consulta, se realiza una conversión de GB18030 a través de las bibliotecas de cliente de Analysis Services (específicamente, el proveedor OLE DB MSOLAP.dll) cuando se devuelven datos de texto en los resultados de la consulta, en función de la configuración del sistema operativo cliente. El motor de base de datos también es compatible con GB18030. Para obtener información detallada, vea [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  

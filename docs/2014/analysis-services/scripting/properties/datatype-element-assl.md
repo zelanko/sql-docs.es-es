@@ -1,5 +1,5 @@
 ---
-title: Elemento DataType (ASSL) | Documentos de Microsoft
+title: Elemento DataType (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataType element
 ms.assetid: efe6f717-8288-4ca2-85ed-9b63d27c02d8
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 706d13e68b21a71fa9be80bf89fc4f9cdd4c6014
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16bc234f74aa8d6eb80607c7d03d63da8130e8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231875"
 ---
 # <a name="datatype-element-assl"></a>Elemento DataType (ASSL)
   Define el tipo de datos del elemento asociado.  
@@ -70,7 +70,7 @@ ms.locfileid: "36104791"
 |*BOOL*|Valor booleano. Este tipo de datos se asigna al tipo de datos `Boolean` en .NET Framework y al tipo de datos DBTYPE_BOOL en OLE DB.|  
 |*Moneda*|Un valor de moneda comprendido entre -2<sup>63</sup> (o -922.337.203.685.477,5808) a 2<sup>63</sup>-1 (o + 922.337.203.685.477,5807) con una precisión de una diezmilésima de unidad de moneda. Este tipo de datos se asigna al tipo de datos `Decimal` en .NET Framework y al tipo de datos DBTYPE_CY en OLE DB.|  
 |*Date*|Fecha de los datos, almacenada como un número de punto flotante de precisión doble. La parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte decimal es una fracción del día. Este tipo de datos se asigna al tipo de datos `DateTime` en .NET Framework y al tipo de datos DBTYPE_DATE en OLE DB.|  
-|*doble*|Número de punto flotante de precisión doble en el intervalo de -1,79E +308 a 1,79E +308. Este tipo de datos se asigna al tipo de datos `Double` en .NET Framework y al tipo de datos DBTYPE_R8 en OLE DB.|  
+|*Doble*|Número de punto flotante de precisión doble en el intervalo de -1,79E +308 a 1,79E +308. Este tipo de datos se asigna al tipo de datos `Double` en .NET Framework y al tipo de datos DBTYPE_R8 en OLE DB.|  
 |*Integer*|Entero de 32 bits con signo. Este tipo de datos se asigna al tipo de datos `Int32` en .NET Framework y al tipo de datos DBTYPE_I4 en OLE DB.|  
 |*Único*|Un número de punto flotante de precisión simple en el intervalo de -3,40E +38 a 3,40E +38. Este tipo de datos se asigna al tipo de datos `Single` en .NET Framework y al tipo de datos DBTYPE_R4 en OLE DB.|  
 |*SmallInt*|Entero de 16 bits con signo. Este tipo de datos se asigna al tipo de datos `Int16` en .NET Framework y al tipo de datos DBTYPE_I2 en OLE DB.|  

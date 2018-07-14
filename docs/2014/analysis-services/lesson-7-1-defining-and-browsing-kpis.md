@@ -1,5 +1,5 @@
 ---
-title: Definir y examinar KPI | Documentos de Microsoft
+title: Definir y examinar KPI | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 1a8612cf9e325aaa59f4b79ca74a5aa49f51aaab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f60530d85de673e3cb3bb7e6f19f2c8484cc68bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243735"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definir y examinar KPI
   Para definir indicadores clave de rendimiento (KPI), deberá primero definir un nombre de KPI y el grupo de medida con el que desea asociar el KPI. Un KPI se puede asociar con todos los grupos de medida o con un solo grupo de medida. Se definirán entonces los siguientes elementos del KPI:  
@@ -69,7 +69,7 @@ ms.locfileid: "36104159"
   
      En el panel de información aparecerá una plantilla de KPI en blanco, como en la siguiente imagen.  
   
-     ![Plantilla KPI en blanco en el panel de información](../../2014/tutorials/media/l7-kpi-2.gif "plantilla de KPI en blanco en el panel de información")  
+     ![Plantilla KPI en blanco en el panel de información](../../2014/tutorials/media/l7-kpi-2.gif "plantilla KPI en blanco en el panel de información")  
   
 3.  En el **nombre** , escriba `Reseller Revenue`y, a continuación, seleccione **Reseller Sales** en el **grupo de medida asociado** lista.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36104159"
   
 1.  Haga clic en el botón **Vista de formulario** de la barra de herramientas de la pestaña **KPI** y, después, haga clic en el botón **Nuevo KPI** .  
   
-2.  En el **nombre** , escriba `Product Gross Profit Margin`y, a continuación, compruebe que  **\<todos >** aparece en la **grupo de medida asociado** lista.  
+2.  En el **nombre** , escriba `Product Gross Profit Margin`y, a continuación, compruebe que  **\<todas >** aparece en el **grupo de medida asociado** lista.  
   
 3.  En la pestaña **Metadatos** del panel **Herramientas de cálculo** , arrastre la medida **Total GPM** al cuadro **Expresión de valor** .  
   
@@ -265,13 +265,13 @@ ms.locfileid: "36104159"
   
 2.  Cuando la implementación se haya completado correctamente, haga clic en **Volver a conectar** en la barra de herramientas de la pestaña **KPI** y, después, haga clic en **Vista de explorador**.  
   
-     El `Product Gross Profit Margin` KPI aparece y muestra el valor KPI de **Q3 CY 2007** y **Norteamérica** territorio de ventas.  
+     El `Product Gross Profit Margin` KPI aparece y muestra el valor KPI para **Q3 CY 2007** y **Norteamérica** territorio de ventas.  
   
 3.  En el panel **Filtro** , seleccione **Product** en la lista **Dimensión** , seleccione **Category** en la lista **Jerarquía** , seleccione **Igual** en la lista **Operador** y **Bikes** en la lista **Expresión de filtro** y, después, haga clic en **Aceptar**.  
   
      Aparecerá el margen de beneficio bruto para la venta de bicicletas por distribuidor en Norteamérica en el tercer trimestre de 2007.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 8: definir acciones](../analysis-services/lesson-8-defining-actions.md)  
+ [Lección 8: Definir acciones](../analysis-services/lesson-8-defining-actions.md)  
   
   

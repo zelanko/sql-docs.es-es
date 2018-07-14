@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapandlayerwizard.f1
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a840b5b3cc60e10a95f1cf7b2c4a473ee8fd0c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7232850d053d238b81b8db9ef6f5eaeec581ab72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299825"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Asistente para mapas y Asistente para capas de mapa (Generador de informes y SSRS)
   El Asistente para mapas y el Asistente para capas de mapa automatizan la tarea de creación de un mapa, incorporación de una capa a un mapa o modificación de las opciones de capas de mapa en una capa existente.  
@@ -33,7 +33,7 @@ ms.locfileid: "36103755"
   
  Antes de agregar un mapa a un informe o una capa de mapa a un mapa, debe disponer de la información siguiente:  
   
--   **Origen de datos espaciales.** La ubicación o conexión a un origen que proporcione los datos espaciales, por ejemplo, el nombre de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia y una base de datos que contiene los datos espaciales o el nombre de un archivo de forma de Environmental Systems Research Institute, Inc. (ESRI).  
+-   **Origen de datos espaciales.** La ubicación o conexión a un origen que proporcione los datos espaciales, por ejemplo, el nombre de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia y una base de datos que contenga datos espaciales o el nombre de un archivo de forma medioambientales Systems Research Institute, Inc. (ESRI).  
   
 -   **.** Del origen de datos espaciales, un campo que contenga los conjuntos de coordenadas que especifican las ubicaciones.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36103755"
   
  En las secciones siguientes se proporciona información sobre las opciones que se especifican en el Asistente para capas de mapa y en el Asistente para mapas.  
   
-##  <a name="BackToTop"></a> Asistente para mapas y páginas del Asistente de capa de mapa  
+##  <a name="BackToTop"></a> Asistente para mapas y las páginas del Asistente de capa de mapa  
  Para abrir el Asistente para mapas, realice una de las siguientes acciones:  
   
 -   Al abrir el Generador de informes, haga clic en el icono del asistente **Mapas** , en el centro de la superficie de diseño.  
@@ -56,7 +56,7 @@ ms.locfileid: "36103755"
   
  Haga clic en el título de la página del asistente correspondiente al contenido de la Ayuda. Las páginas que se pueden ver cambian en función de las opciones de tipo de mapa, el origen de datos espaciales, y el origen de datos analíticos.  
   
-1.  [Elegir un origen de datos espaciales](#SpatialDataSource). Los datos espaciales pueden proceder de la Galería de mapas, un archivo de forma de Environmental Systems Research Institute, Inc. (ESRI) o de los datos espaciales en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos relacional.  
+1.  [Elegir un origen de datos espaciales](#SpatialDataSource). Datos espaciales pueden proceder de la Galería de mapas, un archivo de forma medioambientales Systems Research Institute, Inc. (ESRI) o de los datos espaciales en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos relacional.  
   
     -   [¿Qué son los datos espaciales?](#SpatialData)  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36103755"
   
  Después de agregar un mapa o una capa de mapa, y obtener una vista previa del informe, puede cambiar las opciones del mapa y de la capa de mapa que estableció en los asistentes. Para más información, vea [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Para obtener más información acerca de las asignaciones, vea [asigna &#40;el generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md). Para obtener instrucciones paso a paso para agregar un mapa a un informe, vea [Tutorial: Informe de mapa &#40;Generador de informes&#41;](../tutorial-map-report-report-builder.md).  
+ Para obtener más información acerca de las asignaciones, vea [asigna &#40;generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md). Para obtener instrucciones paso a paso para agregar un mapa a un informe, vea [Tutorial: Informe de mapa &#40;Generador de informes&#41;](../tutorial-map-report-report-builder.md).  
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
@@ -201,7 +201,7 @@ ms.locfileid: "36103755"
   
  Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](http://go.microsoft.com/fwlink/?LinkId=147315). Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](http://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](http://go.microsoft.com/fwlink/?LinkId=151372).  
   
- Para ver un fondo de mosaico en la vista de diseño, debe tener acceso a Internet. Para ver el fondo de mosaico en una vista previa de un informe en un servidor de informes, el servidor de informes se debe configurar para ser compatible con los mosaicos de Bing Maps. Para obtener más información, consulte [solucionar problemas de informes: informes de mapa &#40;el generador de informes y SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) y "Cómo preparar los mapas" en el [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en libros en pantalla de SQL Server .  
+ Para ver un fondo de mosaico en la vista de diseño, debe tener acceso a Internet. Para ver el fondo de mosaico en una vista previa de un informe en un servidor de informes, el servidor de informes se debe configurar para ser compatible con los mosaicos de Bing Maps. Para obtener más información, consulte [solucionar problemas de informes: informes de mapa &#40;generador de informes y SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) y "Cómo preparar los mapas" en el [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en libros en pantalla de SQL Server .  
   
  Para más información sobre otras formas de personalizar una capa de mosaico, vea [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

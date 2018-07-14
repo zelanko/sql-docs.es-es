@@ -1,5 +1,5 @@
 ---
-title: Elemento KPI (ASSL) | Documentos de Microsoft
+title: Elemento KPI (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Kpi element
 ms.assetid: 1979a58f-97a8-4c1a-aa65-dcfb6d2404cf
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6205e1a14a992ed8bd0fc05f91d162e90be3346c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27b0bcbe2ddaabcc7b3f9ef16f3fa620a8c2db38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235645"
 ---
 # <a name="kpi-element-assl"></a>Elemento Kpi (ASSL)
   Define un indicador clave de rendimiento (KPI) dentro de un [cubo](cube-element-assl.md) elemento o un [perspectiva](perspective-element-assl.md) elemento.  
@@ -84,7 +84,7 @@ ms.locfileid: "36105008"
   
 |Antecesor o elemento primario|Elementos secundarios|  
 |------------------------|--------------------|  
-|[Cube](../collections/annotations-element-assl.md), [AssociatedMeasureGroupID](../properties/id-element-assl.md), [CurrentTimeMember](member-element-assl.md), [Description](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [Goal](../properties/goal-element-assl.md), [ID](../properties/id-element-assl.md), [Name](../properties/name-element-assl.md), [Status](../properties/status-element-assl.md), [StatusGraphic](../properties/statusgraphic-element-assl.md), [Translations](../collections/translations-element-assl.md), [Trend](../properties/trend-element-assl.md), [TrendGraphic](../properties/trendgraphic-element-assl.md), [Value](../properties/value-element-assl.md)|  
+|[Cubo](../collections/annotations-element-assl.md), [AssociatedMeasureGroupID](../properties/id-element-assl.md), [CurrentTimeMember](member-element-assl.md), [descripción](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [Objetivo](../properties/goal-element-assl.md), [ID](../properties/id-element-assl.md), [nombre](../properties/name-element-assl.md), [estado](../properties/status-element-assl.md), [StatusGraphic](../properties/statusgraphic-element-assl.md), [traducciones ](../collections/translations-element-assl.md), [Tendencia](../properties/trend-element-assl.md), [TrendGraphic](../properties/trendgraphic-element-assl.md), [valor](../properties/value-element-assl.md)|  
 |[Perspectiva](perspective-element-assl.md)|None|  
   
 ## <a name="remarks"></a>Notas  

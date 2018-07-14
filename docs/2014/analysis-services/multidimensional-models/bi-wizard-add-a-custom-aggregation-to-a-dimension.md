@@ -1,5 +1,5 @@
 ---
-title: Agregar una agregación personalizada a una dimensión | Documentos de Microsoft
+title: Agregar una agregación personalizada a una dimensión | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], Business Intelligence enhancements
 - Business Intelligence enhancements [Analysis Services], custom aggregations
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - custom aggregations [Analysis Services]
 ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f6d9b77272272eadd2844a1ab5da18ec1cfd7a41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8567e17759af61b151a3fc27c05df0ed1df49b63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243955"
 ---
 # <a name="add-a-custom-aggregation-to-a-dimension"></a>Agregar una agregación personalizada a una dimensión
   Agregue una mejora de agregación personalizada a un cubo o dimensión para reemplazar las agregaciones predeterminadas asociadas a un miembro de dimensión con un operador unario diferente. Esta mejora especifica una columna de operador unario en la tabla de dimensión que define el resumen de los miembros de una jerarquía de elementos primarios y secundarios. El operador unario actúa sobre el atributo primario en una jerarquía de elementos primarios y secundarios.  
@@ -44,6 +44,6 @@ ms.locfileid: "36103205"
 ## <a name="adding-custom-aggregation-unary-operator"></a>Agregar agregación personalizada (operador unario)  
  En la segunda página de **Especificar un operador unario** , debe especificar el atributo primario que desea para la agregación personalizada y la columna de origen en la tabla de dimensión para el operador unario. **Atributo primario** se enumeran los atributos que tienen sus `Usage` propiedad establecida en `Parent`. Si hay más de un atributo primario, debe elegir el atributo primario que corresponda a la relación de elementos primarios y secundarios que desee utilizar. Si no se muestran atributos primarios, la dimensión no contiene una jerarquía de elementos primarios y secundarios válida.  
   
- En **Columna de origen**, debe seleccionar la columna de cadenas que contiene los operadores unarios. (Esta selección establece la `UnaryOperatorColumn` propiedad en el atributo primario.) La tabla de dimensión también debe presentar una columna de cadenas que especifique el operador unario de resumen. Los valores de cadenas de esta columna deben contener operadores de agregación válidos. Si una fila está vacía, el miembro correspondiente se calcula de la forma habitual. Si la fórmula de una columna no es válida, se producirá un error en tiempo de ejecución al recuperar un valor de celda que utiliza el miembro. Para obtener más información, vea [Operadores unarios en dimensiones de elementos primarios y secundarios](parent-child-dimension-attributes-unary-operators.md).  
+ En **Columna de origen**, debe seleccionar la columna de cadenas que contiene los operadores unarios. (Esta selección establece la `UnaryOperatorColumn` propiedad del atributo primario.) La tabla de dimensión también debe presentar una columna de cadenas que especifique el operador unario de resumen. Los valores de cadenas de esta columna deben contener operadores de agregación válidos. Si una fila está vacía, el miembro correspondiente se calcula de la forma habitual. Si la fórmula de una columna no es válida, se producirá un error en tiempo de ejecución al recuperar un valor de celda que utiliza el miembro. Para obtener más información, vea [Operadores unarios en dimensiones de elementos primarios y secundarios](parent-child-dimension-attributes-unary-operators.md).  
   
   

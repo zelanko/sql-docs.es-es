@@ -1,35 +1,33 @@
 ---
-title: sp_pdw_database_encryption (almacenamiento de datos de SQL) | Documentos de Microsoft
+title: sp_pdw_database_encryption para (SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: system-stored-procedures
+ms.component: system-objects
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
-caps.latest.revision: 8
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: adb48589c9ba6268aa229cd21871504392151f8e
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
-ms.translationtype: MT
+ms.openlocfilehash: 6508d150df663a6e95437d0b6b3bfd0c8f65906f
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33703138"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926156"
 ---
-# <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption (almacenamiento de datos de SQL)
+# <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption para (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Use **sp_pdw_database_encryption** para habilitar el cifrado de datos transparente en un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] dispositivo. Cuando **sp_pdw_database_encryption** establecido en 1, se utiliza el **ALTER DATABASE** instrucción para cifrar una base de datos mediante TDE.  
+  Use **sp_pdw_database_encryption para** para habilitar el cifrado de datos transparente para una [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] dispositivo. Cuando **sp_pdw_database_encryption para** establecido en 1, se utiliza el **ALTER DATABASE** instrucción para cifrar una base de datos mediante TDE.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,26 +45,26 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
   
 -   1 = Habilitado  
   
- Ejecutar **sp_pdw_database_encryption** sin parámetros, se devuelve el estado actual de TDE en el dispositivo como un conjunto de resultados escalares: 0 para deshabilitado, o 1 para habilitado.  
+ Ejecutar **sp_pdw_database_encryption para** sin parámetros devuelve el estado actual de TDE en el dispositivo como un conjunto de resultados escalares: 0 para deshabilitado, o 1 para habilitado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
- Cuando el TDE está habilitado con **sp_pdw_database_encryption**, se quita la base de datos tempdb, se vuelven a crear y cifrado. Por esta razón, no puede habilitarse TDE en un dispositivo mientras hay otras sesiones activas con tempdb. Habilitación o deshabilitación de TDE en una aplicación es una acción que cambia el estado del dispositivo, en la mayoría de los casos se espera que se realice una vez en la duración de la aplicación y debe ejecutarse cuando no hay ningún tipo de tráfico en el dispositivo.  
+## <a name="remarks"></a>Notas  
+ Cuando está habilitado el TDE mediante **sp_pdw_database_encryption para**, se quita la base de datos tempdb, se vuelve a crear y cifrado. Por ese motivo, el TDE no se puede habilitar un dispositivo mientras hay otras sesiones activas con tempdb. Habilitación o deshabilitación de TDE en un dispositivo es una acción que cambia el estado del dispositivo, en la mayoría de los casos se espera que se puede realizar una vez en la duración de la aplicación y se debe ejecutar cuando no hay ningún tráfico en el dispositivo.  
   
-## <a name="permissions"></a>Permissions  
- Debe pertenecer a la **sysadmin** función fija de base de datos, o **CONTROL SERVER** permiso.  
+## <a name="permissions"></a>Permisos  
+ Debe pertenecer a la **sysadmin** fijo de base de datos, o **CONTROL SERVER** permiso.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se habilita TDE en el dispositivo.  
+ El ejemplo siguiente habilita TDE en el dispositivo.  
   
 ```sql  
 EXEC sys.sp_pdw_database_encryption 1;  
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [sp_pdw_database_encryption_regenerate_system_keys &#40;almacenamiento de datos SQL&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)   
- [sp_pdw_log_user_data_masking &#40;almacenamiento de datos SQL&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
+ [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)   
+ [sp_pdw_log_user_data_masking &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
   
   

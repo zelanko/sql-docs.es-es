@@ -1,5 +1,5 @@
 ---
-title: 'La sintaxis de filtros y ejemplos de modelos (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Ejemplos y sintaxis de filtro de modelos (Analysis Services - minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
 - filter syntax [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 881b62a2e013d9e01a21272d3adeaf6819b2abb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 252af15e8afcf42d407176c4ff72f0076053b52e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236345"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintaxis y ejemplos del filtro de modelos (Analysis Services: Minería de datos)
   En esta sección se proporciona información detallada sobre la sintaxis para los filtros de modelo, junto con expresiones de ejemplo.  
@@ -34,7 +34,7 @@ ms.locfileid: "36103671"
 ##  <a name="bkmk_Syntax"></a> Filter Syntax  
  Las expresiones de filtro generalmente equivalen al contenido de una cláusula WHERE. Puede conectar varias condiciones usando los operadores lógicos `AND`, `OR` y `NOT`.  
   
- En las tablas anidadas, también puede usar el `EXISTS` y `NOT EXISTS` operadores. Una condición `EXISTS` se evalúa como `true` si la subconsulta devuelve al menos una fila. Esto es útil en casos en los que desea restringir el modelo a los casos que contienen un valor determinado en la tabla anidada: por ejemplo, los clientes que han comprado un artículo al menos una vez.  
+ En las tablas anidadas, también se puede usar el `EXISTS` y `NOT EXISTS` operadores. Una condición `EXISTS` se evalúa como `true` si la subconsulta devuelve al menos una fila. Esto es útil en casos en los que desea restringir el modelo a los casos que contienen un valor determinado en la tabla anidada: por ejemplo, los clientes que han comprado un artículo al menos una vez.  
   
  Una condición `NOT EXISTS` se evalúa como `true` si la condición especificada en la subconsulta no existe. Un ejemplo es cuando se desea restringir el modelo a los clientes que nunca han comprado un artículo determinado.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36103671"
 -   **\<=** (menor o igual que)  
   
 > [!NOTE]  
->  Independientemente del tipo de datos, estos operadores no se pueden aplicar a una columna que tiene el tipo de `Discrete`, `Discretized`, o `Key`.  
+>  Independientemente del tipo de datos, estos operadores no se puede aplicar a una columna que tiene el tipo `Discrete`, `Discretized`, o `Key`.  
   
  Una expresión que usa cualquiera de los operadores siguientes se puede aplicar a una columna de clave continua, discreta o de datos discretos:  
   
@@ -244,7 +244,7 @@ FILTER (EXISTS (Products))
 ###  <a name="bkmk_Ex7"></a> Ejemplo 7: combinaciones de filtros complejas  
  El escenario para este modelo se parece al del ejemplo 4 pero es mucho más complejo. La tabla anidada, **ProductsOnSale**, tiene la condición de filtro `(OnSale)` lo que significa que el valor de **OnSale** debe ser `true` para el producto enumerado en **ProductName**. Aquí, **OnSale** es una columna de estructura.  
   
- La segunda parte del filtro, para **ProductsNotOnSale**, repite esta sintaxis pero filtra por los productos para los que el valor de **OnSale** es `not true``(!OnSale)`.  
+ La segunda parte del filtro, para **ProductsNotOnSale**, repite esta sintaxis pero filtra por los productos para que el valor de **OnSale** es `not true``(!OnSale)`.  
   
  Finalmente, se combinan las condiciones y se agrega una restricción adicional a la tabla de casos. El resultado es predecir compras de productos en la lista **ProductsNotOnSale** , basándose en los casos incluidos en la lista **ProductsOnSale** , para todos los clientes mayores de 25.  
   
@@ -287,7 +287,7 @@ FILTER (EXISTS (Products))
 ###  <a name="bkmk_Ex8"></a> Ejemplo 8: filtrar según las fechas  
  Puede filtrar las columnas de entrada según fechas, como con cualquier otro dato. Las fechas contenidas en una columna del tipo de fecha y hora son valores continuos; por consiguiente, puede especificar un intervalo de fechas utilizando a operadores como mayor que (>) o menor que (<). Si el origen de datos no representa las fechas por un tipo de datos continuo, sino como valores discretos o de texto, no puede filtrar en un intervalo de fechas, sino que debe especificar valores discretos e individuales.  
   
- Sin embargo, no puede crear un filtro en la columna de fecha en un modelo del serie temporal si la columna de fecha utilizada para el filtro también es la columna de clave para el modelo. Eso es porque, en los modelos de serie temporal y modelos de clústeres de secuencia, la columna de fecha podría tratarse como tipo `KeyTime` o `KeySequence`.  
+ Sin embargo, no puede crear un filtro en la columna de fecha en un modelo del serie temporal si la columna de fecha utilizada para el filtro también es la columna de clave para el modelo. Eso es porque, en modelos de serie temporal y los modelos de clústeres de secuencia, la columna de fecha podría tratarse como tipo `KeyTime` o `KeySequence`.  
   
  Si necesita filtrar en fechas continuas en un modelo de serie temporal, puede crear una copia de la columna en la estructura de minería de datos y filtrar el modelo en la nueva columna.  
   
@@ -298,7 +298,7 @@ FILTER (EXISTS (Products))
 > [!NOTE]  
 >  Observe que cualquier columna adicional que agregue al modelo podría afectar a los resultados. Por consiguiente, si no desea utilizar la columna en el cálculo de la serie, solo debería agregar la columna a la estructura de minería de datos y no al modelo. También puede establecer la marca de modelo en la columna a `PredictOnly` o a `Ignore`. Para obtener más información, vea [Marcas de modelado &#40;Minería de datos&#41;](modeling-flags-data-mining.md).  
   
- En el caso de otros tipos de modelo, puede utilizar fechas como criterios de entrada o como criterios de filtro igual que con cualquier otra columna. Sin embargo, si tiene que utilizar un nivel concreto de granularidad que no es compatible con un `Continuous` tipo de datos, puede crear un valor derivado en el origen de datos mediante el uso de expresiones para extraer la unidad que se utilizará en el filtro y el análisis.  
+ En el caso de otros tipos de modelo, puede utilizar fechas como criterios de entrada o como criterios de filtro igual que con cualquier otra columna. Sin embargo, si tiene que utilizar un nivel concreto de granularidad que no es compatible con un `Continuous` tipo de datos, puede crear un valor derivado en el origen de datos utilizando expresiones para extraer la unidad que se utilizará en el filtro y el análisis.  
   
 > [!WARNING]  
 >  Cuando especifique fechas como criterios de filtro, debe usar el siguiente formato, independientemente del formato de fecha del sistema operativo actual: `mm/dd/yyyy`. Cualquier otro formato produce un error.  
@@ -308,7 +308,7 @@ FILTER (EXISTS (Products))
  
   
 ## <a name="see-also"></a>Vea también  
- [Filtros para modelos de minería de datos de &#40;Analysis Services: minería de datos&#41;](mining-models-analysis-services-data-mining.md)   
- [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
+ [Filtros para modelos de minería de datos de &#40;Analysis Services - minería de datos&#41;](mining-models-analysis-services-data-mining.md)   
+ [Pruebas y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
   
   

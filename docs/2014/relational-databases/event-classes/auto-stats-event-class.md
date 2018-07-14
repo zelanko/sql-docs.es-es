@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Auto Stats event class
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2c90a2afb20e7757e8797aaf5849c5fe4449b1d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 796f417d3dae943334b6cdadc62c633dcbe18baf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213025"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats [clase de eventos]
   La clase de evento **Auto Stats** indica que se ha producido una actualización automática del índice y de las estadísticas de las columnas.  
@@ -41,7 +41,7 @@ ms.locfileid: "36103105"
 |**Error**|**int**|Número de error de un evento dado. Con frecuencia, es el número de error almacenado en la vista de catálogo **sys.messages** .|31|Sí|  
 |**EventClass**|**int**|Tipo de evento = 58.|27|no|  
 |**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|no|  
-|**EventSubClass**|**int**|Tipo de subclase de evento:<br /><br /> 1: estadísticas crean o actualizan de forma sincrónica; **TextData** columna indica qué estadísticas y si se crea o actualiza.<br /><br /> 2: Actualización de estadísticas asincrónica; trabajo en cola.<br /><br /> 3: Actualización de estadísticas asincrónica; trabajo en inicio.<br /><br /> 4: Actualización de estadísticas asincrónica; trabajo finalizado.|21|Sí|  
+|**EventSubClass**|**int**|Tipo de subclase de evento:<br /><br /> 1: estadísticas creadas o actualizadas de forma sincrónica; **TextData** columna indica qué estadísticas y si se crea o se actualizaron.<br /><br /> 2: Actualización de estadísticas asincrónica; trabajo en cola.<br /><br /> 3: Actualización de estadísticas asincrónica; trabajo en inicio.<br /><br /> 4: Actualización de estadísticas asincrónica; trabajo finalizado.|21|Sí|  
 |**GroupID**|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IndexID**|**int**|Id. de la entrada del índice/estadísticas del objeto afectada por el evento. Para averiguar el identificador de índice de un objeto, use la columna **index_id** de la vista de catálogo **sys.indexes** .|24|Sí|  

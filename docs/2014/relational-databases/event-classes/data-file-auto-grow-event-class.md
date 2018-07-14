@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Data File Auto Grow event class
 ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cca58a379ac65c40cd4f4b215d6935c4068d2abb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9a2b1b7bf2bd3567146512c5822915249749690d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266851"
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow, clase de eventos
   La clase de eventos **Data File Auto Grow** indica que el archivo de datos ha crecido automáticamente. Este evento no se desencadena si se aumentó explícitamente el archivo de datos mediante la instrucción ALTER DATABASE.  

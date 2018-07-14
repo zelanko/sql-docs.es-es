@@ -1,5 +1,5 @@
 ---
-title: Constantes de gran tamaño están tipificadas como tipos de valores grandes en modo de compatibilidad 90 o posterior | Documentos de Microsoft
+title: Constantes de gran tamaño están tipificadas como tipos de valores grandes en los modos de compatibilidad 90 o posterior | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binary constants
 - CHARINDEX function
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - PATINDEX function
 ms.assetid: 6e309fa0-5fb9-45a1-9739-f13fae525bfe
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d40faa01af8e275e7d085a06475322e093786150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 59f9afc3c8f083da2c1d3934d5aea5b541c6c527
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257771"
 ---
 # <a name="large-constants-are-typed-as-large-value-types-in-90-or-later-compatibility-modes"></a>Las constantes de gran tamaño están tipificadas como tipos de valor grande en los modos de compatibilidad 90 o superiores
   El Asesor de actualizaciones ha detectado la presencia de constantes grandes. Las constantes de cadena de caracteres y las constantes binarias cuyo tamaño sea superior a 8.000 bytes se tratan como tipos de datos de objetos grandes en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y en versiones posteriores, las constantes de cadena de caracteres de gran tamaño, Unicode y binarias están tipificadas como tipos de valor grande.  

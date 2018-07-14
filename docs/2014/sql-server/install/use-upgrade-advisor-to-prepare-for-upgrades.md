@@ -1,5 +1,5 @@
 ---
-title: Usar el Asesor de actualizaciones para preparar las actualizaciones | Documentos de Microsoft
+title: Utilice el Asesor de actualizaciones para preparar las actualizaciones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server]
 - upgrading SQL Server, Upgrade Advisor
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - analyzing installations for upgrading [SQL Server]
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e2e852fe295ac2e72c4a06f653033f734ac6150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4e669b214e73d462f141022aa84d41224e88ac0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234425"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Usar el Asesor de actualizaciones para preparar las actualizaciones
   El Asesor de actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ayuda a preparar las actualizaciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esta herramienta analiza los componentes instalados de las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y genera un informe que identifica los problemas que han de solucionarse antes o después de la actualización.  
@@ -64,21 +64,21 @@ ms.locfileid: "36102669"
   
  El Asesor de actualizaciones está disponible en un Feature Pack.  
   
- Requisitos previos para instalar y ejecutar el Asesor de actualizaciones son los siguientes:  
+ Requisitos previos para instalar y ejecutar el Asesor de actualizaciones son las siguientes:  
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 y [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
 -   Windows Installer a partir de la versión 4.5. Puede instalar Windows Installer desde la [sitio Web de Windows Installer](http://go.microsoft.com/fwlink/?LinkId=49112).  
   
--   Microsoft .NET Framework 4. .NET framework 4 está disponible en la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CD del producto y desde el [página de descarga de .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. .NET framework 4 está disponible en el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CD del producto y desde el [página de descarga de .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Para instalar .NET Framework 4 desde el disco de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], busque la raíz de la unidad de disco. A continuación, haga doble clic en la carpeta \redist, haga doble clic en la carpeta DotNetFrameworks y ejecute dotNetFx40_Full_x86_x64.exe (para sistemas operativos de 32 bits o para sistemas operativos de 64 bits).  
   
  Para instalar el Asesor de actualizaciones desde Internet, haga clic en el botón de descarga de la página de descarga. Puede ejecutar la instalación inmediatamente o guardar el archivo SQLUA.msi para ejecutarlo más tarde. Si va a realizar la instalación desde el disco del producto, ejecute el archivo SQLUA.msi directamente desde dicho disco.  
   
- Después de instalar el Asesor de actualizaciones, puede abrirlo desde la **iniciar** menú:  
+ Después de instalar el Asesor de actualizaciones, puede abrirlo desde el **iniciar** menú:  
   
--   Haga clic en **iniciar**, seleccione **todos los programas**, seleccione [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y, a continuación, haga clic en  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Asesor de actualizaciones**.  
+-   Haga clic en **iniciar**, apunte a **todos los programas**, apunte a [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y, a continuación, haga clic en  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
   
  Para obtener más información, vea la documentación del Asesor de actualizaciones incluida en la descarga del Asesor de actualizaciones y las notas de la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

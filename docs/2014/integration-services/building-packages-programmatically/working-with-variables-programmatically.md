@@ -26,13 +26,13 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f2f8a1e936199869f404eddae921bfff8a6a5fc6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c8a6c3b3624fc06f650179610778b75de5ef63cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219705"
 ---
 # <a name="working-with-variables-programmatically"></a>Trabajar con variables mediante programación
   Las variables son una manera de establecer valores y controlar procesos en paquetes, contenedores, tareas y controladores de eventos de forma dinámica. Las restricciones de precedencia también pueden usar variables para controlar la dirección del flujo de datos en diferentes tareas. Las variables tienen diversos usos:  
@@ -233,10 +233,10 @@ End Module
 ## <a name="configuration-files"></a>Archivos de configuración  
  Si un archivo de configuración incluye una variable personalizada, la variable puede estar actualizada en tiempo de ejecución. Esto significa que cuando el paquete se ejecuta, se reemplaza el valor de la variable originalmente en el paquete con un nuevo valor del archivo de configuración. Esta técnica del reemplazo es útil cuando se implementa un paquete en varios servidores que requieren distintos valores de variable. Por ejemplo, una variable puede especificar el número de veces que un contenedor de **bucles Para cada uno** repite su flujo de trabajo, o enumerar los destinatarios a los que un controlador de eventos envía un correo electrónico cuando se produce un error, o cambiar el número de errores que se pueden producir antes de que se genere un error en el paquete. Estas variables se proporcionan de forma dinámica en archivos de configuración para cada entorno. Por consiguiente, en archivos de configuración únicamente se permiten variables de lectura/escritura. Para más información, vea [Crear configuraciones de paquetes](../create-package-configurations.md).  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Servicios de integración &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
- [Usar Variables en paquetes](../use-variables-in-packages.md)  
+ [Usar variables en paquetes](../use-variables-in-packages.md)  
   
   

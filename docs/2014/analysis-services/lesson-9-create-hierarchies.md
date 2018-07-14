@@ -1,5 +1,5 @@
 ---
-title: 'Lección 10: Crear jerarquías | Documentos de Microsoft'
+title: 'Lección 10: Crear jerarquías | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1e2561d3-4890-4495-a9cd-84eb88508938
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: ea741676f07020291c2aa94d130c2f595a50f323
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b8b1b0b3c38374061361df9980c74cfb6e5cbf9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247825"
 ---
 # <a name="lesson-10-create-hierarchies"></a>Lección 10: Crear jerarquías
   En esta lección, creará jerarquías. Las jerarquías son grupos de columnas dispuestas en niveles; por ejemplo, una jerarquía Geografía puede tener subniveles para País, Provincia y Ciudad. Las jerarquías pueden aparecer por separado de otras columnas en una lista de campos de la aplicación cliente de informes, lo que facilita la navegación de los usuarios del cliente y su inclusión en un informe. Para obtener más información, vea [Jerarquías &#40;SSAS tabular&#41;](tabular-models/hierarchies-ssas-tabular.md).  
@@ -42,9 +42,9 @@ ms.locfileid: "36103433"
   
 2.  En el Diseñador de modelos, haga clic en el `Product` de tabla y, a continuación, haga clic en **crear jerarquía**. Aparece una nueva jerarquía en la parte inferior de la ventana de tabla.  
   
-3.  En el nombre de la jerarquía, el nombre de la jerarquía escribiendo `Category`, y, a continuación, presione ENTRAR.  
+3.  En el nombre de la jerarquía, cambie el nombre escribiendo `Category`, y, a continuación, presione ENTRAR.  
   
-4.  En el `Product` de tabla, haga clic en el **Product Category Name** columna, a continuación, arrástrelo hasta el `Category` jerarquía y suelte el botón en la parte superior de la `Category` nombre.  
+4.  En el `Product` de tabla, haga clic en el **Product Category Name** columna, a continuación, arrástrelo hasta el `Category` jerarquía y, a continuación, suelte en la parte superior de la `Category` nombre.  
   
 5.  En el `Category` jerarquía, haga clic en el **Product Category Name** columna, a continuación, haga clic en **cambiar el nombre de**y, a continuación, escriba `Category`.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "36103433"
   
 6.  En el `Product` de tabla, haga clic en el **Product Subcategory Name** columna, a continuación, en el menú contextual, elija **agregar a jerarquía**y, a continuación, haga clic en `Category`.  
   
-7.  Cambiar el nombre de **nombre de subcategoría de producto** a `Subcategory`.  
+7.  Cambiar el nombre de **Product Subcategory Name** a `Subcategory`.  
   
-8.  Mediante el uso de hacer clic y arrastrar o mediante el **agregar a jerarquía** en el menú contextual de comandos, agregue el **nombre del modelo** y **Product Name** columnas (en orden) y colocarlos bajo la **Product Subcategory Name** columna. Cambiar el nombre de estas columnas `Model` y `Product`, respectivamente.  
+8.  Mediante el uso de hacer clic y arrastrar o mediante el **agregar a jerarquía** en el menú contextual de comandos, agregue el **Model Name** y **Product Name** columnas (en orden) y colóquelas debajo el **Product Subcategory Name** columna. Cambiar el nombre de estas columnas `Model` y `Product`, respectivamente.  
   
 #### <a name="to-create-hierarchies-in-the-date-table"></a>Para crear jerarquías en la tabla Date  
   

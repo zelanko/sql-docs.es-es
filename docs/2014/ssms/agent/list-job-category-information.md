@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 231143d7b7fb90f8da6a614d047b98f9da22dbb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 33cf862e752618b35c56d2e5c58f534ca03a347d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280821"
 ---
 # <a name="list-job-category-information"></a>Mostrar información de categorías de trabajo
   Cómo mostrar información de categoría de trabajo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizando [!INCLUDE[tsql](../../includes/tsql-md.md)] u objetos de administración de SQL Server.  
@@ -55,7 +55,7 @@ ms.locfileid: "36103032"
 ##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
  **Para mostrar información de categorías de trabajo**  
   
- Use la `JobCategory` clase mediante el uso de un lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell... Para obtener más información, consulte [objetos de administración de SQL Server &#40;SMO&#41; Guía de programación de](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
+ Use la `JobCategory` clase mediante el uso de un lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell... Para obtener más información, consulte [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
   
   
   

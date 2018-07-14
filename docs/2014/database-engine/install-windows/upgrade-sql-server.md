@@ -1,5 +1,5 @@
 ---
-title: Actualizar a SQL Server 2014 | Documentos de Microsoft
+title: Actualización a SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a9cc1e34ab957e869996d5c8e190de6e0a78979b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b5c7262807cddc848c12e08988e1d28cb0965279
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203955"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Actualizar a SQL Server 2014
   Puede actualizar instancias de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Antes de ejecutar la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte la [Guía técnica de actualización de SQL Server 2014](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (descarga en PDF), revise los temas sobre el proceso de actualización incluidos en esta sección y lea las [notas de la versión SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
@@ -33,7 +33,7 @@ ms.locfileid: "36103376"
   
 -   [Usar el Asesor de actualizaciones para preparar las actualizaciones](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
--   [Use la utilidad de reproducción distribuida para preparar las actualizaciones](../../sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)  
+-   [Emplear Distributed Replay Utility para preparar las actualizaciones](../../sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)  
   
 -   [Actualizar Analysis Services](upgrade-analysis-services.md)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36103376"
  [Actualizar Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Actualizar bases de datos replicadas](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Actualizar Master Data Services](upgrade-master-data-services.md)   
- [Analizador de procedimientos recomendados de SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=197134)   
+ [Best Practices Analyzer para SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=197134)   
  [Best Practices Analyzer para SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=197135)   
  [Compatibilidad con versiones anteriores](../../../2014/getting-started/backward-compatibility.md)  
   

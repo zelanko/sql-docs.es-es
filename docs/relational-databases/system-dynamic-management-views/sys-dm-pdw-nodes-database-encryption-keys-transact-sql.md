@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: ''
@@ -7,33 +7,32 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b3abe99e707a4123e2f05fc1eb47b40d2b74fced
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: 3af945ced5fcbef03565a4e839a5cc56295810a7
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467041"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36772040"
 ---
 # <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>Sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Devuelve información sobre el estado de cifrado de una base de datos y sus claves de cifrado de la base de datos asociadas. **Sys.dm_pdw_nodes_database_encryption_keys** proporciona esta información para cada nodo. Para obtener más información acerca del cifrado de base de datos, vea [cifrado de datos transparente (SQL Server PDW)](http://msdn.microsoft.com/en-us/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d).  
+  Devuelve información sobre el estado de cifrado de una base de datos y sus claves de cifrado de la base de datos asociadas. **Sys.dm_pdw_nodes_database_encryption_keys** proporciona esta información para cada nodo. Para obtener más información acerca del cifrado de base de datos, vea [cifrado transparente de datos (SQL Server PDW)](http://msdn.microsoft.com/en-us/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d).  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Id. de la base de datos física en cada nodo.|  
-|encryption_state|**int**|Indica si la base de datos en este nodo está cifrado o no cifrado.<br /><br /> 0 = Ninguna clave de cifrado de la base de datos, sin cifrado<br /><br /> 1 = Sin cifrar<br /><br /> 2 = Cifrado en curso<br /><br /> 3 = Cifrado<br /><br /> 4 = Cambio de clave en curso<br /><br /> 5 = Descifrado en curso<br /><br /> 6 = cambio de protección en curso (el certificado que se cifra la clave de cifrado de base de datos se está cambiando).|  
+|encryption_state|**int**|Indica si la base de datos en este nodo es cifrar o no.<br /><br /> 0 = Ninguna clave de cifrado de la base de datos, sin cifrado<br /><br /> 1 = Sin cifrar<br /><br /> 2 = Cifrado en curso<br /><br /> 3 = Cifrado<br /><br /> 4 = Cambio de clave en curso<br /><br /> 5 = Descifrado en curso<br /><br /> 6 = cambio de protección en curso (el certificado que cifra la clave de cifrado de base de datos se está cambiando).|  
 |create_date|**datetime**|Muestra la fecha de creación de la clave de cifrado.|  
 |regenerate_date|**datetime**|Muestra la fecha de regeneración de la clave de cifrado.|  
 |modify_date|**datetime**|Muestra la fecha de modificación de la clave de cifrado.|  
@@ -45,11 +44,11 @@ ms.locfileid: "34467041"
 |percent_complete|**real**|Porcentaje completado del cambio de estado del cifrado de la base de datos. Será 0 si no hay ningún cambio de estado.|  
 |node_id|**int**|Identificador numérico único asociado al nodo.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- El ejemplo siguiente combina `sys.dm_pdw_nodes_database_encryption_keys` a otras tablas del sistema para indicar el estado de cifrado para cada nodo de TDE protegido bases de datos.  
+ El ejemplo siguiente combina `sys.dm_pdw_nodes_database_encryption_keys` a otras tablas del sistema para indicar el estado de cifrado para cada nodo del TDE protegidas las bases de datos.  
   
 ```  
 SELECT D.database_id AS DBIDinMaster, D.name AS UserDatabaseName,   
@@ -66,7 +65,7 @@ ORDER BY D.database_id, PD.pdw_node_ID;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica del almacenamiento de datos en paralelo y almacén de datos SQL &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [Vistas de administración dinámica de almacenamiento de datos en paralelo y SQL Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  

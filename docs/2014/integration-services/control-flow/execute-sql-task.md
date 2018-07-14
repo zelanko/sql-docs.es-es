@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 caps.latest.revision: 113
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fcddb47c254b897403cb784810703a1c7b20437a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77db86a684089c0696d499499bc52c816f35c0d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231555"
 ---
 # <a name="execute-sql-task"></a>Tarea Ejecutar SQL
   La tarea Ejecutar SQL ejecuta instrucciones SQL o procedimientos almacenados de un paquete. La tarea puede contener una sola instrucción SQL o múltiples instrucciones SQL que se ejecutarán de forma secuencial. Puede usar la tarea Ejecutar SQL para los siguientes fines:  
@@ -84,7 +84,7 @@ ms.locfileid: "36103121"
 -   Si la tarea utiliza enlace de parámetros, todas las consultas del lote deberán tener el mismo número de parámetros y estos deberán ser del mismo tipo.  
   
 ## <a name="running-parameterized-sql-commands"></a>Ejecutar comandos SQL con parámetros  
- Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros de entrada, parámetros de salida y códigos de retorno. La tarea Ejecutar SQL admite la `Input`, `Output`, y `ReturnValue` tipos de parámetro. Usa el `Input` tipo para los parámetros de entrada, `Output` para parámetros de salida y `ReturnValue` para códigos de retorno.  
+ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros de entrada, parámetros de salida y códigos de retorno. La tarea Ejecutar SQL admite el `Input`, `Output`, y `ReturnValue` tipos de parámetro. Usa el `Input` tipo para parámetros de entrada, `Output` para parámetros de salida y `ReturnValue` para códigos de retorno.  
   
 > [!NOTE]  
 >  Solo puede usar parámetros en una tarea Ejecutar SQL si el proveedor de datos los admite.  
@@ -99,7 +99,7 @@ ms.locfileid: "36103121"
 ## <a name="troubleshooting-the-execute-sql-task"></a>Solucionar problemas de la tarea Ejecutar SQL  
  Puede registrar las llamadas que realiza la tarea Ejecutar SQL a proveedores de datos externos. Puede usar esta capacidad de registro para solucionar problemas relacionados con los comandos SQL que ejecuta la tarea Ejecutar SQL. Para registrar las llamadas realizadas por la tarea Ejecutar SQL a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
- A veces, un procedimiento almacenado o comando SQL devuelve varios conjuntos de resultados. Estos conjuntos de resultados incluyen no solo los conjuntos de filas que son el resultado de `SELECT` consultas, sino valores únicos que son el resultado de errores de `RAISERROR` o `PRINT` las instrucciones. El hecho de que la tarea omita errores en los conjuntos de resultados que se producen después del primer conjunto de resultados depende del tipo de administrador de conexiones que se use:  
+ A veces, un procedimiento almacenado o comando SQL devuelve varios conjuntos de resultados. Estos conjuntos de resultados incluyen no solo los conjuntos de filas que son el resultado de `SELECT` consultas, sino valores únicos que son el resultado de errores de `RAISERROR` o `PRINT` instrucciones. El hecho de que la tarea omita errores en los conjuntos de resultados que se producen después del primer conjunto de resultados depende del tipo de administrador de conexiones que se use:  
   
 -   Si utiliza los administradores de conexiones ADO y OLE DB, la tarea omite los conjuntos de resultados que se producen después del primer conjunto de resultados. Por consiguiente, con estos administradores de conexiones la tarea omite un error devuelto por un procedimiento almacenado o comando SQL cuando el error no forma parte del primer conjunto de resultados.  
   
@@ -150,9 +150,9 @@ ms.locfileid: "36103121"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Asignar parámetros de consulta a Variables en una tarea Ejecutar SQL](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
+-   [Asignar parámetros de consulta a variables en una tarea Ejecutar SQL](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
   
--   [Asignar conjuntos de resultados a Variables en una tarea Ejecutar SQL](../map-result-sets-to-variables-in-an-execute-sql-task.md)  
+-   [Asignar conjuntos de resultados a variables en una tarea Ejecutar SQL](../map-result-sets-to-variables-in-an-execute-sql-task.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
   

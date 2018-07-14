@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
 - sql12.swb.cdw.welcome.f1
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 caps.latest.revision: 61
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e22f3ae3949c47c21423e855e5d4d35cbbe914fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 27352ec11f14042266d17babefda47055a57a9ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199555"
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar el Asistente para copiar bases de datos
-  El Asistente para copiar bases de datos permite mover o copiar bases de datos y sus objetos de un servidor a otro fácilmente, sin tiempo de inactividad del servidor. También puede actualizar las bases de datos de un anterior [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Mediante este asistente, puede hacer lo siguiente:  
+  El Asistente para copiar bases de datos permite mover o copiar bases de datos y sus objetos de un servidor a otro fácilmente, sin tiempo de inactividad del servidor. También puede actualizar las bases de datos desde una anterior [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Mediante este asistente, puede hacer lo siguiente:  
   
 -   Elegir un servidor de origen y de destino  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36104277"
      Permita que un usuario se conecte a través de una cuenta de usuario de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
      **Utilizar autenticación de SQL Server**  
-     Permitir que un usuario se conecte mediante un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nombre de usuario de autenticación y la contraseña.  
+     Permitir que un usuario se conecte proporcionando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nombre de usuario de autenticación y la contraseña.  
   
      **Nombre de usuario.**  
      Escriba el nombre de usuario con el que se va a conectar. Esta opción solo está disponible si ha seleccionado para conectarse mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.  
@@ -145,7 +145,7 @@ ms.locfileid: "36104277"
      Permita que un usuario se conecte a través de una cuenta de usuario de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
      **Utilizar autenticación de SQL Server**  
-     Permitir que un usuario se conecte mediante un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nombre de usuario de autenticación y la contraseña.  
+     Permitir que un usuario se conecte proporcionando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nombre de usuario de autenticación y la contraseña.  
   
      **Nombre de usuario.**  
      Escriba el nombre de usuario con el que se va a conectar. Esta opción solo está disponible si ha seleccionado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.  
@@ -239,10 +239,10 @@ ms.locfileid: "36104277"
   
      Por ejemplo: "\\\\*nombre_servidor*\C$\Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\Data  
   
-9. Crea el Asistente para la base de datos de copiar un [!INCLUDE[ssIS](../../includes/ssis-md.md)] paquete para transferir la base de datos de la **configurar el paquete** página, personalizar el paquete si procede.  
+9. Crea el Asistente para la base de datos de copiar un [!INCLUDE[ssIS](../../includes/ssis-md.md)] paquete para transferir la base de datos de la **configurar el paquete** página y personalizar el paquete si procede.  
   
      **Ubicación del paquete**  
-     Muestra el lugar donde el [!INCLUDE[ssIS](../../includes/ssis-md.md)] paquete que se va a escribir.  
+     Muestra el lugar donde el [!INCLUDE[ssIS](../../includes/ssis-md.md)] se escribirá el paquete.  
   
      **Nombre del paquete**  
      Escriba un nombre para el [!INCLUDE[ssIS](../../includes/ssis-md.md)] paquete.  
@@ -267,7 +267,7 @@ ms.locfileid: "36104277"
      **Cuenta de proxy de Integration Services**  
      Seleccione una cuenta de proxy disponible. Para programar la transferencia, el usuario debe disponer al menos de una cuenta de proxy, configurada con permisos para el **Subsistema de ejecución de paquetes SSIS** .  
   
-     Para crear una cuenta de proxy para [!INCLUDE[ssIS](../../includes/ssis-md.md)] la ejecución, en el Explorador de objetos del paquete, expanda **Agente SQL Server**, expanda **proxy**, haga clic en **la ejecución del paquete SSIS**y, a continuación, haga clic en **nuevo Proxy**.  
+     Para crear una cuenta de proxy para [!INCLUDE[ssIS](../../includes/ssis-md.md)] la ejecución en el Explorador de objetos del paquete, expanda **del Agente SQL Server**, expanda **Proxies**, haga clic en **la ejecución del paquete SSIS**y, a continuación, haga clic en **nuevo Proxy**.  
   
      Los miembros del rol fijo de servidor **sysadmin** pueden seleccionar la **Cuenta del servicio del Agente SQL Server**, que tiene todos los permisos necesarios.  
   

@@ -1,5 +1,5 @@
 ---
-title: Arquitectura de objetos de servidor ADOMD.NET | Documentos de Microsoft
+title: Arquitectura de objetos de servidor ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - object model [ADOMD.NET]
 ms.assetid: bdc81de9-b390-4654-b62a-cd6c0c9ca10d
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a5bcdd6ef56fe8d072b8c22537a55ed3888ad6ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f18dd57b9232a9ef9e3405ccc77b5db1bb8a1c82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237725"
 ---
 # <a name="adomdnet-server-object-architecture"></a>Arquitectura de objetos de servidor ADOMD.NET
   Los objetos de servidor ADOMD.NET son objetos auxiliares que pueden usarse para crear funciones definidas por el usuario (UDF) o procedimientos almacenados en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], about
 - replication [SQL Server]
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e2e6c94d70c3e4fc469653ff5abba17a2b7c22c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ab832622e831b63f9487fea2187151d7a1ddd1b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253783"
 ---
 # <a name="sql-server-replication"></a>Replicación de SQL Server
   La replicación es un conjunto de tecnologías destinadas a la copia y distribución de datos y objetos de base de datos desde una base de datos a otra, para luego sincronizar ambas bases de datos y mantener su coherencia. La replicación permite distribuir datos entre diferentes ubicaciones y entre usuarios remotos o móviles mediante redes locales y de área extensa, conexiones de acceso telefónico, conexiones inalámbricas e Internet.  
@@ -32,12 +32,12 @@ ms.locfileid: "36103281"
  Como alternativa a la replicación, puede sincronizar bases de datos mediante Microsoft Sync Framework. Sync Framework incluye componentes y una API intuitiva y flexible que facilitan la sincronización entre bases de datos de SQL Server, SQL Server Express, SQL Server Compact y SQL Azure. Sync Framework también incluye clases que se pueden adaptar para sincronizar entre una base de datos de SQL Server y cualquier otra base de datos compatible con ADO.NET. Para obtener documentación detallada de los componentes de sincronización de base de datos de Sync Framework, vea [Sincronizar bases de datos](http://go.microsoft.com/fwlink/?LinkId=209079). Para obtener información general sobre Sync Framework, vea el [Centro para desarrolladores de Microsoft Sync Framework](http://go.microsoft.com/fwlink/?LinkId=209078). Para obtener una comparación entre Sync Framework y la replicación de mezcla, vea [Información general y escenarios](http://msdn.microsoft.com/library/bb902818\(SQL.110\).aspx)  
   
  **Examinar contenido por área**  
- ![Icono de carpeta de archivos pequeños](../../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [What's New](what-s-new-replication.md)  
+ ![Icono carpeta de archivos pequeños](../../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [cuáles son las novedades](what-s-new-replication.md)  
   
- ![Icono de carpeta de archivos pequeños](../../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [compatibilidad con versiones anteriores](replication-backward-compatibility.md)  
+ ![Icono carpeta de archivos pequeños](../../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [compatibilidad con versiones anteriores](replication-backward-compatibility.md)  
   
- ![Icono de carpeta de archivos pequeños](../../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [características de replicación y tareas](replication-features-and-tasks.md)  
+ ![Icono carpeta de archivos pequeños](../../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [tareas y las características de replicación](replication-features-and-tasks.md)  
   
- ![Icono de carpeta de archivos pequeños](../../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [referencia técnica](technical-reference-replication.md)  
+ ![Icono carpeta de archivos pequeños](../../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [referencia técnica](technical-reference-replication.md)  
   
   

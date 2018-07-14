@@ -1,5 +1,5 @@
 ---
-title: Páginas de códigos de los datos Unicode y servidor | Documentos de Microsoft
+title: Páginas de códigos de servidor y los datos Unicode | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd532c5b3d564051c8d32171e861791017e8ab3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: fff43500155bdd6fc4fece74a018dc6dd4f7f0fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199255"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Datos Unicode y páginas de códigos de servidor
     
@@ -33,7 +33,7 @@ ms.locfileid: "36103304"
   
  La API Procedimiento almacenado extendido está habilitada para los datos Unicode; sin embargo, no está habilitada para los metadatos Unicode. La directiva #define de Unicode no tiene ningún efecto en la API Procedimiento almacenado extendido.  
   
- Se supone que todos los metadatos que devuelve la API Procedimiento almacenado extendido o que la aplicación de procedimiento almacenado extendida le proporciona están en la página de códigos multibyte del servidor. La página de códigos predeterminada de una aplicación de servidor de API procedimiento almacenado extendido es la página de códigos ANSI del equipo en el que se ejecuta la aplicación, que se puede obtener mediante una llamada a **srv_pfield** con el parámetro de campo establecido en SRV_ SPROC_CODEPAGE.  
+ Se supone que todos los metadatos que devuelve la API Procedimiento almacenado extendido o que la aplicación de procedimiento almacenado extendida le proporciona están en la página de códigos multibyte del servidor. La página de códigos predeterminada de una aplicación de servidor de API procedimiento almacenado extendido es la página de códigos ANSI del equipo donde se ejecuta la aplicación, que puede obtenerse mediante una llamada a **srv_pfield** con el parámetro de campo establecido en SRV_ SPROC_CODEPAGE.  
   
  Si la aplicación de API Procedimiento almacenado extendido está habilitada para Unicode, debe convertir los nombres de columna de metadatos de Unicode, mensajes de error, etc., a datos multibyte antes de pasar estos datos a la API Procedimiento almacenado extendido.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36103304"
   
      Las llamadas a procedimiento almacenado extendido **srv_pfield** con el parámetro de campo establecido en SRV_SPROC_CODEPAGE para obtener la página de códigos multibyte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Mensajes de error se pasan a **srv_sendmsg** como datos multibyte.  
+-   Los mensajes de error que se pasan a **srv_sendmsg** como datos multibyte.  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  

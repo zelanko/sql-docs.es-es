@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 85ec53ed-d887-4d95-a028-08cb502a3356
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5e758de33fdff0445160b346824eae941264d448
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: aedbf40ab545b79261fffe116d08d29a61bd4e70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256274"
 ---
 # <a name="device-not-ready-error"></a>Error por dispositivo no listo
   Esta regla comprueba si el identificador EventId 15 se encuentra en el registro de eventos del sistema. Este error puede ser debido a errores de configuración o problemas relacionados del adaptador host SCSI.  

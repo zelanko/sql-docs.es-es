@@ -1,5 +1,5 @@
 ---
-title: Crear, modificar y eliminar los procedimientos almacenados | Documentos de Microsoft
+title: Crear, modificar y quitar procedimientos almacenados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - stored procedures [SMO]
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 18ab85b6ea304660e412e0e0156fcc1cc9491fc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d7e4ddf95dc9fa08e52c9a312d3cc83c3c04bd05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223186"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Crear, modificar y eliminar los procedimientos almacenados
-  En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), los procedimientos almacenados se representan mediante la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto.  
+  En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), procedimientos almacenados están representados por el <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto.  
   
- Crear un <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto SMO requiere la configuración del <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> propiedad a la [!INCLUDE[tsql](../../../includes/tsql-md.md)] script que define el procedimiento almacenado. Los parámetros requieren el prefijo @ y se deben crear individualmente utilizando los objetos <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> y agregando a la colección <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> del objeto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
+ Crear un <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto SMO requiere establecer el <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> propiedad a la [!INCLUDE[tsql](../../../includes/tsql-md.md)] script que define el procedimiento almacenado. Los parámetros requieren el prefijo @ y se deben crear individualmente utilizando los objetos <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> y agregando a la colección <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> del objeto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>Crear, modificar y eliminar un procedimiento almacenado en Visual Basic  
  Este ejemplo de código muestra cómo crear un procedimiento almacenado para el [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de datos. El ejemplo devuelve el apellido de un empleado cuando se proporciona el número de identificador del empleado. El procedimiento almacenado requiere un parámetro de entrada que especifique el número de identificador del empleado y un parámetro de salida para devolver el apellido del empleado.  

@@ -5,10 +5,9 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system databases [SQL Server], backing up and restoring
 - restoring system databases [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 caps.latest.revision: 57
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 39266ab9ca20c174ee61a1ed2e52c33fb0d4b5ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 81645730d3a854eff8b318ef04ee234f6206b4d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197555"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>Realizar copias de seguridad y restaurar bases de datos del sistema (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene un conjunto de bases de datos de nivel de sistema,*bases de datos del sistema*, esenciales para el funcionamiento de una instancia del servidor. Varias de las bases de datos del sistema requieren que se hagan copias de seguridad tras cualquier actualización de importancia. Las bases de datos del sistema de las que siempre debe realizar copias de seguridad son **msdb**, **maestra**y **model**. Si alguna base de datos utiliza la replicación en la instancia de servidor, existe la base de datos del sistema **distribution** de la que también debe hacer una copia de seguridad. La copia de seguridad de estas bases de datos del sistema le permite restaurar y recuperar el sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el caso de producirse un error del sistema, por ejemplo una pérdida del disco duro.  
@@ -45,7 +44,7 @@ ms.locfileid: "36103812"
   
 ## <a name="limitations-on-restoring-system-databases"></a>Limitaciones sobre la restauración de las bases de datos del sistema  
   
--   Las bases de datos del sistema solo se pueden restaurar a partir de copias de seguridad creadas en la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en que se ejecuta actualmente la instancia de servidor. Por ejemplo, para restaurar una base de datos en una instancia del servidor que se ejecuta en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1.  
+-   Las bases de datos del sistema solo se pueden restaurar a partir de copias de seguridad creadas en la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en que se ejecuta actualmente la instancia de servidor. Por ejemplo, para restaurar una base de datos del sistema en una instancia de servidor que se está ejecutando en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1.  
   
 -   Para restaurar una base de datos, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe estar ejecutándose. El inicio de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere el acceso a la base de datos **maestra** y la posibilidad de utilizarla al menos parcialmente. Si la base de datos **maestra** está inutilizable, puede devolverla a un estado válido de dos formas:  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: bee3e33f3695b89ff4ca84b0ab6e6b657fc3e810
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ebec1a7f57606b2b07fe8b2c2d80529c3f04d583
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209085"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introducción a las tablas con optimización para memoria
   Las tablas con optimización para memoria son tablas creadas por medio de [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql).  
@@ -28,7 +28,7 @@ ms.locfileid: "36103310"
   
  OLTP en memoria está integrado con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para proporcionar una experiencia satisfactoria en todas las áreas como el desarrollo, la implementación, la facilidad de uso y la compatibilidad. Una base de datos puede contener objetos en memoria y objetos basados en disco.  
   
- Las tablas optimizadas para memoria son siempre con control de versiones. Esto significa que cada fila de la tabla puede tener varias versiones. Todas las versiones de fila se mantienen en la misma estructura de datos de la tabla. El control de versiones de fila se utiliza para permitir las lecturas y las escrituras simultáneas en la misma fila. Para obtener más información acerca de simultáneas lecturas y escrituras en la misma fila, vea [transacciones en tablas con optimización para memoria](memory-optimized-tables.md).  
+ Las tablas optimizadas para memoria son siempre con control de versiones. Esto significa que cada fila de la tabla puede tener varias versiones. Todas las versiones de fila se mantienen en la misma estructura de datos de la tabla. El control de versiones de fila se utiliza para permitir las lecturas y las escrituras simultáneas en la misma fila. Para obtener más información acerca de la lectura y escritura en la misma fila concurrentes, consulte [transacciones en tablas optimizadas para memoria](memory-optimized-tables.md).  
   
  La siguiente ilustración muestra la multiversión. La ilustración muestra una tabla con tres filas y cada fila tiene versiones diferentes.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36103310"
 |[Variables de tabla con optimización para memoria](../../database-engine/memory-optimized-table-variables.md)|Sí|Sí|no|  
 |[Procedimientos almacenados compilados de forma nativa](http://msdn.microsoft.com/library/dn133184.aspx)|No puede utilizar la instrucción EXECUTE para ejecutar un procedimiento almacenado desde un procedimiento almacenado compilado de forma nativa.|Sí|No <sup>1</sup>|  
   
- <sup>1</sup> no se puede tener acceso a una tabla optimizada en memoria o un procedimiento almacenado compilado de forma nativa desde la conexión de contexto (la conexión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al ejecutar un módulo CLR). Sin embargo, puede crear y abrir otra conexión en la que pueda tener acceso a las tablas optimizadas para memoria y a los procedimientos almacenados compilados de forma nativa. Para obtener más información, vea [vs Regular. Conexiones de contexto](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
+ <sup>1</sup> no puede tener acceso a una tabla optimizada para memoria o el procedimiento almacenado compilado de forma nativa desde la conexión de contexto (la conexión desde [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al ejecutar un módulo CLR). Sin embargo, puede crear y abrir otra conexión en la que pueda tener acceso a las tablas optimizadas para memoria y a los procedimientos almacenados compilados de forma nativa. Para obtener más información, consulte [vs Regular. Conexiones de contexto](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
   
 ## <a name="performance-and-scalability"></a>Escalabilidad y rendimiento  
  Los siguientes factores afectarán a las mejoras del rendimiento que se pueden lograr con OLTP en memoria:  

@@ -1,5 +1,5 @@
 ---
-title: Ver los eventos para los paquetes registrados | Documentos de Microsoft
+title: Ver los eventos de los paquetes registrados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing events
 - extended events [SQL Server], viewing events
 ms.assetid: 9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 42f24aaa6867cfe972a64b473ee590fcdec2a49e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0610697d8e5b743729985d4a7fe3dbec5a2743f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213375"
 ---
 # <a name="view-the-events-for-registered-packages"></a>Ver los eventos de los paquetes registrados
   Antes de crear una sesión de Extended Events de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , es útil averiguar los eventos disponibles en los paquetes registrados. Para más información, consulte [SQL Server Extended Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md).  

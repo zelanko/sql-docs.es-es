@@ -1,5 +1,5 @@
 ---
-title: Cambiar las asignaciones de filtros de fila (SSAS Tabular) de tabla, columna o | Documentos de Microsoft
+title: Cambiar las asignaciones de filtros de fila (SSAS Tabular), columna o tabla | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e085b0693e0043283cc142ccf2ca764ae234eed7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db70af7541a46fb061a3b668b61040361b261347
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241315"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Cambiar las asignaciones de filtros de tabla, columna o fila (SSAS tabular)
   Este tema describe cómo cambiar las asignaciones de filtros de tabla, columna o fila mediante el cuadro de diálogo **Editar propiedades de tabla** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -48,6 +48,6 @@ ms.locfileid: "36103407"
          Si comete un error y necesita volver a empezar, haga clic en **Borrar filtros de fila**.  
   
 ## <a name="see-also"></a>Vea también  
- [Editar cuadro de diálogo de propiedades de tabla &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+ [Editar cuadro de diálogo Propiedades de tabla &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
   
   

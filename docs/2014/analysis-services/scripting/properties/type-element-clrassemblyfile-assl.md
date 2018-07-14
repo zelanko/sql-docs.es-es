@@ -1,5 +1,5 @@
 ---
-title: Tipo de elemento (ClrAssemblyFile) (ASSL) | Documentos de Microsoft
+title: Type (elemento) (ClrAssemblyFile) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: ab9e1e2c-ab06-4cd1-b007-16d738dc5604
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c253b2975c5e4f4cbf27c5b2d655a09617d644de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02a32dffab7d0274b98a5dcae3099703446b184b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218025"
 ---
 # <a name="type-element-clrassemblyfile-assl"></a>Elemento Type (ClrAssemblyFile) (ASSL)
   Especifica el tipo de archivo de uno de los archivos que pertenecen a un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ensamblado de .NET Framework.  
@@ -72,13 +72,13 @@ ms.locfileid: "36103402"
   
  La enumeración que corresponde a los valores permitidos para `Type` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ClrAssemblyFileType>.  
   
- El elemento que corresponde al elemento primario de `Type` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+ El elemento que se corresponde con el elemento primario de `Type` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento file &#40;ASSL&#41;](../objects/file-element-assl.md)   
  [Archivos elemento &#40;ASSL&#41;](../collections/files-element-assl.md)   
  [Tipo de datos ClrAssembly &#40;ASSL&#41;](../data-type/assembly-data-type-assl.md)   
- [Assembly (elemento) &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
+ [Elemento Assembly &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
  [Elemento Assemblies &#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  
   

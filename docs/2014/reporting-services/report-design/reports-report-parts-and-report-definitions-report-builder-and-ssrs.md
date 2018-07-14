@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 55004b30ac7f462b677875f6f8b872ccebf25be8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e06d0e989b357d939da4a024a6c904c6e1cf175c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212355"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Informes, elementos de informe y definiciones de informe (Generador de informes y SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa diversos términos para describir un informe en distintos Estados, incluida la definición inicial, el informe publicado y el informe visualizado tal cual aparece ante el usuario.  
@@ -64,13 +64,13 @@ ms.locfileid: "36103508"
   
 -   Suscríbase a un informe, que se entrega a una bandeja de entrada de correo electrónico o a un recurso compartido de archivos en un formato de salida que especifique.  
   
- Suscribirse a un informe, que se entrega a una bandeja de entrada de correo electrónico o a un recurso compartido de archivos en un formato que especifique. El formato de representación predeterminado para un informe es HTML 4.0. Además del formato HTML, los informes se pueden representar en varios formatos de salida, entre los que se incluyen Excel, Word, XML, PDF, TIFF y CSV. Al igual que ocurre con los informes publicados, los informes representados no se pueden editar ni volver a guardar en el servidor de informes. Para obtener más información, consulte [exportar informes &#40;el generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
+ Suscribirse a un informe, que se entrega a una bandeja de entrada de correo electrónico o a un recurso compartido de archivos en un formato que especifique. El formato de representación predeterminado para un informe es HTML 4.0. Además del formato HTML, los informes se pueden representar en varios formatos de salida, entre los que se incluyen Excel, Word, XML, PDF, TIFF y CSV. Al igual que ocurre con los informes publicados, los informes representados no se pueden editar ni volver a guardar en el servidor de informes. Para obtener más información, consulte [exportar informes &#40;generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Conceptos de creación de informes &#40;el generador de informes SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Conceptos de creación de informes &#40;generador de informes y SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Generador de informes en SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
  [Instalar, desinstalar y asistencia del generador de informes](../install-uninstall-and-report-builder-support.md)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportar informes &#40;el generador de informes SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Exportar informes &#40;generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

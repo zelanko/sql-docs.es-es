@@ -1,14 +1,13 @@
 ---
-title: Sys.pdw_replicated_table_cache_state (Transact-SQL) | Documentos de Microsoft
+title: Sys.pdw_replicated_table_cache_state (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -17,25 +16,25 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9d3d2880c390dc627db7009662f72ccec6e9700f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.openlocfilehash: 8d78a537bb2de2ee880551afd3667f308b49ce83
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179551"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926056"
 ---
 # <a name="syspdwreplicatedtablecachestate-transact-sql"></a>Sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  Devuelve el estado de la memoria caché asociada con una tabla replicada por **object_id**.  
+  Devuelve el estado de la caché asociada a una tabla replicada por **object_id**.  
   
-|Nombre de la columna|Tipo de datos|Description|Intervalo|  
+|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|object_id|**int**|El identificador de objeto para la tabla. Vea [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **object_id** es la clave para esta vista.||  
-|state|**nvarchar(40)**|El estado de la memoria caché de tabla replicada para esta tabla.|'No está listo', 'Listo'|  
+|object_id|**int**|El identificador de objeto para la tabla. Consulte [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **object_id** es la clave para esta vista.||  
+|state|**nvarchar(40)**|El estado de la caché de tablas replicadas para esta tabla.|'NotReady', 'Listo'|  
   
 ## <a name="example"></a>Ejemplo
-Este ejemplo combina sys.pdw_replicated_table_cache_state con sys.tables para recuperar el nombre de tabla y el estado de la memoria caché de la tabla replicada.
+En este ejemplo une sys.pdw_replicated_table_cache_state con sys.tables para recuperar el nombre de tabla y el estado de la memoria caché de la tabla replicada.
 
 ```sql
 SELECT t.[name], p.[object_id], p.[state]
@@ -46,5 +45,5 @@ SELECT t.[name], p.[object_id], p.[state]
 
 
 ## <a name="next-steps"></a>Pasos siguientes  
- Para obtener una lista de todas las vistas de catálogo para el almacenamiento de datos de SQL y almacenamiento de datos paralelos, vea [paralelo vistas de catálogo de almacenamiento de datos y almacenamiento de datos de SQL](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md).   
+ Para obtener una lista de todas las vistas de catálogo para SQL Data Warehouse y almacenamiento de datos paralelos, vea [SQL Data Warehouse y vistas de catálogo de almacén de datos paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md).   
   

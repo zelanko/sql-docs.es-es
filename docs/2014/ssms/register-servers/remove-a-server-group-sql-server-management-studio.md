@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing server groups
 - Registered Servers [SQL Server], server groups
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - groups [SQL Server], server
 ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72d74cd2af13f46e043a4a10ed17dc11f79be10b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c03ba44ba409e79f98ce12d865646356e59ed8e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288291"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Quitar un grupo de servidores (SQL Server Management Studio)
   En este tema se describe cómo quitar un grupo de servidores de Servidores registrados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los grupos de servidores se pueden eliminar en cualquier momento. Si no están vacíos, se eliminarán también los servidores o grupos de servidores que incluyan. Antes de eliminar un grupo de servidores, traslade los servidores o grupos de servidores que desee conservar a un nuevo grupo de servidores.  

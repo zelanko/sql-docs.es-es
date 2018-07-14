@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:100644
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - checking queries
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6f77da9093a27456014f78ca6285a33d3c565bf2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3eec42b02744209860c19d58a6965737823ef95e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226565"
 ---
 # <a name="verify-queries-visual-database-tools"></a>Comprobar consultas (Visual Database Tools)
   Para evitar problemas, puede comprobar la consulta generada con el fin de asegurarse de que su sintaxis es correcta. Esta opción será especialmente útil cuando escriba instrucciones en el [panel SQL](visual-database-tools.md).  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sa account
 - connecting when locked out [SQL Server]
 - locked out [SQL Server]
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e4a6f1d769833a451f7360c747249cb28d0d0c12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 40950fec562e5f313f6a16302ea714aaef522fa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267181"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Conectarse a SQL Server cuando los administradores del sistema no tienen acceso
   En este tema se describe cómo puede recobrar el acceso a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] como administrador del sistema. Un administrador del sistema puede perder el acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debido a una de las razones siguientes:  
@@ -97,7 +97,7 @@ ms.locfileid: "36103617"
         > [!WARNING]  
         >  Reemplace ************ con una contraseña segura.  
   
-    4.  Si su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en modo de autenticación mixto y desea restablecer la contraseña de la `sa` account, conectar con una ventana de consulta mediante la autenticación de Windows (que incluye sus credenciales de administrador). Cambiar la contraseña de la `sa` cuenta con la siguiente sintaxis.  
+    4.  Si su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en modo de autenticación mixto y desea restablecer la contraseña de la `sa` cuenta, conectar con una ventana de consulta mediante la autenticación de Windows (que incluye sus credenciales de administrador). Cambiar la contraseña de la `sa` cuenta con la siguiente sintaxis.  
   
         ```  
         ALTER LOGIN sa WITH PASSWORD = '************';  
@@ -117,7 +117,7 @@ ms.locfileid: "36103617"
   
 12. Haga clic con el botón derecho en el nombre del servidor y, después, haga clic en **Reiniciar**.  
   
- Ahora debe poder conectarse normalmente con una de las cuentas que es miembro de la `sysadmin` rol fijo de servidor.  
+ Ahora debería poder conectarse normalmente con una de las cuentas que ahora es un miembro de la `sysadmin` rol fijo de servidor.  
   
 ## <a name="see-also"></a>Vea también  
  [Iniciar SQL Server en modo de usuario único](start-sql-server-in-single-user-mode.md)   

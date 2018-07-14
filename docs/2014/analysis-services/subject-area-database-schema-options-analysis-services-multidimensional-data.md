@@ -1,5 +1,5 @@
 ---
-title: Opciones de esquema de base de datos (Asistente para generación de esquema) de área de asunto (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Opciones de esquema de base de datos (Asistente para generación de esquema) de área de asunto (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.subjectareaschemaopts.f1
 ms.assetid: 4c109bb8-e19d-412b-908f-bfdd7f872439
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ce756687e73e628d1b66a797e19711a3d6889eec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb617bca3a906162f372ce482269d3fca386acec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235595"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>Opciones de esquema de la base de datos del área de asunto (Asistente para generar esquemas) (Analysis Services - Datos multidimensionales)
   Use la página **Opciones de esquema de la base de datos del área de asunto** para controlar cómo se genera el esquema y definir cómo se mantienen los datos.  
@@ -39,7 +39,7 @@ ms.locfileid: "36103630"
  **Crear índices**  
  Crea índices en columnas de clave externa en el esquema generado.  
   
- **Exigir la integridad referencial**  
+ **Exigir integridad referencial**  
  Exige integridad referencial en el esquema generado. Si no selecciona esta opción, las relaciones se crean, pero no se exigen.  
   
  **Conservar los datos al volver a generar**  

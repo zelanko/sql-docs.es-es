@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - concatenation [Integration Services]
 - + (concatenate operator)
@@ -17,13 +17,13 @@ ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b0cee1470a2ce2e9f5f95ddd81423ec27898aba3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4a443e62b96a4e96cdd12f91e96f42841eb1397
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235245"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (Concatenar) (expresión de SSIS)
   Concatena dos expresiones en una expresión.  
@@ -72,7 +72,7 @@ FirstName + ' ' + LastName
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Prioridad y asociatividad](operator-precedence-and-associativity.md)   
+ [Precedencia y asociatividad](operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)  
   
   

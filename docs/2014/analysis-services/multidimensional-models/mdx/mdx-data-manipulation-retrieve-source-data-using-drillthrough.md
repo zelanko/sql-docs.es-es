@@ -1,5 +1,5 @@
 ---
-title: Usar DRILLTHROUGH para recuperar datos de origen (MDX) | Documentos de Microsoft
+title: Usar DRILLTHROUGH para recuperar datos de origen (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DRILLTHROUGH statement
 - retrieving data
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [MDX]
 ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9869be182f398df326c0c81b7e00e869f0b3eae6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b98ebd1516d2aa26fa1e3a66edebdaf99f0f181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204425"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>Usar DRILLTHROUGH para recuperar datos de origen (MDX)
   Las expresiones multidimensionales (MDX) usan la instrucción [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough)para recuperar un conjunto de filas de los datos de origen de una celda de cubo.  
@@ -32,7 +32,7 @@ ms.locfileid: "36102942"
  Para ejecutar una instrucción `DRILLTHROUGH` en un cubo, es preciso definir una acción de obtención de detalles para el cubo en cuestión. Para definir una acción de obtención de detalles, en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], en el Diseñador de cubos, en el panel de **Acciones** , en la barra de herramientas, haga clic en **Nueva acción de obtención de detalles**. En la nueva acción de obtención de detalles, especifique el nombre de la acción, el destino, la condición y las columnas que devolverá la instrucción `DRILLTHROUGH`.  
   
 ## <a name="drillthrough-statement-syntax"></a>Sintaxis de la instrucción DRILLTHROUGH  
- El `DRILLTHROUGH` instrucción utiliza la sintaxis siguiente:  
+ El `DRILLTHROUGH` instrucción usa la sintaxis siguiente:  
   
 ```  
 <drillthrough> ::= DRILLTHROUGH [<Max_Rows>] [<First_Rowset>] <MDX select> [<Return_Columns>]  

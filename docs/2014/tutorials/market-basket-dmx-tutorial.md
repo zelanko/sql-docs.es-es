@@ -1,5 +1,5 @@
 ---
-title: Tutorial DMX de Market Basket | Documentos de Microsoft
+title: Tutorial DMX de Market Basket | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -21,13 +21,13 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a8806eceb5c16354d6581c8fcdd4e664619d2d2a
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: b73a618c5318d88ec6ee09751e09327687d865f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220585"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Tutorial DMX de Market Basket
   En este tutorial aprenderá a crear, entrenar y explorar modelos de minería de datos utilizando el lenguaje de consulta Extensiones de minería de datos (DMX). A continuación, estos modelos de minería de datos se utilizarán para crear predicciones que describen los productos que tienden a adquirirse simultáneamente.  
@@ -52,7 +52,7 @@ ms.locfileid: "36312933"
  **Para obtener más información:** [soluciones de minería de datos](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Estructura de minería de datos y modelos de minería de datos  
- Antes de empezar a crear instrucciones DMX, es importante comprender los objetos principales utilizados por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para crear modelos de minería de datos. El *estructura de minería de datos* es una estructura de datos que define el dominio de datos desde el que se generan los modelos de minería de datos. Una estructura de minería de datos sencilla puede contener varios *modelos de minería de datos* que comparten el mismo dominio. Un modelo de minería de datos aplica un algoritmo de modelo de minería a los datos, que se representan en una estructura de minería de datos.  
+ Antes de empezar a crear instrucciones DMX, es importante comprender los objetos principales utilizados por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para crear modelos de minería de datos. El *estructura de minería de datos* es una estructura de datos que define el dominio de datos desde el que se generan los modelos de minería de datos. Una estructura de minería de datos solo puede contener varios *modelos de minería de datos* que comparten el mismo dominio. Un modelo de minería de datos aplica un algoritmo de modelo de minería a los datos, que se representan en una estructura de minería de datos.  
   
  Las unidades de creación de la estructura de minería de datos son las columnas de la estructura de minería de datos, que describen los datos que contiene el origen de datos. Estas columnas contienen información como el tipo de datos, el tipo de contenido y el modo en que se distribuyen los datos.  
   
@@ -85,21 +85,21 @@ ms.locfileid: "36312933"
   
  **Para obtener más información**  
   
- [Extensiones de minería de datos &#40;DMX&#41; referencia](/sql/dmx/data-mining-extensions-dmx-reference), [descripción DMX Select (instrucción)](/sql/dmx/understanding-the-dmx-select-statement), [estructura y el uso de consultas de predicción DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [Extensiones de minería de datos &#40;DMX&#41; referencia](/sql/dmx/data-mining-extensions-dmx-reference), [descripción DMX instrucción Select](/sql/dmx/understanding-the-dmx-select-statement), [estructura y el uso de consultas de predicción DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>Aprendizaje  
  El tutorial está compuesto por las lecciones siguientes:  
   
- [Lección 1: Crear la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
+ [Lección 1: Crear la estructura de minería de Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
  En esta lección aprenderá a usar la instrucción `CREATE` para crear estructuras de minería de datos.  
   
- [Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de la cesta](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Lección 2: Agregar modelos de minería a la estructura de minería de Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
  En esta lección aprenderá a usar la instrucción `ALTER` para agregar modelos de minería de datos a una estructura de minería de datos.  
   
- [Lección 3: Procesar la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
- En esta lección, obtendrá información sobre cómo utilizar el `INSERT INTO` instrucción para procesar estructuras de minería de datos y sus modelos de minería de datos asociados.  
+ [Lección 3: Procesar la estructura de minería de Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ En esta lección, obtendrá información sobre cómo usar el `INSERT INTO` instrucción para procesar estructuras de minería de datos y sus modelos de minería de datos asociados.  
   
- [Lección 4: Ejecutar predicciones de cesta](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [Lección 4: Ejecutar predicciones de Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  En esta lección aprenderá a usar la instrucción `PREDICTION JOIN` para crear predicciones basadas en modelos de minería de datos.  
   
 ## <a name="requirements"></a>Requisitos  

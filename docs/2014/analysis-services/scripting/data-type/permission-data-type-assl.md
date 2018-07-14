@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos Permission (ASSL) | Documentos de Microsoft
+title: Tipo de datos Permission (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Permission data type
 ms.assetid: 5f309544-59f8-4432-b1eb-b7c1a049f8df
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff5fb67e4f7989fb329e60a106ea8e6d0c734c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c570ae1b3f2e2dbf65a4037f96e515d6667863a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233955"
 ---
 # <a name="permission-data-type-assl"></a>Tipo de datos Permission (ASSL)
   Define un tipo de datos primitivo abstracto que representa información acerca de un permiso en particular.  
@@ -66,7 +66,7 @@ ms.locfileid: "36103634"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|None|  
-|Elementos secundarios|[Anotaciones](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [descripción](../properties/description-element-assl.md), [identificador](../properties/id-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [nombre](../properties/name-element-assl.md), [Proceso](../properties/process-element-assl.md), [lectura](../properties/read-element-assl.md), [ReadDefinition](../properties/readdefinition-element-assl.md), [RoleID](../properties/roleid-element-assl.md), [escribir](../properties/write-element-assl.md)|  
+|Elementos secundarios|[Las anotaciones](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [descripción](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [nombre](../properties/name-element-assl.md), [Proceso](../properties/process-element-assl.md), [lectura](../properties/read-element-assl.md), [ReadDefinition](../properties/readdefinition-element-assl.md), [RoleID](../properties/roleid-element-assl.md), [escribir](../properties/write-element-assl.md)|  
 |Elementos derivados|None|  
   
 ## <a name="remarks"></a>Notas  
@@ -74,13 +74,13 @@ ms.locfileid: "36103634"
   
  Este tipo de datos tiene las validaciones siguientes en el valor 2 (modo de servidor tabular) de DeploymentMode.  
   
--   *Proceso* valor predeterminado del atributo se establece en `False`, excepto cuando el usuario tiene la **actualizar** permiso. Para los usuarios con el **actualizar** permiso la *proceso* valor de atributo se establece en `True`.  
+-   *Proceso* valor predeterminado del atributo se establece en `False`, excepto cuando el usuario tiene el **actualizar** permiso. Para los usuarios con el **actualizar** permiso la *proceso* el valor de atributo se establece en `True`.  
   
--   *Leer definición* valor de atributo se establece en `None`; cualquier otro valor genera un error.  
+-   *ReadDefinition* el valor de atributo se establece en `None`; cualquier otro valor genera un error.  
   
--   *Lectura* valor de atributo se establece en `Allowed` para los usuarios con el **usuario** permiso y a `None` cuando los usuarios se asignan a la **actualizar** permiso; si un usuario tiene los **Usuario** y **actualizar** permisos y, a continuación, el atributo se establece en `Allowed`. Para los usuarios con privilegios de administrador, el valor del atributo se establece en `Allowed`.  
+-   *Lectura* el valor de atributo se establece en `Allowed` para los usuarios con el **usuario** permiso y `None` cuando los usuarios se asignan a la **actualizar** permiso; si un usuario tiene los **Usuario** y **actualizar** permisos y, a continuación, el atributo se establece en `Allowed`. Para los usuarios con privilegios de administrador, el valor del atributo se establece en `Allowed`.  
   
--   *Escribir* valor de atributo se establece en `None`; cualquier otro valor genera un error.  
+-   *Escribir* el valor de atributo se establece en `None`; cualquier otro valor genera un error.  
   
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.Permission>.  
   

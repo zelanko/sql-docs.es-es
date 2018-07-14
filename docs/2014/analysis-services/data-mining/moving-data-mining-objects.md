@@ -1,5 +1,5 @@
 ---
-title: Mover objetos de minería de datos | Documentos de Microsoft
+title: Mover objetos de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], models
 - data mining editor [Analysis Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], modifying
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dff20b2b3e273ec0aac653346084f6c2854a8330
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e538d9769991772b66050cf97e458de86a16830a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234325"
 ---
 # <a name="moving-data-mining-objects"></a>Mover objetos de minería de datos
   Los escenarios más frecuentes para mover objetos de minería de datos son implementar un modelo de un entorno de prueba o de análisis en un entorno de producción, o compartir modelos con otros usuarios.  
@@ -79,7 +79,7 @@ ms.locfileid: "36102945"
   
 -   [EXPORTAR &AMP;#40;DMX&AMP;#41;](/sql/dmx/export-dmx)  
   
--   [IMPORTAR &AMP;#40;DMX&AMP;#41;](/sql/dmx/import-dmx)  
+-   [IMPORTACIÓN &AMP;#40;DMX&AMP;#41;](/sql/dmx/import-dmx)  
   
  Si especifica la opción INCLUDE DEPENDENCIES, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también exportará la definición de las vistas del origen de datos necesarias y, al importar el modelo o la estructura, volverá a crear la vista del origen de datos en el servidor de destino. Cuando termine de importar el modelo, asegúrese de establecer los permisos de minería de datos necesarios en el objeto.  
   

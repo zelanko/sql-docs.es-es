@@ -1,5 +1,5 @@
 ---
-title: Definir la referencia de moneda Local (Asistente de Business Intelligence) | Documentos de Microsoft
+title: Definir la referencia de moneda Local (Asistente de Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.localcurrency.f1
 ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10810e19ec00aa77a14cb5a21789dfee1f9ae09a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c2334bf24e692d5728521a1aee4967cfaeba25e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206285"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>Definir la referencia de moneda local (Asistente de Business Intelligence)
   Use la página **Definir la referencia de moneda local** para definir las monedas locales en la funcionalidad de conversión de monedas que incluye los tipos de conversión varios a varios o varios a uno especificados en la página **Seleccionar el tipo de conversión** . La moneda local es la moneda en que se almacenan las transacciones de medidas seleccionadas en la página **Seleccionar medidas** .  
@@ -53,7 +53,7 @@ ms.locfileid: "36103669"
 >  Esta opción no estará disponible si no se selecciona la opción **Atributos de la tabla de dimensiones** .  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda de F1 de Asistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Asistente de Business Intelligence F1 Ayuda](business-intelligence-wizard-f1-help.md)   
  [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Seleccione una vista del origen de datos (Asistente para cubos) | Documentos de Microsoft
+title: Seleccione una vista del origen de datos (Asistente para cubos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.datasourceselection.f1
 ms.assetid: a79cd87f-2a55-4020-90f7-9ee627379588
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48661166ba8994e8d523138cfa0e9ba8c58fd09c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34ddd344b2fa9116c1ecc0ea7dd1cc45ec44f82b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235635"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>Seleccionar una vista del origen de datos (Asistente para cubos)
   Use la página **Seleccionar una vista del origen de datos** para seleccionar la vista del origen de datos para el cubo vacío.  
@@ -30,7 +30,7 @@ ms.locfileid: "36103645"
 >  Esta página solo aparecerá si ha seleccionado **Crear un cubo vacío** en la página **Seleccionar método de creación** .  
   
 ## <a name="options"></a>Opciones  
- **vista del origen de datos**  
+ **Vista del origen de datos**  
  Selecciona la vista del origen de datos que se utilizará para el cubo vacío.  
   
  **Ninguno**  

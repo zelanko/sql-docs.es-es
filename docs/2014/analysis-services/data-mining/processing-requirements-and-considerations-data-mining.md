@@ -1,5 +1,5 @@
 ---
-title: Requisitos y consideraciones (minería de datos) de procesamiento | Documentos de Microsoft
+title: Procesamiento de los requisitos y consideraciones (minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], objects
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbb38b12357b90b8ee2e4183af2d44724e7ce969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 982349548e300e17f97c61f4679c085ed98b3208
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232395"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Requisitos y consideraciones de procesamiento (minería de datos)
   En este tema se describen algunas consideraciones técnicas que debe tener en cuenta al procesar objetos de minería de datos. Para obtener una explicación general de qué es el procesamiento y cómo se aplica a la minería de datos, vea [Procesar objetos de minería de datos](processing-data-mining-objects.md).  
@@ -39,11 +39,11 @@ ms.locfileid: "36103437"
   
  El servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] emite consultas a la base de datos que proporciona los datos sin procesar. Esta base de datos puede ser una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o una versión anterior del motor de base de datos de SQL Server. Cuando se procesa una estructura de minería de datos, los datos del origen se transfieren a la estructura de minería de datos y se conservan en el disco en un nuevo formato comprimido. No se procesan todas las columnas del origen de datos sino únicamente aquellas que están incluidas en la estructura de minería de datos, de acuerdo con la definición de los enlaces.  
   
- Con estos datos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera un índice de todos los datos y columnas de datos discretos, y crea un índice independiente para las columnas continuas. Se emite una consulta por cada tabla anidada para crear el índice y se genera una consulta adicional por cada tabla anidada para procesar las relaciones entre cada par de una tabla anidada y tabla de casos. La razón de crear varias consultas es procesar un almacén interno especial de datos multidimensionales. Puede limitar el número de consultas que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] envía al almacén relacional estableciendo la propiedad del servidor, `DatabaseConnectionPoolMax`. Para más información, consulte [OLAP Properties](../server-properties/olap-properties.md).  
+ Con estos datos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera un índice de todos los datos y columnas de datos discretos, y crea un índice independiente para las columnas continuas. Se emite una consulta por cada tabla anidada para crear el índice y se genera una consulta adicional por cada tabla anidada para procesar las relaciones entre cada par de una tabla anidada y tabla de casos. La razón de crear varias consultas es procesar un almacén interno especial de datos multidimensionales. Puede limitar el número de consultas que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] envía al almacén relacional estableciendo la propiedad del servidor `DatabaseConnectionPoolMax`. Para más información, consulte [OLAP Properties](../server-properties/olap-properties.md).  
   
  Al procesar el modelo, éste no vuelve a leer directamente los datos del origen de datos, sino que recibe el resumen de los datos de la estructura de minería de datos. Utilizando el cubo que se creó, junto con el índice y los datos del caso almacenados en memoria caché, el servidor crea subprocesos independientes para entrenar los modelos.  
   
- Para obtener más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten el modelo de procesamiento en paralelo, vea [características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+ Para obtener más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten el procesamiento de modelos en paralelo, vea [características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ##  <a name="bkmk_ProcessStructures"></a> Procesar estructuras de minería de datos  
  Una estructura de minería de datos se puede procesar con todos los modelos dependientes, o por separado. Procesar una estructura de minería de datos independientemente de los modelos puede ser útil cuando se prevé que el procesamiento de algunos modelos llevará mucho tiempo y se desee diferir esa operación.  
@@ -91,8 +91,8 @@ ms.locfileid: "36103437"
  Para más información, vea [Exportar e importar objetos de minería de datos](export-and-import-data-mining-objects.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Estructuras de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
- [Estructuras de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
  [Procesamiento de objetos de modelo multidimensional](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

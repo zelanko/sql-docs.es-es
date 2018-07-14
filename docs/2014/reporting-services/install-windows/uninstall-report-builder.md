@@ -1,5 +1,5 @@
 ---
-title: Desinstalar la versión independiente del generador de informes (generador de informes) | Documentos de Microsoft
+title: Desinstalar la versión independiente del generador de informes (generador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5482ca3ec570b4155712dbeaf3768a55372eccad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3fec5ecbe30bb55262a274b5764d6650044a54a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216855"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>Desinstalar la versión independiente del Generador de informes (Generador de informes)
   Podrá desinstalar la versión independiente del Generador de informes desde el panel de control o la línea de comandos. No podrá desinstalar la versión [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] del Generador de informes sin desinstalar [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]  
@@ -44,7 +44,7 @@ ms.locfileid: "36103745"
   
 1.  En el menú **Inicio** , haga clic en **Ejecutar**.  
   
-2.  En el **abiertos** cuadro de texto, escriba `cmd.`  
+2.  En el **abierto** cuadro de texto, escriba `cmd.`  
   
 3.  En la ventana del símbolo del sistema, navegue hasta la carpeta con ReportBuilder3_x86.msi.  
   

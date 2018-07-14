@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up [SQL Server], tail of log
 - transaction log backups [SQL Server], tail-log backups
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 caps.latest.revision: 55
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7ad9a530a1bcc67db785af3c23f2fd80496155f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 92e636b8fb7cc5001833f8d3b99cd761dddcf228
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207205"
 ---
 # <a name="tail-log-backups-sql-server"></a>Copias del final del registro (SQL Server)
   Este tema solamente es pertinente para copias de seguridad y restauración de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usan el modelo de recuperación optimizado para cargas masivas de registros o el modelo de recuperación completa.  
@@ -53,8 +52,8 @@ ms.locfileid: "36103100"
   
 |Opción BACKUP LOG|Comentarios|  
 |-----------------------|--------------|  
-|NORECOVERY|Use NORECOVERY cada vez que desee continuar con una operación de restauración en la base de datos. NORECOVERY pone la base de datos en el estado de restauración. Esto garantiza que la base de datos no cambie después de realizar la copia del final del registro.  El registro se trunca a menos que también se especifica la opción NO_TRUNCATE o COPY_ONLY.<br /><br /> **\*\* Importante \* \***  recomendamos que evite usar NO_TRUNCATE, excepto cuando se daña la base de datos.|  
-|CONTINUE_AFTER_ERROR|Utilice CONTINUE_AFTER_ERROR solo si va a crear una copia del final de una base de datos dañada.<br /><br /> Nota: Cuando se utiliza copia de seguridad del final del registro de una base de datos dañada, algunos de los metadatos que comúnmente se capturan en las copias de seguridad de registro estén disponibles. Para obtener más información, vea [Copias del final del registro con metadatos de copia de seguridad incompletos](#IncompleteMetadata) más adelante en este tema.|  
+|NORECOVERY|Use NORECOVERY cada vez que desee continuar con una operación de restauración en la base de datos. NORECOVERY pone la base de datos en el estado de restauración. Esto garantiza que la base de datos no cambie después de realizar la copia del final del registro.  El registro se trunca a menos que también se especifica la opción NO_TRUNCATE o COPY_ONLY.<br /><br /> **\*\* Importante \* \***  le recomendamos que evite usar NO_TRUNCATE, salvo cuando esté dañada la base de datos.|  
+|CONTINUE_AFTER_ERROR|Utilice CONTINUE_AFTER_ERROR solo si va a crear una copia del final de una base de datos dañada.<br /><br /> Nota: Cuando se usa la copia de seguridad del final del registro en una base de datos dañada, algunos de los metadatos que comúnmente se capturan en las copias de seguridad del registro podrían no estar disponible. Para obtener más información, vea [Copias del final del registro con metadatos de copia de seguridad incompletos](#IncompleteMetadata) más adelante en este tema.|  
   
 ##  <a name="IncompleteMetadata"></a> Copias del final del registro con metadatos de copia de seguridad incompletos  
  Las copias de seguridad de registros después del error capturan el final del registro aunque falten archivos en la base de datos, o la base de datos esté sin conexión o dañada. Sin embargo, esto puede provocar que se obtengan metadatos incompletos de los comandos de información de restauración y **msdb**. Sin embargo, solo los metadatos están incompletos. El registro capturado está completo y en condiciones de uso.  

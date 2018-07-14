@@ -1,13 +1,13 @@
 ---
-title: Vistas de administración dinámica de almacenamiento de datos paralelo y SQL | Documentos de Microsoft
+title: Vistas de administración dinámica de almacenamiento de SQL y datos en paralelo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -18,19 +18,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8df833bdcc049bd9c8197dd8caea6410aa94d45c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: e610fb5bf6b64432b28a20d6e57e4b729a3c044e
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467512"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36915026"
 ---
 # <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>Vistas de administración dinámica de SQL y almacenamiento de datos paralelos
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Este tema se enumeran los [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vistas de administración dinámica (DMV).  
   
- Todos los [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] DMV comienzan por **sys.dm_pdw**.  
+ Todos los [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] DMV comienzan con **sys.dm_pdw**.  
   
 ## <a name="includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vistas de administración dinámica  
  Las vistas de administración dinámica siguientes se aplican a ambos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  

@@ -1,5 +1,5 @@
 ---
-title: Asignar parámetros de consulta a Variables en una tarea Ejecutar SQL | Documentos de Microsoft
+title: Asignar parámetros de consulta a Variables en una tarea Ejecutar SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [Integration Services], parameter mapping
 - parameterized SQL commands [Integration Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - variables [Integration Services], mapping parameters to
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6427fe7773569abc5d3989e6ca830c0999a962c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92972c340a71587329146f71542e15d8a45cb914
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233395"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>asignar parámetros de consulta a variables en una tarea Ejecutar SQL
   En este tema se describe cómo utilizar una instrucción SQL con parámetros en la tarea Ejecutar SQL, y crear asignaciones entre las variables y los parámetros de la instrucción SQL.  
@@ -41,7 +41,7 @@ ms.locfileid: "36103108"
   
 3.  Haga clic en la pestaña **Flujo de control** .  
   
-4.  Si el paquete no incluye en ese momento una tarea Ejecutar SQL, agregue una al flujo de control del paquete. Para obtener más información, vea [agregar o eliminar una tarea o un contenedor en un flujo de Control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  Si el paquete no incluye en ese momento una tarea Ejecutar SQL, agregue una al flujo de control del paquete. Para obtener más información, consulte [agregar o eliminar una tarea o un contenedor en un flujo de Control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 5.  Haga doble clic en la tarea Ejecutar SQL.  
@@ -108,7 +108,7 @@ ms.locfileid: "36103108"
   
 ## <a name="see-also"></a>Vea también  
  [Tarea Ejecutar SQL](control-flow/execute-sql-task.md)   
- [Parámetros y códigos de retorno en la tarea Ejecutar SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
+ [Los parámetros y códigos de retorno en la tarea Ejecutar SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
  [Servicios de integración &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)  
   
   

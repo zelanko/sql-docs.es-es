@@ -1,14 +1,13 @@
 ---
-title: Sys.pdw_nodes_tables (Transact-SQL) | Documentos de Microsoft
+title: Sys.pdw_nodes_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -19,19 +18,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 16b8bd03970051d0295d9a89792c7f2de2011466
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.openlocfilehash: 263e2edb61529a197815f95cc595dcb9b5949877
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180881"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36927046"
 ---
 # <a name="syspdwnodestables-transact-sql"></a>Sys.pdw_nodes_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Contiene una fila por cada objeto de tabla que son propiedad de una entidad de seguridad o en el que la entidad de seguridad se ha concedido algún permiso.  
+  Contiene una fila para cada objeto de tabla que son propiedad de una entidad de seguridad o en el que la entidad de seguridad tiene algún permiso.  
   
-|Nombre de la columna|Tipo de datos|Description|Intervalo|  
+|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |\<hereda columnas >||Para obtener una lista de columnas que hereda esta vista, consulte [sys.objects](http://msdn.microsoft.com/en-us/c36fa71e-549a-4533-a6cd-1314d26f533f).||  
 |lob_data_space_id|**int**||Siempre es 0.|  
@@ -43,15 +42,15 @@ ms.locfileid: "33180881"
 |has_replication_filter|**bit**|1 = La tabla tiene un filtro de replicación.|0|  
 |is_merge_published|**bit**|1 = La tabla se publicó con la replicación de mezcla.|0; no se admite.|  
 |is_sync_tran_subscribed|**bit**|1 = La tabla se suscribió con una suscripción de actualización inmediata.|0; no se admite.|  
-|has_unchecked_assembly_data|**bit**|1 = La tabla contiene datos persistentes que dependen de un ensamblado cuya definición cambió durante el último ALTER ASSEMBLY. Se restablecerá en 0 tras la siguiente operación DBCC CHECKDB o DBCC CHECKTABLE correcta.|0; no se admite CLR.|  
+|has_unchecked_assembly_data|**bit**|1 = La tabla contiene datos persistentes que dependen de un ensamblado cuya definición cambió durante el último ALTER ASSEMBLY. Se restablecerá en 0 tras la siguiente operación DBCC CHECKDB o DBCC CHECKTABLE correcta.|0; no compatible con CLR.|  
 |text_in_row_limit|**int**|0 = el texto de fila no se establece la opción.|Siempre es 0.|  
 |large_value_types_out_of_row|**bit**|1 = Los tipos de valores grandes se guardan fuera de la fila.|Siempre es 0.|  
 |is_tracked_by_cdc|**bit**|1 = tabla está habilitada para la captura de datos modificados|Siempre es 0; no se admite CDC.|  
 |lock_escalation|**tinyint**|El valor de la opción LOCK_ESCALATION para la tabla: 2 = AUTO|Siempre 2.|  
-|lock_escalation_desc|**nvarchar(60)**|Una descripción de texto de la opción lock_escalation.|Siempre ꞌAUTOꞌ.|  
+|lock_escalation_desc|**nvarchar(60)**|Descripción de texto de la opción lock_escalation.|Siempre ꞌAUTOꞌ.|  
 |pdw_node_id|**int**|Identificador único de un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo.|NOT NULL|  
   
 ## <a name="see-also"></a>Vea también  
- [Almacenamiento de datos SQL y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

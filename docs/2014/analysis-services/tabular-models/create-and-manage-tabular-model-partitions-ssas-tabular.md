@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar particiones de modelos tabulares (SSAS Tabular) | Documentos de Microsoft
+title: Crear y administrar particiones de modelos tabulares (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cd7eb0621d95d11c29db213cfcff654da3f1240
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fbe478866d3e333893c4a01c78df53590e7fe0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228275"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>Crear y administrar particiones de modelos tabulares (SSAS tabular)
   Las particiones dividen una tabla en partes lógicas. A continuación, cada partición se puede procesar (actualizar) de forma independiente de las demás particiones. Las particiones definidas para un modelo durante la creación de modelos se duplican en un modelo implementado. Una vez realizada la implementación, puede administrar esas particiones mediante el cuadro de diálogo **Particiones** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o mediante un script. Las tareas proporcionadas en este tema describen cómo crear y administrar particiones en un modelo implementado.  
@@ -67,7 +67,7 @@ ms.locfileid: "36103150"
 -   En el cuadro de diálogo **Particiones** , en la lista **Particiones** , seleccione la partición que desea eliminar y, a continuación, haga clic en el botón **Eliminar** .  
   
 ## <a name="see-also"></a>Vea también  
- [Particiones de modelos tabulares &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md)   
- [Procesar particiones de modelos tabulares &#40;SSAS Tabular&#41;](process-tabular-model-partitions-ssas-tabular.md)  
+ [Particiones de modelos tabulares &#40;Tabular de SSAS&#41;](partitions-ssas-tabular.md)   
+ [Procesar particiones de modelos tabulares &#40;Tabular de SSAS&#41;](process-tabular-model-partitions-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Crear válido ID, IDREF e IDREFS tipo atributos mediante SQL: prefix (SQLXML 4.0) | Documentos de Microsoft'
+title: 'Creación de identificador válido, IDREF e IDREFS tipo atributos mediante SQL: prefix (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0da57705288df64e630b0d69781c151cd1310299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 49576de626183ab603699311b9c18f02013685d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215035"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Crear atributos válidos de tipo ID, IDREF e IDREFS mediante sql:prefix (SQLXML 4.0)
   Es posible especificar que un atributo sea un atributo de tipo ID. Los atributos especificados como IDREF o IDREFS pueden usarse para hacer referencia a los atributos de tipo ID, lo que habilita los vínculos entre documentos.  
@@ -47,7 +47,7 @@ ms.locfileid: "36103762"
   
 -   El valor de un atributo ID, IDREF e IDREFS debe ser un token con nombre. (Por ejemplo, el valor entero 101 no puede ser un valor ID.)  
   
--   Los atributos de tipo ID, IDREF e IDREFS no puede asignarse a columnas del tipo `text`, `ntext`, o `image` o cualquier otro tipo de datos binarios (por ejemplo, `timestamp`).  
+-   Los atributos de tipo ID, IDREF e IDREFS no pueden asignarse a columnas de tipo `text`, `ntext`, o `image` o cualquier otro tipo de datos binarios (por ejemplo, `timestamp`).  
   
  Si un documento XML contiene varios atributos de tipo ID, use la anotación `sql:prefix` para asegurarse de que los valores sean únicos.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36103762"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Especificar tipos ID e IDREFS  
- En el esquema siguiente, la  **\<cliente >** elemento consta de los  **\<orden >** elemento secundario. El  **\<orden >** elemento también incluye un elemento secundario, el  **\<OrderDetail >** elemento.  
+ En el siguiente esquema, el  **\<cliente >** elemento consta de los  **\<orden >** elemento secundario. El  **\<orden >** elemento también tiene un elemento secundario, el  **\<OrderDetail >** elemento.  
   
  El **OrderIDList** atributo de  **\<cliente >** es un atributo de tipo IDREFS que hace referencia a la **OrderID** atributo de la  **\< Orden >** elemento.  
   

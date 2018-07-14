@@ -5,10 +5,9 @@ ms.date: 11/23/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption
 - database encryption key, about
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7e1f31b2cfced2f94ecf0417a4cf8b62f53fbb15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 25893299dfc708e952cbc2cb4673e34e5612cf23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236605"
 ---
 # <a name="transparent-data-encryption-tde"></a>Cifrado de datos transparente (TDE)
   El*Cifrado de datos transparente* (TDE) cifra los archivos de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] , conocido como el cifrado de datos en reposo. Puede tomar varias precauciones para proteger la base de datos, como diseñar un sistema seguro, cifrar los datos confidenciales e instalar un firewall alrededor de los servidores de bases de datos. Sin embargo, si se diera el caso de un robo de medios físicos (como unidades de disco o cintas de copia de seguridad), un usuario malintencionado solo tendría que restaurar o adjuntar la base de datos y examinar los datos. Una solución consiste en cifrar los datos confidenciales en la base de datos y usar un certificado para proteger las claves que se utilizan para cifrarlos. Esto evita que utilice los datos cualquiera que carezca de las claves, pero este tipo de protección debe planearse de antemano.  
@@ -41,7 +40,7 @@ ms.locfileid: "36102857"
 >   
 >  -   [Cifrado de datos transparente con Base de datos SQL de Azure](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
 > -   [Mover una base de datos protegida por TDE a otra instancia de SQL Server](move-a-tde-protected-database-to-another-sql-server.md)  
-> -   [Habilitar TDE usando EKM](enable-tde-on-sql-server-using-ekm.md)  
+> -   [Habilitar TDE con EKM](enable-tde-on-sql-server-using-ekm.md)  
   
 ## <a name="about-tde"></a>Acerca de TDE  
  El cifrado del archivo de base de datos se realiza en el nivel de página. Las páginas de una base de datos cifrada se cifran antes de escribirse en el disco y se descifran cuando se leen en la memoria. TDE no aumenta el tamaño de la base de datos cifrada.  
@@ -234,9 +233,9 @@ GO
  El TDE se puede habilitar en una base de datos que tenga objetos de OLTP en memoria. Las entradas del registro de OLTP en memoria se cifran si se ha habilitado el TDE. Los datos de un grupo de archivos MEMORY_OPTIMIZED_DATA no se cifran si está habilitado el TDE.  
   
 ## <a name="see-also"></a>Vea también  
- [Mover la que base de datos a otro servidor SQL Server protegida por un TDE](move-a-tde-protected-database-to-another-sql-server.md)   
- [Habilitar TDE usando EKM](enable-tde-on-sql-server-using-ekm.md)   
- [Cifrado de datos transparente con base de datos SQL Azure](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
+ [Mover que una protegida por TDE base de datos a otro servidor SQL Server](move-a-tde-protected-database-to-another-sql-server.md)   
+ [Habilitar TDE con EKM](enable-tde-on-sql-server-using-ekm.md)   
+ [Cifrado de datos transparente con Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [Cifrado de SQL Server](sql-server-encryption.md)   
  [SQL Server y claves de cifrado de base de datos &#40;motor de base de datos&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
  [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

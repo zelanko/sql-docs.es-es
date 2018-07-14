@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - databases [SQL Server], detaching
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - databases [SQL Server], moving
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 caps.latest.revision: 96
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 421c743456b6a0a2303b2ec0407af566c77ab39e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 11f01f4fe44284d94aa0cfb4d3c008c758a930a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227745"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Adjuntar y separar bases de datos (SQL Server)
   Los archivos de registro de datos y transacciones de una base de datos se pueden desasociar y volverse a adjuntar posteriormente a la misma instancia u otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Separar y adjuntar una base de datos es útil si desea cambiar la base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo o si desea mover la base de datos.  
@@ -89,14 +89,14 @@ ms.locfileid: "36103787"
 3.  Vuelva a separar la base de datos.  
   
 ##  <a name="AttachDb"></a> Adjuntar una base de datos  
- Puede adjuntar una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiada o separada. Cuando se adjunta un [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] instancia del servidor, el catálogo se adjuntan archivos desde su ubicación anterior junto con los demás archivos de base de datos, igual que en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obtener más información, vea [Actualizar la búsqueda de texto completo](../search/upgrade-full-text-search.md).  
+ Puede adjuntar una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiada o separada. Cuando adjunte un [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] instancia del servidor, el catálogo se adjuntan archivos desde su ubicación anterior junto con los demás archivos de base de datos, igual que en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obtener más información, vea [Actualizar la búsqueda de texto completo](../search/upgrade-full-text-search.md).  
   
  Al adjuntar una base de datos, todos los archivos de datos deben estar disponibles (archivos MDF y NDF). Si algún archivo de datos tiene una ruta de acceso diferente a la que tenía cuando se creó la base de datos o cuando ésta se adjuntó por última vez, debe especificar la ruta actual.  
   
 > [!NOTE]  
 >  Si el archivo de datos principal que se va a adjuntar es de solo lectura, [!INCLUDE[ssDE](../../includes/ssde-md.md)] considera que la base de datos es de solo lectura.  
   
- Cuando se adjunta una base de datos en primer lugar a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el propietario de la base de datos debe abrir la clave maestra de la base de datos ejecutando la siguiente instrucción: OPEN MASTER KEY DECRYPTION BY PASSWORD = **' *`password`*'**. Se recomienda habilitar el descifrado automático de la clave maestra mediante la ejecución de la siguiente instrucción: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Para obtener más información, vea [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Cuando se adjunta una base de datos cifrada en primer lugar a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el propietario de la base de datos debe abrir la clave maestra de la base de datos ejecutando la siguiente instrucción: OPEN MASTER KEY DECRYPTION BY PASSWORD = **' *`password`*'**. Se recomienda habilitar el descifrado automático de la clave maestra mediante la ejecución de la siguiente instrucción: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Para obtener más información, vea [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Las condiciones para adjuntar archivos de registro dependen, en parte, de si la base de datos es de lectura y escritura o de solo lectura. Vea a continuación:  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36103787"
   
      Si una base de datos de lectura y escritura contiene solo un archivo de registro y no se especifica una ubicación nueva para el mismo, al adjuntar la base de datos se buscará el archivo en la ubicación antigua. Si se encuentra, se usará el archivo de registro antiguo, sin tener en cuenta si la base de datos se cerró correctamente. No obstante, si el archivo de registro antiguo no se encuentra, la base de datos se cerró correctamente y no hay ninguna cadena de registros activa, al adjuntar se intentará crear un archivo de registro nuevo para la base de datos.  
   
--   Si el archivo de datos principal que se va a adjuntar es de solo lectura, el [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] no se puede actualizar la ubicación del registro almacenada en el archivo principal.  
+-   Si va a adjuntar el archivo de datos principal es de solo lectura, el [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] no se puede actualizar la ubicación de registro almacenada en el archivo principal.  
   
   
   

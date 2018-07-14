@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqlimail.manageexistingaccount.f1
 - sql12.swb.sqlimail.addaccounttoprofile.f1
@@ -33,15 +33,15 @@ helpviewer_keywords:
 - accounts [Database Mail]
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b902597cc2c7920d0eab97f1f6064ba79221333c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b8e6b3e16590eee0eafc805fbc719cc436ca5352
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217405"
 ---
 # <a name="database-mail-configuration-objects"></a>Objetos de configuración de Correo electrónico de base de datos
   Correo electrónico de base de datos tiene dos objetos de configuración. Los objetos de configuración de base de datos proporcionan una manera de configurar los valores que Correo electrónico de base de datos debe usar al enviar un correo electrónico de la aplicación de base de datos o el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

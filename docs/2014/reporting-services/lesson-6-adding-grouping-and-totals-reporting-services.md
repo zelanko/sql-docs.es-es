@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 caps.latest.revision: 50
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c71c785f6d5cd5130223335830f53cc0fa8bf6f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c411b3780f1e3f5b91d00d08093f281a5daa286f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218885"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
   Agregue grupos y totales al informe para organizar y resumir los datos.  
@@ -44,17 +44,17 @@ ms.locfileid: "36104182"
   
 2.  Si no ve el panel **Grupos de filas** , haga clic con el botón secundario en la superficie de diseño y haga clic en **ver** y en **Agrupar**.  
   
-3.  Desde el **datos de informe** , arrastre el `Date` campo a la **grupos de filas** panel. Sitúelo encima de la fila denominada **(Details)**.  
+3.  Desde el **datos de informe** panel, arrastre el `Date` campo el **grupos de filas** panel. Sitúelo encima de la fila denominada **(Details)**.  
   
      Observe que el identificador de fila ahora tiene un corchete para mostrar un grupo. Ahora, la tabla también tiene dos columnas Date, una de ellas en uno de los dos extremos de una línea de puntos vertical.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  Desde el **datos de informe** , arrastre el `Order` campo a la **grupos de filas** panel. Sitúelo debajo de Date y encima de **(Details)**.  
+4.  Desde el **datos de informe** panel, arrastre el `Order` campo el **grupos de filas** panel. Sitúelo debajo de Date y encima de **(Details)**.  
   
      Observe que el identificador de fila ahora tiene dos corchetes para mostrar dos grupos. La tabla tiene ahora dos `Order` columnas, demasiado.  
   
-5.  Elimine las columnas de fecha y orden originales en el **derecho** de la línea doble. Esta acción quita los valores de este registro para que solo se muestre el valor de grupo. Seleccione los identificadores de las dos columnas y haga clic con el botón derecho en **Eliminar columnas**.  
+5.  Eliminar las columnas de fecha y pedido originales a la **derecho** de la línea doble. Esta acción quita los valores de este registro para que solo se muestre el valor de grupo. Seleccione los identificadores de las dos columnas y haga clic con el botón derecho en **Eliminar columnas**.  
   
      ![Seleccionar columnas para eliminar](../../2014/tutorials/media/rs-basictablegroupsdeletecols.gif "Seleccionar columnas para eliminar")  
   
@@ -86,9 +86,9 @@ ms.locfileid: "36104182"
   
 ##  <a name="bkmk_adddailytotal"></a> Para agregar un total diario a un informe  
   
-1.  Haga clic en la celda Order, seleccione **agregar Total**y haga clic en **después**.  
+1.  Haga clic en la celda Order, apunte a **agregar Total**y haga clic en **después**.  
   
-     Esto agrega una nueva fila que contiene las sumas de la cantidad de cantidad y de los importes diarios, así como la etiqueta "**Total**" en la columna de orden.  
+     Esto agrega una nueva fila que contiene las sumas de la cantidad y los importes diarios, así como la etiqueta "**Total**" en la columna Order.  
   
 2.  Escriba la palabra **Daily** delante de la palabra **Total** en la misma celda, de modo que se lea **Daily Total**.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36104182"
   
 1.  Haga clic con el botón derecho en la celda Date, seleccione **Agregar total**y, luego, haga clic en **Después**.  
   
-     Esto agrega una nueva fila que contiene las sumas de las cantidades y dólar para todo el informe y el **Total** etiquetar en la `Date` columna.  
+     Esto agrega una nueva fila que contiene las sumas de las cantidades y dólares para todo el informe y el **Total** etiquetar en el `Date` columna.  
   
 2.  Escriba la palabra **Grand** delante de la palabra **Total** en la misma celda, de modo que se lea **Grand Total**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36104182"
   
 2.  En la barra de herramientas, haga clic en **Proyecto** y, a continuación, haga clic en **tutorial Propiedades...**.  
   
-3.  En el **TargetServerURL** escriba el nombre del nombre de su servidor de informes, por ejemplo **http://\<servername > / reportserver**  
+3.  En el **TargetServerURL** escriba el nombre del nombre del servidor de informes, por ejemplo **http://\<servername > / reportserver**  
   
 4.  Haga clic en **Aceptar**.  
   
@@ -132,11 +132,11 @@ ms.locfileid: "36104182"
   
      Si ve un mensaje similar al siguiente en la ventana de salida, indica que la implementación se realiza correctamente.  
   
-    > ------ Build started: Project: tutorial, Configuration: Debug ------Skipping 'Sales Orders.rdl'. Elemento está actualizado. Generación completa--0 errores, 0 advertencias---implementación iniciada: proyecto: tutorial, configuración: Debug---implementando en http://\<nombre del servidor > / /reportserverdeploying report '/ tutorial/Sales Orders'. Implementar completa--0 errores, 0 advertencias === generar: 1 correctos o actualizados, 0 incorrectos, 0 omitidos === implementar: 1 correctos, 0 incorrectos, 0 omitidos ===  
+    > ------ Build started: Project: tutorial, Configuration: Debug ------Skipping 'Sales Orders.rdl'. Elemento está actualizado. Generación completa--0 errores, 0 advertencias---implementación iniciada: proyecto: tutorial, configuración: Debug---implementar a http://\<nombre del servidor > / /reportserverdeploying report '/ tutorial/Sales Orders'. Implementación completa--0 errores, 0 advertencias === compilar: 1 correctos o actualizados, 0 incorrectos, 0 omitidos === implementar: 1 correctos, 0 incorrectos, 0 omitidos ===  
   
      Si aparece un mensaje de error similar al siguiente, compruebe que dispone de permisos en el servidor de informes y que ha iniciado [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] con privilegios de administrador.  
   
-    > "Los permisos otorgados al usuario ' XXXXXXXX\\< su nombre de usuario\>' son insuficientes para realizar esta operación"  
+    > "Los permisos concedidos al usuario ' XXXXXXXX\\< su nombre de usuario\>' son insuficientes para realizar esta operación"  
   
 6.  Inicie el Administrador de informes con privilegios de administrador, por ejemplo, haga clic con el botón secundario en el icono para Internet Explorer y haga clic en **Ejecutar como administrador**.  
   
@@ -148,6 +148,6 @@ ms.locfileid: "36104182"
  Ha completado correctamente el tutorial Crear un informe de tabla básico.  
   
 ## <a name="see-also"></a>Vea también  
- [Filtrar, agrupar y ordenar datos &#40;el generador de informes SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrar, agrupar y ordenar datos &#40;generador de informes y SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

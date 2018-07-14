@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connectoserverunknownservertype.f1
 - sql12.swb.connection.login.sqlserver.f1
@@ -18,15 +18,15 @@ f1_keywords:
 - sql12.swb.connecttoce.connectionproperties.f1
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 25af65c6e9aa165102e2e14785583aba58949049
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a7861729d8990c0309a926a30209096f8777119e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191325"
 ---
 # <a name="connect-to-server-database-engine"></a>Conectar al servidor (motor de base de datos)
   Use este cuadro de diálogo para ver o especificar opciones cuando se conecte a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. En la mayoría de los casos, para conectarse, puede escribir el nombre del servidor de base de datos en el cuadro **Nombre del servidor** y hacer clic en **Conectar**. Si se está conectando a [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], use el nombre del equipo seguido de **\sqlexpress**.  

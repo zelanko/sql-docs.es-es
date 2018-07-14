@@ -1,5 +1,5 @@
 ---
-title: Establecer las propiedades de una restricción de precedencia | Documentos de Microsoft
+title: Establecer las propiedades de una restricción de precedencia | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 caps.latest.revision: 47
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 344dbadc0aeabbce3b2a554d4ff15370eeadd1fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38e20290eb9499191307c7afb146e9242603c3ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271351"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Establecer las propiedades de una restricción de precedencia
   Para establecer las propiedades en restricciones de precedencia, puede utilizar una de estas herramientas:  
@@ -49,12 +49,12 @@ ms.locfileid: "36103848"
   
 6.  En el `Value` lista desplegable, seleccione el resultado de la ejecución del ejecutable de precedencia.  
   
-7.  Si la operación de evaluación usa una expresión en el `Expression` cuadro, escriba una expresión y haga clic en **prueba** para evaluar la expresión.  
+7.  Si la operación de evaluación usa una expresión, en el `Expression` cuadro, escriba una expresión y haga clic en **prueba** para evaluar la expresión.  
   
     > [!NOTE]  
     >  Los nombres de variables distinguen entre mayúsculas y minúsculas.  
   
-8.  Si hay varias tareas o contenedores conectados al ejecutable restringido, seleccione **lógico y** para especificar que los resultados de la ejecución de todos los ejecutables anteriores deben evaluarse como `true`. Seleccione **operador lógico OR** para especificar que el resultado de la ejecución de un único debe evaluarse como `true`.  
+8.  Si hay varias tareas o contenedores conectados al ejecutable restringido, seleccione **lógico y** para especificar que los resultados de la ejecución de todos los ejecutables anteriores deben evaluarse como `true`. Seleccione **o lógico** para especificar que el resultado de la ejecución de un único debe evaluarse como `true`.  
   
 9. Haga clic en **Aceptar** para cerrar el **Editor de restricciones de precedencia**.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36103848"
     |Propiedad de lectura/escritura|Acción de configuración|  
     |--------------------------|--------------------------|  
     |Descripción|Escribir una descripción.|  
-    |EvalOp|Seleccionar una operación de evaluación. Si el `Expression`, **ExpressionAndConstant**, o **ExpressionOrConstant** operación está activada, puede especificar una expresión.|  
+    |EvalOp|Seleccionar una operación de evaluación. Si el `Expression`, **ExpressionAndConstant**, o **ExpressionOrConstant** está seleccionada la operación, puede especificar una expresión.|  
     |Expresión|Si la operación de evaluación contiene una expresión, se debe proporcionar una expresión. La expresión debe evaluarse como un valor booleano. Para más información sobre el lenguaje de expresiones, vea [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
     |AND lógico|Establecer `LogicalAnd` para especificar si la restricción de precedencia se evalúa en conjunto con otras restricciones de precedencia, cuando preceden varios ejecutables y están vinculados al ejecutable restringido|  
     |Nombre|Actualizar el nombre de la restricción de precedencia.|  
@@ -88,6 +88,6 @@ ms.locfileid: "36103848"
  [Restricciones de precedencia](control-flow/precedence-constraints.md)   
  [Conectar tareas y contenedores mediante una restricción de precedencia predeterminada](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Establecer el valor de una restricción de precedencia mediante el menú contextual](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
- [Utilizar una expresión en una restricción de precedencia](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
+ [Usar una expresión en una restricción de precedencia](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
   
   

@@ -1,14 +1,13 @@
 ---
-title: Configurar cuentas de inicio de sesión de creación de reflejo de base de datos o grupos de disponibilidad AlwaysOn (SQL Server) | Documentos de Microsoft
+title: Configurar cuentas de inicio de sesión de creación de reflejo de base de datos o grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - logins [SQL Server], database mirroring
@@ -16,13 +15,13 @@ ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2e3a776568822b38e3eba56839ecffad26893b55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba315e277513bb0f488982dcfb84bded5cc48a73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245265"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Configurar cuentas de inicio de sesión para la creación de reflejo de la base de datos o grupos de disponibilidad de AlwaysOn (SQL Server)
   Para que dos instancias del servidor se conecten a [extremos de creación de reflejo de la base de datos](the-database-mirroring-endpoint-sql-server.md) entre sí, la cuenta de inicio de sesión de cada instancia debe tener acceso a la otra instancia. Además, cada cuenta de inicio de sesión requiere permiso de conexión al extremo de creación de reflejo de la base de datos de la otra instancia.  
@@ -67,6 +66,6 @@ ms.locfileid: "36103140"
 ## <a name="see-also"></a>Vea también  
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Solucionar problemas de configuración de creación de reflejo de la base de datos &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Solucionar problemas de configuración de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [Solución de problemas de configuración de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

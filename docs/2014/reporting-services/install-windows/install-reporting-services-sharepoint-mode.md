@@ -1,5 +1,5 @@
 ---
-title: Instalación en modo de SharePoint (SharePoint 2010 y SharePoint 2013) de Reporting Services | Documentos de Microsoft
+title: Instalación en modo de SharePoint (SharePoint 2010 y SharePoint 2013) de Reporting Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - installing Reporting Services, SharePoint integrated mode
@@ -17,16 +17,16 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f0e75a75ffb14f720f2b421d659fa6142b579019
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8800556239018222cd3ac63650a1a44c2a750227
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249675"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Instalación del modo de SharePoint de Reporting Services (SharePoint 2010 y SharePoint 2013)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en SharePoint, el modo es una colección de componentes de servidor que proporcionan la generación de informes y la entrega, tomando como base [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] productos de SharePoint.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en SharePoint, el modo es una colección de componentes de servidor que proporcionan la generación de informes y la entrega, según [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] productos de SharePoint.  
   
  La ejecución de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint proporciona las características de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] y de alertas de datos. Para obtener más información sobre las características del modo de SharePoint, vea la sección "Diferencias de compatibilidad de características y comportamiento por modo de servidor" en [Servidor de informes de Reporting Services](../reporting-services-report-server.md).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36103048"
   
  [Dónde encontrar el complemento de Reporting Services para productos de SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
- [Agregar un servidor de informes adicional a una granja de servidores &#40;escalado horizontal de SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
+ [Agregar un servidor de informes adicional a una granja &#40;escalada SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
  [Incorporación de un front-end web adicional de Reporting Services a una granja de servidores](add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   

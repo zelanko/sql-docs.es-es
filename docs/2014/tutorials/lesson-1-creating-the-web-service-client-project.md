@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Crear el proyecto de cliente de servicio Web | Documentos de Microsoft'
+title: 'Lección 1: Crear el proyecto de cliente del servicio Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0070daa6-56b0-4663-83b2-44c96acafad8
 caps.latest.revision: 30
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 291061b72b0ffaedb5bb97ad0ebd5406fe5a5a68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9799bfa53aeaa5557177fe619c6ed378db58683a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208415"
 ---
 # <a name="lesson-1-creating-the-web-service-client-project"></a>Lección 1: crear el proyecto cliente del servicio web
   Para esta visita guiada, creará una aplicación de consola sencilla con acceso al servicio web del servidor de informes. En este tutorial se da por supuesto que la programación se realiza con [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
@@ -28,13 +28,13 @@ ms.locfileid: "36103442"
   
 1.  En el **archivo** menú, elija **New**y, a continuación, haga clic en **proyecto** para abrir el **nuevo proyecto** cuadro de diálogo.  
   
-2.  En el panel izquierdo, bajo **plantillas instaladas**, haga clic en **Visual Basic** o **Visual C#** y seleccione una categoría de proyecto de tipos en la lista expandida.  
+2.  En el panel izquierdo, bajo **plantillas instaladas**, haga clic en **Visual Basic** o **Visual C#** nodo y seleccione una categoría de proyecto de tipos en la lista expandida.  
   
 3.  Elija la **aplicación de consola** tipo de proyecto.  
   
-4.  En el **nombre** cuadro, escriba un nombre para el proyecto. Escriba el nombre `GetPropertiesSample`.  
+4.  En el **nombre** , escriba un nombre para el proyecto. Escriba el nombre `GetPropertiesSample`.  
   
-5.  En el **ubicación** cuadro, escriba la ruta de acceso donde desea guardar el proyecto o haga clic en **examinar** para navegar hasta la carpeta.  
+5.  En el **ubicación** , escriba la ruta de acceso donde desea guardar el proyecto o haga clic en **examinar** para navegar hasta la carpeta.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] Una vista contraída del proyecto aparece en el Explorador de soluciones.  
   
@@ -42,6 +42,6 @@ ms.locfileid: "36103442"
   
 ## <a name="see-also"></a>Vea también  
  [Lección 2: Agregar una referencia Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
- [Obtener acceso al servicio de Web del servidor de informes mediante Visual Basic o Visual C&#35; &#40;Tutorial de SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Acceso a Report Server Web Service mediante Visual Basic o Visual C&#35; &#40;Tutorial de SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

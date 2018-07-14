@@ -1,5 +1,5 @@
 ---
-title: Comparar Roles y tareas de Reporting Services to SharePoint Groups and Permissions | Documentos de Microsoft
+title: Comparar Roles y tareas en Reporting Services con grupos de SharePoint y permisos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - security [Reporting Services], tasks
@@ -21,20 +21,20 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 181985b908c1ab5f2556d8fb58b7d54efa6bcb27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01e24a3aaa994a5e186634221fc4b64f396a8a2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204905"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Comparar roles y tareas de Reporting Services con grupos y permisos de SharePoint
   En este tema se comparan las características de autorización basadas en roles y tareas en modo nativo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con las características de seguridad de los productos de SharePoint. En este tema se comparan la terminología y las características de los roles, las tareas, los grupos de SharePoint, los niveles de permiso y los permisos.  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo de SharePoint &#124; SharePoint 2010 y SharePoint 2013<br /><br /> Modo nativo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
+|[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] El modo de SharePoint &#124; SharePoint 2010 y SharePoint 2013<br /><br /> Modo nativo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
   
  **En este tema:**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36104418"
 ##  <a name="bkmk_compare_tools_terms"></a> Comparación de las herramientas y la terminología de permisos  
  **Modo nativo:** los objetos de permiso en modo nativo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (roles y tareas) se crean en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y se configuran para los usuarios individuales en el Administrador de informes.  
   
- **Modo de SharePoint:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modo de SharePoint usa las características de permisos de SharePoint. Los grupos y los permisos de SharePoint se administran desde la página **Configuración del sitio** .  
+ **El modo de SharePoint:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modo de SharePoint usa las características de permisos de SharePoint. Los grupos y los permisos de SharePoint se administran desde la página **Configuración del sitio** .  
   
  En la tabla siguiente se comparan los objetos y conceptos relacionados con los permisos entre el modo nativo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y SharePoint.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36104418"
 ## <a name="see-also"></a>Vea también  
  [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;modo integrado de Reporting Services en SharePoint&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Establecimiento de permisos para las operaciones del servidor de informes en una aplicación web de SharePoint](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
- [Conceder permisos sobre elementos de servidor de informes en un sitio de SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Definiciones de roles](security/role-definitions.md)   
  [Roles predefinidos](security/role-definitions-predefined-roles.md)  
   

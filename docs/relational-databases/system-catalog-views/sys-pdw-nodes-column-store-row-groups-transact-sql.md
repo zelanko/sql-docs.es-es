@@ -1,67 +1,65 @@
 ---
-title: Sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Documentos de Microsoft
+title: Sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
-caps.latest.revision: 10
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 99577a71d2819ca0d2ce86d901eecf5ce87ae7ab
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.openlocfilehash: 458fd50e6387a2929e660deb81400fc79271ff20
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181541"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36875003"
 ---
 # <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>Sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Proporciona información de índices de almacén de columnas agrupado en una base por segmento para ayudar al administrador a tomar decisiones de administración en sistema [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **Sys.pdw_nodes_column_store_row_groups** tiene una columna para el número total de filas almacenadas físicamente (incluidas las marcadas como eliminadas) y una columna para el número de filas marcadas como eliminadas. Use **sys.pdw_nodes_column_store_row_groups** para determinar qué fila grupos tienen un alto porcentaje de filas eliminadas y deben volver a generar.  
+  Proporciona información de índices de almacén de columnas agrupado en una base por segmento para ayudar al administrador de decisiones de sistema de administración en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **Sys.pdw_nodes_column_store_row_groups** tiene una columna para el número total de filas almacenadas físicamente (incluidas las marcadas como eliminadas) y una columna para el número de filas marcadas como eliminadas. Use **sys.pdw_nodes_column_store_row_groups** para determinar qué fila grupos tienen un alto porcentaje de filas eliminadas y deben volver a generar.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|Id. de la tabla subyacente. Se trata de la tabla física en el nodo de proceso, no el object_id de la tabla lógica en el nodo de Control. Por ejemplo, object_id no coincide con el object_id en sys.tables.<br /><br /> Para unir con sys.tables, use sys.pdw_index_mappings.|  
-|**index_id**|**int**|Id. del índice de almacén de columnas agrupado en *object_id* tabla.|  
-|**partition_number**|**int**|Identificador de la partición de tabla que contiene el grupo de filas *row_group_id*. Puede usar *número_de_partición* para unir Esta DMV a sys.partitions.|  
-|**Row_group_id**|**int**|Id. de este grupo de filas. Es único en la partición.|  
-|**dellta_store_hobt_id**|**bigint**|El hobt_id para los grupos de filas delta, o NULL si el tipo del grupo de filas no es delta. Un grupo de filas delta es un grupo de filas de lectura/escritura que acepta nuevos registros. Un grupo de filas delta tiene el **abiertos** estado. Un grupo de filas delta está todavía en formato de almacén de filas y no se ha comprimido al formato de almacén de columnas.|  
+|**object_id**|**int**|Id. de la tabla subyacente. Se trata de la tabla física en el nodo de proceso, no el object_id de la tabla lógica en el nodo de Control. Por ejemplo, object_id no coincide con el valor object_id en sys.tables.<br /><br /> Para unir con sys.tables, use sys.pdw_index_mappings.|  
+|**index_id**|**int**|Id. del índice agrupado en *object_id* tabla.|  
+|**partition_number**|**int**|Identificador de la partición de tabla que contiene el grupo de filas *row_group_id*. Puede usar *partition_number* para unir Esta DMV a sys.partitions.|  
+|**row_group_id**|**int**|Id. de este grupo de filas. Es único en la partición.|  
+|**dellta_store_hobt_id**|**bigint**|El hobt_id para los grupos de filas delta, o NULL si el tipo del grupo de filas no es delta. Un grupo de filas delta es un grupo de filas de lectura/escritura que acepta nuevos registros. Un grupo de filas delta tiene el **abierto** estado. Un grupo de filas delta está todavía en formato de almacén de filas y no se ha comprimido al formato de almacén de columnas.|  
 |**state**|**tinyint**|Número de identificación asociado con el state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar(60)**|Descripción del estado persistente del grupo de filas:<br /><br /> OPEN: grupo de filas de lectura/escritura que acepta nuevos registros. Un grupo de filas abierto está todavía en formato de almacén de filas y no se ha comprimido al formato de almacén de columnas.<br /><br /> CLOSED: grupo de filas que se ha rellenado, pero que el proceso de tupla motriz aún no ha comprimido.<br /><br /> COMPRESSED: grupo de filas que se ha rellenado y comprimido.|  
 |**total_rows**|**bigint**|Total de filas almacenadas físicamente en el grupo de filas. Es posible que se hayan eliminado algunas, pero estas se siguen almacenando. El número máximo de filas en un grupo de filas es 1.048.576 (hexadecimal FFFFF).|  
-|**deleted_rows**|**bigint**|Número de filas almacenadas físicamente en el grupo de filas que están marcadas para eliminación.<br /><br /> Siempre es 0 para DELTA grupos de filas.|  
-|**size_in_bytes**|**int**|Tamaño total, en bytes, de todas las páginas de este grupo de filas. Este tamaño no incluye el tamaño necesario para almacenar metadatos o diccionarios compartidos.|  
+|**deleted_rows**|**bigint**|Número de filas almacenadas físicamente en el grupo de filas que están marcadas para eliminación.<br /><br /> Siempre 0 para diferencias grupos de filas.|  
+|**size_in_bytes**|**int**|Tamaño total, en bytes, de todas las páginas de este grupo de filas. Este tamaño no incluye el tamaño necesario para almacenar los metadatos o diccionarios compartidos.|  
 |**pdw_node_id**|**int**|Identificador único de un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo.|  
 |**distribution_id**|**int**|Identificador único de la distribución.|
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Devuelve una fila para cada grupo de filas del almacén de columnas de cada tabla que tenga un índice clúster o no clúster de almacén de columnas.  
   
  Use **sys.pdw_nodes_column_store_row_groups** para determinar el número de filas incluido en el grupo de filas y el tamaño del grupo de filas.  
   
- Cuando el número de filas eliminadas de un grupo de filas alcanza un alto porcentaje de las filas totales, la tabla pierde eficiencia. Vuelva a generar el índice de almacén de columnas para reducir el tamaño de la tabla, reduciendo así la E/S de disco necesaria para leer la tabla. Para volver a generar el uso del índice de almacén de columnas el **volver a generar** opción de la **ALTER INDEX** instrucción.  
+ Cuando el número de filas eliminadas de un grupo de filas alcanza un alto porcentaje de las filas totales, la tabla pierde eficiencia. Vuelva a generar el índice de almacén de columnas para reducir el tamaño de la tabla, reduciendo así la E/S de disco necesaria para leer la tabla. Para volver a generar el uso del índice de almacén de columnas el **RECOMPILAR** opción de la **ALTER INDEX** instrucción.  
   
- El almacén de columnas actualizable primero inserta nuevos datos en un **abiertos** grupo de filas, que está en formato de almacén de filas y en ocasiones también se denomina tabla delta.  Una vez que un grupo de filas abierto está lleno, su estado cambia a **cerrado**. Un grupo de filas cerrado se comprime en formato de almacén de columnas por la tupla motriz y el estado cambia a **COMPRESSED**.  La tupla motriz es un proceso en segundo plano que de forma periódica se despierta y comprueba si hay grupos de filas cerrados listos para comprimirse en un grupo de filas de almacén de columnas.  La tupla motriz también cancela la asignación de los grupos de filas en los que se han borrado todas las filas. Desasignada grupos de filas se marcan como **retirado**. Para ejecutar la tupla motriz inmediatamente, use la **REORGANIZAR** opción de la **ALTER INDEX** instrucción.  
+ El almacén de columnas actualizable primero inserta nuevos datos en un **abierto** grupo de filas, que está en formato de almacén de filas y, a veces también se denomina tabla delta.  Una vez que un grupo de filas abierto está lleno, su estado cambia a **cerrado**. La tupla motriz comprime un grupo de filas cerrado en formato de almacén de columnas y el estado cambia a **comprimida**.  La tupla motriz es un proceso en segundo plano que de forma periódica se despierta y comprueba si hay grupos de filas cerrados listos para comprimirse en un grupo de filas de almacén de columnas.  La tupla motriz también cancela la asignación de los grupos de filas en los que se han borrado todas las filas. Desasignadas los grupos de filas se marcan como **retirado**. Para ejecutar la tupla motriz inmediatamente, use el **REORGANIZAR** opción de la **ALTER INDEX** instrucción.  
   
  Cuando se ha rellenado un grupo de filas de almacén de columnas, se comprime y ya no se aceptan filas nuevas. Cuando se eliminan filas de un grupo comprimido, siguen estando allí pero están marcadas como eliminadas. Las actualizaciones de un grupo comprimido se implementan como una eliminación del grupo comprimido, y como una inserción en un grupo abierto.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso **VIEW SERVER STATE**.  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- El ejemplo siguiente se combina el **sys.pdw_nodes_column_store_row_groups** tabla con otras tablas de sistema para devolver información acerca de tablas específicas. La columna `PercentFull` calculada es una estimación de la eficacia del grupo de filas. Para buscar información en una única tabla, quite los guiones de comentario delante de la cláusula WHERE y proporcionar un nombre de tabla.  
+ El ejemplo siguiente combina el **sys.pdw_nodes_column_store_row_groups** tabla con otras tablas del sistema para devolver información sobre tablas específicas. La columna `PercentFull` calculada es una estimación de la eficacia del grupo de filas. Para buscar información en un única tabla, quite los guiones de comentario delante de la cláusula WHERE y proporcione un nombre de tabla.  
   
 ```  
 SELECT IndexMap.object_id,   
@@ -87,7 +85,7 @@ AND CSRowGroups.index_id = NI.index_id
 ORDER BY object_name(i.object_id), i.name, IndexMap.physical_name, pdw_node_id;  
 ```  
 
-El siguiente [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] ejemplo cuenta las filas por partición para columnas agrupadas los almacenes, así como la muchas filas están en grupos de abierto, cerrado o fila comprimida:  
+La siguiente [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] ejemplo cuenta las filas por partición para columnas agrupadas almacenan también cómo muchas filas están en grupos de filas Compressed, cerrado o abierto:  
 
 ```
 SELECT
@@ -112,7 +110,7 @@ ORDER BY 1, 2
 ```
   
 ## <a name="see-also"></a>Vea también  
- [Almacenamiento de datos SQL y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [SQL Data Warehouse y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [Crear índice de almacén &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
  [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  

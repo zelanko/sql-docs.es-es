@@ -1,14 +1,13 @@
 ---
-title: Agrupación en clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server) | Documentos de Microsoft
+title: Agrupación en clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
 - Availability Groups [SQL Server], WSFC clusters
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 caps.latest.revision: 43
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 842003d531b655e4e302941dba67591a94006a84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e0fc322f09ab45756de441e3edf806ab99a02e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267151"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>Clúster de conmutación por error y grupos de disponibilidad de AlwaysOn (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la solución de alta disponibilidad y recuperación ante desastres introducida en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], requiere clústeres de conmutación por error de Windows Server (WSFC). Además, aunque [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no depende de los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , se puede utilizar una instancia de clústeres de conmutación por error (FCI) para hospedar una réplica de disponibilidad para un grupo de disponibilidad. Es importante conocer el rol de cada tecnología de clústeres y saber qué consideraciones son necesarias cuando se diseña el entorno de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
@@ -80,7 +79,7 @@ ms.locfileid: "36103398"
  **La configuración de la directiva de conmutación por error del grupo de disponibilidad se aplica a todas las réplicas, ya estén hospedadas en una instancia independiente o una instancia de FCI.  
   
 > [!NOTE]  
->  Para obtener más información acerca de **número de nodos** en los clústeres de conmutación por error y **grupos de disponibilidad AlwaysOn** para diferentes ediciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [características compatibles con el Ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Para obtener más información acerca de **número de nodos** en los clústeres de conmutación por error y **grupos de disponibilidad AlwaysOn** en diferentes ediciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [características compatibles con el Ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Consideraciones para hospedar una réplica de disponibilidad en una FCI  
   
@@ -118,13 +117,13 @@ ms.locfileid: "36103398"
   
      [Configurar el clúster de conmutación por error de Windows para SQL Server (grupo de disponibilidad o FCI) con seguridad limitada](http://blogs.msdn.com/b/sqlalwayson/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
   
-     [Blogs del equipo de AlwaysOn SQL Server: El Blog oficial del SQL Server AlwaysOn equipo](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Blogs del equipo de AlwaysOn SQL Server: Oficial AlwaysOn Team Blog de SQL Server](http://blogs.msdn.com/b/sqlalwayson/)  
   
      [Blogs de los ingenieros de SQL Server de CSS](http://blogs.msdn.com/b/psssql/)  
   
 -   **Notas del producto:**  
   
-     [Guía de arquitectura de AlwaysOn: Generar una solución de recuperación ante desastres y alta disponibilidad mediante instancias de clúster de conmutación por error y grupos de disponibilidad](http://msdn.microsoft.com/library/jj215886.aspx)  
+     [Guía de arquitectura de AlwaysOn: Generar una alta disponibilidad y la solución de recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](http://msdn.microsoft.com/library/jj215886.aspx)  
   
      [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
@@ -133,7 +132,7 @@ ms.locfileid: "36103398"
      [Notas del producto del equipo de asesoramiento al cliente de SQL Server](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [habilitar y deshabilitar grupos de disponibilidad AlwaysOn &#40;SQL Server&#41; ](enable-and-disable-always-on-availability-groups-sql-server.md) [supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
- [Instancias de clúster de conmutación por error de AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [habilitar y deshabilitar grupos de disponibilidad AlwaysOn &#40;SQL Server&#41; ](enable-and-disable-always-on-availability-groups-sql-server.md) [supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
+ [Instancias de clúster de conmutación por error AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
   
   

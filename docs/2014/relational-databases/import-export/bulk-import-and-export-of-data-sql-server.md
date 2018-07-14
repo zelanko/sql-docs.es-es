@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - exporting data
 - bulk importing [SQL Server], about bulk importing
@@ -25,22 +24,22 @@ helpviewer_keywords:
 - importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 615da1ce995a23b9518997570a9e34df71b4efb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4bfbd00c0079aec3e9bcfa67560962356be1cad4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227695"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Importar y exportar datos de forma masiva (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la exportación masiva de datos (*conjuntos masivos de datos*) desde una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la importación en bloque de datos en una tabla o vista sin particiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La importación y la exportación masivas son esenciales para transferir datos de forma eficaz entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y orígenes de datos heterogéneos. La*exportación masiva* se refiere a la copia de datos de una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un archivo de datos. *Importación masiva* significa cargar datos de un archivo de datos a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, puede exportar datos de una aplicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel a un archivo de datos y, después, importarlos masivamente en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **En este tema:**  
   
--   [Introducción a la importación en bloque y las operaciones de exportación masiva](#Intro)  
+-   [Introducción a las operaciones de exportación masiva e importación](#Intro)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
@@ -49,11 +48,11 @@ ms.locfileid: "36102868"
   
  **En este tema:**  
   
--   [Métodos de importación y exportación de datos masiva](#MethodsForBuliIE)  
+-   [Métodos para importar y exportar datos de forma masiva](#MethodsForBuliIE)  
   
 -   [Archivos de formato](#FFs)  
   
-###  <a name="MethodsForBuliIE"></a> Métodos de importación y exportación de datos masiva  
+###  <a name="MethodsForBuliIE"></a> Métodos para importar y exportar datos de forma masiva  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la exportación masiva de datos desde una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la importación masiva de datos en una tabla o vista sin particiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Están disponibles los métodos básicos siguientes.  
   
 |Método|Descripción|Importa datos|Exporta datos|  
@@ -81,7 +80,7 @@ ms.locfileid: "36102868"
   
 -   [Importar y exportar datos de forma masiva con la utilidad bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)  
   
--   [Importar datos de forma masiva mediante BULK INSERT u OPENROWSET&#40;masiva... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)  
+-   [Importar datos de forma masiva mediante el uso de BULK INSERT u OPENROWSET&#40;masiva... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)  
   
 -   [Mantener valores de identidad al importar datos en bloque &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   

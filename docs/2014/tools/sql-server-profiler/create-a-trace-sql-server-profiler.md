@@ -1,5 +1,5 @@
 ---
-title: Crear un seguimiento (SQL Server Profiler) | Documentos de Microsoft
+title: Crear un seguimiento (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f8aa0ba1d8445a2da5e7ffeb8836848875e8db5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4cdec05ce4abc1a6bfd3585bdd4215ce15be7b39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241811"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>Crear un seguimiento (SQL Server Profiler)
   En este tema se describe cómo utilizar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para crear un seguimiento.  
@@ -59,7 +59,7 @@ ms.locfileid: "36103459"
 7.  Haga clic en **Ejecutar** para iniciar el seguimiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Permisos necesarios para ejecutar el Analizador SQL Server](permissions-required-to-run-sql-server-profiler.md)   
+ [Permisos necesarios para ejecutar SQL Server Profiler](permissions-required-to-run-sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](sql-server-profiler.md)   
  [Establecer correlaciones de un seguimiento con datos del registro de rendimiento de Windows &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  

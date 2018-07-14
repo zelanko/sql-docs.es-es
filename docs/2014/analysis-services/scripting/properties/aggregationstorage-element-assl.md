@@ -1,5 +1,5 @@
 ---
-title: Elemento AggregationStorage (ASSL) | Documentos de Microsoft
+title: Elemento AggregationStorage (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationStorage element
 ms.assetid: dd082388-534d-4847-9232-8f80fc9fe96e
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb4bfcab9de31851c054a5f24382a01af1d2d9b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1f66a2161d7c5d5983366fd67cd695e7d90c4917
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200085"
 ---
 # <a name="aggregationstorage-element-assl"></a>Elemento AggregationStorage (ASSL)
   Identifica el método de almacenamiento para las agregaciones.  
@@ -69,7 +69,7 @@ ms.locfileid: "36103646"
 |*Regular*|Los datos de la agregación se almacenan de la manera predeterminada.|  
 |*MolapOnly*|Los datos de agregación se almacenan utilizando solo almacenamiento OLAP (MOLAP) multidimensional.|  
   
- El *MolapOnly* opción sólo está disponible para el [partición](../objects/partition-element-assl.md) elemento.  
+ El *MolapOnly* opción solo está disponible para el [partición](../objects/partition-element-assl.md) elemento.  
   
  La enumeración que corresponde a los valores permitidos para `AggregationStorage` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ProactiveCachingAggregationStorage>.  
   

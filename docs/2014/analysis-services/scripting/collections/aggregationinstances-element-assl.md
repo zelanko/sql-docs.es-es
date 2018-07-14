@@ -1,5 +1,5 @@
 ---
-title: Elemento AggregationInstances (ASSL) | Documentos de Microsoft
+title: Elemento AggregationInstances (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationInstances element
 ms.assetid: e8321aa8-361b-4d8a-bd89-a596eeb814b1
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2559602f932379272e948bd6e24e8ec6a6a7b246
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4580f50935a9819bba3a10531376389033c3ae04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237595"
 ---
 # <a name="aggregationinstances-element-assl"></a>Elemento AggregationInstances (ASSL)
   Contiene la colección de instancias de agregación que se definen en un [partición](../objects/partition-element-assl.md) elemento.  
@@ -59,7 +59,7 @@ ms.locfileid: "36103184"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Partición](../objects/partition-element-assl.md)|  
-|Elementos secundarios|[AggregationInstance](../objects/aggregationinstance-element-assl.md)|  
+|Elementos secundarios|[Elemento AggregationInstance](../objects/aggregationinstance-element-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.AggregationInstanceCollection>.  

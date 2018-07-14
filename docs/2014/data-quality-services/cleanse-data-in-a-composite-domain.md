@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ba152d105052ae8f481794ca28869cb5d4528de4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f03d5f5961bd09494fccde146a812ea07bb390c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261441"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Limpiar datos en un dominio compuesto
   Este tema proporciona información sobre la limpieza de dominios compuestos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio compuesto consta de dos o más dominios individuales y se asigna a un campo de datos que consta de varios términos relacionados. Todos los dominios que forman un dominio compuesto deben tener un área de conocimiento común. Para obtener información detallada acerca de los dominios compuestos, vea [administrar un dominio compuesto](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "36103146"
   
 -   Los datos de origen están formados por varios campos (por ejemplo, Nombre, Segundo nombre y Apellidos), que están asignados a los dominios individuales de un dominio compuesto.  
   
- Para obtener un ejemplo de cómo asignar dominios compuestos al origen de datos, vea [adjuntar un dominio o un dominio compuesto a datos de referencia](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+ Para obtener un ejemplo de cómo asignar dominios compuestos a los datos de origen, consulte [adjuntar un dominio o un dominio compuesto a datos de referencia](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
 ##  <a name="CDCorrection"></a> Corrección de datos mediante reglas entre dominios definitivas  
  Las reglas entre dominios existentes en un dominio compuesto permiten crear reglas que indican la relación que hay entre los dominios que conforman dicho dominio compuesto. Las reglas entre dominios se tienen en cuenta cuando se ejecuta la actividad de limpieza en los datos de origen y resultan involucrados dominios compuestos. Además de permitirle conocer la validez de una regla entre dominios, la cláusula *Then* definitiva **El valor es igual a**de una regla entre dominios también corrige los datos durante la actividad de limpieza de datos.  
@@ -58,7 +58,7 @@ ms.locfileid: "36103146"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Cuando pruebe la cláusula *Then* definitiva **El valor es igual a**de la regla entre dominios, el cuadro de diálogo **Probar regla de dominio compuesto** contendrá una columna nueva, **Corregir a**, que mostrará los datos correctos. En un proyecto de limpieza de datos de calidad, esta regla entre dominios definitiva cambia los datos con una confianza plena, y en la columna **Motivo** se muestra el siguiente mensaje: corregido por la regla "*\<nombre de la regla entre dominios>*". Para obtener más información acerca de las reglas entre dominios, consulte [crear una regla entre dominios](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
+ Cuando pruebe la cláusula *Then* definitiva **El valor es igual a**de la regla entre dominios, el cuadro de diálogo **Probar regla de dominio compuesto** contendrá una columna nueva, **Corregir a**, que mostrará los datos correctos. En un proyecto de limpieza de datos de calidad, esta regla entre dominios definitiva cambia los datos con una confianza plena, y en la columna **Motivo** se muestra el siguiente mensaje: corregido por la regla "*\<nombre de la regla entre dominios>*". Para obtener más información acerca de las reglas entre dominios, vea [crear una regla entre dominios](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  La regla entre dominios definitiva no funcionará en dominios compuestos que estén adjuntados al servicio de datos de referencia.  

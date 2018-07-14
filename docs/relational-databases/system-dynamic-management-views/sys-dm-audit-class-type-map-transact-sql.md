@@ -22,25 +22,25 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a40f06ca9d012553556c68fca238f6f9a609f04
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: 8eba7e0e1e949883f2af30999b93b290e00e07f2
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465181"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957618"
 ---
 # <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Devuelve una tabla que asigna el campo class_type del registro de auditoría al campo class_desc en sys.dm_audit_actions. Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auditoría, consulte [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**class_type**|**char(2)**|El tipo de clase de la entidad que se auditó. Asigna al valor class_type escrito en el registro de auditoría y devuelto por el **get_audit_file ()** (función). No admite valores NULL.|  
+|**class_type**|**char(2)**|El tipo de clase de la entidad que se auditó. Se asigna al valor class_type escrito en el registro de auditoría y devuelto por el **get_audit_file ()** función. No admite valores NULL.|  
 |**class_type_desc**|**nvarchar(120)**|El nombre de la entidad auditable. No admite valores NULL.|  
 |**securable_class_desc**|**nvarchar(120)**|El objeto protegible que se asigna al valor class_type que se está auditando. Es NULL si el valor class_type no se asigna a un objeto protegible. Puede estar relacionado con class_desc en sys.dm_audit_actions.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Entidad de seguridad debe tener **seleccione** permiso. De forma predeterminada, dicho permiso se concede a Public.  
   
 ## <a name="see-also"></a>Vea también  

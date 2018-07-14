@@ -1,5 +1,5 @@
 ---
-title: Formato de paquetes SSIS | Documentos de Microsoft
+title: Formato de paquetes de SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dcb50760bcbe0ce1a4eb01a9a1a2de29565defdf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c025877f39e66fcf25e6ed2b27d6e1b422a299d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103334"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237125"
 ---
 # <a name="ssis-package-format"></a>Formato de paquetes SSIS
   En la versión actual de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], se han realizado cambios significativos en el formato de paquetes (archivo .dtsx) para que sea más fácil leer el formato y comparar paquetes. También puede combinar de forma más confiable paquetes que no contienen cambios en conflicto o cambios almacenados en formato binario.  
@@ -34,9 +34,9 @@ ms.locfileid: "36103334"
   
 -   La mayoría de los objetos dentro de un paquete al que se puede hacer referencia mediante otros objetos ahora tienen un atributo `refId` definido en el paquete XML. En lugar los identificadores de linaje de almacenamiento, ahora se guarda `refID`. Los identificadores de linaje todavía se utilizan en tiempo de ejecución y se vuelven a generar al cargar el paquete.  
   
-     El `refId` valor es una cadena única que es legible y de fácil comprensión, comparará con GUID o los valores enteros. La cadena es similar a los valores de ruta de acceso que se usan para las configuraciones de paquetes en versiones anteriores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+     El `refId` valor es una cadena única que es legible y fácil comprensión, comparará con GUID o valores enteros. La cadena es similar a los valores de ruta de acceso que se usan para las configuraciones de paquetes en versiones anteriores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Si se mezclan los cambios entre las dos versiones de un paquete, el `refId` puede utilizarse en operaciones de búsqueda y reemplazo para asegurarse de que todas las referencias a ese objeto se han actualizado correctamente.  
+     Si va a combinar los cambios entre las dos versiones de un paquete, el `refId` puede utilizarse en operaciones de búsqueda y reemplazo para asegurarse de que todas las referencias a ese objeto se han actualizado correctamente.  
   
 -   La información de diseño se encuentra en una sección de CDATA.  
   

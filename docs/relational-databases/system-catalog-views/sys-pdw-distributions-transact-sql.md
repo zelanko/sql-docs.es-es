@@ -1,14 +1,12 @@
 ---
-title: Sys.pdw_distributions (Transact-SQL) | Documentos de Microsoft
+title: Sys.pdw_distributions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -19,26 +17,26 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 49c439e4d3b210025dfd28f45cd63b9bfcb5620d
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
-ms.translationtype: MT
+ms.openlocfilehash: 0af52bacdd709c067a62192f3a114453692cbedb
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33697678"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36833703"
 ---
 # <a name="syspdwdistributions-transact-sql"></a>Sys.pdw_distributions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contiene información sobre las distribuciones en el dispositivo. Muestra una fila por cada distribución de dispositivo.  
   
-|Nombre de la columna|Tipo de datos|Description|Intervalo|  
+|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|distribution_id|**int**|Identificador numérico único asociado con la distribución.<br /><br /> Clave para esta vista.|1 hasta el número de nodos de proceso de dispositivo multiplicado por el número de distribuciones por nodo de proceso.|  
-|pdw_node_id|**int**|Identificador del nodo que se encuentra en esta distribución.|Vea pdw_node_id en [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|name|**nvarchar(32)**|Identificador asociado con la distribución, que se utiliza como un sufijo en tablas distribuidas de cadena.|Cadena compuesta de "A-z", "a-z", "0-9', '_','-'.|  
-|position|**int**|Posición de la distribución dentro de un nodo correspondiente a otras distribuciones en ese nodo.|1 hasta el número de distribuciones por nodo.|  
+|distribution_id|**int**|Identificador numérico único asociado con la distribución.<br /><br /> Clave para esta vista.|1 al número de nodos de proceso en el dispositivo multiplicado por el número de distribuciones por nodo de proceso.|  
+|pdw_node_id|**int**|Identificador del nodo en que esta distribución se encuentra.|Vea pdw_node_id en [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
+|NAME|**nvarchar(32)**|Identificador asociado con la distribución, utilizada como sufijo en las tablas distribuidas de cadena.|Cadena compuesta de "A-z", "a-z", "0-9', '_','-'.|  
+|position|**int**|Posición de la distribución dentro de un nodo correspondiente para otras distribuciones en ese nodo.|1 para el número de distribuciones por nodo.|  
   
 ## <a name="see-also"></a>Vea también  
- [Almacenamiento de datos SQL y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

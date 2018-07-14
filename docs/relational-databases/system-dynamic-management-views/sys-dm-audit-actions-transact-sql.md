@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_audit_actions (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_audit_actions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,21 +22,21 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34a180e8b337ea984e320d41f77284ee9833b624
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: 864072a00f2db088b03ce280bf0ad137627b6a7c
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465931"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957638"
 ---
 # <a name="sysdmauditactions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Devuelve una fila por cada acción de auditoría sobre la que se puede guardar información en el registro de auditoría y por cada grupo de acciones de auditoría que se puede configurar como parte de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auditoría, consulte [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**action_id**|**varchar(4)**|Id. de la acción de auditoría. Relacionadas con la **action_id** valor que ha escrito para cada registro de auditoría. Acepta valores NULL. Es NULL para los grupos de auditoría.|  
+|**action_id**|**varchar(4)**|Id. de la acción de auditoría. Relacionados con la **action_id** valor escrito en cada registro de auditoría. Acepta valores NULL. Es NULL para los grupos de auditoría.|  
 |**action_in_log**|**bit**|Indica si una acción se puede escribir en un registro de auditoría. Los valores son los siguientes:<br /><br /> 1 = Sí<br /><br /> 0 = No|  
 |**Nombre**|**sysname**|Nombre de la acción de auditoría o del grupo de acciones de auditoría. No admite valores NULL.|  
 |**class_desc**|**nvarchar(120)**|El nombre de la clase del objeto al que se aplica la acción de auditoría. Puede ser cualquiera de los objetos de ámbito de servidor, de base de datos o de esquema, pero no incluye los objetos de esquema. No admite valores NULL.|  
@@ -45,7 +45,7 @@ ms.locfileid: "34465931"
 |**configuration_level**|**nvarchar (10)**|Indica que la acción o el grupo de acciones especificado en esta fila se puede configurar en el nivel de grupo o de acción. Es NULL si la acción no se puede configurar.|  
 |**containing_group_name**|**nvarchar(120)**|El nombre del grupo de auditoría que contiene la acción especificada. Es NULL si el valor del nombre es un grupo.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Las entidades de seguridad deben tener **seleccione** permiso. De forma predeterminada, dicho permiso se concede a Public.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 737083dfc08633789edc7bac78fb2d7301a9c74e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8b6154cae9ce3fcc2878797bce63ccf1e1f59edd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284591"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Agregar, mover o eliminar una tabla, una matriz o una lista (Generador de informes y SSRS)
   Una región de datos muestra los datos de un conjunto de datos de informe. Entre las regiones de datos se incluyen las siguientes: tabla, matriz, lista, gráfico y medidor. Para anidar una región de datos dentro de otra, agregue por separado cada región de datos y, a continuación, arrastre la región de datos secundaria a la región de datos primaria.  
@@ -36,7 +36,7 @@ ms.locfileid: "36103044"
   
 1.  En la pestaña **Insertar** , haga clic en **Tabla** o en **Matriz**y, a continuación, haga clic en **Asistente para tablas** o en **Asistente para matrices**.  
   
-2.  Siga los pasos de la **NewTable** o **nueva matriz** asistente.  
+2.  Siga los pasos descritos en la **NewTable** o **nueva matriz** asistente.  
   
 3.  En la pestaña **Inicio** , haga clic en **Ejecutar** para ver el informe representado.  
   

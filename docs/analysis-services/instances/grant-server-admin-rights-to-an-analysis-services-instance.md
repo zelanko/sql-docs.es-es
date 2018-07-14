@@ -1,5 +1,5 @@
 ---
-title: Conceder derechos de administrador de servidor a una instancia de Analysis Services | Documentos de Microsoft
+title: Conceder permisos de administrador del servidor a una instancia de Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dac4df875c8a620f735822e73215f86f17a88c3d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ad46e78f5accb54a3870f0c12a8442dc76201b9
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018862"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36760100"
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>Conceder permisos de administrador de servidor (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34018862"
  Con posterioridad a la instalación, puede modificar la pertenencia a un rol para agregar usuarios adicionales que necesiten derechos completos para el servicio. También se pueden administrar roles de servidor mediante Objetos de administración de análisis (AMO). Para obtener más información, vea [Desarrollar con Objetos de administración de análisis &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Proporciona una progresión de roles cada vez más granulares para el procesamiento y consulta en los niveles de servidor, base de datos y objeto. Para obtener instrucciones sobre cómo usar estos roles, vea [Roles y permisos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md).  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Proporciona una progresión de roles cada vez más granulares para el procesamiento y la consulta en el servidor de base de datos y los niveles de objeto. Para obtener instrucciones sobre cómo usar estos roles, vea [Roles y permisos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md).  
   
 ## <a name="modify-server-role-membership"></a>Modificar la pertenencia al rol de servidor  
   
@@ -53,10 +53,10 @@ ms.locfileid: "34018862"
 5.  En el cuadro de texto **Escribir los nombres de objeto para seleccionar** , escriba el nombre del equipo y haga clic en **Comprobar nombres** para comprobar que la cuenta de equipo se encuentra en las ubicaciones actuales. Si no encuentra la cuenta de equipo, compruebe el nombre del equipo y que el dominio del que es miembro el equipo sea correcto.  
   
 ## <a name="nt-servicessastelemetry-account"></a>Cuenta de NT Service\SSASTelemetry  
- **Servicio NT/SSASTelemetry** es una cuenta de equipo con privilegios reducidos que se crea durante la instalación y se usa exclusivamente para ejecutar la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] del servicio Programa para la mejora de la experiencia del usuario (CEIP). Este servicio requiere derechos de administrador en la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para ejecutar varios comandos de detección. Vea [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) y [Microsoft SQL Server Privacy Statement](http://msdn.microsoft.com/library/57769f4a-5689-49a1-8298-e3c0db5106f8) para obtener más información.  
+ **Servicio NT/SSASTelemetry** es una cuenta de equipo con privilegios reducidos que se crea durante la instalación y se usa exclusivamente para ejecutar la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] del servicio Programa para la mejora de la experiencia del usuario (CEIP). Este servicio requiere derechos de administrador en la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para ejecutar varios comandos de detección. Vea [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) y [Microsoft SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444) para obtener más información.  
   
 ## <a name="see-also"></a>Vea también  
  [Cómo autorizar el acceso a objetos y operaciones &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
- [Roles de seguridad & #40; Analysis Services - datos multidimensionales & #41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [Roles de seguridad &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

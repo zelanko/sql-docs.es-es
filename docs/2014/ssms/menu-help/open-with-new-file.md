@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.openwith
 helpviewer_keywords:
 - Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 57aa51909a5fe1c3bb0488ce4bc05bcceab37d26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b254e3d03945f3a7c3641c036a54df18ba13f7bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272101"
 ---
 # <a name="open-with-new-file"></a>Abrir con (Nuevo archivo)
   Puede abrir un documento en uno o varios editores si hace clic en **Abrir** en el menú **Archivo** y, a continuación, hace clic en **Archivo**. En el cuadro de diálogo **Abrir archivo** , seleccione el archivo, haga clic en la flecha de **Abrir** y, después, haga clic en **Abrir con**. En el cuadro de diálogo **Abrir con** , haga clic en el programa que desee de la lista **Seleccione el programa que desee usar** y, a continuación, haga clic en **Abrir**.  

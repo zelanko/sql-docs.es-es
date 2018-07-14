@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7ee40544fc76385d65d6b0b4d38b39c7112218d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3e40443fc2691c33a1d40603b932a4ac031d0a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246315"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Tipo de conexión de Analysis Services para MDX (SSRS)
   Para incluir en el informe datos de un cubo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , debe tener un conjunto de datos basado en un origen de datos de informe de tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Este tipo de origen de datos integrado está basado en la extensión de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Puede recuperar metadatos sobre dimensiones, jerarquías, niveles, indicadores clave de rendimiento (KPI), medidas y atributos desde un cubo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para usarlos como datos de informe.  
   
  Esta extensión de procesamiento de datos admite parámetros de varios valores, agregados de servidor y credenciales administrados con independencia de la cadena de conexión.  
   
- Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones detalladas, consulte [agregar y comprobar una conexión de datos o un origen de datos &#40;el generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones detalladas, consulte [agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Cadena de conexión  
  Al conectarse a un cubo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , se conecta al objeto de base de datos de una instancia de Analysis Services en un servidor. La base de datos podría tener varios cubos. El cubo se especifica en el diseñador de consultas al crear la consulta. En el siguiente ejemplo se muestra una cadena de conexión:  
@@ -54,7 +54,7 @@ data source=<server name>;initial catalog=<database name>
   
 -   No se necesitan credenciales. Para usar esta opción, debe tener la cuenta de ejecución desatendida configurada en el servidor de informes. Para más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en msdn.microsoft.com.  
   
- Para obtener más información, consulte [las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [especificar credenciales en el generador de informes](../specify-credentials-in-report-builder.md).  
+ Para obtener más información, consulte [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [especificar credenciales en Generador de informes](../specify-credentials-in-report-builder.md).  
   
   
   
@@ -75,7 +75,7 @@ data source=<server name>;initial catalog=<database name>
   
  Durante el diseño, ejecute la consulta para ver un conjunto de resultados. Los resultados de la consulta se recuperan automáticamente como un conjunto de filas planas. Las columnas del conjunto de resultados de una consulta rellenan la colección de campos de un conjunto de datos. Después de crear la consulta, vea la colección de campos del conjunto de datos generada a partir de los metadatos en el panel Datos de informe. Cuando el informe se ejecuta, los datos reales se devuelven desde el origen de datos externo.  
   
- La extensión de procesamiento de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite propiedades de campo de conjunto de datos extendidas. Éstos son valores disponibles del origen de datos externo, pero no aparecen en el panel Datos de informe. Puede usar propiedades de campo extendidas admitidas por la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] extensión de procesamiento de datos en el informe a través de los integrados `Fields` colección. Para las propiedades que tengan valores en el origen de datos, se puede tener acceso a valores de propiedad predefinidos como `FormattedValue`, `Color` o `UniqueName`. Para más información, vea [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+ La extensión de procesamiento de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite propiedades de campo de conjunto de datos extendidas. Éstos son valores disponibles del origen de datos externo, pero no aparecen en el panel Datos de informe. Puede usar las propiedades de campo extendidas admitidas por la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] extensión de procesamiento de datos en el informe a través de los integrados `Fields` colección. Para las propiedades que tengan valores en el origen de datos, se puede tener acceso a valores de propiedad predefinidos como `FormattedValue`, `Color` o `UniqueName`. Para más información, vea [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
   
@@ -98,7 +98,7 @@ data source=<server name>;initial catalog=<database name>
 ##  <a name="Related"></a> Secciones relacionadas  
  Estas secciones de la documentación proporcionan información conceptual detallada sobre los datos de informe, así como información de procedimientos acerca de cómo definir, personalizar y usar las partes de un informe que están relacionadas con datos.  
   
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-datasets-ssrs.md)  
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)  
  Proporciona información general sobre cómo obtener acceso a los datos del informe.  
   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

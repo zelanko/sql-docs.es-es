@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Showplan All for Query Compile event class
 ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: df95b493d25fa739a21af96fd37d9336579ff0a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3e4e5c0715c491f9681286ec12e24c71b9cce91a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235275"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile [clase de eventos]
   La clase de eventos Showplan All for Query Compile se produce cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila una instrucción SQL. Incluya esta clase de eventos para identificar los operadores Showplan. La información contenida es un subconjunto de la disponible en la clase de eventos Showplan XML For Query Compile.  

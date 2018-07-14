@@ -1,5 +1,5 @@
 ---
-title: Aplicar una transformación XSL (proveedor SQLXMLOLEDB) | Documentos de Microsoft
+title: Aplicar una transformación XSL (proveedor SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - XSL Transformations [SQLXML]
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 170bed8eece89add964d3f8f0b3ab3fe46552b26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0631033305d05252eb9253fb24614485a5ebccbf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268491"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Aplicar una transformación XSL (proveedor SQLXMLOLEDB)
-  En esta aplicación ADO de ejemplo, se ejecuta una consulta SQL y se aplica una transformación XSL al resultado. Si se establece clientsidexml, propiedad en True, exige el procesamiento del conjunto de filas en el lado del cliente. El lenguaje de comandos se establece en {5d531cb2-e6ed-11d2-b252-00c04f681b71}, porque la consulta SQL se especifica en una plantilla y se debe especificar este lenguaje al ejecutar una plantilla. La propiedad xsl especifica el archivo XSL debe usar para aplicar la transformación. El valor de propiedad de ruta de acceso Base se utiliza para buscar el archivo XSL. Si especifica una ruta de acceso en el valor de la propiedad xsl, la ruta de acceso es relativa a la ruta de acceso que se especifica en la propiedad de ruta de acceso Base.  
+  En esta aplicación ADO de ejemplo, se ejecuta una consulta SQL y se aplica una transformación XSL al resultado. Establecer el clientsidexml, propiedad en True, exige el procesamiento del conjunto de filas en el lado cliente. El lenguaje de comandos se establece en {5d531cb2-e6ed-11d2-b252-00c04f681b71}, porque la consulta SQL se especifica en una plantilla y se debe especificar este lenguaje al ejecutar una plantilla. La propiedad xsl especifica el archivo XSL debe usar para aplicar la transformación. El valor de propiedad de ruta de acceso Base se usa para buscar el archivo XSL. Si especifica una ruta de acceso en el valor de la propiedad xsl, la ruta de acceso es relativa a la ruta de acceso que se especifica en la propiedad de ruta de acceso Base.  
   
  En este ejemplo se muestra cómo utilizar las siguientes propiedades SQLXMLOLEDB específicas del proveedor:  
   
@@ -39,9 +39,9 @@ ms.locfileid: "36103058"
   
  En esta aplicación de ejemplo ADO del lado cliente, se ejecuta en el servidor una plantilla XML que consta de una consulta SQL.  
   
- Porque clientsidexml, propiedad está establecida en True, la instrucción SELECT sin la cláusula FOR XML se envía al servidor. El servidor ejecuta la consulta y devuelve un conjunto de filas al cliente. A continuación, el cliente aplica la transformación FOR XML al conjunto de filas y genera el documento XML.  
+ Dado que el clientsidexml, propiedad se establece en True, la instrucción SELECT sin la cláusula FOR XML se envía al servidor. El servidor ejecuta la consulta y devuelve un conjunto de filas al cliente. A continuación, el cliente aplica la transformación FOR XML al conjunto de filas y genera el documento XML.  
   
- La propiedad de xsl se especifica en la aplicación; por lo tanto, se aplica la transformación XSL al documento XML que se genera en el cliente y el resultado es una tabla de dos columnas.  
+ La propiedad xsl se especifica en la aplicación. por lo tanto, se aplica la transformación XSL al documento XML que se genera en el cliente y el resultado es una tabla de dos columnas.  
   
  Para ejecutar el comando de plantilla, se debe especificar el lenguaje de plantilla XML {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
   

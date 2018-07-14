@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - connections [Reporting Services], accounts
@@ -19,13 +19,13 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6ee89d1d6b01fe39f3798eef9f39c1ca460cc799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71382e58d8709c2a0015e40819b74638413441e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266091"
 ---
 # <a name="authentication-with-the-report-server"></a>Autenticación con el servidor de informes
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) proporciona varias opciones configurables para autenticar usuarios y aplicaciones cliente en el servidor de informes. De forma predeterminada, el servidor de informes usa la autenticación de Windows integrada y supone que existen relaciones de confianza donde el cliente y los recursos de red están en el mismo dominio o en un dominio de confianza. En función de la topología de red y las necesidades de su organización, puede personalizar el protocolo de autenticación que se usa para la autenticación integrada de Windows, usar la autenticación básica o usar una extensión personalizada basada en formularios de autenticación que proporcione. Cada uno de los tipos de autenticación puede activarse o desactivarse individualmente. Puede habilitar más de un tipo de autenticación si desea que el servidor de informes acepte solicitudes de varios tipos.  
@@ -57,7 +57,7 @@ ms.locfileid: "36105308"
 |Resumen|No se admite en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
 ## <a name="configuration-of-authentication-settings"></a>Configuración de los valores de autenticación  
- La configuración de la autenticación se establece para la seguridad predeterminada cuando la dirección URL del servidor de informes está reservada. Si modifica estos valores incorrectamente, el servidor de informes devolverá errores de acceso denegado HTTP 401 para las solicitudes HTTP que no se puedan autenticar. La elección de un tipo de autenticación requiere saber si la autenticación de Windows se admite en la red. Se debe especificar al menos un tipo de autenticación. Se pueden especificar varios tipos de autenticación para RSWindows. Tipos de autenticación de RSWindows (es decir, `RSWindowsBasic`, `RSWindowsNTLM`, `RSWindowsKerberos`, y **RSWindowsNegotiate**) son mutuamente excluyentes con personalizado.  
+ La configuración de la autenticación se establece para la seguridad predeterminada cuando la dirección URL del servidor de informes está reservada. Si modifica estos valores incorrectamente, el servidor de informes devolverá errores de acceso denegado HTTP 401 para las solicitudes HTTP que no se puedan autenticar. La elección de un tipo de autenticación requiere saber si la autenticación de Windows se admite en la red. Se debe especificar al menos un tipo de autenticación. Se pueden especificar varios tipos de autenticación para RSWindows. Tipos de autenticación de RSWindows (es decir, `RSWindowsBasic`, `RSWindowsNTLM`, `RSWindowsKerberos`, y **RSWindowsNegotiate**) se excluyen mutuamente con Custom.  
   
 > [!IMPORTANT]  
 >  Reporting Services no valida la configuración que se especifique para determinar si es correcta en un entorno informático. Es posible que la seguridad predeterminada no funcione en una instalación o que se especifique una configuración que no sea válida en una infraestructura de seguridad. Por esta razón, es importante que pruebe cuidadosamente la implementación del servidor de informes en un entorno de pruebas controlado antes de hacer que esté disponible en una organización mayor.  
@@ -90,8 +90,8 @@ ms.locfileid: "36105308"
  [Especificación de información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
  [Implementación de una extensión de seguridad](../extensions/security-extension/implementing-a-security-extension.md)   
  [Configurar conexiones SSL en un servidor de informes de modo nativo](configure-ssl-connections-on-a-native-mode-report-server.md)   
- [Configurar el acceso del generador de informes](../report-server/configure-report-builder-access.md)   
- [Información general de las extensiones de seguridad](../extensions/security-extension/security-extensions-overview.md)   
+ [Configurar el acceso al generador de informes](../report-server/configure-report-builder-access.md)   
+ [Introducción a las extensiones de seguridad](../extensions/security-extension/security-extensions-overview.md)   
  [Autenticación en Reporting Services](../extensions/security-extension/authentication-in-reporting-services.md)   
  [Autorización en Reporting Services](../extensions/security-extension/authorization-in-reporting-services.md)  
   

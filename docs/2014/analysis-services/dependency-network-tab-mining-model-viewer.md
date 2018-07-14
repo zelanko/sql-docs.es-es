@@ -1,5 +1,5 @@
 ---
-title: Pestaña red de dependencias (Visor de modelos de minería de datos) | Documentos de Microsoft
+title: Pestaña red de dependencias (Visor de modelos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.dependencynetwork.f1
 ms.assetid: e58ce1b7-20d6-42cb-ade5-916da8471e09
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3f8b993490c349cab5a6f25c722f83719b844af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01b3535c7a6c2547bdef9a4f74956ff647f1b864
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279991"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>Pestaña Red de dependencias (Visor de modelos de minería de datos)
   La pestaña **Red de dependencias** proporciona una vista gráfica de todos los atributos que contiene el modelo de minería de datos, y muestra cómo se relacionan los atributos.  
@@ -68,7 +68,7 @@ ms.locfileid: "36103207"
  Una regla general para todos los tipos de modelo es que cuánto más fuerte es el vínculo, más fuerte es la relación de predicción entre los dos atributos.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   

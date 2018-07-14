@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tape backup devices, about tape backup devices
 - backup devices [SQL Server]
@@ -26,15 +25,15 @@ helpviewer_keywords:
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 caps.latest.revision: 89
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c3f5bfc7186470ed713cdb9d979af2e5b3b0367
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d7a3603d8d2f8f947a2c708a11015bf031ede8ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237185"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivos de copia de seguridad (SQL Server)
   En una operación de copia de seguridad en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los datos copiados (la *copia de seguridad*) se escriben en un dispositivo físico de copia de seguridad. Este dispositivo físico de copia de seguridad se inicializa cuando se escribe en él la primera copia de seguridad de un conjunto de medios. Las copias de seguridad de uno o varios dispositivos de copia de seguridad constituyen un solo conjunto de medios.  
@@ -43,9 +42,9 @@ ms.locfileid: "36105389"
   
 -   [Términos y definiciones](#TermsAndDefinitions)  
   
--   [Usar dispositivos de copia de seguridad de disco](#DiskBackups)  
+-   [Uso de dispositivos de copia de seguridad de disco](#DiskBackups)  
   
--   [Usar dispositivos de cinta](#TapeDevices)  
+-   [Uso de dispositivos de cinta](#TapeDevices)  
   
 -   [Usar un dispositivo lógico de copia de seguridad](#LogicalBackupDevice)  
   
@@ -67,14 +66,14 @@ ms.locfileid: "36105389"
   
  Las copias de seguridad de SQL Server también se pueden escribir en un servicio de almacenamiento Blob de Microsoft Azure además de en disco o cinta.  
   
-##  <a name="DiskBackups"></a> Usar dispositivos de copia de seguridad de disco  
+##  <a name="DiskBackups"></a> Uso de dispositivos de copia de seguridad de disco  
  **En esta sección:**  
   
 -   [Especificar un archivo de copia de seguridad mediante su nombre físico (Transact-SQL)](#BackupFileUsingPhysicalName)  
   
 -   [Especifica la ruta de acceso de un archivo de copia de seguridad de disco](#BackupFileDiskPath)  
   
--   [Copia de seguridad en un archivo en un recurso compartido de red](#NetworkShare)  
+-   [Copia un archivo en un recurso compartido de red de seguridad](#NetworkShare)  
   
  Si un archivo de disco se llena mientras una operación de copia de seguridad está anexando una copia de seguridad al conjunto de medios, la operación producirá un error. El tamaño máximo de un archivo de copia de seguridad se determina de acuerdo con el espacio disponible en el dispositivo de disco, de modo que el tamaño apropiado para un dispositivo de copia de seguridad en disco dependerá del tamaño de las copias de seguridad.  
   
@@ -127,7 +126,7 @@ GO
 > [!NOTE]  
 >  La ubicación predeterminada se almacena en la clave del Registro **BackupDirectory** bajo **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer**.  
   
-###  <a name="NetworkShare"></a> Copia de seguridad en un archivo en un recurso compartido de red  
+###  <a name="NetworkShare"></a> Copia un archivo en un recurso compartido de red de seguridad  
  Para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueda tener acceso a un archivo de disco remoto, la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener acceso al recurso compartido de red. Esto incluye disponer de los permisos necesarios para realizar operaciones de copia de seguridad y restauración, escribiendo y leyendo en el recurso compartido de red. La disponibilidad de las unidades de red y los permisos depende del contexto en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Para realizar una copia de seguridad en una unidad de red cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está en ejecución en una cuenta de usuario de dominio, se debe asignar la unidad compartida como una unidad de red en la sesión donde se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si inicia Sqlservr.exe desde la línea de comandos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecta todas las unidades de red que ha asignado en la sesión que ha iniciado.  
@@ -150,7 +149,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="TapeDevices"></a> Usar dispositivos de cinta  
+##  <a name="TapeDevices"></a> Uso de dispositivos de cinta  
   
 > [!NOTE]  
 >  La compatibilidad con dispositivos de cinta de copia de seguridad se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.  
@@ -159,7 +158,7 @@ GO
   
 -   [Especificar una cinta de copia de seguridad mediante su nombre físico (Transact-SQL)](#BackupTapeUsingPhysicalName)  
   
--   [Específicas de cinta opciones BACKUP y RESTORE (Transact-SQL)](#TapeOptions)  
+-   [Copia de seguridad específicas de cinta y las opciones de restauración (Transact-SQL)](#TapeOptions)  
   
 -   [Administrar cintas abiertas](#OpenTapes)  
   
@@ -194,7 +193,7 @@ GO
   
  FROM TAPE **=** { **'***nombre_de_dispositivo_de_copia_de_seguridad_física***'** | **@***nombre_de_dispositivo_de_copia_de_seguridad_física* }  
   
-###  <a name="TapeOptions"></a> Específicas de cinta opciones BACKUP y RESTORE (Transact-SQL)  
+###  <a name="TapeOptions"></a> Copia de seguridad específicas de cinta y las opciones de restauración (Transact-SQL)  
  Para facilitar la administración de cintas, la instrucción BACKUP proporciona las siguientes opciones específicas:  
   
 -   { NOUNLOAD | **UNLOAD** }  

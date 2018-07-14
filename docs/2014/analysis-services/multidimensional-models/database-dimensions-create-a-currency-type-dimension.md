@@ -1,5 +1,5 @@
 ---
-title: Crear una dimensión de tipo moneda | Documentos de Microsoft
+title: Crear una dimensión de tipo moneda | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], currency
 - currency [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f45683b404e9a33260edda6163aae9f783c8b7f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b9eb36a77501a7195c18138eab0d767fc7aed63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232025"
 ---
 # <a name="create-a-currency-type-dimension"></a>Crear una dimensión de tipo moneda
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], una dimensión de tipo moneda es aquella cuyos atributos representan una lista de monedas para la elaboración de informes financieros.  
@@ -37,7 +37,7 @@ ms.locfileid: "36105499"
   
  A partir de esta información, el Asistente de Business Intelligence diseña un proceso de conversión de moneda que identifica la dimensión de moneda de destino adecuada (la dimensión de moneda que representa las monedas de destino). En función del número de conversiones de moneda que necesite la solución de Business Intelligence, el Asistente de Business Intelligence puede definir varias dimensiones de moneda de destino. Para más información sobre cómo definir conversiones de moneda, vea [Conversiones de moneda &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).  
   
- Para identificar una dimensión como una dimensión de moneda, establezca el `Type` propiedad de la dimensión en `Currency`.  
+ Para identificar una dimensión como dimensión de moneda, establezca el `Type` propiedad de la dimensión a `Currency`.  
   
 ## <a name="dimension-structure"></a>Estructura de dimensión  
  Una dimensión de moneda contiene como mínimo un atributo clave que identifica monedas específicas en la tabla de dimensión para la dimensión de moneda. El valor del atributo clave es diferente en las dimensiones de moneda de origen y de destino:  
@@ -67,7 +67,7 @@ ms.locfileid: "36105499"
   
 ## <a name="see-also"></a>Vea también  
  [Atributos y jerarquías de atributo](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Ayuda de F1 de Asistente de Business Intelligence](../business-intelligence-wizard-f1-help.md)   
- [Tipos de dimensión](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
+ [Asistente de Business Intelligence F1 Ayuda](../business-intelligence-wizard-f1-help.md)   
+ [Tipos de dimensiones](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

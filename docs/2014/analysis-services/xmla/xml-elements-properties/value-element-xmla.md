@@ -1,5 +1,5 @@
 ---
-title: Valor de elemento (XMLA) | Documentos de Microsoft
+title: Valor de elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Value element
 ms.assetid: f87ca7f8-d9fe-4730-a706-5d50fcfe21df
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 7a422298e8d1b77f3d036b4cea5761dc6dc6dde4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 8defb7fe2115bd1ea9ccb7b3f23b0717db8b9aef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263257"
 ---
 # <a name="value-element-xmla"></a>Elemento Value (XMLA)
-  Contiene el valor deseado de un [atributo](attribute-element-xmla.md) elemento que va a agregar un [insertar](../xml-elements-commands/insert-element-xmla.md) comando, o un [celda](cell-element-xmla.md) elemento que se va a actualizar una [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)comando.  
+  Contiene el valor deseado de un [atributo](attribute-element-xmla.md) elemento va a agregar mediante una [insertar](../xml-elements-commands/insert-element-xmla.md) comando, o un [celda](cell-element-xmla.md) elemento actualizará un [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)comando.  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento Application (ASSL) | Documentos de Microsoft
+title: Elemento Application (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Application element
 ms.assetid: dfd780ad-f643-4a1c-b58b-34271ae91240
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 363f72b39a48e1606861168461abc3e19cb8b5bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e04ce46a9fc2797885e3c8dff0acd697a782b95a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279501"
 ---
 # <a name="application-element-assl"></a>Elemento Application (ASSL)
   Identifica la aplicación asociada con un [acción](../objects/action-element-assl.md) elemento.  
@@ -64,7 +64,7 @@ ms.locfileid: "36103925"
 ## <a name="remarks"></a>Notas  
  Las aplicaciones cliente pueden utilizar el elemento `Application` para determinar qué acciones son aplicables a una aplicación cliente determinada. La aplicación cliente es responsable de evaluar el valor de este elemento.  
   
- El elemento que corresponde al elemento primario de `Application` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Action>.  
+ El elemento que se corresponde con el elemento primario de `Application` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento Actions &#40;ASSL&#41;](../collections/actions-element-assl.md)   

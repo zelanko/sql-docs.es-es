@@ -1,5 +1,5 @@
 ---
-title: 'SQL: overflow-field (SQLXML 4.0) | Documentos de Microsoft'
+title: overflow-field (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sql:overflow-field
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a1ea697a212058218be295a49c3ad2ecc7c644c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3b78db405442ea15fe3d62db4688eb82440dfb2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246255"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
   En un esquema, puede identificar una columna como una columna de desbordamiento para que reciba todos los datos no consumidos del documento XML. Esta columna se especifica en el esquema utilizando la anotación `sql:overflow-field`. Es posible tener varias columnas de desbordamiento.  
@@ -80,7 +80,7 @@ ms.locfileid: "36103991"
   
  En el esquema, el  **\<cliente >** elemento se asigna a la tabla Cust y  **\<orden >** elemento se asigna a la tabla CustOrder.  
   
- Tanto el  **\<cliente >** y  **\<orden >** elementos identifican una columna de desbordamiento. Por lo tanto, la carga masiva XML guarda todos los secundarios no consumidos elementos y atributos de la  **\<cliente >** elemento de la columna de desbordamiento de la tabla Cust y todos los elementos secundarios no consumidos y atributos de la  **\<Orden >** elemento de la columna de desbordamiento de la tabla CustOrder.  
+ Tanto el  **\<cliente >** y  **\<orden >** elementos identifican una columna de desbordamiento. Por lo tanto, la carga masiva XML guarda todos los sin consumir secundarios elementos y atributos de la  **\<cliente >** elemento en la columna de desbordamiento de la tabla Cust y todos los elementos no utilizados secundarios y atributos de la  **\<Orden >** elemento en la columna de desbordamiento de la tabla CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Para probar un ejemplo funcional  
   

@@ -1,5 +1,5 @@
 ---
-title: Especificar una versión como última versión | Documentos de Microsoft
+title: Especificar una versión como última versión | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version control services [SQL Server], latest version
 - latest file version specified
 - file versions [SQL Server]
 ms.assetid: 407dffb1-3ecf-461e-835d-124781f26ee7
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 598fc6f2d90220f85cef590600d8fcf397384f28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2f90851ebb0c5425e7f3948f7f0e040d2cab0618
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225925"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>Especificar una versión como última versión
   Al proteger un archivo en el control de código fuente, la versión protegida se convierte en la última; los usuarios que desprotegen o recuperan la última versión reciben copias locales del elemento protegido más recientemente.  
@@ -44,7 +44,7 @@ ms.locfileid: "36104954"
   
 3.  En el **archivo** menú, elija **Control de código fuente** y haga clic en **ViewHistory**.  
   
-4.  En el **historial de** \<archivo > cuadro de diálogo, seleccione la versión que desee especificar como última y haga clic en **Pin**.  
+4.  En el **historial de** \<archivo > cuadro de diálogo, seleccione la versión que desea especificar como última y haga clic en **Pin**.  
   
      Aparece un símbolo junto a la versión seleccionada que indica que ésta es la versión actual del archivo. Si tiene cargada una versión distinta en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], se le pedirá que vuelva a cargar el archivo.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "36104954"
   
 3.  En el **archivo** menú, elija **Control de código fuente** y haga clic en **historial**.  
   
-4.  En el **opciones del historial** cuadro de diálogo, haga clic en **Aceptar** para mostrar la **historial de archivo** cuadro de diálogo.  
+4.  En el **opciones del historial** cuadro de diálogo, haga clic en **Aceptar** para mostrar el **historial de archivo** cuadro de diálogo.  
   
-5.  En el **historial de archivo** , seleccione la versión que desee especificar como la versión más reciente y haga clic en **reversión**.  
+5.  En el **historial de archivo** , seleccione la versión que desea especificar como la versión más reciente y haga clic en **reversión**.  
   
      Aparece un mensaje diciendo que todas las versiones siguientes a la seleccionada serán eliminadas.  
   

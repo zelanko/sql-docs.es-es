@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - set working set size option
 ms.assetid: 8876cdbe-c84a-43ae-a146-06974b4576e8
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ade1ded184ca64094b269483645384601a75ccd7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5497c33bc50abed1df40f8ba0eada14e922881bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265335"
 ---
 # <a name="set-working-set-size-server-configuration-option"></a>set working set size (opción de configuración del servidor)
   Esta opción aún está presente en el procedimiento almacenado de **sp_configure** , pero su funcionalidad no está disponible en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La opción no tiene ningún efecto.  

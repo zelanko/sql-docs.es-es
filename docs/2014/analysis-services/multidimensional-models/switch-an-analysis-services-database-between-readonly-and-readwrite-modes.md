@@ -1,5 +1,5 @@
 ---
-title: Cambiar una base de datos de Analysis Services entre los modos ReadOnly y ReadWrite | Documentos de Microsoft
+title: Cambiar una base de datos de Analysis Services entre los modos ReadOnly y ReadWrite | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ReadOnly property
 - ReadWriteMode command
 - operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 184a674d03e6c8fb6b30d10b91b2a58225894ba2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb0d9ae239d33cd55d50e0e876df1584ff2fe965
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286111"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Cambiar entre los modos ReadOnly y ReadWrite en una base de datos de Analysis Services
-  A menudo existen situaciones cuando un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Administrador de base de datos (dba) desea cambiar el modo de lectura/escritura de una base de datos tabular o multidimensional. Estas situaciones suelen responder a necesidades empresariales, como compartir la base de datos entre un grupo de servidores de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para proporcionar una mejor experiencia para el usuario.  
+  A menudo hay situaciones cuando un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Administrador de base de datos (dba) desea cambiar el modo de lectura/escritura de una base de datos tabular o multidimensional. Estas situaciones suelen responder a necesidades empresariales, como compartir la base de datos entre un grupo de servidores de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para proporcionar una mejor experiencia para el usuario.  
   
  El modo de una base de datos se puede cambiar de muchas formas. En este documento se describen los siguientes escenarios comunes:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36103422"
   
 4.  Asigne una contraseña a la base de datos que se va separar y, a continuación, haga clic en **Aceptar** para ejecutar el comando Detach.  
   
-5.  Busque la **bases de datos** carpeta en el panel izquierdo o derecho de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+5.  Busque el **bases de datos** carpeta en el panel izquierdo o derecho de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 6.  Haga clic en el **bases de datos** carpeta y seleccione **adjuntar...**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36103422"
   
 8.  Seleccione el modo de lectura/escritura para la base de datos.  
   
-9. Escriba la contraseña que se utilizó en el paso 3 y haga clic en **Aceptar** para ejecutar el comando attach.  
+9. Escriba la contraseña que utilizó en el paso 3 y haga clic en **Aceptar** para ejecutar el comando attach.  
   
 #### <a name="to-switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>Para cambiar el modo de lectura/escritura de una base de datos mediante programación a través de AMO  
   

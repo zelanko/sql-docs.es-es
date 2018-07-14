@@ -1,5 +1,5 @@
 ---
-title: Características y tareas de Integration Services | Documentos de Microsoft
+title: Características y tareas de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - development [Integration Services]
 - Integration Services, programming
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 611219cbefc037bc0719b1f48b46178d6eef8af2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 451b29e05d7bcb3dfca26a1f6c5287bf47e20f90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186632"
 ---
 # <a name="integration-services-features-and-tasks"></a>Características y tareas de Integration Services
-  Busque información que cualquiera: diseñador, programador, analista o administrador: necesita para crear y desarrollar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] paquetes. A continuación, obtenga información sobre cómo incorporar esos paquetes a las aplicaciones y sitios web.  
+  Busque información que cualquiera, diseñador, programador, analista o administrador, necesita para crear y desarrollar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] paquetes. A continuación, obtenga información sobre cómo incorporar esos paquetes a las aplicaciones y sitios web.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Servicios de integración &#40;SSIS&#41; y entornos de Studio](integration-services-ssis-development-and-management-tools.md)  
@@ -54,7 +54,7 @@ ms.locfileid: "36102891"
   
  [Execution of Projects and Packages](packages/run-integration-services-ssis-packages.md) (Ejecución de proyectos y paquetes)  
   
- [Supervisión de ejecuciones de paquetes y otras operaciones](performance/monitor-running-packages-and-other-operations.md)  
+ [Supervisar las ejecuciones de paquetes y otras operaciones](performance/monitor-running-packages-and-other-operations.md)  
   
  [Información general sobre seguridad &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Editor de tareas de cola de mensajes (página recibir) | Documentos de Microsoft
+title: Editor de la tarea cola de mensajes (página recibir) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.receive.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 458b1ddb5453a65dbfd96a9231f18b0ea81f507c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 384d15668d835db7d75f9e612595d00d83f41da4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256831"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor de la tarea Cola de mensajes (página Recibir)
   Use la página **Recibir** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para configurar una tarea de la cola de mensajes para recibir mensajes de [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ).  
@@ -140,8 +140,8 @@ ms.locfileid: "36104297"
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de tareas de cola de mensajes &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de tareas de cola de mensajes &#40;Enviar página&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
+ [Editor de la tarea cola de mensajes &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea cola de mensajes &#40;Enviar página&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [Página expresiones](expressions/expressions-page.md)   
  [Tarea Cola de mensajes](control-flow/message-queue-task.md)  
   

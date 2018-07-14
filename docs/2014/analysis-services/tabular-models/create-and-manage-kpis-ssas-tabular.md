@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar KPI (SSAS Tabular) | Documentos de Microsoft
+title: Crear y administrar KPI (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.kpi.f1
 ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5eabccab4bcb43175ea9da5813c75d5a4f890d80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 735d471cdfb847a56cb4b30857a097d8acd7e8b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302815"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>Crear y administrar KPI (SSAS tabular)
   En este tema se describe cómo crear, editar o eliminar un KPI (indicador clave de rendimiento) en un modelo tabular. Para crear un KPI, seleccione una medida que se evalúe como el valor base del KPI. A continuación, use el cuadro de diálogo Indicador clave de rendimiento para seleccionar una segunda medida o un valor absoluto que se evalúe como un valor de destino. Después puede definir umbrales de estado que miden el rendimiento entre las medidas Base y Destino.  
@@ -87,8 +87,8 @@ ms.locfileid: "36103911"
 |Tendencia|ALT+T|  
   
 ## <a name="see-also"></a>Vea también  
- [KPI &#40;SSAS Tabular&#41;](kpis-ssas-tabular.md)   
- [Las medidas &#40;SSAS Tabular&#41;](measures-ssas-tabular.md)   
- [Crear y administrar medidas &#40;SSAS Tabular&#41;](create-and-manage-measures-ssas-tabular.md)  
+ [KPI &#40;Tabular de SSAS&#41;](kpis-ssas-tabular.md)   
+ [Las medidas &#40;Tabular de SSAS&#41;](measures-ssas-tabular.md)   
+ [Crear y administrar medidas &#40;Tabular de SSAS&#41;](create-and-manage-measures-ssas-tabular.md)  
   
   

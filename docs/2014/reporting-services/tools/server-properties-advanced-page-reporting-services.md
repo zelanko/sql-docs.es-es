@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: erikre
-ms.openlocfilehash: 81c0e6a2bce527404e7c4f59c10a914e3ac938b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b8459ccb49c2e8d2d681cada3646d7d9aa447b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258131"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propiedades del servidor (página de opciones avanzadas) - Reporting Services
   Use esta página para establecer las propiedades del sistema en el servidor de informes. Hay varias maneras de establecer las propiedades del sistema. Esta herramienta proporciona una interfaz de usuario gráfica para que pueda establecer propiedades sin tener que escribir código.  
@@ -39,10 +39,10 @@ ms.locfileid: "36104179"
  Determina si el control ActiveX RSClientPrint está disponible para descargarlo del servidor de informes. Los valores válidos son `true` y `false`. El valor predeterminado es `true`. Para más información sobre opciones de configuración adicionales necesarias para este control, vea [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  **EnableExecutionLogging**  
- Indica si el registro de ejecución de informes está habilitado. El valor predeterminado es `true`. Para obtener más información sobre el registro de ejecución del servidor de informes, consulte [registro de ejecución del servidor de informes y la vista ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
+ Indica si el registro de ejecución de informes está habilitado. El valor predeterminado es `true`. Para obtener más información sobre el registro de ejecución del servidor de informes, vea [registro de ejecución del servidor de informes y la vista ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  **ExecutionLogDaysKept**  
- Número de días que mantener la información de ejecución de informes en el registro de ejecución. Los valores válidos para esta propiedad son `-1` a través de `2`,`147`,`483`,`647`. Si el valor es `-1` no se eliminan las entradas de la tabla del registro de ejecución. El valor predeterminado es `60`.  
+ Número de días que mantener la información de ejecución de informes en el registro de ejecución. Los valores válidos para esta propiedad incluyen `-1` a través de `2`,`147`,`483`,`647`. Si el valor es `-1` no se eliminan las entradas de la tabla del registro de ejecución. El valor predeterminado es `60`.  
   
  **SessionTimeout**  
  El período, en segundos, que una sesión permanece activa. El valor predeterminado es `600`.  
@@ -88,7 +88,7 @@ ms.locfileid: "36104179"
  `False` = la seguridad integrada de Windows no está habilitada. No se ejecutarán los orígenes de datos de informes que se configuran para usar la seguridad integrada de Windows.  
   
  `EnableLoadReportDefinition`  
- Seleccione esta opción para especificar si los usuarios pueden realizar la ejecución de notificaciones ad hoc desde un informe del Generador de informes. Esta opción determina el valor de la `EnableLoadReportDefinition` propiedad del servidor de informes.  
+ Seleccione esta opción para especificar si los usuarios pueden realizar la ejecución de notificaciones ad hoc desde un informe del Generador de informes. Al establecer esta opción determina el valor de la `EnableLoadReportDefinition` propiedad del servidor de informes.  
   
  Si desactiva esta opción, la propiedad se establecerá en False y el servidor de informes no generará informes click-through para los informes que usan un modelo de informe como origen de datos. Se bloquearán las llamadas al método LoadReportDefinition.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36104179"
  Especifica el número de segundos tras los cuales se agotará el tiempo de espera para una sesión de edición de informes. El valor predeterminado es de 7200 segundos (2 horas).  
   
  **EnableTestConnectionDetailedErrors**  
- Indica si se han enviado al equipo cliente los mensajes de error detallados cuando los usuarios prueban las conexiones a orígenes de datos mediante el servidor de informes. El valor predeterminado es `true`. Si la opción se establece en `false`, se envían sólo los mensajes de error genéricos.  
+ Indica si se han enviado al equipo cliente los mensajes de error detallados cuando los usuarios prueban las conexiones a orígenes de datos mediante el servidor de informes. El valor predeterminado es `true`. Si la opción se establece en `false`, solo los mensajes de error genéricos se envían.  
   
 ## <a name="see-also"></a>Vea también  
  [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

@@ -1,5 +1,5 @@
 ---
-title: Administración de soluciones de minería de datos y objetos | Documentos de Microsoft
+title: Administración de soluciones de minería de datos y objetos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6ea150e4f35eaa1e9251f17894c7f0cf665439ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f20cc2fe28f5d798f3521a36aebcfe346aa643d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218305"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Administración de las soluciones y los objetos de minería de datos
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona herramientas cliente que puede utilizar para administrar estructuras y modelos de minería de datos existentes. Esta sección describe las operaciones de administración que puede realizar con cada entorno.  
@@ -34,12 +34,12 @@ ms.locfileid: "36105996"
   
  [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](processing-requirements-and-considerations-data-mining.md)  
   
- [Usar SQL Server Profiler para supervisar la minería de datos &#40;Analysis Services: minería de datos&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [Uso de SQL Server Profiler para supervisar la minería de datos &#40;Analysis Services - minería de datos&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>Ubicación de los objetos de minería de datos  
  Las estructuras y los modelos de minería de datos que se han procesado se almacenan en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- Si crea una conexión a un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la base de datos `Immediate` objetos modo al desarrollar la minería de datos, los objetos que cree se agregan inmediatamente en el servidor mientras trabaja. Sin embargo, si diseña los objetos de minería de datos en modo **Sin conexión** , que es el predeterminado cuando se trabaja en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], los objetos de minería que cree solo serán contenedores de metadatos, hasta que los implemente en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por lo tanto, siempre que realice un cambio en un objeto, deberá volver a implementarlo en el servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre la arquitectura de minería de datos, vea [Arquitectura física &#40;Analysis Services - Minería de datos&#41;](physical-architecture-analysis-services-data-mining.md).  
+ Si crea una conexión a un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la base de datos `Immediate` objetos modo al desarrollar la minería de datos, los objetos que cree se agregan inmediatamente al servidor mientras trabaja. Sin embargo, si diseña los objetos de minería de datos en modo **Sin conexión** , que es el predeterminado cuando se trabaja en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], los objetos de minería que cree solo serán contenedores de metadatos, hasta que los implemente en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por lo tanto, siempre que realice un cambio en un objeto, deberá volver a implementarlo en el servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre la arquitectura de minería de datos, vea [Arquitectura física &#40;Analysis Services - Minería de datos&#41;](physical-architecture-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  Algunos clientes, como los complementos de minería de datos para [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007, también permiten crear modelos de minería de datos y estructuras de minería de datos de sesión que usan una conexión a una instancia, aunque solo almacenan la estructura y los modelos de minería de datos en el servidor durante el transcurso de la sesión. Aun así, podrá administrar estos modelos a través del cliente, al igual que si las estructuras y los modelos estuvieran almacenados en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Sin embargo, los objetos no se conservarán después de que se desconecte de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -55,7 +55,7 @@ ms.locfileid: "36105996"
   
 -   [Cambiar las propiedades de un modelo de minería de datos](change-the-properties-of-a-mining-model.md)  
   
--   [Ver o cambiar las marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)  
+-   [Ver o cambiar marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)  
   
 -   [Ver o cambiar parámetros del algoritmo](view-or-change-algorithm-parameters.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36105996"
 > [!WARNING]  
 >  Todos los cambios realizados en una estructura o modelo de minería de datos, incluso los cambios realizados en los metadatos, como un nombre o una descripción, requieren que se vuelva a procesar la estructura o modelo.  
   
- Si no tiene el archivo de solución que se usó para crear el proyecto de minería de datos o los objetos, puede importar el proyecto existente desde el servidor mediante el Asistente para importación de Analysis Services, realizar modificaciones en los objetos y, a continuación, volver a implementarlo con la `Incremental` opción. Para obtener más información, vea [Importar un proyecto de minería de datos mediante el Asistente para la importación de Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
+ Si no tiene el archivo de solución que se usó para crear el proyecto de minería de datos u objetos, puede importar el proyecto existente desde el servidor mediante el Asistente para importación de Analysis Services, realizar modificaciones en los objetos y, a continuación, volver a implementarlo con el `Incremental` opción. Para obtener más información, vea [Importar un proyecto de minería de datos mediante el Asistente para la importación de Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>Administrar objetos de minería de datos en SQL Server Management Studio  
  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede crear scripts, procesar o eliminar estructuras y modelos de minería de datos. Solo podrá visualizar un conjunto limitado de propiedades utilizando el Explorador de objetos; sin embargo, puede ver metadatos adicionales relativos a los modelos de minería de datos abriendo una ventana de **consultas DMX** y seleccionando una estructura de minería de datos.  
@@ -88,7 +88,7 @@ ms.locfileid: "36105996"
 ### <a name="data-mining-extensions-dmx"></a>Extensiones de minería de datos (DMX)  
  Las extensiones de minería de datos (DMX) se pueden utilizar con otras interfaces de comandos, como [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o ADOMD.Net para crear, eliminar y consultar estructuras y modelos de minería de datos.  
   
--   [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](/sql/dmx/dmx-statements-data-definition)  
+-   [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](/sql/dmx/dmx-statements-data-definition)  
   
  **Restricciones:** algunas propiedades no se pueden cambiar utilizando DMX.  
   

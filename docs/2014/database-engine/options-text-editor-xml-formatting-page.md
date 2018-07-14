@@ -1,5 +1,5 @@
 ---
-title: 'Opciones (Editor de texto: XML - página formato) | Documentos de Microsoft'
+title: Opciones (Editor de texto - XML - página formato) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Formatting
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 caps.latest.revision: 12
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d77f7351d712f63e9cfc92c3ff03b131cb6d5d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 667b01cbdaa1e5107dcbac8a68879a94d6efc06e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209595"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Opciones (Editor de texto - XML - Página Formato)
   Este cuadro de diálogo permite especificar la configuración de formato del Editor XML. Puede tener acceso al cuadro de diálogo **Opciones** desde el menú **Herramientas**.  
@@ -36,7 +36,7 @@ ms.locfileid: "36104763"
 > [!NOTE]  
 >  Si los atributos se encuentran en varias líneas, el editor sangra cada línea de atributos para que coincida con el sangrado del elemento primario.  
   
- **Alinear los atributos en una línea independiente**  
+ **Alinear cada atributo en una línea independiente**  
  Los atributos segundo y siguientes se alinean verticalmente para coincidir con el sangrado del primer atributo. El siguiente texto XML es un ejemplo de alineación de los atributos.  
   
 ```  
@@ -50,7 +50,7 @@ ms.locfileid: "36104763"
  **Al pegar desde el Portapapeles.**  
  Vuelve a dar formato al texto XML pegado desde el portapapeles.  
   
- **En la realización de la etiqueta de cierre**  
+ **Al finalizar la etiqueta de cierre**  
  Vuelve a dar formato al elemento cuando se completa la etiqueta final.  
   
 ## <a name="mixed-content"></a>Contenido mixto  

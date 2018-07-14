@@ -1,5 +1,5 @@
 ---
-title: Elemento Properties (XMLA) | Documentos de Microsoft
+title: Elemento Properties (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Properties element
 ms.assetid: 0b5468e5-bf23-4d22-862f-72e27a9fff2f
 caps.latest.revision: 30
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 66accb9aab2c970c1fd09b1e14408b5585269d7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 99cb1b43ad7629fd87759d5ea724e068319152b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237235"
 ---
 # <a name="properties-element-xmla"></a>Elemento Properties (XMLA)
-  Contiene el XML de propiedades de Analysis (XMAL) utilizadas por la [Discover](../xml-elements-methods-discover.md) y [Execute](../xml-elements-methods-execute.md) métodos.  
+  Contiene el XML de propiedades de Analysis (XMAL) utilizadas por el [Discover](../xml-elements-methods-discover.md) y [Execute](../xml-elements-methods-execute.md) métodos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36104783"
 ## <a name="remarks"></a>Notas  
  El elemento `Properties` representa las propiedades XMLA usadas para controlar aspectos de los métodos `Discover` y `Execute`, como definir la información requerida para establecer conexión con el origen de datos, especificando el formato de devolución del conjunto de resultados o especificando la configuración regional en la que se debe dar formato a los datos.  
   
- Las propiedades disponibles y sus valores pueden obtenerse mediante el tipo de solicitud DISCOVER_PROPERTIES con el `Discover` método.  
+ Se pueden obtener las propiedades disponibles y sus valores con el tipo de solicitud DISCOVER_PROPERTIES con el `Discover` método.  
   
 ## <a name="example"></a>Ejemplo  
   

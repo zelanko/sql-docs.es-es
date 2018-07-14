@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_TRANSACTIONS | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_TRANSACTIONS | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 85789177-c5df-4336-a90c-c20d69277ab4
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3869d4f8cd3adf96bd006a8669d7d82778b02450
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 979067978855e8aa1012deb8df39bea61862fdeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204555"
 ---
 # <a name="discovertransactions-rowset"></a>Conjunto de filas DISCOVER_TRANSACTIONS
   Devuelve el conjunto actual de transacciones pendientes en el sistema.  
@@ -28,7 +28,7 @@ ms.locfileid: "36105266"
  **Se aplica a:** modelos tabulares, modelos multidimensionales  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_TRANSACTIONS` filas contiene las columnas siguientes.  
+ El `DISCOVER_TRANSACTIONS` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Descripción|  
 |-----------------|--------------------|-----------------|  
@@ -41,7 +41,7 @@ ms.locfileid: "36105266"
  Este conjunto de filas de esquema no está ordenado.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DISCOVER_TRANSACTIONS` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DISCOVER_TRANSACTIONS` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |**Nombre de columna**|**Indicador de tipo**|**Estado de restricción**|  
 |---------------------|------------------------|---------------------------|  

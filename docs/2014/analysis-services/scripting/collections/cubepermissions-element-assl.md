@@ -1,5 +1,5 @@
 ---
-title: Elemento CubePermissions (ASSL) | Documentos de Microsoft
+title: Elemento CubePermissions (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CubePermissions element
 ms.assetid: 75a3a0c2-e1d4-4896-b0f5-2ea9c769b927
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d55b74204090e14e48ad0cf9ab30aa6b03680416
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 81b7e07f04c248747da81093fd3c9383665a3eb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178882"
 ---
 # <a name="cubepermissions-element-assl"></a>Elemento CubePermissions (ASSL)
-  Contiene la colección de permisos aplicable a una [cubo](../objects/cube-element-assl.md) elemento.  
+  Contiene la colección de permisos aplicable a un [cubo](../objects/cube-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36102923"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Cubo](../objects/cube-element-assl.md)|  
-|Elementos secundarios|[CubePermission](../objects/cubepermission-element-assl.md)|  
+|Elementos secundarios|[Elemento CubePermission](../objects/cubepermission-element-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.CubePermissionCollection>.  

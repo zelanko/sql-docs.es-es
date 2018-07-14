@@ -1,5 +1,5 @@
 ---
-title: 'No pueden actualizar los datos de una conexión de datos del libro. Vuelva a intentarlo o póngase en contacto con el administrador del sistema. No se pudieron actualizar las siguientes conexiones: datos de PowerPivot | Documentos de Microsoft'
+title: 'No pueden actualizar los datos de una conexión de datos del libro. Vuelva a intentarlo o póngase en contacto con el administrador del sistema. No se pudieron actualizar las siguientes conexiones: datos PowerPivot | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 705aa014770346e7554a41d01a75235b3e2a0451
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 396b4b32d2af95b8c7d49beab0fde988d2bee903
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220275"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>No pueden actualizar los datos de una conexión de datos del libro. Vuelva a intentarlo o póngase en contacto con el administrador del sistema. No se pudieron actualizar las siguientes conexiones: datos PowerPivot
   Para los libros de Excel que contienen datos PowerPivot, Excel Services devuelve este error si envía una solicitud de conexión a un servidor PowerPivot y se produce un error en la solicitud.  
@@ -44,13 +44,13 @@ ms.locfileid: "36105721"
   
  El libro que intenta abrir podría haberse creado en la versión SQL Server 2008 R2 de PowerPivot para Excel. Probablemente, el proveedor de datos de Analysis Services que se especifica en la cadena de conexión de datos no está presente en el equipo que controla la solicitud.  
   
- Si este es el caso, encontrará este mensaje en el registro de ULS: "Error al actualizar ' PowerPivot' en el libro '\<dirección URL al libro >'", seguido de "No se puede establecer una conexión".  
+ Si este es el caso, encontrará este mensaje en el registro de ULS: "Error al actualizar ' PowerPivot' en el libro '\<dirección URL al libro >'", seguido de "No se puede obtener una conexión".  
   
  Para determinar la versión del libro, ábralo en Excel y compruebe qué proveedor de datos se especifica en la cadena de conexión. Un libro de SQL Server 2008 R2 usa MSOLAP.4 como su proveedor de datos.  
   
  Para evitar este problema, puede actualizar el libro. Opcionalmente, puede instalar las bibliotecas cliente de la versión SQL Server 2008 R2 de Analysis Services en los equipos físicos que ejecutan PowerPivot para SharePoint o Excel Services:  
   
- [Instalar al proveedor de Analysis Services OLE DB en servidores de SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
+ [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
   
  **Escenario 2b: Excel Services se ejecuta en un servidor de aplicaciones que tiene una versión incorrecta de las bibliotecas de cliente**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36105721"
   
  Para evitar este problema, una el equipo al mismo dominio del servidor PowerPivot o instale un controlador de dominio en el equipo local. La segunda solución, instalar el controlador de dominio, le exigirá que cree cuentas de dominio locales para todos los servicios y usuarios. Tendrá que configurar cuentas de servicio y permisos de SharePoint para las cuentas que defina.  
   
- La instalación de un controlador de dominio en el equipo resulta útil si desea utilizar PowerPivot para SharePoint en un estado sin conexión. Para obtener instrucciones detalladas sobre cómo utilizar PowerPivot sin conexión, vea la entrada del blog "Quitar el servidor de PowerPivot fuera de la red" [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
+ La instalación de un controlador de dominio en el equipo resulta útil si desea utilizar PowerPivot para SharePoint en un estado sin conexión. Para obtener instrucciones detalladas sobre cómo utilizar PowerPivot sin conexión, consulte la entrada de blog "Adoptar el servidor de PowerPivot fuera de la red" [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
   
  **Escenario 4: servidor inestable**  
   

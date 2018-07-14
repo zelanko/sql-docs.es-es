@@ -1,5 +1,5 @@
 ---
-title: Abrir soluciones desde el Control de código fuente | Documentos de Microsoft
+title: Abrir soluciones desde Control de código fuente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - opening solutions
 - solutions [SQL Server Management Studio], opening
 ms.assetid: a96a1f0d-0183-4587-a3b0-4598309cbdd2
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d7b626cd1d4868e078174830bcfbaa4cc7abdc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0767df9d8ad010e17560b1f2b5e2e227d52a9f99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285701"
 ---
 # <a name="open-solutions-from-source-control"></a>Abrir soluciones desde el control de código fuente
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] se puede utilizar para abrir soluciones directamente desde el control de código fuente. Al hacer esto, el entorno de Studio crea una copia de la última versión de los archivos de la solución en la ubicación que se especifique.  
@@ -42,9 +42,9 @@ ms.locfileid: "36104108"
   
 4.  Si ya existe una carpeta de trabajo para la solución en la unidad de disco local, el **crear un nuevo proyecto en la carpeta** cuadro cambia para identificar el directorio local. Si no hay una carpeta de trabajo para la solución, puede escribir la ruta o ir al directorio local en el que debe abrirse la solución.  
   
-5.  En el **solución abierta** cuadro de diálogo, seleccione el archivo de solución y haga clic en **Aceptar**.  
+5.  En el **Abrir solución** cuadro de diálogo, seleccione el archivo de solución y haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Abrir proyectos desde el Control de código fuente](../../2014/database-engine/open-projects-from-source-control.md)  
+ [Abrir proyectos desde el control de código fuente](../../2014/database-engine/open-projects-from-source-control.md)  
   
   

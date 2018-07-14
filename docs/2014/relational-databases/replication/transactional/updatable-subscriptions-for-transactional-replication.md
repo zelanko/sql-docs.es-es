@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
 - updatable subscriptions, about updatable subscriptions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3a7af7b2b8da4c51b72e05a7225a4a18224b377a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 38e7b5970295bec4170c8658c254214f40d250ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268671"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "36103995"
   
  Para habilitar las suscripciones actualizables para publicaciones transaccionales, [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
- Para crear suscripciones actualizables para publicaciones transaccionales, vea [crear una suscripción actualizable en una publicación transaccional](../create-updatable-subscription-transactional-publication-transact-sql.md)  
+ Para crear suscripciones actualizables para publicaciones transaccionales, vea [crear una suscripción actualizable a una publicación transaccional](../create-updatable-subscription-transactional-publication-transact-sql.md)  
   
 ## <a name="switching-between-update-modes"></a>Cambio entre modos de actualización  
  Al utilizar las suscripciones actualizables, puede especificar que una suscripción utilice un modo de actualización y, después, cambie al otro si la aplicación lo requiere. Por ejemplo, puede especificar que una suscripción utilice la actualización inmediata, pero cambie a la actualización en cola si se pierde la conectividad de red por un error del sistema.  
@@ -80,13 +80,13 @@ ms.locfileid: "36103995"
   
 -   Las actualizaciones en el suscriptor se propagan al publicador incluso cuando una suscripción ha expirado o está inactiva. Asegúrese de que tales suscripciones se quitan o reinicializan.  
   
--   Si `TIMESTAMP` o `IDENTITY` las columnas se utilizan y se replican como sus tipos de base de datos, valores de estas columnas no se deben actualizar en el suscriptor.  
+-   Si `TIMESTAMP` o `IDENTITY` se usan columnas y se replican como sus tipos de base de datos, los valores de estas columnas no se deben actualizar en el suscriptor.  
   
--   Los suscriptores no pueden actualizar o insertar `text`, `ntext` o `image` valores porque no es posible leer en las tablas insertadas o eliminadas dentro de los desencadenadores de seguimiento de cambios de replicación. De forma similar, los suscriptores no pueden actualizar o insertar `text` o `image` valores mediante `WRITETEXT` o `UPDATETEXT` porque el publicador sobrescribe los datos. En su lugar, puede dividir el `text` y `image` columnas a otro de la tabla y modificar las dos tablas en una transacción.  
+-   Los suscriptores no pueden actualizar o insertar `text`, `ntext` o `image` valores porque no es posible leer en las tablas insertadas o eliminadas dentro de los desencadenadores de seguimiento de cambios de replicación. De forma similar, los suscriptores no pueden actualizar o insertar `text` o `image` valores utilizando `WRITETEXT` o `UPDATETEXT` porque el publicador sobrescribe los datos. En su lugar, puede dividir la `text` y `image` columnas en otra tabla y modificar las dos tablas en una transacción.  
   
-     Para actualizar objetos grandes en un suscriptor, utilice los tipos de datos `varchar(max)`, `nvarchar(max)`, `varbinary(max)` en lugar de `text`, `ntext`, y `image` tipos de datos, respectivamente.  
+     Para actualizar los objetos grandes en el suscriptor, utilice los tipos de datos `varchar(max)`, `nvarchar(max)`, `varbinary(max)` en lugar de `text`, `ntext`, y `image` tipos de datos, respectivamente.  
   
--   No se permiten actualizaciones de claves únicas (incluidas las claves principales) que generen duplicados (por ejemplo, una actualización con el formato `UPDATE <column> SET <column> =<column>+1` ) y se rechazarán debido a una infracción de unicidad. Esto es porque las actualizaciones de conjuntos realizadas en el suscriptor se propagan mediante la replicación como usuario individual `UPDATE` instrucciones para cada fila afectada.  
+-   No se permiten actualizaciones de claves únicas (incluidas las claves principales) que generen duplicados (por ejemplo, una actualización con el formato `UPDATE <column> SET <column> =<column>+1` ) y se rechazarán debido a una infracción de unicidad. Esto es porque las actualizaciones de conjuntos realizadas en el suscriptor se propagan por la replicación como persona `UPDATE` instrucciones para cada fila afectada.  
   
 -   Si se realiza una partición horizontal de la base de datos de suscriptor y hay filas en la partición que existen en el suscriptor pero no en el publicador, el suscriptor no podrá actualizar las filas preexistentes. Si intenta actualizar estas filas, se obtendrá un error. Las filas deben eliminarse de la tabla e insertarse de nuevo.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36103995"
   
 -   No se recomienda realizar actualizaciones en columnas de clave principal al utilizar la actualización en cola, ya que se utiliza la clave principal como localizador de registros para todas las consultas. Cuando la directiva de resolución de conflictos está establecida en El suscriptor gana, las actualizaciones de las claves principales deben realizarse con precaución. Si se realizan actualizaciones de la clave principal en el publicador y en el suscriptor, el resultado serán dos filas con claves principales diferentes.  
   
--   Para las columnas de tipo de datos `SQL_VARIANT`: cuando los datos se insertan o actualizan en el suscriptor, se asigna de la manera siguiente por el agente de lector de cola al copiarlos del suscriptor a la cola:  
+-   Las columnas de tipo de datos `SQL_VARIANT`: cuando los datos se insertan o actualizan en el suscriptor, que se asigna del siguiente modo por el agente de lector de cola al copiarlos del suscriptor a la cola:  
   
     -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY`, y `SMALLMONEY` se asignan a `NUMERIC`.  
   

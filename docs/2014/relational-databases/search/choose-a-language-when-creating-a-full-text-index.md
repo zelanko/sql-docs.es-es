@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - full-text indexes [SQL Server], languages
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7d6f87d5916bcda7db3ff52fcca222d2c3f21816
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3ce5d56ec84c1dcf33e3a915a8fa8bf94b1cdced
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268681"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Elegir un idioma al crear un índice de texto completo
   Al crear un índice de texto completo, tiene que especificar un idioma de columna para la columna indizada. Las consultas de texto completo usarán el [separador de palabras y los lematizadores](configure-and-manage-word-breakers-and-stemmers-for-search.md) del idioma especificado en la columna. Hay varios aspectos que deben tenerse en cuenta al elegir el idioma de columna cuando se crea un índice de texto completo. Estas consideraciones se refieren al modo en que se acorta el texto y se indiza a continuación mediante el motor de texto completo.  
@@ -40,7 +39,7 @@ ms.locfileid: "36104272"
  Esta sección proporciona una introducción a los separadores de palabras y lematizadores, y explica cómo usa la búsqueda de texto completo el LCID del idioma de columna.  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>Introducción a los separadores de palabras y lematizadores  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores incluyen una nueva familia completa de separadores de palabras y lematizadores que son significativamente mejores que los que estaban disponibles anteriormente en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores incluyen una nueva familia completa de separadores de palabras y lematizadores que son significativamente mejores que los que estaban disponibles en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  El grupo de idiomas naturales de Microsoft, Microsoft Natural Language Group (MS NLG), implementó estos nuevos componentes lingüísticos y los admite.  
@@ -53,7 +52,7 @@ ms.locfileid: "36104272"
   
 -   Seguridad  
   
-     Los nuevos separadores de palabras están habilitados de forma predeterminada en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gracias a las mejoras de seguridad en componentes lingüísticos. Recomendamos encarecidamente que se firmen los componentes externos, como son los separadores de palabras y los filtros, con el fin de mejorar la seguridad total y la solidez de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Puede configurar el texto completo para comprobar que estos componentes se firman de la forma siguiente:  
+     Los nuevos separadores de palabras están habilitados de forma predeterminada en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gracias a las mejoras de seguridad de los componentes lingüísticos. Recomendamos encarecidamente que se firmen los componentes externos, como son los separadores de palabras y los filtros, con el fin de mejorar la seguridad total y la solidez de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Puede configurar el texto completo para comprobar que estos componentes se firman de la forma siguiente:  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -63,7 +62,7 @@ ms.locfileid: "36104272"
   
      Los separadores de palabras se han rediseñado y las pruebas muestran que los nuevos proporcionan una mejor calidad semántica que los anteriores. De esta forma, se incrementa la exactitud de recuperación.  
   
--   Cobertura de una amplia lista de idiomas, los separadores de palabras se incluyen en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] directamente y habilita de forma predeterminada.  
+-   Cobertura de una amplia lista de idiomas, los separadores de palabras se incluyen en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] directamente y habilitado de forma predeterminada.  
   
  Para obtener una lista de los idiomas para los que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye un separador de palabras y lematizadores, vea [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
@@ -73,7 +72,7 @@ ms.locfileid: "36104272"
  Al crear un índice de texto completo, tiene que especificar un nombre de idioma válido para cada columna. Si un nombre de idioma es válido pero no lo devuelve la vista de catálogo [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) , la búsqueda de texto completo vuelve al nombre de idioma disponible más próximo de la misma familia de idiomas, si lo hubiera. De lo contrario, la búsqueda de texto completo retrocede al separador de palabras neutro. Este comportamiento de retroceso podría afectar a la exactitud de recuperación. Por consiguiente recomendamos encarecidamente que especifique un nombre de idioma válido y disponible para cada columna al crear un índice de texto completo.  
   
 > [!NOTE]  
->  El LCID se utiliza con todos los tipos de datos elegibles para la indización de texto completo (como `char` o `nchar`). Si tiene el criterio de ordenación de un `char`, `varchar`, o `text` establecido en una configuración diferente del idioma identificado por el LCID, el LCID de idioma de columna de tipo se usa de todos modos durante la indización y consultas de esas columnas de texto completo.  
+>  El LCID se utiliza con todos los tipos de datos elegibles para la indización de texto completo (como `char` o `nchar`). Si tiene el criterio de ordenación de un `char`, `varchar`, o `text` establecido en una configuración diferente del idioma identificado por el LCID, el LCID de idioma de columna de tipo se usa durante la indización y consultas de esas columnas de texto completo de todos modos.  
   
 
   

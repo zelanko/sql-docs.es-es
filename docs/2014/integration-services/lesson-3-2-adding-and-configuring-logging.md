@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 caps.latest.revision: 22
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4d0bd778d04b00c2d90da3cd6a77ca1bf8f9c830
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c8aeee9c6d0d11ba5dbb482e02595802c5d76fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281371"
 ---
 # <a name="step-2-adding-and-configuring-logging"></a>Paso 2: Agregar y configurar el registro
   En esta tarea, habilitará el registro del flujo de datos del paquete Lesson 3.dtsx. A continuación, configurará un proveedor de registro de archivos de texto para registrar los eventos PipelineExecutionPlan y PipelineExecuteTrees. El proveedor de registro de archivos de texto crea registros que pueden verse y transportarse con facilidad. La sencillez de estos archivos de registro hace que sean especialmente útiles durante la fase de prueba básica de un paquete. También puede ver las entradas del archivo de registro en la ventana Registrar eventos del Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
@@ -38,11 +38,11 @@ ms.locfileid: "36104730"
   
 5.  Si lo desea, modifique el campo **Descripción**.  
   
-6.  En el **configuración** columna, haga clic en  **\<nueva conexión >** para especificar el destino en el que se escribe la información del registro.  
+6.  En el **configuración** columna, haga clic en  **\<nueva conexión >** para especificar el destino al que se escribe la información del registro.  
   
      En el cuadro de diálogo **Editor del administrador de conexiones de archivos** , en **Tipo de uso**, seleccione **Crear archivo**y, a continuación, haga clic en **Examinar**. De forma predeterminada, el cuadro de diálogo **Seleccionar archivo** abre la carpeta del proyecto, pero puede guardar la información de registro en cualquier ubicación.  
   
-7.  En el **Seleccionar archivo** cuadro de diálogo, en la **nombre de archivo** cuadro, escriba `TutorialLog.log`y haga clic en **abrir**.  
+7.  En el **Seleccionar archivo** cuadro de diálogo el **nombre de archivo** cuadro, escriba `TutorialLog.log`y haga clic en **abierto**.  
   
 8.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Editor del administrador de conexiones de archivos** .  
   

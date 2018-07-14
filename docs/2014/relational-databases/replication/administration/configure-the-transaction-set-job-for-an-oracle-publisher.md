@@ -1,5 +1,5 @@
 ---
-title: Configurar el trabajo del conjunto de transacciones para un publicador de Oracle (programación de replicación Transact-SQL) | Documentos de Microsoft
+title: Configurar el trabajo de conjunto de transacciones para un publicador de Oracle (programación de replicación Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: beea1a5c-0053-4971-a68f-0da53063fcbb
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c16d9dbd07be6b66a81e1e9e4f9745b80dccfc0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8da949228afdfa4b0e6407205f1a995ee80fb343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248385"
 ---
 # <a name="configure-the-transaction-set-job-for-an-oracle-publisher-replication-transact-sql-programming"></a>Configurar el trabajo del conjunto de transacciones para un publicador de Oracle (programación de la replicación con Transact-SQL)
   El trabajo **Xactset** es un trabajo de base de datos de Oracle creado por replicación que se ejecuta en un publicador de Oracle para crear conjuntos de transacciones cuando el agente de registro del LOG no está conectado al publicador. Puede habilitar y configurar este trabajo desde el distribuidor mediante programación con procedimientos almacenados de replicación. Para obtener más información, consulte [Optimizar el rendimiento de publicadores de Oracle](../non-sql/performance-tuning-for-oracle-publishers.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "36103766"
   
 2.  En el distribuidor, ejecute [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Especifique el nombre del publicador de Oracle en **@publisher**, el nombre de la propiedad del trabajo Xactset que se establece en **@propertyname**y la nueva configuración en **@propertyvalue**.  
   
-3.  (Opcional) Repita el paso 2 para cada propiedad del trabajo Xactset que se establece. Cuando se cambia el `xactsetjobinterval` propiedad, debe reiniciar el trabajo en el publicador de Oracle para el nuevo intervalo surta efecto.  
+3.  (Opcional) Repita el paso 2 para cada propiedad del trabajo Xactset que se establece. Al cambiar el `xactsetjobinterval` propiedad, debe reiniciar el trabajo en el publicador de Oracle para el nuevo intervalo surta efecto.  
   
 ### <a name="to-view-properties-of-the-transaction-set-job"></a>Para ver las propiedades del trabajo del conjunto de transacciones  
   

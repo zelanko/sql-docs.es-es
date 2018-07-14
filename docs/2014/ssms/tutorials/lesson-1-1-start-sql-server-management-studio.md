@@ -5,21 +5,19 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
-caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2f928645fb89757b2284628d0400847cf5f3a1f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 97aae9bc9e495694868c2f8dec8570cdb1742fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104162"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270231"
 ---
 # <a name="start-sql-server-management-studio"></a>Iniciar SQL Server Management Studio
   Para empezar este tutorial, veamos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -28,7 +26,7 @@ ms.locfileid: "36104162"
   
 #### <a name="to-open-sql-server-management-studio"></a>Para abrir SQL Server Management Studio  
   
-1.  En el **iniciar** menú, elija **todos los programas**, seleccione [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y, a continuación, haga clic en **SQL Server Management Studio**.  
+1.  En el **iniciar** menú, elija **todos los programas**, apunte a [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y, a continuación, haga clic en **SQL Server Management Studio**.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no está instalado de forma predeterminada. Si [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no está disponible, ejecute el programa de instalación para instalarlo. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no está disponible con [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express está disponible como descarga gratuita en el [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), pero tiene una interfaz de usuario diferente que se describe en este tutorial.  
@@ -50,7 +48,7 @@ ms.locfileid: "36104162"
   
      La ventana Servidores registrados aparece encima del Explorador de objetos. Servidores registrados enumera los servidores que el usuario administra habitualmente. Puede agregar y quitar los servidores de esta lista. Solo aparecerán en la lista los servidores de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se encuentren en el equipo donde se ejecuta [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-2.  Si el servidor no aparece, en servidores registrados, haga clic en **motor de base de datos**y, a continuación, haga clic en **actualizar registro de servidor Local**.  
+2.  Si no aparece su servidor, en servidores registrados, haga clic en **motor de base de datos**y, a continuación, haga clic en **actualizar registro de servidor Local**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Conectar con el Explorador de objetos y Servidores registrados](../object/object-explorer.md)  

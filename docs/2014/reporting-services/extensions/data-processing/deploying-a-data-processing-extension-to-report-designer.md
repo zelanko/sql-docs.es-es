@@ -15,15 +15,15 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 caps.latest.revision: 40
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f95040735e7ec8987bfdfd194ef1d7f0933df3ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 25b6bfa824f6004fbd35b3a31e7268ff388fab6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216735"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Cómo implementar una extensión de procesamiento de datos en el Diseñador de informes
   El Diseñador de informes utiliza las extensiones de procesamiento de datos para recuperar y procesar los datos mientras se diseñan los informes. Debería implementar el ensamblado de extensión de procesamiento de datos para el Diseñador de informes como un ensamblado privado. También tiene que realizar una entrada en el archivo de configuración del Diseñador de informes, RSReportDesigner.config.  
@@ -44,13 +44,13 @@ ms.locfileid: "36105772"
     </Extensions>  
     ```  
   
-4.  Agregue una entrada para la extensión de procesamiento de datos que incluye una **extensión** elemento con los valores para la `Name`, `Type`, y `Visible` atributos. La entrada podría tener la apariencia siguiente:  
+4.  Agregue una entrada para la extensión de procesamiento de datos que incluya un **extensión** elemento con los valores para el `Name`, `Type`, y `Visible` atributos. La entrada podría tener la apariencia siguiente:  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     El valor de `Name` es el nombre único de la extensión de procesamiento de datos. El valor de `Type` es una lista separada por comas que incluye una entrada para el espacio de nombres completo de la clase que implementa las interfaces <xref:Microsoft.ReportingServices.Interfaces.IExtension> y <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, seguido del nombre del ensamblado (sin incluir la extensión de archivo .dll). De forma predeterminada, las extensiones de procesamiento de datos están visibles. Para ocultar una extensión de interfaces de usuario, como el Diseñador de informes, agregue un `Visible` atribuir a la **extensión** elemento y establézcalo en `false`.  
+     El valor de `Name` es el nombre único de la extensión de procesamiento de datos. El valor de `Type` es una lista separada por comas que incluye una entrada para el espacio de nombres completo de la clase que implementa las interfaces <xref:Microsoft.ReportingServices.Interfaces.IExtension> y <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, seguido del nombre del ensamblado (sin incluir la extensión de archivo .dll). De forma predeterminada, las extensiones de procesamiento de datos están visibles. Para ocultar una extensión de las interfaces de usuario, por ejemplo, el Diseñador de informes, agregue un `Visible` atributo a la **extensión** elemento y establézcalo en `false`.  
   
 5.  Finalmente, agregue un grupo de código para el ensamblado personalizado que conceda el permiso **FullTrust** para la extensión. Para ello, se agrega el grupo de código al archivo rspreviewpolicy.config, que se encuentra de forma predeterminada en la carpeta C:\Archivos de programa\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies. El grupo de código podría tener la apariencia siguiente:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36105772"
   
 #### <a name="to-enable-the-generic-query-designer-for-a-custom-extension"></a>Para habilitar el diseñador de consultas genérico para una extensión personalizada  
   
--   Agregue la entrada siguiente al archivo RSReportDesigner.config en el **diseñador** elemento, reemplazando el `Name` atributo con el nombre que especificó en las entradas anteriores.  
+-   Agregue la siguiente entrada al archivo RSReportDesigner.config bajo el **diseñador** elemento, reemplazando el `Name` atributo con el nombre que proporcionó en las entradas anteriores.  
   
     ```  
     <Extension Name="ExtensionName" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  

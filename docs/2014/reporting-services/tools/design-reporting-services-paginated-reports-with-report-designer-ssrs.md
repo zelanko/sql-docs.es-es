@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 caps.latest.revision: 74
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 811f80385261b9e688c76c6d7b472db210b7cb13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 109ba047a24211c5a41aebf96ccb373a546c26c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218955"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Diseñar informes con el Diseñador de informes (SSRS)
   Use el Diseñador de informes para crear informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y soluciones de informes completos. El Diseñador de informes proporciona una interfaz gráfica en la que se pueden definir orígenes de datos, conjuntos de datos y consultas, posiciones de diseño del informe para las regiones de datos y campos, y características interactivas como parámetros y conjuntos de informes que funcionan conjuntamente.  
@@ -54,7 +54,7 @@ ms.locfileid: "36104651"
   
  En el Diseñador de informes, se trabaja en el panel Datos de informe y en el Explorador de soluciones para definir los conjuntos de datos compartidos usados en un informe. Para más información, consulte [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). No puede usar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para abrir los conjuntos de datos publicados directamente desde un servidor de informes o un sitio de SharePoint. Para esta característica, use [Report Builder &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md) en modo de conjunto de datos compartido.  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] es una herramienta de cliente. Puede usar los Diseñadores de consultas para crear y probar los resultados de la consulta localmente en la vista previa. Después de la implementación, puede administrar los conjuntos de datos compartidos independientemente de los orígenes de datos compartidos e informes de los que dependen. Para obtener más información, consulte [conjuntos de datos incrustados de informes y conjuntos de datos compartidos &#40;el generador de informes y SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [herramientas de diseño de consultas de SQL Server Data Tools de diseñador de informes &#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md), y [administrar conjuntos de datos compartidos](../report-data/manage-shared-datasets.md).  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] es una herramienta de cliente. Puede usar los Diseñadores de consultas para crear y probar los resultados de la consulta localmente en la vista previa. Después de la implementación, puede administrar los conjuntos de datos compartidos independientemente de los orígenes de datos compartidos e informes de los que dependen. Para obtener más información, consulte [conjuntos de datos compartidos y conjuntos de datos incrustado de informe &#40;generador de informes y SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [herramientas de diseño de consulta de SQL Server Data Tools de diseñador de informes &#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md), y [administrar conjuntos de datos compartidos](../report-data/manage-shared-datasets.md).  
   
   
 ##  <a name="bkmk_Reports"></a> Informes  
@@ -121,10 +121,10 @@ ms.locfileid: "36104651"
   
     -   Presione F5.  
   
-     Si usa una configuración de proyecto que genera el informe pero no lo implementa, el informe que se especifica en la `StartItem` propiedades de la configuración actual se abreen en una ventana de vista previa independiente.  
+     Si usa una configuración de proyecto que genera el informe pero no lo implementa, el informe que se especifica en el `StartItem` propiedad de la configuración actual se abre en una ventana de vista previa independiente.  
   
     > [!NOTE]  
-    >  Para usar el modo de depuración, debe establecer un elemento de inicio. En el Explorador de soluciones, haga clic en el proyecto de informe, haga clic en **propiedades**y en `StartItem`, seleccione el nombre del informe que desea mostrar.  
+    >  Para usar el modo de depuración, debe establecer un elemento de inicio. En el Explorador de soluciones, haga clic en el proyecto de informe, haga clic en **propiedades**y en `StartItem`, seleccione el nombre del informe para mostrar.  
   
      Si quiere obtener la vista previa de un informe determinado que no es el elemento de inicio del proyecto, seleccione una configuración que genere el informe pero no lo implemente (por ejemplo, la configuración de depuración local), haga clic con el botón derecho en el informe y, luego, haga clic en **Ejecutar**. Debe elegir una configuración que no implemente el informe; de lo contrario, éste se publicará en el servidor de informes en lugar de mostrarse localmente en una ventana de vista previa.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "36104651"
  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], puede implementar informes u otros elementos de proyecto en varias versiones de los servidores de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Use las configuraciones de proyecto para controlar la actualización de las definiciones de informe en las versiones de esquema compatibles con los servidores de informes de destino. Entre las propiedades que se controlan mediante configuraciones de proyecto se incluyen el servidor de informes de destino, la carpeta donde el proceso de compilación almacena temporalmente las definiciones de informe para la vista previa e implementación, y los niveles de error. Para más información, vea [Propiedades de configuración e implementación](deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties) y [Establecer propiedades de implementación &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
 ### <a name="export-a-report-to-a-different-file-format"></a>Exportar un informe a un formato de archivo diferente  
- Los informes se pueden exportar a una gran variedad de formatos y estos formatos determinan el funcionamiento de algunas de las características interactivas y de diseño del informe. Para obtener más información sobre las consideraciones de diseño de varios formatos de salida, consulte [exportar informes &#40;el generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
+ Los informes se pueden exportar a una gran variedad de formatos y estos formatos determinan el funcionamiento de algunas de las características interactivas y de diseño del informe. Para obtener más información sobre las consideraciones de diseño de varios formatos de salida, vea [exportar informes &#40;generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
 ##  <a name="bkmk_ReportValidationandErrorLevels"></a> Validación de informes y niveles de error  
@@ -186,7 +186,7 @@ ms.locfileid: "36104651"
 |3|Problemas de la generación poco importantes que cambian el diseño del informe de una manera insignificante que podría no ser apreciable.|  
 |4|Solo se utiliza para publicar advertencias.|  
   
- Al intentar obtener una vista previa o implementar un informe que contiene elementos de informe nuevos en [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], por ejemplo mapas y barras de datos, esos elementos de informe pueden quitarse del informe. De forma predeterminada, la propiedad ErrorLevel de la configuración está establecida en 2, lo que haría que la compilación del informe diera un error al quitarse el mapa. Pero si cambia el valor de la propiedad ErrorLevel a 0 o 1, se quita el mapa, se emite una advertencia y el proceso de compilación continúa.  
+ Cuando se intenta obtener una vista previa o implementar un informe que contiene los elementos de informe nuevos en [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], como mapas y barras de datos, pueden quitarse los elementos de informe del informe. De forma predeterminada, la propiedad ErrorLevel de la configuración está establecida en 2, lo que haría que la compilación del informe diera un error al quitarse el mapa. Pero si cambia el valor de la propiedad ErrorLevel a 0 o 1, se quita el mapa, se emite una advertencia y el proceso de compilación continúa.  
   
   
 ## <a name="see-also"></a>Vea también  

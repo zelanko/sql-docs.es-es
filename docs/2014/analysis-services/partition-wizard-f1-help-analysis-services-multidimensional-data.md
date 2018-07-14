@@ -1,5 +1,5 @@
 ---
-title: Asistente para la Ayuda de F1 (Analysis Services - datos multidimensionales) de la partición | Documentos de Microsoft
+title: Ayuda de F1 del asistente (Analysis Services - datos multidimensionales) de partición | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Partition Wizard
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 000e6d0cd8dcaab6aab55de6394527c118396ea9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9c8346f5319bbc8f7552546e52537157c699152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245705"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>Asistente para particiones (Ayuda F1) (Analysis Services - Datos multidimensionales)
   El Asistente para particiones sirve para definir particiones para un grupo de medida de un cubo. De forma predeterminada, se define una sola partición para cada grupo de medida de un cubo. No obstante, el rendimiento de acceso y de procesamiento pueden degradarse en particiones grandes. Creando varias particiones, cada una con una parte de los datos de un grupo de medida, el rendimiento de acceso y de procesamiento pueden mejorarse para dicho grupo de medida.  
@@ -47,7 +47,7 @@ ms.locfileid: "36104345"
   
 -   [Ubicaciones de procesamiento y almacenamiento &#40;Asistente para partición&#41;](processing-and-storage-locations-partition-wizard.md)  
   
--   [Finalización del Asistente para &#40;Asistente para partición&#41;](completing-the-wizard-partition-wizard.md)  
+-   [Finalización del asistente &#40;Asistente para partición&#41;](completing-the-wizard-partition-wizard.md)  
   
 -   [Busque el cuadro de diálogo de la carpeta remota &#40;Analysis Services - datos multidimensionales&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   

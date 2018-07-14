@@ -1,5 +1,5 @@
 ---
-title: Página Elegir vínculo (Administrador de informes) | Documentos de Microsoft
+title: Página Elegir vínculo (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ec09219d146affcceda8194c8e7a60d8e128ef12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6ae425405db24ca56f00dff7952ee0e7b4d1623
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242285"
 ---
 # <a name="choose-link-page-report-manager"></a>Elegir vínculo (página del Administrador de informes)
   Use la página Elegir vínculo para elegir un informe diferente en el que basar el informe vinculado actualmente seleccionado. Los informes vinculados se basan en otros informes ya publicados en un servidor de informes. Un informe vinculado usa el diseño y los datos del informe base, pero tiene páginas de propiedades independientes para que pueda personalizar propiedades de parámetro, configuración de seguridad, nombre, descripción y ubicación.  
@@ -49,6 +49,6 @@ ms.locfileid: "36103978"
 ## <a name="see-also"></a>Vea también  
  [Página de propiedades generales, informes &#40;Administrador de informes&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Nuevo informe vinculado &#40;página del Administrador de informes&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

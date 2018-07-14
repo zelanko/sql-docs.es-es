@@ -1,5 +1,5 @@
 ---
-title: Página de propiedades generales, modelos (Administrador de informes) | Documentos de Microsoft
+title: Página de propiedades generales, modelos (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.general.f1
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 12eda8ffbf8183f5992c2e149c4b2e9bd44b1912
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0101ea532307b4e3dd06d1dc22879f59a682f867
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280671"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Página Propiedades generales, Modelos (Administrador de informes)
   Use la página Propiedades generales para los modelos de informes con el fin de cambiar el nombre, eliminar, mover o reemplazar el archivo de definición de modelo (.smdl). En la parte superior de la página, se incluye información detallada de quién creó o modificó el modelo, y cuándo tuvieron lugar los cambios.  
@@ -47,7 +47,7 @@ ms.locfileid: "36104185"
  Escriba una descripción del modelo. Esta descripción se mostrará en la página Contenido a los usuarios que tengan permiso de acceso al modelo.  
   
  **Oculto en la vista de lista**  
- Active esta casilla para ocultar el elemento cuando la carpeta se establece en la vista de lista. La vista de lista es un modo de visualización del contenido de la carpeta compatible con el Administrador de informes. Puede establecer esta opción en [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para definir la visualización de este elemento en el Administrador de informes. Para obtener más información acerca de los modos de vista en el Administrador de informes, consulte [página contenido &#40;el Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
+ Active esta casilla para ocultar el elemento cuando la carpeta se establece en la vista de lista. La vista de lista es un modo de visualización del contenido de la carpeta compatible con el Administrador de informes. Puede establecer esta opción [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para definir cómo este elemento se ve en el Administrador de informes. Para obtener más información acerca de los modos de vista en el Administrador de informes, vea [página contenido &#40;el Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
   
  **Aplicar**  
  Haga clic para guardar los cambios.  

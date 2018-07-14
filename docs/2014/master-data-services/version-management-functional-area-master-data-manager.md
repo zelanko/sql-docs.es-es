@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3b36b06422cf2e88cfd68fd640f562204a40dde6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: badabfd899f3e4bad719f5c3c731cbc768cfe645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225645"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>Área funcional de Administración de versiones (Master Data Manager)
   En el área funcional de Administración de versiones, los administradores pueden validar datos, revisar e invertir transacciones, crear copias de versiones de datos y marcar versiones de datos para sistemas de suscripción. Para obtener más información sobre los administradores, consulte [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ## <a name="versions"></a>Versiones  
- [Versiones &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+ [Las versiones &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
  [Confirmar una versión &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
   

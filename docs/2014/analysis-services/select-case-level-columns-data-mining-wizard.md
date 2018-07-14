@@ -1,5 +1,5 @@
 ---
-title: Seleccione caso (Asistente para minería de datos) de columnas de nivel | Documentos de Microsoft
+title: Seleccione caso (Asistente para minería de datos) de las columnas de nivel | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectcaselevelcolumn.f1
 ms.assetid: b110af78-8eee-4817-93da-d63c1603f6c8
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9b80369e13d26b4bdb68f1b32dbf58179ec19f29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b57cf4ff913210c8a0fc7fd48593914c76a315dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241325"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>Seleccionar columnas de nivel de caso (Asistente para minería de datos)
   Utilice la página **Seleccionar columnas de nivel de caso** para seleccionar los atributos y medidas de la dimensión de cubo de origen subyacente que serán las columnas de nivel de caso de la estructura de minería de datos.  
@@ -36,7 +36,7 @@ ms.locfileid: "36104331"
  Seleccione los atributos y medidas que serán las columnas de nivel de caso de la estructura de minería de datos. Todos los atributos seleccionados deben estar en jerarquías o tener las jerarquías de atributo habilitadas.  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda F1 del Asistente para minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Asistente para la Ayuda de F1 de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Seleccione la clave de caso &#40;Asistente para minería de datos&#41;](select-the-case-key-data-mining-wizard.md)   
  [Especificar el uso de la columna de modelo de minería de datos &#40;Asistente para minería de datos&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   

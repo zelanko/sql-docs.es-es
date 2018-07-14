@@ -1,5 +1,5 @@
 ---
-title: Agregar datos de una vista de datos del centro de llamadas (Tutorial de minería de datos intermedio) del origen | Documentos de Microsoft
+title: Agregar datos de un origen de vista para los datos del centro de llamadas (Tutorial de minería de datos intermedios) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a448e7e4-dbd1-4d31-90bc-4d4a1c23b352
 caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 128ff8a4cbd1bafcf9c15c32f5cd7c5e127710d9
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: f1e8c03f9b19ee0338915077c6177799072b2356
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291741"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Agregar una vista del origen de datos para datos del centro de llamadas (Tutorial intermedio de minería de datos)
   En esta tarea, agregará una vista del origen de datos que se usará para tener acceso a los datos del centro de llamadas. Se usarán los mismos datos para crear tanto el modelo de red neuronal inicial para la exploración como el modelo de regresión logístico que se empleará para hacer las recomendaciones.  
@@ -36,9 +36,9 @@ ms.locfileid: "36312333"
   
 2.  En la página **Asistente para vistas del origen de datos** , haga clic en **Siguiente**.  
   
-3.  En el **seleccionar un origen de datos** página, en **orígenes de datos relacionales**, seleccione el [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] origen de datos. Si no tiene este origen de datos, vea [Tutorial básico de minería de datos](../../2014/tutorials/basic-data-mining-tutorial.md). Haga clic en **Siguiente**.  
+3.  En el **seleccionar un origen de datos** página, en **orígenes de datos relacionales**, seleccione el [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] origen de datos. Si no tiene este origen de datos, consulte [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md). Haga clic en **Siguiente**.  
   
-4.  En el **seleccionar tablas y vistas** , seleccione la tabla siguiente y, a continuación, haga clic en la flecha derecha para agregarlo a la vista del origen de datos:  
+4.  En el **seleccionar tablas y vistas** , seleccione la tabla siguiente y, a continuación, haga clic en la flecha derecha para agregarla a la vista del origen de datos:  
   
     -   **FactCallCenter (dbo)**  
   
@@ -46,13 +46,13 @@ ms.locfileid: "36312333"
   
 5.  Haga clic en **Siguiente**.  
   
-6.  En el **finalización del Asistente para** página, de forma predeterminada la vista del origen de datos se denomina [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Cambie el nombre a **CallCenter**y, a continuación, haga clic en **finalizar**.  
+6.  En el **completando el Asistente para** página, de forma predeterminada la vista del origen de datos se denomina [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Cambie el nombre a **CallCenter**y, a continuación, haga clic en **finalizar**.  
   
      Se abre el Diseñador de vistas del origen de datos para mostrar el **CallCenter** vista del origen de datos.  
   
 7.  Haga clic en el panel de vista del origen de datos y seleccione **agregar o quitar tablas**. Seleccione la tabla, **DimDate** y haga clic en **Aceptar**.  
   
-     Se debe agregar automáticamente una relación entre el `DateKey` columnas de cada tabla. Utilizará esta relación para obtener la columna **EnglishDayNameOfWeek**, desde el **DimDate** tabla y utilizarla en el modelo.  
+     Se debe agregar automáticamente una relación entre el `DateKey` columnas de cada tabla. Usará esta relación para obtener la columna, **EnglishDayNameOfWeek**, desde el **DimDate** de tabla y su uso en el modelo.  
   
 8.  En el Diseñador de vistas de origen de datos, haga clic en la tabla, **FactCallCenter**y seleccione **nuevo cálculo con nombre**.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "36312333"
 |-----------------|--------------|  
 |FactCallCenterID|Una clave arbitraria que se creó cuando se importaron los datos al almacenamiento de datos.<br /><br /> Esta columna identifica los registros únicos y debe usarse como clave de caso para el modelo de minería de datos.|  
 |DateKey|La fecha de la operación en el centro de llamadas, expresada como un entero. Las claves de fecha se usan a menudo en los almacenamientos de datos, pero puede que desee obtener la fecha con formato de fecha y hora si va a agrupar los valores por fecha.<br /><br /> Observe que las fechas no son únicas, ya que el proveedor facilita un informe independiente para cada turno de cada día de trabajo.|  
-|WageType|Indica si el día es un día de la semana, un fin de semana o un día no laborable.<br /><br /> Es posible que haya una diferencia en la calidad del servicio al cliente los fines de semana frente a los días laborables por lo que usará esta columna como entrada.|  
+|WageType|Indica si el día fue un día laborable, un fin de semana o un día festivo.<br /><br /> Es posible que haya una diferencia en la calidad de servicio al cliente los fines de semana frente a los días laborables por lo que usará esta columna como entrada.|  
 |Shift|Indica el turno para el que se registran las llamadas. Este centro de llamadas divide su jornada laboral en cuatro turnos: uno por la mañana (AM), dos por la tarde (PM1 y PM2) y uno por la noche (Midnight).<br /><br /> Es posible que el turno afecte a la calidad del servicio al cliente; por eso usará esto como entrada.|  
-|LevelOneOperators|Indica el número de operadores de nivel 1 del servicio.<br /><br /> Los empleados de centro de llamadas comienzan en el nivel 1, de modo que estos empleados tienen menos experiencia.|  
+|LevelOneOperators|Indica el número de operadores de nivel 1 en derecho.<br /><br /> Los empleados de centro de llamadas comienzan en el nivel 1, de modo que estos empleados tienen menos experiencia.|  
 |LevelTwoOperators|Indica el número de operadores de nivel 2 en servicio.<br /><br /> Un empleado debe llevar un número determinado de horas de servicio para ser calificadas como un operador de nivel 2.|  
 |TotalOperators|Número total de operadores presentes durante el turno.|  
 |Calls|Número de llamadas recibidas durante el turno.|  
@@ -82,7 +82,7 @@ ms.locfileid: "36312333"
 |Orders|Número de pedidos resultantes de las llamadas.|  
 |IssuesRaised|Número de incidencias que requieren seguimiento y que se generaron a través de llamadas.|  
 |AverageTimePerIssue|Promedio de tiempo que se tarda en atender una llamada entrante.|  
-|ServiceGrade|Una medida que indica la calidad general del servicio, se mide como el *tasa de abandono* del turno completo. Cuanto más alta es la tasa de abandono, más probabilidades hay de que los clientes no estén satisfechos y de que se pierdan posibles pedidos.|  
+|ServiceGrade|Una métrica que indica la calidad general del servicio, se mide como el *tasa de abandono* del turno completo. Cuanto más alta es la tasa de abandono, más probabilidades hay de que los clientes no estén satisfechos y de que se pierdan posibles pedidos.|  
   
  Tenga en cuenta que los datos contienen cuatro columnas diferentes que se basan en una sola columna de fecha: `WageType`, **DayOfWeek**, `Shift`, y `DateKey`. Normalmente en la minería de datos no es aconsejable usar varias columnas derivadas de los mismos datos, ya que los valores están demasiado correlacionados entre sí y pueden ocultar otros patrones.  
   

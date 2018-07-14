@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c9be2d437953424ac256d593fb39a727ae96a5ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 124c7b2dee86e1bd42b2d5cb3f450323bad8161a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218595"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Error de Reporting Services
     
@@ -57,7 +57,7 @@ ms.locfileid: "36105769"
   
 -   No se pudo cargar un ensamblado personalizado o un ensamblado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que estaba implementado incorrectamente.  
   
--   Un parámetro que tiene la propiedad que acepta valores NULL establecida en `False` ha detectado un valor null en el parámetro.  
+-   Un parámetro que tiene la propiedad que acepta valores NULL en `False` ha detectado un valor null en el parámetro.  
   
 -   Una expresión para la propiedad Hidden de una región de datos contiene un error: Referencia de objeto no definida a una instancia de un objeto.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36105769"
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>No se puede procesar el informe principal con subinforme  
  La misma versión del procesador de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] debe procesar un informe con subinformes. Al actualizar los informes a la versión actual del esquema de definición de informe, el informe principal y los subinformes pueden actualizarse o no al mismo tiempo. Si la versión no es compatible entre un informe y sus subinformes, se muestra el mensaje siguiente: "No se pudo procesar el subinforme".  
   
- Debe cambiar el informe principal o los subinformes para que todos los informes se puedan procesar con la misma versión del procesador de informes. Para obtener información acerca de por qué un informe no se puede actualizar, vea [Upgrade Reports](../install-windows/upgrade-reports.md).  
+ Debe cambiar el informe principal o los subinformes para que todos los informes se puedan procesar con la misma versión del procesador de informes. Para obtener información acerca de por qué un informe no se puede actualizar, vea [actualizar informes](../install-windows/upgrade-reports.md).  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>Compruebe que las llamadas a funciones son de Visual Basic y no de SQL  
  Puede utilizar funciones SQL en el texto de consulta en una base de datos relacional. No puede utilizar las funciones de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] en texto de consulta.  
@@ -121,7 +121,7 @@ ms.locfileid: "36105769"
   
  Para las funciones de agregado que calculan totales acumulados (`Previous`, `RunningValue` o `RowNumber`), se puede especificar un parámetro de ámbito que sea un nombre de grupo de filas o de grupo de columnas, pero no ambos. Esto se aplica al mensaje de error siguiente:  
   
--   `Previous`, `RunningValue` o `RowNumber` agregar funciones utilizadas en las celdas de datos de la  *\<tipo de elemento de informe >* '*\<el nombre del elemento de informe >*' hacen referencia a la agrupación de ámbitos en las columnas y filas de la  *\<tipo de elemento de informe >*. Los parámetros de ámbito de todos los `Previous`, `RunningValue` y `RowNumber` agregar funciones dentro de un  *\<tipo de elemento de informe >* pueden hacer referencia a las agrupaciones de filas o agrupaciones de columnas de datos, pero no ambos.  
+-   `Previous`, `RunningValue` o `RowNumber` utilizadas en las celdas de datos de las funciones de agregado el  *\<tipo de elemento de informe >* '*\<el nombre del elemento de informe >*' hacen referencia a los ámbitos de agrupación en las columnas y filas de la  *\<tipo de elemento de informe >*. Los parámetros de ámbito de todos los `Previous`, `RunningValue` y `RowNumber` agregar funciones dentro de un  *\<tipo de elemento de informe >* puede hacer referencia a las agrupaciones de filas o agrupaciones de columnas de datos, pero no ambos.  
   
  Para más información, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) y [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -130,12 +130,12 @@ ms.locfileid: "36105769"
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Referencia a las funciones de agregado &#40;el generador de informes SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Referencia a las funciones de agregado &#40;generador de informes y SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Filtros de uso frecuente &#40;Generador de informes y SSRS&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Referencias a la colección parámetros &#40;el generador de informes SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Referencias a la colección de parámetros &#40;generador de informes y SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

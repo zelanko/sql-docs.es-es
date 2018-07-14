@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - republishing data
 - publishing [SQL Server replication], Subscribers
 - Subscribers [SQL Server replication], republishing data
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7348025d382a3de048906aa79fa43fe25ae35649
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 25f0e7c61ea0b45df386f5bc13a04370e278b7c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204945"
 ---
 # <a name="republish-data"></a>Volver a publicar datos
   En un modelo de republicación, el publicador envía datos a un suscriptor y éste, a su vez, vuelve a publicar los datos en cualquier número de suscriptores. Esto es útil cuando un publicador tiene que enviar datos a suscriptores a través de un vínculo de comunicaciones lento o costoso. Si hay varios suscriptores en el otro extremo del vínculo, el uso de un republicador desplaza la mayor parte de la carga de distribución a ese extremo del vínculo.  
@@ -64,7 +64,7 @@ ms.locfileid: "36104873"
 |publicador|Suscriptor de publicación|Suscriptor|  
 |---------------|---------------------------|----------------|  
 |Publicación transaccional|Suscripción transaccional/publicación transaccional|Suscripción transaccional|  
-|Publicación transaccional|Publicación de combinación/suscripción transaccional<sup>1</sup>|Suscripción de mezcla|  
+|Publicación transaccional|Transaccional suscripción/publicación de combinación<sup>1</sup>|Suscripción de mezcla|  
 |Publicación de combinación|Suscripción de mezcla/publicación de combinación|Suscripción de mezcla|  
 |Publicación de combinación|Suscripción de mezcla/publicación transaccional|Suscripción transaccional|  
   

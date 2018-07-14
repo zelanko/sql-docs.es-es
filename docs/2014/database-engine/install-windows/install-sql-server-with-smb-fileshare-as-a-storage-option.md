@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e83b4a29d1fae74c5b20f3290be8431045f1f38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3aef5a22131fd26d72ccbe569a2adb73d045dfa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200035"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Instalar SQL Server con el recurso compartido de archivos SMB como opción de almacenamiento
-  A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], bases de datos de sistema (Master, Model, MSDB y TempDB) y [!INCLUDE[ssDE](../../includes/ssde-md.md)] las bases de datos de usuario se pueden instalar con el servidor de archivos de bloque de mensajes del servidor (SMB) como una opción de almacenamiento. Esto se aplica tanto a las instalaciones independientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como a las instalaciones de clústeres de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Iniciando [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las bases de datos del sistema (Master, Model, MSDB y TempDB) y [!INCLUDE[ssDE](../../includes/ssde-md.md)] bases de datos de usuario se pueden instalar con el servidor de archivos de bloque de mensajes del servidor (SMB) como una opción de almacenamiento. Esto se aplica tanto a las instalaciones independientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como a las instalaciones de clústeres de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Secuencia de archivos no se admite actualmente en un recurso compartido de archivos SMB.  
@@ -83,7 +83,7 @@ ms.locfileid: "36104771"
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     Para obtener más información sobre el uso de diversas opciones de parámetros de línea de comandos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte [instalar SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+     Para obtener más información sobre el uso de varias opciones de parámetro de línea de comandos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte [instalar SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Consideraciones sobre el sistema operativo (protocolo SMB frente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Los distintos sistemas operativos Windows tienen diferentes versiones del protocolo SMB y la versión del protocolo SMB es transparente para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación se muestran las ventajas de las distintas versiones del protocolo SMB con respecto a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -102,7 +102,7 @@ ms.locfileid: "36104771"
     > [!NOTE]  
     >  Los permisos de recursos compartidos y los permisos NTFS FULL CONTROL en las carpetas de recursos compartidos SMB deben limitarse a la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los usuarios de windows con roles de servidor de administración.  
   
-     Se recomienda usar una cuenta de dominio como cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la cuenta del sistema se utiliza como una cuenta de servicio, conceda permisos para la cuenta del equipo en el formato: * < nombreDeDominio >***\\***< nombre_equipo > ***$**.  
+     Se recomienda usar una cuenta de dominio como cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la cuenta del sistema se utiliza como una cuenta de servicio, conceda permisos para la cuenta de equipo en el formato: * < nombre_de_dominio >***\\***< nombre_de_equipo > ***$**.  
   
     > [!NOTE]  
     >  -   Durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es necesario especificar la cuenta de dominio como una cuenta de servicio si el recurso compartido de archivos de SMB se especifica como opción de almacenamiento. Con el recurso compartido de archivos de SMB, la cuenta del sistema solo se puede especificar como una cuenta de servicio después de la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -116,9 +116,9 @@ ms.locfileid: "36104771"
   
 -   Después de separar una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que reside en el almacenamiento conectado a la red, pueden surgir problemas con los permisos de base de datos al intentar volver a adjuntar la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El problema se define en [este artículo de KB](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321). Para conocer una solución alternativa a este problema, vea la sección **Más información** del artículo de KB.  
   
--   Algunos sistemas de terceros, como en el caso de dispositivos de NetApp, no admiten todas las llamadas API de SQL Server. Con esto, podría obtener:   
+-   Algunos sistemas de terceros, como en el caso de dispositivos de NetApp, no admiten todas las llamadas API de SQL Server. Con estos podría obtener:   
     2015-06-04 13:14:19.97 spid9s Error: 17053, Severity: 16, estado: 1.  
-    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult(): 1 (función incorrecta.) del sistema operativo error encontrado.  
+    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult(): encontrado un error del sistema operativo 1 (función incorrecta.).  
   
      En el caso de NTFS, el error resulta inofensivo;  en el de ReFS, por el contrario, puede provocar una degradación significativa del rendimiento.  
   

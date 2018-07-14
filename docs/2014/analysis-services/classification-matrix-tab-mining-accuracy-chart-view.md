@@ -1,5 +1,5 @@
 ---
-title: Pestaña de la matriz de clasificación (vista de gráfico de precisión de minería de datos) | Documentos de Microsoft
+title: Pestaña matriz de clasificación (vista Gráfico de precisión de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.confusionmatrix.f1
 ms.assetid: 85d5a047-d656-41e0-8a31-400271c2a620
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b4e2f9a8d361cdb400867c08e83be9347d076f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58df3c6d14edb8bfddbd53db0c110475d2a983bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251517"
 ---
 # <a name="classification-matrix-tab-mining-accuracy-chart-view"></a>Pestaña Matriz de clasificación (vista Gráfico de precisión de minería de datos)
   La pestaña **Matriz de clasificación** muestra una matriz de clasificación para cada modelo seleccionado en la cuadrícula de modelos de la pestaña **Asignación de columnas** . La matriz de clasificación solo está disponible si la columna de predicción que está seleccionada en la pestaña **Asignación de columnas** no es continua. Para obtener una descripción más detallada de la pestaña **Matriz de clasificación** , vea [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md).  
@@ -35,12 +35,12 @@ ms.locfileid: "36105506"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**Predecir**|Contiene una fila de cada estado de la columna de predicción.|  
+|**Puede predecir**|Contiene una fila de cada estado de la columna de predicción.|  
 |**\<Estados > (real)**|Una columna para cada estado de la columna de predicción. Si el estado de la fila y la columna se corresponden, la celda representa el número de veces real que el estado existe en la base de datos. Si no se corresponden, la celda representa el error de la predicción.|  
   
 ## <a name="see-also"></a>Vea también  
- [Diseñador de gráficos de precisión de minería de datos &#40;minería de datos&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Pruebas y las tareas de validación y procedimientos &#40;minería de datos&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Diseñador gráfico de precisión de minería de datos &#40;minería de datos&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Pruebas y validación tareas y procedimientos &#40;minería de datos&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Pruebas y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

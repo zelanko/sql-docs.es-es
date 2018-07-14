@@ -1,37 +1,36 @@
 ---
-title: Servicio de almacenamiento de blobs de SQL Server Backup and Restore con Windows Azure | Documentos de Microsoft
+title: Servicio de almacenamiento de blobs de SQL Server Backup and Restore with Windows Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98f774809a3b6bb1d37836c3e7c216f1058a9ec1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 38e20e433b7fed2e34750c300ee7e1489d6df665
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193555"
 ---
 # <a name="sql-server-backup-and-restore-with-windows-azure-blob-storage-service"></a>Copia de seguridad y restauración de SQL Server con el servicio Azure Blob Storage
-  Este tema se presentan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copias de seguridad y restaurar desde el [servicio de almacenamiento de blobs de Windows Azure](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). También se proporciona un resumen de las ventajas de usar Microsoft Azure Blob service para almacenar copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Este tema se presentan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copias de seguridad y restaurar a partir de la [servicio Windows Azure Blob storage](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). También se proporciona un resumen de las ventajas de usar Microsoft Azure Blob service para almacenar copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  SQL Server permite almacenar las copias de seguridad del servicio de almacenamiento Blob de Windows Azure de las maneras siguientes:  
   
--   **Administrar las copias de seguridad de Windows Azure:** con los mismos métodos usados para copia de seguridad en disco y cinta, ahora hacer copias de seguridad en el almacenamiento de Windows Azure especificando la dirección URL como destino de la copia de seguridad.  Puede utilizar esta característica para realizar la copia de seguridad manualmente o para configurar su propia estrategia de copia de seguridad como haría para un almacenamiento local u otras opciones fuera de las instalaciones. Esta característica también se conoce como **Copia de seguridad en URL de SQL Server**. Para obtener más información, vea [SQL Server Backup to URL](sql-server-backup-to-url.md). Esta característica está disponible en SQL Server 2012 SP1 CU2 o posterior.  
+-   **Administrar las copias de seguridad de Windows Azure:** utilizando los mismos métodos usados para copia de seguridad en disco y cinta, puede ahora copia de seguridad en almacenamiento de Windows Azure especificando la dirección URL como destino de copia de seguridad.  Puede utilizar esta característica para realizar la copia de seguridad manualmente o para configurar su propia estrategia de copia de seguridad como haría para un almacenamiento local u otras opciones fuera de las instalaciones. Esta característica también se conoce como **Copia de seguridad en URL de SQL Server**. Para obtener más información, vea [SQL Server Backup to URL](sql-server-backup-to-url.md). Esta característica está disponible en SQL Server 2012 SP1 CU2 o posterior.  
   
     > [!NOTE]  
     >  En las versiones de SQL Server anteriores a SQL Server 2014, puede utilizar el complemento de la herramienta de Microsoft Azure Copia de seguridad de SQL Server para crear rápida y fácilmente copias de seguridad del Almacenamiento de Microsoft Azure. Para obtener más información, vea [centro de descarga](http://go.microsoft.com/fwlink/?LinkID=324399).  
   
--   **Permitir que copias de seguridad de administración de SQL Server en Windows Azure:** Configure SQL Server para administrar las copias de seguridad estrategia y la programación de copia de seguridad para una sola base de datos o varias bases de datos, o establecer los valores predeterminados en el nivel de instancia. Esta característica se conoce como **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. Para obtener más información, consulte [SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md). Esta característica está disponible en SQL Server 2014 o posterior.  
+-   **Permitir que copias de seguridad de administración de SQL Server en Windows Azure:** Configure SQL Server para administrar las copias de seguridad estrategia y programación de copia de seguridad para una base de datos única o varias bases de datos, o establecer valores predeterminados en el nivel de instancia. Esta característica se conoce como **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. Para obtener más información, consulte [SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md). Esta característica está disponible en SQL Server 2014 o posterior.  
   
 ## <a name="benefits-of-using-the-windows-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Ventajas de usar el servicio Blob de Microsoft Azure para las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -45,9 +44,9 @@ ms.locfileid: "36103587"
   
      Además, el archivo de copia de seguridad que ahora se almacena en el servicio de almacenamiento Blob de Windows Azure está disponible directamente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] local o en otro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecute en una máquina virtual de Windows Azure, sin necesidad de adjuntar/separar bases de datos o de descargar y conectar el disco duro virtual.  
   
--   Ventajas de costo: solo se paga por el servicio que se emplea. Puede ser rentable como opción de archivado externo y de copia de seguridad. Consulte la [consideraciones sobre facturación de Windows Azure](#Billing) sección para obtener más información y vínculos.  
+-   Ventajas de costo: solo se paga por el servicio que se emplea. Puede ser rentable como opción de archivado externo y de copia de seguridad. Consulte la [consideraciones de facturación de Windows Azure](#Billing) sección para obtener más información y vínculos.  
   
-##  <a name="Billing"></a> Consideraciones sobre la facturación de Microsoft Azure:  
+##  <a name="Billing"></a> Consideraciones de facturación de Windows Azure:  
  Entender los costos de almacenamiento de Windows Azure permite prever el costo de crear y almacenar copias de seguridad en Windows Azure.  
   
  El [Calculadora de precios de Windows Azure](http://go.microsoft.com/fwlink/?LinkId=277060) puede ayudarle a calcular los costos.  
@@ -59,7 +58,7 @@ ms.locfileid: "36103587"
 ## <a name="see-also"></a>Vea también  
  [Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
- [Tutorial: SQL Server Backup and Restore a Windows Azure Blob Storage Service](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)   
+ [Tutorial: Copia de seguridad SQL Server y restauración para el servicio de Windows Azure Blob Storage](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)   
  [Copia de seguridad en URL de SQL Server](sql-server-backup-to-url.md)  
   
   

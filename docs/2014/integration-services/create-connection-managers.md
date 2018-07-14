@@ -1,5 +1,5 @@
 ---
-title: Crear administradores de conexión | Documentos de Microsoft
+title: Crear administradores de conexiones | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.connectionmanager.f1
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
 caps.latest.revision: 54
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2ae1ccaa1e38d280c3d46fb4504f99df92254a9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f09d663dd371c037c3f2b44b42b202c18377b7cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252547"
 ---
 # <a name="create-connection-managers"></a>Crear administradores de conexiones
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye una serie de administradores de conexión adaptados a las necesidades de las tareas que se conectan a diferentes tipos de servidores y orígenes de datos. Los administradores de conexión son utilizados por los componentes de flujo de datos, que extraen y cargan datos en diferentes tipos de almacenes de datos, y por los proveedores de registro que escriben registros en un servidor, tabla o archivo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Por ejemplo, un paquete con una tarea Enviar correo usa un tipo de administrador de conexiones SMTP para conectarse a un servidor de Protocolo simple de transferencia de correo (SMTP). Un paquete con una tarea Ejecutar SQL puede usar un administrador de conexiones OLE DB para conectarse a una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "36105651"
   
  En tiempo de ejecución, se utiliza la versión correcta, independientemente de que haya especificado la versión de 32 bits del proveedor en tiempo de diseño. Se puede ejecutar la versión de 64 bits del proveedor aun cuando el paquete se ejecuta en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- Las dos versiones del proveedor tienen el mismo identificador. Para especificar si el tiempo de ejecución de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa una versión de 64 bits disponible del proveedor, establezca la propiedad Run64BitRuntime del proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Si se establece la propiedad Run64BitRuntime en `true`, el tiempo de ejecución busca y usa el proveedor de 64 bits; si es Run64BitRuntime `false`, el tiempo de ejecución busca y utiliza el proveedor de 32 bits. Para obtener más información sobre las propiedades que se pueden establecer en proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vea [Entornos de Studio e Integration Services &#40;SSIS&#41;](integration-services-ssis-development-and-management-tools.md).  
+ Las dos versiones del proveedor tienen el mismo identificador. Para especificar si el tiempo de ejecución de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa una versión de 64 bits disponible del proveedor, establezca la propiedad Run64BitRuntime del proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Si la propiedad Run64BitRuntime se establece en `true`, el tiempo de ejecución busca y usa el proveedor de 64 bits; si Run64BitRuntime es `false`, el tiempo de ejecución busca y usa el proveedor de 32 bits. Para obtener más información sobre las propiedades que se pueden establecer en proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vea [Entornos de Studio e Integration Services &#40;SSIS&#41;](integration-services-ssis-development-and-management-tools.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Flujo de control](control-flow/control-flow.md)   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], delete
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 793052419843c2e2421458da07b2815932683645
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f48df99f595bb313d8ca2406850f75cae82c7020
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274211"
 ---
 # <a name="delete-a-workload-group"></a>Eliminar un grupo de cargas de trabajo
   Puede eliminar un grupo de cargas de trabajo o grupo de recursos de servidor mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
@@ -73,7 +73,7 @@ ms.locfileid: "36104468"
   
 1.  Ejecute el `DROP WORKLOAD GROUP` instrucción especificando el nombre del grupo de cargas de trabajo para eliminar.  
   
-2.  Antes de emitir la instrucción `ALTER RESOURCE GOVERNOR RECONFIGURE`, compruebe que no hay ninguna solicitud activa en el grupo de cargas de trabajo que va a eliminar. Si no hay solicitudes activas, `ALTER RESOURCE GOVERNOR` se producirá un error. Para evitar este problema, puede realizar una de las siguientes acciones:  
+2.  Antes de emitir la instrucción `ALTER RESOURCE GOVERNOR RECONFIGURE`, compruebe que no hay ninguna solicitud activa en el grupo de cargas de trabajo que va a eliminar. Si hay solicitudes activas, `ALTER RESOURCE GOVERNOR` se producirá un error. Para evitar este problema, puede realizar una de las siguientes acciones:  
   
     -   Espere hasta todas las sesiones del grupo de cargas de trabajo se hayan desconectado.  
   

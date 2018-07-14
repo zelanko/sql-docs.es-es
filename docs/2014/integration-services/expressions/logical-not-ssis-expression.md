@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logical Not (!)
 - '! (logical Not)'
@@ -16,13 +16,13 @@ ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7de99bf9dc767c5f4f6e47abd88f66f874ebb1be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 119efb0b0957e55c1563d193593854cebfb87524
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213395"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (Not lógico) (expresión de SSIS)
   Niega un operando booleano.  
@@ -68,7 +68,7 @@ ms.locfileid: "36104495"
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Prioridad y asociatividad](operator-precedence-and-associativity.md)   
+ [Precedencia y asociatividad](operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)  
   
   

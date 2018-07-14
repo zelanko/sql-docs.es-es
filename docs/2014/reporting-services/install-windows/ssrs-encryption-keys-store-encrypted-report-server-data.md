@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - credentials [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8b3bcd87abe4efd22f8330c8b7dca7d111fb93f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58b9dbd53149ca710753e8a355d379b21e1c7b5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186082"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>Almacenar datos cifrados del servidor de informes (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena valores cifrados en la base de datos del servidor de informes y en archivos de configuración. La mayoría de los valores cifrados son credenciales que se utilizan para obtener acceso a orígenes de datos externos que proporcionan datos para informes. En este tema se describen los valores que se cifran, la funcionalidad de cifrado usada en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y otros tipos de datos confidenciales almacenados que debe conocer.  
@@ -40,7 +40,7 @@ ms.locfileid: "36103512"
   
 -   Credenciales almacenadas que utiliza un servidor de informes para conectarse a orígenes de datos externos que proporcionan datos a un informe.  
   
-     Estos valores se definen durante la configuración de la información de origen de datos para un informe y se almacenan después como valores cifrados en una base de datos del servidor de informes. El servidor de informes utiliza una clave simétrica para cifrar y descifrar estos datos. Para obtener más información acerca de las credenciales almacenadas, vea [especificar credenciales y la información de conexión para orígenes de datos de informe](../../integration-services/connection-manager/data-sources.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+     Estos valores se definen durante la configuración de la información de origen de datos para un informe y se almacenan después como valores cifrados en una base de datos del servidor de informes. El servidor de informes utiliza una clave simétrica para cifrar y descifrar estos datos. Para obtener más información sobre las credenciales almacenadas, vea [especificar credenciales y la información de conexión de orígenes de datos de informe](../../integration-services/connection-manager/data-sources.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
   
 -   Cuenta de usuario desatendida que el servidor de informes utiliza para conectarse a otros equipos y recuperar archivos de imágenes o datos externos empleados en un informe.  
   

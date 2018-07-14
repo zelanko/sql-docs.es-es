@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 757cb2570c163ceaa184d15a7e97a253129d05cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 85832491b5129111b44daa724475749086588bfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294065"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Gráficos de formas (Generador de informes y SSRS)
   Los gráficos de formas muestran los datos de valores como porcentajes de un total. Los gráficos de formas se usan normalmente para mostrar comparaciones proporcionales entre distintos valores de un conjunto. Las categorías se representan mediante segmentos individuales de la forma. El tamaño del segmento lo determina el valor. Los gráficos de formas son similares en cuanto a uso a los gráficos circulares, excepto en que los primeros ordenan las categorías de mayor a menor.  
   
- Un gráfico de embudo muestra los valores como proporciones que van decreciendo de forma progresiva. El tamaño del área lo determina el valor de la serie como un porcentaje del total de todos los valores. Por ejemplo, puede usar un gráfico de embudo para mostrar las tendencias de los visitantes de un sitio web. Es probable que el gráfico de embudo muestre un área amplia en la parte superior para indicar que la página más visitada es la página principal, y que las demás áreas sean proporcionalmente menores. Para obtener más información acerca de cómo agregar datos a un gráfico de embudo, vea [gráficos &#40;el generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ Un gráfico de embudo muestra los valores como proporciones que van decreciendo de forma progresiva. El tamaño del área lo determina el valor de la serie como un porcentaje del total de todos los valores. Por ejemplo, puede usar un gráfico de embudo para mostrar las tendencias de los visitantes de un sitio web. Es probable que el gráfico de embudo muestre un área amplia en la parte superior para indicar que la página más visitada es la página principal, y que las demás áreas sean proporcionalmente menores. Para obtener más información acerca de cómo agregar datos a un gráfico de embudo, vea [gráficos &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  En la ilustración siguiente se muestra un ejemplo de gráfico de embudo.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36103963"
   
 -   Los gráficos de formas son muy efectivos para mostrar porcentajes proporcionales ordenados. Sin embargo, para mantener la coherencia, el gráfico no ordena los valores del conjunto de datos de forma predeterminada. Piense en la posibilidad de ordenar los valores de mayor a menor para representar con mayor precisión los datos con forma de embudo o de pirámide. Para obtener más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
--   Los valores Null, los valores vacíos y los valores negativos no tienen ningún efecto a la hora de calcular las proporciones. Por esta razón, estos valores no se muestran en un gráfico de formas. Si desea indicar visualmente estos tipos de valores en el gráfico, cambie el gráfico de formas por otro tipo de gráfico. Para obtener más información acerca de cómo agregar puntos vacíos a un gráfico de forma distinta, vea [agregar puntos de vacíos al gráfico &#40;el generador de informes y SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   Los valores Null, los valores vacíos y los valores negativos no tienen ningún efecto a la hora de calcular las proporciones. Por esta razón, estos valores no se muestran en un gráfico de formas. Si desea indicar visualmente estos tipos de valores en el gráfico, cambie el gráfico de formas por otro tipo de gráfico. Para obtener más información sobre cómo agregar puntos vacíos a un gráfico que no son de formas, vea [agregar puntos vacíos al gráfico &#40;generador de informes y SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Si va a definir sus propios colores en un gráfico de formas con una paleta personalizada, asegúrese de que dispone de colores suficientes para resaltar cada punto de datos con su propio color. Para obtener más información, vea [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -63,6 +63,6 @@ ms.locfileid: "36103963"
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Puntos de datos vacíos y nulos en los gráficos &#40;Generador de informes y SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Los gráficos circulares &#40;el generador de informes SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
+ [Los gráficos circulares &#40;generador de informes y SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
   
   

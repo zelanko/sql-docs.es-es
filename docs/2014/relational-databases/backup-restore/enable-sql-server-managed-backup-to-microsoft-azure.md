@@ -1,25 +1,24 @@
 ---
-title: Configurar SQL Server Managed Backup to Windows Azure | Documentos de Microsoft
+title: Configuración de SQL Server Managed Backup to Windows Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 43a7ffba55ccae49ae83360b833184fe0908a41f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 436da2329cec73764cbeb73b34971352df83dfef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281531"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure"></a>Configurar Copia de seguridad administrada de SQL Server para Microsoft Azure
   Este tema incluye dos tutoriales:  
@@ -28,7 +27,7 @@ ms.locfileid: "36103110"
   
  Configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en el nivel de instancia, habilitar la notificación por correo electrónico y supervisar la actividad de copia de seguridad.  
   
- Para obtener un tutorial sobre cómo configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para grupos de disponibilidad, consulte [configurar SQL Server Managed Backup to Microsoft Azure para grupos de disponibilidad](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
+ Para ver un tutorial sobre cómo configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para grupos de disponibilidad, consulte [configuración de SQL Server Managed Backup to Microsoft Azure para grupos de disponibilidad](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
   
 ## <a name="setting-up-includesssmartbackupincludesss-smartbackup-mdmd"></a>Configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
@@ -39,20 +38,20 @@ ms.locfileid: "36103110"
   
 -   Requiere la pertenencia a **db_backupoperator** rol, la base de datos con **ALTER ANY CREDENTIAL** permisos, y `EXECUTE` permisos **sp_delete_backuphistory**procedimiento almacenado.  
   
--   Requiere **seleccione** permisos en el **smart_admin.fn_get_current_xevent_settings**(función).  
+-   Requiere **seleccione** permisos en el **smart_admin.fn_get_current_xevent_settings**función.  
   
 -   Requiere `EXECUTE` permisos en el **smart_admin.sp_get_backup_diagnostics** procedimiento almacenado. Además, requiere permisos `VIEW SERVER STATE` ya que internamente llama a otros objetos del sistema que requieren este permiso.  
   
 -   Requiere `EXECUTE` permisos en el `smart_admin.sp_set_instance_backup` y `smart_admin.sp_backup_master_switch` procedimientos almacenados.  
 
 
-1.  **Crear una cuenta de almacenamiento de Microsoft Azure:** las copias de seguridad se almacenan en el servicio de almacenamiento de Microsoft Azure. En primer lugar debe crear una cuenta de almacenamiento de Microsoft Azure, si ya no dispone de una cuenta.
+1.  **Crear una cuenta de almacenamiento de Microsoft Azure:** las copias de seguridad se almacenan en el servicio Microsoft Azure storage. En primer lugar debe crear una cuenta de almacenamiento de Microsoft Azure, si ya no tiene una cuenta.
     - SQL Server 2014 usa blobs en páginas, que son diferentes de bloque y blobs en anexos. Por lo tanto, debe crear una cuenta de uso general y no una cuenta de blob. Para obtener más información, consulte [cuentas de almacenamiento de Azure sobre](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Anote el nombre de la cuenta de almacenamiento y las claves de acceso. La información del nombre de cuenta y de la clave de acceso se utiliza para crear una credencial SQL. La credencial SQL se usa para autenticarse en la cuenta de almacenamiento.  
  
-2.  **Crear una credencial de SQL:** crear una credencial de SQL con el nombre de la cuenta de almacenamiento como la identidad y la clave de acceso de almacenamiento como contraseña.  
+2.  **Crear una credencial SQL:** crear una credencial de SQL con el nombre de la cuenta de almacenamiento que la identidad y la clave de acceso de almacenamiento como contraseña.  
   
-3.  **Asegúrese de servicio de agente SQL Server está iniciado y esté ejecutándose:** iniciar Agente SQL Server si no se está ejecutando.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requiere que el Agente SQL Server se ejecute en la instancia para realizar operaciones de copia de seguridad.  Puede ser conveniente configurar el Agente SQL Server para que se ejecute automáticamente con el fin de asegurarse de que las operaciones de copia de seguridad pueden realizarse periódicamente.  
+3.  **Asegúrese de que el servicio de agente SQL Server está iniciado y en ejecución:** iniciar Agente SQL Server si no se está ejecutando actualmente.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requiere que el Agente SQL Server se ejecute en la instancia para realizar operaciones de copia de seguridad.  Puede ser conveniente configurar el Agente SQL Server para que se ejecute automáticamente con el fin de asegurarse de que las operaciones de copia de seguridad pueden realizarse periódicamente.  
   
 4.  **Determinar el período de retención:** determine el período de retención para los archivos de copia de seguridad. El período de retención se especifica en días y puede abarcar de 1 a 30.  
   
@@ -151,29 +150,29 @@ ms.locfileid: "36103110"
   
     ```  
   
- Los pasos descritos en esta sección son específicos para configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] por primera vez en la base de datos. Puede modificar las configuraciones existentes usando el mismo procedimiento almacenado del sistema **smart_admin.sp_set_db_backup** y proporcionar los nuevos valores. Para obtener más información, consulte [SQL Server Managed Backup to Microsoft Azure - configuración de almacenamiento y retención](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
+ Los pasos descritos en esta sección son específicos para configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] por primera vez en la base de datos. Puede modificar las configuraciones existentes con el mismo procedimiento almacenado del sistema **smart_admin.sp_set_db_backup** y proporcionar los nuevos valores. Para obtener más información, consulte [SQL Server Managed Backup to Microsoft Azure: configuración de almacenamiento y retención](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
   
 ### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd-for-the-instance-with-default-settings"></a>Habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la instancia con la configuración predeterminada  
- Este tutorial describen los pasos para habilitar y configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la instancia 'MyInstance'\\. Incluye pasos para habilitar la supervisión del estado de mantenimiento de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+ En este tutorial se describe los pasos para habilitar y configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la instancia 'MyInstance',\\. Incluye pasos para habilitar la supervisión del estado de mantenimiento de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  **Permisos:**  
   
 -   Requiere la pertenencia a **db_backupoperator** rol, la base de datos con **ALTER ANY CREDENTIAL** permisos, y `EXECUTE` permisos **sp_delete_backuphistory**procedimiento almacenado.  
   
--   Requiere **seleccione** permisos en el **smart_admin.fn_get_current_xevent_settings**(función).  
+-   Requiere **seleccione** permisos en el **smart_admin.fn_get_current_xevent_settings**función.  
   
 -   Requiere `EXECUTE` permisos en el **smart_admin.sp_get_backup_diagnostics** procedimiento almacenado. Además, requiere permisos `VIEW SERVER STATE` ya que internamente llama a otros objetos del sistema que requieren este permiso.  
 
 
-1.  **Crear una cuenta de almacenamiento de Microsoft Azure:** las copias de seguridad se almacenan en el servicio de almacenamiento de Microsoft Azure. En primer lugar debe crear una cuenta de almacenamiento de Microsoft Azure, si ya no dispone de una cuenta.
+1.  **Crear una cuenta de almacenamiento de Microsoft Azure:** las copias de seguridad se almacenan en el servicio Microsoft Azure storage. En primer lugar debe crear una cuenta de almacenamiento de Microsoft Azure, si ya no tiene una cuenta.
     - SQL Server 2014 usa blobs en páginas, que son diferentes de bloque y blobs en anexos. Por lo tanto, debe crear una cuenta de uso general y no una cuenta de blob. Para obtener más información, consulte [cuentas de almacenamiento de Azure sobre](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Anote el nombre de la cuenta de almacenamiento y las claves de acceso. La información del nombre de cuenta y de la clave de acceso se utiliza para crear una credencial SQL. La credencial SQL se usa para autenticarse en la cuenta de almacenamiento.  
   
-2.  **Crear una credencial de SQL:** crear una credencial de SQL con el nombre de la cuenta de almacenamiento como la identidad y la clave de acceso de almacenamiento como contraseña.  
+2.  **Crear una credencial SQL:** crear una credencial de SQL con el nombre de la cuenta de almacenamiento que la identidad y la clave de acceso de almacenamiento como contraseña.  
   
 3.  **Asegúrese de que el servicio del Agente SQL Server se haya iniciado y esté ejecutándose:** inicie el Agente SQL Server, si no se está ejecutando. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requiere que el Agente SQL Server se ejecute en la instancia para realizar operaciones de copia de seguridad.  Puede ser conveniente configurar el Agente SQL Server para que se ejecute automáticamente con el fin de asegurarse de que las operaciones de copia de seguridad pueden realizarse periódicamente.  
   
-4.  **Determinar el período de retención:** determine el período de retención para los archivos de copia de seguridad. El período de retención se especifica en días y puede abarcar de 1 a 30. Una vez que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] esté habilitada en el nivel de instancia con los valores predeterminados, todas las nuevas bases de datos creadas posteriormente heredarán los valores. Solo se admiten y se configurarán automáticamente las bases de datos configuradas para los modelos de recuperación completo u optimizado para cargas masivas de registro. Puede deshabilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para una base de datos específica en cualquier momento si no desea que se configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. También puede cambiar la configuración de una base de datos mediante la configuración de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en el nivel de base de datos.  
+4.  **Determinar el período de retención:** determine el período de retención para los archivos de copia de seguridad. El período de retención se especifica en días y puede abarcar de 1 a 30. Una vez que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] esté habilitada en el nivel de instancia con los valores predeterminados, todas las nuevas bases de datos creadas posteriormente heredarán los valores. Solo se admiten y se configurarán automáticamente las bases de datos configuradas para los modelos de recuperación completo u optimizado para cargas masivas de registro. Puede deshabilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para una base de datos específica en cualquier momento si no desea que se configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. También puede cambiar la configuración de una base de datos específica configurando [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en el nivel de base de datos.  
   
 5.  **Habilitar y configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** inicie SQL Server Management Studio y conéctese a la instancia de SQL Server. En la ventana de consulta, ejecute la siguiente instrucción después de modificar los valores correspondientes al nombre de la base de datos, la credencial SQL, el período de retención y las opciones de cifrado según sus requisitos:  
   
@@ -229,7 +228,7 @@ ms.locfileid: "36103110"
   
         ```  
   
-         Para obtener más información acerca de cómo supervisar y una secuencia de comandos de ejemplo completo, vea [Monitor de SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
+         Para obtener más información sobre cómo supervisar y un script de ejemplo completo, vea [Monitor de SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
 9. **Consulte los archivos de copia de seguridad en la cuenta de Almacenamiento de Microsoft Azure:** conéctese a la cuenta de almacenamiento desde SQL Server Management Studio o desde el Portal de administración de Azure. Verá un contenedor para la instancia de SQL Server que hospeda la base de datos que configuró para utilizar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. También puede ver una base de datos y una copia de seguridad de registros antes de 15 minutos después de crear una nueva base de datos.  
   
@@ -280,6 +279,6 @@ ms.locfileid: "36103110"
   
     ```  
   
- La configuración predeterminada de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] se puede invalidar en una base de datos específica configurando los valores específicamente en el nivel de base de datos. También puede pausar y reanudar el servicio de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] de forma temporal. Para obtener más información, vea [SQL Server Managed Backup to Microsoft Azure - retención y la configuración de almacenamiento](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)  
+ La configuración predeterminada de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] se puede invalidar en una base de datos específica configurando los valores específicamente en el nivel de base de datos. También puede pausar y reanudar el servicio de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] de forma temporal. Para obtener más información, consulte [SQL Server Managed Backup to Microsoft Azure: configuración de almacenamiento y retención](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)  
   
   

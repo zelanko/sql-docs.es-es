@@ -1,5 +1,5 @@
 ---
-title: Generador de expresiones (Integration Services) | Documentos de Microsoft
+title: Generador de expresiones (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Expression Builder [Integration Services]
 - expressions [Integration Services], Expression Builder
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - tools [Integration Services], Expression Builder
 ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 73cc39126382e0a15151a9b6cd7908081d87cdfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2410b6c9cb601b47f1a55f9601a2bb7afe0cc593
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193595"
 ---
 # <a name="expression-builder-integration-services"></a>Generador de expresiones (Integration Services)
   El cuadro de diálogo **Generador de expresiones** proporciona una interfaz gráfica de usuario para generar las expresiones usadas por las expresiones de propiedades. Puede tener acceso al cuadro de diálogo **Generador de expresiones** desde los cuadros de diálogo de tareas personalizadas del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] y desde la ventana **Propiedades** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

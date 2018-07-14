@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de programación de parámetros con valores de tabla ODBC | Documentos de Microsoft
+title: Ejemplos de programación de parámetro con valores de tabla ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), how-to topics
 ms.assetid: 3f52b7a7-f2bd-4455-b79e-d015fb397726
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 041885beb2b5f8ad4e720e11a8d6dac851e543fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 94d4b5b8928c49dabc3406fbcaaec4e8da8a8259
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283871"
 ---
 # <a name="odbc-table-valued-parameter-programming-examples"></a>Ejemplos de programación de parámetros con valores de tabla ODBC
-  En esta sección se describe cómo realizar tareas comunes con ODBC y parámetros con valores de tabla. Para obtener otro ejemplo que muestra parámetros con valores de tabla, vea [usar parámetros &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+  En esta sección se describe cómo realizar tareas comunes con ODBC y parámetros con valores de tabla. Para obtener otro ejemplo que muestra los parámetros con valores de tabla, vea [usar parámetros &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
   

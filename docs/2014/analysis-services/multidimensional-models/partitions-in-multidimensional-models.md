@@ -1,5 +1,5 @@
 ---
-title: Particiones en modelos multidimensionales | Documentos de Microsoft
+title: Particiones en modelos multidimensionales | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 884f8cbf2157dcf06958c81437a1a177ac2ae282
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7491322b775cca1a6cf65b667ffd979aa723af0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270261"
 ---
 # <a name="partitions-in-multidimensional-models"></a>Particiones en modelos multidimensionales
   En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], una *partición* proporciona el almacenamiento físico de los datos de hechos cargados en un grupo de medida. Se crea automáticamente una sola partición para cada grupo de medida, aunque es frecuente crear particiones adicionales que segmenten aún más los datos, lo que produce un procesamiento más eficiente y un rendimiento de las consultas más rápido.  
@@ -44,7 +44,7 @@ ms.locfileid: "36105001"
  Las agregaciones son resúmenes precalculados de datos de cubo que permiten a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporcionar respuestas de consulta rápidas. Puede controlar el número de agregaciones creadas para un grupo de medida si establece límites de almacenamiento, mejoras de rendimiento o detiene arbitrariamente el proceso de generación de agregaciones después de que se haya estado ejecutando durante algún tiempo. Un número mayor de agregaciones no es necesariamente mejor. Cada agregación nueva supone un costo, tanto en términos de espacio en disco como en tiempo de procesamiento. Se recomienda crear agregaciones para lograr una mejora del rendimiento del treinta por ciento e incrementar después ese número solo si las pruebas o la experiencia lo garantiza. Para obtener más información, vea [Diseñar agregaciones &#40;Analysis Services - Multidimensional&#41;](designing-aggregations-analysis-services-multidimensional.md).  
   
 ## <a name="partition-merging-and-editing"></a>Mezclar y editar particiones  
- Si dos particiones utilizan el mismo diseño de agregaciones, puede mezclarlas en una sola. Por ejemplo, si dispone de una dimensión de inventario con particiones por meses, al final de cada mes puede mezclar esa partición mensual con la partición anual existente. De esta forma, la partición del mes actual se puede procesar y analizar rápidamente, en tanto que el resto de los meses del año solamente tendrá que procesarse de nuevo cuando se realice la mezcla. Este reproceso requiere un mayor tiempo de procesamiento y puede ejecutarse con menos frecuencia. Para obtener más información sobre la administración del proceso de mezcla de particiones, vea [Merge Partitions in Analysis Services &#40;SSAS - Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md). Para editar las particiones del cubo mediante el **particiones** pestaña Diseñador de cubos, vea [editar o eliminar particiones &#40;Analysis Services - Multidimensional&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md).  
+ Si dos particiones utilizan el mismo diseño de agregaciones, puede mezclarlas en una sola. Por ejemplo, si dispone de una dimensión de inventario con particiones por meses, al final de cada mes puede mezclar esa partición mensual con la partición anual existente. De esta forma, la partición del mes actual se puede procesar y analizar rápidamente, en tanto que el resto de los meses del año solamente tendrá que procesarse de nuevo cuando se realice la mezcla. Este reproceso requiere un mayor tiempo de procesamiento y puede ejecutarse con menos frecuencia. Para obtener más información sobre la administración del proceso de mezcla de particiones, vea [Merge Partitions in Analysis Services &#40;SSAS - Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md). Para editar las particiones de cubo mediante el **particiones** pestaña del Diseñador de cubos, vea [editar o eliminar particiones &#40;Analysis Services - Multidimensional&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md).  
   
 ## <a name="related-topics"></a>Temas relacionados  
   

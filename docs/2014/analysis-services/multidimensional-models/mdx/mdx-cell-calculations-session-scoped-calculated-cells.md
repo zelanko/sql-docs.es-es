@@ -1,5 +1,5 @@
 ---
-title: Crear ámbito de sesión celdas calculadas | Documentos de Microsoft
+title: Crear ámbito de sesión de celdas calculadas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - session-scoped calculated members [MDX]
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6cf66b12594d83e315e5cd1f633f0a4261e095e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1df213e83122d3d93a57c2bbdd131741043ffe7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232095"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>Crear celdas calculadas de ámbito de sesión
     
@@ -83,8 +83,8 @@ FOR String_Expression AS 'MDX_Expression'
 |--------------|-----------------|  
 |Conjunto vacío|Una expresión de conjunto MDX que se resuelve en un conjunto vacío. En este caso, el ámbito de la celda calculada es todo el cubo.|  
 |Conjunto de un solo miembro|Una expresión de conjunto MDX que se resuelve en un solo miembro.|  
-|Conjunto de miembros de nivel|Una expresión de conjunto MDX que se resuelve en miembros de un solo nivel. Un ejemplo de esto es el *Level_Expression*.`Members` Función MDX. Para incluir los miembros calculados, use la *Level_Expression*.`AllMembers` Función MDX.<br /><br /> Para más información, vea [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
-|Conjunto de descendientes|Una expresión de conjunto MDX que se resuelve en los descendientes de un miembro determinado. Un ejemplo de esto es el `Descendants`(*expresión_miembro*, *Level_Expression*, *Desc_Flag*) función MDX.<br /><br /> Para más información, vea [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
+|Conjunto de miembros de nivel|Una expresión de conjunto MDX que se resuelve en miembros de un solo nivel. Un ejemplo de esto es el *Level_Expression*.`Members` Función MDX. Para incluir los miembros calculados, use el *Level_Expression*.`AllMembers` Función MDX.<br /><br /> Para más información, vea [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
+|Conjunto de descendientes|Una expresión de conjunto MDX que se resuelve en los descendientes de un miembro determinado. Un ejemplo de esto es el `Descendants`(*Member_Expression*, *Level_Expression*, *Desc_Flag*) función MDX.<br /><br /> Para más información, vea [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
 ## <a name="see-also"></a>Vea también  
  [Creación de cálculos de celdas en MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  

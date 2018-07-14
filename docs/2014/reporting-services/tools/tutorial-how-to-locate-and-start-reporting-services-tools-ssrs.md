@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder 1.0, locating and starting tool
 - Reporting Services, tutorials
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Report Manager [Reporting Services]
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 caps.latest.revision: 54
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 980a68939fa6b2970df820f6dd202865966ad9c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6f76df07880af743623692ffcff924093e0ce9ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276951"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: Cómo buscar e iniciar herramientas de Reporting Services (SSRS)
-  En este tutorial se presentan las herramientas utilizadas para configurar un servidor de informes, administrar las operaciones y el contenido del servidor de informes, y crear y publicar informes. La finalidad de este tutorial es ayudar a los nuevos usuarios a comprender cómo encontrar y abrir las distintas herramientas. Si ya está familiarizado con estas herramientas, puede mover a los otros tutoriales que pueden ayudarle a obtener conocimientos para utilizar [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Para obtener más información acerca de otros tutoriales, vea [tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
+  En este tutorial se presentan las herramientas utilizadas para configurar un servidor de informes, administrar las operaciones y el contenido del servidor de informes, y crear y publicar informes. La finalidad de este tutorial es ayudar a los nuevos usuarios a comprender cómo encontrar y abrir las distintas herramientas. Si ya están familiarizados con las herramientas, se puede pasar a otros tutoriales que pueden ayudar a obtener conocimientos importantes para utilizar [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Para obtener más información acerca de otros tutoriales, consulte [tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
   
  En este tema:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36103254"
   
 -   [Management Studio](#bkmk_managements_studio)  
   
--   [Herramientas de datos SQL Server con el Diseñador de informes y el Asistente para informes](#bkmk_ssdt)  
+-   [SQL Server Data Tools con el Diseñador de informes y el Asistente para informes](#bkmk_ssdt)  
   
 -   [Generador de informes](#bkmk_report_builder)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36103254"
   
 #### <a name="to-start-the-reporting-services-configuration-manager"></a>Para iniciar el Administrador de configuración de Reporting Services  
   
-1.  En la pantalla de inicio de Windows, escriba `reporting` y en el **aplicaciones** resultados de búsqueda, haga clic en **Reporting Services Configuration Manager**.  
+1.  En la pantalla de inicio de Windows, escriba `reporting` y en el **aplicaciones** los resultados de búsqueda, haga clic en **Reporting Services Configuration Manager**.  
   
      ![administrador de configuración de Reporting Services al inicio](../media/bi-ssrs-configmanager-win8-startscreen.gif "administrador de configuración de Reporting Services al inicio")  
   
@@ -99,13 +99,13 @@ ms.locfileid: "36103254"
   
 #### <a name="to-start-report-manager"></a>Para iniciar el Administrador de informes  
   
-1.  Abra el explorador. Para obtener información sobre versiones de explorador y exploradores admitidos, consulte [planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
+1.  Abra el explorador. Para obtener información sobre las versiones de explorador y exploradores admitidos, consulte [planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
   
 2.  En la barra de direcciones del explorador web, escriba la dirección URL del Administrador de informes. De forma predeterminada, la dirección URL es **http://\<serverName > / reports**. Puede utilizar la herramienta de configuración de Reporting Services para confirmar el nombre del servidor y la dirección URL. Para obtener más información sobre las direcciones URL que se usan en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
 3.  El Administrador de informes se abre en una ventana de explorador. La página de inicio es la carpeta Inicio. Según los permisos que posea, podrá ver otras carpetas, hipervínculos a informes y archivos de recursos dentro de la página de inicio. También puede ver otros botones y comandos en la barra de herramientas.  
   
-4.  Si ejecuta el Administrador de informes en el servidor de informes local, vea [configurar un servidor de informes de modo nativo para la administración Local &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+4.  Si ejecuta el Administrador de informes en el servidor de informes local, consulte [configurar un servidor de informes de modo nativo para la administración Local &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
  **Pasos siguientes:** [configurar el Administrador de informes &#40;modo nativo&#41;](../report-server/configure-web-portal.md).  
   
@@ -114,7 +114,7 @@ ms.locfileid: "36103254"
   
 #### <a name="to-start-sql-server-management-studio"></a>Para iniciar SQL Server Management Studio  
   
-1.  Desde la pantalla de inicio de Windows, escriba `sql server` y en el **aplicaciones** resultados de búsqueda, haga clic en **SQL Server Management Studio**.  
+1.  Desde la pantalla de inicio de Windows, escriba `sql server` y en el **aplicaciones** los resultados de búsqueda, haga clic en **SQL Server Management Studio**.  
   
      ![Management Studio desde la pantalla de Inicio de Windows](../media/bi-ssms-win8-startscreen.gif "Management Studio desde la pantalla de Inicio de Windows")  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36103254"
   
      **Or**  
   
-     Haga clic en **iniciar**, seleccione **todos los programas**, seleccione [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]y, a continuación, haga clic en **SQL Server Data Tools (SSDT)**.  
+     Haga clic en **iniciar**, apunte a **todos los programas**, apunte a [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]y, a continuación, haga clic en **SQL Server Data Tools (SSDT)**.  
   
 2.  En el menú **Archivo** , seleccione **Nuevo**y haga clic en **Proyecto**.  
   
@@ -153,12 +153,12 @@ ms.locfileid: "36103254"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] se abre en la página de inicio de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . El Explorador de soluciones proporciona categorías para crear informes y orígenes de datos. Puede utilizar estas categorías para crear nuevos informes y orígenes de datos. Las ventanas con pestañas aparecen cuando crea una definición de informe. Las ventanas con pestañas son Datos, Diseño y Vista previa.  
   
- Para empezar a crear su primer informe, vea [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md). Para obtener más información sobre los diseñadores de consultas puede utilizar en el Diseñador de informes, consulte [herramientas de diseño de consultas de SQL Server Data Tools de diseñador de informes &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md).  
+ Para empezar a crear su primer informe, vea [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md). Para obtener más información acerca de los diseñadores de consultas puede utilizar en el Diseñador de informes, vea [herramientas de diseño de consulta de SQL Server Data Tools de diseñador de informes &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md).  
   
 ##  <a name="bkmk_report_builder"></a> Generador de informes  
- Use [Report Builder &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md) para crear informes en un [!INCLUDE[msCoName](../../includes/msconame-md.md)] entorno de creación de tipo de Office. Puede personalizar y actualizar todos los informes existentes, independientemente de que se hayan creado en el Diseñador de informes o en las versiones anteriores del Generador de informes. Póngase en contacto con el administrador para obtener información sobre la ubicación del archivo ReportBuilder3.msi que necesitará ejecutar para instalar el Generador de informes en su equipo local.  
+ Use [Report Builder &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md) para crear informes en un [!INCLUDE[msCoName](../../includes/msconame-md.md)] entorno de creación parecido a Office. Puede personalizar y actualizar todos los informes existentes, independientemente de que se hayan creado en el Diseñador de informes o en las versiones anteriores del Generador de informes. Póngase en contacto con el administrador para obtener información sobre la ubicación del archivo ReportBuilder3.msi que necesitará ejecutar para instalar el Generador de informes en su equipo local.  
   
- **Instalación:** el clic-una vez que se instala la versión del generador de informes con el [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] modo nativo o modo de SharePoint. La versión independiente del Generador de informes se descarga por separado.  Vea [instalar la versión independiente del generador de informes &#40;generador de informes&#41;](../install-windows/install-report-builder.md)  
+ **Instalación:** clic-una vez que se instala la versión del generador de informes con el [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] modo nativo o modo de SharePoint. La versión independiente del Generador de informes se descarga por separado.  Consulte [instalar la versión independiente del generador de informes &#40;generador de informes&#41;](../install-windows/install-report-builder.md)  
   
 #### <a name="to-start-report-builder-clickonce-from-report-manager-native-mode"></a>Para iniciar el Generador de informes ClickOnce desde el Administrador de informes (modo nativo)  
   

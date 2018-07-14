@@ -1,5 +1,5 @@
 ---
-title: Profundizar en los datos de los casos de un modelo de minería de datos | Documentos de Microsoft
+title: Obtener detalles de los datos de casos de un modelo de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - drillthrough [Analysis Services]
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86a8cc832572d7a1c2e296c72d9bcd9a0a4d1969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3ce4a5aea740048a53ab40db8b40d0a83d40e19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272171"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Obtener detalles de datos de caso a partir de un modelo de minería de datos
   Si un modelo de minería de datos se ha configurado para obtener detalles de los casos de modelos, al examinar el modelo, puede recuperar información detallada sobre los casos que se usaron para crear el modelo. Además, si la estructura de minería de datos subyacente se ha configurado para permitir la obtención de detalles de la estructura de casos, y tiene los permisos adecuados, puede devolver información de la estructura de minería de datos. Puede incluir columnas que no se incluían en el modelo de minería de datos.  
@@ -35,7 +35,7 @@ ms.locfileid: "36105010"
   
 |Nombre del visor|Nombre de la pestaña o del panel|Seleccionar nodo|  
 |-----------------|----------------------|-----------------|  
-|**Visor de árboles de Microsoft**|Pestaña**Árbol de decisión** |Haga clic en un nodo de árbol.<br /><br /> **Tenga en cuenta** evite usar la obtención de detalles en el `All` nodo, porque puede llevar mucho tiempo para devolver resultados.|  
+|**Visor de árboles de Microsoft**|Pestaña**Árbol de decisión** |Haga clic en un nodo de árbol.<br /><br /> **Tenga en cuenta** evite usar la obtención de detalles en el `All` nodo, porque puede llevar mucho tiempo devolver resultados.|  
 |**Visor de clústeres de Microsoft**|**Diagrama del clúster**|Haga clic en un nodo de clúster.|  
 |**Visor de clústeres de Microsoft**|**Perfiles del clúster**|Haga clic en cualquier lugar de la columna de clúster.|  
 |**Visor de asociación de Microsoft**|Pestaña**Reglas** |Haga clic en una fila que contenga un conjunto de reglas.|  

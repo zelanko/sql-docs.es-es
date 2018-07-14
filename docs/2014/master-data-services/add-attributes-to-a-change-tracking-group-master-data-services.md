@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking groups [Master Data Services]
 - attributes [Master Data Services], change tracking groups
 - change tracking groups [Master Data Services], adding attributes
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 77a151fe4238c7ed99282436a9668a94d85e2b35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1ae8616c44e6ba58c254989c718eb53ea53a197f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235185"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>Agregar atributos a un grupo de seguimiento de cambios (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], agregue los atributos a un grupo de seguimiento de cambios cuando desee realizar el seguimiento de los cambios de los valores de atributos.  
@@ -44,7 +44,7 @@ ms.locfileid: "36104484"
   
 1.  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], haga clic en **Administración del sistema**.  
   
-2.  En el **Explorador de modelos** página, en la barra de menús, seleccione **administrar** y haga clic en **entidades**.  
+2.  En el **el Explorador de modelos** página, en la barra de menús, seleccione **administrar** y haga clic en **entidades**.  
   
 3.  En la página **Mantenimiento de entidades** , en la lista **Modelo** , seleccione un modelo.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "36104484"
   
     -   Si el atributo es para miembros hoja, en el **atributos hoja** panel, seleccione el atributo y haga clic en **Editar atributo de hoja**.  
   
-    -   Si el atributo es para miembros consolidados, en la **atributos consolidados** panel, seleccione el atributo y haga clic en **Editar atributo consolidado**.  
+    -   Si el atributo es para miembros consolidados, en el **atributos consolidados** panel, seleccione el atributo y haga clic en **Editar atributo consolidado**.  
   
-    -   Si el atributo es para colecciones, en la **atributos de colección** panel, seleccione el atributo y haga clic en **Editar atributo de colección**.  
+    -   Si el atributo es para colecciones, en el **atributos de colección** panel, seleccione el atributo y haga clic en **Editar atributo de colección**.  
   
 7.  Active la casilla **Habilitar seguimiento de cambios** .  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36104484"
   
 ## <a name="next-steps"></a>Pasos siguientes  
   
--   [Iniciar acciones según los cambios de valores de atributo de &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
+-   [Iniciar acciones según los cambios de valor de atributo &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Crear un atributo de texto &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   

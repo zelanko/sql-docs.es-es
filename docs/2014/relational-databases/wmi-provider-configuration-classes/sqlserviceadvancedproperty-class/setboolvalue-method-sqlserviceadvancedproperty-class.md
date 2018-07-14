@@ -1,5 +1,5 @@
 ---
-title: Establecer puntos de interrupción | Documentos de Microsoft
+title: Establecer puntos de interrupción | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.setbreakpoints.f1
 helpviewer_keywords:
 - Set Breakpoints dialog box
 ms.assetid: 876e61b7-875c-43f4-bbce-d7eeb90f6730
 caps.latest.revision: 23
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: acef1e3e3cc297a54471ed124bfa5984b2980d9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 89517b3d1d8ac28db093cb32990f526b98cbf70e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260461"
 ---
 # <a name="set-breakpoints"></a>Establecer puntos de interrupción
   Utilice el cuadro de diálogo **Establecer puntos de interrupción** para especificar los eventos en los que se deben habilitar puntos de interrupción y para controlar el comportamiento del punto de interrupción.  

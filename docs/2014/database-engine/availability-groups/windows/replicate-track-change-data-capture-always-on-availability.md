@@ -1,14 +1,13 @@
 ---
-title: Replicación, seguimiento de cambios, captura de datos modificados y grupos de disponibilidad AlwaysOn (SQL Server) | Documentos de Microsoft
+title: Replicación, seguimiento de cambios, captura de datos modificados y grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
 - change data capture [SQL Server], AlwaysOn Availability Groups
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 caps.latest.revision: 31
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0afd1136c2426b749beaff5c713f6c5e77671940
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1519ac814a1f8a55333af5050eab8f5fcbc1b022
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204035"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replicación, seguimiento de cambios, captura de datos modificados y grupos de disponibilidad AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] En [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]se admiten la replicación, la captura de datos modificados (CDC) y el seguimiento de cambios (CT). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ayuda a proporcionar alta disponibilidad y capacidades adicionales de recuperación de base de datos.  
@@ -115,7 +114,7 @@ ms.locfileid: "36105936"
     > [!NOTE]  
     >  Se deben crear los trabajos en todos los destinos posibles de conmutación por error antes de la conmutación por error y marcarlos como deshabilitados hasta que la réplica de disponibilidad de un host se convierta en la nueva réplica principal. Los trabajos de CDC que se ejecutan en la base de datos principal anterior también deben estar deshabilitados cuando la base de datos local se convierte en una base de datos secundaria. Para deshabilitar y habilitar trabajos, use la opción *@enabled* del procedimiento [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Para obtener más información sobre cómo crear trabajos de CDC, vea [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)se admiten la replicación, la captura de datos modificados (CDC) y el seguimiento de cambios (CT).  
   
--   **Agregar Roles de CDC a una réplica de base de datos principal de AlwaysOn**  
+-   **Agregar Roles de CDC a una réplica de base de datos principal AlwaysOn**  
   
      Cuando se habilita una tabla para CDC, se puede asociar un rol de base de datos con la instancia de captura. Si se especifica un rol, el usuario que desea utilizar funciones con valores de tabla CDC para tener acceso a los cambios de la tabla no solo debe tener acceso de selección a las columnas de la tabla sometida a seguimiento, sino que también debe ser miembro del rol con nombre. Si no existe todavía el rol especificado, se creará. Cuando los roles de base de datos se agregan automáticamente a una base de datos principal AlwaysOn, los roles también se propagan a las bases de datos secundarias del grupo de disponibilidad.  
   
@@ -160,7 +159,7 @@ ms.locfileid: "36105936"
   
      Se puede usar el nombre de agente de escucha del grupo de disponibilidad o el nombre de nodo explícito para buscar la réplica secundaria. Si se emplea el nombre de agente de escucha del grupo de disponibilidad, el acceso se dirigirá a cualquier réplica secundaria adecuada.  
   
-     Cuando `sp_addlinkedserver` se utiliza para crear un servidor vinculado para obtener acceso a la base de datos secundaria, la *@datasrc* parámetro se utiliza para el nombre de agente de escucha del grupo de disponibilidad o el nombre de servidor explícito y el *@provstr* parámetro se utiliza para especificar la intención de solo lectura.  
+     Cuando `sp_addlinkedserver` se usa para crear un servidor vinculado para obtener acceso a la base de datos secundaria, la *@datasrc* parámetro se usa para el nombre de agente de escucha del grupo de disponibilidad o el nombre de servidor explícito y el *@provstr* parámetro se usa para especificar la intención de solo lectura.  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -256,7 +255,7 @@ ms.locfileid: "36105936"
 ## <a name="see-also"></a>Vea también  
  [Los suscriptores de replicación y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Grupos de disponibilidad AlwaysOn: Interoperabilidad (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ instancias de clúster de conmutación por error de AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [Acerca de la captura de datos modificados &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   

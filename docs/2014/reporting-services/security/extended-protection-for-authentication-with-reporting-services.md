@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b19170e93dbf4efb973df44fc9788c9659897424
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e1de2e37101fe69c1593169d68f314e23e6b9775
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288771"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protección ampliada para la autenticación con Reporting Services
   En versiones recientes del sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, la protección ampliada es un conjunto de mejoras. La protección ampliada mejora cómo protegen las aplicaciones las credenciales y la autenticación. La propia característica no proporciona directamente protección contra ataques específicos como el reenvío de credenciales, pero proporciona una infraestructura para aplicaciones como [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para aplicar la protección ampliada para la autenticación.  
@@ -32,10 +32,10 @@ ms.locfileid: "36103973"
 >  De forma predeterminada, Windows no habilita la protección ampliada. Para obtener información sobre cómo habilitar la protección ampliada de Windows, vea [Protección ampliada para la autenticación](http://go.microsoft.com/fwlink/?LinkID=178431). Tanto el sistema operativo como la pila de autenticación de cliente deben ser compatibles con la protección ampliada para la autenticación se realice correctamente. En sistemas operativos más antiguos, quizá deba instalar varias actualizaciones para disponer de un equipo totalmente preparado para la protección ampliada. Para obtener información sobre los desarrollos recientes con la protección ampliada, vea [Actualizar información con protección ampliada](http://go.microsoft.com/fwlink/?LinkId=183362).  
   
 ## <a name="reporting-services-extended-protection-overview"></a>Información general sobre la protección ampliada de Reporting Services  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] admite y aplica la protección extendida que se ha habilitado en el sistema operativo. Si el sistema operativo no admite la protección ampliada o no se ha habilitado la característica en él, se producirá un error de autenticación de la característica de protección ampliada de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] La protección ampliada también requiere un certificado SSL. Para más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](configure-ssl-connections-on-a-native-mode-report-server.md).  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] admite y aplica la protección ampliada que se ha habilitado en el sistema operativo. Si el sistema operativo no admite la protección ampliada o no se ha habilitado la característica en él, se producirá un error de autenticación de la característica de protección ampliada de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Protección ampliada también requiere un certificado SSL. Para más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 > [!IMPORTANT]  
->  De forma predeterminada, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no se habilita la protección ampliada. La característica se puede habilitar si se modifica el archivo de configuración `rsreportserver.config` o mediante las API de WMI para actualizar el archivo de configuración. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no proporciona una interfaz de usuario para modificar o ver la configuración de protección ampliada. Para obtener más información, vea la sección de [configuración](#ConfigurationSettings) de este tema.  
+>  De forma predeterminada, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no habilita la protección ampliada. La característica se puede habilitar si se modifica el archivo de configuración `rsreportserver.config` o mediante las API de WMI para actualizar el archivo de configuración. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no proporciona una interfaz de usuario para modificar o ver la configuración de protección ampliada. Para obtener más información, vea la sección de [configuración](#ConfigurationSettings) de este tema.  
   
  Los problemas comunes que se producen a causa de los cambios de la configuración de la protección ampliada o de una configuración incorrecta no se muestran mediante mensajes ni ventanas de cuadro de diálogo de error obvios. Los problemas relacionados con la configuración y la compatibilidad de la protección ampliada tienen como resultado errores de autenticación y errores en los registros de seguimiento de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
@@ -43,28 +43,28 @@ ms.locfileid: "36103973"
 >  Algunas tecnologías de acceso a datos pueden no admitir la protección ampliada. Para conectar los orígenes de datos de SQL Server y la base de datos del catálogo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se usa una tecnología de acceso a datos. El hecho de que una tecnología de acceso a datos no admite la protección ampliada afecta a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de las maneras siguientes:  
 >   
 >  -   El servidor SQL Server que ejecuta la base de datos del catálogo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no puede tener habilitada la protección ampliada; de lo contrario se producirá un error de conexión entre el servidor de informes y la base de datos del catálogo, y se devolverán errores de autenticación.  
-> -   Servidores SQL Server que se usan como [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] informe orígenes de datos no pueden tener habilitada la protección ampliada o los intentos realizados por el servidor de informes para conectarse al origen de datos del informe provocarán errores y devolverán errores de autenticación.  
+> -   Servidores SQL Server que se usan como [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] informe orígenes de datos no pueden tener habilitada la protección ampliada o los intentos realizados por el servidor de informes para conectarse al origen de datos de informe provocarán errores y se devolverán errores de autenticación.  
 >   
 >  La documentación de una tecnología de acceso a datos debe tener información sobre la compatibilidad con la protección ampliada.  
   
 ### <a name="upgrade"></a>UPGRADE  
   
--   Actualizar una [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] servidor [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] agrega valores de configuración con valores predeterminados para el `rsreportserver.config` archivo. Si ya estuviera presente, la configuración de la [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] instalación conservará en el `rsreportserver.config` archivo.  
+-   Actualizar un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] servidor [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] agrega opciones de configuración con valores predeterminados para el `rsreportserver.config` archivo. Si la configuración ya se hubiera realizado, la [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] instalación conservará en el `rsreportserver.config` archivo.  
   
--   Cuando se agregan los valores de configuración a la `rsreportserver.config` archivo de configuración, el comportamiento predeterminado es el [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] característica de protección ampliada desactivado y debe habilitar la característica como se describe en este tema. Para obtener más información, vea la sección de [configuración](#ConfigurationSettings) de este tema.  
+-   Cuando se agregan los valores de configuración a la `rsreportserver.config` archivo de configuración, el comportamiento predeterminado es el [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] característica Protección ampliada para ser desactivado y se debe habilitar la característica como se describe en este tema. Para obtener más información, vea la sección de [configuración](#ConfigurationSettings) de este tema.  
   
 -   El valor predeterminado del parámetro `RSWindowsExtendedProtectionLevel` es `Off`.  
   
 -   El valor predeterminado del parámetro `RSWindowsExtendedProtectionScenario` es `Proxy`.  
   
--   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] El Asesor de actualizaciones no comprueba que el sistema operativo o la instalación actual de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tiene habilitada la compatibilidad con protección ampliada.  
+-   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] El Asesor de actualizaciones no comprueba si el sistema operativo o la instalación actual de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tiene habilitada la compatibilidad con protección ampliada.  
   
 ### <a name="what-reporting-services-extended-protection-does-not-cover"></a>Lo que no cubre la protección ampliada de Reporting Services  
  Las siguientes áreas de características y escenarios no son compatibles con el [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] característica de protección ampliada:  
   
 -   Los autores de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extensiones de seguridad personalizadas deben agregar compatibilidad para la protección ampliada a su extensión de seguridad personalizado.  
   
--   Componentes de terceros agregados o usados por un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] instalación debe actualizarse por el proveedor de terceros, para admitir la protección extendida. Para obtener más información, póngase en contacto con el otro proveedor.  
+-   Componentes de terceros agregados o usados por un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] instalación debe actualizarse por el proveedor de terceros, para admitir la protección ampliada. Para obtener más información, póngase en contacto con el otro proveedor.  
   
 ## <a name="deployment-scenarios-and-recommendations"></a>Escenarios y recomendaciones para la implementación  
  En los siguientes escenarios se ilustran las distintas implementaciones y topologías, así como la configuración recomendada para protegerlas con la protección ampliada de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -84,7 +84,7 @@ ms.locfileid: "36103973"
   
 |Escenario|Diagrama del escenario|Protección|  
 |--------------|----------------------|-------------------|  
-|Comunicación HTTP. El servidor de informes aplicará el cliente en el enlace de servicio del servidor de informes.|![RS_ExtendedProtection_Indirect](../media/rs-extendedprotection-indirect.gif "RS_ExtendedProtection_Indirect")<br /><br /> 1) Aplicación cliente<br /><br /> 2) Servidor de informes<br /><br /> 3) Proxy|No existe ningún canal SSL y, por tanto, no es posible la aplicación del enlace de canal.<br /><br /> Establecer `RSWindowsExtendedProtectionLevel` a `Allow` o `Require`.<br /><br /> Establecer `RSWindowsExtendedProtectionScenario` a `Any`.<br /><br /> Tenga en cuenta que el servidor de informes debe configurarse para saber el nombre del servidor proxy para asegurarse de que el enlace de servicio se aplica correctamente.|  
+|Comunicación HTTP. El servidor de informes aplicará el cliente en el enlace de servicio del servidor de informes.|![RS_ExtendedProtection_Indirect](../media/rs-extendedprotection-indirect.gif "RS_ExtendedProtection_Indirect")<br /><br /> 1) Aplicación cliente<br /><br /> 2) Servidor de informes<br /><br /> 3) Proxy|No existe ningún canal SSL y, por tanto, no es posible la aplicación del enlace de canal.<br /><br /> Establecer `RSWindowsExtendedProtectionLevel` a `Allow` o `Require`.<br /><br /> Establecer `RSWindowsExtendedProtectionScenario` a `Any`.<br /><br /> Tenga en cuenta que el servidor de informes debe configurarse para conocer el nombre del servidor proxy para asegurarse de que el enlace de servicio se aplica correctamente.|  
 |Comunicación HTTP.<br /><br /> El servidor de informes aplicará el cliente en el enlace de canal de proxy y en el enlace de servicio del servidor de informes.|![RS_ExtendedProtection_Indirect_SSL](../media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) Aplicación cliente<br /><br /> 2) Servidor de informes<br /><br /> 3) Proxy|El canal SSL al proxy está disponible. Por tanto, se puede aplicar el enlace de canal en el proxy.<br /><br /> También se puede aplicar el enlace de servicio.<br /><br /> El servidor de informes debe saber el nombre del proxy y el administrador del servidor de informes debe crear una reserva de direcciones URL para este, con un encabezado de host o configurar el nombre de proxy en la entrada del Registro de Windows `BackConnectionHostNames`.<br /><br /> `RSWindowsExtendedProtectionLevel` para `Allow` o `Require`.<br /><br /> Establecer `RSWindowsExtendedProtectionScenario` a `Proxy`.|  
 |Comunicación HTTPS indirecta con un proxy seguro. El servidor de informes aplicará el cliente en el enlace de canal de proxy y en el enlace de servicio del servidor de informes.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) Aplicación cliente<br /><br /> 2) Servidor de informes<br /><br /> 3) Proxy|El canal SSL al proxy está disponible. Por tanto, se puede aplicar el enlace de canal en el proxy.<br /><br /> También se puede aplicar el enlace de servicio.<br /><br /> El servidor de informes debe saber el nombre del proxy y el administrador del servidor de informes debe crear una reserva de direcciones URL para este, con un encabezado de host o configurar el nombre de proxy en la entrada del Registro de Windows `BackConnectionHostNames`.<br /><br /> `RSWindowsExtendedProtectionLevel` para `Allow` o `Require`.<br /><br /> Establecer `RSWindowsExtendedProtectionScenario` a `Proxy`.|  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36103973"
 ## <a name="configuring-reporting-rervices-extended-protection"></a>Configurar la protección ampliada de Reporting Services  
  El `rsreportserver.config` archivo contiene los valores de configuración que controlan el comportamiento de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] protección ampliada.  
   
- Para obtener más información acerca del uso y editar la `rsreportserver.config` de archivos, consulte [archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md). La configuración de la protección ampliada también se puede cambiar e inspeccionar mediante las API WMI. Para obtener más información, consulte [método SetExtendedProtectionSettings &#40;MSReportServer_ConfigurationSetting de WMI&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md).  
+ Para obtener más información sobre el uso y editar la `rsreportserver.config` de archivos, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md). La configuración de la protección ampliada también se puede cambiar e inspeccionar mediante las API WMI. Para obtener más información, consulte [método SetExtendedProtectionSettings &#40;MSReportServer_ConfigurationSetting de WMI&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md).  
   
  Cuando se produce un error de autenticación de la configuración, se deshabilitan los tipos de autenticación `RSWindowsNTLM`, `RSWindowsKerberos` y `RSWindowsNegotiate` en el servidor de informes.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36103973"
 ```  
   
 ## <a name="service-binding-and-included-spns"></a>Enlace de servicio y SPN incluidos  
- El enlace de servicio usa nombres principales de servicio (SPN) para validar el destino previsto de los tokens de autenticación. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa la información de reserva de dirección URL para generar una lista de los SPN que se consideran válidos. Si se usa la información de reservas de direcciones URL para la validación tanto de SPN como de reservas de direcciones URL, los administraciones del sistema pueden administrarlos desde una sola ubicación.  
+ El enlace de servicio usa nombres principales de servicio (SPN) para validar el destino previsto de los tokens de autenticación. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa la información de reserva de dirección URL para compilar una lista de los SPN que se consideran válidos. Si se usa la información de reservas de direcciones URL para la validación tanto de SPN como de reservas de direcciones URL, los administraciones del sistema pueden administrarlos desde una sola ubicación.  
   
  La lista de los SPN válidos se actualiza cuando se inicia el servidor de informes, se cambia la configuración de la protección ampliada o se recicla el dominio de aplicación.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
 - published reports [Reporting Services], data source connections
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 caps.latest.revision: 51
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8be62bb127d6d3fed0f3156f1dc58fc276e51431
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 0c49a666894fd4811de2405f22da111298b019b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244315"
 ---
 # <a name="manage-report-data-sources"></a>Administrar orígenes de datos de informe
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], los informes, los modelos de informe y las suscripciones controladas por datos recuperan datos desde orígenes de datos externos. Para conectarse a un origen de datos externo, un servidor de informes utiliza la información de conexión de origen de datos cuya definición o referencia se halla en el informe, el modelo o la suscripción. Las propiedades de conexión de origen de datos siempre se definen con el informe o modelo al crearlo, pero se pueden administrar independientemente una vez que el informe o el modelo se publican en un servidor de informes.  
@@ -56,7 +56,7 @@ ms.locfileid: "36104432"
  Si publica un informe con propiedades de origen de datos incrustadas en él, considere la posibilidad de cambiar a propiedades de origen de datos compartido. Los orígenes de datos compartidos son más fáciles de administrar porque se pueden actualizar las credenciales y las cadenas de conexión en una página. Todos los informes, modelos y suscripciones controladas por datos que utilizan el origen de datos recopilan los cambios inmediatamente. También puede dejar sin conexión un origen de datos compartido, pausando de forma efectiva el informe o la suscripción para evitar que se ejecuten mientras soluciona o investiga los problemas surgidos.  
   
 ## <a name="controlling-access-data-source-properties"></a>Controlar el acceso a las propiedades del origen de datos  
- De forma predeterminada, cualquiera que tenga permiso para administrar informes puede establecer una propiedad en un informe, incluso las propiedades que determinan el tipo de origen de datos, la cadena de conexión, las credenciales y si el informe obtiene la información de conexión de un origen de datos incrustado o compartido. Para obtener más información sobre qué tareas y permisos controlan el acceso a las propiedades de origen de datos en un servidor de informes de modo nativo, vea [proteger elementos de origen de datos compartido](../security/secure-shared-data-source-items.md) y [proteger informes y recursos](../security/secure-reports-and-resources.md).  
+ De forma predeterminada, cualquiera que tenga permiso para administrar informes puede establecer una propiedad en un informe, incluso las propiedades que determinan el tipo de origen de datos, la cadena de conexión, las credenciales y si el informe obtiene la información de conexión de un origen de datos incrustado o compartido. Para obtener más información sobre qué tareas y permisos controlan el acceso a las propiedades de origen de datos en un servidor de informes de modo nativo, vea [proteger elementos de origen de datos compartidos](../security/secure-shared-data-source-items.md) y [proteger informes y recursos](../security/secure-reports-and-resources.md).  
   
  El administrador del sitio determina los permisos para ver y modificar las propiedades de los elementos de una biblioteca de SharePoint. Para obtener más información acerca de qué permisos controlan el acceso a las propiedades de conexión de origen de datos, vea [sitio de SharePoint y List Permission Reference for Report Server Items](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36104432"
 |Crear una lista predefinida de orígenes de datos que los usuarios pueden seleccionar en tiempo de ejecución. Cuando un usuario solicita un informe, el informe proporciona una lista de orígenes de datos. El usuario debe seleccionar qué origen de datos ha de utilizar antes de ejecutar el informe. Para agregar una lista de selección de orígenes de datos a un informe, ha de utilizar una expresión.<br /><br /> Esto se conoce como conexión dinámica de origen de datos.|Diseñador de informes|[Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
 |Crear un elemento de origen de datos compartido en un servidor de informes.|Administrador de informes|[Crear, eliminar o modificar un origen de datos compartido &#40;el Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)|  
 |Almacenar credenciales como requisito previo para crear suscripciones o instantáneas de informe.|Administrador de informes|[Almacenamiento de las credenciales en un origen de datos de Reporting Services](store-credentials-in-a-reporting-services-data-source.md)|  
-|Modificar las propiedades de conexión de origen de datos en un informe publicado.|Administrador de informes|[Configurar las propiedades del origen de datos para un informe &#40;el Administrador de informes&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
+|Modificar las propiedades de conexión de origen de datos en un informe publicado.|Administrador de informes|[Configurar propiedades del origen de datos para un informe &#40;el Administrador de informes&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
 |Crear un elemento de origen de datos compartido en un servidor de informes.|Sitio de SharePoint|[Crear y administrar orígenes de datos compartidos &#40;Reporting Services en el modo integrado de SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)|  
 |Usar la información de conexión .odc existente con un informe.|Sitio de SharePoint|[Usar una conexión de datos de Office &#40;.odc&#41; con informes &#40;modo integrado de Reporting Services en SharePoint&#41;](use-an-office-data-connection-odc-with-reports.md)|  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36104432"
  [Enlazar un informe o modelo a un origen de datos compartido &#40;SSRS&#41;](bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Crear, eliminar o modificar un origen de datos compartido &#40;el Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Almacenamiento de las credenciales en un origen de datos de Reporting Services](store-credentials-in-a-reporting-services-data-source.md)   
- [Las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

@@ -1,14 +1,13 @@
 ---
-title: Las transacciones entre bases de datos no compatibles para la creación de reflejo de base de datos o AlwaysOn grupos de disponibilidad (SQL Server) | Documentos de Microsoft
+title: Las transacciones entre bases de datos no compatibles para la creación de reflejo de base de datos o AlwaysOn grupos de disponibilidad (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - cross-database transactions [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 caps.latest.revision: 23
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: fdfb419c6200cc185128332d790f554c9b10efd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6014fcc072e9ce6d85fffc62d76f5ba51f341556
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271711"
 ---
 # <a name="cross-database-transactions-not-supported-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Transacciones entre bases de datos no compatibles para la creación de reflejo de la base de datos o grupos de disponibilidad de AlwaysOn (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y la creación de reflejo de la base de datos no admiten las transacciones entre bases de datos ni las transacciones distribuidas. Esto se debe a que la integridad o la atomicidad de las transacciones no se puede garantizar por las siguientes razones:  

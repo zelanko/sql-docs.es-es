@@ -1,5 +1,5 @@
 ---
-title: 'Lección 3: Usar la utilidad del símbolo del sistema dta | Documentos de Microsoft'
+title: 'Lección 3: Usar la utilidad del símbolo del sistema dta | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b36705ed8d6d0b97ebc3317ba7987611c4e9a01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5bb9c33d7c39a8a7267d81f22ac3341bdd000589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253547"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lección 3: Usar la utilidad del símbolo del sistema dta
   La utilidad del símbolo del sistema **dta** ofrece funcionalidad adicional a la del Asistente para la optimización de motor de base de datos.  
@@ -43,6 +43,6 @@ ms.locfileid: "36105291"
 -   Iniciar la utilidad del símbolo del sistema **dta** y optimizar una carga de trabajo  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [A partir de la utilidad del símbolo del sistema dta y optimizar una carga de trabajo](lesson-1-1-tuning-a-workload.md)  
+ [Iniciar la utilidad del símbolo del sistema dta y optimizar una carga de trabajo](lesson-1-1-tuning-a-workload.md)  
   
   

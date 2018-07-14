@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tempdb database [SQL Server], collations
 - collations [SQL Server], column
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3de84f26e894f00760a45d5e65769c0db8d4b009
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e215539e97e09fd7512f7673015d07f32e956730
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298515"
 ---
 # <a name="set-or-change-the-column-collation"></a>Establecer o cambiar la intercalación de columnas
-  Puede invalidar la intercalación de base de datos para `char`, `varchar`, `text`, `nchar`, `nvarchar`, y `ntext` datos especificando una intercalación diferente para una columna concreta de una tabla y utilizando uno de los siguientes:  
+  Puede invalidar la intercalación de base de datos para `char`, `varchar`, `text`, `nchar`, `nvarchar`, y `ntext` datos especificando una intercalación diferente para una columna específica de una tabla y utilizando uno de los siguientes:  
   
 -   La cláusula COLLATE de [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) y [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql). Por ejemplo:  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36103805"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información, vea [Collation and Unicode Support](collation-and-unicode-support.md).  
   
--   Mediante el `Column.Collation` propiedad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
+-   Mediante el `Column.Collation` propiedad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   
  No puede cambiar una intercalación de una columna a la que se hace referencia mediante uno de los siguientes elementos:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36103805"
  Al trabajar con la base de datos **tempdb**, la cláusula [COLLATE](/sql/t-sql/statements/collations) incluye una opción *database_default* para especificar que una columna de una tabla temporal use el valor predeterminado de intercalación de la base de datos del usuario actual para la conexión en lugar de la intercalación de **tempdb**.  
   
 ## <a name="collations-and-text-columns"></a>Intercalaciones y columnas de texto  
- Puede insertar o actualizar valores en una `text` columna cuya intercalación sea diferente de la página de códigos de la intercalación predeterminada de la base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte implícitamente los valores a la intercalación de la columna.  
+ Puede insertar o actualizar valores en un `text` columna cuya intercalación sea diferente de la página de códigos de la intercalación predeterminada de la base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte implícitamente los valores a la intercalación de la columna.  
   
 ## <a name="collations-and-tempdb"></a>Intercalación y tempdb  
  La base de datos **tempdb** se crea cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y tiene la misma intercalación predeterminada que la base de datos **model** . Suele ser la misma que la intercalación predeterminada de la instancia. Si crea una base de datos de usuario y especifica una intercalación predeterminada distinta de **model**, la base de datos de usuario tiene una intercalación predeterminada distinta de **tempdb**. Todos los procedimientos almacenados temporales o tablas temporales se crean y se almacenan en **tempdb**. Esto significa que todas las columnas implícitas de las tablas temporales y todas las constantes, variables y parámetros coaccionable-predeterminados en los procedimientos almacenados temporales tienen intercalaciones distintas de los objetos comparables creados en las tablas y procedimientos almacenados permanentes.  

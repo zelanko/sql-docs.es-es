@@ -1,32 +1,31 @@
 ---
-title: Minimizar el tiempo de inactividad de bases de datos reflejadas al actualizar instancias de servidor | Documentos de Microsoft
+title: Minimizar el tiempo de inactividad para las bases de datos reflejadas al actualizar instancias de servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fc5bea207d824c860d197ca75eff788f6794ecc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ba14393c7b8281ae5a9e3a141e7a3e9bd28d0399
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300825"
 ---
-# <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Minimizar el tiempo de inactividad de bases de datos reflejadas al actualizar instancias de servidor
-  Al actualizar instancias de servidor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede reducir el tiempo de inactividad de cada base de datos reflejada a solo una única conmutación por error manual realizando una actualización secuencial, conocido como un *actualización gradual*. Una actualización gradual es un proceso de varias etapas que, en su forma más simple, implica la actualización de la instancia de servidor que está actuando actualmente como servidor reflejado en una sesión de creación de reflejo, la conmutación por error manual de la base de datos reflejada, la actualización del servidor principal anterior y la reanudación de la creación de reflejo. En la práctica, el proceso exacto dependerá del modo de funcionamiento y del número y diseño de la sesión de creación de reflejo que se ejecute en las instancias de servidor que va a actualizar.  
+# <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Minimizar el tiempo de inactividad para las bases de datos reflejadas al actualizar instancias de servidor
+  Al actualizar instancias de servidor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede reducir el tiempo de inactividad de cada base de datos reflejada a solo una sola conmutación por error manual realizando una actualización secuencial, conocido como un *actualización gradual*. Una actualización gradual es un proceso de varias etapas que, en su forma más simple, implica la actualización de la instancia de servidor que está actuando actualmente como servidor reflejado en una sesión de creación de reflejo, la conmutación por error manual de la base de datos reflejada, la actualización del servidor principal anterior y la reanudación de la creación de reflejo. En la práctica, el proceso exacto dependerá del modo de funcionamiento y del número y diseño de la sesión de creación de reflejo que se ejecute en las instancias de servidor que va a actualizar.  
   
 > [!NOTE]  
 >  Para obtener información acerca de cómo realizar una actualización gradual para instalar un service pack o revisión, consulte [instalar un Service Pack en un sistema con el tiempo de inactividad mínimo para bases de datos reflejadas](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
@@ -112,7 +111,7 @@ ms.locfileid: "36103901"
     > [!NOTE]  
     >  El establecimiento de una nueva sesión de creación de reflejo requiere que todas las instancias del servidor se ejecuten en la misma versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-3.  Una vez que una conmutación por error, le recomendamos que ejecute la [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) comando theprincipal base de datos.  
+3.  Después de conmutar, le recomendamos que ejecute la [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) comando theprincipal base de datos.  
   
 4.  Actualice todas las instancias del servidor que es ahora el servidor reflejado en todas las sesiones de creación de reflejo en las que sea asociado. Podría tener que actualizar varios servidores en este momento.  
   

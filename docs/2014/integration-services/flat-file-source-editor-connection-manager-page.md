@@ -1,5 +1,5 @@
 ---
-title: Editor de origen de archivo (página Administrador de conexiones) planos | Documentos de Microsoft
+title: Editor de origen de archivo (página Administrador de conexiones) planos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesourceadapter.connection.f1
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72cf4b3ee9dbcedb7a8f917328a0bdb715ba575a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e88beab545eee8349672d6e2651882a84c110153
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252377"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>Editor de origen de archivos planos (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de origen de archivos planos** para seleccionar el administrador de conexiones que utilizará el origen de archivos planos. El origen de archivos planos lee los datos de un archivo de texto, que pueden estar en formato delimitado, tener un ancho fijo o ser mixtos.  
@@ -51,8 +51,8 @@ ms.locfileid: "36104512"
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origen de archivos planos &#40;página columnas&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
- [Editor de origen de archivos planos &#40;página de salida de Error&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [Flat File Source Editor &#40;página columnas&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [Flat File Source Editor &#40;página de salida de Error&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [Administrador de conexiones de archivos planos](connection-manager/file-connection-manager.md)  
   
   

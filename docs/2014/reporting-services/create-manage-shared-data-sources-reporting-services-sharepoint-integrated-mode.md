@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar orígenes de datos compartidos (Reporting Services en modo integrado de SharePoint) | Documentos de Microsoft
+title: Crear y administrar orígenes de datos compartidos (Reporting Services en modo integrado de SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cab3d9ce31bff00af668a5a10567919bdd106b36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d75ac29d1136106d88022bb8c5e3fd66e62124c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194783"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>Crear y administrar orígenes de datos compartidos (Reporting Services en el modo integrado de SharePoint)
   Al ejecutar un informe desde una biblioteca de SharePoint, la información de conexión puede definirse dentro del informe o en un archivo externo que esté vinculado al informe. Si la información de conexión está incrustada en el informe, se denomina origen de datos personalizado. Si la información de conexión se define en un archivo externo, se denomina origen de datos compartido. El archivo externo puede ser un archivo de origen de datos del servidor de informes (.rsds) o un archivo de conexión de datos de Office (.odc).  
@@ -40,13 +40,13 @@ ms.locfileid: "36196401"
 2.  En el menú **Nuevo documento** , haga clic en **Origen de datos de informe**.  
   
     > [!NOTE]  
-    >  Si no ve el elemento **Origen de datos de informe** en el menú, significa que no se ha habilitado el tipo de contenido del origen de datos de informe. Para obtener más información, consulte [Agregar informe Server tipos de contenido en una biblioteca de &#40;Reporting Services en modo integrado de SharePoint&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+    >  Si no ve el elemento **Origen de datos de informe** en el menú, significa que no se ha habilitado el tipo de contenido del origen de datos de informe. Para obtener más información, consulte [Agregar informe Server tipos de contenido en una biblioteca &#40;Reporting Services en modo integrado de SharePoint&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 3.  En **Nombre**, escriba un nombre descriptivo para el archivo .rsds.  
   
 4.  En **Tipo de origen de datos**, seleccione en la lista el tipo de origen de datos. Para más información, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
-5.  En **Cadena de conexión**, especifique un puntero al origen de datos y cualquier otra opción de configuración necesaria para establecer una conexión al origen de datos externo. El tipo de origen de datos que esté utilizando determinará la sintaxis de la cadena de conexión. Para obtener más información y ejemplos, vea [las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+5.  En **Cadena de conexión**, especifique un puntero al origen de datos y cualquier otra opción de configuración necesaria para establecer una conexión al origen de datos externo. El tipo de origen de datos que esté utilizando determinará la sintaxis de la cadena de conexión. Para obtener más información y ejemplos, vea [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
 6.  En **Credenciales**, especifique el modo en que el servidor de informes debe obtener las credenciales para obtener acceso al origen de datos externo. Las credenciales pueden almacenarse, solicitarse, integrarse o configurarse para el procesamiento de informes en modo desatendido.  
   

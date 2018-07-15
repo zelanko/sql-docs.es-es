@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 033b602d712d4ec6e0caf136b1228cd82b552e08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14e1742f83496b2976466d152cdd7aab39f76346
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289371"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurar el destino del archivo plano (Asistente para importación y exportación de SQL Server)
-  Use la **configurar destino de archivo plano** página para especificar opciones de formato para el archivo plano de destino y para obtener una vista previa de resultados antes de continuar.  
+  Use la **configurar Flat File Destination** página para especificar opciones de formato para el archivo plano de destino y obtener una vista previa de resultados antes de continuar.  
   
  Para más información acerca de este asistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información acerca de las opciones para iniciar el asistente, así como los permisos necesarios para ejecutar el asistente correctamente, consulte [ejecutar la importación de SQL Server y el Asistente para exportación de](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -63,9 +63,9 @@ ms.locfileid: "36113395"
 |**Barra vertical {&#124;}**|Las columnas se delimitan mediante una barra vertical.|  
   
  **Vista previa**  
- Ver en el **vista previa de datos** cuadro de diálogo Opciones de los resultados de los formatos seleccionados para el archivo plano de destino.  
+ Ver en el **datos de vista previa** cuadro de diálogo Opciones de los resultados de la barra de formato seleccionadas para el archivo plano de destino.  
   
  **Editar transformación**  
- Eliminar filas, anexar filas y configurar columnas en el archivo de destino mediante el **asignaciones de columnas** cuadro de diálogo.  
+ Eliminar filas, anexar filas y configurar columnas en el archivo de destino mediante el uso de la **asignaciones de columnas** cuadro de diálogo.  
   
   

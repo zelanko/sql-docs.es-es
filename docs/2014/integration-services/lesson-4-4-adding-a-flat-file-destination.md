@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 00f6cc4f2a6d2283a44b91319362bf0cd171a448
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d30e1259da07f315b424747ad977917e8c68eb30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285481"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>Paso 4: Agregar un destino de archivo plano
   La salida de errores de la transformación Lookup Currency Key redirige a la transformación Script cualquier fila de datos que haya generado un error durante la operación de búsqueda. Para mejorar la información acerca de los errores producidos, la transformación Script ejecuta un script que obtiene una descripción de los errores.  
@@ -40,11 +40,11 @@ ms.locfileid: "36114291"
   
 6.  En el cuadro de diálogo **Formato de archivo plano** , compruebe que esté seleccionado **Delimitado** y haga clic en **Aceptar**.  
   
-7.  En el **Editor del Administrador de conexión de archivos planos**, en la **nombre de administrador de conexiones** cuadro, escriba `Error Data`.  
+7.  En el **Editor del Administrador de conexiones de archivos planos**, en el **nombre del Administrador de conexiones** cuadro, escriba `Error Data`.  
   
 8.  En el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** , haga clic en **Examinar**y busque la carpeta en la que se almacenará el archivo.  
   
-9. En el **abiertos** cuadro de diálogo para **nombre de archivo**, tipo `ErrorOutput.txt`y, a continuación, haga clic en **abiertos**.  
+9. En el **abierto** cuadro de diálogo para **nombre de archivo**, tipo `ErrorOutput.txt`y, a continuación, haga clic en **abierto**.  
   
 10. En el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** , compruebe que el cuadro **Configuración regional** contiene Inglés (Estados Unidos) y la **Página de códigos** contiene 1252 (ANSI -Latin I).  
   

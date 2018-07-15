@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de consultas de modelo de regresión lineal | Documentos de Microsoft
+title: Ejemplos de consultas de modelo de regresión lineal | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - linear regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7dafee7e0aa5a95076c00f6aff9043014066c5da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 481774670258050b111820e88333a8354cfb14ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303185"
 ---
 # <a name="linear-regression-model-query-examples"></a>Ejemplos de consultas de modelos de regresión lineal
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles de los patrones detectados durante el análisis, o de una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones de los nuevos datos. Por ejemplo, una consulta de contenido podría proporcionar detalles adicionales sobre la fórmula de regresión, mientras que una consulta de predicción podría indicar si un nuevo punto de datos se ajusta al modelo. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  
@@ -150,7 +150,7 @@ FROM LR_PredictIncome.CONTENT
  [Volver al principio](#bkmk_top)  
   
 ###  <a name="bkmk_Query4"></a> Consulta de ejemplo 4: predecir los ingresos utilizando una consulta singleton  
- La manera más fácil de crear una sola consulta en un modelo de regresión es usar el cuadro de diálogo **Entrada de consulta singleton** . Por ejemplo, puede crear la consulta DMX siguiente seleccionando el modelo de regresión adecuado, eligiendo **consulta Singleton**y, a continuación, escriba `20` como el valor de **Age**.  
+ La manera más fácil de crear una sola consulta en un modelo de regresión es usar el cuadro de diálogo **Entrada de consulta singleton** . Por ejemplo, puede compilar la consulta DMX siguiente seleccionando el modelo de regresión adecuado, eligiendo **consulta Singleton**y, a continuación, escriba `20` como el valor de **Age**.  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  
@@ -208,6 +208,6 @@ NATURAL PREDICTION JOIN
  [Algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm.md)   
  [Consultas de minería de datos](data-mining-queries.md)   
  [Referencia técnica del algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Contenido del modelo para los modelos de regresión lineal de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenido del modelo para los modelos de regresión lineal de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

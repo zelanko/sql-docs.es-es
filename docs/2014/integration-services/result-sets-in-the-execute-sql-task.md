@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de resultados en la tarea Ejecutar SQL | Documentos de Microsoft
+title: Conjuntos de resultados en la tarea Ejecutar SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0be727ad9370a56de710c0528949398c12050299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1ff4dd56ea104d32a2821bc826ad8919712aea1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217565"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Conjuntos de resultados en la tarea Ejecutar SQL
   En un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , el hecho de que se devuelva un conjunto de resultados a la tarea Ejecutar SQL depende del tipo de comando SQL que use la tarea. Por ejemplo, una instrucción SELECT suele devolver un conjunto de resultados; en cambio, una instrucción INSERT no lo devuelve.  
@@ -35,7 +35,7 @@ ms.locfileid: "36113846"
   
 -   [Rellenar una variable con un conjunto de resultados](#Populate_variable_with_result_set)  
   
--   [Configurar conjuntos de resultados en el Editor de tareas de ejecutar SQL](#Configure_result_sets)  
+-   [Configurar conjuntos de resultados en el Editor de tareas de ejecución SQL](#Configure_result_sets)  
   
 ##  <a name="Result_set_type"></a> Especificar un conjunto de resultados tipo  
  La tarea Ejecutar SQL admite los siguientes tipos de conjuntos de resultados:  
@@ -59,18 +59,18 @@ ms.locfileid: "36113846"
   
  Si el tipo de conjunto de resultados es **Conjunto de resultados completo** o **XML**, debe utilizar 0 como nombre del conjunto de resultados.  
   
- Cuando se asigna una variable a un conjunto de resultados con el tipo de conjunto de resultados **Fila única** , la variable debe tener un tipo de datos que sea compatible con el tipo de datos de la columna contenida en el conjunto de resultados. Por ejemplo, un conjunto de resultados que contiene una columna con un tipo de datos `String` no se puede asignar a una variable con un tipo de datos numérico. Al establecer el **TypeConversionMode** propiedad `Allowed`, la tarea Ejecutar SQL intentará convertir el parámetro de salida y resultados a los datos de tipo de la variable de los resultados de consulta se han asignado.  
+ Cuando se asigna una variable a un conjunto de resultados con el tipo de conjunto de resultados **Fila única** , la variable debe tener un tipo de datos que sea compatible con el tipo de datos de la columna contenida en el conjunto de resultados. Por ejemplo, un conjunto de resultados que contiene una columna con un tipo de datos `String` no se puede asignar a una variable con un tipo de datos numérico. Al establecer el **TypeConversionMode** propiedad `Allowed`, la tarea Ejecutar SQL intentará convertir el parámetro de salida y resultados a los datos de tipo de la variable de los resultados de consulta que se asignan.  
   
- Un conjunto de resultados XML solamente se puede asignar a una variable con el tipo de datos `String` o `Object`. Si la variable tiene el `String` tipo de datos, la tarea Ejecutar SQL devuelve una cadena y el origen XML pueden consumir los datos XML. Si la variable tiene el `Object` tipo de datos, la tarea Ejecutar SQL devuelve un objeto Document Object Model (DOM).  
+ Un conjunto de resultados XML solamente se puede asignar a una variable con el tipo de datos `String` o `Object`. Si la variable tiene el `String` tipo de datos, la tarea Ejecutar SQL devuelve una cadena y el origen XML pueden consumir los datos XML. Si la variable tiene el `Object` tipo de datos, la tarea Ejecutar SQL devuelve un objeto de Document Object Model (DOM).  
   
- A **conjunto de resultados completo** debe asignar a una variable de la `Object` tipo de datos. El resultado devuelto es un objeto de conjunto de filas. Puede usar un contenedor de bucle Foreach para extraer los valores de las filas de una tabla almacenados en la variable Object y almacenarlos en las variables de paquete y, entonces, utilizar una tarea Script para escribir los datos almacenados en variables de paquetes en un archivo. Para ver una demostración de cómo usar un contenedor de bucle Foreach y una tarea Script, consulte el ejemplo en CodePlex, [Ejecutar parámetros SQL y conjuntos de resultados](http://go.microsoft.com/fwlink/?LinkId=157863), en msftisprodsamples.codeplex.com.  
+ Un **conjunto de resultados completo** debe asignar a una variable de la `Object` tipo de datos. El resultado devuelto es un objeto de conjunto de filas. Puede usar un contenedor de bucle Foreach para extraer los valores de las filas de una tabla almacenados en la variable Object y almacenarlos en las variables de paquete y, entonces, utilizar una tarea Script para escribir los datos almacenados en variables de paquetes en un archivo. Para ver una demostración de cómo usar un contenedor de bucle Foreach y una tarea Script, consulte el ejemplo en CodePlex, [Ejecutar parámetros SQL y conjuntos de resultados](http://go.microsoft.com/fwlink/?LinkId=157863), en msftisprodsamples.codeplex.com.  
   
  En la tabla siguiente se resumen los tipos de datos de variables que se pueden asignar a conjuntos de resultados.  
   
 |Tipo de conjunto de resultados|Tipo de datos de variable|Tipo de objeto|  
 |---------------------|---------------------------|--------------------|  
 |Fila única|Cualquier tipo que sea compatible con la columna de tipo del conjunto de resultados.|No aplicable|  
-|Conjunto de resultados completo|`Object`|Si la tarea utiliza un administrador de conexiones nativo, incluidos los administradores de conexión ADO, OLE DB, Excel y ODBC, el objeto devuelto es ADO `Recordset`.<br /><br /> Si la tarea usa un administrador de conexiones administrado, como el [!INCLUDE[vstecado](../includes/vstecado-md.md)] Administrador de conexiones, el objeto devuelto es un `System.Data.DataSet`.<br /><br /> Puede utilizar una tarea de secuencia de comandos para tener acceso a la `System.Data.DataSet` de objeto, como se muestra en el ejemplo siguiente.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
+|Conjunto de resultados completo|`Object`|Si la tarea utiliza un administrador de conexiones nativo, incluidos los administradores de conexión ADO, OLE DB, Excel y ODBC, el objeto devuelto es ADO `Recordset`.<br /><br /> Si la tarea usa un administrador de conexiones administrado, como el [!INCLUDE[vstecado](../includes/vstecado-md.md)] Administrador de conexiones, el objeto devuelto es un `System.Data.DataSet`.<br /><br /> Puede usar una tarea Script para tener acceso a la `System.Data.DataSet` de objeto, como se muestra en el ejemplo siguiente.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
 |XML|`Object`|Si la tarea utiliza un administrador de conexiones nativo, incluidos los administradores de conexión ADO, OLE DB, Excel y ODBC, el objeto devuelto es un `MSXML6.IXMLDOMDocument`.<br /><br /> Si la tarea usa un administrador de conexiones administrado, como el administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)], el objeto devuelto es un `System.Xml.XmlDocument`.|  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36113846"
 -   [Establecer las propiedades de tareas o contenedores](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Asignar conjuntos de resultados a Variables en una tarea Ejecutar SQL](control-flow/execute-sql-task.md)  
+ [Asignar conjuntos de resultados a variables en una tarea Ejecutar SQL](control-flow/execute-sql-task.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
   

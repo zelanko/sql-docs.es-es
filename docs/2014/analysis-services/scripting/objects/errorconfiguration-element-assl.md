@@ -1,5 +1,5 @@
 ---
-title: Elemento ErrorConfiguration (ASSL) | Documentos de Microsoft
+title: Elemento ErrorConfiguration (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ErrorConfiguration element
 ms.assetid: e8363ec2-fbbf-48f6-a55d-01793afa759c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c509fa16348e6f91da1587f5879e651f2362678c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e36d41d9788b7c65079f7aff7a97d72dd44d8e17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316935"
 ---
 # <a name="errorconfiguration-element-assl"></a>Elemento ErrorConfiguration (ASSL)
   Especifica los valores para administrar errores que se pueden producir cuando se procesa el elemento primario.  

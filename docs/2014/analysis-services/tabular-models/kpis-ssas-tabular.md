@@ -1,5 +1,5 @@
 ---
-title: KPI (SSAS Tabular) | Documentos de Microsoft
+title: KPI (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3415f10896313e14b531489eb9c15ddf20ca1b04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2082afaf4928ffd563b064ac7aba84c973edb2c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233795"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI (SSAS tabular)
   Un *KPI* (indicador clave de rendimiento) de un modelo tabular se usa para medir el rendimiento de un valor, definido por una medida *base*, con respecto a un valor de *destino*, que también se define con una medida o un valor absoluto. Este tema proporciona a los creadores de modelos tabulares una descripción básica de los KPI en un modelo tabular.  
@@ -87,10 +87,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Crear y administrar KPI &#40;SSAS Tabular&#41;](kpis-ssas-tabular.md)|Describe cómo crear un KPI con una medida base, una medida de destino y umbrales de estado.|  
+|[Crear y administrar KPI &#40;Tabular de SSAS&#41;](kpis-ssas-tabular.md)|Describe cómo crear un KPI con una medida base, una medida de destino y umbrales de estado.|  
   
 ## <a name="see-also"></a>Vea también  
- [Las medidas &#40;SSAS Tabular&#41;](measures-ssas-tabular.md)   
- [Las perspectivas &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)  
+ [Las medidas &#40;Tabular de SSAS&#41;](measures-ssas-tabular.md)   
+ [Las perspectivas &#40;Tabular de SSAS&#41;](perspectives-ssas-tabular.md)  
   
   

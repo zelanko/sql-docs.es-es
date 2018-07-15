@@ -1,5 +1,5 @@
 ---
-title: 'Lección 5: Publicar la definición de informe en el servidor de informes | Documentos de Microsoft'
+title: 'Lección 5: Publicar la definición de informe en el servidor de informes | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 57fab70f-4a72-4413-a0ad-d0525caca3f7
 caps.latest.revision: 17
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c7fa1c983ae58fd56450e6182499b105b68a322f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2cf3003b45c30fe785d8e0f2e5cc2562cc35726
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206245"
 ---
 # <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Lección 5: Publicar la definición de informe en el servidor de informes
   El último paso de la actualización de la definición de informe es su publicación en el servidor de informes.  
@@ -81,7 +81,7 @@ ms.locfileid: "36196574"
     ```  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- En la siguiente lección, compilar y ejecutar el `SampleRDLSchema` aplicación. Vea [lección 6: ejecutar la aplicación del esquema RDL &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
+ En la siguiente lección compilará y ejecutará el `SampleRDLSchema` aplicación. Consulte [lección 6: ejecutar la aplicación del esquema RDL &#40;VB C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Actualizar informes con clases generadas a partir del esquema RDL &#40;Tutorial de SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

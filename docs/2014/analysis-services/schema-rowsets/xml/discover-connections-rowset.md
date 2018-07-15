@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_CONNECTIONS | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_CONNECTIONS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_CONNECTIONS rowset
 ms.assetid: e4703970-c31d-448c-ab68-503303c91aa4
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f2165f1c5f8c39d8a2259507824152599473207b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02c834a399f2dc6056831f2d4f84b65deb5ba503
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194305"
 ---
 # <a name="discoverconnections-rowset"></a>DISCOVER_CONNECTIONS, conjunto de filas
   Proporciona información sobre el uso de los recursos y la actividad en las conexiones abiertas actualmente en el servidor.  
@@ -30,7 +30,7 @@ ms.locfileid: "36113682"
  **Se aplica a:** modelos tabulares, modelos multidimensionales  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_CONNECTIONS` filas contiene las columnas siguientes.  
+ El `DISCOVER_CONNECTIONS` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Restrictions|Descripción|  
 |-----------------|--------------------|------------------|-----------------|  

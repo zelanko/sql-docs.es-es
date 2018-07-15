@@ -1,5 +1,5 @@
 ---
-title: Analysis Services ejecutan el Editor de la tarea DDL (página DDL) | Documentos de Microsoft
+title: Analysis Services ejecutan el Editor de la tarea DDL (página DDL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asexecuteddltask.ddl.f1
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9499537bdb59778ab4dc5d511c16e3fb4cb9be08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8693bb66bb848301a739a16f6989537d203eca25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269437"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor de la tarea Ejecutar DDL de Analysis Services (página DDL)
   Use la página **DDL** del cuadro de diálogo **Editor de la tarea Ejecutar DDL de Analysis Services** para especificar una conexión a un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y proporcionar información sobre el origen de las instrucciones del lenguaje de definición de datos (DDL).  
@@ -65,7 +65,7 @@ ms.locfileid: "36112069"
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services ejecutan el Editor de la tarea DDL &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
+ [Analysis Services Execute DDL Editor de la tarea &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
  [Página expresiones](expressions/expressions-page.md)   
  [Flujo de control](control-flow/control-flow.md)   
  [Lenguaje de Scripting de Analysis Services &#40;ASSL&#41; referencia](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   

@@ -1,5 +1,5 @@
 ---
-title: Descripción de los requisitos para las Series temporales de modelo (Tutorial de minería de datos intermedios) | Documentos de Microsoft
+title: Descripción de los requisitos para una serie temporal de modelo (Tutorial de minería de datos intermedios) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1ce2b3e3-108a-4f7e-985f-a20b816d0da7
 caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a60d807aa63f57be7811482cadaabe40bded12b9
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: df76b7ac5b50f5dfa9206b0352de4443bfd07a19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255227"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Descripción de los requisitos de un modelo de serie temporal (tutorial intermedio de minería de datos)
   Cuando vaya a preparar datos para un modelo de pronóstico, debe asegurarse de que los datos contengan una columna que se pueda usar para identificar los pasos en la serie temporal. Esa columna se definirá como columna `Key Time`. Dado que es una clave, la columna debe contener valores numéricos únicos.  
@@ -37,26 +37,26 @@ ms.locfileid: "36312663"
   
 1.  En el panel, **SalesByRegion.dsv [Diseño]**, haga clic en la tabla vTimeSeries y, a continuación, seleccione **explorar datos**.  
   
-     Abre una nueva pestaña, titulada **explorar la tabla vTimeSeries**.  
+     Una nueva ficha se abre, **explorar la tabla vTimeSeries**.  
   
-2.  En el **tabla** ficha, revise los datos que se utilizan en las columnas TimeIndex y Reporting Date.  
+2.  En el **tabla** pestaña, revise los datos que se usan en las columnas TimeIndex y Reporting Date.  
   
      Ambas son secuencias con valores únicos y se pueden usar como clave de serie temporal; sin embargo, los tipos de datos de las columnas son distintos. El algoritmo de serie temporal de Microsoft no requiere un tipo de datos `datetime`; solo exige que los valores sean distintos y estén ordenados. Por tanto, se puede utilizar cualquier columna como clave temporal para el modelo de pronóstico.  
   
-3.  En la superficie de diseño de la vista del origen de datos, seleccione la columna, Reporting Date y seleccione **propiedades**. A continuación, haga clic en la columna TimeIndex y seleccione **propiedades**.  
+3.  En la superficie de diseño de vista del origen de datos, seleccione la columna, Reporting Date y seleccione **propiedades**. A continuación, haga clic en la columna TimeIndex y seleccione **propiedades**.  
   
-     El campo TimeIndex tiene el tipo de datos System.Int32, mientras que el campo Reporting Date tiene el tipo System.DateTime. Muchos almacenamientos de datos convierten los valores de fecha y hora en enteros y usan la columna de enteros como clave para mejorar el rendimiento de la indización. Sin embargo, si usa esta columna, el algoritmo de serie temporal de Microsoft realizará las predicciones con valores futuros como 201014, 201014, etc. Dado que desea representar los datos de ventas mediante fechas del calendario de previsión, usará la columna Reporting Date como el identificador único de la serie.  
+     El campo TimeIndex tiene el tipo de datos System.Int32, mientras que el campo Reporting Date tiene los datos de tipo System.DateTime. Muchos almacenamientos de datos convierten los valores de fecha y hora en enteros y usan la columna de enteros como clave para mejorar el rendimiento de la indización. Sin embargo, si usa esta columna, el algoritmo de serie temporal de Microsoft realizará las predicciones con valores futuros como 201014, 201014, etc. Dado que desea representar los datos de ventas mediante fechas del calendario de previsión, utilizará la columna Reporting Date como el identificador de serie únicos.  
   
 ### <a name="to-set-the-key-in-the-data-source-view"></a>Para establecer la clave en la vista del origen de datos  
   
-1.  En el panel de **SalesByRegion.dsv**, seleccione la tabla vTimeSeries.  
+1.  En el panel **SalesByRegion.dsv**, seleccione la tabla vTimeSeries.  
   
 2.  Haga clic en la columna, Reporting Date y seleccione **establecer clave principal lógica**.  
   
 ## <a name="handling-missing-data-optional"></a>Manejar la ausencia de datos (opcional)  
  Si faltan datos en alguna serie, puede aparecer un error al intentar procesar el modelo. Existen varias formas de solucionar la ausencia de datos:  
   
--   Puede hacer que Analysis Services rellene los valores que faltan, ya sea mediante el cálculo de la media o mediante un valor anterior. Para ello, establezca el parámetro MISSING_VALUE_SUBSTITUTION en el modelo de minería de datos. Para obtener más información acerca de este parámetro, vea [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md). Para obtener información acerca de cómo cambiar los parámetros en un modelo de minería de datos existente, vea [ver o cambiar parámetros del algoritmo](../../2014/analysis-services/data-mining/view-or-change-algorithm-parameters.md).  
+-   Puede hacer que Analysis Services rellene los valores que faltan, ya sea mediante el cálculo de la media o mediante un valor anterior. Para ello, establezca el parámetro MISSING_VALUE_SUBSTITUTION en el modelo de minería de datos. Para obtener más información acerca de este parámetro, vea [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md). Para obtener información acerca de cómo cambiar los parámetros de un modelo de minería de datos existente, vea [ver o cambiar parámetros del algoritmo](../../2014/analysis-services/data-mining/view-or-change-algorithm-parameters.md).  
   
 -   Puede modificar el origen de datos o filtrar la vista subyacente para eliminar la serie irregular o reemplazar los valores. Esto se puede hacer en el origen de datos relacionales, o bien puede modificar la vista del origen de datos creando consultas con nombre personalizadas o cálculos con nombre. Para más información, vea [Vistas del origen de datos en modelos multidimensionales](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md). En la última tarea de esta lección se proporciona un ejemplo de cómo generar una consulta con nombre y un cálculo personalizado.  
   

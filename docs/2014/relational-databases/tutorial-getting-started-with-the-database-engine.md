@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [connecting]
 - tutorials [Database Engine]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - connecting tutorial [SQL Server]
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d36f376d99fe3d66bf501cbfa1bd9b72a7b4e288
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4fe6e1227059628f01f4f7393a3744b6e6b5ae29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186158"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Introducción al motor de base de datos
   Éste es el tutorial de introducción a [!INCLUDE[ssDE](../includes/ssde-md.md)] . Este tutorial está destinado a usuarios nuevos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que hayan instalado [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Este breve tutorial le ayuda a comenzar a usar [!INCLUDE[ssDE](../includes/ssde-md.md)].  

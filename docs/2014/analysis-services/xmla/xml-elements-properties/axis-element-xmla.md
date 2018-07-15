@@ -1,5 +1,5 @@
 ---
-title: Elemento Axis (XMLA) | Documentos de Microsoft
+title: Elemento Axis (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - Axis element
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e30ff03b6e1a58a079d35f8e846ed176c42a3a31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e3e68903dc828f4b14ac60892d1b6fc2baed2f30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263231"
 ---
 # <a name="axis-element-xmla"></a>Elemento Axis (XMLA)
-  Contiene un conjunto de tuplas utilizado para representar un eje único en un conjunto de datos multidimensional que contiene un [ejes](axes-element-xmla.md) elemento que usa el [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) tipo de datos, devuelto por la [Execute](../xml-elements-methods-execute.md) método.  
+  Contiene un conjunto de tuplas utilizado para representar un eje único en un conjunto de datos multidimensional que contiene un [ejes](axes-element-xmla.md) elemento que usa el [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) tipo de datos devuelto por la [Execute](../xml-elements-methods-execute.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36113202"
  Cuando una aplicación cliente establece el `AxisFormat` propiedad *TupleFormat*, un eje se representa como un conjunto de tuplas. Cada elemento `Axis` contiene un elemento `Tuples` que representa el conjunto de tuplas de ese eje. Cada tupla se representa utilizando un elemento `Tuple` que contiene elementos `Member` de cada jerarquía del eje.  
   
 ## <a name="clusterformat"></a>ClusterFormat  
- Cuando una aplicación cliente establece el `AxisFormat` propiedad *ClusterFormat*, los miembros en cada eje se dividen en clústeres en el que cada uno representa un producto cruzado entre los conjuntos ordenados de miembros de cada jerarquía. Cada elemento `Axis` consta de uno o varios elementos `CrossProduct`. Cada elemento `CrossProduct` contiene un elemento `Members` para cada jerarquía del eje.  
+ Cuando una aplicación cliente establece el `AxisFormat` propiedad *ClusterFormat*, los miembros en cada eje se dividen en clústeres en el que cada clúster representa un producto cruzado entre los conjuntos ordenados de miembros de cada jerarquía. Cada elemento `Axis` consta de uno o varios elementos `CrossProduct`. Cada elemento `CrossProduct` contiene un elemento `Members` para cada jerarquía del eje.  
   
 ## <a name="customformat"></a>CustomFormat  
  Cuando una aplicación cliente establece el `AxisFormat` propiedad *CustomFormat*, el valor se trata igual que el *TupleFormat* valor por una instancia de Analysis Services.  
@@ -82,7 +82,7 @@ ms.locfileid: "36113202"
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="description"></a>Descripción  
- En el ejemplo siguiente se muestra la estructura de la `Axis` elementos cuando un cliente especifica *TupleFormat* o *CustomFormat* para el `AxisFormat` propiedad XMLA, dada la siguiente miembros para el eje:  
+ El ejemplo siguiente muestra la estructura de la `Axis` elementos cuando un cliente especifica *TupleFormat* o *CustomFormat* para el `AxisFormat` propiedad XMLA, dada la siguiente miembros para el eje:  
   
 |||||  
 |-|-|-|-|  
@@ -132,7 +132,7 @@ ms.locfileid: "36113202"
 ```  
   
 ### <a name="description"></a>Descripción  
- En el ejemplo siguiente se muestra la estructura de la `Axis` elementos cuando un cliente especifica *ClusterFormat* para el `AxisFormat` propiedad XMLA, dado los siguientes miembros para el eje:  
+ El ejemplo siguiente muestra la estructura de la `Axis` elementos cuando un cliente especifica *ClusterFormat* para el `AxisFormat` propiedad XMLA, dado los siguientes miembros para el eje:  
   
 ||||||  
 |-|-|-|-|-|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xml data type [SQL Server], variables
 - parameters [XML in SQL Server]
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 08e80c3a42406b11abc0a46ae7b4afc92d0a35e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0da42dce1cef6d625a8e650a72c481b9458e35df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305095"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML con tipo y XML sin tipo
-  Se pueden crear variables, parámetros y columnas del tipo de datos `xml`. Opcionalmente, puede asociar una colección de esquemas XML a una variable, un parámetro o una columna de `xml` tipo. En este caso, el `xml` instancia del tipo de datos se denomina *escrito*. En los demás casos, se dice que la instancia XML es una instancia *sin tipo*.  
+  Se pueden crear variables, parámetros y columnas del tipo de datos `xml`. Opcionalmente, puede asociar una colección de esquemas XML con una variable, parámetro o columna de `xml` tipo. En este caso, el `xml` se llama a la instancia de tipo de datos *escrito*. En los demás casos, se dice que la instancia XML es una instancia *sin tipo*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>XML correcto y tipo de datos XML  
  El tipo de datos `xml` implementa el tipo de datos `xml` del estándar ISO. Por lo tanto, puede almacenar documentos XML versión 1.0 correctos, así como los denominados fragmentos de contenido XML con nodos de texto y un número arbitrario de elementos de nivel superior en una columna XML sin tipo. El sistema comprueba que todos los datos tienen un formato correcto, no requiere que la columna esté enlazada a esquemas XML y rechaza los datos que no tienen un formato correcto en sentido amplio. Esto también se cumple para parámetros y variables XML sin tipo.  
@@ -67,12 +67,12 @@ ms.locfileid: "36111975"
  Columnas, parámetros y variables XML con tipo pueden almacenar documentos o contenido XML. No obstante, hay que especificar con una marca si se va a almacenar un documento o contenido en el momento de la declaración. Además, hay que proporcionar la colección de esquemas XML. Especifique DOCUMENT si cada instancia XML tiene exactamente un elemento de nivel superior. En caso contrario, use CONTENT. El compilador de consultas usa la marca DOCUMENT en comprobaciones de tipo durante la compilación de consultas para inferir elementos singleton de nivel superior.  
   
 ## <a name="creating-typed-xml"></a>Crear XML con tipo  
- Para poder crear con tipo `xml` variables, parámetros o columnas, primero debe registrar la colección de esquemas XML mediante el uso de [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). A continuación, puede asociar la colección de esquemas XML a variables, parámetros o columnas de la `xml` tipo de datos.  
+ Antes de poder crear con tipo `xml` variables, parámetros o columnas, primero debe registrar la colección de esquemas XML mediante [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). A continuación, puede asociar la colección de esquemas XML a variables, parámetros o columnas de la `xml` tipo de datos.  
   
  En los ejemplos siguientes se usa una convención de nomenclatura de dos partes para especificar el nombre de la recopilación de esquemas XML. La primera parte corresponde al nombre de esquema y la segunda al nombre de la colección de esquemas XML.  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Ejemplo: Asociar una colección de esquemas con una variable de tipo XML  
- En el ejemplo siguiente se crea un`xml` variable de tipo y asocia una colección de esquemas. La colección de esquemas especificada en el ejemplo ya se ha importado a la base de datos **AdventureWorks** .  
+ En el ejemplo siguiente se crea un`xml` variable de tipo y la asocia una colección de esquemas. La colección de esquemas especificada en el ejemplo ya se ha importado a la base de datos **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
@@ -101,7 +101,7 @@ AS
   
 -   Una colección de esquemas XML solo está disponible en la base de datos en la que se ha registrado mediante [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql).  
   
--   Si se convierte en una cadena a un tipo `xml` tipo de datos, el análisis también realiza la validación y tipos, de acuerdo con los espacios de nombres del esquema XML en la colección especificada.  
+-   Si es convertir una cadena a un tipo `xml` tipo de datos, el análisis también realiza la validación y tipos, de acuerdo con los espacios de nombres del esquema XML en la colección especificada.  
   
 -   Es posible convertir un tipo de datos `xml` con tipo en un tipo de datos `xml` sin tipo, y viceversa.  
   
@@ -110,7 +110,7 @@ AS
  En la jerarquía de tipos de datos, el `xml` tipo de datos aparece debajo de `sql_variant` y tipos definidos por el usuario, pero por encima de los tipos integrados.  
   
 ### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Ejemplo: Especificar facetas para restringir una columna XML con tipo  
- Tipo `xml` columnas, puede restringir la columna para permitir que los elementos de solo único, de nivel superior para cada instancia almacenada en ella. Para ello, se especifica la faceta opcional `DOCUMENT` cuando se crea una tabla, como se muestra en el ejemplo siguiente:  
+ Con tipo `xml` columnas, se puede restringir la columna para permitir que los elementos sólo único de nivel superior para cada instancia almacenada en ella. Para ello, se especifica la faceta opcional `DOCUMENT` cuando se crea una tabla, como se muestra en el ejemplo siguiente:  
   
 ```  
 CREATE TABLE T(Col1 xml   
@@ -120,7 +120,7 @@ DROP TABLE T;
 GO  
 ```  
   
- De forma predeterminada, instancias se almacenan en el tipo `xml` columna se almacenan como contenido XML y no como documentos XML. Esto permite lo siguiente:  
+ De forma predeterminada, las instancias se almacenan en el objeto `xml` columna se almacenan como contenido XML y no como documentos XML. Esto permite lo siguiente:  
   
 -   Cero o varios elementos de nivel superior  
   
@@ -133,7 +133,7 @@ CREATE TABLE T(Col1 xml(CONTENT Production.ProductDescriptionSchemaCollection));
 GO -- Default  
 ```  
   
- Tenga en cuenta que puede especificar las facetas de DOCUMENT/CONTENT opcionales en cualquier lugar donde defina un tipo el `xml` (XML con tipo). Por ejemplo, cuando se crea un tipo `xml` variable, puede agregar la faceta DOCUMENT/CONTENT, como se muestra en la siguiente:  
+ Tenga en cuenta que puede especificar las facetas de DOCUMENT/CONTENT opcionales en cualquier lugar donde defina un tipo el `xml` (XML con tipo). Por ejemplo, cuando crea un tipo `xml` variable, puede agregar la faceta DOCUMENT/CONTENT, como se muestra en la siguiente:  
   
 ```  
 declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);  

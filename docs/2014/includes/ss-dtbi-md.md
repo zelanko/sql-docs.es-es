@@ -1,1 +1,1 @@
-Herramientas de datos SQL Server \- Business Intelligence
+SQL Server Data Tools \- inteligencia empresarial

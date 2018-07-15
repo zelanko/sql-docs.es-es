@@ -1,5 +1,5 @@
 ---
-title: sqllogship (aplicación) | Documentos de Microsoft
+title: Aplicación sqllogship | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 66b07b7867d8337941c052818d665d9590550806
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 065491c5bdf2254f6ee356383f7992c6d52b6c0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306685"
 ---
 # <a name="sqllogship-application"></a>sqllogship (aplicación)
   La aplicación **sqllogship** realiza una operación de copia de seguridad, copia o restauración y las tareas de limpieza asociadas en una configuración de trasvase de registros. La operación se realiza en una instancia específica de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para una base de datos determinada.  
   
- ![Icono de vínculo de tema](../../2014/database-engine/media/topic-link.gif "icono de vínculo de tema") para las convenciones de sintaxis, vea [referencia de utilidad de línea de comandos &#40;motor de base de datos&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Icono de vínculo de tema](../../2014/database-engine/media/topic-link.gif "icono de vínculo de tema") para las convenciones de sintaxis, vea [referencia utilidad de símbolo del sistema &#40;motor de base de datos&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,12 +42,12 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
  Especifica la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] donde se ejecutará la operación. La instancia del servidor que se va a especificar depende de la operación de trasvase de registros indicada. Para **-backup**, *instance_name* debe ser el nombre del servidor principal en una configuración de trasvase de registros. Para **-copy** o **-restore**, *instance_name* debe ser el nombre de un servidor secundario en una configuración de trasvase de registros.  
   
  **-backup** *primary_id*  
- Realiza una operación de copia de seguridad de la base de datos principal cuyo identificador principal se especifica en *primary_id*. Puede obtener este Id., selecciónelo en la [log_shipping_primary_databases](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql) tabla del sistema o mediante el [sp_help_log_shipping_primary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql) procedimiento almacenado.  
+ Realiza una operación de copia de seguridad de la base de datos principal cuyo identificador principal se especifica en *primary_id*. Puede obtener este identificador, selecciónelo en la [log_shipping_primary_databases](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql) tabla del sistema o mediante el [sp_help_log_shipping_primary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql) procedimiento almacenado.  
   
  La operación de copia de seguridad crea la copia de seguridad del registro en el directorio de copia de seguridad. A continuación, la aplicación **sqllogship** limpia los archivos de copia de seguridad antiguos, basándose en el período de retención de archivos. Más tarde, la aplicación registra el historial de la operación de copia de seguridad en el servidor principal y en el servidor de supervisión. Por último, se ejecuta la aplicación [sp_cleanup_log_shipping_history](/sql/relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql), que limpia la información del historial antigua, basándose en el período de retención.  
   
  **-copy** *secondary_id*  
- Realiza una operación de copia para copiar copias de seguridad desde el servidor secundario especificado de la base de datos o bases de datos secundarias cuyo identificador secundario se indica en *secondary_id*. Puede obtener este Id., selecciónelo en la [log_shipping_secondary](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql) tabla del sistema o mediante el [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) procedimiento almacenado.  
+ Realiza una operación de copia para copiar copias de seguridad desde el servidor secundario especificado de la base de datos o bases de datos secundarias cuyo identificador secundario se indica en *secondary_id*. Puede obtener este identificador, selecciónelo en la [log_shipping_secondary](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql) tabla del sistema o mediante el [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) procedimiento almacenado.  
   
  La operación copia los archivos de copia de seguridad desde el directorio de copia de seguridad al directorio de destino. A continuación, la aplicación **sqllogship** registra el historial de la operación de copia en el servidor secundario y en el servidor de supervisión.  
   
@@ -78,7 +78,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  El historial de trasvase de registros creado por **sqllogship** se combina con el historial creado por los trabajos de copia de seguridad, copia y restauración de trasvase de registros. Si tiene previsto usar **sqllogship** repetidamente para realizar operaciones de copia de seguridad, copia y restauración para una configuración de trasvase de registros, considere la posibilidad de deshabilitar los trabajos de trasvase de registros correspondientes. Para obtener más información, consulte [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
- El **sqllogship** , SqlLogShip.exe, está instalado en el directorio x:\Program de programa\Microsoft SQL Server\120\Tools\Binn.  
+ El **sqllogship** , SqlLogShip.exe, está instalado en el directorio x:\Program Server\120\Tools\Binn de programa\Microsoft SQL.  
   
 ## <a name="permissions"></a>Permisos  
  **sqllogship** usa la autenticación de Windows. La cuenta de la autenticación de Windows donde se ejecuta el comando requiere acceso al directorio de Windows y permisos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . El requisito depende de si el comando **sqllogship** especifica la opción **-backup**, **-copy**o **-restore** .  

@@ -1,5 +1,5 @@
 ---
-title: Configurar las propiedades de comportamiento de tablas para informes de Power View (SSAS Tabular) | Documentos de Microsoft
+title: Configurar las propiedades de comportamiento de tabla de informes de Power View (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cae146a14e85ed1e41a771f6ad97a9589f0fe272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6ca5036b2e3355ba4866096206296538f07bbae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267207"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurar las propiedades de comportamiento de las tablas para informes de Power View (SSAS tabular)
   Si va a utilizar un modelo tabular como modelo de datos para [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], puede establecer las propiedades del comportamiento de las tablas que exponen filas de detalles en un nivel más específico. El establecimiento de las propiedades del comportamiento de las tablas cambia el comportamiento de agrupación de las filas de detalle y genera una mejor colocación predeterminada de la información de identificación (como nombres, carnets con fotografía o imágenes de logotipo) en diseños de mosaicos, tarjetas y gráficos.  
@@ -109,7 +109,7 @@ ms.locfileid: "36196152"
   
  Para cambiar el comportamiento de agrupación predeterminada, establezca las propiedades **Identificador de tabla** y **Mantener filas únicas** . En **Mantener filas únicas**, elija la columna Apellido para que este valor se repita para una fila, aunque ya aparezca en otra. Después de cambiar las propiedades y volver a publicar el libro, puede crear el mismo informe, solo que en esta ocasión verá los de clientes llamados **Jon Yang**con los **Ingresos anuales** correctamente asignados a cada uno de ellos.  
   
- ![Fila de datos que contienen duplicados según el identificador de fila](../media/ssas-jonyang.gif "la fila de datos que contienen duplicados según el identificador de fila")  
+ ![Fila de datos que contienen duplicados según el Id. de fila](../media/ssas-jonyang.gif "la fila de datos que contienen duplicados según el Id. de fila")  
   
 ### <a name="matrix-layout-is-too-crowded"></a>El diseño de la matriz está demasiado amontonado  
  Cuando se muestra una tabla de detalles en una matriz, la agrupación predeterminada proporciona un valor resumido para cada columna. Dependiendo de los objetivos que tenga, podría haber más resúmenes de lo que le gustaría. Para cambiar este comportamiento, puede establecer **Identificador de tabla**. No será necesario establecer más propiedades adicionales; el identificador de fila es suficiente para cambiar la agrupación de forma que los resúmenes que se calculen para cada fila se basen en su identificador único de fila.  
@@ -118,11 +118,11 @@ ms.locfileid: "36196152"
   
  **Antes: agrupación predeterminada basada en los campos de la matriz**  
   
- ![Diseño de matriz agrupado por identificador de fila](../media/ssas-rptprop-matrixrowid.gif "diseño de matriz agrupado por identificador de fila")  
+ ![Diseño de la matriz se agrupa según el identificador de fila](../media/ssas-rptprop-matrixrowid.gif "diseño de la matriz se agrupa según el identificador de fila")  
   
  **Después: agrupación según el identificador de fila**  
   
- ![Diseño de matriz agrupado por identificador de fila](../media/ssas-rptprop-matrixrowid.gif "diseño de matriz agrupado por identificador de fila")  
+ ![Diseño de la matriz se agrupa según el identificador de fila](../media/ssas-rptprop-matrixrowid.gif "diseño de la matriz se agrupa según el identificador de fila")  
   
 ### <a name="chart-showing-too-many-items-and-levels-on-the-axis"></a>Gráfico que muestra demasiados elementos y niveles en el eje  
  Los informes de gráfico que muestran datos detallados deben utilizar el identificador de fila como eje. Sin un identificador de fila, el eje es indeterminado, lo que produce un diseño basado en suposiciones que puede que no tenga sentido. Para cambiar este comportamiento, puede establecer **Identificador de tabla**. No será necesario establecer más propiedades adicionales; el identificador de fila es suficiente para cambiar la agrupación de forma que los resúmenes que se calculen para cada fila se basen en su identificador único de fila.  
@@ -131,11 +131,11 @@ ms.locfileid: "36196152"
   
  **Antes: agrupación predeterminada basada en los campos de un gráfico**  
   
- ![Gráfico basado en la agrupación predeterminada en el nivel de campo](../media/ssas-rptprop-chartfieldgroup.gif "gráfico basado en la agrupación predeterminada en el nivel de campo")  
+ ![Gráfico basado en agrupación predeterminado en el nivel de campo](../media/ssas-rptprop-chartfieldgroup.gif "gráfico basado en agrupación predeterminado en el nivel de campo")  
   
  **Después: agrupación según el identificador de fila (el identificador de fila se convierte en el eje)**  
   
- ![Gráfico basado en agrupación de Id. de fila](../media/ssas-rptprop-chartrowid.gif "gráfico basado en agrupación de Id. de fila")  
+ ![Gráfico basado en agrupación de identificador de fila](../media/ssas-rptprop-chartrowid.gif "gráfico basado en agrupación de identificador de fila")  
   
 ## <a name="next-steps"></a>Pasos siguientes  
  Después de haber evaluado las tablas del modelo y establecer las propiedades del comportamiento de las tablas para que las que contengan filas de detalles aparezcan siempre como elementos individuales, puede optimizar aún más el modelo mediante propiedades o configuraciones adicionales.  

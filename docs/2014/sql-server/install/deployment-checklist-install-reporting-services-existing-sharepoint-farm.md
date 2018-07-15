@@ -1,5 +1,5 @@
 ---
-title: 'Lista de comprobación de implementación: Instalar Reporting Services en una granja de SharePoint existente | Documentos de Microsoft'
+title: 'Lista de comprobación de implementación: Instalar Reporting Services en una granja de SharePoint existente | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: d13c0329073781f54ac02b653b15ead4959bd96e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c7c7270a3c4ef11f12894c97b51bb6cd09389fea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297545"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Lista de comprobación de la implementación: instalar Reporting Services en una granja de servidores de SharePoint existente
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Servidores de informes de SharePoint pueden instalarse en una granja de SharePoint nueva o en una granja de SharePoint existente. En este tema se describe los posibles escenarios y prácticas recomendadas para instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la granja de servidores de SharePoint existente.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Servidores de informes de SharePoint pueden instalarse en una nueva granja de SharePoint o en una granja de SharePoint existente. En este tema se describe los posibles escenarios y procedimientos recomendados para la instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la granja de servidores de SharePoint existente.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Antes de ejecutar el programa de instalación, revise la información siguiente:  
@@ -35,7 +35,7 @@ ms.locfileid: "36113298"
 |Nota: Si va a actualizar un equipo desde una versión anterior de CTP [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y había realizado cambios personalizados en los archivos de configuración, debe realizar los mismos cambios en los archivos de configuración después de actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Los archivos afectados son **web.config** y **client.config**.||  
   
 ## <a name="installation-scenarios"></a>Escenarios de instalación  
- En la tabla siguiente se describe los posibles escenarios cuando va a instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la granja de servidores de SharePoint existente. Modo local permite que los informes se representen localmente desde la biblioteca de documentos de SharePoint, sin integración con un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de informes. Se requiere el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para los productos de SharePoint. No se requiere un servidor de informes [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información sobre el modo local, vea [Informes en modo local frente al Modo conectado en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41; ](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) y [dónde encontrar el complemento de Reporting Services para productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+ La tabla siguiente describe los posibles escenarios cuando va a instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la granja de servidores de SharePoint existente. Modo local permite que los informes se representen localmente desde la biblioteca de documentos de SharePoint, sin integración con un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de informes. Se requiere el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para los productos de SharePoint. No se requiere un servidor de informes [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información sobre el modo local, vea [Informes en modo local frente al Modo conectado en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41; ](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) y [dónde encontrar el complemento de Reporting Services para productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 |Iniciar la configuración|Flujo de trabajo|Terminar la configuración|Comentarios|  
 |----------------------------|--------------|--------------------------|--------------|  
@@ -68,7 +68,7 @@ ms.locfileid: "36113298"
 |Realizar la copia de seguridad de las bases de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |Realizar la copia de seguridad de las claves de cifrado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |Restaurar la base de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y las claves de cifrado||  
-|Asignar todas las aplicaciones web a las nuevas [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]aplicaciones de servicio|La nueva instalación **es funcional ahora**|  
+|Asignar todas las aplicaciones web al nuevo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]aplicaciones de servicio|La nueva instalación **es funcional ahora**|  
 |Quitar la integración de direcciones URL en el servidor anterior.|Desde Administración central de SharePoint, en la Página **Configuración de aplicación general** , haga clic en **Integración de Reporting Services**.|  
 |Desinstalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] desde la anterior instalación, si lo desea.||  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36113298"
   
 ## <a name="see-also"></a>Vea también  
  [Instalación en modo de SharePoint de Reporting Services &#40;SharePoint 2010 y SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
- [Instrucciones para usar características de BI de SQL Server en una granja de servidores de SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)   
+ [Instrucciones para usar características de BI de SQL Server en una granja de SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)   
  [Combinaciones admitidas de SharePoint y Reporting Services Server y el complemento &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
   

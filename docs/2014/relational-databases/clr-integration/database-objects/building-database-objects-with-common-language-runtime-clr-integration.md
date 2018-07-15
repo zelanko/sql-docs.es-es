@@ -1,13 +1,11 @@
 ---
-title: Creación de objetos de base de datos con la integración de Common Language Runtime (CLR) | Documentos de Microsoft
+title: Creación de objetos de base de datos con la integración de Common Language Runtime (CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +17,18 @@ helpviewer_keywords:
 - .NET Framework routines [SQL Server]
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 070e9df2a42cbed665de1b076600d333926f6ea1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 72d68e213d240e3c6182f99e8c1637c1f1ebedfb
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199705"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351017"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Crear objetos de base de datos con la integración de Common Language Runtime (CLR)
-  Puede crear objetos de base de datos mediante la [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se conoce como una "rutina CLR". Estas rutinas incluyen:  
+  Puede crear objetos de base de datos mediante el [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se conoce como una "rutina CLR". Estas rutinas incluyen:  
   
 -   Funciones definidas por el usuario con valores escalares (UDF escalares)  
   
@@ -42,7 +40,7 @@ ms.locfileid: "36199705"
   
  Las rutinas CLR tienen la misma estructura en código administrado. Están asignadas a los métodos público, estático (compartidos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET) de una clase. Además de las rutinas, los tipos definidos por el usuario (UDT) y las funciones de agregado definidas por el usuario también se pueden definir mediante .NET Framework. Los UDT y los agregados definidos por el usuario están asignados a las clases de .NET Framework completas.  
   
- Cada tipo de rutina de .NET Framework tiene una [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] que la [!INCLUDE[tsql](../../../includes/tsql-md.md)] equivalente se puede utilizar. Por ejemplo, los UDF escalares se pueden usar en cualquier expresión escalar. Un TVF se puede usar en cualquier cláusula FROM. Un procedimiento se puede invocar en una instrucción EXEC o bien, desde una aplicación cliente.  
+ Cada tipo de rutina de .NET Framework tiene un [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] que el [!INCLUDE[tsql](../../../includes/tsql-md.md)] equivalente se puede usar. Por ejemplo, los UDF escalares se pueden usar en cualquier expresión escalar. Un TVF se puede usar en cualquier cláusula FROM. Un procedimiento se puede invocar en una instrucción EXEC o bien, desde una aplicación cliente.  
   
 > [!NOTE]  
 >  La ejecución de un objeto CLR (función definida por el usuario, tipo definido por el usuario o desencadenador) en el Common Language Runtime puede tener lugar en varios subprocesos (el plan paralelo), si el optimizador de consultas decide que es beneficioso. Sin embargo, si una función definida por el usuario tiene acceso a los datos, la ejecución estará en un plan de serie. Cuando se ejecuta en una versión de servidor anterior a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], si una función definida por el usuario contiene parámetros LOB o valores devueltos, la ejecución también debe estar en un plan en serie.  
@@ -61,7 +59,7 @@ ms.locfileid: "36199705"
  [Tipos de datos de SQL Server en .NET Framework](../../clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
  Información general de tipos de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y sus equivalentes de .NET Framework.  
   
- [Información general de atributos personalizados de integración de CLR](../../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)  
+ [Información general de los atributos personalizados de la integración CLR](../../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)  
  Proporciona información sobre los atributos personalizados de integración CLR.  
   
  [Funciones CLR definidas por el usuario](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
@@ -77,6 +75,6 @@ ms.locfileid: "36199705"
  Describe cómo implementar y usar los desencadenadores CLR.  
   
 ## <a name="see-also"></a>Vea también  
- [Common Language Runtime &#40;CLR&#41; descripción de la integración](../common-language-runtime-integration-overview.md)  
+ [Common Language Runtime &#40;CLR&#41; Introducción a la integración](../common-language-runtime-integration-overview.md)  
   
   

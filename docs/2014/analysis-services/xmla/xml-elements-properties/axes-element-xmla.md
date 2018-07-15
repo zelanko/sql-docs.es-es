@@ -1,5 +1,5 @@
 ---
-title: Ejes elemento (XMLA) | Documentos de Microsoft
+title: Axes (XMLA) del elemento | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Axes element
 ms.assetid: 2005d06a-f8a2-4b4f-8c0d-2f7f73eb6f5c
 caps.latest.revision: 21
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f508a92ca7ab8aca224c299723adddf3654c167c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b8ac4baded4dd516e12c31ffd701e1c4668d769e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237405"
 ---
 # <a name="axes-element-xmla"></a>Elemento Axes (XMLA)
   Contiene una colección de [eje](axis-element-xmla.md) elementos que representan datos de eje contenidos por un [raíz](root-element-xmla.md) elemento que usa el [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) tipo de datos.  
@@ -67,7 +67,7 @@ ms.locfileid: "36196308"
 |Elementos secundarios|[Axis](axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notas  
- En el elemento `Axes`, los elementos `Axis` se enumeran en el orden que tienen lugar en el conjunto de datos bajo, empezando desde cero. El valor de la propiedad XMLA de `AxisFormat` determina cómo se da formato a los elementos `Axis`. Para obtener más información sobre la `AxisFormat` propiedad, vea [admite propiedades XMLA &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md).  
+ En el elemento `Axes`, los elementos `Axis` se enumeran en el orden que tienen lugar en el conjunto de datos bajo, empezando desde cero. El valor de la propiedad XMLA de `AxisFormat` determina cómo se da formato a los elementos `Axis`. Para obtener más información sobre la `AxisFormat` propiedad, vea [propiedades XMLA compatibles &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md).  
   
  Un eje representa un conjunto de tuplas, en las que todas las tuplas del conjunto tienen la misma dimensionalidad. Un conjunto se puede representar de maneras diferentes con ventajas diferentes. Por ejemplo, el conjunto siguiente de cuatro tuplas se puede representar como una colección de tuplas bidimensionales o un producto cartesiano de dos conjuntos unidimensionales.  
   

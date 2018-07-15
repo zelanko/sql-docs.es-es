@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - updating resources
 - resources [Reporting Services], updating
@@ -16,13 +16,13 @@ ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 012d0a129f97b87423f295f56c3b00e13a542c4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b4fd1def743928ef113b732fac0fde630c0b7d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328966"
 ---
 # <a name="update-a-resource-report-manager"></a>Actualizar un recurso (Administrador de informes)
   Puede actualizar un recurso reemplazándolo por una versión más reciente. Los recursos son elementos almacenados en un servidor de informes que contienen el contenido de un archivo que el usuario carga. Puede reemplazar un recurso existente importando el contenido de archivo nuevo o diferente en el recurso existente. La actualización de un recurso proporciona un modo de actualizar contenido preservando las propiedades existentes y la configuración de seguridad del recurso.  
@@ -51,6 +51,6 @@ ms.locfileid: "36103041"
  [El contenido de página &#40;el Administrador de informes&#41;](../contents-page-report-manager.md)   
  [Página Cargar archivo &#40;Administrador de informes&#41;](../upload-file-page-report-manager.md)   
  [Carga de archivos a una carpeta](upload-files-to-a-folder.md)   
- [El Administrador de informes (Ayuda F1)](../report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../report-manager-f1-help.md)  
   
   

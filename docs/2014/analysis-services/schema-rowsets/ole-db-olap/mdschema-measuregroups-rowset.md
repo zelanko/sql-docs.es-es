@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas MDSCHEMA_MEASUREGROUPS | Documentos de Microsoft
+title: Conjunto de filas MDSCHEMA_MEASUREGROUPS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_MEASUREGROUPS rowset
 ms.assetid: bab1bbd0-421b-4fad-9aee-e6511e0e1f1b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 046674dc7c579a99e3d9fd90a86c466001c270c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7846fa9eb88a91a945c787cfec0fe19d0c520cf6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300985"
 ---
 # <a name="mdschemameasuregroups-rowset"></a>Conjunto de filas MDSCHEMA_MEASUREGROUPS
   Describe los grupos de medida dentro de una base de datos.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `MDSCHEMA_MEASUREGROUPS` filas contiene las columnas siguientes.  
+ El `MDSCHEMA_MEASUREGROUPS` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "36112103"
  Este conjunto de filas de esquema no está ordenado.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `MDSCHEMA_MEASUREGROUPS` se puede restringir el conjunto de filas en las columnas de la tabla siguiente.  
+ El `MDSCHEMA_MEASUREGROUPS` conjunto de filas puede tener restricciones en las columnas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

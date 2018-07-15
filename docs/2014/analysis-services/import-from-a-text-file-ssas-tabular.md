@@ -1,5 +1,5 @@
 ---
-title: Importar desde un archivo de texto (SSAS Tabular) | Documentos de Microsoft
+title: Importación de un archivo de texto (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7c426b04-4ff6-49ab-8bfd-54074d6ae99d
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0723d7b079fef518f80d468f3a3a08c179a01fbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f897668d21a9f213cf841a688f217a5ff1a9fe02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102940"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310765"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>Importar desde un archivo de texto (SSAS tabular)
   Puede importar datos de archivos de Microsoft Excel y archivos de texto usando el Asistente para la importación de tablas.  
@@ -35,7 +35,7 @@ ms.locfileid: "36102940"
 3.  Siga los pasos en el Asistente para la importación de tablas. En las páginas siguientes, podrá seleccionar tablas específicas y aplicar filtros mediante la página de **Seleccionar tablas y vistas** .  
   
 ## <a name="see-also"></a>Vea también  
- [Importar datos &#40;SSAS Tabular&#41;](import-data-ssas-tabular.md)   
+ [Importar datos &#40;Tabular de SSAS&#41;](import-data-ssas-tabular.md)   
  [Orígenes de datos compatibles &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

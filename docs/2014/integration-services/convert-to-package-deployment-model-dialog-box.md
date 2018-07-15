@@ -1,5 +1,5 @@
 ---
-title: Convertir en el cuadro de diálogo de modelo de implementación de paquete | Documentos de Microsoft
+title: Convertir en el cuadro de diálogo de modelo de implementación de paquete | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.bids.converttolegacydeployment.f1
 ms.assetid: 9e60a34a-10f7-48d1-966f-b3ff236ab4b7
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 69d64b35f39c86b9070df9c9fcfacfcf9a7d68f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1cb982b23645821f6c24c51b4ce4402336c08ea5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233867"
 ---
 # <a name="convert-to-package-deployment-model-dialog-box"></a>Convertir a modelo de implementación de paquetes, cuadro de diálogo
   El comando de **Convertir a modelo de implementación de paquetes** permite convertir un paquete al modelo de implementación de paquetes después de comprobar el proyecto y cada paquete en el proyecto para ver la compatibilidad con ese modelo. Si un paquete usa las características exclusivas del modelo de implementación de proyectos, como los parámetros, el paquete no se podrá convertir.  
@@ -41,6 +41,6 @@ ms.locfileid: "36113186"
 ## <a name="see-also"></a>Vea también  
  [Implementación de proyectos y paquetes](packages/deploy-integration-services-ssis-projects-and-packages.md)   
  [Implementación del paquete &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
- [Asistente para conversión de proyectos de Integration Services](../../2014/integration-services/integration-services-project-conversion-wizard.md)  
+ [Asistente para la conversión de proyectos de Integration Services](../../2014/integration-services/integration-services-project-conversion-wizard.md)  
   
   

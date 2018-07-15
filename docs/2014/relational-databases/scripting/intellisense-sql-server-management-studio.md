@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c6734bbbb57da12d1d83bbaa3135c0910d35b076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 81446455290deca9a3eebd425a27ac7fbcaaa0a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296415"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
   Los editores de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] admiten las opciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense que reducen las tareas de escritura, proporcionan acceso rápido a la información de sintaxis o facilitan la visualización de los delimitadores de expresiones complejas.  
@@ -36,7 +36,7 @@ ms.locfileid: "36113547"
 |Describe cómo usar la información rápida para obtener información acerca de información sobre herramientas que describe un identificador (como una tabla o un nombre de vista).|[Información rápida &#40;IntelliSense&#41;](quick-info-intellisense.md)|  
 |Describe cómo hacer que IntelliSense complete el resto de un identificador después de haber escrito suficiente parte del nombre para obtener una breve lista de objetos cuyos nombres comienzan con la misma cadena.|[Palabra completa &#40;IntelliSense&#41;](complete-word-intellisense.md)|  
 |Describe cómo IntelliSense puede identificar los finales de un par de delimitadores y cómo puede ir de un extremo al otro del par.|[Coincidencia automática de pares en la sintaxis](automatic-matching-of-syntax-pairs.md)|  
-|Describe las condiciones en las que IntelliSense no puede trabajar.|[Solución de problemas IntelliSense (SQL Server Management Studio)](troubleshooting-intellisense.md)|  
+|Describe las condiciones en las que IntelliSense no puede trabajar.|[Solución de problemas de IntelliSense (SQL Server Management Studio)](troubleshooting-intellisense.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Editores de consultas y texto &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  

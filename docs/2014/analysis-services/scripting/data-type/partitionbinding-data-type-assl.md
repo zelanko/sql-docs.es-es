@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos PartitionBinding (ASSL) | Documentos de Microsoft
+title: Tipo de datos PartitionBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PartitionBinding data type
 ms.assetid: 859d4b47-31c7-4678-9388-254fec484299
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4e265cd83401d480de74adf89949dd8edf73616
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c34bee83ab6a32fe10d00b6d3450412e12729dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281921"
 ---
 # <a name="partitionbinding-data-type-assl"></a>Tipo de datos PartitionBinding (ASSL)
   Define un tipo de datos derivado que representa un enlace a un [partición](../objects/partition-element-assl.md) elemento.  
@@ -60,12 +60,12 @@ ms.locfileid: "36114142"
 |------------------|-------------|  
 |Elementos primarios|None|  
 |Elementos secundarios|[CubeID](../../xmla/xml-elements-properties/id-element-xmla.md), [DatabaseID](../../xmla/xml-elements-properties/databaseid-element-xmla.md), [PartitionID](../../xmla/xml-elements-properties/partitionid-element-xmla.md), [origen](../properties/source-element-binding-assl.md)|  
-|Elementos derivados|Vea [enlace](binding-data-type-assl.md)|  
+|Elementos derivados|Consulte [enlace](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
- Para obtener información adicional sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, consulte [tipo de enlace de datos &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Para obtener más información sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, vea [tipo de enlace de datos &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- Para obtener información general de enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;SSAS multidimensionales&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obtener información general de los enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de datos XML de lenguaje Scripting de Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

@@ -1,30 +1,29 @@
 ---
-title: Actualización y actualización de los servidores del grupo de disponibilidad con una pérdida de datos y tiempo de inactividad mínimo | Documentos de Microsoft
+title: Actualización de los servidores del grupo de disponibilidad con una pérdida de datos y tiempo de inactividad mínimo y de actualización | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 caps.latest.revision: 7
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a0e2c87919337ebfec117e4696185b4fe8705218
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: db74916aa24c1dcd3f94fa163ae0ef87697a8fa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247035"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Actualizar servidores de un grupo de disponibilidad con una pérdida de datos y un tiempo de inactividad mínimos
   Al actualizar instancias de servidor de SQL Server 2012 a un Srvice Pack o una versión más reciente, puede reducir el tiempo de inactividad de un grupo de disponibilidad a solo una conmutación por error manual realizando una actualización secuencial. La actualización de las versiones de SQL Server se conoce como adaptación (upgrade) gradual; la actualización de la versión actual de SQL Server con revisiones o Service Packs se conoce como actualización (update) gradual.  
   
- Este tema limita la explicación únicamente a las adaptaciones y a las actualizaciones de SQL Server (a las que, de aquí en adelante, se hará referencia genéricamente como actualizaciones). Para relacionados con el sistema operativo actualizaciones que se ejecutan las instancias de SQL Server de alta disponibilidad en, consulte [entre clústeres migración de grupos de disponibilidad AlwaysOn para las actualizaciones del sistema operativo](http://msdn.microsoft.com/library/jj873730.aspx)  
+ Este tema limita la explicación únicamente a las adaptaciones y a las actualizaciones de SQL Server (a las que, de aquí en adelante, se hará referencia genéricamente como actualizaciones). Para relacionados con el sistema operativo actualizaciones de que se ejecutan las instancias de SQL Server de alta disponibilidad en, consulte [entre clústeres migración de grupos de disponibilidad AlwaysOn para las actualizaciones del sistema operativo](http://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>Prácticas recomendadas de las actualizaciones graduales en grupos de disponibilidad AlwasysOn  
  Las siguientes prácticas recomendadas deberían observarse al realizar actualizaciones de servidor a fin de reducir el tiempo de inactividad y la pérdida de datos en los grupos de disponibilidad:  

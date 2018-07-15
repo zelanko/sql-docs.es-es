@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 39633ecaa8c0fbb73e712d1d227c4fe39c8f00dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 70d23d19f2719aaa86ba81617bfb33544279bd2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236245"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico circular a un informe (Generador de informes)
   Los gráficos circulares y los gráficos de anillos muestran los datos como una proporción del total. Los gráficos circulares se usan normalmente para realizar comparaciones entre grupos. Los gráficos circulares y de anillos, junto con los gráficos de pirámide y embudo, forman un grupo de gráficos conocidos como gráficos de formas. Los gráficos de formas no tienen ejes. Cuando se coloca un campo numérico en un gráfico de formas, el gráfico calcula el porcentaje de cada valor en relación con el total.  
@@ -142,7 +142,7 @@ ms.locfileid: "36113085"
   
      Para mostrar los valores como porcentajes, la propiedad UseValueAsLabel debe ser falsa. Si se le pide que establezca este valor en el cuadro de diálogo **Confirmar acción** , haga clic en **Sí**.  
   
-5.  (Opcional) Para especificar cuántas posiciones decimales muestra la etiqueta, escriba `#PERCENT{Pn}` donde *n* es el número de posiciones decimales que se van a mostrar. Por ejemplo, para no mostrar ninguna posición decimal, escriba `#PERCENT{P0}`.  
+5.  (Opcional) Para especificar el número de posiciones decimales muestra la etiqueta, escriba `#PERCENT{Pn}` donde *n* es el número de posiciones decimales que se muestran. Por ejemplo, para no mostrar ninguna posición decimal, escriba `#PERCENT{P0}`.  
   
     > [!NOTE]  
     >  La opción**Formato de número** del cuadro de diálogo **Propiedades de la etiqueta de la serie** no tiene ningún efecto al dar formato a los porcentajes. Esto aplica formato de porcentaje a las etiquetas, pero no calcula el porcentaje del gráfico circular que cada sector representa.  
@@ -160,7 +160,7 @@ ms.locfileid: "36113085"
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  En el **vista** ficha la **mostrar/ocultar** grupo, seleccione **propiedades**.  
+2.  En el **vista** ficha la **mostrar u ocultar** grupo, seleccione **propiedades**.  
   
 3.  En la superficie de diseño, haga clic en cualquier sector del gráfico circular. Las propiedades de la serie se muestran en el panel de propiedades.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "36113085"
   
 7.  Compruebe que la propiedad **CollectedThresholdUsePercent** esté establecida en **True**.  
   
-8.  En la cinta de opciones, en el **inicio** , haga clic en **ejecutar** para obtener una vista previa del informe.  
+8.  En la cinta de opciones, en el **inicio** , haga clic **ejecutar** para obtener una vista previa del informe.  
   
  En la leyenda, ahora existe la categoría "Other". El nuevo sector del gráfico circular combina todos los sectores que estaban por debajo del 5% en un sector que es el 6% de todo el gráfico circular.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "36113085"
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Si el panel de propiedades no está abierto, en la **vista** ficha, seleccione **propiedades**.  
+2.  Si el panel de propiedades no está ya abierto, en el **vista** ficha, seleccione **propiedades**.  
   
 3.  Haga doble clic en el propio gráfico circular. Las propiedades de la serie para el gráfico circular se muestran en el panel de propiedades.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "36113085"
   
      **Como porcentaje de ventas totales**  
   
-3.  Seleccione **ventas de cámaras y cámaras de vídeo**y haga clic en el **negrita** botón desde la **fuente** sección de la **inicio** ficha de la cinta de opciones.  
+3.  Seleccione **ventas de cámaras y cámaras de vídeo**y haga clic en el **negrita** botón desde la **fuente** sección de la **inicio** pestaña de la cinta de opciones.  
   
 4.  Seleccione **como porcentaje de ventas totales**y en el **fuente** sección en la **inicio** pestaña, establezca el tamaño de fuente en **10**.  
   

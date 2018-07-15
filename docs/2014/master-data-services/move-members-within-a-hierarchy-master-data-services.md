@@ -1,5 +1,5 @@
 ---
-title: Mover miembros dentro de una jerarquía (Master Data Services) | Documentos de Microsoft
+title: Mover miembros dentro de una jerarquía (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Master Data Services], moving members
 - explicit hierarchies, moving members
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - members [Master Data Services], moving
 ms.assetid: 049c9a15-89c1-478c-8438-028fffc9e187
 caps.latest.revision: 8
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d5e8bf5a041458614422b3c89666ea3ffc9f5a86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8048fce8af968f0a1188f8330993977bedcac7d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252321"
 ---
 # <a name="move-members-within-a-hierarchy-master-data-services"></a>Mover miembros dentro de una jerarquía (Master Data Services)
   En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], mueva los miembros de una jerarquía para cambiar su ubicación o su asignación principal.  
@@ -36,7 +36,7 @@ ms.locfileid: "36112930"
   
 -   Para las jerarquías explícitas, debe tener un mínimo de **actualización** permiso a la entidad.  
   
--   Para las jerarquías derivadas, debe tener un mínimo de **actualización** al modelo y a todos los atributos basados en dominio utilizados en la jerarquía.  
+-   Las jerarquías derivadas, debe tener un mínimo de **actualización** al modelo y a todos los atributos basados en dominio utilizados en la jerarquía.  
   
 ### <a name="to-move-members-within-a-hierarchy"></a>Mover miembros dentro de una jerarquía  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36112930"
     >  En las jerarquías derivadas, sólo puede mover los miembros al mismo nivel. Asimismo, puede cambiar el criterio de ordenación de los miembros.  
   
 ## <a name="see-also"></a>Vea también  
- [Mover miembros de jerarquía explícita mediante el proceso de almacenamiento provisional &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
+ [Mover miembros de jerarquías explícitas usando el proceso de almacenamiento provisional &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [Jerarquías derivadas &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
  [Jerarquías explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   

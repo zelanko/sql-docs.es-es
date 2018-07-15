@@ -1,5 +1,5 @@
 ---
-title: Consulta de elemento (XMLA) | Documentos de Microsoft
+title: Consulta de elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Query element
 ms.assetid: 5a4544e4-012f-4a47-942c-23596400ea16
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e01c14cb889a7d2953c98d8dfeee3bb89eee344e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 02feb5cb14e6b6acdc6100070495d0c84b89e483
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293255"
 ---
 # <a name="query-element-xmla"></a>Elemento Query (XMLA)
-  Contiene una consulta en el [consultas](queries-element-xmla.md) colección usada por la [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) comando durante la optimización basada en uso.  
+  Contiene una consulta dentro de la [consultas](queries-element-xmla.md) colección usada por el [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) comando durante la optimización basada en uso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36112082"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El comando `DesignAggregations` admite la optimización basada en el uso incluyendo uno o más elementos `Query` en la colección `Queries` del comando. Cada `Query` elemento representa una consulta de objetivo que utiliza el proceso de diseño para definir agregaciones dirigidas a las consultas utilizadas con más frecuencia. Puede especificar sus propias consultas de objetivo, o puede usar la información almacenada en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en el registro de consultas para recuperar información sobre con más frecuencia utiliza las consultas.  
+ El comando `DesignAggregations` admite la optimización basada en el uso incluyendo uno o más elementos `Query` en la colección `Queries` del comando. Cada `Query` elemento representa una consulta de objetivo que utiliza el proceso de diseño para definir agregaciones dirigidas a las consultas utilizadas con frecuencia. Puede especificar sus propias consultas de objetivo, o puede usar la información almacenada por una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en el registro de consultas para recuperar información sobre con más frecuencia utiliza las consultas.  
   
- Si diseña agregaciones de forma iterativa, solo tiene que pasar las consultas del objetivo de la primera `DesignAggregations` el comando porque el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia almacena estas consultas de objetivo y usa estas consultas durante posteriores `DesignAggregations` comandos. Después de incluir las consultas del objetivo en el primer comando `DesignAggregations` de un proceso iterativo, cualquier comando `DesignAggregations` posterior que contenga las consultas de objetivo en la propiedad `Queries` generará un error.  
+ Si está diseñando agregaciones de forma iterativa, solo tiene que pasar las consultas de objetivo en la primera `DesignAggregations` comando porque el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia almacena estas consultas de objetivo y las usa durante la subsiguiente `DesignAggregations` comandos. Después de incluir las consultas del objetivo en el primer comando `DesignAggregations` de un proceso iterativo, cualquier comando `DesignAggregations` posterior que contenga las consultas de objetivo en la propiedad `Queries` generará un error.  
   
  El elemento `Query` contiene un valor delimitado por comas que contiene los siguientes argumentos:  
   
@@ -81,12 +81,12 @@ ms.locfileid: "36112082"
  Por ejemplo, la cadena "011" haría referencia a una consulta que implicaría una dimensión con tres atributos, de los que el segundo y el tercero estarían incluidos en la consulta.  
   
 > [!NOTE]  
->  Algunos atributos no se tienen en cuenta en el conjunto de datos. Para obtener más información sobre los atributos excluidos, consulte [propiedades (XMLA)](query-element-xmla.md).  
+>  Algunos atributos no se tienen en cuenta en el conjunto de datos. Para obtener más información sobre los atributos excluidos, vea [Properties (XMLA)](query-element-xmla.md).  
   
- Cada dimensión del grupo de medida que contiene el diseño de agregaciones está representada por un *conjunto de datos* valor en el `Query` elemento. El orden de los valores de *Dataset* debe coincidir con el orden de las dimensiones incluidas en el grupo de medidas.  
+ Cada dimensión del grupo de medida que contiene el diseño de agregaciones está representada por un *Dataset* valor en el `Query` elemento. El orden de los valores de *Dataset* debe coincidir con el orden de las dimensiones incluidas en el grupo de medidas.  
   
 ## <a name="see-also"></a>Vea también  
- [Diseñar agregaciones &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   
+ [Diseño de agregaciones &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   
  [Propiedades &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

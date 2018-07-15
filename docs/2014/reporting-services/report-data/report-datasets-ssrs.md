@@ -1,5 +1,5 @@
 ---
-title: Agregar datos a un informe (generador de informes y SSRS) | Documentos de Microsoft
+title: Agregar datos a un informe (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: aeae106d4ab76cb6ab04248126b4b32e1e4a160a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 2b65b1ae16a7df30d161c7f45c594678264de0a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284752"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>Agregar datos a un informe (Generador de informes y SSRS)
   Para agregar datos a un informe, cree conjuntos de datos. Cada conjunto de datos representa el conjunto de resultados obtenidos al ejecutar un comando de consulta en un origen de datos. Las columnas del conjunto de resultados son la colección de campos y las filas, los datos. Un conjunto de resultados no contiene los datos reales, sino la información necesaria para recuperar un conjunto de datos específico a partir de un origen de datos.  
@@ -69,7 +69,7 @@ ms.locfileid: "36196175"
   
 -   [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
--   [Gráficos &#40;el generador de informes SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+-   [Los gráficos &#40;generador de informes y SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
 -   [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -77,9 +77,9 @@ ms.locfileid: "36196175"
   
 -   [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Elementos de informe &#40;el generador de informes SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
+-   [Elementos de informe &#40;generador de informes y SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
   
--   [Filtrar, agrupar y ordenar datos &#40;el generador de informes SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+-   [Filtrar, agrupar y ordenar datos &#40;generador de informes y SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
@@ -100,30 +100,30 @@ ms.locfileid: "36196175"
   
  En el diseñador de consultas, puede ejecutar la consulta para ver datos de ejemplo y validar la sintaxis del comando de consulta. Los nombres de columna del conjunto de resultados se convierten en los nombres de campo que se ven en el panel Datos de informe. El conjunto de resultados debe ser un conjunto único de filas y columnas en el que existe el mismo número de valores para cada fila de datos. No se admiten varios conjuntos de resultados de una única consulta. Las jerarquías desiguales, que no tienen un número constante de columnas y pueden generar un número distinto de valores de datos para cada fila, no se admiten.  
   
- Para ejecutar una consulta, debe tener credenciales de tiempo de diseño. Para obtener más información, consulte [especificar credenciales en el generador de informes](../specify-credentials-in-report-builder.md) y [las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ Para ejecutar una consulta, debe tener credenciales de tiempo de diseño. Para obtener más información, consulte [especificar credenciales en Generador de informes](../specify-credentials-in-report-builder.md) y [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
  Los proveedores de datos se ocupan de la comunicación entre una extensión de datos y el origen de datos externo. Cada proveedor de datos determina la compatibilidad con la sintaxis de comandos de consulta, los parámetros de consulta y los tipos de datos de los valores en el conjunto de resultados. Para más información, vea el tema del tipo específico de extensión de datos y [Diseñadores de consultas &#40;Generador de informes&#41;](../query-designers-report-builder.md).  
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
- [Agregar y comprobar una conexión de datos o un origen de datos &#40;el generador de informes SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
  [Agregar, editar y actualizar campos en el panel Datos de informe &#40;Generador de informes y SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- [Crear una consulta en el Diseñador de consultas relacionales &#40;el generador de informes SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
+ [Crear una consulta en el Diseñador de consultas relacionales &#40;generador de informes y SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales &#40;el generador de informes SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales &#40;generador de informes y SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
  [Agregar un filtro a un conjunto de datos &#40;Generador de informes y SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- [Establecer un mensaje no hay datos para una región de datos &#40;el generador de informes SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Establecer un mensaje cuando no hay datos para una región de datos &#40;generador de informes y SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Asociar un parámetro de consulta con un parámetro de informe &#40;el generador de informes SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
+ [Asociar un parámetro de consulta con un parámetro de informe &#40;generador de informes y SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
- [Definir los parámetros en el Diseñador de consultas MDX para Analysis Services &#40;el generador de informes SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
+ [Definir parámetros en el Diseñador de consultas MDX para Analysis Services &#40;generador de informes y SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36196175"
   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
- [Especifique credenciales en el generador de informes](../specify-credentials-in-report-builder.md)  
+ [Especificar credenciales en el Generador de informes](../specify-credentials-in-report-builder.md)  
   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
@@ -142,6 +142,6 @@ ms.locfileid: "36196175"
   
 ## <a name="see-also"></a>Vea también  
  [Vista de diseño de informe &#40;Generador de informes&#41;](../report-builder/report-design-view-report-builder.md)   
- [Conceptos de creación de informes &#40;el generador de informes SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Conceptos de creación de informes &#40;generador de informes y SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

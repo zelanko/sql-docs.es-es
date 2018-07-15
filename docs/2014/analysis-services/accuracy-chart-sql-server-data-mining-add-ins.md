@@ -1,5 +1,5 @@
 ---
-title: Gráfico de precisión (datos de SQL Server a los complementos de minería de datos) | Documentos de Microsoft
+title: Gráfico de precisión (datos de SQL Server a los complementos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy chart
 - mining models, validating
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - lift [data mining]
 ms.assetid: 303973b4-71c0-4cfc-b7bc-92218b52509d
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 16d669001ae0842c91853e28aae587dd5f4ebb51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d331c1acb84b67a19eba2c6aacebfe68b947b217
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222325"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Gráfico de precisión (Complementos de minería de datos de SQL Server)
-  ![Botón gráfico de precisión en la cinta de opciones de minería de datos](media/dmc-accchart.gif "botón gráfico de precisión en la cinta de opciones de minería de datos")  
+  ![Botón gráfico de precisión en la cinta de opciones minería de datos](media/dmc-accchart.gif "botón gráfico de precisión en la cinta de opciones minería de datos")  
   
- Un gráfico de precisión permite aplicar un modelo a un conjunto de datos nuevo y, a continuación, evaluar su rendimiento. El gráfico de precisión creado por este asistente es una *gráfico de elevación*, que es un tipo de gráfico que se suele usar para medir la exactitud de un modelo de minería de datos. Este tipo de gráfico de precisión muestra una representación gráfica de la mejora obtenida al usar el modelo de minería de datos especificado en comparación con predicciones aleatorias y con el caso ideal de que el cien por cien de esas predicciones fuera correcto. Puede comparar varios modelos dentro de un único gráfico.  
+ Un gráfico de precisión permite aplicar un modelo a un conjunto de datos nuevo y, a continuación, evaluar su rendimiento. El gráfico de precisión creado por este asistente es un *gráfico de elevación*, que es un tipo de gráfico que se suele utilizar para medir la exactitud de un modelo de minería de datos. Este tipo de gráfico de precisión muestra una representación gráfica de la mejora obtenida al usar el modelo de minería de datos especificado en comparación con predicciones aleatorias y con el caso ideal de que el cien por cien de esas predicciones fuera correcto. Puede comparar varios modelos dentro de un único gráfico.  
   
 ## <a name="example"></a>Ejemplo  
  Pongámonos en el caso de que el departamento de marketing de Adventure Works Cycles desee crear una campaña de correo directo. Por las campañas anteriores, saben que el índice de respuesta típico es de un 10 por ciento. Tienen una lista de 10.000 clientes potenciales almacenada en una tabla de la base de datos. Basándose en el índice típico de respuesta, pueden esperar que respondan 1.000 clientes.  
@@ -49,11 +49,11 @@ ms.locfileid: "36197053"
   
 #### <a name="to-create-an-accuracy-chart"></a>Para crear un gráfico de precisión  
   
-1.  Haga clic en el **cliente de minería de datos** la cinta de opciones.  
+1.  Haga clic en el **cliente de minería de datos** cinta de opciones.  
   
-2.  En el **precisión y validación** grupo, haga clic en **gráfico de precisión de**.  
+2.  En el **precisión y validación** grupo, haga clic en **gráfico de precisión**.  
   
-3.  En el **seleccionar estructura o modelo** diálogo cuadro, seleccione el modelo que se va a evaluar. Haga clic en **Siguiente**.  
+3.  En el **seleccionar estructura o modelo** cuadro de diálogo, seleccione el modelo que se va a evaluar. Haga clic en **Siguiente**.  
   
     > [!NOTE]  
     >  Debe seleccionar un modelo que coincida con los datos que desea probar.  
@@ -65,9 +65,9 @@ ms.locfileid: "36197053"
     > [!NOTE]  
     >  No es posible predecir un valor continuo. Sin embargo, se puede discretizar la columna si separa los valores en intervalos discretos. Esto debe hacerse antes de crear el modelo de minería de datos.  
   
-5.  En el **seleccionar datos de origen** diálogo cuadro, especifique el origen de los datos que se pasará a través del modelo para crear una predicción.  
+5.  En el **seleccionar datos de origen** diálogo cuadro, especifique el origen de los datos que se pasará a través del modelo con el fin de crear una predicción.  
   
-6.  Si está utilizando un origen externo de datos y no los datos de prueba que se almacenan con el modelo, en la **especificar relaciones** cuadro de diálogo, asigne las columnas de los nuevos datos de origen a las columnas se usan en el modelo de minería de datos.  
+6.  Si usa un origen externo de datos y no los datos de prueba que se almacenan con el modelo, en el **especificar relaciones** cuadro de diálogo, asigne las columnas de los nuevos datos de origen a las columnas se usan en el modelo de minería de datos.  
   
      Si los nombres de las columnas son similares, el asistente hará la asignación automáticamente. Aunque algunas columnas de los datos de entrada pueden ser irrelevantes para el análisis y pueden omitirse, otras son necesarias para que el modelo de minería de datos procese la entrada. Dichas columnas pueden incluir un identificador de transacción, el valor de destino, o pueden ser columnas usadas para la predicción. Si no asigna una columna necesaria, el asistente mostrará un mensaje de advertencia.  
   

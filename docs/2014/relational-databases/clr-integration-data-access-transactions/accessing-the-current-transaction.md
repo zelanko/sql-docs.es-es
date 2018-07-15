@@ -1,13 +1,11 @@
 ---
-title: Obtener acceso a la transacción actual | Documentos de Microsoft
+title: Obtener acceso a la transacción actual | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 618b272195dc61179db7ac36a19cc30f5eaa2aef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: dad95c2d2fc02e46b139f29889315873f21887e7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201184"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351817"
 ---
 # <a name="accessing-the-current-transaction"></a>Obtener acceso a la transacción actual
   Si una transacción se encuentra activa en el momento en que se escribe el código de Common Language Runtime (CLR) que se ejecuta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la transacción se expone a través de la clase `System.Transactions.Transaction`. La propiedad `Transaction.Current` permite obtener acceso a la transacción actual. En la mayoría de los casos, no es necesario obtener acceso a la transacción de forma explícita. Para las conexiones de bases de datos, ADO.NET comprueba `Transaction.Current` de forma automática cuando se llama al método `Connection.Open` y da de alta la conexión en esa transacción de forma transparente (a menos que la palabra clave `Enlist` esté establecida en False en la cadena de conexión).  
@@ -48,7 +46,7 @@ ms.locfileid: "36201184"
   
 -   La función o el procedimiento administrado puede devolver un valor utilizando un parámetro de salida. El procedimiento [!INCLUDE[tsql](../../includes/tsql-md.md)] de llamada puede comprobar el valor devuelto y, si procede, ejecutar `ROLLBACK TRANSACTION`.  
   
--   La función o el procedimiento administrado puede iniciar una excepción personalizada. La llamada a [!INCLUDE[tsql](../../includes/tsql-md.md)] puede detectar la excepción producida por el procedimiento administrado o una función en un bloque try/catch y ejecutar el procedimiento `ROLLBACK TRANSACTION`.  
+-   La función o el procedimiento administrado puede iniciar una excepción personalizada. La llamada a [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento puede detectar la excepción producida por el procedimiento administrado o la función en un bloque try/catch y ejecutar `ROLLBACK TRANSACTION`.  
   
 -   La función o el procedimiento administrado puede cancelar la transacción actual llamando al método `Transaction.Rollback` si se cumple una condición determinada.  
   
@@ -69,7 +67,7 @@ The context transaction which was active before entering user defined routine, t
  También se espera esta excepción y, para continuar, debe incluir un bloque try/catch alrededor de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que realiza la acción que activa el desencadenador. A pesar de las dos excepciones iniciadas, la transacción se revierte y no se confirman los cambios.  
   
 ### <a name="example"></a>Ejemplo  
- A continuación se muestra un ejemplo de una transacción que se revierte desde un procedimiento administrado mediante el uso del método `Transaction.Rollback`. Observe el bloque try/catch alrededor del método `Transaction.Rollback` en el código administrado. El script [!INCLUDE[tsql](../../includes/tsql-md.md)] crea un ensamblado y un procedimiento almacenado administrado. Tenga en cuenta que el `EXEC uspRollbackFromProc` se encapsula en un bloque try/catch, por lo que se detecta la excepción que se produce cuando finalice la ejecución del procedimiento administrado.  
+ A continuación se muestra un ejemplo de una transacción que se revierte desde un procedimiento administrado mediante el uso del método `Transaction.Rollback`. Observe el bloque try/catch alrededor del método `Transaction.Rollback` en el código administrado. El script [!INCLUDE[tsql](../../includes/tsql-md.md)] crea un ensamblado y un procedimiento almacenado administrado. Tenga en cuenta que el `EXEC uspRollbackFromProc` se encapsula en un bloque try/catch, por lo que se detecta la excepción que se produce cuando completa la ejecución del procedimiento administrado.  
   
 ```csharp  
 using System;  

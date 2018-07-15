@@ -1,5 +1,5 @@
 ---
-title: Tablas y columnas (SSAS Tabular) | Documentos de Microsoft
+title: Las tablas y columnas (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6f7302274fc745fbc7a63bf6af59e4622c36b9a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef5d63ab45c1bad7d74bbf162fd3da0c2e67a161
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319365"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>Definir tablas y columnas (SSAS tabular)
   Después de haber agregado tablas y datos a un modelo mediante el Asistente para la importación de tablas, puede empezar a trabajar con las tablas agregando nuevas columnas de datos, creando relaciones entre las tablas, definiendo cálculos que amplían los datos y filtrando y ordenando datos en las tablas para facilitar su visualización.  
@@ -63,16 +63,16 @@ ms.locfileid: "36102909"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Agregar columnas a una tabla &#40;SSAS Tabular&#41;](add-columns-to-a-table-ssas-tabular.md)|Describe cómo agregar una columna de origen a una definición de tabla.|  
-|[Eliminar una columna &#40;SSAS Tabular&#41;](delete-a-column-ssas-tabular.md)|Describe cómo eliminar una columna de la tabla modelo mediante el diseñador de modelos o mediante el cuadro de diálogo Propiedades de la tabla.|  
-|[Cambiar las asignaciones de filtros de fila, columna o tabla &#40;SSAS Tabular&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|Describe cómo cambiar las asignaciones de filtros de tabla, columna o fila mediante la vista previa de tabla o el Editor de consultas de SQL en el cuadro de diálogo Editar propiedades de tabla.|  
-|[Especificar marcar como tabla de fechas para su uso con inteligencia de tiempo &#40;SSAS Tabular&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|Describe cómo se usa el cuadro de diálogo Marcar como tabla de fechas para especificar una tabla de fechas y una columna de identificador único. Es necesario especificar una tabla de fechas y un identificador único de fecha cuando se utilizan funciones de inteligencia de tiempo en fórmulas DAX.|  
-|[Agregar una tabla &#40;SSAS Tabular&#41;](add-a-table-ssas-tabular.md)|Describe cómo se agrega una tabla desde un origen de datos utilizando una conexión de origen de datos existente.|  
-|[Eliminar una tabla &#40;SSAS Tabular&#41;](delete-a-table-ssas-tabular.md)|Describe cómo eliminar tablas que ya no necesita de la base de datos del área de trabajo del modelo.|  
-|[Cambiar el nombre de una tabla o columna &#40;SSAS Tabular&#41;](rename-a-table-or-column-ssas-tabular.md)|Describe cómo cambiar el nombre de una tabla o una columna para que sea más identificable en el modelo.|  
-|[Establece el tipo de datos de una columna &#40;SSAS Tabular&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|Describe cómo modificar el tipo de datos de una columna. El tipo de datos define cómo se almacenan y presentan los datos de la columna.|  
-|[Ocultar o Inmovilizar columnas &#40;SSAS Tabular&#41;](hide-or-freeze-columns-ssas-tabular.md)|Describe cómo ocultar columnas que no desea mostrar y cómo mantener visible un área de un modelo mientras se desplaza a otra área del modelo inmovilizando (bloqueando) columnas específicas en un área.|  
-|[Columnas calculadas &#40;SSAS Tabular&#41;](ssas-calculated-columns.md)|En los temas de esta sección se describe cómo usar las columnas calculadas para incorporar datos agregados al modelo.|  
-|[Filtrar y ordenar datos &#40;SSAS Tabular&#41;](../filter-and-sort-data-ssas-tabular.md)|En los temas de esta sección se describe cómo filtrar u ordenar los datos usando los controles del diseñador de modelos.|  
+|[Agregar columnas a una tabla &#40;Tabular de SSAS&#41;](add-columns-to-a-table-ssas-tabular.md)|Describe cómo agregar una columna de origen a una definición de tabla.|  
+|[Eliminar una columna &#40;Tabular de SSAS&#41;](delete-a-column-ssas-tabular.md)|Describe cómo eliminar una columna de la tabla modelo mediante el diseñador de modelos o mediante el cuadro de diálogo Propiedades de la tabla.|  
+|[Cambiar las asignaciones de filtros de fila, columna o tabla &#40;Tabular de SSAS&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|Describe cómo cambiar las asignaciones de filtros de tabla, columna o fila mediante la vista previa de tabla o el Editor de consultas de SQL en el cuadro de diálogo Editar propiedades de tabla.|  
+|[Especificar marcar como tabla de fechas para su uso con inteligencia de tiempo &#40;Tabular de SSAS&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|Describe cómo se usa el cuadro de diálogo Marcar como tabla de fechas para especificar una tabla de fechas y una columna de identificador único. Es necesario especificar una tabla de fechas y un identificador único de fecha cuando se utilizan funciones de inteligencia de tiempo en fórmulas DAX.|  
+|[Agregar una tabla &#40;Tabular de SSAS&#41;](add-a-table-ssas-tabular.md)|Describe cómo se agrega una tabla desde un origen de datos utilizando una conexión de origen de datos existente.|  
+|[Eliminar una tabla &#40;Tabular de SSAS&#41;](delete-a-table-ssas-tabular.md)|Describe cómo eliminar tablas que ya no necesita de la base de datos del área de trabajo del modelo.|  
+|[Cambiar el nombre de una tabla o columna &#40;Tabular de SSAS&#41;](rename-a-table-or-column-ssas-tabular.md)|Describe cómo cambiar el nombre de una tabla o una columna para que sea más identificable en el modelo.|  
+|[Establezca el tipo de datos de una columna &#40;Tabular de SSAS&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|Describe cómo modificar el tipo de datos de una columna. El tipo de datos define cómo se almacenan y presentan los datos de la columna.|  
+|[Ocultar o Inmovilizar columnas &#40;Tabular de SSAS&#41;](hide-or-freeze-columns-ssas-tabular.md)|Describe cómo ocultar columnas que no desea mostrar y cómo mantener visible un área de un modelo mientras se desplaza a otra área del modelo inmovilizando (bloqueando) columnas específicas en un área.|  
+|[Columnas calculadas &#40;Tabular de SSAS&#41;](ssas-calculated-columns.md)|En los temas de esta sección se describe cómo usar las columnas calculadas para incorporar datos agregados al modelo.|  
+|[Filtrar y ordenar datos &#40;Tabular de SSAS&#41;](../filter-and-sort-data-ssas-tabular.md)|En los temas de esta sección se describe cómo filtrar u ordenar los datos usando los controles del diseñador de modelos.|  
   
   

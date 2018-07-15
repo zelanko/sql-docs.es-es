@@ -1,5 +1,5 @@
 ---
-title: Mezclar particiones en Analysis Services (SSAS - Multidimensional) | Documentos de Microsoft
+title: Mezclar particiones en Analysis Services (SSAS - Multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], merging
 - merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b926c685b87f863c0b04e4ce570bec2573aebdf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78fcd5ce33ba73b4eb11e6449b84f3afe3f2028a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306575"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Mezclar particiones en Analysis Services (SSAS - Multidimensional)
   Puede mezclar particiones de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente para consolidar datos de hechos de varias particiones del mismo grupo de medida.  
@@ -73,7 +73,7 @@ ms.locfileid: "36113059"
 ##  <a name="bkmk_Where"></a> Actualizar el origen de la partición después de mezclar particiones  
  Las particiones se segmentan por consulta, como la cláusula WHERE de una consulta SQL usada para procesar los datos, o por una tabla o una consulta con nombre que proporcione los datos a la partición. La propiedad `Source` de la partición indica si la partición está enlazada a una consulta o una tabla.  
   
- Cuando se mezclan particiones, el contenido de las particiones se consolida, pero la `Source` propiedad no se actualiza para reflejar el ámbito adicional de la partición. Esto significa que si vuelve a procesar posteriormente una partición que conserva su original `Source`, obtendrá datos incorrectos de esa partición. La partición agregará erróneamente datos en el nivel primario. En el ejemplo siguiente se ilustra este comportamiento.  
+ Cuando se mezclan particiones, el contenido de las particiones se consolida, pero la `Source` propiedad no se actualiza para reflejar el ámbito adicional de la partición. Esto significa que si se vuelve a procesar posteriormente una partición que conserva su original `Source`, obtendrá datos incorrectos de esa partición. La partición agregará erróneamente datos en el nivel primario. En el ejemplo siguiente se ilustra este comportamiento.  
   
  **El problema**  
   
@@ -87,10 +87,10 @@ ms.locfileid: "36113059"
   
  **La cConclusión**  
   
- Después de mezclar particiones, compruebe siempre la `Source` para comprobar si el filtro es correcto para los datos combinados. Si empezó con una partición que incluía datos históricos para T1, T2 y Q3, y ahora mezcla T4, debe ajustar el filtro para incluir T4. De lo contrario, el procesamiento posterior de la partición producirá resultados erróneos. No será correcto para T4.  
+ Después de mezclar particiones, compruebe siempre la `Source` para comprobar el filtro es correcto para los datos combinados. Si empezó con una partición que incluía datos históricos para T1, T2 y Q3, y ahora mezcla T4, debe ajustar el filtro para incluir T4. De lo contrario, el procesamiento posterior de la partición producirá resultados erróneos. No será correcto para T4.  
   
 ##  <a name="bkmk_fact"></a> Consideraciones especiales para las particiones segmentadas por una tabla de hechos o por una consulta con nombre  
- Además de por consultas, las particiones también se pueden segmentar por tabla o por consulta con nombre. Si la partición de origen y la partición de destino emplean la misma tabla de hechos en un origen de datos o en una vista del origen de datos, la propiedad `Source` es válida después de mezclar las particiones. Especifica los datos de la tabla de hechos que son adecuados para la partición resultante. Como los hechos que son necesarios para la partición resultante se encuentran en el hecho de tabla, ninguna modificación a la `Source` propiedad es necesaria.  
+ Además de por consultas, las particiones también se pueden segmentar por tabla o por consulta con nombre. Si la partición de origen y la partición de destino emplean la misma tabla de hechos en un origen de datos o en una vista del origen de datos, la propiedad `Source` es válida después de mezclar las particiones. Especifica los datos de la tabla de hechos que son adecuados para la partición resultante. Como los hechos que son necesarios para la partición resultante se encuentran en el hecho de tabla, ninguna modificación en el `Source` propiedad es necesaria.  
   
  Las particiones que usan datos de varias tablas de hechos o de varias consultas con nombre requieren un trabajo adicional. Debe mezclar manualmente los hechos de la tabla de hechos de la partición de origen en la tabla de hechos de la partición de destino.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36113059"
   
 1.  En el Explorador de objetos, expanda el nodo **Grupos de medida** del cubo que contiene las particiones que quiere mezclar, expanda **Particiones**y haga clic con el botón derecho en la partición de destino o en el destino de la operación de mezcla. Por ejemplo, si va a mover datos de hechos trimestrales a una partición que almacena datos de hechos anuales, seleccione la partición que contiene los datos de hechos anuales.  
   
-2.  Haga clic en **particiones de mezcla** para abrir el **partición de mezcla \<nombre de partición >** cuadro de diálogo.  
+2.  Haga clic en **mezclar particiones** para abrir el **partición de mezcla \<nombre de la partición >** cuadro de diálogo.  
   
 3.  En **Particiones de origen**, active la casilla situada junto a cada partición de origen que desee mezclar con la partición de destino y haga clic en **Aceptar**.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "36113059"
   
 4.  Haga clic con el botón derecho en la partición que contiene los datos acumulados y seleccione **Propiedades**.  
   
-5.  Abra el `Source` propiedad y modifique la cláusula WHERE para que incluya los datos de la partición recién mezclados. Recuerde que el `Source` propiedad no se actualiza automáticamente. Si vuelve a procesar sin actualizar primero el `Source`, es posible que no obtenga todos los datos esperados.  
+5.  Abra el `Source` propiedad y modifique la cláusula WHERE para que incluya los datos de la partición recién mezclados. Recuerde que el `Source` propiedad no se actualiza automáticamente. Si vuelve a procesar sin actualizar primero el `Source`, no es posible que obtenga todos los datos esperados.  
   
 ##  <a name="bkmk_partitionsXMLA"></a> Cómo mezclar particiones mediante XMLA  
  Para más información, vea el tema [Mezclar particiones &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  

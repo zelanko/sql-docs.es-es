@@ -1,5 +1,5 @@
 ---
-title: Copiar y pegar datos (SSAS Tabular) | Documentos de Microsoft
+title: Copiar y pegar datos (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.pastepreviewdb.f1
 ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02f2675214908685964e22f216e3f40ac91d5a85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83b7c0c4b3861ff18008580e60d0b508c1526fd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224665"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Copiar y pegar datos (SSAS tabular)
   Puede copiar los datos de tabla de las aplicaciones externas y pegarlos en una tabla nueva o en una ya existente en el diseñador de modelos. Los datos que pega del Portapapeles deben estar en formato HTML, como los datos que se copian de Excel o Word. El diseñador de modelos detectará y aplicará automáticamente tipos de datos a los datos pegados. También puede modificar el tipo de datos o el formato para mostrar de una columna de forma manual.  
@@ -90,8 +90,8 @@ ms.locfileid: "36196344"
  Muestra un ejemplo del contenido del Portapapeles. Se eliminarán los datos existentes en la tabla de destino y se incrustarán las nuevas filas en la tabla.  
   
 ## <a name="see-also"></a>Vea también  
- [Importar datos &#40;SSAS Tabular&#41;](import-data-ssas-tabular.md)   
- [Orígenes de datos admitidos &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [Establece el tipo de datos de una columna &#40;SSAS Tabular&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
+ [Importar datos &#40;Tabular de SSAS&#41;](import-data-ssas-tabular.md)   
+ [Orígenes de datos admitidos &#40;Tabular de SSAS&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Establezca el tipo de datos de una columna &#40;Tabular de SSAS&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

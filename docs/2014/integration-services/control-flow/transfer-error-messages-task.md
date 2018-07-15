@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6d8bc72c3c713dc1a113490431f4dba81c2a11a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d7a40c86c0dba2a4b2db08305f7fea379a97b1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201855"
 ---
 # <a name="transfer-error-messages-task"></a>Tarea Transferir mensajes de error
   La tarea Transferir mensajes de error transfiere uno o más mensajes de error definidos por el usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los mensajes definidos por el usuario son mensajes con un identificador igual o mayor que 50000. Los mensajes con un identificador menor que 50000 son mensajes de error del sistema, y no se pueden transferir mediante la tarea Transferir mensajes de error.  
@@ -50,7 +50,7 @@ ms.locfileid: "36196509"
  La tarea Transferir mensajes de error no indica el progreso incremental de la transferencia de mensajes de error; solo indica 0% y 100%.  
   
 ## <a name="execution-value"></a>Valor de ejecución  
- El valor de ejecución, que se define en la propiedad `ExecutionValue` de la tarea, devuelve el número de mensajes de error transferidos. Mediante la asignación de una variable definida por el usuario para el `ExecValueVariable` propiedad de la tarea transferir mensajes de Error, información sobre la transferencia de mensajes de error puede ponerse a disposición de otros objetos en el paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) y [Usar variables en paquetes](../use-variables-in-packages.md).  
+ El valor de ejecución, que se define en la propiedad `ExecutionValue` de la tarea, devuelve el número de mensajes de error transferidos. Asignando una variable definida por el usuario para el `ExecValueVariable` propiedad de la tarea transferir mensajes de Error, información sobre la transferencia del mensaje de error puede estar disponible para otros objetos en el paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) y [Usar variables en paquetes](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Entradas del registro  
  La tarea Transferir mensajes de error incluye las siguientes entradas del registro personalizadas:  
@@ -59,7 +59,7 @@ ms.locfileid: "36196509"
   
 -   TransferErrorMessagesTaskFinishedTransferringObjects   Esta entrada del registro indica que ha finalizado la transferencia. La entrada del registro incluye la hora de finalización.  
   
- Además, una entrada del registro para el `OnInformation` eventos informa del número de mensajes de error que se han transferido y una entrada del registro para el `OnWarning event` se escribe para cada mensaje de error que se sobrescribe en el destino.  
+ Además, una entrada de registro para el `OnInformation` evento informa del número de mensajes de error transferidos y una entrada del registro para el `OnWarning event` se escribe para cada mensaje de error que se sobrescribe en el destino.  
   
 ## <a name="security-and-permissions"></a>Seguridad y permisos  
  Para crear mensajes de error, el usuario que ejecuta el paquete debe ser miembro de los roles sysadmin o serveradmin en el servidor de destino.  
@@ -69,9 +69,9 @@ ms.locfileid: "36196509"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Transferir mensajes de Error, Editor de tareas &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de tareas de mensajes de Error de transferencia &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Transferir mensajes de Error, Editor de tareas &#40;mensajes de página&#41;](../transfer-error-messages-task-editor-messages-page.md)  
+-   [Editor de tareas de mensajes de Error de transferencia &#40;mensajes de página&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

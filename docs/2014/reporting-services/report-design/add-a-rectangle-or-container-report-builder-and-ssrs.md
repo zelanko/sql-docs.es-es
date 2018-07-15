@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10061"
 - sql12.rtp.rptdesigner.rectangleproperties.general.f1
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d1cac8525b9343cc2719cd38d278f55b89839bbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 474fcf999291f9b26c242a8e1685431bd58297f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255777"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Agregar un rectángulo o un contenedor (Generador de informes y SSRS)
   Agregue un rectángulo al informe si desea incluir en él un elemento gráfico para separar distintas áreas, resaltarlas o proporcionar un fondo para uno o más elementos de informe. Los rectángulos también se usan como contenedores para ayudar a controlar la manera en la que se representan las regiones de datos en un informe. Puede personalizar la apariencia de un rectángulo editando sus propiedades, como los colores del borde y de segundo plano. Para más información sobre el uso de un rectángulo como contenedor, vea [Rectángulos y líneas &#40;Generador de informes y SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md) y [Mostrar los mismos datos en una matriz y en un gráfico &#40;Generador de informes&#41;](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  
@@ -54,10 +54,10 @@ ms.locfileid: "36196386"
 2.  Haga clic en la flecha situada al lado del botón **Borde** para determinar qué lados del rectángulo va a cambiar.  
   
     > [!NOTE]  
-    >  Si establece el estilo de línea en **doble** y el ancho de línea es 1 1/2 medio o inferior, la línea puede no aparezca como doble cuando ejecute el informe en el generador de informes, el Diseñador de informes o el Administrador de informes. Aparecerá como doble cuando exporte el informe a otros formatos, como Microsoft Word y Acrobat PDF.  
+    >  Si establece el estilo de línea en **doble** y el ancho de línea es 1 1/2 pt o inferior, la línea es posible que no aparezca como doble cuando ejecute el informe en el generador de informes, Diseñador de informes o el Administrador de informes. Aparecerá como doble cuando exporte el informe a otros formatos, como Microsoft Word y Acrobat PDF.  
   
 ## <a name="see-also"></a>Vea también  
- [Rectángulos y líneas &#40;el generador de informes SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Rectángulos y líneas &#40;generador de informes y SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

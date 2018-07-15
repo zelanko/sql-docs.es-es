@@ -1,5 +1,5 @@
 ---
-title: Elemento de la tabla de esquema (DTA) | Documentos de Microsoft
+title: Elemento de tabla de esquema (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Table element [DTA]
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 44df363381b2811b422f29671fe4902c1dd7c23e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f58288d90c1a3158f4757856b51b7374ee07f167
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187762"
 ---
 # <a name="table-element-for-schema-dta"></a>Table (DTA, elemento de Schema)
   Especifica la tabla que se va a optimizar.  
@@ -56,7 +56,7 @@ ms.locfileid: "36197281"
 |Relación|Elementos|  
 |------------------|--------------|  
 |**Elemento primario**|[Elemento de esquema de base de datos &#40;DTA&#41;](schema-element-for-database-dta.md)|  
-|**Elementos secundarios**|[El nombre de elemento de tabla &#40;DTA&#41;](name-element-for-table-dta.md)|  
+|**Elementos secundarios**|[Nombre de elemento de tabla &#40;DTA&#41;](name-element-for-table-dta.md)|  
   
 ## <a name="remarks"></a>Notas  
  Si no se especifica un elemento `Table`, el Asistente para la optimización de motor de base de datos asumirá que todas las tablas de la base de datos especificada se pueden optimizar.  

@@ -1,13 +1,11 @@
 ---
-title: La asignación de datos de parámetro CLR | Documentos de Microsoft
+title: Asignar datos de parámetros CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,18 +26,18 @@ helpviewer_keywords:
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 caps.latest.revision: 69
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a7c442f3bf102c668f0889f008b8a87205b2257
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 34d30e57908e8cd44eefa43d6f2d030ae0d102f7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203219"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354527"
 ---
 # <a name="mapping-clr-parameter-data"></a>Asignar datos de parámetros CLR
-  La siguiente tabla se recogen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos, sus equivalentes en common language runtime (CLR) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el `System.Data.SqlTypes` espacio de nombres y sus equivalentes CLR nativos en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
+  La siguiente tabla enumera [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los tipos de datos, sus equivalentes en common language runtime (CLR) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el `System.Data.SqlTypes` espacio de nombres y sus equivalentes CLR nativos en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 ||||  
 |-|-|-|  
@@ -54,7 +52,7 @@ ms.locfileid: "36203219"
 |`datetime2`|None|**Fecha y hora, que acepta valores NULL\<DateTime >**|  
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset, que acepta valores NULL\<DateTimeOffset >**|  
 |`decimal`|`SqlDecimal`|**Decimal, que acepta valores NULL\<Decimal >**|  
-|`float`|`SqlDouble`|**Double, que acepta valores NULL\<dobles >**|  
+|`float`|`SqlDouble`|**Double, que acepta valores NULL\<Double >**|  
 |`geography`|`SqlGeography`<br /><br /> `SqlGeography` se define en Microsoft.SqlServer.Types.dll, que se instala con SQL Server y puede descargarse desde el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack de](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
 |`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` se define en Microsoft.SqlServer.Types.dll, que se instala con SQL Server y puede descargarse desde el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack de](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
 |`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` se define en Microsoft.SqlServer.Types.dll, que se instala con SQL Server y puede descargarse desde el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack de](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
@@ -66,7 +64,7 @@ ms.locfileid: "36203219"
 |`numeric`|`SqlDecimal`|**Decimal, que acepta valores NULL\<Decimal >**|  
 |`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` es más adecuado para la transferencia de datos y el acceso a los mismos, mientras que `SQLString` es mejor para realizar operaciones de cadena.|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char [], Nullable\<char >**|  
-|`real`|`SqlSingle` (el intervalo de `SqlSingle`, sin embargo, es mayor que `real`)|**Único, que acepta valores NULL\<único >**|  
+|`real`|`SqlSingle` (el intervalo de `SqlSingle`, sin embargo, es mayor que `real`)|**Que acepta valores NULL, única\<único >**|  
 |`rowversion`|None|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16, que acepta valores NULL\<Int16 >**|  
 |`smallmoney`|`SqlMoney`|**Decimal, que acepta valores NULL\<Decimal >**|  

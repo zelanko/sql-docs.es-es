@@ -1,5 +1,5 @@
 ---
-title: Ver una lista de archivos modificados | Documentos de Microsoft
+title: Ver una lista de archivos modificados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.CheckinWindow
 helpviewer_keywords:
@@ -17,24 +17,24 @@ helpviewer_keywords:
 - checking in files
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: affad7b7830088a955794f4825a68e72f12fca96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 22309ba15a3df2ed65fd27a002000e58f4beca36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228245"
 ---
 # <a name="view-a-list-of-modified-files"></a>Ver una lista de archivos modificados
-  Puede usar el **protecciones pendientes** ventana para visualizar en todo momento una lista de los archivos desprotegidos en la solución actual y para proteger estos archivos con un solo botón, haga clic en.  
+  Puede usar el **protecciones pendientes** ventana para mostrar en todo momento una lista de los archivos desprotegidos en la solución actual y para proteger estos archivos con un solo botón, haga clic en.  
   
 ### <a name="to-view-a-list-of-modified-files"></a>Para ver una lista de los archivos modificados  
   
 1.  En el **vista** menú, haga clic en **protecciones pendientes**.  
   
-2.  Para comprobar los archivos seleccionados, haga clic en **proteger**. Como alternativa, puede acoplar el **protecciones pendientes** ventana en el lado derecho de la [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] entorno para que pueda comprobar en los archivos cuando haya terminado de trabajar.  
+2.  Para proteger los archivos seleccionados, haga clic en **proteger**. Como alternativa, puede acoplar el **protecciones pendientes** ventana en el lado derecho de la [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] entorno para que pueda comprobar en los archivos cuando haya terminado de trabajar.  
   
      **Check-in**  
      Protege la solución.  
@@ -62,7 +62,7 @@ ms.locfileid: "36113196"
      Muestra los archivos que se protegen como listas planas, bajo su conexión de control de código fuente.  
   
      **Comparar versiones**  
-     Se abre Visual SourceSafe **opciones de diferencia** cuadro de diálogo, que compara un archivo seleccionado en el proyecto de entorno de desarrollo para cualquier otro tipo de archivo seleccionado y muestra las diferencias, si lo hay.  
+     Se abre Visual SourceSafe **opciones de diferencia** cuadro de diálogo, que compara un archivo seleccionado en el entorno de desarrollo para cualquier otro archivo seleccionado y se muestra las diferencias, si existe.  
   
      **Deshacer desprotección**  
      Revierte la desprotección de todos los elementos seleccionados en el **protecciones pendientes** ventana.  

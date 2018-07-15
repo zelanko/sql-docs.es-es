@@ -1,5 +1,5 @@
 ---
-title: Otorgar permisos Leer definición en metatados de objetos (Analysis Services) | Documentos de Microsoft
+title: Otorgar permisos Leer definición en metatados de objetos (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - metadata [Analysis Services]
 - permissions [Analysis Services], read metadata
 - read metadata permissions
 ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a0a7a6459b282d94801d277bc160b28f15840c59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f87b088072350e58aa00d7c0063a2aa2378346cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241735"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Otorgar permisos Leer definición en metatados de objetos (Analysis Services)
-  Los permisos para leer una definición de objeto o sus metadatos en objetos seleccionados permiten a los administradores otorgar permisos para ver información sobre los objetos sin necesidad de otorgar permisos para modificar la definición del objeto, modificar la estructura del objeto o ver los propios datos del objeto. `Read Definition` pueden conceder permisos en la base de datos, origen de datos, dimensión, estructura de minería de datos y los niveles de modelo de minería de datos. Si necesita `Read Definition` permisos para un cubo, debe habilitar `Read Definition` para la base de datos. Recuerde que los permisos son aditivos. Por ejemplo, un rol otorga permisos para leer los metadatos de un cubo, mientras que otro rol otorga al mismo usuario permisos para leer los metadatos de una dimensión. Los permisos de los dos roles diferentes se combinan para conceder al usuario permiso para leer tanto los metadatos para el cubo como los metadatos para la dimensión dentro de la base de datos.  
+  Los permisos para leer una definición de objeto o sus metadatos en objetos seleccionados permiten a los administradores otorgar permisos para ver información sobre los objetos sin necesidad de otorgar permisos para modificar la definición del objeto, modificar la estructura del objeto o ver los propios datos del objeto. `Read Definition` se pueden conceder permisos en la base de datos de origen de datos, dimensión, estructura de minería de datos y los niveles de modelo de minería de datos. Si necesita `Read Definition` permisos para un cubo, debe habilitar `Read Definition` para la base de datos. Recuerde que los permisos son aditivos. Por ejemplo, un rol otorga permisos para leer los metadatos de un cubo, mientras que otro rol otorga al mismo usuario permisos para leer los metadatos de una dimensión. Los permisos de los dos roles diferentes se combinan para conceder al usuario permiso para leer tanto los metadatos para el cubo como los metadatos para la dimensión dentro de la base de datos.  
   
 > [!NOTE]  
 >  El permiso para leer los metadatos de una base de datos es el mínimo necesario para conectar con una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Un usuario que tenga permiso para leer los metadatos también puede usar el conjunto de filas del esquema DISCOVER_XML_METADATA para hacer consultas en el objeto y ver sus metadatos. Para obtener más información, vea [Conjunto de filas DISCOVER_XML_METADATA](../schema-rowsets/xml/discover-xml-metadata-rowset.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "36113484"
 ## <a name="set-read-definition-permissions-on-a-database"></a>Establecer permisos de Leer definición en una base de datos  
  Al otorgar un permiso para leer los metadatos de una base de datos, también se otorga permiso para leer los metadatos de todos los objetos de la base de datos.  
   
- Se recomienda que incluya la `Read Definition` permiso en el nivel de base de datos cada vez que se va a configurar roles para el procesamiento dedicado. Tener `Read Definition` permite que no sean administradores ver la jerarquía de objetos de un modelo en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y navegar hasta objetos individuales para su posterior procesamiento.  
+ Se recomienda que incluya el `Read Definition` permiso en el nivel de base de datos cada vez que se va a configurar roles para el procesamiento dedicado. Tener `Read Definition` permite que los usuarios ver la jerarquía de objetos del modelo en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y navegar hasta objetos individuales para su posterior procesamiento.  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Roles** para la base de datos correspondiente en Explorador de objetos y, después, haga clic en un rol de base de datos (o cree un rol de base de datos).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36113484"
   
     -   En el **dimensiones** panel, haga clic en el `Read Definition` casilla de verificación para esa dimensión. Es posible que nos analistas y desarrolladores con experiencia necesiten ver la definición sin permiso para modificarla o ver las definiciones de otros objetos (como otras dimensiones, objetos de cubo o estructuras y modelos de minería de datos).  
   
-    -   En el panel estructuras de minería de datos, haga clic en el `Read Definition` casilla de verificación para modelos y estructuras de minería de datos. `Read Definition` es necesario para examinar el modelo de datos. Para obtener más información, vea [Otorgar permisos para estructuras y modelos de minería de datos &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md).  
+    -   En el panel estructuras de minería de datos, haga clic en el `Read Definition` casilla de verificación de modelos o estructuras de minería de datos. `Read Definition` es necesario para examinar el modelo de datos. Para obtener más información, vea [Otorgar permisos para estructuras y modelos de minería de datos &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md).  
   
 4.  En el panel **Pertenencia** , especifique las cuentas de usuario y grupo de Windows que se conectan a Analysis Services con este rol.  
   

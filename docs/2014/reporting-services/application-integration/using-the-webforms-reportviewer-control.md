@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 907ee3eb093f4b240aef2199b0928dab602341ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 21d48953edad8d454f75fa919f9e0facdfb5280b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251327"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Usar el control ReportViewer de WebForms
   Para ver los informes implementados en un servidor de informes o los informes que existen en el sistema de archivos local, puede utilizar el control ReportViewer de WebForms para representarlos en una aplicación web.  
@@ -47,7 +47,7 @@ ms.locfileid: "36112897"
   
  Si quiere ver un informe en modo local, seleccione la opción **Diseñar nuevo informe** para iniciar el diseñador de informes o seleccione un informe que ya forme parte del proyecto existente. Después de haber seleccionado un informe, asegúrese de especificar el nombre del archivo RDLC del informe en la propiedad **ReportPath** del control ReportViewer. Esta propiedad aparece en el nodo **LocalReport** del panel **Propiedades**.  
   
- Tiene la posibilidad de ocultar uno o varios elementos de la barra de herramientas ReportViewer cuando se representa el informe. Por ejemplo, puede ocultar el botón para imprimir. Para ocultar los elementos de la barra de herramientas, establezca las siguientes propiedades de ReportViewer `False` en el **propiedades** panel.  
+ Tiene la posibilidad de ocultar uno o varios elementos de la barra de herramientas ReportViewer cuando se representa el informe. Por ejemplo, puede ocultar el botón para imprimir. Para ocultar los elementos de la barra de herramientas, establezca las siguientes propiedades de ReportViewer en `False` en el **propiedades** panel.  
   
 -   `ShowBackButton`  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36112897"
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Ver los informes en modo de procesamiento remoto  
  En el ejemplo siguiente se muestra la forma de representar un informe que se ha implementado en un servidor de informes. En este ejemplo se utiliza el informe Sales Order Detail que se incluye con el proyecto de informes de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
- En el ejemplo se utiliza la autenticación integrada de Windows, por lo que se debe habilitar primero la suplantación. Para ello, inserte la siguiente línea en el `web.config` archivo:  
+ En el ejemplo se utiliza la autenticación integrada de Windows, por lo que se debe habilitar primero la suplantación. Para ello, inserte la línea siguiente en el `web.config` archivo:  
   
 ```  
 <!-- Web.config file. -->  

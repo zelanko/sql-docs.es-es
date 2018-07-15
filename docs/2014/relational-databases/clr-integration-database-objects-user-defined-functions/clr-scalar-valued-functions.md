@@ -1,13 +1,11 @@
 ---
-title: Las funciones con valores escalares CLR | Documentos de Microsoft
+title: Las funciones con valores escalares CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -19,21 +17,21 @@ helpviewer_keywords:
 - scalar-valued functions
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 caps.latest.revision: 81
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93c56555b0a11e2638f58019f6214c8c6971760c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 5dee7f6654bdf4e24eb170b968dd8afa366e8211
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204618"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350942"
 ---
 # <a name="clr-scalar-valued-functions"></a>Funciones escalares de CLR
   Una función escalar (SVF) devuelve un único valor, como un valor de cadena, entero o de bit. Puede crear funciones escalares definidas por el usuario en código administrado mediante cualquier lenguaje de programación de .NET Framework. Estas funciones son accesibles para [!INCLUDE[tsql](../../includes/tsql-md.md)] u otro código administrado. Para obtener información acerca de las ventajas de la integración de CLR y elegir entre código administrado y [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [información general de la integración CLR](../clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Requisitos de las funciones escalares de CLR  
- Las SVF de .NET Framework se implementan como métodos en una clase de un ensamblado de .NET Framework. Los parámetros de entrada y el tipo devuelto de una SVF pueden ser cualquiera de los tipos de datos escalares admitidos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], excepto `varchar`, `char`, `rowversion`, `text`, `ntext`, `image`, `timestamp`, `table`, o `cursor`. Las SVF deben asegurar una coincidencia entre el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el tipo de datos de retorno del método de implementación. Para obtener más información acerca de las conversiones de tipo, consulte [asignación de datos de parámetro de CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Las SVF de .NET Framework se implementan como métodos en una clase de un ensamblado de .NET Framework. Los parámetros de entrada y el tipo devuelto de una SVF pueden ser cualquiera de los tipos de datos escalares admitidos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], excepto `varchar`, `char`, `rowversion`, `text`, `ntext`, `image`, `timestamp`, `table`, o `cursor`. Las SVF deben asegurar una coincidencia entre el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el tipo de datos de retorno del método de implementación. Para obtener más información sobre las conversiones de tipos, vea [asignación de datos de parámetros CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
  Al implementar una SVF de .NET Framework SVF en un lenguaje .NET Framework, el atributo personalizado `SqlFunction` se puede especificar para incluir la información adicional de la función. El atributo `SqlFunction` indica tanto si la función obtiene acceso o modifica los datos como si no, si es determinista y si la función implica las operaciones de coma flotante.  
   
@@ -156,7 +154,7 @@ GO
  Observe que el nombre de función expuesto en [!INCLUDE[tsql](../../includes/tsql-md.md)] no necesita coincidir con el nombre del método estático público de destino.  
   
 ## <a name="see-also"></a>Vea también  
- [La asignación de datos de parámetro CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
+ [Asignar datos de parámetros CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
  [Información general de atributos personalizados de integración de CLR](../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)   
  [Funciones definidas por el usuario](../user-defined-functions/user-defined-functions.md)   
  [Acceso a datos de objetos de base de datos de CLR](../clr-integration/data-access/data-access-from-clr-database-objects.md)  

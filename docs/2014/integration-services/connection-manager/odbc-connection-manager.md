@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], ODBC
 - ODBC connection manager
@@ -18,18 +18,18 @@ ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9453dc6e402fce60e1f4f440d84f882e513abea7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e0b8bb7a7a2b32f2566a725842919f0260c3f78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267141"
 ---
 # <a name="odbc-connection-manager"></a>ODBC, administrador de conexiones
   Un administrador de conexiones ODBC habilita un paquete para conectarse a una serie de sistemas de administración de bases de datos mediante la especificación Conectividad abierta de bases de datos (ODBC).  
   
- Al agregar una conexión ODBC a un paquete y establecer la conexión de propiedades del administrador, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una conexión de administrador y agrega el Administrador de conexiones para el `Connections` recopilación del paquete. En el tiempo de ejecución el administrador de conexiones se resuelve como una conexión ODBC física.  
+ Al agregar una conexión ODBC a un paquete y establecer propiedades del Administrador de la conexión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una conexión de administrador y agrega el Administrador de conexiones para el `Connections` recopilación del paquete. En el tiempo de ejecución el administrador de conexiones se resuelve como una conexión ODBC física.  
   
  El `ConnectionManagerType` propiedad del Administrador de conexiones se establece en `ODBC`.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36112735"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Referencia de interfaz de usuario de administrador de conexiones de ODBC](../odbc-connection-manager-ui-reference.md)  
+-   [Referencia de la interfaz de usuario del administrador de conexiones ODBC](../odbc-connection-manager-ui-reference.md)  
   
  Para obtener información acerca de cómo configurar un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
   

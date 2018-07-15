@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 13
-author: HeidiSteen
-ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 12a3b3cb6bc31060857a86481a7a952cc19679b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fa5c34ec3c794cf87b96feefbf15c323fbc43e27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261381"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con grupos de disponibilidad AlwaysOn
   El grupo de disponibilidad AlwaysOn es una colección predefinida de bases de datos relacionales de SQL Server que conmuta por error conjuntamente cuando las condiciones desencadenan una conmutación por error en una base de datos, redirigiendo las solicitudes a una base de datos reflejada en otra instancia del mismo grupo de disponibilidad. Si utiliza grupos de disponibilidad como solución de alta disponibilidad, puede usar una base de datos de ese grupo como origen de datos en una solución tabular o multidimensional de Analysis Services. Todas las operaciones de Analysis Services siguientes funcionan de la manera esperada cuando se utiliza una base de datos de disponibilidad: procesando o importando datos, consultando datos relacionales directamente (utilizando el modo DirectQuery o almacenamiento ROLAP) y con reescritura.  
@@ -159,7 +158,7 @@ ms.locfileid: "36113234"
   
 1.  Inicie SQL Server Profiler y conéctese a la instancia de SQL Server que hospeda la réplica secundaria.  
   
-     Mientras se ejecuta el seguimiento, el `SQL:BatchStarting` y `SQL:BatchCompleting` eventos mostrarán las consultas emitidas desde Analysis Services que se están ejecutando en la instancia del motor de base de datos. Estos eventos están seleccionados de forma predeterminada de modo que todo lo que debe hacer es iniciar el seguimiento.  
+     Cuando se ejecuta el seguimiento, el `SQL:BatchStarting` y `SQL:BatchCompleting` eventos mostrarán las consultas emitidas desde Analysis Services que se ejecutan en la instancia del motor de base de datos. Estos eventos están seleccionados de forma predeterminada de modo que todo lo que debe hacer es iniciar el seguimiento.  
   
 2.  En [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)], abra el proyecto de Analysis Services o la solución que contenga una conexión a un origen de datos que desee probar. Asegúrese de que el origen de datos especifica el agente de escucha de grupo de disponibilidad y no una instancia del grupo.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "36113234"
   
 4.  Implemente la solución y, cuando se complete, detenga el seguimiento.  
   
-     En la ventana de seguimiento debería ver los eventos de la aplicación **Microsoft SQL Server Analysis Services**. Debería ver `SELECT` instrucciones que recuperan datos de una base de datos en la instancia del servidor que hospeda la réplica secundaria, lo que demuestra que la conexión se realiza mediante el agente de escucha a la réplica secundaria.  
+     En la ventana de seguimiento debería ver los eventos de la aplicación **Microsoft SQL Server Analysis Services**. Debería ver `SELECT` instrucciones que recuperan datos de una base de datos en la instancia del servidor que hospeda la réplica secundaria, demuestra que la conexión se realiza mediante el agente de escucha a la réplica secundaria.  
   
 #### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>Paso 2: realizar una conmutación por error planeada para probar la configuración  
   

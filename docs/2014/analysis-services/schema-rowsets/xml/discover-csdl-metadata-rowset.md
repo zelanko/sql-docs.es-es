@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_CSDL_METADATA | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_CSDL_METADATA | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3bac193969cb4f5392944a79351b44390b013596
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29f94bd307f0e863e6ff8e54b7b0ec54281f20b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293541"
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA, conjunto de filas
   Devuelve información sobre un modelo de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] (ya sea tabular o multidimensional), proporcionando la definición del modelo en el formato CSDLBI (lenguaje de definición de esquemas conceptuales con anotaciones BI). CSDLBI está basado en CSDL, un esquema XML utilizado por Entity Data Framework para la comunicación entre un servidor de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y el cliente de [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . Las anotaciones Business Intelligence (BI) proporcionan metadatos adicionales sobre los modelos tabulares y los objetos incluidos en ellos. Para más información sobre los modelos de datos tabulares, vea [Anotaciones de CSDL para Business Intelligence &#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "36112343"
  El identificador de idioma del cliente que emite la solicitud del conjunto de filas se incluye en la cadena de conexión para el comando, y afecta al idioma que se muestra en varias propiedades que se devuelven como parte del conjunto de filas.  Para obtener información acerca de las propiedades y la descripción que pueden verse afectadas por el identificador de idioma, vea la sección Comentarios.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_CSDL_METADATA` filas contiene las columnas siguientes.  
+ El `DISCOVER_CSDL_METADATA` conjunto de filas contiene las siguientes columnas.  
   
 |**Nombre de columna**|**Indicador de tipo**|**Restricción**|**Descripción**|  
 |---------------------|------------------------|---------------------|---------------------|  

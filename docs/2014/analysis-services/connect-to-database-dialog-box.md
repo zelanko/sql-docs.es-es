@@ -1,5 +1,5 @@
 ---
-title: Conectarse a la base de datos cuadro de diálogo | Documentos de Microsoft
+title: Conectarse a la base de datos cuadro de diálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.connecttodatabase.f1
 ms.assetid: e2c62d4b-27d9-4ee0-9d90-a6dd4ca2906d
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f2ed332ef683c3f5adba735b46ca6ab7be603efb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bb2b102cc41fec8d061ac21d55a430fcaa78357
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220495"
 ---
 # <a name="connect-to-database-dialog-box"></a>Cuadro de diálogo Conectar con base de datos
   Utilice el cuadro de diálogo **Conectar con base de datos** para conectarse a una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

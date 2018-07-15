@@ -1,5 +1,5 @@
 ---
-title: Opciones de procesamiento de la página de propiedades (Administrador de informes) | Documentos de Microsoft
+title: Opciones de procesamiento de la página de propiedades (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
 caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17db40e24318fad194ec21ca30e6394f3fe607e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa0b3682b6358ee2aa7c246156cf59eecdf4559a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288391"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Página de propiedades Opciones de procesamiento (Administrador de informes)
   Use la página de propiedades Opciones de procesamiento para establecer las propiedades de ejecución de informes del informe actualmente seleccionado. Estas opciones determinan cuándo se produce el procesamiento de datos para el informe. Pueden usarse para recuperar los datos de informe durante las horas de menor actividad. Si tiene un informe al que se obtiene acceso con frecuencia, se pueden almacenar en caché copias temporales del mismo para que los usuarios no tengan que esperar si tienen acceso al mismo informe con diferencia de minutos.  
@@ -68,6 +68,6 @@ ms.locfileid: "36113294"
  [Establecer las propiedades de procesamiento de informes](report-server/set-report-processing-properties.md)   
  [Informes almacenados en caché &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Crear, modificar y eliminar programaciones](subscriptions/create-modify-and-delete-schedules.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

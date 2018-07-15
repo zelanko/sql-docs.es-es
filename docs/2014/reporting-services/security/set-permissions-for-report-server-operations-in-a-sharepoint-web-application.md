@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -20,13 +20,13 @@ ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0f4f4e80a193b1a9cb2f492bf2deab88af1d0f47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 317abe3278784d5328df02ec96c6f126a40d100e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234505"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Establecer permisos para las operaciones del servidor de informes en una aplicación web de SharePoint
   En el caso de un servidor de informes que se ejecuta en el modo integrado de SharePoint, la configuración de seguridad definida en el sitio de SharePoint determina el modo en que se ven y administran los informes, los modelos de informe y los orígenes de datos compartidos. Si usa los grupos, niveles de permiso y asignaciones de permiso predeterminados de SharePoint, puede trabajar con informes y otros documentos mediante la configuración de seguridad actual.  
@@ -85,7 +85,7 @@ ms.locfileid: "36196663"
   
 |Tarea|Permiso|  
 |----------|----------------|  
-|Iniciar el Generador de informes.|No hay permisos que se usen explícitamente para controlar el acceso para usar el Generador de informes. El Generador de informes estará disponible si se configura la integración del servidor de informes y si dispone de permiso para agregar elementos a la biblioteca. Para iniciar el Generador de informes desde el menú **Nuevo** de la biblioteca, debe registrar el tipo de contenido del Generador de informes. Para obtener más información, consulte [Agregar informe Server tipos de contenido en una biblioteca de &#40;Reporting Services en modo integrado de SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
+|Iniciar el Generador de informes.|No hay permisos que se usen explícitamente para controlar el acceso para usar el Generador de informes. El Generador de informes estará disponible si se configura la integración del servidor de informes y si dispone de permiso para agregar elementos a la biblioteca. Para iniciar el Generador de informes desde el menú **Nuevo** de la biblioteca, debe registrar el tipo de contenido del Generador de informes. Para obtener más información, consulte [Agregar informe Server tipos de contenido en una biblioteca &#40;Reporting Services en modo integrado de SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
 |Cargar un modelo o un origen de datos compartido.|**Agregar elementos** en la biblioteca que contendrá los archivos.|  
 |Ver un modelo o un origen de datos compartido dependiente.|**Ver elementos** en la biblioteca que contiene los archivos.<br /><br /> Si el modelo incluye la configuración de seguridad de elementos de modelo, el usuario debe tener además el permiso **Enumerar permisos** en el modelo de informe.|  
 |Generar un modelo a partir de un origen de datos compartido.|**Agregar elementos** en la biblioteca que contiene el archivo de origen de datos compartido (.rsds) a partir del cual está generando el modelo.|  
@@ -124,7 +124,7 @@ ms.locfileid: "36196663"
   
 |Tareas|Permiso|  
 |-----------|----------------|  
-|Crear un origen de datos compartido.|**Agregar elementos** en la biblioteca que contiene el origen de datos compartido. Puede crear nuevos orígenes de datos compartidos desde el menú Nuevo de una biblioteca. Para ello, debe registrar el tipo de contenido Origen de datos de informe en la biblioteca. Para obtener más información, consulte [Agregar informe Server tipos de contenido en una biblioteca de &#40;Reporting Services en modo integrado de SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
+|Crear un origen de datos compartido.|**Agregar elementos** en la biblioteca que contiene el origen de datos compartido. Puede crear nuevos orígenes de datos compartidos desde el menú Nuevo de una biblioteca. Para ello, debe registrar el tipo de contenido Origen de datos de informe en la biblioteca. Para obtener más información, consulte [Agregar informe Server tipos de contenido en una biblioteca &#40;Reporting Services en modo integrado de SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
 |Modificar un origen de datos compartido.|**Editar elementos** en la biblioteca que contiene el origen de datos compartido o en el propio origen de datos compartido.|  
 |Eliminar un origen de datos compartido.|**Eliminar elementos** en la biblioteca que contiene el origen de datos compartido o en el propio origen de datos compartido.|  
 |Usar un origen de datos compartido (.rsds) con un informe.|**Editar elementos** en el informe o en la biblioteca que contiene el informe. Seleccionar un origen de datos compartido forma parte del proceso de establecer las propiedades del origen de datos en un informe.|  
@@ -136,9 +136,9 @@ ms.locfileid: "36196663"
 >  No existen permisos para modificar modelos de informe. Aunque se pueden crear o eliminar modelos de informe, no se pueden modificar desde un sitio de SharePoint. Para poder modificar modelos de informe, es necesario usar el Diseñador de modelos, una herramienta de creación de cliente a la que no afectan los permisos que haya establecido en SharePoint.  
   
 ## <a name="see-also"></a>Vea también  
- [Conceder permisos sobre elementos de servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Comparar Roles y tareas de Reporting Services con permisos y grupos de SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [Conceder permisos sobre elementos de servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Comparar Roles y tareas de Reporting Services con los permisos y grupos de SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Uso de la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   

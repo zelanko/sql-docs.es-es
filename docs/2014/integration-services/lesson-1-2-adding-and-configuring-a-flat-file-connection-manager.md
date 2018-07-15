@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 caps.latest.revision: 42
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c732e124ca8de59f28f4d5121a85e071d6fda7f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7527bbdd1e66db49851832052c8a9393201b202f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254547"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Paso 2: agregar y configurar un administrador de conexiones de archivos planos
   En esta tarea, agregará un administrador de conexiones de archivos planos al paquete que acaba de crear. Un administrador de conexiones de archivos planos permite a un paquete extraer datos de un archivo plano. Mediante el administrador de conexiones de archivos planos puede especificar el nombre y la ubicación del archivo, la configuración regional y la página de códigos, y el formato del archivo, incluyendo los delimitadores de columna, que deben aplicarse cuando el paquete extrae datos del archivo plano. Además, puede especificar de forma manual el tipo de datos para columnas individuales, o usar el cuadro de diálogo **Sugerir tipos de columna** para asignar de forma automática las columnas de datos extraídos a los tipos de datos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -66,13 +66,13 @@ ms.locfileid: "36196497"
   
 2.  En el panel de propiedades, realice los cambios siguientes:  
   
-    -   Cambiar el **columna 0** name (propiedad) para `AverageRate`.  
+    -   Cambiar el **columna 0** nombre de propiedad para `AverageRate`.  
   
-    -   Cambiar el **columna 1** name (propiedad) para `CurrencyID`.  
+    -   Cambiar el **1 columna** nombre de propiedad para `CurrencyID`.  
   
-    -   Cambiar el **columna 2** name (propiedad) para `CurrencyDate`.  
+    -   Cambiar el **columna 2** nombre de propiedad para `CurrencyDate`.  
   
-    -   Cambiar el **columna 3** name (propiedad) para `EndOfDayRate`.  
+    -   Cambiar el **columna 3** nombre de propiedad para `EndOfDayRate`.  
   
     > [!NOTE]  
     >  De forma predeterminada, las cuatro columnas están inicialmente establecidas en el tipo de datos de cadena [DT_STR] con `OutputColumnWidth` con el valor 50.  
@@ -94,9 +94,9 @@ ms.locfileid: "36196497"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Date|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-     El tipo de datos que se sugiere para la `CurrencyID` columna no es compatible con el tipo de datos del campo en la tabla de destino. Dado que el tipo de datos de `DimCurrency.CurrencyAlternateKey` es nchar (3), `CurrencyID` debe cambiarse de cadena [DT_STR] a cadena [DT_WSTR]. Además, el campo `DimDate.FullDateAlternateKey` se define como un tipo de datos de fecha; por lo tanto, `CurrencyDate` debe cambiarse de fecha [DT_Date] hasta la fecha de la base de datos [DT_DBDATE].  
+     El tipo de datos sugerido para la `CurrencyID` columna no es compatible con el tipo de datos del campo en la tabla de destino. Dado que el tipo de datos de `DimCurrency.CurrencyAlternateKey` es nchar (3), `CurrencyID` debe cambiarse de la cadena [DT_STR] a cadena [DT_WSTR]. Además, el campo `DimDate.FullDateAlternateKey` se define como un tipo de datos de fecha; por lo tanto, `CurrencyDate` debe cambiarse del tipo fecha [DT_Date] a fecha de base de datos [DT_DBDATE].  
   
-2.  En la lista, seleccione la columna CurrencyID y en el panel de propiedades, cambie el tipo de datos de columna `CurrencyID` de cadena [DT_STR] a Unicode, cadena [DT_WSTR].  
+2.  En la lista, seleccione la columna CurrencyID y, en el panel de propiedades, cambie el tipo de datos de columna `CurrencyID` de cadena [DT_STR] a Unicode, cadena [DT_WSTR].  
   
 3.  En el panel de propiedades, cambie el tipo de datos de columna `CurrencyDate` de fecha [DT_DATE] a fecha de base de datos [DT_DBDATE].  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36196497"
  [Paso 3: Agregar y configurar un administrador de conexiones OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Administrador de conexión de archivos planos](connection-manager/file-connection-manager.md)   
+ [Administrador de conexiones de archivos planos](connection-manager/file-connection-manager.md)   
  [Tipos de datos de Integration Services](data-flow/integration-services-data-types.md)  
   
   

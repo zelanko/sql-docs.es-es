@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5f14bd16fa44247508ef04bf68d2d02c0503394
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c34c0764e0dd8b8eb64c9bf776a8ed071310fae3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290231"
 ---
 # <a name="saving-reports-report-builder"></a>Guardar informes (Generador de informes)
   En el Generador de informes puede guardar un informe en un servidor de informes, una biblioteca de SharePoint, un recurso compartido de archivos en el que tenga permiso de escritura o su equipo. Puede guardar un informe en la misma ubicación desde la que lo abrió, guardarlo en una ubicación diferente o guardarlo con un nuevo nombre en la misma ubicación o en otra. De forma predeterminada, un informe es vuelve a guardar en la ubicación desde la que se abrió. Al guardar el informe, lo que realmente se guarda es la definición de informe, que describe su diseño. No se guardan los datos. Cada vez que ejecuta el informe, sus datos se actualizan y es probable que sean diferentes a los de antes de la ejecución.  
@@ -56,7 +56,7 @@ ms.locfileid: "36112635"
 
   
 ##  <a name="ExportingAndSavingReports"></a> Exportar y guardar informes  
- Si los informes que necesita archivar son pocos, quizás le interese exportar el informe y guardarlo como un archivo. Tras exportar un informe a una aplicación (como PDF o Excel), puede guardarlo como un archivo y colocarlo en un directorio compartido protegido de la red. También puede cargar un informe PDF o Excel guardado como un elemento de recurso si desea conservar todas las copias del informe, independientemente del formato, en la base de datos del servidor de informes. Para obtener más información acerca de cómo exportar un informe, vea [exportar informes &#40;el generador de informes y SSRS&#41; ](export-reports-report-builder-and-ssrs.md) y [cargar un archivo o informe &#40;el Administrador de informes&#41;](../reports/upload-a-file-or-report-report-manager.md).  
+ Si los informes que necesita archivar son pocos, quizás le interese exportar el informe y guardarlo como un archivo. Tras exportar un informe a una aplicación (como PDF o Excel), puede guardarlo como un archivo y colocarlo en un directorio compartido protegido de la red. También puede cargar un informe PDF o Excel guardado como un elemento de recurso si desea conservar todas las copias del informe, independientemente del formato, en la base de datos del servidor de informes. Para obtener más información acerca de cómo exportar un informe, vea [exportar informes &#40;generador de informes y SSRS&#41; ](export-reports-report-builder-and-ssrs.md) y [cargar un archivo o informe &#40;el Administrador de informes&#41;](../reports/upload-a-file-or-report-report-manager.md).  
   
 
   
@@ -81,10 +81,10 @@ ms.locfileid: "36112635"
 
   
 ## <a name="see-also"></a>Vea también  
- [Informes, elementos de informe y las definiciones de informe &#40;el generador de informes SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Los informes, elementos de informe y definiciones de informe &#40;generador de informes y SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Instalar, desinstalar y asistencia del generador de informes](../install-uninstall-and-report-builder-support.md)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportar informes &#40;el generador de informes SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [Exportar informes &#40;generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Imprimir informes &#40;Generador de informes y SSRS&#41;](print-reports-report-builder-and-ssrs.md)  
   
   

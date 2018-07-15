@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7903ff16c9a7f16eca47be37adcefe35cfcb3aec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26a3efe2d36bd4c912b1b95fa2c00ab597dc44c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257191"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Extraer datos mediante el origen de ODBC
   Este procedimiento describe cómo extraer datos mediante un origen ODBC. Para agregar y configurar un origen ODBC, el paquete ya debe incluir por lo menos una tarea Flujo de datos.  
@@ -55,8 +55,8 @@ ms.locfileid: "36196506"
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de origen ODBC &#40;página Administrador de conexiones&#41;](../odbc-source-editor-connection-manager-page.md)   
+ [Editor de orígenes ODBC &#40;página Administrador de conexiones&#41;](../odbc-source-editor-connection-manager-page.md)   
  [Editor de orígenes ODBC &#40;página Columnas&#41;](../odbc-source-editor-columns-page.md)   
- [Editor de origen ODBC &#40;página de salida de Error&#41;](../odbc-source-editor-error-output-page.md)  
+ [Editor de orígenes ODBC &#40;página de salida de Error&#41;](../odbc-source-editor-error-output-page.md)  
   
   

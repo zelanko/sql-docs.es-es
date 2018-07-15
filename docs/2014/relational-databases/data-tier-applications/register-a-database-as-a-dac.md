@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerdacwizard.registerdac.f1
 - sql12.swb.registerdacwizard.summary.f1
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7b197a130a1caa9ec467d529b36373b8aa648b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 76cea4cf690481d4253b582f681b29b577d71877
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197205"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar una base de datos como una DAC
-  Utilice la **registrar el Asistente para aplicaciones de capa de datos** o un Windows script de PowerShell para generar una definición de aplicación (DAC) de capa de datos que describe los objetos de base de datos existente y registra la definición de DAC en la `msdb` base de datos del sistema (**maestro** en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
+  Usar el **registrar el Asistente para aplicaciones de capa de datos** o un Windows script de PowerShell para compilar una definición de aplicación (DAC) de capa de datos que se describe los objetos de base de datos existente y registre la definición de DAC en la `msdb` base de datos del sistema (**maestro** en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
   
@@ -82,9 +82,9 @@ ms.locfileid: "36113390"
   
  **Nombre de aplicación.** - Una cadena que especifica el nombre usado para identificar la definición de la DAC; el campo se rellena con el nombre de la base de datos.  
   
- **Versión.** - Un valor numérico que identifica la versión de la DAC. La versión de DAC se usa en Visual Studio para identificar la versión de la DAC en la que están trabajando los desarrolladores. Al implementar una DAC, la versión se almacena en la `msdb` la base de datos y más tarde se pueden ver en la **Data-tier Applications** nodo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ **Versión.** - Un valor numérico que identifica la versión de la DAC. La versión de DAC se usa en Visual Studio para identificar la versión de la DAC en la que están trabajando los desarrolladores. Al implementar una DAC, la versión se almacena en el `msdb` de base de datos y más adelante se pueden ver en el **aplicaciones de capa de datos** nodo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Descripción.** - Opcional. Texto que explica el propósito de la DAC. Al implementar una DAC, la descripción se almacena en la `msdb` la base de datos y más tarde se pueden ver en la **Data-tier Applications** nodo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ **Descripción.** - Opcional. Texto que explica el propósito de la DAC. Al implementar una DAC, la descripción se almacena en el `msdb` de base de datos y más adelante se pueden ver en el **aplicaciones de capa de datos** nodo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  **\< Anterior** -vuelve a la **Introducción** página.  
   

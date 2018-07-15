@@ -1,5 +1,5 @@
 ---
-title: Conceder acceso personalizado a los datos de la dimensión (Analysis Services) | Documentos de Microsoft
+title: Conceder acceso personalizado a datos de dimensión (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensiondata.f1
 helpviewer_keywords:
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ApplyDenied property
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 509cc6dc34ce5c62bcf56f38fe3f229d2a081731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae4c816ae333edf892b836d25161b70fc81e58e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215975"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Conceder acceso personalizado a datos de dimensión (Analysis Services)
   Después de permitir el acceso de lectura a un cubo, puede establecer permisos adicionales que permitan o denieguen explícitamente el acceso a miembros de la dimensión (incluidas las medidas que contiene la Dimensión de Medidas que contengan todas las medidas utilizadas en un cubo). Por ejemplo, si hay varias categorías de distribuidores, conviene establecer permisos para excluir datos de un tipo de negocio específico. La ilustración siguiente representa el antes y el después a la denegación de acceso al tipo de negocio Warehouse en la dimensión Reseller.  
@@ -75,7 +75,7 @@ ms.locfileid: "36197494"
 5.  Si lo desea, haga clic en **avanzadas** para habilitar `Visual Totals` para esta jerarquía de atributo. Esta opción vuelve a calcular las agregaciones en función de los miembros disponibles en el rol.  
   
     > [!NOTE]  
-    >  Cuando se aplican permisos que eliminan miembros de una dimensión, los totales agregados no se recalculan de forma automática. Suponga que el `All` miembro de una jerarquía de atributo arroja un recuento de 200 antes de aplicaron permisos. Después de aplicar los permisos que deniegan el acceso a algunos miembros, `All` sigue devolviendo 200, aunque los valores de miembro visibles para el usuario son muchos menos. Para evitar confundir a los consumidores del cubo, puede configurar el `All` miembro sea el agregado de solo los miembros para que los miembros del rol, en lugar de la suma de todos los miembros de la jerarquía de atributo. Para invocar este comportamiento, puede habilitar `Visual Totals` en el **avanzadas** tabulación al configurar la seguridad de dimensión. Una vez que lo haya habilitado, el agregado se calcula en tiempo de consulta en lugar de recuperarse a partir de agregados previamente calculados. Esto puede tener una repercusión apreciable en el rendimiento de la consulta, por tanto, úselo únicamente cuando sea necesario.  
+    >  Cuando se aplican permisos que eliminan miembros de una dimensión, los totales agregados no se recalculan de forma automática. Supongamos que el `All` miembro de una jerarquía de atributo devuelve un recuento de 200 antes de que se aplican los permisos. Después de aplicar los permisos que deniegan el acceso a algunos miembros, `All` todavía devuelve 200, aunque los valores de miembro visibles para el usuario son muchos menos. Para evitar confundir a los consumidores del cubo, puede configurar el `All` miembro sean la agregación de esos miembros para que los miembros del rol, en lugar de la suma de todos los miembros de la jerarquía de atributo. Para invocar este comportamiento, puede habilitar `Visual Totals` en el **avanzadas** tabulación al configurar la seguridad de dimensión. Una vez que lo haya habilitado, el agregado se calcula en tiempo de consulta en lugar de recuperarse a partir de agregados previamente calculados. Esto puede tener una repercusión apreciable en el rendimiento de la consulta, por tanto, úselo únicamente cuando sea necesario.  
   
 ## <a name="hiding-measures"></a>Ocultar medidas  
  En [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md), se explicó que para ocultar totalmente todos los aspectos visuales de una medida, y no solamente los datos de la celda, se requieren permisos para los miembros de la dimensión. En esta sección, se describe cómo denegar el acceso a los metadatos del objeto de una medida.  
@@ -131,7 +131,7 @@ ms.locfileid: "36197494"
   
 ## <a name="see-also"></a>Vea también  
  [Conceder permisos para cubos o modelos &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Conceder acceso personalizado a los datos de las celdas &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
+ [Conceder acceso personalizado a datos de la celda &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
  [Conceder permisos en las estructuras de minería de datos y modelos &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [Conceder permisos en un objeto de origen de datos &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   

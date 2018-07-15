@@ -1,5 +1,5 @@
 ---
-title: Conversiones de moneda (Analysis Services) | Documentos de Microsoft
+title: Conversiones de moneda (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple currency conversions
 - monetary data [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - many-to-one currency conversions [Analysis Services]
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe7eb5df9c2f25912d95aa9b0d72a6effaf06f2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d2a439a5ef4d422b69b95d1c76dbeefa39b658a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289831"
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversiones de moneda (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  solo a modelos multidimensionales  
@@ -72,7 +72,7 @@ ms.locfileid: "36113925"
   
 -   Existe una relación de dimensión normal entre una dimensión temporal y el grupo de medida de tarifas.  
   
--   Opcionalmente, la propiedad `Type` se establece en ExchangeRate. Mientras el Asistente de Business Intelligence utiliza las relaciones con las dimensiones de tiempo y de moneda para identificar los grupos de medida de tarifas probables, establecer el `Type` propiedad en ExchangeRate permite las aplicaciones identificar más fácilmente la medida de la tasa de cliente grupos.  
+-   Opcionalmente, la propiedad `Type` se establece en ExchangeRate. El Asistente de Business Intelligence utiliza las relaciones con las dimensiones de tiempo y de moneda para identificar los grupos de medida de tarifas probables, establecer el `Type` propiedad en ExchangeRate permite a aplicaciones cliente identificar más fácilmente la medida de la tasa grupos.  
   
 -   Una o más medidas, que representan las tasas de cambio que contiene el grupo de medida de tarifas.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36113925"
   
 -   El `Type` propiedad de la dimensión se establece en Currency.  
   
--   El `Type` propiedad del atributo clave de la dimensión se establece en CurrencyName.  
+-   El `Type` propiedad del atributo clave para la dimensión se establece en CurrencyName.  
   
 -   El `Type` propiedad de un atributo dentro de la dimensión se establece en CurrencyDestination, y la columna enlazada con el atributo contiene los identificadores de moneda que representan las monedas del informe para la conversión de moneda.  
   

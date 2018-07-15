@@ -1,5 +1,5 @@
 ---
-title: Referencia técnica del algoritmo de agrupación en clústeres de secuencia de Microsoft | Documentos de Microsoft
+title: Referencia técnica del algoritmo de clústeres de secuencia de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_SEQUENCE_STATES parameter
 - MINIMUM_SUPPORT parameter
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7e1e11074e74a228be0d49a5d8c76196bf5c4463
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29cb245c65976e517aad12ecae636df264dda9d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242015"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de secuencia de Microsoft
   El algoritmo de clústeres de secuencia de Microsoft es un algoritmo híbrido que usa el análisis de cadenas de Markov para identificar secuencias ordenadas, y combina los resultados de este análisis con técnicas de agrupación en clústeres para generar clústeres basados en las secuencias y otros atributos del modelo. En este tema se describe la implementación del algoritmo y cómo personalizarlo, y se detallan los requisitos especiales para los modelos de agrupación en clústeres de secuencia.  
@@ -103,7 +103,7 @@ ms.locfileid: "36113921"
  El valor predeterminado es 64.  
   
  MAXIMUM_STATES  
- Especifica el número máximo de estados que admite el algoritmo para un atributo sin secuencia. Si el número de Estados para un atributo sin secuencia es mayor que el número máximo de Estados, el algoritmo utiliza los estados más populares del atributo y tratará el resto de los estados `Missing`.  
+ Especifica el número máximo de estados que admite el algoritmo para un atributo sin secuencia. Si el número de Estados para un atributo sin secuencia es mayor que el número máximo de Estados, el algoritmo utiliza los estados más populares del atributo y tratará los restantes `Missing`.  
   
  El valor predeterminado es 100.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36113921"
 ## <a name="requirements"></a>Requisitos  
  La tabla de casos debe tener una columna de identificador de caso. Opcionalmente, dicha tabla puede contener otras columnas que almacenen atributos sobre el caso.  
   
- El algoritmo de clústeres de secuencia de Microsoft requiere información de secuencia, almacenada como una tabla anidada. La tabla anidada debe tener una única columna Key Sequence. Un `Key Sequence` columna puede contener cualquier tipo de datos que se puedan ordenar, incluidos los tipos de datos de cadena, pero la columna debe contener valores únicos para cada caso. Es más, antes de procesar el modelo, debe asegurarse de que la tabla de casos y la tabla anidada están ordenadas de manera ascendente por la clave que relaciona las tablas.  
+ El algoritmo de clústeres de secuencia de Microsoft requiere información de secuencia, almacenada como una tabla anidada. La tabla anidada debe tener una única columna Key Sequence. Un `Key Sequence` columna puede contener cualquier tipo de datos que se puedan ordenar, incluyendo tipos de datos de cadena, pero la columna debe contener valores únicos para cada caso. Es más, antes de procesar el modelo, debe asegurarse de que la tabla de casos y la tabla anidada están ordenadas de manera ascendente por la clave que relaciona las tablas.  
   
 > [!NOTE]  
 >  Si crea un modelo que usa el algoritmo de clústeres de secuencia de Microsoft pero no emplea una columna de secuencia, el modelo resultante no contendrá ninguna secuencia, sino que simplemente creará clústeres de casos en función de otros atributos incluidos en el modelo.  
@@ -149,6 +149,6 @@ ms.locfileid: "36113921"
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm.md)   
  [Ejemplos de consultas de modelo de clústeres de secuencia](clustering-model-query-examples.md)   
- [Contenido del modelo para los modelos de clústeres de secuencia de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Para los modelos de clústeres de secuencia de contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

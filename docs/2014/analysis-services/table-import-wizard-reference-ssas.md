@@ -1,5 +1,5 @@
 ---
-title: Tabla de referencia del Asistente para importación (SSAS) | Documentos de Microsoft
+title: Tabla de referencia del Asistente para importación (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableimportwizard.f1
 ms.assetid: 2ac05e89-c002-4adc-86c7-438df70e9ed5
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbd2caf29b53fe6bdb8313dc11645068ff65c64f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 348e92e73e4ca03e995fa17546691dc032f03ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267251"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>Referencia del Asistente para la importación de tablas (SSAS)
   En esta sección se proporciona ayuda acerca del **Asistente para la importación de tablas**. Este asistente le permite importar datos de diversos orígenes de datos. Para tener acceso al asistente desde el diseñador de modelos, en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
@@ -34,11 +34,11 @@ ms.locfileid: "36113237"
   
 -   [Elegir cómo importar los datos &#40;SSAS&#41;](choose-how-to-import-the-data-ssas.md)  
   
--   [Conectarse a una fuente de datos o informe &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md)  
+-   [Conectarse a un informe o fuente de datos &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md)  
   
 -   [Conectarse a un origen de datos &#40;SSAS&#41;](connect-to-a-data-source-ssas.md)  
   
--   [Conectarse a una base de datos de DB2 &#40;SSAS&#41;](connect-to-a-db2-database-ssas.md)  
+-   [Conectarse a una base de datos DB2 &#40;SSAS&#41;](connect-to-a-db2-database-ssas.md)  
   
 -   [Conectarse a un archivo plano &#40;SSAS&#41;](connect-to-a-flat-file-ssas.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36113237"
   
 -   [Conectarse a una base de datos de Microsoft SQL Server &#40;SSAS&#41;](connect-to-a-microsoft-sql-server-database-ssas.md)  
   
--   [Conectarse a un almacenamiento de datos en paralelo de Microsoft SQL Server &#40;SSAS&#41;](connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas.md)  
+-   [Conectarse a un almacén de datos paralelos de Microsoft SQL Server &#40;SSAS&#41;](connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas.md)  
   
 -   [Conectarse a Microsoft SQL Server Analysis Services &#40;SSAS&#41;](connect-to-microsoft-sql-server-analysis-services-ssas.md)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36113237"
   
 -   [Detalles del filtro &#40;SSAS&#41;](filter-details-ssas.md)  
   
--   [Cuadro de diálogo de información de suplantación &#40;Asistente para la importación de tabla&#41;](impersonation-information-dialog-box-table-import-wizard.md)  
+-   [Cuadro de diálogo de información de suplantación &#40;Asistente para importación de tabla&#41;](impersonation-information-dialog-box-table-import-wizard.md)  
   
 -   [Importar &#40;SSAS&#41;](importing-ssas.md)  
   
@@ -80,15 +80,15 @@ ms.locfileid: "36113237"
   
 -   [Seleccionar tablas y vistas &#40;SSAS&#41;](select-tables-and-views-ssas.md)  
   
--   [Seleccionar tablas y vistas &#40;fuentes de datos&#41; &#40;SSAS&#41;](select-tables-and-views-data-feeds-ssas.md)  
+-   [Seleccionar tablas y vistas &#40;las fuentes de datos&#41; &#40;SSAS&#41;](select-tables-and-views-data-feeds-ssas.md)  
   
 -   [Establecer propiedades avanzadas &#40;SSAS&#41;](set-advanced-properties-ssas.md)  
   
 -   [Especifique una cadena de conexión &#40;SSAS&#41;](specify-a-connection-string-ssas.md)  
   
--   [Especificar una consulta SQL o MDX &#40;SSAS&#41;](specify-a-sql-or-mdx-query-ssas.md)  
+-   [Especifique una consulta SQL o MDX &#40;SSAS&#41;](specify-a-sql-or-mdx-query-ssas.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Importar datos &#40;SSAS Tabular&#41;](import-data-ssas-tabular.md)  
+ [Importar datos &#40;Tabular de SSAS&#41;](import-data-ssas-tabular.md)  
   
   

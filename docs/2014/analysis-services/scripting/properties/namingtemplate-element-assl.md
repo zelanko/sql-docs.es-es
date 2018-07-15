@@ -1,5 +1,5 @@
 ---
-title: Elemento NamingTemplate (ASSL) | Documentos de Microsoft
+title: Elemento NamingTemplate (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NamingTemplate element
 ms.assetid: d68d765c-f012-40c1-acd4-32741ee2eadf
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8eb2589b0b33a0b3268e6104b51c3e3612ad894
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ba346be8664cf26992143c15789684c503fdf2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300845"
 ---
 # <a name="namingtemplate-element-assl"></a>Elemento NamingTemplate (ASSL)
   Define cómo se denominan los niveles en una jerarquía de elementos primarios y secundarios construida a partir del [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) elemento primario.  
@@ -62,7 +62,7 @@ ms.locfileid: "36112769"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El valor de la `NamingTemplate` elemento se utiliza únicamente por los atributos primarios (en otras palabras, el valor de la [uso](usage-element-dimensionattribute-assl.md) elemento de la `DimensionAttribute` elemento primario se establece en *primario*).  
+ El valor de la `NamingTemplate` elemento es utilizado únicamente por los atributos primarios (en otras palabras, el valor de la [uso](usage-element-dimensionattribute-assl.md) elemento de la `DimensionAttribute` elemento primario se establece en *primario*).  
   
  Cuando un atributo primario se utiliza para construir una jerarquía, las relaciones primario-secundario determinan los niveles de la jerarquía entre los miembros que se encuentran el atributo primario. Por consiguiente, a diferencia de otras dimensiones, los nombres de los niveles no se pueden deducir de los nombres de atributo utilizados para la jerarquía.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36112769"
   
  Utilice dos asteriscos (*) para incluir el asterisco (\*) carácter en un nombre de nivel como parte de una plantilla de nombres.  
   
- El elemento que corresponde al elemento primario de `NamingTemplate` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ El elemento que se corresponde con el elemento primario de `NamingTemplate` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento NamingTemplateTranslations &#40;ASSL&#41;](../collections/translations-element-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: Recuperar datos mediante AdomdDataReader | Documentos de Microsoft
+title: Recuperación de datos mediante AdomdDataReader | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ed47d13aab29ea47c5f1d041705029844e359e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5631238b78804bb593e8db90f910aec0ddebb933
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321235"
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>Recuperar datos mediante AdomdDataReader
   Al recuperar datos analíticos, el objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> proporciona un equilibrio óptimo entre sobrecarga e interactividad. El objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> recupera un flujo de datos de solo lectura, de solo avance y sin información de estructura jerárquica de un origen de datos analíticos. Este flujo de datos no almacenado en búfer habilita la lógica de procedimiento para procesar los resultados de un origen de datos analíticos secuencialmente de forma eficaz. Esto hace que <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> sea una buena opción para recuperar grandes cantidades de datos con fines de visualización, ya que los datos no se almacenan en la memoria caché.  
   
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> también puede aumentar el rendimiento de la aplicación al recuperar los datos tan pronto como estén disponibles, en lugar de esperar a que se devuelvan los resultados completos de la consulta. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> también reduce la sobrecarga del sistema ya que, de forma predeterminada, este lector almacena las filas de una en una en la memoria.  
   
- La contrapartida del rendimiento optimizado es que el objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> proporciona menos información sobre los datos recuperados que otros métodos de recuperación de datos. El objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> no admite un modelo de objetos grande para representar datos o metadatos; además, dicho modelo de objetos tampoco permite características analíticas más complejas, como la reescritura de celdas. Sin embargo, el objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> proporciona un conjunto de métodos con establecimiento inflexible de tipos para recuperar datos de conjuntos de celdas y un método para recuperar metadatos de conjuntos de celdas en formato tabular. Además, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> implementa la **IDbDataReader** que admitan el enlace de datos y para recuperar datos mediante la interfaz la `SelectCommand` método, de la **System.Data** espacio de nombres de la Biblioteca de clases de Microsoft .NET Framework.  
+ La contrapartida del rendimiento optimizado es que el objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> proporciona menos información sobre los datos recuperados que otros métodos de recuperación de datos. El objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> no admite un modelo de objetos grande para representar datos o metadatos; además, dicho modelo de objetos tampoco permite características analíticas más complejas, como la reescritura de celdas. Sin embargo, el objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> proporciona un conjunto de métodos con establecimiento inflexible de tipos para recuperar datos de conjuntos de celdas y un método para recuperar metadatos de conjuntos de celdas en formato tabular. Además, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> implementa el **IDbDataReader** interfaz a la compatibilidad con el enlace de datos y para recuperar datos mediante el `SelectCommand` método, desde el **System.Data** espacio de nombres de la Biblioteca de clases de Microsoft .NET Framework.  
   
 ## <a name="retrieving-data-from-the-adomddatareader"></a>Recuperar datos desde AdomdDataReader  
  Si desea utilizar el objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> para recuperar datos, siga estos pasos:  
@@ -40,7 +40,7 @@ ms.locfileid: "36104834"
   
      Para crear una nueva instancia de la clase <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>, llame al método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.Execute%2A> o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader%2A> del objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>.  
   
-2.  **Recuperar los datos.**  
+2.  **Recuperar datos.**  
   
      Cuando el comando ejecuta la consulta, ADOMD.NET devuelve los resultados en formato `Resultset` (formato tabular descrito en la especificación de XML for Analysis) a fin de quitar la información de estructura jerárquica de los datos para el objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>. El formato tabular no es muy frecuente en las consultas de datos analíticos debido a la dimensionalidad variable de dichos datos.  
   
@@ -121,8 +121,8 @@ foreach (DataRow objRow in schemaTable.Rows)
  En minería de datos se admite el concepto de tablas anidadas, que ADOMD.NET expone como conjuntos de filas anidados. Para recuperar el conjunto de filas anidado asociado a cada fila, llame al método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetDataReader%2A>.  
   
 ## <a name="see-also"></a>Vea también  
- [Recuperar datos de un origen de datos analíticos](retrieving-data-from-an-analytical-data-source.md)   
- [Recuperar datos mediante el conjunto de celdas](retrieving-data-using-the-cellset.md)   
+ [Recuperación de datos de origen de datos analíticos](retrieving-data-from-an-analytical-data-source.md)   
+ [Recuperar datos mediante el objeto CellSet](retrieving-data-using-the-cellset.md)   
  [Recuperación de datos mediante XmlReader](retrieving-data-using-the-xmlreader.md)  
   
   

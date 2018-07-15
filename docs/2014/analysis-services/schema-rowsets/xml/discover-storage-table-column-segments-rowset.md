@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2155e4a905da3aeade0f0789f05cc04cdd42f8d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae9955e9f052e4be2317206d5618ccf9294232cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325025"
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS, conjunto de filas
   Proporciona información en el nivel de columna y segmento acerca de las tablas de almacenamiento que usa una base de datos de Analysis Services que se ejecuta en modo tabular o de PowerPivot. Este conjunto de filas se utiliza principalmente para solucionar problemas y realizar análisis.  
@@ -28,7 +28,7 @@ ms.locfileid: "36104552"
  **Se aplica a:** modelos tabulares  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS` filas contiene las columnas siguientes.  
+ El `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS` conjunto de filas contiene las siguientes columnas.  
   
 |**Nombre de columna**|**Indicador de tipo**|**Restricción**|**Descripción**|  
 |---------------------|------------------------|---------------------|---------------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "36104552"
 |`COMPRESSION_TYPE`|`DBTYPE_WSTR`||Tipo de compresión aplicado al segmento de la columna. Este valor está pensado para uso interno y del servicio de soporte técnico solamente. Microsoft no publica valores válidos o descripciones para esta columna.|  
 |`BITS_COUNT`|`DBTYPE_I8`||Recuento de bits.|  
 |`BOOKMARK_BITS_COUNT`|`DBTYPE_I8`||Recuento de bits de marcador.|  
-|`VERTIPAQ_STATE`|`DBTYPE_WSTR`||El estado de la compresión VertiPaq para este sector de la columna. El valor puede ser:<br /><br /> -SKIPPED: se omitió la compresión de VertiPaq.<br />-COMPLETAR: la compresión de VertiPaq se completó correctamente.<br />Compresión de - TIMEBOXED: la VertiPaq era timeboxed.|  
+|`VERTIPAQ_STATE`|`DBTYPE_WSTR`||El estado de la compresión VertiPaq para este sector de la columna. El valor puede ser:<br /><br /> -SKIPPED: se omitió la compresión de VertiPaq.<br />-COMPLETAR: la compresión de VertiPaq se completó correctamente.<br />Compresión - TIMEBOXED: la VertiPaq era timeboxed.|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>Usar ADOMD.NET para devolver el conjunto de filas  
  Cuando se utilizan ADOMD.NET y el conjunto de filas de esquema para recuperar metadatos, puede utilizar el GUID o una cadena para hacer referencia a un objeto de conjunto de filas de esquema del método GetSchemaDataSet. Para obtener más información, vea [Working with Schema Rowsets in ADOMD.NET](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 922df55ae21fe9eda3fa3fc5b040696a2ce1424d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3f039dcac25d3fab4c42f1f412f202f19c37d14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324655"
 ---
 # <a name="sap-bw-source"></a>Origen de SAP BW
   El origen de SAP BW es el componente de origen de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Así, el origen de SAP BW extrae datos de un sistema SAP Netweaver BW de la versión 7 y hace que estos datos estén disponibles para el flujo de datos en un paquete de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -110,7 +110,7 @@ ms.locfileid: "36103114"
   
     -   Para la opción **E - Extraer únicamente** , proporcione el identificador de solicitud.  
   
--   Especifique las reglas de conversión de cadenas. (Por ejemplo, convertir todas las cadenas dependiendo de si el sistema SAP Netweaver BW es Unicode o no, o todas las cadenas a `varchar` o `nvarchar`).  
+-   Especifique las reglas de conversión de cadenas. (Por ejemplo, convertir todas las cadenas dependiendo de si el sistema SAP Netweaver BW es Unicode o no o convierta todas las cadenas a `varchar` o `nvarchar`).  
   
 -   Use las opciones que ha seleccionado para obtener una vista previa de los datos que se van a extraer.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36103114"
   
 -   [Editor de origen de SAP BW &#40;página de salida de Error&#41;](sap-bw-source-editor-error-output-page.md)  
   
--   [Editor de origen de SAP BW &#40;página avanzadas&#41;](sap-bw-source-editor-advanced-page.md)  
+-   [Editor de origen de SAP BW &#40;página Opciones avanzadas&#41;](sap-bw-source-editor-advanced-page.md)  
   
  Mientras configura el origen de SAP BW, también puede usar varios cuadros de diálogo para buscar los objetos de SAP Netweaver BW o para obtener una vista previa de los datos de origen. Para obtener más información sobre estos cuadros de diálogo, haga clic en uno de los temas siguientes:  
   
@@ -142,6 +142,6 @@ ms.locfileid: "36103114"
 -   [Vista previa](preview.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Microsoft Connector 1.1 for SAP BW componentes](../microsoft-connector-for-sap-bw-components.md)  
+ [Componentes de Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-components.md)  
   
   

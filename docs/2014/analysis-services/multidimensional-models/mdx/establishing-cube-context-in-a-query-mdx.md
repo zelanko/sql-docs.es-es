@@ -1,5 +1,5 @@
 ---
-title: Establecer el contexto de cubo en una consulta (MDX) | Documentos de Microsoft
+title: Establecer el contexto de cubo en una consulta (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cubes [Analysis Services], MDX
 - MDX [Analysis Services], cube context
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - queries [MDX], cube context
 ms.assetid: 79d6a1e8-2825-4eb9-97df-5071aecae8f0
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 972b630aea4ebcc427803e226d27d52f919da4a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d42357b197b3a691321a5ffd9d066b787288efe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273451"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>Establecer el contexto de cubo en una consulta (MDX)
   Las consultas de MDX se ejecutan en un contexto de cubo especificado. En este contexto se definen los miembros que se evalúan mediante las expresiones contenidas en la consulta.  
@@ -63,6 +63,6 @@ FROM [Adventure Works]
  Puede utilizar la función de MDX [LookupCube](/sql/mdx/lookupcube-mdx) para recuperar datos de cubos que se encuentren fuera del contexto de cubo. Además, funciones como [Filter](/sql/mdx/filter-mdx) están disponibles para permitir la restricción temporal del contexto mientras se evalúa la consulta.  
   
 ## <a name="see-also"></a>Vea también  
- [Aspectos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Aspectos básicos de consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

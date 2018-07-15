@@ -1,5 +1,5 @@
 ---
-title: Elemento KeyErrorLogFile (ASSL) | Documentos de Microsoft
+title: Elemento KeyErrorLogFile (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyErrorLogFile element
 ms.assetid: 1455bb54-03f7-4f25-9d4d-ab75231dd958
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3387498c26e0bf690b2934ea9e1ee99107414c04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 067e509f6be5657e1e748738bc6910fed977fd41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323055"
 ---
 # <a name="keyerrorlogfile-element-assl"></a>Elemento KeyErrorLogFile (ASSL)
   Contiene el nombre de archivo para registrar los errores de procesamiento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36104528"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `KeyErrorLogFile` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ErrorConfiguration>.  
+ El elemento que se corresponde con el elemento primario de `KeyErrorLogFile` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ErrorConfiguration>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Configurar propiedades del servidor de Analysis Services | Documentos de Microsoft
+title: Configurar las propiedades del servidor en Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, configuration properties
 - Analysis Services, configuration properties
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fbb4d0682f7bb961b17901efc3cf3994fd81a7cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19f6f04dfe165cb5f3af5bd5587232d65c8c4582
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247355"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Configurar las propiedades de servidor en Analysis Services
   Un administrador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede modificar las propiedades de configuración predeterminadas del servidor para una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Cada instancia tiene sus propias propiedades de configuración que se pueden establecer independientemente de las demás instancias en el mismo servidor.  
@@ -44,7 +44,7 @@ ms.locfileid: "36114128"
  Las páginas de propiedades de SQL Server Management Studio contienen un subconjunto de las propiedades disponibles, que muestran solo las propiedades que es más probable que haya que modificar. El conjunto completo de propiedades se puede encontrar en el archivo msmdsrv.ini.  
   
 > [!NOTE]  
->  Este tema no documenta las propiedades de configuración de implementación de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obtener más información acerca de la configuración de implementación, consulte [especificar opciones de configuración para la implementación de la solución](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
+>  Este tema no documenta las propiedades de configuración de implementación de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obtener más información acerca de la configuración de implementación, consulte [especificar la configuración de implementación de la solución](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>Ver o establecer propiedades de configuración de Management Studio  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36114128"
 ##  <a name="bkmk_ref"></a> Referencia de las propiedades de servidor  
  Las propiedades de configuración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] son importantes para ajustar bien el sistema. Por ejemplo, para hacer que el comportamiento del registro de consultas sea coherente con los requisitos, puede establecer las propiedades relevantes.  
   
- Los temas siguientes explican las diversas [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] propiedades de configuración:  
+ Los siguientes temas explican los diversos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] propiedades de configuración:  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
@@ -98,6 +98,6 @@ ms.locfileid: "36114128"
   
 ## <a name="see-also"></a>Vea también  
  [Administración de una instancia de Analysis Services](../instances/analysis-services-instance-management.md)   
- [Especificar la configuración de implementación de soluciones](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
+ [Especificar la configuración para la implementación de soluciones](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

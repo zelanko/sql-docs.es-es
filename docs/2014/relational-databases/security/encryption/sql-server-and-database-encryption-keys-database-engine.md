@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 03e1b85250115c3deb8b1615782c3e64c896bed8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 7a7e5c9979dfe42b956a90eb61d1a03a9ef65181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234895"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server y claves de cifrado de base de datos (motor de base de datos)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa claves de cifrado para proteger los datos, las credenciales y la información de conexión que se almacena en una base de datos servidor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiene dos tipos de claves: *simétricas* y *asimétricas*. Las claves simétricas utilizan la misma contraseña para cifrar y descifrar los datos. Las claves asimétricas usan una contraseña para cifrar los datos (denominada clave *pública* ) y otra para descifrar los datos (denominada clave *privada* ).  
@@ -37,7 +36,7 @@ ms.locfileid: "36196893"
   
  Al crearla, la clave maestra se cifra mediante el algoritmo Triple DES y una contraseña proporcionada por el usuario. Para habilitar el descifrado automático de la clave maestra, se cifra una copia de la clave mediante la SMK. Se almacena en la base de datos donde se utiliza y en el `master` base de datos del sistema.  
   
- La copia de la DMK almacenada en la `master` base de datos del sistema se actualiza automáticamente cada vez que se modifica la DMK. Sin embargo, este comportamiento predeterminado puede cambiarse mediante el `DROP ENCRYPTION BY SERVICE MASTER KEY` opción de la `ALTER MASTER KEY` instrucción. Para abrir una DMK que no se haya cifrado con la clave maestra de servicio, debe utilizarse la instrucción `OPEN MASTER KEY` y una contraseña.  
+ La copia de la DMK almacenada en el `master` base de datos del sistema se actualiza automáticamente cada vez que se modifica la DMK. Sin embargo, se puede cambiar este comportamiento predeterminado mediante el uso de la `DROP ENCRYPTION BY SERVICE MASTER KEY` opción de la `ALTER MASTER KEY` instrucción. Para abrir una DMK que no se haya cifrado con la clave maestra de servicio, debe utilizarse la instrucción `OPEN MASTER KEY` y una contraseña.  
   
 ## <a name="managing-sql-server-and-database-keys"></a>Administrar las claves de SQL Server y las claves de las bases de datos  
  La administración de las claves de cifrado consiste en crear nuevas claves de base de datos, crear una copia de seguridad de las claves del servidor y de las bases de datos, y saber cuándo y cómo se deben restaurar, eliminar o cambiar dichas claves.  
@@ -86,7 +85,7 @@ ms.locfileid: "36196893"
   
  [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
- [Habilitar TDE usando EKM](enable-tde-on-sql-server-using-ekm.md)  
+ [Habilitar TDE con EKM](enable-tde-on-sql-server-using-ekm.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  

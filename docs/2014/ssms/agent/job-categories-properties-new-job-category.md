@@ -1,5 +1,5 @@
 ---
-title: Propiedades de categorías de trabajo y la nueva categoría de trabajo | Documentos de Microsoft
+title: Propiedades de las categorías de trabajo y la nueva categoría de trabajo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.categoriesproperties
 ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: da17a458e03770e51b0452094f52a3cd2f56a79a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e17a8aafb263c58f2b6e729970884be8dea7fad1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274041"
 ---
-# <a name="job-categories-properties-and-new-job-category"></a>Propiedades de categorías de trabajo y la nueva categoría de trabajo
+# <a name="job-categories-properties-and-new-job-category"></a>Propiedades de las categorías de trabajo y la nueva categoría de trabajo
   Enumera los trabajos de una categoría de trabajo o todas las categorías de trabajo, y permite agregar una categoría de trabajo nueva.  
   
 ## <a name="options"></a>Opciones  

@@ -1,5 +1,5 @@
 ---
-title: 'Contenido del modelo para los modelos de red neuronal de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Los modelos de red neuronal contenido del modelo de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - output neurons [Analysis Services]
 - neural network algorithms [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3d85b7b9ce95b0dc5a24ece14aa3a1e1203f49b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d90c182f664a6b89232a74da8d9ca5294dea465e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196573"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280461"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de red neuronal (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de red neuronal de Microsoft. Para obtener una explicación de cómo interpretar las estadísticas y la estructura compartidas por todos los tipos de modelos, así como las definiciones generales de términos relacionados con el contenido del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "36196573"
   
 -   Cada nodo sucesivo contiene una *subred* diferente (NODE_TYPE = 17). Cada subred siempre contiene un nivel oculto (NODE_TYPE = 19) y un nivel de salida (NODE_TYPE = 20) para esa subred.  
   
- ![estructura del contenido del modelo para redes neurales](../media/modelcontentstructure-nn.gif "estructura del contenido del modelo para las redes neuronales")  
+ ![estructura del contenido del modelo para las redes neuronales](../media/modelcontentstructure-nn.gif "estructura del contenido del modelo para las redes neuronales")  
   
  La información del nivel de entrada es simple: el nodo superior de cada nivel de entrada (NODE_TYPE = 18) actúa como un organizador para una colección de nodos de entrada (NODE_TYPE = 21). El contenido de los nodos de entrada se describe en la tabla siguiente.  
   

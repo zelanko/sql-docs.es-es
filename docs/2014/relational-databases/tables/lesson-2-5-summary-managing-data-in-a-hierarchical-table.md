@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - managing data in a table
 ms.assetid: a0fd21fc-87fa-42c3-a3ae-1fed24cdd692
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fc4ffd0658e150e0fee8913f20d3e5cc02384f68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b152587ad63cd09281e61dcc746fd1dc18cda1b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297915"
 ---
 # <a name="summary-managing-data-in-a-hierarchical-table"></a>Resumen: Administración de los datos de una tabla jerárquica
   El tipo de datos `hierarchyid` permite crear fácilmente tablas que reflejan los datos jerárquicos y, a continuación, crear los índices con prioridad a la amplitud y a la profundidad para tener un acceso eficaz a la tabla. Utilice los métodos jerárquicos para consultar y manipular los datos.  

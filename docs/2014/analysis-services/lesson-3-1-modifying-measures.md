@@ -1,5 +1,5 @@
 ---
-title: Modificar medidas | Documentos de Microsoft
+title: Modificar medidas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: f95003c329dc121c3a743f1f4447a3aa8a9a506a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 447032ab32e222f3827c34020aef612e8125a518
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232385"
 ---
 # <a name="modifying-measures"></a>Modificar medidas
   Puede usar la propiedad **FormatString** para definir parámetros de formato que controlen cómo se presentan las medidas a los usuarios. En esta tarea, debe especificar las propiedades de formato para las medidas de moneda y porcentaje del cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -60,9 +60,9 @@ ms.locfileid: "36196567"
   
 7.  En la lista desplegable de la parte superior de la ventana Propiedades (justo debajo de la barra de título), seleccione la medida **Unit Price Discount Pct**y, después, seleccione **Porcentaje** en la lista **FormatString** .  
   
-8.  En la ventana Propiedades, cambie la **nombre** propiedad para la **Unit Price Discount Pct** medida `Unit Price Discount Percentage`.  
+8.  En la ventana Propiedades, cambie la **nombre** propiedad para el **Unit Price Discount Pct** medir con `Unit Price Discount Percentage`.  
   
-9. En el **medidas** panel, haga clic en **Tax Amt** y cambie el nombre de esta medida para `Tax Amount`.  
+9. En el **medidas** panel, haga clic en **Tax Amt** y cambie el nombre de esta medida a `Tax Amount`.  
   
 10. En la ventana Propiedades, haga clic en el icono **Ocultar automáticamente** para ocultar la ventana Propiedades y, a continuación, haga clic en **Mostrar el árbol de medidas** en la barra de herramientas de la pestaña **Estructura de cubo** .  
   

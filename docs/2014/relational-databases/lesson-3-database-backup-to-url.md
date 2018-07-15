@@ -1,5 +1,5 @@
 ---
-title: 'Lección 4: Crear una base de datos en almacenamiento de Windows Azure | Documentos de Microsoft'
+title: 'Lección 4: Creación de una base de datos en almacenamiento de Windows Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b72bfc90936011fc4556fae6021fad89b134c57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1d31f0d1eabe73a681b1932b2826ef38ad9b5456
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327845"
 ---
 # <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Lección 4: Crear una base de datos de Azure Storage
   En esta lección, aprenderá a crear una base de datos mediante la característica Archivos de datos de SQL Server en Windows Azure. Tenga en cuenta que, antes que esta lección, debe completar las lecciones 1, 2 y 3. La lección 3 es un paso muy importante porque tiene que almacenar la información sobre el contenedor de Almacenamiento de Windows Azure, su nombre de directiva asociado y la clave SAS en el almacén de credenciales de SQL Server antes de pasar a la lección 4.  
@@ -81,7 +81,7 @@ ms.locfileid: "36104024"
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
-    2.  Copia la **nombre de la cuenta de almacenamiento** y **clave de acceso principal** valores a la **conectar con el almacenamiento de Windows Azure** cuadro de diálogo en SSMS. A continuación, haga clic en **conectar**. De esta forma, la información sobre los contenedores de la cuenta de almacenamiento en SSMS aparecerán como se muestra en la siguiente captura de pantalla:  
+    2.  Copia el **nombre de la cuenta de almacenamiento** y **clave de acceso principal** valores para el **conectar a Windows Azure Storage** ventana de cuadro de diálogo en SSMS. A continuación, haga clic en **Connect**. De esta forma, la información sobre los contenedores de la cuenta de almacenamiento en SSMS aparecerán como se muestra en la siguiente captura de pantalla:  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36104024"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **Nota:** si hay referencias activas a archivos de datos en un contenedor, cualquier intento de eliminar la versión asociada de SQL Server credencial generará un error. De igual forma, si ya hay una concesión en un archivo de base de datos específico de un blob y desea eliminarlo, primero debe interrumpirla en el blob. Para interrumpir la concesión, puede usar [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
+ **Nota:** si hay referencias activas a archivos de datos en un contenedor, cualquier intento de eliminar el asociado de SQL Server se produce un error de credenciales. De igual forma, si ya hay una concesión en un archivo de base de datos específico de un blob y desea eliminarlo, primero debe interrumpirla en el blob. Para interrumpir la concesión, puede usar [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
   
  Mediante esta nueva característica, puede configurar SQL Server de modo que cualquier instrucción CREATE DATABASE será, de forma predeterminada, una base de datos habilitada para la nube. Es decir, puede establecer los datos predeterminados y las ubicaciones del registro en las propiedades de la instancia de SQL Server Management Studio Server de modo que, cuando cree una base de datos, todos los archivos de base de datos (.mdf, .ldf) se crean como blobs de página en Almacenamiento de Windows Azure.  
   

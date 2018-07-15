@@ -1,5 +1,5 @@
 ---
-title: 'Lección 3: Procesar la estructura y modelos de la serie temporal | Documentos de Microsoft'
+title: 'Lección 3: Procesar estructura de la serie temporal y modela | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16e27b57-eae1-47a7-a02c-47b6ed487d87
 caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 652d88a0c977b45f6c1628020ae4e6fd8fae4ad9
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: f69c21f87a56a65fabd781c18612e6b475ca85c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271991"
 ---
 # <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Lección 3: Procesar la estructura de serie temporal y los modelos
-  En esta lección, va a usar el [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instrucción que se va a procesar la serie temporal estructuras de minería de datos y modelos que ha creado.  
+  En esta lección, usará el [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instrucción para procesar la serie temporal las estructuras de minería de datos y que ha creado los modelos de minería de datos.  
   
  Al procesar una estructura de minería de datos, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lee los datos de origen y genera las estructuras que admiten los modelos de minería de datos. Siempre tiene que procesar un modelo y estructura de minería de datos después de crearlo. Si especifica una estructura de minería de datos con INSERT INTO, la instrucción procesa la estructura de minería de datos y todos sus modelos asociados.  
   
  Si agrega un modelo de minería de datos a una estructura de minería de datos que ya se ha procesado, puede usar la instrucción `INSERT INTO MINING MODEL` para procesar solo el nuevo modelo de minería de datos con los datos existentes.  
   
- Para obtener más información acerca del procesamiento de modelos de minería de datos, vea [consideraciones y requisitos de procesamiento &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+ Para obtener más información acerca de cómo procesar modelos de minería de datos, vea [consideraciones y requisitos de procesamiento &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="insert-into-statement"></a>Instrucción INSERT INTO  
- Para entrenar la estructura de minería de datos de serie temporal y todos sus modelos de minería de datos asociados, utilice la [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instrucción. El código de la instrucción se puede dividir en las partes siguientes.  
+ Para entrenar la estructura de minería de datos de serie temporal y todos sus modelos de minería de datos asociados, utilice el [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instrucción. El código de la instrucción se puede dividir en las partes siguientes.  
   
 -   Identificación de la estructura de minería de datos  
   
@@ -82,7 +82,7 @@ OPENQUERY (<source data definition>)
   
 #### <a name="to-process-the-mining-structure-and-related-mining-models-by-using-insert-into"></a>Para procesar la estructura de minería de datos y los modelos relacionados mediante INSERT INTO  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], seleccione **nueva consulta**y, a continuación, haga clic en **DMX**.  
+1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX**.  
   
      Se abre el Editor de consultas, que contiene una consulta nueva en blanco.  
   
@@ -143,14 +143,14 @@ OPENQUERY (<source data definition>)
   
 6.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
   
-7.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y un nombre al archivo `ProcessForecastingAll.dmx`.  
+7.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `ProcessForecastingAll.dmx`.  
   
 8.  En la barra de herramientas, haga clic en el **Execute** botón.  
   
  Cuando la consulta termine de ejecutarse, puede crear las predicciones mediante los modelos de minería de datos procesados. En la lección siguiente, creará varias predicciones basadas en los modelos de minería de datos que ha creado.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 4: Crear predicciones de serie temporal utilizando DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
+ [Lección 4: Crear predicciones de serie temporal con DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   

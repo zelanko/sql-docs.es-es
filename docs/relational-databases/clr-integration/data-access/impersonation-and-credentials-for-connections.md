@@ -1,12 +1,11 @@
 ---
-title: Suplantación y las credenciales para conexiones | Documentos de Microsoft
+title: Suplantación y credenciales para conexiones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - impersonation [CLR integration]
@@ -22,12 +21,12 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 54fbeba549f5a8733c7459fb822a7a67164cc60d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 828357e883ddcf1b1aa1792878d1aedc52105f99
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703376"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358897"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>Suplantación y credenciales para conexiones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +34,11 @@ ms.locfileid: "35703376"
   
  De forma predeterminada, un proceso de SQL Server que se conecta a Windows adquiere el contexto de seguridad de la cuenta de servicio de Windows para SQL Server. Pero es posible asignar una función CLR a una identidad del proxy, para que sus conexiones salientes tengan un contexto de seguridad diferente que el de la cuenta del servicio de Windows.  
   
- En algunos casos, puede que desee suplantar al llamador utilizando el **SqlContext.WindowsIdentity** propiedad en lugar de ejecutarse como cuenta de servicio. El **WindowsIdentity** instancia representa la identidad del cliente que invoca el código que realiza la llamada y solo está disponible cuando el cliente utiliza la autenticación de Windows. Después de haber obtenido el **WindowsIdentity** instancia, se puede llamar a **Impersonate** para cambiar el token de seguridad del subproceso y, a continuación, abra Conexiones de ADO.NET en nombre del cliente.  
+ En algunos casos, es posible que desee suplantar al llamador mediante el uso de la **SqlContext.WindowsIdentity** propiedad en lugar de ejecutarse como cuenta de servicio. El **WindowsIdentity** instancia representa la identidad del cliente que invoca el código de llamada y solo está disponible cuando el cliente usa la autenticación de Windows. Después de haber obtenido el **WindowsIdentity** instancia, puede llamar a **Impersonate** para cambiar el token de seguridad del subproceso y, a continuación, abra Conexiones de ADO.NET en nombre del cliente.  
   
- Después de llamar a SQLContext.WindowsIdentity.Impersonate, no se puede obtener acceso a datos locales y no se puede obtener acceso a datos del sistema. Para tener acceso a datos de nuevo, tendrá que llamar al método WindowsImpersonationContext.Undo.  
+ Después de llamar a SQLContext.WindowsIdentity.Impersonate, no se puede obtener acceso a datos locales y no se puede obtener acceso a los datos del sistema. Para obtener acceso a datos de nuevo, se debe llamar a WindowsImpersonationContext.Undo.  
   
- En el ejemplo siguiente se muestra cómo suplantar al llamador mediante la **SqlContext.WindowsIdentity** propiedad.  
+ El ejemplo siguiente muestra cómo suplantar al llamador utilizando el **SqlContext.WindowsIdentity** propiedad.  
   
  Visual C#  
   
@@ -75,9 +74,9 @@ catch
 ```  
   
 > [!NOTE]  
->  Para obtener información acerca de los cambios de comportamiento en la suplantación, consulte [cambios recientes en las características del motor de base de datos en SQL Server 2016](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Para obtener información acerca de los cambios de comportamiento en la suplantación, vea [cambios recientes en las características del motor de base de datos en SQL Server 2016](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
- Además, si obtuvo la instancia de identidad en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, no puede propagar esa instancia a otro equipo de forma predeterminada; la infraestructura de seguridad de Windows restringe esa acción de forma predeterminada. Sin embargo, hay un mecanismo denominado "delegación" que habilita la propagación de identidades de Windows a través de varios equipos de confianza. Puede aprender más acerca de la delegación en el artículo de TechNet, "[Kerberos Protocol Transition and Constrained Delegation](http://go.microsoft.com/fwlink/?LinkId=50419)".  
+ Además, si obtuvo la instancia de identidad en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, no puede propagar esa instancia a otro equipo de forma predeterminada; la infraestructura de seguridad de Windows restringe esa acción de forma predeterminada. Sin embargo, hay un mecanismo denominado "delegación" que habilita la propagación de identidades de Windows a través de varios equipos de confianza. Puede aprender más acerca de la delegación en el artículo de TechNet "[Kerberos Protocol Transition and Constrained Delegation](http://go.microsoft.com/fwlink/?LinkId=50419)".  
   
 ## <a name="see-also"></a>Vea también  
  [Objeto SqlContext](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  

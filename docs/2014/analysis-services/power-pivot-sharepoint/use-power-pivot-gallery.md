@@ -1,5 +1,5 @@
 ---
-title: Use la Galería de PowerPivot | Documentos de Microsoft
+title: Use la Galería de PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ae0f4d1c8fea1e5e320ea0131575c01bf44008
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6864e7144ce3a1098e7733924e02978b13c744c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321265"
 ---
 # <a name="use-powerpivot-gallery"></a>Usar la galería de PowerPivot
   La Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es una biblioteca de documentos de SharePoint con una finalidad especial que permite obtener una eficaz vista previa y administrar los documentos de los libros de Excel publicados y los informes de Reporting Services que contienen datos PowerPivot.  
@@ -37,7 +37,7 @@ ms.locfileid: "36103937"
   
 -   [Abrir un libro o informe en el modo de página completa](#view)  
   
--   [Programación de actualización de datos para libros de PowerPivot en la Galería de PowerPivot](#newdr)  
+-   [Programar la actualización de datos para los libros PowerPivot en la Galería de PowerPivot](#newdr)  
   
 -   [Eliminar un libro o informe en la Galería de PowerPivot](#delete)  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36103937"
   
  Una solución alternativa a ver el libro en un explorador es abrirlo en Excel en una estación de trabajo del cliente. Debe tener Excel 2013 o Excel 2010 y el complemento [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] para ver el archivo. Puede utilizar Excel 2007 para abrir el archivo, pero no puede utilizarlo para dinamizar los datos. Por esta razón se recomienda Excel 2013 o Excel 2010 tanto para ver como para crear datos PowerPivot. Si no tiene las aplicaciones necesarias, debe utilizar un explorador para ver el libro de SharePoint.  
   
-##  <a name="newdr"></a> Programación de actualización de datos para libros de PowerPivot en la Galería de PowerPivot  
+##  <a name="newdr"></a> Programar la actualización de datos para los libros PowerPivot en la Galería de PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un libro de Excel publicado pueden actualizarse a los intervalos programados.  
   
 |||  
@@ -166,7 +166,7 @@ ms.locfileid: "36103937"
   
 ## <a name="see-also"></a>Vea también  
  [Crear una ubicación de confianza para sitios PowerPivot en Administración Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Eliminar la Galería de PowerPivot](delete-power-pivot-gallery.md)   
+ [Eliminar galería de PowerPivot](delete-power-pivot-gallery.md)   
  [Crear y personalizar la Galería de PowerPivot](create-and-customize-power-pivot-gallery.md)   
  [Programar una actualización de datos &#40;PowerPivot para SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   

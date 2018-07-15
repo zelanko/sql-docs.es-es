@@ -1,5 +1,5 @@
 ---
-title: Busque el cuadro de diálogo de la carpeta remota (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Busque el cuadro de diálogo de la carpeta remota (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.browseforremotepartition.f1
 ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a5316d36dc38f41343c9f0dc3afa1638c68b1dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbc311b4c096f5f834141084f705fa8bdf50c3e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212075"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Buscar carpeta remota (Analysis Services - Datos multidimensionales)
   El cuadro de diálogo **Buscar carpeta remota** muestra una lista de carpetas de registro y de datos disponibles para una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Puede seleccionar una carpeta de la lista o especificar una carpeta diferente, si fuese necesario. El cuadro de diálogo **Buscar carpeta remota** se muestra de una de las siguientes maneras:  

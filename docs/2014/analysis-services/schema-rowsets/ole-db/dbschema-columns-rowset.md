@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DBSCHEMA_COLUMNS | Documentos de Microsoft
+title: Conjunto de filas DBSCHEMA_COLUMNS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DBSCHEMA_COLUMNS rowset
 ms.assetid: 653bdd07-a533-4a99-8b6a-6e5c7322e1f3
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 413e86e156db59e7621c94bdc1c99cd0087a987f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fa933eb153b0d8de4c2fec4ba92b072954be141
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267581"
 ---
 # <a name="dbschemacolumns-rowset"></a>Conjunto de filas DBSCHEMA_COLUMNS
   Proporciona información de columna de todas las columnas que cumplen los criterios de restricción proporcionados.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DBSCHEMA_COLUMNS` filas contiene las columnas siguientes.  
+ El `DBSCHEMA_COLUMNS` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -69,7 +69,7 @@ ms.locfileid: "36196322"
  El conjunto de filas se ordena en `TABLE_CATALOG`, `TABLE_SCHEMA`, `TABLE_NAME`.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DBSCHEMA_COLUMNS` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DBSCHEMA_COLUMNS` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

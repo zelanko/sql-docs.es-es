@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Trace File Close event class
 ms.assetid: 128b7bac-cb64-43e7-ae9b-87b7d2ebb4ef
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 46db1cf4c18b9aab2f7f4ad2e4c08a1628ec1208
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5bb84d96409ef52bed8bf468308e8d169286983f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287251"
 ---
 # <a name="trace-file-close-event-class"></a>Trace File Close, clase de eventos
   La clase de eventos **Trace File Close** indica que se ha cerrado un archivo de seguimiento durante la sustitución incremental de un archivo de seguimiento.  

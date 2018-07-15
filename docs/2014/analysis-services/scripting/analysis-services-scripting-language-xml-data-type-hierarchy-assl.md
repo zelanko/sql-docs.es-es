@@ -1,5 +1,5 @@
 ---
-title: (ASSL) de la jerarquía de tipos de datos XML de lenguaje de Scripting de Analysis Services | Documentos de Microsoft
+title: (ASSL) de la jerarquía de tipos de datos XML de lenguaje de Scripting de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - hierarchies [Analysis Services Scripting Language]
 ms.assetid: f143c9f8-225d-495d-ac8e-ac2d2a7b4c07
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2ebea80cfdecc82a3db5bb1c6cc4b10dcf40b06c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 259b843979c16d47c59bc0b3ab74843cc0015592
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243375"
 ---
 # <a name="analysis-services-scripting-language-xml-data-type-hierarchy-assl"></a>Jerarquía de tipos de datos XML de Analysis Services Scripting Language (ASSL)
   La tabla siguiente muestra la jerarquía de herencia de tipos de datos de Analysis Services Scripting Language (ASSL).  
@@ -120,7 +120,7 @@ TableMiningStructureColumn
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de datos XML de lenguaje Scripting de Analysis Services &#40;ASSL&#41;](data-type/analysis-services-scripting-language-xml-data-types-assl.md)   
- [Jerarquía Analysis Services Scripting Language XML elemento &#40;ASSL&#41;](analysis-services-scripting-language-xml-element-hierarchy-assl.md)   
+ [Jerarquía de elementos XML de lenguaje Scripting de Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-element-hierarchy-assl.md)   
  [Lenguaje de Scripting de Analysis Services &#40;ASSL&#41; referencia](analysis-services-scripting-language-assl-for-xmla.md)  
   
   

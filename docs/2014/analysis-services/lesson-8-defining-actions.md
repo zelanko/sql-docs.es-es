@@ -1,5 +1,5 @@
 ---
-title: 'Lección 8: Definir acciones | Documentos de Microsoft'
+title: 'Lección 8: Definir acciones | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a57c6cc8d08d64c8f2498125f7df952c70adfd6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab952dba40b28ed0575b6fdb8da442ea6ebeb770
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274491"
 ---
 # <a name="lesson-8-defining-actions"></a>Lección 8: definir acciones
   En esta lección, aprenderá a definir acciones en el proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Una acción es solo una instrucción de Expresiones multidimensionales (MDX) que se almacena en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y que se puede incorporar en las aplicaciones cliente e iniciarse por el usuario.  
@@ -48,7 +48,7 @@ ms.locfileid: "36196746"
   
  Esta lección incluye la tarea siguiente:  
   
- [Definición y uso de una acción de obtención de detalles](lesson-8-1-defining-and-using-a-drillthrough-action.md)  
+ [Definir y usar una acción de obtención de detalles](lesson-8-1-defining-and-using-a-drillthrough-action.md)  
  En esta tarea, se define, utiliza y modifica una acción de obtención de detalles a través de la relación de dimensión de hecho definida anteriormente en este tutorial.  
   
 ## <a name="next-lesson"></a>Lección siguiente  

@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DMSCHEMA_MINING_MODELS | Documentos de Microsoft
+title: Conjunto de filas DMSCHEMA_MINING_MODELS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODELS rowset
 ms.assetid: 1636f4cf-b342-4e2e-93b4-04136e2d41ef
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8296ddb800b7691936236aa0cdb6550c89c34c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9af1a9817ad116561b57b1d04b2e3df1d7313bb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208035"
 ---
 # <a name="dmschemaminingmodels-rowset"></a>Conjunto de filas DMSCHEMA_MINING_MODELS
   Enumera los modelos de minería de datos del catálogo actual. El conjunto de filas `DMSCHEMA_MINING_MODELS` incluye información como los nombres de modelo, la fecha de procesamiento y el algoritmo de minería de datos asociados a cada modelo de minería de datos.  
@@ -34,7 +34,7 @@ ms.locfileid: "36197030"
  . El `DMSCHEMA_MINING_MODELS` de filas de esquema es muy similar a la [DBSCHEMA_TABLES](../ole-db/dbschema-tables-rowset.md) de filas de esquema y se puede usar la misma manera.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DMSCHEMA_MINING_MODELS` filas contiene las columnas siguientes.  
+ El `DMSCHEMA_MINING_MODELS` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "36197030"
 |`MODEL_PROPID`|`DBTYPE_UI4`||Id. de propiedad del modelo. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no admite esta columna; siempre contiene `NULL`.|  
 |`DATE_CREATED`|`DBTYPE_DBTIMESTAMP`||Fecha en la que se creó el modelo.|  
 |`DATE_MODIFIED`|`DBTYPE_DBTIMESTAMP`||Fecha en la que se modificó por última vez la definición del modelo.|  
-|`SERVICE_TYPE_ID`|`DBTYPE_UI4`||Enumeración que identifica el tipo de algoritmo de minería de datos que utiliza el modelo. Este tipo puede tener uno de los siguientes valores:<br /><br /> -   `DM_SERVICETYPE_CLASSIFICATION` (1)<br />-   `DM_SERVICETYPE_SEGMENTATION`(2)<br />-   `DM_SERVICETYPE_ ASSOCIATION`(4)<br />-   `DM_SERVICETYPE_ DENSITY_ESTIMATE`(8)<br />-   `DM_SERVICETYPE_SEQUENCE`(16)|  
+|`SERVICE_TYPE_ID`|`DBTYPE_UI4`||Enumeración que identifica el tipo de algoritmo de minería de datos que utiliza el modelo. Este tipo puede tener uno de los siguientes valores:<br /><br /> -   `DM_SERVICETYPE_CLASSIFICATION` En el -   las propiedades de conexión`DM_SERVICETYPE_CLASSIFICATION` cuadro de diálogo, haga clic en definicióny, a continuación, haga clic en el configuración de autenticación...<br />-   `DM_SERVICETYPE_SEGMENTATION`(2)<br />-   `DM_SERVICETYPE_ ASSOCIATION`(4)<br />-   `DM_SERVICETYPE_ DENSITY_ESTIMATE`(8)<br />-   `DM_SERVICETYPE_SEQUENCE`(16)|  
 |`SERVICE_NAME`|`DBTYPE_WSTR`||Nombre específico del proveedor para el algoritmo de minería de datos que utiliza el modelo.|  
 |`CREATION_STATEMENT`|`DBTYPE_WSTR`||Instrucción que se utilizó para crear el modelo de minería de datos.|  
 |`PREDICTION_ENTITY`|`DBTYPE_WSTR`||Lista delimitada por comas que indica las columnas de minería de datos que se pueden predecir.|  
@@ -57,10 +57,10 @@ ms.locfileid: "36197030"
 |`LAST_PROCESSED`|`DBTYPE_DBTIMESTAMP`||Fecha en la que se procesó el modelo por última vez.|  
 |`MSOLAP_IS_DRILLTHROUGH_ENABLED`|`DBTYPE_BOOL`||Marca booleana que indica si el modelo admite la obtención de detalles.|  
 |`FILTER`|`DBTYPE_WSTR`||Expresión de filtro asociada al modelo de minería de datos.<br /><br /> Una cadena NULL o vacía indica que no se aplica ningún filtro.|  
-|`TRAINING_SET_SIZE`|`DBTYPE_UIS`||El número de casos que se encuentran en el entrenamiento del modelo de minería de datos establece después de que se ha procesado la estructura y una vez aplicados los filtros para el modelo.|  
+|`TRAINING_SET_SIZE`|`DBTYPE_UIS`||El número de casos que se encuentran en el entrenamiento del modelo de minería de datos establecido se ha procesado la estructura y después de aplicar los filtros al modelo.|  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DMSCHEMA_MINING_MODELS` se puede restringir el conjunto de filas en las columnas de la tabla siguiente.  
+ El `DMSCHEMA_MINING_MODELS` conjunto de filas puede tener restricciones en las columnas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  
@@ -72,7 +72,7 @@ ms.locfileid: "36197030"
 |`SERVICE_TYPE_ID`|`DBTYPE_UI4`|Opcional.|  
 |`MINING_STRUCTURE`|`DBTYPE_WSTR`|Opcional.|  
   
- Para obtener ejemplos de cómo consultar este conjunto de filas, vea [consultar los parámetros que se usan para crear un modelo de minería de datos](../../data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
+ Para obtener ejemplos de cómo consultar este conjunto de filas, vea [consultar los parámetros usados para crear un modelo de minería de datos](../../data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Conjuntos de filas de esquema de minería de datos](../../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 

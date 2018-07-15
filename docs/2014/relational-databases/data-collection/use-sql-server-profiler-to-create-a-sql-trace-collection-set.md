@@ -1,5 +1,5 @@
 ---
-title: Usar SQL Server Profiler para crear un conjunto de recopilación de seguimiento SQL (SQL Server Management Studio) | Documentos de Microsoft
+title: Usar SQL Server Profiler para crear un conjunto de recopilación de seguimiento SQL (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5abf2baf12e8ae265020e9d4a5766506e9bcace3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 50754e92bad8bb6241129b53339b173d6d1d1bf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260861"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Usar SQL Server Profiler para crear un conjunto de recopilación de Seguimiento SQL (SQL Server Management Studio)
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] puede aprovechar la funcionalidad de seguimiento del lado servidor de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exportar una definición de seguimiento y emplearla después para crear un conjunto de recopilación que use el tipo de recopilador genérico de Seguimiento de SQL. En este proceso hay dos partes:  
@@ -76,7 +76,7 @@ ms.locfileid: "36113626"
   
     1.  En la lista de filtros, haga clic en **Duración**.  
   
-    2.  En la ventana de operadores booleanos, expanda la **igual o mayor que** nodo, escriba `80` como valor y, a continuación, haga clic en **Aceptar**.  
+    2.  En la ventana de operadores booleanos, expanda el **igual o mayor que** nodo, escriba `80` como valor y, a continuación, haga clic en **Aceptar**.  
   
 9. Haga clic en **Ejecutar** para iniciar el seguimiento.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36113626"
   
 3.  Desplácese a través del script y realice las sustituciones siguientes, que están anotadas en el texto de los comentarios del script:  
   
-    -   Reemplace **SQLTrace Collection Set Name Here** por el nombre que desea usar para el conjunto de recopilación. En este ejemplo, el nombre del conjunto de recopilación `SPROC_CollectionSet`.  
+    -   Reemplace **SQLTrace Collection Set Name Here** por el nombre que desea usar para el conjunto de recopilación. Para este ejemplo, el nombre del conjunto de recopilación `SPROC_CollectionSet`.  
   
     -   Reemplace **SQLTrace Collection Item Name Here** por el nombre que desea usar para el elemento de recopilación. En este ejemplo, el nombre del elemento de colección `SPROC_Collection_Item`.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36113626"
   
     2.  Expanda **Administración**y, a continuación, expanda **Recopilación de datos**.  
   
-     El `SPROC_CollectionSet` conjunto de recopilación aparece en el mismo nivel que el **conjuntos de recopilación de datos de sistema** nodo. De manera predeterminada, el conjunto de recopilación está deshabilitado.  
+     El `SPROC_CollectionSet` conjunto de recopilación aparece en el mismo nivel que el **conjuntos de recopilación de datos del sistema** nodo. De manera predeterminada, el conjunto de recopilación está deshabilitado.  
   
 6.  Use el Explorador de objetos para editar las propiedades de SPROC_CollectionSet, como el modo de recopilación y la programación de carga. Realice los mismos procedimientos que usaría para los conjuntos de recopilación de datos del sistema que se proporcionan con el recopilador de datos.  
   

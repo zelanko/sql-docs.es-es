@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 80d5e835700a6ac411c035856ff7c10b49e0c79b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c0878c78af38a8d8b4d6b5d1c6f17a0188b5a50b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264471"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Usar referencias a la colección ReportItems (Generador de informes y SSRS)
-  La colección integrada `ReportItems` es el conjunto de los cuadros de texto de los elementos de informe, como las filas de una región de datos o los cuadros de texto de la superficie de diseño del informe. El `ReportItems` colección incluye cuadros de texto que se encuentran en el ámbito actual de un encabezado de página, el pie de página o el cuerpo del informe. Esta colección la determinan en tiempo de ejecución el procesador de informes y el representador de informes. El ámbito actual va cambiando mientras el procesador de informes va combinando consecutivamente los datos del informe y los elementos de diseño de los elementos del informe a medida que el usuario visualiza las páginas de un informe. Puede usar el `ReportItems` colección integrada para generar encabezados de página de estilo diccionario que muestren el primer y último elemento en cada página.  
+  La colección integrada `ReportItems` es el conjunto de los cuadros de texto de los elementos de informe, como las filas de una región de datos o los cuadros de texto de la superficie de diseño del informe. El `ReportItems` colección incluye cuadros de texto que se encuentran en el ámbito actual de un encabezado de página, el pie de página o el cuerpo del informe. Esta colección la determinan en tiempo de ejecución el procesador de informes y el representador de informes. El ámbito actual va cambiando mientras el procesador de informes va combinando consecutivamente los datos del informe y los elementos de diseño de los elementos del informe a medida que el usuario visualiza las páginas de un informe. Puede usar el `ReportItems` colección incorporada para generar encabezados de página de estilo diccionario que muestren el primer y último elemento de cada página.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>Usar la propiedad Value de ReportItems  
- Elementos de la `ReportItems` colección solo tienen una propiedad: valor. El valor de un elemento de `ReportItems` puede usarse para mostrar o calcular datos de otro campo del informe. Para acceder al valor del cuadro de texto actual, puede usar el valor global integrado Me.Value o simplemente Value de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . En las funciones de informe, como First y las funciones de agregado, use la sintaxis completa.  
+ Los elementos de la `ReportItems` colección solo tienen una propiedad: valor. El valor de un elemento de `ReportItems` puede usarse para mostrar o calcular datos de otro campo del informe. Para acceder al valor del cuadro de texto actual, puede usar el valor global integrado Me.Value o simplemente Value de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . En las funciones de informe, como First y las funciones de agregado, use la sintaxis completa.  
   
  Por ejemplo:  
   
@@ -50,14 +50,14 @@ ms.locfileid: "36113086"
  En una sección de encabezado o de pie de página, solo están disponibles los cuadros de texto de la página actual como miembros de la colección `ReportItems`. Por ejemplo, si `ReportItems!textboxLastName.Value` hace referencia a un cuadro de texto que solo aparece en la primera página de una región de datos de varias páginas, verá un valor para la primera página, pero todas las demás páginas mostrarán **#Error** para indicar que la expresión no se pudo evaluar tal como estaba escrita.  
   
 ## <a name="scope-for-the-reportitems-collection"></a>Ámbito para la colección ReportItems  
- A medida que se procesa el informe, cada cuadro de texto del cuerpo del informe o de una región de datos se evalúa en el contexto de su conjunto de datos, su región de datos y sus asociaciones de grupo. El ámbito de una referencia a la `ReportItems` colección es el ámbito actual o en cualquier punto situado más arriba que el ámbito actual.  
+ A medida que se procesa el informe, cada cuadro de texto del cuerpo del informe o de una región de datos se evalúa en el contexto de su conjunto de datos, su región de datos y sus asociaciones de grupo. El ámbito de una referencia a la `ReportItems` colección es el ámbito actual o cualquier punto mayor que el ámbito actual.  
   
  Por ejemplo, un cuadro de texto de una fila que está en un grupo primario no debe contener ninguna expresión que haga referencia al nombre de un cuadro de texto de una fila de un grupo secundario. Este tipo de expresión no se resuelve como un valor del informe porque el cuadro de texto de la fila secundaria está fuera del ámbito. Para más información, vea [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Colecciones integradas en expresiones &#40;el generador de informes SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [Colecciones integradas en expresiones &#40;generador de informes y SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Filtrar, agrupar y ordenar datos &#40;el generador de informes SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrar, agrupar y ordenar datos &#40;generador de informes y SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

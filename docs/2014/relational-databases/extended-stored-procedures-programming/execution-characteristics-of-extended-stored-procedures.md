@@ -1,5 +1,5 @@
 ---
-title: Características de ejecución de procedimientos almacenados extendidos | Documentos de Microsoft
+title: Características de ejecución de procedimientos almacenados extendidos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - executing extended stored procedures [SQL Server]
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f88d9bb01d8604ec49538b6d4ff4cc6f3557d7bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 3d98354505e34e08da219e1dd9dc276ef6d59948
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313785"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Características de ejecución de los procedimientos almacenados extendidos
     
@@ -32,7 +32,7 @@ ms.locfileid: "36104026"
   
  La ejecución de un procedimiento almacenado extendido tiene estas características:  
   
--   La función de procedimiento almacenado extendido se ejecuta en el contexto de seguridad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   La función de procedimiento almacenado extendido se ejecuta en el contexto de seguridad [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   La función de procedimiento almacenado extendido se ejecuta en el espacio de procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36104026"
   
 -  
   
- Después de que se carga el archivo DLL de procedimiento almacenado extendido, la DLL permanece cargada en el espacio de direcciones del servidor hasta que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se detiene o el administrador descargue explícitamente la DLL utilizando DBCC *nombre_dll* (FREE).  
+ Una vez que se carga el archivo DLL de procedimiento almacenado extendido, la DLL permanece cargada en el espacio de direcciones del servidor hasta que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se detiene o el administrador descargue explícitamente la DLL utilizando DBCC *DLL_name* (gratis).  
   
  El procedimiento almacenado extendido se puede ejecutar desde [!INCLUDE[tsql](../../includes/tsql-md.md)] como un procedimiento almacenado utilizando la instrucción EXECUTE:  
   
@@ -65,7 +65,7 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 >  Los procedimientos almacenados extendidos proporcionan mejoras de rendimiento y amplían la funcionalidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No obstante, como la DLL de procedimiento almacenado extendido y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comparten el mismo espacio de direcciones, un procedimiento con problemas puede afectar de forma negativa al funcionamiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aunque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administra las excepciones generadas por la DLL de procedimiento almacenado extendido, es posible que las áreas de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resulten dañadas. Como medida de seguridad preventiva, solo los administradores del sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden agregar los procedimientos almacenados extendidos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Antes de instalar estos procedimientos, se deberían probar con detenimiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Programación de procedimientos almacenados extendido](database-engine-extended-stored-procedures-programming.md)   
+ [Programación de procedimientos almacenados extendidos](database-engine-extended-stored-procedures-programming.md)   
  [Consultar procedimientos almacenados extendidos instalados en SQL Server](querying-extended-stored-procedures-installed-in-sql-server.md)  
   
   

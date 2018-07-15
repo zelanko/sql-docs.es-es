@@ -1,5 +1,5 @@
 ---
-title: Métodos de modelo | Documentos de Microsoft
+title: Métodos de modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
 caps.latest.revision: 3
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 298a9c92b9888970d3022d94208d4286a6ca7a62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 97c026c2036e48397801d38430ef3349ebbaac79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319775"
 ---
 # <a name="model-methods"></a>Métodos para los modelos
   Puede utilizar estos métodos para administrar los modelos.  

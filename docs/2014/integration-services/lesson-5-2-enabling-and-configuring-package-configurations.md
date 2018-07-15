@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 caps.latest.revision: 39
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd88de02a035e041c887d7505cc8b2f35805e577
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 380676537e0035077e0fd37afda058a98c75c741
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274851"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Paso 2: Habilitar y configurar las configuraciones de paquetes
   En esta tarea, convertirá el proyecto al modelo de implementación de paquetes y habilitará las configuraciones de paquetes mediante el Asistente para configuración de paquetes. Utilizará este asistente para generar un archivo de configuración XML que contiene parámetros de configuración para la propiedad `Directory` del contenedor de bucles Foreach. El valor de la propiedad Directory se proporciona a través de una variable nueva de nivel de paquete que puede actualizarse durante la ejecución. Además, rellenará una carpeta nueva de datos de ejemplo que utilizará durante las pruebas.  
@@ -96,7 +96,7 @@ ms.locfileid: "36113171"
     > [!NOTE]  
     >  Generalmente, un archivo de configuración contiene información compleja sobre las propiedades de un paquete, pero en este tutorial la única información de configuración debería ser  
     > <Configuration ConfiguredType="Property"  
-    > Path="\package.variables[user::varFolderName]. Tipo de valor de propiedades [valor]"="String"\>  
+    > Path="\package.variables[user::varFolderName]. Propiedades [valor]"ValueType ="String"\>  
     >  \<ConfiguredValue >\</ConfiguredValue >  
     > \</ Configuración >.  
   
@@ -109,6 +109,6 @@ ms.locfileid: "36113171"
 3.  En el `New Sample Data` carpeta, pegue los archivos copiados.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 3: Modificar el valor de configuración de la propiedad de directorio](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [Paso 3: Modificar el valor de configuración de la propiedad Directory](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   

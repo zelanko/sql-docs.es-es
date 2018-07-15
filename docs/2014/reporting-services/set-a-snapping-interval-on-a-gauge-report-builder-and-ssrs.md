@@ -1,5 +1,5 @@
 ---
-title: Establecer un intervalo de ajuste en un medidor (generador de informes y SSRS) | Documentos de Microsoft
+title: Establecer un intervalo de ajuste en un medidor (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0ece7297-6e2f-47fb-835d-b9e9cce53fe2
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4ce2f81ddb04c088c909e07f6d842f53c35b3974
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48dc33f7bf80aacb757e990987a58c86f932ccb4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296025"
 ---
 # <a name="set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs"></a>Establecer un intervalo de ajuste en un medidor (Generador de informes y SSRS)
-  Un intervalo de ajuste define el múltiplo al que se redondean los valores. De forma predeterminada, el medidor señala el valor exacto del campo que se ha especificado en el panel de datos. Sin embargo, puede redondear el valor exacto hacia arriba o hacia abajo para que el puntero se ajuste a un intervalo preestablecido. Por ejemplo, si el valor del medidor es de 34,2 y especifica un intervalo de ajuste de 5, el puntero del medidor señalará 3,5. Si el valor del medidor es de 31,2 y especifica un intervalo de ajuste de 5, el puntero del medidor señalará 30.  
+  Un intervalo de ajuste define el múltiplo al que se redondean los valores. De forma predeterminada, el medidor señala el valor exacto del campo que se ha especificado en el panel de datos. Sin embargo, es posible que desee redondear el valor exacto arriba o hacia abajo para que el puntero se ajustará a un intervalo preestablecido. Por ejemplo, si el valor del medidor es de 34,2 y especifica un intervalo de ajuste de 5, el puntero del medidor señalará 3,5. Si el valor del medidor es de 31,2 y especifica un intervalo de ajuste de 5, el puntero del medidor señalará 30.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
@@ -34,7 +34,7 @@ ms.locfileid: "36112888"
 2.  Abra el panel de propiedades.  
   
     > [!NOTE]  
-    >  Si no ve el panel de propiedades, haga clic en el **vista** ficha y, a continuación, seleccione la **propiedades** casilla de verificación.  
+    >  Si no ve el panel Propiedades, haga clic en el **vista** pestaña y, a continuación, seleccione el **propiedades** casilla de verificación.  
   
 3.  En el **punteros** propiedad, haga clic en el botón (…). Se abre el Editor de la colección de punteros.  
   

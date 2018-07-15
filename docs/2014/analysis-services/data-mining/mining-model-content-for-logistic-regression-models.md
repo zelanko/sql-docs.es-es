@@ -1,5 +1,5 @@
 ---
-title: 'Contenido del modelo para los modelos de regresión logística de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Contenido del modelo para los modelos de regresión logística de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9846361e76eac9f4ad61edde10c0fda20f4f546
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6af2d4d2e3f5007cbe0721fe734073e7306b95a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328942"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de regresión logística (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de regresión logística de Microsoft. Para obtener una explicación de cómo interpretar las estadísticas y la estructura compartidas por todos los tipos de modelos, así como las definiciones generales de términos relacionados con el contenido del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "36103218"
   
  Sin embargo, en un modelo de regresión logística, el nodo que representa el nivel oculto está vacío y no tiene ningún elemento secundario. Por consiguiente, el modelo contiene nodos que representan salidas individuales (NODE_TYPE = 23) y entradas individuales (NODE_TYPE = 21) pero ningún nodo oculto individual.  
   
- ![estructura del contenido del modelo de regresión logística](../media/skt-modelcontentstructure-logregc.gif "estructura del contenido del modelo de regresión logística")  
+ ![estructura del contenido de modelo de regresión logística](../media/skt-modelcontentstructure-logregc.gif "estructura del contenido de modelo de regresión logística")  
   
  De forma predeterminada, un modelo de regresión logística se muestra en el **Visor de redes neuronales de Microsoft**. Con este visor personalizado, puede filtrar los atributos de entrada y sus valores, y ver gráficamente cómo afectan a las salidas. La información sobre herramientas del visor muestra la probabilidad y la mejora respecto al modelo de predicción asociados a cada par de valores de entrada y de salida. Para más información, vea [Examinar un modelo usando el Visor de redes neuronales de Microsoft](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
@@ -189,7 +189,7 @@ ms.locfileid: "36103218"
   
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm.md)   
- [Contenido del modelo para los modelos de red neuronal de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Los modelos de red neuronal contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Ejemplos de consultas de modelo de regresión logística](logistic-regression-model-query-examples.md)   
  [Referencia técnica del algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)  
   

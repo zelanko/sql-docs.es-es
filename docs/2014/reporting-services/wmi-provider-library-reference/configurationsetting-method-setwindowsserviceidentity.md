@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetWindowsServiceIdentity method
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 caps.latest.revision: 19
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fc3dfeafab01480fde7eb195363f46946de30ddd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bc53a516da25d81c1532ea1418b4f846f37597ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268461"
 ---
 # <a name="setwindowsserviceidentity-method-wmi-msreportserverconfigurationsetting"></a>Método SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting)
   Ejecuta el servicio de Windows de servidor de informes como el usuario de Windows especificado y concede a esta cuenta suficientes permisos de sistema de archivos para permitir que servidor de informes funcione.  
@@ -61,9 +61,9 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
 ## <a name="remarks"></a>Notas  
- Cuando el *UseBuiltInAccount* parámetro está establecido en `true` y se está ejecutando el servidor de informes en Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] o Windows XP, el valor de la *nombre*, *dedominio*, y *contraseña* se omiten los parámetros y se utiliza la cuenta de sistema Local.  
+ Cuando el *UseBuiltInAccount* parámetro está establecido en `true` y el servidor de informes se ejecuta en Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] o Windows XP, el valor de la *nombre*, *dominio*, y *contraseña* se omiten los parámetros y se utiliza la cuenta Sistema Local.  
   
- Cuando el *UseBuiltInAccount* parámetro está establecido en `true` y el servidor de informes se está ejecutando en Windows Server 2003, el *dominio* y *contraseña* propiedades son pasar por alto, y el campo de nombre debe contener "Builtin\NetworkService" o "Builtin\System" o "Builtin\LocalService".  
+ Cuando el *UseBuiltInAccount* parámetro está establecido en `true` y el servidor de informes se ejecuta en Windows Server 2003, el *dominio* y *contraseña* son propiedades se omite, y el campo nombre debe contener "Builtin\system" o "Builtin\System" o "Builtin\LocalService".  
   
  El método SetWindowsServiceIdentity establece los permisos de archivo en los archivos y carpetas en el directorio de instalación del servidor de informes.  
   

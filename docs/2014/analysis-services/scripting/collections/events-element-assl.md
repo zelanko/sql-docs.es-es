@@ -1,5 +1,5 @@
 ---
-title: Elemento Events (ASSL) | Documentos de Microsoft
+title: Elemento Events (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Events element
 ms.assetid: de887998-dc4b-44dc-8fec-08d67b92f96d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a9fd96d0ad375725d1b7efa72dda9c0467e0b93b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 33f6d302557369d7cbc90c1d5786bc21d37b0f42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293505"
 ---
 # <a name="events-element-assl"></a>Elemento Events (ASSL)
   Define la colección de los elementos [Event](../objects/event-element-assl.md) que va a capturar un [Trace](../objects/trace-element-assl.md).  

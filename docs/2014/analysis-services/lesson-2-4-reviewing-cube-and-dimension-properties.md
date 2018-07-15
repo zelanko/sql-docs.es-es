@@ -1,5 +1,5 @@
 ---
-title: Revisar las propiedades de dimensión y cubo | Documentos de Microsoft
+title: Revisar las propiedades de dimensión de cubo y | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 092ffbd7242d65d06476e3a22f43252600562520
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30dc761707ec02843bcc296bdb3cc7408c33a554
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241745"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Revisar las propiedades de cubo y dimensión
   Después de definir un cubo, se pueden revisar los resultados mediante el Diseñador de cubos. En la tarea siguiente, revisará la estructura del cubo del proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -38,7 +38,7 @@ ms.locfileid: "36113916"
   
 4.  En el panel **Dimensiones** de la pestaña **Estructura de cubo** , expanda **Customer**y, a continuación, haga clic en **Editar Customer** para abrir la dimensión en el Diseñador de dimensiones.  
   
-     El Diseñador de dimensiones contiene estas pestañas: **Estructura de dimensión**, **Relaciones de atributo**, **Traducciones**y **Explorador**. Tenga en cuenta que la pestaña **Estructura de dimensión** incluye tres paneles: **Atributos**, **Jerarquías**y **Vista del origen de datos**. Los atributos que contiene la dimensión aparecen en el panel **Atributos** . Para obtener más información, consulte [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md), [Create User-Defined jerarquías](multidimensional-models/user-defined-hierarchies-create.md).  
+     El Diseñador de dimensiones contiene estas pestañas: **Estructura de dimensión**, **Relaciones de atributo**, **Traducciones**y **Explorador**. Tenga en cuenta que la pestaña **Estructura de dimensión** incluye tres paneles: **Atributos**, **Jerarquías**y **Vista del origen de datos**. Los atributos que contiene la dimensión aparecen en el panel **Atributos** . Para obtener más información, consulte [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md), [jerarquías definidas por el usuario](multidimensional-models/user-defined-hierarchies-create.md).  
   
 5.  Para cambiar al Diseñador de cubos, haga clic con el botón derecho en el cubo **Tutorial de Analysis Services** del nodo **Cubos** en el Explorador de soluciones y, después, haga clic en **Ver diseñador**.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "36113916"
  [Implementar un proyecto de Analysis Services](lesson-2-5-deploying-an-analysis-services-project.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Examinar los datos de dimensión en el Diseñador de dimensiones](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
+ [Examinar los datos de dimensiones en el Diseñador de dimensiones](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
   
   

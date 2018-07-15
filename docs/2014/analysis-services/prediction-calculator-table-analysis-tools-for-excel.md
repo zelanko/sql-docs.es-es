@@ -1,5 +1,5 @@
 ---
-title: Cálculo de predicción (herramientas de análisis de tabla para Excel) | Documentos de Microsoft
+title: Cálculo de predicción (herramientas de análisis de tabla para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model, regression
 - Table Analysis tools
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - prediction calculator
 ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac962304d0870c3f0882a02a0a97eb3f266aaa9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fde8a692652cbe166eaf2075a3cd0da5e17a7d6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113693"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301195"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Cálculo de predicción (Herramientas de análisis de tabla para Excel)
-  ![Herramienta de cálculo de predicción](media/tat-predcal.gif "herramienta cálculo de predicción")  
+  ![Herramienta cálculo de predicción](media/tat-predcal.gif "herramienta cálculo de predicción")  
   
- El **cálculo de predicción** herramienta le ayuda a crear un cuadro de mandos que puede utilizarse para analizar los nuevos datos y evaluar las opciones o riesgo. Por ejemplo, si tiene datos históricos y demográficos sobre los clientes, el **cálculo de predicción** herramienta puede ayudarle con dos tareas fundamentales:  
+ El **cálculo de predicción** herramienta le permite crear un cuadro de mandos que puede utilizarse para analizar los nuevos datos y evaluar las opciones o riesgo. Por ejemplo, si tiene datos históricos y demográficos sobre los clientes, el **cálculo de predicción** herramienta puede ayudarle con dos tareas clave:  
   
 -   Generar un análisis subyacente de los datos demográficos, los hábitos de compra y otros factores.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "36113693"
   
 2.  Haga clic en **cálculo de predicción** en el **analizar** ficha.  
   
-3.  En el **cálculo de predicción** cuadro de diálogo, como el destino, elija la columna que desea predecir, como hábitos de compra.  
+3.  En el **cálculo de predicción** cuadro de diálogo de destino, elija la columna que desea predecir, como hábitos de compra.  
   
-4.  Especifique el valor deseado. Si el valor es numérico, utilice la opción **en intervalo**y, a continuación, escriba los valores mínimos y máximo para el intervalo deseado. Si el valor es discreto, seleccione la **exactamente** opción y, a continuación, seleccione el valor en la lista desplegable.  
+4.  Especifique el valor deseado. Si el valor es numérico, utilice la opción **intervalo**y, a continuación, escriba los valores mínimos y máximo para el intervalo deseado. Si el valor es discreto, seleccione el **exactamente** opción y, a continuación, seleccione el valor de la lista desplegable.  
   
 5.  Haga clic en **elegir las columnas que se usarán para el análisis**.  
   
@@ -56,23 +56,23 @@ ms.locfileid: "36113693"
   
      Para evitar sesgar los resultados, también conviene que quite las columnas con información duplicada. Por ejemplo, si tiene una columna de ingresos que contiene datos numéricos, y una columna de grupo de ingresos que contiene las etiquetas Alto, Medio y Bajo, no debe incluir ambas columnas en el mismo modelo. En su lugar, puede crear un modelo independiente para cada columna.  
   
-7.  En el **opciones de salida** sección, seleccione **cálculos operativos** para crear el análisis y la tarjeta de puntuación en un libro de Excel. Seleccione **cálculos listos para impresión** para crear el análisis y generar un informe que puede imprimir y usar para puntuar manualmente.  
+7.  En el **opciones de salida** sección, seleccione **cálculos operativos** para crear el análisis y el cuadro de mandos dentro de un libro de Excel. Seleccione **cálculos listos para impresora** para crear el análisis y también generará un informe que se puede imprimir y usar para puntuar manualmente.  
   
 8.  Haga clic en **Ejecutar**.  
   
      La herramienta crea nuevas hojas de cálculo que contienen los informes y las tarjetas de puntuación.  
   
 ### <a name="requirements"></a>Requisitos  
- El **cálculo de predicción** herramienta utiliza el algoritmo de regresión logística de Microsoft, que puede trabajar con valores discretos, así como datos numéricos discretos y continuos.  
+ El **cálculo de predicción** herramienta usa el algoritmo de regresión logística de Microsoft, que puede trabajar con valores discretos, así como datos numéricos discretizados y continuos.  
   
 ## <a name="understanding-the-scoring-reports"></a>Descripción de los informes de puntuación  
  Si selecciona ambas opciones de salida, la herramienta Cálculo de predicción crea las tres hojas de cálculo nuevas siguientes dentro del libro actual:  
   
--   A **informe de predicción**que contiene los resultados del análisis, junto con tablas interactivas y gráficos que le permiten experimentar con interacciones y beneficios.  
+-   Un **informe de predicción**que contiene los resultados del análisis, junto con tablas interactivas y gráficos que le permiten experimentar con interacciones y beneficios.  
   
--   Interactivo **cálculo de predicción** que le ayuda a crear puntuaciones.  
+-   Interactivo **cálculo de predicción** que le permite crear puntuaciones.  
   
--   A **cálculo imprimible** con instrucciones y coeficientes que usar para determinar la puntuación.  
+-   Un **cálculo imprimible** con instrucciones y coeficientes debe usar para determinar la puntuación.  
   
 -   En esta sección se describe la información incluida en cada informe y cómo usar las distintas opciones de informe.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36113693"
 #### <a name="chart-for-viewing-maximum-profit"></a>Gráfico para ver el beneficio máximo  
  A medida que escribe los valores en la tabla, los gráficos relacionados se actualizan automáticamente para mostrarle el mejor punto para maximizar el beneficio en el modelo actual. El gráfico de líneas situado a la derecha de esta tabla muestra el beneficio para varios umbrales de puntuación. El beneficio se calcula usando las cifras de beneficio y de costo que ha introducido en la tabla, basándose en las predicciones y probabilidades del modelo.  
   
- Por ejemplo, si es, en la tabla superior izquierda, la celda de **umbral sugerido para maximizar el beneficio** muestra el valor 500, el gráfico en el lado derecho mostrará 500 como el punto más alto del gráfico de líneas. Lo que este valor significa es que, para maximizar los beneficios, debe usar las 500 recomendaciones superiores del modelo de minería de datos, ordenadas por probabilidad.  
+ Por ejemplo, si se encuentra, en la tabla superior izquierda, la celda para **umbral sugerido para maximizar el beneficio** muestra el valor 500, el gráfico en el lado derecho mostrará 500 como el punto más alto del gráfico de líneas. Lo que este valor significa es que, para maximizar los beneficios, debe usar las 500 recomendaciones superiores del modelo de minería de datos, ordenadas por probabilidad.  
   
 #### <a name="table-listing-scores-for-each-attribute-and-value"></a>Tabla que incluye las puntuaciones para cada atributo y valor  
  La tabla situada en el lado inferior izquierdo del informe muestra un análisis detallado de los valores que se detectaron, y cómo afecta cada uno de ellos al resultado. No se pueden cambiar los valores de esta tabla; aparecen aquí para ayudarle a comprender la predicción.  
@@ -127,9 +127,9 @@ ms.locfileid: "36113693"
  La segunda hoja de cálculo creada por la herramienta de cálculo de predicción se denomina **cálculo de predicción para el \<estado de destino > de \<atributo de destino >**. Es una hoja de cálculo interactiva que puede usar para calcular puntuaciones individuales. Dado que esta hoja de cálculo utiliza los patrones y las estadísticas almacenadas en el modelo, puede experimentar con valores diferentes y ver cómo afectan a la puntuación predicha. Este informe también incluye dos secciones: una es interactiva y la otra se proporciona como referencia.  
   
 #### <a name="first-table"></a>Primera tabla  
- Puede seleccionar o escribir un nuevo valor en el **valor** columna de la tabla para ver cómo afecta el cambio del valor a la puntuación.  
+ Puede seleccionar o escribir un nuevo valor en el **valor** columna de la tabla para ver cómo cambia el valor afecta a la puntuación.  
   
- Por ejemplo, si el informe contiene los valores siguientes, podría disminuir el valor de Cars a 1 y, a continuación, a 0 para comprobar cómo afecta esto a los hábitos de compra de los clientes. A medida que cambia el valor de **automóviles** en 0, la predicción en la parte inferior cambia a TRUE.  
+ Por ejemplo, si el informe contiene los valores siguientes, podría disminuir el valor de Cars a 1 y, a continuación, a 0 para comprobar cómo afecta esto a los hábitos de compra de los clientes. Cuando se cambia el valor de **automóviles** en 0, la predicción en la parte inferior cambia a TRUE.  
   
 |Attribute|Valor|Impacto relativo|  
 |---------------|-----------|---------------------|  
@@ -143,7 +143,7 @@ ms.locfileid: "36113693"
 |Cars|2|50|  
 |Commute Distance|0-1 Miles|99|  
 |Region|North America|0|  
-|Age|37 - 46|5|  
+|Age|37: 46|5|  
 |Total||491|  
 |Prediction for 'Yes'||FALSE|  
   
@@ -156,11 +156,11 @@ ms.locfileid: "36113693"
  En esta tabla se muestran las puntuaciones individuales para cada posible estado de las columnas de entrada, así como el impacto relativo que dichas puntuaciones tienen en los resultados. Esta tabla es estática y solo se usa como referencia.  
   
 ### <a name="printable-prediction-calculator"></a>Cálculo de predicción imprimible  
- La tercera hoja de cálculo creada por la herramienta de cálculo de predicción se denomina **PrintablePrediction calculadora para la \<estado de destino > de \<atributo de destino >**. Esta tarjeta de puntuación está concebida para su impresión, de tal forma que pueda calcular manualmente las puntuaciones cuando no esté cerca de su equipo.  
+ La tercera hoja de cálculo creada por la herramienta de cálculo de predicción se denomina **PrintablePrediction calculadora para el \<estado de destino > de \<atributo de destino >**. Esta tarjeta de puntuación está concebida para su impresión, de tal forma que pueda calcular manualmente las puntuaciones cuando no esté cerca de su equipo.  
   
 ##### <a name="to-print-and-use-the-scoring-report-generated-by-the-prediction-calculator"></a>Para imprimir y usar el informe de puntuación generado por la herramienta Cálculo de predicción  
   
-1.  Haga clic en la pestaña que se denomina **imprimible para \<atributo >**.  
+1.  Haga clic en la ficha que se denomina **imprimible para \<atributo >**.  
   
 2.  En el menú archivo de Excel, seleccione **vista previa de impresión**.  
   
@@ -176,12 +176,12 @@ ms.locfileid: "36113693"
   
 7.  Calcular la suma de las puntuaciones para cada atributo y escriba ese número en el **Total** fila.  
   
-8.  Convierta la puntuación en un resultado de predicción mediante los criterios que se imprimen en la hoja inmediatamente después de la **Total** fila.  
+8.  Convierta la puntuación en un resultado de predicción utilizando los criterios que se imprimirán en la hoja inmediatamente después de la **Total** fila.  
   
 ## <a name="related-tools"></a>Herramientas relacionadas  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona el algoritmo de regresión logística de Microsoft para su uso en este tipo de análisis. Si ya está familiarizado con la regresión logística, puede crear fácilmente los modelos de regresión logística usando la **avanzadas** opción del cliente de minería de datos para Excel. Para obtener más información, consulte [avanzadas de modelado &#40;complementos minería de datos para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Para obtener más información acerca de las opciones y parámetros para los modelos de regresión logística, vea el tema "Algoritmo de regresión logística de Microsoft" en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] libros en pantalla.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona el algoritmo de regresión logística de Microsoft para su uso en este tipo de análisis. Si ya está familiarizado con la regresión logística, puede crear fácilmente modelos de regresión logística utilizando la **avanzadas** opción de cliente de minería de datos para Excel. Para obtener más información, consulte [avanzadas de modelado &#40;complementos minería de datos para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Para obtener más información sobre las opciones y parámetros para los modelos de regresión logística, vea el tema "Algoritmo de regresión logística de Microsoft" en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] libros en pantalla.  
   
 ## <a name="see-also"></a>Vea también  
- [Herramientas de análisis de tabla para Excel](table-analysis-tools-for-excel.md)  
+ [Herramientas de análisis de tablas para Excel](table-analysis-tools-for-excel.md)  
   
   

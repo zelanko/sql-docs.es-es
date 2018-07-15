@@ -1,5 +1,5 @@
 ---
-title: Crear una estructura de minería de datos relacional | Documentos de Microsoft
+title: Crear una estructura de minería de datos relacional | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
 - data mining [Analysis Services], structure
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3622989e4dbc5ba8d954f0f92513820829aaea54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 261936c087c109087c9916513acd45468de55a7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237915"
 ---
 # <a name="create-a-relational-mining-structure"></a>Crear una estructura de minería de datos relacional
   La mayoría de los modelos de minería de datos se basan en orígenes de datos relacionales. Las ventajas de crear un modelo de minería de datos relacional son que puede reunir datos ad hoc y entrenar y actualizar un modelo sin la complejidad que supone crear un cubo.  
@@ -97,7 +97,7 @@ ms.locfileid: "36114156"
   
  Los datos de una estructura de minería de datos se derivan de lo que haya en una vista del origen de datos existente. Puede modificar los datos a medida que los necesite en la vista del origen de datos, agregando relaciones o columnas derivadas que podrían no estar presentes en los datos relacionales subyacentes. También puede crear cálculos o agregaciones con nombre en la vista del origen de datos. Estas características son muy prácticas si no tiene el control sobre la disposición de los datos en el origen de datos o si desea experimentar con agregaciones diferentes de los datos para los modelos de minería de datos.  
   
- No tiene que utilizar todos los datos disponibles; puede escoger y elegir qué columnas desea incluir en la estructura de minería de datos. Todos los modelos que se basan en esa estructura, a continuación, pueden utilizar esas columnas, o se pueden marcar determinadas columnas como `Ignore` para un modelo determinado. Puede permitir a los usuarios de un modelo de minería de datos explorar en profundidad los resultados del modelo para ver columnas adicionales de la estructura de minería de datos que no se incluyeron en el propio modelo de minería de datos.  
+ No tiene que utilizar todos los datos disponibles; puede escoger y elegir qué columnas desea incluir en la estructura de minería de datos. Todos los modelos que se basan en esa estructura, a continuación, pueden usar esas columnas, o se pueden marcar determinadas columnas como `Ignore` para un modelo determinado. Puede permitir a los usuarios de un modelo de minería de datos explorar en profundidad los resultados del modelo para ver columnas adicionales de la estructura de minería de datos que no se incluyeron en el propio modelo de minería de datos.  
   
 ##  <a name="bkmk_ContentDataType"></a> Especificar el tipo de contenido y el tipo de datos  
  El tipo de datos es más o menos igual que los tipos de datos que se especifican en SQL Server o en otras interfaces de aplicación: fechas y horas, números de diferentes tamaños, valores booleanos, texto y otros datos discretos.  
@@ -130,9 +130,9 @@ ms.locfileid: "36114156"
   
 ## <a name="see-also"></a>Vea también  
  [Diseñador de minería de datos](data-mining-designer.md)   
- [Asistente para minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-wizard-analysis-services-data-mining.md)   
+ [Asistente para minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-wizard-analysis-services-data-mining.md)   
  [Propiedades del modelo de minería de datos](mining-model-properties.md)   
- [Propiedades de la estructura de minería de datos y columnas de estructura](properties-for-mining-structure-and-structure-columns.md)   
+ [Propiedades de la estructura de minería de datos y las columnas de estructura](properties-for-mining-structure-and-structure-columns.md)   
  [Tareas y procedimientos de las estructuras de minería de datos](mining-structure-tasks-and-how-tos.md)  
   
   

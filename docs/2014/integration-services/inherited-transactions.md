@@ -1,5 +1,5 @@
 ---
-title: Hereda las transacciones | Documentos de Microsoft
+title: Hereda las transacciones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], inherited
 - child packages
 - inherited transactions [Integration Services]
 ms.assetid: 90db5564-d41e-4cfe-8c9e-4e68d41eff1c
 caps.latest.revision: 34
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0df0ba113b23e9b5cc582b1795299a0befee4bae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b2a4010ccdf7ec3138e180d5d90f6e779aa0529
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215495"
 ---
 # <a name="inherited-transactions"></a>Transacciones heredadas
   Un paquete puede ejecutar otro paquete, utilizando la tarea Ejecutar paquete. El paquete secundario, que es el que ejecuta la tarea Ejecutar paquete, puede crear su propia transacción de paquete o heredar la del paquete primario.  
@@ -60,6 +60,6 @@ ms.locfileid: "36198036"
  El paquete E no utiliza transacciones.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Configurar un paquete para que utilice transacciones](../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [Configurar un paquete para el uso de transacciones](../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

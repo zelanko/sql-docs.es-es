@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.profilerequests.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1a493e342b9637d6e1498e38f9689897d8b65e64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc2c19b0ae0247a8cccbb75f56d943ef277625e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292915"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Editor de tareas de generación de perfiles de datos (página Solicitudes de perfil)
   Use la página **Solicitudes de perfil** del **Editor de tareas de generación de perfiles de datos** para seleccionar y configurar los perfiles que desee calcular. En una única tarea de generación de perfiles puede calcular varias filas para varias columnas o combinaciones de columnas en varias tablas o vistas.  
@@ -74,7 +74,7 @@ ms.locfileid: "36112318"
 |**Solicitud de perfil de distribución de longitud de columnas**|Calcule un perfil de distribución de longitud de columnas.<br /><br /> El perfil de distribución de longitud de columnas indica las diferentes longitudes de los valores de cadena de la columna seleccionada y el porcentaje de filas de la tabla que cada longitud representa. Este perfil puede ayudarle a identificar los problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, genera un perfil de una columna de códigos de estados de Estados Unidos de dos caracteres y detecta valores menores de dos caracteres.|  
 |**Solicitud de perfil de proporción de columnas nulas**|Calcule un perfil de proporción de columnas nulas.<br /><br /> El perfil de proporción de columnas nulas notifica el porcentaje de valores nulos en la columna seleccionada. Este perfil puede ayudarle a identificar problemas en los datos, por ejemplo una proporción inesperadamente alta de valores nulos en una columna. Por ejemplo, genera un perfil de una columna de códigos postales y detecta un porcentaje inaceptablemente alto de códigos que faltan.|  
 |**Solicitud de perfil de patrón de columnas**|Calcule un perfil de patrón de columnas.<br /><br /> El perfil de patrón de columnas notifica un conjunto de expresiones regulares que cubren el porcentaje especificado de valores en una columna de cadenas. Este perfil puede ayudarle también a identificar problemas de los datos, por ejemplo cadenas que no sean válidas. Este perfil también puede sugerir expresiones regulares que se pueden usar en el futuro para validar los valores nuevos. Por ejemplo, un perfil de patrón de una columna de códigos postales podría generar las expresiones regulares: \d{5}-\d{4}, \d{5} y \d{9}. Si ve otras expresiones regulares, es posible que los datos contengan valores no válidos o tengan un formato incorrecto.|  
-|**Solicitud de perfil de estadísticas de columnas**|Seleccione esta opción para calcular un perfil de estadísticas de columnas utilizando la configuración predeterminada para todas las columnas aplicables de la tabla o vista seleccionada.<br /><br /> El perfil de estadísticas de columnas notifica estadísticas, como mínimo, máximo, Media y desviación estándar para las columnas numéricas y los valores mínimo y máximo para `datetime` columnas. Este perfil puede ayudarle a identificar problemas de los datos, por ejemplo fechas que no sean válidas. Por ejemplo, genera un perfil de una columna de fechas históricas y detecta una fecha máxima futura.|  
+|**Solicitud de perfil de estadísticas de columnas**|Seleccione esta opción para calcular un perfil de estadísticas de columnas utilizando la configuración predeterminada para todas las columnas aplicables de la tabla o vista seleccionada.<br /><br /> El perfil de estadísticas de columnas notifica estadísticas, como mínimo, máximo, promedio y desviación estándar para las columnas numéricas y los valores mínimo y máximo para `datetime` columnas. Este perfil puede ayudarle a identificar problemas de los datos, por ejemplo fechas que no sean válidas. Por ejemplo, genera un perfil de una columna de fechas históricas y detecta una fecha máxima futura.|  
 |**Solicitud de perfil de distribución de valores de columna**|Calcule un perfil de distribución de valores de columnas.<br /><br /> El perfil de distribución de valores de columnas notifica todos los valores distintos en la columna seleccionada y el porcentaje de filas en la tabla que cada valor representa. Este perfil también puede notificar valores que representan más de un porcentaje especificado en la tabla. Este perfil puede ayudarle a identificar problemas en los datos, por ejemplo un número incorrecto de valores distintos en una columna. Por ejemplo, suponga que genera un perfil de una columna que contiene los estados de Estados Unidos y detecta más de 50 valores distintos.|  
 |**Solicitud de perfil de dependencia funcional**|Calcule un perfil de dependencia funcional.<br /><br /> El perfil de dependencia funcional notifica hasta qué punto los valores de una columna (la columna dependiente) dependen de los valores de otra columna o de un conjunto de columnas (la columna determinante). Este perfil puede ayudarle también a identificar problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, suponga que genera un perfil de la dependencia entre una columna de códigos postales de Estados Unidos y una columna de los estados. El mismo código postal debería tener siempre el mismo estado, pero el perfil detecta infracciones de esta dependencia.|  
 |**Solicitud de perfil de inclusión de valores**|Calcule un perfil de inclusión de valores.<br /><br /> El perfil de inclusión de valores calcula la superposición en los valores entre dos columnas o conjuntos de columnas. Este perfil también puede determinar si una columna o un conjunto de columnas es adecuado para actuar como una clave externa entre las tablas seleccionadas. Este perfil puede ayudarle igualmente a identificar problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, puede generar el perfil de una columna de identificadores de producto de una tabla de ventas y detectar que dicha columna contiene valores que no se encuentran en la columna de identificadores de producto de la tabla de productos.|  
@@ -136,15 +136,15 @@ ms.locfileid: "36112318"
   
 -   [Opciones de solicitud de perfil de claves candidatas &#40;tarea de generación de perfiles de datos&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de proporción de columnas nulas de columna &#40;tarea de generación de perfiles de datos&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opciones de solicitud de perfil de proporción de Null de columna &#40;tarea de generación de perfiles de datos&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
 -   [Opciones de solicitud de perfil de estadísticas de columna &#40;tarea de generación de perfiles de datos&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de distribución de los valores de columna &#40;tarea de generación de perfiles de datos&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opciones de solicitud de perfil de distribución de valores de columna &#40;tarea de generación de perfiles de datos&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
 -   [Opciones de solicitud de perfil de distribución de longitud de columna &#40;tarea de generación de perfiles de datos&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de patrón de columna &#40;tarea de generación de perfiles de datos&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opciones de solicitud de perfil de patrón de columnas &#40;tarea de generación de perfiles de datos&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
 -   [Opciones de solicitud de perfil de dependencia funcional &#40;tarea de generación de perfiles de datos&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   

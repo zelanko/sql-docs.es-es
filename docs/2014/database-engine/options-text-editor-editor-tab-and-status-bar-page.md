@@ -1,5 +1,5 @@
 ---
-title: 'Opciones (Editor de texto: pestaña Editor y página barra de estado) | Documentos de Microsoft'
+title: 'Opciones (Editor de texto: pestaña Editor y página barra de estado) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
@@ -16,13 +16,13 @@ ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bfaef2b11c331416134eba0e7325875f47a014b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fdef7c6b3a72b4c6556ec5d8e6354c837d6be04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267271"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opciones (Editor de texto: pestaña Editor y página Barra de estado)
   La **página Barra de estado y pestaña de editor** permite personalizar la información mostrada por los editores de consultas de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Puede especificar el nivel de información que se muestra en la pestaña y en la barra de estado de la ventana del editor de consultas y si la barra de estado debe aparecer en la parte superior o inferior de la ventana del editor.  
@@ -47,7 +47,7 @@ ms.locfileid: "36113211"
  **Transcurrido**  
  La barra de estado muestra la cantidad de tiempo que el script ha estado en ejecución. Cuando se completa el script, la pantalla muestra el tiempo que ha llevado ejecutarse el script.  
   
- **Incluir nombre de la base de datos**  
+ **Incluir nombre de base de datos**  
  Incluye el nombre de la base de datos actual para la conexión. Cuando se abre el editor de consultas por primera vez, esta es la base de datos predeterminada del inicio de sesión. El contexto de la base de datos se puede cambiar posteriormente mediante la instrucción USE de Transact-SQL.  
   
  **Incluir nombre de inicio de sesión**  
@@ -56,7 +56,7 @@ ms.locfileid: "36113211"
  **Incluir recuento de filas**  
  Incluye un recuento de las filas procesadas por el script que se está ejecutando actualmente.  
   
- **Incluir nombre de servidor**  
+ **Incluir nombre del servidor**  
  Incluye el nombre del servidor. Para las conexiones locales, es el nombre de instancia. Para las conexiones remotas, es el nombre del equipo remoto y el nombre de instancia.  
   
 ## <a name="status-bar-layout-and-colors"></a>Diseño de la barra de estado y colores  
@@ -80,19 +80,19 @@ ms.locfileid: "36113211"
 ## <a name="tab-text"></a>Texto de pestaña  
  Especifica el texto que aparece en la pestaña en la parte superior de una ventana del Editor de consultas. Si el texto es demasiado largo para mostrarse, puede ver la cadena completa en una información sobre herramientas que se muestra si mantiene el mouse sobre la pestaña.  
   
- **Incluir nombre de la base de datos**  
+ **Incluir nombre de base de datos**  
  Incluye el nombre de la base de datos actual para la conexión. Cuando se abre el editor de consultas por primera vez, esta es la base de datos predeterminada del inicio de sesión. El contexto de la base de datos se puede cambiar posteriormente mediante la instrucción USE de Transact-SQL.  
   
  **Incluir nombre de archivo**  
  Incluye el nombre del archivo donde se almacena el script.  
   
- **Incluir carpeta**  
+ **Incluir nombre de carpeta**  
  Incluye la ruta de acceso donde se almacena el archivo de script.  
   
  **Incluir nombre de inicio de sesión**  
  Incluye el nombre de inicio de sesión.  
   
- **Incluir nombre de servidor**  
+ **Incluir nombre del servidor**  
  Incluye el nombre del servidor. Para las conexiones locales, es el nombre de instancia. Para las conexiones remotas, es el nombre del equipo remoto y el nombre de instancia.  
   
 ## <a name="see-also"></a>Vea también  

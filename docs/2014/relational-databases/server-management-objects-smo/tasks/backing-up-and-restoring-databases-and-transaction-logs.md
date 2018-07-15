@@ -1,5 +1,5 @@
 ---
-title: Copia de seguridad y restaurar bases de datos y registros de transacciones | Documentos de Microsoft
+title: Copia de seguridad y restauración de bases de datos y registros de transacciones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,25 +21,25 @@ helpviewer_keywords:
 - database restores [SMO]
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a020f5bfe13086aab602d0bcd136d63175cb8bac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b5b5a885ef12294f1d8b755ba72873ffe70e2eb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217015"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Realizar copias de seguridad y restaurar bases de datos y registros de transacciones
-  En SMO, la clase <xref:Microsoft.SqlServer.Management.Smo.Backup> y la clase <xref:Microsoft.SqlServer.Management.Smo.Restore> son clases de utilidad que proporcionan las herramientas para realizar las tareas concretas de copias de seguridad y restauración. A <xref:Microsoft.SqlServer.Management.Smo.Backup> objeto representa una tarea de copia de seguridad específica que se necesita en lugar de un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objeto en la instancia del servidor.  
+  En SMO, la clase <xref:Microsoft.SqlServer.Management.Smo.Backup> y la clase <xref:Microsoft.SqlServer.Management.Smo.Restore> son clases de utilidad que proporcionan las herramientas para realizar las tareas concretas de copias de seguridad y restauración. Un <xref:Microsoft.SqlServer.Management.Smo.Backup> objeto representa una tarea de copia de seguridad concreta necesaria en lugar de un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objeto en la instancia del servidor.  
   
  Si se produce una pérdida de datos o se dañan, se debe restaurar la copia de seguridad, total o parcialmente. La restauración parcial utiliza la colección <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> para segmentar los datos que se van a restaurar. Si la copia de seguridad es de un registro de transacciones, los datos se pueden desde un momento determinado utilizando la propiedad <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.Restore>. Los datos también se pueden validar utilizando el método <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>. El procedimiento de copia de seguridad recomendado es comprobar la integridad de la copia de seguridad haciendo una operación de restauración y comprobando los datos en la base de datos periódicamente.  
   
  Al igual que el objeto <xref:Microsoft.SqlServer.Management.Smo.Backup>, el objeto <xref:Microsoft.SqlServer.Management.Smo.Restore> no necesita crearse utilizando un método `Create` porque no representa ningún objeto en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El objeto <xref:Microsoft.SqlServer.Management.Smo.Restore> es un conjunto de propiedades y métodos que se utilizan para restaurar una base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Realizar copias de seguridad de bases de datos y registros de transacciones en Visual Basic  
  En este ejemplo de código se muestra cómo realizar una copia de seguridad de una base de datos existente en un archivo y cómo restaurarla.  

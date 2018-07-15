@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CODEPOINT function
 - leftmost character of expression
@@ -16,13 +16,13 @@ ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e038fc2856bacbcf69ad06091157198dfe3dbd6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e531f3cca54af2bd224d1822776ddb8cb466d44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332325"
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (expresión de SSIS)
   Devuelve el punto de código Unicode del primer carácter de la izquierda de una expresión de caracteres.  

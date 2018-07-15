@@ -1,5 +1,5 @@
 ---
-title: Secuencia de comandos de una sesión de eventos extendidos | Documentos de Microsoft
+title: Secuencia de comandos de una sesión de eventos extendidos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80f9fdde-1f13-4292-a4fc-55da826be3b4
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 71b9918e2f05efcc5a8720dcedeef023392f99ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c199c5e222457deef83a876974d6856ec1a2f047
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233751"
 ---
 # <a name="script-an-extended-event-session"></a>Crear un script para una sesión de eventos extendidos
   En este tema se describe cómo crear un script para una sesión de eventos. Puede exportar, modificar o quitar la sesión de eventos, o quitar y crear la sesión de eventos en:  

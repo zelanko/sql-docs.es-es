@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bbb9817ac5e9ef4c779dd8a283223622b28c9119
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 138ab7faa61857de9f130b9feffe7879095a32c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287573"
 ---
 # <a name="security-master-data-services"></a>Seguridad (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], use la seguridad para asegurarse de que los usuarios tengan acceso a los datos maestros específicos necesarios para realizar su trabajo y para impedir que tengan acceso a datos que no deben estar disponibles para ellos.  
@@ -44,7 +44,7 @@ ms.locfileid: "36113386"
   
 -   [Permisos de objeto de modelo](../../2014/master-data-services/model-object-permissions-master-data-services.md), que determinan los atributos que puede tener acceso un usuario y el tipo de acceso (lectura o actualización) que tiene el usuario para esos atributos.  
   
--   Si lo desea, [permisos de miembros de jerarquía](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md), que determinan los miembros puede tener acceso un usuario, y el tipo de acceso (lectura o actualización) el usuario tiene a los miembros.  
+-   Si lo desea, [permisos de miembros de jerarquía](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md), que determinan los miembros puede tener acceso un usuario, y el tipo de acceso (lectura o actualización) que el usuario tiene para esos miembros.  
   
  Cuando asigna permisos a atributos y miembros, los permisos se cruzan y las reglas determinan qué permiso tiene prioridad. Para obtener más información, consulte [How Permissions Are Determined &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md).  
   
@@ -52,11 +52,11 @@ ms.locfileid: "36113386"
   
  La siguiente imagen muestra la jerarquía derivada de la entidad estilo y los permisos de miembro de estilo para un usuario seleccionado. Se asignan permisos de actualización a los miembros H {Hombre} y U {Unisex}, y se asignan permisos de solo lectura a los miembros del estilo Mujer. Esto significa que el usuario puede actualizar los registros de los productos para Hombre y Unisex, y solo puede leer los registros de los productos del estilo Mujer.  
   
- ![Permisos de jerarquía derivada y miembro de estilo](../../2014/master-data-services/media/style-derived-hierarchy-mds.png "permisos de miembro y de jerarquía derivada de estilo")  
+ ![Permisos de jerarquía derivada y miembro de estilo](../../2014/master-data-services/media/style-derived-hierarchy-mds.png "permisos de jerarquía derivada de estilo y miembro")  
   
  Para obtener información sobre cómo crear una jerarquía, consulte [crear una jerarquía explícita &#40;Master Data Services&#41; ](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md) y [crear una jerarquía derivada &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md).  
   
- Para obtener información acerca de cómo asignar permisos de miembros, vea [asignar permisos de miembro de jerarquía &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
+ Para obtener información sobre cómo asignar permisos de miembros, vea [asignar permisos de miembro de jerarquía &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
 ## <a name="security-in-the-add-in-for-excel"></a>Seguridad del complemento de Excel  
  La seguridad establecida en la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] también se aplica a [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. Los usuarios solo pueden ver y trabajar con datos para los que tienen permiso. Los administradores pueden realizar tareas administrativas.  
@@ -71,7 +71,7 @@ ms.locfileid: "36113386"
 |Agregar un grupo de Active Directory a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]; este es el primer paso para conceder a un grupo permiso de acceso a datos de la aplicación web de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Agregar un grupo &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)|  
 |Asignar permisos a un área funcional de la aplicación web de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Asignar permisos del área funcional &#40;Master Data Services&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)|  
 |Asignar permisos a los valores de atributo asignando el permiso a los objetos del modelo.|[Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
-|Asignar permisos a los valores de miembro asignando el permiso a los nodos de la jerarquía.|[Asignar los permisos de miembro de jerarquía &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
+|Asignar permisos a los valores de miembro asignando el permiso a los nodos de la jerarquía.|[Asignar permisos de miembro de jerarquía &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Los administradores &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)   

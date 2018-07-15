@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
 - roles [Reporting Services], security
@@ -18,19 +18,19 @@ ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 70fb0da3dccb70dc8ce706fe56dc83693084c114
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03d3bc951a76b6ff3fdf088999777d80f699f690
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112886"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282671"
 ---
 # <a name="role-definitions"></a>Definiciones de roles
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], una *definición de**rol* es una colección con nombre de tareas que definen las operaciones disponibles en un servidor de informes. Las definiciones de roles proporcionan las reglas que el servidor de informes utiliza para aplicar la seguridad. Cuando un usuario intenta realizar una tarea, como publicar un informe, el servidor de informes comprueba la asignación de roles de dicho usuario para determinar si la tarea está incluida en su definición de roles. Si la tarea está incluida en la definición de roles, se envía la solicitud.  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>Usar roles para autorizar el acceso a un servidor de informes  
- Un rol será operativo solo cuando se utilice en una asignación de roles. Para obtener más información acerca de cómo los roles proporcionan seguridad, consulte [las asignaciones de roles](role-assignments.md).  
+ Un rol será operativo solo cuando se utilice en una asignación de roles. Para obtener más información sobre los roles proporcionan seguridad, consulte [las asignaciones de roles](role-assignments.md).  
   
 ## <a name="types-of-role-definitions"></a>Tipos de definiciones de roles  
  Las definiciones de roles pueden ser de nivel de elemento o de nivel de sistema. Una *definición de roles de nivel de elemento* describe tareas relacionadas con elementos almacenados y administrados en un servidor de informes, como informes, carpetas y modelos. Administrar informes, Ver carpetas y Administrar suscripciones individuales son ejemplos de tareas que puede incluir en las definiciones de roles de nivel de elemento. Una *definición de roles del sistema* incluye tareas que se aplican a todo el sitio. Ver propiedades del servidor de informes es un ejemplo de tarea que puede incluir en un rol del sistema.  

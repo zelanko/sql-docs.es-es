@@ -1,5 +1,5 @@
 ---
-title: Diseñador de vistas (Analysis Services - datos multidimensionales) del origen de datos | Documentos de Microsoft
+title: Diseñador de vistas (Analysis Services - datos multidimensionales) del origen de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.f1
 helpviewer_keywords:
 - Data Source View Designer
 ms.assetid: 6f40a074-761f-440b-a999-09b755bd86ce
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b440c0186e60e6622d861110a8de2284e2b2589
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08fb948e9dd0cd401e1cc2fa3fe2a4bc60ff4e11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296055"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>Diseñador de vistas del origen de datos (Analysis Services - Datos multidimensionales)
   Una vista del origen de datos (DSV) es una vista lógica de un origen de datos relacional externo utilizado para crear cubos y dimensiones en un modelo multidimensional.  

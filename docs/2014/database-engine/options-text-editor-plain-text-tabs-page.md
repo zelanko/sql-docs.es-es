@@ -1,5 +1,5 @@
 ---
-title: 'Opciones (Editor de texto: texto sin formato - página de tabulaciones) | Documentos de Microsoft'
+title: 'Opciones (Editor de texto: texto sin formato - página de tabulaciones) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5c27514ea38602885c26733238f2564211d4f43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bce8fcc9ea458c3cf2408a3edeb497def4044b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275311"
 ---
-# <a name="options-text-editor---plain-text---tabs-page"></a>Opciones (página de fichas de Editor de texto: texto sin formato:)
+# <a name="options-text-editor---plain-text---tabs-page"></a>Opciones (página de pestañas del Editor de texto: texto sin formato:)
   Utilice este cuadro de diálogo para cambiar el comportamiento del tabulador del Editor de texto que se usa para editar un documento que no esté asociado a ningún lenguaje de desarrollo específico. Para mostrar estas opciones de configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda el **Editor de texto**, expanda **Texto sin formato**y, a continuación, haga clic en **Tabulaciones**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Establecer opciones en varias ubicaciones  
@@ -33,7 +33,7 @@ ms.locfileid: "36196515"
  **Ninguno**  
  No aplica ninguna sangría a la nueva línea que se crea al presionar ENTRAR. El cursor se coloca en la primera columna de la nueva línea.  
   
- **bloque**  
+ **Bloque**  
  Aplica una sangría a la nueva línea que se crea al presionar ENTRAR a la misma distancia a la que se creó la sangría de la línea anterior.  
   
  **Inteligente**  

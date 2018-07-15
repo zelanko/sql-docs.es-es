@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
 - hierarchyid [Database Engine], concepts
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7294a3d1db75d8ef2596bf7796fa706a9a9bc269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f188b3824492ca28fdf37d4e26d2387fbd8e923a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322395"
 ---
 # <a name="hierarchical-data-sql-server"></a>Datos jerárquicos (SQL Server)
-  Integrado `hierarchyid` tipo de datos resulta más fácil para almacenar y consultar datos jerárquicos. `hierarchyid` se optimiza para representar árboles, que son el tipo más común de datos jerárquicos.  
+  Integrado `hierarchyid` tipo de datos resulta más fácil almacenar y consultar datos jerárquicos. `hierarchyid` se optimiza para representar árboles, que son el tipo más común de los datos jerárquicos.  
   
  Los datos jerárquicos se definen como un conjunto de elementos de datos que se relacionan entre sí mediante relaciones jerárquicas. Las relaciones jerárquicas existen allí donde un elemento de los datos es el elemento primario de otro elemento. Entre los ejemplos de datos jerárquicos que se almacenan normalmente en las bases de datos se incluyen los siguientes:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36103792"
   
 -   La comparación se realiza con prioridad a la profundidad  
   
-     Dados dos `hierarchyid` valores **una** y **b**, **una < b** significa un viene antes que b en un corte transversal de prioridad del árbol. Los índices de los tipos de datos `hierarchyid` están en orden con prioridad a la profundidad y los nodos cercanos entre sí en un corte transversal de prioridad a la profundidad se almacenan casi uno junto a otro. Por ejemplo, los elementos secundarios de un registro se almacenan adyacentes a ese registro.  
+     Dados dos `hierarchyid` valores **un** y **b**, **un < b** significa un viene antes que b en un corte transversal de prioridad de profundidad del árbol. Los índices de los tipos de datos `hierarchyid` están en orden con prioridad a la profundidad y los nodos cercanos entre sí en un corte transversal de prioridad a la profundidad se almacenan casi uno junto a otro. Por ejemplo, los elementos secundarios de un registro se almacenan adyacentes a ese registro.  
   
 -   Compatibilidad con inserciones y eliminaciones arbitrarias  
   
@@ -108,11 +108,11 @@ GO
   
  La estructura de elemento primario/secundario puede ser mejor opción cuando se dan las condiciones siguientes:  
   
--   El tamaño de la clave es crítico. Para el mismo número de nodos, un `hierarchyid` valor es igual o mayor que una familia de enteros (`smallint`, `int`, `bigint`) valor. Esto es sólo una razón para utilizar el elemento primario/secundario en raras ocasiones, porque `hierarchyid` tiene una proximidad significativamente mejor de E/S y CPU de complejidad de las expresiones de tabla comunes necesarias cuando se utiliza una estructura de elemento primario/secundario.  
+-   El tamaño de la clave es crítico. Para el mismo número de nodos, un `hierarchyid` valor es igual o mayor que una familia de enteros (`smallint`, `int`, `bigint`) valor. Esto es sólo una razón para usar los elementos primarios y secundarios en casos excepcionales, porque `hierarchyid` tiene una proximidad significativamente mejor de E/S y CPU de complejidad de las expresiones de tabla comunes necesarias cuando se usa una estructura de elementos primarios y secundarios.  
   
 -   Las consultas raramente recorren todas las secciones de la jerarquía. Dicho de otro modo, las consultas normalmente se dirigen a un solo punto de la jerarquía. En estos casos la ubicación conjunta no es importante. Por ejemplo, la estructura de elemento primario y secundario es la mejor opción cuando la tabla de organización solo se usa para procesar la nómina de empleados individuales.  
   
--   Los subárboles no hoja se mueven con frecuencia y el rendimiento es muy importante. En una representación de elemento primario/secundario, el cambio de ubicación de una fila en una jerarquía afecta a una única fila. Cambiar la ubicación de una fila en un `hierarchyid` afectará *n* filas, donde *n* se está moviendo el número de nodos del subárbol.  
+-   Los subárboles no hoja se mueven con frecuencia y el rendimiento es muy importante. En una representación de elemento primario/secundario, el cambio de ubicación de una fila en una jerarquía afecta a una única fila. Cambiar la ubicación de una fila en un `hierarchyid` afectará *n* filas, donde *n* se va a mover el número de nodos del subárbol.  
   
      Si los subárboles no hoja se mueven con frecuencia y el rendimiento es importante, pero la mayoría de los movimientos se encuentran en un nivel bien definido de la jerarquía, tenga en cuenta la posibilidad de dividir los niveles más altos y más bajos en dos jerarquías. Esto convierte todos los movimientos en niveles de hoja de la jerarquía más alta. Por ejemplo, considere la posibilidad de tener una jerarquía de sitios web hospedada por un servicio. Los sitios contienen muchas páginas organizadas de forma jerárquica. Los sitios hospedados se pueden mover a otras ubicaciones en la jerarquía del sitio, pero las páginas subordinadas rara vez se reorganizan. Esto se podría representar mediante:  
   
@@ -269,7 +269,7 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> Tareas relacionadas  
   
 ###  <a name="migrating"></a> Migrar de elemento primario/secundario a hierarchyid  
- La mayoría de los árboles se representan mediante elementos primario y secundario. La manera más fácil de migrar de una estructura de elemento primario/secundario a una tabla mediante `hierarchyid` consiste en utilizar una columna temporal o una tabla temporal para mantener el seguimiento del número de nodos en cada nivel de la jerarquía. Para ver un ejemplo sobre la migración de una tabla de elemento primario/secundario, consulte la lección 1 de [Tutorial: Usar el tipo de datos hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ La mayoría de los árboles se representan mediante elementos primario y secundario. La manera más fácil migrar de una estructura de elementos primarios y secundarios en una tabla con `hierarchyid` consiste en usar una columna temporal o una tabla temporal para mantener el seguimiento del número de nodos en cada nivel de la jerarquía. Para ver un ejemplo sobre la migración de una tabla de elemento primario/secundario, consulte la lección 1 de [Tutorial: Usar el tipo de datos hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Administrar un árbol mediante hierarchyid  

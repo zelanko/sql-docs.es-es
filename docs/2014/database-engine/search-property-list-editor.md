@@ -1,39 +1,38 @@
 ---
-title: Editor de lista de propiedades de búsqueda | Documentos de Microsoft
+title: Editor de lista de propiedades de búsqueda | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.searchpropertylisteditor.f1
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 caps.latest.revision: 26
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e34bcf522675e13e9b1fa987f0f3bfc6aba36efb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f55070e129328e8b876a97382bfca4462a4cf70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231535"
 ---
 # <a name="search-property-list-editor"></a>Editor de lista de propiedades de búsqueda
   Use este cuadro de diálogo para agregar o eliminar propiedades de búsqueda en una lista de propiedades de búsqueda.  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>Para usar SQL Server Management Studio con el fin de administrar listas de propiedades de búsqueda  
- Para obtener información acerca de cómo crear, ver o eliminar una lista de propiedades de búsqueda y sobre cómo configurar un índice de texto completo para búsqueda de propiedades, vea [buscar propiedades de documento con listas de propiedades de búsqueda](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+ Para obtener información acerca de cómo crear, ver o eliminar una lista de propiedades de búsqueda y sobre cómo configurar un índice de texto completo para búsqueda de propiedades, vea [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="options"></a>Opciones  
  **Nombre de propiedad**  
  Especifique el nombre que se va a usar para identificar la propiedad en consultas de texto completo. El nombre de una propiedad puede contener espacios internos. La longitud máxima del atributo **Property Name** es de 256 caracteres. Este nombre puede ser un nombre descriptivo, como "Autor" o "Dirección particular", o bien el nombre canónico de Windows de la propiedad, como `System.Author` o `System.Contact.HomeAddress`. **Nombre de propiedad** debe identificar exclusivamente la propiedad en el conjunto de propiedades.  
   
- Los desarrolladores usan el nombre de propiedad para identificar la propiedad en el [CONTAINS](/sql/t-sql/queries/contains-transact-sql) predicado. Por tanto, cuando se agregue una propiedad es importante especificar un valor que represente significativamente la propiedad.  
+ Los desarrolladores usar el nombre de propiedad para identificar la propiedad en el [CONTAINS](/sql/t-sql/queries/contains-transact-sql) predicado. Por tanto, cuando se agregue una propiedad es importante especificar un valor que represente significativamente la propiedad.  
   
  **GUID del conjunto de propiedades**  
  Especifique el identificador del conjunto de propiedades al que pertenece la propiedad. Se trata de un identificador único global (GUID). Un conjunto de propiedades es un grupo de propiedades relacionadas lógicamente. Para obtener más información cómo obtener este valor, vea la sección "Comentarios" más adelante en este tema.  
@@ -57,7 +56,7 @@ ms.locfileid: "36196718"
 -   [Buscar propiedades de documento con listas de propiedades de búsqueda](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
 ## <a name="permissions"></a>Permisos  
- Vea [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql).  
+ Consulte [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql).  
   
 ## <a name="see-also"></a>Vea también  
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)   

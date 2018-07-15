@@ -1,5 +1,5 @@
 ---
-title: Página Ver, informes (Administrador de informes) | Documentos de Microsoft
+title: Ver la página, los informes (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 582855613306e0a0660f16708baec0a670706360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ff8af0b8badf1bc1bbee5e864f825af9d0ab03c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311235"
 ---
 # <a name="view-page-reports-report-manager"></a>Ver la página, informes (Administrador de informes)
   Use la página Ver para ver un informe. La primera vez que se abre un informe en el Administrador de informes, tiene formato HTML. Los informes HTML incluyen una barra de herramientas que aparece en la parte superior del informe, de modo que pueda navegar por las páginas del informe, realizar búsquedas en el informe, o bien exportar el informe a otro formato. El diagrama siguiente muestra la barra de herramientas de informe.  
@@ -43,6 +43,6 @@ Barra de herramientas de informe
   
 ## <a name="see-also"></a>Vea también  
  [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

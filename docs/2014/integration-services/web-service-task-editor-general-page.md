@@ -1,5 +1,5 @@
 ---
-title: Editor de tareas de servicio Web (página General) | Documentos de Microsoft
+title: Editor de tareas de servicio Web (página General) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.general.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 caps.latest.revision: 34
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d23c975b44a9d61bb9e9b1b61ebf04285842ba01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d68fdf156caf460ee6130df7ab746fcbd13fec0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331865"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor de la tarea Servicio web (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Servicio web** para especificar un administrador de conexiones de HTTP, especificar la ubicación del archivo de Lenguaje de descripción de servicios web (WSDL) que usa la tarea Servicio web, describir la tarea Servicios web y descargar el archivo WSDL.  
@@ -58,7 +58,7 @@ ms.locfileid: "36103832"
  **OverwriteWSDLFile**  
  Indica si el archivo WSDL de la tarea Servicio web se puede sobrescribir.  
   
- Si desea descargar el archivo WSDL utilizando el **descargar WSDL** botón, establezca este valor en `True`.  
+ Si va a descargar el archivo WSDL utilizando el **descargar WSDL** botón, establezca este valor en `True`.  
   
  **Nombre**  
  Proporcione un nombre único para la tarea Servicio web. Este nombre se utiliza como etiqueta en el icono de tarea.  
@@ -77,7 +77,7 @@ ms.locfileid: "36103832"
 ## <a name="see-also"></a>Vea también  
  [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de la tarea servicio Web &#40;página de entrada&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [Editor de la tarea servicio Web &#40;generan las páginas&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Editor de la tarea servicio Web &#40;página de salida&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Página Expresiones](expressions/expressions-page.md)  
   
   

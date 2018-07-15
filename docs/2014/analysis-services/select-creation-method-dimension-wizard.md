@@ -1,5 +1,5 @@
 ---
-title: Seleccionar método de creación (Asistente para dimensiones) | Documentos de Microsoft
+title: Seleccionar método de creación (Asistente para dimensiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensiondefinition.f1
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10d52966956d39f7a495e353bdf6acd595cc51ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d10005b2b689078eb7677547ebfc905fbdcc996
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267161"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>Seleccionar método de creación (Asistente para dimensiones)
   Use la página **Seleccionar método de creación** para seleccionar cómo se crea la dimensión.  
@@ -49,7 +49,7 @@ ms.locfileid: "36113040"
   
  Para más información, vea [Crear una dimensión de tiempo generando una tabla de tiempos](multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md).  
   
- **Generar una tabla no sea de tiempos en el origen de datos**  
+ **Generar una tabla que no sea de tiempos en el origen de datos**  
  Diseñe la dimensión sin un origen de datos relacional subyacente y, a continuación, genere el esquema necesario para el origen de datos. Este enfoque se conoce como modelado de arriba a abajo.  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ ms.locfileid: "36113040"
 >  Esta opción solo está disponible cuando se ha seleccionado la opción **Generar una tabla que no sea de tiempos en el origen de datos** .  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente de dimensiones (Ayuda F1)](dimension-wizard-f1-help.md)   
+ [Ayuda de F1 del Asistente para dimensiones](dimension-wizard-f1-help.md)   
  [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

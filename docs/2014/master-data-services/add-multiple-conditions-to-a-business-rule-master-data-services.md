@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e5ac7bab7712a268e3fe8fd37f1a5ae799ef55dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f7994861c246b31731dbff82069eed091379ad6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275181"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Agregar varias condiciones a una regla de negocios (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], agregue varias condiciones **AND** u **OR** a una regla de negocio cuando quiera una regla más compleja.  
@@ -48,7 +48,7 @@ ms.locfileid: "36196267"
   
 4.  En la lista **Entidad** , seleccione una entidad.  
   
-5.  Desde el **tipo de miembro** , seleccione un tipo de miembro.  
+5.  Desde el **tipo de miembro** lista, seleccione un tipo de miembro.  
   
 6.  En la lista **Atributo** , seleccione un atributo o deje el valor predeterminado de **Todos**.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36196267"
   
 11. En el panel **Componentes** , expanda el nodo **Condiciones** .  
   
-12. Haga clic en una condición y arrástrela hasta **IF** panel, a la **AND** o **OR** etiqueta desde el paso 10.  
+12. Haga clic en una condición y arrástrela hasta **IF** panel, a la **AND** o **OR** etiqueta del paso 10.  
   
 13. En el **atributos** panel, haga clic en un atributo y arrástrelo hasta el **Editar condición** del panel **Seleccionar atributo** etiqueta.  
   
@@ -70,10 +70,10 @@ ms.locfileid: "36196267"
   
 15. En el panel **Editar acción** , haga clic en **Guardar elemento**.  
   
-16. Opcionalmente, para agregar más condiciones, desde el **componentes** , arrastre **AND** o **OR** a cualquier **AND** o **OR**en la **IF** panel. A continuación, siga los pasos 13-15.  
+16. Opcionalmente, para agregar más condiciones, desde el **componentes** panel, arrastre **AND** o **OR** a cualquier **AND** o **OR**en el **IF** panel. A continuación, siga los pasos 13-15.  
   
     > [!TIP]  
-    >  Para eliminar una condición, haga clic en el nombre de la condición y en la **Editar condición** panel, haga clic en **eliminar el elemento**.  
+    >  Para eliminar una condición, haga clic en el nombre de la condición y, en el **Editar condición** panel, haga clic en **de eliminación de elemento**.  
   
 ## <a name="see-also"></a>Vea también  
  [Las reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   

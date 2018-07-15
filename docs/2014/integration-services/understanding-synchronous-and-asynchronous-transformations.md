@@ -19,13 +19,13 @@ ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2e943eab4aea643762f2ab9553c800211c5a2d9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d8a4fb438fce2ff1e774938a34dfd25be1b483a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302365"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Descripción de las transformaciones sincrónicas y asincrónicas
   Para entender la diferencia que existe entre una transformación sincrónica y una transformación asincrónica en [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], lo más fácil es empezar por la descripción de una transformación sincrónica. Si una transformación sincrónica no satisface sus necesidades, puede que su diseño requiera una transformación asincrónica.  
@@ -35,7 +35,7 @@ ms.locfileid: "36114065"
   
  Un ejemplo de transformación sincrónica es la transformación Conversión de datos. Para cada fila entrante, convierte el valor de la columna especificada y envía la fila a lo largo de su recorrido. Cada operación de conversión discreta es independiente del resto de las filas del conjunto de datos.  
   
- En [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de scripting y programación, especifique una transformación sincrónica busca el identificador de entrada de un componente y asígneselo a la `SynchronousInputID` propiedad de las salidas del componente. Esto indica al motor de flujo de datos que procese cada fila de entrada y se la envíe automáticamente a las salidas especificadas. Si desea que cada fila se dirija a cada una de las salidas, no es necesario que escriba código adicional para generar los datos. Si usa la propiedad `ExclusionGroup` para especificar que las filas solo se dirijan a uno u otro de los grupos de salidas, como en el caso de la transformación División condicional, debe llamar al método `DirectRow` para seleccionar el destino adecuado para cada fila. Cuando tenga una salida de error, deberá llamar a `DirectErrorRow` para enviar las filas con problemas a la salida de error en lugar de enviarlas a la salida predeterminada.  
+ En [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] scripting y programación, especifique una transformación sincrónica debe buscar el identificador de entrada de un componente y asignarlo a la `SynchronousInputID` propiedad de las salidas del componente. Esto indica al motor de flujo de datos que procese cada fila de entrada y se la envíe automáticamente a las salidas especificadas. Si desea que cada fila se dirija a cada una de las salidas, no es necesario que escriba código adicional para generar los datos. Si usa la propiedad `ExclusionGroup` para especificar que las filas solo se dirijan a uno u otro de los grupos de salidas, como en el caso de la transformación División condicional, debe llamar al método `DirectRow` para seleccionar el destino adecuado para cada fila. Cuando tenga una salida de error, deberá llamar a `DirectErrorRow` para enviar las filas con problemas a la salida de error en lugar de enviarlas a la salida predeterminada.  
   
 ## <a name="asynchronous-transformations"></a>Transformaciones asincrónicas  
  Es posible que decida que su diseño requiere una transformación asincrónica cuando no es posible procesar cada fila independientemente del resto de las filas. En otras palabras, no es posible pasar cada fila al flujo de datos en cuanto se procesa, sino que los datos deben generarse de forma asincrónica o en un momento distinto al de la entrada. Por ejemplo, los siguientes escenarios requieren una transformación asincrónica:  
@@ -53,7 +53,7 @@ ms.locfileid: "36114065"
   
  También sería posible crear una transformación asincrónica que emule una transformación sincrónica mediante la copia explícita de cada fila de entrada en la salida. Con este enfoque, podría cambiar el nombre de las columnas o convertir los tipos de datos o los formatos. No obstante, este enfoque disminuye el rendimiento. Puede obtener los mismos resultados con un mayor rendimiento utilizando componentes integrados de Integration Services, como Copiar columna o Conversión de datos.  
   
-![Icono de Integration Services (pequeño)](media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services  **<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear una transformación sincrónica con el componente de script](data-flow/transformations/script-component.md)   

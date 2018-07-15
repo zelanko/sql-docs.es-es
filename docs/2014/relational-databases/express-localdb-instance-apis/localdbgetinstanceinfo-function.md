@@ -1,5 +1,5 @@
 ---
-title: Función LocalDBGetInstanceInfo | Documentos de Microsoft
+title: Función LocalDBGetInstanceInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1f85efa89aae3df4a8875c865d9e83f2d4d9b91d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 8fe636ca60998baa75b71a6d179d20630bac2f8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205315"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Función LocalDBGetInstanceInfo
   Devuelve información para la instancia de SQL Server Express LocalDB especificada, por ejemplo si existe, la versión de LocalDB que usa, si se está ejecutando, etc.  
@@ -132,11 +132,11 @@ HRESULT LocalDBGetInstanceInfo(
  Error inesperado. Vea el registro de eventos para obtener detalles.  
   
 ## <a name="details"></a>Detalles  
- El análisis razonado respecto a la introducción de la `struct` argumento de tamaño (*lpInstanceInfoSize*) consiste en permitir a la API que devuelva distintas versiones de la **LocalDBInstanceInfostruct**, de forma eficaz habilitar la compatibilidad con versiones anteriores y posteriores.  
+ La lógica subyacente en la introducción de la `struct` argumento de tamaño (*lpInstanceInfoSize*) consiste en habilitar la API que devuelva distintas versiones de la **LocalDBInstanceInfostruct**, eficaz habilitar la compatibilidad con versiones anteriores y posteriores.  
   
  Si el `struct` argumento de tamaño (*lpInstanceInfoSize*) coincide con el tamaño de una versión conocida de la **LocalDBInstanceInfostruct**, esa versión de la `struct` se devuelve. De lo contrario, se devuelve LOCALDB_ERROR_INVALID_PARAMETER.  
   
- Un ejemplo típico de **LocalDBGetInstanceInfo** uso de la API tiene el siguiente aspecto:  
+ Un ejemplo típico de **LocalDBGetInstanceInfo** uso de la API tiene este aspecto:  
   
 ```  
 LocalDBInstanceInfo ii;  

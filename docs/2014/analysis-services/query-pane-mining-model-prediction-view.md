@@ -1,5 +1,5 @@
 ---
-title: Panel (vista predicción de modelo de minería de datos) de consulta | Documentos de Microsoft
+title: Consultar el panel (vista predicción de modelo de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.query.f1
 ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a0f0105796bd4a4903a12dbad0b87b76919ce8b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ede17228e9dc21a170815ecc46900fd38ab7d978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211785"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>Panel de consulta (Vista Predicción de modelo de minería de datos)
   En el panel **Consulta** se muestran las instrucciones DMX (Extensiones de minería de datos) creadas por el Generador de consultas de predicción. Puede modificar las instrucciones y, a continuación, hacer clic en el botón **Cambiar a vista de resultado de consulta** para devolver los resultados. Si cambia a la vista **Diseño** , se perderán los cambios realizados a la instrucción.  

@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MultiPolygon geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f1d29c76541d87e950c973fd6dc7d57482c6d2b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3ae25be65e0fdf0cf88bf8dec6cf5c3f59f9c9e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311415"
 ---
 # <a name="multipolygon"></a>MultiPolígono
-  A `MultiPolygon` instancia es una colección de cero o más `Polygon` instancias.  
+  Un `MultiPolygon` instancia es una colección de cero o más `Polygon` instancias.  
   
 ## <a name="polygon-instances"></a>Instancias Polygon  
  La ilustración siguiente muestra ejemplos de `MultiPolygon` instancias.  
@@ -41,9 +41,9 @@ ms.locfileid: "36104870"
 ### <a name="accepted-instances"></a>Instancias aceptadas  
  Un `MultiPolygon` se acepta la instancia se cumple una de las siguientes condiciones.  
   
--   Es vacío `MultiPolygon` instancia.  
+-   Es un valor vacío `MultiPolygon` instancia.  
   
--   Todas las instancias que comprenden la `MultiPolygon` se aceptan instancia `Polygon` instancias. Para obtener más información sobre aceptado `Polygon` instancias, vea [polígono](../spatial/polygon.md).  
+-   Todas las instancias que comprenden la `MultiPolygon` se aceptan instancia `Polygon` instancias. Para obtener más información sobre aceptado `Polygon` instancias, consulte [polígono](../spatial/polygon.md).  
   
  Los ejemplos siguientes muestran instancias `MultiPolygon` aceptadas.  
   
@@ -64,7 +64,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### <a name="valid-instances"></a>Instancias válidas  
  Una instancia `MultiPolygon` es válida si es una instancia `MultiPolygon` vacía o si cumple los siguientes criterios.  
   
-1.  Todas las instancias que comprenden la instancia `MultiPolygon` son instancias `Polygon` válidas. Para válido `Polygon` instancias, vea [polígono](../spatial/polygon.md).  
+1.  Todas las instancias que comprenden la instancia `MultiPolygon` son instancias `Polygon` válidas. Para válido `Polygon` instancias, consulte [polígono](../spatial/polygon.md).  
   
 2.  Ninguna de las instancias `Polygon` que comprenden la instancia `MultiPolygon` se superponen.  
   

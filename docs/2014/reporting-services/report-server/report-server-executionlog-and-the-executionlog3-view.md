@@ -1,5 +1,5 @@
 ---
-title: Registro de ejecución del servidor y la vista ExecutionLog3 informes | Documentos de Microsoft
+title: Informe de registro de ejecución del servidor y la vista ExecutionLog3 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9059bf91729065342e0013770b7b4b688df6fa17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ffd98216c7943f164ad633603fa51aa717a552
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255697"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Registro de ejecución del servidor de informes y la vista ExecutionLog3
   El registro de la ejecución del servidor de informes contiene información sobre los informes que se ejecutan en el servidor o en varios servidores de una implementación escalada en modo nativo o de una granja de servidores de SharePoint. Puede usar el registro de la ejecución de informes para averiguar con qué frecuencia se solicita el informe, qué formatos de salida se usan más y cuántos milisegundos del tiempo de procesamiento se dedica a cada fase del procesamiento. El registro contiene información sobre el tiempo de ejecución de la consulta de conjunto de datos de un informe y el tiempo empleado en el procesamiento de los datos. Si es administrador del servidor de informes, puede revisar la información del registro e identificar las tareas de ejecución prolongada, y realizar sugerencias a los autores de informes en las áreas del informe (conjunto de datos o procesamiento) que se puedan mejorar.  
@@ -127,7 +127,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|Número de milisegundos empleados en recuperar los datos.|  
 |TimeProcessing|Número de milisegundos empleados en procesar el informe.|  
 |TimeRendering|Número de milisegundos empleados en representar el informe.|  
-|Source|Origen de la ejecución del informe. Valores posibles:<br /><br /> **Live**<br /><br /> **Caché**: indica una ejecución almacenada en caché, por ejemplo, conjunto de datos que las consultas no se ejecutan de forma dinámica.<br /><br /> **Snapshot**<br /><br /> **Historial**<br /><br /> **"Ad hoc"** : hace referencia a un informe generado dinámicamente en función del modelo informe detallado o un informe de generador de informes que se muestra una vista previa en un cliente utilizando el servidor de informes para el procesamiento y representación.<br /><br /> **Sesión**: indica una solicitud de seguimiento en una sesión que ya se ha establecido.  Por ejemplo, la solicitud inicial es ver la página 1 y la solicitud de seguimiento es exportar a Excel con el estado actual de la sesión.<br /><br /> **Rdce**: indica una extensión de personalización de definición de informe. Las extensiones personalizadas de RDCE pueden personalizar dinámicamente una definición de informe antes de que se pase al motor de procesamiento en el momento de la ejecución de informes.|  
+|Source|Origen de la ejecución del informe. Valores posibles:<br /><br /> **Live**<br /><br /> **Caché**: indica una ejecución almacenada en caché, por ejemplo, conjunto de datos en directo no se ejecutan las consultas.<br /><br /> **Snapshot**<br /><br /> **Historial**<br /><br /> **Ad hoc** : indica un informe generado dinámicamente en función del modelo informe detallado o un informe de generador de informes que se muestra una vista previa en un cliente que use el servidor de informes para el procesamiento y representación.<br /><br /> **Sesión**: indica una solicitud de seguimiento en una sesión que ya se ha establecido.  Por ejemplo, la solicitud inicial es ver la página 1 y la solicitud de seguimiento es exportar a Excel con el estado actual de la sesión.<br /><br /> **Rdce**: indica una extensión de personalización de definición de informe. Las extensiones personalizadas de RDCE pueden personalizar dinámicamente una definición de informe antes de que se pase al motor de procesamiento en el momento de la ejecución de informes.|  
 |Estado|Estado (rsSuccess o un código de error; si se producen varios errores, solo se registra el primero).|  
 |ByteCount|Tamaño de los informes representados en bytes|  
 |RowCount|Número de filas devueltas de consultas.|  
@@ -226,13 +226,13 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 ```  
   
- A continuación describe algunas de las propiedades que aparece en el campo AdditionalInfo:  
+ El siguiente describe algunas de las propiedades que verá en el campo AdditionalInfo:  
   
--   **ProcessingEngine**: 1 = SQL Server 2005, 2 = el nuevo motor de procesamiento a petición. Si una mayoría de los informes sigue mostrando el valor 1, puede investigar cómo reajustarlos para que usen el motor de procesamiento a petición más reciente y más eficaz.  
+-   **ProcessingEngine**: 1 = SQL Server 2005, 2 = el nuevo motor de procesamiento y a petición. Si una mayoría de los informes sigue mostrando el valor 1, puede investigar cómo reajustarlos para que usen el motor de procesamiento a petición más reciente y más eficaz.  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**: el número de milisegundos empleados en realizar operaciones relacionadas de escala en el motor de procesamiento. Un valor de 0 indica que no se empleó ningún tiempo adicional en las operaciones de escala y 0 también indica que la solicitud no estaba bajo presión de memoria.  
+-   **ScalabilityTime**: el número de milisegundos empleados en realizar escala operaciones relacionadas en el motor de procesamiento. Un valor de 0 indica que no se empleó ningún tiempo adicional en las operaciones de escala y 0 también indica que la solicitud no estaba bajo presión de memoria.  
   
     ```  
     <ScalabilityTime>  
@@ -248,7 +248,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**: los tipos de extensiones de datos u orígenes de datos usados en el informe. El número es un recuento del número de repeticiones del origen de datos concreto.  
+-   **DataExtension**: los tipos de extensiones de datos u orígenes de datos utilizados en el informe. El número es un recuento del número de repeticiones del origen de datos concreto.  
   
     ```  
     <DataExtension>  
@@ -256,7 +256,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**el valor está en milisegundos. Estos datos se pueden utilizar para diagnosticar problemas de rendimiento. El tiempo necesario para recuperar imágenes desde un servidor web externo puede ralentizar la ejecución de informes global. Agregado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **ExternalImages**es el valor en milisegundos. Estos datos se pueden utilizar para diagnosticar problemas de rendimiento. El tiempo necesario para recuperar imágenes desde un servidor web externo puede ralentizar la ejecución de informes global. Se ha agregado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <ExternalImages>  
@@ -266,7 +266,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **Las conexiones**: una estructura de varios niveles. Agregado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **Las conexiones**: una estructura de varios niveles. Se ha agregado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <Connections>  

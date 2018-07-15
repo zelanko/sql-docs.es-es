@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bffff032f51c1a349db6ab384c8f6b49e66ed206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b9dfb573605f8e859f8db4b991e2eb19a73d4606
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319955"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de datos en expresiones (Generador de informes y SSRS)
   La finalidad de los tipos de datos es permitir el almacenamiento y el procesamiento de los datos de manera eficaz. Los tipos de datos más comunes incluyen texto (también conocido como cadenas), números (con y sin decimales), fechas y horas, e imágenes. Los valores de un informe deben ser del tipo de datos de lenguaje RDL (Report Definition Language). Puede dar formato a un valor según sus preferencias al mostrarlo en un informe. Por ejemplo, un campo que representa valores de moneda se almacena en la definición del como un número de punto flotante y mostrarse en uno y otro formato en función de la propiedad de formato elegida.  
@@ -108,7 +108,7 @@ ms.locfileid: "36105313"
   
  `2008-07-01 06:05:07.9999999 +08:00`  
   
- En este ejemplo, se muestra la fecha (1 de julio de 2008) seguida de la hora con una precisión de 7 dígitos (6:05:07,9999999 a.m.) y de un ajuste de zona horaria UTC en horas y minutos (más 8 horas, 0 minutos). Los ejemplos siguientes, este valor se ha colocado en un `String` campo denominado `MyDateTime.Value`.  
+ En este ejemplo, se muestra la fecha (1 de julio de 2008) seguida de la hora con una precisión de 7 dígitos (6:05:07,9999999 a.m.) y de un ajuste de zona horaria UTC en horas y minutos (más 8 horas, 0 minutos). Los ejemplos siguientes, este valor se ha situado en un `String` campo denominado `MyDateTime.Value`.  
   
  Puede usar una de las estrategias siguientes para convertir estos datos en uno o más valores CLR:  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36105313"
   
          Si la cadena `MyDateTime.Value` tiene un ajuste UTC, la función `DateTime.Parse` primero ajusta de acuerdo con el ajuste UTC (7 a.m. - [`+08:00`] a la hora UTC de las 11 p.m. de la noche anterior). A continuación, la función `DateTime.Parse` aplica el ajuste UTC del servidor de informes local y, si fuera necesario, vuelve a ajustar la hora para adaptarla al horario de verano. Por ejemplo, en Redmond, Washington, el ajuste de la hora local adaptado al horario de verano es `[-07:00]`o 7 horas antes de las 11 p.m. El resultado es el valor `DateTime` siguiente: `2007-07-06 04:07:07 PM` (6 de julio de 2007 a las 4:07 p.m).  
   
- Para obtener más información sobre cómo convertir cadenas a `DateTime` tipos de datos, consulte [analizar cadenas de fecha y hora](http://go.microsoft.com/fwlink/?LinkId=89703), [aplicar formato de fecha y hora para una referencia cultural concreta](http://go.microsoft.com/fwlink/?LinkId=89704), y [elección Entre DateTime, DateTimeOffset y TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) en MSDN.  
+ Para obtener más información sobre cómo convertir cadenas a `DateTime` tipos de datos, vea [analizar cadenas de fecha y hora](http://go.microsoft.com/fwlink/?LinkId=89703), [aplicar formato de fecha y hora para una referencia cultural concreta](http://go.microsoft.com/fwlink/?LinkId=89704), y [elección Entre DateTime, DateTimeOffset y TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) en MSDN.  
   
 -   Agregue un nuevo campo calculado al conjunto de datos de informe que use una expresión para extraer partes de la cadena. Para obtener más información, consulte [Agregar, editar y actualizar campos en el panel Datos de informe &#40;Generador de informes y SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   

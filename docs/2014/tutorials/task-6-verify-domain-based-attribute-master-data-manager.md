@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 6: Comprobar que el atributo basado en dominio se crea mediante Master Data Manager | Documentos de Microsoft'
+title: 'Tarea 6: Comprobar que se crea el atributo basado en dominio mediante Master Data Manager | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d12764af6fbebf8c0fa82d38059cc64ea9bbc2c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f607a6faaf8a6891ff2d7191142f11dbaa55f961
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191305"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Tarea 6: comprobar que se crea el atributo basado en dominio mediante Master Data Manager
   En esta tarea, comprobará que se crea la entidad **Estado** en **MDS** y que el atributo **State** de la entidad **Proveedor** es un atributo basado en dominio que depende de la entidad **Estado** mediante **Master Data Manager**.  
@@ -34,7 +34,7 @@ ms.locfileid: "36199028"
   
 4.  Mantenga el mouse sobre **Entidades** en la barra de menús y observe que ahora hay dos entidades: **Proveedor** y **Estado**.  
   
-     ![Menú de entidades con estado y proveedor](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "menú de entidades con estado y proveedor")  
+     ![Menú de entidades con estado y proveedor](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "menú entidades con estado y proveedor")  
   
 5.  Haga clic en **Estado** si la entidad no está abierta todavía.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36199028"
   
 11. Ahora, observe que se puede cambiar un valor para el campo **State** en el panel **Detalles** mediante la lista desplegable. También puede ver que en la lista de la izquierda y en la lista desplegable del panel **Detalles**, primero se muestra el código y después el nombre entre llaves. Además, puede cambiar cualquier otro valor en el panel **Detalles**.  
   
-     ![Estado de atributo con el código actualizado y nombres](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "atributo con el código actualizado y los nombres de estado")  
+     ![Estado de atributo con los nombres y el código actualizado](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "atributo con el código actualizado y los nombres de estado")  
   
 ## <a name="next-step"></a>Paso siguiente  
  [Tarea 7: Ver las actualizaciones realizadas con Master Data Manager en Excel](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  

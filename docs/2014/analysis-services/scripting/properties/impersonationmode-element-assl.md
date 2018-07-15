@@ -1,5 +1,5 @@
 ---
-title: Elemento ImpersonationMode (ASSL) | Documentos de Microsoft
+title: Elemento ImpersonationMode (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ImpersonateMode element
 ms.assetid: 160fdcb2-ac9f-4c5a-a0eb-a5f7669166b9
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e41e5b5fef7759f6ad310a7f04dc012a7b7cb54f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dad131322f27cee48fa2fe1dd1ed593477afbe42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216235"
 ---
 # <a name="impersonationmode-element-assl"></a>Elemento ImpersonationMode (ASSL)
   Contiene un valor que indica el método de suplantación para los elementos que se derivan de la [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) tipo de datos.  

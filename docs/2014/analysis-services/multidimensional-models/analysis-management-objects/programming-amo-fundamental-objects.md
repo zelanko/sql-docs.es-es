@@ -1,5 +1,5 @@
 ---
-title: Programar objetos fundamentales de AMO | Documentos de Microsoft
+title: Programar objetos fundamentales de AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c85b48c62e271dff6a4db582527c68a7735f0dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d85bbc23bd016f2e1dd1d4842a5bd66645035ec2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321305"
 ---
 # <a name="programming-amo-fundamental-objects"></a>Programar objetos fundamentales de AMO
   Los objetos fundamentales son generalmente objetos simples y sencillos. Estos objetos se crean normalmente con instancias y después, cuando ya no se necesitan, el usuario se desconecta de ellos. Las clases fundamentales incluyen los objetos siguientes: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>y <xref:Microsoft.AnalysisServices.DataSourceView>. El único objeto complejo en los objetos fundamentales de AMO es <xref:Microsoft.AnalysisServices.DataSourceView>, que requiere detalles para generar el modelo abstracto que representa la vista del origen de datos.  
@@ -43,12 +43,12 @@ ms.locfileid: "36105971"
   
 -   [Objetos de base de datos](#DatabaseObjects)  
   
--   [Objetos de origen de datos](#DataSource)  
+-   [Objetos DataSource](#DataSource)  
   
 -   [Objetos DataSourceView](#DSV)  
   
 ##  <a name="ServerObjects"></a> Objetos de servidor  
- Para usar un <xref:Microsoft.AnalysisServices.Server> objeto requiere los pasos siguientes: conectar al servidor, comprobar si la <xref:Microsoft.AnalysisServices.Server> objeto está conectado al servidor y, si es así, desconectar el <xref:Microsoft.AnalysisServices.Server> desde el servidor.  
+ Para usar un <xref:Microsoft.AnalysisServices.Server> objeto requiere los pasos siguientes: conectarse al servidor, comprobar si el <xref:Microsoft.AnalysisServices.Server> de objetos está conectado al servidor y, si es así, desconectar el <xref:Microsoft.AnalysisServices.Server> desde el servidor.  
   
 ### <a name="connecting-to-the-server-object"></a>Conectar al objeto Server  
  Para conectarse al servidor de debe tener la cadena de conexión correcta.  
@@ -108,7 +108,7 @@ if ( (svr != null) && ( svr.Connected))
 ```  
   
 ###  <a name="AMO"></a> Objetos de excepción AmoException  
- AMO producirá excepciones en los diferentes problemas encontrados. Para obtener una explicación detallada de las excepciones, vea [AMO otras clases y métodos](amo-other-classes-and-methods.md). En el código de ejemplo siguiente se muestra la manera correcta de capturar excepciones en AMO:  
+ AMO producirá excepciones en los diferentes problemas encontrados. Para obtener una explicación detallada de excepciones, vea [AMO otras clases y métodos](amo-other-classes-and-methods.md). En el código de ejemplo siguiente se muestra la manera correcta de capturar excepciones en AMO:  
   
 ```  
 try  
@@ -193,7 +193,7 @@ static Database ProcessDatabase(Database db, ProcessType pt)
 }  
 ```  
   
-##  <a name="DataSource"></a> Objetos de origen de datos  
+##  <a name="DataSource"></a> Objetos DataSource  
  Un objeto <xref:Microsoft.AnalysisServices.DataSource> es el vínculo entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y la base de datos donde residen los datos. El objeto <xref:Microsoft.AnalysisServices.DataSourceView> define el esquema que representa el modelo subyacente para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Un objeto <xref:Microsoft.AnalysisServices.DataSource> se puede considerar como una cadena de conexión a la base de datos donde residen los datos.  
   
  En el código de ejemplo siguiente se muestra cómo se crea un objeto <xref:Microsoft.AnalysisServices.DataSource>. En el ejemplo se comprueba que el servidor todavía existe, el objeto <xref:Microsoft.AnalysisServices.Server> está conectado y la base de datos existe. Si el objeto <xref:Microsoft.AnalysisServices.DataSource> existe, se quita y se vuelve a crear. El objeto <xref:Microsoft.AnalysisServices.DataSource> se crea con el mismo nombre e identificador interno. En este ejemplo, no se realiza ninguna comprobación en la cadena de conexión para indicarlo.  

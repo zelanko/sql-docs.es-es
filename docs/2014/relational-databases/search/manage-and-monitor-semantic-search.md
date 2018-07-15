@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], managing
 - semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 366a8e3047cdba872fa9cb004c2a1d8a1892d22b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4dc25a584e7e883ce07040e0d5d0d567995533f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311465"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Administrar y supervisar la búsqueda semántica
   Describe el proceso de indización semántica y las tareas relacionadas con la administración y supervisión de los índices.  
@@ -68,7 +67,7 @@ SELECT * FROM sys.dm_db_fts_index_physical_stats WHERE object_id = OBJECT_ID('ta
 GO  
 ```  
   
- **¿Cuál es el tamaño total de los índices de texto completo y semánticos de un catálogo de texto completo?**  
+ **¿Qué es el tamaño total de los índices de texto completo y semánticos de un catálogo de texto completo?**  
  Consulte la propiedad **IndexSize** de la función de metadatos [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql).  
   
 ```tsql  
@@ -76,7 +75,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')
 GO  
 ```  
   
- **¿Cuántos elementos se indizan en los índices de texto completo y semánticos de un catálogo de texto completo?**  
+ **¿Cuántos elementos se indizan en los índices de texto completo y semántico para un catálogo de texto completo?**  
  Consulte la propiedad **ItemCount** de la función de metadatos [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql).  
   
 ```tsql  
@@ -137,14 +136,14 @@ GO
 2.  **Fase 2**. Después se rellena el índice semántico de similitud de documentos. Este índice depende de los dos índices que se rellenaron en la fase anterior.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> Problema: No se rellenan índices semánticos  
+##  <a name="ProblemNotPopulated"></a> Problema: No se rellenan los índices semánticos  
  **¿Se rellenan los índices de texto completo asociados?**  
  Dado que la indización semántica depende de la indización de texto completo, los índices semánticos solo se rellenan cuando lo hacen los índices de texto completo.  
   
- **¿Son las búsquedas de texto completo y semántica instaladas y configuradas correctamente?**  
+ **¿Está correctamente instalado y configurado la búsqueda semántica y búsqueda de texto completo?**  
  Para obtener más información, vea [Instalar y configurar la búsqueda semántica](install-and-configure-semantic-search.md).  
   
- **¿El servicio FDHOST no está disponible, o existe otra condición que provocaría la indización de texto completo para un error?**  
+ **¿El servicio FDHOST no está disponible, o existe otra condición que provocaría la indización de texto completo conmutar por error?**  
  Para obtener más información, vea [Solucionar problemas de indexación de texto completo](troubleshoot-full-text-indexing.md).  
   
   

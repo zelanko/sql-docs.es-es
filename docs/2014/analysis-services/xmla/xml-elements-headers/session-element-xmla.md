@@ -1,5 +1,5 @@
 ---
-title: Elemento Session (XMLA) | Documentos de Microsoft
+title: Elemento Session (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Session element
 ms.assetid: 884ed090-968e-41d3-97e5-6d12787467da
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4be4778be16da0271e2f46643a165864d679e8ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 74ce499ba167c7c0d439fba4e4099638f4e98db6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310375"
 ---
 # <a name="session-element-xmla"></a>Elemento Session (XMLA)
   Utiliza el encabezado SOAP en un mensaje de solicitud SOAP para identificar una sesión explícita existente en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -83,7 +83,7 @@ ms.locfileid: "36113011"
   
 -   Una respuesta SOAP que contiene un [BeginSession](session-element-xmla.md) elemento de encabezado SOAP.  
   
--   Una solicitud SOAP para identificar la sesión en el que se va a ejecutar la [Discover](../xml-elements-methods-discover.md) o [Execute](../xml-elements-methods-execute.md) método.  
+-   Una solicitud SOAP para identificar la sesión en el que se va a ejecutar el [Discover](../xml-elements-methods-discover.md) o [Execute](../xml-elements-methods-execute.md) método.  
   
  Un identificador de sesión no garantiza que una sesión continúe siendo válida. La sesión especificada en el elemento `Session` puede expirar. Por ejemplo, una sesión puede expirar si supera el tiempo de espera o se interrumpe la conexión asociada a la sesión. Si la sesión expira o deja de ser válida, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] finaliza la sesión y revierte cualquier transacción que esté en curso en ese momento. Cualquier mensaje SOAP enviado con un identificador de sesión que ya no sea válido emitirá un error SOAP que indica que la sesión especificada no se puede encontrar.  
   

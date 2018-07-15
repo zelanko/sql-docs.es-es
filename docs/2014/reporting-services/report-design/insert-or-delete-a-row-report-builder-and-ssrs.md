@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e794c5621c0ecddd2e3dddf9700faa0c7bb6a87d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7cc7b1450f6e1d115b44a2c703516f2c562b90ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198385"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216585"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>Insertar o eliminar una fila (Generador de informes y SSRS)
   Puede agregar o eliminar filas de una región de datos Tablix. La región de datos Tablix puede ser una tabla, una matriz o una lista. Los procedimientos siguientes no se aplican a las regiones de datos Gráfico y Medidor.  
@@ -33,7 +33,7 @@ ms.locfileid: "36198385"
   
 -   En la vista Diseño, haga clic en la esquina superior izquierda de la región de datos Tablix para que los identificadores de columna y de fila aparezcan por encima y junto a ella.  
   
-     Para obtener más información acerca de las áreas de región de datos, vea [enumera &#40;el generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
+     Para obtener más información acerca de las áreas de regiones de datos, vea [enumera &#40;generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ### <a name="to-insert-a-row-in-a-selected-data-region"></a>Para insertar una fila en una región de datos seleccionada  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36198385"
   
 ## <a name="see-also"></a>Vea también  
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
- [Descripción de los grupos &#40;el generador de informes SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)   
+ [Descripción de los grupos &#40;generador de informes y SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)   
  [Tablas &#40;Generador de informes y SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrices &#40;Generador de informes y SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Listas &#40;Generador de informes y SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

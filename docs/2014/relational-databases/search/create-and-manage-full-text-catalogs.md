@@ -5,29 +5,28 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb72092ec96c373c05a74a479eaefa47de6d3d35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d3d1bf94e65ffb789204bb774ea502ef824659ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266331"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Crear y administrar catálogos de texto completo
   Un catálogo de texto completo es un objeto virtual que no pertenece a ningún grupo de archivos; es un concepto lógico que hace referencia a un grupo de índices de texto completo.  
   
-##  <a name="creating"></a> Crear un catálogo de texto completo  
+##  <a name="creating"></a> Creación de un catálogo de texto completo  
   
 #### <a name="to-create-a-full-text-catalog"></a>Para crear un catálogo de texto completo  
   
@@ -47,7 +46,7 @@ ms.locfileid: "36197360"
   
   
 ##  <a name="props"></a> Ver las propiedades de un catálogo de texto completo  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] funciones como FULLTEXTCATALOGPROPERTY pueden utilizarse para obtener el valor de diversas propiedades relacionadas con la indización de texto completo. Esta información es útil para administrar y solucionar problemas de la búsqueda de texto completo.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] funciones como FULLTEXTCATALOGPROPERTY pueden usarse para obtener el valor de diversas propiedades relacionadas con la indización de texto completo. Esta información es útil para administrar y solucionar problemas de la búsqueda de texto completo.  
   
  En la siguiente tabla se muestran las propiedades relacionadas con los catálogos de texto completo.  
   

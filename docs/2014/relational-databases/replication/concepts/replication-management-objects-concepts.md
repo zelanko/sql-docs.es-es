@@ -22,15 +22,15 @@ helpviewer_keywords:
 - programming [SQL Server replication], RMO
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 caps.latest.revision: 60
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6054a9dba13bf319c04b5e066d009a32c3995fa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b6dd9b98eaca7591cf3fbfa3a7032d3ed0fc066
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199115"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   Replication Management Objects (RMO) es un ensamblado de código administrado que encapsula las funcionalidades de replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. RMO se implementa mediante el espacio de nombres <xref:Microsoft.SqlServer.Replication>.  
@@ -145,7 +145,7 @@ ms.locfileid: "36197419"
     ```  
   
 ## <a name="connecting-to-a-replication-server"></a>Conectar a un servidor de replicación  
- Los objetos de programación de RMO requieren que se realice una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante una instancia de la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>. Esta conexión al servidor se efectúa independientemente de cualquier objeto de programación de RMO. A continuación, se pasa al objeto RMO durante la creación de instancias o mediante la asignación a la <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> propiedad del objeto. De esta manera, se pueden crear y administrar los objetos de programación RMO y las instancias de objeto de conexión por separado y se puede reutilizar un objeto de conexión único con varios objetos de programación RMO. Las reglas siguientes se aplican a las conexiones a un servidor de replicación:  
+ Los objetos de programación de RMO requieren que se realice una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante una instancia de la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>. Esta conexión al servidor se efectúa independientemente de cualquier objeto de programación de RMO. A continuación, se pasa al objeto RMO durante la creación de instancias o por asignación a la <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> propiedad del objeto. De esta manera, se pueden crear y administrar los objetos de programación RMO y las instancias de objeto de conexión por separado y se puede reutilizar un objeto de conexión único con varios objetos de programación RMO. Las reglas siguientes se aplican a las conexiones a un servidor de replicación:  
   
 -   Todas las propiedades de la conexión se definen para un objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> dado.  
   

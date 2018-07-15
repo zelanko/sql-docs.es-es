@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 4: Crear un proyecto de SSIS con SQL Server Data Tools | Documentos de Microsoft'
+title: 'Tarea 4: Crear un proyecto de SSIS con SQL Server Data Tools | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8603ea91-2ec4-40b6-8070-4f824332f5d3
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 03c0a6599990357a255fab3beeb434db3cb5d97d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6fb09370b01a88c23d75b843d588626ed96c9b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198076"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208075"
 ---
 # <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Tarea 4: crear un proyecto de SSIS con SQL Server Data Tools
   En esta tarea, creará un proyecto de SSIS usando **SQL Server Data Tools** para automatizar la limpieza y la búsqueda de coincidencias de los datos de proveedor.  
@@ -45,6 +45,6 @@ ms.locfileid: "36198076"
 7.  Escriba **CleanseAndCurate.dtsx** y presione **ENTRAR**. Asegúrese de que la **extensión** siga siendo **.dtsx**.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 5: Agregar una tarea de flujo de datos](task-5-adding-data-flow-task.md)  
+ [Tarea 5: Agregar una tarea Flujo de datos](task-5-adding-data-flow-task.md)  
   
   

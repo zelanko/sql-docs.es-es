@@ -1,5 +1,5 @@
 ---
-title: Pestaña distinción del clúster (Visor de modelos de minería de datos) de clústeres de secuencia | Documentos de Microsoft
+title: Pestaña distinción del clúster (Visor de modelos de minería de datos) de clústeres de secuencia | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.discrimination.f1
 ms.assetid: 7dd16479-2633-4f4b-83bf-cf55972a2241
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34ae165b87eed53b68ae4e1bd5264f1b500d0f73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4debc43286ffb3fe4f87115ed15e9b4c3f74b06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187152"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>Pestaña Distinción del clúster de agrupación en clústeres de secuencia (Visor de modelos de minería de datos)
   La pestaña  **Distinción del clúster** del **Visor de agrupación en clústeres de secuencia de Microsoft** compara los clústeres seleccionados de un modelo de agrupación en clústeres de secuencia.  
@@ -48,7 +48,7 @@ ms.locfileid: "36197023"
   
  Si no selecciona otro clúster, de forma predeterminada el clúster seleccionado se compara con su complemento, es decir, con todos los casos del modelo que no están en el Clúster 1.  
   
- **Puntuaciones de distinción para \<, clúster 1 > y \<clúster 2 >**  
+ **Puntuaciones de distinción para \<clúster 1 > y \<clúster 2 >**  
  Este gráfico proporciona una comparación detallada de los clústeres seleccionados. En general, un modelo de agrupación en clústeres raramente asigna estados o valores exclusivamente a un único clúster. Por consiguiente, el visor solo indica que un determinado atributo o estado *favorece* un determinado clúster.  
   
  En general, algún clúster podría contener más de un estado: por ejemplo, un estado común podría ser la compra de una Botella de agua y de un Portabotellas secuencialmente. Sin embargo, la secuencia se podría encontrar en otros clústeres que tengan características de definición más importantes. Por ejemplo, otro clúster podría estar caracterizado más firmemente por unos tiempos de transacción muy cortos, y un análisis revelaría que los elementos [Water Bottle y Water] normalmente se agruparían en este clúster, pero no siempre.  
@@ -57,10 +57,10 @@ ms.locfileid: "36197023"
 |-----------|-----------------|  
 |**Variables**|Un atributo del modelo de minería de datos.|  
 |**Valores**|Un estado del atributo que se incluye en **Variables**.|  
-|**Favorece \<, clúster 1 >**|Contiene una barra sombreada que indica con qué intensidad el atributo y el estado se incluyen en **Variables** y **Valor** a favor del clúster seleccionado en **Clúster 1**.|  
+|**Favorece \<clúster 1 >**|Contiene una barra sombreada que indica con qué intensidad el atributo y el estado se incluyen en **Variables** y **Valor** a favor del clúster seleccionado en **Clúster 1**.|  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   

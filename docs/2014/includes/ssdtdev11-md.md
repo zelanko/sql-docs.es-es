@@ -1,1 +1,1 @@
-Herramientas de datos SQL Server \- Business Intelligence para Visual Studio 2012
+SQL Server Data Tools \- Business Intelligence para Visual Studio 2012

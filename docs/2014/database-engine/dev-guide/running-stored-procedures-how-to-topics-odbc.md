@@ -1,5 +1,5 @@
 ---
-title: Ejecutar temas de procedimientos almacenados (ODBC) | Documentos de Microsoft
+title: Temas de procedimientos almacenados (ODBC) de ejecución | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - stored procedures [ODBC], running
 ms.assetid: c2220182-a23d-4475-b353-77a77ab613d6
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0f2c8e56f629446d0e89f97d334cfffb121c0d0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1629ddec83036180c315bc53a83799044bd8d2c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297005"
 ---
 # <a name="running-stored-procedures-how-to-topics-odbc"></a>Temas de procedimientos de ejecución de procedimientos almacenados (ODBC)
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite ejecutar los procedimientos almacenados como procedimientos almacenados remotos. La ejecución de un procedimiento almacenado como un procedimiento almacenado remoto permite al controlador y al servidor optimizar el rendimiento de la ejecución del procedimiento.  

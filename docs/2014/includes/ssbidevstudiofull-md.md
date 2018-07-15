@@ -1,1 +1,1 @@
-Herramientas de datos SQL Server \(SSDT\)
+SQL Server Data Tools \(SSDT\)

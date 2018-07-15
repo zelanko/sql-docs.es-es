@@ -1,5 +1,5 @@
 ---
-title: 'Opciones (página de XML:Tabs: Editor de texto) | Documentos de Microsoft'
+title: 'Opciones (página XML:Tabs: Editor de texto) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Tabs
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb41fb44ad1f820623ab3db96b1bf6108fd580a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2843acbc8935d8bd9f505a9265c704a342ddee3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324925"
 ---
-# <a name="options-text-editorxmltabs-page"></a>Opciones (página de XML:Tabs: Editor de texto)
+# <a name="options-text-editorxmltabs-page"></a>Opciones (página XML:Tabs: Editor de texto)
   Este cuadro de diálogo permite cambiar el comportamiento del tabulador del Editor XML, que se usa para editar documentos XML. Para mostrar estas opciones de configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda la carpeta **Editor de texto** , expanda la subcarpeta **XML** y, a continuación, haga clic en **Tabulaciones**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Establecer opciones en varias ubicaciones  
@@ -33,7 +33,7 @@ ms.locfileid: "36105665"
  **Ninguno**  
  Cuando se selecciona esta opción, no se aplica ninguna sangría a la nueva línea que se crea al presionar ENTRAR. El cursor se coloca en la primera columna de la nueva línea.  
   
- **bloque**  
+ **Bloque**  
  Cuando se selecciona esta opción, se aplica una sangría de forma automática a la nueva línea que se crea al presionar ENTRAR, a la misma distancia que la línea anterior.  
   
  **Inteligente**  

@@ -1,12 +1,11 @@
 ---
-title: Acceso a datos desde objetos de base de datos CLR | Documentos de Microsoft
+title: Acceso a datos desde objetos de base de datos CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], data access
@@ -26,16 +25,16 @@ caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1ff4b57fc7557fd2fd339e08b1529605d505cd44
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 590c5ec05efbb59c59cf307d98e589b42d69da47
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701846"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357677"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Acceso a datos de objetos de base de datos de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Una rutina de common language runtime (CLR) puede obtener acceso fácilmente a los datos almacenados en la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en que se ejecuta, así como los datos almacenados en instancias remotas. El contexto del usuario en el que se ejecuta el código, determina los datos concretos a los que la rutina puede tener acceso. Tener acceso a datos desde un objeto de base de datos CLR mediante el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], también denominada **SqlClient**. Éste es el mismo proveedor que usan los programadores con acceso a los datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde aplicaciones cliente administradas y de nivel medio. Por este motivo, puede aprovechar sus conocimientos de ADO.NET y **SqlClient** en aplicaciones cliente y de nivel intermedio.  
+  Una rutina de common language runtime (CLR) puede acceder fácilmente a los datos almacenados en la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en que se ejecuta, así como los datos almacenados en instancias remotas. El contexto del usuario en el que se ejecuta el código, determina los datos concretos a los que la rutina puede tener acceso. Acceso a datos desde dentro de un objeto de base de datos CLR mediante el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], también conocida como **SqlClient**. Éste es el mismo proveedor que usan los programadores con acceso a los datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde aplicaciones cliente administradas y de nivel medio. Por este motivo, puede aprovechar sus conocimientos de ADO.NET y **SqlClient** en aplicaciones cliente y el nivel intermedio.  
   
 > [!NOTE]  
 >  De forma predeterminada, los métodos de tipo definido por el usuario y funciones definidas por el usuario no pueden tener acceso a datos. Debe establecer el **DataAccess** propiedad de **SqlMethodAttribute** o **SqlFunctionAttribute** a **DataAccessKind.Read** para habilitar acceso a los datos de solo lectura de los métodos de tipo definido por el usuario (UDT) o funciones definidas por el usuario. Las operaciones de modificación de datos o las funciones definidas por el usuario no se permiten desde los UDT y, si se intentan producen excepciones en tiempo de ejecución.  
@@ -51,12 +50,12 @@ ms.locfileid: "35701846"
  Describe la suplantación de conexiones y las credenciales de conexión.  
   
  [Extensiones específicas en proceso de SQL Server a ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
- Describe la concretos en proceso **SqlPipe**, **SqlContext**, **SqlTriggerContext**, y **SqlDataRecord** objetos.  
+ Describe las específicas en proceso **SqlPipe**, **SqlContext**, **SqlTriggerContext**, y **SqlDataRecord** objetos.  
   
  [Integración CLR y transacciones](../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
  Describe cómo se integra el nuevo marco de transacciones que se proporciona en el espacio de nombres System.Transactions con ADO.NET y con la integración CLR de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Serialización XML de objetos de base de datos CLR](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)  
+ [Serialización XML de objetos de base de datos de CLR](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)  
  Explica cómo habilitar escenarios de serialización XML de objetos de base de datos de CLR en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
   

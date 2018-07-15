@@ -1,25 +1,25 @@
 ---
-title: Obtener ayuda (SQL Server 2014) | Documentos de Microsoft
+title: Obtener ayuda (SQL Server 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - finding Help topics [SQL Server]
 ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5697ee9de8311c591bd71a87e8f3361a28b2de04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 44dfb789b8caa90413106655aefb635d0ba7c3db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223666"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Obtener ayuda (SQL Server 2014)
   Hay tres fuentes principales de información de [!INCLUDE[msCoName](../includes/msconame-md.md)] acerca de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -33,7 +33,7 @@ ms.locfileid: "36196717"
  Si no encuentra la información que está buscando en estas fuentes, puede publicar preguntas en los grupos de noticias y foros de la comunidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o abrir un caso de soporte con el servicio de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Obtener ayuda acerca de SQL Server](../../2014/getting-started/getting-sql-server-assistance.md)  
+ [Obtener ayuda sobre SQL Server](../../2014/getting-started/getting-sql-server-assistance.md)  
  Contiene vínculos a las principales fuentes de información acerca de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. El tema también contiene vínculos a sitios de soporte técnico.  
   
  [Accesibilidad para personas con discapacidades](../../2014/getting-started/accessibility-for-people-with-disabilities.md)  

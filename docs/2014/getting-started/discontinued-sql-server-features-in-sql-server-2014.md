@@ -1,5 +1,5 @@
 ---
-title: No incluye características de SQL Server en SQL Server 2014 | Documentos de Microsoft
+title: No incluye características de SQL Server en SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b842b9a3a98dd69d04f76ce26ccc84d6ec008822
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 99223e87f7d4488783ad76b355f38249d51a82af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322755"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Características de SQL Server no disponibles en SQL Server 2014
   En este tema se describen las características que ya no están disponibles tras actualizar a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -44,7 +44,7 @@ ms.locfileid: "36106178"
 ## <a name="discontinued-features-in-sql-server-2008"></a>Características de SQL Server no incluidas en SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>SQL-DMO no está disponible desde la instalación de SQL Server Express  
- SQL-DMO para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ha quitado de [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Le recomendamos que modifique las aplicaciones que actualmente utilicen esta característica tan pronto como le sea posible. Si debe utilizar SQL-DMO para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, instale los componentes de compatibilidad con versiones anteriores de la [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] feature pack desde de la [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=51230). Use Objetos de administración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SMO) en nuevos trabajos de desarrollo.  
+ SQL-DMO para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ha quitado de [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Le recomendamos que modifique las aplicaciones que actualmente utilicen esta característica tan pronto como le sea posible. Si debe utilizar SQL-DMO para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, instale los componentes de compatibilidad con versiones anteriores el [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] feature pack desde de la [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=51230). Use Objetos de administración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SMO) en nuevos trabajos de desarrollo.  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Opción no incluida para Asistente de Web  
  La opción `sp_configure` para habilitar el Asistente de Web se ha quitado de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Se recomienda utilizar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en su lugar.  
@@ -52,15 +52,15 @@ ms.locfileid: "36106178"
 ### <a name="surface-area-configuration-tool"></a>herramienta de configuración de área expuesta  
  La herramienta de configuración de área expuesta ya no se incluye en [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. En la tabla siguiente se muestra lo que se puede utilizar para configurar valores, opciones y características de componentes en esta versión.  
   
-|Configuración de sustitución y características de los componentes|Cómo se configura|  
+|Configuración de sustitución y las características del componente|Cómo se configura|  
 |-------------------------------------------------|----------------------|  
 |Protocolos, conexiones y opciones de inicio|Use el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |Características del [!INCLUDE[ssDE](../includes/ssde-md.md)]|Utilice la administración basada en directivas, la configuración de propiedades de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o sp_Configure.|  
 |Características del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Utilice la configuración de propiedades de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Propiedad Enableintegratedsecurity|Utilice la configuración de propiedades de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -"Eventos de programación y entrega de informes" y "Acceso HTTP y servicios Web"|Modifique el archivo de configuración RSReportServer.config|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -"Eventos de programación y entrega de informes" y "Acceso HTTP y servicio Web"|Modifique el archivo de configuración RSReportServer.config|  
 |Opciones de línea de comandos|No existe compatibilidad en esta versión.|  
-|SOAP y extremos de [!INCLUDE[ssSB](../includes/sssb-md.md)]|Use [CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql)y [sobre ALTER ENDPOINT](/sql/t-sql/statements/alter-endpoint-transact-sql).|  
+|SOAP y extremos de [!INCLUDE[ssSB](../includes/sssb-md.md)]|Use [CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql)y [ALTER ENDPOINT](/sql/t-sql/statements/alter-endpoint-transact-sql).|  
   
 ### <a name="discontinued-command-prompt-parameters-for-sql-server-setup"></a>Parámetros del símbolo del sistema no incluidos para el programa de instalación de SQL Server  
  En la tabla siguiente se muestran los parámetros del símbolo del sistema de las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que no se admiten en [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
@@ -80,9 +80,9 @@ ms.locfileid: "36106178"
 |UPGRADE|/ACTION=Upgrade y /FEATURES|  
 |USESYSDB|Sin equivalencia en esta versión.|  
   
- <sup>1</sup>estos parámetros son válidos únicamente para la instalación.  
+ <sup>1</sup>estos parámetros son válidos para la instalación.  
   
- <sup>2</sup>iniciando [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], especifique/Action = EditionUpgrade, para actualizar una edición existente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a una edición diferente de cualquier momento sin utilizar el medio de instalación original. Para obtener más información acerca de las actualizaciones de edición y versión compatibles, vea [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+ <sup>2</sup>iniciando [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], especifique/Action = EditionUpgrade para actualizar una edición existente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a una edición diferente de cualquier momento sin usar los medios de instalación original. Para obtener más información acerca de las actualizaciones de edición y versión compatibles, vea [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
  Para obtener más información, vea [Instalar SQL Server 2014 desde el símbolo del sistema](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

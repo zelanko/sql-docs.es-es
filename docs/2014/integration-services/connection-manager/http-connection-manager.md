@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTTP connection manager
 - Web site connections [Integration Services]
@@ -19,20 +19,20 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d1b2cd536d08df8499e42291fab7470c608fea6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02df4c5dff88988bd6a233208646e9eb9a7f0e2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314455"
 ---
 # <a name="http-connection-manager"></a>HTTP, administrador de conexiones
   Una conexión HTTP habilita a un paquete para obtener acceso a un servidor web mediante HTTP para enviar o recibir archivos. La tarea Servicio web que incluye [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa este administrador de conexiones.  
   
  Cuando agrega un administrador de conexiones HTTP a un paquete, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un administrador de conexiones que se resuelve como una conexión HTTP en tiempo de ejecución, establece las propiedades del administrador de conexiones y agrega el administrador de conexiones a la colección `Connections` del paquete.  
   
- El `ConnectionManagerType` propiedad del Administrador de conexiones está establecida en `HTTP.`  
+ El `ConnectionManagerType` propiedad del Administrador de conexiones se establece en `HTTP.`  
   
  Puede configurar el administrador de conexiones HTTP de las maneras siguientes:  
   

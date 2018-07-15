@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB QueryInterface event class
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0ec866dba3009e9c660710ce65b9d3a202b6bc19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4a6fcacac48a6f32cbdd7744566400936decc51e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223445"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface, clase de eventos
   La clase de evento **OLEDB QueryInterface** se produce cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emite una llamada **QueryInterface** de OLE DB para consultas distribuidas y procedimientos almacenados remotos. Incluya esta clase de evento en los seguimientos que supervisan problemas asociados a consultas distribuidas y procedimientos almacenados remotos.  
@@ -55,7 +55,7 @@ ms.locfileid: "36198448"
 |NTUserName|`nvarchar`|Nombre del usuario de Windows.|6|Sí|  
 |ProviderName|`nvarchar`|Nombre del proveedor OLE DB.|46|Sí|  
 |IdSolicitud|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, `SessionLoginName` mostrará inicioDeSesión1 y `LoginName` mostrará inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
+|SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, `SessionLoginName` muestra inicioDeSesión1 y `LoginName` muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|`datetime`|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |TextData|`nvarchar`|Parámetros enviados y recibidos en la llamada OLE DB.|1|no|  

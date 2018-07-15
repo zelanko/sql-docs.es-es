@@ -1,5 +1,5 @@
 ---
-title: Elemento OrderBy (ASSL) | Documentos de Microsoft
+title: Elemento OrderBy (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OrderBy element
 ms.assetid: d7a0564b-430e-44eb-913a-fe1f98917d0f
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 18fa2af79937c7f927413f0e601b6969bbfeb3bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2151ac4cdcaa095d663682c936158557c1fea2be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291321"
 ---
 # <a name="orderby-element-assl"></a>Elemento OrderBy (ASSL)
   Describe cómo ordenar los miembros incluidos en el atributo.  
@@ -68,7 +68,7 @@ ms.locfileid: "36113252"
 |-----------|-----------------|  
 |*Nombre*|Se ordena por el nombre de miembro.|  
 |*Key*|Se ordena por la clave de miembro.|  
-|*AttributeKey*|Se ordena por la clave de miembro del atributo especificado en el [OrderByAttributeID](id-element-assl.md) elemento de `DimensionAttribute`.|  
+|*AttributeKey*|Ordena por la clave de miembro del atributo especificado en el [OrderByAttributeID](id-element-assl.md) elemento de `DimensionAttribute`.|  
 |*AttributeName*|Se ordena por el nombre de miembro del atributo especificada en el elemento `OrderByAttributeID` de `DimensionAttribute`.|  
   
  La enumeración que corresponde a los valores permitidos para `OrderBy` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.OrderBy>.  

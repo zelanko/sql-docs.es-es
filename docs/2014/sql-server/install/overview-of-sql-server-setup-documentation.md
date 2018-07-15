@@ -1,5 +1,5 @@
 ---
-title: Información general sobre la documentación de instalación SQL Server | Documentos de Microsoft
+title: Información general de la documentación del programa de instalación SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2620439a-f9d3-4b3c-9968-48f60b4bb9a5
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ff6c201df28ed49922d54e0cb04c7ebff813bbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c289b1355418d7c611536600f34e5e2d70255bc6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197307"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275891"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>Información general de la documentación de instalación de SQL Server
   La documentación de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está disponible en el medio de instalación y en línea.  
@@ -34,7 +34,7 @@ ms.locfileid: "36197307"
   
      Describe cómo preparar una instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   [Instalar a SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
+-   [Instalar SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
   
      Describe las opciones para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

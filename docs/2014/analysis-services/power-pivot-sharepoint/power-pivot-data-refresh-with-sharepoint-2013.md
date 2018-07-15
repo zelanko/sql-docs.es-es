@@ -1,5 +1,5 @@
 ---
-title: Actualización de datos de PowerPivot con SharePoint 2013 | Documentos de Microsoft
+title: Actualización de datos PowerPivot con SharePoint 2013 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca3c358b6cd8d371a0b93b33ab449998a38d24b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa5a4ddce8c51b3e360c4fc4f243b90b310fd07f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280781"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>Actualización de datos PowerPivot con SharePoint 2013
   El diseño de la actualización de modelos de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de SharePoint 2013 emplea Excel Services como componente principal para cargar y actualizar modelos de datos en una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecuta en modo de SharePoint. El servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ejecuta fuera de la granja de servidores de SharePoint.  
   
- Arquitectura de la actualización de los datos anteriores se basa exclusivamente en el servicio de sistema de PowerPivot para cargar y actualizar modelos de datos en un modo de SharePoint [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia. La instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se ejecutaba localmente en el servidor de aplicaciones de PowerPivot. La nueva arquitectura presenta también un nuevo método para mantener la información de programación como metadatos datos del elemento de libro en la biblioteca de documentos. La arquitectura de SharePoint 2013 Excel Services admite tanto la **actualización de datos interactiva** como la **actualización de datos programada**.  
+ Arquitectura de la actualización de los datos anteriores basaba exclusivamente en el servicio de sistema de PowerPivot para cargar y actualizar modelos de datos en un modo de SharePoint [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia. La instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se ejecutaba localmente en el servidor de aplicaciones de PowerPivot. La nueva arquitectura presenta también un nuevo método para mantener la información de programación como metadatos datos del elemento de libro en la biblioteca de documentos. La arquitectura de SharePoint 2013 Excel Services admite tanto la **actualización de datos interactiva** como la **actualización de datos programada**.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36113481"
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **Puntos clave de interés de la actualización de datos programada:**  
   
--   Necesita la implementación del complemento PowerPivot para SharePoint. Para obtener más información, consulte [instalar o desinstalar PowerPivot para SharePoint Add- &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   Necesita la implementación del complemento PowerPivot para SharePoint. Para obtener más información, consulte [instalar o desinstalar PowerPivot para SharePoint Add-in &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 -   Un usuario configura una programación de actualización para un libro. En el momento programado, el servicio de sistema de PowerPivot envía una solicitud a Excel Services para:  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36113481"
   
 -   **Credenciales:** usa las credenciales almacenadas. No usa la identidad del usuario actual.  
   
--   **Libros admitidos:** libros creados mediante el [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] complemento PowerPivot para Excel 2010 o con Excel 2013. Los libros creados en Excel 2010 con el [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] complemento de PowerPivot no se admiten. Actualizar el libro como mínimo al [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] formato de PowerPivot. Para obtener más información sobre actualizaciones de libros, vea [Actualizar libros y actualización de datos programada &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+-   **Libros admitidos:** libros creados mediante el [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] complemento PowerPivot para Excel 2010 o con Excel 2013. Los libros creados en Excel 2010 con el [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] complemento PowerPivot no se admiten. Actualizar el libro como mínimo al [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] formato de PowerPivot. Para obtener más información sobre actualizaciones de libros, vea [Actualizar libros y actualización de datos programada &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  Para mostrar la página **Administrar actualización de datos** :  
   
@@ -167,10 +167,10 @@ ms.locfileid: "36113481"
   
     -   Volver a guardar el libro en la base de datos de contenido.  
   
- ![administrar el menú contextual de la actualización de datos](../media/as-manage-datarefresh-sharepoint2013.gif "administrar menú contextual de la actualización de datos")  
+ ![menú contextual de la actualización de datos administrar](../media/as-manage-datarefresh-sharepoint2013.gif "administrar menú contextual de la actualización de datos")  
   
 > [!TIP]  
->  Para obtener información sobre cómo actualizar libros desde SharePoint online, consulte [actualizar libros de Excel con modelos de PowerPivot incrustados desde SharePoint Online (notas del producto)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx).  
+>  Para obtener información sobre actualizar libros desde SharePoint online, consulte [actualizar libros de Excel con modelos de PowerPivot incrustados desde SharePoint Online (notas)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx).  
   
 ##  <a name="bkmk_refresh_architecture"></a> Arquitectura de actualización de datos programada de SharePoint 2013  
  En la ilustración siguiente se resume la arquitectura de actualización de datos de SharePoint 2013 y SQL Server 2012 SP1.  
@@ -198,7 +198,7 @@ ms.locfileid: "36113481"
   
 2.  En la parte inferior del panel, vea **Actualización de datos: actividad reciente** y **Actualización de datos: errores recientes**.  
   
-3.  Para obtener más información sobre datos de uso y cómo habilitarlos, vea [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+3.  Para obtener más información sobre los datos de uso y cómo habilitarlo, consulte [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **Datos del registro de diagnóstico:** puede ver datos de registro de diagnóstico de SharePoint relacionados con la actualización de datos. En primer lugar, compruebe el registro de diagnósticos del **Servicio PowerPivot** en la página **Supervisión** de Administración central de SharePoint. Quizás necesite aumentar el nivel de registro para que se registre el "evento menos crítico". Por ejemplo, establezca temporalmente el valor en **Detallado** y vuelva a ejecutar las operaciones de actualización de datos.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "36113481"
   
 -   La categoría de **Actualización de datos**.  
   
- Examine **Configurar registro de diagnósticos**. Para obtener más información, consulte [configurar y ver archivos de registro de SharePoint y el registro de diagnósticos &#40;PowerPivot para SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
+ Examine **Configurar registro de diagnósticos**. Para obtener más información, consulte [configurar y ver archivos de registro de SharePoint y el registro de diagnóstico &#40;PowerPivot para SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 ##  <a name="datarefresh_additional_authentication"></a> Otras consideraciones sobre la autenticación  
  Los valores del cuadro de diálogo **Configuración de autenticación de los Servicios de Excel** en Excel 2013 determinan la identidad de Windows que Excel Services y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] emplean para la actualización de datos.  
@@ -236,10 +236,10 @@ ms.locfileid: "36113481"
 ##  <a name="bkmk_moreinformation"></a> Más información  
  [Solución de problemas de actualización de datos PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- [Excel Services en SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15)).  
+ [Servicios de Excel en SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15)).  
   
 ## <a name="see-also"></a>Vea también  
  [Actualizar libros y actualización de datos programada &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
- [PowerPivot para SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [Instalación de PowerPivot para SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

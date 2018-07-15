@@ -5,30 +5,29 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], key phrase queries
 ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 28696617406fd5f3776181a79cd8fb84bec04307
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3a9cb8c4903580c4b5879b431b1be6de1b77f97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234965"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Buscar frases clave en documentos con la búsqueda semántica
   Describe cómo buscar las frases clave en documentos o columnas de texto configurados para la indización semántica estadística.  
   
 ##  <a name="BasicsQueryKey"></a> Buscar frases clave en documentos  
   
-###  <a name="howtofind"></a> Cómo: buscar las frases clave en documentos con SEMANTICKEYPHRASETABLE  
+###  <a name="howtofind"></a> Cómo: buscar frases clave en documentos con SEMANTICKEYPHRASETABLE  
  Para identificar las frases clave de documentos específicos o para identificar documentos que contengan frases clave específicas, consulte la función [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql).  
   
  SEMANTICKEYPHRASETABLE devuelve una tabla con cero, una o más filas para las frases clave asociadas con las columnas de la tabla especificada. Se puede hacer referencia a esta función de conjunto de filas en la cláusula FROM de una instrucción SELECT como si fuese un nombre de tabla normal.  
@@ -41,7 +40,7 @@ ms.locfileid: "36114217"
 > [!IMPORTANT]  
 >  Las columnas de destino deben tener habilitada la indización de texto completo y semántica.  
   
-###  <a name="HowToTopPhrases"></a> Ejemplo 1: Buscar las frases clave principales de un documento específico  
+###  <a name="HowToTopPhrases"></a> Ejemplo 1: Buscar las frases clave principales de un documento determinado  
  En el ejemplo siguiente se recuperan las 10 frases clave principales del documento especificado por la variable @DocumentId en la columna Document de la tabla Production.Document de la base de datos de ejemplo AdventureWorks. La variable @DocumentId representa un valor de la columna de clave del índice de texto completo.  
   
 ```tsql  

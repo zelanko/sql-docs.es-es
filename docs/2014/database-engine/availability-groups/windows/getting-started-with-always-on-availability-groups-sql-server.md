@@ -1,28 +1,27 @@
 ---
-title: Introducción a los grupos de disponibilidad AlwaysOn (SQL Server) | Documentos de Microsoft
+title: Introducción a los grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], about
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 caps.latest.revision: 51
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c4dff6389577217b8b7a6d1cb447507c27f72ff5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3700a2e2d7b96a572fd8c72210a5d287ca56cf6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237645"
 ---
 # <a name="getting-started-with-alwayson-availability-groups-sql-server"></a>Introducción a los grupos de disponibilidad de AlwaysOn (SQL Server)
   En este tema se describen los pasos para las instancias de configuración de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para admitir [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y crear, administrar, y supervisar la disponibilidad de grupo.  
@@ -33,7 +32,7 @@ ms.locfileid: "36196531"
 ###  <a name="RecommendedReading"></a> Lecturas recomendadas  
  Antes de crear el primer grupo de disponibilidad, recomendamos leer los siguientes temas:  
   
--   [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+-   [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
 -   [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
@@ -67,7 +66,7 @@ ms.locfileid: "36196531"
 |----------|----------|  
 |Modificar la [directiva de conmutación por error flexible](flexible-automatic-failover-policy-availability-group.md) del grupo de disponibilidad para controlar las condiciones que producen una conmutación por error automática. Esta directiva es pertinente cuando la conmutación automática por error es posible.|[Configurar la directiva flexible de conmutación por error de un grupo de disponibilidad](configure-flexible-automatic-failover-policy.md)|  
 |Realizar una conmutación por error manual planeada o una conmutación por error manual forzada (con posible pérdida de datos), denominada normalmente *conmutación por error forzada*. Para más información, vea [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).|[Realizar una conmutación manual por error planeada](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [Realizar una conmutación manual por error forzada](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
-|Usar un conjunto de directivas definidas previamente para ver el estado de un grupo de disponibilidad y sus réplicas y bases de datos.|[Usar la administración basada en directivas para ver el estado de los grupos de disponibilidad](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Usar el panel de grupo AlwaysOn](use-the-always-on-dashboard-sql-server-management-studio.md)|  
+|Usar un conjunto de directivas definidas previamente para ver el estado de un grupo de disponibilidad y sus réplicas y bases de datos.|[Usar la administración basada en directivas para ver el estado de los grupos de disponibilidad](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Utilice el panel de grupo AlwaysOn](use-the-always-on-dashboard-sql-server-management-studio.md)|  
 |Agregar o quitar una réplica secundaria.|[Agregar una réplica secundaria](add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [Quitar una réplica secundaria](remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
 |Suspender o reanudar una base de datos de disponibilidad. Suspender una base de datos secundaria la mantiene en su momento actual en el tiempo hasta que se reanuda.|[Suspender una base de datos](suspend-an-availability-database-sql-server.md)<br /><br /> [Reanudar una base de datos](resume-an-availability-database-sql-server.md)|  
 |Agregar o quitar una base de datos.|[Agregar una base de datos](availability-group-add-a-database.md)<br /><br /> [Quitar una base de datos secundaria](remove-a-secondary-database-from-an-availability-group-sql-server.md)<br /><br /> [Quitar una base de datos principal](remove-a-primary-database-from-an-availability-group-sql-server.md)|  
@@ -100,11 +99,11 @@ ms.locfileid: "36196531"
   
 ## <a name="see-also"></a>Vea también  
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md)   
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Configuración de una instancia del servidor para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)   
  [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [Información general sobre instrucciones Transact-SQL para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
- [Información general sobre los Cmdlets de PowerShell para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [Introducción a los PowerShell Cmdlets para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   

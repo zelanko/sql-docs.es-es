@@ -1,5 +1,5 @@
 ---
-title: Definir un cubo | Documentos de Microsoft
+title: Definir un cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: ee7de0dd605b8a6083a6541daf7942cf93ab5916
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9de74db589624ecbf16785ca108dbdd6c5f9ca87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323295"
 ---
 # <a name="defining-a-cube"></a>Definir un cubo
   El Asistente para cubos le ayuda a definir los grupos de medida y las dimensiones de un cubo. En la tarea siguiente, usará el Asistente para cubos para generar un cubo.  
@@ -60,7 +60,7 @@ ms.locfileid: "36106452"
   
 11. Haga clic en **Siguiente**.  
   
-12. En el **finalización del Asistente para** página, cambie el nombre del cubo para `Analysis Services Tutorial`. En el panel de vista previa, puede ver el grupo de medida **InternetSales** y sus medidas. También puede ver las dimensiones **Date**, **Customer** y **Product** .  
+12. En el **completando el Asistente para** página, cambie el nombre del cubo para `Analysis Services Tutorial`. En el panel de vista previa, puede ver el grupo de medida **InternetSales** y sus medidas. También puede ver las dimensiones **Date**, **Customer** y **Product** .  
   
 13. Haga clic en **Finalizar** para completar el asistente.  
   

@@ -1,5 +1,5 @@
 ---
-title: Copia de seguridad y restaurar aplicaciones de servicio de SharePoint de servicios de informes | Documentos de Microsoft
+title: Copia de seguridad y restauración de Reporting Services SharePoint Service aplicaciones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 504afebfbe59ef6717bb60e8220600256419f785
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ad72399371d662ee8842dd7f9bf72ce5a72b6b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212575"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Copias de seguridad y restauración de aplicaciones de servicio de SharePoint para Reporting Services
   Este tema se describe cómo hacer una copia de seguridad y restaurar una aplicación de servicio de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] mediante Administración central de SharePoint o PowerShell. El tema contiene:  
@@ -41,7 +41,7 @@ ms.locfileid: "36114209"
   
 -   Realice una copia de seguridad de las claves de cifrado antes de iniciar la copia de seguridad de SharePoint. Si no hace una copia de seguridad de las claves de cifrado, no podrá acceder a los datos cifrados después de restaurar la aplicación de servicio. Tendrá que eliminar los datos cifrados.  
   
--   Compruebe si su [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicación de servicio utiliza UEA o Windows la autenticación para el acceso a la base de datos. Si es así, compruebe cuáles son las credenciales correctas para poder configurar correctamente la aplicación de servicio después del proceso de restauración.  
+-   Compruebe si su [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicación de servicio utiliza UEA o Windows autenticación para el acceso a la base de datos. Si es así, compruebe cuáles son las credenciales correctas para poder configurar correctamente la aplicación de servicio después del proceso de restauración.  
   
 -   Compruebe que el archivo de registro de copia de seguridad de SharePoint se crea en la misma carpeta que el archivo de copia de seguridad. El archivo se denomina normalmente **spbackup.log**  
   
@@ -114,7 +114,7 @@ ms.locfileid: "36114209"
   
 3.  Seleccione la copia de seguridad de la aplicación de servicio en la lista **Componente principal** y después haga clic en **Siguiente**.  
   
-4.  Seleccione el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicación y, a continuación, haga clic en **siguiente**.  
+4.  Seleccione su [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicación y, a continuación, haga clic en **siguiente**.  
   
 5.  En la sección **Nombres y contraseñas de inicio de sesión** , escriba la contraseña del nombre de inicio de sesión. El cuadro de nombre de inicio de sesión debe rellenarse con el inicio de sesión que usaba la aplicación de servicio antes de que se realizara la copia de seguridad.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36114209"
  [Restauración de una aplicación de servicio (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx).  
   
 ### <a name="restore-the-encryption-keys-using-central-administration"></a>Restauración de las claves de cifrado mediante Administración central  
- Para obtener información acerca de cómo restaurar la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] claves de cifrado, vea la sección "Claves de cifrado" de [administrar una aplicación de servicio de SharePoint de Reporting Services](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
+ Para obtener información acerca de cómo restaurar la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] claves de cifrado, vea la sección "Claves de cifrado" de [administrar una aplicación de servicio de Reporting Services SharePoint](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ### <a name="configure-the-execution-account-and-database-authentication"></a>Configurar la cuenta de ejecución y la autenticación de la base de datos  
  **Cuenta de ejecución:** si la aplicación de servicio utilizaba una cuenta de ejecución, realice el procedimiento siguiente para configurarla:  

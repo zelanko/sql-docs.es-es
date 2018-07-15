@@ -1,12 +1,11 @@
 ---
-title: Información general de la integración CLR | Documentos de Microsoft
+title: Información general de la integración CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], about CLR integration
@@ -21,14 +20,14 @@ caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3e1be655f6f1da49e9c432243e46d34e4d0412ec
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8f4fb83b806fe03bf1b68e7f9d70beb7ce876f7e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696786"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351347"
 ---
-# <a name="clr-integration---overview"></a>Integración de CLR - información general
+# <a name="clr-integration---overview"></a>Integración de CLR: información general
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Common Language Runtime (CLR) es el núcleo de Microsoft .NET Framework y proporciona el entorno de ejecución de todo el código de .NET Framework. Se hace referencia al código que se ejecuta en CLR como código administrado. CLR proporciona varias funciones y servicios necesarios para la ejecución de programas, que incluyen la compilación Just-In-Time (JIT), la asignación y administración de memoria, el forzado de la seguridad de tipos, el control de excepciones, la administración de subprocesos y la seguridad.  Para obtener información, vea .NET Framework SDK.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "35696786"
  El código administrado es más adecuado que [!INCLUDE[tsql](../../includes/tsql-md.md)] para los cálculos y la lógica de ejecución complicada y presenta una amplia compatibilidad para muchas tareas complejas, como son el tratamiento de cadenas y las expresiones regulares. Con la funcionalidad incluida en la biblioteca de .NET Framework, tiene acceso a miles de clases y rutinas previamente integradas. Se puede tener acceso a éstas con facilidad desde cualquier procedimiento almacenado, desencadenador o función definida por el usuario. La Biblioteca de clases base (BCL) incluye las clases que proporcionan la funcionalidad para la manipulación de cadenas de caracteres, operaciones matemáticas avanzadas, el acceso a archivos, criptografía, etc.  
   
 > [!NOTE]  
->  Mientras muchas de estas clases están disponibles para su uso desde el código CLR en SQL Server, las que no son adecuadas para su uso en el servidor (por ejemplo, las clases de selección de ventana), no están disponibles. Para obtener más información, consulte [bibliotecas de .NET Framework admite](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Mientras muchas de estas clases están disponibles para su uso desde el código CLR en SQL Server, las que no son adecuadas para su uso en el servidor (por ejemplo, las clases de selección de ventana), no están disponibles. Para obtener más información, consulte [admite bibliotecas de .NET Framework](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
  Uno de las ventajas del código administrado es la seguridad de tipos o la garantía de que el código tiene acceso a los tipos solo de maneras bien definidas y permitidas. Antes de que se ejecute el código administrado, CLR comprueba que el código es seguro. Por ejemplo, se comprueba el código para asegurarse de que no se lea ninguna memoria que no se haya escrito previamente. CLR puede ayudar también a asegurarse de que el código no manipula la memoria no administrada.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "35696786"
  Otro factor a la hora de decidirse sobre si se debe utilizar [!INCLUDE[tsql](../../includes/tsql-md.md)] o el código administrado es la ubicación donde desea que resida el código, el equipo servidor o el equipo cliente. [!INCLUDE[tsql](../../includes/tsql-md.md)] y el código administrado se pueden ejecutar en el servidor. Esto sitúa el código y los datos juntos y le permite aprovechar la capacidad de procesamiento del servidor. Por otro lado, quizá prefiera evitar situar las tareas con un consumo de procesador elevado en el servidor de bases de datos. La mayoría de los equipos cliente actuales son muy eficaces y quizá prefiera aprovechar esta capacidad de procesamiento situando cuanto más código sea posible en el cliente. El código administrado se puede ejecutar en un equipo cliente, mientras que [!INCLUDE[tsql](../../includes/tsql-md.md)] no se puede.  
   
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>Elegir entre los procedimientos almacenados extendidos y el código administrado  
- Se pueden crear procedimientos almacenados extendidos para llevar a cabo funcionalidades que no son posibles con los procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los procedimientos almacenados extendidos pueden, sin embargo, poner en peligro la integridad del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mientras que el código administrado, cuya seguridad de tipos se comprueba, no puede. Además, la administración de memoria, la programación de subprocesos y fibras y los servicios de sincronización se integran más plenamente entre el código administrado de CLR y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con la integración CLR, tiene una manera más segura que los procedimientos almacenados extendidos de escribir los procedimientos almacenados necesarios para realizar las tareas que no son posibles en [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obtener más información sobre la integración de CLR y los procedimientos almacenados extendidos, consulte [rendimiento de la integración CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
+ Se pueden crear procedimientos almacenados extendidos para llevar a cabo funcionalidades que no son posibles con los procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los procedimientos almacenados extendidos pueden, sin embargo, poner en peligro la integridad del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mientras que el código administrado, cuya seguridad de tipos se comprueba, no puede. Además, la administración de memoria, la programación de subprocesos y fibras y los servicios de sincronización se integran más plenamente entre el código administrado de CLR y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con la integración CLR, tiene una manera más segura que los procedimientos almacenados extendidos de escribir los procedimientos almacenados necesarios para realizar las tareas que no son posibles en [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obtener más información sobre la integración de CLR y los procedimientos almacenados extendidos, vea [rendimiento de la integración CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Instalar .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   

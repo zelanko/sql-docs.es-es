@@ -1,5 +1,5 @@
 ---
-title: Editor de destino de OLE DB (página Administrador de conexiones) | Documentos de Microsoft
+title: Editor de destino de OLE DB (página Administrador de conexiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.connection.f1
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 caps.latest.revision: 81
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0cead24f56ca904d8d1286dfb7e1dd1b96302291
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 1e6aaff0e415aeaab5e42395a3acd7c0b96a0f00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328075"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Editor de destino de OLE DB (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de OLE DB** para seleccionar la conexión OLE DB del destino. Esta página también permite seleccionar una tabla o vista de la base de datos.  
   
 > [!NOTE]  
->  El `CommandTimeout` propiedad destino de OLE DB no está disponible en la **Editor de destino de OLE DB**, pero se puede establecer mediante el uso de la **Editor avanzado**. Además, ciertas opciones de carga rápida solo están disponibles en el **Editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre el destino de OLE DB en [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
+>  El `CommandTimeout` propiedad del destino OLE DB no está disponible en el **Editor de destino de OLE DB**, pero se puede establecer utilizando la **Editor avanzado**. Además, ciertas opciones de carga rápida solo están disponibles en el **Editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre el destino de OLE DB en [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
   
  Para obtener más información acerca del destino de OLE DB, vea [OLE DB Destination](data-flow/ole-db-destination.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Habilitar una entidad para jerarquías explícitas y colecciones (Master Data Services) | Documentos de Microsoft
+title: Habilitar una entidad para jerarquías explícitas y colecciones (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], enabling for collections
 - entities [Master Data Services], enabling for explicit hierarchies
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c15f62eaebbfe77303004bb2417989ed5320ea11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a300dd4ab0a162c335dc0c0efac548dcb757f11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311925"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>Habilitar una entidad para jerarquías explícitas y colecciones (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], habilite una entidad para las jerarquías y colecciones explícitas de modo que pueda crearlas para la entidad.  
@@ -63,7 +63,7 @@ ms.locfileid: "36105873"
 -   [Crear una colección &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Entidades &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
+ [Las entidades &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
  [Jerarquías explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
  [Colecciones &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   

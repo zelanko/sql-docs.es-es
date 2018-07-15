@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stretch cluster
 - Availability Groups [SQL Server], WSFC clusters
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server]
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b2238da7a6eae3e4374f899d8f7c667bc163f1e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65f8cb55f16372e5b0d70298fc3b3d5bb52ce2a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317555"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Agrupación en clústeres de varias subredes de SQL Server (SQL Server)
   Un clúster de conmutación por error de múltiples subredes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es una configuración donde cada nodo clúster se conecta a una subred diferente o un conjunto de subredes diferente. Estas subredes pueden estar en la misma ubicación o en sitios geográficamente dispersos. A veces se hace referencia a la agrupación en clústeres en sitios geográficamente dispersos como clústeres elásticos. Como no existe ningún almacenamiento compartido al que todos los nodos puedan tener acceso, los datos se deben replicar entre el almacenamiento de datos en las diversas subredes. Con la replicación de datos, hay más de una copia de los datos disponible. Por consiguiente, un clúster de conmutación por error de múltiples subredes proporciona una solución de recuperación ante desastres además de alta disponibilidad.  
@@ -73,7 +72,7 @@ ms.locfileid: "36104634"
 ##  <a name="DNS"></a> Latencia de recuperación de cliente durante conmutaciones por error  
  Una instancia de clúster de conmutación por error de múltiples subredes habilita de forma predeterminada el recurso de clúster RegisterAllProvidersIP para el nombre de red. En una configuración de múltiples subredes, las direcciones IP en línea y sin conexión del nombre red se registra en el servidor DNS. La aplicación cliente recupera a continuación todas las direcciones IP registradas del servidor DNS e intenta la conexión con las direcciones en orden o en paralelo. Esto significa que el tiempo de recuperación de cliente en clústeres de conmutación por error de múltiples subredes deja de depender de las latencias de actualización de DNS. De forma predeterminada, el cliente intenta las direcciones IP en orden. Cuando el cliente utiliza el nuevo parámetro opcional `MultiSubnetFailover=True` en la cadena de conexión, intentará en su lugar las direcciones IP simultáneamente y las conexiones al primer servidor que responda. Esto puede ayudar a reducir al mínimo la latencia de recuperación de cliente cuando se produzcan conmutaciones por error. Para obtener más información, consulte [conectividad de cliente de AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) y [crear o configurar un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- Con bibliotecas de cliente heredadas o proveedores de datos de terceros, no puede usar el `MultiSubnetFailover` parámetro en la cadena de conexión. Para asegurarse de que la aplicación cliente funcione de manera óptima con instancias de conmutación por error de múltiples subredes en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], intente ajustar el tiempo de espera de conexión en la cadena de conexión de cliente en 21 segundos para cada dirección IP adicional. Esto garantiza que el intento de reconexión del cliente no supere el tiempo de espera antes de poder recorrer todas las direcciones IP en la instancia de conmutación por error de múltiples subredes.  
+ Con las bibliotecas de cliente heredado o proveedores de datos de terceros, no puede usar el `MultiSubnetFailover` parámetro en la cadena de conexión. Para asegurarse de que la aplicación cliente funcione de manera óptima con instancias de conmutación por error de múltiples subredes en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], intente ajustar el tiempo de espera de conexión en la cadena de conexión de cliente en 21 segundos para cada dirección IP adicional. Esto garantiza que el intento de reconexión del cliente no supere el tiempo de espera antes de poder recorrer todas las direcciones IP en la instancia de conmutación por error de múltiples subredes.  
   
  El período de tiempo de espera predeterminado de la conexión de cliente para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio y **sqlcmd** es de 15 segundos.  
   

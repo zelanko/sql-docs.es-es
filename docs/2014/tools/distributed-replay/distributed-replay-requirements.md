@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay Requirements | Documentos de Microsoft
+title: Distributed Replay Requirements | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f38f09e4b9c5bcf2d3d6611f4a6d5e8bdc9534d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: bc0ae7de69ac9887e7bb3e75acfc97a1ae9be822
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312735"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
   Antes de utilizar la característica Distributed Replay de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tenga en cuenta los requisitos de productos que se describen en este tema.  
@@ -129,7 +129,7 @@ ms.locfileid: "36106003"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>Requisitos de sistema operativo  
- Los sistemas operativos admitidos para ejecutar la herramienta de administración y los servicios del controlador y el cliente son los mismos que para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre qué sistemas operativos son compatibles con su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la instancia, consulte [requisitos de Hardware y Software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Los sistemas operativos admitidos para ejecutar la herramienta de administración y los servicios del controlador y el cliente son los mismos que para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre qué sistemas operativos se admiten para su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la instancia, vea [requisitos de Hardware y Software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
  Las características de Distributed Replay se admiten en sistemas operativos basados en x86 y en x64. Para los sistemas operativos basados en x64, solo se admite el modo Windows sobre Windows (WOW).  
   

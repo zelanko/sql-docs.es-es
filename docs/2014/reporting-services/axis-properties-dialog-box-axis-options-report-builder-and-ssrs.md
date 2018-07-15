@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Propiedades del eje, opciones del eje (generador de informes y SSRS) | Documentos de Microsoft
+title: Cuadro de diálogo Propiedades del eje, opciones del eje (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 947b985ef25eec47ec8f064c752c5dad49fdf30b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2b769fd686ba2bd32611b073cfe08a71e224d89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315455"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades del eje, Opciones del eje (Generador de informes y SSRS)
-  Seleccione **opciones del eje** en el **Horizontal** o **VerticalAxis propiedades** cuadro de diálogo para definir la apariencia del eje del gráfico especificado. En versiones anteriores de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], el gráfico mostraba todas las etiquetas en el eje X de forma predeterminada. Sin embargo, en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, el gráfico omite las etiquetas para generar una imagen más limpia en el gráfico y evitar las colisiones entre etiquetas. Para más información, vea [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+  Seleccione **opciones del eje** en el **Horizontal** o **propiedades del eje vertical** cuadro de diálogo para definir la apariencia del eje del gráfico especificado. En versiones anteriores de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], el gráfico mostraba todas las etiquetas en el eje X de forma predeterminada. Sin embargo, en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, el gráfico omite las etiquetas para generar una imagen más limpia en el gráfico y evitar las colisiones entre etiquetas. Para más información, vea [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opciones  
  **Habilitar quiebres de escala**  
@@ -69,8 +69,8 @@ ms.locfileid: "36105783"
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Especificar un intervalo de eje &#40;Generador de informes y SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
  [Aplicar formato de fecha o de moneda a las etiquetas de los ejes &#40;Generador de informes y SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Trazar datos en un eje secundario &#40;el generador de informes SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [Trazar datos en un eje secundario &#40;generador de informes y SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Agregar o quitar márgenes de un gráfico de &#40;el generador de informes SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Agregar o quitar márgenes de un gráfico &#40;generador de informes y SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   

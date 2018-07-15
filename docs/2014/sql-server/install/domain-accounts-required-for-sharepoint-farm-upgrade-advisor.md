@@ -1,5 +1,5 @@
 ---
-title: Cuentas de dominio necesarias para la granja de servidores de SharePoint (Asesor de actualizaciones) | Documentos de Microsoft
+title: Cuentas de dominio necesarias para la granja de SharePoint (Asesor de actualizaciones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: fd013ae4f7266604dde798aa76393612cd578bad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 122f0209e7254d558ac5cc3db806d8bb648a849c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251217"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>Cuentas de dominio necesarias para una granja de servidores de SharePoint (Asesor de actualizaciones)
   Los productos de SharePoint que están configurados para un entorno de una granja requieren el uso de cuentas de dominio.  
@@ -39,7 +39,7 @@ ms.locfileid: "36197305"
  "El servidor de informes se está ejecutando en la cuenta de servicio NT AUTHORITY\NETWORK integrada, lo que no se admite en una instalación de granja de SharePoint. Vuelva a configurar el servidor de informes para que se ejecute en una cuenta de dominio."  
   
 ## <a name="corrective-action"></a>Acción correctora  
- Para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y versiones anteriores, utilice el Administrador de configuración de Reporting Services para cambiar la cuenta que está asignada como la cuenta de servicio del servidor de informes.  
+ Para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y versiones anteriores, utilice el Administrador de configuración de Reporting Services para cambiar la cuenta asignada como cuenta de servicio del servidor de informes.  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>Para cambiar la cuenta de servicio del Administrador de configuración  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36197305"
   
 2.  Seleccione **herramientas de configuración**y, a continuación, haga clic en **Reporting Services Configuration Manager**.  
   
-3.  En el Administrador de configuración, seleccione la **cuenta de servicio** ficha.  
+3.  En el Administrador de configuración, seleccione el **cuenta de servicio** ficha.  
   
 4.  Seleccione **usar otra cuenta** y escriba las credenciales de una cuenta de dominio.  
   

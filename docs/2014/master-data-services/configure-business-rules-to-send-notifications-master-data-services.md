@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], configuring notifications
 - e-mail [Master Data Services], configuring business rules
 - notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2d0c5d66a15ba476806df39792206c47a31bb26d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: c20519f4db37f398fefed79042cc2d3ecf5ba631
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326135"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Configurar reglas de negocios para enviar notificaciones (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], configure reglas de negocios para enviar notificaciones cuando desee notificar a los usuarios los cambios de los valores de los atributos.  
@@ -51,7 +51,7 @@ ms.locfileid: "36105398"
   
 4.  En la lista **Entidad** , seleccione una entidad.  
   
-5.  Desde el **tipo de miembro** , seleccione un tipo de miembro.  
+5.  Desde el **tipo de miembro** lista, seleccione un tipo de miembro.  
   
 6.  En la lista **Atributo** , seleccione un atributo o deje el valor predeterminado de **Todos**.  
   

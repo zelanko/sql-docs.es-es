@@ -1,5 +1,5 @@
 ---
-title: Usar fuentes de distribución de datos (PowerPivot para SharePoint) | Documentos de Microsoft
+title: Usar fuentes de distribución de datos (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3c8ecd6c4d3cde888559886154c679c0a4f7a5e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e974c81b3f65ef7830362bc80fc7f15df0f1009
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249415"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Usar fuentes de distribución de datos (PowerPivot para SharePoint)
   Las fuentes de distribución de datos son una o varias secuencias de datos que se generan en un origen de datos en línea y se difunden en un documento o aplicación de destino. Si está utilizando PowerPivot para Excel, las fuentes de distribución de datos pueden ayudarle a poner los datos empresariales o corporativos existentes de orígenes de datos arbitrarios en la ventana de PowerPivot de un libro de Excel 2010. Después de importar una fuente de distribución de datos en un libro, puede hacer referencia a ella posteriormente en cualquier operación de actualización de datos que programe en un servidor de SharePoint.  
   
  El modo de utilizar una fuente de distribución de datos depende de si se utilizan las características de exportación integradas en las aplicaciones compatibles con las fuentes de distribución de datos de Atom, o si se crean y usan servicios de datos personalizados. Las aplicaciones que pueden publicar y leer los datos XML de Atom permiten una transferencia de datos sin problemas que oculta la mecánica de los servicios de datos y fuentes de distribución de datos a los usuarios. Para un usuario, simplemente mueve los datos de una aplicación a otra.  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y Microsoft SharePoint Server 2010 proporcionan datos de fuentes que pueden usar en los libros PowerPivot. Puede utilizar la información de este tema para saber cómo tener acceso a las fuentes de distribución de datos de los informes y las listas de que ya disponga.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y Microsoft SharePoint 2010 proporcionan fuentes de distribución que se pueden usar en los libros PowerPivot de datos. Puede utilizar la información de este tema para saber cómo tener acceso a las fuentes de distribución de datos de los informes y las listas de que ya disponga.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -55,9 +55,9 @@ ms.locfileid: "36196323"
 3.  En Conectar y exportar, haga clic en **Exportar como fuente de distribución de datos**.  
   
     > [!NOTE]  
-    >  El **exportar como fuente de datos** botón se agrega a SharePoint por medio de PowerPivot. Si no tiene PowerPivot para SharePoint instalado o no activó la característica PowerPivot, este botón no estará disponible.  
+    >  El **exportar como fuente de distribución de datos** botón se agrega a SharePoint por medio de PowerPivot. Si no tiene PowerPivot para SharePoint instalado o no activó la característica PowerPivot, este botón no estará disponible.  
   
-4.  Haga clic en **abiertos** si PowerPivot para Excel está instalado localmente, o haga clic en **guardar** para guardar el documento .atomsvc en el disco duro para las operaciones de importación en un momento posterior.  
+4.  Haga clic en **abierto** si PowerPivot para Excel está instalado localmente, o haga clic en **guardar** para guardar el documento .atomsvc en el disco duro para las operaciones de importación en un momento posterior.  
   
 5.  Si elige **Abrir**, use el Asistente para la importación de tablas a fin de importar la fuente de distribución de datos en una hoja de cálculo. La fuente de distribución de datos se agregará como una nueva tabla en la ventana de PowerPivot.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36196323"
  Para obtener instrucciones sobre cómo exportar una fuente de distribución de datos a partir de un informe, vea [Generar fuentes de distribución de datos a partir de un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) en el [archivo de Ayuda del Generador de informes](http://go.microsoft.com/fwlink/?LinkId=154494).  
   
 > [!NOTE]  
->  Para configurar la programación de una actualización de datos reiterada que vuelva a importar los datos del informe en un libro PowerPivot que esté publicado en una biblioteca de SharePoint, el servidor de informes se debe configurar para la integración de SharePoint. Para obtener más información acerca del uso de PowerPivot para SharePoint y Reporting Services juntos, consulte [configuración y administración de un servidor de informes &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  
+>  Para configurar la programación de una actualización de datos reiterada que vuelva a importar los datos del informe en un libro PowerPivot que esté publicado en una biblioteca de SharePoint, el servidor de informes se debe configurar para la integración de SharePoint. Para obtener más información sobre el uso de PowerPivot para SharePoint y Reporting Services juntos, consulte [configuración y administración de un servidor de informes &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  
   
 ##  <a name="dsdoc"></a> Crear una fuente de distribución de datos a partir de un documento de servicio de datos  
  Si tiene un servicio de datos personalizado que genera las fuentes Atom, puede configurar un documento de servicio de datos para hacer que los datos estén disponibles para los usuarios y aplicaciones. Un archivo de *documento de servicio de datos* (.atomsvc) especifica una o varias conexiones a los orígenes en línea que publican los datos en el formato de conexión de Atom. Los documentos de servicio de datos se pueden crear en una *biblioteca de fuente de distribución de datos*, que es una biblioteca con una finalidad especial que proporciona un punto de acceso común para examinar los documentos de servicio de datos publicados en un servidor de SharePoint. Los trabajadores de la información que disponen de permiso de acceso a los documentos de servicio de datos en la biblioteca de fuentes de distribución de datos pueden hacer referencia a la dirección URL de SharePoint del documento para importar las fuentes de distribución de datos en sus libros y aplicaciones.  

@@ -1,11 +1,11 @@
 ---
-title: Crear un tipo definido por el usuario | Documentos de Microsoft
+title: Creación de un tipo definido por el usuario | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -18,18 +18,18 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0f0f9599e5a529011528307b97e39dc68009852
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 62bcb175cebbfa4848bbc49ac21710d58bfafcc8
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702616"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349488"
 ---
-# <a name="creating-user-defined-types"></a>Crear tipos definidos por el usuario
+# <a name="creating-user-defined-types"></a>Creación de tipos definidos por el usuario
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Para crear un tipo definido por el usuario (UDT) capaz de instalarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe crear primero una clase en uno de los lenguajes de programación de .NET Framework compatibles, como Visual C# o Visual Basic, que se ajuste a las especificaciones para crear UDT. A continuación, la clase puede compilarse como una biblioteca de vínculos dinámicos (DLL), que puede cargarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede crear e implementar UDT con Visual Studio.  
   
- La capacidad de ejecutar el código de Common Language Runtime (CLR) está establecida de forma predeterminada en OFF en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CLR puede habilitarse mediante la **sp_configure** procedimiento almacenado del sistema tal y como se muestra en la siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones:  
+ La capacidad de ejecutar el código de Common Language Runtime (CLR) está establecida de forma predeterminada en OFF en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El CLR puede habilitarse mediante la **sp_configure** procedimiento almacenado del sistema como se muestra en la siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones:  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -37,16 +37,16 @@ Reconfigure
 ```  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Requisitos de tipo definido por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)  
+ [Requisitos de tipos definidos por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)  
  Describe los requisitos para codificar los tipos definidos por el usuario.  
   
  [Codificar tipos definidos por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)  
  Muestra las técnicas de codificación implicadas en la creación de tipos definidos por el usuario.  
   
 ## <a name="example"></a>Ejemplo  
- La lista de código siguiente define el UDT Point, que se describe en detalle en [Coding User-Defined tipos](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ La lista de código siguiente define el UDT Point, que se describe en detalle en [codificación de tipos](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
- Las listas de códigos completas para el resto de los ejemplos que se describen en esta sección pueden obtenerse instalando los ejemplos de CLR. Para obtener instrucciones acerca de cómo instalar estos ejemplos, vea [ejemplos de motor de base de datos de SQL Server](http://msftengprodsamples.codeplex.com/).  
+ Las listas de códigos completas para el resto de los ejemplos que se describen en esta sección pueden obtenerse instalando los ejemplos de CLR. Para obtener instrucciones acerca de cómo instalar estos ejemplos, consulte [ejemplos de motor de base de datos de SQL Server](http://msftengprodsamples.codeplex.com/).  
   
  C#  
   

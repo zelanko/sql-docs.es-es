@@ -1,5 +1,5 @@
 ---
-title: Acceso a datos PowerPivot | Documentos de Microsoft
+title: Acceso a datos PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a1a209c87dc227497aad1808758373b0d98b4d77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d00d5ae30f7ed612657e185ed28307cc576bf040
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232001"
 ---
 # <a name="powerpivot-data-access"></a>Acceso a datos PowerPivot
   En este tema se describen las diferentes formar de recuperar datos de un libro PowerPivot publicado en una biblioteca de SharePoint.  
@@ -32,7 +32,7 @@ ms.locfileid: "36196139"
   
  En una granja de servidores de SharePoint, Excel Services utiliza el proveedor OLE DB MSOLAP local para conectarse a datos PowerPivot. El proveedor envía la solicitud de conexión a un servidor PowerPivot para SharePoint en la granja. Ese servidor carga los datos, ejecuta la consulta y devuelve el conjunto de resultados.  
   
-##  <a name="queryproc"></a> Consultar datos de PowerPivot en SharePoint  
+##  <a name="queryproc"></a> Consultar datos PowerPivot en SharePoint  
  Al ver un libro PowerPivot de una biblioteca de SharePoint, los datos PowerPivot que están dentro del libro se detectan, extraen y procesan de forma independiente en las instancias de servidor de Analysis Services dentro de la granja, mientras Excel Services representa el nivel de presentación. Puede ver el libro procesado totalmente en una ventana del explorador o en una aplicación de escritorio de Excel 2010 que tenga el complemento de PowerPivot.  
   
  El siguiente diagrama muestra cómo se mueve a través de la granja una solicitud para el procesamiento de las consultas. Dado que los datos PowerPivot forman parte de un libro de Excel 2010, cuando un usuario abre un libro de Excel de una biblioteca de SharePoint e interactúa con una tabla dinámica o con un gráfico dinámico que contiene datos PowerPivot, se produce una solicitud para el procesamiento de consultas.  

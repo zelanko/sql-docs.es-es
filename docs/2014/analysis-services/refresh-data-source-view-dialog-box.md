@@ -1,5 +1,5 @@
 ---
-title: Actualizar el cuadro de diálogo de vista de origen de datos | Documentos de Microsoft
+title: Actualizar el cuadro de diálogo de vista de origen de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.refreshdsv.f1
 helpviewer_keywords:
 - Refresh Data Source View dialog box
 ms.assetid: 56bac170-6777-472a-8a09-549b2ee0d909
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7f585623e7b8de7ac802612fd3c861819a2bb58e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d93a157fa80754d58be242c4fdbe759176cb6f0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204605"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Actualizar vista del origen de datos (cuadro de diálogo)
   Use el cuadro de diálogo **Actualizar vista del origen de datos** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para aceptar o cancelar los cambios que se producirán como resultado de actualizar la vista del origen de datos. El cuadro de diálogo muestra los cambios que se van a realizar en la vista del origen de datos como resultado de los cambios realizados en el origen de datos subyacente. Haga clic en **Aceptar** para aceptar los cambios y actualizar la vista del origen de datos, o haga clic en **Cancelar** para ignorar los cambios y dejar la vista del origen de datos sin modificaciones. Puede mostrar el cuadro de diálogo **Actualizar vista del origen de datos** de uno de estos modos:  

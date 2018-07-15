@@ -1,5 +1,5 @@
 ---
-title: Consideraciones de seguridad 4.0 de SQLXML | Documentos de Microsoft
+title: Consideraciones de seguridad 4.0 de SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - security [SQLXML]
 ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 238f581b636acbd8a659e67b100c911449bfff90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e2f19a8ea2efce2d7f5aee1cea3c5e4514cfd926
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270821"
 ---
 # <a name="sqlxml-40-security-considerations"></a>Consideraciones de seguridad de SQLXML 4.0
   En esta sección se proporciona información sobre las consideraciones relacionadas con la seguridad de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML.  

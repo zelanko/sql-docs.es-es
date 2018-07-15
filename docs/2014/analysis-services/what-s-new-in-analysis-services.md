@@ -1,5 +1,5 @@
 ---
-title: ¿Qué&#39;s de Analysis Services y Business Intelligence | Documentos de Microsoft
+title: ¿Qué&#39;s de Analysis Services y Business Intelligence | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81dc5c82b8b034556ab4eb69c9f9ca377f641c43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30789972454ecc6c32ef4cb109bfbb20a2523e37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323115"
 ---
 # <a name="what39s-new-in-analysis-services-and-business-intelligence"></a>¿Qué&#39;s de Analysis Services y Business Intelligence
-  A excepción de funcionalidad agregada que admite informes Power View en modelos multidimensionales, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] se ha modificado desde la versión anterior.  
+  Con la excepción de la funcionalidad agregada que admite informes Power View en modelos multidimensionales, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no se ha modificado desde la versión anterior.  
   
- Para obtener información sobre otras [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] productos y tecnologías que son diferentes en esta versión, consulte [What's New en SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
+ Para obtener información acerca de otros [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] productos y tecnologías que son diferentes en esta versión, consulte [What ' s New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
 ## <a name="updates-to-design-tool-installation"></a>Actualizaciones a la instalación de las herramientas de diseño  
  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para Business Intelligence (SSDT-BI), conocido anteriormente como Business Intelligence Development Studio (BIDS), se emplea para crear modelos de Analysis Services, informes de Reporting Services y paquetes de Integration Services. Puede descargar SSDT-BI desde las ubicaciones siguientes:  
@@ -49,7 +49,7 @@ ms.locfileid: "36105202"
   
  Esta funcionalidad ayuda a las organizaciones a maximizar sus inversiones existentes de BI ya que permite usar modelos multidimensionales (también conocidos como cubos OLAP) con las últimas herramientas de generación de informes cliente. En función de los tipos de datos del modelo multidimensional, los usuarios pueden crear fácilmente diversas visualizaciones dinámicas desde tablas y matrices hasta gráficos de burbujas y mapas geográficos. Los modelos multidimensionales también admiten ahora consultas mediante el Lenguaje de expresiones de análisis de datos (DAX).  
   
- Power View para modelos multidimensionales requiere la capacidad de generación de informes de Power View incorporada en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (en el modo de SharePoint). Otras versiones de Power View, en concreto el complemento Power View de Excel 2013, no admiten modelos multidimensionales.  
+ Power View para modelos multidimensionales requiere la capacidad integrada de informes de Power View en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (en el modo de SharePoint). Otras versiones de Power View, en concreto el complemento Power View de Excel 2013, no admiten modelos multidimensionales.  
   
  Para obtener más información, vea [Power View para modelos multidimensionales](http://msdn.microsoft.com/library/dn140246.aspx).  
   

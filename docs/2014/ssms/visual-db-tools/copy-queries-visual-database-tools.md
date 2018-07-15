@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - copying queries
 - queries [SQL Server], copying
 ms.assetid: 46cd1557-cf3d-40b8-b489-8446e0984e0f
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c5f6df3df44447d1ef24946468e54000a4a477d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f961375f9e73bd96e2bf4199743fb98f8b9e96f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204525"
 ---
 # <a name="copy-queries-visual-database-tools"></a>Copiar consultas (Visual Database Tools)
   Puede copiar el cuerpo de una consulta en otra nueva para utilizarlo como un punto de partida.  
@@ -43,7 +43,7 @@ ms.locfileid: "36197532"
   
 ## <a name="see-also"></a>Vea también  
  [Cambiar el nombre de las consultas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Borrar los resultados de la consulta &#40;Visual Database Tools&#41;](clear-query-results-visual-database-tools.md)   
+ [Borrar los resultados de consulta &#40;Visual Database Tools&#41;](clear-query-results-visual-database-tools.md)   
  [Guardar consultas &#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
  [Realizar operaciones básicas con consultas (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   

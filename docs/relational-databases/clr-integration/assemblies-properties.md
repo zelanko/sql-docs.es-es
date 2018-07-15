@@ -1,12 +1,11 @@
 ---
-title: Propiedades del ensamblado (página General) | Documentos de Microsoft
+title: Propiedades del ensamblado (página General) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 f1_keywords:
 - sql13.swb.assemblies.general.f1
@@ -15,14 +14,14 @@ caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2eaea8f9b417a11134fb59108c83d452f1954fcd
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4efc892d633698dd9ce1ea08edcb2f563ac20ea7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701196"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350327"
 ---
-# <a name="assemblies---properties"></a>Ensamblados - propiedades
+# <a name="assemblies---properties"></a>Ensamblados: propiedades
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Utilice esta página para ver o modificar propiedades del ensamblado.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "35701196"
  Muestra la fecha de creación o registro del ensamblado.  
   
  **Nombre seguro**  
- Muestra **True** si el ensamblado se ha firmado digitalmente, **False** si no se ha firmado digitalmente.  
+ Muestra **True** si el ensamblado se ha firmado digitalmente, **False** si no lo ha firmado digitalmente.  
   
  **Versión**  
  Muestra el número de versión del ensamblado.  

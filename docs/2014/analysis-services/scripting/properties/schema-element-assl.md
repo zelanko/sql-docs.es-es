@@ -1,5 +1,5 @@
 ---
-title: Elemento Schema (ASSL) | Documentos de Microsoft
+title: Elemento Schema (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Schema element
 ms.assetid: 4b6375fb-7ad8-4d5f-88b1-abd3da2654db
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 130d1363a007fb51db3bc7b39efcae4d9140c368
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3bcf275eafb8a982fa2ddf9d5ecb82d45e435fa5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200045"
 ---
 # <a name="schema-element-assl"></a>Elemento Schema (ASSL)
   Contiene el esquema de la vista del origen de datos.  
@@ -58,13 +58,13 @@ ms.locfileid: "36114139"
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elemento primario|[DataSourceView](../objects/datasourceview-element-assl.md)|  
+|Elemento primario|[Elemento DataSourceView](../objects/datasourceview-element-assl.md)|  
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
  El `Schema` se representa usando el  formato del lenguaje de definición de esquemas XML (XSD) de conjuntos de datos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, con algunas extensiones para los conjuntos de datos y otras específicas para este uso dentro del lenguaje de definición de datos (DDL). Los conjuntos de datos definen una asignación flexible de XSD a un esquema relacional pero a continuación, devuelven XSD en un más la forma canónica. Solo esta forma canónica es válida dentro de los orígenes de datos.  
   
- El elemento que corresponde al elemento primario de `Schema` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DataSourceView>.  
+ El elemento que se corresponde con el elemento primario de `Schema` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DataSourceView>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

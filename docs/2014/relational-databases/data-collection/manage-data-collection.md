@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 - data collector [SQL Server], Transact-SQL
 - data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1bd9b3d11069fd035c9a96fcba8d2114f6df0eeb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a682e89cb0c6f419b29d36faa3970730baf4b22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196141"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296525"
 ---
 # <a name="manage-data-collection"></a>Administrar la recopilación de datos
-  Puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimientos almacenados y funciones para administrar distintos aspectos de la recopilación de datos, como habilitar o deshabilitar la recopilación de datos, cambiar una colección de conjunto de configuración, o ver los datos en el almacén de datos de administración .  
+  Puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimientos almacenados y funciones para administrar distintos aspectos de recopilación de datos, como habilitar o deshabilitar la recopilación de datos, cambiar una colección de conjunto de configuración, o ver los datos en el almacén de datos de administración .  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>Administrar la recopilación de datos mediante el uso de SQL Server Management Studio  
- Puede realizar las siguientes tareas relacionadas con el recopilador de datos mediante el Explorador de objetos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+ Puede realizar las siguientes tareas relacionadas con el recopilador de datos utilizando el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [Configurar el almacén de administración de datos &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36196141"
 > [!IMPORTANT]  
 >  A diferencia de los procedimientos almacenados normales, los procedimientos almacenados del recopilador usan parámetros con establecimiento estricto de tipos y no admiten la conversión automática de tipos de datos. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devuelve un error.  
   
- Puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear y ejecutar los ejemplos de código que se proporcionan. Para obtener más información, vea [Explorador de objetos](../../ssms/object/object-explorer.md). Como alternativa, puede crear la consulta en cualquier editor y guardarla en un archivo de texto con la extensión de nombre de archivo .sql. Puede ejecutar la consulta desde el símbolo del sistema de Windows mediante el `sqlcmd` utilidad. Para obtener más información, vea [Usar la utilidad sqlcmd](../scripting/sqlcmd-use-the-utility.md).  
+ Puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear y ejecutar los ejemplos de código proporcionado. Para obtener más información, vea [Explorador de objetos](../../ssms/object/object-explorer.md). Como alternativa, puede crear la consulta en cualquier editor y guardarla en un archivo de texto con la extensión de nombre de archivo .sql. Puede ejecutar la consulta desde el símbolo del sistema de Windows mediante el `sqlcmd` utilidad. Para obtener más información, vea [Usar la utilidad sqlcmd](../scripting/sqlcmd-use-the-utility.md).  
   
 ### <a name="stored-procedures-and-views"></a>Procedimientos almacenados y vistas  
  **Trabajar con el recopilador de datos**  

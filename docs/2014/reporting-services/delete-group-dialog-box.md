@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Eliminar grupo | Documentos de Microsoft
+title: Cuadro de diálogo Eliminar grupo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.deletegroup.f1
 - "10138"
@@ -18,13 +18,13 @@ ms.assetid: bc1c0f27-41cb-49ad-8bef-634a4c23586f
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6e5ef71b94f16d90ef611ad950e7b280cd17fe3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5a3195d350e27e68c937e57b1325a00b05f056d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236545"
 ---
 # <a name="delete-group-dialog-box"></a>Eliminar grupo (cuadro de diálogo)
   Use el cuadro de diálogo **Eliminar grupo** para eliminar un grupo de una región de datos de tabla, matriz o lista. Si hay filas o columnas asociadas a este grupo, también puede eliminar estas estructuras.  
@@ -38,7 +38,7 @@ ms.locfileid: "36114199"
   
 ## <a name="see-also"></a>Vea también  
  [Diseñador de informes (Ayuda F1)](tools/report-designer-f1-help.md)   
- [Descripción de los grupos &#40;el generador de informes SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)   
+ [Descripción de los grupos &#40;generador de informes y SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

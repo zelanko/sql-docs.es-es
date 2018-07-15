@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e68b94ce70e24d16ac1cc94274b9dac05974dbe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6b18989012a733d39dca843f475ec23e99893d0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246922"
 ---
 # <a name="the-memory-optimized-filegroup"></a>El grupo de archivos con optimización para memoria
   Para crear tablas optimizadas para memoria, primero debe crear un grupo de archivos optimizados para memoria. El grupo de archivos optimizados para memoria contiene uno o varios contenedores. Cada contenedor contiene archivos de datos, archivos delta o ambos tipos de archivos.  
@@ -61,7 +61,7 @@ ms.locfileid: "36113145"
   
  En un escenario de varios contenedores y varias unidades, los archivos de datos y delta se asignan por turnos (round robin) en los contenedores. El primer archivo de datos se asigna al primer contenedor y el archivo delta se asigna desde el siguiente contenedor, y este modelo de asignación se repite. Este esquema de asignación distribuye uniformemente los archivos de datos y delta entre los contenedores si tiene un número impar de unidades, cada una de ellas asignada a un contenedor. Sin embargo, si tiene un número par de unidades, cada una de ellas asignada a un contenedor, puede provocar un almacenamiento desequilibrado donde los archivos de datos se asignan a las unidades impares y los archivos delta se asignan a las unidades pares. Para obtener un flujo equilibrado de E/S en la recuperación, considere la posibilidad de colocar los pares de archivos de datos y delta en los mismos ejes o almacenamiento como se describe en el ejemplo siguiente.  
   
- **Ejemplo:** considere la posibilidad de un grupo de archivos con optimización para memoria con dos contenedores: contenedor 1 en la unidad X y el contenedor 2 en la unidad Y. Puesto que la asignación de archivos de datos y delta se hace en modo round-robin, contenedor 1 solamente tendrá archivos de datos y contenedor 2 solamente tendrá archivos delta, lo que provoca desequilibrio para almacenamiento, así como operaciones de entrada/salida por segundo, como archivos de datos son mucho mayores que los archivos delta. Para distribuir archivos de datos y delta uniformemente entre las unidades X e Y, cree cuatro contenedores en lugar de dos y asigne los dos primeros contenedores a la unidad X y los dos contenedores siguientes a la unidad Y. Con la asignación de round robin, el primero los datos y el primer archivo delta se asignarán desde 1 del contenedor y el contenedor 2 respectivamente que están asignados a la unidad X. De igual forma, se le asignará el siguiente archivo de datos y delta de contenedor-3 y 4 de contenedor que se asignan a la unidad Y. Esto permite distribuir uniformemente los archivos delta y de datos en dos unidades.  
+ **Ejemplo:** considere la posibilidad de un grupo de archivos optimizados para memoria con dos contenedores: contenedor 1 unidad X y el contenedor 2 en la unidad Y. Puesto que la asignación de archivos delta y de datos se realiza en modo round-robin, contenedor 1 solamente tendrá archivos de datos y el contenedor 2 solo tendrá archivos delta, lo que da lugar a desequilibrio para almacenamiento, así como las operaciones de entrada/salida por segundo, como archivos de datos son mucho mayores que los archivos delta. Para distribuir archivos de datos y delta uniformemente en las unidades X e Y, cree cuatro contenedores en lugar de dos y asigne los dos primeros contenedores a la unidad X y los dos contenedores siguientes a la unidad Y. Con la asignación de round robin, el primero los datos y el primer archivo delta se asignarán desde container-1 y el contenedor 2 respectivamente que están asignados a la unidad X. De forma similar, el siguiente archivo de datos y delta se asignarán desde contenedor 3 y 4, contenedor que se asignan a la unidad Y. Esto permite distribuir uniformemente los archivos delta y de datos a través de dos unidades.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear y administrar el almacenamiento de objetos con optimización para memoria](creating-and-managing-storage-for-memory-optimized-objects.md)  

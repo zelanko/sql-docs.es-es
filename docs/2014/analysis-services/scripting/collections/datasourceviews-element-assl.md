@@ -1,5 +1,5 @@
 ---
-title: Elementos Datasourceviews (ASSL) | Documentos de Microsoft
+title: Elementos Datasourceviews (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataSourceViews element
 ms.assetid: f708ceac-8eeb-45ee-a2bb-919126898c80
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a50e0e03b993031bfb0df92b99e6873dc28099fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 869e404c4d9a46f4d3b4fc14b8f5dac46fd72304
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187122"
 ---
 # <a name="datasourceviews-element-assl"></a>Elementos DataSourceViews (ASSL)
-  Contiene la colección de [DataSourceView](../objects/datasourceview-element-assl.md) elementos asociados a un [base de datos](../objects/database-element-assl.md) elemento.  
+  Contiene la colección de [DataSourceView](../objects/datasourceview-element-assl.md) elementos asociados con un [base de datos](../objects/database-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36198541"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Base de datos](../objects/database-element-assl.md)|  
-|Elementos secundarios|[DataSourceView](../objects/datasourceview-element-assl.md)|  
+|Elementos secundarios|[Elemento DataSourceView](../objects/datasourceview-element-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.DataSourceViewCollection>.  

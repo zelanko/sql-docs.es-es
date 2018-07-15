@@ -1,12 +1,11 @@
 ---
-title: Diseñar ensamblados | Documentos de Microsoft
+title: Diseñar ensamblados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
@@ -16,14 +15,14 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8607c326734f998ee536d884a57463765f7b67b2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4c26b6d0671feaf1638fecf9afe60744c5a2d1da
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695346"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353517"
 ---
-# <a name="assemblies---designing"></a>Ensamblados - diseño
+# <a name="assemblies---designing"></a>Ensamblados: diseño
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se describen los siguientes aspectos que se deben tener en cuenta al diseñar ensamblados:  
   
@@ -121,7 +120,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Ensamblados &#40;motor de base de datos&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Los ensamblados &#40;motor de base de datos&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Seguridad de la integración CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

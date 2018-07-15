@@ -1,5 +1,5 @@
 ---
-title: Propiedad SHA (clase SecurityCertificate) | Documentos de Microsoft
+title: Propiedad SHA (clase SecurityCertificate) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SHA property
 ms.assetid: 73dfe0b7-0237-4d92-8161-9264a10a28a7
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f33792c2a9e52891ed62101b82f6a1b1ec505b6b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7b5656923cf751a315ebd2f52b3580043af7d5bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325685"
 ---
 # <a name="sha-property-securitycertificate-class"></a>Propiedad SHA (clase SecurityCertificate)
   Obtiene el atributo de huella digital de SHA del certificado de seguridad.  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>Partes  
  *object*  
- Un securitycertificate [clase SecurityCertificate]-class.md) objeto que representa un certificado de seguridad.  
+ Una [clase SecurityCertificate] securitycertificate-class.md) objeto que representa un certificado de seguridad.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el atributo de huella digital de SHA del certificado de seguridad.  
@@ -51,6 +51,6 @@ object
 ## <a name="remarks"></a>Notas  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurar protocolos de red de servidor y las bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

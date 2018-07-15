@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones (página avanzadas) varios archivos planos | Documentos de Microsoft
+title: Editor del Administrador de conexiones (página avanzadas) varios archivos planos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.advanced.f1
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 caps.latest.revision: 36
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dfbc768285e81c1abfac99430527f2d5dbfe4a81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc475677c9e122776deb58d749f0630b1bf57294
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246745"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>Editor del administrador de conexiones de varios archivos planos (página Avanzadas)
   Use la página **Avanzadas** del cuadro de diálogo **Editor del Administrador de conexiones de varios archivos planos** para establecer propiedades como el tipo de datos y los delimitadores de cada columna en los archivos de texto a los que se conecta el administrador de conexiones de archivos planos.  
@@ -73,6 +73,6 @@ ms.locfileid: "36196709"
  [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor del Administrador de conexiones de varios archivos planos &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor del Administrador de conexiones de varios archivos planos &#40;página columnas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [Editor del Administrador de conexiones de varios archivos planos &#40;obtener una vista previa de página&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Editor del Administrador de conexiones de varios archivos planos &#40;vista previa de página&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

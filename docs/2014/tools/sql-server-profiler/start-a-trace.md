@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, stopping traces
 - pausing traces
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - starting traces
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb735810bcf265076fde9e3834dc7404d1f45079
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 678bf2b9140d5df7d19aa28088d598f4cca450c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224585"
 ---
 # <a name="start-a-trace"></a>Iniciar un seguimiento
   Una vez definida un nuevo seguimiento o creada una plantilla mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puede iniciar, pausar o detener la captura de datos con la nueva definición de seguimiento o plantilla.  
@@ -48,7 +48,7 @@ ms.locfileid: "36197287"
 >  Si trabaja con seguimientos existentes, puede ver las propiedades, pero no modificarlas. Para modificar las propiedades, detenga o pause el seguimiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Iniciar un seguimiento automáticamente después de conectarse a un servidor &#40;analizador de SQL Server&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [Iniciar un seguimiento automáticamente después de conectarse a un servidor &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [Pausar un seguimiento &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
  [Detener un seguimiento &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   
  [Borrar el contenido de una ventana de seguimiento &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   

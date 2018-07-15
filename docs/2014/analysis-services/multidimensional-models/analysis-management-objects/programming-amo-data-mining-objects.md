@@ -1,5 +1,5 @@
 ---
-title: Programar objetos de minería de datos AMO | Documentos de Microsoft
+title: Programar objetos de minería de datos AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Analysis Management Objects, data mining
 ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62ef444d7fa112267a4a272553834e24fe5b0df9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 340030bcc2acdc220f6aff4634c6926163862c6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176952"
 ---
 # <a name="programming-amo-data-mining-objects"></a>Programar objetos de minería de datos con AMO
   La programación de objetos de minería de datos mediante AMO es un proceso sencillo y directo. El primer paso consiste en crear un modelo de estructura de datos que admita el proyecto de minería de datos. A continuación, se crea el modelo de minería de datos que admite el algoritmo de minería de datos que desea utilizar para predecir o buscar las relaciones ocultas subyacentes a los datos. Una vez creado el proyecto de minería de datos (incluidos la estructura y los algoritmos), puede procesar los modelos de minería de datos para obtener los modelos entrenados que utilizará más adelante al realizar consultas y predicciones desde la aplicación cliente.  
@@ -53,7 +53,7 @@ ms.locfileid: "36198556"
   
      Las estructuras de minería de datos se pueden procesar y, al procesarlas, se procesan o se vuelven a entrenar los modelos de minería de datos secundarios.  
   
- El código de ejemplo siguiente crea una estructura de minería de datos para pronosticar las ventas en una serie temporal. Antes de ejecutar el ejemplo de código, asegúrese de que la base de datos *db*, pasado como parámetro para `CreateSalesForecastingMiningStructure`, contiene en `db.DataSourceViews[0]` una referencia a la vista *dbo.vTimeSeries* en el [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]base de datos de ejemplo.  
+ El código de ejemplo siguiente crea una estructura de minería de datos para pronosticar las ventas en una serie temporal. Antes de ejecutar el código de ejemplo, asegúrese de que la base de datos *db*, pasado como parámetro para `CreateSalesForecastingMiningStructure`, contiene en `db.DataSourceViews[0]` una referencia a la vista *dbo.vTimeSeries* en el [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]base de datos de ejemplo.  
   
 ```  
 public static MiningStructure CreateSalesForecastingMiningStructure(Database db)  

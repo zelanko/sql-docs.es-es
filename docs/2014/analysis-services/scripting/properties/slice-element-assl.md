@@ -1,5 +1,5 @@
 ---
-title: Segmentar el elemento (ASSL) | Documentos de Microsoft
+title: Slice (ASSL) del elemento | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Slice element
 ms.assetid: 2c8c4107-c641-4724-bfa5-0c47e0ec8888
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3b1f693eddeebc0b4ad88e629eeeac9f76ca1083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 299f84167ec64c4bdd795c56a608e76f61d348b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178892"
 ---
 # <a name="slice-element-assl"></a>Elemento Slice (ASSL)
   Contiene una expresión MDX (Expresiones multidimensionales) que define el segmento incluido en una partición.  
@@ -64,7 +64,7 @@ ms.locfileid: "36198528"
 ## <a name="remarks"></a>Notas  
  El elemento `Slice` contiene una expresión de tupla de MDX o expresión de conjunto que identifica la parte del cubo para la que la partición almacena información. La expresión MDX es similar a la [StrToSet](/sql/mdx/strtoset-mdx) función MDX con la palabra clave CONSTRAINED, en que la expresión no puede incluir MDX o funciones definidas por el usuario.  
   
- El elemento que corresponde al elemento primario de `Slice` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Partition>.  
+ El elemento que se corresponde con el elemento primario de `Slice` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

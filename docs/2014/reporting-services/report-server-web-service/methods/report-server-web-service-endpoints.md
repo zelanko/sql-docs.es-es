@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Report Server Web service, endpoints
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b525f90b91d3b1d540513212164b8efc062b6ed3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 79713fc3f83f83774e95a8956cfbc6c591f9d6dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197551"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268451"
 ---
 # <a name="report-server-web-service-endpoints"></a>Extremos de servicios web del servidor de informes
   El servicio web del servidor de informes proporciona varios extremos para administrar un servidor de informes además de ejecutar los informes y navegar por ellos.  
@@ -70,7 +70,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
   
 |Extremo proxy|Descripción|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|Proporciona las API para administrar un servidor de informes que se configura para el modo integrado de SharePoint. **Nota:** este extremo está en desuso en [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
+|<xref:ReportService2006>|Proporciona las API para administrar un servidor de informes que se configura para el modo integrado de SharePoint. **Nota:** este punto de conexión está en desuso en [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
 |<xref:ReportService2010>|Proporciona las API para administrar un servidor de informes que se configura para el modo nativo o para el modo integrado de SharePoint.|  
 |<xref:ReportExecution2005>|Proporciona las API para ejecutar los informes y navegar por ellos.|  
 |<xref:ReportServiceAuthentication>|Proporciona las API para autenticar a los usuarios con un servidor de informes cuando la aplicación web de SharePoint se configura para la autenticación de formularios.|  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7cf717edbf16f8f151bbf278d8bd69aa997c141b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b278a5e71b3954e8d296fd9dc7644b33b99aae9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244335"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activar eventos de Reporting Services para el registro de seguimiento de SharePoint (ULS)
   A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], los servidores de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en modo de SharePoint pueden escribir los eventos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en el registro de seguimiento del Servicio de creación de registros unificado (ULS). [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] están disponibles en la página Supervisión de Administración central de SharePoint.  
@@ -105,7 +105,7 @@ Get-SPDiagnosticConfig
 |Representación de modo local||  
 |Proxy de cliente SOAP||  
 |Páginas de la interfaz de usuario||  
-|Power View|Entradas del registro escritas en la API de **LogClientTraceEvents** . Estas entradas se obtienen de las aplicaciones cliente, incluyendo [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una característica de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] complemento para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Todas las entradas del registro desde la API de LogClientTraceEvents se registran en **Categoría** de “SQL Server Reporting Services” y **Área** de “Vista avanzada”.<br /><br /> El contenido de las entradas registradas con el área de “Vista avanzada” viene determinado por la aplicación cliente.|  
+|Power View|Entradas del registro escritas en la API de **LogClientTraceEvents** . Estas entradas se obtienen de aplicaciones cliente, como [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una característica de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] complemento para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Todas las entradas del registro desde la API de LogClientTraceEvents se registran en **Categoría** de “SQL Server Reporting Services” y **Área** de “Vista avanzada”.<br /><br /> El contenido de las entradas registradas con el área de “Vista avanzada” viene determinado por la aplicación cliente.|  
 |Tiempo de ejecución de alertas del servidor de informes||  
 |Administrador de dominios de aplicación del servidor de informes||  
 |Respuesta en búfer del servidor de informes||  

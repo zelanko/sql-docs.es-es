@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d95395b74de40bcc6f8a93a246deae9c9d799198
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 76795367b5f03e65673468d4af8e7f7c7222e73b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249745"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Informe de asignaciones (Generador de informes)
   Este tutorial le ayudará a obtener información sobre las características de mapa que puede utilizar para mostrar los datos de informe sobre un fondo geográfico.  
@@ -35,19 +35,19 @@ ms.locfileid: "36113101"
   
 1.  [Crear un mapa con una capa de polígono desde el Asistente para mapas](#Map)  
   
-2.  [Agregar una capa de punto de mapa para ubicaciones del almacén de presentación](#PointLayer)  
+2.  [Agregar una capa de punto de mapa para mostrar Store ubicaciones](#PointLayer)  
   
 3.  [Agregar una capa de línea de mapa para mostrar una ruta](#LineLayer)  
   
-4.  [Agregar un fondo de mosaicos de mapas de Bing](#TileLayer)  
+4.  [Agregar un fondo de mosaico de Bing Maps](#TileLayer)  
   
 5.  [Hacer una capa transparente](#Transparent)  
   
 6.  [Variar los colores de condado de acuerdo con las ventas](#Vary)  
   
-    1.  [Crear una relación entre los datos espaciales y analíticos](#Relationship)  
+    1.  [Crear una relación entre datos espaciales y analíticos](#Relationship)  
   
-    2.  [Especificar las reglas de Color para polígonos](#ColorRules)  
+    2.  [Especificar reglas de Color para polígonos](#ColorRules)  
   
     3.  [Dar formato a los datos de la escala de Color como moneda](#ColorScale)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36113101"
   
 #### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>Para agregar un mapa con el Asistente para mapas en un informe nuevo  
   
-1.  Haga clic en **iniciar**, seleccione **programas**, seleccione [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
+1.  Haga clic en **iniciar**, apunte a **programas**, apunte a [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
   
      Aparecerá el cuadro de diálogo Introducción.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36113101"
   
      Se ha creado el conjunto de datos de informe denominado DataSet1. Después de completar el asistente, puede usar el panel Datos de informe para ver esta colección de campos.  
   
-11. En el **elegir datos espaciales y opciones de la vista del mapa** , comprueba que la **campo espacial** es `SpatialLocation` y que la **tipo de capa** es **punto**. Acepte los demás valores predeterminados de esta página.  
+11. En el **elegir los datos espaciales y las opciones de vista del mapa** , comprueba que el **campo espacial** es `SpatialLocation` y que la **tipo de capa** es **punto**. Acepte los demás valores predeterminados de esta página.  
   
      La vista de mapa muestra círculos que marcan la ubicación de cada almacén.  
   
@@ -418,7 +418,7 @@ ms.locfileid: "36113101"
   
  La escala de colores muestra las ventas anuales en el formato de moneda para cada rango.  
   
-###  <a name="NewLegend"></a> d. 6 Crear una nueva leyenda  
+###  <a name="NewLegend"></a> 6D. Crear una nueva leyenda  
  De forma predeterminada, todas las reglas se muestran en la primera leyenda. Para mejorar la presentación de un mapa, puede agregar leyendas.  
   
  Cambiar la presentación predeterminada requiere dos pasos: crear una nueva leyenda y, a continuación, asociar los resultados de la regla para una capa de mapa con la nueva leyenda.  
@@ -456,7 +456,7 @@ ms.locfileid: "36113101"
   
 5.  En **Opciones de leyenda**, en la lista desplegable, seleccione Legend2. Aparece la opción de texto de la leyenda. De forma predeterminada, se da formato al texto de la leyenda con una cadena de formato [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] general. Los 0 en N0 no especifican dígitos decimales.  
   
-6.  En **texto de leyenda**, utilice el formato siguiente para especificar la moneda sin los dígitos decimales: `#FROMVALUE {C0} - #TOVALUE {C0}`  
+6.  En **texto de leyenda**, use el siguiente formato para especificar la moneda sin los dígitos decimales: `#FROMVALUE {C0} - #TOVALUE {C0}`  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -584,9 +584,9 @@ ms.locfileid: "36113101"
 ## <a name="next-steps"></a>Pasos siguientes  
  De esta forma se concluye el tutorial sobre cómo agregar un mapa a un informe.  
   
- Para obtener más información, consulte [mapas &#40;el generador de informes y SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) y la entrada de blog [ajuste cartográfico de datos espaciales de SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) en blogs.msdn.com.  
+ Para obtener más información, consulte [mapas &#40;generador de informes y SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) y la entrada de blog [ajuste cartográfico de datos espaciales de SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) en blogs.msdn.com.  
   
- Para obtener más tutoriales, consulte [tutoriales &#40;Report Builder&#41;](report-builder-tutorials.md).  
+ Para obtener más tutoriales, vea [tutoriales &#40;Report Builder&#41;](report-builder-tutorials.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Tutoriales &#40;generador de informes&#41;](report-builder-tutorials.md)   

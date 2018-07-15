@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc492ecae459c0ff697f829ad6db14872e00da41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a95f78439afc186c7301a5e4b139494601a358aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328125"
 ---
 # <a name="the-oracle-cdc-service"></a>El servicio CDC de Oracle
   El servicio CDC de Oracle es un servicio de Windows que ejecuta el programa xdbcdcsvc.exe. El servicio CDC de Oracle se puede configurar para ejecutar varios servicios de Windows en el mismo equipo, cada uno de ellos con un nombre de servicio de Windows diferente. Se suelen crear varios servicios de Windows CDC de Oracle en un único equipo para obtener una mejor separación entre ellos o cuando cada uno de ellos debe trabajar con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente.  
   
- Un servicio CDC de Oracle se crea mediante la Consola de configuración del servicio CDC de Oracle o se define mediante la interfaz de línea de comandos integrada en el programa xdbcdcsvc.exe. En ambos casos, cada servicio CDC de Oracle creado está asociado con una sola [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia (que puede organizado en clústeres o reflejarse con **AlwaysOn** el programa de instalación) y la información de conexión (cadena de conexión y credenciales de acceso) son parte de la configuración del servicio.  
+ Un servicio CDC de Oracle se crea mediante la Consola de configuración del servicio CDC de Oracle o se define mediante la interfaz de línea de comandos integrada en el programa xdbcdcsvc.exe. En ambos casos, cada servicio CDC de Oracle creado está asociado con una sola [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia (que es posible que organizado en clústeres o reflejarse con **AlwaysOn** el programa de instalación) y la información de conexión (cadena de conexión y credenciales de acceso) son parte de la configuración del servicio.  
   
  Cuando se inicia un servicio CDC de Oracle, intenta conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la que está asociado, obtiene la lista de instancias CDC de Oracle que debe controlar y realiza una validación inicial del entorno. Los errores que se producen durante el inicio del servicio y cualquier información de inicio o detención se escriben siempre en el registro de eventos de aplicación de Windows. Cuando se establece una conexión con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , todos los errores y mensajes informativos se escriben en la tabla **dbo.xdbcdc_trace** de la base de datos MSXDBCDC de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una de las comprobaciones realizadas durante el inicio consiste en comprobar que no hay ningún otro servicio CDC de Oracle con el mismo nombre funcionando en ese momento. Si un servicio con el mismo nombre está conectado actualmente desde un equipo diferente, el servicio CDC de Oracle entra en un bucle de espera, esperando a que el otro servicio se desconecte antes de controlar el trabajo de CDC de Oracle.  
   
@@ -92,7 +92,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [Permisos de conexión con SQL Server necesarios para el servicio CDC](sql-server-connection-required-permissions-for-the-cdc-service.md)  
   
--   [Roles de usuario para los datos modificados Capture Service para Oracle de Attunity](user-roles.md)  
+-   [Roles de usuario para el Servicio de captura de datos modificados para Oracle de Attunity](user-roles.md)  
   
 -   [Trabajar con el servicio CDC de Oracle](the-oracle-cdc-service.md)  
   

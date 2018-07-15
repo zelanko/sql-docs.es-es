@@ -1,5 +1,5 @@
 ---
-title: 'Lección 4: Ejecutar predicciones de cesta | Documentos de Microsoft'
+title: 'Lección 4: Ejecutar predicciones de cesta | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b3238f1b-ea04-4253-ade2-838a806b62fe
 caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 7f5ba3de919c8d38287e09061d399a331870f89a
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: eb490ee36b9b1a3aff3d0477451d9534309b347a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303115"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>Lección 4: Ejecutar predicciones de cesta de la compra
-  En esta lección, usará el DMX `SELECT` modelos de instrucción para crear predicciones basadas en la asociación que creó en [lección 2: agregar modelos de minería a la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Para crear una consulta de predicción se usa la instrucción `SELECT` de DMX y se agrega una cláusula `PREDICTION JOIN`. Para obtener más información acerca de la sintaxis de una combinación de predicción, vea [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
+  En esta lección, usará el DMX `SELECT` instrucción para crear predicciones basadas en la asociación que creó en los modelos [lección 2: agregar modelos de minería a la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Para crear una consulta de predicción se usa la instrucción `SELECT` de DMX y se agrega una cláusula `PREDICTION JOIN`. Para obtener más información sobre la sintaxis de una combinación de predicción, vea [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
   
- El **SELECT FROM \<modelo > PREDICTION JOIN** formada por el `SELECT` instrucción consta de tres partes:  
+ El **SELECT FROM \<modelo > PREDICTION JOIN** formulario de la `SELECT` instrucción consta de tres partes:  
   
 -   Una lista de las funciones de predicción y las columnas del modelo de minería de datos devueltas en el conjunto de resultados. Esta lista también puede incluir columnas de entrada de los datos de origen.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36312863"
  También puede usar el generador de consultas de predicción de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear consultas de predicción.  
   
 ## <a name="singleton-prediction-join-statement"></a>Instrucción singleton PREDICTION JOIN  
- El primer paso es crear una consulta singleton, mediante la **SELECT FROM \<modelo > PREDICTION JOIN** sintaxis y proporcionar un único conjunto de valores como entrada. A continuación, se incluye un ejemplo genérico de la instrucción singleton:  
+ El primer paso es crear una consulta singleton, mediante el uso de la **SELECT FROM \<modelo > PREDICTION JOIN** sintaxis y proporcionar un único conjunto de valores como entrada. A continuación, se incluye un ejemplo genérico de la instrucción singleton:  
   
 ```  
 SELECT <select list>  
@@ -74,15 +74,15 @@ SELECT <select list> FROM [<mining model>]
 ## <a name="lesson-tasks"></a>Tareas de la lección  
  En esta lección realizará las tareas siguientes:  
   
--   Crear una consulta que Prediga qué otros artículos podría adquirir un cliente, basándose en los elementos que ya existen en su carro de la compra. Se creará esta consulta mediante el modelo de minería de datos con el valor predeterminado *MINIMUM_PROBABILITY*.  
+-   Crear una consulta que Prediga qué otros artículos podría adquirir un cliente, en función de los elementos ya existentes en su carro de la compra. Creará esta consulta mediante el modelo de minería de datos con el valor predeterminado *MINIMUM_PROBABILITY*.  
   
--   Crear una consulta que prediga qué otros artículos podría adquirir un cliente en función de los artículos que ya se están en su carro de la compra. Esta consulta se basa en un modelo diferente, en el que *MINIMUM_PROBABILITY* se ha establecido en 0,01. Dado que el valor predeterminado para *MINIMUM_PROBABILITY* en modelos de asociación es 0,3, la consulta en este modelo debería devolver más elementos posibles que la consulta en el modelo predeterminado.  
+-   Crear una consulta que prediga qué otros artículos podría adquirir un cliente en función de los artículos que ya se están en su carro de la compra. Esta consulta se basa en un modelo diferente, en el que *MINIMUM_PROBABILITY* se ha establecido en 0,01. Dado que el valor predeterminado para *MINIMUM_PROBABILITY* en los modelos de asociación es 0,3, la consulta en este modelo debería devolver más elementos posibles que la consulta en el modelo predeterminado.  
   
 ## <a name="create-a-prediction-by-using-a-model-with-the-default-minimumprobability"></a>Crear una predicción usando un modelo con el valor de MINIMUM_PROBABILITY predeterminado  
   
 #### <a name="to-create-an-association-query"></a>Para crear una consulta de asociación  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], seleccione **nueva consulta**y, a continuación, haga clic en **DMX** para abrir el Editor de consultas.  
+1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX** para abrir el Editor de consultas.  
   
 2.  Copie el ejemplo genérico de la instrucción `PREDICTION JOIN` en la consulta en blanco.  
   
@@ -98,7 +98,7 @@ SELECT <select list> FROM [<mining model>]
     PREDICT([Default Association].[Products],INCLUDE_STATISTICS,3)  
     ```  
   
-     Podría incluir solamente el nombre de columna [Products], pero mediante la [Predict &#40;DMX&#41; ](/sql/dmx/predict-dmx) función, puede limitar el número de productos devueltos por el algoritmo a tres. También puede usar `INCLUDE_STATISTICS`, que devuelve la compatibilidad, la probabilidad y la probabilidad ajustada para cada producto. Estas estadísticas ayudan a valorar la precisión de la predicción.  
+     Podría incluir solamente el nombre de columna [Products], pero utilizando el [Predict &#40;DMX&#41; ](/sql/dmx/predict-dmx) función, puede limitar el número de productos devueltos por el algoritmo a tres. También puede usar `INCLUDE_STATISTICS`, que devuelve la compatibilidad, la probabilidad y la probabilidad ajustada para cada producto. Estas estadísticas ayudan a valorar la precisión de la predicción.  
   
 4.  Reemplace lo siguiente:  
   
@@ -146,7 +146,7 @@ SELECT <select list> FROM [<mining model>]
   
 6.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
   
-7.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y un nombre al archivo `Association Prediction.dmx`.  
+7.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `Association Prediction.dmx`.  
   
 8.  En la barra de herramientas, haga clic en el **Execute** botón.  
   
@@ -156,7 +156,7 @@ SELECT <select list> FROM [<mining model>]
   
 #### <a name="to-create-an-association-query"></a>Para crear una consulta de asociación  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], seleccione **nueva consulta**y, a continuación, haga clic en **DMX** para abrir el Editor de consultas.  
+1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX** para abrir el Editor de consultas.  
   
 2.  Copie el ejemplo genérico de la instrucción `PREDICTION JOIN` en la consulta en blanco.  
   
@@ -218,7 +218,7 @@ SELECT <select list> FROM [<mining model>]
   
 6.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
   
-7.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y un nombre al archivo `Modified Association Prediction.dmx`.  
+7.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `Modified Association Prediction.dmx`.  
   
 8.  En la barra de herramientas, haga clic en el **Execute** botón.  
   

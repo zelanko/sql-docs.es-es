@@ -1,5 +1,5 @@
 ---
-title: Importar un proyecto de minería de datos mediante el Asistente para la importación de Analysis Services | Documentos de Microsoft
+title: Importar un proyecto de minería de datos mediante el Asistente para importación de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 79bd5b8fb8e81b20b810fdec88db5c2bdda958f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb48edb7b991a92e17e3c1c8d7b70cce54d1c938
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319345"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Cantidad un proyecto de minería de datos mediante el Asistente para la importación de Analysis Services
   En este tema se describe cómo crear un nuevo proyecto de minería de datos mediante la importación de los metadatos de un proyecto de minería de datos existente en otro servidor, usando para ello la plantilla de proyecto **Importar del servidor (multidimensional y minería de datos)**, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -63,6 +63,6 @@ ms.locfileid: "36105709"
      El nuevo proyecto se abre de modo automático mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades del proyecto &#40;SSAS Tabular&#41;](../tabular-models/properties-ssas-tabular.md)  
+ [Las propiedades del proyecto &#40;Tabular de SSAS&#41;](../tabular-models/properties-ssas-tabular.md)  
   
   

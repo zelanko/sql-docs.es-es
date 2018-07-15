@@ -1,5 +1,5 @@
 ---
-title: Especifique credenciales en el generador de informes | Documentos de Microsoft
+title: Especificar credenciales en Generador de informes | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4c5a9c27436bf80887a3f8917b1d4df71896ba2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bfa96110c521386cf6e7697f6f395f845ae6a83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280331"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Especificar credenciales en el Generador de informes
   Las credenciales autentican al usuario que intenta recuperar datos de un origen de datos. El propietario del origen de datos determina el tipo de credenciales que se deben utilizar. Por ejemplo, un administrador de bases de datos podría especificar que el usuario debe proporcionar un nombre de usuario y una contraseña de Windows.  
@@ -52,7 +52,7 @@ ms.locfileid: "36197310"
  Para más información, vea [Propiedades del origen de datos (cuadro de diálogo), General &#40;Generador de informes&#41;](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md) y [Mostrar la vista previa de informes en el Generador de informes](report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="types-of-credentials"></a>Tipos de credenciales  
- El tipo de credenciales que admite un origen de datos lo especifica el propietario del origen de datos. Por ejemplo, para tener acceso a un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos, es posible que deba proporcionar un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nombre de usuario de inicio de sesión y contraseña. Para tener acceso a un origen de datos diferente, puede tener que proporcionar un nombre de usuario y contraseña de Windows. Es posible que algunos orígenes de datos no requieran credenciales.  
+ El tipo de credenciales que admite un origen de datos lo especifica el propietario del origen de datos. Por ejemplo, para tener acceso a un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos, es posible que deba proporcionar una [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nombre de usuario de inicio de sesión y contraseña. Para tener acceso a un origen de datos diferente, puede tener que proporcionar un nombre de usuario y contraseña de Windows. Es posible que algunos orígenes de datos no requieran credenciales.  
   
 ### <a name="options-for-specifying-credentials"></a>Opciones para especificar credenciales  
  Para especificar credenciales para un origen de datos existen las siguientes opciones:  
@@ -75,14 +75,14 @@ ms.locfileid: "36197310"
  Al especificar las credenciales solicitadas, cada usuario que obtiene acceso al informe debe escribir un nombre de usuario y una contraseña para recuperar los datos. Esta es la opción recomendada para los informes que contienen información confidencial. Las credenciales solicitadas pueden ser para una cuenta de Windows o para iniciar sesión en una base de datos. Si el servidor de bases de datos no reconoce las credenciales proporcionadas, o si al usuario especificado no se le ha concedido permiso para recuperar los datos, se produce un error en la conexión.  
   
 ### <a name="no-credentials"></a>Sin credenciales  
- No se requieren credenciales para este origen de datos. Para ejecutar este informe en el servidor de informes, se debe configurar una cuenta de ejecución desatendida. Para obtener más información, consulte [configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentación en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [libros en pantalla de](http://go.microsoft.com/fwlink/?linkid=121312).  
+ No se requieren credenciales para este origen de datos. Para ejecutar este informe en el servidor de informes, se debe configurar una cuenta de ejecución desatendida. Para obtener más información, consulte [configurar la cuenta de ejecución desatendida &#40;SSRS Configuration Manager&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentación en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [libros](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 ## <a name="see-also"></a>Vea también  
  [Instalar, desinstalar y asistencia del generador de informes](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
- [Incrustados y compartidos conexiones de datos u orígenes de datos &#40;el generador de informes SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Cuadro de diálogo, configuración de opciones de generador de informes &#40;generador de informes&#41;](report-builder/set-default-options-for-report-builder.md)   
+ [Incrustados y compartidos de conexiones de datos u orígenes de datos &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Cuadro de diálogo, configuración de opciones del generador de informes &#40;generador de informes&#41;](report-builder/set-default-options-for-report-builder.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Agregar y comprobar una conexión de datos o un origen de datos &#40;el generador de informes SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
   

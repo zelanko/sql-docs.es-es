@@ -1,5 +1,5 @@
 ---
-title: Elemento Annotations (ASSL) | Documentos de Microsoft
+title: Elemento Annotations (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Annotations element
 ms.assetid: b2236075-6a48-470d-8182-b0de112e258a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b673e7f9edd199d32f7bd89d082d39b6d58f876a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 165d5ba47462c47ebc77a53b9f76537427cb9837
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276161"
 ---
 # <a name="annotations-element-assl"></a>Elemento Annotations (ASSL)
   Contiene la colección de [anotación](../objects/annotation-element-assl.md) elementos asociados con el elemento primario.  

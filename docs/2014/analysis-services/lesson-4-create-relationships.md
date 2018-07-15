@@ -1,5 +1,5 @@
 ---
-title: 'Lección 5: Crear relaciones | Documentos de Microsoft'
+title: 'Lección 5: Crear relaciones | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: d9428908b712fcda9a016af0825602c62548a691
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f0c32363cd3af495ef17d689bbf8c704e8ba21d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204511"
 ---
 # <a name="lesson-5-create-relationships"></a>Lección 5: Crear relaciones
   En esta lección, comprobará las relaciones que se han creado de forma automática al importar datos y agregará nuevas relaciones entre tablas diferentes. Una relación es una conexión entre dos tablas de datos que establece cómo se deben poner en correlación los datos de esas tablas. Por ejemplo, la tabla Product y la tabla Product Subcategory tienen una relación basada en el hecho de que cada producto pertenece a una subcategoría. Para obtener más información, consulte [Relaciones &#40;SSAS tabular&#41;](tabular-models/relationships-ssas-tabular.md).  
@@ -51,10 +51,10 @@ ms.locfileid: "36197499"
   
     |Activo|Table|Tabla de búsqueda relacionada|  
     |------------|-----------|--------------------------|  
-    |Sí|**Cliente [Geography Id]**|**Geografía [Geography Id]**|  
+    |Sí|**Clientes [Geography Id]**|**Geografía [Geography Id]**|  
     |Sí|**Producto [Id. de subcategoría de producto]**|**Subcategoría de producto [Id. de subcategoría de producto]**|  
     |Sí|**Subcategoría de producto [Id. de categoría de producto]**|**Categoría de producto [Id. de categoría de producto]**|  
-    |Sí|**Ventas por Internet [CustomerID]**|**Cliente [CustomerID]**|  
+    |Sí|**Ventas por Internet [Id. de cliente]**|**Clientes [Id. de cliente]**|  
     |Sí|**Ventas por Internet [Id. de producto]**|**Producto [Id. de producto]**|  
   
  Si falta alguna de las relaciones en la tabla, compruebe que el modelo incluye las tablas siguientes: Customer, Date, Geography, Product, Product Category, Product Subcategory y Internet Sales. Si las tablas de la misma conexión del origen de datos se importan en momentos distintos, no se creará ninguna relación entre estas tablas y las relaciones deberán crearse manualmente.  

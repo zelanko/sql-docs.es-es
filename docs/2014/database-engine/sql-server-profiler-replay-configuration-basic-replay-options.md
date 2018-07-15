@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - configuración de reproducción (opciones básicas de reproducción) | Documentos de Microsoft
+title: SQL Server Profiler - configuración de reproducción (opciones básicas de reproducción) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.generaloptions.f1
 helpviewer_keywords:
 - Replay Configuration dialog box
 ms.assetid: 85a1dec6-9bbc-477a-86c5-b463db9ebb31
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a2d67c2c481c44012a6e6fc63ae9bd560be90264
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cef06029d3ac1af86955f7a2df89fbe570c15245
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178382"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>Analizador SQL Server (Configuración de reproducción/página Opciones básicas de reproducción)
   En el cuadro de diálogo **Configuración de reproducción** , utilice la página **Opciones básicas de reproducción** para especificar cómo reproducir una tabla o un archivo de seguimiento.  
@@ -56,7 +56,7 @@ ms.locfileid: "36196966"
  Muestra el resultado de la reproducción en el [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [Reproducir una tabla de seguimiento &#40;analizador de SQL Server&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [Reproducir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Reproducir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Reproducir seguimientos](../tools/sql-server-profiler/replay-traces.md)  
   

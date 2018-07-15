@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ListSSLCertificates method
 ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7f187fa6f3f99d476faada44639caa7e89b33750
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c2bacf89f7660ca7bc79387d85836352d37141ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238275"
 ---
 # <a name="listsslcertificates-method-wmi-msreportserverconfigurationsetting"></a>Método ListSSLCertificates (WMI MSReportServer_ConfigurationSetting)
   Devuelve una lista de certificados en el equipo del servidor de informes.  

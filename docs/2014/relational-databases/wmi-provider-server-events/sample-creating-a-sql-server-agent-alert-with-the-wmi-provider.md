@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Crear una alerta del Agente SQL Server mediante el proveedor WMI para eventos de servidor | Documentos de Microsoft'
+title: 'Ejemplo: Creación de una alerta del Agente SQL Server mediante el proveedor WMI para eventos de servidor | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sample applications [WMI]
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9f109802dccbe7698f713f61ce7ba1f26efb1449
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6c6a8ded031806322961d5f56a1b0ba28fe6dad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186222"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Ejemplo: crear una alerta del Agente SQL Server utilizando el proveedor WMI para eventos de servidor
   Una manera común de utilizar el Proveedor de eventos WMI es crear alertas del Agente SQL Server que respondan a eventos concretos. En el ejemplo siguiente se presenta una alerta simple que guarda los eventos de grafo de interbloqueo de XML en una tabla para el análisis posterior. El Agente SQL Server envía una solicitud WQL, recibe los eventos WMI y ejecuta un trabajo en respuesta al evento. Observe que, aunque varios objetos Service Broker están implicados para procesar el mensaje de notificación, el Proveedor de eventos WMI administra los detalles de creación y administración de estos objetos.  
@@ -39,7 +39,7 @@ ms.locfileid: "36196668"
  La alerta ejecuta el trabajo cada vez que se registraría un evento de seguimiento de grafo de interbloqueo. Para una alerta WMI, el Agente SQL Server crea una consulta de notificación mediante el espacio de nombres y la instrucción WQL especificados. Para este alerta, el Agente SQL Server supervisa la instancia predeterminada en el equipo local. La instrucción WQL solicita cualquier evento `DEADLOCK_GRAPH` en la instancia predeterminada. Para cambiar la instancia que supervisa la alerta, sustituya el nombre de instancia por `MSSQLSERVER` en el `@wmi_namespace` para la alerta.  
   
 > [!NOTE]  
->  Agente de SQL Server recibir eventos WMI, [!INCLUDE[ssSB](../../includes/sssb-md.md)] debe estar habilitada en **msdb** y [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+>  Agente SQL Server recibir eventos WMI, [!INCLUDE[ssSB](../../includes/sssb-md.md)] debe estar habilitada en **msdb** y [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
 USE AdventureWorks ;  

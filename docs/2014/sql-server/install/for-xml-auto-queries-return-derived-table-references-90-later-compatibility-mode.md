@@ -1,5 +1,5 @@
 ---
-title: FOR XML AUTO consultas devuelven referencias a tablas derivadas en modo de compatibilidad 90 o posterior | Documentos de Microsoft
+title: FOR XML AUTO, las consultas devuelven referencias a tablas derivadas en los modos de compatibilidad 90 o posterior | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML AUTO [SQL Server]
 ms.assetid: 10c32f06-f7e1-40e0-8f79-6d921f2bef1d
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a056ae122c30b6014d325e4e87a43921426905c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 578222ffcdfe7d9b73205e64528441a8300f1959
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321745"
 ---
 # <a name="for-xml-auto-queries-return-derived-table-references-in-90-or-later-compatibility-modes"></a>Las consultas FOR XML AUTO devuelven referencias a tablas derivadas en los modos de compatibilidad 90 o superiores
   Cuando el nivel de compatibilidad de la base de datos está establecido en 90 o más, las consultas FOR XML que se ejecutan en modo AUTO devuelven referencias a alias de tabla derivadas. Cuando el nivel de compatibilidad de la base de datos está establecido en 80, las consultas FOR XML AUTO devuelven referencias a las tablas base que definen una tabla derivada.  

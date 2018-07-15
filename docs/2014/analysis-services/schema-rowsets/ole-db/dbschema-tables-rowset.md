@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DBSCHEMA_TABLES | Documentos de Microsoft
+title: Conjunto de filas DBSCHEMA_TABLES | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DBSCHEMA_TABLES rowset
 ms.assetid: 14c16e6b-0aff-4ad1-b98f-cdb7df0f8d73
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9033dc2f48b74bc13268d06f66a084f4ada22cfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83537dc9159331342ae344e5003d9c04fd8980eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114339"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211835"
 ---
 # <a name="dbschematables-rowset"></a>Conjunto de filas DBSCHEMA_TABLES
   Identifica los grupos de medida y dimensiones expuestos como tablas dentro de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DBSCHEMA_TABLES` filas contiene las columnas siguientes.  
+ El `DBSCHEMA_TABLES` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -45,12 +45,12 @@ ms.locfileid: "36114339"
 |`TABLE_PROPID`|`DBTYPE_UI4`||No compatible.|  
 |`DATE_CREATED`|`DBTYPE_DBTIMESTAMP`||No compatible.|  
 |`DATE_MODIFIED`|`DBTYPE_DBTIMESTAMP`||Fecha de la última modificación del objeto.|  
-|`TABLE_OLAP_TYPE`|`DBTYPE_WSTR`||Tipo OLAP del objeto.<br /><br /> **MEASURE_GROUP** indica que el objeto es un grupo de medida.<br /><br /> `CUBE_DIMENSION` indica que el objeto es una dimensión.|  
+|`TABLE_OLAP_TYPE`|`DBTYPE_WSTR`||Tipo OLAP del objeto.<br /><br /> **MEASURE_GROUP** indica el objeto es un grupo de medida.<br /><br /> `CUBE_DIMENSION` indica que el objeto es una dimensión.|  
   
  El conjunto de filas se ordena en `TABLE_TYPE`, `TABLE_CATALOG`, `TABLE_SCHEMA` y `TABLE_NAME`.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DBSCHEMA_TABLES` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DBSCHEMA_TABLES` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

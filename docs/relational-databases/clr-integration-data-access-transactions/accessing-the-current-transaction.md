@@ -1,11 +1,11 @@
 ---
-title: Obtener acceso a la transacción actual | Documentos de Microsoft
+title: Obtener acceso a la transacción actual | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,16 +17,16 @@ caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01f0f1513d2b627f0097005487bae4e86f2507e8
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 66d123ca233bc71ce401fb7d76fe5b1fc29e0870
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695286"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358757"
 ---
 # <a name="accessing-the-current-transaction"></a>Obtener acceso a la transacción actual
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Si una transacción está activa en el momento en que código de common language runtime (CLR) con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está especificado, la transacción se expone a través de la **System.Transactions.Transaction** clase. La propiedad **Transaction.Current** permite obtener acceso a la transacción actual. En la mayoría de los casos, no es necesario obtener acceso a la transacción de forma explícita. Para las conexiones de bases de datos, ADO.NET comprueba **Transaction.Current** de forma automática cuando se llama al método **Connection.Open** y da de alta la conexión en esa transacción de forma transparente (a menos que la palabra clave **Enlist** esté establecida en False en la cadena de conexión).  
+  Si se activa en el momento en el código de common language runtime (CLR) que se ejecutan en una transacción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está especificado, la transacción se expone a través de la **System.Transactions.Transaction** clase. La propiedad **Transaction.Current** permite obtener acceso a la transacción actual. En la mayoría de los casos, no es necesario obtener acceso a la transacción de forma explícita. Para las conexiones de bases de datos, ADO.NET comprueba **Transaction.Current** de forma automática cuando se llama al método **Connection.Open** y da de alta la conexión en esa transacción de forma transparente (a menos que la palabra clave **Enlist** esté establecida en False en la cadena de conexión).  
   
  Es posible que desee usar directamente el objeto **Transaction** en los escenarios siguientes:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "35695286"
   
 -   La función o el procedimiento administrado puede devolver un valor utilizando un parámetro de salida. La llamada a [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento puede comprobar el valor devuelto y, si procede, ejecutar **ROLLBACK TRANSACTION**.  
   
--   La función o el procedimiento administrado puede iniciar una excepción personalizada. La llamada a [!INCLUDE[tsql](../../includes/tsql-md.md)] puede detectar la excepción producida por el procedimiento administrado o una función en un bloque try/catch y ejecutar procedimiento **ROLLBACK TRANSACTION**.  
+-   La función o el procedimiento administrado puede iniciar una excepción personalizada. La llamada a [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento puede detectar la excepción producida por el procedimiento administrado o la función en un bloque try/catch y ejecutar **ROLLBACK TRANSACTION**.  
   
 -   La función o el procedimiento administrado puede cancelar la transacción actual llamando al método **Transaction.Rollback** si se cumple una condición determinada.  
   

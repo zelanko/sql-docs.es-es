@@ -1,5 +1,5 @@
 ---
-title: Propiedades del cubo | Documentos de Microsoft
+title: Propiedades del cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -33,15 +33,15 @@ helpviewer_keywords:
 - ProactiveCaching property
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: beae78f264c9ac0ce3aef5690f4e11e51ef191c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 785bc878c238b1fbba5acbd7ba3bc0525b8d6cc6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312485"
 ---
 # <a name="cube-properties"></a>Propiedades del cubo
   Los cubos tienen varias propiedades que se pueden establecer para modificar el comportamiento del cubo. Estas propiedades se resumen en la tabla siguiente.  
@@ -49,7 +49,7 @@ ms.locfileid: "36106229"
 > [!NOTE]  
 >  Algunas propiedades se establecen automáticamente cuando se crea el cubo y no se pueden cambiar.  
   
- Para obtener más información sobre cómo establecer propiedades del cubo, consulte [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](../cube-designer-analysis-services-multidimensional-data.md).  
+ Para obtener más información sobre cómo establecer las propiedades de cubo, vea [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](../cube-designer-analysis-services-multidimensional-data.md).  
   
 |Property|Descripción|  
 |--------------|-----------------|  
@@ -63,10 +63,10 @@ ms.locfileid: "36106229"
 |`Language`|Especifica el identificador de idioma predeterminado del cubo.|  
 |`Name`|Especifica el nombre descriptivo del cubo.|  
 |`ProactiveCaching`|Define la configuración de almacenamiento en caché automático para el cubo.|  
-|`ProcessingMode`|Indica si la indización y la agregación se deben producir durante o después del procesamiento. Opciones son **regular** o `lazy`.|  
+|`ProcessingMode`|Indica si la indización y la agregación se deben producir durante o después del procesamiento. Las opciones son **regular** o `lazy`.|  
 |`ProcessingPriority`|Determina la prioridad de procesamiento del cubo durante las operaciones de fondo, como indizaciones y agregaciones diferidas. El valor predeterminado es **0**.|  
-|`ScriptCacheProcessingMode`|Indica si la caché de script se debe generar durante o después del procesamiento. Opciones son **regular** y `lazy`.|  
-|`ScriptErrorHandlingMode`|Determina el control de errores. Opciones son `IgnoreNone` o `IgnoreAll`|  
+|`ScriptCacheProcessingMode`|Indica si la caché de script se debe generar durante o después del procesamiento. Las opciones son **regular** y `lazy`.|  
+|`ScriptErrorHandlingMode`|Determina el control de errores. Las opciones son `IgnoreNone` o `IgnoreAll`|  
 |`Source`|Muestra la vista del origen de datos utilizada para el cubo.|  
 |`StorageLocation`|Especifica la ubicación de almacenamiento del sistema de archivos para el cubo. Si no se especifica ninguna ubicación, se hereda de la base de datos que contiene el objeto de cubo.|  
 |`StorageMode`|Especifica el modo de almacenamiento del cubo. Los valores son `MOLAP`, `ROLAP`, o `HOLAP``.`|  

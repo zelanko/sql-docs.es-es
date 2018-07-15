@@ -1,12 +1,11 @@
 ---
-title: Restricciones en conexiones de contexto y normales | Documentos de Microsoft
+title: Restricciones en conexiones de contexto y normales | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
@@ -16,16 +15,16 @@ caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 290110b735765da45bca5f5f67bfd764f4abc6dc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 6e3f290a689cc1914548204e95a3a690d045a7d4
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694386"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358167"
 ---
-# <a name="context-connections-and-regular-connections---restrictions"></a>Conexiones de contexto y las conexiones normales - restricciones
+# <a name="context-connections-and-regular-connections---restrictions"></a>Conexiones de contexto y conexiones normales: restricciones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  En este tema se describe las restricciones asociadas a la ejecución de código en el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] procesos a través de conexiones normales y de contexto.  
+  En este tema se describe las restricciones asociadas con la ejecución de código en el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] procesos a través de conexiones normales y de contexto.  
   
 ## <a name="restrictions-on-context-connections"></a>Restricciones en conexiones de contexto  
  Al desarrollar su aplicación, tenga en cuenta las siguientes restricciones que se aplican a las conexiones de contexto:  
@@ -38,7 +37,7 @@ ms.locfileid: "35694386"
   
 -   No se admite el procesamiento por lotes de actualizaciones en una conexión de contexto  
   
--   **SqlNotificationRequest** no se puede usar con los comandos que se ejecuta en una conexión de contexto.  
+-   **SqlNotificationRequest** no se puede usar con los comandos que se ejecutan en una conexión de contexto.  
   
 -   No se admite la cancelación de comandos que están ejecutándose en la conexión de contexto. El **SqlCommand.Cancel** método omite automáticamente la solicitud.  
   
@@ -51,9 +50,9 @@ ms.locfileid: "35694386"
 ## <a name="restrictions-on-regular-connections"></a>Restricciones en conexiones normales  
  Al desarrollar su aplicación, tenga en cuenta las siguientes restricciones que se aplican a las conexiones normales:  
   
--   No se admite la ejecución de comandos asincrónica en servidores internos. Incluido "async = true" en la cadena de conexión de un comando y, a continuación, ejecutar el comando, da como resultado **System.NotSupportedException** que se producen. Aparece este mensaje: "No se admite el procesamiento asincrónico  al ejecutar el proceso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]".  
+-   No se admite la ejecución de comandos asincrónica en servidores internos. Incluido "async = true" en la cadena de conexión de un comando y, a continuación, ejecutar el comando, da como resultado **System.NotSupportedException** producida. Aparece este mensaje: "No se admite el procesamiento asincrónico  al ejecutar el proceso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]".  
   
--   **SqlDependency** no admite el objeto.  
+-   **SqlDependency** objeto no es compatible.  
   
 ## <a name="see-also"></a>Vea también  
  [Conexión de contexto](../../../relational-databases/clr-integration/data-access/context-connection.md)  

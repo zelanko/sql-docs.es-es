@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text queries [SQL Server], performance
 - transform noise words option
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - stopwords [full-text search]
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 36f615f09fa20c2d5d07853d0a9ef07fdc445704
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 708333809439bcada782b72ce67890dc7b3d5799
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231945"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words (opción de configuración del servidor)
-  Use la `transform noise words` opción de configuración de servidor para suprimir un mensaje de error si palabras irrelevantes, es decir [las palabras irrelevantes](../../relational-databases/search/full-text-search.md), hacen que una operación booleana en una consulta de texto completo devuelva cero filas. Esta opción es útil para las consultas de texto completo que utilizan el predicado CONTAINS en el que las operaciones booleanas o las operaciones NEAR incluyen palabras irrelevantes. En la siguiente tabla se describen los valores posibles.  
+  Use la `transform noise words` opción de configuración de servidor para suprimir un mensaje de error si palabras irrelevantes, que es [las palabras irrelevantes](../../relational-databases/search/full-text-search.md), hacen que una operación booleana en una consulta de texto completo devuelva cero filas. Esta opción es útil para las consultas de texto completo que utilizan el predicado CONTAINS en el que las operaciones booleanas o las operaciones NEAR incluyen palabras irrelevantes. En la siguiente tabla se describen los valores posibles.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  

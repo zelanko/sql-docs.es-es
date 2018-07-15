@@ -1,5 +1,5 @@
 ---
-title: Elemento Update (XMLA) | Documentos de Microsoft
+title: Elemento Update (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Update command [XMLA]
 ms.assetid: 324dcc16-865d-4d0a-b393-2b06c18ac807
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 68eb54e24daccb08a77cc88b2396d31114a29b25
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 75dda4a163ce6551246e11aa9eba6b57fcd9fb25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283963"
 ---
 # <a name="update-element-xmla"></a>Elemento Update (XMLA)
   Actualiza miembros de atributo de una dimensión.  
@@ -69,7 +69,7 @@ ms.locfileid: "36197244"
 ## <a name="remarks"></a>Notas  
  El comando `Update` mueve los miembros de atributo dentro de una dimensión habilitada para escritura.  
   
- Para obtener más información acerca de cómo actualizar los miembros, vea [Insertar, actualizar y quitar miembros &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
+ Para obtener más información acerca de cómo actualizar miembros, vea [Insertar, actualizar y quitar miembros &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento DROP &#40;XMLA&#41;](drop-element-xmla.md)   

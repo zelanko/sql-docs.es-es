@@ -1,11 +1,11 @@
 ---
-title: Invocar funciones de agregado definidas por el usuario CLR | Documentos de Microsoft
+title: Invocar funciones de agregado definido por el usuario CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -21,14 +21,14 @@ caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7731be96b2cf9eaccdad14274250346c04b67a75
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ca243bc1961b703839ff72e5b559349e3a4c3e36
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700346"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355377"
 ---
-# <a name="clr-user-defined-aggregate---invoking-functions"></a>Agregado definido por el usuario CLR - invocar funciones
+# <a name="clr-user-defined-aggregate---invoking-functions"></a>Agregado definido por el usuario CLR: invocar funciones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En las instrucciones SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)], puede invocar agregados definidos por el usuario de Common Language Runtime (CLR), siguiendo todas las reglas que se aplican a las funciones de agregado del sistema.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "35700346"
   
 -   Agregados definidos por el usuario se deben invocar utilizando un nombre de dos partes en forma de *nombre_esquema.nombre_agrdu*.  
   
--   El tipo de argumento del agregado definido por el usuario debe coincidir o ser implícitamente convertible a la *input_type* del agregado, tal como se define en el **CREATE AGGREGATE** instrucción.  
+-   El tipo de argumento del agregado definido por el usuario debe coincidir con o ser implícitamente convertible a la *input_type* del agregado, tal como se define en el **CREATE AGGREGATE** instrucción.  
   
 -   El tipo de valor devuelto del agregado definido por el usuario debe coincidir con el *return_type* en el **CREATE AGGREGATE** instrucción.  
   
@@ -200,7 +200,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Una vez compilado el código en **MyAgg.dll**, puede registrar el agregado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como se indica a continuación:  
+ Una vez compilado el código en **MyAgg.dll**, puede registrar el agregado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como sigue:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -212,7 +212,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no se admite la ejecución de objetos de base de datos de Visual C++, como las funciones escalares, que se han compilado con la opción /clr:pure del compilador.  
   
- Al igual que con la mayoría de los agregados, la mayor parte de la lógica en el **Accumulate** método. Aquí, la cadena que se pasa como un parámetro a la **Accumulate** método se anexa a la **StringBuilder** objeto que se inicializó en el **Init** método. Suponiendo que esto no es la primera vez el **Accumulate** ha llamado al método, también se anexa una coma a la **StringBuilder** antes de anexar la cadena que se pasa. Al final de las tareas de cálculo, el **Terminate** llama el método, que devuelve el **StringBuilder** como una cadena.  
+ Al igual que con la mayoría de los agregados, la mayor parte de la lógica en el **Accumulate** método. Aquí, la cadena que se pasa como un parámetro a la **Accumulate** método se anexa a la **StringBuilder** objeto que se inicializó en el **Init** método. Suponiendo que esto no es la primera vez el **Accumulate** ha llamado al método, también se anexa una coma a la **StringBuilder** antes de anexar la cadena pasada. Al finalizar las tareas de cálculo, el **Terminate** llama el método, que devuelve el **StringBuilder** como una cadena.  
   
  Considere, por ejemplo, una tabla con el siguiente esquema:  
   
@@ -245,7 +245,7 @@ GROUP BY BookID;
 |3|Roberts, Michaels, Steven|  
   
 ## <a name="example-2"></a>Ejemplo 2  
- El ejemplo siguiente muestra una función de agregado que tiene dos parámetros en la **Accumulate** método.  
+ El ejemplo siguiente muestra un agregado que tiene dos parámetros en la **Accumulate** método.  
   
  [C#]  
   

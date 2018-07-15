@@ -1,5 +1,5 @@
 ---
-title: Elemento ReportFormatParameter (ASSL) | Documentos de Microsoft
+title: Elemento ReportFormatParameter (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportFormatParameter element
 ms.assetid: 064a8683-c44b-4261-be4d-32226d3d3119
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9df481067c68796c1b1ab1d029dbd08fbda13c9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dfcc98e3abe60296e7ee28b57bc54fe89f5c2abe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245585"
 ---
 # <a name="reportformatparameter-element-assl"></a>Elemento ReportFormatParameter (ASSL)
-  Contiene el nombre y el valor de un parámetro que especifica cómo un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se da formato al informe en tiempo de ejecución.  
+  Contiene el nombre y valor de un parámetro que especifica cómo un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se da formato al informe en tiempo de ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36113235"
 |Elementos secundarios|[Name](../properties/name-element-assl.md), [Value](../properties/value-element-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `ReportFormatParameter` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ReportAction>.  
+ El elemento que se corresponde con el elemento primario de `ReportFormatParameter` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ReportAction>.  
   
 ## <a name="see-also"></a>Vea también  
  [Tipo de datos ReportAction &#40;ASSL&#41;](../data-type/action-data-type-assl.md)   

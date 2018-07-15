@@ -1,5 +1,5 @@
 ---
-title: Opciones de actualización (Administrador de informes) de caché | Documentos de Microsoft
+title: Almacenar en caché las opciones de actualización (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5d5a2bd4683e70523275c8da191bc74cd4de28d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734bad595344741ee47503352b440a8db320912
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282701"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Opciones de actualización de memoria caché (Administrador de informes)
   Utilice la página Opciones de actualización de caché a fin de crear las programaciones para cargar previamente la memoria caché con copias temporales de datos para un informe o un conjunto de datos compartido. Un plan de actualización incluye una programación y la opción para especificar o invalidar los valores de los parámetros. Para un conjunto de datos compartido, no puede invalidar los valores para los parámetros que estén marcados como de solo lectura. Puede crear y utilizar más de un plan de actualización como parte de la página de opciones de actualización.  
@@ -71,7 +71,7 @@ ms.locfileid: "36196878"
   
  Para obtener más información, consulte [nueva programación: Editar página de programación &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
   
- **programación compartida**  
+ **Programación compartida**  
  Seleccione esta opción para seleccionar una programación existente.  
   
  Para obtener más información, consulte [crear, modificar y eliminar programaciones](subscriptions/create-modify-and-delete-schedules.md).  
@@ -81,7 +81,7 @@ ms.locfileid: "36196878"
   
  Vea [Especificar los parámetros](#Parameters) en la sección siguiente.  
   
- **Usar valor predeterminado**  
+ **Usar el valor predeterminado**  
  Seleccione esta opción para usar el valor predeterminado predefinido para este parámetro.  
   
 ##  <a name="Parameters"></a> Especificación de parámetros  
@@ -111,9 +111,9 @@ ms.locfileid: "36196878"
 ### <a name="report-parameters"></a>Parámetros de informe  
  En un informe, cada valor de parámetro debe ser válido para poder crear correctamente un plan de actualización de caché. Debe escribir o seleccionar un valor predeterminado para cada parámetro de informe. El valor que establece invalida el predeterminado que se define para el parámetro de informe en el servidor de informes.  
   
- Los parámetros deben cumplir los requisitos especificados en las propiedades de parámetro en el servidor de informes. Por ejemplo, si la propiedad AllowBlank está establecida en falso para un parámetro de informe, una cadena vacía no es un valor válido.  
+ Los parámetros deben cumplir los requisitos especificados en las propiedades de parámetro en el servidor de informes. Por ejemplo, si la propiedad AllowBlank es false para un parámetro de informe, una cadena vacía no es un valor válido.  
   
- Para ver o cambiar las opciones de los parámetros de informe, debe modificar los parámetros de informe en el informe o independientemente en el servidor de informes. Para obtener más información, consulte [concepto de parámetros de informe &#40;el generador de informes y SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+ Para ver o cambiar las opciones de los parámetros de informe, debe modificar los parámetros de informe en el informe o independientemente en el servidor de informes. Para obtener más información, consulte [concepto de parámetros de informe &#40;generador de informes y SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
   
 ## <a name="conditions-that-cause-a-cache-refresh-plan-to-be-inactive"></a>Condiciones que ocasionan que un plan de actualización de caché esté inactivo  
  Las siguientes condiciones pueden hacer que un plan de actualización de caché de un informe o un conjunto de datos compartido se convierta en inactivo.  

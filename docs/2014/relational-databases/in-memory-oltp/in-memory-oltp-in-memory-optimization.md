@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 caps.latest.revision: 98
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a7ee2a4a5a9bb56eee68aab349ff65ca811356cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1a1df515a5a88c94e52d376394905a819d361281
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316205"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP en memoria (optimización en memoria)
   Es una novedad en [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] puede mejorar significativamente el rendimiento de la aplicación de base de datos OLTP. 
@@ -36,7 +36,7 @@ ms.locfileid: "36105668"
   
  En esta tabla resumimos los patrones de carga de trabajo que sacarían el máximo partido usando [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]:  
   
-|Escenario de implementación|Escenario de implementación|Entre las ventajas de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]|  
+|Escenario de implementación|Escenario de implementación|Ventajas de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]|  
 |-----------------------------|-----------------------------|-------------------------------------|  
 |Índice elevado de inserción de datos a partir de varias conexiones simultáneas.|Almacenamiento principal solo de adición.<br /><br /> Incapaz de procesar la carga de trabajo insertada.|Eliminar contención.<br /><br /> Reducir registros.|  
 |Leer el rendimiento y escalar con inserción y actualizaciones por lotes periódicos.|Operaciones de lectura de alto rendimiento, especialmente cuando cada solicitud de servidor debe realizar varias operaciones de lectura.<br /><br /> Incapaz de satisfacer los requisitos de ampliación vertical.|Eliminar la contención cuando llegan datos nuevos.<br /><br /> Recuperación de datos de menor latencia.<br /><br /> Minimizar el tiempo de ejecución del código.|  
@@ -54,7 +54,7 @@ ms.locfileid: "36105668"
   
  En [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] existen limitaciones en el área expuesta de [!INCLUDE[tsql](../../../includes/tsql-md.md)] admitida para [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].  
   
- [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] logra importantes mejoras en el rendimiento y la escalabilidad mediante:  
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] logra importantes mejoras de rendimiento y escalabilidad mediante:  
   
 -   Los algoritmos que se optimizan para tener acceso a los datos residentes en memoria.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36105668"
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Requisitos para usar tablas con optimización para memoria](memory-optimized-tables.md)|Describe los requisitos de hardware y software y las instrucciones para utilizar tablas optimizadas para memoria.|  
-|[Usar OLTP en memoria en un entorno de máquinas virtuales](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|Se ocupa del uso de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] en entornos virtualizados.|  
+|[Uso de OLTP en memoria en un entorno de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|Se ocupa del uso de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] en entornos virtualizados.|  
 |[Ejemplos de código de OLTP en memoria](in-memory-oltp-code-samples.md)|Contiene ejemplos de código en los que se muestra cómo crear y utilizar una tabla optimizada para memoria.|  
 |[Memory-Optimized Tables](memory-optimized-tables.md)|Presenta las tablas optimizadas para memoria.|  
 |[Variables de tabla con optimización para memoria](../../database-engine/memory-optimized-table-variables.md)|Ejemplo de código que muestra cómo utilizar una variable de tabla optimizada para memoria en lugar de una variable de tabla tradicional para reducir el uso de tempdb.|  
@@ -95,7 +95,7 @@ ms.locfileid: "36105668"
   
 -   [OLTP en memoria y los patrones de carga de trabajo comunes y consideraciones para la migración](http://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [Información general de funcionamiento interno SQL Server OLTP en memoria](http://msdn.microsoft.com/library/dn720242.aspx)  
+-   [Información general de los aspectos internos OLTP en memoria SQL Server](http://msdn.microsoft.com/library/dn720242.aspx)  
   
 ## <a name="see-also"></a>Vea también  
  [Características de la base de datos](../database-features.md)  

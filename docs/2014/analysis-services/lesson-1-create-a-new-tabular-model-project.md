@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Crear un nuevo proyecto de modelo Tabular | Documentos de Microsoft'
+title: 'Lección 1: Crear un nuevo proyecto de modelo Tabular | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 6a5f5c938289963373d09891f20c3a87495a33a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ffb0804ab6edd3afbbf3a3e618ca7c417744b21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226635"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lección 1: Crear un nuevo proyecto de modelo tabular
   En esta lección, creará un nuevo proyecto de modelo tabular en blanco en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Una vez creado el nuevo proyecto, puede comenzar a agregar datos usando el Asistente para la importación de tablas. Además de crear un nuevo proyecto, esta lección incluye también una breve introducción al entorno de creación de modelos tabulares en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
@@ -39,7 +39,7 @@ ms.locfileid: "36197047"
   
 2.  En el **nuevo proyecto** cuadro de diálogo **plantillas instaladas**, haga clic en **Business Intelligence**, a continuación, haga clic en **Analysis Services**, y a continuación, haga clic en **proyecto Tabular de Analysis Services**.  
   
-3.  En **nombre**, tipo `AW Internet Sales Tabular Model`, a continuación, especifique una ubicación para los archivos de proyecto.  
+3.  En **nombre**, tipo `AW Internet Sales Tabular Model`, a continuación, especifique una ubicación para los archivos del proyecto.  
   
      De forma predeterminada, el **Nombre de la solución** será el mismo que el nombre del proyecto, pero puede especificar un nombre de solución diferente.  
   

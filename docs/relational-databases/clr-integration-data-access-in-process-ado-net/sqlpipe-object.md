@@ -1,12 +1,12 @@
 ---
-title: SqlPipe, objetos | Documentos de Microsoft
+title: Objeto SqlPipe | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ caps.latest.revision: 54
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab26172d585be0a7ffd4d6d3b77630bdecf384ce
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 27e9b16848cb214c0ba7502beb878ab9cde061c3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702126"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354317"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe, objetos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "35702126"
   
  El método **Send** envía los datos directamente al cliente o autor de la llamada. Generalmente es el cliente el que consume los resultados del método **SqlPipe**, pero en el caso de procedimientos almacenados de CLR anidados, el consumidor de los resultados también puede ser un procedimiento almacenado. Por ejemplo, Procedure1 llama a SqlCommand.ExecuteReader() con el texto de comando "EXEC Procedure2". Procedure2 también es un procedimiento almacenado administrado. Si Procedure2 llama ahora a SqlPipe.Send( SqlDataRecord ), la fila se envía al lector de Procedure1, no al cliente.  
   
- El **enviar** método envía un mensaje de cadena que aparece en el cliente como un mensaje informativo, equivalente a PRINT en [!INCLUDE[tsql](../../includes/tsql-md.md)]. También puede enviar un conjunto de resultados de fila única mediante **SqlDataRecord**o un conjunto de resultados de varias filas mediante **SqlDataReader**.  
+ El **enviar** método envía un mensaje de cadena que aparece en el cliente como un mensaje de información, equivalente a PRINT en [!INCLUDE[tsql](../../includes/tsql-md.md)]. También puede enviar un conjunto de resultados de fila única mediante **SqlDataRecord**o un conjunto de resultados de varias filas mediante **SqlDataReader**.  
   
  El objeto **SqlPipe** también incluye un método **ExecuteAndSend** . Este método se puede utilizar para ejecutar un comando (se pasa como objeto **SqlCommand** ) y devolver directamente los resultados al autor de la llamada. Si existen errores en el comando enviado, las excepciones se envían a la canalización, pero también se envía una copia al código administrado que realiza la llamada. Si el código de llamada no detecta la excepción, propaga la pila al código de [!INCLUDE[tsql](../../includes/tsql-md.md)] y aparece dos veces en el resultado. Si el código de llamada sí detecta la excepción, el consumidor de la canalización aún ve el error, pero no hay errores duplicados.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, application code usage
 - XML [SQL Server], FOR XML clause
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73ca2ee9220b73e329ab829f3533274416b1855b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a8cb0fb56cd1715331c5c3f0e09c4319e0b82335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254117"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Usar los resultados de FOR XML en el código de aplicación
   Al utilizar cláusulas FOR XML con consultas SQL, se pueden recuperar e incluso convertir los resultados de la consulta como datos XML. Esta funcionalidad permite realizar las siguientes operaciones cuando los resultados de las consultas FOR XML se pueden utilizar en el código de aplicación XML:  
@@ -39,9 +39,9 @@ ms.locfileid: "36113992"
  Este tema proporciona ejemplos que muestran estos planteamientos.  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>Recuperar datos FOR XML con islas de datos ADO y XML  
- La propiedad ADO `Stream` objeto u otros objetos que son compatibles con el COM `IStream` interfaz, por ejemplo, las páginas Active Server (ASP) `Request` y `Response` objetos, se pueden usar para guardar los resultados cuando se trabaja con consultas FOR XML.  
+ ADO `Stream` objeto u otros objetos que admiten el COM `IStream` interfaz, por ejemplo, las páginas Active Server (ASP) `Request` y `Response` objetos, se pueden usar para contener los resultados cuando se trabaja con consultas FOR XML.  
   
- Por ejemplo, el siguiente código ASP muestra los resultados de la consulta de un `xml` columna tipo de datos, datos demográficos, en la tabla Sales.Store de la base de datos de ejemplo AdventureWorks. Concretamente, la consulta busca el valor de instancia de esta columna para la fila en la que CustomerID es igual a 3.  
+ Por ejemplo, el siguiente código ASP muestra los resultados de la consulta de un `xml` columna tipo de datos, Demographics, en la tabla Sales.Store de la base de datos de ejemplo AdventureWorks. Concretamente, la consulta busca el valor de instancia de esta columna para la fila en la que CustomerID es igual a 3.  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -205,13 +205,13 @@ ms.locfileid: "36113992"
   
  En este ejemplo, se utilizan las siguientes API administradas de Microsoft .NET Framework para devolver y representar los resultados de la consulta FOR XML:  
   
-1.  `SqlConnection` se utiliza para abrir una conexión con SQL Server, en función del contenido de una variable de cadena de conexión especificada, strConn.  
+1.  `SqlConnection` se utiliza para abrir una conexión a SQL Server, según el contenido de una variable de cadena de conexión especificada, strConn.  
   
 2.  A continuación, se utiliza `SqlDataAdapter` como adaptador de datos y se emplea la conexión SQL y una cadena de consulta SQL especificada para ejecutar la consulta FOR XML.  
   
-3.  Una vez ejecutada la consulta, el `SqlDataAdapter.Fill` método, a continuación, se llama y se pasa una instancia de un `DataSet,` MyDataSet, para llenar el conjunto de datos con la salida de la consulta FOR XML.  
+3.  Después de que se ha ejecutado la consulta, el `SqlDataAdapter.Fill` , a continuación, se llama a método y se pasa una instancia de un `DataSet,` MyDataSet, para llenar el conjunto de datos con la salida de la consulta FOR XML.  
   
-4.  El `DataSet.GetXml` , a continuación, se llama el método para devolver los resultados de consulta como una cadena que se pueden mostrar en la página HTML generada por el servidor.  
+4.  El `DataSet.GetXml` , a continuación, se llama el método para devolver los resultados de consulta como una cadena que se puede mostrar en la página HTML generado por el servidor.  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -294,7 +294,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` soporte permite solicitar que se devuelva el resultado de una consulta FOR XML como tipo de datos `xml` tipo de datos, en lugar de como cadena o imagen de datos con tipo, especificando el [directiva TYPE](type-directive-in-for-xml-queries.md). Cuando se usa la directiva TYPE en las consultas FOR XML, el tipo de acceso que se proporciona mediante programación a los resultados de FOR XML es similar al que se muestra en [Usar datos XML en las aplicaciones](use-xml-data-in-applications.md).  
+>  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` soporte permite solicitar que se devuelva el resultado de una consulta FOR XML como tipo de datos `xml` tipo de datos, en lugar de como cadena o imagen de tipos de datos, especificando el [directiva TYPE](type-directive-in-for-xml-queries.md). Cuando se usa la directiva TYPE en las consultas FOR XML, el tipo de acceso que se proporciona mediante programación a los resultados de FOR XML es similar al que se muestra en [Usar datos XML en las aplicaciones](use-xml-data-in-applications.md).  
   
 ## <a name="see-also"></a>Vea también  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  

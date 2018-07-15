@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report-specific schedules [Reporting Services]
 - shared schedules [Reporting Services]
@@ -25,26 +25,26 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c4ac89d35cfe118cb82e945ef48d87c24b56abed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5cecee40fb3eaee2bd481b38a54cbcfa686eb0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317885"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   Use este tema para obtener información acerca de cómo crear, modificar y eliminar programaciones.  
   
  En este tema:  
   
--   [Información general de la administración de programaciones compartidas](#bkmk_overview)  
+-   [Información general de administración de programaciones compartidas](#bkmk_overview)  
   
--   [Crear y administrar programaciones compartidas (modo de SharePoint)](#bkmk_sharepoint)  
+-   [Crear y administrar programaciones compartidas (modo SharePoint)](#bkmk_sharepoint)  
   
 -   [Crear y administrar programaciones compartidas (modo nativo)](#bkmk_native)  
   
-##  <a name="bkmk_overview"></a> Información general de la administración de programaciones compartidas  
+##  <a name="bkmk_overview"></a> Información general de administración de programaciones compartidas  
  Para administrar programaciones compartidas para el modo nativo, use la página Programaciones del Administrador de informes o la carpeta Programaciones compartidas de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para el modo de SharePoint, use las páginas de administración para la aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Puede ver todas las programaciones compartidas definidas para el servidor de informes, pausarlas y reanudarlas (solo en el Administrador de informes) e incluso seleccionar las programaciones que desea modificar o eliminar. La página Programaciones compartidas resume la siguiente información sobre el estado de cada programación: frecuencia, propietario, fecha de expiración y estado.  

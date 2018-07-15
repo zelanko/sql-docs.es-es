@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_PARTITION_DIMENSION_STAT | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_PARTITION_DIMENSION_STAT | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bf4626b3-4d6b-4795-bb01-df335fb9c09a
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 798fa10d608db06da3a45041df25c11047dc7a7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f4dc209f985cafe804f81fa54fa68c56655d3e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310745"
 ---
 # <a name="discoverpartitiondimensionstat-rowset"></a>Conjunto de filas DISCOVER_PARTITION_DIMENSION_STAT
   Devuelve estadísticas sobre la dimensión asociada a una partición.  
@@ -28,7 +28,7 @@ ms.locfileid: "36106228"
  **Se aplica a:** modelos tabulares, modelos multidimensionales  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_PARTITION_DIMENSION_STAT` filas contiene las columnas siguientes.  
+ El `DISCOVER_PARTITION_DIMENSION_STAT` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Restricción|Descripción|  
 |-----------------|--------------------|-----------------|-----------------|  

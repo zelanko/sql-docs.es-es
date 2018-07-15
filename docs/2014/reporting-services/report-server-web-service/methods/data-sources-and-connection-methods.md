@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], methods
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d86f3caa19f9fc9466704feb0421810213c008ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7f3885bc443bbd47388a7bc3453dc9130aa6aa09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251314"
 ---
 # <a name="data-sources-and-connection-methods"></a>Orígenes de datos y métodos de conexión
   Puede utilizar estos métodos para establecer y administrar las credenciales y las conexiones a un origen de datos.  

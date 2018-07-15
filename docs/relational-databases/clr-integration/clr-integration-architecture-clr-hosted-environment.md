@@ -1,12 +1,11 @@
 ---
-title: Entorno de CLR hospedado | Documentos de Microsoft
+title: Entorno de CLR hospedado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -30,14 +29,14 @@ caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6292f8fd453b0031b36e1c9a244c442e94d323f1
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 50343b871322c373b297e5b1a062df844621ba2d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697516"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352817"
 ---
-# <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitectura de integración de CLR - entorno hospedado CLR
+# <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitectura de integración de CLR: entorno hospedado CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   La integración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con .NET Framework Common Language Runtime (CLR) permite a los programadores de base de datos usar lenguajes como Visual C#, Visual Basic .NET y Visual C++. Las funciones, procedimientos almacenados, desencadenadores, tipos de datos y agregados pertenecen a los tipos de lógica de negocios que los programadores pueden escribir con estos lenguajes.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "35697516"
   
 -   ExternalProcessMgmt, que indica si la API expone una forma de controlar el proceso de host.  
   
- Dados estos atributos, el host puede especificar una lista de atributos HPA, como el atributo SharedState, que no deberían permitirse en el entorno hospedado. En este caso, CLR rechaza los intentos del código de usuario de llamar a las API anotadas por los HPA en la lista de atributos prohibidos. Para obtener más información, consulte [atributos de protección de Host y la programación de integración de CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
+ Dados estos atributos, el host puede especificar una lista de atributos HPA, como el atributo SharedState, que no deberían permitirse en el entorno hospedado. En este caso, CLR rechaza los intentos del código de usuario de llamar a las API anotadas por los HPA en la lista de atributos prohibidos. Para obtener más información, consulte [atributos de protección de Host y programación de integración de CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
   
 ## <a name="how-sql-server-and-the-clr-work-together"></a>Cómo trabajan juntos SQL Server y CLR  
  En esta sección se describe el modo en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integra los modelos de subprocesamiento, programación, sincronización y administración de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y CLR. En concreto, en esta sección se examina la integración a la luz de los objetivos de escalabilidad, confiabilidad y seguridad. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actúa esencialmente como sistema operativo para CLR cuando se hospeda en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CLR llama a las rutinas de bajo nivel implementadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el subprocesamiento, la programación, la sincronización y la administración de memoria. Éstos son los mismos tipos primitivos que usa el resto del motor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este enfoque proporciona varias ventajas de escalabilidad, confiabilidad y seguridad.  
@@ -146,10 +145,10 @@ ms.locfileid: "35697516"
   
  A la vista de estas consideraciones, se desaconseja el uso de variables estáticas y miembros de datos estáticos de las clases que se utilizan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En el caso de ensamblados SAFE y EXTERNAL_ACCESS, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] examina los metadatos del ensamblado en el momento de creación del ensamblado (CREATE ASSEMBLY) y no puede crear dichos ensamblados si detecta el uso de variables y miembros de datos estáticos.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] También permite las llamadas a API de .NET Framework que se anoten con el **SharedState**, **sincronización** y **ExternalProcessMgmt** atributos de protección del host. Esto impide que los ensamblados EXTERNAL_ACCESS y SAFE llamen a cualquiera de las API que habilitan el estado compartido, ejecuten la sincronización y puedan afectar a la integridad del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [restricciones del modelo de programación de integración de CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] También permite las llamadas a API de .NET Framework anotadas con el **SharedState**, **sincronización** y **ExternalProcessMgmt** atributos de protección del host. Esto impide que los ensamblados EXTERNAL_ACCESS y SAFE llamen a cualquiera de las API que habilitan el estado compartido, ejecuten la sincronización y puedan afectar a la integridad del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [restricciones del modelo de programación de integración de CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Seguridad de la integración de CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
+ [Seguridad de la integración CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Rendimiento de la integración CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   
   

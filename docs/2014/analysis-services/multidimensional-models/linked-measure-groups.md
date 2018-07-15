@@ -1,5 +1,5 @@
 ---
-title: Vincular grupos de medida | Documentos de Microsoft
+title: Grupos de medida vinculados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linked measure groups [Analysis Services]
 - referencing measure groups
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f01313ce33a2dca510846a66d34d972540d72d85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e67d39b1cafa212b2a43b55d9de58e5df918bd11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251477"
 ---
 # <a name="linked-measure-groups"></a>Grupos de medida vinculados
   Un grupo de medida vinculado está basado en otro grupo de medida de un cubo diferente dentro de la misma base de datos o en una base de datos de Analysis Services diferente. Puede usar un grupo de medida vinculada si desea reutilizar un conjunto de medidas, y los valores de datos correspondientes, en varios cubos.  
   
- Microsoft recomienda que los grupos de medida vinculados y originales residan en soluciones que se ejecuten en el mismo servidor. Vincular a un grupo de medida en un servidor remoto está programada para desuso en una versión futura (vea [en desuso de Analysis Services Features in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
+ Microsoft recomienda que los grupos de medida vinculados y originales residan en soluciones que se ejecuten en el mismo servidor. Vincular a un grupo de medida en un servidor remoto está programada para desuso en una versión futura (vea [en desuso características de Analysis Services en SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
   
 > [!IMPORTANT]  
 >  Los grupos de medida vinculados son de solo lectura. Para reflejar los últimos cambios, debe eliminar y volver a crear todos los grupos de medida vinculados basados en el objeto de origen modificado. Por esta razón, copiar y pegar grupos de medida entre distintos proyectos es un método alternativo que debe tener en cuenta en caso de que se necesiten modificaciones futuras al grupo de medida.  
@@ -72,7 +72,7 @@ ms.locfileid: "36113906"
 ## <a name="secure-a-linked-measure"></a>Proteger una medida vinculada  
  Una vez definido este vínculo, el acceso a las medidas de un grupo de medida vinculado se administra de la misma manera que el acceso a otros grupos de medida. Un objeto vinculado aparece junto con sus homólogos no vinculados en el Diseñador de roles. Para más información sobre cómo administrar la seguridad de un grupo de medida, vea [Otorgar permisos para cubos o modelos &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
- Para definir o usar un grupo de medida vinculado, las ventanas de cuenta de servicio para el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia debe pertenecer a un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rol de base de datos que tiene `ReadDefinition` y `Read` derechos en el origen de acceso [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia para el cubo y grupo de medida de origen, o debe pertenecer a la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] función Administradores para el origen de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia.  
+ Para definir o usar un grupo de medida vinculado, el Windows cuenta de servicio de la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia debe pertenecer a un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rol de base de datos que tiene `ReadDefinition` y `Read` derechos en el origen de acceso [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia a la cubo y grupo de medida de origen, o debe pertenecer a la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] función Administradores para el origen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia.  
   
 ## <a name="see-also"></a>Vea también  
  [Definir dimensiones vinculadas](define-linked-dimensions.md)  

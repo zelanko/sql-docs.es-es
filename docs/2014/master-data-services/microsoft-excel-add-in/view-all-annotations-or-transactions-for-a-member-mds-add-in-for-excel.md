@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 11903306315023c5de25212cc7c8196210fa0f3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 8396e4509f77310f785dc221b0eebed8979872b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197545"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Vea todas las anotaciones o transacciones para un miembro (complemento MDS para Excel)
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede ver las anotaciones (comentarios) y las transacciones de las filas de datos (miembros) cuando quiera ver actualizaciones de los datos a través del tiempo.  
@@ -33,7 +33,7 @@ ms.locfileid: "36114287"
   
 1.  Haga clic en una celda de la fila que contenga las transacciones que desee ver.  
   
-2.  Haga clic en y en el menú que se muestra, haga clic en **ver transacciones**.  
+2.  Haga clic en y desde el menú que aparece, haga clic en **ver transacciones**.  
   
 3.  En el cuadro de diálogo **Ver transacciones** , se muestra la lista de transacciones. Para ver todas las anotaciones asociadas con una transacción, haga clic en una fila de la cuadrícula.  
   

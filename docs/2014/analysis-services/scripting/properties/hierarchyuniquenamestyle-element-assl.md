@@ -1,5 +1,5 @@
 ---
-title: Elemento HierarchyUniqueNameStyle (ASSL) | Documentos de Microsoft
+title: Elemento HierarchyUniqueNameStyle (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - HierarchyUniqueNameStyle element
 ms.assetid: 2ac57825-e9e5-4ec4-9856-fa2326d2c43f
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4948cc104e39c6d7aec7e2822594e891c52b112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d19fa53581241686d68179162762a0909fcc69f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304295"
 ---
 # <a name="hierarchyuniquenamestyle-element-assl"></a>Elemento HierarchyUniqueNameStyle (ASSL)
-  Determina cómo únicos nombres se generan para las jerarquías que están dentro de la [CubeDimension](../data-type/dimension-data-type-assl.md).  
+  Determina los nombres únicos de cómo se generan para las jerarquías contenidas en el [CubeDimension](../data-type/dimension-data-type-assl.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36113038"
 |*IncludeDimensionName*|El nombre de la dimensión se incluye como parte del nombre de la jerarquía.|  
 |*ExcludeDimensionName*|El nombre de la dimensión no se incluye como parte del nombre de la jerarquía.|  
   
- El elemento que corresponde al elemento primario de `HierarchyUniqueNameStyle` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.CubeDimension>.  
+ El elemento que se corresponde con el elemento primario de `HierarchyUniqueNameStyle` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.CubeDimension>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento de cubo &#40;ASSL&#41;](../objects/cube-element-assl.md)   

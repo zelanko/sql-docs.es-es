@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a52c18dffbe35372fd0cf393cce531a59a7a04b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 98aafe228a4dfe8a2e38667fcf58a61527e103e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212385"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Crear una consulta en el Diseñador de consultas relacionales (Generador de informes y SSRS)
   Los diseñadores de consultas le ayudan a especificar los datos que se deben recuperar de un origen de datos externo para un conjunto de datos de informe. Puede utilizar un diseñador de consultas cuando genere una consulta en un asistente o cree una consulta de conjunto de datos.  
@@ -27,7 +27,7 @@ ms.locfileid: "36197552"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Una conjunto de datos se basa en un origen de datos. El tipo de origen de datos y el entorno de creación determina el diseñador de consultas que se ha de abrir al definir la consulta de conjunto de datos. Las características del diseñador de consultas varían en función del origen de datos subyacente. Para obtener más información acerca de las capas de datos, vea [las conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md) o [las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) .  
+ Una conjunto de datos se basa en un origen de datos. El tipo de origen de datos y el entorno de creación determina el diseñador de consultas que se ha de abrir al definir la consulta de conjunto de datos. Las características del diseñador de consultas varían en función del origen de datos subyacente. Para obtener más información acerca de las capas de datos, vea [conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md) o [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) .  
   
  Puede utilizar un diseñador de consultas para las siguientes tareas:  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36197552"
  La consulta se ejecuta en el origen de datos y devuelve datos de ejemplo en el panel Resultados de la consulta.  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-datasets-ssrs.md)   
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)   
  [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
  [Diseñadores de consultas &#40;Generador de informes&#41;](../query-designers-report-builder.md)   
  [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   

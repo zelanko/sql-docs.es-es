@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos IncrementalProcessingNotification (ASSL) | Documentos de Microsoft
+title: Tipo de datos IncrementalProcessingNotification (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IncrementalProcessingNotification data type
 ms.assetid: 66e27f92-65c1-4a34-b9c2-bfbb5aeb7d7c
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a913d847e6d328c3fc1289f964170af463a3f5be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ca951d727e32f576e4dc65bc005a5b423e90c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114337"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231815"
 ---
 # <a name="incrementalprocessingnotification-data-type-assl"></a>Tipo de datos IncrementalProcessingNotification (ASSL)
   Define un tipo de datos derivado que representa la información de la [ProactiveCaching](../objects/proactivecaching-element-assl.md) elemento acerca de la consulta que se ejecutan para determinar el progreso del procesamiento incremental.  

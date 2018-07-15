@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Evaluar las directivas de prácticas recomendadas de forma programada | Documentos de Microsoft'
+title: 'Lección 2: Evaluar las directivas de prácticas recomendadas de forma programada | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 37ffad63-d6db-4609-8deb-786200659554
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cd4874e722c12813eb574d94c073cc069f72a4b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: bfdad3793673e24ddf87d504ab71c96c0bac16f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196605"
 ---
 # <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>Lección 2: evaluar las directivas de las prácticas recomendadas de forma programada
   Puede configurar evaluaciones programadas de directivas de prácticas recomendadas en una o más instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para configurar las directivas de prácticas recomendadas de modo que se ejecuten de forma programada, debe importar las directivas en la instancia de destino.  
@@ -39,7 +39,7 @@ ms.locfileid: "36197503"
   
  En esta lección se incluyen los temas siguientes:  
   
--   [Importar las directivas a una sola instancia](../../2014/tutorials/import-the-policies-to-a-single-instance.md)  
+-   [Importar las directivas a una instancia única](../../2014/tutorials/import-the-policies-to-a-single-instance.md)  
   
 -   [Programar las directivas](../../2014/tutorials/schedule-the-policies.md)  
   

@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 09b00f2a95ae510cc387d60e3d810e03196bd76e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4822bfe4b64e9fd169d02bd0b733bc64997d3b90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190525"
 ---
 # <a name="backup-encryption"></a>Cifrado de copia de seguridad
   Este tema proporciona información general sobre las opciones de cifrado para las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Incluye detalles del uso, los beneficios y las prácticas recomendadas para el cifrado durante la copia de seguridad.  
@@ -139,7 +138,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |Tema y tarea|Descripción|  
 |-----------------|-----------------|  
 |[Crear una copia de seguridad cifrada](create-an-encrypted-backup.md)|Describe los pasos básicos necesarios para crear una copia de seguridad cifrada|  
-|[SQL Server administrado Backup to Windows Azure - configuración de almacenamiento y de retención](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Describe los pasos básicos necesarios para configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con las opciones de cifrado especificadas.|  
+|[Copia de seguridad administrada de SQL Server para Microsoft Azure - Configuración de la retención y el almacenamiento](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Describe los pasos básicos necesarios para configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con las opciones de cifrado especificadas.|  
 |[Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Proporciona un ejemplo de creación de una copia de seguridad cifrada protegida por claves en el almacén de claves de Azure.|  
   
 ## <a name="see-also"></a>Vea también  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameter queries [SQL Server]
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 92279d4ee154bbac96341680fe2c8bcd1d3c2231
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dc09916ca71dabcdf9e50ddb109c9b60ac0401b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303505"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Consultas con parámetros (Visual Database Tools)
   En algunos casos, tal vez necesite crear una consulta que pueda utilizar en muchas ocasiones, pero con un valor diferente cada vez. Por ejemplo, puede ejecutar habitualmente una consulta para buscar todos los `title_ids` escritos por un autor. Puede ejecutar la misma consulta para cada solicitud, con la salvedad de que el nombre o el Id. del autor serán diferentes cada vez.  
@@ -70,7 +70,7 @@ WHERE au_fname = %first name% AND
   
 ## <a name="see-also"></a>Vea también  
  [Consulta con parámetros &#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)   
- [Tipos de consulta admitidos &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
+ [Tipos de consultas compatibles &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
  [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

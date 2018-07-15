@@ -1,11 +1,11 @@
 ---
-title: Utilizar System.Transactions | Documentos de Microsoft
+title: Utilizar System.Transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,12 +20,12 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 985669c18716faec4ac731fe76c09c84f8f5584a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e9e09ae1d55065f7f50d25c3538f3c9218d8ed52
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700576"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349812"
 ---
 # <a name="using-systemtransactions"></a>Utilizar System.Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

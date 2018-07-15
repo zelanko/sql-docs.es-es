@@ -1,5 +1,5 @@
 ---
-title: Seleccionar tablas y vistas (fuentes de datos) (SSAS) | Documentos de Microsoft
+title: Seleccionar tablas y vistas (fuentes de datos) (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.seltablesviewsdf.f1
 ms.assetid: 6c4fafe0-e02e-47d1-b8bc-e70e872690af
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 199e225e6a3a4b63c704606418fae021b1ba3e9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0864ee8b70f104abb02e7064d3f011495f193c3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208105"
 ---
 # <a name="select-tables-and-views-data-feeds-ssas"></a>Seleccionar tablas y vistas (fuentes de distribución de datos) (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite seleccionar las tablas y vistas de las que desea importar los datos. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
@@ -34,7 +34,7 @@ ms.locfileid: "36198067"
  **Dirección URL de fuente de datos**  
  Muestra la dirección URL para la fuente de distribución de datos que seleccionó.  
   
- **Tablas y vistas**  
+ **Las tablas y vistas**  
  Enumera las tablas y vistas de la fuente de datos. Active la casilla situada al lado de cada tabla y vista que desee importar.  
   
  **Tabla de origen**  

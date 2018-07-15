@@ -1,5 +1,5 @@
 ---
-title: Autorizar el acceso a objetos y operaciones (Analysis Services) | Documentos de Microsoft
+title: Autorizar el acceso a objetos y operaciones (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.membership.f1
 - sql12.asvs.roledesignerdialog.general.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed4336f15c7bb024e9de1d4a4be7928ebf2c89af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43f0606aebac245a3756db1361ea8f1cf6360358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249185"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Cómo autorizar el acceso a objetos y operaciones (Analysis Services)
   El acceso de los usuarios que no sean administradores a los cubos, dimensiones y modelos de minería de datos de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se obtiene mediante la pertenencia a uno o varios roles de base de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Los administradores crean estos roles de base de datos, conceden permisos de Lectura o de Lectura y escritura en objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y luego asignan usuarios y grupos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows a cada rol.  
@@ -56,7 +56,7 @@ ms.locfileid: "36196753"
   
  **Paso 1: Administración de servidores**  
   
- El primer paso es decidir quién tendrá derechos de administrador en el nivel de servidor. Durante la instalación, el administrador local que instala SQL Server debe especificar una o varias cuentas de Windows como el administrador de servidor de Analysis Services. Los administradores de servidor cuentan con todos los permisos posibles para un servidor, lo cual incluye los permisos para ver, modificar y eliminar cualquier objeto del servidor o para ver los datos asociados. Una vez se ha completado la instalación, los administradores de servidor pueden agregar o quitar cuentas para cambiar la pertenencia de este rol. Vea [conceder permisos de administrador de servidor &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) para obtener más información acerca de este nivel de permiso.  
+ El primer paso es decidir quién tendrá derechos de administrador en el nivel de servidor. Durante la instalación, el administrador local que instala SQL Server debe especificar una o varias cuentas de Windows como el administrador de servidor de Analysis Services. Los administradores de servidor cuentan con todos los permisos posibles para un servidor, lo cual incluye los permisos para ver, modificar y eliminar cualquier objeto del servidor o para ver los datos asociados. Una vez se ha completado la instalación, los administradores de servidor pueden agregar o quitar cuentas para cambiar la pertenencia de este rol. Consulte [conceder permisos de administrador de servidor &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) para obtener más información acerca de este nivel de permiso.  
   
  **Paso 2: Administración de bases de datos**  
   

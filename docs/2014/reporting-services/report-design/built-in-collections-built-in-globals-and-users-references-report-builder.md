@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 897cb599b73c6a136c2d79e2a21068dfb05655ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 35a17dd8fd787fe585108b661117b36f887bdfca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331015"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Referencias a campos globales y de usuario integrados (Generador de informes y SSRS)
   La colección de campos integrados, que incluye las colecciones `Globals` y `User`, representa valores globales proporcionados por Reporting Services al procesar un informe. La colección `Globals` proporciona valores como el nombre del informe, la hora a la que comenzó el procesamiento del informe y el número de la página actual para el encabezado o el pie de página del informe. La colección `User` proporciona el identificador de usuario y la configuración de idioma. Estos valores se pueden usar en expresiones para filtrar los resultados de un informe.  
@@ -33,7 +33,7 @@ ms.locfileid: "36104862"
 |**Miembro**|**Tipo**|**Descripción**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|`DateTime`|Fecha y hora en que se empezó a ejecutar el informe.|  
-|PageNumber|`Integer`|Número de página actual relativo a los saltos de página que restablecieron el número de página. Al principio del procesamiento del informe, el valor inicial está establecido en 1. El número de página aumenta en cada página representada.<br /><br /> Para numerar las páginas dentro de un rectángulo, una región de datos, un grupo de regiones de datos o una asignación, en la propiedad PageBreak, saltos de página, establezca la propiedad de ResetPageNumber en `True`. No se admite en grupos de jerarquías de columnas de Tablix.<br /><br /> PageNumber solo se puede usar en una expresión en un encabezado o pie de página.|  
+|PageNumber|`Integer`|Número de página actual relativo a los saltos de página que restablecieron el número de página. Al principio del procesamiento del informe, el valor inicial está establecido en 1. El número de página aumenta en cada página representada.<br /><br /> Para numerar las páginas dentro de los saltos de página para un rectángulo, una región de datos, un grupo de regiones de datos o una asignación, en la propiedad PageBreak, establezca la propiedad ResetPageNumber `True`. No se admite en grupos de jerarquías de columnas de Tablix.<br /><br /> PageNumber solo se puede usar en una expresión en un encabezado o pie de página.|  
 |ReportFolder|`String`|Ruta de acceso completa a la carpeta en la que se halla el informe. No incluye la dirección URL del servidor de informes.|  
 |ReportName|`String`|Nombre del informe tal como se almacena en la base de datos del servidor de informes.|  
 |ReportServerUrl|`String`|Dirección URL del servidor de informes en el que se ejecuta el informe.|  
@@ -43,7 +43,7 @@ ms.locfileid: "36104862"
 |OverallTotalPages|`Integer`|Número total de páginas de todo el informe. ResetPageNumber no afecta a este valor.<br /><br /> OverallTotalPages solo se puede usar en una expresión en un encabezado o pie de página.|  
 |RenderFormat|`RenderFormat`|Información sobre la solicitud de representación actual.<br /><br /> Para obtener más información, vea la sección "RenderFormat" más adelante.|  
   
- Los miembros de la `Globals` colección devolver una variante. Si desea usar un miembro de esta colección en una expresión que requiere un tipo de datos específico, primero deberá convertir la variable. Por ejemplo, para convertir los datos de tipo variant de la fecha y hora de ejecución a formato de fecha, utilice `=CDate(Globals!ExecutionTime)`. Para obtener más información, consulte [tipos de datos en expresiones &#40;el generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md).  
+ Los miembros de la `Globals` colección devolver un tipo variant. Si desea usar un miembro de esta colección en una expresión que requiere un tipo de datos específico, primero deberá convertir la variable. Por ejemplo, para convertir los datos de tipo variant de la fecha y hora de ejecución a formato de fecha, utilice `=CDate(Globals!ExecutionTime)`. Para obtener más información, consulte [Data Types in Expressions &#40;generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
 ### <a name="renderformat"></a>RenderFormat  
  En esta tabla se describen los miembros de `RenderFormat`.  
@@ -96,7 +96,7 @@ ms.locfileid: "36104862"
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Expresión &#40;cuadro de diálogo del Generador de informes&#41;](../expression-dialog-box-report-builder.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Aplicar formato a números y fechas &#40;el generador de informes SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Aplicar formato a números y fechas &#40;generador de informes y SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

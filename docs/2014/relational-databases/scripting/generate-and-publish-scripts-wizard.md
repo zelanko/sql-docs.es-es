@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.generatescriptswizard.setscriptingoptions.f1
 - sql9.swb.generatescriptswizard.scriptwizarddescription.f1
@@ -43,15 +43,15 @@ helpviewer_keywords:
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 06b4bbbca6699c274701ae479cf24daaabdcf18b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4c784a16a3539b52c2f900af7af6e08afca098e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307615"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Asistente generar y publicar scripts
   Puede usar el **Asistente Generar y publicar scripts** para crear scripts con el fin de transferir una base de datos entre instancias de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Puede generar scripts para una base de datos en una instancia del motor de base de datos en la red local o a partir de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Los scripts generados se pueden ejecutar en otra instancia del motor de base de datos o [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. También puede usar el asistente para publicar el contenido de una base de datos directamente en un servicio web creado usando Database Publishing Services. Es posible crear scripts para una base de datos completa o limitarlos a objetos específicos.  
@@ -192,9 +192,9 @@ ms.locfileid: "36196229"
   
 -   **Incluir permisos de objeto en el script** : incluye scripts para establecer permisos en los objetos de la base de datos. El valor predeterminado es **False**.  
   
--   **Incluir estadísticas** -cuando se establece en **incluir estadísticas en**, esta opción incluye la `CREATE STATISTICS` instrucción para volver a crear estadísticas del objeto. La opción **Incluir estadísticas e histogramas en el script** también crea información de histogramas. El valor predeterminado es **No incluir estadísticas en el script**. Para obtener más información, vea [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
+-   **Generar script de estadísticas** -cuando se establece en **incluir estadísticas en**, esta opción incluye la `CREATE STATISTICS` instrucción para volver a crear estadísticas del objeto. La opción **Incluir estadísticas e histogramas en el script** también crea información de histogramas. El valor predeterminado es **No incluir estadísticas en el script**. Para obtener más información, vea [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
--   **Incluir USE DATABASE** -agrega la `USE DATABASE` instrucción a la secuencia de comandos. Para asegurarse de que se creen objetos de base de datos en la base de datos correcta, incluya el `USE DATABASE` instrucción. Cuando se prevea que la secuencia de comandos que se usará en otra base de datos, seleccione **False** para omitir la `USE DATABASE` instrucción. El valor predeterminado es **True**. Para obtener más información, vea [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
+-   **Incluir USE DATABASE** -agrega el `USE DATABASE` instrucción a la secuencia de comandos. Para asegurarse de que se creen objetos de base de datos en la base de datos correcta, incluya el `USE DATABASE` instrucción. Cuando se espera que el script se puede usar en otra base de datos, seleccione **False** para omitir la `USE DATABASE` instrucción. El valor predeterminado es **True**. Para obtener más información, vea [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
 -   **Tipos de datos que se deben incluir en el script**: selecciona lo que se incluirá en el script: **Solo datos**, **Solo esquema** o ambos. El valor predeterminado **Solo esquema**.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "36196229"
   
 -   **Generar script de seguimiento de cambios** : incluye en el script el seguimiento de cambios si se ha habilitado en la base de datos de origen o en las tablas de la base de datos de origen. El valor predeterminado es **False**. Para obtener más información, vea [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
--   **Incluir restricciones check** – Adds `CHECK` restricciones a la secuencia de comandos. El valor predeterminado es **True**. `CHECK` las restricciones requieren datos que se escriban en una tabla para cumplir con una condición especificada. Para más información, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+-   **Incluir restricciones check** – Adds `CHECK` restricciones a la secuencia de comandos. El valor predeterminado es **True**. `CHECK` las restricciones requieren datos que se escriben en una tabla para cumplir con una condición especificada. Para más información, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 -   **Incluir opciones de compresión de datos en el script** : incluye las opciones de compresión de datos en el script, si se han configurado en la base de datos de origen o en las tablas de la base de datos de origen. Para obtener más información, consulte [Data Compression](../data-compression/data-compression.md). El valor predeterminado es **False**.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "36196229"
   
 8.  **Publicar estadísticas** -cuando se establece en **publicar estadísticas**, incluye el `CREATE STATISTICS` instrucción para volver a crear estadísticas del objeto. La opción **Publicar estadísticas e histogramas** también crea información de histogramas. El valor predeterminado es **No publicar estadísticas**. Para obtener más información, vea [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
-9. **Publicar opciones vardecimal** -habilita la `vardecimal` el formato de tabla en la tabla de base de datos de destino cuando se habilita en la tabla de base de datos de origen. El valor predeterminado es **True**.  
+9. **Publicar opciones vardecimal** -permite la `vardecimal` formato de tabla en la tabla de base de datos de destino cuando se habilita en la tabla de base de datos de origen. El valor predeterminado es **True**.  
   
 10. **Nombres de objeto de certificación de esquema** : incluye el nombre de esquema en el nombre de los objetos que se crean. El valor predeterminado es **True**.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "36196229"
   
  **Opciones de tabla o vista** : las siguientes opciones solo se aplican a tablas o vistas.  
   
-1.  **Publicar restricciones check** -incluye la creación de `CHECK` restricciones en el proceso de publicación. El valor predeterminado es **True**. `CHECK` las restricciones requieren datos que se escriban en una tabla para cumplir con una condición especificada. Para más información, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+1.  **Publicar restricciones check** -incluye la creación de `CHECK` restricciones en el proceso de publicación. El valor predeterminado es **True**. `CHECK` las restricciones requieren datos que se escriben en una tabla para cumplir con una condición especificada. Para más información, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 2.  **Publicar claves externas** : incluye la creación de claves externas en el proceso de publicación. El valor predeterminado es **True**. Las claves externas indican y exigen relaciones entre tablas. Para más información, consulte [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   

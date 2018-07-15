@@ -1,5 +1,5 @@
 ---
-title: Cambiar un nombre de entidad (Master Data Services) | Documentos de Microsoft
+title: Cambiar un nombre de entidad (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c2f0869bd7cff707ac65d83c870b290aa1af4cec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 3986f5508bd5b6fe5ce55b38ff038e4a14a2b73c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261001"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>Cambiar el nombre de una entidad (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede cambiar el nombre de una entidad.  
@@ -48,7 +48,7 @@ ms.locfileid: "36197938"
   
 5.  Haga clic en **Editar entidad seleccionada**.  
   
-6.  En el **nombre de la entidad** , escriba el nombre actualizado de la entidad.  
+6.  En el **nombre de entidad** , escriba el nombre actualizado de la entidad.  
   
 7.  Haga clic en **Guardar entidad**.  
   

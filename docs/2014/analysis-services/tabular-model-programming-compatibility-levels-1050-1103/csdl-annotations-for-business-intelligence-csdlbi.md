@@ -1,5 +1,5 @@
 ---
-title: Anotaciones de CSDL para Business Intelligence (CSDLBI) | Documentos de Microsoft
+title: Anotaciones de CSDL para Business Intelligence (CSDLBI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 caps.latest.revision: 19
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0e545667bd907460b695f63cbe9f2f537c9be62d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 45f29343fe3fb3bd95e8f9753438e90214f18c80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328435"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Anotaciones de CSDL para Business Intelligence (CSDLBI)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la presentación de la definición de un modelo tabular en un formato XML denominado Lenguaje de definición de esquemas conceptuales con anotaciones Business Intelligence (CSDLBI).  
@@ -32,9 +32,9 @@ ms.locfileid: "36104980"
   
  Aunque CSDL es compatible con Entity Data Framework, no es necesario comprender el modelo entidad-relación ni tener ninguna herramienta especial para generar un modelo tabular o un informe basado en un modelo. Es posible generar modelos mediante herramientas cliente como [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o una API como AMO, e implementarlos en un servidor. Los clientes se conectan con el modelo mediante un archivo de definición de modelo, que normalmente se publica en una biblioteca de SharePoint donde pueden utilizarlo los diseñadores de informes y los consumidores de informes. Para obtener más información, vea estos vínculos:  
   
--   [Soluciones de modelos tabulares &#40;SSAS Tabular&#41;](../tabular-model-solutions-ssas-tabular.md)  
+-   [Soluciones de modelos tabulares &#40;Tabular de SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
--   [Implementación de la solución de modelo tabular &#40;SSAS Tabular&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [Implementación de la solución de modelo tabular &#40;Tabular de SSAS&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 -   [Conexión de modelo semántico de BI PowerPivot &#40;.bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36104980"
 ### <a name="csdlbi-versions"></a>Versiones de CSDLBI  
  La especificación CSDL original (de Entity Data Framework) es suficiente para la mayor parte de las entidades y propiedades necesarias para el modelado. Las anotaciones BI admiten requisitos especiales de modelos tabulares, propiedades de informes requeridas por clientes como [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] y metadatos adicionales requeridos por modelos multidimensionales. En esta sección se describen las actualizaciones de cada versión.  
   
- **CSDLBI 1.0**  
+ **1.0 DE CSDLBI**  
   
  El conjunto inicial de adiciones al esquema CSDL para admitir los modelos tabulares de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contenía anotaciones que permitían el uso del modelado de datos, los cálculos personalizados y las presentaciones mejoradas:  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36104980"
   
 -   Compatibilidad con las perspectivas.  
   
- Para obtener información detallada acerca de los elementos individuales de las anotaciones CSDLBI, vea [Technical Reference for anotaciones BI para CSDL](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md). Para obtener información sobre la especificación de CSDL del núcleo, consulte el [especificación CSDL v3](https://msdn.microsoft.com/en-us/data/jj652004) en MSDN.  
+ Para obtener información detallada acerca de los elementos individuales de las anotaciones CSDLBI, vea [referencia técnica para las anotaciones de Business Intelligence en CSDL](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md). Para obtener información acerca de la especificación de CSDL del núcleo, consulte el [especificación CSDL v3](https://msdn.microsoft.com/en-us/data/jj652004) en MSDN.  
   
 ## <a name="see-also"></a>Vea también  
  [Descripción del modelo de objetos tabulares](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   

@@ -1,5 +1,5 @@
 ---
-title: Seleccione un origen de datos (Asistente para vistas de origen de datos) (Analysis Services) | Documentos de Microsoft
+title: Seleccione un origen de datos (Asistente para vistas de origen de datos) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selectdatasource.f1
 ms.assetid: 51282270-8ca8-42cf-8538-a6baf0006656
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98fd253da693a23ccbda57c605edb9f59dcc1540
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a7db15f7dcf8e963e9df38dbda0dd05aa208b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291421"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>Seleccionar un origen de datos (Asistente para vistas del origen de datos) (Analysis Services)
   Use la página **Seleccionar un origen de datos** para seleccionar un origen de datos para la vista del origen de datos.  
@@ -42,8 +42,8 @@ ms.locfileid: "36196315"
  Abre el Asistente para orígenes de datos, en el que puede crear un nuevo origen de datos que se va a agregar al proyecto.  
   
 ## <a name="see-also"></a>Vea también  
- [Vistas de orígenes de datos Asistente para la Ayuda de F1 &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [Ayuda de F1 de Asistente para la vista de datos origen &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
  [Vistas del origen de datos en modelos multidimensionales](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Ayuda F1 del Asistente del origen de datos &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
+ [Ayuda F1 del Asistente para origen de datos &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
   
   

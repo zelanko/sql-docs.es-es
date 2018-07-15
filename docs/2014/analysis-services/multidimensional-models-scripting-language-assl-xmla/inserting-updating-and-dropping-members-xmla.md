@@ -1,5 +1,5 @@
 ---
-title: Insertar, actualizar y quitar miembros (XMLA) | Documentos de Microsoft
+title: Insertar, actualizar y quitar miembros (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - dimensions [Analysis Services], XML for Analysis
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b283d0eec203422b97b9e7981783ac81999dc18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 394a0448101846db2b6852224e39fedc2dd5fe74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308525"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Insertar, actualizar y quitar miembros (XMLA)
-  Puede usar el [insertar](../xmla/xml-elements-commands/insert-element-xmla.md), [actualizar](../xmla/xml-elements-commands/update-element-xmla.md), y [Drop](../xmla/xml-elements-commands/drop-element-xmla.md) comandos de XML for Analysis (XMLA) para respectivamente Insertar, actualizar o eliminar los miembros de una dimensión habilitada para escritura. Para obtener más información acerca de las dimensiones habilitadas para escritura, consulte [dimensiones habilitadas para escritura](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+  Puede usar el [insertar](../xmla/xml-elements-commands/insert-element-xmla.md), [actualizar](../xmla/xml-elements-commands/update-element-xmla.md), y [Drop](../xmla/xml-elements-commands/drop-element-xmla.md) los comandos de XML for Analysis (XMLA) para insertar respectivamente, actualizar o eliminar miembros de una dimensión habilitada para escritura. Para obtener más información acerca de las dimensiones habilitadas para escritura, consulte [dimensiones habilitadas para escritura](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 ## <a name="inserting-new-members"></a>Insertar nuevos miembros  
  El comando `Insert` inserta nuevos miembros en atributos especificados de una dimensión habilitada para escritura.  
@@ -51,7 +51,7 @@ ms.locfileid: "36112817"
   
  El comando `Insert` solamente acepta dos propiedades:  
   
--   El [objeto](../xmla/xml-elements-properties/object-element-xmla.md) propiedad, que contiene una referencia de objeto para la dimensión en la que los miembros se va a insertar. La referencia de objeto contiene el identificador de la base de datos, el identificador del cubo y el identificador de dimensión para la dimensión.  
+-   El [objeto](../xmla/xml-elements-properties/object-element-xmla.md) propiedad, que contiene una referencia de objeto para la dimensión que se va a insertar los miembros. La referencia de objeto contiene el identificador de la base de datos, el identificador del cubo y el identificador de dimensión para la dimensión.  
   
 -   El [atributos](../xmla/xml-elements-properties/attributes-element-xmla.md) propiedad, que contiene uno o varios [atributo](../xmla/xml-elements-properties/attribute-element-xmla.md) elementos para identificar los atributos que se va a insertar los miembros. Cada elemento `Attribute` identifica un atributo y proporciona el nombre, el valor, las traducciones, el operador unario, el resumen personalizado, las propiedades de resúmenes personalizados y los niveles omitidos para un miembro único que se va a agregar al atributo identificado.  
   

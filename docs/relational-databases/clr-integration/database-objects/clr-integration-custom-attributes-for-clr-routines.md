@@ -1,12 +1,11 @@
 ---
-title: Atributos personalizados para las rutinas CLR | Documentos de Microsoft
+title: Los atributos personalizados para las rutinas CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -25,16 +24,16 @@ caps.latest.revision: 82
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c5c496cc6d8e74cf917c964b51da58dba3a6615c
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 865d305e5d85fd58ab85148f74cc5159323674bb
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697226"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356127"
 ---
-# <a name="clr-integration-custom-attributes-for-clr-routines"></a>Atributos personalizados de integración de CLR rutinas CLR
+# <a name="clr-integration-custom-attributes-for-clr-routines"></a>Atributos personalizados de integración de CLR para las rutinas CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Los atributos que aparecen pueden aplicarse a rutinas de runtime (CLR) de lenguaje común, tipos definidos por el usuario y agregados definidos por el usuario que están registrados en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si no se aplica el atributo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] asume el valor predeterminado. Se definen los atributos que aparecen en la **Microsoft.SqlServer.Server** espacio de nombres.  
+  Los atributos listados pueden aplicarse a rutinas de common language runtime (CLR), tipos definidos por el usuario y agregados definidos por el usuario que están registrados en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si no se aplica el atributo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] asume el valor predeterminado. Se definen los atributos que aparecen en la **Microsoft.SqlServer.Server** espacio de nombres.  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>Atributo SqlUserDefinedAggregate  
  El **SqlUserDefinedAggregate** atributo indica que el método debe registrarse como un agregado definido por el usuario. Los agregados definidos por el usuario deben anotarse con este atributo.  
@@ -42,7 +41,7 @@ ms.locfileid: "35697226"
  Para obtener más información, consulte [SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626).  
   
 ## <a name="the-sqlfunction-attribute"></a>Atributo SqlFunction  
- El **SqlFunction** atributo indica que el método debe registrarse como una función, con el conjunto de atributos de función correspondiente.  
+ El **SqlFunction** atributo indica que el método debe registrarse como una función con el conjunto de atributos de función correspondiente.  
   
  Para obtener más información, consulte [SqlFunctionAttribute](http://go.microsoft.com/fwlink/?LinkId=128019).  
   

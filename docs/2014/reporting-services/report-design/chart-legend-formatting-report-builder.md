@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10183"
 - sql12.rtp.rptdesigner.legendtitleproperties.shadow.f1
@@ -28,15 +28,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.legendtitleproperties.general.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7f53e64e54b3bb56f0f2070b1fe894d26523c200
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8e67ff32578131fc5689ac819fd3ac1fc155d0f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244325"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a la leyenda de un gráfico (Generador de informes y SSRS)
   La leyenda de un gráfico contiene descripciones para cada una de las categorías de un gráfico. Una leyenda siempre contiene uno o varios elementos de leyenda, cada uno de los cuales consta de un cuadro coloreado que representa la serie y una cadena de texto que describe la serie, tal como se ve en la ilustración siguiente.  
@@ -53,14 +53,14 @@ ms.locfileid: "36196174"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="ordering-legend-items-in-the-legend"></a>Ordenar los elementos de leyenda en la leyenda  
- Las series se ordenan en la leyenda según el orden en que las procesa el motor de procesamiento de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Puede cambiar el orden haciendo lo propio con los campos en la zona de colocación de campos de datos. Si está usando agrupaciones de series, los datos de las series no se conocen hasta su procesamiento, por lo que no hay ninguna manera volver a ordenar estos elementos. Los cambios se pueden ver en la vista previa. Para obtener más información acerca de la agrupación de serie, consulte [gráficos &#40;el generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ Las series se ordenan en la leyenda según el orden en que las procesa el motor de procesamiento de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Puede cambiar el orden haciendo lo propio con los campos en la zona de colocación de campos de datos. Si está usando agrupaciones de series, los datos de las series no se conocen hasta su procesamiento, por lo que no hay ninguna manera volver a ordenar estos elementos. Los cambios se pueden ver en la vista previa. Para obtener más información sobre las agrupaciones de series, vea [gráficos &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
- Puede ocultar cualquier serie para que no se muestre en la leyenda. Si está usando agrupaciones de series, se ocultarán todas las series relacionadas con el campo de datos. Para obtener más información, consulte [ocultar elementos de leyenda en el gráfico &#40;el generador de informes y SSRS&#41;](chart-legend-hide-items-report-builder.md).  
+ Puede ocultar cualquier serie para que no se muestre en la leyenda. Si está usando agrupaciones de series, se ocultarán todas las series relacionadas con el campo de datos. Para obtener más información, consulte [ocultar elementos de leyenda en el gráfico &#40;generador de informes y SSRS&#41;](chart-legend-hide-items-report-builder.md).  
   
 ## <a name="changing-the-text-or-color-of-a-legend-item-in-the-legend"></a>Cambiar el texto o el color de un elemento de leyenda en la leyenda  
- Cuando se coloca un campo en la zona de colocación de campos de datos de un gráfico, automáticamente se genera un elemento de leyenda que contiene el nombre de este campo. De forma predeterminada, el texto de cada elemento de leyenda se toma del nombre del campo de datos. Cada elemento de leyenda se conecta a una serie individual del gráfico, a excepción de los gráficos de formas, donde la leyenda se conecta a puntos de datos individuales en lugar de a series individuales. Cuando se define un grupo de categorías en un gráfico de formas, el texto de cada elemento de leyenda procede de la representación de cadena del grupo de categorías. En los gráficos circulares, de anillos y de embudo, puede especificar texto de etiqueta personalizado para mostrar información distinta de la etiqueta de grupo de categorías relacionada con cada punto de datos individual de la leyenda. Para ello, seleccione la leyenda y especifique el texto de leyenda en el cuadro de diálogo **Propiedades de la serie** o la propiedad **LegendText** en el panel de propiedades. Para obtener más información, consulte [cambiar el texto de un elemento de leyenda &#40;el generador de informes y SSRS&#41;](chart-legend-change-item-text-report-builder.md).  
+ Cuando se coloca un campo en la zona de colocación de campos de datos de un gráfico, automáticamente se genera un elemento de leyenda que contiene el nombre de este campo. De forma predeterminada, el texto de cada elemento de leyenda se toma del nombre del campo de datos. Cada elemento de leyenda se conecta a una serie individual del gráfico, a excepción de los gráficos de formas, donde la leyenda se conecta a puntos de datos individuales en lugar de a series individuales. Cuando se define un grupo de categorías en un gráfico de formas, el texto de cada elemento de leyenda procede de la representación de cadena del grupo de categorías. En los gráficos circulares, de anillos y de embudo, puede especificar texto de etiqueta personalizado para mostrar información distinta de la etiqueta de grupo de categorías relacionada con cada punto de datos individual de la leyenda. Para ello, seleccione la leyenda y especifique el texto de leyenda en el cuadro de diálogo **Propiedades de la serie** o la propiedad **LegendText** en el panel de propiedades. Para obtener más información, consulte [cambiar el texto de un elemento de leyenda &#40;generador de informes y SSRS&#41;](chart-legend-change-item-text-report-builder.md).  
   
- También puede especificar palabras clave específicas del gráfico, con distinción de mayúsculas y minúsculas, para los atributos a los que se hace referencia más habitualmente en la propiedad **LegendText** o en el cuadro de diálogo **Propiedades de la serie** . El control de gráfico reemplaza estas palabras clave por su representación de datos en tiempo de ejecución. Este enfoque resulta útil en los gráficos de formas porque le permite mostrar información relacionada con puntos de datos específicos. Para obtener más información, consulte [puntos de datos de formato en un gráfico &#40;el generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ También puede especificar palabras clave específicas del gráfico, con distinción de mayúsculas y minúsculas, para los atributos a los que se hace referencia más habitualmente en la propiedad **LegendText** o en el cuadro de diálogo **Propiedades de la serie** . El control de gráfico reemplaza estas palabras clave por su representación de datos en tiempo de ejecución. Este enfoque resulta útil en los gráficos de formas porque le permite mostrar información relacionada con puntos de datos específicos. Para obtener más información, consulte [puntos de datos de formato de un gráfico &#40;generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
  El cuadro coloreado que se muestra para cada elemento de leyenda se hereda del color de relleno de su serie correspondiente. Si desea cambiar el color mostrado en un elemento de leyenda, tendrá que cambiar el color de la serie correspondiente. Para obtener más información, vea [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -80,15 +80,15 @@ ms.locfileid: "36196174"
 ## <a name="formatting-the-legend-text"></a>Dar formato al texto de la leyenda  
  Puede cambiar la fuente, el tamaño, el estilo y el color del texto de la leyenda en la página **Fuente** del cuadro de diálogo **Propiedades de la leyenda** .  
   
- De forma predeterminada, el texto de la leyenda no se optimiza para que quepa en el área de la leyenda. Para hacer que el texto de leyenda se ajuste automáticamente el espacio asignado, establezca la propiedad AutoFitTextDisabled en `False` y establecer un tamaño de fuente mínimo para la propiedad MinFontSize al tamaño de fuente mínimo que sea presentable y aún permite leyenda optimización.  
+ De forma predeterminada, el texto de la leyenda no se optimiza para que quepa en el área de la leyenda. Para hacer que el texto de leyenda se ajuste automáticamente el espacio asignado, establezca la propiedad AutoFitTextDisabled `False` y establecer un tamaño de fuente mínimo para la propiedad MinFontSize al tamaño de fuente mínimo que cree que sea presentable y permita la de la leyenda optimización.  
   
 ## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo de propiedades de leyenda, General &#40;el generador de informes SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Cuadro de diálogo Propiedades de leyenda, General &#40;generador de informes y SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Cambiar el texto de un elemento de leyenda &#40;Generador de informes y SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Ocultar elementos de leyenda en el gráfico &#40;Generador de informes y SSRS&#41;](chart-legend-hide-items-report-builder.md)   
- [Definir los colores de un gráfico con una paleta &#40;el generador de informes SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
+ [Definir los colores de un gráfico mediante una paleta &#40;generador de informes y SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

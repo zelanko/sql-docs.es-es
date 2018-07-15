@@ -1,5 +1,5 @@
 ---
-title: Personalizar los modelos de minería de datos y la estructura | Documentos de Microsoft
+title: Personalizar los modelos de minería de datos y la estructura | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - mining models [Analysis Services], properties
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 595e914741361fa0922da59a2e0fdc699d96054c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79790404f11ffc40ca3e4826217ab331fec92a85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286361"
 ---
 # <a name="customize-mining-models-and-structure"></a>Personalizar la estructura y los modelos de minería de datos
   Después de seleccionar un algoritmo que satisfaga sus necesidades empresariales, puede personalizar el modelo de minería de datos de las maneras siguientes para intentar mejorar los resultados.  
@@ -89,7 +89,7 @@ ms.locfileid: "36197285"
 |-|-|  
 |[Algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm.md)|[Algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm.md)|  
 |[Algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm.md)|[Algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm.md)|  
-|[Algoritmo Bayes Naive de Microsoft](microsoft-naive-bayes-algorithm.md)|[Algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm.md)|  
+|[Algoritmo Bayes naive de Microsoft](microsoft-naive-bayes-algorithm.md)|[Algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm.md)|  
 |[Algoritmo de asociación de Microsoft](microsoft-association-algorithm.md)|[Algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm.md)|  
 |[Algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm.md)||  
   
@@ -137,7 +137,7 @@ ms.locfileid: "36197285"
 |STOPPING_TOLERANCE|[Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Arquitectura física &#40;Analysis Services: minería de datos&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Arquitectura física &#40;Analysis Services - minería de datos&#41;](physical-architecture-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo nueva medida (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Cuadro de diálogo nueva medida (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.newmeasuredialog.f1
 helpviewer_keywords:
 - New Measure dialog box
 ms.assetid: 86dc9146-cc6d-4cef-b178-9a6b4cf616e8
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1a2685f29e91d7fcef9018674dbcf67761afb2d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35bb394a835d8a667aa1ff3e339717ab4e1cf8e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310435"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Nueva medida (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Nueva medida** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para agregar una nueva medida a un grupo de medida en el Diseñador de cubos. Puede abrir el cuadro de diálogo **Nueva medida** de distintas maneras:  

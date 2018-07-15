@@ -1,5 +1,5 @@
 ---
-title: Base de datos de cuadro de diálogo de propiedades (SSAS - Tabular) | Documentos de Microsoft
+title: Cuadro de diálogo de propiedades (SSAS - Tabular) de la base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.DatabaseProperties.f1
 ms.assetid: 0f0ec02f-7b55-40ea-8a04-ed0deb1efd7a
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 142a3eeb8ae135fa27316f4b227f13fc33c77814
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31f4e6201246467517cf3fdd39bb03906b3bde24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299335"
 ---
 # <a name="database-properties-dialog-box-ssas---tabular"></a>Cuadro de diálogo Propiedades de base de datos (SSAS: tabular)
   Este cuadro de diálogo proporciona marcas de tiempo y otra información descriptiva, además de propiedades personalizables que determinan si la base de datos usa datos almacenados en caché. Entre las propiedades personalizables se incluyen la posibilidad de cambiar el nombre de la base de datos y especificar las opciones de suplantación.  
@@ -39,7 +39,7 @@ ms.locfileid: "36196147"
 |**Modo de lectura y escritura**|Es una propiedad de solo lectura, pero se puede cambiar con una secuencia de comandos **Detach** y **Attach** , donde la propiedad es un parámetro del comando **Attach** . Para más información, vea [Modos de la propiedad de base de datos ReadWriteMode](multidimensional-models/database-readwritemodes.md).|  
 |**DirectQueryMode**|Especifica si la base de datos utiliza solo el almacenamiento en memoria (sin almacenamiento en disco), solo el almacenamiento basado en disco o una combinación de ambos. Los valores válidos son InMemory, DirectQuery, InMemoryWithDirectQuery (principalmente, el almacenamiento basado en memoria con cierta paginación en el disco) o DirectQueryWithInMemory (principalmente basado en disco con parte de almacenamiento en memoria). Para obtener más información, consulte [escenarios de implementación de DirectQuery &#40;Tabular de SSAS&#41;](directquery-deployment-scenarios-ssas-tabular.md).|  
 |**Información de suplantación de origen de datos**|Especifica la cuenta de suplantación utilizada en las conexiones a bases de datos al procesar o actualizar los datos en las particiones locales o remotos, las consultas que se ejecutan en un almacén de datos relacional (mediante DirectQuery), los enlaces fuera de línea y la sincronización de bases de datos del destino al origen.<br /><br /> Los valores válidos incluyen la cuenta de servicio de Analysis Services o un conjunto específico de credenciales de Windows. No especifique **Usar las credenciales del usuario actual**. Esa opción de credenciales no se admite para una base de datos de modelo tabular.|  
-|**Procesó por última vez**|Muestra la fecha y hora en que se procesó por última vez la base de datos.|  
+|**Procesado por última vez**|Muestra la fecha y hora en que se procesó por última vez la base de datos.|  
 |**Tamaño estimado**|Muestra el tamaño estimado de la base de datos.|  
 |**Ubicación de almacenamiento**|Especifica la ubicación de la base de datos. Si la base de datos se encuentra en el directorio de datos predeterminado, este valor estará vacío.|  
   

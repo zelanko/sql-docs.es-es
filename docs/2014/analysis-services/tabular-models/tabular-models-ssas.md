@@ -1,5 +1,5 @@
 ---
-title: Tabular (SSAS Tabular) de modelado | Documentos de Microsoft
+title: Tabular (SSAS Tabular) de modelado | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80027288-c203-4667-a3e1-40fa572b4975
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df693d141f3a91c1c0b9b023a89d39c5f2c171ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fe54f13fb065b099983ae58934851af1a3f49a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257221"
 ---
 # <a name="tabular-modeling-ssas-tabular"></a>Modelado tabular (SSAS tabular)
   Los modelos tabulares son bases de datos "en memoria" de Analysis Services. Gracias a los algoritmos de compresión avanzados y al procesador de consultas multiproceso, el motor analítico en memoria xVelocity (VertiPaq) ofrece un acceso rápido a los objetos y los datos de los modelos tabulares para aplicaciones cliente de informes como Microsoft Excel y Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
@@ -29,9 +29,9 @@ ms.locfileid: "36114122"
  Los modelos tabulares se crean en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mediante las nuevas plantillas de proyectos de modelos tabulares. Puede importar datos de varios orígenes y, a continuación, enriquecer el modelo agregando relaciones, columnas calculadas, medidas, KPI y jerarquías. A continuación, los modelos se pueden implementar en una instancia de Analysis Services que permite a las aplicaciones cliente de informes conectarse con ellos. Los modelos implementados se pueden administrar en SQL Server Management Studio del mismo modo que los modelos multidimensionales. También se pueden crear particiones de los mismos para optimizar el procesamiento y protegerlos en el nivel de fila usando la seguridad basada en roles.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Soluciones de modelos tabulares &#40;SSAS Tabular&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [Soluciones de modelos tabulares &#40;Tabular de SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
- [Las bases de datos de modelo tabular &#40;SSAS Tabular&#41;](tabular-model-databases-ssas-tabular.md)  
+ [Las bases de datos de modelo tabular &#40;Tabular de SSAS&#41;](tabular-model-databases-ssas-tabular.md)  
   
  [Acceso a datos de modelos tabulares](tabular-model-data-access.md)  
   

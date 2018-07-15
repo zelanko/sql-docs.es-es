@@ -1,5 +1,5 @@
 ---
-title: Ver y detener los paquetes en ejecución en la integración de servicios de servidor | Documentos de Microsoft
+title: Ver y detener los paquetes que se ejecutan en la integración de servicios de servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
 - managing running packages [Integration Services]
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - running package [Integration Services], managing
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ce4fd750986269c0e92ae2ea764f02e1bd642cb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cef267dbb770c0ccb39ea40143ce9591f915db5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215835"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Ver y detener los paquetes en ejecución en el Servidor de Integration Services
-  El `SSISDB` base de datos almacena el historial de ejecución en tablas internas que no son visibles para los usuarios. Sin embargo, expone la información que necesita a través de vistas públicas que puede consultar. También proporciona procedimientos almacenados a los que puede llamar para realizar tareas frecuentes relacionadas con los paquetes.  
+  El `SSISDB` base de datos almacena el historial de ejecución en las tablas internas que no son visibles para los usuarios. Sin embargo, expone la información que necesita a través de vistas públicas que puede consultar. También proporciona procedimientos almacenados a los que puede llamar para realizar tareas frecuentes relacionadas con los paquetes.  
   
- Normalmente, administra los objetos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] del servidor en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Sin embargo, también puede consultar las vistas de base de datos y llamar a los procedimientos almacenados directamente, o escribir código personalizado que llame a la API administrada. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y la API administrada consultan las vistas y llaman a los procedimientos almacenados para llevar a cabo muchas de sus tareas. Por ejemplo, puede ver la lista de paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que se están ejecutando actualmente en el servidor y solicitar que se detengan si es necesario.  
+ Normalmente, administra los objetos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] del servidor en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Sin embargo, también puede consultar las vistas de base de datos y llamar a los procedimientos almacenados directamente, o escribir código personalizado que llame a la API administrada. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y la API administrada consultan las vistas y llaman a los procedimientos almacenados para realizar muchas de sus tareas. Por ejemplo, puede ver la lista de paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que se están ejecutando actualmente en el servidor y solicitar que se detengan si es necesario.  
   
 ## <a name="viewing-the-list-of-running-packages"></a>Ver la lista de paquetes en ejecución  
  Puede ver la lista de paquetes que hay en ejecución actualmente en el servidor en el cuadro de diálogo **Operaciones activas** . Para más información, consulte [Active Operations Dialog Box](../../2014/integration-services/active-operations-dialog-box.md).  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, debugging code
 - Transact-SQL debugger, step over
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6cb9a3f5e0d275e4b7b646401f81b8128546a850
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 331dca27a98a9493478ff294a21e5c52e1a1ba97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331285"
 ---
 # <a name="step-through-transact-sql-code"></a>Avanzar paso a paso por el código Transact-SQL
   El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] permite controlar las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecutan en una ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Puede detener el depurador en instrucciones individuales y, a continuación, ver el estado de los elementos de código en ese punto.  
@@ -57,7 +57,7 @@ ms.locfileid: "36105820"
 |------------|---------------|  
 |Ejecutar todas las instrucciones desde la instrucción actual hasta el siguiente punto de interrupción|En el **depurar** menú, haga clic en **continuar**.<br /><br /> En el **depurar** barra de herramientas, haga clic en el **continuar** botón.|  
 |Ir a la siguiente instrucción o módulo|En el **depurar** menú, haga clic en **paso a paso**.<br /><br /> En el **depurar** barra de herramientas, haga clic en el **paso a paso** botón.<br /><br /> Presione F11.|  
-|Paso a paso por la siguiente instrucción o módulo|En el **depurar** menú, haga clic en **paso a paso por**.<br /><br /> En el **depurar** barra de herramientas, haga clic en el **paso a paso por** botón.<br /><br /> Presione F10.|  
+|Paso a paso por la siguiente instrucción o módulo|En el **depurar** menú, haga clic en **paso a paso por**.<br /><br /> En el **depurar** barra de herramientas, haga clic en el **saltar** botón.<br /><br /> Presione F10.|  
 |Salir de un módulo|En el **depurar** menú, haga clic en **paso a paso fuera**.<br /><br /> En el **depurar** barra de herramientas, haga clic en el **paso a paso fuera** botón.<br /><br /> Presione MAYÚS+F11.|  
 |Ejecutar un proceso hasta la ubicación del cursor actual|Haga clic con el botón derecho en la ventana del Editor de consultas y, después, haga clic en **Ejecutar hasta el cursor**.<br /><br /> Presione CTRL+F10.|  
   

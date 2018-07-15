@@ -1,5 +1,5 @@
 ---
-title: Barra de herramientas (pestaña cálculos, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Barra de herramientas (pestaña cálculos, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74b1d8b1-6bf4-490a-a181-03cc52348952
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32d1dd432ea374a7e1d0452ab9ba786b74dbc26c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b596dc89e9e5f00f70bee5687d15a1da08071e20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252997"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Cálculos, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Barra de herramientas** para realizar operaciones comunes en la pestaña **Cálculos** del Diseñador de cubos.  
@@ -39,7 +39,7 @@ ms.locfileid: "36113895"
 |**Bajar**|Baja el cálculo seleccionado en el panel **Organizador de script** una posición en la vista de formulario.|  
 |**Vista de formulario**|Seleccione esta opción para usar la pestaña **Cálculos** en la vista de formulario.|  
 |**Vista de script**|Seleccione esta opción para usar la pestaña **Cálculos** en la Vista de script.|  
-|**Compruebe la sintaxis**|Haga clic para comprobar la sintaxis del script del cubo.|  
+|**Comprobar sintaxis**|Haga clic para comprobar la sintaxis del script del cubo.|  
 |**Fuente**|Haga clic para mostrar el cuadro de diálogo **Fuente** e insertar un conjunto válido de valores de propiedad de celda relacionados con la fuente en el punto de selección del script del cubo. Esta opción solamente se habilita en la Vista de script.|  
 |**Color**|Haga clic para mostrar el cuadro de diálogo **Color** e insertar un valor RGB (Rojo, verde, azul) válido en el punto de selección del script del cubo. Esta opción solamente se habilita en la Vista de script.|  
 |**Propiedades de cálculo**|Haga clic para mostrar el cuadro de diálogo **Propiedades de cálculo** y editar los valores de propiedad de cálculo para los cálculos del script del cubo.|  

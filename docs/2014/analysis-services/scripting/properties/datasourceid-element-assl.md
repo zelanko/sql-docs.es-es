@@ -1,5 +1,5 @@
 ---
-title: Elemento DataSourceID (ASSL) | Documentos de Microsoft
+title: Elemento DataSourceID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataSourceID element
 ms.assetid: 2d71ba53-1684-4da0-8da4-fb75033c971b
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 69cdda7c02c2bea92f1fb631b955e223427f3b85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86a5e07518097e01509f24f2969580dec7ba0c34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263591"
 ---
 # <a name="datasourceid-element-assl"></a>Elemento DataSourceID (ASSL)
-  Identifica la [DataSource](../objects/datasource-element-assl.md) elemento asociado con el elemento primario.  
+  Identifica el [DataSource](../objects/datasource-element-assl.md) asociado con el elemento primario del elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -1,5 +1,5 @@
 ---
-title: Trabajar con conexiones y sesiones en ADOMD.NET | Documentos de Microsoft
+title: Trabajar con conexiones y sesiones en ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - connections [ADOMD.NET]
 ms.assetid: 72b43c06-f3e4-42c3-a696-4a3419c3b884
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 07c17333b58d34a99e8d393a1dbc8ec00d75f60e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ef7c679aa0f295c486836763158a89a1f593ff8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176962"
 ---
 # <a name="working-with-connections-and-sessions-in-adomdnet"></a>Trabajar con conexiones y sesiones en ADOMD.NET
   En XML for Analysis (XMLA), las sesiones proporcionan compatibilidad para las operaciones con estado durante el acceso a datos analíticos. Las sesiones enmarcan el ámbito y contexto de comandos y transacciones para un origen de datos analíticos. Los elementos XMLA utilizados para administrar sesiones son [BeginSession](../xmla/xml-elements-headers/beginsession-element-xmla.md), [Session](../xmla/xml-elements-headers/session-element-xmla.md)y [EndSession](../xmla/xml-elements-headers/endsession-element-xmla.md).  
@@ -48,9 +48,9 @@ ms.locfileid: "36197046"
  Un identificador de sesión no garantiza que una sesión siga siendo válida. Si la sesión expira (por ejemplo, se agota el tiempo de espera de la sesión o se pierde la conexión), el proveedor puede optar por finalizar y revertir las acciones de esa sesión. Si esto se produce, todas las llamadas subsiguientes al método del objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> producirán una excepción. Dado que solo se producen las excepciones cuando la solicitud siguiente se envía al proveedor, no cuando la sesión expira, su aplicación debe ser capaz de manejar estas excepciones cada vez que recupere datos o metadatos del proveedor.  
   
 ## <a name="closing-a-session"></a>Cerrar una sesión  
- Si el <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A> método se llama sin especificar el valor de la *endSession* parámetro, o si la *endSession* parámetro está establecido en True, tanto la conexión a la sesión y la sesión asociado con el <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> se cierra el objeto. Para cerrar una sesión, ADOMD.NET envía un encabezado `EndSession` de XMLA al proveedor, con el identificador de sesión establecido en el valor de la propiedad <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.SessionID%2A>.  
+ Si el <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A> se llama al método sin especificar el valor de la *endSession* parámetro, o si el *endSession* parámetro se establece en True, tanto la conexión a la sesión y la sesión asociado con el <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> se cierran el objeto. Para cerrar una sesión, ADOMD.NET envía un encabezado `EndSession` de XMLA al proveedor, con el identificador de sesión establecido en el valor de la propiedad <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.SessionID%2A>.  
   
- Si el <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A> método se llama con la *endSession* parámetro establecido en False, la sesión asociada con el <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> objeto permanece activo pero se cierra la conexión a la sesión.  
+ Si el <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A> se llama al método con el *endSession* parámetro establecido en False, la sesión asociada a la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> objeto permanece activo pero se cierra la conexión a la sesión.  
   
 ## <a name="example-of-managing-a-session"></a>Ejemplo de administración de una sesión  
  En el ejemplo siguiente se muestra cómo abrir una conexión, crear una sesión y cerrar la conexión manteniendo la sesión abierta en ADOMD.NET:  
@@ -108,6 +108,6 @@ static string CreateSession(string connectionString)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Para establecer conexiones en ADOMD.NET](connections-in-adomd-net.md)  
+ [Establecer conexiones en ADOMD.NET](connections-in-adomd-net.md)  
   
   

@@ -1,1 +1,1 @@
-Analysis Services SQL Server 2005 \(SSAS\)
+SQL Server 2005 Analysis Services \(SSAS\)

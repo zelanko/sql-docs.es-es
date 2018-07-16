@@ -1,5 +1,5 @@
 ---
-title: Elemento TableID (ASSL) | Documentos de Microsoft
+title: Elemento TableID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TableID element
 ms.assetid: 45fe7e23-b274-4bc2-be63-1a5bb6680f51
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9b8f85ee3fecac1b098a16afe6cf2d0eca61226b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3010d64a5898b16322afca819f54cbcc32f0b867
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190865"
 ---
 # <a name="tableid-element-assl"></a>Elemento TableID (ASSL)
   Contiene el identificador (ID) de la tabla (desde la [DataSourceView](../objects/datasourceview-element-assl.md) elemento) asociado con el elemento primario.  

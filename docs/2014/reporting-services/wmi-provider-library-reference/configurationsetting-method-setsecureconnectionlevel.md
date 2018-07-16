@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetSecureConnectionLevel method
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 caps.latest.revision: 21
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f761337d48cc168ee87a0557201b5827a80afd21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5af02be1c79b69fa113bec095ea9bf7a35354799
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185778"
 ---
 # <a name="setsecureconnectionlevel-method-wmi-msreportserverconfigurationsetting"></a>Método SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting)
   Establece el nivel de conexión segura del servidor de informes.  
@@ -57,7 +57,7 @@ public void SetSecureConnectionLevel(Int32 Level,
 ## <a name="remarks"></a>Notas  
  Cuando se realiza una llamada, la propiedad SecureConnectionLevel del servidor de informes se establece en el valor especificado. El valor 0 indica que SSL está desactivado. Un valor mayor o igual que 1 indica que SSL está activado.  
   
--   Cuando se establece el valor, se cambia el elemento SecureConnectionLevel en el archivo de configuración del servidor de informes y el `URLRoot` elemento en el archivo de configuración se establece para utilizar "https://" si especificado *nivel* es mayor que o Si es igual a 1 o "http://" especificado *nivel* es 0.  
+-   Cuando se establece el valor, se cambia el elemento SecureConnectionLevel en el archivo de configuración del servidor de informes y el `URLRoot` en el archivo de configuración está establecida para utilizar "https://" si especificado *nivel* es mayor que o igual que 1 o "http://" si especificado *nivel* es 0.  
   
  En [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SecureConnectionLevel actúa como un conmutador de activación o desactivación (el valor predeterminado es 0). Para cualquier valor mayor o igual que 1 pasado a la API con el método SetSecureConnectionLevel, SSL se considera activado y la propiedad SecureConnectionLevel de configuración se establece en consecuencia en el archivo rsreportserver.config. Los valores 2 y 3 todavía se permiten por mantener la compatibilidad con las versiones anteriores.  
   

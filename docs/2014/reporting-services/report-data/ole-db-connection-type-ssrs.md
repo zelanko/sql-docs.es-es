@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 851c9acd9b383f8f315b71b215fe739284c2f2d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bf944dfa9bd17946130b568d53be032c56fc0ef3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198755"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Tipo de conexión OLE DB (SSRS)
   Para incluir los datos de un proveedor de datos OLE DB, debe tener un conjunto de datos basado en un origen de datos de informe de tipo OLE DB. Este tipo de origen de datos integrado se basa en la extensión de procesamiento de datos de OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  OLE DB es una tecnología de acceso a datos que permite a los clientes conectarse a diversos proveedores de datos. Después de seleccionar el tipo de origen de datos OLE DB, debe seleccionar un proveedor de datos concreto. La compatibilidad con características como parámetros y credenciales depende del proveedor de datos que seleccione.  
   
- Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones detalladas, consulte [agregar y comprobar una conexión de datos o un origen de datos &#40;el generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones detalladas, consulte [agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Cadena de conexión  
  La cadena de conexión para la extensión de procesamiento de datos de OLE DB depende del proveedor de datos que desee. Una cadena de conexión típica contiene pares de nombre/valor admitidos por el proveedor de datos. Por ejemplo, la siguiente cadena de conexión especifica el proveedor OLE DB para la base de datos de AdventureWorks y Native Client de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -46,7 +46,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  Después de publicar el informe, es posible que necesite cambiar las credenciales para el origen de datos de tal forma que, cuando el informe se ejecute en el servidor de informes, los permisos para recuperar los datos sean válidos.  
   
- Para obtener más información, consulte [las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [especificar credenciales en el generador de informes](../specify-credentials-in-report-builder.md).  
+ Para obtener más información, consulte [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [especificar credenciales en Generador de informes](../specify-credentials-in-report-builder.md).  
   
 ###### <a name="special-characters-in-a-password"></a>Caracteres especiales en una contraseña  
  Si se configura el origen de datos OLE DB para que solicite una contraseña o para que esta se incluya en la cadena de conexión y un usuario especifica una contraseña con caracteres especiales, como signos de puntuación, algunos controladores del origen de datos subyacente no podrán validar los caracteres especiales. Cuando procese el informe, es posible que aparezca un mensaje para indicarle que la contraseña no es válida.  
@@ -79,7 +79,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="HowTo"></a> Temas de procedimientos  
  Esta sección contiene instrucciones paso a paso para trabajar con conexiones de datos, orígenes de datos y conjuntos de datos.  
   
- [Agregar y comprobar una conexión de datos o un origen de datos &#40;el generador de informes SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -90,7 +90,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="Related"></a> Secciones relacionadas  
  Estas secciones de la documentación proporcionan información conceptual detallada sobre los datos de informe, así como información de procedimientos acerca de cómo definir, personalizar y usar las partes de un informe que están relacionadas con datos.  
   
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-datasets-ssrs.md)  
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)  
  Proporciona información general sobre cómo obtener acceso a los datos del informe.  
   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

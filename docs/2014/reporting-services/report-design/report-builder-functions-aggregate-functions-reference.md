@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: de909a10f9a0a76b8cf9c505120fa75ca1ff0a07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 35ddaed3e6735e11fe3fd0e3f39435516e8bb851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177288"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>Referencia a las funciones de agregado (Generador de informes y SSRS)
   Para incluir valores de agregado en un informe, puede utilizar las funciones de agregado integradas en las expresiones. La función de agregado predeterminada para los campos numéricos es SUM. Puede modificar la expresión y utilizar una función de agregado integrada diferente o especificar un ámbito diferente. El ámbito identifica qué conjunto de datos utilizar para el cálculo.  
@@ -142,7 +142,7 @@ ms.locfileid: "36108282"
 |------------------|---------------------|  
 |[Función Lookup](report-builder-functions-lookup-function.md)|Devuelve un valor de un conjunto de datos para una expresión especificada.|  
 |[Función LookupSet](report-builder-functions-lookupset-function.md)|Devuelve un conjunto de valores de un conjunto de datos para una expresión especificada.|  
-|[Función multilookup](report-builder-functions-multilookup-function.md)|Devuelve el conjunto de valores de primera coincidencia para un conjunto de nombres a partir de un conjunto de datos que contiene pares de nombre/valor.|  
+|[Función Multilookup](report-builder-functions-multilookup-function.md)|Devuelve el conjunto de valores de primera coincidencia para un conjunto de nombres a partir de un conjunto de datos que contiene pares de nombre/valor.|  
   
 ##  <a name="RetrievingPostsortValues"></a> Recuperar valores dependientes de la ordenación  
  Las funciones integradas siguientes devuelven el primer valor, el último valor o el valor anterior dentro de un ámbito determinado. Estas funciones dependen del criterio de ordenación de los valores de datos. Por ejemplo, use estas funciones para encontrar el primer y el último valor de una página para crear un encabezado de página de estilo diccionario. Use `Previous` para comparar un valor de una fila con el valor de la fila anterior dentro de un ámbito específico, por ejemplo, para encontrar los porcentajes de año a valores de año de una tabla.  
@@ -175,8 +175,8 @@ ms.locfileid: "36108282"
 |[Level](report-builder-functions-level-function.md)|Devuelve el nivel actual de profundidad de una jerarquía recursiva.|  
   
 ## <a name="see-also"></a>Vea también  
- [Expresión que se utiliza en los informes &#40;el generador de informes SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;el generador de informes SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

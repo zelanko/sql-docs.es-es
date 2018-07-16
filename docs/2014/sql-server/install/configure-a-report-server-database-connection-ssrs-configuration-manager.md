@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - connections [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8eb2cc1bcfa9528eccd2764af954fb165b74daa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43cf572cca1062471e73ab47be5e687fee40c1db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208555"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurar una conexión a la base de datos del servidor de informes (Administrador de configuración de SSRS)
   Cada instancia del servidor de informes requiere una conexión a la base de datos del servidor de informes que almacena informes, modelos de informe, orígenes de datos compartidos, recursos y metadatos administrados por el servidor. La conexión inicial se puede crear durante la instalación de un servidor de informes si va a instalar la configuración predeterminada. En la mayoría de los casos, también puede utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar la conexión una vez completada la instalación. Puede modificar la conexión en cualquier momento para cambiar el tipo de cuenta o restablecer las credenciales. Para obtener instrucciones paso a paso sobre cómo crear la base de datos y configurar la conexión, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
@@ -57,7 +57,7 @@ ms.locfileid: "36110874"
   
 -   Nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda la base de datos del servidor de informes.  
   
--   Nombre de la base de datos del servidor de informes. Cuando se crea una conexión por primera vez, puede crear una base de datos del servidor de informes nueva o seleccionar una existente. Para obtener más información, consulte [crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md).  
+-   Nombre de la base de datos del servidor de informes. Cuando se crea una conexión por primera vez, puede crear una base de datos del servidor de informes nueva o seleccionar una existente. Para obtener más información, consulte [crear una base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md).  
   
 -   Tipo de credencial. Puede utilizar cuentas de servicio, una cuenta de dominio de Windows o un inicio de sesión de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

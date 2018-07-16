@@ -1,5 +1,5 @@
 ---
-title: 'Contenido del modelo para los modelos de serie temporal de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Contenido del modelo para los modelos de serie temporal de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae3e235b2a80248327a4aa4a69e2b357b36d2a1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0c69583fec1e43ba65ac1da2c321f7b0a5d9599
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204736"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214625"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de serie temporal (Analysis Services - Minería de datos)
   Todos los modelos de minería de datos utilizan la misma estructura para almacenar su contenido. Esta estructura se define según el conjunto de filas de esquema de contenido de minería de datos. Sin embargo, dentro de esa estructura estándar, los nodos que contienen información están organizados de maneras diferentes que representan varios tipos de árboles. En este tema se describe cómo se organizan los nodos, y lo que significa cada uno de ellos, para los modelos de minería de datos basados en el algoritmo de serie temporal [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -61,7 +61,7 @@ ms.locfileid: "36204736"
   
  Si el nodo no tiene ningún elemento secundario, es porque no se ha encontrado ninguna condición significativa que justifique dividir los casos en más subgrupos. La bifurcación finaliza en este punto y el nodo se denomina *nodo hoja*. El nodo de hoja contiene los atributos, coeficientes y valores que son los bloques de creación de la fórmula ARTXP.  
   
- Algunas bifurcaciones pueden tener más divisiones, al igual que sucede en los modelos de árboles de decisión. Por ejemplo, la bifurcación del árbol que representa las ventas para la región de Europa divide en dos bifurcaciones. Se produce una bifurcación cuando existe una condición que da lugar a una diferencia significativa entre los dos grupos. El nodo primario indica el nombre del atributo que ha provocado la división, como [Amount] y la cantidad de casos que hay en el nodo primario. Los nodos hoja proporcionan más detalles: el valor del atributo, como [Sales] > 10.000 en lugar de [Sales] \< 10.000), el número de casos que cumplen cada condición y la fórmula ARTXP.  
+ Algunas bifurcaciones pueden tener más divisiones, al igual que sucede en los modelos de árboles de decisión. Por ejemplo, la bifurcación del árbol que representa las ventas para la región de Europa divide en dos bifurcaciones. Se produce una bifurcación cuando existe una condición que da lugar a una diferencia significativa entre los dos grupos. El nodo primario indica el nombre del atributo que ha provocado la división, como [Amount] y la cantidad de casos que hay en el nodo primario. Los nodos hoja proporcionan más detalles: el valor del atributo, como [Sales] > 10.000 en lugar de [Sales] \< 10.000), el número de casos que admiten cada condición y la fórmula ARTXP.  
   
 > [!NOTE]  
 >  Si desea ver las fórmulas, encontrará la fórmula de regresión completa en el nivel del nodo de hoja, pero no en los nodos intermedios o raíz.  
@@ -388,9 +388,9 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Ecuación ARIMA:  
   
- ARIMA ({1,1}, 0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Intercept: 56.8888888888889  
+ ARIMA ({1,1}, 0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}): 56.8888888888889 de intercepción  
   
- Esta ecuación está en el formato ARIMA largo, que incluye los valores de los coeficientes y la intersección. El formato abreviado de esta ecuación sería {1,0,7}, donde 1 indica el período como un recuento de intervalos de tiempo, 0 indica que el orden de diferencia de término y 7 indica el número de coeficientes.  
+ Esta ecuación está en el formato ARIMA largo, que incluye los valores de los coeficientes y la intersección. El formato abreviado de esta ecuación sería {1,0,7}, donde 1 indica el período como un recuento de intervalos de tiempo, 0 indica el orden de diferencia de términos y 7 indica el número de coeficientes.  
   
 > [!NOTE]  
 >  Analysis Services calcula una constante para hallar la varianza, pero la constante en sí no se muestra en la interfaz de usuario. Sin embargo, puede ver la varianza correspondiente a cualquier punto de la serie como una función de esta constante; para ello, seleccione **Mostrar desviaciones** en la vista **Gráfico** . La Información sobre herramientas para cada serie de datos muestra la varianza correspondiente a un punto predicho concreto.  
@@ -422,7 +422,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 |29 (Regresión automática ARIMA)|Coeficiente<br /><br /> (complemento de coeficiente)|7|  
 |30 (Media móvil ARIMA)|Valor en t<br /><br /> Valor en t-1<br /><br /> …<br /><br /> Valor en t-n|7|  
   
- El valor del *orden de media móvil* indica el número de medias móviles de una serie. Suele ser la media móvil calculada n-1 veces si hay n términos en una serie, pero puede reducir el número para facilitar el cálculo.  
+ El valor del *orden de media móvil* indica el número de medias móviles de una serie. Suele ser la media móvil calculada n-1 veces si hay n términos en una serie, pero se puede reducir el número para facilitar el cálculo.  
   
  El valor del *orden de regresión automática* indica la cantidad de series de regresión automática.  
   
@@ -445,7 +445,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  Puede resultar complicado recuperar información de un árbol ARTXP, porque la información correspondiente a cada división se encuentra en un lugar diferente dentro del árbol. Por consiguiente, con un modelo ARTXP, debe obtener todas las piezas y, a continuación, procesarlas de alguna forma para reconstituir la fórmula completa. Recuperar una ecuación a partir de un modelo ARIMA es más fácil, porque el árbol pone la fórmula a su disposición en distintos puntos. Para obtener información sobre cómo crear una consulta que recupere esta información, vea [Ejemplos de consultas de modelos de serie temporal](time-series-model-query-examples.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm.md)   
  [Ejemplos de consultas de modelo de serie temporal](time-series-model-query-examples.md)   
  [Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)  

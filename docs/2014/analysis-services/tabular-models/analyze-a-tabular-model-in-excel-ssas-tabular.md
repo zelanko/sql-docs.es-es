@@ -1,5 +1,5 @@
 ---
-title: Analizar un modelo Tabular en Excel (SSAS Tabular) | Documentos de Microsoft
+title: Analizar un modelo Tabular en Excel (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.chooseperspect.f1
 ms.assetid: 47fa45fc-60ab-41a1-bde3-5781c8462889
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ea5288c3f70bbcb8ce2b44a78348283284a7aeb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d838dbf683746b212967f2775c6c943310ce6cb6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204015"
 ---
 # <a name="analyze-a-tabular-model-in-excel-ssas-tabular"></a>Analizar un modelo tabular en Excel (SSAS tabular)
   La característica Analizar en Excel de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] abre Microsoft Excel, crea una conexión de origen de datos con la base de datos del área de trabajo del modelo y agrega una tabla dinámica a la hoja de cálculo. Los objetos del modelo (tablas, columnas, medidas, jerarquías y KPI) se incluyen como campos en la lista de campos de la tabla dinámica.  
@@ -55,6 +55,6 @@ ms.locfileid: "36201895"
 >  La lista de campos de tabla dinámica de Excel no se actualiza automáticamente a medida que se realizan cambios en el proyecto de modelos en el diseñador de modelos. Para actualizar dicha lista, en Excel, haga clic en **Actualizar** en la cinta **Opciones**.  
   
 ## <a name="see-also"></a>Vea también  
- [Analizar en Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md)  
+ [Analizar en Excel &#40;Tabular de SSAS&#41;](analyze-in-excel-ssas-tabular.md)  
   
   

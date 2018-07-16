@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13e260f9-a75f-430b-88a3-959ddcead8fe
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0e1c4aa4389f72fb81a98e7091ccc5a5d52db1d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 89e7b89a8b7f9527027a90b447ebcf6a50c5509e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185672"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-log-on-tab"></a>Selector del demonio de filtro de texto completo de SQL (pestaña Iniciar sesión)
   Desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], la búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza el servicio Selector de demonio de filtro de texto completo de SQL (iniciador FDHOST). Este servicio debe estar ejecutándose si se utiliza la búsqueda de texto completo. Para obtener información sobre los procesos de host de demonio de filtro, vea "Arquitectura de la búsqueda de texto completo" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

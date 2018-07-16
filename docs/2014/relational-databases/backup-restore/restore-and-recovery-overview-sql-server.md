@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring tables [SQL Server]
 - backups [SQL Server], restore scenarios
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - database restores [SQL Server], scenarios
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b360f5817d74461d41ce47da47afbea8e4095649
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 72c827235057c77fe42de062dc2c09050dd1a698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197495"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Información general sobre restauración y recuperación (SQL Server)
   Para recuperar de un error una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un administrador de bases de datos tiene que restaurar un conjunto de copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una secuencia de restauración correcta y significativa de forma lógica. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite restaurar los datos de las copias de seguridad de toda una base de datos, un archivo de datos o una página de datos, tal y como se describe a continuación:  

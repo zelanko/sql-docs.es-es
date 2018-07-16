@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación de columna (página columnas) exportar | Documentos de Microsoft
+title: Exportar a Editor de transformación de columna (página columnas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fileextractortransformation.columns.f1
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 86f14583351c2ff734ec0cc3e09abaa270c1c9ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b427d8a727f0db31b63d43efbe00378c7ef0f18b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207455"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Editor de transformación Exportar columna (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de transformación Exportar columna** para especificar las columnas del flujo de datos que desea extraer a los archivos. Podrá especificar si desea que la transformación Exportar columna anexe los datos a un archivo o sobrescriba un archivo existente.  
@@ -44,7 +44,7 @@ ms.locfileid: "36202127"
  Especifique si desea que la transformación elimine el contenido de los archivos existentes antes de escribir los datos. El valor predeterminado es `false`.  
   
  **BOM de escritura**  
- Especifique si desea escribir una marca de orden de bytes (BOM) en el archivo. Solo se escribe una BOM si los datos tienen el `DT_NTEXT` o tipo de datos DT_WSTR y no se anexan a un archivo de datos existente.  
+ Especifique si desea escribir una marca de orden de bytes (BOM) en el archivo. Solo se escribirá una BOM si los datos tienen el `DT_NTEXT` o tipo de datos DT_WSTR y no se anexan a un archivo de datos existente.  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

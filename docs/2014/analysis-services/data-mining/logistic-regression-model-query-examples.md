@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de consultas de modelo de regresión logística | Documentos de Microsoft
+title: Ejemplos de consultas de modelo de regresión logística | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b079609e6d2df8d104b3430488ae37ac0e9ea179
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f908b029074e58866f51dbd7deff571763e11b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189602"
 ---
 # <a name="logistic-regression-model-query-examples"></a>Ejemplos de consultas de modelos de regresión logística
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles de los patrones detectados durante el análisis, o de una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones con los nuevos datos.  
@@ -129,7 +129,7 @@ NATURAL PREDICTION JOIN
   
  Resultados del ejemplo:  
   
- **Predecir el grado de servicio**: 0.102601830123659  
+ **Grado de servicio puede predecir**: 0.102601830123659  
   
  **Resultado**  
   
@@ -161,7 +161,7 @@ NATURAL PREDICTION JOIN
   
 6.  En la pestaña **Estructura de minería de datos** , haga clic con el botón derecho en la columna de nivel de servicio y seleccione **Propiedades**.  
   
-7.  Cambiar el `Content` propiedad de **Continuous** a **Discretized**. Cambiar el `DiscretizationMethod` propiedad **clústeres**. En Discretization BucketCount, escriba **3**.  
+7.  Cambiar el `Content` propiedad desde **Continuous** a **Discretized**. Cambiar el `DiscretizationMethod` propiedad **clústeres**. En Discretization BucketCount, escriba **3**.  
   
     > [!NOTE]  
     >  Estos parámetros se utilizan simplemente para ilustrar el proceso y no generan necesariamente un modelo válido.  
@@ -215,7 +215,7 @@ NATURAL PREDICTION JOIN
  [Consultas de minería de datos](data-mining-queries.md)   
  [Algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm.md)   
  [Referencia técnica del algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)   
- [Contenido del modelo para los modelos de regresión logística de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Contenido del modelo para los modelos de regresión logística de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Lección 5: Generar modelos de regresión logística y Red neuronal &#40;intermedio de Tutorial de minería de datos&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

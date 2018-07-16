@@ -1,5 +1,5 @@
 ---
-title: Agregar, eliminar, cambiar el ámbito de la Variable definida por el usuario en un paquete | Documentos de Microsoft
+title: Agregar, eliminar, cambiar el ámbito de Variable definido por el usuario en un paquete | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], adding
 ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
 caps.latest.revision: 46
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3d0d607408aed88a91be310d715505881708edee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fdccdecea434aa3fe56c362f932b3ba0da396b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213605"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete
   Estos procedimientos describen cómo agregar, eliminar y cambiar el ámbito de una variable definida por el usuario en un paquete usando la ventana **Variables**.  
   
  Para obtener más información sobre el ámbito de las variables, vea [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] También proporciona variables del sistema que disponer de información del sistema en tiempo de ejecución y pueden utilizarse en contenedores como paquetes y controladores de eventos. Las variables del sistema no se pueden eliminar.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] También proporciona variables del sistema que hacen que la información del sistema disponibles en tiempo de ejecución y se pueden utilizar en contenedores como paquetes y controladores de eventos. Las variables del sistema no se pueden eliminar.  
   
 ### <a name="to-add-a-variable"></a>Para agregar una variable  
   
@@ -90,6 +90,6 @@ ms.locfileid: "36203004"
  [Servicios de integración &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
  [Usar Variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)   
  [Establecer las propiedades de una Variable definida por el usuario](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
- [Use los valores de Variables y parámetros de un paquete secundario](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
+ [Uso de los valores de variables y parámetros en un paquete secundario](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
   
   

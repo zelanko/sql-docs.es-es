@@ -1,5 +1,5 @@
 ---
-title: Preparar los datos de seguimiento de entrada | Documentos de Microsoft
+title: Preparar los datos de seguimiento de entrada | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30b9108a8586e56f7a96695be513e6e33fe39c85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7da90e14d33fb19b421e0cd5a9219ac356952e83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196725"
 ---
 # <a name="prepare-the-input-trace-data"></a>Preparar los datos de seguimiento de entrada
   Para poder iniciar una repetición distribuida con la característica Distributed Replay de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , debe preparar la información de seguimiento de entrada iniciando la fase de preprocesamiento desde la herramienta de administración de reproducción distribuida. En la fase de preprocesamiento, el controlador de reproducción distribuida procesa la información de seguimiento y genera un archivo intermedio:  
@@ -45,7 +45,7 @@ ms.locfileid: "36202834"
   
 2.  **Iniciar la fase de preprocesamiento**: para preparar la información de seguimiento de entrada, debe ejecutar la herramienta de administración con la opción **preprocess** . Para obtener más información, vea [Opción de preprocesamiento &#40;herramienta de administración Distributed Replay&#41;](preprocess-option-distributed-replay-administration-tool.md).  
   
-    1.  Abra la utilidad de símbolo del sistema de Windows (`CMD.exe`) y vaya a la ubicación de instalación de la herramienta de administración de Distributed Replay (`DReplay.exe`).  
+    1.  Abra la utilidad de símbolo del sistema de Windows (`CMD.exe`) y navegue hasta la ubicación de instalación de la herramienta de administración de Distributed Replay (`DReplay.exe`).  
   
     2.  (Opcional) Use el parámetro *controller* , **-m**, para especificar el controlador, si el servicio del controlador se está ejecutando en un equipo diferente al de la herramienta de administración.  
   
@@ -63,8 +63,8 @@ ms.locfileid: "36202834"
   
 ## <a name="see-also"></a>Vea también  
  [Reproducción distribuida de SQL Server](sql-server-distributed-replay.md)   
- [Requisitos de Distributed Replay](distributed-replay-requirements.md)   
- [Opciones de línea de comandos de herramientas de administración &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Requisitos de reproducción distribuida](distributed-replay-requirements.md)   
+ [Opciones de línea de comandos de la herramienta de administración &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurar Distributed Replay](configure-distributed-replay.md)  
   
   

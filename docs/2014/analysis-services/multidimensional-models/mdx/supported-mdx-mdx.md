@@ -1,5 +1,5 @@
 ---
-title: Admite MDX (MDX) | Documentos de Microsoft
+title: Admite MDX (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], statements
 - MDX [Analysis Services], functions
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0db1a0ef59eafcf20e240aa863ba7ce61edfad55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3301717dda71b51283f971fa1a21dbca1c228781
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191172"
 ---
 # <a name="supported-mdx-mdx"></a>Compatibilidad con MDX (MDX)
   Las siguientes instrucciones y funciones se admiten en script MDX (Expresiones multidimensionales):  
@@ -40,7 +40,7 @@ ms.locfileid: "36204041"
   
  [Instrucción CALCULATE &#40;MDX&#41;](/sql/mdx/mdx-scripting-calculate)  
   
- [CASE (instrucción) &#40;MDX&#41;](/sql/mdx/case-statement-mdx)  
+ [Instrucción CASE &#40;MDX&#41;](/sql/mdx/case-statement-mdx)  
   
  [Instrucción CREATE CELL CALCULATION &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
@@ -50,14 +50,14 @@ ms.locfileid: "36204041"
   
  [EXISTING, palabra clave &#40;MDX&#41;](mdx-query-existing-keyword.md)  
   
- [Instrucción de inmovilización &#40;MDX&#41;](/sql/mdx/mdx-scripting-freeze)  
+ [Instrucción FREEZE &#40;MDX&#41;](/sql/mdx/mdx-scripting-freeze)  
   
  [IF instrucción &#40;MDX&#41;](/sql/mdx/mdx-scripting-if)  
   
  [Esto &#40;MDX&#41;](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
->  MDX admite la asignación a las siguientes propiedades de celda: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` y `FONT_SIZE`. Para obtener más información, vea [Usar las propiedades de celda &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). MDX admite también la asignación a la `NON_EMPTY_BEHAVIOR` propiedad de la [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) instrucción.  
+>  MDX admite la asignación a las siguientes propiedades de celda: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` y `FONT_SIZE`. Para obtener más información, vea [Usar las propiedades de celda &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). MDX también admite la asignación a la `NON_EMPTY_BEHAVIOR` propiedad de la [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) instrucción.  
   
  [Instrucción SCOPE &#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)  
   

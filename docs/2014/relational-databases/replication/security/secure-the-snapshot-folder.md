@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], security
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7c92354681c797588a0d1bd3b569cdd50bf9c765
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0942c2d0f60c4ee93ad5636178d885d5972c1c1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177802"
 ---
 # <a name="secure-the-snapshot-folder"></a>Proteger la carpeta de instantáneas
   La carpeta de instantáneas es un directorio que almacena archivos de instantáneas. Se recomienda que sea un directorio dedicado para el almacenamiento de instantáneas. Conceda al Agente de instantáneas permiso de escritura en la carpeta y asegúrese de que el permiso de lectura se concede solamente a la cuenta de Windows que utiliza el Agente de mezcla o el Agente de distribución cuando tiene acceso a la carpeta. Para tener acceso a una carpeta de instantáneas que se encuentra en un equipo remoto, la cuenta de Windows asociada con el agente debe ser una cuenta de dominio.  

@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 - report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 96841d12896ed3bdb414fa1db1825cf5c07ba0cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 030f950d9b18452e415fa23b1a1d43bf13eabdce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196825"
 ---
 # <a name="planning-a-report-report-builder"></a>Planear un informe (Generador de informes)
   El Generador de informes permite crear muchos tipos de informes. Por ejemplo, puede crear informes que muestren los datos de ventas detallados o resumidos, las tendencias de marketing y de ventas, los informes de operaciones o los paneles. También puede crear informes que aprovechen el texto de formato enriquecido, por ejemplo, para pedidos de ventas, catálogos de productos o circulares. Todos estos informes se crean utilizando combinaciones diferentes de los mismos bloques de creación básicos en el Generador de informes. Para crear un informe útil, de fácil comprensión, sirve de ayuda planearlo primero. A continuación se detallan algunos de los aspectos que quizá desee considerar antes de empezar:  
   
 -   **¿En qué formato desea que aparezca el informe?**  
   
-     Puede representar en línea los informes en un explorador, como el Administrador de informes, o exportarlos a otros formatos como Excel, Word o PDF. La forma final que adopta el informe es una consideración importante porque no todas las características están disponibles en todos los formatos de exportación. Para obtener más información, consulte [exportar informes &#40;el generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
+     Puede representar en línea los informes en un explorador, como el Administrador de informes, o exportarlos a otros formatos como Excel, Word o PDF. La forma final que adopta el informe es una consideración importante porque no todas las características están disponibles en todos los formatos de exportación. Para obtener más información, consulte [exportar informes &#40;generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
 -   **¿Qué estructura desea utilizar para presentar los datos en el informe?**  
   
-     Tiene varias opciones entre las que elegir para presentar los datos, como formato tabular, matriz (similar a un informe de tabla de referencias cruzadas o de tabla dinámica), gráfico, las estructuras de forma libre, o cualquier combinación de estos. Para obtener más información, consulte [enumera &#40;el generador de informes y SSRS&#41; ](tables-matrices-and-lists-report-builder-and-ssrs.md) y [gráficos &#40;el generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
+     Tiene varias opciones entre las que elegir para presentar los datos, como formato tabular, matriz (similar a un informe de tabla de referencias cruzadas o de tabla dinámica), gráfico, las estructuras de forma libre, o cualquier combinación de estos. Para obtener más información, consulte [enumera &#40;generador de informes y SSRS&#41; ](tables-matrices-and-lists-report-builder-and-ssrs.md) y [gráficos &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 -   **¿Qué aspecto desea que tenga el informe?**  
   
@@ -53,11 +53,11 @@ ms.locfileid: "36202439"
   
 -   **¿Cómo va a distribuir el informe?**  
   
-     Puede guardar el informe en el equipo local y continuar trabajando en él, o ejecutarlo localmente para obtener su propia información. Sin embargo, para compartir el informe con otros usuarios, tendrá que guardarlo en un servidor de informes configurado en el modo nativo o en un servidor de informes en el modo integrado de SharePoint. Guardarlo en un servidor permite a otros usuarios ejecutarlo cuando lo deseen. Como alternativa, el administrador del servidor de informes puede configurar una suscripción al informe o configurar la distribución del informe por correo electrónico a otros individuos. Puede hacer que el informe se entregue en un formato de exportación concreto si lo prefiere. Para obtener más información, consulte [buscar, ver y administrar informes &#40;el generador de informes y SSRS &#41; ](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+     Puede guardar el informe en el equipo local y continuar trabajando en él, o ejecutarlo localmente para obtener su propia información. Sin embargo, para compartir el informe con otros usuarios, tendrá que guardarlo en un servidor de informes configurado en el modo nativo o en un servidor de informes en el modo integrado de SharePoint. Guardarlo en un servidor permite a otros usuarios ejecutarlo cuando lo deseen. Como alternativa, el administrador del servidor de informes puede configurar una suscripción al informe o configurar la distribución del informe por correo electrónico a otros individuos. Puede hacer que el informe se entregue en un formato de exportación concreto si lo prefiere. Para obtener más información, consulte [buscar, ver y administrar informes &#40;generador de informes y SSRS &#41; ](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Generador de informes en SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
- [Conceptos de creación de informes &#40;el generador de informes SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Conceptos de creación de informes &#40;generador de informes y SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Tutoriales &#40;generador de informes&#41;](../report-builder-tutorials.md)  
   
   

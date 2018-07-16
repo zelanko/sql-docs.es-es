@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.admin.config.log.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fea4b763ec3646c7299c01058166dc97d24a9c62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1ce0ea05c39db00f96bff2bc14e6f52c9ed3aec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204067"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurar los niveles de gravedad de los archivos de registro de DQS
   En este tema se describe cómo configurar los niveles de gravedad de las distintas actividades y módulos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) mediante [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Los niveles de gravedad definen la intensidad de los eventos que tienen lugar en DQS. Los eventos de DQS tienen los niveles de gravedad siguientes, en orden decreciente:  

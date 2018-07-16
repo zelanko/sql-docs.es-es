@@ -1,5 +1,5 @@
 ---
-title: Usar una conexión de datos de Office (.odc) con informes (Reporting Services en modo integrado de SharePoint) | Documentos de Microsoft
+title: Usar una conexión de datos de Office (.odc) con informes (Reporting Services en modo integrado de SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Office Data Connection (.odc) files
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2b6f4f52d1ada7d279a5de935359022947fcf087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 63f220c5201931169546305a0b4115677aedf0e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177212"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>Usar una conexión de datos de Office (.odc) con informes (Reporting Services en el modo integrado de SharePoint)
   En escenarios limitados, puede usar un archivo de conexión de datos de Office (.odc) existente para proporcionar información de conexión a un informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Al crear un origen de datos compartido, puede usarse un archivo .odc en lugar de un archivo .rsds. El servidor de informes usa un archivo .odc de la misma forma que usa un archivo .rsds; lee el archivo para el tipo de origen de datos, una cadena de conexión y la información de credenciales.  
@@ -38,7 +38,7 @@ ms.locfileid: "36108276"
   
 -   El archivo .odc debe especificar una cadena de conexión.  
   
--   Las credenciales se pueden establecer en `None`, `Stored`, o `Integrated`. Si el método de credenciales se establece en `Stored`, el servidor de informes le pedirá al usuario las credenciales en lugar de usar las credenciales almacenadas. El servidor de informes no puede usar credenciales almacenadas, tal y como se define en el archivo .odc.  
+-   Se pueden establecer las credenciales en `None`, `Stored`, o `Integrated`. Si el método de credenciales se establece en `Stored`, el servidor de informes solicitará al usuario las credenciales en lugar de usar las credenciales almacenadas. El servidor de informes no puede usar credenciales almacenadas, tal y como se define en el archivo .odc.  
   
 -   El origen de datos debe tener un esquema idéntico al utilizado para crear el informe. Si las estructuras de datos son distintas, no se ejecutará el informe.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
 - cache [Reporting Services]
@@ -25,13 +25,13 @@ ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 22bad94dc3102b48b858f22354039bcb61fea06e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0dd80e542132cb2ebd36b1431e274e823970d9af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203907"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206555"
 ---
 # <a name="caching-reports-ssrs"></a>Informes almacenados en caché (SSRS)
   Un servidor de informes puede almacenar en memoria caché una copia de un informe procesado y devolverla cuando el usuario abra el informe. Para un usuario, la única prueba visible que indica que el informe es una copia en caché es la fecha y la hora de ejecución. Si la fecha o la hora no son actuales y el informe no es una instantánea, significa que éste se ha obtenido de la caché.  

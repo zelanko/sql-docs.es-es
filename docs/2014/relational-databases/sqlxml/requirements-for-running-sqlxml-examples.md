@@ -1,5 +1,5 @@
 ---
-title: Requisitos para ejecutar los ejemplos de SQLXML | Documentos de Microsoft
+title: Requisitos para ejecutar los ejemplos de SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - examples [SQLXML], requirements
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0accbe193a3402e7935914a3a91a91a54f6bc15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 567abfcd0ed51fafb16f7152d505b2f9afd6b454
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191625"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Requisitos para ejecutar los ejemplos de SQLXML
   El [programación en SQLXML 4.0](sqlxml-4-0-programming-concepts.md) sección proporcionan numerosos ejemplos. En este tema se enumeran los requisitos para crear ejemplos funcionales a partir de estos ejemplos.  

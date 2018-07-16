@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Bayes Naive de Microsoft | Documentos de Microsoft
+title: Algoritmo Bayes Naive de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Bayesian classifiers
 - algorithms [data mining]
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 caps.latest.revision: 55
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43d3851c5a3acd6a33d051eb743797220d06cb7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9abc422430a70a8a4386b55ca0d8d4eb4fb3017b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196615"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
-  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Bayes Naive es un algoritmo de clasificación basado en teoremas de Bayes y proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para su uso en el modelado de predicción. La palabra naïve (ingenuo en inglés) del término Bayes naive proviene del hecho que el algoritmo utiliza técnicas Bayesianas pero no tiene en cuenta las dependencias que puedan existir.  
+  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Bayes Naive es un algoritmo de clasificación basado en los teoremas de Bayes y proporcionada por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para su uso en el modelado de predicción. La palabra naïve (ingenuo en inglés) del término Bayes naive proviene del hecho que el algoritmo utiliza técnicas Bayesianas pero no tiene en cuenta las dependencias que puedan existir.  
   
  Desde el punto de vista computacional, el algoritmo es menos complejo que otros algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] y, por tanto, resulta útil para generar rápidamente modelos de minería de datos que detectan las relaciones entre las columnas de entrada y las columnas de predicción. Puede utilizar este algoritmo para realizar la exploración inicial de los datos y, más adelante, aplicar los resultados para crear modelos de minería de datos adicionales con otros algoritmos más complejos y precisos desde el punto de vista computacional.  
   
@@ -96,10 +96,10 @@ ms.locfileid: "36111051"
 -   Admite el uso de modelos de minería de datos OLAP.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Selección de características &#40;minería de datos&#41;](feature-selection-data-mining.md)   
- [Ejemplos de consultas de modelo Bayes naive](naive-bayes-model-query-examples.md)   
- [Contenido del modelo para los modelos Bayes Naive de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+ [Ejemplos de consultas del modelo Bayes naive](naive-bayes-model-query-examples.md)   
+ [Para los modelos Bayes Naive contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Referencia técnica del algoritmo Bayes naive de Microsoft](microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   

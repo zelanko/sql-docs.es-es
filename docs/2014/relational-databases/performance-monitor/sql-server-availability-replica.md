@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - performance counters [SQL Server], AlwaysOn Availability Groups
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], performance counters
 ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
 caps.latest.revision: 24
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: ea4de34980e29b47aa9bb2ce35f5634067a1e623
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 7f711ca92f6dc3ff6e5171ae2e2da19641d1ef72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204576"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186656"
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server, réplica de disponibilidad
   El objeto de rendimiento **SQLServer:Availability Replica** contiene contadores de rendimiento que proporcionan información acerca de las réplicas de disponibilidad en los grupos de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Todos los contadores de rendimiento de las réplicas de disponibilidad se aplican tanto a las réplicas principales como a las réplicas secundarias, y los contadores de envío/recepción reflejan la réplica local. En general, la réplica principal envía la mayor parte de los datos y las réplicas secundarias reciben los datos. Sin embargo, las réplicas secundarias envían mensajes de confirmación de reconocimiento y otro tráfico de fondo a las réplicas principales. Observe que en una réplica de disponibilidad dada, algunos contadores mostrarán el valor cero, dependiendo del rol actual (principal o secundario) de la réplica local.  

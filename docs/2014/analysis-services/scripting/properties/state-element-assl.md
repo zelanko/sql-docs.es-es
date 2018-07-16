@@ -1,5 +1,5 @@
 ---
-title: Estado de elemento (ASSL) | Documentos de Microsoft
+title: Estado de elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - State element
 ms.assetid: b6ee1144-89f7-4ced-bc87-c2e33ca25f73
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 391babe6cba3330c0a072739c01748d618aec3e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 507dab440db095f844b4fad9dcdd96e29d18d487
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206035"
 ---
 # <a name="state-element-assl"></a>Elemento State (ASSL)
   Contiene un valor de solo lectura que describe el estado de procesamiento actual del elemento primario.  
@@ -66,7 +66,7 @@ ms.locfileid: "36111224"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|*Procesar*|El elemento se ha procesado totalmente.|  
+|*Procesado*|El elemento se ha procesado totalmente.|  
 |*PartiallyProcessed*|El elemento se ha procesado parcialmente. ([Cubo](../objects/cube-element-assl.md) y [MeasureGroup](../objects/group-element-assl.md) sólo.)|  
 |*Sin procesar*|El elemento no se ha procesado.|  
   

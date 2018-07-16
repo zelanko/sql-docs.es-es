@@ -1,5 +1,5 @@
 ---
-title: Examinar un modelo usando el Visor de red neuronal de Microsoft | Documentos de Microsoft
+title: Examinar un modelo usando el Visor de red neuronal de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, viewing
 - classification mining model [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - neural network model [Analysis Services]
 ms.assetid: 2343d746-c4f4-499b-9d3c-17d63310a9a3
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f577d98082953bc565a6c14fc8fdafce2a6711fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45561d4e2b5463e6525d9def3cf0d508fddd592f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196675"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Examinar un modelo usando el Visor de redes neuronales de Microsoft
   El Visor de redes neuronales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los modelos de minería de datos que se generan con el algoritmo de Red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . El algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] crea modelos de minería de datos de regresión y de clasificación que pueden analizar entradas y salidas múltiples, y es muy útil para los análisis de final abierto y la exploración. Para obtener más información acerca de este algoritmo, vea [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md).  
@@ -81,8 +81,8 @@ ms.locfileid: "36203298"
   
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm.md)   
- [Tareas y tareas del Visor de modelo de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
- [Tareas y tareas del Visor de modelo de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tareas del Visor de modelo de minería de datos y procedimientos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tareas del Visor de modelo de minería de datos y procedimientos](mining-model-viewer-tasks-and-how-tos.md)   
  [Herramientas de minería de datos](data-mining-tools.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)  
   

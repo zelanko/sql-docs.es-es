@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 caps.latest.revision: 4
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d62dfcc3587cb2abfe28b2bee899ac38167c4748
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f6d09da64246aa0fe2d68df3ab75780597affae2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205865"
 ---
 # <a name="step-4-deploying-the-lesson-6-package"></a>Paso 4: implementar el paquete de la lección 6
   Implementar el paquete consiste en agregar el paquete al catálogo SSISDB de Integration Services en una instancia de SQL Server. En esta lección, agregará el paquete de la lección 6 en el catálogo SSISDB, establecerá el parámetro y ejecutará el paquete. Para esta lección, utilizará SQL Server Management Studio para agregar el paquete de la lección 6 al catálogo SSISDB e implementar el paquete. Después de implementar el paquete, modificará el parámetro para que señale una ubicación nueva y después ejecutará el paquete.  

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 27410ba1fa02fac7b2db9f0404db450b6a6463d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a44dd79a67fe38735d54d1d91a9a37fdeb32e0e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209625"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Operación en curso (Asistente para importación y exportación de SQL Server)
-  Use la **operación en curso** página para ver el progreso y los resultados de la operación de importación y exportación y para interrumpir la operación si es necesario.  
+  Use la **realizando operación** página para ver el progreso y los resultados de la operación de importación y exportación y para interrumpir la operación si es necesario.  
   
  Para más información acerca de este asistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información acerca de las opciones para iniciar el asistente, así como los permisos necesarios para ejecutar el asistente correctamente, consulte [ejecutar la importación de SQL Server y el Asistente para exportación de](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36203989"
  Muestra mensajes de información o de error generados por la acción.  
   
  **Filter**  
- Puede elegir si desea que se muestren únicamente los errores, las advertencias o las acciones que finalizaron sin error. Puede volver a la visualización predeterminada eligiendo **mostrar todas las acciones**.  
+ Puede elegir si desea que se muestren únicamente los errores, las advertencias o las acciones que finalizaron sin error. Puede revertir a la presentación predeterminada eligiendo **mostrar todas las acciones**.  
   
  **Detener**  
  Interrumpir la operación, si es necesario, mediante el uso de la **detener** botón.  

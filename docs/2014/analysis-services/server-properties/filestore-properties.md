@@ -1,5 +1,5 @@
 ---
-title: Propiedades de FILESTORE | Documentos de Microsoft
+title: FILESTORE, propiedades | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Income property
 - InitialBonus property
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - MemoryLimit property
 ms.assetid: 580cf0aa-7425-4d48-aa8d-128f5b488fcd
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4bff551f29c7d16fc068bb0f41d2b17917e2145c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f23a96efda1a112c7cfc2f082f1b111dee78185
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205787"
 ---
 # <a name="filestore-properties"></a>Filestore, propiedades
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades del servidor de almacén de archivos que aparecen en las tablas siguientes. Todas son propiedades avanzadas que no se deben cambiar, salvo bajo la orientación de soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -82,7 +82,7 @@ ms.locfileid: "36108421"
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar propiedades del servidor de Analysis Services](server-properties-in-analysis-services.md)   
+ [Configurar las propiedades del servidor en Analysis Services](server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

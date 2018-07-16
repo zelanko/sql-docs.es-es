@@ -1,5 +1,5 @@
 ---
-title: Elemento del lenguaje (XMLA) | Documentos de Microsoft
+title: Elemento Language (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Language element
 ms.assetid: cd998202-e43f-4c6c-8727-a15a76a520ea
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5ea8c37369c45d35a8fe3c7366c2d5293e0c48a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d247e81c19c3394ac46274ba775c1695741e00ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205855"
 ---
 # <a name="language-element-xmla"></a>Elemento Language (XMLA)
   Contiene el identificador de configuración regional (LCID) para el elemento primario [traducción](translation-element-xmla.md) elemento.  

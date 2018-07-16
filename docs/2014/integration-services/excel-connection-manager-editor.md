@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones de Excel | Documentos de Microsoft
+title: Administrador de conexiones de Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelconnection.f1
 helpviewer_keywords:
 - Excel Connection Manager Editor
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9396c9fe0a04dd7cf8c3f8e408ea22e83dc1c3e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c7a601344f28f99a31adb9d635c44e9cca85471
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287641"
 ---
 # <a name="excel-connection-manager-editor"></a>Editor de Administrador de conexiones con Excel
   Utilice el cuadro de diálogo **Editor del administrador de conexiones con Excel** para agregar una conexión a un archivo de libro de [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] existente o nuevo.  
@@ -38,7 +38,7 @@ ms.locfileid: "36203993"
  Escriba la ruta de acceso y el nombre de archivo de un archivo de libro de Excel (.xls) nuevo o existente.  
   
 > [!WARNING]  
->  El **Editor de destino de Excel** crea automáticamente el archivo de Excel cuando se selecciona un **conexión con Excel** que apunta a un nuevo/inexistente de archivo y, a continuación, haga clic en **New** para **Nombre de la hoja de Excel**.  
+>  El **Editor de destino de Excel** crea automáticamente el archivo de Excel cuando se selecciona un **conexión de Excel** que apunta a un nuevo o inexistente de archivo y, a continuación, haga clic en **New** para **Nombre de la hoja de Excel**.  
   
  **Examinar**  
  Use el cuadro de diálogo **Abrir** para ir a la carpeta donde se encuentra el archivo de Excel o a la ubicación en la que quiere crear el archivo.  
@@ -49,7 +49,7 @@ ms.locfileid: "36203993"
 |Opción|Descripción|  
 |------------|-----------------|  
 |Excel 97-2003|El archivo se ha creado con Excel 97 o una versión posterior.|  
-|Excel 3.0|Archivo se creó con Excel 3.0.|  
+|Excel 3.0|Archivo creado con Excel 3.0.|  
 |Excel 4.0|El archivo se ha creado con Excel 4.0.|  
 |Excel 5.0|El archivo se ha creado con Excel 95 (7.0).|  
   

@@ -1,5 +1,5 @@
 ---
-title: Aspectos básicos (Analysis Services) de Scripting de MDX | Documentos de Microsoft
+title: Aspectos básicos (Analysis Services) de Scripting de MDX | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cubes [Analysis Services], scripts
 - calculations [Analysis Services], scripts
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], scripts
 ms.assetid: fdecb3ce-7c87-4bab-8000-532ba7a29f96
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f4cdd712fff0de36e051f371cae58a3ff8543628
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01f105ab8cd05029ac4dc7d747f5b0c016745962
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325195"
 ---
 # <a name="mdx-scripting-fundamentals-analysis-services"></a>Aspectos básicos de scripting MDX (Analysis Services)
   En [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], un script de expresiones multidimensionales (MDX) se compone de una o más expresiones o instrucciones MDX que llenan un cubo con cálculos.  

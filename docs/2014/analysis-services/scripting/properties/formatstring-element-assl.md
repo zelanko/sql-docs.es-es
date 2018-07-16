@@ -1,5 +1,5 @@
 ---
-title: Elemento FormatString (ASSL) | Documentos de Microsoft
+title: Elemento FormatString (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - FormatString element
 ms.assetid: 7b996221-936e-4f36-a3a8-676eb9869c55
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0760432767a8f7fb1dcdec99c2ca7d76722ddb38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a61057708dd430fa6879101cda0dd315bbc82298
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273201"
 ---
 # <a name="formatstring-element-assl"></a>Elemento FormatString (ASSL)
   Describe el formato de presentación para un [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento o un [medida](../objects/measure-element-assl.md) elemento.  

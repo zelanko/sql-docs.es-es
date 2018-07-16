@@ -1,5 +1,5 @@
 ---
-title: Editor de código fuente de OData (página columnas) | Documentos de Microsoft
+title: Editor de código fuente de OData (página columnas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.columns.f1
 ms.assetid: d640e9e4-86c3-4cb7-a6c2-e82624303696
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3c9e2f45198a063282fcbd5adcff8a42dcc0887f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb8c3e5598a2b1f5faa8f7f8259748432e0adf38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254947"
 ---
 # <a name="odata-source-editor-columns-page"></a>Editor de origen OData (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de origen OData** para seleccionar las columnas externas (origen) que se van a incluir en la salida y asignarlas a columnas de salida.  
@@ -37,8 +37,8 @@ ms.locfileid: "36204828"
  Permite proporcionar un nombre único para cada columna de salida. El nombre predeterminado es el nombre de la columna externa (origen) seleccionada; sin embargo, puede elegir un nombre único y descriptivo.  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de código fuente de OData &#40;página de conexión&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [Editor de código fuente de OData &#40;página de salida de Error&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [Editor de origen OData &#40;página de conexión&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [Editor de origen OData &#40;página de salida de Error&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [Origen OData](data-flow/odata-source.md)   
  [Administrador de conexiones OData](connection-manager/odata-connection-manager.md)  
   

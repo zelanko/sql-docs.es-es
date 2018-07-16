@@ -1,5 +1,5 @@
 ---
-title: Diseñador de modelos tabulares (SSAS Tabular) | Documentos de Microsoft
+title: Diseñador de modelos tabulares (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7d0fc5ae763542c5f46bdcdb474a71f71250733c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20beaf68692cfecbdc047752ff873921cce6a740
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263351"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Diseñador de modelos tabulares (SSAS tabular)
   El diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], integrado con Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 o posterior, con plantillas adicionales de tipo de proyecto específicamente para desarrollar soluciones de modelos tabulares profesionales.  
@@ -32,7 +32,7 @@ ms.locfileid: "36203502"
   
 -   [Plantillas de proyecto](#bkmk_proj_temp)  
   
--   [Ventanas y menús](#bkmk_wind_men)  
+-   [Windows y menús](#bkmk_wind_men)  
   
 -   [Integración de Visual Studio](#bkmk_vsint)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36203502"
  Los métodos abreviados de teclado de Analysis Services se pueden configurar/reasignar con el cuadro de diálogo Herramientas->Opciones->Teclado. Algunos métodos abreviados globales de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , como compilar, guardar, depurar, nuevo proyecto, etc. se admiten en el contexto del diseñador de modelos tabulares. Otros métodos abreviados específicos del diseñador de modelos tabulares se encuentran en el contexto de Analysis Services.  
   
 ## <a name="see-also"></a>Vea también  
- [Proyectos de modelos tabulares &#40;SSAS Tabular&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Propiedades &#40;SSAS Tabular&#41;](tabular-models/properties-ssas-tabular.md)  
+ [Proyectos de modelos tabulares &#40;Tabular de SSAS&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [Propiedades &#40;Tabular de SSAS&#41;](tabular-models/properties-ssas-tabular.md)  
   
   

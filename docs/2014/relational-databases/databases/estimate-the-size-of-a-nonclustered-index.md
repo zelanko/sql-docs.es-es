@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
 - size [SQL Server], tables
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 102701a984c6f35d38194c0d8a46c4ed63438936
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d2fb15614dbb72fd9e76bf62174f6b435429d4e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296655"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimar el tamaño de un índice no clúster
   Siga estos pasos para estimar el espacio necesario para almacenar un índice no clúster:  
@@ -121,7 +121,7 @@ ms.locfileid: "36203658"
     >  Un índice no clúster se puede ampliar incluyendo columnas que no son de clave además de las columnas de clave de índice. Estas columnas adicionales solamente se almacenan en el nivel hoja del índice no clúster. Para más información, consulte [Create Indexes with Included Columns](../indexes/create-indexes-with-included-columns.md).  
   
     > [!NOTE]  
-    >  Puede combinar `varchar`, `nvarchar`, `varbinary`, o `sql_variant` columnas que hacen que el ancho total definido para la tabla sea superior a 8.060 bytes. La longitud de cada una de estas columnas debe ajustarse al límite de 8.000 bytes en columnas `varchar`, `varbinary` o `sql_variant` y de 4.000 bytes en columnas `nvarchar`. Sin embargo, el ancho combinado puede superar el límite de 8.060 bytes de una tabla. Esto también se aplica a filas de hoja de índice no clúster con columnas incluidas.  
+    >  Puede combinar `varchar`, `nvarchar`, `varbinary`, o `sql_variant` columnas que provocan el ancho total definido para la tabla sea superior a 8.060 bytes. La longitud de cada una de estas columnas debe ajustarse al límite de 8.000 bytes en columnas `varchar`, `varbinary` o `sql_variant` y de 4.000 bytes en columnas `nvarchar`. Sin embargo, el ancho combinado puede superar el límite de 8.060 bytes de una tabla. Esto también se aplica a filas de hoja de índice no clúster con columnas incluidas.  
   
      Si el índice no clúster no incluye columnas, utilice los valores del Paso 1, incluidas las modificaciones determinadas en el Paso 1.3:  
   
@@ -214,13 +214,13 @@ ms.locfileid: "36203658"
   
 1.  Calcule el número de niveles no hoja del índice:  
   
-     ***Los niveles no hoja*** = 1 + registro Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Los niveles no hoja*** = 1 + Index_Rows_Per_Page de registro (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
   
      Redondee este valor al número entero más próximo. Este valor no incluye el nivel hoja del índice no clúster.  
   
 2.  Calcule el número de páginas no hoja del índice:  
   
-     ***Num_Index_Pages*** = ∑Level (***Num_Leaf_Pages/Index_Rows_Per_Page***<sup>nivel</sup>) donde 1 < = nivel < = ***niveles***  
+     ***Num_Index_Pages*** = ∑Level (***Num_Leaf_Pages/Index_Rows_Per_Page***<sup>nivel</sup>) donde 1 < = Level < = ***niveles***  
   
      Redondee cada sumando al número entero más próximo. Como ejemplo sencillo, considere un índice en el que ***Num_Leaf_Pages*** = 1000 e ***Index_Rows_Per_Page*** = 25. El primer nivel de índice por encima del nivel hoja almacena 1000 filas de índice, lo que equivale a una fila de índice por página hoja, y en cada página caben 25 filas de índice. Esto significa que se necesitan 40 páginas para almacenar las 1000 filas de índice. El siguiente nivel del índice debe almacenar 40 filas. Esto significa que necesita 2 páginas. El nivel final del índice debe almacenar 2 filas. Esto significa que necesita 1 página. Todo ello da lugar a 43 páginas no hoja de índice. Si se utilizan estos números en las fórmulas anteriores, el resultado será el siguiente:  
   
@@ -249,7 +249,7 @@ ms.locfileid: "36203658"
   
 -   Valores de objetos grandes (LOB)  
   
-     El algoritmo para determinar exactamente la cantidad de espacio se utilizará para almacenar los tipos de datos LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, y `image` valores es complejo. Basta con agregar el tamaño medio de los valores LOB esperados, multiplicarlo por ***Num_Rows***y sumar el resultado al tamaño total del índice no agrupado.  
+     El algoritmo para determinar exactamente la cantidad de espacio se usará para almacenar los tipos de datos LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, y `image` valores es complejo. Basta con agregar el tamaño medio de los valores LOB esperados, multiplicarlo por ***Num_Rows***y sumar el resultado al tamaño total del índice no agrupado.  
   
 -   Compresión  
   

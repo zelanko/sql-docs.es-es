@@ -1,5 +1,5 @@
 ---
-title: Utilizar una expresión en una restricción de precedencia | Documentos de Microsoft
+title: Usar una expresión en una restricción de precedencia | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precedence constraints [Integration Services], adding expressions
 - expressions [Integration Services], adding
 ms.assetid: 601038bb-3b17-42ac-b09d-5b3a82fb6564
 caps.latest.revision: 44
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9752ccb8a925f144abc256db01a6eab683e7d6b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31e3e002996d523aa225e0d0bb607d1772d8b0e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273071"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>Usar una expresión en una restricción de precedencia
   Este procedimiento describe cómo agregar una expresión a una restricción de precedencia mediante el cuadro de diálogo **Editor de restricciones de precedencia** . Antes de poder agregar una expresión a una restricción de precedencia, el paquete debe incluir por lo menos dos ejecutables, ya sean tareas o contenedores, y deben estar conectados por una restricción de precedencia.  

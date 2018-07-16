@@ -1,5 +1,5 @@
 ---
-title: Instalar la versión independiente del generador de informes (generador de informes) | Documentos de Microsoft
+title: Instalar la versión independiente del generador de informes (generador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 599f5aef18b38070d1543de351d0f99b68b4596e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 0fb9e6b43faf8b3ff7e0b91ccb500b94547436aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305085"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Instalar la versión independiente del Generador de informes (Generador de informes)
-  Puede instalar el generador de informes desde el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack de en el [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=168472) o una ubicación como la carpeta pública a los que tiene el ReportBuilder3_x86.msi, el paquete de Windows Installer para el generador de informes se ha descargado.  
+  Puede instalar el generador de informes desde el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack de en el [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=168472) o una ubicación como la carpeta pública a la que tiene el ReportBuilder3_x86.msi, el paquete de Windows Installer para el generador de informes se ha descargado.  
   
  También puede realizar una instalación de línea de comandos del Generador de informes y especificar argumentos para personalizar la instalación. Además de los parámetros estándar intrínsecos de MSI, puede usar los parámetros personalizados que proporciona el Generador de informes: RBINSTALLDIR y REPORTSERVERURL. RBINSTALLDIR especifica la carpeta de instalación raíz para el Generador de informes. REPORTSERVERURL especifica el servidor de informes predeterminado que usa el Generador de informes para guardar los informes en el servidor.  
   
@@ -37,32 +37,32 @@ ms.locfileid: "36200489"
   
 2.  Haga clic en **X86 paquete**.  
   
-3.  En el **descarga de archivos** cuadro de diálogo, haga clic en **ejecutar**.  
+3.  En el **de descarga del archivo** cuadro de diálogo, haga clic en **ejecutar**.  
   
     > [!IMPORTANT]  
     >  Descargue solo archivos de fuentes de confianza.  
   
-4.  En el cuadro de diálogo Internet Explorer, haga clic en **ejecutar**.  
+4.  En el cuadro de diálogo de Internet Explorer, haga clic en **ejecutar**.  
   
     > [!IMPORTANT]  
     >  Ejecute solo archivos de fuentes de confianza.  
   
 5.  Se iniciará el Asistente del Generador de informes de Microsoft SQL Server.  
   
-6.  En el **Asistente para la instalación** página, haga clic en **siguiente**.  
+6.  En el **el Asistente para instalación** página, haga clic en **siguiente**.  
   
-7.  En el **contrato de licencia** página, lea el contrato y, a continuación, seleccione la **acepto los términos del contrato de licencia** opción. Haga clic en **Siguiente**.  
+7.  En el **contrato de licencia** página, lea el contrato y, a continuación, seleccione el **acepto los términos del contrato de licencia** opción. Haga clic en **Siguiente**.  
   
 8.  Especifique su nombre y el nombre de su compañía. Haga clic en **Siguiente**.  
   
-9. En el **selección de características** , opcionalmente, haz clic en **examinar** o **espacio en disco**. Haga clic en **Siguiente**.  
+9. En el **selección de características** , opcionalmente, haga clic en **examinar** o **espacio en disco**. Haga clic en **Siguiente**.  
   
     -   Haga clic en **examinar** para ver la ubicación predeterminada del generador de informes y actualizarla.  
   
         > [!NOTE]  
         >  La carpeta de instalación predeterminada para el generador de informes es \<unidad > archivos de programa\Microsoft SQL Server.  
   
-    -   Haga clic en **espacio en disco** saber cuánto espacio en disco Report Builder consume.  
+    -   Haga clic en **espacio en disco** obtener información sobre el generador de informes cuánto espacio en disco consume.  
   
         > [!NOTE]  
         >  Si un volumen no tiene suficiente espacio disponible en disco, se muestra resaltado.  
@@ -82,20 +82,20 @@ ms.locfileid: "36200489"
   
      Se iniciará el Asistente del Generador de informes de Microsoft SQL Server.  
   
-3.  En el **Asistente para la instalación** página, haga clic en **siguiente**.  
+3.  En el **el Asistente para instalación** página, haga clic en **siguiente**.  
   
-4.  En el **contrato de licencia** página, lea el contrato y, a continuación, seleccione la **acepto los términos del contrato de licencia** opción. Haga clic en **Siguiente**.  
+4.  En el **contrato de licencia** página, lea el contrato y, a continuación, seleccione el **acepto los términos del contrato de licencia** opción. Haga clic en **Siguiente**.  
   
 5.  Especifique su nombre y el nombre de su compañía. Haga clic en **Siguiente**.  
   
-6.  En el **selección de características** , opcionalmente, haz clic en **examinar** o **espacio en disco**. Haga clic en **Siguiente**.  
+6.  En el **selección de características** , opcionalmente, haga clic en **examinar** o **espacio en disco**. Haga clic en **Siguiente**.  
   
     -   Haga clic en **examinar** para ver la ubicación predeterminada del generador de informes y actualizarla.  
   
         > [!NOTE]  
         >  La carpeta de instalación predeterminada para el generador de informes es \<unidad > archivos de programa\Microsoft SQL Server.  
   
-    -   Haga clic en **espacio en disco** saber cuánto espacio en disco Report Builder consume.  
+    -   Haga clic en **espacio en disco** obtener información sobre el generador de informes cuánto espacio en disco consume.  
   
         > [!NOTE]  
         >  Si un volumen no tiene suficiente espacio disponible en disco, se muestra resaltado.  

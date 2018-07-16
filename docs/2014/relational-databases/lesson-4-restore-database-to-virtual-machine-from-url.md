@@ -1,5 +1,5 @@
 ---
-title: Lección 5. (Opcional) Cifrar la base de datos con TDE | Documentos de Microsoft
+title: Lección 5. (Opcional) Cifrar la base de datos mediante TDE | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c8ef2e904c197822721a5c48f811a2a895b5ca59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c73078a44d45d10fae144eb0d15db8995b556ed8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275171"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>Lección 5. (Opcional) Cifrar la base de datos mediante TDE
-  Como paso opcional, puede cifrar la base de datos creada recientemente. El cifrado de datos transparente (TDE) realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. Este tipo de cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. Para obtener más información, consulte [cifrado de datos transparente &#40;TDE&#41; ](security/encryption/transparent-data-encryption.md) y [mover una base de datos protegida de TDE a otro servidor SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
+  Como paso opcional, puede cifrar la base de datos creada recientemente. El cifrado de datos transparente (TDE) realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. Este tipo de cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. Para obtener más información, consulte [cifrado de datos transparente &#40;TDE&#41; ](security/encryption/transparent-data-encryption.md) y [mover una base de datos protegida de TDE a otra de SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
   
  En esta lección se supone que ya completó los pasos siguientes:  
   
@@ -91,10 +91,10 @@ GO
   
 ```  
   
- For detailed information the Transact-SQL statements that have been used in this lesson, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql), [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql), [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql), [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql), and [sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).  
+ Para instrucciones Transact-SQL de información detallada que se han usado en esta lección, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql), [ALTER DATABASE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql), [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql), [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql), y [sys.dm_database_ encryption_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).  
   
  **Lección siguiente:**  
   
- [Lección 6: Migrar una base de datos de un origen de la máquina local a una máquina de destino en Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [Lección 6: Migrar una base de datos de una máquina de origen local a un equipo de destino de Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

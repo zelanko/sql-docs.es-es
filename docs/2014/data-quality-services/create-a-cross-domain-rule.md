@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.testcdrule.f1
 - sql12.dqs.dm.cdrules.f1
@@ -16,13 +16,13 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 07c6f1a6d6f202805f5d2b830e45e8638c5a3a80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 198f3c46c97039fb788cb924a5980f0b6cd75145
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295445"
 ---
 # <a name="create-a-cross-domain-rule"></a>Crear una regla entre dominios
   En este tema se describe cómo crear una regla entre dominios para un dominio compuesto en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una regla entre dominios comprueba la relación entre los valores de los dominios individuales incluidos en un dominio compuesto. Una regla entre dominios debe cumplirse en todo el dominio compuesto para que los valores de dominio se consideren precisos y compatibles con los requisitos empresariales. Las reglas entre dominios se utilizan para validar, corregir y normalizar valores de dominio.  
@@ -31,7 +31,7 @@ ms.locfileid: "36201898"
   
  Una regla entre dominios que tenga condiciones definitivas aplicará la lógica de la regla a los sinónimos del valor en las condiciones, así como a los propios valores. Las condiciones definitivas para las cláusulas If y Then son El valor es igual a, El valor no es igual a, El valor está en o El valor no está en. Por ejemplo, imagine que dispone de la siguiente regla entre dominios para un dominio compuesto: “For “City”, if El valor es igual a ‘Los Angeles’, then for ‘State’, El valor es igual a ‘CA’”. Si ‘Los Angeles’ y ‘LA’ son sinónimos, esta regla dará un resultado correcto para ‘Los Angeles CA’ y ‘LA CA’ y uno incorrecto para ‘Los Angeles WA’ y ‘LA WA’.  
   
- Además de permitirle conocer la validez de una regla entre dominios, la cláusula *Then* definitiva **El valor es igual a**de una regla entre dominios también corrige los datos durante la actividad de limpieza de datos. Para obtener más información, consulte [corrección de datos mediante las reglas entre dominios definitiva](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) en [limpiar los datos en un dominio compuesto](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md).  
+ Además de permitirle conocer la validez de una regla entre dominios, la cláusula *Then* definitiva **El valor es igual a**de una regla entre dominios también corrige los datos durante la actividad de limpieza de datos. Para obtener más información, consulte [corrección de datos mediante reglas entre dominios definitivas](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) en [limpiar los datos en un dominio compuesto](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md).  
   
  Las reglas entre dominios se tienen en consideración una vez aplicadas todas las reglas sencillas que afectan únicamente a un dominio individual. La regla entre dominios solo se aplica si un valor pasa las reglas de dominio individual (si estas existen). El dominio compuesto y los dominios individuales en los que se ejecuta una regla deben haberse definido con anterioridad a la ejecución de la regla.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36201898"
   
     6.  Una vez finalizada la prueba, haga clic en **Cerrar** en el cuadro de diálogo **Probar regla de dominio compuesto** .  
   
-2.  Cuando se hayan completado las reglas entre dominios, haga clic en **finalizar** para completar la actividad de administración de dominios, como se describe en [finalizar la actividad de administración de dominios](../../2014/data-quality-services/end-the-domain-management-activity.md).  
+2.  Cuando haya completado las reglas entre dominios, haga clic en **finalizar** para completar la actividad de administración de dominios, como se describe en [finalizar la actividad de administración de dominios](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de crear una regla entre dominios  
  Una vez creada una regla entre dominios, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  

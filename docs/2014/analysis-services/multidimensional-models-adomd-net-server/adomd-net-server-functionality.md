@@ -1,5 +1,5 @@
 ---
-title: Funcionalidad de servidor ADOMD.NET | Documentos de Microsoft
+title: Funcionalidad del servidor ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - ADOMD.NET, functionality
 ms.assetid: b74c6957-3f64-4e09-aa09-d06ee93f82fa
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 622a7c51bfd6c2a8a9defba70a412967a48dee50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8463ec4804e1ba7ada8ea4e781a34495f5a0d94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269921"
 ---
 # <a name="adomdnet-server-functionality"></a>Funcionalidad del servidor de ADOMD.NET
   Todos los objetos de servidor de ADOMD.NET proporcionan acceso de solo lectura a los datos y metadatos del servidor. Para recuperar datos y metadatos, utilice el modelo de objetos del servidor ADOMD.NET, ya que el modelo de objetos de servidor no admite conjuntos de filas de esquema.  
@@ -34,7 +34,7 @@ ms.locfileid: "36107754"
 >  El objeto <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> solamente admite DMX.  
   
 ## <a name="what-is-a-udf"></a>¿Qué es una UDF?  
- A *UDF* es un método que tiene las siguientes características:  
+ Un *UDF* es un método que tiene las siguientes características:  
   
 -   Puede llamar a la UDF en el contexto de una consulta.  
   
@@ -51,7 +51,7 @@ FROM SalesModel
 ```  
   
 ## <a name="what-is-a-stored-procedure"></a>¿Qué es un procedimiento almacenado?  
- A *procedimiento almacenado* es un método que tiene las siguientes características:  
+ Un *procedimiento almacenado* es un método que tiene las siguientes características:  
   
 -   Se llama a un procedimiento almacenado en su propio con el MDX [llamar](/sql/mdx/mdx-data-manipulation-call) instrucción.  
   

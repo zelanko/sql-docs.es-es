@@ -1,5 +1,5 @@
 ---
-title: Editor de código fuente de OData (página de salida de Error) | Documentos de Microsoft
+title: Editor de código fuente de OData (página salida de Error) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.erroroutput.f1
 ms.assetid: 9a81e2ce-aee6-4c4c-8495-6501d715aca2
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7b76a5399a88118fc0f09c381d2def5e8fb038e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97ac6b0096c7b0ba99baa3868ffcb46c1505b8c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106785"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291041"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Editor de origen OData (página Salida de error)
   Use la página **Salida de error** del cuadro de diálogo **Editor de origen OData** para seleccionar opciones de control de errores y establecer las propiedades en las columnas de salida de errores.  
@@ -51,8 +51,8 @@ ms.locfileid: "36106785"
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de código fuente de OData &#40;página de conexión&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [Editor de código fuente de OData &#40;página columnas&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [Editor de origen OData &#40;página de conexión&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [Editor de origen OData &#40;página columnas&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [Origen OData](data-flow/odata-source.md)   
  [Administrador de conexiones OData](connection-manager/odata-connection-manager.md)  
   

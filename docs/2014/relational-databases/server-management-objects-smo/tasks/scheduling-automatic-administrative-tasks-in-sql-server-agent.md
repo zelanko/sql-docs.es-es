@@ -1,5 +1,5 @@
 ---
-title: Programar tareas administrativas automáticas en el Agente SQL Server | Documentos de Microsoft
+title: Programar tareas administrativas automáticas en el Agente SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - automatic administrative SMO tasks
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd9f5ca6e2b00893bcf5fea14829d76a18b85fa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ad4b0fa53b7a15d9ff8118336d0ec0b9d31a4b56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256057"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Programar tareas administrativas automáticas en el Agente SQL Server
   Los objetos siguientes representan al Agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en SMO:  
@@ -40,7 +40,7 @@ ms.locfileid: "36204121"
  Los objetos del Agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se encuentran en el espacio de nombres <xref:Microsoft.SqlServer.Management.Smo.Agent>.  
   
 ## <a name="examples"></a>Ejemplos  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 1.  Para los programas que utilizan el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe incluir la instrucción `Imports` para certificar el espacio de nombres del Agente. Inserte la instrucción después de las demás instrucciones `Imports`, antes de cualquier declaración de la aplicación, como:  
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento SourceColumnID (ASSL) | Documentos de Microsoft
+title: Elemento SourceColumnID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SourceColumnID element
 ms.assetid: 715c0be7-aa07-4dff-a909-9738224941ec
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d1ad5aecbf77103ae3e06b932dd0da678fbaa83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 523977b881e9e8357b32cd606252d0a758d3b46a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281781"
 ---
 # <a name="sourcecolumnid-element-assl"></a>Elemento SourceColumnID (ASSL)
   Contiene el identificador (ID) de la columna de estructura de minería de datos de origen en el antecesor [MiningStructure](../objects/miningstructure-element-assl.md) elemento.  
@@ -64,7 +64,7 @@ ms.locfileid: "36109023"
 ## <a name="remarks"></a>Notas  
  El valor de la `SourceColumnID` elemento coincide con el identificador de una columna de estructura de minería de datos en el [columnas](../collections/columns-element-assl.md) colección del elemento primario `MiningStructure`.  
   
- El elemento que corresponde al elemento primario de `SourceColumnID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MiningModelColumn>.  
+ El elemento que se corresponde con el elemento primario de `SourceColumnID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MiningModelColumn>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

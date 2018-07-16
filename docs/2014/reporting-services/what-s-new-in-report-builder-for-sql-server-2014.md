@@ -1,5 +1,5 @@
 ---
-title: ¿Qué&#39;s nuevos en el generador de informes para SQL Server 2014 | Documentos de Microsoft
+title: ¿Qué&#39;s en el generador de informes para SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8223c19b-4b0d-4b1d-a042-9a726c18e708
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8bf08740110d2b7517a692e0c7a7f53351767d54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8825385596c14121d0e6e13a7ecdbccbafb26a52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224905"
 ---
-# <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>¿Qué&#39;s nuevos en el generador de informes para SQL Server 2014
+# <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>¿Qué&#39;s en el generador de informes para SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] presenta diversas características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
- Para obtener información sobre las características de esta versión para otros [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] productos y tecnologías, vea [What's New en SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
+ Para obtener información sobre las características de esta versión para otros [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] productos y tecnologías, consulte [What ' s New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
 > [!TIP]  
 >  Para obtener la información y los recursos más recientes con respecto a las nuevas características de esta versión, vea [Información adicional sobre las novedades de SQL Server Reporting Services (SSRS)](http://go.microsoft.com/fwlink/?LinkId=207147).  

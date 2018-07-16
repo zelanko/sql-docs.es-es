@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17b923177aed9583b3757baadce00b6a1aa01038
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9f51af9131329a37be6772310dd2817e4f62fd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282941"
 ---
 # <a name="extensions-ssrs"></a>Extensiones (SSRS)
   El servidor de informes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usa extensiones para modular los tipos de entrada y salida que acepta para la autenticación, el proceso de datos, la representación de informes y la entrega de informes. Esto hace que sea más fácil que las instalaciones existentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] utilicen los nuevos estándares de software del sector, como un esquema de autenticación o un tipo de origen de datos personalizado. El servidor de informes admite extensiones de autenticación personalizadas, extensiones de procesamiento de datos, extensiones de procesamiento de informes, extensiones de representación y extensiones de entrega, y las extensiones disponibles para los usuarios se pueden configurar en el archivo de configuración RSReportServer.config. Por ejemplo, puede limitar los formatos de exportación que el visor de informes puede usar. Un servidor de informes requiere al menos una extensión de autenticación, una extensión de procesamiento de datos y una extensión de representación. Las extensiones de procesamiento de informes y de entrega son opcionales, pero necesarias si desea admitir controles personalizados o de distribución de informes.  
@@ -59,7 +59,7 @@ ms.locfileid: "36203132"
 ## <a name="rendering-extensions"></a>Extensiones de representación  
  Las extensiones de representación transforman los datos y la información de diseño del procesador de informes en un formato específico del dispositivo. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye siete extensiones de representación: HTML, Excel, CSV, XML, Image, PDF y [!INCLUDE[msCoName](../includes/msconame-md.md)] Word.  
   
--   **Extensión de representación en HTML** Cuando se solicita un informe del servidor de informes a través de un explorador web, el servidor de informes utiliza la extensión de representación en HTML para representar el informe. La extensión de representación en HTML genera todo el lenguaje HTML mediante codificación UTF-8. Para obtener más información, consulte [representar en HTML &#40;el generador de informes y SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md) y [planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+-   **Extensión de representación en HTML** Cuando se solicita un informe del servidor de informes a través de un explorador web, el servidor de informes utiliza la extensión de representación en HTML para representar el informe. La extensión de representación en HTML genera todo el lenguaje HTML mediante codificación UTF-8. Para obtener más información, consulte [representar en HTML &#40;generador de informes y SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md) y [planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 -   **Extensión de representación en Excel** La extensión de representación en Excel representa informes que pueden verse y modificarse en [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 o posterior. Esta extensión de representación crea archivos BIFF (Formato de archivo de intercambio binario). BIFF es el formato de archivo nativo para datos de Excel. Los informes que se representan en [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] admiten todas las características disponibles para una hoja de cálculo. Para obtener más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   

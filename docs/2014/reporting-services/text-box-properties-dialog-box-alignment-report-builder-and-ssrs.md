@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de propiedades de cuadro de texto, alineación (generador de informes y SSRS) | Documentos de Microsoft
+title: Cuadro de diálogo de propiedades de cuadro de texto, alineación (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.alignment.f1
 - "10125"
 ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
 caps.latest.revision: 9
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bf6aec0a4375c495f49d4ad0484c1893ef4ccdc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c981605bf2f7473fdd24ba10e167f970c1aac8b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214655"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades de cuadro de texto, Alineación (Generador de informes y SSRS)
   Seleccione **Alineación** en el cuadro de diálogo **Propiedades de cuadro de texto** para situar los valores dentro de la celda o región de datos seleccionada.  

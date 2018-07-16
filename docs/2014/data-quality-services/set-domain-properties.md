@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ab449fa419e273b09801b966d01d4b920af451df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5705838a12d5f8f7518cb2726a4151a71c4a067f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226407"
 ---
 # <a name="set-domain-properties"></a>Establecer las propiedades de dominio
   En este tema se describe cómo establecer las propiedades del dominio en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -40,7 +40,7 @@ ms.locfileid: "36204023"
   
 1.  Establecer propiedades en un dominio existente, abra una base de conocimiento en la actividad de administración de dominios (vea [abrir una Base de conocimiento](../../2014/data-quality-services/open-a-knowledge-base.md)) y, a continuación, seleccione el dominio adecuado en el **dominio** lista. La página Propiedades del dominio se mostrará de forma predeterminada.  
   
-2.  Establecer las propiedades de un dominio nuevo después de crearlo, como se describe en [crear un dominio](../../2014/data-quality-services/create-a-domain.md).  
+2.  Establecer propiedades de un dominio nuevo después de crearlo, como se describe en [crear un dominio](../../2014/data-quality-services/create-a-domain.md).  
   
 3.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   

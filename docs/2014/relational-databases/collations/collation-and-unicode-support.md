@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binary collations [SQL Server]
 - expression-level collations [SQL Server]
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5f7ba7721287907142e7966b6d4e298afa07a89f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0547ac482e5dc56ec3b5e207b5776f5c8fbdab4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287341"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
   Las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporcionan propiedades de distinción entre mayúsculas y minúsculas, acentos y reglas de ordenación para los datos. Las intercalaciones que se usan con tipos de datos de caracteres como `char` y `varchar` dictan el código de página y los caracteres correspondientes que se pueden representar para ese tipo de datos. Si va a instalar una instancia nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restaurar una copia de seguridad de la base de datos o conectar el servidor a bases de datos cliente, es importante conocer los requisitos de configuración regional, el criterio de ordenación y la distinción entre mayúsculas y minúsculas y acentos de los datos con los que se va a trabajar. Para ver una lista de las intercalaciones disponibles en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
@@ -91,7 +91,7 @@ ms.locfileid: "36203210"
   
  No puede cambiar la intercalación de base de datos del sistema excepto cambiando la intercalación del servidor.  
   
- La intercalación de base de datos se usa para todos los metadatos de la base de datos, y es la predeterminada para todas las columnas de cadena, los objetos temporales, los nombres de variable, y cualquier otra cadena usada en la base de datos. Cuando se cambia la intercalación de una base de datos de usuario, pueden producirse conflictos de intercalación cuando las consultas en la base de datos tienen acceso a tablas temporales. Tablas temporales se almacenan siempre en el `tempdb` base de datos de sistema que se usará la intercalación de la instancia. Las consultas que comparan datos de caracteres entre la base de datos de usuario y `tempdb` pueden generar un error si las intercalaciones producen un conflicto en la evaluación de los datos de caracteres. Puede resolver esto especificando la cláusula COLLATE en la consulta. Para obtener más información, vea [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations).  
+ La intercalación de base de datos se usa para todos los metadatos de la base de datos, y es la predeterminada para todas las columnas de cadena, los objetos temporales, los nombres de variable, y cualquier otra cadena usada en la base de datos. Cuando se cambia la intercalación de una base de datos de usuario, pueden producirse conflictos de intercalación cuando las consultas en la base de datos tienen acceso a tablas temporales. Las tablas temporales se almacenan siempre en el `tempdb` base de datos del sistema, que usará la intercalación de la instancia. Las consultas que comparan datos de caracteres entre la base de datos de usuario y `tempdb` pueden generar un error si las intercalaciones producen un conflicto en la evaluación de los datos de caracteres. Puede resolver esto especificando la cláusula COLLATE en la consulta. Para obtener más información, vea [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations).  
   
  Intercalaciones de columna  
  Cuando cree o altere una tabla, puede especificar intercalaciones para cada columna de cadena de caracteres mediante la cláusula COLLATE. Si no se especifica una intercalación, a la columna se le asigna la intercalación predeterminada de la base de datos.  
@@ -148,7 +148,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Supplementary_Characters"></a> Caracteres complementarios  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proporciona los tipos de datos `nchar` y `nvarchar` para almacenar datos Unicode. Estos tipos de datos codifican el texto en un formato denominado *UTF-16*. Unicode Consortium asigna a cada carácter un punto de código único, que es un valor en el intervalo comprendido entre 0x0000 y 0x10FFFF. Los caracteres que se usan con más frecuencia tienen valores de punto de código que se ajustarán a una palabra de 16 bits en memoria y en disco, pero los caracteres con valores de punto de código mayores que 0xFFFF requieren dos palabras de 16 bits consecutivas. Estos caracteres se denominan *caracteres adicionales*y las dos palabras de 16 bits consecutivas, *pares suplentes*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proporciona tipos de datos, como `nchar` y `nvarchar` para almacenar datos Unicode. Estos tipos de datos codifican el texto en un formato denominado *UTF-16*. Unicode Consortium asigna a cada carácter un punto de código único, que es un valor en el intervalo comprendido entre 0x0000 y 0x10FFFF. Los caracteres que se usan con más frecuencia tienen valores de punto de código que se ajustarán a una palabra de 16 bits en memoria y en disco, pero los caracteres con valores de punto de código mayores que 0xFFFF requieren dos palabras de 16 bits consecutivas. Estos caracteres se denominan *caracteres adicionales*y las dos palabras de 16 bits consecutivas, *pares suplentes*.  
   
  Si utiliza caracteres adicionales:  
   

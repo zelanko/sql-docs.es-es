@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - images [Reporting Services], rendering
 - device information settings [Reporting Services], IMAGE rendering
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 caps.latest.revision: 40
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f403ef13892ed913c00d2f7042ab8d127fffd09e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 17c7a8f084db4c252da7f235762a60078ef39214
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315475"
 ---
 # <a name="image-device-information-settings"></a>Configuración de la información del dispositivo de imagen
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato IMAGE.  
@@ -46,7 +46,7 @@ ms.locfileid: "36204549"
 |`StartPage`|Primera página del informe que se va a representar. El valor `0` indica que se representan todas las páginas. El valor predeterminado es `1`.|  
   
 ## <a name="see-also"></a>Vea también  
- [Pasar la configuración de información de dispositivo para las extensiones de representación](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Pasar la configuración de información de dispositivo a las extensiones de representación](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizar los parámetros de extensión de representación en RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referencia técnica &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   

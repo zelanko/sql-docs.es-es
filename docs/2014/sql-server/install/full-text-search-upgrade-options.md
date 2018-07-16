@@ -1,5 +1,5 @@
 ---
-title: Opciones de actualización de búsqueda de texto completo | Documentos de Microsoft
+title: Opciones de actualización de búsqueda de texto completo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Full-Text Search
 - Upgrade options, Full-Text Search
@@ -16,13 +16,13 @@ ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: af3bf4f26b94e6fc8ce18c07ed052ef53087f68c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52490126091c122a272d0404f95026a1d68d12ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280721"
 ---
 # <a name="full-text-search-upgrade-options"></a>Opciones de actualización de búsqueda de texto completo
   Use la página de opciones de actualización de búsqueda de texto completo del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para seleccionar la opción de actualización de búsqueda de texto completo que usará con las bases de datos cuya actualización está realizando en este momento.  

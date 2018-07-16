@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos MiningStructureColumn (ASSL) | Documentos de Microsoft
+title: Tipo de datos MiningStructureColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningStructureColumn data type
 ms.assetid: b6d6e7a5-9c48-40c4-b147-8fcd5e429ae3
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1b1fc3d4f25bb5aa261179904939a271774de446
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f30ccbc909db5197423c680e1e27b4ec55b97b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107736"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272081"
 ---
 # <a name="miningstructurecolumn-data-type-assl"></a>Tipo de datos MiningStructureColumn (ASSL)
   Define un tipo de datos primitivo abstracto que representa información sobre una columna de un [MiningStructure](../objects/miningstructure-element-assl.md) elemento.  
@@ -60,7 +60,7 @@ ms.locfileid: "36107736"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elemento primario|None|  
-|Elementos secundarios|[Anotaciones](../collections/annotations-element-assl.md), [descripción](../properties/description-element-assl.md), [identificador](../properties/id-element-assl.md), [nombre](../properties/name-element-assl.md), [tipo](../properties/type-element-miningstructurecolumn-assl.md)|  
+|Elementos secundarios|[Las anotaciones](../collections/annotations-element-assl.md), [descripción](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [nombre](../properties/name-element-assl.md), [tipo](../properties/type-element-miningstructurecolumn-assl.md)|  
 |Elementos derivados|[Columna](../objects/column-element-assl.md) ([columnas](../collections/columns-element-assl.md) colección de [MiningStructure](../objects/miningstructure-element-assl.md))|  
   
 ## <a name="remarks"></a>Notas  

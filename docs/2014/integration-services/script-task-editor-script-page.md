@@ -1,5 +1,5 @@
 ---
-title: Editor de la tarea de script (página Script) | Documentos de Microsoft
+title: Editor de la tarea script (página Script) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.script.f1
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 caps.latest.revision: 40
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0b5641a837761e113368eea47777c3c3bf82ee20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa423929b775dcfb50ef8d49329689820c797772
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295045"
 ---
 # <a name="script-task-editor-script-page"></a>Editor de la tarea Script (página Script)
   Use la página **Script** del cuadro de diálogo **Editor de la tarea Script** para establecer las propiedades del script y para especificar las variables a las que se puede tener acceso desde el mismo.  
@@ -64,10 +64,10 @@ ms.locfileid: "36204624"
 ## <a name="see-also"></a>Vea también  
  [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Página general](general-page-of-integration-services-designers-options.md)   
- [Editor de la tarea de secuencia de comandos &#40;página General&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
+ [Editor de la tarea script &#40;página General&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
  [Página expresiones](expressions/expressions-page.md)   
- [Ejemplos de la tarea de secuencia de comandos](extending-packages-scripting-task-examples/script-task-examples.md)   
+ [Ejemplos de tarea script](extending-packages-scripting-task-examples/script-task-examples.md)   
  [Servicios de integración &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
- [Agregar, eliminar, cambiar el ámbito de la Variable definida por el usuario en un paquete](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
+ [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

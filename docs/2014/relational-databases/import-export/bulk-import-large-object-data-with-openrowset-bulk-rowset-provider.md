@@ -1,14 +1,13 @@
 ---
-title: Importar datos de objetos de gran tamaño de forma masiva mediante el proveedor de conjunto de filas Bulk OPENROWSET (SQL Server) | Documentos de Microsoft
+title: Importar datos de objetos de gran tamaño de forma masiva mediante el proveedor de conjunto de filas Bulk OPENROWSET (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SINGLE_NCLOB option
 - bulk rowset providers [SQL Server]
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - SINGLE_BLOB option
 ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 59fcfef241b00f2a4c080e5496b7d58b41aa5869
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d48b0af070e67ff1c77b8e5e2b0d32ce6e3aba4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223435"
 ---
 # <a name="bulk-import-large-object-data-by-using-the-openrowset-bulk-rowset-provider-sql-server"></a>Importar de forma masiva datos de objetos de gran tamaño mediante el proveedor de conjuntos de filas BULK OPENROWSET (SQL Server)
   El proveedor de conjuntos de filas BULK OPENROWSET de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite realizar la importación masiva de un archivo de datos como datos de objetos grandes.  

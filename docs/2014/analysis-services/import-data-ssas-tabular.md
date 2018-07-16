@@ -1,5 +1,5 @@
 ---
-title: Importar datos (SSAS Tabular) | Documentos de Microsoft
+title: Importar datos (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc8728c2a4e023fb03e0e2de8e3c457e0f15fd72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35312647eeb1b452c155c05d7f4392fa540aa156
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253567"
 ---
 # <a name="import-data-ssas-tabular"></a>Importar datos (SSAS tabular)
   Puede importar datos en un modelo tabular desde una gran variedad de orígenes. En los temas de esta sección se describe cómo utilizar el Asistente para la importación de tablas para conectarse y seleccionar los datos que se van a importar en un proyecto de modelos.  
@@ -42,10 +42,10 @@ ms.locfileid: "36204053"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Importar datos de un origen de datos relacionales &#40;SSAS Tabular&#41;](import-from-a-relational-data-source-ssas-tabular.md)|Describe cómo importar datos de orígenes de datos relacionales, como las bases de datos de Microsoft SQL Server, Oracle o Teradata.|  
-|[Importar datos de un origen de datos multidimensionales &#40;SSAS Tabular&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|Describe cómo importar datos de un cubo multidimensional de SQL Server Analysis Services.|  
-|[Importar desde una fuente de datos &#40;SSAS Tabular&#41;](import-from-a-data-feed-ssas-tabular.md)|Describe cómo importar datos desde una fuente de distribución de datos, como un informe de Microsoft Reporting Services o un conjunto de datos de Azure DataMarket.|  
-|[Importar desde un archivo de texto &#40;SSAS Tabular&#41;](import-from-a-text-file-ssas-tabular.md)|Describe cómo importar datos desde un libro de Microsoft Excel o un archivo de texto.|  
-|[Copiar y pegar datos &#40;SSAS Tabular&#41;](copy-and-paste-data-ssas-tabular.md)|Describe cómo agregar datos a una tabla existente en el Diseñador de modelos usando Pegar, y Pegar y anexar.|  
+|[Importar desde un origen de datos relacional &#40;Tabular de SSAS&#41;](import-from-a-relational-data-source-ssas-tabular.md)|Describe cómo importar datos de orígenes de datos relacionales, como las bases de datos de Microsoft SQL Server, Oracle o Teradata.|  
+|[Importar desde un origen de datos Multidimensional &#40;Tabular de SSAS&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|Describe cómo importar datos de un cubo multidimensional de SQL Server Analysis Services.|  
+|[Importar desde una fuente de datos &#40;Tabular de SSAS&#41;](import-from-a-data-feed-ssas-tabular.md)|Describe cómo importar datos desde una fuente de distribución de datos, como un informe de Microsoft Reporting Services o un conjunto de datos de Azure DataMarket.|  
+|[Importar desde un archivo de texto &#40;Tabular de SSAS&#41;](import-from-a-text-file-ssas-tabular.md)|Describe cómo importar datos desde un libro de Microsoft Excel o un archivo de texto.|  
+|[Copiar y pegar datos &#40;Tabular de SSAS&#41;](copy-and-paste-data-ssas-tabular.md)|Describe cómo agregar datos a una tabla existente en el Diseñador de modelos usando Pegar, y Pegar y anexar.|  
   
   

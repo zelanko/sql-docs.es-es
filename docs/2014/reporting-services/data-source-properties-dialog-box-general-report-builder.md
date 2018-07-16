@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de propiedades General (generador de informes) del origen de datos | Documentos de Microsoft
+title: Origen de datos de cuadro de diálogo de propiedades General (generador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: edd997ab55e63abe4b5085bbe0b11c197020c2ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30114b93158424512e9a9be6441dc5c3ab8dd460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288461"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Propiedades del origen de datos (cuadro de diálogo), General (Generador de informes)
   Seleccione **General** en el cuadro de diálogo **Propiedades del origen de datos** para seleccionar un origen de datos compartido desde un servidor de informes o para crear o modificar información de conexión de un origen de datos incrustado en el informe.  
@@ -68,8 +68,8 @@ ms.locfileid: "36202236"
  Haga clic para comprobar que la conexión del origen de datos funciona con las credenciales especificadas. Si no se puede realizar la conexión, debe comprobar las credenciales y la disponibilidad del servidor. Puede probar las conexiones de origen de datos para los orígenes de datos incrustados y compartidos.  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Agregar y comprobar una conexión de datos o un origen de datos &#40;el generador de informes SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Cuadro de diálogo de propiedades, las credenciales del origen de datos &#40;generador de informes&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
  [Ayuda del generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  

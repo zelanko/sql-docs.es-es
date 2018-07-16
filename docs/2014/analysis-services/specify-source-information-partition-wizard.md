@@ -1,5 +1,5 @@
 ---
-title: Especifique la información de origen (Asistente para particiones) | Documentos de Microsoft
+title: Especificar información de origen (Asistente para particiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.specifydsvandfacttables.f1
 ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d29067eabeb7050ec033cc5d274f9f5373c97ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6f60f8470c45e8dbc97de12d7a13b19bea9becb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310455"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Especificar información de origen (Asistente para particiones)
   Use la página **Especificar información de origen** para seleccionar el grupo de medida en el que desea crear la partición, así como la vista del origen de datos y las tablas de filtros de la partición.  
@@ -30,7 +30,7 @@ ms.locfileid: "36204024"
 >  Si especifica una tabla en **Tablas disponibles** usada por otra partición, deberá proporcionar una consulta en la página **Restringir filas** para evitar duplicar datos en el cubo.  
   
 ## <a name="options"></a>Opciones  
- **grupo de medida**  
+ **Grupo de medida**  
  Seleccione un grupo de medida para la partición.  
   
  **Look in**  

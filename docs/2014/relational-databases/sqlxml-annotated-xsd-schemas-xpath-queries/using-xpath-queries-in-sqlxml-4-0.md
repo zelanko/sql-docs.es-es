@@ -1,5 +1,5 @@
 ---
-title: Utilizar consultas XPath en SQLXML 4.0 | Documentos de Microsoft
+title: Utilizar consultas XPath en SQLXML 4.0 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML views [SQLXML]
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b0fe87e704a04c402e58079d5a6f087015f658c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 50586aca145c18a29cb260c71de578a060f08f36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217035"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Utilizar consultas XPath en SQLXML 4.0
   La compatibilidad de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con los esquemas XSD anotados le permite crear vistas XML de los datos relacionales almacenadas en la base de datos. Puede utilizar un subconjunto del lenguaje XPath para consultar las vistas XML creadas por un esquema XSD anotado.  
@@ -43,10 +43,10 @@ ms.locfileid: "36202667"
  [Consultas XPath de ejemplo &#40;SQLXML 4.0&#41;](samples/sample-xpath-queries-sqlxml-4-0.md)  
  Proporciona consultas XPath de ejemplo para SQLXML 4.0.  
   
- [Tipos de datos de XPath &#40;SQLXML 4.0&#41;](xpath-data-types-sqlxml-4-0.md)  
+ [Los tipos de datos de XPath &#40;SQLXML 4.0&#41;](xpath-data-types-sqlxml-4-0.md)  
  Describe tipos de datos XPath, que son significativamente diferentes de los de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y XSD.  
   
 ## <a name="see-also"></a>Vea también  
- [Formato XML del lado cliente &#40;SQLXML 4.0&#41;](../sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
+ [Aplicación de formato XML del lado cliente &#40;SQLXML 4.0&#41;](../sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   
   

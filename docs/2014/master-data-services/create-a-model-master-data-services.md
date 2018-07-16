@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], creating models
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 643f46f0e8339cbe5e5cc46c13e90796b1479bf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 7538c80ac8425e02f5ccc37ecffacfa07b8576c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318755"
 ---
 # <a name="create-a-model-master-data-services"></a>Crear un modelo (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un modelo para contener los objetos de modelo.  
@@ -56,7 +56,7 @@ ms.locfileid: "36204206"
   
 ## <a name="see-also"></a>Vea también  
  [Modelos &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   
- [Entidades &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
+ [Las entidades &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
  [Eliminar un modelo &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)   
  [Cambiar el nombre de un modelo &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)  
   

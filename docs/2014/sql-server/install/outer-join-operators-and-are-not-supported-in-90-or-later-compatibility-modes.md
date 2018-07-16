@@ -1,5 +1,5 @@
 ---
-title: Operadores de combinación externa *= y =* no se admiten en modo de compatibilidad 90 o posterior | Documentos de Microsoft
+title: Operadores de combinación externa *= y =* no se admiten en los modos de compatibilidad 90 o posterior | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - outer joins
 - =* join
@@ -16,24 +16,24 @@ helpviewer_keywords:
 - joins [SQL Server]
 ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 47a58b60ecd303b893e001663134d9b510bbabfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 579565320855694166f57039402e3fbef14183d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255447"
 ---
-# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Operadores de combinación externa *= y =* no se admiten en modo de compatibilidad 90 o posterior
+# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Operadores de combinación externa *= y =* no se admiten en los modos de compatibilidad 90 o posterior
   El Asesor de actualizaciones ha detectado el uso de operadores de combinación externa * = y =\*. Estos operadores no se admiten en los modos de compatibilidad 90 y posteriores. Cuando actualiza, las bases de datos de usuarios conservan su modo de compatibilidad. Las instrucciones que usan estos operadores generarán un error.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>Acción correctora  
- Antes de cambiar el modo de compatibilidad de base de datos a 90 o posterior, modifique las instrucciones que usan los operadores de combinación externa * = y =\* usar palabras clave de combinación externa equivalente. El ejemplo siguiente muestra una consulta que utiliza el operador `*=` y una consulta equivalente que utiliza las palabras clave `LEFT OUTER JOIN`.  
+ Antes de cambiar el modo de compatibilidad de base de datos a 90 o posterior, modifique las instrucciones que usan los operadores de combinación externa * = y =\* utilizar palabras clave equivalentes de combinación externa. El ejemplo siguiente muestra una consulta que utiliza el operador `*=` y una consulta equivalente que utiliza las palabras clave `LEFT OUTER JOIN`.  
   
 ```  
 -- This query uses an old-style outer join operator.  

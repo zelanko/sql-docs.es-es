@@ -1,5 +1,5 @@
 ---
-title: Clase ProcessId (clase SqlService) | Documentos de Microsoft
+title: Clase ProcessId (clase SqlService) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProcessId property
 ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0acd413899fb51d5a5670352c4638f8f5552f59a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0885ca6300d50b1d9f9aacd81ae4382985f650d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251537"
 ---
 # <a name="processid-class-sqlservice-class"></a>Clase ProcessId (clase SqlService)
   Obtiene el id. del proceso del sistema que identifica un servicio de forma inequívoca.  

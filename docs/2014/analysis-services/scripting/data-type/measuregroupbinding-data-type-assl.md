@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos MeasureGroupBinding (ASSL) | Documentos de Microsoft
+title: Tipo de datos MeasureGroupBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupBinding data type
 ms.assetid: 47e83eec-e0bc-4118-9a0f-5bfdd6218297
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12c54f8a61d75afd7689f19b2936bb6aefa3b4c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 530ed80199c0bc607016a1b34a1a830dfaabee5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324915"
 ---
 # <a name="measuregroupbinding-data-type-assl"></a>Tipo de datos MeasureGroupBinding (ASSL)
   Define un tipo de datos derivado que representa un enlace a un [MeasureGroup](../objects/group-element-assl.md) elemento.  
@@ -64,12 +64,12 @@ ms.locfileid: "36203507"
 |------------------|-------------|  
 |Elementos primarios|None|  
 |Elementos secundarios|[CubeID](../properties/id-element-assl.md), [DataSourceID](../properties/datasourceid-element-assl.md), [filtro](../properties/filter-element-binding-assl.md), [MeasureGroupID](../properties/measuregroupid-element-assl.md), [persistencia](../properties/persistence-element-assl.md), [RefreshInterval ](../properties/refreshinterval-element-assl.md), [RefreshPolicy](../properties/refreshpolicy-element-assl.md)|  
-|Elementos derivados|Vea [enlace](binding-data-type-assl.md)|  
+|Elementos derivados|Consulte [enlace](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
- Para obtener información adicional sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) del tipo de enlace y la jerarquía de herencia de `Binding` tipos, consulte [tipo de datos de enlace &#40;ASSL &#41;](binding-data-type-assl.md).  
+ Para obtener más información sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) del tipo de enlace y la jerarquía de herencia de `Binding` tipos, vea [tipo de datos de enlace &#40;ASSL &#41;](binding-data-type-assl.md).  
   
- Para obtener información general de enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;SSAS multidimensionales&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obtener información general de los enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.MeasureGroupBinding>.  
   

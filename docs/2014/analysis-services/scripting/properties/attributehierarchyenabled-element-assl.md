@@ -1,5 +1,5 @@
 ---
-title: Elemento AttributeHierarchyEnabled (ASSL) | Documentos de Microsoft
+title: Elemento AttributeHierarchyEnabled (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeHierarchyEnabled element
 ms.assetid: 1e95307f-530e-4e98-a0e1-2b0462d330a3
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3433ad50f1a8d769eec53090087683324f8a9383
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab14a4adf69281ec919811270c3d2220a76682e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250875"
 ---
 # <a name="attributehierarchyenabled-element-assl"></a>Elemento AttributeHierarchyEnabled (ASSL)
   Determina si una jerarquía de atributos está habilitada para el atributo.  

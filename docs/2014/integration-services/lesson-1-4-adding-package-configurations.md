@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 11d97017f27634c5c6f3f913cd41447780b68199
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29da6dedad91566c0d111acfeb18b3778d2da4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308125"
 ---
 # <a name="step-4-adding-package-configurations"></a>Paso 4: Agregar configuraciones de paquetes
   En esta tarea, agregará una configuración a cada paquete. Las configuraciones actualizan los valores de las propiedades de los paquetes y los objetos de los paquetes en tiempo de ejecución.  
@@ -46,7 +46,7 @@ ms.locfileid: "36106998"
   
 5.  En la página de bienvenida del Asistente para la configuración de paquetes, haga clic en **Siguiente**.  
   
-6.  En la página Seleccionar tipo de configuración, seleccione **archivo de configuración XML** en el **tipo de configuración** , seleccione la **ubicación de configuración se almacena en una variable de entorno** opción y escriba `DataTransfer,` o seleccione el **DataTransfer** variable de entorno en la lista.  
+6.  En la página Seleccionar tipo de configuración, seleccione **archivo de configuración XML** en el **tipo de configuración** lista, seleccione el **ubicación de configuración se almacena en una variable de entorno** opción y escriba `DataTransfer,` o seleccione el **DataTransfer** variable de entorno en la lista.  
   
     > [!NOTE]  
     >  Para hacer que la variable de entorno esté disponible en la lista, puede que tenga que reiniciar el equipo después de agregar la variable. Si no desea reiniciar el equipo, puede escribir el nombre de la variable de entorno.  
@@ -97,7 +97,7 @@ ms.locfileid: "36106998"
   
 5.  En la página de bienvenida del Asistente para la configuración de paquetes, haga clic en **Siguiente**.  
   
-6.  En la página Seleccionar tipo de configuración, seleccione **archivo de configuración XML** en el **tipo de configuración** , seleccione la **ubicación de configuración se almacena en una variable de entorno** opción, escriba `LoadXMLData` o seleccione el `LoadXMLData` variable de entorno en la lista.  
+6.  En la página Seleccionar tipo de configuración, seleccione **archivo de configuración XML** en el **tipo de configuración** lista, seleccione el **ubicación de configuración se almacena en una variable de entorno** opción, escriba `LoadXMLData` o seleccione el `LoadXMLData` variable de entorno en la lista.  
   
     > [!NOTE]  
     >  Para hacer que la variable de entorno esté disponible en la lista, puede que tenga que reiniciar el equipo después de agregar la variable.  
@@ -135,7 +135,7 @@ ms.locfileid: "36106998"
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Paso 5: Probar los paquetes actualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![Icono de Integration Services (pequeño)](media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services  **<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Configuraciones de paquetes](../../2014/integration-services/package-configurations.md)   

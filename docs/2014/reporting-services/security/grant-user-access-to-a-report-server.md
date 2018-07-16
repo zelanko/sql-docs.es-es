@@ -1,5 +1,5 @@
 ---
-title: Usuario de conceder acceso a un servidor de informes (Administrador de informes) | Documentos de Microsoft
+title: Conceda al usuario el acceso a un servidor de informes (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
 - permissions [Reporting Services], granting report server access
@@ -19,13 +19,13 @@ ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d3a3526e9c52dad5c595c9df9fb722abb5f5b288
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b705997e16e2f41fb92ed7a5385a0907db09d99e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256147"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>Conceder a un usuario acceso a un servidor de informes (Administrador de informes)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la seguridad basada en roles para conceder a un usuario acceso a un servidor de informes. En una nueva instalación del servidor de informes, solo los usuarios que son miembros del grupo local de administradores tienen los permisos para acceder a las operaciones y al contenido del servidor de informes. Para hacer que el servidor de informes esté disponible para otros usuarios, debe crear asignaciones de roles que asignen cuentas de usuario o de grupo a un rol predefinido que especifique una recopilación de tareas.  
@@ -90,8 +90,8 @@ ms.locfileid: "36203342"
   
 ## <a name="see-also"></a>Vea también  
  (crear-y-administrar-rol-assignments.md)   
- [Nueva asignación de roles: Editar asignación de roles páginas &#40;el Administrador de informes&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
- [Página de propiedades de seguridad, elementos &#40;el Administrador de informes&#41;](../security-properties-page-items-report-manager.md)   
+ [Nueva asignación de roles: Editar página de asignación de rol &#40;el Administrador de informes&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
+ [Los elementos de la página de propiedades de seguridad, &#40;el Administrador de informes&#41;](../security-properties-page-items-report-manager.md)   
  [Asignaciones de roles](role-assignments.md)   
  [Definiciones de roles](role-definitions.md)  
   

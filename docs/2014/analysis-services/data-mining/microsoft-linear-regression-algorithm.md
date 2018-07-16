@@ -1,5 +1,5 @@
 ---
-title: Algoritmo de regresión lineal de Microsoft | Documentos de Microsoft
+title: Algoritmo de regresión lineal de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - linear regression algorithms [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a249f0c1a4ffde7e14841d53c01a9bdf6790931
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6efc2b76fe6a6c4b53a2b108a776f2104b02318d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204060"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315100"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algoritmo de regresión lineal de Microsoft
   El algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es una variación del algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] que ayuda a calcular una relación lineal entre una variable independiente y otra dependiente y, a continuación, utilizar esa relación para la predicción.  
@@ -81,9 +81,9 @@ ms.locfileid: "36204060"
 -   Admite el uso de modelos de minería de datos OLAP.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Referencia técnica del algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
  [Ejemplos de consultas de modelo de regresión lineal](linear-regression-model-query-examples.md)   
- [Contenido del modelo para los modelos de regresión lineal de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenido del modelo para los modelos de regresión lineal de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

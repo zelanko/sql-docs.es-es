@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], expressions
 - data [Reporting Services], expressions
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: 76
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9a313408046919de0c3a07739792d36b88eafa4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6a239f80c3b560e60ca0b60b9a9fa7deb68a20a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220855"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes (SSRS)
   Puede agregar referencias al código personalizado incrustado en un informe o a los ensamblados personalizados que haya generado y guardado en el equipo e implementado en el servidor de informes. El código incrustado se utiliza en constantes, funciones complejas o funciones personalizadas que se usan varias veces en un único informe. Use ensamblados de código personalizados para mantener el código en un único lugar y compartirlo con el fin de utilizarlos en múltiples informes. El código personalizado puede incluir nuevas constantes, variables, funciones o subrutinas personalizadas. Puede incluir referencias de solo lectura en las colecciones integradas, como la colección Parameters. Sin embargo, no puede pasar conjuntos de valores de datos de informe a las funciones personalizadas; concretamente, no se admiten agregados personalizados.  
@@ -71,7 +71,7 @@ ms.locfileid: "36203812"
 ##  <a name="Embedded"></a> Incluir código incrustado  
  Para agregar código incrustado a un informe, use la pestaña Código del cuadro de diálogo **Propiedades del informe** . El bloque de código que cree puede contener varios métodos. Es necesario que los métodos del código incrustado estén escritos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] y que estén basados en instancias. El procesador de informes agrega automáticamente referencias para los espacios de nombres System.Convert y System.Math. Use la página **Referencias** del cuadro de diálogo **Propiedades del informe** para agregar referencias de ensamblado adicionales. Para obtener más información, vea [Agregar una referencia de ensamblado a un informe &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md).  
   
- Los métodos del código incrustado están disponibles a través del miembro `Code` definido globalmente. Obtener acceso a estos métodos, debe hacer referencia a la `Code` miembro y el nombre del método. En el ejemplo siguiente se llama al método `ToUSD`, que convierte el valor en el `StandardCost` campo en un valor de moneda:  
+ Los métodos del código incrustado están disponibles a través del miembro `Code` definido globalmente. Poder acceder a ellos mediante una referencia a la `Code` miembro y el nombre del método. El ejemplo siguiente llama al método `ToUSD`, que convierte el valor en el `StandardCost` campo en un valor de moneda:  
   
 ```  
 =Code.ToUSD(Fields!StandardCost.Value)  
@@ -101,11 +101,11 @@ Public Dim MyDoubleVersion As Double = 123.456
 =Code.MyDoubleVersion  
 ```  
   
- En el ejemplo siguiente se incluye la referencia del código y la implementación del código de la función `FixSpelling`, que sustituye el texto `"Bicycle"` todas las apariciones del texto "Bike" en la `SubCategory` campo.  
+ El ejemplo siguiente incluye la referencia del código y la implementación del código de la función `FixSpelling`, que sustituye el texto `"Bicycle"` todas las apariciones del texto "Bike" en el `SubCategory` campo.  
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
- Cuando el código siguiente se incrusta en un bloque de código de la definición de informe, muestra una implementación del método `FixSpelling`. Este ejemplo muestra cómo usar una referencia completa a la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] `StringBuilder` clase.  
+ Cuando el código siguiente se incrusta en un bloque de código de la definición de informe, muestra una implementación del método `FixSpelling`. En este ejemplo se muestra cómo usar una referencia completa a la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] `StringBuilder` clase.  
   
 ```vb  
 Public Function FixSpelling(ByVal s As String) As String  
@@ -121,7 +121,7 @@ End Function
  Para más información sobre las colecciones de objetos integradas y la inicialización, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md) e [Inicializar objetos de ensamblados personalizados](../custom-assemblies/initializing-custom-assembly-objects.md).  
   
 ##  <a name="Parameters"></a> Incluir referencias a parámetros desde el código  
- Se puede hacer referencia a la colección global Parameters mediante código personalizado en un bloque de código de la definición de informe o en un ensamblado personalizado proporcionado por el usuario. La colección Parameters es de solo lectura y no tiene iteradores públicos. No se puede utilizar un [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `For Each` construir para recorrer la colección. Debe conocer el nombre del parámetro definido en la definición de informe para poder hacer referencia a él en el código. No obstante, puede recorrer en iteración todos los valores de un parámetro de varios valores.  
+ Se puede hacer referencia a la colección global Parameters mediante código personalizado en un bloque de código de la definición de informe o en un ensamblado personalizado proporcionado por el usuario. La colección Parameters es de solo lectura y no tiene iteradores públicos. No puede usar un [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `For Each` construir para recorrer la colección. Debe conocer el nombre del parámetro definido en la definición de informe para poder hacer referencia a él en el código. No obstante, puede recorrer en iteración todos los valores de un parámetro de varios valores.  
   
  En la tabla siguiente se incluyen ejemplos de referencias a la colección integrada `Parameters` desde código personalizado:  
   
@@ -135,7 +135,7 @@ End Function
   
  Para obtener información sobre cómo crear un ensamblado personalizado y ponerlo a disposición [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [usar ensamblados personalizados con informes](../custom-assemblies/using-custom-assemblies-with-reports.md).  
   
- Para incluir en una expresión una referencia a código personalizado, debe llamar al miembro de una clase dentro del ensamblado. La manera de hacerlo depende de si el método es estático o se basa en instancias. Los métodos estáticos de un ensamblado de código están disponibles globalmente en el informe. El acceso a estos métodos estáticos en expresiones se lleva a cabo a través de la especificación del espacio de nombres, la clase y el nombre del método. En el ejemplo siguiente se llama al método `ToGBP`, que convierte el valor de la **StandardCost** valor de dólares a libras esterlinas:  
+ Para incluir en una expresión una referencia a código personalizado, debe llamar al miembro de una clase dentro del ensamblado. La manera de hacerlo depende de si el método es estático o se basa en instancias. Los métodos estáticos de un ensamblado de código están disponibles globalmente en el informe. El acceso a estos métodos estáticos en expresiones se lleva a cabo a través de la especificación del espacio de nombres, la clase y el nombre del método. El ejemplo siguiente llama al método `ToGBP`, que convierte el valor de la **StandardCost** valor de dólares a libras esterlinas:  
   
 ```  
 =CurrencyConversion.DollarCurrencyConversion.ToGBP(Fields!StandardCost.Value)  

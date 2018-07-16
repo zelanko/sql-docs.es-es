@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a4c29542fe95e7f7323ac7d8975f391ba97ea274
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5d1f203a7c80d08de14857ea08a4fe14ecbaf3bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215985"
 ---
 # <a name="ole-db-custom-properties"></a>Propiedades personalizadas de OLE DB
   **Propiedades personalizadas de origen**  
@@ -30,7 +30,7 @@ ms.locfileid: "36109004"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|Modo que se usa para tener acceso a la base de datos. Los valores posibles son **conjuntos de filas abiertos**, **Open Rowset from Variable**, `SQL Command`, y **comando SQL de Variable**. El valor predeterminado es **Open Rowset**.|  
+|AccessMode|Integer|Modo que se usa para tener acceso a la base de datos. Los valores posibles son **Open Rowset**, **Open Rowset from Variable**, `SQL Command`, y **comando SQL de Variable**. El valor predeterminado es **Open Rowset**.|  
 |AlwaysUseDefaultCodePage|Boolean|Un valor que indica si se usa el valor de la `DefaultCodePage` propiedad para cada columna, o intentar derivar la página de códigos de configuración regional de cada columna. El valor predeterminado de esta propiedad es `False`.|  
 |CommandTimeout|Integer|Número de segundos que tienen que transcurrir antes de que un comando supere el tiempo de espera. El valor 0 indica un tiempo infinito.<br /><br /> Nota: La propiedad no está disponible en el **Editor de origen de OLE DB**, pero se puede establecer con el **Editor avanzado**.|  
 |DefaultCodePage|Integer|Página de códigos que se usa cuando no hay información disponible de la misma en el origen de datos.|  
@@ -51,11 +51,11 @@ ms.locfileid: "36109004"
  En la tabla siguiente se describen las propiedades personalizadas del destino OLE DB. Todas las propiedades son de lectura y escritura.  
   
 > [!NOTE]  
->  Las opciones de carga rápida enumeradas aquí (FastLoadKeepIdentity, FastLoadKeepNulls y FastLoadOptions) corresponden a las propiedades con el mismo nombre expuestas por la `IRowsetFastLoad` interfaz implementada por el proveedor Microsoft OLE DB para SQL Server (SQLOLEDB). Para obtener más información, busque IRowsetFastLoad en la MSDN Library.  
+>  Las opciones de carga rápida enumeradas aquí (FastLoadKeepIdentity, FastLoadKeepNulls y FastLoadOptions) corresponden a las propiedades con el mismo nombre expuestas por el `IRowsetFastLoad` interfaz implementada por el proveedor Microsoft OLE DB para SQL Server (SQLOLEDB). Para obtener más información, busque IRowsetFastLoad en la MSDN Library.  
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer (enumeración)|Valor que especifica cómo tiene acceso el destino a su base de datos de destino.<br /><br /> Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> `OpenRowset` (0): se proporciona el nombre de una tabla o vista.<br />`OpenRowset from Variable` (1): debe proporcionar el nombre de una variable que contiene el nombre de una tabla o vista.<br />`OpenRowset Using Fastload` (3): proporcione el nombre de una tabla o vista.<br />`OpenRowset Using Fastload from Variable` (4): debe proporcionar el nombre de una variable que contiene el nombre de una tabla o vista.<br />`SQL Command` (2): proporcione una instrucción SQL.|  
+|AccessMode|Integer (enumeración)|Valor que especifica cómo tiene acceso el destino a su base de datos de destino.<br /><br /> Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> `OpenRowset` (0): proporcione el nombre de una tabla o vista.<br />`OpenRowset from Variable` (1): proporcione el nombre de una variable que contiene el nombre de una tabla o vista.<br />`OpenRowset Using Fastload` (3): proporcione el nombre de una tabla o vista.<br />`OpenRowset Using Fastload from Variable` (4): proporcione el nombre de una variable que contiene el nombre de una tabla o vista.<br />`SQL Command` (2): proporcione una instrucción SQL.|  
 |AlwaysUseDefaultCodePage|Boolean|Un valor que indica si se usa el valor de la `DefaultCodePage` propiedad para cada columna, o intentar derivar la página de códigos de configuración regional de cada columna. El valor predeterminado de esta propiedad es `False`.|  
 |CommandTimeout|Integer|Número máximo de segundos que el comando SQL se puede ejecutar antes de superar el tiempo de espera. Un valor de 0 indica un tiempo infinito. El valor predeterminado de esta propiedad es 0.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de destino OLE DB**, pero se puede establecer con el **Editor avanzado**.|  
 |DefaultCodePage|Integer|Página de códigos predeterminada asociada al destino OLE DB.|  

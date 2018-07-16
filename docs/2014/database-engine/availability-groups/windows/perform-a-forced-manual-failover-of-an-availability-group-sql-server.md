@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.forcefailover.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 caps.latest.revision: 80
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a9ababac85cb978253682050d558c7d8aca8aad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 11041aeddd084b47ba1747ce2e555819743d9766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287997"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Realizar una conmutación por error manual forzada de un grupo de disponibilidad (SQL Server)
   En este tema se describe cómo realizar una conmutación por error forzada (con posible pérdida de datos) en un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Una conmutación por error forzada es una forma de conmutación por error manual pensada estrictamente para la recuperación ante desastres, cuando no es posible realizar una [conmutación por error manual planeada](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Si se fuerza la conmutación por error a una réplica secundaria no sincronizada, es posible que se pierdan datos. Por tanto, se recomienda encarecidamente que solo fuerce la conmutación por error si debe restaurar el servicio al grupo de disponibilidad inmediatamente y asume el riesgo de perder datos.  
@@ -161,7 +160,7 @@ ms.locfileid: "36204488"
   
     -   `-AllowDataLoss`  
   
-         De forma predeterminada, el parámetro `-AllowDataLoss` hace que `Switch-SqlAvailabilityGroup` le solicite recordar que forzar la conmutación por error podría provocar la pérdida de transacciones no confirmadas y solicitar confirmación. Para continuar, escriba `Y`; para cancelar la operación, escriba `N`.  
+         De forma predeterminada, el parámetro `-AllowDataLoss` hace que `Switch-SqlAvailabilityGroup` le solicite recordar que forzar la conmutación por error podría provocar la pérdida de transacciones no confirmadas y solicitar confirmación. Para continuar, especifique `Y`; para cancelar la operación, escriba `N`.  
   
          En el ejemplo siguiente se realiza una conmutación por error forzada (con posible pérdida de datos) del grupo de disponibilidad `MyAg` a la réplica secundaria en la instancia del servidor denominada `SecondaryServer\InstanceName`. Se le pedirá que confirme esta operación.  
   
@@ -173,7 +172,7 @@ ms.locfileid: "36204488"
   
     -   **-AllowDataLoss-Force**  
   
-         Para iniciar una conmutación por error forzada sin confirmación, especifique los parámetros `-AllowDataLoss` y `-Force`. Esto es útil si desea incluir el comando en un script y ejecutarlo sin la intervención del usuario.  Sin embargo, usar el `-Force` opción con precaución, ya que una conmutación por error forzada podría provocar la pérdida de datos de las bases de datos que forman parte del grupo de disponibilidad.  
+         Para iniciar una conmutación por error forzada sin confirmación, especifique los parámetros `-AllowDataLoss` y `-Force`. Esto es útil si desea incluir el comando en un script y ejecutarlo sin la intervención del usuario.  Sin embargo, usar el `-Force` opción con precaución, ya que una conmutación por error forzada podría provocar la pérdida de datos de las bases de datos que participan en el grupo de disponibilidad.  
   
          En el ejemplo siguiente se realiza una conmutación por error forzada (con posible pérdida de datos) del grupo de disponibilidad `MyAg` a la instancia del servidor denominada `SecondaryServer\InstanceName`. La opción `-Force` suprime la confirmación de esta operación.  
   
@@ -184,7 +183,7 @@ ms.locfileid: "36204488"
         ```  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use la `Get-Help` cmdlet en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el `Get-Help` cmdlet en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 3.  Después de forzar un grupo de disponibilidad a la conmutación por error, complete los pasos necesarios de seguimiento. Para obtener más información, vea [Seguimiento: tareas esenciales después de una conmutación por error forzada](#FollowUp), más adelante en este tema.  
   
@@ -311,15 +310,15 @@ ms.locfileid: "36204488"
   
  **Para solucionar problemas:**  
   
--   [Solucionar problemas de configuración de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
+-   [Solución de problemas de configuración de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
--   [Solucionar problemas de una operación de agregar archivos con error &#40;grupos de disponibilidad AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Solución de problemas de una operación de agregar archivos con error &#40;grupos de disponibilidad AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
 -   **Blogs:**  
   
-     [Blogs del equipo de AlwaysOn SQL Server: El Blog oficial del SQL Server AlwaysOn equipo](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Blogs del equipo de AlwaysOn SQL Server: Oficial AlwaysOn Team Blog de SQL Server](http://blogs.msdn.com/b/sqlalwayson/)  
   
      [Blogs de los ingenieros de SQL Server de CSS](http://blogs.msdn.com/b/psssql/)  
   
@@ -332,7 +331,7 @@ ms.locfileid: "36204488"
      [Notas del producto del equipo de asesoramiento al cliente de SQL Server](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](availability-modes-always-on-availability-groups.md)   
  [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   

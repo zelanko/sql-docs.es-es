@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rsServerConfigurationError
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 49183fb1ff712ee3d0be8cd76d99492fcc9a93d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86394a3e44d1dab34bc451eee19410083bc676e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238205"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Error de Reporting Services
     
@@ -51,7 +51,7 @@ ms.locfileid: "36202233"
 ## <a name="user-action"></a>Acción del usuario  
  Si este error empezara a producirse después de editar manualmente un archivo de configuración, quite los cambios efectuados y especifique el valor anterior, o restaure una versión anterior si tiene una copia de seguridad.  
   
- Para revisar la información del mensaje de error adicional que acompaña a la `rsServerConfiguration` error, revise los archivos de registro de informes servidor seguimiento, que se encuentran en \Microsoft SQL Server\MSRS12.\< instancename > \Reporting Services\LogFiles. Para más información, vea [Archivos de registro y orígenes de Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
+ Para revisar la información del mensaje de error adicional que acompaña a la `rsServerConfiguration` error, revise los archivos de registro de informes servidor seguimiento, que se encuentran en \Microsoft SQL Server\MSRS12.\< nombreDeInstancia > \Reporting Services\LogFiles. Para más información, vea [Archivos de registro y orígenes de Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
 ## <a name="internal-only"></a>Solo para uso interno  
   

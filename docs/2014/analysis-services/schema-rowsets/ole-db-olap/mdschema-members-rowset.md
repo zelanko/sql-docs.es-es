@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas MDSCHEMA_MEMBERS | Documentos de Microsoft
+title: Conjunto de filas MDSCHEMA_MEMBERS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_MEMBERS rowset
 ms.assetid: 0b1aada0-67f8-4ef6-81b2-0100b65e0c2f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2473797ef34c0fd204c878da8c6044a307cc1ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d36a065ea73f249ce5c4d9dc37cc047ac864cb84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280021"
 ---
 # <a name="mdschemamembers-rowset"></a>Conjunto de filas MDSCHEMA_MEMBERS
   Describe los miembros incluidos en una base de datos.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `MDSCHEMA_MEMBERS` filas contiene las columnas siguientes.  
+ El `MDSCHEMA_MEMBERS` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "36202613"
  El conjunto de filas se ordena en `CATALOG_NAME`, `SCHEMA_NAME`, `CUBE_NAME`, `DIMENSION_UNIQUE_NAME`, `HIERARCHY_UNIQUE_NAME`, `LEVEL_UNIQUE_NAME`, `LEVEL_NUMBER`, `MEMBER_ORDINAL`.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `MDSCHEMA_MEMBERS` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `MDSCHEMA_MEMBERS` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  
@@ -79,8 +79,8 @@ ms.locfileid: "36202613"
 |`MEMBER_UNIQUE_NAME`|`DBTYPE_WSTR`|Opcional.|  
 |`MEMBER_CAPTION`|`DBTYPE_WSTR`|Opcional.|  
 |`MEMBER_TYPE`|`DBTYPE_I4`|Opcional.|  
-|`TREE_OP`|`DBTYPE_I4`|(Opcional) Solo se aplica a un único miembro:<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) devuelve todos los antecesores.<br />-   `MDTREEOP_CHILDREN` (`0x01`) devuelve solo los elementos secundarios inmediatos.<br />-   `MDTREEOP_SIBLINGS` (`0x02`) devuelve los miembros del mismo nivel.<br />-   `MDTREEOP_PARENT` (`0x04`) devuelve solo el elemento primario inmediato.<br />-   `MDTREEOP_SELF` (`0x08`) devuelve a sí mismo en la lista de filas devueltas.<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) devuelve todos los descendientes.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(Opcional) Mapa de bits con uno de los siguientes valores válidos:<br /><br /> -CUBO 1<br />-DIMENSIÓN DE 2<br /><br /> La restricción predeterminada es un valor de 1.|  
+|`TREE_OP`|`DBTYPE_I4`|(Opcional) Solo se aplica a un único miembro:<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) devuelve todos los antecesores.<br />-   `MDTREEOP_CHILDREN` (`0x01`) devuelve solo los elementos secundarios inmediatos.<br />-   `MDTREEOP_SIBLINGS` (`0x02`) devuelve los miembros del mismo nivel.<br />-   `MDTREEOP_PARENT` (`0x04`) devuelve sólo el objeto primario inmediato.<br />-   `MDTREEOP_SELF` (`0x08`) devuelve a sí mismo en la lista de filas devueltas.<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) devuelve todos los descendientes.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(Opcional) Mapa de bits con uno de los siguientes valores válidos:<br /><br /> -1 CUBO<br />-DIMENSIÓN DE 2<br /><br /> La restricción predeterminada es un valor de 1.|  
   
 ## <a name="see-also"></a>Vea también  
  [OLE DB para los conjuntos de filas de esquema OLAP](ole-db-for-olap-schema-rowsets.md)  

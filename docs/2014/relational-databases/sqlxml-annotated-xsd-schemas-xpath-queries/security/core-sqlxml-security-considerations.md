@@ -1,5 +1,5 @@
 ---
-title: Principales consideraciones de seguridad SQLXML | Documentos de Microsoft
+title: Principales consideraciones de seguridad SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - security [SQLXML], about security
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7b89745551ba3f4d82272387149bca21466e9813
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 972ece66513dcc8784ed40e9757ec6114684f10e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255967"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Consideraciones básicas de seguridad de SQLXML
   A continuación se indican instrucciones de seguridad para utilizar SQLXML en el acceso a datos.  
@@ -43,7 +43,7 @@ ms.locfileid: "36107592"
   
 -   SQLXML puede realizar cambios de formato en los datos proporcionados basándose en las diferencias entre los modelos de datos XML y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por ejemplo, el formato para especificar una hora es distinto. SQLXML intentará resolver estas diferencias. Como resultado, es posible que se pierdan algunos datos de precisión.  
   
--   SQLXML no establece ningún límite en la cantidad de tiempo que tarda en procesar los datos. El procesamiento continuará hasta que se produce un error o se ha completado el procesamiento.  
+-   SQLXML no establece ningún límite en la cantidad de tiempo que tarda en procesar los datos. Procesamiento continuará hasta que se produce un error o se ha completado el procesamiento.  
   
 -   SQLXML no escribe en el sistema de archivos. Si los usuarios desean guardar los datos que recuperan de la base de datos, deben hacerlo en el código.  
   

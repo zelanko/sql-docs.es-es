@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [Reporting Services]
 - roles [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d20737ae25412caa7af4c3aa82966a5b384d7126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed057d08c25d1988d4ccf03d1647aa4ef92e4b0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255587"
 ---
 # <a name="role-assignments"></a>Asignaciones de roles
   En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], las *asignaciones de roles* determinan el acceso a los elementos almacenados y al propio servidor de informes. Una asignación de roles consta de las siguientes partes:  
@@ -62,7 +62,7 @@ Diagrama de asignaciones de roles
 ## <a name="predefined-role-assignments"></a>Asignaciones de roles predefinidos  
  De manera predeterminada, las asignaciones de roles predefinidos se implementan para permitir a los administradores locales administrar el servidor de informes. Es preciso agregar asignaciones de roles adicionales para conceder acceso a otros usuarios.  
   
- Para obtener más información acerca de las asignaciones de roles predefinidos que proporcionan la seguridad predeterminada, vea [Roles predefinidos](role-definitions-predefined-roles.md).  
+ Para obtener más información sobre las asignaciones de roles predefinidos que proporcionan la seguridad predeterminada, vea [Roles predefinidos](role-definitions-predefined-roles.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   

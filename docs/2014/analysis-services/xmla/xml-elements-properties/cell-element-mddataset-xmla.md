@@ -1,5 +1,5 @@
 ---
-title: (MDDataSet) (XMLA) del elemento de celda | Documentos de Microsoft
+title: Celda de elemento (MDDataSet) (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Cell element
 ms.assetid: c4ea08a4-f653-4ade-be07-b91eb5b1ef32
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 47d4449fd47cbb3da8e516a593cb8711e2bc2331
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3f07798a28c59597575de08bf5d0f3ea1d7087c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269511"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Elemento Cell (MDDataSet) (XMLA)
   Contiene información acerca de una sola celda que contiene un elemento primario [CellData](celldata-element-xmla.md) elemento.  
@@ -69,7 +69,7 @@ ms.locfileid: "36204476"
   
 |Attribute|Descripción|  
 |---------------|-----------------|  
-|CellOrdinal|Necesario `unsignedInt` atributo. Posición ordinal de la celda dentro del conjunto de datos multidimensional.|  
+|CellOrdinal|Requiere `unsignedInt` atributo. Posición ordinal de la celda dentro del conjunto de datos multidimensional.|  
   
 ## <a name="remarks"></a>Notas  
  En el elemento `root` primario, el elemento `Axes` va seguido del elemento `CellData`, una colección de elementos `Cell` que contienen los valores de propiedad para cada celda devuelta en un conjunto de datos multidimensional. El elemento `Cell` contiene el atributo `CellOrdinal`, que indica la posición ordinal basada en cero de la celda dentro del conjunto de datos multidimensional, y un elemento para cada valor de propiedad de la celda asociado a la celda. Un elemento XML independiente define cada valor de propiedad de la celda en el elemento `Cell`. El valor de la propiedad de la celda es los datos que se encuentran en el elemento XML; el nombre de la propiedad de la celda, definido en el elemento `CellInfo` del elemento raíz primario, corresponde al nombre del elemento XML.  
@@ -97,28 +97,28 @@ ms.locfileid: "36204476"
 ```  
   
 ## <a name="calculating-cell-ordinal-values"></a>Calcular los valores ordinales de celdas  
- La referencia de eje de una celda se puede calcular en función de un valor de atributo `CellOrdinal`. Conceptualmente, las celdas se numeran en un conjunto de datos como si el conjunto de datos fuera una *p*-matriz unidimensional, donde *p* es el número de ejes. Las celdas se ordenan por importancia de fila.  
+ La referencia de eje de una celda se puede calcular en función de un valor de atributo `CellOrdinal`. Conceptualmente, las celdas se numeran en un conjunto de datos como si el conjunto de datos fuera una *p*-matriz dimensional, donde *p* es el número de ejes. Las celdas se ordenan por importancia de fila.  
   
  Suponga que una consulta solicita cuatro medidas en las columnas y una combinación cruzada de dos estados con cuatro trimestres en las filas. En el siguiente resultado de conjunto de datos, la propiedad `CellOrdinal` para la parte del resultado del conjunto de datos mostrada en negrita es el conjunto {9, 10, 11, 13, 14, 15, 17, 18, 19}. Éste es el conjunto porque las celdas se numeran en orden de importancia de fila, iniciándose con un `CellOrdinal` de 0 para la celda superior izquierda.  
   
 |State|Trimestre|Unit sales|Store cost|Store sales|Sales count|  
 |-----------|-------------|----------------|----------------|-----------------|-----------------|  
 |California|Q1|16890|14431.09|36175.2|5498|  
-||Q2|18052|15332.02|38396.75|5915|  
-||Q3|18370|**15672.83**|**39394.05**|**6014**|  
-||T4|21436|**18094.5**|**45201.84**|**7015**|  
+||2 º TRIMESTRE|18052|15332.02|38396.75|5915|  
+||P3|18370|**15672.83**|**39394.05**|**6014**|  
+||P4|21436|**18094.5**|**45201.84**|**7015**|  
 |Oregon|Q1|19287|**16081.07**|**40170.29**|**6184**|  
-||Q2|15079|12678.96|31772.88|4799|  
-||Q3|16940|14273.78|35880.46|5432|  
-||T4|16353|13738.68|34453.44|5196|  
+||2 º TRIMESTRE|15079|12678.96|31772.88|4799|  
+||P3|16940|14273.78|35880.46|5432|  
+||P4|16353|13738.68|34453.44|5196|  
 |Washington|Q1|30114|25240.08|63282.86|9906|  
-||Q2|29479|24953.25|62496.64|9654|  
-||Q3|30538|25958.26|64997.38|10007|  
-||T4|34235|29172.72|73016.34|11217|  
+||2 º TRIMESTRE|29479|24953.25|62496.64|9654|  
+||P3|30538|25958.26|64997.38|10007|  
+||P4|34235|29172.72|73016.34|11217|  
   
  Si se aplica la fórmula de la figura, el eje k = 0 tiene Uk = 4 miembros, y el eje k = 1 tiene Uk = 8 tuplas. P = 2 es el número total de ejes de la consulta. Si se toma la celda que es {California, Q3, Store Cost} como S0, la suma inicial es i = 0 a 1. Para i = 0, la tupla ordinal del eje 0 de {Store Cost} es 1. Para i = 1, la tupla ordinal de {CA, Q3} es 2.  
   
- Para = 0, Ei = 1, por = 0 la suma es 1 * 1 = 1 y para = 1, la suma es 2 (ordinal de tupla) veces 4 (el valor de Ei calculado como 1 \* 4), u 8. La suma de 1 + 8 es 9, el ordinal de celda de esa celda.  
+ Para = 0, Ei = 1, por lo que para = 0 la suma es 1 * 1 = 1 y para = 1, la suma es 2 (tupla ordinal) veces 4 (el valor de Ei calculado como 1 \* 4), u 8. La suma de 1 + 8 es 9, el ordinal de celda de esa celda.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra la estructura del elemento `Cell`, con los valores de propiedad de celda VALUE, FORMATTED_VALUE y FORMAT_STRING para cada celda.  

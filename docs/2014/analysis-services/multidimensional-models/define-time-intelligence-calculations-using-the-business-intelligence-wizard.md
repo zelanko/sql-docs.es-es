@@ -1,5 +1,5 @@
 ---
-title: Definir cálculos de inteligencia de tiempo mediante el Asistente de Business Intelligence | Documentos de Microsoft
+title: Definir cálculos de inteligencia de tiempo mediante el Asistente de Business Intelligence | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - period over period growth [Analysis Services]
 - parallel period comparisons [Analysis Services]
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - time intelligence [Analysis Services]
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 54d0e5cf5562049ee239d21a2d7fdeae8d46fed8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 319408b079ce5be4a381e02f47f5189edbde3ed0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295985"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Definir cálculos de inteligencia de tiempo mediante el Asistente de Business Intelligence
   La mejora de inteligencia de tiempo es una mejora del cubo que agrega cálculos de tiempo (o vistas de tiempo) a una jerarquía seleccionada. Esta mejora admite las siguientes categorías de cálculos:  
@@ -45,14 +45,14 @@ ms.locfileid: "36201476"
   
 -   Comparaciones de período paralelas.  
   
- Se aplica la inteligencia de tiempo a los cubos que tienen una dimensión de tiempo. (Una dimensión de tiempo es una dimensión cuya propiedad `Type` se establece como `Time`). Además, los atributos de tiempo de esa dimensión también deben tener la configuración apropiada (como Years o Months) para su propiedad `Type`. El `Type` propiedad de la dimensión y sus atributos se establecerá correctamente si utiliza el Asistente para dimensiones para crear la dimensión de tiempo.  
+ Se aplica la inteligencia de tiempo a los cubos que tienen una dimensión de tiempo. (Una dimensión de tiempo es una dimensión cuya propiedad `Type` se establece como `Time`). Además, los atributos de tiempo de esa dimensión también deben tener la configuración apropiada (como Years o Months) para su propiedad `Type`. El `Type` propiedad de la dimensión y sus atributos se establecerá correctamente si usa el Asistente para dimensiones para crear la dimensión de tiempo.  
   
  Para agregar inteligencia de tiempo a un cubo, se usa el Asistente de Business Intelligence y se selecciona la opción **Definir la inteligencia de tiempo** de la página **Elegir mejora** . Este asistente le guiará por el proceso para seleccionar una jerarquía a la que se agrega inteligencia de tiempo y especificar los miembros de la jerarquía a los que se aplicará inteligencia de tiempo. En la última página del asistente, se pueden ver los cambios que se realizarán a la base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para agregar la inteligencia de tiempo seleccionada.  
   
 ## <a name="selecting-a-time-hierarchy"></a>Seleccionar una jerarquía de tiempo  
  En la página **Elegir cálculos y jerarquía de destino** , seleccione la jerarquía de tiempo para la que se aplica la mejora de tiempo. Puede aplicar la mejora de tiempo a una sola jerarquía de tiempo cada vez que se ejecuta el Asistente de Business Intelligence. Si desea aplicar la mejora a más de una jerarquía de tiempo, se vuelve a ejecutar el asistente.  
   
- Después de seleccionar una jerarquía de tiempo, en la lista **Cálculos de tiempo disponibles** seleccione los cálculos que afectan a la jerarquía. Los cálculos que se muestran dependen de los niveles de la jerarquía y en la `Type` valor de propiedad para el atributo para cada nivel. Por ejemplo, una jerarquía Años admite Valor anual hasta la fecha y Porcentaje de crecimiento de año a año, pero una jerarquía Trimestres no.  
+ Después de seleccionar una jerarquía de tiempo, en la lista **Cálculos de tiempo disponibles** seleccione los cálculos que afectan a la jerarquía. Los cálculos enumerados dependen de los niveles de la jerarquía y en el `Type` configuración de la propiedad del atributo para cada nivel. Por ejemplo, una jerarquía Años admite Valor anual hasta la fecha y Porcentaje de crecimiento de año a año, pero una jerarquía Trimestres no.  
   
 > [!NOTE]  
 >  El archivo de plantilla Timeintelligence.xml define los cálculos de tiempo que se enumeran en **Cálculos de tiempo disponibles**. Si los cálculos enumerados no cubren sus necesidades, puede cambiar los cálculos existentes o agregar nuevos cálculos al archivo Timeintelligence.xml.  

@@ -1,5 +1,5 @@
 ---
-title: Editor de consultas MDX (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Editor de consultas MDX (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.startpage.mdx.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - MDX Query Editor
 ms.assetid: 777f2c23-1c1c-4b72-9d19-48a4866551f8
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff0c288919bed3a6e1c13c9a7cb98bc7adbb949c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3fa81db8ca9f6a9ebd490724bf003a81d87c7d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275885"
 ---
 # <a name="mdx-query-editor-analysis-services---multidimensional-data"></a>Editor de consultas MDX (Analysis Services - Datos multidimensionales)
   Use el Editor de consultas MDX para diseñar y ejecutar instrucciones y scripts escritos en lenguaje de expresiones multidimensionales (MDX).  
@@ -60,7 +60,7 @@ ms.locfileid: "36201478"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Ventana editor de consultas**|Escriba las instrucciones y scripts MDX que debe ejecutar el Editor de consultas MDX.<br /><br /> El menú contextual del editor de consultas proporciona las siguientes opciones:<br /><br /> **Cortar**: copia la selección actual en el Portapapeles y quita la selección de la ventana del editor de consultas.<br /><br /> **Copiar**: copia la selección actual en el Portapapeles.<br /><br /> **Pegar**: pega el contenido del Portapapeles en la selección actual.<br /><br /> **Conectar**: abre el cuadro de diálogo **Conectar con el servidor** para establecer una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br /><br /> **Desconectar**: desconecta el editor de consultas actual de un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia.<br /><br /> **Desconectar todas las consultas**: desconecta todos los editores de consultas abiertos.<br /><br /> **Cambiar conexión**: abre el **conectar al servidor** cuadro de diálogo para establecer una conexión a otro [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia.<br /><br /> **Abrir servidor en el Explorador de objetos**: abre el [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia a la que está conectado el editor de consultas actual en **Explorador de objetos**.<br /><br /> **Ejecutar**: ejecuta el código seleccionado o, si no se ha seleccionado ningún código, ejecuta todo el código en el editor de consultas actual.<br /><br /> **Ventana propiedades**: muestra la **propiedades** ventana en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para la ventana de consulta actual.<br /><br /> **Opciones de consulta**: muestra la **opciones de consulta** cuadro de diálogo.|  
+|**Ventana editor de consultas**|Escriba las instrucciones y scripts MDX que debe ejecutar el Editor de consultas MDX.<br /><br /> El menú contextual del editor de consultas proporciona las siguientes opciones:<br /><br /> **Cortar**: copia la selección actual en el Portapapeles y quita la selección de la ventana del editor de consultas.<br /><br /> **Copiar**: copia la selección actual en el Portapapeles.<br /><br /> **Pegar**: pega el contenido del Portapapeles en la selección actual.<br /><br /> **Conectar**: abre el cuadro de diálogo **Conectar con el servidor** para establecer una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br /><br /> **Desconectar**: desconecta el editor de consultas actual de un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia.<br /><br /> **Desconectar todas las consultas**: desconecta todos los editores de consultas abiertos.<br /><br /> **Cambiar conexión**: abre el **conectar al servidor** cuadro de diálogo para establecer una conexión a otro [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia.<br /><br /> **Abrir servidor en el Explorador de objetos**: abre el [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia al que está conectado el editor de consultas actual en **Explorador de objetos**.<br /><br /> **Ejecutar**: ejecuta el código seleccionado o, si se selecciona ningún código, ejecuta todo el código en el editor de consultas actual.<br /><br /> **Ventana propiedades**: muestra el **propiedades** ventana en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para la ventana de consulta actual.<br /><br /> **Opciones de consulta**: muestra el **opciones de consulta** cuadro de diálogo.|  
 |**Ventana metadatos**|Muestra los metadatos para la base de datos conectada de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Cubo**|Seleccione un cubo en la base de datos conectada de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para mostrar los metadatos asociados al cubo en la pestaña **Metadatos** .|  
 |**Metadatos**|Muestra los metadatos para el cubo seleccionado en **Cubo**, incluidos los grupos de medida y las medidas, los indicadores clave de rendimiento, las dimensiones, las jerarquías, los niveles, los miembros y las propiedades de los miembros. Para recuperar la clave completa de un objeto:<br /><br /> Arrastre el objeto desde la pestaña **Metadatos** hasta el panel de consultas.<br /><br /> Haga clic con el botón derecho en el objeto y seleccione **Copiar**y, después, haga clic con el botón derecho en el panel de consultas y seleccione **Pegar**.|  

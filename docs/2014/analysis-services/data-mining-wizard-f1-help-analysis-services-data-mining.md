@@ -1,5 +1,5 @@
 ---
-title: 'Ayuda F1 del Asistente para minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Asistente para la Ayuda de F1 de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.welcome.f1
 helpviewer_keywords:
 - Mining Model Wizard
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1f66b73d25762a949322b84859d12dd02053c80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6782013eab9b190efe2f6756c1ee409598eb1619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291682"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Ayuda F1 del Asistente para minería de datos (Analysis Services – Minería de datos)
   Use el **Asistente para minería de datos** para crear una nueva estructura de minería de datos y un modelo de minería de datos asociado opcional.  
@@ -61,7 +61,7 @@ ms.locfileid: "36201493"
  Después de crear la estructura de minería de datos y un modelo de minería opcional, puede utilizar el **Diseñador de minería de datos** para modificar sus propiedades.  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente para minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Asistente para minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [Diseñador de minería de datos](data-mining/data-mining-designer.md)   
  [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)   
  [Seleccione el método de definición &#40;Asistente para minería de datos&#41;](select-the-definition-method-data-mining-wizard.md)   
@@ -71,17 +71,17 @@ ms.locfileid: "36201493"
  [Especificar tipos de tablas &#40;Asistente para minería de datos&#41;](specify-table-types-data-mining-wizard.md)   
  [Especifique los datos de entrenamiento &#40;Asistente para minería de datos&#41;](specify-the-training-data-data-mining-wizard.md)   
  [Sugerir columnas relacionadas &#40;Asistente para minería de datos&#41;](suggest-related-columns-data-mining-wizard.md)   
- [Seleccionar la dimensión de cubo de origen &#40;Asistente para minería de datos&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
+ [Seleccione la dimensión de cubo de origen &#40;Asistente para minería de datos&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
  [Seleccione la clave de caso &#40;Asistente para minería de datos&#41;](select-the-case-key-data-mining-wizard.md)   
- [Seleccione columnas de nivel de caso &#40;Asistente para minería de datos&#41;](select-case-level-columns-data-mining-wizard.md)   
+ [Seleccione las columnas de nivel de caso &#40;Asistente para minería de datos&#41;](select-case-level-columns-data-mining-wizard.md)   
  [Especificar el uso de la columna de modelo de minería de datos &#40;Asistente para minería de datos&#41;](specify-mining-model-column-usage-data-mining-wizard.md)   
  [Seleccione una dimensión de grupo de medida &#40;agregar nueva tabla anidada&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
  [Seleccione la clave de tabla anidada &#40;agregar nueva tabla anidada&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
  [Seleccione columnas de tabla anidada &#40;agregar nueva tabla anidada&#41;](select-nested-table-columns-add-new-nested-table-wizard.md)   
  [Especificar el contenido y el tipo de datos de la columna &#40;Asistente para minería de datos&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)   
  [Segmentar el cubo de origen &#40;Asistente para minería de datos&#41;](slice-source-cube-data-mining-wizard.md)   
- [Finalización del Asistente para &#40;Asistente para minería de datos&#41;](completing-the-wizard-data-mining-wizard.md)   
- [Especificar el contenido de la columna y el tipo de datos &#40;Asistente para minería de datos&#41;](specify-column-content-and-data-type-data-mining-wizard.md)   
+ [Finalización del asistente &#40;Asistente para minería de datos&#41;](completing-the-wizard-data-mining-wizard.md)   
+ [Especificar el contenido de columna y tipo de datos &#40;Asistente para minería de datos&#41;](specify-column-content-and-data-type-data-mining-wizard.md)   
  [Crear conjunto de pruebas &#40;Asistente para minería de datos&#41;](create-testing-set-data-mining-wizard.md)  
   
   

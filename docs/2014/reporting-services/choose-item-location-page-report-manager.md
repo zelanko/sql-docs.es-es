@@ -1,5 +1,5 @@
 ---
-title: Elegir página de ubicación del elemento (Administrador de informes) | Documentos de Microsoft
+title: Elija la página de ubicación del elemento (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bf08188225c10d72230eea781ac9ebbff3d7c5f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3e0f94a0785aa13fc4c83c304e207b8775e58b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260522"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Elegir página de ubicación del elemento (Administrador de informes)
   Use la página Elegir ubicación de informe vinculado para seleccionar una carpeta para un nuevo informe vinculado o un nuevo modelo. Si va a crear un modelo o un informe vinculado para un grupo específico de usuarios, puede colocar el informe vinculado en una carpeta que contenga otros informes que ellos usen. Debe elegir una carpeta que exista y para la que tenga permisos para agregar contenido.  
@@ -67,6 +67,6 @@ ms.locfileid: "36108938"
 ## <a name="see-also"></a>Vea también  
  [Nuevo informe vinculado &#40;página del Administrador de informes&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [Página nuevo modelo &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

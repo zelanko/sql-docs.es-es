@@ -1,5 +1,5 @@
 ---
-title: Crear una utilidad de implementación | Documentos de Microsoft
+title: Crear una utilidad de implementación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 caps.latest.revision: 49
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c7e51388856f6bbd63382410100b5655194ec3d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09c39bccc82df8539fc419180465739cf1ed8054
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273121"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   El primer paso para implementar paquetes es crear una utilidad de implementación para un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . La utilidad de implementación es una carpeta que contiene los archivos necesarios para implementar los paquetes de un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en un servidor distinto. La utilidad de implementación se crea en el equipo en el que se almacena el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -51,7 +51,7 @@ ms.locfileid: "36203700"
   
 3.  En el cuadro de diálogo **\<nombre del proyecto> Páginas de propiedades**, haga clic en **Utilidad de implementación**.  
   
-4.  Para actualizar las configuraciones de paquetes al implementar los paquetes, establezca **AllowConfigurationChanges** a `True`.  
+4.  Para actualizar las configuraciones de paquetes cuando se implementan paquetes, establezca **AllowConfigurationChanges** a `True`.  
   
 5.  Establecer `CreateDeploymentUtility` a `True`.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36203700"
 ## <a name="see-also"></a>Vea también  
  [Configuraciones de paquetes](../../2014/integration-services/package-configurations.md)   
  [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md)   
- [Implementar paquetes mediante la utilidad de implementación](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
+ [Implementar los paquetes mediante la utilidad de implementación](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
  [Implementación del paquete &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos ClrAssembly (ASSL) | Documentos de Microsoft
+title: Tipo de datos ClrAssembly (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ClrAssembly data type
 ms.assetid: 3f5dc5a1-ebd6-41b8-ac04-91d4de137eb4
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e17992a5d15113ec0de5dd75978f932cb83d11c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63809f3dd903878baf5eabf1642430fbe0d9aa8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235585"
 ---
 # <a name="clrassembly-data-type-assl"></a>Tipo de datos ClrAssembly (ASSL)
-  Define un tipo de datos derivado que representa un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ensamblado asociado a un [base de datos](../objects/database-element-assl.md) o [Server](../objects/server-element-assl.md) elemento  
+  Define un tipo de datos derivado que representa un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ensamblado asociado con un [base de datos](../objects/database-element-assl.md) o [Server](../objects/server-element-assl.md) elemento  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36108686"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipos de datos base|[ensamblado](../objects/assembly-element-assl.md)|  
+|Tipos de datos base|[Ensamblado](../objects/assembly-element-assl.md)|  
 |Tipos de datos derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relaciones entre tipos de datos  
@@ -59,7 +59,7 @@ ms.locfileid: "36108686"
 |------------------|-------------|  
 |Elementos primarios|Ninguno (tipo abstracto)|  
 |Elementos secundarios|[Archivos](../collections/files-element-assl.md), [PermissionSet](../properties/permissionset-element-assl.md)|  
-|Elementos derivados|Vea [ensamblado](../objects/assembly-element-assl.md) ([ensamblados](../collections/assemblies-element-assl.md) colección de [base de datos](../objects/database-element-assl.md) o [Server](../objects/server-element-assl.md))|  
+|Elementos derivados|Consulte [ensamblado](../objects/assembly-element-assl.md) ([ensamblados](../collections/assemblies-element-assl.md) colección de [base de datos](../objects/database-element-assl.md) o [Server](../objects/server-element-assl.md))|  
   
 ## <a name="remarks"></a>Notas  
  El `ClrAssembly` elemento contiene los archivos necesarios para volver a crear un [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ensamblado, asociado con una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] o con una base de datos en una instancia de [!INCLUDE[ssAS](../../../includes/ssas-md.md)], así como el permisos necesarios para ejecutar el ensamblado.  

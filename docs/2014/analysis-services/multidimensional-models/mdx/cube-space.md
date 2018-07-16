@@ -1,5 +1,5 @@
 ---
-title: Espacio de cubo | Documentos de Microsoft
+title: Espacio de cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a8be8107b3d18aca49cf8b670131ef695d5901f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07011d823f4bede671c3ee4a465d27c413d04e9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282191"
 ---
 # <a name="cube-space"></a>Espacio de cubo
   El espacio de cubo es el producto de los miembros de las jerarquías de atributo de un cubo con las medidas de un cubo. Por consiguiente, el espacio del cubo se determina con el producto combinatorio de todos los miembros de jerarquía de atributo en el cubo y las medidas del cubo, y define el tamaño máximo del cubo. Es importante tener en cuenta que este espacio incluye todas las posibles combinaciones de miembros de la jerarquía de atributos, incluso las que podrían ser consideradas como imposibles en el mundo real, es decir, aquellas en las que la ciudad es París y los países son Gran Bretaña, España, Japón, India, etc.  
@@ -116,7 +116,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Tenga en cuenta que la `WITH` se utiliza la palabra clave con la [CurrentMember (MDX)](/sql/mdx/current-mdx) y [Name (MDX)](/sql/mdx/members-string-mdx) funciones para crear un miembro calculado para su uso en la consulta. Para más información, vea [Consulta de MDX básica &#40;MDX&#41;](mdx-query-the-basic-query.md).  
+>  Tenga en cuenta que el `WITH` palabra clave se usa con el [CurrentMember (MDX)](/sql/mdx/current-mdx) y [Name (MDX)](/sql/mdx/members-string-mdx) funciones para crear un miembro calculado para su uso en la consulta. Para más información, vea [Consulta de MDX básica &#40;MDX&#41;](mdx-query-the-basic-query.md).  
   
  En la consulta anterior, se devuelve el nombre del miembro de la jerarquía de atributo Country asociado con cada miembro de la jerarquía de atributo State. Aparece el miembro Country esperado (debido a que hay una relación de atributo definida entre los atributos City y Country). Sin embargo, si no se define una relación de atributo entre las jerarquías de atributo de la misma dimensión, se devuelve el miembro (All), como se muestra en la consulta siguiente.  
   
@@ -135,9 +135,9 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>Vea también  
  [Conceptos clave para MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Tuplas](tuples.md)   
- [Autoexist](autoexists.md)   
+ [Autoexists](autoexists.md)   
  [Trabajar con miembros, tuplas y conjuntos &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Los totales visuales y totales no visuales](visual-totals-and-non-visual-totals.md)   
+ [Totales visuales y totales no visuales](visual-totals-and-non-visual-totals.md)   
  [Referencia del lenguaje MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [Expresiones multidimensionales &#40;MDX&#41; referencia](/sql/mdx/multidimensional-expressions-mdx-reference)  
   

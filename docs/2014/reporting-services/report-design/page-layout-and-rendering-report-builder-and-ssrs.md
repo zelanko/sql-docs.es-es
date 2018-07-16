@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 544931a2a43d875af5d2688bd1e52667ea5c5b5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c46f1e1993743365c9a0120a086f8732c2b60e5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264211"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Representación y diseño de páginas (Generador de informes y SSRS)
   Cuando cree un informe, es importante que conozca el comportamiento de los representadores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para asegurarse de que el informe representado tiene la apariencia que desea, incluidos el diseño y los saltos de página. Probablemente también desee asegurarse de que el informe representado cabe en el tamaño de papel que usted o su organización suelen utilizar.  
@@ -57,11 +57,11 @@ ms.locfileid: "36107557"
     > [!NOTE]  
     >  Aunque no permite la exportación directa a un formato diferente, la representación de Atom genera los archivos de datos de los informes.  
   
--   **Representadores de saltos de página automáticos** Los representadores de saltos de página automáticos mantienen el diseño y el formato de los informes. El archivo resultante se optimiza para la visualización y la entrega basada en la presentación en pantalla, como en una página web. Los representadores de saltos de página automáticos disponibles son: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, MHTML (archivo Web) y el código HTML.  
+-   **Representadores de saltos de página automáticos** Los representadores de saltos de página automáticos mantienen el diseño y el formato de los informes. El archivo resultante se optimiza para la visualización y la entrega basada en la presentación en pantalla, como en una página web. Los representadores de saltos de página automáticos disponibles son: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] palabra, archivo Web (MHTML) y el código HTML.  
   
 -   **Representadores de saltos de página duros** : los representadores de saltos de página duros mantienen el diseño y el formato de los informes. El archivo resultante se optimiza para que su aspecto no varíe al imprimirlo o para ver el informe en pantalla con formato de libro. Los representadores de saltos de página manuales disponibles que se admiten son TIFF y PDF.  
   
- Cuando se obtiene una vista previa de un informe en el Generador de informes o el Diseñador de informes o se ejecuta un informe en el Administrador de informes, siempre se representa primero en HTML. Después de ejecutar el informe, puede exportarlo a otros formatos de archivo. Para obtener más información, consulte [exportar informes &#40;el generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
+ Cuando se obtiene una vista previa de un informe en el Generador de informes o el Diseñador de informes o se ejecuta un informe en el Administrador de informes, siempre se representa primero en HTML. Después de ejecutar el informe, puede exportarlo a otros formatos de archivo. Para obtener más información, consulte [exportar informes &#40;generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
   
@@ -98,33 +98,33 @@ ms.locfileid: "36107557"
 ##  <a name="HowTo"></a> Temas de procedimientos  
  En esta sección se enumeran procedimientos que muestran, paso a paso, cómo trabajar con la paginación en los informes.  
   
--   [Agregar un salto de página &#40;el generador de informes SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
+-   [Agregar un salto de página &#40;generador de informes y SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
   
--   [Mostrar encabezados de fila y columna en varias páginas &#40;el generador de informes SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
+-   [Mostrar encabezados de fila y columna en varias páginas &#40;generador de informes y SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
   
--   [Agregar o quitar un encabezado o pie de página &#40;el generador de informes SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+-   [Agregar o quitar un encabezado o pie de página &#40;generador de informes y SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
--   [Mantener visibles los encabezados al desplazarse a través de un informe &#40;el generador de informes SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+-   [Mantener visibles los encabezados al desplazarse a través de un informe &#40;generador de informes y SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
--   [Mostrar números de página u otras propiedades del informe &#40;el generador de informes SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
+-   [Mostrar números de página u otras propiedades del informe &#40;generador de informes y SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
   
--   [Ocultar un encabezado de página o pie de página en la primera o última página &#40;el generador de informes SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
+-   [Ocultar un encabezado de página o pie de página en la primera o última página &#40;generador de informes y SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
   
   
 ##  <a name="InThisSection"></a> En esta sección  
  En los temas siguientes se proporciona información adicional sobre el diseño y la representación de páginas.  
   
- [Encabezados y pies de página &#40;el generador de informes SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Encabezados y pies de página &#40;generador de informes y SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
  Proporciona información sobre cómo utilizar encabezados y pies de página en informes, y cómo controlar la paginación al usarlos.  
   
- [Controlar la página se interrumpe, encabezados, columnas y filas &#40;el generador de informes SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
+ [Controlar saltos de página, encabezados, columnas y filas &#40;generador de informes y SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  Proporciona información sobre cómo utilizar saltos de página.  
   
   
   
 ## <a name="see-also"></a>Vea también  
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;el generador de informes SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Exportar informes &#40;el generador de informes SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;generador de informes y SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Exportar informes &#40;generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

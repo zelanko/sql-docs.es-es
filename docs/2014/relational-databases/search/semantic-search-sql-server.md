@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server]
 - semantic search [SQL Server], overview
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - statistical semantic search [SQL Server], overview
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8746a7f7a7fb8c1dfc84f3f50a09476f77b3c78a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9f00453d8540953beb1db7978c80a807a235a620
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250105"
 ---
 # <a name="semantic-search-sql-server"></a>Búsqueda semántica (SQL Server)
   La búsqueda semántica estadística proporciona una visión general amplia de los documentos no estructurados almacenados en las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la extracción e indización de *frases clave*estadísticamente pertinentes. Entonces también usa las frases clave para identificar e indizar *documentos que son similares o están relacionados*.  
@@ -54,7 +53,7 @@ SELECT @Title AS Title, keyphrase, score
   
   
   
-###  <a name="find2"></a> Buscar documentos similares o relacionados.  
+###  <a name="find2"></a> Buscar documentos similares o relacionados  
  La consulta siguiente obtiene los documentos que se identificaron como similares al documento de ejemplo o relacionados con este. Muestra los resultados en orden descendente por la puntuación que clasifica la similitud de los 2 documentos. Esta consulta llama a la función [semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql).  
   
 ```vb  
@@ -74,7 +73,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
   
   
-###  <a name="find3"></a> Buscar las frases clave que hacen a los documentos similares o relacionados.  
+###  <a name="find3"></a> Buscar las frases clave que hacen los documentos similares o relacionados  
  La consulta siguiente obtiene las frases clave que hacen a los 2 documentos de ejemplo similares o relacionados entre sí. Muestra los resultados en orden descendente por la puntuación que clasifica el peso de cada frase clave. Esta consulta llama a la función [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql).  
   
 ```tsql  

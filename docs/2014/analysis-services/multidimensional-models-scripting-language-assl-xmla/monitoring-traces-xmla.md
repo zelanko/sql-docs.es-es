@@ -1,5 +1,5 @@
 ---
-title: Supervisar los seguimientos (XMLA) | Documentos de Microsoft
+title: Supervisar los seguimientos (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,24 @@ helpviewer_keywords:
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d605586c915963efc86c4e3197e087b8a5f82dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9df7fd3e22c8e63873584491c7f2051e8897efa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201240"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241625"
 ---
 # <a name="monitoring-traces-xmla"></a>Supervisar los seguimientos (XMLA)
-  Puede usar el [suscribir](../xmla/xml-elements-commands/subscribe-element-xmla.md) comando XML for Analysis (XMLA) para supervisar un seguimiento existente definido en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El comando `Subscribe` devuelve los resultados de un seguimiento como conjunto de filas.  
+  Puede usar el [Subscribe](../xmla/xml-elements-commands/subscribe-element-xmla.md) XML for Analysis (XMLA) para supervisar un seguimiento existente definido en una instancia de comando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El comando `Subscribe` devuelve los resultados de un seguimiento como conjunto de filas.  
   
 ## <a name="specifying-a-trace"></a>Especificar un seguimiento  
- El [objeto](../xmla/xml-elements-properties/object-element-xmla.md) propiedad de la `Subscribe` comando debe contener una referencia de objeto a una [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia o un seguimiento en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia. Si no se especifica la propiedad `Object`, o no se especifica un identificador de seguimiento en la propiedad `Object`, el comando `Subscribe` supervisa el seguimiento de sesión predeterminado para la sesión explícita especificada en el encabezado SOAP del comando.  
+ El [objeto](../xmla/xml-elements-properties/object-element-xmla.md) propiedad de la `Subscribe` comando debe contener una referencia de objeto a un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia o un seguimiento en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia. Si no se especifica la propiedad `Object`, o no se especifica un identificador de seguimiento en la propiedad `Object`, el comando `Subscribe` supervisa el seguimiento de sesión predeterminado para la sesión explícita especificada en el encabezado SOAP del comando.  
   
 ## <a name="returning-results"></a>Devolver resultados  
- El comando `Subscribe` devuelve un conjunto de filas que contiene los eventos de seguimiento capturados por el seguimiento especificado. El `Subscribe` comando devuelve los resultados de seguimiento hasta que se cancela el comando por el [cancelar](../xmla/xml-elements-commands/cancel-element-xmla.md) comando.  
+ El comando `Subscribe` devuelve un conjunto de filas que contiene los eventos de seguimiento capturados por el seguimiento especificado. El `Subscribe` comando devuelve los resultados de seguimiento hasta que el comando cancelado por el [cancelar](../xmla/xml-elements-commands/cancel-element-xmla.md) comando.  
   
  El conjunto de filas contiene las columnas que se muestran en la tabla siguiente.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36201240"
 |ObjectReference|String|Representación XML de la referencia de objeto para el objeto especificado en ObjectName.|  
 |NestLevel|Integer|Nivel de la transacción para la que se produjo el evento.|  
 |NumSegments|Entero largo|Número de segmentos de datos afectados por el comando para el que se produjo el evento o a los que éste tuvo acceso.|  
-|Severity|Integer|Nivel de gravedad de una excepción del evento La columna puede contener uno de los siguientes valores:<br /><br /> Valor: 0 = correcto<br /><br /> Valor: 1 = información<br /><br /> Valor: 2 = advertencia<br /><br /> Valor: 3 = Error|  
+|Severity|Integer|Nivel de gravedad de una excepción del evento La columna puede contener uno de los siguientes valores:<br /><br /> Valor: 0 = correcto<br /><br /> Valor: 1 = la información<br /><br /> Valor: 2 = advertencia<br /><br /> Valor: 3 = Error|  
 |Correcto|Boolean|Indica si un comando se ha ejecutado correctamente o no.|  
 |Error|Entero largo|Número de error del evento, si procede.|  
 |ConnectionID|String|Identificador de la conexión para la que se produjo el evento.|  

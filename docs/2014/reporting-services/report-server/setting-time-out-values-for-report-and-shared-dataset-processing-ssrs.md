@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time-outs [Reporting Services]
 - query time-outs [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9066dbbc02149913959c9c1e16ee044f5f3b7a31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4794c4a2b6c9207cb48573bb481499fa402f3b29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214575"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos (SSRS)
   La especificación de valores de tiempo de espera permite establecer límites relativos al empleo de los recursos del sistema. El servidor de informes admite dos valores de tiempo de espera:  
@@ -38,7 +38,7 @@ ms.locfileid: "36203795"
  La mayoría de los errores de tiempo de espera se generan durante el procesamiento de las consultas. Si detecta errores de este tipo, intente aumentar el valor de tiempo de espera de la consulta. Asegúrese de ajustar el valor de tiempo de espera de ejecución del informe de forma que sea superior al de la consulta. El período de tiempo debería ser suficiente para completar el procesamiento tanto de la consulta como del informe.  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>Establecer un tiempo de espera de la consulta para un conjunto de datos incrustados en un informe  
- Los valores de tiempo de espera de la consulta se especifican durante la creación del informe como un conjunto de datos incrustado. El valor de tiempo de espera se almacena con el informe, en la `Timeout` elementos de la definición de informe. De forma predeterminada, este valor está establecido en 30 segundos. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Los valores de tiempo de espera de la consulta se especifican durante la creación del informe como un conjunto de datos incrustado. El valor de tiempo de espera se almacena con el informe, en el `Timeout` elementos de la definición de informe. De forma predeterminada, este valor está establecido en 30 segundos. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
  Los usuarios con permisos para modificar las propiedades de un informe publicado pueden restablecer este valor mediante la edición del archivo de definición del informe.  
   

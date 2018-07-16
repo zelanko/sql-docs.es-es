@@ -1,5 +1,5 @@
 ---
-title: Agrupar miembros de atributos (discretización) | Documentos de Microsoft
+title: Agrupar miembros de atributo (discretización) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NameColumn property
 - discretization [Analysis Services]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - names [Analysis Services], member groups
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc2c51f16733597af532fe256c73c69649f0e1c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e07f85d5a6162bed15393d8c255a55cf01b903c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251457"
 ---
 # <a name="group-attribute-members-discretization"></a>Agrupar miembros de atributos (discretización)
   Un grupo de miembros es una colección de miembros de dimensión consecutivos generada por el sistema. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los miembros de un atributo pueden agruparse en varios grupos de miembros mediante un proceso denominado discretización. Un nivel de una jerarquía contiene miembros o grupos de miembro, pero no los dos. Cuando los usuarios corporativos examinan un nivel que contiene grupos de miembros, ven los nombres y valores de celdas de estos grupos. Los miembros que genera [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para admitir grupos de miembros se denominan miembros de agrupación y son similares a los miembros normales.  
@@ -41,7 +41,7 @@ ms.locfileid: "36201707"
 |Configuración de `DiscretizationMethod`|Descripción|  
 |--------------------------------------|-----------------|  
 |`None`|Muestra los miembros.|  
-|`Automatic`|Selecciona el método que mejor representa los datos: ya sea el `EqualAreas` método o la `Clusters` método.|  
+|`Automatic`|Selecciona el método que mejor represente los datos: ya sea el `EqualAreas` método o la `Clusters` método.|  
 |`EqualAreas`|Intenta dividir los miembros del atributo en grupos que contengan el mismo número de miembros.|  
 |`Clusters`|Intenta dividir los miembros del atributo en grupos mediante el muestreo de los datos de entrenamiento, la inicialización en un número de puntos aleatorios y la ejecución de varias iteraciones del algoritmo de clústeres Expectation-Maximization (EM).<br /><br /> Este método resulta útil porque funciona en cualquier curva de distribución, pero requiere más tiempo de procesamiento.|  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36201707"
   
  El criterio de ordenación de los miembros de los grupos de miembros se controla mediante el `OrderBy` propiedad del atributo. Según este criterio de ordenación, los miembros de un grupo de miembros se ordenan consecutivamente.  
   
- El uso normal de los grupos de miembros consiste en obtener detalles de un nivel con pocos miembros en otro con muchos miembros. Para permitir al usuario obtener detalles de un nivel en otro, cambie la propiedad `DiscretizationMethod` del atributo en el nivel que contiene muchos miembros de `None` a uno de los métodos de discretización que se describen en la tabla anterior. Por ejemplo, una dimensión Client contiene una jerarquía de atributo Client Name con 500.000 miembros. Puede cambiar el atributo Client Groups y establecer el `DiscretizationMethod` propiedad `Automatic` para mostrar los grupos de miembros en el nivel de miembro de la jerarquía de atributo.  
+ El uso normal de los grupos de miembros consiste en obtener detalles de un nivel con pocos miembros en otro con muchos miembros. Para permitir al usuario obtener detalles de un nivel en otro, cambie la propiedad `DiscretizationMethod` del atributo en el nivel que contiene muchos miembros de `None` a uno de los métodos de discretización que se describen en la tabla anterior. Por ejemplo, una dimensión Client contiene una jerarquía de atributo Client Name con 500.000 miembros. Puede cambiar el nombre de atributo Client Groups y establecer el `DiscretizationMethod` propiedad `Automatic` para mostrar los grupos de miembros en el nivel de miembro de jerarquía de atributo.  
   
  Para obtener detalles de clientes concretos de cada grupo, puede crear otra jerarquía de atributos Client Name enlazada a la misma columna de la tabla. A continuación, cree una nueva jerarquía de usuario basada en los dos atributos. El nivel superior se basa en el atributo Client Groups y el nivel inferior se basa en el atributo Client Name. El valor de la propiedad `IsAggregatable` es `True` en ambos atributos. El usuario puede expandir el nivel (All) de la jerarquía para ver los miembros del grupo y expandirlos para ver los miembros hoja de la jerarquía. Para ocultar un nivel de grupo o cliente, puede establecer la propiedad `AttributeHierarchyVisible` en `False` en el atributo correspondiente.  
   

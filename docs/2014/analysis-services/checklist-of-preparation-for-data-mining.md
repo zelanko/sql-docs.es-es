@@ -1,5 +1,5 @@
 ---
-title: Lista de comprobación de preparación para la minería de datos | Documentos de Microsoft
+title: Lista de comprobación de preparación para la minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f7429dd799a1081bd1a03e985a8772b04498129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0bed960058bdc9120089d89a32a3ede0bf2f3160
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232505"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Lista de comprobación de la preparación para la minería de datos
   Pese a que los complementos de minería de datos facilitan y hacen más agradable la creación de modelos y la experimentación con los mismos, cuando se necesita obtener resultados repetibles y procesables, se debe prever un periodo adecuado para la formulación de requisitos de negocio básicos y para la obtención y preparación de los datos. En esta sección encontrará una lista de comprobación para ayudarle a planear la investigación, así como descripciones de los problemas comunes.  
@@ -38,7 +38,7 @@ ms.locfileid: "36203304"
   
 -   ¿Puede asignar datos de entrada nuevos a los resultados esperados?  
   
- **Conozco el significado, tipos de datos y la distribución de los datos de entrada.**  
+ **Sé el significado y tipos de datos de distribución de los datos de entrada.**  
  Tómese un tiempo para explorar y comprender los datos de origen. Es importante que las personas que revisen el modelo conozcan el tipo de datos de entrada que se usaron y sepan cómo interpretar los tipos de datos y la variabilidad, así como el equilibrio y la calidad.  
   
 -   ¿Cuántos datos tiene? ¿Hay suficientes datos para el modelado?  
@@ -53,7 +53,7 @@ ms.locfileid: "36203304"
   
 -   ¿Tienen los datos de entrada algunos resultados de ejemplo que se pueden utilizar para el entrenamiento?  
   
- **Entiendo que el nivel de integridad de los datos que tenemos y el nivel que necesitamos.**  
+ **Entiendo el nivel de integridad de los datos que tenemos y el nivel que necesitamos.**  
  Los datos incorrectos pueden afectar a la calidad del modelo, o impedir que este se genere. Debe contar con un buen conocimiento de la distribución y del significado de los datos, y saber cómo llegaron a este estado. Necesitará saber si es posible o adecuado simplificar los datos mediante etiquetado, truncamiento de tipos de datos numéricos o resumen.  
   
 -   Etiquetas de datos: ¿son claras y correctas?  
@@ -85,7 +85,7 @@ ms.locfileid: "36203304"
   
 -   ¿Puede aplicar también el marco de procesamiento de datos algoritmos de aprendizaje automático, realizar pruebas y visualizar resultados?  
   
- **Ha habido acuerdo en la granularidad deseada de predicciones y nuestros datos se ha modificado para generar esas unidades.**  
+ **Ha habido en la granularidad deseada de predicciones y nuestros datos se ha modificado para generar esas unidades.**  
  Antes de preparar los datos, debe decidir cuál va a ser la granularidad de los resultados. Por ejemplo, debe indicar si desea que los pronósticos de ventas sean por día o por trimestre. Puede considerar la posibilidad de configurar diferentes estructuras de datos para los mismos datos con objeto de controlar distintos niveles de resumen.  
   
 -   ¿Cuál es la unidad de medida o la unidad de tiempo actual?  
@@ -107,7 +107,7 @@ ms.locfileid: "36203304"
   
 -   ¿Ha decidido usar un valor de inicialización para el modelo?  
   
- **Se tiene conocimiento del dominio para validar los resultados, o tener acceso a los expertos en la materia que nos pueden aconsejar.**  
+ **Se tiene conocimiento del dominio para validar los resultados, o tener acceso a expertos en el tema que nos pueden aconsejar.**  
  Emplee tiempo en validar las variables, el modelo y los resultados. Pida ayuda a los expertos para evaluar las interacciones y los resultados. Sin embargo, no permita que las suposiciones se impongan a la evidencia. Esté abierto a los hallazgos nuevos e inesperados.  
   
 -   ¿Existe conocimiento del dominio disponible para ayudar a filtrar los datos y a reducir el ruido en la entrada?  

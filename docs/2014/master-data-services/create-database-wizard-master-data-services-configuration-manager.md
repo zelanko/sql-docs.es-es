@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef3d71e52b29895111378ad26973f819bcf14076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1c020e8c27a7e4e2e7d22eb5a89308ddab5b8112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296695"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>Asistente Crear base de datos (Administrador de configuración de Master Data Services)
   Utilice el asistente para **Crear base de datos** con el fin de crear una base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -50,7 +50,7 @@ ms.locfileid: "36106992"
   
 |Nombre del control|Descripción|  
 |------------------|-----------------|  
-|**Nombre de usuario.**|Especifique una cuenta de usuario de dominio para que sea la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] administrador del sistema. Para todas las [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] aplicaciones Web asociadas con esta base de datos, este usuario pueden actualizar todos los modelos y todos los datos en todas las áreas funcionales. Para obtener más información, vea [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).|  
+|**Nombre de usuario.**|Especifique una cuenta de usuario de dominio para que sea el [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] administrador del sistema. Para todas las [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] aplicaciones Web asociadas con esta base de datos, este usuario pueden actualizar todos los modelos y todos los datos en todas las áreas funcionales. Para obtener más información, vea [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).|  
   
 ## <a name="summary"></a>Resumen  
  Muestra un resumen de las opciones seleccionadas. Compruebe sus elecciones y, a continuación, haga clic en **Siguiente** para empezar a crear la base de datos con los valores especificados.  

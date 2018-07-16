@@ -1,5 +1,5 @@
 ---
-title: Elemento ScriptCacheProcessingMode (ASSL) | Documentos de Microsoft
+title: Elemento ScriptCacheProcessingMode (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ScriptCacheProcessingMode element
 ms.assetid: 95c0723c-69a4-43e7-b743-f712180a7681
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0566ea0411eb3f6574d03e738017d8ca6a5bdf2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de4bac4bfbfa0ab7a6471f107c594194023292a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253077"
 ---
 # <a name="scriptcacheprocessingmode-element-assl"></a>Elemento ScriptCacheProcessingMode (ASSL)
   Indica el servidor debería generar la caché de script durante o después del procesamiento.  
@@ -71,7 +71,7 @@ ms.locfileid: "36204686"
   
  La enumeración que corresponde a los valores permitidos para `ScriptCacheProcessingMode` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ScriptCacheProcessingMode>.  
   
- El elemento que corresponde al elemento primario de `ScriptCacheProcessingMode` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Cube>.  
+ El elemento que se corresponde con el elemento primario de `ScriptCacheProcessingMode` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Cube>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Editar propiedades de la plantilla de seguimiento (pestaña General) | Documentos de Microsoft
+title: Editar propiedades de plantilla de seguimiento (pestaña General) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.edittracetemplateproperties.general.f1
 helpviewer_keywords:
 - Trace Template Properties dialog box
 ms.assetid: 2ab1a21d-3a0f-4ba4-92d8-7150b68e585e
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 384979b0a5a6377102c53ea9843dd84e96adc4d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 01e568b91050e3f42dd8788d5cc46d4deebd0fc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108411"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257041"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>Editar Propiedades de la plantilla de seguimiento (pestaña General)
   Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** para ver o editar las plantillas de seguimiento existentes utilizando las opciones que se muestran a continuación. Para obtener acceso a este cuadro de diálogo, en el menú [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **de** , seleccione **Plantillas**y, a continuación, haga clic en **Editar plantilla**.  

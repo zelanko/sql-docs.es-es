@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5912a29ddfd19ef5e191be6c4d102117d125421d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f6a3c90fe0df58b27f99df2f1e37d66c1ff523b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268637"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propiedades de campo extendidas para una base de datos de Analysis Services (SSRS)
-  La extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite propiedades de campo extendidas. Las propiedades de campo extendidas son propiedades disponibles además de las propiedades de campo `Value` e `IsMissing` en el origen de datos y admitidas por la extensión de procesamiento de datos. Las propiedades extendidas no aparecen en el panel Datos de informe como parte de la colección de campos para un conjunto de datos de informe. Puede incluir valores de propiedad de campo extendidas en el informe, escriba expresiones que especifiquen por su nombre mediante la integrada `Fields` colección.  
+  La extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite propiedades de campo extendidas. Las propiedades de campo extendidas son propiedades disponibles además de las propiedades de campo `Value` e `IsMissing` en el origen de datos y admitidas por la extensión de procesamiento de datos. Las propiedades extendidas no aparecen en el panel Datos de informe como parte de la colección de campos para un conjunto de datos de informe. Puede incluir valores de propiedad de campo extendidas en el informe, escriba expresiones que especifiquen por su nombre usa el método integrado `Fields` colección.  
   
- Las propiedades extendidas incluyen propiedades predefinidas y propiedades personalizadas. Las propiedades predefinidas son propiedades comunes a varios orígenes de datos que se asignan a nombres de propiedad de campo específicos y son accesibles a través de los integrados `Fields` colección por su nombre. Las propiedades personalizadas son específicas de cada proveedor de datos y se puede tener acceso a ellas mediante la colección `Fields` integrada, pero solo mediante la sintaxis que usa el nombre de la propiedad extendida como una cadena.  
+ Las propiedades extendidas incluyen propiedades predefinidas y propiedades personalizadas. Las propiedades predefinidas son propiedades comunes a varios orígenes de datos que se asignan a nombres de propiedad de campo específicos y pueden obtenerse a través de los integrados `Fields` colección por nombre. Las propiedades personalizadas son específicas de cada proveedor de datos y se puede tener acceso a ellas mediante la colección `Fields` integrada, pero solo mediante la sintaxis que usa el nombre de la propiedad extendida como una cadena.  
   
  Al usar el diseñador de consultas MDX para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo gráfico para definir la consulta, se agrega automáticamente un conjunto predefinido de propiedades de celda y propiedades de dimensión a la consulta MDX. Solo puede usar las propiedades extendidas que se indican de forma específica en la consulta MDX del informe. En función del informe, puede que desee modificar el texto del comando MDX predeterminado para incluir otras propiedades de dimensión o personalizadas definidas en el cubo. Para más información sobre los campos extendidos disponibles en los orígenes de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Crear y usar los valores de propiedad &#40;MDX&#41;](../../analysis-services/creating-and-using-property-values-mdx.md).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Trabajar con propiedades de campo en un informe  
- Las propiedades de campo extendidas incluyen propiedades predefinidas y propiedades específicas del proveedor de datos. Las propiedades de campo no aparecen con la lista de campos del panel **Datos de informe** , aunque estén en la consulta creada para un conjunto de datos; por tanto, las propiedades de campo no se pueden arrastrar a la superficie de diseño del informe. En su lugar, debe arrastrar el campo al informe y, a continuación, cambiar el `Value` propiedad del campo a la propiedad que desea utilizar. Por ejemplo, si ya se ha dado formato a los datos de celda de un cubo, puede usar la propiedad de campo FormattedValue con la siguiente expresión: `=Fields!FieldName.FormattedValue`.  
+ Las propiedades de campo extendidas incluyen propiedades predefinidas y propiedades específicas del proveedor de datos. Las propiedades de campo no aparecen con la lista de campos del panel **Datos de informe** , aunque estén en la consulta creada para un conjunto de datos; por tanto, las propiedades de campo no se pueden arrastrar a la superficie de diseño del informe. En su lugar, debe arrastrar el campo al informe y, a continuación, cambiar el `Value` propiedad del campo a la propiedad que desea usar. Por ejemplo, si ya se ha dado formato a los datos de celda de un cubo, puede usar la propiedad de campo FormattedValue con la siguiente expresión: `=Fields!FieldName.FormattedValue`.  
   
  Para hacer referencia a una propiedad extendida no predefinida, se utiliza la siguiente sintaxis en una expresión:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36203348"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Especifica el valor de los datos del campo.|  
 |`IsMissing`|`Boolean`|Indica si se ha encontrado el campo en el conjunto de datos resultante.|  
-|`UniqueName`|`String`|Devuelve el nombre completo de un nivel. Por ejemplo, el `UniqueName` el valor de un empleado puede ser *[Employee]. [ El departamento de empleado]. [Departamento]. & [Sales]. & [Administrador de ventas América del Norte]. & [272]*.|  
+|`UniqueName`|`String`|Devuelve el nombre completo de un nivel. Por ejemplo, el `UniqueName` el valor de un empleado podría ser *[Employee]. [ Departamento del empleado]. [Departamento]. & [ventas]. & [director de ventas de Norteamérica]. & [272]*.|  
 |`BackgroundColor`|`String`|Devuelve el color de fondo del campo, definido en la base de datos.|  
 |`Color`|`String`|Devuelve el color de primer plano del elemento, definido en la base de datos.|  
 |`FontFamily`|`String`|Devuelve el nombre de la fuente del elemento, definido en la base de datos.|  
@@ -144,7 +144,7 @@ CELL PROPERTIES
 |FONT_SIZE|(null)|  
 |FONT_FLAGS|(null)|  
   
- Si crea un conjunto de datos de informe con esta consulta y lo enlaza con una tabla, puede ver la propiedad VALUE predeterminada para un campo (por ejemplo, `=Fields!Month_of_Year!Value`). Si establece esta expresión como la expresión de ordenación para la tabla, los resultados serán ordenar la tabla alfabéticamente por mes, porque el campo de valor usa un `String` tipo de datos. Para ordenar la tabla de modo que los meses aparezcan en el orden normal de enero a diciembre, use la siguiente expresión:  
+ Si crea un conjunto de datos de informe con esta consulta y lo enlaza con una tabla, puede ver la propiedad VALUE predeterminada para un campo (por ejemplo, `=Fields!Month_of_Year!Value`). Si establece esta expresión como la expresión de ordenación para la tabla, serán los resultados ordenar la tabla alfabéticamente por mes, porque el campo de valor usa un `String` tipo de datos. Para ordenar la tabla de modo que los meses aparezcan en el orden normal de enero a diciembre, use la siguiente expresión:  
   
 ```  
 =Fields!Month_of_Year("MEMBER_VALUE")  
@@ -154,7 +154,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Colecciones integradas en expresiones &#40;el generador de informes SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Colecciones integradas en expresiones &#40;generador de informes y SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

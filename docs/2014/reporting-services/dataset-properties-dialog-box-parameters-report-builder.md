@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Propiedades del conjunto de datos, parámetros (generador de informes) | Documentos de Microsoft
+title: Cuadro de diálogo Propiedades del conjunto de datos, parámetros (generador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0b2d38e3cb08d0fd3370557e3c3ad1aa53e97fb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 50ee6db4cd7e8d16da89f234a67c437390260364
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232465"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Propiedades del conjunto de datos (cuadro de diálogo), Parámetros (Generador de informes)
-  Seleccione **parámetros** en el **propiedades de conjunto de datos** cuadro de diálogo para agregar, cambiar y eliminar parámetros de consulta.  
+  Seleccione **parámetros** en el **las propiedades del conjunto de datos** cuadro de diálogo para agregar, cambiar y eliminar parámetros de consulta.  
   
  Para un conjunto de datos incrustado, las opciones se aplican al conjunto de datos de la definición de informe.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36108522"
   
 ## <a name="see-also"></a>Vea también  
  [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Cuadro de diálogo de propiedades de conjunto de datos, realice una consulta &#40;generador de informes&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
+ [Cuadro de diálogo de propiedades de conjunto de datos, la consulta &#40;generador de informes&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Tutorial: Agregar un parámetro a un informe &#40;Generador de informes&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   

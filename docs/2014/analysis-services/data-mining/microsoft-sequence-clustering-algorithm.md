@@ -1,5 +1,5 @@
 ---
-title: Algoritmo de clústeres de secuencia de Microsoft | Documentos de Microsoft
+title: Algoritmo de clústeres de secuencia de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
 - algorithms [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e8c5a8a0b921ed59f40206a05326f4f4025c2bc6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be5171c376b9f454e0474400e8bab2c55692f3bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306585"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algoritmo de clústeres de secuencia de Microsoft
   El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de clústeres de secuencia es un algoritmo de clústeres de secuencia proporcionado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Puede utilizar este algoritmo para explorar los datos que contiene los eventos que se pueden vincular siguiendo rutas o *secuencias*. El algoritmo encuentra las secuencias más comunes mediante la agrupación, o agrupación en clústeres, de las secuencias que son idénticas. A continuación se incluyen algunos ejemplos de datos que contienen secuencias que se podrían utilizar para la minería de datos, para ofrecer una visión general de problemas comunes o escenarios empresariales:  
@@ -40,7 +40,7 @@ ms.locfileid: "36200443"
  Este algoritmo es similar en muchas maneras al algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Sin embargo, en lugar de encontrar clústeres de casos que contienen atributos similares, el algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] encuentra clústeres de casos que contienen rutas similares en una secuencia.  
   
 ## <a name="example"></a>Ejemplo  
- El [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] sitio Web recopila información acerca de las páginas que visitan los usuarios del sitio y el orden en que se visitan de las páginas. Debido a que la empresa ofrece un sistema de pedidos en línea, los clientes deben registrarse en el sitio. Esto permite que la empresa pueda conseguir información de clics por cada perfil de cliente. Mediante el uso del algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en estos datos, la empresa puede encontrar grupos, o clústeres, de los clientes que tienen patrones o secuencias de clics similares. La empresa puede usar estos clústeres para analizar la forma en que los clientes se mueven por el sitio web, identificar qué páginas se relacionan más estrechamente con la venta de un producto en particular y predecir las páginas que tienen mayores probabilidades de ser visitadas a continuación.  
+ El [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] sitio Web recopila información acerca de las páginas que visitan los usuarios del sitio y el orden en que las páginas se visitan. Debido a que la empresa ofrece un sistema de pedidos en línea, los clientes deben registrarse en el sitio. Esto permite que la empresa pueda conseguir información de clics por cada perfil de cliente. Mediante el uso del algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en estos datos, la empresa puede encontrar grupos, o clústeres, de los clientes que tienen patrones o secuencias de clics similares. La empresa puede usar estos clústeres para analizar la forma en que los clientes se mueven por el sitio web, identificar qué páginas se relacionan más estrechamente con la venta de un producto en particular y predecir las páginas que tienen mayores probabilidades de ser visitadas a continuación.  
   
 ## <a name="how-the-algorithm-works"></a>Cómo funciona el algoritmo  
  El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo híbrido que combina técnicas de agrupación en clústeres con el análisis de cadenas de Markov para identificar los clústeres y sus secuencias. Una de las marcas distintivas del algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es que utiliza los datos de las secuencias. Estos datos suelen representar una serie de eventos o transiciones entre los estados de un conjunto de datos, como una serie de compras de productos o los clics en web para un usuario determinado. El algoritmo examina todas las probabilidades de transición y mide las diferencias, o las distancias, entre todas las posibles secuencias del conjunto de datos con el fin de determinar qué secuencias es mejor utilizar como entradas para la agrupación en clústeres. Después de que el algoritmo ha creado la lista de secuencias candidatas, usa la información de las secuencias como entrada para el método EM de agrupación en clústeres.  
@@ -81,8 +81,8 @@ ms.locfileid: "36200443"
 -   Admite el uso de modelos de minería de datos OLAP y la creación de dimensiones de minería de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Referencia técnica del algoritmo de agrupación en clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Referencia técnica del algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Ejemplos de consultas de modelo de clústeres de secuencia](clustering-model-query-examples.md)   
  [Examinar un modelo usando el Visor de clústeres de secuencia de Microsoft](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Llamar a procedimientos almacenados | Documentos de Microsoft
+title: Llamar a procedimientos almacenados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CALL statement
 ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed6cad7159c7ef8873c7fd1d9d9ba153380e2c33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb799a4e366c0301998b46d7244438aabd2c4411
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299155"
 ---
 # <a name="calling-stored-procedures"></a>Llamar a procedimientos almacenados
   Se puede llamar a los procedimientos almacenados desde el servidor o desde la aplicación cliente. En cualquier caso, los procedimientos almacenados siempre se ejecutan en el servidor, ya sea en el contexto del servidor o de una base de datos. No se requieren permisos específicos para ejecutar un procedimiento almacenado. Cuando un ensamblado agrega un procedimiento almacenado al contexto del servidor o de la base de datos, cualquier usuario puede ejecutarlo, siempre que el rol del usuario permita las acciones que efectúa el procedimiento almacenado.  
@@ -87,7 +87,7 @@ CALL(MyVoidFunction)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Administración de ensamblados de modelos multidimensionales](../multidimensional-models/multidimensional-model-assemblies-management.md)   
+ [Administración de los ensamblados de modelos multidimensionales](../multidimensional-models/multidimensional-model-assemblies-management.md)   
  [Definición de procedimientos almacenados](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

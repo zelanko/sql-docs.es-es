@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b9c9b3cc1259ca1c905cd25e9d8379eb7ecc4f87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7fb341cb36e97fbd06f38363c84d87f975d23eed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204886"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329965"
 ---
 # <a name="transaction-isolation-levels"></a>Niveles de aislamiento de transacción
   Los niveles de aislamiento siguientes se admiten en las transacciones que tienen acceso a las tablas optimizadas para memoria.  
@@ -34,9 +34,9 @@ ms.locfileid: "36204886"
   
  El nivel de aislamiento de transacción se puede especificar como parte del bloque ATOMIC de un procedimiento almacenado compilado de forma nativa. Para obtener más información, vea [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql). Cuando se tiene acceso a tablas optimizadas para memoria desde [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado, el nivel de aislamiento se puede especificar mediante sugerencias de nivel de tabla.  
   
- Debe especificar el nivel de aislamiento de transacción cuando defina un procedimiento almacenado compilado de forma nativa. Debe especificar el nivel de aislamiento en las sugerencias de tabla cuando tenga acceso a las tablas optimizadas para memoria desde las transacciones de usuario en [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado. Para obtener más información, consulte [directrices para los niveles de aislamiento de transacciones con tablas con optimización para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Debe especificar el nivel de aislamiento de transacción cuando defina un procedimiento almacenado compilado de forma nativa. Debe especificar el nivel de aislamiento en las sugerencias de tabla cuando tenga acceso a las tablas optimizadas para memoria desde las transacciones de usuario en [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado. Para obtener más información, consulte [directrices para los niveles de aislamiento de transacciones con tablas optimizadas para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
- El nivel de aislamiento READ COMMITTED se admite para las tablas optimizadas para memoria con transacciones de confirmación automática. READ COMMITTED no es válido en transacciones de usuario o en un bloque atómico. READ COMMITTED no se admite con las transacciones de usuario explícitas o implícitas. El nivel de aislamiento READ_COMMITTED_SNAPSHOT se admite para las tablas optimizadas para memoria que tienen confirmación automática de la transacción y solo si la consulta no tiene acceso a ninguna tabla basada en disco. Además, las transacciones que se inician con [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado con aislamiento SNAPSHOT no pueden tener acceso a las tablas optimizadas para memoria. Las transacciones que usan [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado con el aislamiento REPEATABLE READ o SERIALIZABLE deben tener acceso a las tablas optimizadas para memoria que utilicen el aislamiento SNAPSHOT. Para obtener más información acerca de este escenario, vea [transacciones entre contenedores](cross-container-transactions.md).  
+ El nivel de aislamiento READ COMMITTED se admite para las tablas optimizadas para memoria con transacciones de confirmación automática. READ COMMITTED no es válido en transacciones de usuario o en un bloque atómico. READ COMMITTED no se admite con las transacciones de usuario explícitas o implícitas. El nivel de aislamiento READ_COMMITTED_SNAPSHOT se admite para las tablas optimizadas para memoria que tienen confirmación automática de la transacción y solo si la consulta no tiene acceso a ninguna tabla basada en disco. Además, las transacciones que se inician con [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado con aislamiento SNAPSHOT no pueden tener acceso a las tablas optimizadas para memoria. Las transacciones que usan [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado con el aislamiento REPEATABLE READ o SERIALIZABLE deben tener acceso a las tablas optimizadas para memoria que utilicen el aislamiento SNAPSHOT. Para obtener más información acerca de este escenario, consulte [transacciones entre contenedores](cross-container-transactions.md).  
   
  READ COMMITTED es el nivel de aislamiento predeterminado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Cuando el nivel de aislamiento de la sesión sea READ COMMITTED (o inferior), puede hacer lo siguiente:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36204886"
  SNAPSHOT  
  Este nivel de aislamiento especifica que los datos leídos por cualquier instrucción de una transacción serán la versión coherente, desde el punto de vista transaccional, de los datos existentes al comienzo de la transacción. La transacción únicamente puede reconocer las modificaciones de datos confirmadas antes del comienzo de la misma. Las instrucciones que se ejecuten en la transacción actual no verán las modificaciones de datos efectuadas por otras transacciones después del inicio de la transacción actual. Las instrucciones de una transacción obtienen una instantánea de los datos confirmados tal como se encontraban al comienzo de la transacción.  
   
- Las operaciones de escritura (actualizaciones, inserciones y eliminaciones) siempre se aíslan completamente de otras transacciones. Por tanto, las operaciones de escritura en una transacción SNAPSHOT pueden entrar en conflicto con las operaciones de escritura realizadas por otras transacciones. Cuando la transacción actual intenta actualizar o eliminar una fila que ha sido actualizada o eliminada por otra transacción que se confirmó tras iniciarse la transacción actual, finaliza la transacción con el siguiente mensaje de error.  
+ Las operaciones de escritura (actualizaciones, inserciones y eliminaciones) siempre se aíslan completamente de otras transacciones. Por tanto, las operaciones de escritura en una transacción SNAPSHOT pueden entrar en conflicto con las operaciones de escritura realizadas por otras transacciones. Cuando la transacción actual intenta actualizar o eliminar una fila que ha sido actualizada o eliminada por otra transacción que se confirmó tras iniciarse la transacción actual, la transacción finaliza con el siguiente mensaje de error.  
   
  Error 41302. La transacción actual intentó actualizar un registro en la tabla X que se ha actualizado desde que esta transacción se inició. Se anuló la transacción.  
   
@@ -77,15 +77,15 @@ ms.locfileid: "36204886"
  SERIALIZABLE  
  Este nivel de aislamiento incluye las garantías que proporciona REPEATABLE READ. No han aparecido filas fantasma entre la instantánea y el final de la transacción. Las filas fantasma cumplen la condición de filtro de una selección, una actualización o una eliminación.  
   
- Se ejecuta la transacción como si no hubiera transacciones simultáneas. Todas las acciones prácticamente se producen en un solo punto de serialización (tiempo de confirmación).  
+ Se ejecuta la transacción como si no hubiera transacciones simultáneas. Todas las acciones que prácticamente se producen en un solo punto de serialización (tiempo de confirmación).  
   
  Si se infringe alguna de estas garantías, la transacción no puede confirmarse y genera el mensaje de error siguiente:  
   
  Error 41325. La transacción actual no pudo confirmarse debido a un error serializable de validación.  
   
 ## <a name="see-also"></a>Vea también  
- [Descripción de las transacciones en tablas optimizadas en memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Directrices para los niveles de aislamiento de transacciones con tablas optimizadas en memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [Directrices para la lógica de reintento para las transacciones en tablas optimizadas en memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
+ [Descripción de las transacciones en tablas optimizadas para memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Directrices para los niveles de aislamiento de transacciones con tablas optimizadas para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [Instrucciones para la lógica de reintento de transacciones en tablas optimizadas para memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

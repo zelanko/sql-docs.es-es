@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], upgrading
 - published reports [Reporting Services], upgrades
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - .rdl files
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 caps.latest.revision: 65
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d3c6611c05fc90afcdbeae689f650bf476b2019b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1ba06e961245cf1fe9ae5802abc26b575fe7683c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244515"
 ---
 # <a name="upgrade-reports"></a>Upgrade Reports
   Los archivos de definición de informe (.rdl) se actualizan automáticamente de las maneras siguientes:  
   
--   Al abrir un informe en el Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la definición de informe se actualiza al esquema RDL admitido actualmente. Cuando se especifica un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] servidor de informes en las propiedades del proyecto, la definición de informe se guarda en un esquema que es compatible con el servidor de destino.  
+-   Al abrir un informe en el Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la definición de informe se actualiza al esquema RDL admitido actualmente. Cuando se especifica un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] el servidor de informes en las propiedades del proyecto, la definición de informe se guarda en un esquema que es compatible con el servidor de destino.  
   
 -   Al actualizar una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a una instalación de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , los informes e instantáneas existentes que se han publicado en un servidor de informes se compilan y actualizan automáticamente al nuevo esquema la primera vez que se procesan. Si no se puede actualizar automáticamente un informe, se procesa utilizando el modo de compatibilidad con versiones anteriores. La definición de informe se conserva en el esquema original.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36202247"
   
  Cuando un informe se actualiza localmente o en el servidor de informes, puede observar errores, advertencias y mensajes adicionales. Este es el resultado de los cambios en el modelo de objetos de informe interno y en los componentes de procesamiento, que hacen que estos mensajes se muestren cuando se detectan problemas subyacentes en el informe. Para obtener más información, vea [Compatibilidad con versiones anteriores de Reporting Services](../reporting-services-backward-compatibility.md).  
   
- Para obtener más información sobre las nuevas características para [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], consulte [What's New &#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
+ Para obtener más información sobre las nuevas características para [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], consulte [What ' s New &#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
   
  En este tema:  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36202247"
   
 -   El informe principal y todos los subinformes pueden actualizarse correctamente. El procesador de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] los procesa.  
   
--   No se pueden actualizar el informe principal ni ninguno de los subinformes. Procesa la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] procesador de informes.  
+-   No se pueden actualizar el informe principal ni ninguno de los subinformes. Se procesó el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] procesador de informes.  
   
 -   Se puede actualizar el informe principal, pero no se pueden actualizar uno o varios subinformes. El procesador de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] procesa el informe principal, pero el informe representado muestra un mensaje similar a "Error: no se pudo procesar el subinforme" en la ubicación donde aparecería el subinforme que no se pudo actualizar.  
   
@@ -114,9 +114,9 @@ ms.locfileid: "36202247"
 ##  <a name="bkmk_CRIs"></a> Actualizar un informe con elementos de informe personalizados  
  Los informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podrían contener elementos de informe personalizados (CRI) proporcionados por proveedores de software de otros fabricantes que el administrador del sistema podría instalar en el equipo de creación de informes y en el servidor de informes. Los informes que contienen CRI se pueden actualizar de las maneras siguientes:  
   
--   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de informes se actualiza a una [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] servidor de informes. Los informes publicados en el servidor de informes se actualizan automáticamente al usarse por primera vez.  
+-   Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de informes se actualiza a un [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] servidor de informes. Los informes publicados en el servidor de informes se actualizan automáticamente al usarse por primera vez.  
   
--   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] informe se carga en un [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] servidor de informes. El informe se actualiza automáticamente al usarse por primera vez.  
+-   Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] informe se carga en un [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] servidor de informes. El informe se actualiza automáticamente al usarse por primera vez.  
   
 -   Un informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se abre en el Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Se crea una copia de seguridad del informe original. Se da uno de los dos casos siguientes:  
   
@@ -137,12 +137,12 @@ ms.locfileid: "36202247"
 |--------------|----------------------------------|  
 |CRI de otros proveedores|La actualización no se realiza.<br /><br /> Los procesa el procesador de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |CRI de gráficos de Dundas 2005 con características admitidas|Se actualizan al esquema RDL más reciente. Todos los CRI de gráficos de Dundas 2005 se convierten en regiones de datos de gráfico compatibles con [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].<br /><br /> Los procesa el procesador de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
-|CRI de Dundas 2005 Gauge con características admitidas|Se actualizan al esquema RDL más reciente. Todos los CRI de Dundas 2005 gauge se convierten para medir las regiones de datos que son compatibles con [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]<br /><br /> Los procesa el procesador de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|CRI de Dundas 2005 Gauge con características admitidas|Se actualizan al esquema RDL más reciente. Todos los Dundas 2005 gauge se convierten para medir las regiones de datos que son compatibles con [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]<br /><br /> Los procesa el procesador de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
 |CRI de Dundas 2005 Chart con características no admitidas|La actualización no se realiza.<br /><br /> Los procesa el procesador de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |CRI de Dundas 2005 Gauge con características no admitidas|La actualización no se realiza.<br /><br /> Los procesa el procesador de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
 ###  <a name="OpeningaReport"></a> Abrir un informe con CRI en el Diseñador de informes  
- Cuando se abre un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] informe con CRI en el Diseñador de informes en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el informe se actualizará al nuevo esquema de definición de informe. Según los CRI que contenga el informe, tendrá lugar alguna de las acciones siguientes:  
+ Al abrir un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] informe con CRI en el Diseñador de informes en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el informe se actualizará al nuevo esquema de definición de informe. Según los CRI que contenga el informe, tendrá lugar alguna de las acciones siguientes:  
   
 -   Se detectan CRI de otros proveedores. Si la versión del CRI que está instalada en el equipo de creación de informes no es compatible con el nuevo esquema de RDL, la superficie de diseño muestra un cuadro de texto con una X roja. Debe ponerse en contacto con el administrador del sistema para instalar las versiones nuevas del CRI de los otros proveedores que sean compatibles con el nuevo esquema de RDL.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "36202247"
   
  Algunos CRI se pueden convertir en elementos de informe en el nuevo formato de definición de informe. Para obtener la lista de CRI que se pueden convertir, vea [actualizar informes](upgrade-reports.md). Use la lista siguiente para decidir si se deben convertir los CRI de este informe:  
   
--   **Sí** : elija **Sí** para convertir todos los CRI del informe, siempre que sea posible. Las características no admitidas de los CRI no se pueden actualizar y se quitan del archivo de definición de informe. Para obtener la lista de características no admitidas, vea [actualizar informes](upgrade-reports.md). Al ver el informe, es posible que observe diferencias en la manera en que se muestran los CRI en el informe.  
+-   **Sí** : elija **Sí** para convertir todos los CRI del informe, siempre que sea posible. Las características no admitidas de los CRI no se pueden actualizar y se quitan del archivo de definición de informe. Para obtener la lista de características no admitidas, consulte [actualizar informes](upgrade-reports.md). Al ver el informe, es posible que observe diferencias en la manera en que se muestran los CRI en el informe.  
   
 -   **No** : elija **No** si no desea convertir los CRI del informe. El procesador de informes no puede mostrar la versión actual de estos CRI. Si el administrador del sistema tiene pensado instalar una nueva versión de los CRI de otros fabricantes de software que es compatible con el nuevo formato de definición de informe, debería elegir **No**. Hasta que estén disponibles las nuevas versiones, los CRI se muestran en el informe como un cuadro de texto vacío con una X roja.  
   

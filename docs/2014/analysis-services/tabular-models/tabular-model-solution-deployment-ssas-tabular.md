@@ -1,5 +1,5 @@
 ---
-title: Implementación de soluciones de modelo tabular (SSAS Tabular) | Documentos de Microsoft
+title: Implementación de soluciones de modelos tabulares (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 89e240e5c3a877761f8b26e9a581f462af49f395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b9e1594c4d4fbe07a6085544021b94820db640
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220045"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Implementación de soluciones de modelos tabulares (SSAS tabular)
   Después de crear un proyecto de modelo tabular, deberá implementarlo para que los usuarios examinen el modelo usando una aplicación cliente de informes. Este tema describe las diferentes propiedades y métodos que puede utilizar al implementar soluciones de modelo tabular en el entorno.  
@@ -65,7 +65,7 @@ ms.locfileid: "36108184"
 |--------------|---------------------|-----------------|  
 |**Servidor**<br /><br /> Establézcalo cuando se cree el proyecto.|**localhost**|Esta propiedad, establecida cuando se crea el proyecto, especifica el nombre de la instancia de Analysis Services en la que se implementará el modelo. De forma predeterminada, el modelo se implementará en la instancia predeterminada de Analysis Services del equipo local. Sin embargo, puede cambiar este valor para especificar una instancia con nombre en el equipo local o cualquier instancia en cualquier equipo remoto en el que tenga permiso para crear objetos de Analysis Services.|  
 |**Edición**|La misma edición que la instancia en la que se encuentra el servidor del área de trabajo.|Esta propiedad especifica la edición del servidor de Analysis Services en la que se implementará el modelo. La edición del servidor define varias características que se pueden incorporar al proyecto. De forma predeterminada, la edición será la del servidor de Analysis Services local. Si especifica otro servidor de Analysis Services, por ejemplo, uno de producción, asegúrese de especificar la edición de ese servidor de Analysis Services.|  
-|**Base de datos**|**\<NombreDeProyecto >**|Esta propiedad especifica el nombre de la base de datos de Analysis Services en la que se crearán instancias de los objetos de modelo durante la implementación. Este nombre también se especificará en una conexión de datos del cliente de informes o en un archivo de conexión de datos .bism.<br /><br /> Puede cambiar este nombre en cualquier momento durante la creación del modelo. Si cambia el nombre después de haber implementado el modelo, los cambios realizados no afectarán al modelo implementado previamente. Por ejemplo, si abre una solución denominada `TestDB` implementa la solución con el nombre de base de datos de modelo predeterminado modelo y, a continuación, modifica la solución y cambiar el nombre de la base de datos de modelo `Sales`, la instancia de Analysis Services se implementaron las soluciones para le mostrar separar las bases de datos, una denominada modelo y otro denominado Sales.|  
+|**Base de datos**|**\<ProjectName >**|Esta propiedad especifica el nombre de la base de datos de Analysis Services en la que se crearán instancias de los objetos de modelo durante la implementación. Este nombre también se especificará en una conexión de datos del cliente de informes o en un archivo de conexión de datos .bism.<br /><br /> Puede cambiar este nombre en cualquier momento durante la creación del modelo. Si cambia el nombre después de haber implementado el modelo, los cambios realizados no afectarán al modelo implementado previamente. Por ejemplo, si abre una solución denominada `TestDB` e implementar su solución con el nombre de base de datos de modelo predeterminado modelo y, a continuación, modifica la solución y cambia el nombre de la base de datos de modelo `Sales`, la instancia de Analysis Services se implementaron las soluciones a le mostrar separar las bases de datos, una denominada modelo y otra denominada Sales.|  
 |**Nombre del cubo**|**Modelo**|Esta propiedad especifica el nombre del cubo como se muestra en las herramientas cliente (por ejemplo, Excel) y en AMO (Objetos de administración de análisis).|  
   
 ### <a name="directquery-options-properties"></a>Propiedades de las opciones de DirectQuery  
@@ -80,7 +80,7 @@ ms.locfileid: "36108184"
   
 |Método|Descripción|Vínculo|  
 |------------|-----------------|----------|  
-|**Implementar el comando en Herramientas de datos de SQL Server**|El comando Implementar proporciona un método sencillo e intuitivo para implementar un proyecto de modelos tabulares del entorno de creación de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] .<br /><br /> **\*\* Precaución \*\*** Este método no se debe usar para implementar servidores de producción. Con este método, puede sobrescribir ciertas propiedades de un modelo existente.|[Implementar con SQL Server Data Tools &#40;SSAS Tabular&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|  
+|**Implementar el comando en Herramientas de datos de SQL Server**|El comando Implementar proporciona un método sencillo e intuitivo para implementar un proyecto de modelos tabulares del entorno de creación de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] .<br /><br /> **\*\* Precaución \*\*** Este método no se debe usar para implementar servidores de producción. Con este método, puede sobrescribir ciertas propiedades de un modelo existente.|[Implementar desde SQL Server Data Tools &#40;Tabular de SSAS&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|  
 |**Automatización AMO (Objetos de administración de análisis)**|AMO ofrece una interfaz programática para el conjunto de comandos completo establecido para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluidos los comandos que se pueden usar para la implementación de soluciones. Como método para la implementación de soluciones, la automatización AMO es el más flexible, pero también requiere un esfuerzo de programación.  Una ventaja clave de AMO es que puede usar el Agente SQL Server con la aplicación AMO para ejecutar la implementación siguiendo una programación preestablecida.|[Desarrollar con objetos de administración de análisis &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |**XMLA**|Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para generar un script XMLA de los metadatos de una base de datos existente de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y, a continuación, ejecute el script en otro servidor para volver a crear la base de datos inicial. Los scripts XMLA se forman fácilmente en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] definiendo el proceso de implementación, codificándolo y guardándolo en un script XMLA. Una vez que se tiene un script XMLA en un archivo guardado, se puede ejecutar fácilmente de acuerdo con una programación, o bien se puede incrustar en una aplicación que se conecta directamente con una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> También se pueden ejecutar Scripts XMLA de forma preestablecida con el Agente SQL Server, pero este método no presenta la misma flexibilidad que AMO. AMO ofrece una mayor funcionalidad, al hospedar todo el espectro de comandos administrativos.|[Implementar soluciones de modelo mediante XMLA](../multidimensional-models/deploy-model-solutions-using-xmla.md)|  
 |**Asistente para la implementación**|Use el Asistente para la implementación cuando desee usar los archivos de salida XMLA generados por un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para implementar los metadatos del proyecto en un servidor de destino. Con el Asistente para la implementación, puede implementar directamente desde el archivo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , tal como lo creó el directorio de salida en la compilación del proyecto.<br /><br /> La principal ventaja de usar el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es la comodidad. Al igual que se puede guardar un script XMLA para su uso posterior en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se pueden guardar los scripts del Asistente para la implementación. El Asistente para la implementación se puede ejecutar interactivamente y desde el símbolo del sistema mediante la utilidad de implementación.|[Implementar soluciones con el Asistente para la implementación](../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  
@@ -97,7 +97,7 @@ ms.locfileid: "36108184"
   
 |Tarea|Descripción|  
 |----------|-----------------|  
-|[Implementar con SQL Server Data Tools &#40;SSAS Tabular&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|Describe cómo configurar las propiedades de implementación e implementar un proyecto de modelo tabular mediante el comando Implementar en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].|  
+|[Implementar desde SQL Server Data Tools &#40;Tabular de SSAS&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|Describe cómo configurar las propiedades de implementación e implementar un proyecto de modelo tabular mediante el comando Implementar en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].|  
 |[Implementar soluciones con el Asistente para la implementación](../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|En los temas de esta sección se describe cómo usar el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para implementar soluciones de modelo tabular y multidimensional.|  
 |[Implementar soluciones de modelos con la utilidad de implementación](../multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|Describe cómo usar la utilidad de implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para implementar soluciones de modelo tabular y multidimensional.|  
 |[Implementar soluciones de modelo mediante XMLA](../multidimensional-models/deploy-model-solutions-using-xmla.md)|Describe cómo usar XMLA para implementar las soluciones tabulares y multidimensionales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  

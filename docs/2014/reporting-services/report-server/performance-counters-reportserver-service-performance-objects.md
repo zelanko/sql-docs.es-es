@@ -1,5 +1,5 @@
 ---
-title: 'Contadores de rendimiento de los objetos de rendimiento de ReportServer: Service y reportserversharepoint: Service | Documentos de Microsoft'
+title: 'Contadores de rendimiento para los objetos de rendimiento de ReportServer: Service y reportserversharepoint: Service | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 43e051ae17b406021092af68767ff3b196c2f250
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0573346427258d9b79188852c8d6e13af1cb8d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238395"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service
   En este tema se describen los contadores de rendimiento para los siguientes objetos de rendimiento [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]:  
@@ -43,10 +43,10 @@ ms.locfileid: "36107121"
   
 -   [Usar cmdlets de PowerShell para devolver listas](#bkmk_powershell)  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo de SharePoint | Modo nativo.  
+ [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] El modo de SharePoint | Modo nativo.  
   
 ##  <a name="bkmk_ReportServer"></a> Contadores de rendimiento de ReportServer:Service (servidor de informes de modo nativo)  
- El objeto de rendimiento `ReportServer:Service` incluye una colección de contadores para realizar el seguimiento de eventos relacionados con HTTP y eventos relacionados con memoria para una instancia del servidor de informes. Este objeto de rendimiento aparece una vez por cada [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] instancia en el equipo y puede agregar o quitar contadores del objeto de rendimiento para cada instancia. Los contadores de la instancia predeterminada aparecen con el formato `ReportServer:Service`. Contadores para las instancias con nombre aparecen con el formato `ReportServer$<` *instance_name*`>:Service`.  
+ El objeto de rendimiento `ReportServer:Service` incluye una colección de contadores para realizar el seguimiento de eventos relacionados con HTTP y eventos relacionados con memoria para una instancia del servidor de informes. Este objeto de rendimiento aparece una vez por cada [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] instancia en el equipo, por lo que puede agregar o quitar contadores del objeto de rendimiento para cada instancia. Los contadores de la instancia predeterminada aparecen con el formato `ReportServer:Service`. Los contadores de las instancias con nombre aparecen con el formato `ReportServer$<` *instance_name*`>:Service`.  
   
  El `ReportServer:Service` era nuevo en el objeto de rendimiento [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], y proporciona un subconjunto de contadores que se incluyeron con Internet Information Services (IIS) y [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] en versiones anteriores de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Estos nuevos contadores son específicos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y realizan el seguimiento de los eventos relacionados con HTTP para el servidor de informes, como solicitudes, conexiones e intentos de inicio de sesión. Además, este objeto de rendimiento incluye los contadores para realizar el seguimiento de los eventos de administración de memoria.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36107121"
 |`Tasks Queued`|El número de tareas que están esperando para que un subproceso esté disponible para su proceso. Cada solicitud realizada al servidor de informes corresponde a una o más tareas. Este contador representa únicamente el número de tareas listas para su procesamiento; no incluye el número de tareas que se está ejecutando actualmente.|  
   
 ##  <a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (servidor de informes en modo de SharePoint)  
- El `ReportServerSharePoint:Service` objeto de rendimiento se agregó en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+ El `ReportServerSharePoint:Service` se agregó el objeto de rendimiento en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  ![Contenido relacionado con PowerShell](../media/rs-powershellicon.jpg "Contenido relacionado con PowerShell") El siguiente script de Windows PowerShell devolverá la lista de contadores de rendimiento de CounterSetName  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36107121"
   
 ## <a name="see-also"></a>Vea también  
  [Supervisar el rendimiento del servidor de informes](monitoring-report-server-performance.md)   
- [Contadores de rendimiento para el servicio Web de MSRS 2014 y objetos de rendimiento de servicio de Windows de MSRS 2014 &#40;modo nativo&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
- [Los contadores de rendimiento para el modo de SharePoint de MSRS 2014 Web Service y objetos de rendimiento del modo de SharePoint de MSRS 2014 Windows Service &#40;el modo de SharePoint&#41;]... / performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [Contadores de rendimiento para el servicio Web de MSRS 2014 y objetos de rendimiento de MSRS 2014 Windows Service &#40;modo nativo&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Los contadores de rendimiento para el modo de SharePoint de MSRS 2014 Web Service y los objetos de rendimiento del modo de SharePoint de MSRS 2014 Windows Service &#40;el modo de SharePoint&#41;]... / performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento Hierarchies (ASSL) | Documentos de Microsoft
+title: Elemento Hierarchies (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Hierarchies element
 ms.assetid: dc844eea-869c-4217-b9be-e543a76f5e92
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a53cc41d7373bcd60268bd64247eea6caf56753a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe89bade8e70b6812dddca1a6e20d274acea3526
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308465"
 ---
 # <a name="hierarchies-element-assl"></a>Elemento Hierarchies (ASSL)
   Contiene la colección de [jerarquía](../objects/hierarchy-element-assl.md) elementos asociados con el elemento primario.  
@@ -68,9 +68,9 @@ ms.locfileid: "36202180"
   
 |Antecesor o elemento primario|Elemento secundario|  
 |------------------------|-------------------|  
-|[CubeDimension](../data-type/dimension-data-type-assl.md)|[Jerarquía](../objects/hierarchy-element-assl.md) de tipo [CubeHierarchy](../data-type/hierarchy-data-type-assl.md)|  
+|[CubeDimension](../data-type/dimension-data-type-assl.md)|[Jerarquía](../objects/hierarchy-element-assl.md) typu [CubeHierarchy](../data-type/hierarchy-data-type-assl.md)|  
 |[Dimension](../objects/dimension-element-assl.md)|[Hierarchy](../objects/hierarchy-element-assl.md)|  
-|[PerspectiveDimension](../data-type/perspectivedimension-data-type-assl.md)|[Jerarquía](../objects/hierarchy-element-assl.md) de tipo [PerspectiveHierarchy](../data-type/perspectivehierarchy-data-type-assl.md)|  
+|[PerspectiveDimension](../data-type/perspectivedimension-data-type-assl.md)|[Jerarquía](../objects/hierarchy-element-assl.md) typu [PerspectiveHierarchy](../data-type/perspectivehierarchy-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
  Los elementos correspondientes en el modelo de objetos Objetos de administración de análisis (AMO) son <xref:Microsoft.AnalysisServices.HierarchyCollection>, <xref:Microsoft.AnalysisServices.CubeHierarchyCollection> y <xref:Microsoft.AnalysisServices.PerspectiveHierarchyCollection>.  

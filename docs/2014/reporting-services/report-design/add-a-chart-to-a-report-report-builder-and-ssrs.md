@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e2a663799a6f4559d3720638b1383b648562cdec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: db831f0a92962eaa12d220d31d762d2c591e0d45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309385"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Agregar un gráfico a un informe (Generador de informes y SSRS)
   Si desea resumir datos y presentarlos con un formato visual, use una región de datos Gráfico. Es importante elegir el tipo de gráfico adecuado para el tipo de datos que se va a presentar. Esto determinará en qué medida se podrán interpretar correctamente los datos cuando se trasladen al gráfico. Para más información, vea [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "36200851"
   
 ### <a name="to-add-a-chart-to-a-report"></a>Para agregar un gráfico a un informe  
   
-1.  Cree un informe y defina un conjunto de datos. Para obtener más información, consulte [agregar datos a un informe &#40;el generador de informes y SSRS&#41;](../report-data/report-datasets-ssrs.md).  
+1.  Cree un informe y defina un conjunto de datos. Para obtener más información, consulte [agregar datos a un informe &#40;generador de informes y SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
 2.  En la pestaña **Insertar** , haga clic en **Gráfico**y, a continuación, haga clic en **Insertar gráfico**.  
   

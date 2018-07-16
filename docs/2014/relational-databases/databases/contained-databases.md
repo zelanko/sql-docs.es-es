@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database
 - database_uncontained_usage event
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 622a67f232bb24af9efe9c621e86f1415866dc6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8c584cbb736a494ab071dbc570cfcc67bd2e5e32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223675"
 ---
 # <a name="contained-databases"></a>Bases de datos independientes
   Una*base de datos independiente* es una base de datos que está aislada de otras bases de datos y de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ayuda al usuario a aislar su base de datos de la instancia de 4 maneras.  
@@ -37,7 +37,7 @@ ms.locfileid: "36108366"
   
 -   El entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DMV, XEvents, etc.) informa y puede actuar en la información de contención.  
   
- Algunas características de las bases de datos parcialmente independientes, como el almacenamiento de la base de datos, se aplican a todas las bases de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Algunas ventajas de las bases de datos parcialmente independientes, como la autenticación en el nivel de base de datos y la intercalación de catálogo, se deben habilitar para que estén disponibles. Estado de contención parcial se habilita mediante la `CREATE DATABASE` y `ALTER DATABASE` instrucciones o mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información acerca de cómo habilitar la contención parcial de bases de datos, vea [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md).  
+ Algunas características de las bases de datos parcialmente independientes, como el almacenamiento de la base de datos, se aplican a todas las bases de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Algunas ventajas de las bases de datos parcialmente independientes, como la autenticación en el nivel de base de datos y la intercalación de catálogo, se deben habilitar para que estén disponibles. Contención parcial se habilita mediante la `CREATE DATABASE` y `ALTER DATABASE` instrucciones o mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información acerca de cómo habilitar la contención parcial de bases de datos, vea [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md).  
   
  Este tema contiene las siguientes secciones.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36108366"
 ### <a name="benefit-of-contained-database-users-with-alwayson"></a>Ventajas de usuarios de bases de datos independientes con AlwaysOn  
  Mediante la reducción de los vínculos a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las bases de datos parcialmente independientes pueden ser útiles durante la conmutación por error cuando se use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
- La creación de usuarios contenidos permite al usuario conectarse directamente a la base de datos independiente. Esta es una característica muy importante en escenarios de alta disponibilidad y recuperación ante desastres, como en una solución de AlwaysOn. Cuando los usuarios son usuarios contenidos, si que se produce una conmutación por error, podrán conectarse al servidor secundario sin crear inicios de sesión en la instancia que hospeda a este servidor. Esto proporciona una ventaja inmediata. Para obtener más información, consulte [información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) y [requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;] ((.. /.. / database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+ La creación de usuarios contenidos permite al usuario conectarse directamente a la base de datos independiente. Esta es una característica muy importante en escenarios de alta disponibilidad y recuperación ante desastres, como en una solución de AlwaysOn. Cuando los usuarios son usuarios contenidos, si que se produce una conmutación por error, podrán conectarse al servidor secundario sin crear inicios de sesión en la instancia que hospeda a este servidor. Esto proporciona una ventaja inmediata. Para obtener más información, consulte [información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) y [requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;] ((.. /.. / database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="initial-database-development"></a>Desarrollo inicial de la base de datos  
  Dado que un desarrollador puede no saber dónde se implementará una nueva base de datos, la limitación de los impactos del entorno implementados en la base de datos disminuye el trabajo y la carga del desarrollador. En el modelo dependiente, el desarrollador debe tener en cuenta los posibles impactos del entorno en la nueva base de datos y programar en consecuencia. Sin embargo, las bases de datos parcialmente independientes permiten a los desarrolladores detectar los efectos de nivel de instancia en la base de datos y aspectos en el nivel de instancia que les preocupan.  
@@ -163,7 +163,7 @@ ms.locfileid: "36108366"
  Este XEvent tiene lugar siempre que una entidad dependiente se identifica en tiempo de ejecución. Esto incluye las entidades originadas en el código de cliente. Este Xevent solo tendrá lugar para las entidades dependientes reales. Sin embargo, el evento solo se produce en tiempo de ejecución. Por consiguiente, este XEvent no identificará las entidades de usuario dependientes que no se hayan ejecutado.  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Modificar características &#40;base de datos independiente&#41;](modified-features-contained-database.md)  
+ [Características modificadas &#40;base de datos independiente&#41;](modified-features-contained-database.md)  
   
  [Intercalaciones de bases de datos independientes](contained-database-collations.md)  
   

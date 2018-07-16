@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_DB_CONNECTIONS | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_DB_CONNECTIONS | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DISCOVER_DB_CONNECTIONS rowset
 ms.assetid: 12a51a4e-5f3d-4449-9d94-7836fea1bc8b
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76b078c5b61c685634636f8891f65da722be911e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f22c330fcc1deef1e86f4442ed8524235a3ba5c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295555"
 ---
 # <a name="discoverdbconnections-rowset"></a>DISCOVER_DB_CONNECTIONS, conjunto de filas
   Proporciona información sobre el uso de los recursos y la actividad en las conexiones abiertas actualmente desde el servidor a una base de datos.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_DB_CONNECTIONS` filas contiene las columnas siguientes.  
+ El `DISCOVER_DB_CONNECTIONS` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "36203509"
 >  El conjunto de filas `DISCOVER_DB_CONNECTIONS` solamente mostrará información cuando el servicio se conecte a los orígenes de datos relacionales.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DISCOVER_DB_CONNECTIONS` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DISCOVER_DB_CONNECTIONS` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

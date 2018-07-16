@@ -1,5 +1,5 @@
 ---
-title: Traducciones (Analysis Services) | Documentos de Microsoft
+title: Traducciones (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, translations [Analysis Services]
 - translations [Analysis Services], about translations
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - translations [Analysis Services]
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 196e55fb22a5e14344f1c379bb8eb77bdd8bf387
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fce0d8195895fafdfe519ddc1609f0d22a0be0cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293295"
 ---
 # <a name="translations-analysis-services"></a>Traducciones (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  solo a modelos multidimensionales  
   
  En un modelo de datos multidimensional de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puede incrustar varias traducciones de un título para proporcionar cadenas específicas de la configuración regional que coincidan con cada LCID. Se pueden agregar traducciones para el nombre de la base de datos, objetos de cubo y objetos de la dimensión de base de datos.  
   
- Al definir una traducción, se crean los metadatos y el título traducido dentro del modelo, pero para que se representen cadenas localizadas en una aplicación cliente, deberá configurar la propiedad `Language` en el objeto o pasar un parámetro de `Locale Identifier` en la cadena de conexión (por ejemplo, estableciendo `LocaleIdentifier=1036` para devolver cadenas en francés). Utilice `Locale Identifier` si quiere admitir varias traducciones simultáneas del mismo objeto en diferentes idiomas. Establecer el `Language` propiedad funciona, pero esto afectará también al procesamiento y consultas, lo cual pudieron tener consecuencias no deseadas. Establecer `Locale Identifier` es la mejor opción porque solo se usa para devolver las cadenas traducidas.  
+ Al definir una traducción, se crean los metadatos y el título traducido dentro del modelo, pero para que se representen cadenas localizadas en una aplicación cliente, deberá configurar la propiedad `Language` en el objeto o pasar un parámetro de `Locale Identifier` en la cadena de conexión (por ejemplo, estableciendo `LocaleIdentifier=1036` para devolver cadenas en francés). Utilice `Locale Identifier` si quiere admitir varias traducciones simultáneas del mismo objeto en diferentes idiomas. Establecer el `Language` propiedad funciona, pero esto afectará también al procesamiento y consultas, lo que podrían tener consecuencias no deseadas. Establecer `Locale Identifier` es la mejor opción porque solo se usa para devolver las cadenas traducidas.  
   
  Una traducción consta de un identificador de configuración regional (LCID), de un título traducido para el objeto (por ejemplo, la dimensión o un nombre de atributo) y, opcionalmente, de un enlace a una columna que proporciona los valores de datos en el idioma de destino. Puede tener varias traducciones, pero solo puede utilizar una para cada una de las conexiones. No hay ningún límite teórico en la cantidad de traducciones que puede incrustar en el modelo, pero cada traducción agrega complejidad a las pruebas y todas las traducciones deben compartir la misma intercalación. Por lo tanto, al diseñar la solución, tenga en cuenta estas restricciones naturales.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36106626"
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>Agregar traducciones a una dimensión y atributos  
  Puede agregar traducciones a dimensiones de una base de datos, atributos, jerarquías y niveles de una jerarquía.  
   
- Los títulos traducidos se agregan al modelo manualmente con el teclado o con copiar y pegar, pero en el caso de los miembros de atributos de dimensión, puede obtener valores traducidos de una base de datos externa. En concreto, la `CaptionColumn` propiedad de un atributo se puede enlazar a una columna de una vista del origen de datos.  
+ Los títulos traducidos se agregan al modelo manualmente con el teclado o con copiar y pegar, pero en el caso de los miembros de atributos de dimensión, puede obtener valores traducidos de una base de datos externa. En concreto, el `CaptionColumn` se puede enlazar la propiedad de un atributo a una columna en una vista del origen de datos.  
   
  En el nivel del atributo, puede invalidar la configuración de intercalación: por ejemplo, puede ajustar la distinción de ancho o usar una ordenación binaria para un atributo concreto. En [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la intercalación se expone donde se definen los enlaces de datos. Dado que va a enlazar una traducción de atributo de dimensión con una columna de un origen diferente en la vista del origen de datos (DSV), hay una configuración de intercalación disponible para que pueda especificar la intercalación que utiliza la columna de origen. Consulte [Set or Change the Column Collation](../relational-databases/collations/set-or-change-the-column-collation.md) para ver más detalles sobre la intercalación de columnas en la base de datos relacional.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36106626"
   
 2.  En Traducciones, especifique el idioma de destino (se resuelve en un LCID), el título traducido y la descripción traducida. La lista de idiomas es coherente en Analysis Services, tanto si configura el idioma del servidor en Management Studio como si agrega la sustitución de una traducción en un solo atributo.  
   
-3.  En la página de propiedades de la base de datos, establezca `Language` en el mismo LCID que especificó para la traducción. Además, puede establecer el `Collation` también si el valor predeterminado no es adecuado.  
+3.  En la página de propiedades de la base de datos, establezca `Language` con el mismo LCID que especificó para la traducción. Además, puede establecer el `Collation` también si el valor predeterminado no es adecuado.  
   
 4.  Compilar e implementar la base de datos.  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f2498b374ae6a0db8c60357a533f7318e32761bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 92d0b3c040b3b1b8be16e4a9c1ea79f081f49842
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214685"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Métodos abreviados de teclado (Generador de informes)
   Cuando se trabaja en el Generador de informes se tiene acceso a todas las teclas de método abreviado para navegación que proporciona el entorno de Windows. Puede seleccionar entre varios esquemas de asignación de teclado estándar.  

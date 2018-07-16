@@ -1,5 +1,5 @@
 ---
-title: Conceder permisos de base de datos de procesamiento | Documentos de Microsoft
+title: Conceder permisos de base de datos de proceso | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: c309ca3781bea3594c6d7e8d1b912730371635e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f3cce413fa5a5c47afa5ea9a97b142a75d23472
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306525"
 ---
 # <a name="granting-process-database-permissions"></a>Conceder permisos Procesar base de datos
   Después de instalar una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], todos los miembros del rol de administrador de servidor [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de dicha instancia tienen permisos en el servidor para llevar a cabo cualquier tarea dentro de la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. De manera predeterminada, ningún otro usuario tiene permiso para administrar o ver objetos en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "36202200"
   
      Observe que los miembros de este rol tienen permisos para procesar esta base de datos, pero no tienen permiso para obtener acceso a los datos del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial y no tienen acceso a obtención de detalles o cubo local, como se muestra en la siguiente imagen.  
   
-     ![Pestaña cubos del Diseñador de roles](../../2014/tutorials/media/l10-security-2.png "ficha cubos del Diseñador de roles")  
+     ![Pestaña cubos del Diseñador de roles](../../2014/tutorials/media/l10-security-2.png "pestaña cubos del Diseñador de roles")  
   
 7.  Vaya a la pestaña **Dimensiones** del Diseñador de roles.  
   

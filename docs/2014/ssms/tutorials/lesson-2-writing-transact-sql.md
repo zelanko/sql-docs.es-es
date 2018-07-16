@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 439cfab5-c049-43a8-8617-59eaa8d24873
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bfed7f5ff0bfe5ffc02d113905c7c9a92147cf49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7fb7fbd52df66d731f370f2d8ce9f6c99beda40e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222665"
 ---
 # <a name="lesson-2-writing-transact-sql"></a>Lección 2: Escribir Transact-SQL
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es un entorno de desarrollo integrado para escribir consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX y XML, y comandos de SQLCMD. El tutorial ilustra el uso del editor de consultas del motor de base de datos para escribir un script [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

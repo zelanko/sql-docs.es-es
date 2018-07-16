@@ -1,5 +1,5 @@
 ---
-title: Eliminar una columna (SSAS Tabular) | Documentos de Microsoft
+title: Eliminar una columna (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 703db83b-e554-450e-813e-23ad08c1cdad
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bef4966295acafa3b122fe1786cf06495962890d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 378f2a9503abbf277b25c09b66e11acc606529e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273871"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>Eliminar una columna (SSAS tabular)
   En este tema se describe cómo eliminar una columna de una tabla de modelo tabular.  
@@ -42,7 +42,7 @@ ms.locfileid: "36203264"
 3.  En el cuadro de diálogo **Editar propiedades de tabla** , en la ventana de vista previa de la tabla, desactive la columna de origen que desee eliminar y haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar columnas a una tabla &#40;SSAS Tabular&#41;](add-columns-to-a-table-ssas-tabular.md)   
- [Las particiones &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md)  
+ [Agregar columnas a una tabla &#40;Tabular de SSAS&#41;](add-columns-to-a-table-ssas-tabular.md)   
+ [Las particiones &#40;Tabular de SSAS&#41;](partitions-ssas-tabular.md)  
   
   

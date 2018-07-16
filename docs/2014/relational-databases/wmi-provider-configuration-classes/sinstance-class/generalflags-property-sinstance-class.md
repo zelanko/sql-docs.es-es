@@ -1,5 +1,5 @@
 ---
-title: Propiedad GeneralFlags (clase SInstance) | Documentos de Microsoft
+title: Propiedad GeneralFlags (clase SInstance) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - GeneralFlags property
 ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 54daa43c2ccb4e05691d04c2d9e20baad98b9ac6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 544536253cd7de2c62dbd54f891f5b72d534d74a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294255"
 ---
 # <a name="generalflags-property-sinstance-class"></a>Propiedad GeneralFlags (clase SInstance)
-  Obtiene las marcas generales asociadas con la una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Obtiene las marcas generales asociadas con el una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,6 +51,6 @@ object
 ## <a name="remarks"></a>Notas  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurar protocolos de red de servidor y las bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

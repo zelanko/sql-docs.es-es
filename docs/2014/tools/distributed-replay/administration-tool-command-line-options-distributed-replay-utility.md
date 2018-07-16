@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8e137d3e03594cda0a799f066ac175f78c194514
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 36f31c211affa12e7db9988200e3d04040ec227e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261801"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>Opciones de línea de comandos de la herramienta de administración (utilidad Distributed Replay)
-  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herramienta de administración de Distributed Replay, `DReplay.exe`, es una herramienta de línea de comandos que puede usar para comunicarse con el controlador de reproducción distribuida. Utilice la herramienta de administración para iniciar, supervisar y cancelar operaciones en el controlador.  
+  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herramienta de administración de Distributed Replay, `DReplay.exe`, es una herramienta de línea de comandos que puede usar para comunicarse con distributed replay controller. Utilice la herramienta de administración para iniciar, supervisar y cancelar operaciones en el controlador.  
   
  ![Icono de vínculo de tema](../../database-engine/media/topic-link.gif "Icono de vínculo de tema") Para obtener más información sobre las convenciones de sintaxis que se usan con la sintaxis de la herramienta de administración, vea [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
   
@@ -63,13 +63,13 @@ Usage:
   
  Para obtener información de la sintaxis detallada que incluye los argumentos de comando y ejemplos, vea los siguientes temas:  
   
--   [Opción de preprocesamiento &#40;distribuidas herramienta de administración de reproducción&#41;](preprocess-option-distributed-replay-administration-tool.md)  
+-   [Opción de preprocesamiento &#40;distribuye la herramienta de administración de reproducción&#41;](preprocess-option-distributed-replay-administration-tool.md)  
   
--   [Opción Replay &#40;distribuidas herramienta de administración de reproducción&#41;](replay-option-distributed-replay-administration-tool.md)  
+-   [Opción Replay &#40;distribuye la herramienta de administración de reproducción&#41;](replay-option-distributed-replay-administration-tool.md)  
   
--   [Opción Status &#40;distribuidas herramienta de administración de reproducción&#41;](status-option-distributed-replay-administration-tool.md)  
+-   [Opción Status &#40;distribuye la herramienta de administración de reproducción&#41;](status-option-distributed-replay-administration-tool.md)  
   
--   [Opción Cancel &#40;distribuidas herramienta de administración de reproducción&#41;](cancel-option-distributed-replay-administration-tool.md)  
+-   [Opción Cancel &#40;distribuye la herramienta de administración de reproducción&#41;](cancel-option-distributed-replay-administration-tool.md)  
   
  Las RPC se reproducen como RPC y no como eventos de lenguaje.  
   

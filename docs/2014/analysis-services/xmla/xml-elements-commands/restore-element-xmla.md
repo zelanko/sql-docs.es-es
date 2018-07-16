@@ -1,5 +1,5 @@
 ---
-title: Elemento restore (XMLA) | Documentos de Microsoft
+title: Elemento restore (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Restore command
 ms.assetid: bb5a0c92-3927-4fa4-975b-6e4d79e0a912
 caps.latest.revision: 26
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0e8eca537c61be64de403b4ad08bb0e64040937c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 682806680604606d54c133617b2150b975cf8c03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275661"
 ---
 # <a name="restore-element-xmla"></a>Elemento Restore (XMLA)
-  Restaura una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos desde un archivo de copia de seguridad.  
+  Restaura un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos desde un archivo de copia de seguridad.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36202794"
 ## <a name="remarks"></a>Notas  
  El `Restore` comando restaura un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos especificada en el `DatabaseName` elemento desde un archivo de copia de seguridad y, opcionalmente, restaurar particiones remotas desde archivos de copia de seguridad remotos.  
   
- Dependiendo del modo de almacenamiento utilizado por los objetos guardados en el archivo de copia de seguridad, la `Restore` comando restaura la información que se muestran en la tabla siguiente.  
+ Dependiendo del modo de almacenamiento utilizado por los objetos guardados en el archivo de copia de seguridad, la `Restore` comando restaura la información como se muestra en la tabla siguiente.  
   
 |Modo de almacenamiento|Información|  
 |------------------|-----------------|  
@@ -81,7 +81,7 @@ ms.locfileid: "36202794"
 |OLAP híbrido (HOLAP)|Agregaciones y metadatos|  
 |OLAP relacional (ROLAP)|Metadatos|  
   
- Durante una `Restore` comando, se coloca un bloqueo exclusivo en el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos especificada en el `DatabaseName` elemento. El bloqueo se libera después de la `Restore` comando se ha completado.  
+ Durante una `Restore` comando, se coloca un bloqueo exclusivo en el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos especificada en el `DatabaseName` elemento. El bloqueo se libera después de la `Restore` comando ha finalizado.  
   
  Para obtener más información acerca de la copia de seguridad y restaurar bases de datos, vea [realizar copias de seguridad, restaurar y sincronizar bases de datos &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36202794"
 >  Después de restaurar una base de datos existente, el usuario que restauró la base de datos podría perder el acceso a la base de datos restaurada. Esta pérdida de acceso puede producirse si, en el momento en que se realizó la copia de seguridad, el usuario no era miembro del rol de servidor o no era miembro de rol de base de datos con permisos de Control total (Administrador).  
   
 ## <a name="see-also"></a>Vea también  
- [Elemento de la copia de seguridad &#40;XMLA&#41;](backup-element-xmla.md)   
+ [Elemento de copia de seguridad &#40;XMLA&#41;](backup-element-xmla.md)   
  [Elemento de lote &#40;XMLA&#41;](batch-element-xmla.md)   
  [Elemento en paralelo &#40;XMLA&#41;](../xml-elements-properties/parallel-element-xmla.md)   
  [Elemento Synchronize &#40;XMLA&#41;](synchronize-element-xmla.md)   

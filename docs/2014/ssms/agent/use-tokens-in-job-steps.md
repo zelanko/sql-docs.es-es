@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
 - security [SQL Server Agent], enabling alert job step tokens
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1ae207d1b4568a9d2eb567821511e411f92360e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c23214b2ce0fccf5b96934cab3b4561d224ff677
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246175"
 ---
 # <a name="use-tokens-in-job-steps"></a>Usar tokens en pasos de trabajo
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente le permite usar tokens en scripts de pasos de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] . La utilización de tokens al escribir pasos de trabajo ofrece la misma flexibilidad que las variables al escribir programas de software. Una vez que se inserta un token en un script de pasos de trabajo, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sustituye el token en tiempo de ejecución, antes de que el subsistema de [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecute el paso de trabajo.  
@@ -33,7 +33,7 @@ ms.locfileid: "36203328"
 > [!IMPORTANT]  
 >  A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, la sintaxis del token del paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha cambiado. Como resultado, todos los tokens que se usan en pasos de trabajo deben adjuntar ahora una macro de escape; de lo contrario, esos pasos de trabajo producirán un error. El uso de las macros de escape y la actualización de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa tokens se describen en las secciones siguientes, "Descripción del uso de tokens", "Tokens y macros del Agente[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " y "Actualizar pasos de trabajo para usar macros". Además, también ha cambiado la sintaxis de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] , que usaba corchetes para llamar a los tokens de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, "`[DATE]`"). Ahora debe delimitar los nombres de los tokens entre paréntesis y colocar un signo de dólar (`$`) al principio de la sintaxis del token. Por ejemplo:  
 >   
->  `$(ESCAPE_` *nombre de la macro* `(DATE))`  
+>  `$(ESCAPE_` *nombre de macro* `(DATE))`  
   
 ## <a name="understanding-using-tokens"></a>Descripción del uso de tokens  
   
@@ -90,10 +90,10 @@ ms.locfileid: "36203328"
   
 |Macros de escape|Descripción|  
 |-------------------|-----------------|  
-|**$(ESCAPE_SQUOTE (** *nombre_token* **))**|Convierte las comillas simples (') en la cadena de reemplazo del token. Sustituye una comilla simple por dos comillas simples.|  
-|**$(ESCAPE_DQUOTE (** *nombre_token* **))**|Convierte las comillas dobles ('') en la cadena de reemplazo del token. Sustituye una comilla doble por dos comillas dobles.|  
-|**$(ESCAPE_RBRACKET (** *nombre_token* **))**|Convierte los corchetes de cierre (]) en la cadena de reemplazo del token. Sustituye un corchete de cierre por dos corchetes de cierre.|  
-|**$(ESCAPE_NONE (** *nombre_token* **))**|Sustituye el token sin convertir ninguno de los caracteres de la cadena. Se incluye esta macro para la compatibilidad con versiones anteriores en entornos donde las cadenas de reemplazo de tokens se esperan únicamente de usuarios de confianza. Para obtener más información, vea "Actualizar pasos de trabajo para usar macros" más adelante en este tema.|  
+|**$(ESCAPE_SQUOTE (** *token_name* **))**|Convierte las comillas simples (') en la cadena de reemplazo del token. Sustituye una comilla simple por dos comillas simples.|  
+|**$(ESCAPE_DQUOTE (** *token_name* **))**|Convierte las comillas dobles ('') en la cadena de reemplazo del token. Sustituye una comilla doble por dos comillas dobles.|  
+|**$(ESCAPE_RBRACKET (** *token_name* **))**|Convierte los corchetes de cierre (]) en la cadena de reemplazo del token. Sustituye un corchete de cierre por dos corchetes de cierre.|  
+|**$(ESCAPE_NONE (** *token_name* **))**|Sustituye el token sin convertir ninguno de los caracteres de la cadena. Se incluye esta macro para la compatibilidad con versiones anteriores en entornos donde las cadenas de reemplazo de tokens se esperan únicamente de usuarios de confianza. Para obtener más información, vea "Actualizar pasos de trabajo para usar macros" más adelante en este tema.|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>Actualizar pasos de trabajo para usar macros  
  A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, los pasos de trabajo que contienen tokens sin macros de escape producirán un error y devolverán un mensaje de error indicando que el paso de trabajo contiene uno o más tokens que deben actualizarse con una macro antes de poder ejecutar el trabajo.  

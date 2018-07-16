@@ -1,5 +1,5 @@
 ---
-title: Seleccione la clave de caso (Asistente para minería de datos) | Documentos de Microsoft
+title: Seleccione la clave de caso (Asistente para minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectcasekey.f1
 ms.assetid: 75755ee7-65b7-4d61-b1e8-3566199430d5
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac22701b451360e5877af76a770b106b5c91b699
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de7c1972cdf7a39fe39b045f8a7d555cd9a328c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300915"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>Seleccionar la clave de caso (Asistente para minería de datos)
   Utilice la página **Seleccionar la clave de caso** para seleccionar el atributo de la dimensión de cubo de origen que será la clave de la estructura de minería de datos. Este atributo se debe incluir en una jerarquía o debe tener su jerarquía de atributo habilitada.  
@@ -36,8 +36,8 @@ ms.locfileid: "36201446"
  Haga clic en el atributo que será la clave de la estructura de minería de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda F1 del Asistente para minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Seleccionar la dimensión de cubo de origen &#40;Asistente para minería de datos&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
- [Seleccione columnas de nivel de caso &#40;Asistente para minería de datos&#41;](select-case-level-columns-data-mining-wizard.md)  
+ [Asistente para la Ayuda de F1 de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Seleccione la dimensión de cubo de origen &#40;Asistente para minería de datos&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
+ [Seleccione las columnas de nivel de caso &#40;Asistente para minería de datos&#41;](select-case-level-columns-data-mining-wizard.md)  
   
   

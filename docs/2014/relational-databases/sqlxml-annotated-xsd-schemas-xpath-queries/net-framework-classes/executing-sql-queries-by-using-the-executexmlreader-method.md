@@ -1,5 +1,5 @@
 ---
-title: Ejecutar consultas SQL mediante el método ExecuteXMLReader | Documentos de Microsoft
+title: Ejecutar consultas SQL mediante el método ExecuteXMLReader | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - SQL queries [SQLXML]
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 707364644cab1f2f025b0e735f531753637fb815
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1acabdc04e8ac24efb5e16858defb2649e52ac43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247895"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Ejecutar consultas SQL mediante el método ExecuteXMLReader
-  En lugar de utilizar el método ExecuteToStream, puede usar el método ExecuteXmlReader del objeto SqlXmlCommand para ejecutar comandos. Este método devuelve un objeto XmlReader que puede usarse para su posterior procesamiento del resultado (que en este ejemplo se imprime los nombres de elemento o atributo y los valores).  
+  En lugar de usar el método ExecuteToStream, puede usar el método ExecuteXmlReader del objeto SqlXmlCommand para ejecutar comandos. Este método devuelve un objeto XmlReader que se puede usar para su posterior procesamiento del resultado (que en este ejemplo imprime los nombres de elemento o atributo y los valores).  
   
 > [!NOTE]  
 >  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [Reporting Services]
 - configuring servers [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1f3c852712890d8a1cd67f9d2cabc6d5053c39ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60c593878f3c40094995a4d7b905d0bb59ff1a24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292175"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurar un firewall para el acceso al servidor de informes
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] A las aplicaciones del servidor de informes y a los informes publicados se tiene acceso a través de direcciones URL que especifican una dirección IP, un puerto y un directorio virtual. Si Firewall de Windows está activado, es probable que el puerto que el servidor de informes está configurado para usar esté cerrado. Los indicios que señalan que un puerto podría estar cerrado son la aparición de una página web en blanco después de solicitar un informe o al intentar abrir el Administrador de informes desde un equipo cliente remoto.  
@@ -77,7 +77,7 @@ ms.locfileid: "36202869"
   
 #### <a name="to-open-port-80-on-windows-vista-or-windows-server-2008"></a>Para abrir el puerto 80 en Windows Vista o Windows Server 2008  
   
-1.  Desde el **iniciar** menú, haga clic en **el Panel de Control**, haga clic en **seguridad**y, a continuación, haga clic en **Firewall de Windows**.  
+1.  Desde el **iniciar** menú, haga clic en **Panel de Control**, haga clic en **seguridad**y, a continuación, haga clic en **Windows Firewall**.  
   
 2.  Haga clic en **permitir un programa a través de Firewall de Windows**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36202869"
   
 ## <a name="see-also"></a>Vea también  
  [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configurar direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurar las direcciones URL de servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Administración de un servidor de informes en modo nativo de Reporting Services](manage-a-reporting-services-native-mode-report-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: Referencia técnica del algoritmo Bayes Naive de Microsoft | Documentos de Microsoft
+title: Referencia técnica del algoritmo Bayes Naive de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_DEPENDENCY_PROBABILITY parameter
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - MAXIMUM_STATES parameter
 ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 421da938c83045cea508a5926d1edc8892be11a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0f489c08c33fa66794f0eace23d207855e207b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253537"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Referencia técnica del algoritmo Bayes naive de Microsoft
   El algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de clasificación que proporciona [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para el modelado predictivo. Este algoritmo calcula la probabilidad condicional entre columnas de entrada y de predicción y supone que las columnas son independientes. Esta suposición de independencia conduce al nombre Bayes naive.  
@@ -104,7 +104,7 @@ ms.locfileid: "36202822"
   
 ## <a name="see-also"></a>Vea también  
  [Algoritmo Bayes Naive de Microsoft](microsoft-naive-bayes-algorithm.md)   
- [Ejemplos de consultas de modelo Bayes naive](naive-bayes-model-query-examples.md)   
- [Contenido del modelo para los modelos Bayes Naive de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Ejemplos de consultas del modelo Bayes naive](naive-bayes-model-query-examples.md)   
+ [Para los modelos Bayes Naive contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

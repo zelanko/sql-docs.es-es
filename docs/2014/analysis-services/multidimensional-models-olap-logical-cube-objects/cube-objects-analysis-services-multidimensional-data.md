@@ -1,5 +1,5 @@
 ---
-title: Objetos (Analysis Services - datos multidimensionales) de cubo | Documentos de Microsoft
+title: Objetos (Analysis Services - datos multidimensionales) de cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], objects
 ms.assetid: 5cee362e-3f95-4467-bc6c-29b1518ecbf3
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 783caa7a2ea334da09ab038694c09795fa3af229
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d722b34679ccef20a939fc505e735886e7f16d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282227"
 ---
 # <a name="cube-objects-analysis-services---multidimensional-data"></a>Objetos de cubo (Analysis Services - Datos multidimensionales)
     

@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de propiedades de credenciales (generador de informes) del origen de datos | Documentos de Microsoft
+title: Las credenciales (generador de informes) cuadro de diálogo Propiedades del origen de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 237e1c9ef26c5dba838fa8071b2dce7293f2077a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0b6689c1a75cfc9354f8c47532d0ed773f3c6e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238595"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Propiedades del origen de datos (cuadro de diálogo), Credenciales (Generador de informes)
   Seleccione **Credenciales** en el cuadro de diálogo **Propiedades del origen de datos** para mostrar y modificar las credenciales para conectarse a un origen de datos incrustado en el informe. Las credenciales que proporcione se usarán para tener acceso al origen de datos con el fin de obtener una vista previa de los informes. Para obtener más información, vea [Especificar credenciales en el Generador de informes](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
   
 ## <a name="options"></a>Opciones  
- **Utilizar autenticación de Windows (seguridad integrada)**  
+ **Usar la autenticación de Windows (seguridad integrada)**  
  Seleccione esta opción para utilizar la autenticación de Windows.  
   
  **Use este nombre de usuario y contraseña**  
@@ -55,7 +55,7 @@ ms.locfileid: "36204111"
 ## <a name="see-also"></a>Vea también  
  [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Propiedades del origen de datos (cuadro de diálogo), General &#40;Generador de informes&#41;](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md)   
- [Agregar y comprobar una conexión de datos o un origen de datos &#40;el generador de informes SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-data/report-datasets-ssrs.md)  
+ [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

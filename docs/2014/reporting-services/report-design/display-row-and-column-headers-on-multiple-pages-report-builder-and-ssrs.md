@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 51a549b7fbea2bc4b1c5e41114e831ff3f68550b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ef91743d7a5a4106b51761901ba6f18b9f24d5a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303675"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Mostrar encabezados de fila y de columna en varias páginas (Generador de informes y SSRS)
   Puede controlar si se deben repetir los encabezados de fila y de columna en cada página de una región de datos Tablix que abarca varias páginas. Una región de datos Tablix puede ser una tabla, una matriz o una lista.  
@@ -73,9 +73,9 @@ ms.locfileid: "36107552"
   
 ## <a name="see-also"></a>Vea también  
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportar informes &#40;el generador de informes SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
- [Controlar la página se interrumpe, encabezados, columnas y filas &#40;el generador de informes SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Exportar informes &#40;generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Controlar saltos de página, encabezados, columnas y filas &#40;generador de informes y SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Mostrar encabezados y pies de página con un grupo &#40;Generador de informes y SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [Mantener visibles los encabezados al desplazarse a través de un informe &#40;el generador de informes SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+ [Mantener visibles los encabezados al desplazarse a través de un informe &#40;generador de informes y SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
   

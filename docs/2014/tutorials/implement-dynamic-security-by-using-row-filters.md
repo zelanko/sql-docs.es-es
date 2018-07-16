@@ -1,5 +1,5 @@
 ---
-title: Implementar seguridad dinámica utilizando filtros de fila | Documentos de Microsoft
+title: Implementar seguridad dinámica utilizando filtros de fila | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 066e628cc40f4ac4745f4b2edaa93ecdbd8d93d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4364b9c18125b5aa4baa479ae92a2dc688d9fe18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257601"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementar seguridad dinámica utilizando filtros de filas
   En esta lección complementaria, creará un rol adicional que implemente seguridad dinámica. La seguridad dinámica proporciona seguridad de nivel de fila basada en el nombre de usuario o el identificador de inicio de sesión del usuario que ha iniciado sesión actualmente. Para obtener más información, consulte [Roles &#40;SSAS tabular&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
@@ -89,10 +89,10 @@ ms.locfileid: "36203096"
   
     |Employee Id|Sales Territory Id|Nombre|Apellidos|Login Id|  
     |-----------------|------------------------|----------------|---------------|--------------|  
-    |1|2|\<el nombre de usuario >|\<último nombre de usuario >|\<dominio ombreDeUsuario >|  
-    |1|3|\<el nombre de usuario >|\<último nombre de usuario >|\<dominio ombreDeUsuario >|  
-    |2|4|\<el nombre de usuario >|\<último nombre de usuario >|\<dominio ombreDeUsuario >|  
-    |3|5|\<el nombre de usuario >|\<último nombre de usuario >|\<dominio ombreDeUsuario >|  
+    |1|2|\<nombre de usuario >|\<apellido del usuario >|\<dominio\nombre de usuario >|  
+    |1|3|\<nombre de usuario >|\<apellido del usuario >|\<dominio\nombre de usuario >|  
+    |2|4|\<nombre de usuario >|\<apellido del usuario >|\<dominio\nombre de usuario >|  
+    |3|5|\<nombre de usuario >|\<apellido del usuario >|\<dominio\nombre de usuario >|  
   
 3.  En la nueva hoja de cálculo, reemplace el nombre, el apellido, y el dominio\nombreUsuario con los nombres y los id. de inicio de sesión de tres usuarios de su organización. Coloque el mismo usuario en las dos primeras filas, para el Employee Id 1. Esto mostrará que este usuario pertenece a más de un territorio de ventas. Deje los campos Employee Id y Sales Territory Id como están.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36203096"
   
      Se agrega a la lista un nuevo rol con el permiso Ninguno.  
   
-3.  Haga clic en el nuevo rol y, a continuación, en la **nombre** columna, cambiar el nombre de la función para `Sales Employees by Territory`.  
+3.  Haga clic en el nuevo rol y, a continuación, en el **nombre** columna, cambiar el nombre de la función para `Sales Employees by Territory`.  
   
 4.  En la columna **Permisos** , haga clic en la lista desplegable y, después, seleccione el permiso **Lectura** .  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36203096"
   
 7.  Haga clic en la pestaña **Filtros de fila** .  
   
-8.  Para el `Employee Security` tabla, en la **filtro DAX** columna, escriba la siguiente fórmula.  
+8.  Para el `Employee Security` de tabla, en el **filtro DAX** columna, escriba la siguiente fórmula.  
   
      `=FALSE()`  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36203096"
   
 ## <a name="see-also"></a>Vea también  
  [Función USERNAME &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [Función LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
+ [La función LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
  [Función CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   
   

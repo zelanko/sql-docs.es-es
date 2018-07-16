@@ -20,15 +20,15 @@ helpviewer_keywords:
 - replication [SQL Server], how-to topics
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fd33311f93f8634efc311f1dbddd35c292d8d36a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2fd79f87d69ea11e255bb6009f6a5d2365cab296
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292275"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el acceso mediante programación a toda la funcionalidad configurable por el usuario en una topología de replicación se proporciona mediante procedimientos almacenados del sistema. Aunque los procedimientos almacenados se pueden ejecutar individualmente utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o el programa de línea de comandos sqlcmd, puede ser beneficioso escribir archivos de script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] que se pueden ejecutar para realizar una secuencia lógica de tareas de replicación.  

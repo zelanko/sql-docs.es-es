@@ -1,5 +1,5 @@
 ---
-title: Configurar el depurador de Transact-SQL | Documentos de Microsoft
+title: Configurar el depurador de Transact-SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_register_failed
 - vs.debug.error.sqlde_accessdenied
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 747165efe7f5493263da0deec3ec5b2ebcdbad04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 79bb9e677f078f4ee1f4a18142fa3068f61349b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262521"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurar el depurador de Transact-SQL
   Se deben configurar reglas del Firewall de Windows para habilitar la depuración en [!INCLUDE[tsql](../../includes/tsql-md.md)] cuando se establezca conexión con una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se esté ejecutando en un equipo distinto del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -160,7 +160,7 @@ ms.locfileid: "36204571"
   
 * La ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe estar conectada a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) o posterior. No puede ejecutar el depurador cuando la ventana del Editor de consultas esté conectada a una instancia cuyo modo sea de usuario único.
 
-* El servidor necesita comunicarse de nuevo con el cliente a través de RPC. Autenticar a la cuenta bajo la que se ejecuta el servicio SQL Server debe tener permisos para el cliente.  
+* El servidor necesita comunicarse de nuevo con el cliente a través de RPC. Autenticar a la cuenta bajo la que se está ejecutando el servicio de SQL Server debe tener permisos para el cliente.  
   
 ## <a name="see-also"></a>Vea también  
  [Depurador de Transact-SQL](transact-sql-debugger.md)   

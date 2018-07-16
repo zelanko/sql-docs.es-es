@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 516b61e080c92bd6dc0579b93b829e891068c826
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f06fa546153ef62edda97c173a8c4fb9cc4d9362
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276171"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Agregar un KPI a un informe (Generador de informes y SSRS)
   Un indicador clave de rendimiento (KPI) es un valor medible que tiene importancia para la empresa. Este tutorial lo enseñará a incluir un KPI en un informe. En este escenario, el resumen de ventas por subcategorías de producto es el KPI. El estado actual del KPI se muestra mediante colores, medidores e indicadores.  
@@ -56,7 +56,7 @@ ms.locfileid: "36201745"
  Para obtener más información sobre los requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Table"></a> 1. Crear un informe de tabla y un conjunto de datos con el asistente para tablas o matrices  
- Desde el **Introducción** cuadro de diálogo, elija un origen de datos compartido, crear un conjunto de datos incrustado y muestra los datos en una tabla.  
+ Desde el **Introducción** cuadro de diálogo, elija un origen de datos compartido, crear un conjunto de datos incrustado y mostrar los datos en una tabla.  
   
 > [!NOTE]  
 >  En este tutorial, la consulta contiene los valores de datos, de forma que no necesita un origen de datos externo. Esto hace que la consulta requiera bastante tiempo. En un entorno empresarial, la consulta no contendría los datos. Esto es solo con fines de aprendizaje.  
@@ -68,7 +68,7 @@ ms.locfileid: "36201745"
      Aparecerá el cuadro de diálogo **Introducción** .  
   
     > [!NOTE]  
-    >  Si el **Introducción** no aparece el cuadro de diálogo, en el botón Generador de informes, haga clic en **nuevo**.  
+    >  Si el **Introducción** no aparece el cuadro de diálogo, en el botón Generador de informes, haga clic en **New**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36201745"
   
 #### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>Para mostrar el estado actual de un KPI mediante colores de fondo  
   
-1.  En la tabla, haga clic en dos celdas hacia abajo desde la `[Sum(Sales)]` (la fila de subtotal que muestra las ventas de una subcategoría) de la celda y, a continuación, haga clic en **propiedades de cuadro de texto**.  
+1.  En la tabla, haga clic en dos celdas hacia abajo desde la `[Sum(Sales)]` celda (la fila de subtotal que muestra las ventas de una subcategoría) y, a continuación, haga clic en **propiedades de cuadro de texto**.  
   
 2.  En **rellenar**, haga clic en el **fx** situado junto a la **color de relleno** opción y escriba la siguiente expresión en el **Establecer expresión para: BackgroundColor** campo:  
   
@@ -194,9 +194,9 @@ ms.locfileid: "36201745"
   
 1.  Cambie a la vista de diseño.  
   
-2.  En la tabla, haga clic en el controlador de la columna de la celda que se cambió en el procedimiento anterior, seleccione **Insertar columna**y, a continuación, haga clic en **derecha**. Se agregará una nueva columna a la tabla.  
+2.  En la tabla, haga clic en el controlador de la columna de la celda que modificó en el procedimiento anterior, elija **Insertar columna**y, a continuación, haga clic en **derecha**. Se agregará una nueva columna a la tabla.  
   
-3.  Tipo de **KPI** en el encabezado de columna.  
+3.  Tipo **KPI** en el encabezado de columna.  
   
 4.  En el **insertar** ficha la **regiones de datos** grupo, haga clic en **medidor**y, a continuación, haga clic en la superficie de diseño fuera de la tabla. Aparece el cuadro de diálogo **Seleccionar tipo de medidor** .  
   
@@ -212,7 +212,7 @@ ms.locfileid: "36201745"
   
      Al arrastrar el campo al medidor, el campo se agrega usando la función integrada Sum.  
   
-9. Haga clic en el puntero en el medidor y haga clic en **propiedades del puntero**.  
+9. Haga clic en el puntero del medidor y haga clic en **propiedades del puntero**.  
   
 10. En **tipo de puntero**, seleccione **barra**. Esto cambia el puntero de un marcador a una barra que estará más visible cuando el medidor se agregue a la tabla.  
   
@@ -240,7 +240,7 @@ ms.locfileid: "36201745"
   
     2.  Haga clic en la escala. Las propiedades de la escala lineal se muestran en el panel de propiedades.  
   
-    3.  En el **topes de escala** categoría, expanda la **MaximumPin** nodo.  
+    3.  En el **topes de escala** categoría, expanda el **MaximumPin** nodo.  
   
     4.  Establecer el **habilitar** propiedad `True`. Aparece un tope después del valor máximo en la escala.  
   
@@ -255,9 +255,9 @@ ms.locfileid: "36201745"
   
 1.  Cambie a la vista de diseño.  
   
-2.  En la tabla, haga clic en el controlador de la columna de la celda que se cambió en el procedimiento anterior, seleccione **Insertar columna**y, a continuación, haga clic en **derecha**. Se agregará una nueva columna a la tabla.  
+2.  En la tabla, haga clic en el controlador de la columna de la celda que modificó en el procedimiento anterior, elija **Insertar columna**y, a continuación, haga clic en **derecha**. Se agregará una nueva columna a la tabla.  
   
-3.  Tipo de **KPI** en el encabezado de columna.  
+3.  Tipo **KPI** en el encabezado de columna.  
   
 4.  Haga clic en la celda del subtotal de la subcategoría.  
   
@@ -265,7 +265,7 @@ ms.locfileid: "36201745"
   
      Se abrirá el cuadro de diálogo **Seleccionar tipo de indicador** .  
   
-6.  Haga clic en **formas**. El primer tipo de forma, **3 semáforos (),** está seleccionada.  
+6.  Haga clic en **formas**. El primer tipo de forma **3 semáforos (sin marco),** está seleccionada.  
   
      Utilice este indicador en el tutorial.  
   
@@ -277,7 +277,7 @@ ms.locfileid: "36201745"
   
 9. Haga clic en **valores y estados**.  
   
-10. En la lista desplegable valor, seleccione **[SUM (Sales)]**, pero no cambie ninguna otra opción.  
+10. En la lista desplegable valor, seleccione **[SUM (Sales)]**, pero no cambie las demás opciones.  
   
      De manera predeterminada, la sincronización de datos se produce en la región de datos y podrá ver el valor **Tablix1**, el nombre de la región de datos de la tabla del informe, en el cuadro **Ámbito de sincronización** .  
   
@@ -294,7 +294,7 @@ ms.locfileid: "36201745"
   
 1.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-2.  Tipo de **KPI de ventas del producto**y, a continuación, haga clic fuera del cuadro de texto.  
+2.  Tipo **KPI de ventas del producto**y, a continuación, haga clic fuera del cuadro de texto.  
   
 3.  Si lo desea, haga clic en el cuadro de texto que contiene **KPI de ventas del producto**, haga clic en **propiedades de cuadro de texto**y, a continuación, en la pestaña fuente seleccionar los diferentes estilos de fuente, tamaños y colores.  
   
@@ -333,7 +333,7 @@ ms.locfileid: "36201745"
 2.  Haga clic en **Guardar**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Ha completado correctamente el tutorial Agregar un KPI a un informe. Para obtener más información, vea medidores (generador de informes) [indicadores &#40;el generador de informes y SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md).  
+ Ha completado correctamente el tutorial Agregar un KPI a un informe. Para obtener más información, vea medidores (generador de informes) [indicadores &#40;generador de informes y SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Tutoriales &#40;generador de informes&#41;](report-builder-tutorials.md)   

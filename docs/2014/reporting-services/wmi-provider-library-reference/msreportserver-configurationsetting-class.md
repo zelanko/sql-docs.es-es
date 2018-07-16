@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - MSReportServer_ConfigurationSetting Class
 api_location:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 caps.latest.revision: 36
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6e09e954cb842a25a1e20453dec816479061c597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: fbc5fb6155840f6c64003f1e1dd38dc7914a0f04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280141"
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>clase MSReportServer_ConfigurationSetting
   Representa la instalación y los parámetros de tiempo de ejecución de una instancia del servidor de informes. Estos parámetros se guardan en el archivo de configuración del servidor de informes.  
@@ -49,7 +49,7 @@ public class MSReportServer_ConfigurationSetting
  Todos los miembros estáticos (**compartidos** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) públicos de este tipo son seguros para operaciones multiproceso. No se garantiza que los miembros de instancia sean seguros para subprocesos.  
   
 ## <a name="example"></a>Ejemplo  
- Para ejecutar el código siguiente, agregue el nombre del servidor en lugar de cada \<*nombreDeServidor*>. Actualice la ruta de acceso para que señale su ubicación de instalación si no es el valor predeterminado. En el ejemplo de código siguiente se recorre en iteración cada propiedad en el [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) (clase), imprimiendo el nombre de cada propiedad y su valor en la consola.  
+ Para ejecutar el código siguiente, agregue el nombre del servidor en lugar de cada \<*nombreDeServidor*>. Actualice la ruta de acceso para que señale su ubicación de instalación si no es el valor predeterminado. El ejemplo de código siguiente recorre en iteración cada propiedad en el [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) (clase), imprimiendo el nombre de cada propiedad y su valor en la consola.  
   
 ```vb  
 Imports System  

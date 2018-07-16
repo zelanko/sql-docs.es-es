@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_ENUMERATORS | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_ENUMERATORS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DISCOVER_ENUMERATORS rowset
 ms.assetid: ddc7b13c-3135-4419-8166-eddd459167da
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2c4eb36f93faba7f32352de41d5c6fde4e0dac2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 328d37a9d010388c0cb8d0e7e9d251601e35f949
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302715"
 ---
 # <a name="discoverenumerators-rowset"></a>Conjunto de filas DISCOVER_ENUMERATORS
   Devuelve una lista de nombres, tipos de datos y valores de enumeración de enumeradores admitidos por el proveedor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) para un origen de datos concreto. El proveedor de XMLA publica todas las constantes de enumeración que reconoce.  
@@ -36,7 +36,7 @@ ms.locfileid: "36201462"
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  Para cada enumerador, hay varios elementos, uno para cada valor en la enumeración. El conjunto de filas que representa cada enumerador es plano y el nombre del enumerador se puede repetir para los elementos que pertenecen a la misma enumeración.  
   
- El `DISCOVER_ENUMERATORS` filas contiene las columnas siguientes.  
+ El `DISCOVER_ENUMERATORS` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "36201462"
  Este conjunto de filas de esquema no está ordenado.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DISCOVER_ENUMERATORS` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DISCOVER_ENUMERATORS` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

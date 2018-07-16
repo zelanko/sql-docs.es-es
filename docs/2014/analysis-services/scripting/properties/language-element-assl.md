@@ -1,5 +1,5 @@
 ---
-title: Elemento Language (ASSL) | Documentos de Microsoft
+title: Elemento Language (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Language element
 ms.assetid: 4d745d23-6b1f-4a85-97cf-d034cc41356f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 09a51320df0cf5d4246fbc14307f488c2d754e3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 738403bedd7a9da120e5ba706eabe4848f7e1e2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293248"
 ---
 # <a name="language-element-assl"></a>Elemento Language (ASSL)
   Contiene el identificador de lenguaje del elemento primario.  

@@ -1,5 +1,5 @@
 ---
-title: FeatureSet, elemento (DTA) | Documentos de Microsoft
+title: FeatureSet (DTA, elemento) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - FeatureSet element
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1a3da0184ab2cbb6c94d94429dc4e9640a597fe3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fb596ca38310bce4b9be6f1061952ebc2756fc73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226515"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet (DTA, elemento)
   Contiene las estructuras de diseño físico (índices o vistas indizadas) que desea que utilice el Asistente para la optimización de motor de base de datos durante el análisis.  
@@ -45,13 +45,13 @@ ms.locfileid: "36203088"
 |**Tipo y longitud de los datos**|`string`, sin longitud máxima.|  
 |**Valores permitidos**|**IDX_IV**<br /> Índices y vistas indizadas.<br /><br /> **IDX**<br /> Solo índices.<br /><br /> **IV**<br /> Solo vistas indizadas.<br /><br /> **NCL_IDX**<br /> Solo índices no clúster.<br /><br /> Utilice uno de estos valores con este elemento.|  
 |**Valor predeterminado**|**IDX**|  
-|**Repetición**|Una obligatoria para cada elemento `TuningOptions`, a menos que se utilice el elemento `DropOnlyMode`. Si `DropOnlyMode` es utiliza, no se puede utilizar `FeatureSet`. Estos elementos son mutuamente exclusivos.|  
+|**Repetición**|Una obligatoria para cada elemento `TuningOptions`, a menos que se utilice el elemento `DropOnlyMode`. Si `DropOnlyMode` es utilizado, no se puede usar `FeatureSet`. Estos elementos son mutuamente exclusivos.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Tuningoptions, elemento &#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**Elemento primario**|[TuningOptions, elemento &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**Elementos secundarios**|Ninguno.|  
   
 ## <a name="example"></a>Ejemplo  

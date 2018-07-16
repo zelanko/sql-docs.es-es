@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checking report server installations
 - verifying report server installations
@@ -21,20 +21,20 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 67898b04b17ad344f07dc457927cd4abee6695bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e57883c7b6119499135fede5ad9c398350e587a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272540"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pueden instalarse de uno de dos modos, Nativo o SharePoint. Los pasos que debería seguir para comprobar la instalación dependen del modo del servidor de informes.  
   
  Este tema contiene la información siguiente:  
   
--   [Comprobar la instalación en modo de SharePoint](#bkmk_sharepointmode)  
+-   [Comprobar la instalación del modo de SharePoint](#bkmk_sharepointmode)  
   
 -   [Comprobar una instalación en modo nativo](#bkmk_nativemode)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36107134"
   
 #### <a name="to-verify-reporting-server-content-types"></a>Para comprobar los tipos de contenido del servidor de informes  
   
-1.  Para comprobar o agregar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tipos de contenido del servidor de informes, consulte [agregar tipos de contenido de servidor de informes en una biblioteca de &#40;Reporting Services en modo integrado de SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).  
+1.  Para comprobar o agregar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tipos de contenido del servidor de informes, vea [agregar tipos de contenido de servidor de informes en una biblioteca &#40;Reporting Services en modo integrado de SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 #### <a name="to-verify-you-can-launch-report-builder"></a>Para comprobar que puede iniciar el Generador de informes  
   
@@ -116,7 +116,7 @@ ms.locfileid: "36107134"
 2.  Si ha instalado ejemplos de informe, abra los archivos de proyectos de informe de ejemplo y publique los informes en un servidor de informes.  
   
 ## <a name="see-also"></a>Vea también  
- [Solucionar problemas de una instalación de Reporting Services](troubleshoot-a-reporting-services-installation.md)   
+ [Solución de problemas de una instalación de Reporting Services](troubleshoot-a-reporting-services-installation.md)   
  [Causa y resolución de errores de Reporting Services](../troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
   

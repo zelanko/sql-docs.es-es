@@ -1,5 +1,5 @@
 ---
-title: Valor de elemento (Parameter) (XMLA) | Documentos de Microsoft
+title: Valor de elemento (Parameter) (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Value element
 ms.assetid: e590d189-91aa-40c7-8669-09c87812f4ce
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 37e0ac55da5c8bae13fcddcaad52aeb8cf51da22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 05535bb119ce20334b5681ea001e4e8528a507f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302705"
 ---
 # <a name="value-element-parameter-xmla"></a>Elemento Value (Parameter) (XMLA)
   Contiene el valor de un parámetro representado por la [parámetro](parameter-element-xmla.md) elemento.  
@@ -64,7 +64,7 @@ ms.locfileid: "36107507"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El `Value` elemento puede almacenar cualquier tipo XML sencillo, así como el XML for Analysis (XMLA) `Rowset` tipo de datos, para los parámetros utilizados por comandos XMLA en el [Execute](../xml-elements-methods-execute.md) método.  
+ El `Value` elemento puede almacenar cualquier tipo XML simple, así como el código XML for Analysis (XMLA) `Rowset` tipo de datos, para los parámetros utilizados por comandos XMLA en el [Execute](../xml-elements-methods-execute.md) método.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;XMLA&#41;](xml-elements-properties.md)  

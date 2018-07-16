@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.chartareaproperties.3doptions.f1
 - "10256"
@@ -21,18 +21,18 @@ f1_keywords:
 - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bd6084c7d426693abbaa29c60aa2c5ad0b0011ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 33e11e05c4678fbbde7c97175498f94e092ffe43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280481"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Gráficos (Generador de informes y SSRS)
-  Si desea resumir datos y presentarlos con un formato visual, use la región de datos de gráfico. Los gráficos le permiten visualizar de forma rápida grandes volúmenes de información agregada. Es importante que prepare cuidadosamente los datos y que los comprenda antes de crear los gráficos; esto le ayudará a diseñarlos de manera rápida y eficaz. Para más información, vea [Agregar un gráfico a un informe &#40;Generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Para empezar a usar un gráfico inmediatamente, vea la barra, columna, minigráfico y los tutoriales de gráfico circular en [tutoriales &#40;Report Builder&#41; ](../report-builder-tutorials.md) o la barra y los tutoriales de gráfico circular en [Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
+  Si desea resumir datos y presentarlos con un formato visual, use la región de datos de gráfico. Los gráficos le permiten visualizar de forma rápida grandes volúmenes de información agregada. Es importante que prepare cuidadosamente los datos y que los comprenda antes de crear los gráficos; esto le ayudará a diseñarlos de manera rápida y eficaz. Para más información, vea [Agregar un gráfico a un informe &#40;Generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Para empezar a usar un gráfico inmediatamente, consulte la barra, columna, minigráfico y tutoriales de gráfico circular en [tutoriales &#40;Report Builder&#41; ](../report-builder-tutorials.md) o la barra y los tutoriales de gráfico circular en [Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
   
  En la ilustración siguiente se muestran muchos de los distintos elementos que se usan en un gráfico.  
   
@@ -121,38 +121,38 @@ ms.locfileid: "36108508"
   
   
 ##  <a name="InThisSection"></a> En esta sección  
- [Agregar un gráfico a un informe &#40;el generador de informes SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [Agregar un gráfico a un informe &#40;generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
  Describe los primeros pasos para agregar un gráfico a su informe.  
   
- [Tipos de gráficos &#40;el generador de informes SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
+ [Tipos de gráficos &#40;generador de informes y SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
  Describe todos los tipos y subtipos de gráficos disponibles en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e incluye consideraciones y procedimientos recomendados para el uso de varios tipos de gráficos.  
   
- [Aplicar formato a un gráfico &#40;el generador de informes SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [Aplicar formato a un gráfico &#40;generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
  Use formato para mejorar el aspecto general y resaltar los puntos de datos clave en el gráfico.  
   
- [Puntos de datos en los gráficos vacíos y nulos &#40;el generador de informes SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Puntos de datos en los gráficos vacíos y nulos &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)  
  Describe las consideraciones que se deben tener en cuenta al trabajar con gráficos basados en campos vacíos o con valores nulos.  
   
- [Mostrar una serie con varios intervalos de datos en un gráfico &#40;el generador de informes SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [Mostrar una serie con varios rangos de datos en un gráfico &#40;generador de informes y SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
  Describe cómo agregar quiebres de escala a una serie que contiene más de un intervalo de datos.  
   
- [Mostrar varias Series en un gráfico de &#40;el generador de informes SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
+ [Mostrar varias Series en un gráfico &#40;generador de informes y SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
  Describe diversos métodos para mostrar varias series en el mismo gráfico, incluidos la combinación de tipos de gráfico, el uso del eje secundario, la especificación de tipos de gráficos diferentes y el uso de varias áreas de gráfico.  
   
- [Vincular varias regiones de datos al mismo conjunto de datos &#40;el generador de informes SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [Vincular varias regiones de datos al mismo conjunto de datos &#40;generador de informes y SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
  Proporcione distintas vistas de los datos del mismo conjunto de datos de informe.  
   
- [Agregar o eliminar un grupo en un gráfico de &#40;el generador de informes SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [Agregar o eliminar un grupo en un gráfico &#40;generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
  Describe la adición de grupos y de grupos anidados a un gráfico.  
   
- [Agregar una media móvil a un gráfico &#40;el generador de informes SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Agregar una media móvil a un gráfico &#40;generador de informes y SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
  Describe el uso de la fórmula de promedio móvil para calcular el promedio de los datos de la serie.  
   
- [Solucionar problemas de gráficos &#40;el generador de informes SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [Solucionar problemas de gráficos &#40;generador de informes y SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
  Ofrece sugerencias para trabajar con gráficos.  
   
 ## <a name="see-also"></a>Vea también  
- [Imágenes, cuadros de texto, rectángulos y líneas &#40;el generador de informes SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Imágenes, cuadros de texto, rectángulos y líneas &#40;generador de informes y SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
  [Tutorial: Agregar un gráfico de columnas a un informe &#40;Generador de informes&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   

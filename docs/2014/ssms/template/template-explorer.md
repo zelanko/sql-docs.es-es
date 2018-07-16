@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.wb.templates.f1
 - sql12.swb.templates.explorer.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - templates [SQL Server], Template Explorer
 ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 18f36d27472338e7ba8c596b6d51a9b1f22a6522
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a8702521d385b6036825190ed5652bf395997160
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241815"
 ---
 # <a name="template-explorer"></a>Template Explorer
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una variedad de plantillas. Las plantillas son archivos estereotipados que contienen scripts SQL que ayudan a crear objetos en una base de datos. La primera vez que se abre el explorador de plantillas, se coloca una copia de las plantillas en la carpeta del usuario C:\Users, en AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates.  

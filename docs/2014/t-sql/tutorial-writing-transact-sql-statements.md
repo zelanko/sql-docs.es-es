@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL statements, tutorials
 - Transact-SQL tutorials
 - tutorials [Transact-SQL]
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ffe24c3b61e745817296486de511d5a2e59b6ff0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 0334281467eea3d1324732a0c2ec1978aaadf60b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241705"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Tutorial: Escribir instrucciones Transact-SQL
   Éste es el tutorial Escribir instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] . Este tutorial está pensado para usuarios que no tienen experiencia en escribir instrucciones SQL. Ayudará a los nuevos usuarios a empezar revisando algunas instrucciones básicas para crear tablas e insertar datos. Este tutorial usa [!INCLUDE[tsql](../includes/tsql-md.md)], la implementación de [!INCLUDE[msCoName](../includes/msconame-md.md)] del estándar SQL. Este tutorial está pensado como una breve introducción al lenguaje [!INCLUDE[tsql](../includes/tsql-md.md)] y no como una sustitución de una clase de [!INCLUDE[tsql](../includes/tsql-md.md)] . Las instrucciones de este tutorial son sencillas de forma intencionada y no pretenden representar la complejidad que se encuentra en una base de datos de producción típica.  
@@ -60,6 +60,6 @@ ms.locfileid: "36107084"
 -   Internet Explorer 6 o posterior.  
   
 > [!NOTE]  
->  Al revisar los tutoriales, se recomienda que agregue el **siguiente** y **anterior** botones a la barra de herramientas del Visor de documentos.  
+>  Cuando revise los tutoriales, le recomendamos que agregue el **siguiente** y **anterior** botones a la barra de herramientas del Visor de documentos.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Lección 4: Definir avanzado atributos y propiedades de dimensión | Documentos de Microsoft'
+title: 'Lección 4: Definir avanzadas de propiedades de dimensión y atributo | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 853ce6e8fbbc559e690c46fda0ae1d7db02d2eb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9dd26e1f755f655dd5757c35c3232ce34981da6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279820"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lección 4: Definir propiedades de dimensiones y de atributos avanzados
   En esta lección, aprenderá a utilizar algunas de las propiedades avanzadas de atributos, jerarquías de atributos y propiedades de dimensiones.  
@@ -29,7 +29,7 @@ ms.locfileid: "36201912"
   
  Esta lección contiene las siguientes tareas:  
   
- [Utiliza una versión modificada del proyecto Tutorial de Analysis Services](lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
+ [Usar una versión modificada del proyecto Tutorial de Analysis Services](lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
  En esta tarea, abrirá, revisará e implementará una versión modificada del proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , que tiene varios grupos de medidas y dimensiones adicionales.  
   
  [Definir propiedades de atributo primario en una jerarquía de elementos primarios y secundarios](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
@@ -44,14 +44,14 @@ ms.locfileid: "36201912"
  [Ordenar los miembros de atributo en función de un atributo secundario](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
  En esta tarea, se muestra cómo ordenar los miembros de dimensión en función de un atributo secundario para obtener el criterio de ordenación que se desee.  
   
- [Especificar relaciones de atributo entre atributos en una jerarquía definida por el usuario](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+ [Especificar relaciones de atributo entre los atributos de una jerarquía definida por el usuario](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
  En esta tarea, aprenderá a definir las propiedades de miembro de los atributos y a especificar relaciones de agregación entre ellos. Para obtener más información, vea [Definir relaciones de atributo](multidimensional-models/attribute-relationships-define.md) y [Propiedades de jerarquía de usuario](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
- [Definir el miembro desconocido y propiedades de procesamiento de valores Null](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [Definir las propiedades de miembro desconocido y de procesamiento de valores NULL](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
  En esta tarea, debe configurar las propiedades UnknownMember y UnknownMemberName para controlar las condiciones de error causadas por los miembros de dimensión con valor NULL.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 5: Definir relaciones entre las dimensiones y grupos de medida](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [Lección 5: Definir relaciones entre dimensiones y grupos de medida](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Escenario de Tutorial de Analysis Services](analysis-services-tutorial-scenario.md)   

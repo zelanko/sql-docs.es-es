@@ -1,5 +1,5 @@
 ---
-title: Depurar procedimientos almacenados | Documentos de Microsoft
+title: Depurar procedimientos almacenados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], debugging
 ms.assetid: 34f51b85-02b3-40dd-bf93-375a9e522385
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec2c67e30caf18f3e11b1391dc0a4bb67028c083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d14f4b68aa3a4cf76cad1c49c1d37a6be9c70f7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282021"
 ---
 # <a name="debugging-stored-procedures"></a>Depurar procedimientos almacenados
   Los procedimientos almacenados de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] son bibliotecas CLR o COM (generalmente DLL) escritas en C# (u otro lenguaje de bibliotecas CLR o COM). Por consiguiente, la depuración de un procedimiento almacenado es muy similar a la depuración de cualquier otra aplicación del entorno de depuración de Visual Studio. Los procedimientos almacenados del entorno de desarrollo de Visual Studio pueden depurarse con las funciones de depuración integradas. Con ellas podrá detenerse en ubicaciones de procedimientos, inspeccionar los valores de memoria y registro, cambiar variables, observar el tráfico de mensajes y examinar cómo funciona el código.  
@@ -44,7 +44,7 @@ ms.locfileid: "36203284"
   
     1.  Desde el **depurar** menú, elija **toProcess asociar**.  
   
-    2.  En el **asociar toProcess** cuadro de diálogo, seleccione **Mostrar procesos de todos los usuarios**.  
+    2.  En el **asociar toProcess** cuadro de diálogo, seleccione **mostrar los procesos de todos los usuarios**.  
   
     3.  En el **procesos disponibles** lista el **proceso** columna, haga clic en **Msmdsrv.exe**. Si se ejecutase más de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el servidor, necesita identificar el proceso mediante el Id. de la instancia que desee utilizar.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36203284"
  Si experimenta problemas al depurar una biblioteca, compruebe que el archivo de la base de datos del programa (PDB) correspondiente se ha copiado en la ubicación de implementación del servidor. Si no se ha copiado el archivo durante el registro o la implementación, es necesario copiarlo manualmente en la misma ubicación que la DLL. En el código nativo (DLL de COM), el archivo PDB reside en el subdirectorio \debug. En el código administrado (DLL de CLR), reside en el subdirectorio \WINDEBUG.  
   
 ## <a name="see-also"></a>Vea también  
- [Administración de ensamblados de modelos multidimensionales](../multidimensional-models/multidimensional-model-assemblies-management.md)   
+ [Administración de los ensamblados de modelos multidimensionales](../multidimensional-models/multidimensional-model-assemblies-management.md)   
  [Definición de procedimientos almacenados](defining-stored-procedures.md)  
   
   

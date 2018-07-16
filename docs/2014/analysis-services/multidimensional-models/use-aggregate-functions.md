@@ -1,5 +1,5 @@
 ---
-title: Usar funciones de agregado | Documentos de Microsoft
+title: Usar funciones de agregado | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9520426cdb177b8851f0766448f637563b125693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68ec0250382ad6ec865ff37adcb847ba6afec978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257551"
 ---
 # <a name="use-aggregate-functions"></a>Usar funciones de agregado
   Al usar una dimensión para segmentar una medida, la medida se resume en las jerarquías contenidas en la dimensión. El comportamiento de suma depende de la función de agregado especificada en la medida. Para la mayoría de las medidas que contienen datos numéricos, la función de agregado es `Sum`. El valor de la medida se suma a cantidades diferentes dependiendo del nivel de la jerarquía que esté activo.  

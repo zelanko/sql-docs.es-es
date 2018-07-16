@@ -1,5 +1,5 @@
 ---
-title: Revise los resultados de la reproducción | Documentos de Microsoft
+title: Revise los resultados de la reproducción | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ecfcf05a685543e22d9ea9bf3b2889fcb8098064
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 03149886d49a86656aca73f80685e711c3ca9b77
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308965"
 ---
 # <a name="review-the-replay-results"></a>Revisar los resultados de la reproducción
   Una vez que la característica de reproducción distribuida de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] completa una reproducción distribuida, la actividad de reproducción de cada cliente se puede capturar y guardar en los archivos de seguimiento de resultados de cada cliente. Para capturar esta actividad, debe usar el parámetro **-o** al ejecutar la herramienta de administración con la opción **replay**. Para obtener más información sobre la opción replay, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
@@ -82,8 +82,8 @@ ms.locfileid: "36200043"
   
 ## <a name="see-also"></a>Vea también  
  [Reproducción distribuida de SQL Server](sql-server-distributed-replay.md)   
- [Requisitos de Distributed Replay](distributed-replay-requirements.md)   
- [Opciones de línea de comandos de herramientas de administración &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Requisitos de reproducción distribuida](distributed-replay-requirements.md)   
+ [Opciones de línea de comandos de la herramienta de administración &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurar Distributed Replay](configure-distributed-replay.md)  
   
   

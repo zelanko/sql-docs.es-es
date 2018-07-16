@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], aliases
 - aliases [SQL Server], columns
 ms.assetid: e2e1c166-8ea7-47a2-b6a7-e419bf0fa3bb
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c317fd581c97d8c48a5ccd92a0010c45be24493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 942279e0c731439f013bee345b5202fb7fed5960
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291935"
 ---
 # <a name="create-column-aliases-visual-database-tools"></a>Crear alias de columna (Visual Database Tools)
   Puede crear alias para nombres de columnas con el fin de facilitar el trabajo con nombres de columnas, cálculos y valores de resumen. Por ejemplo, puede crear un alias de columna para:  
@@ -42,7 +42,7 @@ ms.locfileid: "36108012"
 ## <a name="see-also"></a>Vea también  
  [Agregar columnas a las consultas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Ordenar y agrupar los resultados de consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [Resumir los resultados de la consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Resumir los resultados de consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Realizar operaciones básicas con consultas (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

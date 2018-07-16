@@ -1,5 +1,5 @@
 ---
-title: Elemento Create (XMLA) | Documentos de Microsoft
+title: Elemento Create (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Create command (XMLA)
 ms.assetid: a623d362-a1ac-40e4-8816-65fac89cb391
 caps.latest.revision: 17
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 19e7673c63d7e305d706efb910222f8ba0da7215
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a3679fd48885b3538996b38286709e14b665bef0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247739"
 ---
 # <a name="create-element-xmla"></a>Elemento Create (XMLA)
   Contiene elementos de Analysis Services Scripting Language (ASSL) utilizados por el `Execute` método para crear objetos en un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia.  
@@ -69,7 +69,7 @@ ms.locfileid: "36200810"
 |Attribute|Descripción|  
 |---------------|-----------------|  
 |AllowOverwrite|Opcional `Boolean` atributo. Si está establecido en True, los objetos definidos en el elemento `ObjectDefinition` pueden sobrescribir objetos existentes en la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Si este atributo se omite o se establece en False, la presencia de un objeto existente genera un error.|  
-|Ámbito|Opcional `Enum` atributo. Define la duración de objetos definidos en el elemento `ObjectDefinition`. Si se omite este atributo, los objetos definidos en el elemento `ObjectDefinition` se almacenan en la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Puede disponer de los siguientes valores:<br /><br /> -   *sesión*<br />     Los objetos definidos en el elemento `ObjectDefinition` solamente existen mientras dura la sesión de XML  for Analysis (XMLA). **Nota:** cuando se usa el *sesión* establecer, el `ObjectDefinition` solo puede contener el elemento [dimensión](../../scripting/objects/dimension-element-assl.md), [cubo](../../scripting/objects/cube-element-assl.md), o [MiningModel ](../../scripting/objects/miningmodel-element-assl.md) Elementos ASSL.|  
+|Ámbito|Opcional `Enum` atributo. Define la duración de objetos definidos en el elemento `ObjectDefinition`. Si se omite este atributo, los objetos definidos en el elemento `ObjectDefinition` se almacenan en la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Puede disponer de los siguientes valores:<br /><br /> -   *Sesión*<br />     Los objetos definidos en el elemento `ObjectDefinition` solamente existen mientras dura la sesión de XML  for Analysis (XMLA). **Nota:** cuando se usa el *sesión* establecimiento, el `ObjectDefinition` solo puede contener el elemento [dimensión](../../scripting/objects/dimension-element-assl.md), [cubo](../../scripting/objects/cube-element-assl.md), o [MiningModel ](../../scripting/objects/miningmodel-element-assl.md) Elementos ASSL.|  
   
 ## <a name="remarks"></a>Notas  
  Cada operación `Create` crea un objeto principal bajo un elemento primario proporcionado por el elemento `ParentObject`. Si se omite el objeto primario, se asume que es la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] de destino. Esto genera un error si el elemento primario de un objeto principal no es la instancia de destino.  

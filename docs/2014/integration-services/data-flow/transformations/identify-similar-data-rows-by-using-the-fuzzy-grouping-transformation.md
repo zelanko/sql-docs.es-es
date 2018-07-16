@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Fuzzy Grouping transformation
 - match similar data [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bff1f66d68f07aaaf23e8a3c90b8c09b0206c79e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 948a55588aa943ba05fc3ac536f6ca04213a2e99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233755"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identificar filas de datos similares mediante la transformación Agrupación aproximada
   Para agregar y configurar una transformación Agrupación aproximada, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  

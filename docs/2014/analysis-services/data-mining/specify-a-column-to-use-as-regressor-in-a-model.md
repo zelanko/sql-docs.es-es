@@ -1,5 +1,5 @@
 ---
-title: Especificar una columna que se utilizan como regresor en un modelo | Documentos de Microsoft
+title: Especificar una columna que se usarán como regresor en un modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0c2897d8b57b381a5a25cd83086f3cb2178994d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8d3418ced07536e0ab02c6ad1324096f0898bc6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293625"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Especificar una columna para utilizar como regresor en un modelo
   Un modelo de regresión lineal representa el valor del atributo de predicción como resultado de una fórmula que combina las entradas de manera que los datos se ajusten lo más posible a una línea de regresión estimada. El algoritmo acepta solamente valores numéricos como entradas y detecta automáticamente las entradas que proporcionan el ajuste óptimo.  
@@ -67,6 +67,6 @@ ms.locfileid: "36204289"
  [Algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm.md)   
  [Consultas de minería de datos](data-mining-queries.md)   
  [Referencia técnica del algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Contenido del modelo para los modelos de regresión lineal de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenido del modelo para los modelos de regresión lineal de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Statistics object
 - SQLAgent:Statistics
 ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d78970cd4b284d54c23893a7886caefb894f3529
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c5520359d8dd661d6636dbfcccddf60577adad2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298565"
 ---
 # <a name="sql-server-agent-statistics-object"></a>Statistics (objeto del Agente SQL Server)
   El objeto de rendimiento **Statistics** del Agente SQL Server contiene contadores de rendimiento que proporcionan información acerca del Agente SQL Server.  

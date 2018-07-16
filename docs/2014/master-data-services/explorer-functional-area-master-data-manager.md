@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1b92e520492b579009c0f68e07592b7c2916fd75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e1e100be7ab60e98b53681cf11a811b9627cfb57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309985"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>Área funcional de Explorador (Master Data Manager)
   En el área funcional de Explorador, puede actualizar datos y trabajar con jerarquías y colecciones.  
@@ -37,7 +37,7 @@ ms.locfileid: "36202317"
   
  [Reactivar un miembro o colección &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
- [Anotaciones &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+ [Las anotaciones &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   
  [Transacciones &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Crear una serie temporal de modelo de minería de datos y la estructura de minería de datos | Documentos de Microsoft'
+title: 'Lección 1: Crear una serie temporal del modelo de minería de datos y la estructura de minería de datos | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b201f2b8-9ab5-425b-9ff3-fe321a60a7b7
 caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: e6092c624d6fbbac57411d3e6d2e1c65c437a7d6
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: e0dc6f1be5fd1d0a6c983005d7db10c4c94a690b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251187"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lección 1: Crear un modelo de minería de datos de serie temporal y una estructura de minería de datos
   En esta lección, creará un modelo de minería de datos que le permita predecir valores a lo largo del tiempo, según datos históricos. Al crear el modelo, la estructura subyacente se generará automáticamente y se utilizará como base para otros modelos de minería de datos.  
@@ -57,7 +57,7 @@ CREATE MINING MODEL [Mining Model Name]
   
  Analysis Services genera un nombre para la estructura subyacente anexando "_structure" al nombre del modelo, con lo que se asegura de que el nombre de la estructura sea distinto del nombre del modelo. Para obtener información sobre la nomenclatura de un objeto en DMX, vea [identificadores &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
   
- La línea siguiente de código define la columna de clave para el modelo de minería de datos, que en el caso de un modelo de serie temporal identifica singularmente un incremento de tiempo en los datos del origen. El incremento de tiempo se identifica con la `KEY TIME` palabras clave después de los tipos de datos y el nombre de columna. Si el modelo de serie temporal tiene una clave de serie independiente, se identifica con la palabra clave `KEY`.  
+ La línea siguiente de código define la columna de clave para el modelo de minería de datos, que en el caso de un modelo de serie temporal identifica singularmente un incremento de tiempo en los datos del origen. El paso del tiempo se identifica con el `KEY TIME` palabras clave después de los tipos de datos y el nombre de columna. Si el modelo de serie temporal tiene una clave de serie independiente, se identifica con la palabra clave `KEY`.  
   
 ```  
 <key columns>  
@@ -85,9 +85,9 @@ CREATE MINING MODEL [Mining Model Name]
   
 1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  En el **conectar al servidor** cuadro de diálogo para **tipo de servidor**, seleccione **Analysis Services**. En **nombre del servidor**, tipo `LocalHost`, o el nombre de la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que desea conectarse en esta lección. Haga clic en **Conectar**.  
+2.  En el **conectar al servidor** cuadro de diálogo para **tipo de servidor**, seleccione **Analysis Services**. En **nombre del servidor**, tipo `LocalHost`, o el nombre de la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que desea conectarse a esta lección. Haga clic en **Conectar**.  
   
-3.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], seleccione **nueva consulta**y, a continuación, haga clic en **DMX**.  
+3.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX**.  
   
      Se abre el Editor de consultas, que contiene una consulta nueva en blanco.  
   
@@ -178,7 +178,7 @@ CREATE MINING MODEL [Mining Model Name]
   
 6.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
   
-7.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y un nombre al archivo `Forecasting_MIXED.dmx`.  
+7.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `Forecasting_MIXED.dmx`.  
   
 ## <a name="executing-the-query"></a>Ejecutar la consulta  
  El último paso es ejecutar la consulta. Después de crear y guardar una consulta, debe ejecutarse para crear el modelo y su estructura de minería de datos en el servidor. Para obtener más información acerca de cómo ejecutar consultas en el Editor de consultas, vea [Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
@@ -187,7 +187,7 @@ CREATE MINING MODEL [Mining Model Name]
   
 -   En el Editor de consultas, en la barra de herramientas, haga clic en **Execute**.  
   
-     El estado de la consulta se muestra en el **mensajes** ficha en la parte inferior del Editor de consultas de después de la instrucción termina de ejecutarse. En Mensajes, debe aparecer lo siguiente:  
+     El estado de la consulta se muestra en el **mensajes** en la parte inferior del Editor de consultas de una vez que finaliza la ejecución de la instrucción. En Mensajes, debe aparecer lo siguiente:  
   
     ```  
     Executing the query   
@@ -196,13 +196,13 @@ CREATE MINING MODEL [Mining Model Name]
   
      Una nueva estructura denominada **Forecasting_MIXED_Structure** ahora existe en el servidor, junto con el modelo de minería de datos relacionado **Forecasting_MIXED**.  
   
- En la siguiente lección, agregará un modelo de minería de datos a la **Forecasting_MIXED** estructura de minería de datos que acaba de crear.  
+ En la siguiente lección, agregará un modelo de minería de datos para el **Forecasting_MIXED** estructura de minería de datos que acaba de crear.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
  [Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de serie temporal](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo para los modelos de serie temporal de minería de datos &#40;Analysis Services: minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
+ [Contenido del modelo para los modelos de serie temporal de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
  [Referencia técnica del algoritmo de serie temporal de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

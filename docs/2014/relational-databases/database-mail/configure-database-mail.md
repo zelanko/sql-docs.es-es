@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.swb.sqlimail.newaccount.f1
 - Sql12.swb.sqlimail.manageexistingaccount.f1
@@ -40,15 +40,15 @@ f1_keywords:
 - Sql12.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a56c620c26a7ef2a7af3dccf59f2f6bcdb0bf3ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5d4b20236528e1908c5012ef6cae19d7fb62e580
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269361"
 ---
 # <a name="configure-database-mail"></a>Configuración de Correo electrónico de base de datos
   En este tema se describe cómo habilitar y configurar el Correo electrónico de base de datos con el Asistente para configuración de Correo electrónico de base de datos y crear un script de configuración de Correo electrónico de base de datos mediante plantillas.  
@@ -71,7 +71,7 @@ ms.locfileid: "36202325"
   
 2.  Expanda el nodo **Administración** .  
   
-3.  Estrecha y haga clic en **correo electrónico de base de datos**y, a continuación, haga clic en **configurar correo electrónico de base de datos**.  
+3.  Estrecho y haga clic en **Database Mail**y, a continuación, haga clic en **configurar correo electrónico de base de datos**.  
   
 4.  Complete los cuadros de diálogo del asistente.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36202325"
  Escriba la dirección de correo electrónico que se utilizará para las respuestas a los mensajes enviados desde esta cuenta. Esta dirección es opcional. Por ejemplo, las respuestas a los mensajes de una cuenta del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden dirigirse al administrador de la base de datos, danw@Adventure-Works.com.  
   
  **Nombre del servidor**  
- Escriba el nombre o la dirección IP del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Típicamente está en un formato similar a `smtp.` *< su_compañía >*`.com`. Si necesita ayuda, consulte a su administrador de correo.  
+ Escriba el nombre o la dirección IP del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Esto está típicamente en un formato similar a `smtp.` *< su_compañía >*`.com`. Si necesita ayuda, consulte a su administrador de correo.  
   
  **Número de puerto**  
  Escriba el número de puerto del servidor SMTP de esta cuenta. La mayor parte de los servidores SMTP utilizan el puerto 25.  

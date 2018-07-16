@@ -1,5 +1,5 @@
 ---
-title: Seguimiento de propiedades de archivo (pestaña selección de eventos) | Documentos de Microsoft
+title: Seguimiento de propiedades de archivo (pestaña selección de eventos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracefileproperties.eventsselection.f1
 helpviewer_keywords:
 - Trace File Properties dialog box
 ms.assetid: 158d442f-2225-4173-8545-fb1cf611b4d0
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fdc365671beae3d0037ca9f3dca9b0c2a1f21ad4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f74cc7160d66909523628c173e4b80db4045a90e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302645"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>Propiedades del archivo de seguimiento (pestaña Selección de eventos)
   Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades del archivo de seguimiento** para ver las propiedades de columna del seguimiento o quitar columnas de datos del seguimiento.  
@@ -52,10 +52,10 @@ ms.locfileid: "36202552"
  Después de seleccionar la columna **Eventos** y la columna de datos de las que se va a realizar un seguimiento, haga clic en **Organizar columnas** para que la cuadrícula reordene la columna en la ventana de resultados del seguimiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Especificar eventos y columnas de datos para un archivo de seguimiento &#40;analizador de SQL Server&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
- [Filtrar eventos en un seguimiento &#40;analizador de SQL Server&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
+ [Especificar eventos y columnas de datos para un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [Filtrar eventos en un seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [Ver información de un filtro &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
- [Modificar un filtro &#40;analizador de SQL Server&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
+ [Modificar un filtro &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   

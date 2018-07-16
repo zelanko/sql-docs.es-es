@@ -1,5 +1,5 @@
 ---
-title: Orígenes de datos en modelos multidimensionales | Documentos de Microsoft
+title: Orígenes de datos en modelos multidimensionales | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - metadata [Analysis Services]
 - Analysis Services objects, data sources
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - storage [Analysis Services], data sources
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fb84aceb83b3dfd0ac5e1e36d884b41df2850769
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 962e4cf17f53db60f3f766e1bd4432b1bd07df69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267641"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>Orígenes de datos en modelos multidimensionales
   Todos los datos que se importan o se cargan en un modelo multidimensional se originan en un origen de datos externo. Normalmente, los datos de origen son de un almacenamiento de datos diseñado para el informe de errores, pero pueden proceder de cualquier base de datos relacional a la que se acceda directa o indirectamente mediante un intermediario, como un paquete de [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
@@ -61,8 +61,8 @@ ms.locfileid: "36107057"
 |[Orígenes de datos admitidos &#40;SSAS Multidimensional&#41;](supported-data-sources-ssas-multidimensional.md)|Describe los tipos de orígenes de datos que puede usar en un modelo multidimensional.|  
 |[Crear un origen de datos &#40;SSAS Multidimensional&#41;](create-a-data-source-ssas-multidimensional.md)|Explica cómo agregar un objeto de origen de datos a un modelo multidimensional.|  
 |[Eliminar un origen de datos en el Explorador de soluciones &#40;SSAS Multidimensional&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Use este procedimiento para eliminar un objeto de origen de datos de un modelo multidimensional.|  
-|[Establecer las propiedades de origen de datos &#40;SSAS Multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md)|Describe cada propiedad y explica cómo configurar cada una.|  
-|[Establecer opciones de suplantación &#40;SSAS - multidimensionales&#41;](set-impersonation-options-ssas-multidimensional.md)|Explica cómo configurar opciones en el cuadro de diálogo información de suplantación.|  
+|[Establecer las propiedades del origen de datos &#40;SSAS Multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md)|Describe cada propiedad y explica cómo configurar cada una.|  
+|[Establecer las opciones de suplantación &#40;SSAS - multidimensionales&#41;](set-impersonation-options-ssas-multidimensional.md)|Explica cómo configurar opciones en el cuadro de diálogo información de suplantación.|  
   
 ## <a name="see-also"></a>Vea también  
  [Objetos de base de datos &#40;Analysis Services - datos multidimensionales&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 3: Comprobar los datos en Master Data Manager | Documentos de Microsoft'
+title: 'Tarea 3: Comprobar los datos en Master Data Manager | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d88953d2-2258-40ac-b3bf-2ef502f9b5fd
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0d455808b3add11f07bdd31b328542cc777890f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 82a96594b7ef6aa498dd0d4cac7f9f1f50a8e270
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289811"
 ---
 # <a name="task-3-verifying-the-data-in-master-data-manager"></a>Tarea 3: comprobar los datos en Master Data Manager
   En esta tarea, comprobará que se ha creado la entidad **Proveedor** en **MDS** mediante la **aplicación web Master Data Manager**.  
@@ -35,6 +35,6 @@ ms.locfileid: "36108229"
 3.  Revise los datos almacenados en MDS. Si no ve los datos, confirme que ha seleccionado **Proveedores** en **Modelo** en la página principal antes de iniciar **Explorador**. Puede agregar o eliminar datos de la lista de proveedores mediante los botones **Agregar miembro** y **Eliminar miembro** de la barra de herramientas.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 4 &#40;opcional&#41;: combinar, búsqueda de coincidencias y publicar un nuevo conjunto de datos](../../2014/tutorials/task-4-optional-combining-matching-and-publishing-new-set-of-data.md)  
+ [Tarea 4 &#40;opcional&#41;: combinar, coincidencia y publicar un nuevo conjunto de datos](../../2014/tutorials/task-4-optional-combining-matching-and-publishing-new-set-of-data.md)  
   
   

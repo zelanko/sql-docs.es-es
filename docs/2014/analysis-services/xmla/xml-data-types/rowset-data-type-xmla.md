@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos Rowset (XMLA) | Documentos de Microsoft
+title: Tipo de datos Rowset (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 554217fe6d660040b51788d82a63f11ea0b7ce7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6f7dd6bc7f19d7d3eba42c21cda71a9216cbe32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279451"
 ---
 # <a name="rowset-data-type-xmla"></a>Tipo de datos Rowset (XMLA)
   Define un tipo de datos derivado que representa un [raíz](../xml-elements-properties/root-element-xmla.md) elemento que devuelve datos tabulares de un [Discover](../xml-elements-methods-discover.md) o [Execute](../xml-elements-methods-execute.md) llamada al método.  
   
- **Namespace** urn: schemas-microsoft-com-analysis: rowset  
+ **Namespace** urn: schemas-microsoft-com-analysis: conjunto de filas  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,13 +62,13 @@ ms.locfileid: "36204258"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|None|  
-|Elementos secundarios|[Fila](../xml-elements-properties/row-element-xmla.md)|  
+|Elementos secundarios|[fila](../xml-elements-properties/row-element-xmla.md)|  
 |Elementos derivados|[raíz](../xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notas  
- XML no admite ciertos caracteres como nombres de elemento y de atributo. Para solucionar esta restricción de nomenclatura, XML for Analysis (XMLA) admite la codificación tal como se define por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para los nombres de columna que contienen caracteres de nombre XML que no son válidos según la especificación XML 1.0, XMLA utiliza los valores hexadecimales correspondientes para codificar los caracteres Unicode que no son válidos. Los valores hexadecimales son los caracteres de escape _x*HHHH*\_, donde *HHHH* representa el código UCS-2 hexadecimal de cuatro dígitos para el carácter con el bit más significativo en primer lugar. Por ejemplo, XMLA codifica el nombre "Order Details" como Order_x0020_Details, reemplazando el carácter de espacio en blanco con el código hexadecimal correspondiente.  
+ XML no admite ciertos caracteres como nombres de elemento y de atributo. Para solucionar esta restricción de nomenclatura, XML for Analysis (XMLA) admite la codificación tal como se define por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para los nombres de columna que contienen caracteres de nombre XML que no son válidos según la especificación XML 1.0, XMLA utiliza los valores hexadecimales correspondientes para codificar caracteres Unicode que no son válidos. Los valores hexadecimales usan secuencias de escape como _x*HHHH*\_, donde *HHHH* significa el código UCS-2 hexadecimal de cuatro dígitos para el carácter con el bit más significativo en primer lugar. Por ejemplo, XMLA codifica el nombre "Order Details" como Order_x0020_Details, reemplazando el carácter de espacio en blanco con el código hexadecimal correspondiente.  
   
- La codificación puede hacer que las transformaciones del Leguaje de estilos extensible (XSL) resulten difíciles. Para admitir una búsqueda rápida de los datos reales, sin codificar los nombres de columna, agregue el `sql:field`de atributo en el esquema de conjunto de filas XML para cada columna, tal como se muestra en el ejemplo siguiente:  
+ La codificación puede hacer que las transformaciones del Leguaje de estilos extensible (XSL) resulten difíciles. Para admitir una búsqueda rápida de los datos reales, sin codificar los nombres de columna, agregue el `sql:field`atributo al esquema XML del conjunto de filas para cada columna, tal como se muestra en el ejemplo siguiente:  
   
 ```  
 <xsd:element name="Order_x0020_Details" type="string" sql:field="Order Details" />  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e25fcb18b0224780e3dff2fcbe62b88f8a3d0322
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da89c1a1740d8acd0f284d9cf1475d34ca651792
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252597"
 ---
 # <a name="left-ssis-expression"></a>LEFT (expresión de SSIS)
   Devuelve el número de caracteres especificado de la parte más a la izquierda de la expresión de caracteres dada.  

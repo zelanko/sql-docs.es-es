@@ -1,14 +1,13 @@
 ---
-title: Usar la base de datos Agregar asistente de grupo de disponibilidad (SQL Server Management Studio) | Documentos de Microsoft
+title: Usar la base de datos Agregar asistente de grupo de disponibilidad (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.adddatabasewizard.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 caps.latest.revision: 23
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2eae2dbc1f6031b18f6edf3a92e65d05d56b4ff2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3900ee843069adb8775497168069716e68eea352
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243505"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server Management Studio)
   Use el Asistente para agregar una base de datos al grupo de disponibilidad como ayuda para agregar una o varias bases de datos a un grupo de disponibilidad AlwaysOn existente.  
@@ -43,7 +42,7 @@ ms.locfileid: "36202793"
 -   **Para agregar una base de datos mediante:**  [Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
- Si nunca ha agregado una base de datos a un grupo de disponibilidad, vea la sección "Bases de datos de disponibilidad" en [requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Si nunca ha agregado una base de datos a un grupo de disponibilidad, consulte la sección "Bases de datos de disponibilidad" en [requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Requisitos previos, restricciones y recomendaciones  
   
@@ -51,7 +50,7 @@ ms.locfileid: "36202793"
   
 -   Si una base de datos está cifrada o incluso contiene una clave de cifrado de base de datos (DEK), no puede usar el [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] ni el [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] para agregar la base de datos a un grupo de disponibilidad. Aunque se haya descifrado una base de datos cifrada, sus copias de seguridad de registros pueden contener datos cifrados. En este caso, la sincronización de datos completa inicial podría producir errores en la base de datos. Esto se debe a que la operación de restaurar registro puede requerir el certificado utilizado por las claves de cifrado de base de datos (DEK) y ese certificado podría no estar disponible.  
   
-     **Para que pueda agregar a un grupo de disponibilidad mediante el Asistente para una base de datos descifrado:**  
+     **Para hacer que una base de datos descifrada se pueda agregar a un grupo de disponibilidad mediante el Asistente para:**  
   
     1.  Cree una copia de seguridad de registros de la base de datos principal.  
   
@@ -87,7 +86,7 @@ ms.locfileid: "36202793"
   
 3.  Haga clic con el botón secundario en el grupo de disponibilidad al que está agregando una base de datos y seleccione el comando **Agregar base de datos** . Este comando inicia el Asistente para agregar una base de datos al grupo de disponibilidad.  
   
-4.  En la página **Seleccionar bases de datos** , seleccione una o varias bases de datos. Para obtener más información, consulte [la página Seleccionar bases de datos &#40;disponibilidad Asistente para agregar base de datos Asistente para nuevo grupo&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md).  
+4.  En la página **Seleccionar bases de datos** , seleccione una o varias bases de datos. Para obtener más información, consulte [seleccione página de bases de datos &#40;disponibilidad Asistente para agregar base de datos de Asistente para nuevo grupo&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md).  
   
 5.  En la página **Seleccionar sincronización de datos iniciales** , elija cómo desea que las nuevas bases de datos secundarias se creen y se unan al grupo de disponibilidad. Elija una de las opciones siguientes:  
   
@@ -114,7 +113,7 @@ ms.locfileid: "36202793"
   
 6.  En la página **Conectar con réplicas secundarias existentes** , si las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedan las réplicas de disponibilidad para este grupo de disponibilidad se ejecutan todas como un servicio en la misma cuenta de usuario, haga clic en **Conectar todas**. Si alguna instancia de servidor se ejecuta como un servicio bajo diferentes cuentas, haga clic en el botón **Conectar** individual situado a la derecha de cada nombre de instancia de servidor.  
   
-     Para obtener más información, consulte [conectar a la página de réplicas secundarias existentes &#40;Asistente para agregar réplica y el Asistente para agregar bases de datos&#41;](connect-to-existing-secondary-replicas-page.md).  
+     Para obtener más información, consulte [conectarse a la página réplicas secundarias existentes &#40;Agregar réplica y el Asistente para agregar las bases de datos&#41;](connect-to-existing-secondary-replicas-page.md).  
   
 7.  La página **Validación** comprueba si los valores especificados en este asistente cumplen los requisitos del Asistente para nuevo grupo de disponibilidad. Para realizar un cambio, puede hacer clic en **Anterior** para volver a una página anterior del asistente con el fin de cambiar uno o varios valores. Haga clic en **Siguiente** para volver a la página **Validación** y haga clic en **Volver a ejecutar la validación**.  
   
@@ -145,7 +144,7 @@ ms.locfileid: "36202793"
 -   [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Agregar una base de datos a un grupo de disponibilidad &#40;SQL Server&#41;](availability-group-add-a-database.md)   
  [Iniciar el movimiento de datos en una base de datos secundaria AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)   

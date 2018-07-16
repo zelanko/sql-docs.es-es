@@ -1,5 +1,5 @@
 ---
-title: 'Nueva programación: Editar programación página (Administrador de informes) | Documentos de Microsoft'
+title: 'Nueva programación: Editar programación página (Administrador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 019cb1a12e25ac3c347d1dbdb72296c2f2a888f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2772db639b664724ee6d594d061f6c9ccdc847cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262011"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Nueva programación: Editar página de programación (Administrador de informes)
   Utilice la página Nueva programación/Editar programación para crear una programación para un informe. Las programaciones se usan con las suscripciones para actualizar los informes almacenados en caché y para crear instantáneas como elementos independientes o en un historial de informes.  
@@ -82,7 +82,7 @@ ms.locfileid: "36108932"
   
 -   **Hora** define una programación que se ejecuta a intervalos de horas. Use la sección **Fechas de inicio y fin** para especificar el día en el que se va a ejecutar la programación.  
   
--   **Día** define una programación que se ejecuta en los días seleccionados a una hora específica. Puede especificar los días en las siguientes maneras: cada \< *día*>, cada día de la semana y cada \< *número*> día. Al elegir un método se anulan los demás, aunque los demás días aparezcan seleccionados.  
+-   **Día** define una programación que se ejecuta en los días seleccionados a una hora específica. Puede especificar los días de las siguientes maneras: cada \< *día*>, todos los días laborables y cada \< *número*> días. Al elegir un método se anulan los demás, aunque los demás días aparezcan seleccionados.  
   
 -   **Semana** define una programación que se ejecuta en intervalos semanales a una hora específica. El intervalo puede ser una semana completa (por ejemplo, cada dos semanas) o días de una semana.  
   
@@ -98,6 +98,6 @@ ms.locfileid: "36108932"
 ## <a name="see-also"></a>Vea también  
  [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Crear, modificar y eliminar programaciones](subscriptions/create-modify-and-delete-schedules.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

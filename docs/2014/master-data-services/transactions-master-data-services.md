@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: debc2d15deda7079c54d3b763ef89afaa86f17f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 7697fba2cadf0f7199b047ce7e84656b838cedb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283361"
 ---
 # <a name="transactions-master-data-services"></a>Transacciones (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se registra una transacción cada vez que se realiza una acción en un miembro. Todos los usuarios pueden ver las transacciones y los administradores pueden invertirlas. Las transacciones muestran la fecha, la hora, el usuario que aplicó la acción y otros detalles. Los usuarios pueden agregar una anotación a una transacción para indicar por qué tuvo lugar una transacción.  
@@ -66,6 +66,6 @@ ms.locfileid: "36203434"
   
 -   [Los administradores &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
   
--   [Anotaciones &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [Las anotaciones &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   
   

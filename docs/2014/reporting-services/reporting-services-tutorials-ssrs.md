@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Reporting Services]
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 caps.latest.revision: 35
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ed753691683719dae20802f80e4ae635a79c4338
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b6e44a34ed1262d6e7e5a9db67e3fc61ab7ba998
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268421"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Tutoriales de Reporting Services (SSRS)
   Esta sección contiene los tutoriales de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -32,8 +32,8 @@ ms.locfileid: "36107350"
  [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
  Siga los pasos de este tutorial para aprender a crear su primer informe. En este tutorial, se muestra cómo trabajar con [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear una conexión de datos (origen de datos), definir una consulta sencilla (conjunto de datos) y configurar una región de datos que contenga los datos.  
   
- [Obtener acceso al servicio de Web del servidor de informes mediante Visual Basic o Visual C&#35; &#40;Tutorial de SSRS&#41;](../tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
- Siga los pasos de este tutorial para obtener información sobre cómo obtener acceso a la [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] servicios Web de una aplicación creada con [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
+ [Acceso a Report Server Web Service mediante Visual Basic o Visual C&#35; &#40;Tutorial de SSRS&#41;](../tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ Siga los pasos de este tutorial para aprender cómo obtener acceso a la [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] servicios desde una aplicación creada con Web [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
   
  [Actualizar informes con clases generadas a partir del esquema RDL &#40;Tutorial de SSRS&#41;](../tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
  Siga los pasos de este tutorial para aprender a usar la herramienta de definición de esquemas XML (Xsd.exe) para generar clases que permiten serializar y deserializar archivos de definición de informe (.rdl y .rdlc) con el [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
@@ -44,7 +44,7 @@ ms.locfileid: "36107350"
 ## <a name="see-also"></a>Vea también  
  [Adventure Works para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=245471)   
  [Ejemplos de Reporting Services en CodePlex (http://go.microsoft.com/fwlink/?LinkId=198283)](http://go.microsoft.com/fwlink/?LinkId=198283)   
- [WIKI de TechNet: SQL Server 2012 Samples (http://go.microsoft.com/fwlink/?linkID=220734)](http://go.microsoft.com/fwlink/?linkID=220734)   
- [Picnic (datos de ejemplo) del conjunto de datos (http://go.microsoft.com/fwlink/?linkID=219108)](http://go.microsoft.com/fwlink/?linkID=219108)  
+ [WIKI de TechNet: SQL Server 2012 Samples ()http://go.microsoft.com/fwlink/?linkID=220734)](http://go.microsoft.com/fwlink/?linkID=220734)   
+ [(De picnic Dataset (datos de ejemplo)http://go.microsoft.com/fwlink/?linkID=219108)](http://go.microsoft.com/fwlink/?linkID=219108)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de Hello World Ready | Documentos de Microsoft
+title: Ejemplo de Hello World Ready | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e4fed72859ff91a9a0056529893c7f5664fe6254
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7d94ed99238f6e4a38b92059ad7cd5571abd47e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235605"
 ---
 # <a name="hello-world-ready-sample"></a>Ejemplo de Hola a todos preparado
   El ejemplo Hello World Ready muestra las operaciones básicas relacionadas con la creación, implementación y prueba de un procedimiento almacenado de integración con CLR (Common Language Runtime) simple internacionalizado. Un componente internacionalizado se puede localizar fácilmente a distintos idiomas para diferentes mercados del mundo entero sin cambiar el código fuente del componente. Este ejemplo también muestra cómo devolver datos al cliente a través de un parámetro de salida y a través de un registro que el procedimiento almacenado crea dinámicamente. Este ejemplo es casi idéntico al descrito en Hello World, salvo que es mucho más fácil y seguro localizar esta aplicación. Para cambiar el texto localizado se requiere lo siguiente:  
   
-1.  Cambiar un archivo XML (el archivo.`resx` archivo) para la referencia cultural concreta en el directorio de recursos  
+1.  Cambiar un archivo XML (el.`resx` archivo) para la referencia cultural concreta en el directorio de recursos  
   
 2.  Generar el archivo de recursos de la referencia cultural con `resgen`.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
 - Integration Services packages, expressions
@@ -22,13 +22,13 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9cb824a3e2c0321b8fcb782d8f7827e395afc2b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b4d8718e8a30fdc55da6601ad24e54923d9ae526
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107688"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289381"
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expresiones de propiedad en paquetes
   Una expresión de propiedad es una expresión asignada a una propiedad para permitir la actualización dinámica de la propiedad en tiempo de ejecución. Por ejemplo, una expresión de propiedad puede actualizar la línea Para que utiliza una tarea Enviar correo, insertando una dirección de correo electrónico almacenada en una variable.  
@@ -56,7 +56,7 @@ ms.locfileid: "36107688"
   
  Una propiedad solo puede utilizar una expresión de propiedad, y una expresión de propiedad solo se puede aplicar a una propiedad. Sin embargo, puede generar varias expresiones de propiedad idénticas y asignarlas a diferentes propiedades.  
   
- Algunas propiedades se establecen mediante el uso de valores provenientes de enumeradores. Cuando hace referencia al miembro enumerador en una expresión de propiedad, debe utilizar el valor numérico equivalente al nombre descriptivo del miembro enumerador. Por ejemplo, si una expresión de propiedad establece la `LoggingMode` propiedad, que utiliza un valor de la `DTSLoggingMode` enumeración, la expresión de propiedad debe utilizar 0, 1 o 2 en lugar de los nombres descriptivos `Enabled`, `Disabled`, o `UseParentSetting`. Para más información, vea [Constantes enumeradas en expresiones de propiedad](enumerated-constants-in-property-expressions.md).  
+ Algunas propiedades se establecen mediante el uso de valores provenientes de enumeradores. Cuando hace referencia al miembro enumerador en una expresión de propiedad, debe utilizar el valor numérico equivalente al nombre descriptivo del miembro enumerador. Por ejemplo, si establece una expresión de propiedad el `LoggingMode` propiedad, que utiliza un valor de la `DTSLoggingMode` enumeración, la expresión de propiedad debe utilizar 0, 1 o 2 en lugar de los nombres descriptivos `Enabled`, `Disabled`, o `UseParentSetting`. Para más información, vea [Constantes enumeradas en expresiones de propiedad](enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Interfaz de usuario de las expresiones de propiedad  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Proporciona un conjunto de herramientas para crear y administrar expresiones de propiedad.  
@@ -96,7 +96,7 @@ ms.locfileid: "36107688"
  Las expresiones de propiedad se cargan una vez que se han cargado las configuraciones de paquete. Por ejemplo, las variables se actualizan primero con sus configuraciones, y luego se evalúan y cargan las expresiones de propiedad que utilizan las variables. Esto significa que las expresiones de propiedad siempre utilizan los valores de variables establecidas con configuraciones.  
   
 > [!NOTE]  
->  No se puede utilizar el `Set` opción de la **dtexec** utilidad para rellenar una expresión de propiedad.  
+>  No puede usar el `Set` opción de la **dtexec** utilidad para rellenar una expresión de propiedad.  
   
  La tabla siguiente resume cuándo se evalúan y cargan las expresiones de propiedad de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36107688"
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>Usar expresiones de propiedad en el bucle Foreach  
  A menudo, es útil implementar una expresión de propiedad para establecer el valor de la propiedad `ConnectionString` de los administradores de conexión que se utilizan dentro del contenedor de bucles Foreach. Después de que el enumerador asigne su valor actual a una variable en cada iteración del bucle, la expresión de propiedad puede usar el valor de esta variable para actualizar el valor de la `ConnectionString` propiedad dinámicamente.  
   
- Si desea utilizar expresiones de propiedad con la propiedad `ConnectionString` de administradores de conexión de archivos, varios archivos, archivos planos y varios archivos planos que utiliza un bucle Foreach, deberá tener en cuenta varios aspectos. Un paquete se puede configurar para ejecutar varios ejecutables simultáneamente estableciendo la propiedad `MaxConcurrentExecutables` en un valor mayor que 1 o en el valor -1. El valor de -1 permite que el número máximo de ejecutables en ejecución simultánea sea igual al número de procesadores más dos. Para evitar las consecuencias negativas de la ejecución paralela de ejecutables, el valor de `MaxConcurrentExecutables` se debe establecer en 1. Si `MaxConcurrentExecutables` no está establecido en 1, el valor de la `ConnectionString` no se puede garantizar la propiedad y los resultados son impredecibles.  
+ Si desea utilizar expresiones de propiedad con la propiedad `ConnectionString` de administradores de conexión de archivos, varios archivos, archivos planos y varios archivos planos que utiliza un bucle Foreach, deberá tener en cuenta varios aspectos. Un paquete se puede configurar para ejecutar varios ejecutables simultáneamente estableciendo la propiedad `MaxConcurrentExecutables` en un valor mayor que 1 o en el valor -1. El valor de -1 permite que el número máximo de ejecutables en ejecución simultánea sea igual al número de procesadores más dos. Para evitar las consecuencias negativas de la ejecución paralela de ejecutables, el valor de `MaxConcurrentExecutables` se debe establecer en 1. Si `MaxConcurrentExecutables` no está establecida en 1, el valor de la `ConnectionString` no se garantiza que la propiedad y los resultados son imprevisibles.  
   
  Por ejemplo, suponga que un bucle Foreach que enumera los archivos de una carpeta recupera los nombres de archivo y luego utiliza la tarea Ejecutar SQL para insertar cada nombre de archivo en una tabla. Si `MaxConcurrentExecutables` no se establece en 1, es posible que se produzcan conflictos de escritura si dos instancias de la tarea Ejecutar SQL intentan escribir en la tabla al mismo tiempo.  
   
@@ -176,6 +176,6 @@ ms.locfileid: "36107688"
 -   Artículo técnico, sobre [ejemplos de expresiones SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Vea también  
- [Usar Variables en paquetes](../use-variables-in-packages.md)  
+ [Usar variables en paquetes](../use-variables-in-packages.md)  
   
   

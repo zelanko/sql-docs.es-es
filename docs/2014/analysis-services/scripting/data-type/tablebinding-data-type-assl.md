@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos TableBinding (ASSL) | Documentos de Microsoft
+title: Tipo de datos TableBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TableBinding data type
 ms.assetid: 3195dca4-82bf-46b7-a31f-5383586e3573
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0790fe5d8567c8ab23e3aaf39430d46675dcbdc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 475044a0bcad3c90ffaffa71eeeb6735a37f96c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220255"
 ---
 # <a name="tablebinding-data-type-assl"></a>Tipo de datos TableBinding (ASSL)
   Define un tipo de datos derivado que representa un enlace con una tabla.  
@@ -60,7 +60,7 @@ ms.locfileid: "36204261"
 |------------------|-------------|  
 |Elementos primarios|None|  
 |Elementos secundarios|[DataSourceID](../properties/id-element-assl.md), [DbSchemaName](../properties/name-element-assl.md), [DbTableName](../properties/dbtablename-element-assl.md)|  
-|Elementos derivados|Vea [enlace](binding-data-type-assl.md)|  
+|Elementos derivados|Consulte [enlace](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
  Tenga en cuenta que la referencia a otras tablas en la expresión de filtro mediante subselect puede afectar al rendimiento de algunos orígenes de datos. Sin embargo, el diseñador puede controlar totalmente la expresión de SQL definiendo una consulta con nombre en la vista del origen de datos y, a continuación, haciendo referencia a ella.  
@@ -77,16 +77,16 @@ SELECT Date, Product ID, Qty, Price, Qty * Price AS Amount
    WHERE Year(Sales.Date) = 97  
 ```  
   
- La expresión calculada todavía es válida, aunque la expresión haya usado nombres de tabla calificados (por ejemplo, Sales.Qty). Lo mismo se aplica si en su lugar, la tabla se sustituye por alguna consulta "SELECT..." La cláusula FROM anterior se convertiría en "FROM SELECT... As Sales."  
+ La expresión calculada todavía es válida, aunque la expresión haya usado nombres de tabla calificados (por ejemplo, Sales.Qty). Lo mismo sucede si la tabla se sustituye por alguna consulta "SELECT…" La cláusula FROM anterior se convertiría en "FROM SELECT... As Sales."  
   
- Para obtener más información sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) del tipo `Binding` y la jerarquía de herencia de `Binding` tipos, consulte [tipo de datos de enlace &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Para obtener más información sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) del tipo `Binding` y la jerarquía de herencia de `Binding` tipos, vea [tipo de datos de enlace &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- Para obtener información general de enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;SSAS multidimensionales&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obtener información general de los enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.TableBinding>.  
   
 ## <a name="see-also"></a>Vea también  
- [Tipo de datos de enlace &#40;ASSL&#41;](binding-data-type-assl.md)   
+ [Tipo de datos Binding &#40;ASSL&#41;](binding-data-type-assl.md)   
  [Orígenes de datos y enlaces &#40;SSAS Multidimensional&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)   
  [Tipos de datos XML de lenguaje Scripting de Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   

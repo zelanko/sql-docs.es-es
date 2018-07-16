@@ -1,5 +1,5 @@
 ---
-title: Metadatos (ODBC) | Documentos de Microsoft
+title: Metadatos (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,27 +15,27 @@ helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 99133efc-b1f2-46e9-8203-d90c324a8e4c
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3414b90224037338fe618d54387700a493c95867
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 430a1b1e67bf2ce64a8cbf30bdd1c1807efb8c62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295205"
 ---
 # <a name="metadata-odbc"></a>Metadatos (ODBC)
   En esta sección se describen los parámetros, resultados de la columna y metadatos del catálogo.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Parámetros y metadatos de resultados](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)  
+ [Metadatos de parámetros y resultados](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)  
  Describe lo que se devuelve en los campos IPD e IRD para los tipos de datos de fecha y hora.  
   
  [Metadatos de catálogo](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)  
  Describe los metadatos de columna devueltos por `SQLColumns` y `SQLProcedureColumns`, así como los metadatos de tipo de datos devueltos por `SQLGetTypeInfo`.  
   
 ## <a name="see-also"></a>Vea también  
- [Fecha y hora mejoras &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

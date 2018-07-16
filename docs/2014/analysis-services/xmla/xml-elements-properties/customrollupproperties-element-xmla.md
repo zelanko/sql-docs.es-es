@@ -1,5 +1,5 @@
 ---
-title: Elemento CustomRollupProperties (XMLA) | Documentos de Microsoft
+title: Elemento CustomRollupProperties (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CustomRollupProperties element
 ms.assetid: 4abf0129-e529-4355-b8d5-6f4e6a88e796
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 004cc629790be3840e7c2b43f71c58dc8416cca7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a564296dd022dece7ff20a7187c2c80bba9c6b7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233705"
 ---
 # <a name="customrollupproperties-element-xmla"></a>Elemento CustomRollupProperties (XMLA)
   Contiene las propiedades de resumen personalizado para un miembro de atributo representado por el elemento primario [atributo](attribute-element-xmla.md) elemento.  
@@ -66,7 +66,7 @@ ms.locfileid: "36111013"
 ## <a name="remarks"></a>Notas  
  El elemento `CustomRollupProperties` contiene una expresión de Expresiones multidimensionales (MDX) que define las propiedades de resumen personalizado del miembro del atributo definido por el elemento primario `Attribute`.  
   
- Para obtener más información acerca de las expresiones de MDX, vea [expresiones &#40;MDX&#41;](/sql/mdx/expressions-mdx).  
+ Para obtener más información sobre las expresiones MDX, vea [expresiones &#40;MDX&#41;](/sql/mdx/expressions-mdx).  
   
 ## <a name="see-also"></a>Vea también  
  [Insertar elemento &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c81867131974a7cf9f4bdd62b1ab84743a3b3fb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: bc4a0923e5e0d337df82e87a9086e14b61a0e945
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305465"
 ---
 # <a name="transact-sql-debugger"></a>Depurador de Transact-SQL
   El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] ayuda a buscar errores en el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante la investigación del comportamiento en tiempo de ejecución del código. Después de establecer la ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en el modo de depuración, puede detener la ejecución de líneas específicas de código e inspeccionar la información y los datos usados por las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o devueltos por ellas.  
@@ -64,7 +64,7 @@ ms.locfileid: "36204381"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Describe cómo configurar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizar la depuración remota.|[Configurar al depurador de Transact-SQL](configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|Describe cómo configurar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizar la depuración remota.|[Configurar el depurador de Transact-SQL](configure-firewall-rules-before-running-the-tsql-debugger.md)|  
 |Describe cómo iniciar, detener y controlar el funcionamiento del depurador.|[Ejecutar el depurador de Transact-SQL](transact-sql-debugger.md)|  
 |Describe cómo utilizar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] para recorrer el código.|[Avanzar paso a paso por el código Transact-SQL](step-through-transact-sql-code.md)|  
 |Describe cómo utilizar el depurador para ver los datos de [!INCLUDE[tsql](../../includes/tsql-md.md)] , como los parámetros y las variables, así como la información del sistema.|[Ver información del depurador de Transact-SQL](transact-sql-debugger-information.md)|  

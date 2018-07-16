@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
 - publishing reports [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f656681c39367bc82c4b5f2b548df69e6106fffa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cf985f4f16f60378dd3d866489fc7c64c940928
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276381"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Establecer propiedades de implementación (Reporting Services)
   En[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], debe especificar el servidor de informes y, si lo desea, las carpetas de los informes y orígenes de datos compartidos para poder publicar los elementos de un proyecto de Servidor de informes en un servidor de informes. Las propiedades y valores que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] necesita para generar los informes, obtener una vista previa de los mismos e implementarlos están almacenados en las configuraciones de proyecto correspondiente al proyecto del servidor de informes. Puede crear varios conjuntos con nombre para estas propiedades de proyecto; de esta forma, podrá cambiar de un conjunto de propiedades a otro según sea necesario. Cada conjunto de propiedades es una configuración. Por ejemplo, puede tener una configuración para publicar los informes en un servidor de pruebas y otra configuración diferente para publicar los informes en un servidor de producción.  
@@ -48,15 +48,15 @@ ms.locfileid: "36203789"
   
 3.  En el **OutputPath** cuadro de texto, escriba o pegue la ruta de acceso en el sistema de archivos local para almacenar la definición de informe que se usa en la comprobación de la compilación, implementación y vista previa de informes. La ruta de acceso debe ser diferente de la que se utiliza para el proyecto y una ruta de acceso relativa que sea una carpeta secundaria bajo la ruta de acceso del proyecto.  
   
-4.  En el **ErrorLevel** cuadro de texto, escriba la gravedad de la compilación problemas que se notifican como errores. Los niveles de problemas que se producen al compilar informes, orígenes de datos u otros recursos del proyecto con una gravedad menor o igual que el valor de **ErrorLevel** se notifican como errores; en caso contrario, los problemas se notifican como advertencias. Cualquier error hará que la tarea de compilación dé un error. Los niveles de gravedad válidos abarcan de 0 a 4, ambos incluidos. El valor predeterminado es 2.  
+4.  En el **ErrorLevel** cuadro de texto, escriba la gravedad de la compilación problemas que se notifican como errores. Niveles de los problemas que se producen al compilar informes, orígenes de datos u otros recursos del proyecto con una gravedad menor o igual que el valor de **ErrorLevel** se notifican como errores; en caso contrario, los problemas se notifican como advertencias. Cualquier error hará que la tarea de compilación dé un error. Los niveles de gravedad válidos abarcan de 0 a 4, ambos incluidos. El valor predeterminado es 2.  
   
      **ErrorLevel** se puede utilizar para aumentar o disminuir la sensibilidad de la compilación. Por ejemplo, cuando se crea un informe con un mapa durante la implementación en un servidor de informes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , de forma predeterminada se muestra un error y la compilación del informe genera un error. Si reduce el **ErrorLevel** , el mapa se quita del informe, se muestra una advertencia y la compilación del informe continúa.  
   
-5.  En el **StartItem** lista, seleccione un informe para mostrar en la ventana de vista previa o en una ventana del explorador cuando se ejecuta el proyecto de informe.  
+5.  En el **StartItem** lista, seleccione un informe que se muestra en la ventana Vista previa o en una ventana del explorador cuando se ejecuta el proyecto de informe.  
   
 6.  En la lista **OverwriteDataSources** , seleccione **True** para sobrescribir el origen de datos compartido en el servidor cada vez que se publican orígenes de datos compartidos, o seleccione **False** para mantener el origen de datos en el servidor.  
   
-7.  En el **TargetServerVersion** lista, seleccione la [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] versión de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o seleccione **detectar versión** para determinar automáticamente la versión instalada en el servidor identificado por la **TargetServer URL** propiedad. El valor predeterminado es **SQL Server 2008 R2**.  
+7.  En el **TargetServerVersion** lista, seleccione el [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] verzi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o seleccione **detectar versión** para determinar automáticamente la versión instalada en el servidor identificado por la **TargetServer URL** propiedad. El valor predeterminado es **SQL Server 2008 R2**.  
   
      Utilice **TargetServerVersion** para personalizar los informes compilados, colocados en la ruta de acceso especificada en OutputPath, para la versión del servidor de informes especificada en **TargetServer URL**.  
   

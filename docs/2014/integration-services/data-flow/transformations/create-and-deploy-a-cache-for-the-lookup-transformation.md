@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating cache files for Lookup transformation
 - deploying cache files for Lookup transformation
@@ -17,13 +17,13 @@ ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f82feebd86e06fb7422cb36659645b9bc9702000
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4d3ab254acde1f610d9bb5593a5e0e5b22ca179
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279661"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Crear e implementar una memoria caché para la transformación Búsqueda
   Puede crear e implementar un archivo caché (.caw) para la transformación Búsqueda. El conjunto de datos de referencia está almacenado en el archivo caché.  

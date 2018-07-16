@@ -1,5 +1,5 @@
 ---
-title: Editor de formulario de acción de obtención de detalles (pestaña acciones, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Editor de formulario de acción de obtención de detalles (pestaña acciones, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.drillthroughaction.f1
 ms.assetid: 225fd818-b5ea-494f-b67b-66e09798274a
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81b7cde92983bf16f37b586389c059dfbff639d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6c310afd3535c1e5a7da5bd9f7784bec2a235ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203301"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220485"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de acción de obtención de detalles (pestaña Acciones, Diseñador de cubos) (Analysis Services -  Datos multidimensionales)
   Use el panel **Editor de Formulario de acción de obtención de detalles** de la pestaña **Acciones** del Diseñador de cubos para modificar la acción de obtención de detalles seleccionada en el panel **Organizador de acciones** . Para obtener más información sobre las acciones de obtención de detalles, vea [Acciones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "36203301"
 |columna|Descripción|  
 |------------|-----------------|  
 |**Dimensions**|Seleccione la dimensión de la que se deriva el atributo devuelto. Seleccione MEASURES para obtener detalles de medidas.|  
-|**Devolver columnas**|Seleccione el atributo o la medida de las dimensiones seleccionadas que se van a devolver cuando se ejecute la acción.|  
+|**Devolver las columnas**|Seleccione el atributo o la medida de las dimensiones seleccionadas que se van a devolver cuando se ejecute la acción.|  
   
  **Propiedades adicionales**  
  Expanda esta opción para ver las opciones **Predeterminado**, **Número máximo de filas**, **Invocación**, **Aplicación**, **Descripción**, **Título**y **El título es MDX** .  
@@ -63,7 +63,7 @@ ms.locfileid: "36203301"
  **Default**  
  Seleccione **True** para incluir esta acción de obtención de detalles como la acción de obtención de detalles predeterminada; en caso contrario, seleccione **False**.  
   
- Si el `RETURN` se omite la cláusula de un MDX `DRILLTHROUGH` instrucción ejecutada por una aplicación cliente, el [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia evalúa todas las acciones de obtención de detalles de manera predeterminada y se ejecuta la primera obtención de detalles predeterminada acción que devuelve un conjunto no vacío. Para obtener más información acerca de MDX `DRILLTHROUGH` instrucción, consulte [instrucción DRILLTHROUGH &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough).  
+ Si el `RETURN` se omite la cláusula de tipo MDX `DRILLTHROUGH` instrucción ejecutada por una aplicación cliente, el [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia evalúa todas las acciones de obtención de detalles predeterminadas y ejecuta la primera obtención de detalles predeterminada acción que devuelve un conjunto no vacío. Para obtener más información acerca de MDX `DRILLTHROUGH` instrucción, consulte [instrucción DRILLTHROUGH &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough).  
   
 > [!NOTE]  
 >  Esta opción se utiliza por compatibilidad con versiones anteriores.  

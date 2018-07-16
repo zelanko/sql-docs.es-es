@@ -1,14 +1,13 @@
 ---
-title: Instalar un Service Pack en un sistema con el tiempo de inactividad mínimo para bases de datos reflejadas | Documentos de Microsoft
+title: Instalar un Service Pack en un sistema con el tiempo de inactividad mínimo para bases de datos reflejadas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hotfixes [SQL Server]
 - database mirroring [SQL Server], upgrading system
@@ -18,18 +17,18 @@ helpviewer_keywords:
 - upgrading SQL Server, mirrored databases
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e15b15020dcf28ad83bfbc50ab18e0005c71a4d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cca85c8f2d38e5f786aa635380c3bd6199e3a48f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296925"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Instalar un Service Pack en un sistema con un tiempo de inactividad mínimo para bases de datos reflejadas
-  En este tema se describe cómo minimizar el tiempo de inactividad de las bases de datos reflejadas cuando instale los Service Pack o las revisiones. Este proceso conlleva la actualización secuencial de las instancias de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] que forman parte de la creación de reflejo de la base de datos. Esta forma de actualización, lo que se conoce como un *actualización gradual*, reduce el tiempo de inactividad a solo una conmutación por error único. Tenga en cuenta que para las sesiones de modo de alto rendimiento en el que el servidor reflejado está geográficamente distante del servidor principal, una actualización gradual puede no ser conveniente.  
+  En este tema se describe cómo minimizar el tiempo de inactividad de las bases de datos reflejadas cuando instale los Service Pack o las revisiones. Este proceso conlleva la actualización secuencial de las instancias de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] que forman parte de la creación de reflejo de la base de datos. Este formulario de actualización, que se conoce como un *actualización gradual*, reduce el tiempo de inactividad a solo una conmutación por error único. Tenga en cuenta que para las sesiones de modo de alto rendimiento en el que el servidor reflejado está geográficamente distante del servidor principal, una actualización gradual podría ser inadecuada.  
   
  Una actualización gradual es un proceso de varias fase que consta de las siguientes fases:  
   
@@ -42,7 +41,7 @@ ms.locfileid: "36202153"
   
 -   Si una sesión se está ejecutando en modo de alto rendimiento, cambie el modo de funcionamiento al modo de alta seguridad.  
   
--   Actualice cada instancia del servidor implicada en la creación de reflejo de la base de datos. Una actualización gradual implica actualizar la instancia del servidor que es actualmente el servidor reflejado, conmuta manualmente cada una de sus bases de datos reflejadas y actualizar la instancia del servidor que primero era el servidor principal (y ahora es el nuevo servidor reflejado). En este momento, tendrá que reanudar la creación de reflejo.  
+-   Actualice cada instancia del servidor implicada en la creación de reflejo de la base de datos. Una actualización gradual implica actualizar la instancia del servidor que es actualmente el servidor reflejado, conmutación manual por cada uno de sus bases de datos reflejadas y actualizar la instancia del servidor que primero era el servidor principal (y ahora es el nuevo servidor reflejado). En este momento, tendrá que reanudar la creación de reflejo.  
   
     > [!NOTE]  
     >  Antes de iniciar una actualización gradual, recomendamos que realice un ejercicio de conmutación manual por error en al menos una de las sesiones de creación de reflejo.  
@@ -58,7 +57,7 @@ ms.locfileid: "36202153"
   
 ### <a name="to-protect-your-data-before-an-update-a-best-practice"></a>Para proteger los datos antes de una actualización (práctica recomendada)  
   
-1.  Realice una copia de seguridad completa de cada base de datos principal.  
+1.  Realizar una copia de seguridad de base de datos completa en cada base de datos principal.  
   
      **Para realizar una copia de seguridad de una base de datos**  
   
@@ -84,18 +83,18 @@ ms.locfileid: "36202153"
   
 ### <a name="to-perform-the-rolling-update"></a>Para realizar la actualización gradual  
   
-1.  Para minimizar el tiempo de inactividad, recomendamos lo siguiente: inicie la actualización gradual actualizando todos los asociados de creación de reflejo que sean actualmente el servidor reflejado en todas sus sesiones de creación de reflejo. Podría tener que actualizar varias instancias del servidor en este momento.  
+1.  Para minimizar el tiempo de inactividad, se recomienda lo siguiente: iniciar la actualización gradual actualizando cualquier asociado de creación de reflejo que es actualmente el servidor reflejado en todas sus sesiones de creación de reflejo. Podría tener que actualizar varias instancias del servidor en este momento.  
   
     > [!NOTE]  
     >  Un testigo se puede actualizar en cualquier momento del proceso de actualización gradual. Por ejemplo, si una instancia del servidor es un servidor reflejado en la sesión 1 y es un testigo en la sesión 2, puede actualizar ahora la instancia del servidor.  
   
-     La instancia del servidor que actualice primero depende de la configuración actual de las sesiones de creación de reflejo, como se indica a continuación:  
+     La instancia del servidor que actualice primero depende de las sesiones de creación de reflejo, la configuración actual como sigue:  
   
     -   Si cualquier instancia del servidor ya es el servidor reflejado en todas sus sesiones de creación de reflejo, instale el Service Pack o la revisión en dicha instancia del servidor.  
   
-    -   Si todas las instancias de servidor son actualmente el servidor principal en las sesiones de creación de reflejo, seleccione una instancia de servidor que actualice primero. Manualmente, a continuación, conmutar por error cada una de sus bases de datos principales y actualizar esa instancia del servidor instalando el service pack o la revisión.  
+    -   Si todas las instancias de servidor se encuentra el servidor principal en las sesiones de creación de reflejo, seleccione una instancia del servidor que actualice primero. Manualmente, a continuación, conmutar por error cada uno de sus bases de datos principales y actualizar esa instancia del servidor instalando el service pack o la revisión.  
   
-     Después de que se va a actualizar, una instancia del servidor automáticamente se reincorpora a cada uno de sus sesiones de creación de reflejo.  
+     Después de actualizarse, una instancia del servidor automáticamente vuelve a unir cada uno de sus sesiones de creación de reflejo.  
   
      **Para realizar una conmutación manual por error**  
   
@@ -105,7 +104,7 @@ ms.locfileid: "36202153"
   
      Para obtener más información sobre el funcionamiento de la conmutación por error manual, vea [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
-2.  En cada sesión de creación de reflejo cuya instancia del servidor reflejado se acaba de actualizar, espere a la sesión que se va a sincronizar. A continuación, conéctese a la instancia del servidor principal y realice una conmutación manual por error de la sesión. Conmutación por error, la instancia del servidor actualizada se convierte en el servidor principal para esa sesión, y el servidor principal anterior se convierte en el servidor reflejado.  
+2.  Para cada sesión de creación de reflejo cuya instancia del servidor reflejado se acaba de actualizar, espere a la sesión de sincronización. A continuación, conéctese a la instancia del servidor principal y realice una conmutación manual por error de la sesión. En la conmutación por error, la instancia del servidor actualizada se convierte en el servidor principal para esa sesión y el servidor principal anterior se convierte en el servidor reflejado.  
   
      El objetivo de este paso es que otra instancia del servidor se convierta en el servidor reflejado en cada sesión de creación de reflejo en la que es un asociado.  
   
@@ -121,7 +120,7 @@ ms.locfileid: "36202153"
     > [!NOTE]  
     >  Conmutación automática por error no funcionará hasta que se ha actualizado el testigo.  
   
-6.  Instale el Service Pack o la revisión en el resto de instancias del servidor que sean testigo para todas las sesiones de reflejo. Cuando un testigo actualizado se reincorpora a una sesión de creación de reflejo, conmutación automática por error vuelve a posibles. Podría tener que actualizar varios servidores en este momento.  
+6.  Instale el Service Pack o la revisión en el resto de instancias del servidor que sean testigo para todas las sesiones de reflejo. Después de un testigo actualizado se vuelve a unir a una sesión de creación de reflejo, conmutación automática por error vuelve a posibles. Podría tener que actualizar varios servidores en este momento.  
   
 ### <a name="to-return-a-session-to-high-performance-mode"></a>Para devolver una sesión al modo de alto rendimiento  
   
@@ -135,7 +134,7 @@ ms.locfileid: "36202153"
   
 1.  Si lo desea, en modo de alta seguridad, restablezca el testigo en cada sesión de creación de reflejo.  
   
-     **Para volver a establecer el testigo**  
+     **Para restablecer el testigo**  
   
     -   [Agregar o reemplazar un testigo de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   

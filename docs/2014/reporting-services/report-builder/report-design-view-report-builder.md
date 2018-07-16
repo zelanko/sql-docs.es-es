@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10440"
 - "10426"
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 64398eaa537e6413f5a55bedb0aa683143047aac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 435709e17b917c1b741e1bc619bb1dca106dbd4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108045"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244385"
 ---
 # <a name="report-design-view-report-builder"></a>Vista de diseño de informe (Generador de informes)
   La ventana del Generador de informes está diseñada para ayudarle a organizar con facilidad sus recursos de informes y a generar rápidamente los informes que necesita. La superficie de diseño está en el centro de la ventana, con la Cinta de opciones arriba y los paneles Datos de informe, Agrupación y Propiedades y la Galería de elementos de informe a la izquierda, abajo y a la derecha. La superficie de diseño es donde agrega y organiza sus elementos de informe. La Cinta de opciones organiza los elementos de menú tradicionales en categorías que puede buscar y utilizar con facilidad. Los paneles le ayudan a agregar, seleccionar y organizar sus recursos de informe y a cambiar las propiedades de los elementos de informe.  
@@ -42,15 +42,15 @@ ms.locfileid: "36108045"
   
  En la vista de diseño del informe, la cinta de opciones se divide en las pestañas siguientes: Inicio, Insertar y Vista. Si no encuentra una tarea en la cinta de opciones, algunos grupos de la cinta de opciones tienen un cuadro de diálogo relacionado que puede abrir haciendo clic en la flecha en el lado inferior derecho del grupo. No puede minimizar o eliminar la cinta de opciones ni reemplazarla con barras de herramientas y menús.  
   
- En el modo de ejecución, la cinta de opciones tiene solo una pestaña, **ejecutar**.  
+ En modo de ejecución, la cinta de opciones tiene solo una pestaña, **ejecutar**.  
   
 ### <a name="home-tab"></a>Pestaña Inicio  
- La pestaña Inicio es una colección de comandos de uso frecuente, centrados en la apariencia de los elementos dentro del informe. En la pestaña Inicio, puede tener acceso a los comandos ejecutar, fuente, párrafo, borde, número y diseño. Al hacer clic en un elemento en la pestaña, cambia el elemento seleccionado en la superficie de diseño. Al hacer clic en **ejecutar**, el informe se representa en HTML para que pueda ver cómo aparecerá el contenido del informe cuando se publica y se muestra la pestaña ejecutar en lugar de la pestaña Inicio. La pestaña Inicio es la pestaña predeterminada que se muestra al crear un informe por primera vez.  
+ La pestaña Inicio es una colección de comandos de uso frecuente, centrados en la apariencia de los elementos dentro del informe. En la pestaña Inicio, puede tener acceso a los comandos ejecutar, fuente, párrafo, borde, número y diseño. Al hacer clic en un elemento en la pestaña, cambia el elemento seleccionado en la superficie de diseño. Al hacer clic en **ejecutar**, el informe se representa en HTML para que pueda ver cómo aparecerá el contenido del informe cuando publica y vea la pestaña ejecutar en lugar de la pestaña Inicio. La pestaña Inicio es la pestaña predeterminada que se muestra al crear un informe por primera vez.  
   
 ### <a name="insert-tab"></a>Pestaña Insertar  
  La pestaña Insertar es una colección de comandos usados con frecuencia para agregar elementos al informe. En la pestaña Insertar, puede usar un los asistentes para agregar una tabla, una matriz, un gráfico o un mapa. También puede agregar estos elementos sin usar un asistente, y agregar otros elementos de informe como minigráficos, indicadores, cuadros de texto, imágenes, líneas, rectángulos, subinformes, encabezados del informe y pies de página.  
   
- Haga clic en **elementos de informe** en la instrucción Insert pestaña abre la Galería de elementos de informe. Puede buscar elementos de informe guardados en un servidor de informes. Para más información, vea [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
+ Al hacer clic en **elementos de informe** en la instrucción Insert ficha abre la Galería de elementos de informe. Puede buscar elementos de informe guardados en un servidor de informes. Para más información, vea [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
  Después de insertar un elemento, el Generador de informes vuelve a cambiar automáticamente a la pestaña Inicio.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "36108045"
  La pestaña Vista es una colección de comandos que controlan lo que se muestra dentro de la ventana del Generador de informes. Puede cambiar las opciones de presentación de la regla y los paneles Agrupar, Datos de informe y Propiedades.  
   
 ### <a name="run-tab"></a>Pestaña Ejecutar  
- Al hacer clic en **ejecutar** en la pestaña Inicio, ejecutar una vista previa del informe en el Visor de HTML y se muestra la pestaña ejecutar en lugar de la pestaña Inicio.  
+ Al hacer clic en **ejecutar** en la pestaña Inicio, ejecutar una vista previa del informe en el Visor HTML y vea la pestaña ejecutar en lugar de la pestaña Inicio.  
   
  La pestaña Ejecutar contiene una colección de comandos que puede usar una vez representado el informe. Puede imprimir el informe, navegar por las páginas del informe, exportar el informe a otro formato de archivo, ver el mapa del documento o los parámetros (si el informe los tiene) y buscar elementos dentro del informe. Para obtener más información, consulte [vista previa del informe en modo de ejecución](#RunMode).  
   
- Para volver a la vista de diseño, del informe en el **ejecutar** , haga clic en **diseño**.  
+ Para volver a la vista de diseño de informes en el **ejecutar** , haga clic **diseño**.  
   
   
 ##  <a name="RptDesignSurface"></a> Superficie de diseño del informe  
@@ -104,11 +104,11 @@ ms.locfileid: "36108045"
   
  Para obtener más información acerca de los elementos del panel Datos de informe, vea los siguientes temas:  
   
--   [Funciones globales integradas y referencias a los usuarios &#40;el generador de informes SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+-   [Funciones globales integradas y referencias a los usuarios &#40;generador de informes y SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
 -   [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Imágenes &#40;el generador de informes SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
+-   [Imágenes &#40;generador de informes y SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
   
 -   [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   

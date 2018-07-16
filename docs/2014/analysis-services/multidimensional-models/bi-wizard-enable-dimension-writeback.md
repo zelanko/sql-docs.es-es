@@ -1,5 +1,5 @@
 ---
-title: Habilitar reescritura en la dimensión | Documentos de Microsoft
+title: Habilitar la reescritura de dimensiones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying dimensions
 - writeback [Analysis Services], setting up
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - manual dimension structure modifications
 ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a05010b2f102170b64df13e4eb079dde8fbe325
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e7ee13d4fdfa021e050c4357dc8796289a3cd4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247435"
 ---
 # <a name="enable-dimension-writeback"></a>Habilitar reescritura en la dimensión
   Agregar la mejora de reescritura de dimensiones a un cubo o dimensión para permitir que los usuarios modifiquen manualmente la estructura y los miembros de la dimensión. Las actualizaciones de una dimensión habilitada para escritura se registran directamente en la tabla de dimensiones. Esta mejora cambia la configuración de la propiedad `WriteEnabled` para una dimensión.  
@@ -42,10 +42,10 @@ ms.locfileid: "36202623"
  En la primera página **Habilitar reescritura en la dimensión** del asistente, se especifica la dimensión a la que se desea aplicar la reescritura. La mejora de reescritura de dimensiones agregada a esta dimensión seleccionada produce cambios en la dimensión. Estos cambios son heredados por todos los cubos que incluyan la dimensión seleccionada.  
   
 ## <a name="setting-dimension-writeback-capability"></a>Establecer la capacidad de reescritura de dimensiones  
- En la segunda página **Habilitar reescritura en la dimensión** del asistente se establece la opción **Habilitar reescritura en la dimensión** . Al seleccionar esta opción establece automáticamente el `WriteEnabled` propiedad de la dimensión en `True`. Si se desactiva automáticamente esta opción establece la propiedad en `False`.  
+ En la segunda página **Habilitar reescritura en la dimensión** del asistente se establece la opción **Habilitar reescritura en la dimensión** . Al seleccionar esta opción establece automáticamente la `WriteEnabled` propiedad de la dimensión a `True`. Si se desactiva automáticamente esta opción establece la propiedad en `False`.  
   
 ## <a name="remarks"></a>Notas  
- Al crear un nuevo miembro, debe incluir todos los atributos en una dimensión. No puede insertar un miembro sin especificar un valor para el atributo clave de la dimensión. Por lo tanto, la creación de miembros está sujeta a las restricciones (como los valores de clave no nulos) definidas en la tabla de la dimensión. También debería considerar las columnas especificadas opcionalmente por las propiedades de dimensión, como las columnas especifican en el `CustomRollupColumn`, `CustomRollupPropertiesColumn` o `UnaryOperatorColumn` propiedades de la dimensión.  
+ Al crear un nuevo miembro, debe incluir todos los atributos en una dimensión. No puede insertar un miembro sin especificar un valor para el atributo clave de la dimensión. Por lo tanto, la creación de miembros está sujeta a las restricciones (como los valores de clave no nulos) definidas en la tabla de la dimensión. También debe considerar las columnas especificadas opcionalmente por las propiedades de dimensión, como las columnas especificadas en el `CustomRollupColumn`, `CustomRollupPropertiesColumn` o `UnaryOperatorColumn` propiedades de la dimensión.  
   
 > [!WARNING]  
 >  Si usa SQL Azure como origen de datos para realizar la reescritura en una base de datos de Analysis Services, se produce un error en la operación. Esto es así por cuestiones de diseño, porque la opción del proveedor que permite que haya varios conjuntos de resultados (MARS) activos no está activada de forma predeterminada.  

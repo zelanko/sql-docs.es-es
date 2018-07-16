@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], PowerShell
 - scripts [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 caps.latest.revision: 22
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 02ae3d24f1f9f642876b4314a41bc2823fc8c622
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 15ead723c73da69d9dd8e6f41b1bf5533eb3c313
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284801"
 ---
 # <a name="database-engine-scripting"></a>Scripting del motor de base de datos
   El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] admite el entorno de scripting de [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell para administrar las instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y los objetos en las instancias. También puede generar y ejecutar consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contengan [!INCLUDE[tsql](../../includes/tsql-md.md)] y XQuery en entornos muy similares a los de scripts.  
@@ -57,13 +57,13 @@ ms.locfileid: "36201117"
   
 -   Puede ejecutar y depurar interactivamente consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puede codificar y depurar varias instrucciones en una sesión; a continuación, puede guardar todas las instrucciones en un único archivo de script.  
   
--   El `sqlcmd` utilidad de símbolo del sistema le permite ejecutar interactivamente [!INCLUDE[ssDE](../../includes/ssde-md.md)] consultas y que también existe ejecución [!INCLUDE[ssDE](../../includes/ssde-md.md)] archivos de secuencia de comandos de consulta.  
+-   El `sqlcmd` utilidad de símbolo del sistema le permite ejecutar interactivamente [!INCLUDE[ssDE](../../includes/ssde-md.md)] las consultas y también ejecución existente [!INCLUDE[ssDE](../../includes/ssde-md.md)] archivos de secuencia de comandos de consulta.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] se suelen codificar interactivamente en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . El archivo se puede abrir después en uno de estos entornos:  
   
 -   Use el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo**/**Abrir** para abrir el archivo en una nueva ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
--   Use el **-i *** input_file* parámetro para ejecutar el archivo con el `sqlcmd` utilidad.  
+-   Use el **-i *** archivo_entrada* parámetro para ejecutar el archivo con el `sqlcmd` utilidad.  
   
 -   Use el parámetro **-QueryFromFile** para ejecutar el archivo con el cmdlet **Invoke-Sqlcmd** en los scripts de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell.  
   

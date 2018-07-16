@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_OBJECT_ACTIVITY | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_OBJECT_ACTIVITY | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DISCOVER_OBJECT_ACTIVITY rowset
 ms.assetid: 100f7de1-ad5c-4973-b863-3c10df1245c4
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5ab904cff026149194c3bd2d242ab448da4be89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09aec1da2c7e9001585b0793b12f0faf89feaf27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235705"
 ---
 # <a name="discoverobjectactivity-rowset"></a>DISCOVER_OBJECT_ACTIVITY, conjunto de filas
   Proporciona el uso de recursos por objeto desde el inicio del servicio.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_OBJECT_ACTIVITY` filas contiene las columnas siguientes.  
+ El `DISCOVER_OBJECT_ACTIVITY` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -51,7 +51,7 @@ ms.locfileid: "36204037"
  Este conjunto de filas de esquema no está ordenado.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DISCOVER_OBJECT_ACTIVTY` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DISCOVER_OBJECT_ACTIVTY` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

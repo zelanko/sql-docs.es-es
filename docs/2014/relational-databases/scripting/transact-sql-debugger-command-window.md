@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.CommandWindow
 helpviewer_keywords:
 - Command Window [Transact-SQL]
 ms.assetid: e567ebf9-0793-451b-92c7-26193a02d9da
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7253938a5f1a32211ebc9edcf96aa1ca691c6426
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 7b69735b5c2a2750ab34bc34d5a7f3c3e46bba16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253797"
 ---
 # <a name="command-window"></a>Ventana de comandos
   Use la **ventana Comandos** para ejecutar comandos, como debug y edit, con el código de la ventana Editor de consultas de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que se está depurando. Debe estar en modo de depuración para utilizar el **Ventana de comandos**. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] admite muchos de los comandos que también se admiten en la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **ventana** . Para obtener más información, vea [Ventana de comandos de Visual Studio](http://go.microsoft.com/fwlink/?LinkId=112007).  
@@ -39,7 +39,7 @@ ms.locfileid: "36202908"
   
  **Para mostrar información sobre el subproceso actual**  
   
--   En el **ventana comandos**, tipo `Debug.ListThread`, y, a continuación, presione ENTRAR.  
+-   En el **CommandWindow**, tipo `Debug.ListThread`, y, a continuación, presione ENTRAR.  
   
  **Para agregar una variable a la ventana Inspección rápida**  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ba6915e8d5e39af32279fbaca208c97fd076d337
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cd4544aefe0f8a5b474b073ef4279f50c4d8a434
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320296"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Generar un modelo (complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], los administradores pueden realizar un subconjunto de las funciones administrativas disponibles en la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
@@ -42,7 +42,7 @@ ms.locfileid: "36112498"
 |Crear un atributo basado en dominio.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicación web, servicio web o [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Crear un atributo basado en dominio &#40;complemento MDS para Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
 |Crear grupos de atributos.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] o aplicación web|[Crear un grupo de atributos &#40;Master Data Services&#41;](../create-an-attribute-group-master-data-services.md)|  
 |Crear reglas de negocios.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] o aplicación web|[Crear y publicar una regla de negocios &#40;Master Data Services&#41;](../create-and-publish-a-business-rule-master-data-services.md)|  
-|Crear vistas de suscripción.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] o aplicación web|[Crear una vista de suscripción &#40;Master Data Services&#41;](../create-a-subscription-view-to-export-data-master-data-services.md)|  
+|Crear vistas de suscripción.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] o aplicación web|[Crear una vista de suscripciones &#40;Master Data Services&#41;](../create-a-subscription-view-to-export-data-master-data-services.md)|  
 |Crear jerarquías.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] o aplicación web|[Crear una jerarquía derivada &#40;Master Data Services&#41;](../create-a-derived-hierarchy-master-data-services.md)<br /><br /> [Crear una jerarquía explícita &#40;Master Data Services&#41;](../create-an-explicit-hierarchy-master-data-services.md)|  
 |Crear colecciones.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] o aplicación web|[Crear una colección &#40;Master Data Services&#41;](../create-a-collection-master-data-services.md)|  
 |Crear versiones de datos.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] o aplicación web|[Bloquear una versión &#40;Master Data Services&#41;](../lock-a-version-master-data-services.md)|  
@@ -68,10 +68,10 @@ ms.locfileid: "36112498"
   
 -   [Colecciones &#40;Master Data Services&#41;](../collections-master-data-services.md)  
   
--   [Versiones &#40;Master Data Services&#41;](../versions-master-data-services.md)  
+-   [Las versiones &#40;Master Data Services&#41;](../versions-master-data-services.md)  
   
 -   [Seguridad &#40;Master Data Services&#41;](../security-master-data-services.md)  
   
--   [Implementar modelos &#40;Master Data Services&#41;](../deploying-models-master-data-services.md)  
+-   [Implementación de modelos &#40;Master Data Services&#41;](../deploying-models-master-data-services.md)  
   
   

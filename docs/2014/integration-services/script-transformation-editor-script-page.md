@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación script (página Script) | Documentos de Microsoft
+title: Editor de transformación script (página Script) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.script.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a2f5e41abd5d54aa54a2fbff0bcd8e57720a163e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f620afb4ab4e32776d36ad5a1f37fd6ad28f3644
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217655"
 ---
 # <a name="script-transformation-editor-script-page"></a>Editor de transformación Script (página Script)
   Use la pestaña **Script** del cuadro de diálogo **Editor de transformación Script** para especificar un script y las propiedades relacionadas.  
@@ -50,7 +50,7 @@ ms.locfileid: "36198754"
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Seleccionar tipo de componente de Script](../../2014/integration-services/select-script-component-type.md)   
+ [Seleccionar el tipo de componente de Script](../../2014/integration-services/select-script-component-type.md)   
  [Editor de transformación script &#40;página columnas de entrada&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
  [Editor de transformación script &#40;entradas y salidas de página&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
  [Editor de transformación script &#40;página Administradores de conexión&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   

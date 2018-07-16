@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo nuevo grupo de medida (Diseñador de cubos) | Documentos de Microsoft
+title: Cuadro de diálogo nuevo grupo de medida (Diseñador de cubos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.newmeasuregroupdialog.f1
 helpviewer_keywords:
 - New Measure Group dialog box
 ms.assetid: 5f21b865-8030-4371-b16b-430a12fcb997
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e60219aa3e3388c2b74131e99441754569eb2e6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 385e3c2fb01a251c954d6b4e630127f3f1892fdf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196185"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>Nuevo grupo de medida (cuadro de diálogo del Diseñador de cubos)
   Use el cuadro de diálogo **Nuevo grupo de medida** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para agregar un nuevo grupo de medida a un cubo en el Diseñador de cubos. Puede mostrar el cuadro de diálogo **Nuevo grupo de medida** de uno de estos modos:  

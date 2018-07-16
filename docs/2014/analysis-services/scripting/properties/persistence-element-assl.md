@@ -1,5 +1,5 @@
 ---
-title: Elemento Persistence (ASSL) | Documentos de Microsoft
+title: Elemento Persistence (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Persistence element
 ms.assetid: dafe3df2-4795-48ea-bebe-33c1a3bf18b6
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1409ee5b58ee0e65aa324bb8009758430ef95224
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44b97b0289b45ca231bc35f0a9690bafcea737e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330295"
 ---
 # <a name="persistence-element-assl"></a>Elemento Persistence (ASSL)
   Determina qué partes de los datos de origen enlazados son dinámicos y se comprueban para las actualizaciones con la frecuencia especificada por el [RefreshPolicy](refreshpolicy-element-assl.md) elemento.  

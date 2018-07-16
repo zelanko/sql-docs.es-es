@@ -1,5 +1,5 @@
 ---
-title: No admitida la configuración de Winsock Proxy | Documentos de Microsoft
+title: Configuración de Winsock Proxy no se admite | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Winsock proxy configuration [SQL Server]
 ms.assetid: abf71f7b-8bd7-49d2-92f7-9ddf72924d8c
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b8af65a848d21fd04de9fe28d11160f3007a6d7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3c7f0d97b2a6b0c5a853b36d9269c8237df08095
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292145"
 ---
 # <a name="winsock-proxy-configuration-not-supported"></a>No se admite la configuración del proxy WinSock
   El proxy Winsock no se puede configurar mediante el uso de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herramientas.  

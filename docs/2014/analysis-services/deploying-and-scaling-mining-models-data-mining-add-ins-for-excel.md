@@ -1,5 +1,5 @@
 ---
-title: Implementar y ampliar modelos de minería de datos (datos de complementos de minería de datos para Excel) | Documentos de Microsoft
+title: Implementar y ampliar modelos de minería de datos (complementos de minería de datos para Excel de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - manage
 ms.assetid: 4c617375-6b01-4a71-9680-de0cbf2cff05
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 11d25bc3b87da0f3b605f05dfbf4b421809006f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4ee14168bab11ec19aa748651ec1e871ee047ef6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317395"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>Implementar y ampliar modelos de minería de datos (Complementos de minería de datos para Excel)
   Las herramientas de la **uso del modelo** y **administración** grupo se proporcionan para ayudarle a administrar y examinar los modelos de minería de datos existente. Puede utilizar estas herramientas para ver cualquier modelo que esté almacenado en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], no solo los creados mediante los complementos.  
@@ -36,14 +36,14 @@ ms.locfileid: "36113920"
  Para obtener más información, consulte [examinar modelos en Excel &#40;complementos de minería de datos de SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).  
   
 ### <a name="document-model"></a>Modelo para documentación  
- Haga clic en **documento modelo** para iniciar un asistente que crea un informe de las estructuras de minería de datos y modelos de minería de datos que ha creado. Puede crear informes básicos o avanzados. Los informes incluyen columnas y metadatos del modelo, por lo que son útiles para documentar el trabajo y hacer un seguimiento de los cambios en los modelos.  
+ Haga clic en **documentar modelo** para iniciar un asistente que crea un informe de las estructuras de minería de datos y modelos de minería de datos que ha creado. Puede crear informes básicos o avanzados. Los informes incluyen columnas y metadatos del modelo, por lo que son útiles para documentar el trabajo y hacer un seguimiento de los cambios en los modelos.  
   
  Para obtener más información, consulte [documentar modelos de minería de datos &#40;complementos minería de datos para Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
   
 ### <a name="query"></a>Consulta  
  Haga clic en **consulta** para iniciar el **consulta** asistente. El asistente le guía de forma interactiva por el proceso de creación de una consulta de predicción en un modelo de minería de datos existente.  
   
- Para obtener más personalice la consulta o generar consultas no incluidas en el asistente, haga clic en el **avanzadas** botón para iniciar la **datos minería Editor de consultas avanzadas**.  
+ Para personalizar la consulta, o generar consultas no incluidas en el Asistente para, simplemente haga clic en el **avanzadas** botón para iniciar el **Data Mining Editor de consultas avanzadas**.  
   
  Para obtener más información, consulte [consulta &#40;complementos de minería de datos de SQL Server&#41;](query-sql-server-data-mining-add-ins.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36113920"
  Para obtener más información, consulte [administrar modelos &#40;complementos de minería de datos de SQL Server&#41;](manage-models-sql-server-data-mining-add-ins.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Crear un modelo de minería de datos](creating-a-data-mining-model.md)   
+ [Creación de un modelo de minería de datos](creating-a-data-mining-model.md)   
  [Validar modelos y usar modelos para la predicción &#40;datos complementos de minería de datos para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

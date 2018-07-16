@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 05bcbd306dc29769db143fb4614c01d527144b82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 905d673939c1831cbe84d49e863ec401a03ec4b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290271"
 ---
 # <a name="server-properties-general-page"></a>Propiedades del servidor (página General)
   Use esta página para ver o modificar el título usado en el Administrador de informes, habilitar o deshabilitar Mis informes, seleccionar una definición de roles para la seguridad de Mis informes, y habilitar o deshabilitar el control de impresión del cliente.  
@@ -53,7 +53,7 @@ ms.locfileid: "36197082"
  Especifique una definición de roles para usarla para la seguridad de Mis informes. La definición de roles identifica el conjunto de tareas que se admiten en cada carpeta Mis informes.  
   
  **Habilitar descarga para el control de impresión de ActiveX client**  
- Establece el `EnableClientPrinting` propiedad del servidor de informes. Si habilita la impresión del cliente, los usuarios que tienen permisos de administrador local tienen la opción de descargar un control de ActiveX firmado para imprimir informes HTML. Para obtener más información, consulte [habilitar y deshabilitar la impresión de cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Establece el `EnableClientPrinting` propiedad del sistema de servidor de informes. Si habilita la impresión del cliente, los usuarios que tienen permisos de administrador local tienen la opción de descargar un control de ActiveX firmado para imprimir informes HTML. Para obtener más información, consulte [habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

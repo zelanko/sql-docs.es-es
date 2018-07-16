@@ -1,5 +1,5 @@
 ---
-title: Ejecutar archivos de plantilla mediante el uso de la propiedad CommandText | Documentos de Microsoft
+title: Ejecutar archivos de plantilla con la propiedad CommandText | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a935c42d72f0dc26bc329cb0f4c8649097a317f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7b74755c73982bb4ed0380209b34278e68b2309e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227125"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Ejecutar archivos de plantilla utilizando la propiedad CommandText
-  Este ejemplo muestra cómo se pueden especificar archivos de plantilla que están compuestos de consultas SQL o XPath utilizando la CommandTextproperty. En lugar de especificar la consulta SQL o XPath como el valor de CommandText, puede especificar un nombre de archivo como el valor. En el ejemplo siguiente, la propiedad CommandType se especifica como SqlXmlCommandType.TemplateFile.  
+  En este ejemplo se muestra cómo se pueden especificar archivos de plantilla que están compuestos de consultas SQL o XPath utilizando el CommandTextproperty. En lugar de especificar la consulta SQL o XPath como el valor de CommandText, puede especificar un nombre de archivo como valor. En el ejemplo siguiente, se especifica la propiedad CommandType como SqlXmlCommandType.TemplateFile.  
   
  La aplicación de ejemplo ejecuta esta plantilla:  
   

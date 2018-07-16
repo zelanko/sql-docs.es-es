@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - role switching [SQL Server]
 - mirroring partners [SQL Server]
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], failover
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b54338853101e6e396a414365f2ebc71e83291a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 80db1069e46f6ec8bc8edba6820dad2780f5aacd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207695"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Conmutación de roles durante una sesión de creación de reflejo de la base de datos (SQL Server)
   En el contexto de una sesión de creación de reflejo de la base de datos, los roles principal y reflejado suelen ser intercambiables en un proceso conocido como *conmutación de roles*. En la conmutación de roles, el servidor reflejado actúa como el *asociado de conmutación por error* para el servidor principal al asumir el rol principal, y al recuperar su copia de la base de datos y ponerla en línea como la nueva base de datos principal. El servidor principal anterior, cuando esté disponible, asumirá el rol reflejado y su base de datos se convertirá en la nueva base de datos reflejada. Potencialmente, los roles pueden conmutarse como respuesta a varios errores o con fines administrativos.  

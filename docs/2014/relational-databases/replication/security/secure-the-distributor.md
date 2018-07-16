@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], Distributors
 - Distributors [SQL Server replication], security
 ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f4378be21503d0885774f630dcf0d0d8460389c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8e5dadadffd2703dc3d2f3feab081be946c1c8ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290401"
 ---
 # <a name="secure-the-distributor"></a>Proteger el distribuidor
   Al distribuidor se conectan los siguientes agentes de replicación: el Agente de registro del LOG, el Agente de instantáneas, el Agente de lectura de cola, el Agente de distribución y el Agente de mezcla. Es importante proporcionar un inicio de sesión adecuado para cada uno de estos agentes respetando el principio de conceder los derechos mínimos necesarios y proteger el almacenamiento de todas las contraseñas:  

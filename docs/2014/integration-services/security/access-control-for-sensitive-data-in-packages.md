@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - passwords [Integration Services]
 - packages [Integration Services], security
@@ -21,13 +21,13 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8cf68cbe7e1599bc34d891dfd010ba2d81c7a965
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8657428ef8a31829fffb77ccf9ceb997fa34e74a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277271"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Control del acceso a la información confidencial en paquetes
   Para proteger los datos de un paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede establecer un nivel de protección que ayude a proteger los datos confidenciales únicamente o todos los datos del paquete. Asimismo, puede cifrar estos datos con una contraseña o una clave de usuario, o confiar en que la base de datos cifre los datos. Además, el nivel de protección que utiliza para un paquete no es necesariamente estático, sino que cambia a lo largo de su ciclo de vida. A menudo se establece un nivel de protección durante el desarrollo y otro cuando el paquete se implementa.  
@@ -59,11 +59,11 @@ ms.locfileid: "36105681"
 |Nivel de protección|Descripción|  
 |----------------------|-----------------|  
 |No guardar la información confidencial (`DontSaveSensitive`)|Suprime los valores de las propiedades confidenciales del paquete al guardarlo. Este nivel de protección no cifra, sino que impide que se guarden con el paquete las propiedades marcadas como confidenciales y, en consecuencia, impide que los datos confidenciales estén disponibles para otros usuarios. Si un usuario distinto abre el paquete, aparecerán espacios en blanco en el lugar de la información confidencial y usuario deberá suministrar la información confidencial.<br /><br /> Cuando se usa con la utilidad **dtutil** (dtutil.exe), este nivel de protección se corresponde con el valor de 0.|  
-|Cifrar todos los datos con una contraseña (`EncryptAllWithPassword`)|Usa una contraseña para cifrar todo el paquete. El paquete se cifra con una contraseña suministrada por el usuario al crear o exportar el paquete. Para abrir el paquete en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] o ejecutarlo con la utilidad del símbolo del sistema **dtexec** , el usuario debe proporcionar la contraseña del paquete. Sin la contraseña, el usuario no tiene acceso al paquete ni lo puede ejecutar.<br /><br /> Cuando se usa con la utilidad **dtutil** , este nivel de protección corresponde al valor 3.|  
-|Cifrar todos los datos con una clave de usuario (`EncryptAllWithUserKey`)|Utiliza una clave que se basa en el perfil de usuario actual para cifrar el paquete entero. El usuario que creó o exportó el paquete es el único que puede abrirlo en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] o ejecutarlo con la utilidad del símbolo del sistema **dtexec** .<br /><br /> Cuando se usa con la utilidad **dtutil** , este nivel de protección corresponde al valor 4.<br /><br /> Nota: Para los niveles de protección que utilizan una clave de usuario, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utiliza los estándares DPAPI. Para obtener más información sobre DPAPI, vea MSDN Library en [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408).|  
+|Cifrar todo con contraseña (`EncryptAllWithPassword`)|Usa una contraseña para cifrar todo el paquete. El paquete se cifra con una contraseña suministrada por el usuario al crear o exportar el paquete. Para abrir el paquete en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] o ejecutarlo con la utilidad del símbolo del sistema **dtexec** , el usuario debe proporcionar la contraseña del paquete. Sin la contraseña, el usuario no tiene acceso al paquete ni lo puede ejecutar.<br /><br /> Cuando se usa con la utilidad **dtutil** , este nivel de protección corresponde al valor 3.|  
+|Cifrar todo con la clave de usuario (`EncryptAllWithUserKey`)|Utiliza una clave que se basa en el perfil de usuario actual para cifrar el paquete entero. El usuario que creó o exportó el paquete es el único que puede abrirlo en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] o ejecutarlo con la utilidad del símbolo del sistema **dtexec** .<br /><br /> Cuando se usa con la utilidad **dtutil** , este nivel de protección corresponde al valor 4.<br /><br /> Nota: Para los niveles de protección que utilizan una clave de usuario, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utiliza los estándares DPAPI. Para obtener más información sobre DPAPI, vea MSDN Library en [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408).|  
 |Cifrar la información confidencial con una contraseña (`EncryptSensitiveWithPassword`)|Utiliza una contraseña para cifrar solamente los valores de las propiedades confidenciales en el paquete. Para el cifrado, se utiliza DPAPI. Los datos confidenciales se guardan como parte del paquete, pero los datos se cifran utilizando una contraseña que el usuario actual suministra al crear o exportar el paquete. Para abrir el paquete en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , el usuario debe proporcionar la contraseña del paquete. Si no se proporciona la contraseña, el paquete se abre sin los datos confidenciales y el usuario actual debe proporcionar valores nuevos para estos datos. Si el usuario intenta ejecutar el paquete sin proporcionar la contraseña, el paquete no se ejecutará. Para obtener más información acerca de las contraseñas y la ejecución desde la línea de comandos, vea [dtexec Utility](../packages/dtexec-utility.md).<br /><br /> Cuando se usa con la utilidad **dtutil** , este nivel de protección corresponde al valor 2.|  
 |Cifrar la información confidencial con una clave de usuario (`EncryptSensitiveWithUserKey`)|Utiliza una clave que se basa en el perfil de usuario actual para cifrar solamente los valores de las propiedades confidenciales en el paquete. Solo el mismo usuario que use el mismo perfil puede cargar el paquete. Si un usuario distinto abre el paquete, aparecerán espacios en blanco en el lugar de la información confidencial y usuario actual deberá suministrar valores nuevos para los datos confidenciales. Si el usuario intenta ejecutar el paquete, se generará un error. Para el cifrado, se utiliza DPAPI.<br /><br /> Cuando se usa con la utilidad **dtutil** , este nivel de protección corresponde al valor 1.<br /><br /> Nota: Para los niveles de protección que utilizan una clave de usuario, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utiliza los estándares DPAPI. Para obtener más información sobre DPAPI, vea MSDN Library en [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408).|  
-|Basar en el almacenamiento de servidor para el cifrado (`ServerStorage`)|Protege el paquete completo usando roles de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta opción solo se admite cuando se guarda un paquete en la base de datos msdb de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Además, el catálogo de SSISDB emplea el `ServerStorage` nivel de protección<br /><br /> Esta opción no se admite cuando un paquete se guarda en el sistema de archivos desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
+|Se basan en el almacenamiento del servidor para el cifrado (`ServerStorage`)|Protege el paquete completo usando roles de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta opción solo se admite cuando se guarda un paquete en la base de datos msdb de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Además, el catálogo de SSISDB emplea el `ServerStorage` nivel de protección<br /><br /> Esta opción no se admite cuando un paquete se guarda en el sistema de archivos desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
   
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>Configuración del nivel de protección y el catálogo de SSISDB  
  El catálogo de SSISDB emplea el `ServerStorage` nivel de protección. Al implementar un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , el catálogo cifra automáticamente los datos del paquete y los valores confidenciales. El catálogo también descifra automáticamente los datos cuando lo recupera.  
@@ -83,7 +83,7 @@ ms.locfileid: "36105681"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Establecer o cambiar el nivel de protección de paquetes](../set-or-change-the-protection-level-of-packages.md)  
+-   [Establecer o cambiar el nivel de protección de los paquetes](../set-or-change-the-protection-level-of-packages.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Importar y exportar paquetes &#40;servicio SSIS&#41;](../import-and-export-packages-ssis-service.md)   

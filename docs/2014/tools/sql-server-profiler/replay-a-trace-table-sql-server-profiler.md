@@ -1,5 +1,5 @@
 ---
-title: Reproducir una tabla de seguimiento (SQL Server Profiler) | Documentos de Microsoft
+title: Reproducir una tabla de seguimiento (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 590ea6f3d35f49ece98916ea6c141017cac5b892
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0125b1911383d735b2329594207c6560c06351bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319905"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>Reproducir una tabla de seguimiento (SQL Server Profiler)
   La reproducción es la capacidad de abrir un seguimiento guardado y reproducirlo más tarde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] incluye un motor de reproducción de varios subprocesos que puede simular conexiones de usuario y la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La reproducción es útil para solucionar problemas de aplicaciones o procesos. Cuando identifique el problema e implemente las acciones para corregirlo, ejecute el seguimiento que encontró el posible problema en la aplicación o proceso corregido. A continuación, reproduzca el seguimiento original y compare los resultados.  
@@ -63,7 +63,7 @@ ms.locfileid: "36111931"
     -   Para controlar el modo en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administra los procesos durante la reproducción, configure **Opciones del monitor de estado**.  
   
 ## <a name="see-also"></a>Vea también  
- [Permisos necesarios para ejecutar el Analizador SQL Server](sql-server-profiler.md)   
+ [Permisos necesarios para ejecutar SQL Server Profiler](sql-server-profiler.md)   
  [Reproducir seguimientos](replay-traces.md)   
  [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)   
  [SQL Server Profiler](sql-server-profiler.md)  

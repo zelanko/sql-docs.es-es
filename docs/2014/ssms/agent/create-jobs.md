@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], creating
 - SQL Server Agent jobs, creating
 ms.assetid: 465fb7fc-7622-4252-a178-ea51691c935b
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 40ec697eb5093ee690d944e0ec07cc01e2bf8ac6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ed5eada15f8f63404c0d6053fad452d372b09cef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270191"
 ---
 # <a name="create-jobs"></a>Crear trabajos
   Un trabajo es una serie específica de operaciones que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza secuencialmente. Un trabajo puede realizar una amplia variedad de actividades, incluidos scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , aplicaciones de símbolo del sistema, scripts de Microsoft ActiveX, paquetes de Integration Services, comandos y consultas de Analysis Services o tareas de replicación. Los trabajos pueden ejecutar tareas repetitivas o que se pueden programar, y pueden notificar automáticamente a los usuarios el estado del trabajo mediante alertas, lo cual simplifica en gran medida la administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -46,7 +46,7 @@ ms.locfileid: "36105521"
  [Administrar pasos de trabajo](manage-job-steps.md)   
  [Administración automatizada en una empresa](automated-administration-across-an-enterprise.md)   
  [Crear y adjuntar programaciones a trabajos](create-and-attach-schedules-to-jobs.md)   
- [Ejecutar trabajos](run-jobs.md)   
+ [Ejecución de trabajos](run-jobs.md)   
  [Ver o modificar trabajos](view-or-modify-jobs.md)  
   
   

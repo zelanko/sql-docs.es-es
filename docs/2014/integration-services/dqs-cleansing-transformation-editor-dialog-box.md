@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Editor de transformación limpieza de DQS | Documentos de Microsoft
+title: Cuadro de diálogo Editor de transformación de limpieza de DQS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssdqs.designer.cleansing.f1
 - SQL12.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f723e04c13dd16c6f872950652dba759f611cbf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0034984a58971af442ab7154bbba50820dfe1a16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219675"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Cuadro de diálogo Editor de transformación Limpieza de DQS
   Use el cuadro de diálogo **Editor de transformación Limpieza de DQS** para corregir datos con Data Quality Services (DQS). Para más información, consulte [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md).  

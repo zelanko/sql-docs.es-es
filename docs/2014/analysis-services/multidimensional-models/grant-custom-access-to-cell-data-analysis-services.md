@@ -1,5 +1,5 @@
 ---
-title: Conceder acceso personalizado a los datos de las celdas (Analysis Services) | Documentos de Microsoft
+title: Conceder acceso personalizado a los datos de las celdas (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.celldata.f1
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - custom cell data access [Analysis Services]
 ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 979209ce262ee26efbe1e4c575243d29e4a1dc56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4932341742a0760b1bfb1ccab502cbf960aa01d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317115"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Otorgar acceso personalizado a los datos de las celdas (Analysis Services)
   La seguridad de celdas se usa para permitir o denegar el acceso para medir los datos de un cubo. En la siguiente ilustración presentamos una combinación de medidas permitidas y denegadas en una tabla dinámica, cuando se está conectado como usuario con un rol que solamente permite el acceso a ciertas medidas. En este ejemplo, **Importe de venta del distribuidor** y **Coste total del producto del distribuidor** son las únicas medidas disponibles mediante este rol. El resto de medidas se deniegan de forma implícita (los pasos que se siguen para obtener este resultado se describen a continuación, en la sección siguiente: Permitir el acceso a medidas específicas).  
@@ -50,7 +50,7 @@ ms.locfileid: "36114155"
 ## <a name="allow-access-to-specific-measures"></a>Permitir el acceso a medidas específicas  
  Puede usar la seguridad de celda para elegir explícitamente qué medidas estarán disponibles. Una vez que haya identificado específicamente los miembros que se permiten, el resto de medidas pasa a no estar disponible. Se trata quizás del escenario más sencillo para realizar implementaciones a través de scripts MDX, tal como se describe en los pasos siguientes.  
   
-1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], seleccione una base de datos, abra la carpeta **Roles** y, después, haga clic en un rol de base de datos (o cree un rol de base de datos nuevo). La pertenencia ya debería estar especificada y el rol debe tener `Read` acceso al cubo. Vea [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) si necesita ayuda con este paso.  
+1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], seleccione una base de datos, abra la carpeta **Roles** y, después, haga clic en un rol de base de datos (o cree un rol de base de datos nuevo). La pertenencia ya debería estar especificada y el rol debería tener `Read` acceso al cubo. Vea [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) si necesita ayuda con este paso.  
   
 2.  En **Datos de celda**, compruebe la selección del cubo para asegurarse de que ha elegido el correcto y, después, seleccione **Habilitar permisos de lectura**.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36114155"
   
  En Excel, la seguridad de celda se hace patente en la ilustración siguiente:  
   
- ![Columnas que muestran celdas como no disponible en Excel](../media/ssas-permscellshidemeasure.png "columnas que muestran celdas como no disponible en Excel")  
+ ![Las columnas que muestran celdas como no disponible en Excel](../media/ssas-permscellshidemeasure.png "columnas que muestran celdas como no disponible en Excel")  
   
 ## <a name="set-read-permissions-on-calculated-measures"></a>Establecer permisos de Lectura en medidas calculadas  
  Los permisos en medidas calculadas se pueden establecer independientemente de sus partes constituyentes. Si quiere coordinar los permisos entre una medida calculada y sus medidas dependientes, pase a la siguiente sección sobre Contingente de lectura.  
@@ -87,7 +87,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
  En Excel, conéctese al cubo con el rol actual y elija las tres medidas para ver el resultado de la seguridad de celda. Vea que las medidas en el conjunto que se ha denegado no están disponibles, pero el usuario puede ver la medida calculada.  
   
- ![Tabla de Excel con disponibles y no cellls](../media/ssas-permscalculatedcells.png "tabla de Excel con cellls disponible y no está disponible")  
+ ![Tabla de Excel con disponibles y no cellls](../media/ssas-permscalculatedcells.png "tabla de Excel con cellls disponibles y no está disponible")  
   
 ## <a name="set-read-contingent-permissions-on-calculated-measures"></a>Establecer permisos de Contingente de lectura en medidas calculadas  
  La seguridad de celda ofrece una alternativa, Contingente de lectura, para establecer permisos en las celdas asociadas que participan en un cálculo. Remítase de nuevo al ejemplo de **Reseller Gross Profit** . Al especificar la misma expresión MDX que se proporciona en la sección anterior, colóquela esta vez en la segunda área de texto del cuadro de diálogo **Crear rol** | **Datos de celda** (en el área de texto inferior **Permitir la lectura del contenido de la celda supeditado a la seguridad de celda**), el resultado aparece cuando se ve en Excel. Dado que **Reseller Gross Profit** depende de **Reseller Sales Amount** y **Reseller Total Product Cost**, ahora no se puede tener acceso al beneficio bruto porque no se tiene acceso a sus partes constituyentes.  
@@ -104,8 +104,8 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  [Generador MDX &#40;Analysis Services - datos multidimensionales&#41;](../mdx-builder-analysis-services-multidimensional-data.md)   
  [El Script MDX básico &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
  [Conceder permisos de procesamiento &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
- [Conceder permisos para una dimensión &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
- [Conceder acceso personalizado a los datos de la dimensión &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Conceder permisos en una dimensión &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
+ [Conceder acceso personalizado a datos de dimensión &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
  [Conceder permisos para cubos o modelos &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Página Propiedades generales, elementos de informe (informe de administrador) | Documentos de Microsoft
+title: Página Propiedades generales, informes partes (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0ce0b1ca08f1d0d97f268f3ec8c145c117d56a60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3823b01bfc318f26ba0135d054d913d3ffe1fd6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238515"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Página de propiedades generales, Elementos de informe (Administrador de informes)
   Use la página de propiedades para ver y administrar las propiedades generales de un elemento de informe.  
@@ -84,7 +84,7 @@ ms.locfileid: "36104872"
  [Administrar elementos de informe](report-design/managing-report-parts.md)   
  [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [El contenido de página &#40;el Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Elementos de informe &#40;el generador de informes SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [Elementos de informe &#40;generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
  [Elementos de informe y conjuntos de datos en el Generador de informes](report-data/report-parts-and-datasets-in-report-builder.md)  
   

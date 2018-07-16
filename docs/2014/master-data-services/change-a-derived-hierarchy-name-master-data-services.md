@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, changing name
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 24f9f05c17c218729a6d64d3c9dfe5e7e5d990f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2746ab437d1fa64e50da83a335d3fef9639b9f9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193285"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>Cambiar el nombre de una jerarquía derivada (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede cambiar el nombre de una jerarquía derivada.  
@@ -43,9 +43,9 @@ ms.locfileid: "36110961"
   
 4.  Seleccione la fila de la jerarquía derivada a la que desea cambiar el nombre.  
   
-5.  Haga clic en **Editar seleccionado derivada jerarquía**.  
+5.  Haga clic en **seleccionado de Editar jerarquía derivada**.  
   
-6.  En el **Editar jerarquía derivada** página, haga clic en **editar derivada nombre de la jerarquía**.  
+6.  En el **Editar jerarquía derivada** página, haga clic en **Editar nombre de la jerarquía de derivada**.  
   
 7.  En el cuadro **Nombre de jerarquía derivada** , escriba el nombre actualizado de la jerarquía.  
   

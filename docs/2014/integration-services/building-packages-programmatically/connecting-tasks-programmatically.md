@@ -21,13 +21,13 @@ ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 71a71c91a5189175471459fcb4725cb542712b0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 23dfe0adbf0a20f48beee7330fdc7486bf9169b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193545"
 ---
 # <a name="connecting-tasks-programmatically"></a>Conectar tareas mediante programación
   Una restricción de precedencia, representada en el modelo de objetos por la clase <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>, establece el orden en que se ejecutan los objetos <xref:Microsoft.SqlServer.Dts.Runtime.Executable> en un paquete. La restricción de precedencia permite que la ejecución de los contenedores y las tareas de un paquete dependa del resultado de la ejecución de una tarea o un contenedor anterior. Las restricciones de precedencia se establecen entre pares de objetos <xref:Microsoft.SqlServer.Dts.Runtime.Executable> con una llamada al método <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A> de la colección <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints> en el objeto contenedor. Después de crear una restricción entre dos objetos ejecutables, establece la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> para establecer los criterios de ejecución del segundo ejecutable definido en la restricción.  
@@ -102,7 +102,7 @@ Module Module1
 End Module  
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services  **<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Agregar la tarea de flujo de datos mediante programación](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  

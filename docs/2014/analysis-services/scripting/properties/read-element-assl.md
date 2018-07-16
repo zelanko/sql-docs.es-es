@@ -1,5 +1,5 @@
 ---
-title: Leer el elemento (ASSL) | Documentos de Microsoft
+title: Leer elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Read element
 ms.assetid: 2e2c1173-72ca-4e8a-a6cd-fd348ef96d78
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1e7f26c9064f754633420cd58a0f15197189d1ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5d4d8b256e29f3f4e4998fdc029f0d9eb3e1a893
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321205"
 ---
 # <a name="read-element-assl"></a>Elemento Read (ASSL)
   Determina si se pueden leer datos o metadatos para un determinado [CubeDimensionPermission](../data-type/permission-data-type-assl.md) o [permiso](../data-type/permission-data-type-assl.md) elemento.  

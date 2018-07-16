@@ -1,5 +1,5 @@
 ---
-title: Cargar datos de MDS en Excel | Documentos de Microsoft
+title: Cargar datos de MDS en Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8bee7252d1adfcce827eadbd62cb7d38416d7596
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: b74f5fc00ea25f434a4191c04b0f890e04d8aca0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316555"
 ---
 # <a name="load-data-from-mds-into-excel"></a>Cargar datos de MDS en Excel
-  En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], debe cargar los datos del repositorio MDS para trabajar con él.  
+  En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], debe cargar los datos del repositorio MDS para poder trabajar con él.  
   
  Si desea filtrar el conjunto de datos antes de la carga, consulte [filtrar datos antes de la carga &#40;complemento MDS para Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) en su lugar.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36111800"
  [Publicar datos de Excel en MDS &#40;complemento MDS para Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Cargar datos &#40;complemento MDS para Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
+ [Cargando datos &#40;complemento MDS para Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
  [Cuadro de diálogo Filtrar &#40;Complemento MDS para Excel&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
  [Publicar datos &#40;complemento MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   

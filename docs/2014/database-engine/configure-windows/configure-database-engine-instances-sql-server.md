@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 84e36fcb-2c78-48e8-8e4b-bf784a3ee557
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d72adcfae0854807191e8cfa4faeac401f8bf52e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1ab5c7785fed8f22a12e265426d485fd65ed9a66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325095"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>Configurar instancias del motor de base de datos (SQL Server)
   Cada instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe configurarse satisfacer los requisitos de rendimiento y disponibilidad definidos para las bases de datos hospedadas por la instancia. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] incluye opciones de configuración que controlan comportamientos como el uso de recursos y la disponibilidad de características como la los comportamientos de control como el uso de los recursos y la disponibilidad de características como auditoría o recursividad de desencadenador.  

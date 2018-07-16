@@ -1,5 +1,5 @@
 ---
-title: Establecer las propiedades de una ruta de acceso mediante el Editor de rutas de flujo de datos | Documentos de Microsoft
+title: Establecer las propiedades de una ruta de acceso mediante el Editor de rutas de flujo de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], properties
 ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f9b8b60299840327060bfc192ac4fced2773029f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08d774cb9163f7c047a7333f4ff04e06939e2cf2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322635"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Establecer las propiedades de una ruta con el Editor de rutas de flujo de datos
   Las rutas conectan dos componentes de flujo de datos. Para poder establecer propiedades de ruta, el flujo de datos debe contener por lo menos dos componentes de flujo de datos conectados. Para más información, vea [Agregar o eliminar un componente en un flujo de datos](data-flow/add-or-delete-a-component-in-a-data-flow.md) y [Conectar componentes de un flujo de datos](data-flow/connect-components-in-a-data-flow.md).  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e8bd5260d3da017c5bd401d8322eebbfa6a3b0eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c1dfbb97a7b02ebaaa82369f7d1883ad4d2eb299
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321755"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Representar regiones de datos (Generador de informes y SSRS)
   Además de los comportamientos generales de representación que se aplican a todos los elementos de informe, las regiones de datos están sujetas a comportamientos de paginación y de representación adicionales. Las reglas de representación específicas de las regiones de datos describen la forma en la que crece una región de datos, cómo se representan las celdas especiales, como la celda de la esquina o las celdas de encabezado, y cómo se representa una región de datos para la lectura de derecha a izquierda. En este tema se explica cómo se representan las distintas partes de una región de datos.  
@@ -28,7 +28,7 @@ ms.locfileid: "36196884"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="tablix-data-regions"></a>Regiones de datos Tablix  
- La región de datos Tablix, que permite crear tablas, matrices y listas, se representa como una cuadrícula formada por columnas y filas. La intersección de una fila y una columna es una celda. Cuando se representa, esta celda puede contener datos u otros elementos de informe, como imágenes, rectángulos, cuadros de texto o subinformes. Una región de datos Tablix puede crecer tanto vertical como horizontalmente. Además, la celda de la esquina, las celdas de encabezado de la región de datos y las celdas del cuerpo de la región de datos pueden crecer en función de su contenido. Si la región de datos ocupa varias páginas, los elementos de informe configurados para que se repitan con la región de datos se representan en cada una de las páginas en las que se muestra ésta. Para obtener más información, consulte [enumera &#40;el generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
+ La región de datos Tablix, que permite crear tablas, matrices y listas, se representa como una cuadrícula formada por columnas y filas. La intersección de una fila y una columna es una celda. Cuando se representa, esta celda puede contener datos u otros elementos de informe, como imágenes, rectángulos, cuadros de texto o subinformes. Una región de datos Tablix puede crecer tanto vertical como horizontalmente. Además, la celda de la esquina, las celdas de encabezado de la región de datos y las celdas del cuerpo de la región de datos pueden crecer en función de su contenido. Si la región de datos ocupa varias páginas, los elementos de informe configurados para que se repitan con la región de datos se representan en cada una de las páginas en las que se muestra ésta. Para obtener más información, consulte [enumera &#40;generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ### <a name="right-to-left"></a>De derecha a izquierda  
  Una región de datos Tablix que se haya configurado para mostrarse de derecha a izquierda se representa con su estructura como una imagen reflejada de la región de datos tal como se representaría de izquierda a derecha. La esquina de la región de datos aparece en la esquina superior derecha. Si el informe incluye columnas dinámicas, éstas se expanden hacia la izquierda. La configuración de derecha a izquierda no afecta al orden de los datos en la región de datos; simplemente, las columnas se ordenan de forma diferente.  
@@ -45,7 +45,7 @@ ms.locfileid: "36196884"
  La esquina superior izquierda es la que se denomina esquina de Tablix. La esquina de Tablix puede contener otros elementos de informe pero, si se insertan saltos de página lógicos en la esquina, éstos se omitirán al representar la región de datos Tablix.  
   
 ### <a name="tablix-body"></a>Cuerpo del Tablix  
- El cuerpo del Tablix se compone de las celdas de Tablix. El cuerpo del Tablix se representa teniendo en cuenta las reglas de paginación y los comportamientos de representación de los elementos de informe. Para obtener más información, consulte [representar elementos de informe &#40;el generador de informes y SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md).  
+ El cuerpo del Tablix se compone de las celdas de Tablix. El cuerpo del Tablix se representa teniendo en cuenta las reglas de paginación y los comportamientos de representación de los elementos de informe. Para obtener más información, consulte [representar elementos de informe &#40;generador de informes y SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md).  
   
 ## <a name="chart-gauge-and-map-data-regions"></a>Regiones de datos Gráfico, Medidor y Mapa  
  Las regiones de datos Gráfico, Medidor y Mapa se comportan como imágenes cuando se representan y se muestran en el cuerpo del informe. Los valores existentes dentro de la región de datos pueden tener acciones asociadas, como vincularse con otro informe o desplazarse a un marcador, y éstas acciones también se pueden representar, si el representador lo admite.  
@@ -53,7 +53,7 @@ ms.locfileid: "36196884"
 ## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;el generador de informes SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;generador de informes y SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)   
  [Listas &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   

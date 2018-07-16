@@ -1,5 +1,5 @@
 ---
-title: Índices de hash | Documentos de Microsoft
+title: Índices de hash | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4bdc9c1-7922-4fac-8183-d11ec58fec4e
 caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 3da74688d6a2f65b191788ab9ecd2394bcca8597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2c2b4c055eea6aef2e7825ee6589c6611ceaf7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295235"
 ---
 # <a name="hash-indexes"></a>Índices hash
   Los índices se utilizan como puntos de entrada para las tablas optimizadas para memoria. Leer filas de una tabla requiere un índice para buscar los datos en la memoria.  
   
  Un índice hash consta de una colección de cubos organizados en una matriz. Una función hash asigna las claves de índice a los cubos correspondientes en el índice hash. La ilustración siguiente muestra las tres claves de índice que se asignan a tres cubos distintos en el índice hash. Con fines meramente ilustrativos, el nombre de función hash es f(x).  
   
- ![Claves de índice que se asignan a cubos distintos. ] (../../2014/database-engine/media/hekaton-tables-2.gif "Claves de índice asignadas a cubos distintos.")  
+ ![Claves de índice asignadas a diferentes cubos. ] (../../2014/database-engine/media/hekaton-tables-2.gif "Claves asignadas a diferentes cubos de índice.")  
   
  La función hash que se utiliza para los índices hash tiene las siguientes características:  
   

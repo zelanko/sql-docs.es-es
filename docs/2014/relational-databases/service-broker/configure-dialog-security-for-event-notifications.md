@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-notifications
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0da3e8f61c3db9721d68c441ae2db0d497cf1741
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e129d7b64d079104a2378fb24dcc0419dd4e8647
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266221"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurar la seguridad de diálogo para notificaciones de eventos
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] se debe configurar para las notificaciones de eventos que envíen mensajes a un Service Broker en un servidor remoto. La seguridad de diálogo se debe configurar manualmente según el modelo de seguridad de diálogo completa de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . El modelo de seguridad completa habilita el cifrado y el descifrado de los mensajes que se envían a servidores remotos o desde los mismos. Aunque las notificaciones de eventos se envían en una dirección, otros mensajes, como los errores, también se devuelven en la dirección opuesta.  

@@ -1,5 +1,5 @@
 ---
-title: Referencia técnica del algoritmo de serie temporal de Microsoft | Documentos de Microsoft
+title: Referencia técnica del algoritmo de serie temporal de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - HISTORICAL_MODEL_GAP parameter
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ab83d1cefec896835d8ecb0c9baa49d4ea44b68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78a54bc173a3d3b780e57752d86aebc33249066a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323625"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series Algorithm Technical Reference
   El algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] incluye dos algoritmos independientes para analizar series de tiempo:  
@@ -71,7 +71,7 @@ ms.locfileid: "36114160"
   
  El algoritmo de serie temporal de Microsoft toma los valores de una serie de datos e intenta ajustarlos a un patrón. Si la serie de datos todavía no es estacionaria, el algoritmo aplica un orden de diferencia. Cada incremento en el orden de diferencia tiende a hacer que la serie temporal sea más estacionaria.  
   
- Por ejemplo, si tiene la serie temporal (z1, z2,..., zn) y realiza cálculos con un orden de diferencia, obtendrá una nueva serie (y1, y2,..., yn-1), donde *yi = zi + 1-zi*. Cuando el orden de diferencia es 2, el algoritmo genera otra serie (x1, x2,..., xn-2), en función de la serie y que se derivó de la ecuación del primer orden. El grado correcto de diferencia depende de los datos. Un solo orden de diferencia es más común en los modelos que muestran una tendencia constante; un segundo orden de diferencia puede indicar una tendencia que varía con el tiempo.  
+ Por ejemplo, si tiene la serie temporal (z1, z2, …, zn) y realizar cálculos con un orden de diferencia, obtendrá una nueva serie (y1, y2,..., yn-1), donde *yi = zi + 1-zi*. Cuando el orden de diferencia es 2, el algoritmo genera otra serie (x1, x2, …, xn-2), en función de la serie y que se derivó de la ecuación del primer orden. El grado correcto de diferencia depende de los datos. Un solo orden de diferencia es más común en los modelos que muestran una tendencia constante; un segundo orden de diferencia puede indicar una tendencia que varía con el tiempo.  
   
  De forma predeterminada, el orden de diferencia que se usa en el algoritmo de serie temporal de Microsoft es -1, lo que significa que el algoritmo detectará automáticamente el mejor valor para el orden de diferencia. Generalmente, el mejor valor es 1 (cuando se requiere una diferencia) pero, en ciertas circunstancias, el algoritmo aumentará el valor hasta un máximo de 2.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36114160"
   
  Siempre que el valor de ARIMA_AR_ORDER sea mayor que 1, el algoritmo multiplica la serie temporal por un término polinómico. Si un término de la fórmula polinómica se resuelve con una raíz de uno o con un valor cercano a 1, el algoritmo intenta conservar la estabilidad del modelo quitando el término e incrementando el orden de diferencia en 1. Si el orden de diferencia ya es el máximo, el término se quita y el orden de diferencia no cambia.  
   
- Por ejemplo, si el valor de AR = 2, el AR resultante término polinómico podría ser similar a esto: 1: 1.4B + .45B ^ 2 = (1-.9b) (1 - 0.5B). Tenga en cuenta el término (1-.9b) que tiene una raíz de aproximadamente 0,9. El algoritmo elimina este término de la fórmula polinómica pero no puede incrementar el orden de diferencia en uno porque ya tiene el valor máximo de 2.  
+ Por ejemplo, si el valor de AR = 2, el resultante AR término polinómico podría parecerse a esto: 1: 1.4B + .45B ^ 2 = (1-.9b) (1 - 0.5B). Tenga en cuenta el término (1-.9b) que tiene una raíz de aproximadamente 0,9. El algoritmo elimina este término de la fórmula polinómica pero no puede incrementar el orden de diferencia en uno porque ya tiene el valor máximo de 2.  
   
  Es importante observar que el único modo en que puede **exigir** un cambio en el orden de diferencia es mediante el parámetro no admitido ARIMA_DIFFERENCE_ORDER. Este parámetro oculto controla el número de veces en que el algoritmo realiza la diferenciación de la serie temporal y puede establecerse escribiendo un parámetro del algoritmo personalizado. Sin embargo, no se recomienda cambiar este valor a menos que esté en disposición de experimentar y conozca los cálculos implicados. Tenga en cuenta igualmente que no hay ningún mecanismo, ni siquiera los parámetros ocultos, que le permita controlar el umbral en el que se activa el orden de diferencia.  
   
@@ -124,11 +124,11 @@ ms.locfileid: "36114160"
   
  En el diagrama siguiente se muestra cómo el modelo combina los algoritmos cuando *PREDICTION_SMOOTHING* se establece en el valor predeterminado, 0,5. ARIMA y ARTXP se ponderan equitativamente al principio, pero a medida que el número de pasos de predicción aumenta, la ponderación de ARIMA es mayor.  
   
- ![curva predeterminada de la combinación de algoritmos de serie temporal](../media/time-series-mixing-default.gif "curva predeterminada de la combinación de algoritmos de serie temporal")  
+ ![curva predeterminada para la combinación de algoritmos de serie temporal](../media/time-series-mixing-default.gif "curva predeterminada para la combinación de algoritmos de serie temporal")  
   
  Por el contrario, el diagrama siguiente ilustra la combinación de los algoritmos cuando *PREDICTION_SMOOTHING* se establece en 0,2. En el paso [!INCLUDE[tabValue](../../includes/tabvalue-md.md)], el modelo pondera ARIMA como 0,2 y ARTXP como 0,8. Posteriormente, el peso de ARIMA aumenta exponencialmente y el de ARTXP disminuye exponencialmente.  
   
- ![curva de mezcla del modelo de serie tiempo caída](../media/time-series-blending-curve.gif "curva de mezcla del modelo de serie tiempo caída")  
+ ![curva de mezcla del modelo de serie tiempo caída](../media/time-series-blending-curve.gif "curva decadencia para tiempo mezcla del modelo de serie")  
   
 ### <a name="setting-algorithm-parameters"></a>Establecer parámetros del algoritmo  
  En la tabla siguiente se describen los parámetros que se pueden utilizar con el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -144,9 +144,9 @@ ms.locfileid: "36114160"
 |*MAXIMUM_SERIES_VALUE*|Especifica el valor máximo que se debe usar para las predicciones. Este parámetro se usa, junto con *MINIMUM_SERIES_VALUE*, para restringir las predicciones a un intervalo esperado. Por ejemplo, puede especificar que la predicción de la cantidad de ventas diaria nunca supere el número de productos en inventario.<br /><br /> Nota: Este parámetro solo está disponible en algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*MINIMUM_SERIES_VALUE*|Especifica el valor mínimo que se puede predecir. Este parámetro se usa, junto con *MAXIMUM_SERIES_VALUE*, para restringir las predicciones a un intervalo esperado. Por ejemplo, puede especificar que la cantidad de ventas previstas nunca debe ser un número negativo.<br /><br /> Nota: Este parámetro solo está disponible en algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*MINIMUM_SUPPORT*|Especifica el número mínimo de segmentos de tiempo necesarios para generar una división en cada árbol de serie temporal. El valor predeterminado es 10.|  
-|*MISSING_VALUE_SUBSTITUTION*|Especifica cómo se llenan los espacios en los datos históricos. De forma predeterminada, no se permiten espacios en los datos. Si los datos contienen varias series, las series tampoco pueden tener bordes irregulares. Es decir, todas las series deben tener los mismos puntos inicial y final. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también utiliza el valor de este parámetro para rellenar los espacios en los datos nuevos cuando se realiza una operación `PREDICTION JOIN` en el modelo de serie temporal. En la siguiente tabla se muestran los posibles valores para este parámetro.<br /><br /> Ninguno: predeterminado. Reemplaza los valores que faltan por los valores trazados a lo largo de la curva del modelo entrenado.<br /><br /> Anterior: Repite el valor de intervalo de tiempo anterior.<br /><br /> Media: Se usa una media móvil de intervalos de tiempo utilizados para el entrenamiento.<br /><br /> Numeric constant: utiliza el número especificado para reemplazar todos los valores que faltan.|  
+|*MISSING_VALUE_SUBSTITUTION*|Especifica cómo se llenan los espacios en los datos históricos. De forma predeterminada, no se permiten espacios en los datos. Si los datos contienen varias series, las series tampoco pueden tener bordes irregulares. Es decir, todas las series deben tener los mismos puntos inicial y final. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también utiliza el valor de este parámetro para rellenar los espacios en los datos nuevos cuando se realiza una operación `PREDICTION JOIN` en el modelo de serie temporal. En la siguiente tabla se muestran los posibles valores para este parámetro.<br /><br /> Ninguno: predeterminado. Reemplaza los valores que faltan por los valores trazados a lo largo de la curva del modelo entrenado.<br /><br /> Anterior: Repite el valor de intervalo de tiempo anterior.<br /><br /> Media: Utiliza un promedio móvil de intervalos de tiempo que se usan para el entrenamiento.<br /><br /> Numeric constant: utiliza el número especificado para reemplazar todos los valores que faltan.|  
 |*PERIODICITY_HINT*|Proporciona una sugerencia al algoritmo en cuanto a la periodicidad de los datos. Por ejemplo, si las ventas varían por año y la unidad de medida en la serie son los meses, la periodicidad es 12. Este parámetro toma el formato de {n [, n]}, donde n es un número positivo.<br /><br /> La n de los corchetes [] es opcional y puede repetirse con la frecuencia que sea necesaria. Por ejemplo, para proporcionar varias sugerencias de periodicidad para los datos suministrados mensualmente, se puede escribir {12, 3, 1} para detectar patrones durante un año, trimestre o mes. Sin embargo, la periodicidad influye significativamente en la calidad del modelo. Si la sugerencia que se proporciona difiere de la periodicidad real, los resultados pueden verse afectados negativamente.<br /><br /> El valor predeterminado es {1}.<br /><br /> Nota: Las llaves son obligatorias. Además, este parámetro tiene un tipo de datos de cadena. Por consiguiente, si se escribe este parámetro como parte de una instrucción de Extensiones de minería de datos (DMX), el número y las llaves se deben poner entre comillas.|  
-|*PREDICTION_SMOOTHING*|Especifica cómo se debe combinar el modelo para optimizar el pronóstico. Este parámetro solo está disponible en algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se puede escribir cualquier valor entre [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] y 1, o utilizar uno de los valores siguientes:<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]: Especifica que predicción solo utiliza ARTXP. El pronóstico se optimiza para un menor número de predicciones.<br /><br /> 0.5: (valor predeterminado) especifica que para la predicción se deben utilizar ambos algoritmos y combinados los resultados.<br /><br /> 1: especifica que la predicción solo utiliza ARIMA. El pronóstico se optimiza para un gran número de predicciones.<br /><br /> <br /><br /> Nota: Use la *FORECAST_METHOD* parámetro para controlar el entrenamiento.|  
+|*PREDICTION_SMOOTHING*|Especifica cómo se debe combinar el modelo para optimizar el pronóstico. Este parámetro solo está disponible en algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se puede escribir cualquier valor entre [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] y 1, o utilizar uno de los valores siguientes:<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]: Especifica que predicción solo utiliza ARTXP. El pronóstico se optimiza para un menor número de predicciones.<br /><br /> 0.5: (valor predeterminado) especifica que para la predicción se deben utilizar ambos algoritmos y combinados los resultados.<br /><br /> 1: especifica que la predicción solo utiliza ARIMA. El pronóstico se optimiza para un gran número de predicciones.<br /><br /> <br /><br /> Nota: Use el *FORECAST_METHOD* parámetro para controlar el entrenamiento.|  
   
 ### <a name="modeling-flags"></a>Marcas de modelado  
  El algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las marcas de modelado siguientes. Al crear la estructura o el modelo de minería de datos, se definen las marcas de modelado que especifican cómo se tratan los valores de cada columna durante el análisis. Para obtener más información, vea [Marcas de modelado &#40;Minería de datos&#41;](modeling-flags-data-mining.md).  
@@ -173,6 +173,6 @@ ms.locfileid: "36114160"
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm.md)   
  [Ejemplos de consultas de modelo de serie temporal](time-series-model-query-examples.md)   
- [Contenido del modelo para los modelos de serie temporal de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenido del modelo para los modelos de serie temporal de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

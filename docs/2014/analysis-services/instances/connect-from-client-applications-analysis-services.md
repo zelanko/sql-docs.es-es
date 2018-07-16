@@ -1,5 +1,5 @@
 ---
-title: Conectarse desde aplicaciones cliente (Analysis Services) | Documentos de Microsoft
+title: Conectarse desde aplicaciones cliente (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d343794027e87b575b9cdaa9ee3a9dd2908438aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ee609b8a208b55509058e635b96fa70c52c4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314915"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Conectarse desde aplicaciones cliente (Analysis Services)
   Si no está familiarizado con Analysis Services, use la información de este tema para conectarse a una instancia existente de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante herramientas y aplicaciones comunes. En este tema también explica cómo conectarse bajo distintas identidades de usuario para realizar pruebas.  
@@ -134,7 +134,7 @@ ms.locfileid: "36113699"
 ## <a name="see-also"></a>Vea también  
  [Conectarse a Analysis Services](connect-to-analysis-services.md)   
  [Metodologías de autenticación admitidas por Analysis Services](authentication-methodologies-supported-by-analysis-services.md)   
- [Suplantación &#40;SSAS Tabular&#41;](../tabular-models/impersonation-ssas-tabular.md)   
+ [Suplantación &#40;Tabular de SSAS&#41;](../tabular-models/impersonation-ssas-tabular.md)   
  [Crear un origen de datos &#40;SSAS Multidimensional&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

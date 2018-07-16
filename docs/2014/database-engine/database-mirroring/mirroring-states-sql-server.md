@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - states [SQL Server], database mirroring
 - PENDING_FAILOVER state
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], states
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e74c22410ea2eb256d68f5b83703528406884eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 10cc3385d0bbcd7832533e1e375401b1b060c959
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320729"
 ---
 # <a name="mirroring-states-sql-server"></a>Estados de creacion de reflejo (SQL Server)
   Durante una sesión de creación de reflejo de la base de datos, la base de datos reflejada siempre se encuentra en un estado específico (el *estado de creación de reflejo*). El estado de la base de datos refleja el estado de la comunicación, el flujo de datos y la diferencia de datos entre los asociados. La sesión de creación de reflejo de la base de datos adopta el mismo estado que la base de datos principal.  

@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f33b889cb9bc409815c6fe8a0501de3bc1388e68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 14010ca375afdf5166f737a27e33f8ed3fc42c49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327349"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Compatibilidad de FOR XML con el tipo de datos xml
-  Si una consulta FOR XML especifica una columna de `xml` tipo en la cláusula SELECT, se asignan los valores de las columnas como elementos en el XML devuelto, independientemente de si se especifica la directiva ELEMENTS. Las declaraciones XML en la columna de tipo `xml` no se serializan.  
+  Si una consulta FOR XML especifica una columna de `xml` tipo en la cláusula SELECT, los valores de columna se asignan como elementos en el XML devuelto, independientemente de si especifica la directiva Elements. Las declaraciones XML en la columna de tipo `xml` no se serializan.  
   
- Por ejemplo, la consulta siguiente recupera información de contacto del cliente, como el `BusinessEntityID`, `FirstName`, y `LastName` columnas y los números de teléfono de la `AdditionalContactInfo` columna de `xml` tipo.  
+ Por ejemplo, la consulta siguiente recupera información de contacto de cliente, como el `BusinessEntityID`, `FirstName`, y `LastName` columnas y los números de teléfono desde el `AdditionalContactInfo` columna de `xml` tipo.  
   
 ```  
 USE AdventureWorks2012;  
@@ -44,7 +44,7 @@ declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-
 FOR XML AUTO, TYPE;  
 ```  
   
- Dado que la consulta no especifica la directiva ELEMENTS, los valores de columna se devuelven como atributos, excepto los valores de información de contacto adicional recuperados de la `xml` columna de tipo. Estos se devuelven como elementos.  
+ Dado que la consulta no especifica la directiva Elements, los valores de columna se devuelven como atributos, excepto los valores de información de contacto adicional recuperados de la `xml` columna de tipo. Estos se devuelven como elementos.  
   
  Éste es el resultado parcial:  
   
@@ -121,7 +121,7 @@ FOR XML AUTO, TYPE;
   
  Si se especifica la directiva ELEMENTS en la consulta, se devolverán BusinessEntityID, LastName y FirstName como elementos en el XML resultante.  
   
- En el ejemplo siguiente se muestra que la lógica de procesamiento de FOR XML no serializa las declaraciones XML de los datos XML de un `xml` columna de tipo:  
+ El ejemplo siguiente se muestra que la lógica de procesamiento de FOR XML no serializa las declaraciones XML de los datos XML desde un `xml` columna de tipo:  
   
 ```  
 create table t(i int, x xml)  
@@ -152,7 +152,7 @@ for xml auto;
   
 -   Una instancia de la `xml` tipo  
   
- Por ejemplo, la siguiente función definida por el usuario devuelve una tabla con una sola columna de `xm`tipo:  
+ Por ejemplo, la siguiente función definida por el usuario devuelve una tabla con una sola columna de `xm`tipo l:  
   
 ```  
 USE AdventureWorks2012;  

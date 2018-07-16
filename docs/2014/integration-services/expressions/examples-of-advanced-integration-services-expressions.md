@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [Integration Services]
 - operators [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8ce3f4c37d7c590166beb53879c624ae70d9a3e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fec3425d4382c19e93b0317db4d338173a9bb1b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314275"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Ejemplos de expresiones avanzadas de Integration Services
   Esta sección proporciona ejemplos de expresiones avanzadas que combinan varios operadores y varias funciones. Si se usa una expresión en una restricción de precedencia o en la transformación División condicional, su evaluación debe devolver un valor booleano. Sin embargo, esta restricción no se aplica a las expresiones usadas en expresiones de propiedades, variables, la transformación Columna derivada o el contenedor de bucles For.  
@@ -104,7 +104,7 @@ ms.locfileid: "36110743"
     ```  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Utilizar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)  
+ [Usar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](http://pragmaticworks.com/cheatsheet/), en pragmaticworks.com  

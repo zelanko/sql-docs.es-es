@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fdb619e98fe28742ac6b96acc6419513addfae25
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: de1213901f7cc9c743d76727ac65320507b0fab5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214825"
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
   Después de crear un filtro para los datos de la tabla de datos, el paso siguiente consiste en generar y ejecutar la aplicación del sitio Web.  
@@ -38,7 +38,7 @@ ms.locfileid: "36106049"
   
 4.  Haga clic en el icono, **Volver al informe primario**, en la barra de herramientas de **ReportViewer** para navegar de nuevo al informe **Primario** .  
   
-     ![obtención de SSRS mediante ReportViewer](../../2014/tutorials/media/ssrs-drillthrough-report.png "ssrs obtención de detalles mediante ReportViewer")  
+     ![explorar en SSRS a través del uso de ReportViewer](../../2014/tutorials/media/ssrs-drillthrough-report.png "profundizar ssrs a través del uso de ReportViewer")  
   
 5.  Cierre el explorador para salir.  
   

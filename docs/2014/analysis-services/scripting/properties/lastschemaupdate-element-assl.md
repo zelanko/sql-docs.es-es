@@ -1,5 +1,5 @@
 ---
-title: Elemento LastSchemaUpdate (ASSL) | Documentos de Microsoft
+title: Elemento LastSchemaUpdate (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - LastSchemaUpdate element
 ms.assetid: 0634c105-91cc-4882-87be-97ca29a251a6
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa6ea025f62fdfd00c65c1b839da8d045fc9e9b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94fe98ca4a898e3cb126dcddcd45f367999b7daf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196736"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306475"
 ---
 # <a name="lastschemaupdate-element-assl"></a>Elemento LastSchemaUpdate (ASSL)
   Contiene los metadatos de la marca de tiempo de actualización de solo lectura del elemento primario.  
@@ -58,11 +58,11 @@ ms.locfileid: "36196736"
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[Assembly](../objects/assembly-element-assl.md), [Cube](../objects/cube-element-assl.md), [Database](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [Dimension](../objects/dimension-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [Partition](../objects/partition-element-assl.md), [Permission](../data-type/permission-data-type-assl.md), [Perspective](../objects/perspective-element-assl.md)|  
+|Elementos primarios|[Ensamblado](../objects/assembly-element-assl.md), [cubo](../objects/cube-element-assl.md), [base de datos](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [dimensión](../objects/dimension-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [partición](../objects/partition-element-assl.md), [Permiso](../data-type/permission-data-type-assl.md), [perspectiva](../objects/perspective-element-assl.md)|  
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El `LastSchemaUpdate` elemento contiene sólo lectura `DateTime` valor que representa la fecha y hora en que se haya cambiado los metadatos de un objeto en una instancia determinada de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ El `LastSchemaUpdate` elemento contiene sólo lectura `DateTime` valor que representa la fecha y hora en que se cambiaron los metadatos para un objeto en una instancia determinada de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  Los elementos que corresponden a los elementos primarios de `LastSchemaUpdate` en el modelo de objetos de Analysis Management Objects (AMO) son <xref:Microsoft.AnalysisServices.Assembly>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, <xref:Microsoft.AnalysisServices.DataSourceView>, <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.MdxScript>, <xref:Microsoft.AnalysisServices.MeasureGroup>, <xref:Microsoft.AnalysisServices.MiningModel>, <xref:Microsoft.AnalysisServices.MiningStructure>, <xref:Microsoft.AnalysisServices.Partition>, <xref:Microsoft.AnalysisServices.Permission>, y <xref:Microsoft.AnalysisServices.Perspective>.  
   

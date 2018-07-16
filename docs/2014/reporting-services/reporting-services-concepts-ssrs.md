@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 37f778e52088df89a12b46b636aa1948623b9ac9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5f3ad348ebfc89706eb57dea34f91342550189b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236305"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Conceptos de Reporting Services (SSRS)
   En este tema se proporciona un breve resumen de los conceptos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -32,7 +32,7 @@ ms.locfileid: "36198135"
   
 -   [Conceptos del servidor de informes](#bkmk_ReportServerConcepts)  
   
--   [Informes y conceptos de elementos relacionados](#bkmk_ReportsandRelatedItemConcepts)  
+-   [Los informes y conceptos de elementos relacionados](#bkmk_ReportsandRelatedItemConcepts)  
   
 -   [Tipos de informes](#bkmk_TypesofReports)  
   
@@ -70,21 +70,21 @@ ms.locfileid: "36198135"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona una arquitectura extensible que puede usar para personalizar soluciones de informe. El servidor de informes admite extensiones de autenticación personalizadas, extensiones de procesamiento de datos, extensiones de procesamiento de informes, extensiones de representación y extensiones de entrega, y las extensiones disponibles para los usuarios se pueden configurar en el archivo de configuración RSReportServer.config. Por ejemplo, puede limitar los formatos de exportación que el visor de informes puede usar. Las extensiones de procesamiento de informes y de entrega son opcionales, pero necesarias si desea admitir controles personalizados o de distribución de informes. Para obtener más información, vea [Extensiones &#40;SSRS&#41;](extensions-ssrs.md).  
   
  **Acceso a los informes**  
- El acceso a petición permite a los usuarios seleccionar los informes desde una herramienta de visualización de informes. Según la configuración del servidor de informes, puede usar el Administrador de informes, un [!INCLUDE[msCoName](../includes/msconame-md.md)] elemento Web de SharePoint 2.0, una biblioteca de SharePoint cuando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] está instalado en modo integrado de SharePoint, un control ReportViewer incrustado o un explorador mediante la dirección URL acceso. Para más información sobre el acceso a petición a los informes, vea [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ El acceso a petición permite a los usuarios seleccionar los informes desde una herramienta de visualización de informes. Según la configuración del servidor de informes, puede usar el Administrador de informes, un [!INCLUDE[msCoName](../includes/msconame-md.md)] elemento Web de SharePoint 2.0, una biblioteca de SharePoint cuando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] está instalado en modo integrado de SharePoint, un control ReportViewer incrustado o un explorador utilizando la dirección URL acceso. Para más información sobre el acceso a petición a los informes, vea [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
  Las suscripciones proporcionan una alternativa a la ejecución de un informe a petición. Para obtener más información, vea [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
  Para obtener la lista de herramientas que hay que usar para interactuar con el servidor de informes, vea [Herramientas de Reporting Services](tools/reporting-services-tools.md).  
   
 ##  <a name="bkmk_ReportsandRelatedItemConcepts"></a> Informes y conceptos de elementos relacionados  
- **Informes y definiciones de informe**  
+ **Los informes y definiciones de informe**  
  **RDL.** Una definición de informe es un archivo XML conforme a una gramática XML denominada lenguaje RDL (Report Definition Language). En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], una definición de informe se crea en una herramienta como el Generador de informes o el Diseñador de informes. Incluye elementos que definen conexiones a orígenes de datos, consultas usadas para recuperar datos, expresiones, parámetros, imágenes, cuadros de texto, tablas y cualquier otro elemento de tiempo de diseño. Para más información, vea [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
  **RDLX.** Una definición de informe en RDLX es un archivo RDL con extensiones internas que habilitan la experiencia de visualización de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Para obtener más información, vea el tema de [información general acerca de la vista avanzada](http://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx).  
   
  **RDLC.** El Diseñador de informes de Visual Studio genera archivos de definición de informe de cliente (.rdlc) en formato XML para su uso con el control ReportViewer.  
   
- **Las conexiones de datos y orígenes de datos de informe**  
+ **Conexiones y orígenes de datos de informe**  
  Los informes usan las conexiones de datos para recuperar datos para un informe cuando se ejecuta una consulta o cuando se procesa el informe. En una definición de informe, una conexión de datos es lo mismo que un origen de datos. Puede elegir en una lista de tipos de conexión de datos incrustadas para conectarse a una base de datos relacional, una base de datos multidimensional, un servicio web u otro tipo de origen de datos. Los siguientes términos se usan para describir las conexiones de datos.  
   
 -   **Conexión de datos.** También conocido como *origen de datos*. Una conexión de datos consta de un nombre y propiedades de conexión, que dependen del tipo de conexión. Por cuestiones de diseño, una conexión de datos no incluye credenciales. Una conexión de datos no especifica qué datos deben recuperarse del origen de datos externo. Para ello, se especifica una consulta cuando se crea un conjunto de datos.  
@@ -131,9 +131,9 @@ ms.locfileid: "36198135"
   
 -   **Tabla.** Una tabla es una región de datos que muestra los datos fila por fila. La columnas de tabla son estáticas: el número de columnas del informe se define al diseñarlo. Las filas de tabla son dinámicas: se expanden hacia abajo para incluir los datos. Se pueden agregar grupos a las tablas, que organizan los datos por campos o expresiones seleccionados. Para más información, vea [Tablas &#40;Generador de informes y SSRS&#41;](report-design/tables-report-builder-and-ssrs.md).  
   
--   **Matriz.** Las matrices también se denominan tablas de referencias cruzadas. Una región de datos de matriz contiene columnas y filas dinámicas: se expanden para dar cabida a los datos. Una matriz puede tener columnas y filas dinámicas y estáticas. Las columnas o las filas pueden contener otras columnas o filas, y se pueden usar para agrupar datos. Para obtener más información, consulte [Matrices &#40;el generador de informes y SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md).  
+-   **Matriz.** Las matrices también se denominan tablas de referencias cruzadas. Una región de datos de matriz contiene columnas y filas dinámicas: se expanden para dar cabida a los datos. Una matriz puede tener columnas y filas dinámicas y estáticas. Las columnas o las filas pueden contener otras columnas o filas, y se pueden usar para agrupar datos. Para obtener más información, consulte [Matrices &#40;generador de informes y SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md).  
   
--   **Lista.** Una lista es una región de datos que muestra los datos organizados con un formato libre. Los elementos de informe se pueden organizar para crear un formulario con cuadros de texto, imágenes y otras regiones de datos colocadas en cualquier lugar de la lista. Para obtener más información, consulte [enumera &#40;el generador de informes y SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+-   **Lista.** Una lista es una región de datos que muestra los datos organizados con un formato libre. Los elementos de informe se pueden organizar para crear un formulario con cuadros de texto, imágenes y otras regiones de datos colocadas en cualquier lugar de la lista. Para obtener más información, consulte [enumera &#40;generador de informes y SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 -   **Gráfico.** Un gráfico muestra los datos de forma gráfica. Los gráficos de barras, circulares y de líneas son algunos ejemplos, pero se admiten muchos más estilos. Para más información, vea [Gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md).  
   
@@ -162,7 +162,7 @@ ms.locfileid: "36198135"
  **Subinformes**  
  Un subinforme es un elemento de informe que se agrega a un informe como un elemento de diseño. Un subinforme apunta a otro informe diferente y se muestra en el cuerpo de un informe principal como una instancia de subinforme. El subinforme puede usar orígenes de datos diferentes a los del informe principal. Aunque un subinforme se puede repetir en las regiones de datos usando un parámetro para filtrar los datos en cada instancia del subinforme, se suele usar con un informe principal como libro de instrucciones o como contenedor de una colección de informes relacionados. Cada instancia de un subinforme cambia el contexto para el procesamiento del informe entre el informe principal y el subinforme. Para los informes que usan muchas instancias de subinformes, considere la posibilidad de usar informes de obtención de detalles en su lugar. Para más información, vea [Subinformes &#40;Generador de informes y SSRS&#41;](report-design/subreports-report-builder-and-ssrs.md).  
   
- **Informes de principal y de detalle e informes de obtención de detalles**  
+ **Los informes principal y de detalle e informes de obtención de detalles**  
  Una solución de informe principal y de detalle incluye un informe principal que muestra información de resumen con hipervínculos a uno o más informes que muestran información detallada.  El informe de detalle solo se ejecuta si un lector del informe hace clic en un vínculo al mismo. El informe de obtención de detalles se abre de forma independiente del informe principal. Se puede definir un hipervínculo en cualquier elemento de informe que tenga una propiedad Action, como un cuadro de texto, texto marcador de posición o series de gráficos. Para más información, vea [Informes detallados &#40;Generador de informes y SSRS&#41;](report-design/drillthrough-reports-report-builder-and-ssrs.md).  
   
  **Informes vinculados**  
@@ -186,7 +186,7 @@ ms.locfileid: "36198135"
   
 -   **Informe de Click-through.** Un informe click-through es aquel que muestra datos relacionados de un modelo de informe cuando se hace clic en los datos interactivos incluidos contenidos en el informe basado en el modelo. Los informes click-through se generan automáticamente. Para obtener más información, vea [Informes click-through &#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md).  
   
- Para obtener más información acerca de los modelos SMDL, consulte [Breaking Changes in SQL Server Reporting Services en SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
+ Para obtener más información sobre los modelos SMDL, vea [cambios substanciales de SQL Server Reporting Services en SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
   
  **Informes guardados**  
  Un informe guardado es un archivo de definición de informe (.rdl). Una definición de informe se puede guardar localmente o cargar en un servidor de informes. Si carga una definición de informe en lugar de publicarla, no se realiza ninguna validación de la versión o la expresión. No verá errores hasta que no se ejecute el informe. Para obtener más información, vea [Save and Deploy](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy).  
@@ -203,7 +203,7 @@ ms.locfileid: "36198135"
  ![Diagrama de procesamiento de informes](media/report-execution.gif "Diagrama de procesamiento de informes")  
 Diagrama de procesamiento de informes  
   
- **definición de informe**  
+ **Definición de informe**  
  El archivo de definición de informe (.rdl) almacenado en un servidor de informes. Para más información, vea [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
  **Informe compilado y el formato de informe intermedio**  
@@ -215,11 +215,11 @@ Diagrama de procesamiento de informes
  **Informe procesado**  
  Un informe totalmente procesado que contiene datos e información de diseño.  
   
- **informe representado**  
+ **Informe representado**  
  Un informe totalmente procesado se envía a un representador de informes para combinar los datos y el diseño de cada página del formato de representación de destino. Las extensiones de representación son personalizables y extensibles. El formato de representación predeterminado para un informe es HTML 4.0. Para más información, vea [Representación y diseño de páginas &#40;Generador de informes y SSRS&#41;](report-design/page-layout-and-rendering-report-builder-and-ssrs.md) y [Extensiones &#40;SSRS&#41;](extensions-ssrs.md).  
   
  **Informe exportado**  
- Un informe exportado es un informe totalmente paginado guardado en un formato de archivo específico. Los formatos de exportación dependen de las extensiones de representación instaladas y se pueden personalizar. De forma predeterminada, entre los formatos de exportación se incluyen Excel, Word, XML, PDF, TIFF y CSV. Para obtener más información, consulte [exportar informes &#40;el generador de informes y SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md).  
+ Un informe exportado es un informe totalmente paginado guardado en un formato de archivo específico. Los formatos de exportación dependen de las extensiones de representación instaladas y se pueden personalizar. De forma predeterminada, entre los formatos de exportación se incluyen Excel, Word, XML, PDF, TIFF y CSV. Para obtener más información, consulte [exportar informes &#40;generador de informes y SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Características y tareas de Reporting Services &#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   

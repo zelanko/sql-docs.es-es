@@ -1,5 +1,5 @@
 ---
-title: Elemento NamingTemplateTranslations (ASSL) | Documentos de Microsoft
+title: Elemento NamingTemplateTranslations (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NamingTemplateTranslations element
 ms.assetid: fde65778-1fa3-490a-9874-8bf2052ef25c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e22eaea2ab6d19bf1da5620321f0d2002ed382d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2965971734625c4d0c553f652160e1044eb48546
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204405"
 ---
 # <a name="namingtemplatetranslations-element-assl"></a>Elemento NamingTemplateTranslations (ASSL)
   Proporciona una colección de traducciones adaptadas para el elemento [NamingTemplate](../properties/namingtemplate-element-assl.md) del elemento primario, [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "36106220"
 |Elementos secundarios|[NamingTemplateTranslation](../objects/translation-element-assl.md) de tipo [Translation](translations-element-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
- El valor de la `NamingTemplateTranslation` elemento se utiliza únicamente por los atributos primarios (en otras palabras, el valor de la [uso](../properties/usage-element-dimensionattribute-assl.md) elemento del elemento primario `DimensionAttribute` está establecido en *primario*.)  
+ El valor de la `NamingTemplateTranslation` elemento es utilizado únicamente por los atributos primarios (en otras palabras, el valor de la [uso](../properties/usage-element-dimensionattribute-assl.md) elemento primario `DimensionAttribute` está establecido en *primario*.)  
   
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   

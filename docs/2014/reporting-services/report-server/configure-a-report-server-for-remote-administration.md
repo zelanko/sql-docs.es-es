@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - WMI provider [Reporting Services], remote configuration
@@ -19,13 +19,13 @@ ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0f7a3ee16a9085639e03abe268c4c72dc0f488de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e89d1452c1daa5c1aa53341fa09e0e6b71b0c078
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325705"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurar un servidor de informes para la administración remota
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede configurar las instancias del servidor de informes local o remotamente. Para configurar una instancia del servidor de informes remota, se puede utilizar la herramienta Configuración de Reporting Services o escribir código personalizado que utilice el proveedor de Instrumental de administración de Windows (WMI) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La herramienta de configuración de Reporting Services proporciona una interfaz gráfica para el proveedor WMI, de modo que se puede configurar un servidor de informes sin tener que escribir código. Al iniciar la herramienta, se puede especificar el servidor remoto con el que se desea establecer la conexión.  
@@ -64,9 +64,9 @@ ms.locfileid: "36111284"
   
 ### <a name="to-open-ports-in-windows-firewall"></a>Abrir puertos en Firewall de Windows  
   
-1.  [Configurar Firewall de Windows para obtener acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+1.  [Configurar un Firewall de Windows para acceder al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-2.  [Configurar un Firewall para el acceso del servidor de informes](configure-a-firewall-for-report-server-access.md).  
+2.  [Configurar un Firewall para el acceso al servidor de informes](configure-a-firewall-for-report-server-access.md).  
   
 ### <a name="to-configure-remote-connections-to-the-report-server-database"></a>Configurar las conexiones remotas a la base de datos del servidor de informes  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36111284"
   
 1.  En el menú Inicio, seleccione **Herramientas administrativas**y haga clic en **Servicios de componente**.  
   
-     En Windows Vista, en el menú Inicio, haga clic en **todos los programas**, haga clic en **ejecutar**y, a continuación, escriba `mmc comexp.msc`.  
+     Windows Vista, en el menú Inicio, haga clic en **todos los programas**, haga clic en **ejecutar**y, a continuación, escriba `mmc comexp.msc`.  
   
 2.  Abra la carpeta Servicios de componente.  
   

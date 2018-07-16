@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.historycleanuptask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3f25531b3dd2df5fa43bc0dcaa3ea0decc9d7386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9866ea65bdd4f7fdb9e867898c4ae85a0c0f189
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271661"
 ---
 # <a name="history-cleanup-task"></a>Tarea Limpieza de historial
   La tarea Limpieza de historial elimina entradas de las siguientes tablas de historial de la base de datos msdb de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

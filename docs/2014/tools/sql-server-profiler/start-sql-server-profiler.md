@@ -1,5 +1,5 @@
 ---
-title: Iniciar SQL Server Profiler | Documentos de Microsoft
+title: Iniciar SQL Server Profiler | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], starting
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9a61a8a5db0df279a344cdedfcf519c232cc911b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f5b752dfc31fd83530a773370551b88589fc2f4b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246145"
 ---
 # <a name="start-sql-server-profiler"></a>Iniciar SQL Server Profiler
   Puede iniciar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de varias formas distintas para admitir la recopilación de resultados de seguimiento en diversos escenarios. Entre las diferentes formas de iniciar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] se incluyen: desde el menú **Inicio** , desde el menú **Herramientas** en el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y desde varias ubicaciones en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

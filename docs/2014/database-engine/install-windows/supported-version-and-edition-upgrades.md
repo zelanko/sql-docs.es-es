@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - components [SQL Server], adding to existing installations
 - versions [SQL Server], upgrading
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 caps.latest.revision: 132
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc7140188a24ba8b8ca51b792d4dd2beb8384ce6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ce657b9b4b832e1c880edd3d2c6d966cd5a78dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252647"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Actualizaciones de ediciones y versiones admitidas
   Puede actualizar desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], y [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], y [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. En este tema se enumeran las formas de actualización admitidas desde estas versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las actualizaciones de edición admitidas para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
@@ -47,7 +47,7 @@ ms.locfileid: "36105689"
   
 -   No se admite la actualización entre plataformas. No puede actualizar una instancia de 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 64 bits nativo con el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sin embargo, puede realizar copias de seguridad o separar bases de datos de una instancia de 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y, después, si no están publicadas en replicación, restaurarlas o anexarlas a una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64 bits). Debe volver a crear los inicios de sesión y los demás objetos de usuario en las bases de datos del sistema maestra, msdb y modelo.  
   
--   No puede agregar características nuevas durante la actualización de una instancia existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Después de actualizar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede agregar características mediante el programa de instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, consulte [agregar características a una instancia de SQL Server 2014 &#40;el programa de instalación&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
+-   No puede agregar características nuevas durante la actualización de una instancia existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Después de actualizar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede agregar características mediante el programa de instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, consulte [agregar características a una instancia de SQL Server 2014 &#40;instalación&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
   
 -   Los clústeres de conmutación por error no se admiten en el modo WOW.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "36105689"
 > [!NOTE]  
 >  La compatibilidad con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] se describe con más detalle en la próxima sección, 'Compatibilidad de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]'.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ediciones de 32 bits pueden actualizarse a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en el subsistema de 32 bits (WOW64) de un servidor de 64 bits.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las ediciones de 32 bits pueden actualizarse a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en el subsistema de 32 bits (WOW64) de un servidor de 64 bits.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las versiones de 64 bits pueden actualizarse a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] solo servidor de 64 bits.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las versiones de 64 bits pueden actualizarse a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sólo el servidor de 64 bits.  
   
 > [!NOTE]  
 >  Al actualizar a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, elija entre “Enterprise Edition: Licencia Core” y “Enterprise Edition”. Estas ediciones Enterprise se diferencian solamente en los modos de licencia y el número máximo de núcleos admitidos. Para obtener más información, consulte [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
@@ -104,12 +104,12 @@ ms.locfileid: "36105689"
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Standard|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express,<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Tools y<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express Management Studio y<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express con Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Business Intelligence|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Inteligencia empresarial|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
   
 ### <a name="includesssql14includessssql14-mdmd-support-for-includessversion2005includesssversion2005-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Compatibilidad con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
  En esta sección se explica la compatibilidad de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], podrá hacer lo siguiente:  
   
--   Actualizar una [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instancia del motor de base de datos para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ejecutando [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] el programa de instalación mediante la instalación del asistente o desde el símbolo del sistema.  
+-   Actualizar un [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instancia del motor de base de datos para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ejecutando [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] configuración mediante la instalación del asistente o desde el símbolo del sistema.  
   
 -   Adjuntar una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (archivos mdf/ldf) a la instancia de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] del motor de base de datos.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36105689"
   
 -   Actualizar un paquete [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Ejecutar paquetes con actualización en contexto automática.  
   
--   Actualizar una [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ejecutando [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] el programa de instalación.  
+-   Actualizar un [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ejecutando [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] el programa de instalación.  
   
 -   Hacer copia de seguridad de un cubo de [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] y restaurarla en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36105689"
 ## <a name="includesssql14includessssql14-mdmd-edition-upgrade"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Actualización de edición  
  En la tabla siguiente se enumeran los escenarios de actualización de edición de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]admitidos.  
   
- Para obtener instrucciones paso a paso sobre cómo realizar una actualización de edición, vea [actualizar a una edición diferente de SQL Server 2014 &#40;el programa de instalación&#41;](upgrade-to-a-different-edition-of-sql-server-setup.md).  
+ Para obtener instrucciones detalladas sobre cómo realizar una actualización de edición, vea [actualizar a una edición diferente de SQL Server 2014 &#40;instalación&#41;](upgrade-to-a-different-edition-of-sql-server-setup.md).  
   
 |Actualización de|Actualización a|  
 |------------------|----------------|  
@@ -160,7 +160,7 @@ ms.locfileid: "36105689"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licencia Server+CAL o Core)|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise Evaluation <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licencia Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Desarrollador<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> La actualización de Evaluation Enterprise (una edición gratuita) a cualquiera de las ediciones de pago se admite para las instalaciones independientes, pero no para las instalaciones en clúster.|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Estándar <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licencia Server+CAL o Core)|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licencia Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Desarrollador <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licencia Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licencia Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express <sup>1</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licencia Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Desarrollador<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
   
@@ -186,7 +186,7 @@ ms.locfileid: "36105689"
 ## <a name="see-also"></a>Vea también  
  [Características compatibles con las ediciones de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Requisitos de hardware y Software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
- [Actualizar a SQL Server 2014](upgrade-sql-server.md)   
+ [Actualización a SQL Server 2014](upgrade-sql-server.md)   
  [Usar el Asesor de actualizaciones para preparar las actualizaciones](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
   

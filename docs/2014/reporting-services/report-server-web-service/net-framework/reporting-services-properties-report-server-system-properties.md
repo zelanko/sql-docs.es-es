@@ -15,15 +15,15 @@ helpviewer_keywords:
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 caps.latest.revision: 55
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 79fb5e55f54a07f8b3a770f39b3c738a59dab16e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cc749db6d8eee973ef4c146d62ce5ebebda230e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276601"
 ---
 # <a name="report-server-system-properties"></a>Propiedades del sistema del servidor de informes
   Los siguientes nombres de propiedades de sistema están reservados. No puede crear propiedades definidas por el usuario con el mismo nombre. Puede leer o modificar muchas de estas propiedades utilizando los métodos de servicio web.  
@@ -40,7 +40,7 @@ ms.locfileid: "36198387"
 |EnableMyReports|Indica si la característica Mis informes está habilitada. Un valor de `true` indica que la característica está habilitada.|  
 |MyReportsRole|El nombre del rol que se usa al crear directivas de seguridad en las carpetas Mis informes del usuario. El valor predeterminado es `My Reports Role`.|  
 |EnableExecutionLogging|Indica si el registro de ejecución de informes está habilitado. El valor predeterminado es `true`.|  
-|ExecutionLogDaysKept|Número de días que mantener la información de ejecución de informes en el registro de ejecución. Los valores válidos para esta propiedad son `0` a través de `2`,`147`,`483`,`647`. Si el valor es `0` no se eliminan las entradas de la tabla del registro de ejecución. El valor predeterminado es `60`.|  
+|ExecutionLogDaysKept|Número de días que mantener la información de ejecución de informes en el registro de ejecución. Los valores válidos para esta propiedad incluyen `0` a través de `2`,`147`,`483`,`647`. Si el valor es `0` no se eliminan las entradas de la tabla del registro de ejecución. El valor predeterminado es `60`.|  
 |SnapshotCompression|Define la manera en la que se comprimen las instantáneas. El valor predeterminado es `SQL`. Los valores válidos son los siguientes:<br /><br /> `SQL` = las instantáneas se comprimen cuando se almacenan en la base de datos del servidor de informes. Éste es el comportamiento actual.<br /><br /> **None =** no se comprimen las instantáneas.<br /><br /> `All` = las instantáneas se comprimen para todas las opciones de almacenamiento, lo que incluye la base de datos del servidor de informes o el sistema de archivos.|  
 |EnableClientPrinting|Determina si el control ActiveX RSClientPrint está disponible para descargarlo del servidor de informes. Los valores válidos son `true` y `false`. El valor predeterminado es `true`. Para más información sobre opciones de configuración adicionales necesarias para este control, vea [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).|  
 |EnableIntegratedSecurity|Determina si se admite la seguridad integrada para las conexiones de origen de datos del informe. El valor predeterminado es `True`. Los valores válidos son los siguientes:<br /><br /> `True` = la seguridad integrada está habilitada.<br /><br /> `False` = la seguridad integrada no está habilitada. No se ejecutarán los orígenes de datos de informes que estén configurados para usar la seguridad integrada.|  

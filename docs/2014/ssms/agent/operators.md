@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - operators (users) [Database Engine]
 - fail-safe operator [SQL Server]
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - alerts [SQL Server], operators
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d234e4748e2e0188b9b1d7f0248261089a454778
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c0d64bf91d18b5bbd1538a3f65d8ca50f74b8019
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282351"
 ---
 # <a name="operators"></a>Operadores
   Los operadores son alias para personas o grupos que pueden recibir una notificación electrónica cuando los trabajos se completan o se activa una alerta. El servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la notificación de administradores a través de operadores. Los operadores habilitan las capacidades de notificación y supervisión del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

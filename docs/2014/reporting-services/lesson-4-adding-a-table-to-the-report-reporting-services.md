@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 caps.latest.revision: 60
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a34a6efad3223ec4d38133571a7c081364f28fea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a8a4c0fb1fe9128b40ee00e29c243ede617501f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224705"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lección 4: Agregar una tabla al informe (Reporting Services)
   Después de definir un conjunto de datos, puede comenzar a diseñar el diseño. El diseño del informe se crea arrastrando y colocando en la superficie de diseño regiones de datos, cuadros de texto, imágenes y otros elementos que se desean incluir en el informe.  
@@ -35,11 +35,11 @@ ms.locfileid: "36198118"
   
 2.  En el **datos de informe** panel, expanda el **AdventureWorksDataset** conjunto de datos para mostrar los campos.  
   
-3.  Arrastre el campo de fecha de la **datos de informe** panel a la primera columna de la tabla.  
+3.  Arrastre el campo Date desde el **datos de informe** panel a la primera columna en la tabla.  
   
      Al colocar el campo en la primera columna, suceden dos cosas. En primer lugar, la celda de datos mostrará el nombre del campo, que se conoce como la *expresión de campo*, entre corchetes: `[Date]`. En segundo lugar, se agrega automáticamente un valor de encabezado de columna a la fila Encabezado, inmediatamente encima de la expresión de campo. De forma predeterminada, la columna tiene el nombre del campo. Puede seleccionar el texto de la fila Encabezado y escribir un nuevo nombre.  
   
-4.  Arrastre el campo Order desde el **datos de informe** panel hasta la segunda columna de la tabla.  
+4.  Arrastre el campo Order desde el **datos de informe** panel a la segunda columna de la tabla.  
   
 5.  Arrastre el campo Product desde el **datos de informe** panel a la tercera columna de la tabla.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36198118"
   
      En el diagrama siguiente se muestra una región de datos de tabla rellenada con estos campos: Date, Order, Product, Qty y LineTotal.  
   
-     ![Diseño, tabla con fila de encabezado y fila de detalle](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "de diseño, tabla con fila de encabezado y fila de detalles")  
+     ![Diseño, tabla con fila de encabezado y fila de detalle](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "diseño, tabla con fila de encabezado y fila de detalles")  
   
 ## <a name="preview-your-report"></a>Obtener una vista previa del informe  
  Al obtener una vista previa de un informe, se puede ver el informe representado sin tener que publicarlo antes en un servidor de informes. Es probable que desee obtener frecuentemente una vista previa de un informe durante su diseño. Al obtener la vista previa del informe, también se ejecutará la validación en el diseño y las conexiones de datos de modo que pueda corregir los errores y los problemas antes de publicar el informe en un servidor de informes.  

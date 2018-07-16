@@ -1,5 +1,5 @@
 ---
-title: Opciones (página General de Ayuda de entorno) | Documentos de Microsoft
+title: Opciones (página entorno-ayuda-General) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Help.General
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b471acfdbaa82005bbfb0b70b68a78a62498a7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e0f67935fd46e27ad107221de96d8816e056e421
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294085"
 ---
-# <a name="options-environment-help-general-page"></a>Opciones (página General de Ayuda de entorno)
+# <a name="options-environment-help-general-page"></a>Opciones (entorno-ayuda-General, página)
   Use el cuadro de diálogo **Opciones** para elegir conjuntos de documentación y decidir si deben mostrarse temas internamente en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o externamente en otra ventana. Para tener acceso a este cuadro de diálogo, haga clic en **Opciones** en el menú **Herramientas** , expanda el elemento **Ayuda** del nodo **Entorno** y, a continuación, haga clic en **General**.  
   
 > [!NOTE]  

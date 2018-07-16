@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing properties
 - Properties window [SQL Server Management Studio]
 - complex properties [SQL Server Management Studio]
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b1c8a14431ed10908daabf3688a5869ee151f790
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5e69b87d6ad930a37206d98e2f4fa318fe4b6658
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318065"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Utilizar la ventana Propiedades en Management Studio
   La ventana Propiedades describe el estado de un elemento de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], como una conexión o un operador de plan de presentación, además de proporcionar información acerca de objetos de la base de datos, como tablas, vistas y diseñadores.  

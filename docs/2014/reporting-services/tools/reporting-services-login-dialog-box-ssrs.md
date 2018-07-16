@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.reportservicelogin.f1
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e4a3feeca737e1d4db6627af5ece9fa9d36c6b7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 505288382a078a020984db3b9f560f7c2e52fcbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305027"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Inicio de sesión de Reporting Services (cuadro de diálogo de SSRS)
   Utilice el cuadro de diálogo **Inicio de sesión de Reporting Services** para proporcionar credenciales para publicar informes en el servidor de informes.  
@@ -39,7 +39,7 @@ ms.locfileid: "36196656"
  Escriba la contraseña con la que iniciar sesión en el servicio web.  
   
 ## <a name="see-also"></a>Vea también  
- [Las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Especificar credenciales y la información de conexión para orígenes de datos de informe](../report-data/specify-credential-and-connection-information-for-report-data-sources.md) [ayuda de F1 de diseñador de informes](report-designer-f1-help.md)  
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Especifique la información de credenciales y conexión para orígenes de datos de informe](../report-data/specify-credential-and-connection-information-for-report-data-sources.md) [ayuda de F1 de diseñador de informes](report-designer-f1-help.md)  
   
   

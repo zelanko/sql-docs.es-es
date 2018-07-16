@@ -1,5 +1,5 @@
 ---
-title: Descripción de Power View para modelos multidimensionales | Documentos de Microsoft
+title: Descripción de Power View para modelos multidimensionales | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a252c89adfe34f849e6fe2bd538ddf22b044c7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df50d1ac785e58bf3136f6d8777a01c98a81d568
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288061"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Descripción de Power View para modelos multidimensionales
   En este artículo se describe la característica Power View para modelos multidimensionales de Microsoft SQL Server 2014 y se proporciona información importante para los profesionales y los administradores de BI que pretenden implementar Power View para modelos multidimensionales en su organización.  
@@ -80,7 +80,7 @@ ms.locfileid: "36104156"
   
  **Grupos de medida en la lista de campos de Power View**  
   
- ![Lista en la vista avanzada de campos](../media/daxmd-powerviewfieldlist.gif "campo lista en la vista avanzada")  
+ ![Campo de lista en la vista avanzada](../media/daxmd-powerviewfieldlist.gif "campo de lista en la vista avanzada")  
   
  Las medidas dentro de un grupo de medida aparecen como medidas. Si hay medidas calculadas que no tienen un grupo de medida asociado, se agruparán en una tabla especial denominada Medidas.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36104156"
   
  **Tipos geography de atributos de dimensión en SSDT y en la lista de campos de Power View**  
   
- ![Tipos de geografía de atributos de dimensión](../media/daxmd-ssdt-attribute-geog-types.gif "tipos geography de atributos de dimensión")  
+ ![Tipos geography de atributos de dimensión](../media/daxmd-ssdt-attribute-geog-types.gif "tipos geography de atributos de dimensión")  
   
 ### <a name="dimension-calculated-members"></a>Miembros calculados de dimensión  
  Los modelos multidimensionales admiten miembros calculados para los secundarios de todos con un único miembro real. Las restricciones adicionales al exponer este tipo de miembro calculado son:  
@@ -129,7 +129,7 @@ ms.locfileid: "36104156"
   
  **Informe de Power View con miembros calculados**  
   
- ![Miembros calculados en Power View](../media/daxmd-calcmembersinpowerview.gif "miembros calculados en la vista avanzada")  
+ ![Miembros calculados en Power View](../media/daxmd-calcmembersinpowerview.gif "miembros calculados en Power View")  
   
 ### <a name="default-members"></a>Miembros predeterminados  
  Los modelos multidimensionales admiten miembros predeterminados para los atributos de dimensión. El miembro predeterminado se usa en Analysis Services al agregar datos para una consulta. El miembro predeterminado de un atributo de dimensión se expone como valor predeterminado o filtro para la columna correspondiente en los metadatos tabulares.  
@@ -151,7 +151,7 @@ ms.locfileid: "36104156"
   
  **Tipo de atributo de dimensión ImageURL en SSDT**  
   
- ![Propiedades de los atributos de dimensión](../media/daxmd-dimattribute-properties.gif "propiedades de los atributos de dimensión")  
+ ![Propiedades de los atributos de dimensión](../media/daxmd-dimattribute-properties.gif "las propiedades de atributo de dimensión")  
   
 ## <a name="parent-child-hierarchies"></a>Jerarquías de elementos primarios y secundarios  
  Los modelos multidimensionales admiten jerarquías de elementos primarios y secundarios, que se exponen como jerarquía en los metadatos tabulares. Cada nivel de la jerarquía se expone como una columna oculta. El atributo clave de la dimensión primaria-secundaria no se expone en los metadatos tabulares.  

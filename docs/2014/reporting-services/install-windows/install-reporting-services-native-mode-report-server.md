@@ -1,5 +1,5 @@
 ---
-title: Instalar Reporting Services Native Mode Report Server | Documentos de Microsoft
+title: Instalar el servidor de informes de modo nativo de servicios de informes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - report servers [Reporting Services], default configurations
@@ -17,13 +17,13 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 caps.latest.revision: 58
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 090432d75605eb1678eacc77fafe1c213825d5ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0260982df5dff6640a4a273916c8e4455bd18621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329445"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Instalar el servidor de informes en modo nativo de Reporting Services
   Un servidor de informes en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se puede instalar desde el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o desde la línea de comandos. En el Asistente para la instalación, puede seleccionar 1) instalar archivos y configurar el servidor con los valores predeterminados o 1) instalar solo los archivos y el Asistente para la instalación no configura el servidor. En este tema se examina la *configuración predeterminada para el modo nativo* donde el programa de instalación instala y configura una instancia del servidor de informes. Cuando finalice el programa de instalación, el servidor de informes estará en ejecución y listo para ser utilizado. Un servidor de informes en modo nativo se ejecuta como servidor de aplicaciones independiente. El modo nativo es el modo de servidor predeterminado.  
@@ -40,7 +40,7 @@ ms.locfileid: "36196880"
   
 -   [Requisitos](#bkmk_requirements)  
   
--   [Reservas de direcciones URL predeterminada](#bkmk_defaultURLreservations)  
+-   [Reservas de dirección URL predeterminada](#bkmk_defaultURLreservations)  
   
 -   [Instalar el modo nativo mediante el Asistente para la instalación de SQL Server](#bkmk_installwithwizard)  
   
@@ -95,13 +95,13 @@ ms.locfileid: "36196880"
   
  No intente reconfigurar el equipo solo para permitir que continúe una instalación predeterminada. Si lo hace, podrían necesitarse varias horas de trabajo, lo que elimina en efecto el ahorro de tiempo que la opción de instalación proporciona. La mejor solución es instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de solo archivos y, a continuación, configure el servidor de informes para utilizar valores concretos.  
   
-##  <a name="bkmk_defaultURLreservations"></a> Reservas de direcciones URL predeterminada  
+##  <a name="bkmk_defaultURLreservations"></a> Reservas de dirección URL predeterminada  
  Las reservas de direcciones URL están compuestas de un prefijo, un nombre de host, un puerto y un directorio virtual:  
   
 |Parte|Descripción|  
 |----------|-----------------|  
 |Prefijo|El prefijo predeterminado es HTTP. Si instaló anteriormente un certificado de Capa de sockets seguros (SSL), el programa de instalación intentará crear reservas de direcciones URL que usen el prefijo HTTPS.|  
-|Nombre de host|El nombre de host predeterminado es un carácter comodín (+) seguro. Especifica que el servidor de informes aceptará cualquier solicitud HTTP en el puerto designado para cualquier nombre de host que se resuelve en el equipo, incluidos http://\<nombreDeEquipo > / reportserver, http://localhost/reportserver, o http://\<IPAddress > / ReportServer.|  
+|Nombre de host|El nombre de host predeterminado es un carácter comodín (+) seguro. Especifica que el servidor de informes aceptará cualquier solicitud HTTP en el puerto designado para cualquier nombre de host que se resuelve en el equipo, incluidos http://\<nombreDeEquipo > / reportserver, http://localhost/reportserver, o http://\<direcciónIP > / ReportServer.|  
 |Puerto|El puerto predeterminado es 80. Tenga en cuenta que si utiliza cualquier puerto distinto del 80, tendrá que agregarlo explícitamente a la dirección URL cuando abra una aplicación web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una ventana del explorador.|  
 |Directorio virtual|De forma predeterminada, los directorios virtuales se crean en el formato de ReportServer_\<*instance_name*> para el servicio Web del servidor de informes y Reports_\<*instance_name*> Administrador de informes. Para el servicio web del servidor de informes, el nombre del directorio virtual predeterminado es **reportserver**. Para el Administrador de informes, el directorio virtual predeterminado es **reports**.|  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36196880"
   
      ![Selección del modo nativo de SSRS en Selección de características](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "Selección del modo nativo de SSRS en Selección de características")  
   
-3.  Si tiene previsto usar el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] característica de suscripción, a continuación, en la **configuración del servidor** página, desea comprobar el Agente SQL Server está configurado para **automática** tipo de inicio.  
+3.  Si tiene previsto usar el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] característica de suscripción, a continuación, en el **configuración del servidor** página, desea comprobar el Agente SQL Server está configurado para **automática** tipo de inicio.  
   
 4.  En la página **Configuración de Reporting Services** , seleccione **Instalar y configurar**.  
   
@@ -157,7 +157,7 @@ setup /q /ACTION=install /FEATURES=SQL,RS,TOOLS /INSTANCENAME=MSSQLSERVER /SQLSY
 SERVICE" /RSSVCSTARTUPTYPE="Manual" /RSINSTALLMODE="DefaultNativeMode"  
 ```  
   
- Para obtener más información y ejemplos, vea [símbolo instalación de Reporting Services SharePoint Mode y el modo nativo](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md) y [instalar SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+ Para obtener más información y ejemplos, vea [símbolo instalación de Reporting Services SharePoint Mode y modo nativo](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md) y [instalar SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Solucionar problemas en una instalación de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   

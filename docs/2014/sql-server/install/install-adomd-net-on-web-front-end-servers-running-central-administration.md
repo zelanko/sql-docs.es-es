@@ -1,5 +1,5 @@
 ---
-title: Instalar ADOMD.NET en servidores front-end Web ejecutando Administración Central | Documentos de Microsoft
+title: Instale ADOMD.NET en servidores front-end Web ejecutando Administración Central | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: ccedd48fcebab07eeb7b27821917b684d98a11d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fd8c345a0f5b1cafdf675fa5ed57b857d9714b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317545"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>Instalar ADOMD.NET en servidores front-end web ejecutando Administración central
   Si instala PowerPivot para SharePoint en una granja que tiene la topología de Administración central, sin Excel Services o PowerPivot para SharePoint, descargue e instale la biblioteca de cliente de Microsoft ADOMD.NET si desea acceso total a los informes integrados en el panel de administración de PowerPivot. Algunos informes del panel usan ADOMD.NET para tener acceso a los datos internos que proporcionan los datos de errores en el procesamiento de las consultas de PowerPivot y el estado del servidor en la granja.  

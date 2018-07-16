@@ -1,5 +1,5 @@
 ---
-title: Directorios virtuales no están especificados (Asesor de actualizaciones) | Documentos de Microsoft
+title: Los directorios virtuales no están especificados (Asesor de actualizaciones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - virtual directories [Reporting Services]
 ms.assetid: 7d32b560-49d6-4558-b5d6-9127067f82d6
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 56e42c309a59d103ffb4d8193e6563cf298b55bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eba1359cc34a7b8e5fec19a71282d6b862b93102
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265794"
 ---
 # <a name="virtual-directories-are-unspecified-upgrade-advisor"></a>Los directorios virtuales no están especificados (Asesor de actualizaciones)
   El Asesor de actualizaciones no ha detectado ninguna configuración de directorios virtuales para el servicio web del servidor de informes o para el Administrador de informes. Una vez completada la actualización, debe configurar las reservas de direcciones URL para el servidor de informes mediante el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -39,7 +39,7 @@ ms.locfileid: "36105531"
 ## <a name="corrective-action"></a>Acción correctora  
  Tras finalizar la actualización, use el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para establecer las direcciones URL para el servidor de informes y para el Administrador de informes. Use el Administrador de IIS para quitar los directorios virtuales que ya no necesite.  
   
- Para obtener más información, consulte [configurar una dirección URL &#40;Administrador de configuración de SSRS&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+ Para obtener más información, consulte [configurar una dirección URL &#40;SSRS Configuration Manager&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
   
 ## <a name="see-also"></a>Vea también  
  [Problemas de actualización de Reporting Services &#40;Asesor de actualizaciones&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

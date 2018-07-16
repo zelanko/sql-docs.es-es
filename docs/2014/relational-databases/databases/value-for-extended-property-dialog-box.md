@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.value.f1
 - sql12.swb.extendedpropertiesvalue.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Value for Extended Property dialog box
 ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1e0afbfab1085105fb438a3f4f4976b099fd7791
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6eb09c17322ba613b347b1a4b21755c07b9d1263
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331777"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>Valor para propiedad extendida, cuadro de diálogo
   Use el cuadro de diálogo **Valor para** *\<nombre de propiedad>* para escribir o ver un valor. Se trata de un cuadro de diálogo común que puede abrirse desde varias ubicaciones.  

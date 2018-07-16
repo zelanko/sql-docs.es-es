@@ -1,5 +1,5 @@
 ---
-title: Administración de servicios y la configuración de red mediante el proveedor WMI | Documentos de Microsoft
+title: Administración de servicios y la configuración de red mediante el uso de proveedor WMI | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - monitoring [SMO]
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 54c441653fd1116aa9061d143aa63ae353a43585
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9f0f9c249ac1a494a3dd965386da7160dd373818
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280631"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Administrar servicios y configuración de red utilizando el proveedor WMI
   El proveedor WMI es una interfaz publicada que utiliza [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) para administrar la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicios y protocolos de red. En SMO, el <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> objeto representa el proveedor de WMI.  

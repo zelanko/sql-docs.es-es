@@ -5,28 +5,27 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], document similarity queries
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b4158ae5c5647516c309f43bc5fa5e49caed4f5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: b38cdb3e37ff8dca8a1fb206513c69a826ce91c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319895"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>buscar documentos similares y relacionados con la búsqueda semántica
   Describe cómo buscar documentos o valores de texto similares e información acerca de su similitud o relación en columnas configuradas para la indización semántica estadística.  
   
-##  <a name="BasicsQuerySimilar"></a> Buscar documentos similares o relacionados.  
+##  <a name="BasicsQuerySimilar"></a> Buscar documentos similares o relacionados  
   
 ###  <a name="HowToQuerySimilar"></a> Cómo: Buscar documentos similares o relacionados con SEMANTICSIMILARITYTABLE  
  Para identificar documentos similares o relacionados en una columna específica, consulte la función [semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql).  
@@ -55,7 +54,7 @@ ORDER BY KEY_TBL.score DESC;
 GO  
 ```  
   
-##  <a name="BasicsQuerySimilarity"></a> Buscar información sobre cómo los documentos son similares o relacionados.  
+##  <a name="BasicsQuerySimilarity"></a> Buscar información sobre cómo los documentos son similares o relacionados  
   
 ###  <a name="HowToQuerySimilarity"></a> Cómo: Buscar información acerca de cómo los documentos son similares o relacionados con SEMANTICSIMILARITYDETAILSTABLE  
  Para obtener información sobre las frases clave que hacen que los documentos sean similares o relacionados, puede consultar la función [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql).  

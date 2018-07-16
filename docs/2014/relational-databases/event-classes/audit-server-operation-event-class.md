@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Server Operation event class
 ms.assetid: 6cc3dbb9-817e-4329-9f45-c3adcff3b511
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 247e345674681c6093f2605474c3ae60ab77dea8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 27a4e9b29c1b7a14618fd97b373ae77896c9749b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186584"
 ---
 # <a name="audit-server-operation-event-class"></a>Audit Server Operation, clase de eventos
   La clase de eventos **Audit Server Operation** se produce cuando se usan operaciones de auditoría de seguridad, como modificar la configuración, los recursos, el acceso externo o la autorización.  

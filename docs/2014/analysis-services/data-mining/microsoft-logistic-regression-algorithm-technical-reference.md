@@ -1,5 +1,5 @@
 ---
-title: Referencia técnica del algoritmo de regresión logística de Microsoft | Documentos de Microsoft
+title: Referencia técnica del algoritmo de regresión logística de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: accf5f68267c4e66b2becac0f03c6bc4548b4ae5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f211c048acff10e3e9509beebc909ee141ba56a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317485"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Referencia técnica del algoritmo de regresión logística de Microsoft
   El algoritmo de regresión logística de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es una variación del algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , donde el parámetro *HIDDEN_NODE_RATIO* se establece en 0. Este valor creará un modelo de red neuronal que no contenga un nivel oculto y que, por consiguiente, sea equivalente a la regresión logística.  
@@ -36,7 +36,7 @@ ms.locfileid: "36196163"
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Implementación del algoritmo de regresión logística de Microsoft  
  Supongamos que la columna de predicción solo contiene dos estados, pero que aun así desea realizar un análisis de regresión, relacionando las columnas de entrada con la probabilidad de que la columna de predicción contenga un estado específico. El siguiente diagrama muestra los resultados que obtendrá si asigna 1 y 0 a los estados de la columna de predicción, calcula la probabilidad de que la columna contenga un estado específico y realiza una regresión lineal en una variable de entrada.  
   
- ![Mal modelar datos utilizando regresión lineal](../media/logistic-linear-regression.gif "mal modelar datos utilizando regresión lineal")  
+ ![Modelo incorrecto creado con la regresión lineal de datos](../media/logistic-linear-regression.gif "mal modelar datos con la regresión lineal")  
   
  El eje x contiene los valores de una columna de entrada. El eje y contiene las probabilidades de que la columna de predicción tenga un estado o el otro. El problema que puede surgir es que la regresión lineal no limite la columna a los valores 0 y 1, a pesar de que son los valores máximo y mínimo de la columna. Una forma de resolver el problema es llevar a cabo una regresión logística. En vez de crear una línea recta, el análisis de regresión logística crea una curva con forma de "S" que contiene las restricciones máxima y mínima. Por ejemplo, el siguiente diagrama muestra los resultados que se obtienen si lleva a cabo una regresión logística con los mismos datos utilizados en el ejemplo anterior.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "36196163"
 ### <a name="scoring-inputs"></a>Entradas de puntuación  
  La*puntuación* en el contexto de un modelo de red neuronal o de regresión logística implica el proceso de convertir los valores que están presentes en los datos en un conjunto de valores que utilizan la misma escala y, por consiguiente, se pueden comparar entre sí. Por ejemplo, suponga que las entradas para los ingresos abarcan de 0 a 100.000 mientras que las entradas para [Número de hijos] abarcan de 0 a 5. Este proceso de conversión siempre le permite *puntuar*, o comparar, la importancia de cada entrada sin tener en cuenta la diferencia en los valores.  
   
- Para cada estado que aparece en el conjunto de entrenamiento, el modelo genera una entrada. Para las entradas discretas o de datos discretos, se crea una entrada adicional para representar el estado Missing, si aparece al menos una vez en el conjunto de entrenamiento. En las entradas continuas, se crean al menos dos nodos de entrada: uno para los valores Missing, si están presentes en los datos de entrenamiento, y una entrada para todos los valores existentes o no nulos. Cada entrada se escala a un formato numérico usando el método de normalización de puntuación-z, (x – μ) / StdDev.  
+ Para cada estado que aparece en el conjunto de entrenamiento, el modelo genera una entrada. Para las entradas discretas o de datos discretos, se crea una entrada adicional para representar el estado Missing, si aparece al menos una vez en el conjunto de entrenamiento. En las entradas continuas, se crean al menos dos nodos de entrada: uno para los valores Missing, si están presentes en los datos de entrenamiento, y una entrada para todos los valores existentes o no nulos. Cada entrada se escala a un formato numérico mediante el método de normalización de puntuación-z, (x – μ) o StdDev.  
   
  Durante la normalización de puntuación-z, la media (μ) y la desviación estándar se obtienen sobre el conjunto de entrenamiento completo.  
   
  **Valores continuos**  
   
- El valor está presente: (X – μ) / σ / / X es el valor real que se está codificando)  
+ Valor está presente: (X – μ) / σ / / X es el valor real que se está codificando)  
   
  Valor está ausente: - μ/σ / / mu negativo dividido por sigma)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36196163"
   
  StdDev = sqrt(p(1-p))  
   
- El valor está presente: (1 – μ) / σ / / (uno menos mu) dividido por sigma)  
+ Valor está presente: (1 – μ) / σ / / (uno menos mu) dividido por sigma)  
   
  Valor está ausente: (– μ) / σ / / mu negativo dividido por sigma)  
   
@@ -159,7 +159,7 @@ WHERE NODE_TYPE = 23
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm.md)   
  [Ejemplos de consultas de modelo de regresión lineal](linear-regression-model-query-examples.md)   
- [Contenido del modelo para los modelos de regresión logística de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Contenido del modelo para los modelos de regresión logística de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm.md)  
   
   

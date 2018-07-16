@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -18,13 +18,13 @@ ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ecf22fbf730510c0fbb87dff803ea6b69d4881f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4197e80f29f7add23fcb1ddb7594fe5f7e3173f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327065"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes
   En este tema se proporciona una referencia de los permisos de SharePoint que se pueden usar para conceder acceso a las operaciones del servidor de informes para un servidor de informes que se ejecuta en el modo integrado de SharePoint. Si va a crear niveles de permisos personalizados, este tema puede ayudarle a elegir qué permisos usar.  
@@ -77,7 +77,7 @@ ms.locfileid: "36197087"
 |Abrir|Abrir un sitio web, una lista o una carpeta para obtener acceso a los elementos incluidos en dicho contenedor.|X|X|X|Leer programaciones y propiedades de elementos.|  
   
 ## <a name="see-also"></a>Vea también  
- [Comparar Roles y tareas de Reporting Services con permisos y grupos de SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [Comparar Roles y tareas de Reporting Services con los permisos y grupos de SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Concesión de permisos sobre elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

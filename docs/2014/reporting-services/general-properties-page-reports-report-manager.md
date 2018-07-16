@@ -1,5 +1,5 @@
 ---
-title: Página Propiedades generales, informes (Administrador de informes) | Documentos de Microsoft
+title: Página Propiedades generales, informes (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 21ffa295452a4f025eb15600e48f0e99906ac2fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 607d50e68cef49fef5940b2729bea8156d7bf2f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189902"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Página d propiedades generales, informes (Administrador de informes)
   Use la página de propiedades General de informes para cambiar de nombre, eliminar, mover o reemplazar una definición de informe. Esta página se puede utilizar también para crear un informe vinculado. En la parte superior de la página, se incluye información detallada sobre quién creó o modificó el informe, y cuándo tuvieron lugar los cambios.  
@@ -74,6 +74,6 @@ ms.locfileid: "36199619"
   
 ## <a name="see-also"></a>Vea también  
  [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Examinar un modelo usando el Visor de clústeres de secuencia de Microsoft | Documentos de Microsoft
+title: Examinar un modelo usando el Visor de clústeres de secuencia de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Sequence Cluster Viewer
 - clusters [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - transitions [Analysis Services]
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 37a7d3c5be648c1861dbbb33ac20a824e462296f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14b1cb2c1aff17b9953865846ba2d4d100132397
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276221"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Examinar un modelo usando el Visor de clústeres de Microsoft
   El Visor de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los modelos de minería de datos que se generan con el algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de clústeres de secuencia que se utiliza para explorar datos que contienen eventos que se pueden vincular siguiendo rutas o *secuencias*. Para más información sobre este algoritmo, vea [Algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "36198078"
  [Volver al principio](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Profile"></a> Perfiles del clúster  
- La pestaña **Perfiles del clúster** proporciona una vista general de los clústeres que crea el algoritmo del modelo. Cada columna que sigue a la columna **Llenado** en la cuadrícula representa un clúster que el modelo ha descubierto. El \<atributo > fila de ejemplos representa diferentes secuencias de datos que existen en el clúster, y el \<atributo > fila describe todos los elementos que contiene el clúster y su distribución global.  
+ La pestaña **Perfiles del clúster** proporciona una vista general de los clústeres que crea el algoritmo del modelo. Cada columna que sigue a la columna **Llenado** en la cuadrícula representa un clúster que el modelo ha descubierto. El \<atributo > .samples fila representa diferentes secuencias de datos que existen en el clúster, y el \<atributo > fila describe todos los elementos que contiene el clúster y su distribución general.  
   
  La opción **Barras de histograma** controla el número de barras que están visibles en el histograma. Si hay más barras de las que elige que se muestren, se retienen las de mayor importancia y las restantes se agrupan en un depósito gris.  
   
@@ -95,8 +95,8 @@ ms.locfileid: "36198078"
  [Volver al principio](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas y tareas del Visor de modelo de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
- [Tareas y tareas del Visor de modelo de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tareas del Visor de modelo de minería de datos y procedimientos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tareas del Visor de modelo de minería de datos y procedimientos](mining-model-viewer-tasks-and-how-tos.md)   
  [Algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm.md)   
  [Herramientas de minería de datos](data-mining-tools.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)   

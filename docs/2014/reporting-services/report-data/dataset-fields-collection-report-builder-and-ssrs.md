@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ef032c021bb8bdf2a64f63aad8d3eb79da044afb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f8890c0ccab740444845180a328f9753c7a50976
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194916"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Colección Campos del conjunto de datos (Generador de informes y SSRS)
   Los campos de conjunto de datos representan los datos de una conexión de datos. Un campo puede representar datos numéricos o no numéricos. En los ejemplos se incluyen cantidades de ventas, ventas totales, nombres de cliente, identificadores de base de datos, direcciones URL, imágenes, datos espaciales y direcciones de correo electrónico. En la superficie de diseño, los campos aparecen como expresiones en los elementos de informe como los cuadros de texto, tablas y gráficos.  

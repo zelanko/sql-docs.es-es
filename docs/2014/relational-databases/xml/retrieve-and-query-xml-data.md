@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2bab6f72c83cc681443ee526a35fb4368db7ea6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 42311763fddcec6403494c82dca02c29480f7235
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313285"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperar y consultar datos XML
   En este tema se describen las opciones de consulta que se tienen que especificar para consultar datos XML. También describe las partes de las instancias XML que no se conservan cuando se almacenan en bases de datos.  
@@ -91,7 +91,7 @@ GO
   
   
 ##  <a name="query"></a> Establecer opciones de consulta necesarias  
- Cuando se consultan `xml` columnas o variables con tipo `xml` métodos de tipo de datos, las siguientes opciones deben establecerse como se muestra.  
+ Al consultar `xml` columnas o variables con tipo `xml` métodos del tipo de datos, las siguientes opciones deben establecerse como se muestra.  
   
 |Opciones de SET|Valores requeridos|  
 |-----------------|---------------------|  

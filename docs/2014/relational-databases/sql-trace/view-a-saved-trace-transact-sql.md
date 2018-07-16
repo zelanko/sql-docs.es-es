@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], viewing
 - displaying traces
 - viewing traces
 ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7f417eb54eff29631f4a24ebbf48de40937a50c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ad3bbe8ec603afa8753951942d2b13a63e0af8db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225355"
 ---
 # <a name="view-a-saved-trace-transact-sql"></a>Ver un seguimiento guardado (Transact-SQL)
   En este tema se describe cómo utilizar las funciones integradas para ver un seguimiento guardado.  

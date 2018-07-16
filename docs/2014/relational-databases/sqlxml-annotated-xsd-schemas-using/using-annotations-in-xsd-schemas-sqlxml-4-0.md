@@ -1,5 +1,5 @@
 ---
-title: Utilizar anotaciones en esquemas XSD (SQLXML 4.0) | Documentos de Microsoft
+title: Utilizar anotaciones en esquemas XSD (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mapping schema [SQLXML], scenarios for using
 ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56db3f001d68bcaf65d71f793744896944318fc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 26fd2f853697765fda82b869aae7780976753749
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321955"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>Utilizar anotaciones en esquemas XSD (SQLXML 4.0)
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0, el lenguaje de esquemas XSD admite las anotaciones de un modo similar a las introducidas en el lenguaje de esquemas reducidos de datos XML (XDR). Hay anotaciones adicionales introducidas en XSD que no se admiten en XDR.  
@@ -47,7 +47,7 @@ ms.locfileid: "36197113"
  [Las anotaciones XSD &#40;SQLXML 4.0&#41;](xsd-annotations-sqlxml-4-0.md)  
  Se enumeran las anotaciones que puede utilizar con esquemas XSD, sus descripciones y las anotaciones equivalentes para XDR.  
   
- [Asignación predeterminada de elementos y atributos a las tablas y columnas XSD &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [Asignación predeterminada de atributos y elementos XSD a tablas y columnas &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
  Explica la asignación predeterminada y proporciona ejemplos de tareas relacionados con la asignación predeterminada.  
   
  [Asignación explícita de elementos y atributos a las tablas y columnas XSD &#40;SQLXML 4.0&#41;](explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "36197113"
  [Crear elementos constantes mediante sql: constante es &#40;SQLXML 4.0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)  
  Describe y proporciona ejemplos de la anotación `sql:is-constant`.  
   
- [Excluir elementos de esquema del documento XML resultante mediante sql: asignado &#40;SQLXML 4.0&#41;](excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)  
+ [Excluir elementos de esquema del documento XML resultante mediante sql: asigna &#40;SQLXML 4.0&#41;](excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)  
  Describe y proporciona ejemplos de la anotación `sql:mapped`.  
   
  [Filtrar valores mediante SQL: limit-campo y SQL: limit-valor &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
@@ -71,10 +71,10 @@ ms.locfileid: "36197113"
  [Identificar columnas de clave mediante SQL: Key-campos &#40;SQLXML 4.0&#41;](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)  
  Describe y proporciona ejemplos de la anotación `sql:key-fields`.  
   
- [La especificación de un Namespace de destino mediante el atributo targetNamespace &#40;SQLXML 4.0&#41;](specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
+ [Especificar un destino Namespace mediante el atributo targetNamespace &#40;SQLXML 4.0&#41;](specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
  Describe y proporciona ejemplos de la **targetNamespace** atributo.  
   
- [Crear SQL: prefix válido ID, IDREF e IDREFS tipo atributos mediante &#40;SQLXML 4.0&#41;](creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
+ [Creación de un identificador válido, IDREF e IDREFS tipo atributos mediante SQL: prefix &#40;SQLXML 4.0&#41;](creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
  Describe y proporciona ejemplos de la anotación `sql:prefix`.  
   
  [Conversiones de tipos de datos y la anotación SQL: DataType &#40;SQLXML 4.0&#41;](data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)  
@@ -83,13 +83,13 @@ ms.locfileid: "36197113"
  [Asignar tipos de datos XSD a tipos de datos de XPath &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)  
  Proporciona una tabla que compara XSD, XDR y tipos de datos XPath y enumera las conversiones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pertinentes.  
   
- [Crear secciones CDATA mediante SQL-cdata &#40;SQLXML 4.0&#41;](creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)  
+ [Creación de secciones de CDATA mediante SQL: use-cdata &#40;SQLXML 4.0&#41;](creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)  
  Describe y proporciona ejemplos de la anotación `sql:use-data`.  
   
- [Solicitar referencias URL para datos BLOB mediante sql: codificar &#40;SQLXML 4.0&#41;](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
+ [Solicitar referencias URL a datos BLOB mediante sql: encode &#40;SQLXML 4.0&#41;](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
  Describe y proporciona ejemplos de la anotación `sql:encode`.  
   
- [Recuperar datos no consumidos mediante SQL: overflow-campo &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  
+ [Recuperar datos no consumidos mediante Overflow-campo &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  
  Describe y proporciona ejemplos de la anotación `sql:overflow-field`.  
   
  [Ocultar elementos y atributos mediante sql:hide](hiding-elements-and-attributes-by-using-sql-hide.md)  

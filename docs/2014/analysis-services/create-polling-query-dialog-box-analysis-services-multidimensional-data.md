@@ -1,5 +1,5 @@
 ---
-title: Crear el sondeo en el cuadro de diálogo de consulta (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Crear el cuadro de diálogo (Analysis Services - datos multidimensionales) de consulta de sondeo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createpollingquerydialog.f1
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d7f46fbd895f1b9e9bce29674999a3e710a1a33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1c7ca8d5c2594668283887c23f7d976a1fc3359
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236235"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Crear consulta de sondeo (Analysis Services - Datos multidimensionales)
   Utilice el cuadro de diálogo **Crear consulta de sondeo** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear una consulta de sondeo en la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento** . Una consulta de sondeo es, por lo general, una consulta singleton que devuelve un valor que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] puede utilizar para determinar si los cambios se realizaron en una tabla o en otro objeto relacional. Para mostrar el cuadro de diálogo **Crear consulta de sondeo**, haga clic en el botón de puntos suspensivos (**…**) que se encuentra en la columna **Consulta de sondeo** de la cuadrícula correspondiente a la opción **Sondeo programado**, en la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento**. Para más información sobre la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento**, vea [Notificaciones &#40;cuadro de diálogo Opciones de almacenamiento&#41; &#40;Analysis Services - Datos multidimensionales&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
@@ -90,7 +90,7 @@ ms.locfileid: "36198311"
 > [!IMPORTANT]  
 >  No es posible cambiar los tipos de consulta en el cuadro de diálogo.  
   
- **Panel Cuadrícula**  
+ **Panel de cuadrícula**  
  Muestra en una cuadrícula los objetos a los que se hace referencia en la consulta. Puede usar este panel para agregar y quitar columnas en la consulta, y para cambiar la configuración de cada columna.  
   
 > [!NOTE]  

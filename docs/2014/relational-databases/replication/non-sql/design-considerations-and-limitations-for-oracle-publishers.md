@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], design considerations and limitations
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 385c9fcbf98c30646c91694669cc13984e111cda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 326460795e7b1d72c1e894c80265401f5bfd882c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287091"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Consideraciones y limitaciones de diseño de los publicadores de Oracle
   La publicación de una base de datos de Oracle se diseña para que funcione casi idénticamente a la publicación de una base de datos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . No obstante, debe tener en cuenta las siguientes limitaciones y problemas:  

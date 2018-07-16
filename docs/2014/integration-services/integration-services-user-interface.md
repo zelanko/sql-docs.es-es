@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
 - tools [Integration Services], SSIS Designer
@@ -19,13 +19,13 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5eb117c2f5f81c7a9d26fc3c0b62a101e1d9fb7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72d10ae01b290425d5f00054d84311323c3332a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290991"
 ---
 # <a name="integration-services-user-interface"></a>Interfaz de usuario de Integration Services
   Además de las superficies de diseño de las pestañas del Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] , la interfaz de usuario proporciona acceso a las siguientes ventanas y cuadros de diálogo para agregar características a paquetes y configurar las propiedades de los objetos de paquete:  

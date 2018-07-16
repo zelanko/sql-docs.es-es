@@ -1,5 +1,5 @@
 ---
-title: Crear una dimensión de tipo de fecha | Documentos de Microsoft
+title: Crear una dimensión de tipo fecha | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - dimensions [Analysis Services], time
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8f57269c2f2400b9ccf2e090fd0c0a97a21c9efc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1e38812dbdff6ecf36bd0c1398ce733d29af6e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315105"
 ---
 # <a name="create-a-date-type-dimension"></a>Crear una dimensión de tipo Date
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], una dimensión de tiempo es un tipo de dimensión cuyos atributos representan periodos de tiempo, como horas, semestres, trimestres, meses y días. Los periodos en una dimensión de tiempo proporcionan niveles de granularidad basados en tiempo para la elaboración de análisis e informes. Los atributos se organizan en jerarquías y la granularidad de la dimensión de tiempo se determina en gran parte según los requisitos empresariales y de informes de los datos históricos. Por ejemplo, la mayoría de datos financieros y de ventas en las aplicaciones de Business Intelligence utilizan una granularidad mensual o trimestral.  
@@ -73,7 +73,7 @@ ms.locfileid: "36111896"
   
 ## <a name="see-also"></a>Vea también  
  [Crear una dimensión de tiempo generando una tabla de tiempos](create-a-time-dimension-by-generating-a-time-table.md)   
- [Ayuda de F1 de Asistente de Business Intelligence](../business-intelligence-wizard-f1-help.md)   
- [Tipos de dimensión](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
+ [Asistente de Business Intelligence F1 Ayuda](../business-intelligence-wizard-f1-help.md)   
+ [Tipos de dimensiones](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

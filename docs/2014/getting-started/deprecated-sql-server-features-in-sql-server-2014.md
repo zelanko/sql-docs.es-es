@@ -1,5 +1,5 @@
 ---
-title: En desuso características de SQL Server en SQL Server 2014 | Documentos de Microsoft
+title: Características de SQL Server en SQL Server 2014 en desuso | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fdc0c778-cc8d-42ab-8833-4deb4329f37a
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d0cafd847932ef5f87064defb8e92e7ac4b09784
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b7d47249b2263ea3d5523458fd34770e7c009800
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324735"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>Características de SQL Server desusadas en SQL Server 2014
   En este tema se describen las características desusadas que siguen estando disponibles en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
@@ -35,7 +35,7 @@ ms.locfileid: "36196970"
 ### <a name="slipstream-functionality"></a>Funcionalidad de instalación integrada  
  La característica Actualización del producto reemplaza a la funcionalidad de instalación integrada que estaba disponible en [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1. Por consiguiente, los parámetros de línea de comandos /*PCUSource* y /*CUSource*asociados a la funcionalidad de instalación integrada ya no deben usarse. Los parámetros continuarán funcionando, pero se pueden quitar en una versión futura del programa de instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. El parámetro /*UpdateSource* combina la funcionalidad de los parámetros de la instalación integrada, /*PCUSource* y /*CUSource*.  
   
- Para obtener más información sobre la funcionalidad de instalación integrada que estaba disponible en [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, vea [integrar una actualización de SQL Server](http://go.microsoft.com/fwlink/?LinkId=219945) (http://go.microsoft.com/fwlink/?LinkId=219945).  
+ Para obtener más información acerca de la funcionalidad integrada que estaba disponible en [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, vea [integrar una actualización de SQL Server](http://go.microsoft.com/fwlink/?LinkId=219945) (http://go.microsoft.com/fwlink/?LinkId=219945).  
   
 ## <a name="see-also"></a>Vea también  
  [Compatibilidad con versiones anteriores](../../2014/getting-started/backward-compatibility.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'Opciones (página General del Editor de texto: XML -) | Documentos de Microsoft'
+title: Opciones (página General del Editor de texto - XML -) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.General
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
 caps.latest.revision: 20
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e5d686db29cd4fe7db3c76be22c67a2aacbec3d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7a6a5f53bbccbd0d30aaada30366d01af23a3a5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322785"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Options (Text Editor - XML - General Page)
   Utilice este cuadro de diálogo para cambiar el comportamiento de edición general del Editor XML, que se utiliza para modificar los documentos XML. Para mostrar esta configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda la subcarpeta **XML** y luego haga clic en **General**.  
@@ -43,7 +43,7 @@ ms.locfileid: "36112980"
  **Habilitar espacio virtual**  
  Cuando se selecciona esta casilla, los espacios se insertan al final de cada línea de código. Seleccione esta casilla para colocar comentarios en un punto coherente junto al código.  
   
- **Ajuste automático de línea**  
+ **Ajuste de línea**  
  Cuando se selecciona esta casilla, cualquier parte de una línea que se extienda horizontalmente fuera del área visible del editor se mostrará automáticamente en la siguiente línea. Cuando se selecciona esta casilla, se habilita la casilla **Mostrar glifos visuales para ajuste de línea** .  
   
  **Mostrar glifos visuales para ajuste de línea**  
@@ -52,7 +52,7 @@ ms.locfileid: "36112980"
 > [!NOTE]  
 >  Estas flechas de recordatorio no se agregan al código y no se imprimen. Solo sirven como referencia.  
   
- **Aplicar comandos Cortar o copiar a líneas en blanco si no hay selección**  
+ **Aplicar comandos Cortar o copiar a líneas en blanco cuando no hay ninguna selección**  
  Esta casilla establece el comportamiento del editor cuando el punto de inserción se coloca en una línea en blanco, no se selecciona nada y se hace clic en **Copiar** o **Cortar**.  
   
  Cuando se selecciona esta casilla, se copia o se corta la línea en blanco. Si luego hace clic en **Pegar**, se insertará una nueva línea en blanco.  

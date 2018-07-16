@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server]
 - standby servers [SQL Server]
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - mirror server [SQL Server] See database mirroring
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 caps.latest.revision: 121
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f70a95e9ef5bf0bc01687728fd5cac7641867759
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b760a12e436a9d6f6eebf96bcfeaea8459171a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233895"
 ---
 # <a name="database-mirroring-sql-server"></a>Creación de reflejo de la base de datos (SQL Server)
     
@@ -298,7 +297,7 @@ ms.locfileid: "36105692"
   
  **Usar Transact-SQL o SQL Server Management Studio**  
   
--   [Minimizar el tiempo de inactividad de bases de datos reflejadas al actualizar instancias de servidor](upgrading-mirrored-instances.md)  
+-   [Minimizar el tiempo de inactividad de las bases de datos reflejadas al actualizar instancias de servidor](upgrading-mirrored-instances.md)  
   
 -   [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
@@ -331,11 +330,11 @@ ms.locfileid: "36105692"
   
 ## <a name="see-also"></a>Vea también  
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [Reparación de página automática &#40;para grupos de disponibilidad y creación de reflejo de base de datos&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [Reparación de página automática &#40;para grupos de disponibilidad y la creación de reflejo de base de datos&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Solucionar problemas de configuración de creación de reflejo de la base de datos &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Creación de reflejo de la base de datos: interoperabilidad y coexistencia &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Requisitos previos, restricciones y recomendaciones para la creación de reflejo de la base de datos](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../log-shipping/about-log-shipping-sql-server.md)  
   
   

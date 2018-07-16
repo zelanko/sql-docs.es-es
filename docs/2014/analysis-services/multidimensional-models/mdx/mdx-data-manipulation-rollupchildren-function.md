@@ -1,5 +1,5 @@
 ---
-title: Trabajar con la función RollupChildren (MDX) | Documentos de Microsoft
+title: Trabajar con la función RollupChildren (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], RollupChildren function
 - RollupChildren function
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - IIf function
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7776ad0bf70060912e4ad8d3e612b04bbcd4183
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d864ea4e9d71928823b7de4d5b539594783d8ba2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314991"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Trabajar con la función RollupChildren (MDX)
-  Las expresiones multidimensionales (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) (función) [secuencia de comandos para buscar y reemplazar] acumula los miembros secundarios de un miembro, aplicar un operador unario diferente a cada elemento secundario y devuelve el valor de este resumen como un número. El operador unario utilizado puede ser proporcionado mediante una propiedad de miembro asociada al miembro secundario, o bien puede ser una expresión de cadena proporcionada directamente a la función.  
+  Expresiones multidimensionales (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) (función) [secuencia de comandos de búsqueda y reemplazo] acumula los elementos secundarios de un miembro, aplicar un operador unario diferente a cada elemento secundario y devuelve el valor de este resumen como un número. El operador unario utilizado puede ser proporcionado mediante una propiedad de miembro asociada al miembro secundario, o bien puede ser una expresión de cadena proporcionada directamente a la función.  
   
 ## <a name="rollupchildren-function-examples"></a>Ejemplos de la función RollupChildren  
  El uso de la función `RollupChildren` en instrucciones de expresiones multidimensionales (MDX) es fácil de explicar, pero esta función puede tener un impacto muy variado en las consultas MDX.  

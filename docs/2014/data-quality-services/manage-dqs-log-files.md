@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logging
 - log files
@@ -17,13 +17,13 @@ ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c96dc16b01021141db2ad2ac37e24abd20e43413
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4150b3eda44bd6ce2d367f4bb1d45cd0f096a7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257031"
 ---
 # <a name="manage-dqs-log-files"></a>Administrar archivos de registro de DQS
   Los archivos de registro de[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) le ayudan a diagnosticar y solucionar los problemas relacionados con [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]y [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]. Se generan archivos de registro independientes para [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]y el [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)].  

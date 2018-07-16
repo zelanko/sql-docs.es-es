@@ -1,5 +1,5 @@
 ---
-title: Microsoft Connector 1.1 for SAP BW | Documentos de Microsoft
+title: Microsoft Connector 1.1 for SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1ab02cdbf8a92814728d7a4adbaeb1e9d229cdbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74b106e4d40cdc079a21ae3345b96ad4489e1286
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283591"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 for SAP BW
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW consta de un conjunto de tres componentes que le permiten tanto extraer datos de un sistema SAP NetWeaver BW versión 7 como cargarlos en él.  
@@ -47,10 +47,10 @@ ms.locfileid: "36105148"
  [Instalar Microsoft Connector for 1.1 SAP BW](installing-the-microsoft-connector-for-sap-bw.md)  
  Describe los requisitos de instalación para [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW.  
   
- [Microsoft Connector 1.1 for SAP BW componentes](microsoft-connector-for-sap-bw-components.md)  
+ [Componentes de Microsoft Connector 1.1 for SAP BW](microsoft-connector-for-sap-bw-components.md)  
  Describe cada uno de los componentes de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW.  
   
- [Microsoft Connector 1.1 for SAP BW F1 Ayuda](microsoft-connector-for-sap-bw-f1-help.md)  
+ [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](microsoft-connector-for-sap-bw-f1-help.md)  
  Describe la interfaz de usuario de cada componente de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW.  
   
   

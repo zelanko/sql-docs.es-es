@@ -1,5 +1,5 @@
 ---
-title: Las columnas del modelo de minería de datos | Documentos de Microsoft
+title: Las columnas del modelo de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], mining model columns
 - columns [data mining]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - usage property [data mining]
 ms.assetid: fab47643-5bfd-424e-a0f7-69e665db6bab
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a982333d62398da617c7eae40c48a05181494c0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6067f165746f653819655063b9eb6798f23d3dc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326861"
 ---
 # <a name="mining-model-columns"></a>Columnas del modelo de minería de datos
   Un modelo de minería de datos aplica un algoritmo de modelo de minería a los datos que se representan en una estructura de minería de datos. Al igual que la estructura, el modelo de minería de datos contiene columnas. La estructura de minería contiene el modelo de minería de datos y éste hereda todos los valores de las propiedades que define la estructura. El modelo puede utilizar todas las columnas que contiene la estructura de minería de datos o un subconjunto de las columnas.  
@@ -49,8 +49,8 @@ ms.locfileid: "36112350"
  Para más información sobre la configuración de la propiedad de uso y la definición de marcas de modelado mediante programación con DMX, vea [CREATE MINING MODEL &#40;DMX&#41;](/sql/dmx/create-mining-model-dmx). Para más información sobre la configuración de la propiedad de uso y la definición de marcas de modelado en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vea [Mover objetos de minería de datos](moving-data-mining-objects.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Estructuras de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
  [Cambiar las propiedades de un modelo de minería de datos](change-the-properties-of-a-mining-model.md)   
  [Excluir una columna de un modelo de minería de datos](exclude-a-column-from-a-mining-model.md)   
  [Columnas de la estructura de minería de datos](mining-structure-columns.md)  

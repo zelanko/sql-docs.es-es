@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad con características de informes de Access (SSRS) | Documentos de Microsoft
+title: Compatibilidad con características de informes de Access (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
 - functions [Reporting Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 caps.latest.revision: 43
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a3bb7caa0d570b83bb8b487a42fa2364731602d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2beb25cee62fda3e3f71290d0f91a0a8954feed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268481"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Compatibilidad con características de informes de Access (SSRS)
   Cuando se importa un informe al Diseñador de informes, el proceso de importación convierte el informe de [!INCLUDE[msCoName](../includes/msconame-md.md)] Access en un archivo RDL (Report Definition Language) de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite varias características de Access; no obstante, debido a las diferencias entre Access y [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], algunos elementos deben modificarse ligeramente para que sean admitidos. En este tema, se describe cómo se convierten las características de informes de Access a RDL.  
@@ -35,7 +35,7 @@ ms.locfileid: "36105559"
 ## <a name="importing-access-reports"></a>Importar informes de Access  
  Algunas consultas contienen código específico de Access. El código de Access no se importa con el informe. Asimismo, si una consulta contiene cadenas incrustadas, es posible que el informe no se importe correctamente. Para solucionar este problema, sustituya las cadenas por un código de carácter. Por ejemplo, sustituya el carácter de la coma (,) por CHAR(34).  
   
- El proceso de importación no pasa correctamente el punto y coma (;) o caracteres de marcado XML (\<, >, etc.) en información de la cadena de conexión. Si una cadena de conexión contiene un punto y coma, o un carácter de marcación XML, tendrá que establecer manualmente la contraseña en el nuevo informe una vez importado.  
+ El proceso de importación no pasa correctamente el punto y coma (;) o caracteres de marcado XML (\<, >, etc.) en la información de la cadena de conexión. Si una cadena de conexión contiene un punto y coma, o un carácter de marcación XML, tendrá que establecer manualmente la contraseña en el nuevo informe una vez importado.  
   
  En el proceso de importación no se importa la configuración de conexión o de tiempo de espera general de la cadena de conexión. Posiblemente tenga que ajustar esta configuración después de importar el informe.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36105559"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite los orígenes de datos OLE DB, como [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si va a importar informes de un archivo de proyecto de Access (.adp), la cadena de conexión del origen de datos se toma de la cadena de conexión del archivo .adp. Si va a importar informes de un archivo de base de datos de Access (.mdb o .accdb), la cadena de conexión podría apuntar a la base de datos de Access y es posible que deba corregirla después de la importación. Si el origen de datos del informe de Access es una consulta, la información de la misma se guarda sin modificar en el archivo RDL. Si el origen de datos del informe de Access es una tabla, en el proceso de conversión se crea una consulta basada en el nombre de la tabla y de los campos de la misma.  
   
 ## <a name="reports-with-custom-modules"></a>Informes con módulos personalizados  
- Si no hay personalizado [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] código incluido dentro de los módulos, no se convierte. Si el Diseñador de informes encuentra código durante el proceso de importación, se genera una advertencia y se muestra en el **lista de tareas** ventana.  
+ Si no hay personalizado [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] código contenida dentro de los módulos, no se convierte. Si el Diseñador de informes encuentra código durante el proceso de importación, se genera una advertencia y se muestra en el **lista de tareas** ventana.  
   
 ## <a name="report-controls"></a>Controles de informe  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite los siguientes controles de Access y los incluye en las definiciones de informe convertidas:  
@@ -71,7 +71,7 @@ ms.locfileid: "36105559"
 |CustomControl|ListBox|ObjectFrame|OptionButton|  
 |TabControl|ToggleButton|||  
   
- Si el Diseñador de informes se encuentra alguno de estos controles durante el proceso de importación, se genera una advertencia y se muestra en el **lista de tareas** ventana.  
+ Si el Diseñador de informes encuentra alguno de estos controles durante el proceso de importación, se genera una advertencia y se muestra en el **lista de tareas** ventana.  
   
  Otros controles, como ActiveX y Office Web Components, no se importan. Por ejemplo, si un informe de Access contiene un control Chart de OWC, no se convertirá al importar el informe.  
   
@@ -298,7 +298,7 @@ ms.locfileid: "36105559"
  En una definición de informe de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], los rectángulos pueden contener otros elementos de informe. Un rectángulo de mayor tamaño que el elemento de informe y que solape más del 90 por ciento de su área se convierte en un contenedor del elemento de informe.  
   
 ## <a name="bitmaps"></a>Mapas de bits  
- Todos los mapas de bits incrustados en un informe se convierten al formato .bmp cuando se importa el informe, independientemente de su formato inicial. Por ejemplo, si el informe contiene archivos .jpg y .gif, los recursos finales importados con el informe son archivos .bmp. Los mapas de bits se guardan como imágenes incrustadas en el informe. Para obtener información sobre las imágenes incrustadas, vea [imágenes &#40;el generador de informes y SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
+ Todos los mapas de bits incrustados en un informe se convierten al formato .bmp cuando se importa el informe, independientemente de su formato inicial. Por ejemplo, si el informe contiene archivos .jpg y .gif, los recursos finales importados con el informe son archivos .bmp. Los mapas de bits se guardan como imágenes incrustadas en el informe. Para obtener información sobre las imágenes incrustadas, vea [imágenes &#40;generador de informes y SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
   
 ## <a name="other-considerations"></a>Otras consideraciones  
  Además de los elementos anteriores, también cabe destacar lo siguiente en relación con los informes importados desde Access:  

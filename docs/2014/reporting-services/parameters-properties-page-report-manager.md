@@ -1,5 +1,5 @@
 ---
-title: Página de propiedades de parámetros (el Administrador de informes) | Documentos de Microsoft
+title: Página de propiedades de parámetros (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dae546d2c07e21c8c930c889f8931b683828b055
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0f3b3bf5c8d672be964dcd77453f16e7ac9cbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327565"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Parámetros (página de propiedades del Administrador de informes)
   Utilice la página de propiedades Parámetros para ver o modificar la configuración de los parámetros de un informe con parámetros.  
@@ -46,7 +46,7 @@ ms.locfileid: "36113974"
  **Tipo de datos**  
  Especifica el tipo de datos del parámetro.  
   
- **No tiene valor predeterminado**  
+ **Tiene un valor predeterminado**  
  Active esta casilla para especificar si el parámetro tiene un valor predeterminado. Al activar esta casilla, se habilita la opción **Valor predeterminado**. También habilita **NULL** si el parámetro de informe acepta valores nulos. Si **Tiene un valor predeterminado** no está seleccionado, debe ocultar el valor o solicitarle al usuario que proporcione un valor cuando se ejecute el informe.  
   
  **Valor predeterminado**  
@@ -74,6 +74,6 @@ ms.locfileid: "36113974"
   
 ## <a name="see-also"></a>Vea también  
  [Página de propiedades generales, informes &#40;Administrador de informes&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

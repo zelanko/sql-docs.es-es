@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 49929fedf5b7d1e44a300919f2c9d903efca5bc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cd396e077ba63369d256c39ba104427f595f4df4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324405"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Cómo se determinan los permisos (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], la manera más sencilla de configurar la seguridad es asignar permisos del objeto de modelo a un grupo al que pertenece el usuario.  
@@ -48,7 +48,7 @@ ms.locfileid: "36108981"
   
 -   Todos los objetos del mismo nivel que la entidad se deniegan implícitamente.  
   
--   Todos los objetos de un nivel superior reciben acceso de navegación. Para obtener más información acerca del acceso de navegación, consulte [acceso por navegación &#40;Master Data Services&#41;](navigational-access-master-data-services.md).  
+-   Todos los objetos de un nivel superior reciben acceso de navegación. Para obtener más información sobre el acceso de navegación, consulte [acceso por navegación &#40;Master Data Services&#41;](navigational-access-master-data-services.md).  
   
  En este ejemplo, **de sólo lectura** permiso se asigna a una entidad y su atributo, que se encuentra en un nivel inferior de la estructura del modelo heredan ese permiso. El modelo proporciona acceso de navegación a esta entidad y su atributo. La otra entidad del modelo no tiene ningún permiso explícito asignado y no hereda ningún permiso, de modo que se deniega implícitamente.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36108981"
   
 -   Todos los nodos de niveles superiores a los que no se asignan los permisos se deniegan implícitamente.  
   
- En este ejemplo, **de sólo lectura** permiso se asigna a un nodo de la jerarquía y un nodo en un nivel inferior en la estructura de jerarquía lo heredado ese permiso. La raíz no tiene ningún permiso asignado, de modo que se deniega implícitamente. El otro nodo de la estructura de la jerarquía no tiene ningún permiso explícito asignado y no hereda ningún permiso, de modo que se deniega implícitamente.  
+ En este ejemplo, **de sólo lectura** permiso se asigna a un nodo de la jerarquía y un nodo en un nivel inferior de la estructura de jerarquía heredan ese permiso. La raíz no tiene ningún permiso asignado, de modo que se deniega implícitamente. El otro nodo de la estructura de la jerarquía no tiene ningún permiso explícito asignado y no hereda ningún permiso, de modo que se deniega implícitamente.  
   
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36108981"
  En este caso, los permisos de usuario y de grupo que se superpongan se deben resolver para poder comparar los permisos del objeto de modelo y del miembro de jerarquía. Para obtener más información, consulte [Overlapping User and Group Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Superposición de permisos de usuario y grupo &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
+ [Superponer permisos de grupo y usuario &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
  [Superponer permisos de modelo y de miembro &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

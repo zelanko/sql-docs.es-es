@@ -1,5 +1,5 @@
 ---
-title: Restaurar la clave de cifrado (modo nativo de SSRS) | Documentos de Microsoft
+title: Restaurar clave de cifrado (modo nativo de SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.restoreencryptionkey.F1
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2fd845eb3bbc64f43b499e6761b4acc5aa84ae0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9a048a70beb3fa22ab250316b6e630b845e7ca7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303635"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>Restaurar clave de cifrado (Modo nativo de SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utiliza una clave de cifrado para proteger los datos confidenciales que se almacenan en la base de datos del servidor de informes. Para asegurarse de que dispone de acceso continuado a los datos cifrados, es importante que cree una copia de seguridad de la clave de cifrado por si necesita restaurarla posteriormente debido a cambios de la cuenta de servicio o como parte de una migración planeada. Este tema contiene información general sobre cómo utilizar el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para restaurar las claves.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utiliza una clave de cifrado para proteger datos confidenciales que se almacenan en la base de datos del servidor de informes. Para asegurarse de que dispone de acceso continuado a los datos cifrados, es importante que cree una copia de seguridad de la clave de cifrado por si necesita restaurarla posteriormente debido a cambios de la cuenta de servicio o como parte de una migración planeada. En este tema es una visión general de cómo usar el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para restaurar las claves.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36196596"
 ## <a name="restore-encryption-key-dialog"></a>Cuadro de diálogo Restaurar clave de cifrado  
  Para obtener información sobre dónde encontrar el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, vea [Reporting Services Configuration Manager &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
- Para abrir el cuadro de diálogo Restaurar clave de cifrado, haga clic en **las claves de cifrado** en el panel de navegación de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager y, a continuación, haga clic en **restaurar**. Este cuadro de diálogo también aparece al actualizar la cuenta de servicio desde la página cuenta de servicio en la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Para obtener más información sobre  
+ Para abrir el cuadro de diálogo Restaurar clave de cifrado, haga clic en **las claves de cifrado** en el panel de navegación de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager y, a continuación, haga clic en **restaurar**. Este cuadro de diálogo también aparece al actualizar la cuenta de servicio con la página cuenta de servicio en la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Para obtener más información sobre  
   
 ## <a name="options"></a>Opciones  
  **Ubicación del archivo**  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.roleproperties.selectroll.f1
 - sql12.swb.databaseuser.permissions.user.f1--May use common.permissions
@@ -29,15 +28,15 @@ helpviewer_keywords:
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 caps.latest.revision: 54
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1023de7c9ba97728ce23057172ec419c81f9b812
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 55f86aa023d1c5ddfb03c24d9c97797b22a93973
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318045"
 ---
 # <a name="principals-database-engine"></a>Entidades de seguridad (motor de base de datos)
   Las*entidades de seguridad* son entidades que pueden solicitar recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Igual que otros componentes del modelo de autorización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , las entidades de seguridad se pueden organizar en jerarquías. El ámbito de influencia de una entidad de seguridad depende del ámbito de su definición: Windows, servidor o base de datos; y de si la entidad de seguridad es indivisible o es una colección. Un Inicio de sesión de Windows es un ejemplo de entidad de seguridad indivisible y un Grupo de Windows es un ejemplo de una del tipo colección. Toda entidad de seguridad tiene un identificador de seguridad (SID).  
@@ -89,7 +88,7 @@ ms.locfileid: "36113998"
 -   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>Usuario guest  
- Cada base de datos incluye un usuario **guest**. Los permisos concedidos al usuario **guest** se aplican a todos los usuarios que tienen acceso a la base de datos, pero no disponen de una cuenta en la base de datos. El **invitado** no se puede quitar el usuario, pero puede deshabilitarse si se revoca su del `CONNECT` permiso. El `CONNECT` permiso se puede revocar si se ejecuta `REVOKE CONNECT FROM GUEST` dentro de cualquier base de datos que no sea master o tempdb.  
+ Cada base de datos incluye un usuario **guest**. Los permisos concedidos al usuario **guest** se aplican a todos los usuarios que tienen acceso a la base de datos, pero no disponen de una cuenta en la base de datos. El **invitado** usuario no puede quitarse, pero se puede deshabilitar si se revoca su del `CONNECT` permiso. El `CONNECT` permiso se puede revocar ejecutando `REVOKE CONNECT FROM GUEST` dentro de cualquier base de datos que no sea master o tempdb.  
   
 ## <a name="client-and-database-server"></a>Cliente y servidor de base de datos  
  Por definición, un cliente y un servidor de base de datos son entidades de seguridad y se pueden proteger. Estas entidades se pueden autenticar mutuamente antes de establecer una conexión de red segura. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite la [Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758) protocolo de autenticación, que define cómo interactúan los clientes con un servicio de autenticación de red.  

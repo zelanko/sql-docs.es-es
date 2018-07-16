@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 8: Agregar condicional divide la transformación para dividir la salida de limpieza | Documentos de Microsoft'
+title: 'Tarea 8: Agregar condicional divide la transformación para dividir la salida de limpieza | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,25 +10,25 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6dc3b98e03a7940841bc97012c1a4e4220bb970d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 40d01901ff90c22d4286e59c5d0589b07ad424a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246135"
 ---
 # <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Tarea 8: agregar la transformación División condicional para dividir el resultado de la limpieza
-  En esta tarea, agregará una transformación División condicional al flujo de datos. La transformación División condicional puede dirigir filas a salidas diferentes en función del contenido de los datos. Para este tutorial, use la **estado de registro** columna de salida de la transformación limpieza de DQS. En este tutorial solo cargará los registros correctos o corregidos en el servidor MDS. Por tanto, compruebe si el **estado de registro** es **correcto** o **corregido**y combinar los registros antes de cargarlos en MDS.  
+  En esta tarea, agregará una transformación División condicional al flujo de datos. La transformación División condicional puede dirigir filas a salidas diferentes en función del contenido de los datos. Para este tutorial, usará el **estado de registro** columna de salida de la transformación limpieza de DQS. En este tutorial solo cargará los registros correctos o corregidos en el servidor MDS. Por lo tanto, compruebe si el **estado de registro** es **correcto** o **corregido**y combinar los registros antes de cargar los registros a MDS.  
   
-1.  Arrastrar y colocar **transformación División condicional** de **común** sección el **cuadro de herramientas de SSIS** a la **de flujo de datos** pestaña **Limpiar datos de proveedor**.  
+1.  Arrastrar y colocar **transformación División condicional** desde **común** sección la **cuadro de herramientas de SSIS** a la **de flujo de datos** ficha en **Limpiar datos de proveedor**.  
   
-2.  Haga clic en **división condicional**y haga clic en **cambiar el nombre de**. Tipo de **elegir registros correctos y corregidos** y presione **ENTRAR**.  
+2.  Haga clic en **división condicional**y haga clic en **cambiar el nombre**. Tipo **elegir registros correctos y corregidos** y presione **ENTRAR**.  
   
 3.  Conectar **limpiar datos de proveedor** y **elegir registros correctos y corregidos** mediante el conector azul.  
   
@@ -44,13 +44,13 @@ ms.locfileid: "36196852"
   
 7.  Arrastrar y colocar **estado de registro** a la **condición** columna.  
   
-8.  Tipo de **== "Corregido"** junto a **[estado de registro]** para el **condición** columna.  
+8.  Tipo **== "Corregido"** junto a **[estado de registro]** para el **condición** columna.  
   
 9. Haga clic en **caso 1** en el **columna de nombre de salida**y cambie el nombre a **corregido**.  
   
 10. Haga clic en **Aceptar** para cerrar el **Editor de transformación División condicional** cuadro de diálogo.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 9: Agregar la unión transformación todo para combinar registros correctos y corregidos](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
+ [Tarea 9: Agregar la transformación Unión de todo para combinar los registros correctos y corregidos](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
   
   

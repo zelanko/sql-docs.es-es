@@ -1,5 +1,5 @@
 ---
-title: 'Analizador de SQL Server: motor de base de datos de tabla de origen Asistente para la optimización - Seleccionar tabla de carga de trabajo | Documentos de Microsoft'
+title: SQL Server Profiler - Asesor de optimización de motor de base de datos de tabla origen - Seleccionar tabla de carga de trabajo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.sourcetable.f1
 helpviewer_keywords:
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Source Table dialog box
 ms.assetid: 51185be7-7092-480a-a52c-cf7786c4a0a0
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8b5ccfddb032fb3833e517632290cfdf7d82e643
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8c371644630c24946b4acc50d77916fb8d0fd4a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285691"
 ---
-# <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server Profiler - Asistente para la optimización el motor de base de datos de tabla origen - carga de trabajo seleccione tabla
+# <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>-Asistente para la optimización el motor de base de datos de tabla origen - carga de trabajo seleccione tabla de SQL Server Profiler
   El Asistente para la optimización de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] y el [!INCLUDE[ssDE](../includes/ssde-md.md)] de Microsoft utilizan este cuadro de diálogo para seleccionar las tablas.  
   
  En [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], use el cuadro de diálogo **Tabla de origen** a fin de especificar una tabla de origen para una tabla de seguimiento. Esta última es una tabla desde la que se carga un seguimiento y su contenido se ve y usa para reproducir el seguimiento.  
@@ -47,7 +47,7 @@ ms.locfileid: "36105193"
  Especifica el nombre de la tabla de seguimiento desde la que debe leerse el seguimiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Guardar los resultados de seguimiento en una tabla &#40;analizador de SQL Server&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [Guardar los resultados de seguimiento en una tabla &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Asistente para la optimización de motor de base de datos](../relational-databases/performance/database-engine-tuning-advisor.md)  
   

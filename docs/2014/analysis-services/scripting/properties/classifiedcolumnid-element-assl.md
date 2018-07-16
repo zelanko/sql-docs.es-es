@@ -1,5 +1,5 @@
 ---
-title: Elemento ClassifiedColumnID (ASSL) | Documentos de Microsoft
+title: Elemento ClassifiedColumnID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ClassifiedColumnID element
 ms.assetid: c294b9c5-3ac2-4554-8ba8-d9f15d7e85c0
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa8223969facc66d126bcba7c7d74a8056e60f00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc9938b44568e0641f97697216780ec4f31ad424
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316865"
 ---
 # <a name="classifiedcolumnid-element-assl"></a>Elemento ClassifiedColumnID (ASSL)
   Contiene el identificador (ID) de una columna relacionada clasificada por el [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) elemento.  

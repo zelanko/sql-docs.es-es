@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - table creation [SQL Server], Visual Database Tools
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e4a25a40c2af9d5c5d636a8576ee487135009a24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0b6631d5e3d4112be1d80a2dfd207e2c2c308982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280611"
 ---
 # <a name="create-tables-database-engine"></a>Crear tablas (motor de base de datos)
   Puede crear una nueva tabla, asignarle un nombre y agregarla a una base de datos existente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  

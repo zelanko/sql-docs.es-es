@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
 - walkthroughs [SQL Server replication]
 - replication [SQL Server], tutorials
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 976f1ee9539731da6036990da754dc1f894ced8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8d489965584903f10b613a40a073357c51b1b9aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217365"
 ---
 # <a name="replication-tutorials"></a>Tutoriales de replicación
   La replicación incluye tutoriales que se pueden utilizar para aprender a configurar y a ejecutar topologías de replicación con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

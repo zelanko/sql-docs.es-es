@@ -1,5 +1,5 @@
 ---
-title: Particiones habilitadas para escritura | Documentos de Microsoft
+title: Particiones habilitadas para escritura | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - storing data [Analysis Services], partitions
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9098219cccf4559fbb2a9b9e7e03da0004f1b570
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24fd38410e5719dd72e5a55b2914c22fc153ea98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326575"
 ---
 # <a name="write-enabled-partitions"></a>Particiones habilitadas para escritura
   Los datos de un cubo son normalmente de solo lectura. Con todo, en ciertos casos, puede interesarle habilitar una partición para escritura. Las particiones habilitadas para escritura se usan para que los usuarios corporativos puedan explorar escenarios si cambian los valores de las celdas y analizan los efectos de los cambios en los datos del cubo. Si habilita una partición para escritura, las aplicaciones cliente podrán registrar los cambios en los datos de la partición. Estos cambios, conocidos como datos de reescritura, se almacenan en una tabla independiente y no sobrescriben los datos existentes en un grupo de medida. Sin embargo, se incorporan a los resultados de la consulta como si formasen parte de los datos del cubo.  
@@ -35,7 +35,7 @@ ms.locfileid: "36106468"
  Puede habilitar para escritura un cubo completo o solo algunas particiones del mismo. Las dimensiones habilitadas para escritura son distintas, aunque complementarias. Una partición habilitada para escritura permite a los usuarios actualizar celdas de particiones, mientras que las dimensiones habilitadas para escritura les permiten actualizar miembros de dimensión. También se pueden utilizar conjuntamente estas dos características. Por ejemplo, un cubo habilitado para escritura o una partición habilitada para escritura no tiene que incluir ninguna dimensión habilitada para escritura. **Tema relacionado:**[dimensiones habilitadas para escritura](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 > [!NOTE]  
->  Si desea habilitar para escritura un cubo que tiene una base de datos de Microsoft Access como origen de datos, no utilice el proveedor Microsoft OLE DB para controladores ODBC en las definiciones de origen de datos del cubo, sus particiones ni sus dimensiones. En su lugar, puede utilizar el proveedor OLE DB de Microsoft Jet 4.0 o cualquier versión del Jet Service Pack que incluya Jet 4.0 OLE. Para obtener más información, vea el artículo de Microsoft Knowledge Base [cómo obtener el service pack más reciente para el motor de base de datos de Microsoft Jet 4.0](http://support.microsoft.com/?kbid=239114).  
+>  Si desea habilitar para escritura un cubo que tiene una base de datos de Microsoft Access como origen de datos, no utilice el proveedor Microsoft OLE DB para controladores ODBC en las definiciones de origen de datos del cubo, sus particiones ni sus dimensiones. En su lugar, puede utilizar el proveedor OLE DB de Microsoft Jet 4.0 o cualquier versión del Jet Service Pack que incluya Jet 4.0 OLE. Para obtener más información, consulte el artículo de Microsoft Knowledge Base [cómo obtener el service pack más reciente para el motor de base de datos Microsoft Jet 4.0](http://support.microsoft.com/?kbid=239114).  
   
  Un cubo solamente puede habilitarse para escritura si todas sus medidas utilizan la función de agregado `Sum`. Los grupos de medida vinculados y los cubos locales no pueden habilitarse para escritura.  
   

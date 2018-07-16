@@ -1,5 +1,5 @@
 ---
-title: Configurar un conjunto de campos predeterminado para informes de Power View (SSAS Tabular) | Documentos de Microsoft
+title: Configurar un conjunto de campos predeterminado para informes de Power View (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - ql12.asvs.bidtoolset.deffieldset.f1
 ms.assetid: 6836b42f-28b8-4a98-a86d-2c3c109f0189
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3349a5a427df9a4d65505b157d2e38f9ecc29758
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0eba29031af4265c1850ed6a3ecf0241b60ac808
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263271"
 ---
 # <a name="configure-default-field-set-for-power-view-reports-ssas-tabular"></a>Configurar un conjunto de campos predeterminado para informes de Power View (SSAS tabular)
   Un conjunto de campos predeterminado es una lista predefinida de columnas y medidas que se agregan automáticamente a un lienzo de informe [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] cuando se selecciona la tabla en la lista de campos de informes. Los autores de modelos tabulares pueden crear un conjunto de campos predeterminado para eliminar pasos redundantes para los autores de informes que usan el modelo en sus informes. Por ejemplo, si sabe que la mayoría de los autores del informe que trabajan con información de contacto del cliente siempre desean ver un nombre de contacto, un número del teléfono principal, una dirección de correo electrónico y un nombre de compañía, puede pre-seleccionar esas columnas para que siempre se agreguen al lienzo del informe cuando el autor haga clic en la tabla Customer Contact.  

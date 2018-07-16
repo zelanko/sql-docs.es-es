@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45be29be2275a5e0a5c953164a79d377c4f67f41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08b61386de48d83b9d845d57dd831fff68b9ee2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219915"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Actualizar el esquema de las bases de datos DQS tras instalar la actualización de SQL Server
   Tras instalar una actualización de SQL Server (revisión o actualización acumulativa) en una instancia de DQS configurada previamente, puede que tenga que actualizar el esquema de bases de datos DQS ejecutando el archivo DQSInstaller.exe con el parámetro de la línea de comandos **upgrade** . De lo contrario, podría recibir un mensaje de error similar al siguiente al intentar conectarse a Data Quality Server con su Data Quality Client:  
@@ -57,7 +57,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
     dqsinstaller.exe -upgrade  
     ```  
   
-5.  El instalador le pregunta si desea realizar la copia de seguridad de las bases de datos DQS antes de continuar. Si ya ha hecho las bases de datos DQS, escriba `Y` o `Yes` y presione ENTRAR para continuar con la actualización.  
+5.  El instalador le pregunta si desea realizar la copia de seguridad de las bases de datos DQS antes de continuar. Si aún no ha hecho copia de las bases de datos DQS, escriba `Y` o `Yes` y presione ENTRAR para continuar con la actualización.  
   
 6.  Se muestra un mensaje para indicar que la actualización del esquema de las bases de datos DQS se realizó.  
   

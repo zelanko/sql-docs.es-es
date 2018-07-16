@@ -1,5 +1,5 @@
 ---
-title: Metadatos (Master Data Services) | Documentos de Microsoft
+title: Metadatos (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined metadata [Master Data Services], about user-defined metadata
 - metadata [Master Data Services], about metadata
@@ -16,27 +16,27 @@ helpviewer_keywords:
 - user-defined metadata [Master Data Services]
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 25fa2078127816b2fd9d50bd7bd4c074c3577dae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19e3cde73564540b44c49536da008fa4aa54e348
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296685"
 ---
 # <a name="metadata-master-data-services"></a>Metadatos (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], los metadatos definidos por el usuario son la información que se usa para describir los objetos del modelo. Por ejemplo, puede que desee realizar el seguimiento de los propietarios de un modelo o entidad determinados, o realizar el seguimiento de los sistemas de origen que proporcionan los datos a una entidad.  
   
- Metadatos definidos por el usuario se administran mediante un modelo denominado **metadatos**. Este modelo se incluye automáticamente cuando [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] está instalado, y es similar a todos los modelos MDS, salvo que no se puede crear versiones de esta aplicación.  
+ Los metadatos definidos por el usuario se administran mediante un modelo denominado **metadatos**. Este modelo se incluye automáticamente cuando [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] está instalado, y es similar a todos los modelos MDS, salvo que no se puede crear versiones de él.  
   
  Después de rellenar el modelo de metadatos con los metadatos definidos por el usuario, puede incluirlo en las vistas de suscripciones, para que lo puedan usar los sistemas suscriptores.  
   
 ## <a name="metadata-entities"></a>Entidades de metadatos  
  El modelo de metadatos incluye cinco entidades, cada una de las cuales representa un tipo de objeto del modelo de datos maestros que admite los metadatos definidos por el usuario. Por ejemplo, el **definición de metadatos del modelo** entidad contiene miembros que representan los modelos y la **definición de metadatos de atributo** entidad tiene miembros que representan todos los atributos de todos los modelos.  
   
- Para definir los metadatos de un objeto del modelo, rellene uno de estos atributos del miembro. Por ejemplo, en la **definición de metadatos de la entidad** entidad, puede rellenar el atributo de descripción del miembro precio con el texto: **el precio del producto cuando se vende a un cliente**.  
+ Para definir los metadatos de un objeto del modelo, rellene uno de estos atributos del miembro. Por ejemplo, en el **definición de metadatos de entidad** entidad, puede rellenar el atributo de descripción del miembro precio con el texto: **el precio del producto cuando se vende a un cliente**.  
   
  Los miembros del modelo de metadatos se actualizan automáticamente siempre que se agregan o se eliminan los objetos del modelo compatibles con los metadatos definidos por el usuario.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36106984"
   
 -   Un atributo de forma libre denominado Fecha de la última revisión, que se utiliza para realizar el seguimiento de la fecha en que el propietario de un objeto lo revisó por última vez.  
   
--   Un atributo basado en dominio denominado orígenes, que se utiliza para realizar un seguimiento y administrar los sistemas de origen que interactúan con el [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] instancia.  
+-   Un atributo basado en dominio denominado orígenes, que usa para realizar un seguimiento y administrar los sistemas de origen que interactúan con el [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] instancia.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

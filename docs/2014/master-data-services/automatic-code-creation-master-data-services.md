@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7159085aacfe569af079c9f7c457a460df960189
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fb55b8db046e3d4fd76143f37f883b458e8bab64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245005"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Creación automática de código (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], los valores numéricos pueden generarse automáticamente para el atributo Code o para cualquier otro atributo numérico. Cuando se generan códigos automáticamente, no se impide introducir otros valores para los códigos; en su lugar, se establece automáticamente un valor inicial.  
@@ -39,7 +39,7 @@ ms.locfileid: "36110733"
   
 -   En el área funcional **Administración de versiones** , un administrador puede invertir las transacción que se produjo cuando se eliminó el miembro. Sin embargo, esto significa que todos los atributos anteriores y la pertenencia del miembro a jerarquías y colecciones se restauran. Para obtener más información, consulte [invertir una transacción &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md).  
   
--   Un administrador puede utilizar el proceso de almacenamiento provisional para eliminar permanentemente el miembro. Para obtener más información, consulte [desactivar o eliminar miembros usando el proceso de almacenamiento provisional &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
+-   Un administrador puede utilizar el proceso de almacenamiento provisional para eliminar permanentemente el miembro. Para obtener más información, consulte [desactivar o eliminar miembros usando el proceso de ensayo &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

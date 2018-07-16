@@ -1,5 +1,5 @@
 ---
-title: Implementación de paquetes secundarios | Documentos de Microsoft
+title: Implementación de paquetes secundarios | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - child packages
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 caps.latest.revision: 38
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 85a9e6c93f0b1c3157f9814508ee4fb9263cd444
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbf5d3d4142c543f5bd0ab3cebae72eeea3bb432
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287591"
 ---
 # <a name="implementation-of-child-packages"></a>Implementación de paquetes secundarios
   Cuando implementa el equilibrio de carga mediante [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], los paquetes secundarios se instalan en otros servidores para aprovechar el tiempo de servidor o CPU disponible. Para crear y ejecutar los paquetes secundarios, es necesario realizar los pasos siguientes:  
@@ -45,7 +45,7 @@ ms.locfileid: "36204454"
   
 -   Exportar paquetes mediante [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
--   Implementar paquetes generando una utilidad de implementación para el proyecto que contiene los paquetes que desea implementar y, a continuación, ejecutar el Asistente para la instalación de paquetes para instalar los paquetes en el sistema de archivos o en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, consulte [implementación de paquetes &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+-   Implementar paquetes generando una utilidad de implementación para el proyecto que contiene los paquetes que desea implementar y, a continuación, ejecutar el Asistente para la instalación de paquetes para instalar los paquetes en el sistema de archivos o en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, consulte [la implementación del paquete &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
   
  Debe repetir la implementación con cada servidor remoto que desee utilizar.  
   

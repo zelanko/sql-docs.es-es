@@ -1,5 +1,5 @@
 ---
-title: Seleccionar tablas y vistas (Asistente para vistas de origen de datos) (Analysis Services) | Documentos de Microsoft
+title: Seleccionar tablas y vistas (Asistente para vistas de origen de datos) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selecttablesandviews.f1
 ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8bf3897fe2466b00c0346590147884696b632b7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0ec6553114e5a6a5a0700a852c56d4be51eba39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279511"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>Seleccionar las tablas y vistas (Asistente para vistas del origen de datos) (Analysis Services)
   Utilice la página **Seleccionar tablas y vistas** para seleccionar las tablas o las vistas del origen de datos que desea incluir en la vista del origen de datos.  
@@ -56,7 +56,7 @@ ms.locfileid: "36112550"
  Agrega todas las tablas que están relacionadas con las indicadas en **Objetos incluidos**. Esta opción no agrega vistas. No obstante, sí agrega tablas con particiones. Si selecciona criterios de coincidencia de nombres en la página **Coincidencia de nombres** del asistente, esta opción también incluye tablas relacionadas lógicamente de acuerdo con los criterios seleccionados. Las tablas también se incluyen si están relacionadas con las tablas relacionadas que se acaban de agregar, y si su estructura es idéntica a la de la tabla original.  
   
 ## <a name="see-also"></a>Vea también  
- [Vistas de orígenes de datos Asistente para la Ayuda de F1 &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [Ayuda de F1 de Asistente para la vista de datos origen &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
  [Vistas del origen de datos en modelos multidimensionales](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

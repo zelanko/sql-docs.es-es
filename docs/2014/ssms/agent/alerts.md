@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent alerts, event types
 - SQL Server Agent alerts, names
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - alerts [SQL Server], names
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c5b7f394fe78c24c958962f8c5edf1b599c7e2db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c1e27e777741fa159a5d0afee7e200af27b1833e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330875"
 ---
 # <a name="alerts"></a>Trabajos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera eventos que se incluyen en el registro de aplicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente lee el registro de aplicación y compara los eventos con las alertas definidas. Cuando el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encuentra una coincidencia, activa una alerta, que es una respuesta automatizada a un evento. Además de supervisar los eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también puede supervisar las condiciones de rendimiento y los eventos de Instrumental de administración de Windows (WMI).  

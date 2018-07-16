@@ -1,5 +1,5 @@
 ---
-title: Interfaz de usuario del Diseñador de Hyperion Essbase consulta (generador de informes) | Documentos de Microsoft
+title: Interfaz de usuario del Diseñador de Hyperion Essbase consulta (generador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10013"
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - query designers, Hyperion
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 27dd20fae08317cd58fd9ca9b5084fda000906c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3653c8bf79c3c7527f72d01282fe7af961fbbec8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208595"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas de Hyperion Essbase (Generador de informes)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona un diseñador gráfico de consultas que permite crear consultas MDX (expresiones multidimensionales) para un origen de datos de [!INCLUDE[extEssbase](../includes/extessbase-md.md)]. El diseñador gráfico de consultas MDX tiene dos modos: modo de diseño y modo de consulta. Cada modo proporciona un panel de metadatos desde el que puede arrastrar miembros de un cubo definido en el origen de datos para crear una consulta MDX que recupere datos cuando se procese el informe.  
@@ -35,7 +35,7 @@ ms.locfileid: "36112898"
  En esta sección se describen los botones de la barra de tareas y los paneles del diseñador para cada modo del diseñador gráfico de consultas.  
   
 ## <a name="graphical-query-designer-in-design-mode"></a>Diseñador gráfico de consultas en modo de diseño  
- Al editar una consulta MDX para un conjunto de datos que utiliza un [!INCLUDE[extEssbase](../includes/extessbase-md.md)] origen de datos, el diseñador gráfico de consultas se abre en modo de diseño. En la siguiente ilustración se indican los nombres de los paneles del modo de diseño.  
+ Al editar una consulta MDX para un conjunto de datos que usa un [!INCLUDE[extEssbase](../includes/extessbase-md.md)] origen de datos, el diseñador gráfico de consultas se abre en modo de diseño. En la siguiente ilustración se indican los nombres de los paneles del modo de diseño.  
   
  ![Diseñador de consultas para el origen de datos de Hyperion Essbase](media/rsqd-dshyperionessbase-mdx-designmode.gif "Diseñador de consultas para el origen de datos de Hyperion Essbase")  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36112898"
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas. No está disponible para este tipo de origen de datos.|  
 |**Importar**|Importa una consulta existente desde un archivo de definición de informe (.rdl) del sistema de archivos.|  
 |![Actualizar campos del conjunto de datos](media/rsqdicon-refreshfields.gif "Actualizar campos del conjunto de datos")|Actualiza los metadatos desde el origen de datos.|  
-|![Agregar miembro calculado](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado")|Muestra el cuadro de diálogo **Generador de miembros calculados** . Use este cuadro de diálogo para crear o editar expresiones para un miembro calculado, incluido el establecimiento de la propiedad **Orden de resolución** .|  
+|![Agregar un miembro calculado](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado")|Muestra el cuadro de diálogo **Generador de miembros calculados** . Use este cuadro de diálogo para crear o editar expresiones para un miembro calculado, incluido el establecimiento de la propiedad **Orden de resolución** .|  
 |![Alternar para mostrar celdas vacías](../analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías")|Muestra y oculta las celdas vacías del panel Datos. Esto equivale a utilizar la cláusula NON EMPTY en MDX.|  
 |![Ejecutar la consulta automáticamente](../analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente")|Ejecuta automáticamente la consulta y muestra el resultado cada vez que se realice un cambio, por ejemplo al eliminar una columna en el panel Datos. Los resultados se mostrarán en el panel Datos.|  
 |![Eliminar](../analysis-services/media/rsqdicon-delete.gif "eliminar")|Elimina el elemento seleccionado de la consulta. Use este botón para eliminar las filas seleccionadas en el panel Filtro.|  

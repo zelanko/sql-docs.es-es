@@ -1,5 +1,5 @@
 ---
-title: Página de seguridad (Configuración del sitio. Administrador de informes) | Documentos de Microsoft
+title: Página de seguridad (Configuración del sitio. El Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: acc9a905-90f8-4544-aec6-b2ab3a1b0015
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b4115675e8f9529873eeeec5f71d2b5861fef9eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a613f3d2cadae9913f14759ca3c59252d62cd14f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294105"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Página de seguridad (Configuración del sitio. Administrador de informes)
   Use la página Seguridad para ver las asignaciones de roles del sistema que controlan el acceso al sitio del servidor de informes. Las asignaciones de roles del sistema existen fuera del ámbito del espacio de nombres o la jerarquía de carpetas del servidor de informes. Son globales y no pueden variar para elementos específicos. Las operaciones que se admiten a través de las asignaciones de roles del sistema incluyen la creación y el uso de las programaciones compartidas, el uso del Generador de informes y el establecimiento de valores predeterminados para algunas características del servidor.  
@@ -44,10 +44,10 @@ ms.locfileid: "36201298"
  Haga clic para eliminar una asignación de roles existente. Antes de hacer clic en **Eliminar**, active la casilla que aparece junto al nombre de grupo o usuario que desea quitar. No puede eliminar una asignación de roles si es la única que permanece. Si se elimina una asignación de roles, no se elimina la cuenta de usuario o grupo ni las definiciones de roles.  
   
  **Nueva asignación de roles**  
- Haga clic para abrir la página Nueva asignación de roles del sistema, que se utiliza para crear asignaciones de roles del sistema adicionales para el sitio del servidor de informes. Para obtener más información, consulte [nuevas asignaciones de roles de sistema: Editar página de asignaciones de rol de sistema &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
+ Haga clic para abrir la página Nueva asignación de roles del sistema, que se utiliza para crear asignaciones de roles del sistema adicionales para el sitio del servidor de informes. Para obtener más información, consulte [nuevas asignaciones de roles de sistema: Editar página de asignaciones de roles de sistema &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
   
  **Editar**  
- Haga clic para abrir la página Editar asignaciones de roles del sistema, que se usa para editar las asignaciones de roles del sistema individuales para el sitio del servidor de informes. Para obtener más información, consulte [nuevas asignaciones de roles de sistema: Editar página de asignaciones de rol de sistema &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
+ Haga clic para abrir la página Editar asignaciones de roles del sistema, que se usa para editar las asignaciones de roles del sistema individuales para el sitio del servidor de informes. Para obtener más información, consulte [nuevas asignaciones de roles de sistema: Editar página de asignaciones de roles de sistema &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
   
  **Grupo o usuario**  
  Muestra los grupos y usuarios que forman parte de una asignación de roles existente. Se han definido las asignaciones de roles existentes para la carpeta actual de los grupos y usuarios que se muestran en esta columna. Haga clic en **Editar** junto a un nombre de usuario o grupo para ver o editar los detalles de las asignaciones de roles.  

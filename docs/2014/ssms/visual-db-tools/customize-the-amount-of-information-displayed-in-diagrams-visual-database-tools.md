@@ -1,5 +1,5 @@
 ---
-title: Personalizar la cantidad de información mostrada en diagramas (Visual Database Tools) | Documentos de Microsoft
+title: Personalizar la cantidad de información mostrada en diagramas (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], information displayed
 - table views in database diagrams [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - custom table views [SQL Server]
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 73feb0102b3f83927012a6517b5f0f4475cf36ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 18288e60d5fd3fe276ac900eb6c7d11aa54caf8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301375"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Personalizar la cantidad de información mostrada en los diagramas (Visual Database Tools)
   Al agregar una tabla a un diagrama de base de datos, ésta aparece con un número establecido de propiedades. Puede elegir en un menú de opciones la cantidad de información que va a aparecer, o bien puede crear un conjunto de propiedades personalizado.  

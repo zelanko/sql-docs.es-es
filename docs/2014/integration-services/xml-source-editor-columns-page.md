@@ -1,5 +1,5 @@
 ---
-title: Editor de origen XML (página columnas) | Documentos de Microsoft
+title: Editor de origen XML (página columnas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsourceadapter.columns.f1
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 5162c400-b2fc-4711-af0f-609132fbaaad
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c0b9077c53775f18d7319bb7f49e76e711b4c993
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa36ba30fbf303c9ae93b112eaadc7b16de6dbf9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242995"
 ---
 # <a name="xml-source-editor-columns-page"></a>Editor de origen de XML (página Columnas)
   Use el nodo **Columnas** del cuadro de diálogo **Editor de origen de XML** para asignar una columna de salida a una columna externa (origen).  

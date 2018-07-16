@@ -1,5 +1,5 @@
 ---
-title: Representación de indicadores de rendimiento (Tabular) de clave | Documentos de Microsoft
+title: Representación de indicadores de rendimiento (Tabular) de clave | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4673e33ba3b6ecce58d8d4c06a12d7311b98cde0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cdb38afa672655dbb0a644783e7dc3fadb180b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295415"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>Representación de indicadores de rendimiento clave (tabular)
   Los KPI se usan para medir el rendimiento de un valor, definido por una medida base, con respecto a un valor de destino.  
@@ -226,6 +226,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>Ejemplo AMO2Tabular  
- Para obtener una descripción de cómo usar AMO para crear y manipular el indicador clave de rendimiento representaciones, vea el código fuente del ejemplo AMO a Tabular; concreto, revise el siguiente archivo fuente: AddKPIs.cs. El ejemplo está disponible en Codeplex. Nota importante sobre el código: el código se proporciona solo como apoyo de los conceptos lógicos explicados aquí y no debe utilizarse en un entorno de producción; no debe usarse para otros fines excepto el pedagógico.  
+ Para obtener una descripción de cómo usar AMO para crear y manipular el indicador clave de rendimiento representaciones, vea el código fuente de la del ejemplo AMO a Tabular; concreto, revise el siguiente archivo fuente: AddKPIs.cs. El ejemplo está disponible en Codeplex. Nota importante sobre el código: el código se proporciona solo como apoyo de los conceptos lógicos explicados aquí y no debe utilizarse en un entorno de producción; no debe usarse para otros fines excepto el pedagógico.  
   
   

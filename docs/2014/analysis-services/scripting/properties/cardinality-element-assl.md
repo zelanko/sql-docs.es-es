@@ -1,5 +1,5 @@
 ---
-title: Elemento Cardinality (ASSL) | Documentos de Microsoft
+title: Elemento Cardinality (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Cardinality element
 ms.assetid: 60ac8a26-7c8b-4011-9b9b-a29863779428
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b90e85efbde384bd0d2854fdb2bbd4b325632e2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7446923efc15a2fe05f3e8bf8c86a2e9f429a2c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325085"
 ---
 # <a name="cardinality-element-assl"></a>Elemento Cardinality (ASSL)
   Indica la cardinalidad de la relación descrita por un [AttributeRelationship](../objects/attributerelationship-element-assl.md) o [RegularMeasureGroupDimension](../data-type/dimension-data-type-assl.md).  

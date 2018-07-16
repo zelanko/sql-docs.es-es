@@ -1,5 +1,5 @@
 ---
-title: Elemento Status (ASSL) | Documentos de Microsoft
+title: Elemento Status (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Status element
 ms.assetid: 4938465e-7876-43e2-9d03-70dcc9b7b749
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fd27525f6a0a7457a3fd6a3f63f102b1f6ae7bf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5f67c4f94e5817d36f54d5d54465425c7837119
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247295"
 ---
 # <a name="status-element-assl"></a>Elemento Status (ASSL)
-  Contiene una expresión de expresiones multidimensionales (MDX) que devuelve un indicador de estado para una [Kpi](../objects/kpi-element-assl.md) elemento.  
+  Contiene una expresión MDX (expresiones multidimensionales) que devuelve un indicador de estado para una [Kpi](../objects/kpi-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36106823"
 ## <a name="remarks"></a>Notas  
  El elemento `Status` contiene una expresión MDX.  
   
- El elemento que corresponde al elemento primario de `Status` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Kpi>.  
+ El elemento que se corresponde con el elemento primario de `Status` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Kpi>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

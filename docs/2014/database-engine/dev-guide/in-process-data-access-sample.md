@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de acceso a datos en proceso | Documentos de Microsoft
+title: Ejemplo de acceso a datos en proceso | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c6f90e5ba1dd6c90f5d941dfcb2ccaa42c8d9c07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f74adfc254b0606fb62a93b72b2c8b5a038f2a7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285801"
 ---
 # <a name="in-process-data-access-sample"></a>Ejemplo de acceso a datos en proceso
   El ejemplo `InProcessDataAccess` contiene una serie de funciones simples que muestran diversas características del proveedor de acceso a datos en proceso de CLR de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -57,7 +57,7 @@ ms.locfileid: "36109018"
   
 -   La base de datos de AdventureWorks debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando.  
   
--   Si no es un administrador para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia que esté utilizando, debe tener un administrador le conceden **CreateAssembly** permiso para completar la instalación.  
+-   Si no es un administrador para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia utiliza, debe tener un administrador le conceda **CreateAssembly** permiso para completar la instalación.  
   
 ## <a name="building-the-sample"></a>Generar el ejemplo  
   
@@ -360,7 +360,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- El siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) prueba el ejemplo ejecutando los procedimientos almacenados y la función definida en este ejemplo.  
+ La siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) prueba el ejemplo ejecutando los procedimientos almacenados y la función definida en este ejemplo.  
   
 ```  
 USE AdventureWorks;  

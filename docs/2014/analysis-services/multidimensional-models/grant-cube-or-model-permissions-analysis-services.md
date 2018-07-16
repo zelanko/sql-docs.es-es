@@ -1,5 +1,5 @@
 ---
-title: Conceder permisos para cubos o modelos (Analysis Services) | Documentos de Microsoft
+title: Conceder permisos para cubos o modelos (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.cubes.f1
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - permissions [Analysis Services], cubes
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f3c50f06e71d69b893e5bbebc1ca9870da04f54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c2602f95332f48b71f56ce1fb3028c22c51d2ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306565"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Otorgar permisos para cubos o modelos (Analysis Services)
   Un cubo o modelo tabular es el objeto de consulta principal en un modelo de datos de Analysis Services. Cuando se conecte a datos multidimensionales o tabulares desde Excel para una exploración de datos ad hoc, los usuarios por lo general comienzan seleccionando un cubo o modelo tabular específico como la estructura de datos que subyace tras el objeto de informe dinámico. En este tema, se describe cómo otorgar los permisos necesarios para tener acceso a cubos o datos tabulares.  
@@ -38,7 +38,7 @@ ms.locfileid: "36201909"
  Para preservar las definiciones de roles respecto a implementaciones de soluciones sucesivas, uno de los procedimientos recomendados es definir roles en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] como parte integrante del modelo y, después, que un administrador de bases de datos asigne pertenencias a roles en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tras haber publicado la base de datos. Pero también puede usar cualquiera de las herramientas para ambas tareas. Para que este ejercicio sea más sencillo, usaremos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para las definiciones de rol y para la pertenencia.  
   
 > [!NOTE]  
->  Solamente los administradores de servidor o de base de datos con permisos de Control total pueden implementar cubos a partir de archivos de origen en un servidor o crear roles y asignar miembros. Vea [conceder permisos de administrador de servidor &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) y [conceder permisos de base de datos &#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md) para obtener más información acerca de estos permisos niveles.  
+>  Solamente los administradores de servidor o de base de datos con permisos de Control total pueden implementar cubos a partir de archivos de origen en un servidor o crear roles y asignar miembros. Consulte [conceder permisos de administrador de servidor &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) y [conceder permisos de base de datos &#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md) para obtener más información acerca de estos permisos niveles.  
   
 #### <a name="step-1-create-the-role"></a>Paso 1: Creación del role  
   

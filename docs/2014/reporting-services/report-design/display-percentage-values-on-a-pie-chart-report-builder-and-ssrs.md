@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 744cfd4600c58d0c5f9508243e2635d108f7fd73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d8c4cc67ad7a3719db277840e4ca535a373e8b44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287021"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>Mostrar valores de porcentaje en un gráfico circular (Generador de informes y SSRS)
   De forma predeterminada, las categorías se muestran en la leyenda para identificar cada valor. Si ha etiquetado el gráfico circular con etiquetas de categoría, es probable que le interese mostrar los porcentajes en la leyenda.  
@@ -35,7 +35,7 @@ ms.locfileid: "36201091"
   
 3.  En la superficie de diseño, haga clic con el botón secundario en las etiquetas y seleccione **Propiedades de la etiqueta de la serie**. Aparece el cuadro de diálogo **Propiedades de la etiqueta de la serie** .  
   
-4.  Tipo de `#PERCENT` para el **etiquetar los datos** opción.  
+4.  Tipo `#PERCENT` para el **etiquetar datos** opción.  
   
 5.  (Opcional) Para especificar el número de posiciones decimales que se deben mostrar en la etiqueta, escriba "#PERCENT{P*n*}", donde *n* es el número de posiciones decimales que se deben mostrar. Por ejemplo, para no mostrar ninguna posición decimal, escriba "#PERCENT{P0}".  
   
@@ -46,9 +46,9 @@ ms.locfileid: "36201091"
 2.  En **leyenda**, tipo `#PERCENT` para el **texto de leyenda personalizado** propiedad.  
   
 ## <a name="see-also"></a>Vea también  
- [Los gráficos circulares &#40;el generador de informes SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Aplicar formato a la leyenda en un gráfico &#40;el generador de informes SSRS&#41;](chart-legend-formatting-report-builder.md)   
- [Las etiquetas de punto de datos de visualización fuera de un gráfico circular &#40;el generador de informes SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
- [Recopilar sectores pequeños en un gráfico circular &#40;el generador de informes SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [Los gráficos circulares &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Aplicar formato a la leyenda en un gráfico &#40;generador de informes y SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [Punto de datos para mostrar las etiquetas fuera de un gráfico circular &#40;generador de informes y SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Recopilar segmentos pequeños en un gráfico circular &#40;generador de informes y SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

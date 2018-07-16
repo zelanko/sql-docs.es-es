@@ -1,5 +1,5 @@
 ---
-title: Elemento CaseCubeDimensionID (ASSL) | Documentos de Microsoft
+title: Elemento CaseCubeDimensionID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CaseCubeDimensionID element
 ms.assetid: 96720e13-7f9b-4768-ad4b-4def40758707
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e01ec48101913cb79e074a46aa118f11e514600d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8defd95c5c21acd1e6ffa1c6ca9a9546713f51f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204688"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295505"
 ---
 # <a name="casecubedimensionid-element-assl"></a>Elemento CaseCubeDimensionID (ASSL)
   Contiene el identificador (Id.) de la dimensión de cubo que relaciona la dimensión de la minería de datos con el grupo de medida.  
@@ -62,7 +62,7 @@ ms.locfileid: "36204688"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `CaseCubeDimensionID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>.  
+ El elemento que se corresponde con el elemento primario de `CaseCubeDimensionID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Elemento EditionId | Documentos de Microsoft
+title: Elemento EditionId | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,18 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f2d1cc7f-8ab5-4b73-a128-ce58d9bb7f96
 caps.latest.revision: 4
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: ff1d8b091450a3d1b9d1ee846ee1f72bcd14ad2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 97154969b548b05ab2fb4c468a070d3c06faec64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304165"
 ---
 # <a name="editionid-element"></a>Elemento EditionId
-  Contiene el código de identificador de edición numérico del elemento primario [elemento de servidor (ASSL)](../../scripting/objects/server-element-assl.md) elemento.  
+  Contiene el código de identificador de edición numérico del elemento primario [elemento Server (ASSL)](../../scripting/objects/server-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   

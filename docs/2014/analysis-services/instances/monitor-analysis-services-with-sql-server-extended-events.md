@@ -1,5 +1,5 @@
 ---
-title: Usar SQL Server extendida Events (XEvents) para supervisar Analysis Services | Documentos de Microsoft
+title: Usar SQL Server extendida Events (XEvents) para supervisar Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb67c1eca2b803c01a3716708f73afbb3861476a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4aa591ff08106f7af8946d6725d8894c52149634
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332805"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>Usar SQL Server Extended Events (XEvents) para supervisar Analysis Services
   Analysis Services proporciona capacidades de seguimiento mediante el uso de [Extended Events](../../relational-databases/extended-events/extended-events.md).  
   
  Eventos extendidos es una infraestructura de eventos con un alto nivel de escalabilidad y configurabilidad para sistemas de servidor. Extended Events es un sistema ligero de supervisión de rendimiento que usa muy pocos recursos de rendimiento.  
   
- Todos los servicios de análisis eventos se pueden capturar y destinar a usuarios específicos, según se define en [Extended Events](../../relational-databases/extended-events/extended-events.md), con XEvents.  
+ Todos los Analysis Services, los eventos se pueden capturar y destinar a usuarios específicos, como se define en [Extended Events](../../relational-databases/extended-events/extended-events.md), con XEvents.  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>Iniciar Eventos extendidos en Analysis Services  
  El seguimiento de Eventos extendidos se habilita mediante un comando de script de objeto de creación XMLA similar como se muestra a continuación:  

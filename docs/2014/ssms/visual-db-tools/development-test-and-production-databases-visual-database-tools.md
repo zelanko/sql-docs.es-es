@@ -1,5 +1,5 @@
 ---
-title: Desarrollo, prueba y producción de bases de datos (Visual Database Tools) | Documentos de Microsoft
+title: Desarrollo, prueba y las bases de datos de producción (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - production databases [SQL Server]
 - testing databases
 - database testing [SQL Server]
 ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b59509cadb56fbbc9896b82d20f38f48e874da71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b90b7f4b96e3d32bab9131f12e5305f32af9a6f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224625"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>Bases de datos de desarrollo, pruebas y producción (Visual Database Tools)
   Si dispone de dos bases de datos con idéntica estructura, puede realizar cambios en una base de datos y propagar los cambios a la otra base de datos. Por ejemplo, si dispone de una base de datos de desarrollo personal y una base de datos de pruebas de grupo, puede modificar la base de datos de desarrollo y, a continuación, propagar los cambios a la base de datos de pruebas.  

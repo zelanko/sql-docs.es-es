@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1f841825-da1f-4062-9a81-3cdbab03845b
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 077d927d1d6f5c56681b5188815e46b85c576f67
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f8ce7eb6e1ba660a676aa08087e689d1d6b1c550
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215155"
 ---
 # <a name="run-windows-powershell-from-sql-server-management-studio"></a>Ejecutar Windows PowerShell desde SQL Server Management Studio
   Puede iniciar sesiones de Windows PowerShell desde el **Explorador de objetos** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] inicia Windows PowerShell, carga el `sqlps` módulo y establece el contexto de la ruta de acceso al nodo asociado en el **Explorador de objetos** árbol.  

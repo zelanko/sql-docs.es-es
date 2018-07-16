@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdest.f1
 helpviewer_keywords:
@@ -23,13 +23,13 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 caps.latest.revision: 77
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f6b3cbdff4e837facc8a6cd2c2b0498ae6bf92a7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: eee342244a6a057a98d5ab6252c6ab970b515118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243095"
 ---
 # <a name="ole-db-destination"></a>Destino de OLE DB
   El destino de OLE DB carga datos en una serie de bases de datos compatibles con OLE DB que usan una tabla o vista de base de datos o un comando SQL. Por ejemplo, un origen de OLE DB puede cargar datos en tablas en bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -49,7 +49,7 @@ ms.locfileid: "36324709"
 > [!NOTE]  
 >  El destino de OLE DB no admite parámetros. Si tiene que ejecutar una instrucción INSERT con parámetros, puede usar la transformación Comando de OLE DB. Para más información, consulte [OLE DB Command Transformation](transformations/ole-db-command-transformation.md).  
   
- Cuando el destino de OLE DB carga datos que utilizan un juego de caracteres de doble byte (DBCS), los datos se pueden dañar si el modo del acceso a datos no usa la opción de carga rápida y si el administrador de conexiones OLE DB utiliza el proveedor OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Para garantizar la integridad de datos de DBCS es necesario configurar el administrador de conexiones OLE DB para que use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o uno de los modos de acceso de carga rápida: **Carga rápida de tabla o vista** o **Carga rápida de variable de nombre de tabla o nombre de vista**. Ambas opciones están disponibles en el cuadro de diálogo **Editor de destino de OLE DB** . Al programar la [!INCLUDE[ssIS](../../includes/ssis-md.md)] modelo de objetos, debe establecer la propiedad AccessMode en `OpenRowset Using FastLoad`, o `OpenRowset Using FastLoad From Variable`.  
+ Cuando el destino de OLE DB carga datos que utilizan un juego de caracteres de doble byte (DBCS), los datos se pueden dañar si el modo del acceso a datos no usa la opción de carga rápida y si el administrador de conexiones OLE DB utiliza el proveedor OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Para garantizar la integridad de datos de DBCS es necesario configurar el administrador de conexiones OLE DB para que use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o uno de los modos de acceso de carga rápida: **Carga rápida de tabla o vista** o **Carga rápida de variable de nombre de tabla o nombre de vista**. Ambas opciones están disponibles en el cuadro de diálogo **Editor de destino de OLE DB** . Al programar el [!INCLUDE[ssIS](../../includes/ssis-md.md)] modelo de objetos, debe establecer la propiedad AccessMode en `OpenRowset Using FastLoad`, o `OpenRowset Using FastLoad From Variable`.  
   
 > [!NOTE]  
 >  Si usa el cuadro de diálogo **Editor de destino de OLE DB** en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] para crear la tabla de destino en la que el destino de OLE DB inserta los datos, puede tener que seleccionar la tabla nueva manualmente. La necesidad de selección manual se produce cuando un proveedor OLE DB, como el proveedor OLE DB para DB2 agrega automáticamente identificadores de esquema al nombre de la tabla.  
@@ -80,7 +80,7 @@ ms.locfileid: "36324709"
   
 -   Especificar la cantidad de filas del lote y el tamaño de confirmación.  
   
- Algunas opciones de carga rápida están almacenadas en propiedades específicas del destino de OLE DB. Por ejemplo, FastLoadKeepIdentity especifica si se mantienen los valores de identificación, FastLoadKeepNulls especifica si se mantienen los valores nulos y FastLoadMaxInsertCommitSize especifica el número de filas que se confirmarán como un lote. Otras opciones de carga rápida se almacenan en una lista separada por comas, en la propiedad FastLoadOptions. Si el destino de OLE DB utiliza todas las opciones de carga rápida que se almacenan en FastLoadOptions y aparece en el **Editor de destino de OLE DB** cuadro de diálogo, el valor de la propiedad se establece en `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`. El valor 1000 indica que el destino se configura para usar lotes de 1000 filas.  
+ Algunas opciones de carga rápida están almacenadas en propiedades específicas del destino de OLE DB. Por ejemplo, FastLoadKeepIdentity especifica si se mantienen los valores de identificación, FastLoadKeepNulls especifica si se mantienen los valores nulos y FastLoadMaxInsertCommitSize especifica el número de filas que se confirmarán como un lote. Otras opciones de carga rápida se almacenan en una lista separada por comas, en la propiedad FastLoadOptions. Si el destino de OLE DB usa todas las opciones de carga rápida que se almacenan en FastLoadOptions y aparece en el **Editor de destino de OLE DB** cuadro de diálogo, el valor de la propiedad se establece en `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`. El valor 1000 indica que el destino se configura para usar lotes de 1000 filas.  
   
 > [!NOTE]  
 >  Los errores de restricciones en el destino provocan el error del lote completo de las filas definidas por FastLoadMaxInsertCommitSize.  
@@ -89,7 +89,7 @@ ms.locfileid: "36324709"
   
 |Opción de carga rápida|Descripción|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Especifica el tamaño en kilobytes para insertar. La opción tiene la forma `KILOBYTES_PER_BATCH`  =  \<valor entero positivo**>**.|  
+|KILOBYTES_PER_BATCH|Especifica el tamaño en kilobytes para insertar. La opción tiene el formato `KILOBYTES_PER_BATCH`  =  \<valor entero positivo**>**.|  
 |FIRE_TRIGGERS|Especifica si se activan los desencadenadores en la tabla de inserción. La opción tiene la forma **FIRE_TRIGGERS**. La presencia de la opción indica que se activan los desencadenadores.|  
 |ORDER|Especifica cómo se ordenan los datos de entrada. La opción tiene el formato ORDER \<nombre de columna> ASC&#124;DESC. Se puede enumerar cualquier cantidad de columnas (el orden es opcional). Si se omite el orden, la operación de inserción presupone que los datos no están ordenados.<br /><br /> Nota: El rendimiento puede mejorar si se utiliza la opción ORDER para ordenar los datos de entrada según el índice agrupado de la tabla.|  
   

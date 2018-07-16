@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic report server tasks
 - rs utility
@@ -21,13 +21,13 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 26e1dccb1d72ac0a743a545e29b175f5e8bb79fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9889c2a14d48a7c2bccd7087c96567e92e1e4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255467"
 ---
 # <a name="rsexe-utility-ssrs"></a>Utilidad RS.exe (SSRS)
   La utilidad rs.exe procesa el script que proporcione en un archivo de entrada. Use esta utilidad para automatizar las tareas de implementación y administración del servidor de informes.  
@@ -106,7 +106,7 @@ ms.locfileid: "36111497"
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- Se crean variables globales con los nombres indicados y se establecen en los valores proporcionados. Por ejemplo, **- v un =**"`1`" **- v b =**"`2`" da como resultado una variable denominada `a` con un valor de "`1`" y una variable **b**con un valor de "`2`".  
+ Se crean variables globales con los nombres indicados y se establecen en los valores proporcionados. Por ejemplo, **- v una =**"`1`" **- v b =**"`2`" da como resultado una variable denominada `a` con un valor de "`1`" y una variable **b**con un valor de "`2`".  
   
  Las variables globales están disponibles para todas las funciones del script. Si se especifica una barra diagonal inversa y comillas (**\\"**), se interpreta como comillas dobles. Las comillas solo son necesarias si la cadena contiene un espacio. Los nombres de las variables deben ser válidos para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]; deben comenzar por un carácter alfabético o de subrayado y deben contener caracteres alfabéticos, dígitos o caracteres de subrayado. No se pueden utilizar palabras reservadas como nombres de variables. Para más información sobre las variables globales, vea [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -128,7 +128,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  Para ver otros ejemplos, vea [Ejecutar un archivo de script de Reporting Services](run-a-reporting-services-script-file.md).  
   
 ## <a name="remarks"></a>Notas  
- Puede definir scripts para establecer propiedades del sistema, publicar informes, etc. Los scripts que crea pueden incluir cualquier método de la API [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información sobre los métodos y propiedades disponibles, vea [Report Server Web Service](../report-server-web-service/report-server-web-service.md).  
+ Puede definir scripts para establecer propiedades del sistema, publicar informes, etc. Los scripts que crea pueden incluir cualquier método de la API [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información acerca de los métodos y propiedades disponibles, consulte [Report Server Web Service](../report-server-web-service/report-server-web-service.md).  
   
  Es necesario escribir el script en código de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET y guardarlo en un archivo de texto Unicode o UTF-8 con la extensión de nombre de archivo .rss. No se pueden depurar scripts mediante la utilidad **rs** . Para depurar un script, ejecute el código dentro de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
@@ -139,6 +139,6 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  [Ejecutar un archivo de Script de Reporting Services](run-a-reporting-services-script-file.md)   
  [Script para tareas administrativas y de implementación](script-deployment-and-administrative-tasks.md)   
  [Secuencia de comandos con la utilidad rs.exe y el servicio Web](script-with-the-rs-exe-utility-and-the-web-service.md)   
- [Utilidades del símbolo del sistema del servidor de informes &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
+ [Utilidades de símbolo del sistema del servidor de informes &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
   
   

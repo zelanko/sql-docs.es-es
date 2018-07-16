@@ -1,5 +1,5 @@
 ---
-title: Medidas (SSAS Tabular) | Documentos de Microsoft
+title: Medidas (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d5690f488c5cb0119c62be819e1cfece41d2fda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9715d64ea8d2df1747a26fc15cf830bab3d5efd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218005"
 ---
 # <a name="measures-ssas-tabular"></a>Medidas (SSAS tabular)
   En los modelos tabulares, una medida es un cálculo creado usando una fórmula DAX para usarla en un cliente de informes. Las medidas se evalúan según los campos, filtros y segmentaciones de datos que los usuarios seleccionan en la aplicación cliente de informes.  
@@ -102,11 +102,11 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Crear y administrar medidas &#40;SSAS Tabular&#41;](measures-ssas-tabular.md)|Describe cómo crear y administrar medidas mediante la cuadrícula de medidas del diseñador de modelos.|  
+|[Crear y administrar medidas &#40;Tabular de SSAS&#41;](measures-ssas-tabular.md)|Describe cómo crear y administrar medidas mediante la cuadrícula de medidas del diseñador de modelos.|  
   
 ## <a name="see-also"></a>Vea también  
- [KPI &#40;SSAS Tabular&#41;](kpis-ssas-tabular.md)   
- [Crear y administrar KPI &#40;SSAS Tabular&#41;](create-and-manage-kpis-ssas-tabular.md)   
- [Columnas calculadas &#40;SSAS Tabular&#41;](ssas-calculated-columns.md)  
+ [KPI &#40;Tabular de SSAS&#41;](kpis-ssas-tabular.md)   
+ [Crear y administrar KPI &#40;Tabular de SSAS&#41;](create-and-manage-kpis-ssas-tabular.md)   
+ [Columnas calculadas &#40;Tabular de SSAS&#41;](ssas-calculated-columns.md)  
   
   

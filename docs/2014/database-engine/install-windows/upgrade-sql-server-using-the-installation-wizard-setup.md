@@ -1,5 +1,5 @@
 ---
-title: Actualización a SQL Server 2014 mediante el Asistente para la instalación (programa de instalación) | Documentos de Microsoft
+title: Actualización a SQL Server 2014 mediante el Asistente para la instalación (programa de instalación) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 caps.latest.revision: 62
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b56fc3323fcd29b19f43d63c054a9cd844944bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 71f2683e42e6a1af7c971b3e192ad534847896ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219795"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Actualizar a SQL Server 2014 mediante el Asistente para la instalación (programa de instalación)
   El Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un único árbol de características para la actualización de los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en paralelo con una versión anterior, o migrar los valores de configuración y las bases de datos existentes de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y aplicarlos a una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "36113220"
   
 -   [Actualizar una instancia de clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)  
   
--   [Instalar a SQL Server 2014 desde el símbolo del sistema](install-sql-server-from-the-command-prompt.md)  
+-   [Instalar SQL Server 2014 desde el símbolo del sistema](install-sql-server-from-the-command-prompt.md)  
   
 -   [Usar el Asistente para copiar bases de datos](../../relational-databases/databases/use-the-copy-database-wizard.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36113220"
   
 -   [Actualizar a SQL Server 2014](upgrade-sql-server.md)  
   
--   [Requisitos de hardware y Software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Requisitos de hardware y software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Comprobar los parámetros del Comprobador de configuración del sistema](check-parameters-for-the-system-configuration-checker.md)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36113220"
 -   [Compatibilidad con versiones anteriores del Motor de base de datos de SQL Server](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
->  Tenga en cuenta que no puede cambiar las características que se van a actualizar, y no puede agregar características durante la operación de actualización. Para obtener más información sobre cómo agregar características a una instancia actualizada de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] una vez completada la operación de actualización, vea [agregar características a una instancia de SQL Server 2014 &#40;el programa de instalación&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
+>  Tenga en cuenta que no puede cambiar las características que se van a actualizar, y no puede agregar características durante la operación de actualización. Para obtener más información acerca de cómo agregar características a una instancia actualizada de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] una vez completada la operación de actualización, vea [agregar características a una instancia de SQL Server 2014 &#40;instalación&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
   
 ## <a name="procedure"></a>Procedimiento  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36113220"
   
 2.  El Asistente para la instalación inicia el Centro de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para actualizar una instancia existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], haga clic en **Instalación** en el área de navegación de la izquierda y, después, haga clic en **Actualizar desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**.  
   
-3.  En la página Clave del producto, haga clic en una opción para indicar si va a actualizar a una edición gratuita de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o si tiene una clave de PID para una versión de producción del producto. Para obtener más información, consulte [ediciones y componentes de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) y [actualizaciones de ediciones y versiones admitidas](supported-version-and-edition-upgrades.md).  
+3.  En la página Clave del producto, haga clic en una opción para indicar si va a actualizar a una edición gratuita de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o si tiene una clave de PID para una versión de producción del producto. Para obtener más información, consulte [ediciones y componentes de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) y [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md).  
   
 4.  En la página Términos de licencia, revise el contrato de licencia y, si está de acuerdo, active la casilla **Acepto los términos de licencia** y haga clic en **Siguiente**. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
@@ -128,12 +128,12 @@ ms.locfileid: "36113220"
   
 -   **Registrar los servidores** : la actualización quita la configuración del Registro de la instancia anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tras la actualización, debe volver a registrar los servidores.  
   
--   **Actualizar las estadísticas** : para poder optimizar el rendimiento de las consultas, es recomendable actualizar las estadísticas de todas las bases de datos tras la actualización. Use la `sp_updatestats` para actualizar las estadísticas en tablas definidas por el usuario en el procedimiento almacenado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las bases de datos.  
+-   **Actualizar las estadísticas** : para poder optimizar el rendimiento de las consultas, es recomendable actualizar las estadísticas de todas las bases de datos tras la actualización. Use la `sp_updatestats` para actualizar las estadísticas en tablas definidas por el usuario en el procedimiento almacenado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de datos.  
   
 -   **Configurar la nueva instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: para reducir el área expuesta del sistema susceptible de recibir ataques, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala y habilita los servicios y características clave de forma selectiva. Para obtener más información sobre la configuración del área expuesta, vea el archivo Léame correspondiente a esta versión.  
   
 ## <a name="see-also"></a>Vea también  
- [Actualizar a SQL Server 2014](upgrade-sql-server.md)   
+ [Actualización a SQL Server 2014](upgrade-sql-server.md)   
  [Compatibilidad con versiones anteriores](../../getting-started/backward-compatibility.md)  
   
   

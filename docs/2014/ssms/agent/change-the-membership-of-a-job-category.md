@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
 - jobs [SQL Server Agent], categories
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - members [SQL Server], job categories
 ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fb8bb0ade433b6c72f41409ba1cd247fb983b50d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6c430bba54c46572f5d8afdfe5a0606e207d875c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303495"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
   En este tema se describe cómo cambiar la pertenencia de la categoría de trabajo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]u Objetos de administración de SQL Server.  

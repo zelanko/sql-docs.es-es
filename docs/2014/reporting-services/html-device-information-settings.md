@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 caps.latest.revision: 47
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 51b4ec577596fde0923f1d446ed282db1cd3eb17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bb0063ac9887d12b8ebeaf329c044f4974e49607
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201539"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177230"
 ---
 # <a name="html-device-information-settings"></a>Configuración de la información del dispositivo HTML
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato HTML.  
@@ -39,10 +39,10 @@ ms.locfileid: "36201539"
 |`ExpandContent`|Indica si el informe se debería incluir en una estructura de tabla que restrinja el tamaño horizontal.|  
 |**FindString**|Texto que se va a buscar en el informe. El valor predeterminado de este parámetro es una cadena vacía.|  
 |**GetImage (\*)**|Obtiene un icono determinado para la interfaz de usuario del Visor HTML.|  
-|`HTMLFragment`|Indica si un fragmento HTML se crea en lugar de un documento HTML completo. Un fragmento HTML incluye el contenido del informe en un elemento TABLE y omite los elementos BODY y HTML. El valor predeterminado es `false`. Representar utilizando SOAP con el `HTMLFragment` propiedad establecida en `true` crean direcciones URL que contiene información de sesión que puede utilizarse para solicitar las imágenes correctamente. Las imágenes deben ser recursos cargados en la base de datos del servidor de informes.|  
+|`HTMLFragment`|Indica si un fragmento HTML se crea en lugar de un documento HTML completo. Un fragmento HTML incluye el contenido del informe en un elemento TABLE y omite los elementos BODY y HTML. El valor predeterminado es `false`. Representar utilizando SOAP con el `HTMLFragment` propiedad establecida en `true` crean direcciones URL que contiene información de sesión que se puede usar para solicitar las imágenes correctamente. Las imágenes deben ser recursos cargados en la base de datos del servidor de informes.|  
 |`ImageConsolidation`|Indica si se consolidan las imágenes de gráficos, mapas, medidores e indicadores representadas en una imagen grande. La consolidación de imágenes ayuda a mejorar el rendimiento del informe en el explorador de cliente cuando el informe contenga muchos elementos de visualización de datos. El valor predeterminado es `true` para los exploradores más modernos.|  
 |**JavaScript**|Indica si JavaScript se admite en el informe representado. El valor predeterminado es `true`.|  
-|`LinkTarget`|Destino para los hipervínculos en el informe. Puede tener como destino una ventana o marco proporcionando el nombre de la ventana, como `LinkTarget` = *nombre_de_ventana*, o puede tener como destino una nueva ventana con `LinkTarget`= _blank. Otros nombres de destino válidos incluyen _self, _parent y _top.|  
+|`LinkTarget`|Destino para los hipervínculos en el informe. Puede tener como destino una ventana o marco si se proporciona el nombre de la ventana, como `LinkTarget` = *nombre_ventana*, o puede tener como destino una nueva ventana con `LinkTarget`= _blank. Otros nombres de destino válidos incluyen _self, _parent y _top.|  
 |**OnlyVisibleStyles(\*)**|Indica que solo se generan los estilos compartidos para la página representada actualmente.|  
 |`OutlookCompat`|Indica si la representación se va a realizar con metadatos adicionales que hacen que el informe tenga una apariencia mejorada en Outlook. En otros casos, el valor predeterminado es `false`.|  
 |**Parámetros**|Indica si mostrar u ocultar el área de parámetros de la barra de herramientas. Si establece este parámetro en un valor de `true`, se muestra el área de parámetros de la barra de herramientas. El valor predeterminado de este parámetro es `true`.|  
@@ -52,13 +52,13 @@ ms.locfileid: "36201539"
 |**Sección**|Número de página del informe que representar. El valor `0` indica que se representan todas las secciones del informe. El valor predeterminado es `1`.|  
 |**StreamRoot (\*)**|Ruta de acceso que se usa como prefijo para el valor del atributo **src** del elemento IMG en el informe HTML que devuelve el servidor de informes. De forma predeterminada, el servidor de informes proporciona la ruta de acceso. Puede usar este valor para especificar una ruta de acceso raíz para las imágenes de un informe (por ejemplo, **http://\<nombreDeServidor>/resources/companyimages**).|  
 |**StyleStream**|Indica si los estilos y scripts se crean como un flujo independiente en lugar de en el documento. El valor predeterminado es `false`.|  
-|`Toolbar`|Indica si mostrar u ocultar la barra de herramientas. El valor predeterminado de este parámetro es `true`. Si el valor de este parámetro es `false`, se omiten todas las opciones restantes (excepto el mapa del documento). Si omite este parámetro, la barra de herramientas se muestra automáticamente para los formatos de representación que lo admiten.<br /><br /> Al usar el acceso URL para representar un informe, se representa la barra de herramientas del Visor de informes. La barra de herramientas no se representa a través de la API SOAP. Sin embargo, el `Toolbar` configuración afecta al modo en que el informe se muestra información del dispositivo cuando se utiliza SOAP `Render` método. Si el valor de este parámetro es `true` al utilizar SOAP para representar en HTML, solo la primera sección del informe se representa. Si el valor es `false`, el informe HTML completo se representa como una página HTML única.|  
-|`UserAgent`|El `user-agent` cadena del explorador que está realizando la solicitud, que se encuentra en la solicitud HTTP.|  
+|`Toolbar`|Indica si mostrar u ocultar la barra de herramientas. El valor predeterminado de este parámetro es `true`. Si el valor de este parámetro es `false`, se omiten todas las opciones restantes (excepto el mapa del documento). Si omite este parámetro, la barra de herramientas se muestra automáticamente para los formatos de representación que lo admiten.<br /><br /> Al usar el acceso URL para representar un informe, se representa la barra de herramientas del Visor de informes. La barra de herramientas no se representa a través de la API SOAP. Sin embargo, el `Toolbar` configuración afecta a la manera en que el informe se muestra información del dispositivo cuando se utiliza SOAP `Render` método. Si el valor de este parámetro es `true` al utilizar SOAP para representar en HTML, solo la primera sección del informe se representa. Si el valor es `false`, el informe HTML completo se representa como una página HTML única.|  
+|`UserAgent`|El `user-agent` cadena del explorador que realiza la solicitud, que se encuentra en la solicitud HTTP.|  
 |**Zoom (\*)**|Valor de ampliación del informe como porcentaje entero o una constante de cadena. Los valores de cadena estándar incluyen `Page Width` y `Whole Page`. Las versiones de [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer anteriores a Internet Explorer 5.0 y todos los exploradores que no son de[!INCLUDE[msCoName](../includes/msconame-md.md)] omiten este parámetro. El valor predeterminado de este parámetro es `100`.|  
 |**DataVisualizationFitSizing**|Indica el comportamiento de ajuste para la visualización de datos cuando se esté dentro de un Tablix. Esto incluye un gráfico, un medidor y un mapa.<br /><br /> Los valores posibles son **Aproximado** y **Exacto**.<br /><br /> El valor predeterminado es **Aproximado**. Si se quita el valor de configuración del archivo **rsreportserver.config** , el comportamiento predeterminado es **Exacto**.<br /><br /> Si se habilita **Exacto** , podría afectar al rendimiento porque el procesamiento necesario para determinar el tamaño exacto puede tardar más tiempo.|  
   
 ## <a name="see-also"></a>Vea también  
- [Pasar la configuración de información de dispositivo para las extensiones de representación](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Pasar la configuración de información de dispositivo a las extensiones de representación](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizar los parámetros de extensión de representación en RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referencia técnica &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   

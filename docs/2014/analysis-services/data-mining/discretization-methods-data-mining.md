@@ -1,5 +1,5 @@
 ---
-title: Métodos de discretización (minería de datos) | Documentos de Microsoft
+title: Métodos de discretización (minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
 - discretization [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2cedf4996536560ff415746c7948cc62a86de77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29ef2a25704911e1feb31f20a048952d45966925
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206255"
 ---
 # <a name="discretization-methods-data-mining"></a>Métodos de discretización (minería de datos)
   Algunos de los algoritmos que se utilizan para crear modelos de minería de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] requieren tipos de contenido específicos para poder funcionar correctamente. Por ejemplo, el algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] no puede utilizar columnas continuas como entrada ni predecir valores continuos. Además, algunas columnas pueden contener tal cantidad de valores que el algoritmo no puede identificar con facilidad patrones de interés en los datos para crear un modelo a partir de los mismos.  
@@ -58,13 +58,13 @@ ms.locfileid: "36201916"
   
 -   El `CLUSTERS` método usa una muestra aleatoria de 1000 registros para discretizar los datos. Utilice el método `EQUAL_AREAS` si no desea que el algoritmo realice un muestreo de datos.  
   
--   El tutorial del modelo de minería de datos de redes neuronales proporciona un ejemplo de cómo se puede personalizar la discretización. Para obtener más información, consulte [lección 5: generar Red neuronal y los modelos de regresión logística &#40;Tutorial intermedio de minería de datos&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+-   El tutorial del modelo de minería de datos de redes neuronales proporciona un ejemplo de cómo se puede personalizar la discretización. Para obtener más información, consulte [lección 5: creación de red neuronal y modelos de regresión logística &#40;Tutorial intermedio de minería de datos&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md)   
  [Tipos de contenido &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Estructuras de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
  [Tipos de datos &#40;minería de datos&#41;](data-types-data-mining.md)   
  [Columnas de estructura de minería de datos](mining-structure-columns.md)   
  [Distribuciones de columnas &#40;minería de datos&#41;](column-distributions-data-mining.md)  

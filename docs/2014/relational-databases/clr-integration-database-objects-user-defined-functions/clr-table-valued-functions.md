@@ -1,13 +1,11 @@
 ---
-title: Las funciones con valores de tabla CLR | Documentos de Microsoft
+title: Las funciones con valores de tabla CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - TVFs [CLR integration]
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 caps.latest.revision: 86
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 83d955467034448e5c9a7337b674b85a12acb0c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 67bb174803f7368257217e5244ef023e2c274929
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113155"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354007"
 ---
 # <a name="clr-table-valued-functions"></a>Funciones con valores de tabla en CLR
   Una función con valores de tabla es una función definida por el usuario que devuelve una tabla.  
@@ -180,7 +178,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Ejemplo: devolver los resultados de una consulta SQL Server  
- En el siguiente ejemplo se muestra una función con valores de tabla que consulta una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En este ejemplo se utiliza la base de datos AdventureWorks Light de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Vea [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) para obtener más información sobre la descarga de AdventureWorks.  
+ En el siguiente ejemplo se muestra una función con valores de tabla que consulta una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En este ejemplo se utiliza la base de datos AdventureWorks Light de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Consulte [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) para obtener más información sobre la descarga de AdventureWorks.  
   
  Asigne a su archivo de código fuente el nombre FindInvalidEmails.cs o FindInvalidEmails.vb.  
   

@@ -1,5 +1,5 @@
 ---
-title: Clustered, propiedad (clase SqlService) | Documentos de Microsoft
+title: Propiedad (clase SqlService) Clustered | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Clustered property
 ms.assetid: f714e7f5-c2db-45c6-9536-6ca2cb5b42aa
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: feca14847331e11a8a79d36b66d79abe4bd55d12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a9625ccfba0bce361ef9750ae7d3b3d654af6eb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321865"
 ---
 # <a name="clustered-property-sqlservice-class"></a>Propiedad Clustered (clase SqlService)
   Obtiene el valor de propiedad booleano que especifica si el servicio forma parte de una instancia en clúster.  

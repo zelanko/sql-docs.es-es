@@ -1,5 +1,5 @@
 ---
-title: Ejecutar SQL Server de importación y exportación Asistente | Documentos de Microsoft
+title: Ejecute el servidor SQL de importación y exportación de Asistente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Import and Export Wizard
 - starting SQL Server Import and Export Wizard
@@ -18,22 +18,22 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 817172e78c7f7702aa4dc9d7555b25f6866a6897
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d39f6988fafe56210e5641b85f54adb644b8d8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307997"
 ---
-# <a name="run-the-sql-server-import-and-export-wizard"></a>Ejecutar SQL Server de importación y exportación de Asistente
+# <a name="run-the-sql-server-import-and-export-wizard"></a>Ejecute el servidor SQL de importación y exportación de Asistente
   El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona el método más sencillo para copiar datos entre orígenes de datos y crear paquetes básicos. Para obtener más información sobre el asistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
   
- Para ver un vídeo que muestra cómo usar la importación de SQL Server y el Asistente para exportación para crear un paquete que exporta datos de una base de datos de SQL Server a una hoja de cálculo de Microsoft Excel, vea [exportar datos de SQL Server a Excel (vídeo de SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131024).  
+ Para ver un vídeo que muestra cómo usar la importación de SQL Server y el Asistente para exportación para crear un paquete que exporta los datos desde una base de datos de SQL Server a una hoja de cálculo de Microsoft Excel, [exportar datos de SQL Server a Excel (vídeo de SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131024).  
   
 ### <a name="to-start-the-sql-server-import-and-export-wizard"></a>Para iniciar el Asistente para importación y exportación de SQL Server  
   
--   En el **iniciar** menú, elija **todos los programas**, seleccione**Microsoft SQL Server** y, a continuación, haga clic en **importar y exportar datos**.  
+-   En el **iniciar** menú, elija **todos los programas**, apunte a**Microsoft SQL Server** y, a continuación, haga clic en **importar y exportar datos**.  
   
      O bien  
   
@@ -41,11 +41,11 @@ ms.locfileid: "36202986"
   
      O bien  
   
-     En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en la **proyecto** menú, haga clic en **SSISImport y Asistente para exportación de**.  
+     En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en el **proyecto** menú, haga clic en **SSISImport y Asistente para exportación de**.  
   
      O bien  
   
-     En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la [!INCLUDE[ssDE](../../includes/ssde-md.md)] tipo de servidor, expanda bases de datos, haga clic en una base de datos, seleccione **tareas**y, a continuación, haga clic en **importar datos** o **exportar datos**.  
+     En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conectarse a la [!INCLUDE[ssDE](../../includes/ssde-md.md)] tipo de servidor, expanda bases de datos, haga clic en una base de datos, seleccione **tareas**y, a continuación, haga clic en **importar datos** o **exportar datos**.  
   
      O bien  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36202986"
     > [!NOTE]  
     >  El Proveedor OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para Oracle no admite los siguientes tipos de datos de Oracle: BLOB, CLOB, NCLOB, BFILE y UROWID. Por consiguiente, el origen OLE DB no puede extraer datos de tablas que contengan columnas con estos tipos de datos.  
   
-     Los destinos de datos disponibles incluyen [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proveedores de datos, proveedores OLE DB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, Excel, Access y el destino de archivo sin formato.  
+     Los destinos de datos disponibles incluyen [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proveedores de datos, los proveedores OLE DB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, Excel, Access y el destino de archivo sin formato.  
   
 3.  Establezca las opciones para el tipo de destino que ha seleccionado.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36202986"
   
          Si el origen es un proveedor [!INCLUDE[vstecado](../../includes/vstecado-md.md)], debe usar también la opción para copiar los resultados de las consultas, proporcionando la cadena DBCommand como consulta.  
   
-         Si los datos de origen están una vista, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard convierte automáticamente la vista a una tabla en el destino.  
+         Si los datos de origen están una vista, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard convierte automáticamente la vista a una tabla de destino.  
   
     -   Indicar si la tabla de destino debe quitarse y volver a crearse posteriormente, y si se deben habilitar las inserciones de identidad.  
   
@@ -121,11 +121,11 @@ ms.locfileid: "36202986"
   
 6.  Guardar y ejecutar un paquete.  
   
-     Si se inicia el asistente desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o desde el símbolo del sistema, el paquete se puede ejecutar de inmediato. Opcionalmente, puede guardar el paquete en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** base de datos o al sistema de archivos. Para obtener más información sobre la **msdb** la base de datos, vea [administración de paquetes &#40;servicio SSIS&#41;](../service/package-management-ssis-service.md).  
+     Si se inicia el asistente desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o desde el símbolo del sistema, el paquete se puede ejecutar de inmediato. Opcionalmente, puede guardar el paquete en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** base de datos o al sistema de archivos. Para obtener más información sobre la **msdb** de base de datos, vea [administración de paquetes &#40;servicio SSIS&#41;](../service/package-management-ssis-service.md).  
   
-     Al guardar el paquete, puede establecer su nivel de protección y, si el nivel utiliza una contraseña, proporcionarla. Para obtener más información acerca de los niveles de protección del paquete, consulte [Control de acceso para los datos confidenciales en paquetes](../security/access-control-for-sensitive-data-in-packages.md).  
+     Al guardar el paquete, puede establecer su nivel de protección y, si el nivel utiliza una contraseña, proporcionarla. Para obtener más información acerca de los niveles de protección de paquetes, consulte [Control del acceso a datos confidenciales en paquetes](../security/access-control-for-sensitive-data-in-packages.md).  
   
-     Si el asistente se inicia desde un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proyecto en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], no se puede ejecutar el paquete desde el asistente. En lugar de ello, el paquete se agrega al proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] desde el cual se inició el asistente. A continuación, puede ejecutar el paquete en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+     Si se inicia el asistente desde un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], no se puede ejecutar el paquete desde el asistente. En lugar de ello, el paquete se agrega al proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] desde el cual se inició el asistente. A continuación, puede ejecutar el paquete en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
     > [!NOTE]  
     >  En [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], la opción para guardar el paquete creado por el asistente no está disponible.  

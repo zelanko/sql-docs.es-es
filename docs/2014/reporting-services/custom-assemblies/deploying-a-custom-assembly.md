@@ -17,15 +17,15 @@ helpviewer_keywords:
 - updating custom assemblies
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
 caps.latest.revision: 46
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: db9a7f2660306b5a938041cc967d1daccc9bc97b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 72edfdc6070140f2b9d72c1a4ba50c05cfda8d96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313255"
 ---
 # <a name="deploying-a-custom-assembly"></a>Implementar un ensamblado personalizado
   Para implementar un ensamblado personalizado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], coloque el ensamblado en las carpetas de aplicaciones del Diseñador de informes y el servidor de informes. De forma predeterminada, a los ensamblados personalizados se les concede el permiso `Execution` en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para conceder privilegios a los ensamblados personalizados a parte del permiso Ejecutar, tendrá que modificar el archivo de configuración rssrvpolicy.config para el servidor de informes y el archivo de configuración rspreviewpolicy.config para la ventana de vista previa del Diseñador de informes. Otra opción es instalar el ensamblado personalizado en la memoria caché de ensamblados global (GAC).  

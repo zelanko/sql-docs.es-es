@@ -1,5 +1,5 @@
 ---
-title: Eliminar una vista del origen de datos (Analysis Services) | Documentos de Microsoft
+title: Eliminar una vista del origen de datos (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting data source views
 - data source views [Analysis Services], deleting
 - removing data source views
 ms.assetid: ae3f5ca0-ecbf-4b52-8386-eb457719d854
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e4467d476acbb45e0ec18c7a28fd1a9a143c386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c8d04731a4b555b6e4afe9c8697fc5c4f907a9a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284027"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>Eliminar una vista del origen de datos (Analysis Services)
   Si ha dejado de usar una vista del origen de datos (DSV) en un proyecto de OLAP, puede eliminarla del proyecto en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "36203769"
   
  Si elimina una DSV, invalidará otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que dependen de ella, de modo que, antes de eliminar la DSV, verá la lista de objetos que quedarían invalidados cuando se quite la DSV. Revise esta lista con atención para asegurarse de que no contiene objetos que todavía espera usar.  
   
- ![Eliminar objetos, cuadro de diálogo](../media/ssas-olapdsv-deleteobjects.gif "cuadro de diálogo Eliminar objetos")  
+ ![Eliminar el cuadro de diálogo objetos](../media/ssas-olapdsv-deleteobjects.gif "cuadro de diálogo Eliminar objetos")  
   
 ## <a name="see-also"></a>Vea también  
  [Vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md)   

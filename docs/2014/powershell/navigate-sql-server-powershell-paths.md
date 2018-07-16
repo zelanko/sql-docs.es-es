@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: a737eb351e6de2160ddf3385dbd3e5448bc2a937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fd5d59a76ae4a9b6ec2bfb7cc811a23037f720ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201191"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242765"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navegar por las rutas de acceso de SQL Server PowerShell
   El proveedor de PowerShell de [!INCLUDE[ssDE](../includes/ssde-md.md)] expone el conjunto de objetos de una instancia de SQL Server en una estructura similar a una ruta de acceso del archivo. Puede usar los cmdlets de Windows PowerShell para navegar por la ruta de acceso del proveedor y crear las unidades personalizadas para acortar la ruta de acceso que tiene que escribir.  
@@ -118,7 +118,7 @@ Get-ChildItem -force
 ## <a name="create-a-custom-drive"></a>Crea una unidad personalizada  
  **Cree y use una unidad personalizada**  
   
-1.  Use `New-PSDrive` para definir una unidad personalizada. Use el `Root` para especificar la ruta de acceso que se representa mediante el nombre de unidad personalizada.  
+1.  Use `New-PSDrive` para definir una unidad personalizada. Use el `Root` parámetro para especificar la ruta de acceso que está representado por el nombre de unidad personalizada.  
   
 2.  Hacer referencia al nombre de unidad personalizada en cmdlets de navegación de la ruta de acceso como `Set-Location`.  
   

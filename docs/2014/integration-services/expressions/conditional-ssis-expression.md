@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
@@ -16,13 +16,13 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4c59de8a12276c2660cc3f1b8c06a4f9d4168a37
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 36514b86afc211f9ef699300c93e1652749b5b1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265001"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (Condicional) (expresión de SSIS)
   Devuelve una de dos expresiones en función del resultado de la evaluación de una expresión booleana. Si la evaluación de la expresión booleana devuelve TRUE, se evalúa la primera expresión y el resultado es el resultado de la expresión. Si devuelve FALSE, se evalúa la segunda expresión y el resultado es el resultado de la expresión.  
@@ -102,7 +102,7 @@ ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Prioridad y asociatividad](operator-precedence-and-associativity.md)   
+ [Precedencia y asociatividad](operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos AggregationDesignDimension (ASSL) | Documentos de Microsoft
+title: Tipo de datos AggregationDesignDimension (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationDesignDimension data type
 ms.assetid: 06a0d418-014c-4f40-a63a-5cfeee3f6a41
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0828fb652833b84948552ffe1802af77e0d1e83c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74a28002d7074ad58c044b4af57310c22518a87d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247255"
 ---
 # <a name="aggregationdesigndimension-data-type-assl"></a>Tipo de datos AggregationDesignDimension (ASSL)
   Define un tipo de datos primitivo que representa la relación entre una dimensión de cubo y un [AggregationDesign](../objects/aggregationdesign-element-assl.md) elemento.  
@@ -58,7 +58,7 @@ ms.locfileid: "36106832"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|None|  
-|Elementos secundarios|[Anotaciones](../collections/annotations-element-assl.md), [atributos](../collections/attributes-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md)|  
+|Elementos secundarios|[Las anotaciones](../collections/annotations-element-assl.md), [atributos](../collections/attributes-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md)|  
 |Elementos derivados|[Dimensión](../objects/dimension-element-assl.md) ([dimensiones](../collections/dimensions-element-assl.md) colección de [AggregationDesign](../objects/aggregationdesign-element-assl.md))|  
   
 ## <a name="remarks"></a>Notas  

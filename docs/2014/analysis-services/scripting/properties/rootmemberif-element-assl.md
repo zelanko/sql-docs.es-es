@@ -1,5 +1,5 @@
 ---
-title: Elemento RootMemberIf (ASSL) | Documentos de Microsoft
+title: Elemento RootMemberIf (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RootMemberIf element
 ms.assetid: b695e271-c748-4abc-a09f-acb1014f768f
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a923b08efc636d2635d60b00f85c42dc00a312e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7ac45d2111b8d3631160ce78f131f98d53230e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280301"
 ---
 # <a name="rootmemberif-element-assl"></a>Elemento RootMemberIf (ASSL)
   Determina cómo se identifican los miembros raíz de un atributo primario.  
@@ -62,14 +62,14 @@ ms.locfileid: "36107720"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El valor de la `RootMemberIf` elemento se utiliza únicamente por los atributos primarios (en otras palabras, el valor de la [uso](usage-element-dimensionattribute-assl.md) elemento de la `DimensionAttribute` elemento primario se establece en *primario*) para determinar la raíz () miembros de nivel superior) de una jerarquía de elementos primarios y secundarios.  
+ El valor de la `RootMemberIf` elemento es utilizado únicamente por los atributos primarios (en otras palabras, el valor de la [uso](usage-element-dimensionattribute-assl.md) elemento de la `DimensionAttribute` elemento primario se establece en *primario*) para determinar la raíz ( miembros de nivel superior) de una jerarquía de elementos primarios y secundarios.  
   
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |*ParentIsBlankSelfOrMissing*|Solo los miembros que cumplen una o varias de las condiciones descritas para *ParentIsBlank*, *ParentIsSelf*, o *ParentIsMissing* se tratan como miembros raíz.|  
-|*ParentIsBlank*|Solo los miembros con un valor null, cero o una cadena vacía en las columnas de clave representadas por la [KeyColumns](../collections/columns-element-assl.md) colección de `DimensionAttribute` se tratan como miembros raíz.|  
+|*ParentIsBlank*|Solo los miembros con un valor null, cero o una cadena vacía en las columnas de clave representadas por el [KeyColumns](../collections/columns-element-assl.md) colección de `DimensionAttribute` se tratan como miembros raíz.|  
 |*ParentIsSelf*|Únicamente los miembros que son elementos primarios se tratan como miembros raíz.|  
 |*ParentIsMissing*|Únicamente los miembros cuyos elementos primarios no se pueden encontrar se tratan como miembros raíz.|  
   

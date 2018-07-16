@@ -1,5 +1,5 @@
 ---
-title: Establecer opciones de Control de código fuente | Documentos de Microsoft
+title: Establecer opciones de Control de código fuente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Source_Control.Visual_SourceSafe
 - VS.ToolsOptionsPages.Source_Control.General
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - source controls [SQL Server Management Studio], options
 ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30c24ccdc17888de4b5ff8c93e76c00beb2986eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ed15c8ca6fb8e93695b7465460c34d730453d01
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300785"
 ---
 # <a name="set-source-control-options"></a>Establecer las opciones de control de código fuente
   Antes de aprovechar las características de control de código fuente integradas en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], es necesario configurar las opciones de control de código fuente de los diversos entornos en los que trabaje.  
   
- Configurar opciones de control de código fuente mediante el **opciones** cuadro de diálogo para configurar uno o varios roles de control de código fuente. Un rol se compone de una descripción general de la configuración en la que se utiliza [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y las opciones de control de código fuente asociadas a esa configuración.  
+ Configurar opciones de control de código fuente mediante la **opciones** cuadro de diálogo para configurar uno o varios roles de control de código fuente. Un rol se compone de una descripción general de la configuración en la que se utiliza [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y las opciones de control de código fuente asociadas a esa configuración.  
   
  Por ejemplo, si es desarrollador de software de bases de datos independiente, normalmente no crea conflictos con otros usuarios al conservar los archivos desprotegidos después de haberlos protegido. En consecuencia, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] define un rol de desarrollador de software independiente. Para este rol, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] selecciona automáticamente el **mantener elementos desprotegidos cuando se protejan** opción.  
   
@@ -51,20 +51,20 @@ ms.locfileid: "36111851"
   
 3.  Establezca las credenciales de inicio de sesión de cada rol de control de código fuente que desee usar. Esta página solo está disponible si está instalado un complemento de control de código fuente.  
   
-     **Descripción de la función**  
+     **Descripción del rol**  
      La selección de uno de estos roles hace que las opciones de control de código fuente correspondientes se seleccionen automáticamente.  
   
     |Rol|Descripción|  
     |----------|-----------------|  
-    |**Visual SourceSafe**|Especifica que desea utilizar la configuración más utilizada por [!INCLUDE[msCoName](../includes/msconame-md.md)] los usuarios de Visual SourceSafe.|  
-    |**Programador independiente**|Especifica que el usuario está realizando su trabajo de forma independiente.|  
+    |**Visual SourceSafe**|Especifica que desea usar la configuración más utilizada por [!INCLUDE[msCoName](../includes/msconame-md.md)] usuarios de Visual SourceSafe.|  
+    |**Desarrollador independiente**|Especifica que el usuario está realizando su trabajo de forma independiente.|  
     |**Custom**|Especifica que el usuario ha modificado la configuración de un rol.|  
   
-     **Realizar actualizaciones de estado de segundo plano**  
+     **Realice las actualizaciones de estado en segundo plano**  
      Actualiza automáticamente los iconos de señal del control de código fuente en el Explorador de soluciones cuando cambia el estado de un elemento. Si se producen retrasos al realizar operaciones que consumen muchos recursos del servidor, en especial cuando abre una solución o un proyecto desde el control de código fuente, la desactivación de esta casilla puede mejorar el rendimiento.  
   
      **Id. de inicio de sesión**  
-     Especifica el nombre de usuario que se va a utilizar para iniciar la sesión en el proveedor del control de código fuente. Si admite el proveedor de control de código fuente, este nombre se rellena automáticamente en el **inicio de sesión** cuadro de diálogo para alcanzar el servidor de control de código fuente. Para activar esta opción, utilice el programa de administrador del proveedor del control de código fuente para deshabilitar los inicios de sesión automáticos y reinicie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+     Especifica el nombre de usuario que se va a utilizar para iniciar la sesión en el proveedor del control de código fuente. Si se admite el proveedor de control de código fuente, este nombre se rellena automáticamente en el **inicio de sesión** cuadro de diálogo para llegar a su servidor de control de código fuente. Para activar esta opción, utilice el programa de administrador del proveedor del control de código fuente para deshabilitar los inicios de sesión automáticos y reinicie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
      **Avanzadas**  
      Muestra opciones adicionales para agregar elementos al control de código fuente. Estas opciones dependen del proveedor del control de código fuente. En el programa del control de código fuente dispone de ayuda para estas opciones.  
@@ -73,26 +73,26 @@ ms.locfileid: "36111851"
   
 5.  En el **configuración del entorno de Control de código fuente** , seleccione el rol en el que desea establecer opciones de control de código fuente.  
   
-     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] activa automáticamente las opciones de control de código fuente del rol que ha seleccionado. Si desactiva alguna de las opciones predeterminadas, el **configuración del entorno de Control de código fuente** cuadro muestra la **personalizado** opción para indicar que se ha personalizado el rol seleccionado originalmente.  
+     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] activa automáticamente las opciones de control de código fuente del rol que ha seleccionado. Si desactiva alguna de las opciones predeterminadas, la **configuración del entorno de Control de código fuente** cuadro muestra la **personalizado** opción para indicar que ha personalizado el rol seleccionado originalmente.  
   
      **Configuración del entorno de Control de código fuente**  
      Especifica el rol que se desea utilizar. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] define los siguientes roles.  
   
     |Rol|Descripción|  
     |----------|-----------------|  
-    |**Visual SourceSafe**|Especifica que desea utilizar la configuración más utilizada por [!INCLUDE[msCoName](../includes/msconame-md.md)] los usuarios de Visual SourceSafe.|  
-    |**Programador independiente**|Especifica que el usuario está realizando su trabajo de forma independiente.|  
+    |**Visual SourceSafe**|Especifica que desea usar la configuración más utilizada por [!INCLUDE[msCoName](../includes/msconame-md.md)] usuarios de Visual SourceSafe.|  
+    |**Desarrollador independiente**|Especifica que el usuario está realizando su trabajo de forma independiente.|  
     |**Custom**|Especifica que el usuario ha modificado la configuración de un rol.|  
   
      La selección de uno de estos roles hace que las opciones de control de código fuente correspondientes se seleccionen automáticamente.  
   
      **Mantener elementos desprotegidos cuando se protejan**  
-     Especifica que cuando el usuario proteja elementos para actualizar el almacén de control de código fuente, los elementos deben permanecer desprotegidos para el usuario. Si desea cambiar esta opción para una protección concreta, haga clic en el **opciones** flecha en el **proteger** cuadro de diálogo y, a continuación, desactive la **Mantener *** desprotegido** casilla de verificación.  
+     Especifica que cuando el usuario proteja elementos para actualizar el almacén de control de código fuente, los elementos deben permanecer desprotegidos para el usuario. Si desea cambiar esta opción para una inserción en específico, haga clic en el **opciones** flecha en el **proteger** cuadro de diálogo y, a continuación, desactive la **Mantener *** desprotegido** casilla de verificación.  
   
      **Elementos protegidos**  
      Muestra una lista de opciones que especifican la forma en que debe comportarse [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] cuando se intenta editar un elemento que no está desprotegido. En la siguiente tabla se describen las opciones disponibles.  
   
-     **Guardar**  
+     **Al guardar**  
   
     |Acción|Descripción|  
     |------------|-----------------|  
@@ -113,11 +113,11 @@ ms.locfileid: "36111851"
      Especifica que los elementos que están protegidos puedan editarse en la memoria. Si selecciona esta casilla, un **editar** botón aparece en la **desproteger** cuadro de diálogo cuando se intenta editar un elemento protegido. Después de hacer clic en este botón, podrá editar el elemento. Si intenta guardar el elemento, deberá desprotegerlo o guardarlo en una ubicación distinta.  
   
      **Restablecer**  
-     Restablece los cuadros de diálogo de confirmación de control de código fuente a sus valores predeterminados. Por ejemplo, si ha seleccionado la **no volver a mostrar este cuadro de diálogo** casilla de verificación en un cuadro de diálogo de control de código fuente, seleccione la **restablecer** opción revierte dicha acción.  
+     Restablece los cuadros de diálogo de confirmación de control de código fuente a sus valores predeterminados. Por ejemplo, si ha seleccionado la **no volver a mostrar este cuadro de diálogo** casilla de verificación en un cuadro de diálogo de control de código fuente, seleccione el **restablecer** opción revierte dicha acción.  
   
 ## <a name="see-also"></a>Vea también  
  [Fundamentos del Control de código fuente](../../2014/database-engine/source-control-basics.md)   
  [Cambio de conexiones de Control de código fuente](../../2014/database-engine/change-source-control-connections.md)   
- [Excluir archivos de Control de código fuente](../../2014/database-engine/exclude-files-from-source-control.md)  
+ [Excluir archivos desde el control de código fuente](../../2014/database-engine/exclude-files-from-source-control.md)  
   
   

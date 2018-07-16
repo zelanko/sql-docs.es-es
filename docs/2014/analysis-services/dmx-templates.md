@@ -1,5 +1,5 @@
 ---
-title: Plantillas DMX | Documentos de Microsoft
+title: Plantillas DMX | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0f29e0c000477ec705111f433c31370edc0d973
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30a02f00df965362c1c8702403b06df8b0883ead
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194365"
 ---
 # <a name="dmx-templates"></a>Plantillas DMX
   Las plantillas de minería de datos ayudan a crear rápidamente consultas sofisticadas. Aunque la sintaxis general de las consultas DMX está bien documentada, el uso de plantillas facilita la creación de consultas haciendo clic y apuntando a los argumentos y orígenes de datos.  
@@ -42,21 +42,21 @@ ms.locfileid: "36201924"
   
      Para las consultas de predicción, elija el conjunto de datos de entrada primero y asigne después las columnas.  
   
-7.  Haga clic en **Editar consulta** para cambiar a la vista de editor de texto y cambie manualmente la consulta.  
+7.  Haga clic en **Editar consulta** para cambiar a la vista del editor de texto y cambie manualmente la consulta.  
   
      Sin embargo, tenga en cuenta que si cambia las vistas al trabajar en el editor de consultas, se borrará cualquier información que tuviera en la vista anterior. Antes de cambiar de vista, guarde el trabajo; para ello, copie y pegue las instrucciones DMX en un archivo independiente.  
   
 8.  Haga clic en **Finalizar**. En el **elegir destino** diálogo cuadro, especifique dónde desea que se guarden los resultados. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
->  Si ha ejecutado correctamente una instrucción, la instrucción DMX que envía al servidor también se registra en el **seguimiento** ventana. Para obtener más información sobre cómo usar la característica de seguimiento, vea [seguimiento &#40;cliente de minería de datos para Excel&#41;](trace-data-mining-client-for-excel.md).  
+>  Si ha ejecutado una instrucción correctamente, la instrucción DMX que envía al servidor también se registra en el **seguimiento** ventana. Para obtener más información sobre cómo usar la característica de seguimiento, vea [seguimiento &#40;cliente de minería de datos para Excel&#41;](trace-data-mining-client-for-excel.md).  
   
  Para obtener más información sobre cómo usar los datos de minería de datos Editor de consultas avanzadas, vea [consulta &#40;complementos de minería de datos de SQL Server&#41; ](query-sql-server-data-mining-add-ins.md) y [Editor de consultas avanzadas de minería de datos](advanced-data-mining-query-editor.md).  
   
 ## <a name="list-of-dmx-templates"></a>Lista de plantillas DMX  
  En el Cliente de minería de datos para Excel se incluyen las siguientes plantillas DMX.  
   
- **predicción**  
+ **Predicción**  
   
  Use estas plantillas para crear consultas de predicción avanzadas, incluidas las consultas no admitidas por los asistentes de los complementos, como consultas que usan tablas anidadas u orígenes de datos externos.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36201924"
   
  Use estas plantillas para crear modelos o estructuras de datos personalizados. No está limitado a los modelos que admiten los asistentes; puede usar cualquier algoritmo de minería de datos compatible con la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a la que está conectado, incluidos los algoritmos de complementos.  
   
--   modelo de minería de datos  
+-   Modelo de minería de datos  
   
 -   Estructura de minería de datos  
   

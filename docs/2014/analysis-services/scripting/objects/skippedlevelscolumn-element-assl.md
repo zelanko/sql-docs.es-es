@@ -1,5 +1,5 @@
 ---
-title: Elemento SkippedLevelsColumn (ASSL) | Documentos de Microsoft
+title: El elemento SkippedLevelsColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SkippedLevelsColumn element
 ms.assetid: 6b00a288-99c1-4735-9e6b-cd13ed4fa346
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ae469982f39e1274759eaaea992fe456330d8fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c04dea8c63d71483de9a8194a15bc4e4d7be5b88
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196035"
 ---
 # <a name="skippedlevelscolumn-element-assl"></a>Elemento SkippedLevelsColumn (ASSL)
     
@@ -54,7 +54,7 @@ ms.locfileid: "36108192"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|[Elemento de datos](../data-type/dataitem-data-type-assl.md)|  
+|Tipo y longitud de los datos|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Valor predeterminado|None|  
 |Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
@@ -66,11 +66,11 @@ ms.locfileid: "36108192"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El `SkippedLevelsColumn` elemento solo es aplicable a los atributos primarios (en otras palabras, el valor de la [uso](../properties/usage-element-dimensionattribute-assl.md) (elemento) para la `DimensionAttribute` primario se establece en *primario*). El elemento `SkippedLevelsColumn` contiene la columna o el atributo del atributo primario que almacena el número de niveles omitidos entre cada miembro y su miembro primario. Esto permite jerarquías de elementos primarios y secundarios que están basadas en el atributo primario para omitir niveles entre miembros. Los valores contenidos en esta columna o atributo deben ser enteros no negativos; de lo contrario, se produce un error de procesamiento. Si el elemento `SkippedLevelsColumn` no se especifica o no contiene ningún valor, el miembro actual tiene una profundidad de un nivel por debajo de su miembro primario.  
+ El `SkippedLevelsColumn` elemento solo es aplicable a los atributos primarios (en otras palabras, el valor de la [uso](../properties/usage-element-dimensionattribute-assl.md) (elemento) para el `DimensionAttribute` primario se establece en *primario*). El elemento `SkippedLevelsColumn` contiene la columna o el atributo del atributo primario que almacena el número de niveles omitidos entre cada miembro y su miembro primario. Esto permite jerarquías de elementos primarios y secundarios que están basadas en el atributo primario para omitir niveles entre miembros. Los valores contenidos en esta columna o atributo deben ser enteros no negativos; de lo contrario, se produce un error de procesamiento. Si el elemento `SkippedLevelsColumn` no se especifica o no contiene ningún valor, el miembro actual tiene una profundidad de un nivel por debajo de su miembro primario.  
   
  Para obtener más información sobre la `DataItem` tipo, incluida una tabla de objetos de Analysis Services Scripting Language (ASSL) y las propiedades de la `DataItem` de tabla, vea [tipo de datos DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- El elemento que corresponde al elemento primario de `SkippedLevelsColumn` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ El elemento que se corresponde con el elemento primario de `SkippedLevelsColumn` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vea también  
  [Atributos de elemento &#40;ASSL&#41;](../collections/attributes-element-assl.md)   

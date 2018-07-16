@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up encryption keys [Reporting Services]
 - restoring encryption keys [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 26b64626126f331b5ca9dcc893a7ecb73a7bce38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26c71d0d4f3811d4204e83f465c47a6a78f7532f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331305"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services
   Una parte importante de la configuración del servidor de informes es la creación de una copia de seguridad de la clave simétrica utilizada para cifrar información confidencial. La copia de seguridad de la clave se necesita para varias operaciones rutinarias y, además, permite volver a utilizar una base de datos del servidor de informes existente en una nueva instalación.  
@@ -104,7 +104,7 @@ ms.locfileid: "36204757"
   
 ####  <a name="bkmk_restore_rskeymgmt"></a> Restaurar las claves de cifrado - rskeymgmt (modo nativo)  
   
-1.  Ejecute **rskeymgmt.exe** localmente en el equipo que hospeda el servidor de informes. Use la `-a` argumento para restaurar las claves. Debe proporcionar un nombre de archivo completo y especificar una contraseña. El siguiente ejemplo ilustra los argumentos que debe especificar:  
+1.  Ejecute **rskeymgmt.exe** localmente en el equipo que hospeda el servidor de informes. Use el `-a` argumento para restaurar las claves. Debe proporcionar un nombre de archivo completo y especificar una contraseña. El siguiente ejemplo ilustra los argumentos que debe especificar:  
   
     ```  
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  

@@ -1,5 +1,5 @@
 ---
-title: El programa de instalación y la instalación de servicios | Documentos de Microsoft
+title: El programa de instalación y mantenimiento de la instalación | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6df72a78-6b36-4bc1-948e-04b4ebe46094
 caps.latest.revision: 3
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 567ca07f1cb83ace26a4d89133c96faa4cdf1b7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 311addf861fec1aa5f706ea40a0874af837b71c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255367"
 ---
 # <a name="setup-and-servicing-installation"></a>Instalación inicial y de servicio
   Esta sección contiene los temas siguientes:  
   
--   [Interfaz de usuario de instalación SQL Server 2014](../../../2014/sql-server/install/sql-server-2014-setup-user-interface.md)  
+-   [Interfaz de usuario del programa de instalación de SQL Server 2014](../../../2014/sql-server/install/sql-server-2014-setup-user-interface.md)  
   
--   [Instalación de servicios de SQL Server](../../../2014/sql-server/install/sql-server-servicing-installation.md)  
+-   [Instalación de servicio de SQL Server](../../../2014/sql-server/install/sql-server-servicing-installation.md)  
   
   

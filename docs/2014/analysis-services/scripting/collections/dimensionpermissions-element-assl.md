@@ -1,5 +1,5 @@
 ---
-title: Elemento DimensionPermissions (ASSL) | Documentos de Microsoft
+title: Elemento DimensionPermissions (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DimensionPermissions element
 ms.assetid: cb9fdfbf-2118-423b-ba02-fa36813dbea0
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0ce5b6f55d8ed8d14b192de800c62237629195e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 605f5055d4fc3939cb8b30f123281e3d920db6fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246337"
 ---
 # <a name="dimensionpermissions-element-assl"></a>Elemento DimensionPermissions (ASSL)
-  Contiene la colección de permisos aplicable a una [dimensión](../objects/dimension-element-assl.md) elemento o un [CubePermission](../objects/cubepermission-element-assl.md) elemento.  
+  Contiene la colección de permisos aplicable a un [dimensión](../objects/dimension-element-assl.md) elemento o un [CubePermission](../objects/cubepermission-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -1,5 +1,5 @@
 ---
-title: sqlmaint (utilidad) | Documentos de Microsoft
+title: sqlmaint, utilidad | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
 - sqlmaint utility
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba7788006e5b44ac7ad6c4adf1bf9f9bc43542ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 94181b7b45ee1e1258678bbc4bc3357ebecb0bc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236131"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint, utilidad
   La utilidad**sqlmaint** realiza un conjunto especificado de operaciones de mantenimiento en una o varias bases de datos. Use **sqlmaint** para ejecutar comprobaciones de DBCC, realizar una copia de seguridad de una base de datos y su registro de transacciones, actualizar estadísticas y volver a generar índices. Todas las actividades de mantenimiento de bases de datos generan un informe que se puede enviar a un archivo de texto designado, un archivo HTML o una cuenta de correo electrónico. **sqlmaint** ejecuta los planes de mantenimiento de bases de datos creados con versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para ejecutar los planes de mantenimiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde el símbolo del sistema, emplee la [utilidad dtexec](../integration-services/packages/dtexec-utility.md).  
@@ -267,7 +267,7 @@ sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 
 sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -CrBkSubDir -DelBkUps 2weeks  
 ```  
   
-### <a name="d-backing-up-a-database-to-the-default-xprogram-filesmicrosoft-sql-servermssql12mssqlservermssqlbackup-directory"></a>D. Copia de seguridad de una base de datos a la x:\Program predeterminado de programa\Microsoft SQL Server\MSSQL12. Directorio de MSSQLSERVER\MSSQL\Backup. \  
+### <a name="d-backing-up-a-database-to-the-default-xprogram-filesmicrosoft-sql-servermssql12mssqlservermssqlbackup-directory"></a>D. Copia de seguridad de una base de datos para el x:\Program predeterminado de programa\Microsoft SQL Server\MSSQL12. Directorio MSSQLSERVER\MSSQL\Backup. \  
   
 ```  
 sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir  

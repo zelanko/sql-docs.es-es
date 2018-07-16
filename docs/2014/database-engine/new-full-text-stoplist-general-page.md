@@ -1,27 +1,26 @@
 ---
-title: Nuevo Stoplist de texto completo (página General) | Documentos de Microsoft
+title: Irrelevantes de texto completo (página General) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplist.general.f1
 ms.assetid: 97f8e82d-82ab-4525-91c9-1ee3ae217309
 caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5217bd995855ff33e6b21b883c854cb3db474e03
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2304b2b9a8711210117ffbb2a84abbf167694e71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221975"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>Nueva lista de palabras irrelevantes de texto completo (página General)
   Utilice este cuadro de diálogo para crear una lista de palabras irrelevantes de texto completo. Una *lista de palabras irrelevantes* es un conjunto de palabras que se usan habitualmente, denominadas *palabras irrelevantes*, que se omiten de la indización de texto completo para las tablas que utilizan dicha lista. Para obtener más información, vea [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../relational-databases/search/full-text-search.md).  
@@ -51,7 +50,7 @@ ms.locfileid: "36113654"
  **Crear a partir de una lista de palabras irrelevantes de texto completo existente**  
  La nueva lista de palabras irrelevantes se crea copiando una lista existente.  
   
- **base de datos de origen**  
+ **Base de datos de origen**  
  Especifica el nombre de la base de datos a la que pertenece la lista de palabras irrelevantes existente. De manera predeterminada, se selecciona la base de datos actual. Si lo desea, seleccione otra base de datos en el cuadro de lista.  
   
  **Lista de palabras irrelevantes de origen**  

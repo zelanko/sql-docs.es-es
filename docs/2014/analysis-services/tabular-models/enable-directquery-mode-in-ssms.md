@@ -1,5 +1,5 @@
 ---
-title: Configurar el acceso de DirectQuery para una base de datos de modelo Tabular o en memoria | Documentos de Microsoft
+title: Configurar el acceso de DirectQuery para una base de datos de modelo Tabular o en memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c91dd8529fa6ddfb111ebb87cb84d87a55d3a709
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee6b2f55d1b630b489f65e16a39cb602d5fd5a6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243445"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>Configurar el acceso In-Memory o DirectQuery para una base de datos modelo tabular
   En este tema se describe cómo cambiar las propiedades de conexión de un modelo tabular que ya se haya implementado, para habilitar el uso del modelo en el modo Direct Query.  
@@ -45,7 +45,7 @@ ms.locfileid: "36201679"
   
 1.  En SQL Server Management Studio, abra la instancia en la que se implementó el modelo.  
   
-2.  En el Explorador de objetos, haga clic en el nombre de la base de datos de modelo y seleccione **propiedades**.  
+2.  En el Explorador de objetos, haga clic en el nombre de la base de datos modelo y seleccione **propiedades**.  
   
 3.  Busque la propiedad **DirectQueryMode**. Para habilitar el uso del origen de datos relacional, esta propiedad se debe establecer en uno de estos valores:  
   

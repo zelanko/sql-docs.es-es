@@ -1,5 +1,5 @@
 ---
-title: Notificar el concepto de parámetros (generador de informes y SSRS) | Documentos de Microsoft
+title: Notificar el concepto de parámetros (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3df4f17a75018c3b78653f5b0fb9419d3835f9e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 860099dc49e0fe383d7b53ac379c4671ead2477b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296065"
 ---
 # <a name="report-parameters-concept-report-builder-and-ssrs"></a>Concepto de parámetros de informe (Generador de informes y SSRS)
   Puede agregar parámetros a un informe para vincular informes relacionados, controlar la apariencia del informe, filtrar datos del informe o restringir el ámbito del informe a usuarios o ubicaciones específicos.  
@@ -48,8 +48,8 @@ ms.locfileid: "36201960"
  Si está pensando crear instantáneas de informe, historiales o suscripciones a un informe publicado, debe saber cómo afectan los parámetros de informe a los requisitos de diseño del informe.  
   
 ## <a name="see-also"></a>Vea también  
- [Conceptos de creación de informes &#40;el generador de informes SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Conceptos de creación de informes &#40;generador de informes y SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Tutorial: Agregar un parámetro a un informe &#40;generador de informes&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Tutorial: Agregar un parámetro al informe &#40;generador de informes&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   

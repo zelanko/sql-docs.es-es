@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f5095c28bb6a5d09ae7b872272e8ed4f58efc584
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a675b9f671631030e2fd49a8f3aba3534e8fa30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294025"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>¿Desea actualizar desde SQL Server 2005?
   Como el soporte extendido de SQL Server 2005 llega a su fin, es un buen momento para actualizar a una versión más reciente de SQL Server y a Base de datos SQL de Azure. La actualización permite mantener la seguridad y el cumplimiento, lograr un rendimiento excepcional y optimizar la infraestructura de su plataforma de datos.  
@@ -43,8 +43,8 @@ ms.locfileid: "36111487"
 |Opción de almacenamiento relacional|Ventajas|Otros factores a tener en cuenta|  
 |-------------------------------|--------------|-------------------------------|  
 |**SQL Server local**<br /><br /> Tenga en cuenta esta opción para las aplicaciones de bases de datos de cualquier tipo, desde sistemas transaccionales a almacenes de datos.<br /><br /> Para obtener más información, consulte [SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/).|Tendrá el máximo control sobre las características y la escalabilidad, ya que administra el hardware y software.<br /><br /> Si está actualizando desde SQL Server 2005, este es el entorno más parecido.|Debe realizar la mayor inversión inicial y proporcionar la administración más continua, porque tiene que comprar, mantener y administrar su propio hardware y software.|  
-|**SQL Server hospedado en máquinas virtuales de Azure**<br /><br /> Tenga en cuenta esta opción si desea lo siguiente.<br />-Ventajas de migrar a un entorno hospedado.<br />-Control sobre el entorno operativo.<br />-Conjunto de características conocidas de SQL Server.<br /><br /> Para obtener más información, consulte [SQL Server en máquinas virtuales de Azure información general sobre](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).<br /><br /> Para obtener información acerca de la migración, consulte [Migrar una base de datos a SQL Server en una máquina virtual de Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/).|Puede implementar rápidamente desde una biblioteca de imágenes de máquina virtual.<br /><br /> Obtenga el conjunto completo de características de SQL Server.<br /><br /> Ahórrese el costo de hardware y software de servidor. Solo paga por el uso por horas.|Debe configurar y administrar el servidor SQL Server y el software del sistema operativo.|  
-|**Servicio de base de datos hospedado en la base de datos SQL de Azure**<br /><br /> Tenga en cuenta esta opción si desea una solución de bajo costo con menos mantenimiento.<br /><br /> Esta opción es especialmente adecuada para aplicaciones que no requieren la misma capacidad en todo momento o que tiene que proporcionar acceso externo.<br /><br /> Para obtener más información, consulte [base de datos SQL](https://azure.microsoft.com/services/sql-database/).<br /><br /> Para obtener información acerca de la migración, consulte [migrar una base de datos de SQL Server a la base de datos de SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/).|Puede implementar rápidamente y escalar fácilmente.<br /><br /> Solo paga por el uso por horas.<br /><br /> El costo del servicio incluye no solo el almacenamiento, sino también copias de seguridad automatizadas y de alta disponibilidad.|Azure SQL Database carece de algunas características de SQL Server que no son aplicables en un entorno de nube hospedada. Para obtener más información, vea la [información de Transact-SQL de la base de datos SQL de Azure](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/).<br /><br /> La base de datos SQL de Azure también tiene un tamaño máximo de base de datos de 500 GB, en comparación con los 524 PB de SQL Server.|  
+|**SQL Server hospedado en máquinas virtuales de Azure**<br /><br /> Tenga en cuenta esta opción si desea lo siguiente.<br />-Beneficios de migrar a un entorno hospedado.<br />-Control sobre el entorno operativo.<br />-Conjunto de características conocidas de SQL Server.<br /><br /> Para obtener más información, consulte [SQL Server en Azure Virtual Machines overview](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).<br /><br /> Para obtener información acerca de la migración, consulte [Migrar una base de datos a SQL Server en una máquina virtual de Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/).|Puede implementar rápidamente desde una biblioteca de imágenes de máquina virtual.<br /><br /> Obtenga el conjunto completo de características de SQL Server.<br /><br /> Ahórrese el costo de hardware y software de servidor. Solo paga por el uso por horas.|Debe configurar y administrar el servidor SQL Server y el software del sistema operativo.|  
+|**Servicio de base de datos hospedado en la base de datos SQL de Azure**<br /><br /> Tenga en cuenta esta opción si desea una solución de bajo costo con menos mantenimiento.<br /><br /> Esta opción es especialmente adecuada para aplicaciones que no requieren la misma capacidad en todo momento o que tiene que proporcionar acceso externo.<br /><br /> Para obtener más información, consulte [base de datos SQL](https://azure.microsoft.com/services/sql-database/).<br /><br /> Para obtener información acerca de la migración, consulte [migrar una base de datos de SQL Server a Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/).|Puede implementar rápidamente y escalar fácilmente.<br /><br /> Solo paga por el uso por horas.<br /><br /> El costo del servicio incluye no solo el almacenamiento, sino también copias de seguridad automatizadas y de alta disponibilidad.|Azure SQL Database carece de algunas características de SQL Server que no son aplicables en un entorno de nube hospedada. Para obtener más información, vea la [información de Transact-SQL de la base de datos SQL de Azure](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/).<br /><br /> La base de datos SQL de Azure también tiene un tamaño máximo de base de datos de 500 GB, en comparación con los 524 PB de SQL Server.|  
   
  También debe considerar soluciones NoSQL o no relacionales para determinados datos y aplicaciones.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36111487"
   
  Para descargar el informe "Migración desde SQL Server 2005" de Indicaciones en Microsoft, [haga clic aquí](https://info.microsoft.com/CO-SQL-CNTNT-FY16-09Sep-14-ModernizationDirOnMFST-Register.html) (no en la imagen en miniatura que aparece aquí).  
   
- ![Informe sobre la migración desde SQL Server 2005](../../../2014/sql-server/install/media/sqlserver2005migratingdoc.png "informes sobre la migración desde SQL Server 2005")  
+ ![Informe sobre la migración desde SQL Server 2005](../../../2014/sql-server/install/media/sqlserver2005migratingdoc.png "informe sobre la migración desde SQL Server 2005")  
   
 ## <a name="plan-your-upgrade"></a>Planee su actualización  
   

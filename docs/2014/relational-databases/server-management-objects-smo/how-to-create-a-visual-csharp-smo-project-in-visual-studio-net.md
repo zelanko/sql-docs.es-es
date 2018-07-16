@@ -1,5 +1,5 @@
 ---
-title: Crear un proyecto de Visual C# SMO en Visual Studio .NET | Documentos de Microsoft
+title: Crear un proyecto de Visual C# SMO en Visual Studio .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Visual C# [SMO]
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b96b2f52b1d993c02536b70e39ba7d1868643a04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c63f02cc9496a09744f403eaac9ec8dd84cc38b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270671"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>Crear un proyecto de Visual C# SMO en Visual Studio .NET
   En esta sección se describe cómo generar una aplicación de consola SMO simple.  
   
- En este ejemplo se importan espacios de nombres, lo que habilita al programa para que haga referencia a los tipos SMO. La importación del espacio de nombres `Agent` es opcional. Utilícela cuando esté escribiendo un programa que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. El espacio de nombres `Common` se requiere para establecer una conexión segura a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El espacio de nombres `SqlClient` se utiliza para procesar los errores de excepción de SQL.  
+ En este ejemplo se importan espacios de nombres, lo que habilita al programa para que haga referencia a los tipos SMO. La importación del espacio de nombres `Agent` es opcional. Usarlo cuando se escribe un programa que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. El espacio de nombres `Common` se requiere para establecer una conexión segura a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El espacio de nombres `SqlClient` se utiliza para procesar los errores de excepción de SQL.  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>Crear un proyecto de Visual C# SMO en Visual Studio.NET  
   
@@ -35,11 +35,11 @@ ms.locfileid: "36111106"
   
 2.  En el menú **Archivo**, haga clic en **Nuevo proyecto**. Aparecerá el cuadro de diálogo **Nuevo proyecto** .  
   
-3.  En **tipos de proyecto** cuadro de diálogo, seleccione **Visual C#** y, a continuación, seleccione **Windows**. En el [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] panel Plantillas instaladas, seleccione **aplicación de Windows**.  
+3.  En **tipos de proyecto** cuadro de diálogo, seleccione **Visual C#** y, a continuación, seleccione **Windows**. En el [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] panel Plantillas instaladas, seleccione **aplicación Windows**.  
   
 4.  (Opcional) En el **nombre** , escriba el nombre de la nueva aplicación  
   
-5.  Seleccione el tipo de aplicación de Visual C#. Para los ejemplos que siguen, seleccione **aplicación de consola**.  
+5.  Seleccione el tipo de aplicación de Visual C#. Los ejemplos que siguen, seleccione **aplicación de consola**.  
   
 6.  En el menú **Proyecto**, seleccione **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36111106"
   
 9. Haga clic en **Abrir**.  
   
-10. En el **vista** menú, haga clic en **código**. O bien seleccione Program1.cs [Diseño] Windows y haga doble clic en el formulario windows Forms para mostrar la ventana de código.  
+10. En el **vista** menú, haga clic en **código**. - o bien seleccione el Windows Program1.cs [Diseño] y haga doble clic en el formulario windows Forms para mostrar la ventana de código.  
   
 11. En el código, antes de la instrucción de espacio de nombres, escriba las instrucciones `using` siguientes para certificar los tipos en el espacio de nombres de SMO:  
   

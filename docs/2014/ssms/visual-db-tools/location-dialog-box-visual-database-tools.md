@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.getdirectoryname
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 243dc99dcb7ea50a6894665f3dbf46d542572ee8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 55bdf0e85a80793c3e16b92337f10b6c1d54aa0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234455"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Ubicación (cuadro de diálogo, Visual Database Tools)
   Utilice este cuadro de diálogo para ubicar y seleccionar la carpeta que contiene los archivos de interés. Este cuadro de diálogo devuelve la ruta de acceso de la carpeta seleccionada al cuadro de diálogo que realiza la llamada. Puede tener acceso a este cuadro de diálogo de esta forma:  

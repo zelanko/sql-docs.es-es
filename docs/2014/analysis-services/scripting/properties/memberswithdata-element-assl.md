@@ -1,5 +1,5 @@
 ---
-title: Elemento MembersWithData (ASSL) | Documentos de Microsoft
+title: Elemento MembersWithData (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MembersWithData element
 ms.assetid: 845087a2-b12d-4344-a8be-85ca61155296
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5c0311a774b225234aeb63d4d67680e12b693b0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0c2e35549f4db2de489916ad1760954d4f6dfd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218235"
 ---
 # <a name="memberswithdata-element-assl"></a>Elemento MembersWithData (ASSL)
   Determina si se van a mostrar los miembros de datos para los miembros no hoja del atributo primario.  
@@ -62,7 +62,7 @@ ms.locfileid: "36201230"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El valor de la `MembersWithData` elemento se utiliza únicamente por los atributos primarios (en otras palabras, el valor de la [uso](usage-element-dimensionattribute-assl.md) elemento de la `DimensionAttribute` elemento primario se establece en *primario*) para determinar si para mostrar a los miembros de datos para los miembros no hoja del atributo primario. Para obtener más información sobre los miembros de datos, vea [Atributos en las jerarquías de elementos primarios y secundarios](../../multidimensional-models/parent-child-dimension-attributes.md).  
+ El valor de la `MembersWithData` elemento es utilizado únicamente por los atributos primarios (en otras palabras, el valor de la [uso](usage-element-dimensionattribute-assl.md) elemento de la `DimensionAttribute` elemento primario se establece en *primario*) para determinar si para mostrar a los miembros de datos para los miembros no hoja del atributo primario. Para obtener más información sobre los miembros de datos, vea [Atributos en las jerarquías de elementos primarios y secundarios](../../multidimensional-models/parent-child-dimension-attributes.md).  
   
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   

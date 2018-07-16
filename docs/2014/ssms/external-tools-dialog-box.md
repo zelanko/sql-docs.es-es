@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding external tools
 - external tools [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], external tools
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 15d26c23413cc3f47cba2cce5d7d7ce9efab9a66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 60e6ba4d3c9997eaa9052b5d88bf1e2ed625f548
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226645"
 ---
 # <a name="external-tools-dialog-box"></a>Cuadro de diálogo Herramientas externas
   Use el cuadro de diálogo **Herramientas externas** para agregar herramientas externas como SQLCMD o el Bloc de notas al menú **Herramientas**. La adición de herramientas externas permite iniciar fácilmente otras aplicaciones mientras se trabaja en el entorno de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Cuando inicie la herramienta, podrá especificar argumentos y un directorio de trabajo. Además, el resultado de algunas herramientas puede verse en la **Ventana de resultados** . El cuadro de diálogo **Herramientas externas** está disponible en el menú **Herramientas** .  

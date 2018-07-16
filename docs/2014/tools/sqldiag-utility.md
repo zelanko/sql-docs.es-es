@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], SQLdiag
 - stopping diagnostic collection
@@ -30,15 +30,15 @@ helpviewer_keywords:
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 caps.latest.revision: 56
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 775ad67ee25e67d894cf3aff88efe3d71f175011
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fa5904d3244cbd19642ce84bebce414f4c7f0c30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272431"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag , utilidad
   La utilidad **SQLdiag** es una herramienta de recopilación de diagnósticos de uso general que se puede ejecutar como una aplicación de consola o como un servicio. Puede usar **SQLdiag** para recopilar los archivos de datos y de registro de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y otros tipos de servidores, y para supervisar los servidores a lo largo del tiempo o solucionar problemas específicos de los mismos. **SQLdiag** se ha diseñado para acelerar y simplificar la recopilación de información de diagnóstico para los Servicios de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] .  

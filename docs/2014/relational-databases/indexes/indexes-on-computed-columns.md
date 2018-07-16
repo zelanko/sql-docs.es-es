@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, index creation
 - index creation [SQL Server], computed columns
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - precise [SQL Server]
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9b7d9b25ccb9404011c459ba0275f2ba0c63746a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ffa842513c5cd185c7760bc737aeb64a4c33742e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279121"
 ---
 # <a name="indexes-on-computed-columns"></a>Índices en columnas calculadas
   Los índices se pueden definir en columnas calculadas si se cumplen estos requisitos:  
@@ -74,7 +73,7 @@ ms.locfileid: "36108094"
   
 -   No es una expresión del tipo de datos `float` o `real`.  
   
--   No use un `float` o `real` tipo de datos en su definición. Por ejemplo, en la siguiente instrucción, columna `y` es `int` y determinista, pero no precisa.  
+-   No se utiliza un `float` o `real` tipo de datos en su definición. Por ejemplo, en la siguiente instrucción, columna `y` es `int` y determinista, pero no precisa.  
   
     ```  
     CREATE TABLE t2 (a int, b int, c int, x float,   
@@ -86,13 +85,13 @@ ms.locfileid: "36108094"
     ```  
   
 > [!NOTE]  
->  Cualquier `float` o `real` expresión se consideran imprecisa y no puede ser una clave de un índice; una `float` o `real` expresión puede utilizarse en una vista indizada, pero no como clave. Esto también se aplica a las columnas calculadas. Cualquier función, una expresión o una función definida por el usuario se considerarán imprecisa si incluyen `float` o `real` expresiones. Esto incluye a las lógicas (comparaciones).  
+>  Cualquier `float` o `real` expresión se consideran imprecisa y no puede ser una clave de un índice; una `float` o `real` expresión puede utilizarse en una vista indizada, pero no como una clave. Esto también se aplica a las columnas calculadas. Cualquier función, una expresión o una función definida por el usuario se considerarán imprecisa si incluyen `float` o `real` expresiones. Esto incluye a las lógicas (comparaciones).  
   
  La propiedad **IsPrecise** de la función COLUMNPROPERTY informa de si una expresión *computed_column_expression* es precisa.  
   
  **Data Type Requirements**  
   
--   El *computed_column_expression* definida para la columna calculada no puede evaluar para la `text`, `ntext`, o `image` tipos de datos.  
+-   El *computed_column_expression* definida para la columna calculada no se puede evaluar para la `text`, `ntext`, o `image` tipos de datos.  
   
 -   Las columnas calculadas derivadas de los tipos de datos `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)` y `xml` se pueden indizar, siempre que el tipo de datos esté disponible como una columna de clave de índice.  
   
@@ -121,7 +120,7 @@ ms.locfileid: "36108094"
      Al establecer ANSI_WARNINGS en ON, ARITHABORT se establece de forma implícita en ON cuando el nivel de compatibilidad de base de datos está establecido en 90 o un valor superior.  
   
 ##  <a name="BKMK_persisted"></a> Crear índices en columnas calculadas persistentes  
- Puede crear un índice en una columna calculada definida con una expresión determinista pero imprecisa si se marca la columna como PERSISTED en la instrucción CREATE TABLE o ALTER TABLE. Esto significa que el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] utiliza estos valores persistentes cuando crea un índice en la columna, y cuando se hace referencia al índice en una consulta. Esta opción le permite crear un índice en una columna calculada cuando [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)], es determinista y precisa.  
+ Puede crear un índice en una columna calculada definida con una expresión determinista pero imprecisa si se marca la columna como PERSISTED en la instrucción CREATE TABLE o ALTER TABLE. Esto significa que el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] utiliza estos valores persistentes cuando crea un índice en la columna y cuando el índice se hace referencia en una consulta. Esta opción le permite crear un índice en una columna calculada cuando [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)], es determinista y precisa.  
   
 ## <a name="related-content"></a>Contenido relacionado  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  

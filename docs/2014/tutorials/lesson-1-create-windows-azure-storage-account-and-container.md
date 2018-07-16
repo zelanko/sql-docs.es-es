@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Crear la cuenta de almacenamiento de Azure de Windows y contenedor | Documentos de Microsoft'
+title: 'Lección 1: Crear cuenta de Microsoft Azure Storage y contenedor | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9c4a2fb1db64456fe63bc814adda8278b253937a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 3953936761ac031a352ef17544e4818c276ab54a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299315"
 ---
 # <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Lección 1: Crear la cuenta y el contenedor de Azure Storage
   Antes de comenzar a almacenar archivos de datos de SQL Server en Azure Storage, primero debe crear una cuenta de Azure Storage, un contenedor de blobs y una firma de acceso compartido. La lección 1 le guía por los pasos necesarios para iniciar sesión en el portal de administración de Windows Azure, y para crear una cuenta de almacenamiento, un contenedor de blobs y una firma de acceso compartido.  
@@ -41,18 +41,18 @@ ms.locfileid: "36200253"
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-1.gif "SQL 14 CTP2")  
   
-2.  Siga las instrucciones paso a paso para [crear una cuenta de almacenamiento](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/). Tenga en cuenta que, al crear una cuenta de almacenamiento que se utilizará para la característica Archivos de datos de SQL Server en Windows Azure, debe anular la selección o deshabilitar la replicación geográfica. Esto se debe a que el orden de escritura no se garantiza para los distintos blobs que participen en la replicación geográfica. Si se georreplica una cuenta de almacenamiento y se requiere la recuperación, se producen daños.  
+2.  Utilice las instrucciones paso a paso para [crear una cuenta de almacenamiento](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/). Tenga en cuenta que, al crear una cuenta de almacenamiento que se utilizará para la característica Archivos de datos de SQL Server en Windows Azure, debe anular la selección o deshabilitar la replicación geográfica. Esto se debe a que el orden de escritura no se garantiza para los distintos blobs que participen en la replicación geográfica. Si se georreplica una cuenta de almacenamiento y se requiere la recuperación, se producen daños.  
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-2.gif "SQL 14 CTP2")  
   
 ## <a name="create-a-blob-container"></a>Crear un contenedor de blobs  
- En Windows Azure, un contenedor proporciona una agrupación de un conjunto de blobs. Todos los blobs deben estar en un contenedor. Una cuenta de almacenamiento puede contener un número ilimitado de contenedores, pero debe tener al menos uno. Un contenedor puede almacenar un número ilimitado de blobs. Para obtener información más actualizada acerca de los límites de tamaño de almacenamiento, consulte [cómo utilizar el servicio de almacenamiento de blobs de Windows Azure en .NET](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/).  
+ En Windows Azure, un contenedor proporciona una agrupación de un conjunto de blobs. Todos los blobs deben estar en un contenedor. Una cuenta de almacenamiento puede contener un número ilimitado de contenedores, pero debe tener al menos uno. Un contenedor puede almacenar un número ilimitado de blobs. Para obtener información más actualizada sobre los límites de tamaño de almacenamiento, consulte [cómo usar el servicio de Windows Azure Blob Storage en .NET](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/).  
   
  Para crear un contenedor de Windows Azure, siga estos pasos:  
   
 1.  Inicie sesión en el [Portal de administración de Azure Windows](https://manage.windowsazure.com).  
   
-2.  Seleccione la cuenta de almacenamiento, haga clic en el **contenedores** ficha y haga clic en **agregar contenedor** en la parte inferior de la pantalla, que abre un cuadro de diálogo nuevo.  
+2.  Seleccione la cuenta de almacenamiento, haga clic en el **contenedores** ficha y haga clic en **agregar contenedor** en la parte inferior de la pantalla, que abre un cuadro de diálogo.  
   
 3.  Escriba un nombre para el contenedor.  
   
@@ -61,10 +61,10 @@ ms.locfileid: "36200253"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  Para crear un contenedor mediante programación, también puede usar las API de REST. Para obtener más información, consulte [crear contenedor](http://msdn.microsoft.com/library/windowsazure/dd179468.aspx) y también [referencia de API de REST de servicios de almacenamiento de Windows Azure](http://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
+>  Para crear un contenedor mediante programación, también puede usar las API de REST. Para obtener más información, consulte [crear contenedor](http://msdn.microsoft.com/library/windowsazure/dd179468.aspx) y también [referencia de API de REST de servicios de Windows Azure Storage](http://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
   
  **Lección siguiente:**  
   
- [Lección 2. Crear una directiva en el contenedor y generar una firma de acceso compartido &#40;SAS&#41; clave](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
+ [Lección 2: Crear una directiva en el contenedor y generar una firma de acceso compartido &#40;SAS&#41; clave](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
   
   

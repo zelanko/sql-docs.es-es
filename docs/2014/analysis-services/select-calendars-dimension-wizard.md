@@ -1,5 +1,5 @@
 ---
-title: Seleccionar calendarios (Asistente para dimensiones) | Documentos de Microsoft
+title: Seleccionar calendarios (Asistente para dimensiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.serverSpecialCalendars.f1
 ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6796c7c3064adc65982b1d5aaec005249e224cae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7166b39dd5cc9d8a2a4cbb6da1c8f44d49181d46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245595"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Seleccionar calendarios (Asistente para dimensiones)
   Use la página **Seleccionar calendarios** para crear jerarquías adicionales que representan calendarios fiscales, de generación de informes, de fabricación o International Standards Organization (ISO) 8601 para la dimensión de tiempo.  
@@ -87,7 +87,7 @@ ms.locfileid: "36109286"
  Seleccione esta opción para crear una jerarquía de tiempo basada en el calendario ISO 8601.  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente de dimensiones (Ayuda F1)](dimension-wizard-f1-help.md)   
+ [Ayuda de F1 del Asistente para dimensiones](dimension-wizard-f1-help.md)   
  [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

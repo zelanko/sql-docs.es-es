@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexión de SMTP | Documentos de Microsoft
+title: Editor del Administrador de conexiones SMTP | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.smtpconnection.f1
 helpviewer_keywords:
 - SMTP Connection Manager Editor
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d2215a062328e08c5c7ebc4f1e59b9ade164053b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c67233452d294a6bc0f6f106a59678827ef17b3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235215"
 ---
 # <a name="smtp-connection-manager-editor"></a>Editor del administrador de conexiones SMTP
   Use el cuadro de diálogo **Editor del administrador de conexiones SMTP** para especificar un servidor de protocolo simple de transferencia de correo (SMTP).  
@@ -47,7 +47,7 @@ ms.locfileid: "36202991"
 >  El administrador de conexiones SMTP solo es compatible con la autenticación anónima y la autenticación de Windows. No admite la autenticación básica.  
   
 > [!NOTE]  
->  Si utiliza Microsoft Exchange como servidor SMTP, puede que necesite establecer **utilizar autenticación de Windows** a `True`. Es posible que los servidores Exchange estén configurados para no permitir conexiones SMTP no autenticadas.  
+>  Cuando se usa Microsoft Exchange como servidor SMTP, es posible que deba establecer **utilizar autenticación de Windows** a `True`. Es posible que los servidores Exchange estén configurados para no permitir conexiones SMTP no autenticadas.  
   
  **Habilitar capa de sockets seguros (SSL)**  
  Seleccione esta opción para cifrar comunicación mediante Capa de sockets seguros (SSL) al enviar mensajes de correo electrónico.  

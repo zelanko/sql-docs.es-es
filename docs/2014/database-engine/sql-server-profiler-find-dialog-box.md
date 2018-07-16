@@ -1,5 +1,5 @@
 ---
-title: Analizador de SQL Server - cuadro de diálogo Buscar | Documentos de Microsoft
+title: SQL Server Profiler - cuadro de diálogo Buscar | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.find.f1
 helpviewer_keywords:
 - Find dialog box
 ms.assetid: dfaeec04-93d3-4214-9fc1-38b80179b36b
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 12c2fce80877fd14412558b673fa94662b712dba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 311d248acae2b64d106c57f5c7f92024c4174e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199995"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>Buscar (cuadro de diálogo de SQL Server Profiler)
   Utilice el cuadro de diálogo **Buscar** para buscar un seguimiento para palabras o caracteres específicos. Para cancelar la búsqueda en curso, presione ESC.  
@@ -50,8 +50,8 @@ ms.locfileid: "36204657"
  Realiza una búsqueda hacia atrás en el seguimiento, para buscar el ejemplo anterior de los caracteres del cuadro **Buscar** .  
   
 ## <a name="see-also"></a>Vea también  
- [Buscar un valor o una columna de datos durante una traza &#40;analizador de SQL Server&#41;](../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)   
- [Crear un seguimiento &#40;analizador de SQL Server&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Buscar un valor o una columna de datos durante una traza &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)   
+ [Crear un seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

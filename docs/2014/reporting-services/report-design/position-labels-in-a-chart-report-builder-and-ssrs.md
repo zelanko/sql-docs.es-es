@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4b7782cb836f437aa61064d64d084859dedf97ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 0eabbd703d04e5aca74b8b94e449d5d8fd18ae97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262001"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Colocar etiquetas en un gráfico (Generador de informes y SSRS)
   Dado que cada tipo de gráfico tiene una forma diferente, las etiquetas de punto de datos se colocan en una ubicación óptima para no interferir en el gráfico. La posición predeterminada de las etiquetas depende del tipo de gráfico:  
@@ -66,7 +66,7 @@ ms.locfileid: "36202440"
 6.  Si se trata de un gráfico de embudo, seleccione un valor para la propiedad FunnelLabelStyle. Si se trata de un gráfico piramidal, seleccione un valor para la propiedad PyramidLabelStyle.  
   
     > [!NOTE]  
-    >  Cuando esta propiedad está establecida en un valor `OutsideInColumn`, las etiquetas se representan en una columna vertical. No hay ninguna manera de cambiar la posición de la columna.  
+    >  Cuando esta propiedad se establece en un valor `OutsideInColumn`, las etiquetas se representan en una columna vertical. No hay ninguna manera de cambiar la posición de la columna.  
   
 ### <a name="to-change-the-position-of-point-labels-in-a-bar-chart"></a>Para cambiar la posición de las etiquetas de punto de datos de un gráfico de barras  
   
@@ -99,11 +99,11 @@ ms.locfileid: "36202440"
 6.  Seleccione un valor para la propiedad Position.  
   
 ## <a name="see-also"></a>Vea también  
- [Los gráficos circulares &#40;el generador de informes SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Gráficos de barras &#40;el generador de informes SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
+ [Los gráficos circulares &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Los gráficos de barras &#40;generador de informes y SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Aplicar formato de fecha o de moneda a las etiquetas de los ejes &#40;Generador de informes y SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Las etiquetas de punto de datos de visualización fuera de un gráfico circular &#40;el generador de informes SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Punto de datos para mostrar las etiquetas fuera de un gráfico circular &#40;generador de informes y SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   

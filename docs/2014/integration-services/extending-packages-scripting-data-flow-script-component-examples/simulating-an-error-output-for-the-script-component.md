@@ -19,13 +19,13 @@ ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0c09510a58c691f4db6b12c4613ff68c9642ffa1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9d559e78dda2f7163d4996be5b3720843dc8e98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329835"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>Simular una salida de error para el componente de script
   Aunque no puede configurar directamente una salida como una salida de error en el componente de script para el control automático de filas del error, puede reproducir la funcionalidad de una salida de error integrada mediante la creación de una salida adicional y la utilización de una lógica condicional en su script para dirigir las filas a esta salida cuando corresponda. Puede que desee imitar el comportamiento de una salida de error integrada agregando dos columnas de salida adicionales para recibir el número de error y el identificador de la columna en la que se produjo un error.  
@@ -51,7 +51,7 @@ ms.locfileid: "36106586"
   
 7.  En la página **Columnas de entrada**, seleccione las columnas que quiere procesar en la transformación Script. En este ejemplo se utiliza únicamente la columna CountryRegionName. Las columnas de entrada disponibles que no se seleccionen pasarán simplemente al flujo de datos sin cambios.  
   
-8.  En el **entradas y salidas** página, agregue un nuevo, segunda salida y establecer su `SynchronousInputID` valor para el identificador de la entrada, que es también el valor de la `SynchronousInputID` propiedad de la salida predeterminada. Establezca la propiedad `ExclusionGroup` de ambas salidas en el mismo valor distinto de cero (por ejemplo, 1) para indicar que cada fila se dirigirá únicamente a una de las dos salidas. Asigne un nombre distintivo a la nueva salida de error, como "MyErrorOutput".  
+8.  En el **entradas y salidas** página, agregue una nueva, segunda salida y establecer su `SynchronousInputID` valor para el identificador de la entrada, que es también el valor de la `SynchronousInputID` propiedad de la salida predeterminada. Establezca la propiedad `ExclusionGroup` de ambas salidas en el mismo valor distinto de cero (por ejemplo, 1) para indicar que cada fila se dirigirá únicamente a una de las dos salidas. Asigne un nombre distintivo a la nueva salida de error, como "MyErrorOutput".  
   
 9. Agregue las columnas de salida adicionales a la nueva salida de error para capturar la información de error deseada que puede incluir el código de error, el identificador de la columna en la que se produjo el error y, posiblemente, la descripción del error. En este ejemplo se crean las nuevas columnas, ErrorColumn y ErrorMessage. Si está detectando los errores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] predefinidos en su propia implementación, asegúrese de agregar una columna ErrorCode para el número de error.  
   
@@ -104,7 +104,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 }  
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services  **<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Control de errores en los datos](../data-flow/error-handling-in-data.md)   

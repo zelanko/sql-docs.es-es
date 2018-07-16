@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookuptrans.f1
 helpviewer_keywords:
@@ -23,13 +23,13 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 546acdba2996b4264e946b052af18cf6574868a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b98ce551e69f64a515f58d2b4a0588dabc742ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225835"
 ---
 # <a name="term-lookup-transformation"></a>Búsqueda de términos, transformación
   La transformación Búsqueda de términos compara los términos extraídos del texto en una columna de entrada de transformación con los términos de una tabla de referencia. A continuación, cuenta la cantidad de veces que un término aparece en la tabla de búsqueda en el conjunto de datos de entrada y escribe el recuento junto con el término de la tabla de referencia en columnas en la salida de transformación. Esta transformación resulta útil para crear una lista personalizada de palabras basada en el texto de entrada, que incluye estadísticas de frecuencia de aparición de palabras.  
@@ -98,7 +98,7 @@ ms.locfileid: "36107916"
   
  Para obtener más información sobre las propiedades que se pueden establecer en el cuadro de diálogo **Editor de transformación Búsqueda de términos** , haga clic en uno de los siguientes temas:  
   
--   [Editor de transformación Búsqueda de términos &#40;pestaña de la tabla de referencia&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor de transformación Búsqueda de términos &#40;pestaña tabla de referencia&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Editor de transformación Búsqueda de términos &#40;pestaña búsqueda de términos&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   

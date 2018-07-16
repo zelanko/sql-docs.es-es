@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: baceb951040c86be5b42e8d881deb51d84df3849
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5a8bfc88933351eb818b1412c249475fa34222c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294235"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Imprimir un informe (Generador de informes y SSRS)
   Después de guardar un informe en un servidor de informes, puede ver e imprimir el informe desde un explorador, el Administrador de informes o cualquier aplicación que use para ver un informe exportado. Antes de guardar un informe, puede imprimirlo desde su vista previa.  
@@ -101,7 +101,7 @@ ms.locfileid: "36111089"
   
 ## <a name="see-also"></a>Vea también  
  [Imprimir informes &#40;Generador de informes y SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
- [Exportar informes &#40;el generador de informes SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [Exportar informes &#40;generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Propiedades del informe (cuadro de diálogo), Configurar página &#40;Generador de informes&#41;](../report-properties-dialog-box-page-setup-report-builder.md)   
  [Vista Diseño del informe &#40;generador de informes&#41;](report-design-view-report-builder.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Conversiones de tipos de datos y la anotación (SQLXML 4.0) de SQL: DataType | Documentos de Microsoft'
+title: 'Conversiones de tipos de datos y las anotaciones (SQLXML 4.0) de SQL: DataType | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb04ef325a598382e014257dafdc979a47c05eff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 095df15d5a917b54e1a518445f49a7ab1f351378
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297945"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Conversión de tipos de datos y la anotación sql:datatype (SQLXML 4.0)
   En un esquema XSD, el atributo `xsd:type` especifica el tipo de datos XSD de un elemento o atributo. Cuando se usa un esquema XSD para extraer datos de la base de datos, el tipo de datos especificado se usa para dar formato a los datos.  
@@ -39,7 +39,7 @@ ms.locfileid: "36108553"
  Además de especificar un tipo XSD en un esquema, también puede especificar un tipo de datos de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando la anotación `sql:datatype`. Los atributos `xsd:type` y `sql:datatype` controlan la asignación entre los tipos de datos XSD y los tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="xsdtype-attribute"></a>Atributo xsd:type  
- Puede usar el atributo `xsd:type` para especificar el tipo de datos XML de un atributo o elemento que se asigna a una columna. `xsd:type` afecta al documento que se devuelve del servidor y también a la consulta XPath que se ejecuta. Cuando una consulta XPath se ejecuta en un esquema de asignación que contiene el atributo `xsd:type`, XPath usa el tipo de datos especificado al procesar la consulta. Para obtener más información acerca de cómo usa XPath `xsd:type`, consulte [asignación de tipos de datos de XSD a tipos de datos de XPath &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
+ Puede usar el atributo `xsd:type` para especificar el tipo de datos XML de un atributo o elemento que se asigna a una columna. `xsd:type` afecta al documento que se devuelve del servidor y también a la consulta XPath que se ejecuta. Cuando una consulta XPath se ejecuta en un esquema de asignación que contiene el atributo `xsd:type`, XPath usa el tipo de datos especificado al procesar la consulta. Para obtener más información sobre el uso XPath `xsd:type`, consulte [asignación de tipos de datos XSD a tipos de datos XPath &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
   
  En un documento devuelto, todos los tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se convierten en representaciones de cadena. Algunos tipos de datos requieren conversiones adicionales. En la tabla siguiente se indican las conversiones que se usan para distintos valores de `xsd:type`.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36108553"
   
 -   Especifica `xsd:type=time` en el **ShipDate** atributo, la parte de hora del valor devuelto por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el **ShipDate** se muestra el atributo.  
   
--   No especifique `xsd:type` en el **DueDate** de atributo, el mismo valor que se devuelve por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se muestra.  
+-   No especifique `xsd:type` en el **DueDate** atributo, el mismo valor que devuelve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se muestra.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta de XPath de ejemplo con respecto al esquema  
   

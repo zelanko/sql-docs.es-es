@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - '| (bitwise inclusive OR)'
 - bitwise inclusive OR (|)
@@ -16,13 +16,13 @@ ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5e3b514636551083aa8e6576ec1e4115f574ec6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3cef0a13b840d7e209e12f3e68a0ce085fe7364
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283561"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (OR inclusivo bit a bit) (expresión de SSIS)
   Lleva a cabo una operación OR bit a bit entre dos valores enteros. Compara cada bit del primer operando con el bit correspondiente del segundo operando. Si cualquiera de los bits es 1, el bit de resultado correspondiente se establece en 1. De lo contrario, se establece en cero (0).  
@@ -99,7 +99,7 @@ ReorderPoint | SafetyStockLevel
 ## <a name="see-also"></a>Vea también  
  [&#124;&#124;&#40;OR lógico&#41; &#40;expresión de SSIS&#41;](logical-or-ssis-expression.md)   
  [^ &#40;OR exclusivo bit a bit&#41; &#40;expresión de SSIS&#41;](bitwise-exclusive-or-ssis-expression.md)   
- [Prioridad y asociatividad](operator-precedence-and-associativity.md)   
+ [Precedencia y asociatividad](operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)  
   
   

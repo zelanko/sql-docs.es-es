@@ -1,5 +1,5 @@
 ---
-title: Editor de la tarea Control CDC | Documentos de Microsoft
+title: Editor de la tarea Control CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 caps.latest.revision: 9
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 498c46942b397f48fbaded6d4e98cb088d3c2dd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f6ce35e58b34e44690de9992f5e0296edbe4589f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256961"
 ---
 # <a name="cdc-control-task-editor"></a>Editor de la tarea Control de CDC
   Use el cuadro de diálogo **Editor de la tarea Control CDC** para configurar la tarea Control CDC. La configuración de la tarea Control CDC incluye la definición de una conexión a la base de datos CDC, la operación de tarea CDC y la información sobre la administración de estados.  

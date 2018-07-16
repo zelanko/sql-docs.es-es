@@ -1,5 +1,5 @@
 ---
-title: Convenciones XML de ASSL | Documentos de Microsoft
+title: Convenciones XML de ASSL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - inherited defaults [Analysis Services Scripting Language]
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0411903c72aba9b0122beb4c0e46e9f172f4f4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d248cc39e20869752deb67c0c84c8b0aca6aafd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279901"
 ---
 # <a name="assl-xml-conventions"></a>Convenciones XML de ASSL
   Analysis Services Scripting Language (ASSL) representa la jerarquía de objetos como un conjunto de tipos de elemento, cada uno de los cuales define los elementos secundarios que puede contener.  
@@ -43,7 +43,7 @@ ms.locfileid: "36203061"
   
 -   Todos los objetos y las propiedades se representan como elementos, salvo los atributos XML estándar como "xml:lang".  
   
--   Nombres de elementos y valores de enumeración siguen la convención de nomenclatura de Microsoft .NET Framework de Pascal de mayúsculas y minúsculas sin caracteres de subrayado.  
+-   Nombres de elementos y valores de enumeración siguen la convención de nomenclatura de Microsoft .NET Framework de Pascal las mayúsculas y minúsculas sin caracteres de subrayado.  
   
 -   Se conserva el uso de mayúsculas o minúsculas de todos los valores. Los valores de las enumeraciones también distinguen entre mayúsculas y minúsculas.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36203061"
   
 -   Se conserva el espacio en blanco interno.  
   
- Las propiedades `Name` e `ID` tienen limitaciones especiales respecto a los caracteres válidos en los elementos de cadena. Para obtener información adicional acerca de `Name` y `ID` convenciones, vea [ASSL y características de objetos](assl-objects-and-object-characteristics.md).  
+ Las propiedades `Name` e `ID` tienen limitaciones especiales respecto a los caracteres válidos en los elementos de cadena. Para obtener más información acerca de `Name` y `ID` convenciones, vea [ASSL y características de objetos](assl-objects-and-object-characteristics.md).  
   
  `DateTime`  
  Un `DateTime` estructura a partir de .NET Framework. Un valor `DateTime` no puede ser NULL. La fecha más antigua que admite el tipo de datos `DataTime` es el 1 de enero de 1601, disponible para los programadores como `DateTime.MinValue`. La fecha más antigua admitida indica que falta un valor `DateTime`.  
@@ -183,6 +183,6 @@ ms.locfileid: "36203061"
   
  `</Dimension>`  
   
- Para obtener más información sobre los valores predeterminados heredados, consulte [ASSL y características de objetos](assl-objects-and-object-characteristics.md).  
+ Para obtener más información sobre los valores predeterminados heredados, vea [ASSL y características de objetos](assl-objects-and-object-characteristics.md).  
   
   

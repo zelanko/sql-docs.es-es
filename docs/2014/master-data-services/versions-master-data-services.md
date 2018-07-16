@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
 - versions [Master Data Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2777ef1871da042c18459ac33c93e71844b89838
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 40d1a247b8d6efeb39b0c0f311a014ef76b55db4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217685"
 ---
 # <a name="versions-master-data-services"></a>Versiones (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede crear varias versiones de los datos maestros dentro de un modelo. Las versiones se pueden bloquear mientras se validan los datos y confirmarse una vez validados los datos. Las versiones confirmadas forman un registro auditable de cambios. Cada versión que cree contendrá todos los miembros, valores de atributo, miembros de jerarquía, relaciones de jerarquía y colecciones del modelo.  

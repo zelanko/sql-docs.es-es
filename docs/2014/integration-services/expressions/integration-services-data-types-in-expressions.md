@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
@@ -16,13 +16,13 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a06b8864c458817185223a9ee45c3dd25c4a2d33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cd26c9c3d81ffd308ca013915f924f9cf88d7e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237145"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de datos de Integration Services en las expresiones
   El evaluador de expresiones utiliza tipos de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Cuando los datos entran por primera vez en un flujo de datos de un paquete [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , el motor de flujo de datos convierte todos los datos de columna a un tipo de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y los datos de columna ya utilizados por una expresión a un tipo de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Las expresiones usadas en las transformaciones División condicional y Columna derivada pueden hacer referencia a columnas, ya que forman parte de un flujo de datos que incluye datos de columna.  
@@ -63,7 +63,7 @@ ms.locfileid: "36200589"
   
 -   [&#62;&#40;Mayor&#41; &#40;expresión de SSIS&#41;](greater-than-ssis-expression.md)  
   
--   [&#60;&#40;Inferior a&#41; &#40;expresión de SSIS&#41;](less-than-ssis-expression.md)  
+-   [&#60;&#40;Menor&#41; &#40;expresión de SSIS&#41;](less-than-ssis-expression.md)  
   
 -   [&#62;= &#40;Mayor o igual que&#41; &#40;expresión de SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36200589"
  Los resultados de muchas operaciones y funciones tienen tipos de datos predeterminados. Pueden ser el tipo de datos del argumento o el tipo de datos al que el evaluador de expresiones convierte el resultado. Por ejemplo, el resultado de un operador lógico OR (||) es siempre un valor booleano, el resultado de la función ABS es el tipo de datos numérico del argumento y el resultado de la multiplicación es el tipo de datos numérico más pequeño que puede contener el resultado sin perder información. Para más información sobre los tipos de datos de los resultados, vea [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Utilizar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)  
+ [Usar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
   

@@ -1,5 +1,5 @@
 ---
-title: Utilizar sp_rename para cambiar el nombre de índice duplicado | Documentos de Microsoft
+title: Utilice sp_rename para cambiar el nombre de índice duplicados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - table names [SQL Server]
 - duplicate table names
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - duplicate index names
 ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b47cb1000c4b427f8780c8a3f3ba57ef73fef9bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 522fcd712882d031a5febe4766946a31d5696859
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232515"
 ---
 # <a name="use-sprename-to-rename-duplicate-index-name"></a>Utilizar sp_rename para cambiar el nombre de índice duplicado
   El Asesor de actualizaciones ha detectado nombres de índice de vista o tabla duplicados. Cambie los nombres de los índices o quite los duplicados antes de actualizar.  

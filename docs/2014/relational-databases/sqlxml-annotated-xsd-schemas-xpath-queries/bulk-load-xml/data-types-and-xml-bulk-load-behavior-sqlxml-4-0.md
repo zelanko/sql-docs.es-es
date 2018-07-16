@@ -1,5 +1,5 @@
 ---
-title: Tipos de datos y XML de forma masiva el comportamiento de carga (SQLXML 4.0) | Documentos de Microsoft
+title: Tipos de datos y XML (SQLXML 4.0) del comportamiento de carga de forma masiva | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML Bulk Load [SQLXML], data types
 ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 752dca45eb12e4148ab407b578d0f4161444ece9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ce59362d28c4d65e32834fd965cf710f49edb501
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274681"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>Tipos de datos y comportamiento de la carga masiva XML (SQLXML 4.0)
   Generalmente se omiten los tipos de datos que se especifican en el esquema de asignación (XSD o tipo XDR y `sql:datatype`), excepto en los casos siguientes:  
@@ -33,7 +33,7 @@ ms.locfileid: "36107594"
   
 -   Si el tipo es `dateTime` o `time`, debe especificar `sql:datatype` porque la carga masiva XML realiza la conversión de datos antes de enviarlos a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Cuando la carga masiva en una columna de `uniqueidentifier` escriba [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y el valor XSD es un GUID que incluye llaves ({y}), se debe especificar **SQL: DataType = "uniqueidentifier"** para quitar las llaves antes de que el valor es inserta en la columna. Si no se especifica `sql:datatype`, el valor se envía con las llaves y se produce un error en la inserción.  
+-   Cuando se carga masiva en una columna de `uniqueidentifier` escriba [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y el valor XSD es un GUID que incluye llaves ({y}), se debe especificar **SQL: DataType = "uniqueidentifier"** para quitar las llaves antes de que el valor es Insertar en la columna. Si no se especifica `sql:datatype`, el valor se envía con las llaves y se produce un error en la inserción.  
   
  Para obtener más información acerca de `sql:datatype`, consulte [conversiones de tipos de datos y la anotación SQL: DataType &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   

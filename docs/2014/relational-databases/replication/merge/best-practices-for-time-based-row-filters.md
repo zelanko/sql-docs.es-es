@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 718615cbe81c5238d6d16cff1806d14a019920e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8dd38a60a64738535d65931d40aac5182e331e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331345"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Prácticas recomendadas para filtros de fila basados en el tiempo
   Los usuarios de aplicaciones requieren con frecuencia un subconjunto de datos de una tabla basado en el tiempo. Por ejemplo, un vendedor puede requerir datos para pedidos de la semana pasada o un programador de eventos puede requerir datos para eventos de la semana próxima. En muchos casos, las aplicaciones usan consultas que contienen la función `GETDATE()` para llevar esto a cabo. Considere la siguiente instrucción de filtro de fila:  
@@ -30,7 +30,7 @@ ms.locfileid: "36199117"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- Con un filtro de este tipo, se suele asumir que siempre ocurren dos cosas cuando se ejecuta el agente de mezcla: las filas que cumplen este filtro se replican en los suscriptores y las filas que no lo cumplen se borran en los suscriptores. (Para obtener más información acerca del filtrado con `HOST_NAME()`, consulte [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).) Sin embargo, la replicación de mezcla solo replica y borra los datos que han cambiado desde la última sincronización, independientemente de cómo defina un filtro de fila para esos datos.  
+ Con un filtro de este tipo, se suele asumir que siempre ocurren dos cosas cuando se ejecuta el agente de mezcla: las filas que cumplen este filtro se replican en los suscriptores y las filas que no lo cumplen se borran en los suscriptores. (Para obtener más información sobre cómo filtrar con `HOST_NAME()`, consulte [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).) Sin embargo, la replicación de mezcla solo replica y borra los datos que han cambiado desde la última sincronización, independientemente de cómo defina un filtro de fila para esos datos.  
   
  Para que la replicación de mezcla procese una fila, los datos de la fila deben cumplir el filtro de fila y haber cambiado desde la última sincronización. En el caso de la tabla **SalesOrderHeader** , se incluye **OrderDate** cuando se inserta una fila. Las filas se replican en el suscriptor como se espera porque la inserción es un cambio en los datos. Sin embargo, si hay filas en el suscriptor que ya no cumplen el filtro (son para pedidos con más de siete días de antigüedad), no se quitan del suscriptor a menos que se actualicen por alguna otra razón.  
   
@@ -59,7 +59,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 -   Cree un trabajo del Agente SQL Server (o un trabajo programado con otro mecanismo) que actualice la columna antes de que se ejecute el agente de mezcla según esté programado.  
   
- Este enfoque soluciona los inconvenientes del uso `GETDATE()` u otro método basado en tiempo y evita el problema de tener que determinar cuando se evalúan los filtros para las particiones. Considere el siguiente ejemplo de una tabla **Events** :  
+ Este enfoque soluciona los inconvenientes del uso `GETDATE()` u otro método basado en tiempo y evita el problema de tener que determinar cuándo se evalúan los filtros para las particiones. Considere el siguiente ejemplo de una tabla **Events** :  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replicar**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  

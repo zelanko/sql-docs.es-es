@@ -1,5 +1,5 @@
 ---
-title: Elemento DiscretizationBucketCount (ASSL) | Documentos de Microsoft
+title: Elemento DiscretizationBucketCount (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DiscretizationBucketCount element
 ms.assetid: 551a73ae-59e1-4079-a2d9-988df96b5e07
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3609dcc1a5a926e4b9ecc46736a90d6620ec068
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0309610c503a229c698cc3d959eae10a5acbca06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233735"
 ---
 # <a name="discretizationbucketcount-element-assl"></a>Elemento DiscretizationBucketCount (ASSL)
   Contiene el número de depósitos en los que discretizar.  

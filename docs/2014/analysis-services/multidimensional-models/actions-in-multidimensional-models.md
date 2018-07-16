@@ -1,5 +1,5 @@
 ---
-title: Acciones en modelos multidimensionales | Documentos de Microsoft
+title: Acciones en modelos multidimensionales | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services], creating
 - report actions [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: adf4fe01f2bf85bf4cf13e828f62eced3696a4ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6576d805e7352133bffb97ad4612cc5114764ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196545"
 ---
 # <a name="actions-in-multidimensional-models"></a>Acciones en modelos multidimensionales
   Una acción es una operación iniciada por el usuario final en un cubo seleccionado o en una parte de un cubo. La operación puede iniciar una aplicación con el elemento seleccionado como parámetro o recuperar información acerca del elemento seleccionado. Para más información sobre las acciones, vea [Acciones &#40;Analysis Services - Datos multidimensionales&#41;](actions-analysis-services-multidimensional-data.md).  
@@ -80,7 +80,7 @@ ms.locfileid: "36111453"
 |**Aplicación**|Describe la aplicación de la acción.|  
 |**Descripción**|Describe la acción.|  
 |**Caption**|Proporciona un título que se muestra para la acción. Si el título es MDX, especifique `True` para **título es MDX**.|  
-|**El título es MDX**|Especifique `True` si el título es MDX o `False` si no lo está.|  
+|**El título es MDX**|Especificar `True` si el título es MDX o `False` si no lo está.|  
   
 > [!NOTE]  
 >  Debe usar Lenguaje de scripting de Analysis Services (ASSL) u Objetos de administración de análisis (AMO) para definir tipos de acciones de la línea de comandos y HTML. Para más información, vea [Elemento Action &#40;ASSL&#41;](../scripting/objects/action-element-assl.md), [Elemento Type &#40;Action&#41; &#40;ASSL&#41;](../scripting/properties/type-element-action-assl.md) y [Programar objetos avanzados OLAP en AMO](analysis-management-objects/programming-amo-olap-advanced-objects.md).  

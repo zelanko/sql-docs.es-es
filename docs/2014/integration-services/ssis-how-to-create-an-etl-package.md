@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de SSIS: Crear un paquete ETL sencillo | Documentos de Microsoft'
+title: 'Tutorial SSIS: Crear un paquete ETL sencillo | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, tutorials
 - packages [Integration Services], tutorials
@@ -20,16 +20,16 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9d5a3522e857f7cb053f181a46e17cb44288a850
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b2e8b7f78e7dc64bc3649270e279b740b041abb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263161"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>Tutorial de SSIS: Crear un paquete ETL sencillo
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) es una plataforma para compilar soluciones de integración de datos, incluidos los paquetes de extracción, transformación y carga (ETL) para almacenamiento de datos de alto rendimiento. SSIS incluye herramientas gráficas y asistentes para generar y depurar paquetes; tareas para realizar funciones de flujo de datos tales como operaciones de FTP; ejecución de instrucciones SQL y envío de mensajes de correo electrónico; orígenes y destinos de datos para extraer y cargar datos; transformaciones para limpiar, agregar, combinar y copiar datos; un servicio de administración, el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para administrar la ejecución y almacenamiento de paquetes; e interfaces de programación de aplicaciones (API) para programar el modelo de objetos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) es una plataforma para compilar soluciones de integración de datos, incluidos los paquetes de extracción, transformación y carga (ETL) para el almacenamiento de datos de alto rendimiento. SSIS incluye herramientas gráficas y asistentes para generar y depurar paquetes; tareas para realizar funciones de flujo de datos tales como operaciones de FTP; ejecución de instrucciones SQL y envío de mensajes de correo electrónico; orígenes y destinos de datos para extraer y cargar datos; transformaciones para limpiar, agregar, combinar y copiar datos; un servicio de administración, el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para administrar la ejecución y almacenamiento de paquetes; e interfaces de programación de aplicaciones (API) para programar el modelo de objetos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  En este tutorial, aprenderá a utilizar el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] para crear un paquete de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sencillo. El paquete que cree toma los datos de un archivo plano, formatea de nuevo lo datos y luego inserta dichos datos en una tabla de hechos. En las lecciones siguientes, el paquete se expande para mostrar la creación de bucles, configuraciones de paquete, registro y flujo de errores.  
   
@@ -68,10 +68,10 @@ ms.locfileid: "36111387"
  [Lección 3: Agregar registro](lesson-3-add-logging-with-ssis.md)  
  En esta lección, expandirá el paquete que creó en la lección 2 para beneficiarse de las nuevas características de registro.  
   
- [Lección 4: Agregar redirección de flujo de Error](lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [Lección 4: Agregar redireccionamiento de flujo de errores](lesson-4-add-error-flow-redirection-with-ssis.md)  
  En esta lección, expandirá el paquete que creó en la lección 3 para beneficiarse de las nuevas configuraciones de salida de error.  
   
- [Lección 5: Agregar configuraciones de paquetes para el modelo de implementación de paquetes](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [Lección 5: Agregar configuraciones de paquete para el modelo de implementación de paquetes](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
  En esta lección, expandirá el paquete que creó en la lección 4 para beneficiarse de las nuevas opciones de configuración del paquete.  
   
  [Lección 6: Usar parámetros con el modelo de implementación de proyectos](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

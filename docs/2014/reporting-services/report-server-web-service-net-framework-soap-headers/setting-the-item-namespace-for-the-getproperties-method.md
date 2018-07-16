@@ -16,15 +16,15 @@ helpviewer_keywords:
 - GetProperties method
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9cfe424d0cc39cb72c5d08215131a4cf540f2ed2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3319ab4b491b83693cce795d24ee226ccf2d3288
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226985"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>Establecer el espacio de nombres de elemento para el método GetProperties
   Puede utilizar el encabezado SOAP <xref:ReportService2010.ItemNamespaceHeader> en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para recuperar propiedades de elementos basadas en dos identificadores de elemento diferentes: la ruta de acceso completa o el id. del elemento.  

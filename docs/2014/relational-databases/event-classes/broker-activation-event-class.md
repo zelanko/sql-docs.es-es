@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Activation event class
 ms.assetid: 481d5b13-657e-4b51-8783-ccac3595bd45
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8449de73e5cb4f45d954774fd8a6b49d63d0d7e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f95424242f62c946dc5d0787e54c8095e2f71a1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250205"
 ---
 # <a name="brokeractivation-event-class"></a>Broker:Activation, clase de eventos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Activation** cuando un monitor de cola inicia un procedimiento almacenado de activación, envía una notificación QUEUE_ACTIVATION o cuando se cierra un procedimiento almacenado de activación iniciado por un monitor de cola.  
@@ -36,7 +36,7 @@ ms.locfileid: "36204185"
 |**DatabaseID**|`int`|Identificador de la base de datos especificada mediante la instrucción USE *database* o identificador de la base de datos predeterminada si no se ha emitido la instrucción USE *database*para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**EventClass**|`int`|Tipo de clase de eventos capturado. Es siempre **163** para **Broker:Activation**.|27|no|  
 |**EventSequence**|`int`|Número de secuencia de este evento.|51|no|  
-|**EventSubClass**|`nvarchar`|Acción específica de la que este evento informa. Los valores pueden ser los siguientes:<br /><br /> **iniciar**: <br />                [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha iniciado un procedimiento almacenado de activación.<br /><br /> **finalizó**: la activación de procedimiento almacenado ha terminado normalmente.<br /><br /> **se anuló**: la activación de procedimiento almacenado ha terminado con un error.|21|no|  
+|**EventSubClass**|`nvarchar`|Acción específica de la que este evento informa. Los valores pueden ser los siguientes:<br /><br /> **iniciar**: <br />                [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha iniciado un procedimiento almacenado de activación.<br /><br /> **finalizó**: la activación de procedimiento almacenado ha terminado con normalidad.<br /><br /> **anulado**: la activación de procedimiento almacenado ha terminado con un error.|21|no|  
 |**HostName**|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IntegerData**|`int`|Número de tareas activas en esta cola.|25|no|  
 |**IsSystem**|`int`|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|no|  

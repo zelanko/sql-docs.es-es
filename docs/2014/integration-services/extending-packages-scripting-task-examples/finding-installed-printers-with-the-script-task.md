@@ -25,13 +25,13 @@ ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 58795723cbe892fe607bdc768dec4fca6b7ae7ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd26b3cdda5ae3e851c01824f62d91a763557afd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246945"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>Buscar impresoras instaladas con la tarea Script
   Los datos que se transforman con los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tienen a menudo un informe impreso como último destino. El `System.Drawing.Printing` espacio de nombres en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona clases para trabajar con impresoras.  
@@ -50,7 +50,7 @@ ms.locfileid: "36108379"
   
 3.  Agregue una referencia al espacio de nombres **System.Drawing** en el proyecto de script.  
   
-4.  En el código, utilice `Imports` instrucciones para importar el **System.Collections** y `System.Drawing.Printing` los espacios de nombres.  
+4.  En el código, utilice `Imports` instrucciones para importar el **System.Collections** y `System.Drawing.Printing` espacios de nombres.  
   
 ### <a name="code"></a>código  
   
@@ -146,7 +146,7 @@ public void Main()
         }  
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services  **<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplos de tarea Script](../extending-packages-scripting-task-examples/script-task-examples.md)  

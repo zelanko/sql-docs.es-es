@@ -1,5 +1,5 @@
 ---
-title: Aplicar funciones de predicción a un modelo | Documentos de Microsoft
+title: Aplicar funciones de predicción a un modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Prediction [Analysis Services], selecting mining models
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: abd75a7a7be7cacc0395af11e02b5dc55828e31d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a512c4e9f288c0e776b7ac6de91604da39d9f4d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270021"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Aplicar funciones de predicción a un modelo
   Para crear una consulta de predicción, antes debe seleccionar el modelo de minería de datos en el que se basará la consulta. Puede seleccionar cualquier modelo de minería de datos que esté incluido en el proyecto actual.  
@@ -72,7 +72,7 @@ ms.locfileid: "36202396"
     |||  
     |-|-|  
     |**\<nombre del modelo >**|Seleccione esta opción para incluir los valores del modelo de minería de datos en la salida. Solo puede agregar nuevas columnas de predicción.<br /><br /> Cuando se agrega una columna del modelo, el resultado devuelto es la lista de valores no distintivos de esa columna.<br /><br /> Las columnas que agrega con esta opción se incluyen en la parte SELECT de la instrucción DMX resultante.|  
-    |**Prediction Function**|Seleccione esta opción para examinar una lista de funciones de predicción.<br /><br /> Los valores o funciones que seleccione se agregan a la parte SELECT de la instrucción DMX resultante.<br /><br /> La lista de funciones de predicción no se filtra ni se restringe por el tipo de modelo que ha seleccionado. Por consiguiente, si tiene alguna duda sobre si la función se admite para el tipo actual del modelo, basta con agregar la función a la lista y verla si hay un error.<br /><br /> Elementos de lista que están precedidos por $ (como $AdjustedProbability) representan las columnas de la tabla anidada que se genera cuando se utiliza la función `PredictHistogram`. Estos son los métodos abreviados que puede usar para devolver una columna y no una tabla anidada.|  
+    |**Prediction Function**|Seleccione esta opción para examinar una lista de funciones de predicción.<br /><br /> Los valores o funciones que seleccione se agregan a la parte SELECT de la instrucción DMX resultante.<br /><br /> La lista de funciones de predicción no se filtra ni se restringe por el tipo de modelo que ha seleccionado. Por consiguiente, si tiene alguna duda sobre si la función se admite para el tipo actual del modelo, basta con agregar la función a la lista y verla si hay un error.<br /><br /> Los elementos de lista que van precedidos por $ (como $AdjustedProbability) representan las columnas de la tabla anidada que se genera cuando se utiliza la función, `PredictHistogram`. Estos son los métodos abreviados que puede usar para devolver una columna y no una tabla anidada.|  
     |**Expresión personalizada**|Seleccione esta opción para escribir una expresión personalizada y asignar después un alias a la salida.<br /><br /> La expresión personalizada se agrega a la parte SELECT de la consulta de predicción resultante DMX.<br /><br /> Esta opción es útil si desea agregar el texto de la salida a cada fila, llamar a funciones de VB o llamar a procedimientos almacenados personalizados.<br /><br /> Para más información sobre cómo usar funciones de Excel y VBA desde DMX, vea [Funciones de VBA en MDX y DAX](/sql/mdx/vba-functions-in-mdx-and-dax).|  
   
 3.  Después de agregar cada función o expresión, cambie a la vista DMX para ver cómo se agrega la función dentro de la instrucción DMX.  

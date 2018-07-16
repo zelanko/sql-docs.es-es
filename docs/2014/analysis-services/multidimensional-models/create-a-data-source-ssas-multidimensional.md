@@ -1,5 +1,5 @@
 ---
-title: Crear un origen de datos (SSAS Multidimensional) | Documentos de Microsoft
+title: Crear un origen de datos (SSAS Multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcedesigner.f1
 - sql12.asvs.sqlserverstudio.impersonationinfo.f1
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 caps.latest.revision: 60
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b4077a7a0df6fe7575a7844a85917c107aacac07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b0275daece83f64726f7b5dd50618d68d7c6e6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310855"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Crear un origen de datos (SSAS multidimensional)
   En un modelo multidimensional de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , un objeto de origen de datos representa una conexión al origen de datos del que va a procesar o importar los datos. Un modelo multidimensional debe contener al menos un objeto de origen de datos, pero puede agregar más para combinar datos de varios almacenamientos de datos. Siga las instrucciones de este tema para crear un objeto de origen de datos para el modelo. Para obtener más información sobre cómo establecer propiedades en este objeto, vea [Establecer propiedades de origen de datos &#40;SSAS multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "36204294"
 >  De manera predeterminada, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] no guarda contraseñas con la cadena de conexión. Si no se guarda la contraseña, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le solicita que la escriba cuando es necesario. Si decide guardar la contraseña, esta se guarda en formato cifrado en la cadena de conexión de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cifra la información de contraseña para los orígenes de datos mediante la clave de cifrado de la base de datos que contiene el origen de datos. Con la información de conexión cifrada, debe usar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cambiar la cuenta de servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o la contraseña, ya que de lo contrario no se puede recuperar la información cifrada. Para más información, consulte [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>Definir la información de suplantación para los objetos de minería de datos  
- Las consultas de minería de datos se pueden ejecutar en el contexto de la cuenta de servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pero también se pueden ejecutar en el contexto del usuario que envía la consulta o en el de un usuario especificado. El contexto en que se ejecute una consulta podría afectar a sus resultados. Para la minería de datos `OPENQUERY` escribir operaciones, puede que desee la consulta de minería de datos para ejecutar en el contexto del usuario actual o en el contexto de un usuario especificado (independientemente del usuario que ejecuta la consulta), en lugar de hacerlo en el contexto de la cuenta de servicio. Así, la consulta se puede ejecutar con credenciales de seguridad limitadas. Si desea que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suplante al usuario actual o a un usuario especificado, seleccione las opciones **Utilizar un nombre de usuario y una contraseña específicos** o **Utilizar las credenciales del usuario actual** .  
+ Las consultas de minería de datos se pueden ejecutar en el contexto de la cuenta de servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pero también se pueden ejecutar en el contexto del usuario que envía la consulta o en el de un usuario especificado. El contexto en que se ejecute una consulta podría afectar a sus resultados. Para la minería de datos `OPENQUERY` escribir operaciones, es posible que desee que la consulta de minería de datos se ejecutara en el contexto del usuario actual o en el contexto de un usuario especificado (independientemente del usuario que ejecuta la consulta) y no en el contexto de la cuenta de servicio. Así, la consulta se puede ejecutar con credenciales de seguridad limitadas. Si desea que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suplante al usuario actual o a un usuario especificado, seleccione las opciones **Utilizar un nombre de usuario y una contraseña específicos** o **Utilizar las credenciales del usuario actual** .  
   
 ##  <a name="bkmk_steps"></a> Crear un origen de datos con el Asistente para orígenes de datos  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36204294"
   
      El proveedor predeterminado para una conexión nueva es el proveedor OLE DB nativo\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Este proveedor se usa para conectarse a una instancia del Motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante OLE DB. Normalmente, para las conexiones con una base de datos relacional de SQL Server, el uso de OLE DB nativo\SQL Server Native Client 11.0 ofrece más velocidad que el uso de proveedores alternativos.  
   
-     También puede elegir un proveedor diferente para acceder a otros orígenes de datos. Para obtener una lista de los proveedores y bases de datos relacionales admitidos por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [orígenes de datos admitidos &#40;SSAS multidimensionales&#41;](supported-data-sources-ssas-multidimensional.md).  
+     También puede elegir un proveedor diferente para acceder a otros orígenes de datos. Para obtener una lista de los proveedores y bases de datos relacionales admitidos por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Data Sources Supported &#40;Multidimensional de SSAS&#41;](supported-data-sources-ssas-multidimensional.md).  
   
 5.  Especifique la información solicitada por el proveedor seleccionado para conectar con el origen de datos subyacente. Si selecciona el proveedor **OLE DB nativo\SQL Server Native Client** , especifique la siguiente información:  
   
@@ -155,7 +155,7 @@ ms.locfileid: "36204294"
  Puede crear más de un objeto de origen de datos para admitir conexiones a orígenes de datos adicionales. Cada origen de datos debe tener columnas que se puedan usar para crear relaciones.  
   
 > [!NOTE]  
->  Si se definen varios orígenes de datos y se consultan los datos de varios orígenes en una sola consulta, por ejemplo, para una dimensión de copo de nieve, debe definir un origen de datos que admita consultas remotas mediante `OpenRowset`. Normalmente, será un origen de datos de Microsoft SQL Server.  
+>  Si se definen varios orígenes de datos y se consultan los datos de varios orígenes en una sola consulta, como en una dimensión de copo de nieve, debe definir un origen de datos que admita consultas remotas mediante `OpenRowset`. Normalmente, será un origen de datos de Microsoft SQL Server.  
   
  Algunos requisitos para usar varios orígenes de datos son los siguientes:  
   

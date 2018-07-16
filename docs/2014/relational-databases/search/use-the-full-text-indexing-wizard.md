@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextindexingwizard.selecttablecolumns.f1
 - sql12.swb.fulltextindexingwizard.welcome.f1
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69b7caacb7d6731731aaae11c18e9f960278136c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5395a6ee63d3fbf4456a3da4e4e19390e042e2b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309525"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar el Asistente para indización de texto completo
   El Asistente para indización de texto completo le guía por una serie de pasos diseñados para ayudarle a crear un índice de texto completo.  
@@ -47,7 +46,7 @@ ms.locfileid: "36204572"
      **Columnas disponibles**  
      Para incluir una columna en el índice, active la casilla situada junto al nombre de columna. Las columnas que no son aptas para la indización de texto completo aparecen en gris con las casillas deshabilitadas.  
   
-     **Idioma del separador de palabras de**  
+     **Idioma para el separador de palabras**  
      Seleccione un idioma en la lista desplegable. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizará esta opción para identificar los separadores de palabras correctos para el índice. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa separadores de palabras para identificar límites de palabras en los datos indexados de texto completo.  
   
      **Columna de tipo**  

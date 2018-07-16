@@ -1,5 +1,5 @@
 ---
-title: Establecer las propiedades de una tarea o contenedor | Documentos de Microsoft
+title: Establecer las propiedades de una tarea o contenedor | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], properties
 ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
 caps.latest.revision: 48
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 08133206f867492f52c5d89d67819d8f928eb8ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4aa8b85c3b5c92b38f50bbfac850d4a69ed2d4c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264901"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>Establecer las propiedades de tareas o contenedores
   Puede establecer la mayoría de las propiedades de tareas y contenedores utilizando la ventana **Propiedades** . Las excepciones son propiedades de colecciones de tareas y propiedades que son demasiado complejas como para establecerse mediante la ventana **Propiedades** . Por ejemplo, no puede configurar el enumerador que usa el contenedor de bucles Foreach en la ventana **Propiedades** . Debe usar un editor de tareas o contenedores para establecer estas propiedades complejas. La mayoría de los editores de tareas y contenedores tienen varios nodos y cada nodo contiene propiedades relacionadas. El nombre del nodo indica el sujeto de las propiedades que contiene el nodo.  

@@ -1,5 +1,5 @@
 ---
-title: Modificar la vista de resultados de seguimiento | Documentos de Microsoft
+title: Modificar la vista de resultados de seguimiento | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5bb647bb704bee1b33eee00c9b13903d48140ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2c1e9c9c2d0041e2e09156e4f33744ea1964812
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302765"
 ---
 # <a name="modify-the-trace-results-view"></a>Modificar la vista de resultados del seguimiento
   En este tema se describe cómo modificar la vista de resultados de seguimiento de una sesión de eventos extendidos en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] realizando las siguientes tareas.  
@@ -121,7 +121,7 @@ ms.locfileid: "36106596"
   
      Si ha agrupado las columnas, al ordenar la columna, solo se ordenarán los datos que contiene el grupo.  
   
-##  <a name="GroupResults"></a> Resultados de grupo  
+##  <a name="GroupResults"></a> Agrupar resultados  
   
 #### <a name="to-group-the-results-by-a-single-column"></a>Para agrupar los resultados por una única columna  
   
@@ -188,7 +188,7 @@ ms.locfileid: "36106596"
   
 7.  Haga clic en **Aceptar**.  
   
-##  <a name="Filter"></a> Resultados del filtro  
+##  <a name="Filter"></a> Filtrar los resultados  
  Puede aplicar filtros para reducir los resultados de seguimiento que se muestran en la ventana de seguimiento. El filtro de visualización incluye un filtro horario y un filtro avanzado. Puede utilizar el filtro horario para filtrar el resultado de seguimiento por la marca de tiempo del evento y utilizar el filtro avanzado para crear condiciones de filtro mediante los campos de evento y las acciones. Hay una relación de AND lógico entre el filtro horario y el filtro avanzado.  
   
 #### <a name="to-create-a-filter"></a>Para crear un filtro  
@@ -233,7 +233,7 @@ ms.locfileid: "36106596"
   
     -   **Detalles**. Utilice esta opción para buscar en todas las columnas (promocionadas y no promocionadas) en la ventana de seguimiento que seleccionó antes de abrir el cuadro de diálogo **Buscar en eventos extendidos** .  
   
-    -   **\<Nombre de la columna de evento >**. Utilice esta opción para buscar en una columna de evento concreta de la lista desplegable.  
+    -   **\<Nombre de columna de evento >**. Utilice esta opción para buscar en una columna de evento concreta de la lista desplegable.  
   
 5.  Utilice las siguientes opciones para especificar cómo desea definir la búsqueda:  
   

@@ -1,5 +1,5 @@
 ---
-title: Secuencias de comandos | Documentos de Microsoft
+title: Secuencias de comandos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - scripts [SMO]
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1bf854648bc4180ca87d004d43002feb3c1baaac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 375a8f90c4864c8f1f3db12c56db1bf0eda3b0a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262283"
 ---
 # <a name="scripting"></a>Scripting
-  El objeto <xref:Microsoft.SqlServer.Management.Smo.Scripter> y sus objetos secundarios o el método `Script` en objetos individuales controlan el scripting en SMO. El <xref:Microsoft.SqlServer.Management.Smo.Scripter> objeto controla la asignación de las relaciones de dependencia para objetos en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  El objeto <xref:Microsoft.SqlServer.Management.Smo.Scripter> y sus objetos secundarios o el método `Script` en objetos individuales controlan el scripting en SMO. El <xref:Microsoft.SqlServer.Management.Smo.Scripter> objeto controla la asignación de relaciones de dependencia para objetos en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  La generación avanzada de script utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.Scripter> y sus objetos secundarios es un proceso de tres fases:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36203144"
   
 3.  Generación de script  
   
- La fase de detección utiliza el objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker>. Dada una lista de URN de objetos, el método <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> devuelve un objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> para los objetos en la lista URN. El valor booleano *fParents* parámetro se utiliza para seleccionar si los elementos primarios o los elementos secundarios del objeto especificado son para su detección. El árbol de dependencia se puede modificar en esta fase.  
+ La fase de detección utiliza el objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker>. Dada una lista de URN de objetos, el método <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> devuelve un objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> para los objetos en la lista URN. El valor booleano *fParents* parámetro se utiliza para seleccionar si los elementos primarios o secundarios del objeto especificado son para su detección. El árbol de dependencia se puede modificar en esta fase.  
   
  En la fase de generación de lista, el árbol se pasa y se devuelve la lista resultante. Esta lista de objetos aparece en orden de scripting y se puede manipular.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36203144"
  En la tercera y última fase, se genera un script con la lista especificada y las opciones de scripting. El resultado se devuelve como un objeto de sistema <xref:System.Collections.Specialized.StringCollection>. En esta fase los nombres de objeto dependientes se extraen a continuación de la colección Elementos del objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> y de propiedades como <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> y <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A>.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
  Este ejemplo de código requiere una instrucción `Imports` para el espacio de nombres System.Collections.Specialized. Inserte esto con las otras instrucciones Imports, antes de cualquier declaración en la aplicación.  
   

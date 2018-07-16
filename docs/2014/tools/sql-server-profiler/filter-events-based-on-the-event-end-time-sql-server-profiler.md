@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event end times [SQL Server]
 - filters [SQL Server], traces
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - traces [SQL Server], events
 ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ae6ba13adfd2cd482a8c52383ae220557f0bcc66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7d319f09716ec35cc0af52414c0f8c76f63a9248
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241825"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>Filtrar eventos basándose en la hora de finalización del evento (SQL Server Profiler)
   En este tema se describe el modo de filtrar eventos de seguimiento basándose en la hora de finalización del evento mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "36200034"
   
 5.  En el menú **Selección de eventos**, haga clic en la columna de datos **Hora de finalización** para iniciar el cuadro de diálogo **Editar filtro** . También puede hacer clic con el botón derecho en el encabezado de la columna y seleccionar **Editar filtro de columna**.  
   
-6.  Expanda **mayor** o **inferior a**y escriba un `datetime`valor en el campo que aparece debajo del operador de comparación.  
+6.  Expanda **mayor** o **menor**y escriba un `datetime`valor del campo que aparece debajo del operador de comparación.  
   
 ## <a name="see-also"></a>Vea también  
  [SQL Server Profiler](sql-server-profiler.md)   

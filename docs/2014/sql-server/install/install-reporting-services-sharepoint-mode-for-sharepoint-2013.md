@@ -1,5 +1,5 @@
 ---
-title: Instalar Reporting Services SharePoint Mode for SharePoint 2013 | Documentos de Microsoft
+title: Instalar Reporting Services SharePoint Mode for SharePoint 2013 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b29d0f45-0068-4c84-bd7e-5b8a9cd1b538
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 4ad7c3338d14bcf75aebc2b178d3064b56cd48db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea3d8ed6c8887a79b37a07ea30487d98872f21b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308975"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Instalar el modo de SharePoint de Reporting Services para SharePoint 2013
   Los procedimientos de este tema le guían por la instalación en un solo servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint. Los pasos incluyen la ejecución del Asistente para la instalación de SQL Server, así como tareas de configuración que usan Administración central de SharePoint. El tema también se puede usar para ver procedimientos individuales para actualizar una instalación existente, como crear una aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -71,7 +71,7 @@ ms.locfileid: "36200858"
  ![Implementación de un solo servidor en el modo SSRS de SharePoint](../../../2014/sql-server/install/media/rs-sharepoint-1server-deployment.gif "Implementación de un solo servidor en el modo SSRS de SharePoint")  
   
 > [!TIP]  
->  Para obtener ejemplos más complejos de implementación, consulte [topologías de implementación para las características de BI de SQL Server en SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
+>  Para obtener ejemplos más complejos de implementación, consulte [Deployment Topologies for SQL Server BI Features in SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
   
 ##  <a name="bkmk_setupaccounts"></a> Cuentas de instalación  
  En esta sección se describen las cuentas y los permisos usados para los principales pasos de implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint.  
@@ -82,7 +82,7 @@ ms.locfileid: "36200858"
   
  **Crear aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  
   
--   Después de instalar y registrar el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , cree una o más aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La “cuenta del servicio de la granja de servidores de SharePoint“ debe ser temporalmente miembro del grupo local de administradores para que la aplicación de servicio de Reporting Services se pueda crear. Para obtener más información sobre los permisos de cuenta de SharePoint 2013, vea [cuenta permisos y la configuración de seguridad en SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx).  
+-   Después de instalar y registrar el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , cree una o más aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La “cuenta del servicio de la granja de servidores de SharePoint“ debe ser temporalmente miembro del grupo local de administradores para que la aplicación de servicio de Reporting Services se pueda crear. Para obtener más información sobre los permisos de cuenta de SharePoint 2013, consulte [cuenta permisos y la configuración de seguridad en SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx).  
   
      Es una práctica recomendada de seguridad que las cuentas de administrador de la granja de servidores de SharePoint no sean también cuentas locales de administrador del sistema operativo. Si agrega una cuenta de administrador de la granja de servidores al grupo local de administradores como parte del proceso de instalación, se recomienda que quite la cuenta del grupo local de administradores una vez completada la instalación.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36200858"
   
     -   **Complemento de Reporting Services para productos de SharePoint**.  
   
-         ![Tenga en cuenta](../../../2014/reporting-services/media/rs-fyinote.png "Nota") la opción del Asistente de instalación para instalar el complemento es nueva con el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de la versión.  
+         ![Tenga en cuenta](../../../2014/reporting-services/media/rs-fyinote.png "Nota") la opción del Asistente de instalación para instalar el complemento es nueva con el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de versión.  
   
     -   Si no tiene ya una instancia de SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)], también podría seleccionar **servicios de motor de base de datos** y **herramientas de administración completa** para un entorno completo.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36200858"
     > [!NOTE]  
     >  Una vez completada la instalación de SQL Server, vea las demás secciones de este tema para configurar el entorno de SharePoint. Esto incluye instalar el servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y la creación de las aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-     ![Asistente para el programa de instalación SQL Server - página de configuración de SSRS](../../../2014/sql-server/install/media/rs-2012sp1-setup-ssrs-configpage-with-circles.gif "Asistente de instalación SQL Server, página de configuración de SSRS")  
+     ![Asistente para instalación SQL Server - página de configuración de SSRS](../../../2014/sql-server/install/media/rs-2012sp1-setup-ssrs-configpage-with-circles.gif "Asistente para instalación SQL Server - página de configuración de SSRS")  
   
 17. Ayude a Microsoft a mejorar las características y los servicios de SQL Server activando la casilla para enviar informes de error de la página **Informes de errores** .  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36200858"
   
 -   La cuenta usada para instalar el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no era miembro del grupo de administradores de la granja de servidores de SharePoint. Para obtener más información, vea la sección [Setup accounts](#bkmk_setupaccounts).  
   
- Los archivos necesarios se instalaron como parte de la instalación del Asistente para la instalación de SQL Server, pero los servicios tienen que ser registrados en la granja de servidores de SharePoint. El [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versión introduce compatibilidad con PowerShell [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint.  
+ Los archivos necesarios se instalaron como parte de la instalación del Asistente para la instalación de SQL Server, pero los servicios tienen que ser registrados en la granja de servidores de SharePoint. El [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versión presenta compatibilidad con PowerShell [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint.  
   
  Los pasos siguientes le guían a través de la apertura del Shell de administración de SharePoint y de la ejecución de cmdlets:  
   
@@ -255,7 +255,7 @@ ms.locfileid: "36200858"
   
 11. El proceso de creación de la aplicación de servicio podría tardar varios minutos en completarse. Cuando se complete, verá un mensaje de confirmación y un vínculo a una página **Aprovisionar suscripciones y alertas** . Complete el paso de aprovisionamiento si desea usar las características de suscripciones o de alertas de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, vea [Aprovisionar suscripciones y alertas para aplicaciones de servicio SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- ![Contenido relacionado con PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "contenido relacionado con PowerShell") para obtener información sobre cómo usar PowerShell para crear una [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aplicación de servicio, vea:  
+ ![Contenido relacionado con PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "contenido relacionado con PowerShell") para obtener información sobre el uso de PowerShell para crear un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aplicación de servicio, vea:  
   
 -   Vea la siguiente sección [Script de Windows PowerShell para los pasos 1 a 4](#bkmk_full_script).  
   
@@ -387,7 +387,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
  En esta sección se describen los pasos de configuración que son importantes para la mayoría de las implementaciones de SharePoint.  
   
 ###  <a name="bkmk_configure_ECS"></a> Configurar Excel Services y PowerPivot  
- Si desea ver [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] informes de Power View en un libro de Excel 2013 en SharePoint, una aplicación de servicios de Excel en la granja de servidores debe estar configurado para utilizar un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] servidor en modo de SharePoint. Además, la cuenta de seguridad del grupo de aplicaciones usada por la aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] debe ser administrador del servidor de Analysis Services. Para obtener más información, vea:  
+ Si desea ver [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] informes de Power View en un libro de Excel 2013 en SharePoint, una aplicación de servicios de Excel en la granja de servidores debe configurarse para usar un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Server en modo de SharePoint. Además, la cuenta de seguridad del grupo de aplicaciones usada por la aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] debe ser administrador del servidor de Analysis Services. Para obtener más información, vea:  
   
 -   La sección "configurar Excel Services para la integración de Analysis Services" en [PowerPivot para SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
@@ -397,13 +397,13 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
  Las características de alerta de datos y suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pueden requerir la configuración de permisos del Agente SQL Server. Si obtiene un mensaje de error que indica que se requiere el Agente SQL Server y ha comprobado que se está ejecutando, tiene que actualizar los permisos. Puede hacer clic en el vínculo **Aprovisionar suscripciones y alertas** en la página que indica que la aplicación de servicio se creó correctamente para ir a otra página y aprovisionar el Agente SQL Server. El paso de aprovisionamiento es necesario si la implementación cruza los límites del equipo, por ejemplo, cuando la instancia de la base de datos de SQL Server está en un equipo diferente. Para obtener más información, vea [Aprovisionar Subscripciones y alertas para aplicaciones de servicio SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ### <a name="configure-e-mail-for-ssrs-service-applications"></a>Configurar el correo electrónico para aplicaciones de servicio de SSRS  
- La característica de alertas de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] envía alertas en los mensajes de correo electrónico. Para enviar correo electrónico, quizás tenga que configurar la aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y modificar la extensión de entrega de correo electrónico para ella. Si piensa usar la extensión de entrega por correo electrónico para la característica de suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , hay que configurar el correo electrónico. Para obtener más información, consulte [configurar el correo electrónico para una aplicación de servicio de Reporting Services &#40;SharePoint 2010 y SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+ La característica de alertas de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] envía alertas en los mensajes de correo electrónico. Para enviar correo electrónico, quizás tenga que configurar la aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y modificar la extensión de entrega de correo electrónico para ella. Si piensa usar la extensión de entrega por correo electrónico para la característica de suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , hay que configurar el correo electrónico. Para obtener más información, consulte [configurar correo electrónico para una aplicación de servicio de Reporting Services &#40;SharePoint 2010 y SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>Agregar tipos de contenido de Reporting Services a bibliotecas de contenido  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona tipos de contenido predefinidos que se usan para administrar archivos de orígenes de datos compartidos (.rsds), modelos de informe (.smdl) y archivos de definición de informe (.rdl) del Generador de informes. Al agregar un tipo de contenido **Informe del Generador de informes**, **Modelo de informe**y **Origen de datos de informe** a una biblioteca se habilita el comando **Nuevo** para que pueda crear nuevos documentos de ese tipo. Para obtener más información, consulte [Agregar informe Server tipos de contenido en una biblioteca de &#40;Reporting Services en modo integrado de SharePoint&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona tipos de contenido predefinidos que se usan para administrar archivos de orígenes de datos compartidos (.rsds), modelos de informe (.smdl) y archivos de definición de informe (.rdl) del Generador de informes. Al agregar un tipo de contenido **Informe del Generador de informes**, **Modelo de informe**y **Origen de datos de informe** a una biblioteca se habilita el comando **Nuevo** para que pueda crear nuevos documentos de ese tipo. Para obtener más información, consulte [Agregar informe Server tipos de contenido en una biblioteca &#40;Reporting Services en modo integrado de SharePoint&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>Activar la característica de sincronización de archivos del servidor de informes  
- Si los usuarios van a cargar con frecuencia elementos de informe publicados directamente en bibliotecas de documentos de SharePoint, la característica de nivel de sitio **Sincronizar archivo del Servidor de informes** será beneficiosa. La característica de sincronización de archivos sincronizará el catálogo del servidor de informes con los elementos de las bibliotecas de documentos con más frecuencia. Para obtener más información, consulte [activar la característica de sincronización de archivos del servidor de informes en Administración Central de SharePoint](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
+ Si los usuarios van a cargar con frecuencia elementos de informe publicados directamente en bibliotecas de documentos de SharePoint, la característica de nivel de sitio **Sincronizar archivo del Servidor de informes** será beneficiosa. La característica de sincronización de archivos sincronizará el catálogo del servidor de informes con los elementos de las bibliotecas de documentos con más frecuencia. Para obtener más información, consulte [activar la característica de sincronización de archivos de servidor de informes en Administración Central de SharePoint](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
   
 ##  <a name="bkmk_verify_installation"></a> Comprobar la instalación  
  A continuación se muestran los pasos y procedimientos sugeridos para comprobar la implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint.  

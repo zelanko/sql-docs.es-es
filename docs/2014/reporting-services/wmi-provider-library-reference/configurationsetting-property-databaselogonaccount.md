@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - DatabaseLogonAccount
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DatabaseLogonAccount property
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
 caps.latest.revision: 24
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 75a929c87f963f102535c7fbe015a4bb49e6278f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6b94a45ed2c528972fffb79d2f8f51ad9bcba56d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185770"
 ---
 # <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>Propiedad DatabaseLogonAccount (WMI MSReportServer_ConfigurationSetting)
   Especifica la cuenta de inicio de sesión que el servidor de informes utiliza al conectarse a la base de datos del servidor de informes. Solo lectura.  

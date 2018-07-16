@@ -1,5 +1,5 @@
 ---
-title: Recuperar datos mediante el objeto CellSet | Documentos de Microsoft
+title: Recuperar datos mediante el objeto CellSet | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], CellSet object
 ms.assetid: 77e4ee58-882d-4012-91a3-0565f18a4882
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cda35dc6151d17e1dad2d341337d67ef39d9f839
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69e53cab56cf22d6627fd8039e6a46735d934ca7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178902"
 ---
 # <a name="retrieving-data-using-the-cellset"></a>Recuperar datos mediante el objeto CellSet
   Al recuperar datos analíticos, el objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> proporciona la máxima interactividad y flexibilidad. El objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> es una caché de datos y metadatos jerárquicos en memoria que conserva las dimensiones originales de los datos. El objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> también se puede recorrer en estado conectado o desconectado. Debido a la posibilidad de utilizarlo sin conexión, el objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> se puede usar para ver datos y metadatos en un orden cualquiera y proporciona el modelo de objetos más completo para la recuperación de datos. Dicha capacidad de uso sin conexión también hace que el objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> tenga la máxima sobrecarga y sea el modelo de objetos de recuperación de datos de ADOMD.NET más lento de rellenar.  
@@ -44,7 +44,7 @@ ms.locfileid: "36111674"
   
      Cada objeto <xref:Microsoft.AnalysisServices.AdomdClient.Axis> contiene una colección de objetos <xref:Microsoft.AnalysisServices.AdomdClient.Position> que representan el conjunto de tuplas disponible para ese eje. Cada objeto <xref:Microsoft.AnalysisServices.AdomdClient.Position> representa una sola tupla que contiene uno o más miembros, representados por una colección de objetos <xref:Microsoft.AnalysisServices.AdomdClient.Member>.  
   
-3.  **Recuperar datos de la colección de conjunto de celdas.**  
+3.  **Recuperar datos de la colección de objetos cellset.**  
   
      Además de recuperar metadatos, ADOMD.NET también recupera datos para el objeto CellSet. Tan pronto como el comando haya ejecutado la consulta y devuelto un objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, puede recuperar los datos mediante la colección <xref:Microsoft.AnalysisServices.AdomdClient.CellSet.Cells%2A> de <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>. Esta colección contiene los valores que se calculan para la intersección de todos los ejes de la consulta. Por lo tanto, hay varios indizadores para obtener acceso a cada intersección o celda. Para obtener una lista de indizadores, vea <xref:Microsoft.AnalysisServices.AdomdClient.CellCollection.Item%2A>.  
   
@@ -65,8 +65,8 @@ ms.locfileid: "36111674"
  [!code-csharp[Adomd.NetClient#DemonstrateDisconnectedCellset](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#demonstratedisconnectedcellset)]  
   
 ## <a name="see-also"></a>Vea también  
- [Recuperar datos de un origen de datos analíticos](retrieving-data-from-an-analytical-data-source.md)   
- [Recuperar datos mediante AdomdDataReader](retrieving-data-using-the-adomddatareader.md)   
+ [Recuperación de datos de origen de datos analíticos](retrieving-data-from-an-analytical-data-source.md)   
+ [Recuperación de datos mediante AdomdDataReader](retrieving-data-using-the-adomddatareader.md)   
  [Recuperación de datos mediante XmlReader](retrieving-data-using-the-xmlreader.md)  
   
   

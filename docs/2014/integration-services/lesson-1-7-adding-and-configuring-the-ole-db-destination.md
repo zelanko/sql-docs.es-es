@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 caps.latest.revision: 24
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9492f985dda337159257257c675fe37d39f162b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f85ebcc3be06d86110a99e498a9349d973a9ca6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260941"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Paso 7: agregar y configurar el destino de OLE DB
   Ahora, el paquete puede extraer datos de un origen de archivo plano y transformar dichos datos en un formato compatible con el destino. La tarea siguiente consiste realmente en cargar los datos transformados en el destino. Para cargar los datos, debe agregar un destino de OLE DB al flujo de datos. El destino de OLE DB puede utilizar una tabla de bases de datos, una vista o un comando SQL para cargar datos en distintas bases de datos compatibles con OLE DB.  
@@ -57,7 +57,7 @@ ms.locfileid: "36201630"
 14. En la ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **inglés (Estados Unidos)** y`DefaultCodePage` propiedad está establecida en **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 8: Lo más fácil de entender el paquete de la lección 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+ [Paso 8: Facilitar la comprensión del paquete de la lección 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Destino de OLE DB](data-flow/ole-db-destination.md)  

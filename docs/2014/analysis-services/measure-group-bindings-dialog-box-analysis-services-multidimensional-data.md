@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de enlaces de grupo de medida (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Cuadro de diálogo enlaces de grupo de medida (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusage.definerelationship.measuregroupbindings.f1
 helpviewer_keywords:
 - Measure Group Bindings dialog box
 ms.assetid: ed642780-5350-438e-af73-b9ceab3f876d
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1508624a9d0e5a9f36c8ec7c15093f56b37977ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c306ba41e8ebb6fe2615be0bec8f3cebd560e65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226415"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Enlaces de grupo de medida (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Enlaces de grupo de medida** para crear y modificar las relaciones directas entre los atributos que no son de granularidad de una dimensión de cubo y las columnas de un grupo de medida para una relación de dimensión regular, así como para especificar opciones de procesamiento de valores NULL para los atributos de una dimensión de cubo del cuadro de diálogo **Definir relación**.  
@@ -37,7 +37,7 @@ ms.locfileid: "36201487"
   
 |Opción|Definición|  
 |------------|----------------|  
-|**Nombre del atributo**|Muestra el nombre del atributo.|  
+|**Nombre de atributo**|Muestra el nombre del atributo.|  
 |**Tabla de dimensiones**|Muestra el nombre de la tabla de dimensiones en la que se basa el atributo.|  
   
  **Relación**  
@@ -50,7 +50,7 @@ ms.locfileid: "36201487"
 |**Procesamiento de valores null**|Seleccione una opción de procesamiento de valores NULL para el atributo. Para más información sobre las opciones de procesamiento de valores NULL, vea [Elemento NullProcessing &#40;ASSL&#41;](scripting/properties/nullprocessing-element-assl.md).|  
   
 ## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo de relación definir &#40;Analysis Services - datos multidimensionales&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md)   
+ [Definir el cuadro de diálogo relación &#40;Analysis Services - datos multidimensionales&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md)   
  [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Asistente para minería de datos | Documentos de Microsoft
+title: Asistente para minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Mining Wizard
 - Analysis Services Data Mining Wizard
 ms.assetid: f949a5f0-d8f5-4da1-a9f8-200b918e29ff
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 442e77491d2254c230c60c99c8f1ede91117d171
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d309e9ce8d0ccfd48402be1bf6ce8f3f2ff2c3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263831"
 ---
 # <a name="data-mining-wizards"></a>Asistente para minería de datos
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona asistentes para usarlos en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -31,9 +31,9 @@ ms.locfileid: "36201714"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Ayuda F1 del Asistente del origen de datos &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)|Use el Asistente para orígenes de datos para definir un nuevo origen de datos.|  
-|[Vistas de orígenes de datos Asistente para la Ayuda de F1 &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)|Use el Asistente para vistas del origen de datos para definir un nuevo origen de datos.|  
-|[Ayuda F1 del Asistente para minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)|Use el Asistente para minería de datos para definir una nueva estructura de minería de datos y los modelos de minería de datos asociados.|  
+|[Ayuda F1 del Asistente para origen de datos &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)|Use el Asistente para orígenes de datos para definir un nuevo origen de datos.|  
+|[Ayuda de F1 de Asistente para la vista de datos origen &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)|Use el Asistente para vistas del origen de datos para definir un nuevo origen de datos.|  
+|[Asistente para la Ayuda de F1 de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)|Use el Asistente para minería de datos para definir una nueva estructura de minería de datos y los modelos de minería de datos asociados.|  
   
  Además de los asistentes, puede generar, modificar y procesar los objetos de minería de datos en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] mediante las herramientas de diseño gráfico que se proporcionan.  
   

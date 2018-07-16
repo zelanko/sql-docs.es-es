@@ -1,5 +1,5 @@
 ---
-title: Elemento ProtocolCapabilities (XMLA) | Documentos de Microsoft
+title: Elemento ProtocolCapabilities (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ProtocolCapabilities element
 ms.assetid: f923896a-3f32-46a3-9543-388c30b3465d
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0243e0050111c0bc478f17403f3014fc619d9a43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c4183d90d07a54cf009daec59ca29ca802f2bf67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295435"
 ---
 # <a name="protocolcapabilities-element-xmla"></a>Elemento ProtocolCapabilities (XMLA)
   Utiliza el encabezado SOAP en un mensaje de solicitud SOAP para identificar las capacidades de protocolo entre una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y una aplicación cliente.  
@@ -81,7 +81,7 @@ ms.locfileid: "36107035"
   
 3.  Si la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tiene la misma capacidad de protocolo que la solicitada, la instancia envía una respuesta SOAP que incluye el mismo elemento `ProtocolCapabilities` enviado en la solicitud SOAP y el protocolo se negocia correctamente. En caso contrario, las capacidades de protocolo no se negocian correctamente y la instancia devuelve un error de SOAP.  
   
- Después de negociar correctamente las capacidades de protocolo, el tiempo que las aplicaciones cliente y el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia utilicen un protocolo determinado depende de si la sesión es explícita o implícita:  
+ Después de negociar correctamente las capacidades de protocolo, ¿cuánto tiempo la aplicación de cliente y el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utilicen instancia un protocolo determinado depende de si la sesión es explícita o implícita:  
   
 -   Una sesión explícita es aquella que se crea utilizando el [BeginSession](session-element-xmla.md) elemento de encabezado. Para una sesión explícita, se utiliza el protocolo negociado hasta que la aplicación de cliente envía un nuevo `ProtocolCapabilities` elemento o finalice la sesión.  
   

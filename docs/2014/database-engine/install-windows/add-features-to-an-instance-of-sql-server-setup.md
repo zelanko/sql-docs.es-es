@@ -1,5 +1,5 @@
 ---
-title: Agregar características a una instancia de SQL Server 2014 (programa de instalación) | Documentos de Microsoft
+title: Agregar características a una instancia de SQL Server 2014 (programa de instalación) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - feature adding [SQL Server]
 - SQL Server, features
 - adding features to SQL Server
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cf44b5cd848a3a315290e88e00b49a2e0156024a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c3bdfd58db40fe34cc107b412c531bc8a3e75ebe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225963"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>Agregar características a una instancia de SQL Server 2014 (programa de instalación)
   En este tema se proporciona un procedimiento paso a paso para agregar características a una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Algunos componentes o servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son específicos de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También se denominan dependientes de la instancia. Comparten la misma versión que la instancia que los hospeda y se usan exclusivamente para dicha instancia. Puede agregar los componentes dependientes de la instancia a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], junto con los componentes compartidos si no están instalados. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -152,7 +152,7 @@ ms.locfileid: "36106822"
  [Ver y leer los archivos de registro de instalación de SQL Server](view-and-read-sql-server-setup-log-files.md)   
  [Validar una instalación de SQL Server](validate-a-sql-server-installation.md)   
  [Quitar una instalación de SQL Server 2014](repair-a-failed-sql-server-installation.md)   
- [Actualización a SQL Server 2014 mediante el Asistente para la instalación &#40;el programa de instalación&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
- [Instalar a SQL Server 2014 desde el símbolo del sistema](install-sql-server-from-the-command-prompt.md)  
+ [Actualización a SQL Server 2014 mediante el Asistente para instalación &#40;el programa de instalación&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
+ [Instalar SQL Server 2014 desde el símbolo del sistema](install-sql-server-from-the-command-prompt.md)  
   
   

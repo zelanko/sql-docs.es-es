@@ -1,5 +1,5 @@
 ---
-title: Serialización XML de objetos de base de datos CLR | Documentos de Microsoft
+title: Serialización XML de objetos de base de datos CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XmlSerializer class
 ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ad6b9ebaba9f05b0a927cd65f788cdbdb672a6d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8b59c013a9a21aaa50465acd5a565eda5c1e0653
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279831"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>Serialización XML de objetos de base de datos de CLR
   La serialización XML se requiere para dos situaciones:  
@@ -34,13 +34,13 @@ ms.locfileid: "36204660"
   
 -   Convertir un tipo definido por el usuario (UDT) en XML.  
   
- La realización de la serialización XML invocando la clase `XmlSerializer` genera normalmente un ensamblado de serialización adicional que se sobrecarga en el proyecto con el ensamblado de origen. Sin embargo, por razones de seguridad, esta sobrecarga está deshabilitada en CLR. Por lo tanto, para llamar a un servicio web o realizar la conversión de UDT a XML en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se debe crear el ensamblado manualmente mediante una herramienta denominada **Sgen.exe** proporcionada con .NET Framework que genera la necesaria ensamblados de serialización. Al invocar `XmlSerializer`, se debe crear el ensamblado de serialización manualmente siguiendo estos pasos:  
+ La realización de la serialización XML invocando la clase `XmlSerializer` genera normalmente un ensamblado de serialización adicional que se sobrecarga en el proyecto con el ensamblado de origen. Sin embargo, por razones de seguridad, esta sobrecarga está deshabilitada en CLR. Por lo tanto, para llamar a un servicio web o realizar la conversión de UDT a XML en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe crear el ensamblado manualmente mediante una herramienta denominada **Sgen.exe** proporcionado con .NET Framework que genera las necesarias ensamblados de serialización. Al invocar `XmlSerializer`, se debe crear el ensamblado de serialización manualmente siguiendo estos pasos:  
   
-1.  Ejecute el **Sgen.exe** herramienta que se proporciona con .NET Framework SDK para crear el ensamblado que contiene los serializadores XML para el ensamblado de origen.  
+1.  Ejecute el **Sgen.exe** herramienta proporcionada con el SDK de .NET Framework para crear el ensamblado que contiene los serializadores XML para el ensamblado de origen.  
   
 2.  Registre el ensamblado generado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la instrucción `CREATE ASSEMBLY`.  
   
- Para obtener información acerca de los errores que puede recibir al realizar la serialización XML, consulte el siguiente artículo de Microsoft Support: ["No se puede cargar el ensamblado de serialización generado dinámicamente"](http://support.microsoft.com/kb/913668).  
+ Para obtener información sobre los errores que puede recibir al realizar la serialización XML, consulte el siguiente artículo de Microsoft Support: ["No se puede cargar el ensamblado de serialización generado dinámicamente"](http://support.microsoft.com/kb/913668).  
   
  Para obtener información sobre los tipos de datos no admitidos por XMLSerializer, consulte Compatibilidad con enlaces del esquema XML en .NET Framework en la documentación de .NET Framework.  
   

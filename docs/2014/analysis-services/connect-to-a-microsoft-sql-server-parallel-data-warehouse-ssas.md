@@ -1,5 +1,5 @@
 ---
-title: Conectarse a un almacenamiento de datos en paralelo de Microsoft SQL Server (SSAS) | Documentos de Microsoft
+title: Conectarse a un almacén de datos paralelos de Microsoft SQL Server (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlparadatawh.f1
 ms.assetid: 98c879ee-7257-40c9-bc85-6766bd3b4885
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 87d025750a92a3ea62d91b14b67fca0bc33b98c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bc82bc4ed9e90305a8ca78adc9ee643fabf9800
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208165"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>Conectarse a un almacenamiento de datos paralelos de Microsoft SQL Server (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite especificar los valores para conectar con un almacenamiento de datos paralelos (PDW) de Microsoft SQL Server. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  

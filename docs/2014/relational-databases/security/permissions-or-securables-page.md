@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.permissions.f1
 - sql12.swb.SecurableAndEffectPermissions.f1
@@ -17,15 +16,15 @@ f1_keywords:
 - sql12.swb.SecurableAndEffectivePermission.f1
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3de33a268022b777476a9b05145da144ed87fb26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 8f925690ea8d8c008a2ebffa0dda2f39c7118563
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186212"
 ---
 # <a name="permissions-or-securables-page"></a>Página Permisos o Elementos protegibles
   Utilice la página **Permisos** o la página **Elementos protegibles** para ver o establecer los permisos de los elementos protegibles. Esta página se puede abrir desde varias ubicaciones. El contenido de la página puede cambiar ligeramente, dependiendo de cómo se abra la página y de su contenido. La cuadrícula superior de la página puede estar rellena al abrir la página, o bien puede estar vacía. Para agregar elementos a la cuadrícula superior, haga clic en **Buscar**. En la cuadrícula superior, seleccione un elemento y luego establezca los permisos apropiados en la pestaña **Explícito** . Para ver los permisos agregados, use la pestaña **Vigente** .  

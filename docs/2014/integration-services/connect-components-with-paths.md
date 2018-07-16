@@ -1,5 +1,5 @@
 ---
-title: Conectar componentes con rutas de acceso | Documentos de Microsoft
+title: Conectar componentes con rutas de acceso | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data flow [Integration Services], connections
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 05633e4c-1370-4b05-802b-f36b07dd71c8
 caps.latest.revision: 32
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5152147f82d1d413806eeb8f9644e70af9a04828
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a14ec2a4fe8e13d7e2adb2e79d290361540c7b8b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243085"
 ---
 # <a name="connect-components-with-paths"></a>Conectar componentes con rutas de acceso
   El flujo de datos de un paquete se genera en la superficie de diseño de la pestaña **Flujo de datos** en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] . Si un flujo de datos contiene dos componentes de flujo de datos, puede conectar ambos conectando la salida de un origen o transformación con la entrada de una transformación o destino. El conector entre dos componentes de flujo de datos se denomina ruta.  
@@ -42,11 +42,11 @@ ms.locfileid: "36107695"
   
 ### <a name="to-set-path-properties"></a>Para establecer las propiedades de la ruta  
   
--   [Establecer las propiedades de una ruta de acceso mediante el Editor de rutas de flujo de datos](../../2014/integration-services/set-the-properties-of-a-path-by-using-the-data-flow-path-editor.md)  
+-   [Establecer las propiedades de una ruta con el Editor de rutas de flujo de datos](../../2014/integration-services/set-the-properties-of-a-path-by-using-the-data-flow-path-editor.md)  
   
 ### <a name="to-view-path-metadata"></a>Para ver metadatos de ruta  
   
--   [Ver los metadatos de ruta de acceso en el Editor de rutas de flujo de datos](../../2014/integration-services/view-path-metadata-in-the-data-flow-path-editor.md)  
+-   [Ver los metadatos de rutas con el Editor de rutas de flujo de datos](../../2014/integration-services/view-path-metadata-in-the-data-flow-path-editor.md)  
   
 ### <a name="to-view-path-metadata"></a>Para ver metadatos de ruta  
   

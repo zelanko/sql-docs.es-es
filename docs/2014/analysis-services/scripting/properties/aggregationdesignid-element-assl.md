@@ -1,5 +1,5 @@
 ---
-title: Elemento AggregationDesignID (ASSL) | Documentos de Microsoft
+title: Elemento AggregationDesignID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregationDesignID element
 ms.assetid: e7f1f7ae-3169-4c0c-aadb-f7465155d652
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0548685e81b7c98b80e49ea67bdb754cb0dfe887
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 373f77f8195f0e8d9c3000f9e55e0f1395c91b67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194285"
 ---
 # <a name="aggregationdesignid-element-assl"></a>Elemento AggregationDesignID (ASSL)
-  Identifica la [AggregationDesign](../objects/aggregationdesign-element-assl.md) elemento asociado a la [partición](../objects/partition-element-assl.md) elemento.  
+  Identifica el [AggregationDesign](../objects/aggregationdesign-element-assl.md) elemento asociado con el [partición](../objects/partition-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36113250"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `AggregationDesignID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Partition>. Vea también <xref:Microsoft.AnalysisServices.AggregationDesign>.  
+ El elemento que se corresponde con el elemento primario de `AggregationDesignID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Partition>. Vea también <xref:Microsoft.AnalysisServices.AggregationDesign>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento AggregationDesign &#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md)   

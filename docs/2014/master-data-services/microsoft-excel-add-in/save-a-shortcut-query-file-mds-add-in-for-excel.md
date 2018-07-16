@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d1e2c8560461f121b7d51a69878144bd01755f3e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 0a9d466501b09dbfc30b5a948f43cd49dc58c9a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285361"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Guardar un archivo de consulta de acceso directo (complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede guardar un archivo de consulta de método abreviado cuando necesite tener acceso con frecuencia al mismo conjunto de datos.  

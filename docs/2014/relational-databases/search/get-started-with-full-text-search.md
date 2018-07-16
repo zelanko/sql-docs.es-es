@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text indexes [SQL Server], creating
@@ -16,20 +15,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a4bdb94c371342a94c74e72a1cb1f33886fc0963
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e9745635b277a53f724b61ff4143e41af47775a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324015"
 ---
 # <a name="get-started-with-full-text-search"></a>Introducción a la búsqueda de texto completo
   Las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están habilitadas para texto completo de forma predeterminada. Sin embargo, para usar un índice de texto completo en una tabla, debe configurar la capacidad de indización de texto completo en las columnas de las tablas a las que desea obtener acceso mediante el motor de búsqueda de texto completo.  
   
-##  <a name="configure"></a> Configurar una base de datos para la búsqueda de texto completo  
+##  <a name="configure"></a> Configuración de una base de datos para la búsqueda de texto completo  
  En cualquier escenario, un administrador de bases de datos realiza los siguientes pasos básicos para configurar columnas de tabla en una base de datos para la búsqueda de texto completo:  
   
 1.  Crear un catálogo de texto completo  
@@ -112,7 +111,7 @@ CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;
 GO  
 ```  
   
- El siguiente [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción modifica una lista de palabras irrelevantes denominada mystoplist; para ello, agrega la palabra 'en', primero para español y, a continuación, para francés:  
+ La siguiente [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción modifica una lista de palabras irrelevantes denominada mystoplist; para ello, agrega la palabra 'en', primero para español y, a continuación, para francés:  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  

@@ -1,5 +1,5 @@
 ---
-title: 'La validación cruzada (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: La validación cruzada (Analysis Services - minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86d7c0aeec81133a2bfdc8e5d30bd962a5c7cce6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1ff61a92995d65e66a1115b70681585eb643a7ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236015"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Validación cruzada (Analysis Services - Minería de datos)
   La *validación cruzada* es una herramienta estándar de análisis que resulta muy útil a la hora de desarrollar y ajustar modelos de minería de datos. La validación cruzada se usa después de crear una estructura de minería de datos y los modelos de minería de datos relacionados para determinar la validez del modelo.  La validación cruzada tiene las aplicaciones siguientes:  
@@ -64,7 +64,7 @@ ms.locfileid: "36112588"
   
  El ejemplo del diagrama muestra el uso de los datos si se especifican tres plegamientos.  
   
- ![Cómo segmenta la validación cruzada datos](../media/xvoverviewmain.gif "Cómo segmenta la validación cruzada datos")  
+ ![Cómo los segmentos de datos de validación cruzada](../media/xvoverviewmain.gif "cómo los segmentos de datos de validación cruzada")  
   
  En el escenario del diagrama, la estructura de minería de datos contiene un conjunto de datos de exclusión que se usa para pruebas, pero el conjunto de datos de pruebas no se ha incluido para la validación cruzada. Como resultado, todos los datos del conjunto de datos de aprendizaje, el 70 por ciento de los datos de la estructura de minería de datos, se usan para validación cruzada. El informe de validación cruzada muestra el número total de casos usados en cada partición.  
   
@@ -115,17 +115,17 @@ ms.locfileid: "36112588"
   
  En la primera fase, llama a un procedimiento almacenado del sistema que crea tantas particiones como especifique dentro del conjunto de datos y devuelve los resultados de precisión para cada partición. Para cada métrica, Analysis Services calcula entonces las desviaciones media y estándar para las particiones.  
   
--   [SystemGetCrossValidationResults &#40;Analysis Services: minería de datos&#41;](/sql/analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining)  
+-   [SystemGetCrossValidationResults &#40;Analysis Services - minería de datos&#41;](/sql/analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining)  
   
--   [SystemGetClusterCrossValidationResults &#40;Analysis Services: minería de datos&#41;](/sql/analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining)  
+-   [SystemGetClusterCrossValidationResults &#40;Analysis Services - minería de datos&#41;](/sql/analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining)  
   
  **Generar métricas para todo el conjunto de datos**  
   
  En la segunda fase, llama a otro conjunto de procedimientos almacenados. Estos procedimientos almacenados no crean particiones del conjunto de datos, pero generan resultados de precisión para el conjunto de datos especificados como un todo. Si ha creado particiones y ha procesado una estructura de minería de datos, puede llamar a este segundo conjunto de procedimientos almacenados para obtener los resultados.  
   
--   [SystemGetAccuracyResults &#40;Analysis Services: minería de datos&#41;](/sql/analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining)  
+-   [SystemGetAccuracyResults &#40;Analysis Services - minería de datos&#41;](/sql/analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining)  
   
--   [SystemGetClusterAccuracyResults &#40;Analysis Services: minería de datos&#41;](/sql/analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining)  
+-   [SystemGetClusterAccuracyResults &#40;Analysis Services - minería de datos&#41;](/sql/analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining)  
   
 #### <a name="defining-the-testing-data"></a>Definir los datos de prueba  
  Al ejecutar los procedimientos almacenados de validación cruzada que calculan la precisión (SystemGetAccuracyResults o SystemGetClusterAccuracyResults), puede especificar el origen de los datos que se usan para realizar pruebas durante la validación cruzada. Esta opción no está disponible en la interfaz de usuario.  
@@ -188,13 +188,13 @@ ms.locfileid: "36112588"
 |Describe cómo establecer los parámetros de validación cruzada en SQL Server Development Studio.|[Pestaña validación cruzada &#40;vista Gráfico de precisión de minería de datos&#41;](../cross-validation-tab-mining-accuracy-chart-view.md)|  
 |Describe las métricas que proporciona la validación cruzada|[Fórmulas de validación cruzada](cross-validation-formulas.md)|  
 |Explica el formato del informe de validación cruzada y define las medidas estadísticas proporcionadas para cada tipo de modelo.|[Medidas en el informe de validación cruzada](measures-in-the-cross-validation-report.md)|  
-|Enumera los procedimientos almacenados para calcular las estadísticas de validación cruzada.|[Procedimientos almacenados de minería de datos &#40;Analysis Services: minería de datos&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)|  
+|Enumera los procedimientos almacenados para calcular las estadísticas de validación cruzada.|[Procedimientos almacenados de minería de datos &#40;Analysis Services - minería de datos&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)|  
 |||  
 |Describe cómo crear un conjunto de datos de pruebas para las estructuras y los modelos relacionados.|[Conjuntos de datos de entrenamiento y de prueba](training-and-testing-data-sets.md)|  
-|Vea los ejemplos de otros tipos de gráficos de precisión.|[Matriz de clasificación &#40;Analysis Services: minería de datos&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Gráfico de elevación &#40;Analysis Services: minería de datos&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de beneficios &#40;Analysis Services: minería de datos&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersión &#40;Analysis Services: minería de datos&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Describe los pasos para crear varios gráficos de precisión.|[Pruebas y las tareas de validación y procedimientos &#40;minería de datos&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Vea los ejemplos de otros tipos de gráficos de precisión.|[Matriz de clasificación &#40;Analysis Services - minería de datos&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Gráfico de elevación &#40;Analysis Services - minería de datos&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de beneficios &#40;Analysis Services - minería de datos&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersión &#40;Analysis Services - minería de datos&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Describe los pasos para crear varios gráficos de precisión.|[Pruebas y validación tareas y procedimientos &#40;minería de datos&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
+ [Pruebas y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
   
   

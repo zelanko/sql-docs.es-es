@@ -1,5 +1,5 @@
 ---
-title: Establecer la reescritura de particiones | Documentos de Microsoft
+title: Establecer la reescritura de particiones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - write-enabled partitions [Analysis Services]
 - partitions [Analysis Services], writeback
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de2e5bc7b9c4a09d2a5a3df82586cc9fb9f856b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c58dea5dd30f32b9b137903103448ade4678c87b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250945"
 ---
 # <a name="set-partition-writeback"></a>Establecer la reescritura de particiones
   Si habilita para escritura un grupo de medida, los usuarios finales pueden cambiar los datos del cubo mientras lo examinan; en ese caso, los cambios se guardan en una tabla diferente denominada tabla de reescritura, no en los datos del cubo ni en los datos de origen. Los usuarios finales que examinan una partición habilitada para escritura verán el efecto neto de todos los cambios en la tabla de reescritura de la partición.  

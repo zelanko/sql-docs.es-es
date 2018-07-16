@@ -1,5 +1,5 @@
 ---
-title: Crear una consulta de predicción Singleton desde una plantilla | Documentos de Microsoft
+title: Crear una consulta de predicción Singleton desde una plantilla | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - singleton query predictions [DMX]
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91180f533afbbb18472d933891ab607a5ba7f6d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09d7a8b9de92e18646c00b045cb1d55b0eb311d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224595"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Crear una consulta de predicción singleton desde una plantilla
   Una consulta singleton es útil cuando tiene un modelo que desea utilizar para la predicción, pero no desea asignarlo a un conjunto de datos de entrada externos o realizar predicciones masivas. Una consulta singleton le permite proporcionar un valor o varios valores al modelo y ver al momento el valor predicho.  
@@ -73,15 +73,15 @@ AS [t]
   
 5.  En la fila **modelo de minería de datos** , escriba el nombre del modelo de minería de datos entre la lista de modelos de minería de datos que aparecen en el **Explorador de objetos**.  
   
-     Para el código de ejemplo mostrado al principio de este tema, el **modelo de minería de datos** fila se establece en el nombre, `TM_Decision_Tree`.  
+     Para el código de ejemplo mostrado al principio de este tema, el **modelo de minería de datos** fila se estableció en el nombre, `TM_Decision_Tree`.  
   
 6.  En la fila **value** , escriba el nuevo valor de datos para el que desea realizar una predicción.  
   
-     Para el código de ejemplo mostrado al principio de este tema, el **valor** fila se estableció en `2` para predecir el comportamiento de compras según la cantidad de niños en casa.  
+     Para el código de ejemplo mostrado al principio de este tema, el **valor** fila se estableció en `2` para predecir el comportamiento en función del número de niños en casa de compras.  
   
 7.  En la fila **column** , escriba el nombre de la columna del modelo de minería de datos al que deberían estar asignados los nuevos datos.  
   
-     Para el código de ejemplo mostrado al principio de este tema, el **columna** fila se estableció en `Number Children at Home`.  
+     Para el código de ejemplo mostrado al principio de este tema, el **columna** fila se ha establecido en `Number Children at Home`.  
   
     > [!NOTE]  
     >  Al usar el cuadro de diálogo **Especificar valores para parámetros de plantilla** , no tiene que agregar corchetes al nombre de columna. Los corchetes se agregarán automáticamente.  

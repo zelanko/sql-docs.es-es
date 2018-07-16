@@ -1,5 +1,5 @@
 ---
-title: (Analysis Services - datos multidimensionales) del Diseñador de cubos | Documentos de Microsoft
+title: (Analysis Services - datos multidimensionales) del Diseñador de cubos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cube Designer
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 00720caa0c9bcae9e04cc542864ab99e14eb0f86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc6972d90683de658dd0d8104cff138d59960904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246285"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Diseñador de cubos (Analysis Services - Datos multidimensionales)
   Use el **Diseñador de cubos** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para editar diversas propiedades de un cubo existente, incluidos los grupos de medidas y las medidas, las dimensiones del cubo y las relaciones de dimensión, los cálculos, los indicadores clave de rendimiento (KPI), las acciones, las particiones, las perspectivas y las traducciones incluidas en el cubo, así como para examinar los datos incluidos en el cubo. Para mostrar el cuadro de diálogo **Diseñador de cubos** :  

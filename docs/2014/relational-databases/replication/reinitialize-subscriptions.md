@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 caps.latest.revision: 50
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c235100c4f00d9b10b766ff66c9491c2769dfe0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ca8769e10a525ef1543dc10983aaa2caaa12ffb1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294625"
 ---
 # <a name="reinitialize-subscriptions"></a>Reinicializar suscripciones
   Reinicializar una suscripción implica aplicar una nueva instantánea de uno o más artículos a uno o más suscriptores: las replicaciones transaccionales y de instantáneas permiten la reinicialización de los artículos individuales. La replicación de mezcla requiere que todos los artículos se reinicialicen. Los nodos de una topología de replicación transaccional punto a punto no se pueden reinicializar. Si necesita asegurarse de que un nodo tiene una copia nueva de los datos, restaure una copia de seguridad en el nodo. La reinicialización se produce por dos motivos:  

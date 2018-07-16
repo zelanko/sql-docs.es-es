@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmieventwatchertask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6e56f807e6f0d1bc7155c71d1332e56124b17da9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f4fa442175db0b00033e4c616f7572a3ad26da6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169239"
 ---
 # <a name="wmi-event-watcher-task"></a>Tarea Monitor de eventos WMI
   La tarea Monitor de eventos WMI supervisa un evento de Instrumental de administración de Windows (WMI) mediante una consulta de evento de Lenguaje de consulta de Instrumental de administración (WQL) para especificar los eventos de interés. Puede usar la tarea Monitor de eventos WMI para los siguientes fines:  
@@ -97,7 +97,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   [Editor de tareas de Monitor de eventos WMI &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de tareas de Monitor de eventos WMI &#40;página de opciones de WMI&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [Editor de tareas de Monitor de eventos WMI &#40;página Opciones de WMI&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

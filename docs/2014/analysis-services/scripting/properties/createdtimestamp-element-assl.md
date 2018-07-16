@@ -1,5 +1,5 @@
 ---
-title: Elemento CreatedTimestamp (ASSL) | Documentos de Microsoft
+title: Elemento CreatedTimestamp (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CreatedTimestamp element
 ms.assetid: 35f5dd33-ea82-4be3-a117-69136aa9d1a4
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60e59f981f5430e74d3c83a3586f39f5538f3bae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1bab2bbc51422d6062b5f7df97fd3ff7b17e40c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235625"
 ---
 # <a name="createdtimestamp-element-assl"></a>Elemento CreatedTimestamp (ASSL)
   Contiene la marca de tiempo de creación de solo lectura del elemento primario.  
@@ -58,7 +58,7 @@ ms.locfileid: "36201234"
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[Assembly](../objects/assembly-element-assl.md), [Cube](../objects/cube-element-assl.md), [Database](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [Dimension](../objects/dimension-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [Partition](../objects/partition-element-assl.md), [Permission](../data-type/permission-data-type-assl.md), [Perspective](../objects/perspective-element-assl.md)|  
+|Elementos primarios|[Ensamblado](../objects/assembly-element-assl.md), [cubo](../objects/cube-element-assl.md), [base de datos](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [dimensión](../objects/dimension-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [partición](../objects/partition-element-assl.md), [Permiso](../data-type/permission-data-type-assl.md), [perspectiva](../objects/perspective-element-assl.md)|  
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  

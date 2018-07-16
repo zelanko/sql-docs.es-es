@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - production environments [Reporting Services]
 - report projects [Reporting Services]
@@ -26,16 +26,16 @@ ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 30571f0eaa50961fd9d96c3e1c13b4c57da774d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98482f6ad6e2f98120603c28cdc40181e37ef9a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273961"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publicar informes en un servidor de informes
-  Después de diseñar y probar un informe o un conjunto de informes, puede utilizar las características de implementación integradas en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para publicar los informes en un servidor de informes. Puede publicar informes individuales o un proyecto del servidor de informes. Publicar un proyecto del servidor de informes es la manera más fácil de publicar varios informes. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] se utiliza el término *implementar*, en lugar del término *publicar*. Las dos condiciones son intercambiables.  
+  Después de diseñar y probar un informe o un conjunto de informes, puede utilizar las características de implementación integradas en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para publicar los informes en un servidor de informes. Puede publicar informes individuales o un proyecto del servidor de informes. Publicar un proyecto del servidor de informes es la manera más fácil de publicar varios informes. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa el término *implementar*, en lugar del término *publicar*. Las dos condiciones son intercambiables.  
   
  Para poder publicar un informe, debe tener permiso para hacerlo. El permiso se determina a través de la seguridad basada en roles que define el administrador del servidor de informes. Normalmente, las operaciones de publicación se conceden a través del rol Publicador.  
   
@@ -44,12 +44,12 @@ ms.locfileid: "36201739"
 ## <a name="project-configurations"></a>Configuraciones del proyecto  
  Los informes se generan antes de publicarse para asegurarse de que solo las definiciones de informe válidas se publiquen en el servidor de informes. Las configuraciones de proyecto incluyen propiedades para generar los informes, como la carpeta en la que almacenar temporalmente los informes integrados y cómo administrar los problemas de generación. Las configuraciones también tienen las propiedades que se utilizan para especificar la ubicación, la versión y las carpetas del servidor de informes.  
   
- De forma predeterminada, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] proporciona tres configuraciones de proyecto: depuración local, depuración y lanzamiento. La configuración predeterminada es de depuración local. Normalmente, se utiliza la configuración de depuración local para ver informes en una ventana de vista previa local, la configuración de depuración para publicar informes en un servidor de pruebas y la configuración de lanzamiento para publicar los informes en un servidor de producción. En la lista desplegable de configuraciones de soluciones de la barra de herramientas estándar, se muestra la configuración activa. Para utilizar una configuración diferente, selecciónela en la lista.  
+ De forma predeterminada, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] proporciona tres configuraciones de proyecto: DebugLocal, Debug y Release. La configuración predeterminada es de depuración local. Normalmente, se utiliza la configuración de depuración local para ver informes en una ventana de vista previa local, la configuración de depuración para publicar informes en un servidor de pruebas y la configuración de lanzamiento para publicar los informes en un servidor de producción. En la lista desplegable de configuraciones de soluciones de la barra de herramientas estándar, se muestra la configuración activa. Para utilizar una configuración diferente, selecciónela en la lista.  
   
- El entorno de informes podría tener varios servidores de informes y versiones diferentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instaladas. Puede crear varias configuraciones y, a continuación, utilizar una diferente según el escenario de implementación. Para obtener más información, consulte [implementación y compatibilidad de versiones de SQL Server Data Tools &#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md) y [establecer propiedades de implementación &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md).  
+ El entorno de informes podría tener varios servidores de informes y versiones diferentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instaladas. Puede crear varias configuraciones y, a continuación, utilizar una diferente según el escenario de implementación. Para obtener más información, consulte [implementación y compatibilidad de versiones en SQL Server Data Tools &#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md) y [establecer propiedades de implementación &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md).  
   
 ## <a name="publishing-reports"></a>Publicar informes  
- Puede publicar un informe único o un proyecto del servidor de informes que contenga varios informes. Para obtener instrucciones acerca de cómo publicar informes, consulte [publicar informes](../publish-reports.md).  
+ Puede publicar un informe único o un proyecto del servidor de informes que contenga varios informes. Para obtener instrucciones sobre cómo publicar informes, consulte [publicar informes](../publish-reports.md).  
   
 ### <a name="publishing-a-single-report"></a>Publicar un solo informe  
  Si no desea publicar todos los informes de un proyecto, puede optar por publicar uno solo. Para ello, seleccione una configuración que implemente el informe (por ejemplo, la configuración de lanzamiento), haga clic con el botón derecho en el informe y, después, haga clic en **Implementar**.  

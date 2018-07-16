@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar una partición Local (Analysis Services) | Documentos de Microsoft
+title: Crear y administrar una partición Local (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - local partitions [Analysis Services]
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7aee67c9e63078a0218665fc818381d473e493e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10b6498034ddcd2733501c63601f026b229d616a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321275"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Crear y administrar una partición local (Analysis Services)
   Puede crear particiones adicionales para un grupo de medida con el fin de mejorar el rendimiento de procesamiento. Tener varias particiones permite asignar datos de hechos en un número correspondiente de archivos de datos físicos tanto en servidores locales como en servidores remotos. En Analysis Services, las particiones se pueden procesar independientemente y en paralelo, lo que permite tener más control sobre las cargas de trabajo de procesamiento del servidor.  
@@ -59,7 +59,7 @@ ms.locfileid: "36204707"
   
 3.  En la columna Origen, haga clic en el botón Examinar (. para abrir el cuadro de diálogo Origen de la partición.  
   
-     ![Columna de origen en el panel de la partición](../media/ssas-partitionsource.png "columna de origen en el panel de partición")  
+     ![Columna de origen en el panel de la partición](../media/ssas-partitionsource.png "columna de origen en el panel de la partición")  
   
 4.  En Tipo de enlace, seleccione **Enlace de consultas**. La consulta SQL que selecciona los datos aparece automáticamente.  
   

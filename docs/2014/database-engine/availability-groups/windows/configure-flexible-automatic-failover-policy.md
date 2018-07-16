@@ -1,29 +1,28 @@
 ---
-title: Configurar la directiva de conmutación por error Flexible para controlar las condiciones para la conmutación por error automática (grupos de disponibilidad AlwaysOn) | Documentos de Microsoft
+title: Configurar la directiva de conmutación por error Flexible para controlar las condiciones para la conmutación automática por error (siempre en grupos de disponibilidad) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 caps.latest.revision: 22
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: c789865b92b628c30e0f634e529027ad26de23eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4868c07427230de655fc8a1742458f4b4c72cfbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193985"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>Configurar la directiva de conmutación por error flexible para controlar las condiciones de la conmutación automática por error (grupos de disponibilidad AlwaysOn)
   En este tema se describe cómo configurar la directiva de conmutación por error flexible para un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Una directiva de conmutación por error flexible proporciona mayor control sobre las condiciones que produce una conmutación automática por error para un grupo de disponibilidad. Al cambiar las condiciones de error que activan una conmutación automática por error y la frecuencia de comprobaciones de estado, se puede aumentar o reducir la probabilidad de una conmutación automática por error que sea compatible con su SLA por tener alta disponibilidad.  
@@ -94,7 +93,7 @@ ms.locfileid: "36202357"
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para configurar la directiva flexible de conmutación por error**  
   
-1.  Establezca el valor predeterminado (`cd`) a la instancia del servidor que hospeda la réplica principal.  
+1.  Establezca el valor predeterminado (`cd`) a la instancia de servidor que hospeda la réplica principal.  
   
 2.  Para agregar una réplica de disponibilidad a un grupo de disponibilidad, use el cmdlet `New-SqlAvailabilityGroup`. Para modificar una réplica de disponibilidad existente, use el cmdlet `Set-SqlAvailabilityGroup`.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "36202357"
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Para establecer el umbral de tiempo de espera de comprobación de estado, utilice la `HealthCheckTimeout` *n* parámetro, donde *n* es un entero de 15000 milisegundos (15 segundos) a 4294967295 milisegundos. El valor predeterminado es 30000 milisegundos (30 segundos).  
+    -   Para establecer el umbral de tiempo de espera de comprobación de estado, use la `HealthCheckTimeout` *n* parámetro, donde *n* es un entero de 15000 milisegundos (15 segundos) a 4294967295 milisegundos. El valor predeterminado es 30000 milisegundos (30 segundos).  
   
          Por ejemplo, el siguiente comando cambia el umbral de tiempo de espera de comprobación de estado de un grupo de disponibilidad disponible, `AG1`, a 120.000 milisegundos (dos minutos).  
   
@@ -129,7 +128,7 @@ ms.locfileid: "36202357"
         ```  
   
 > [!NOTE]  
->  Para ver la sintaxis de un cmdlet, use la `Get-Help` cmdlet en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  Para ver la sintaxis de un cmdlet, use el `Get-Help` cmdlet en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
@@ -138,7 +137,7 @@ ms.locfileid: "36202357"
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidad (grupos de disponibilidad AlwaysOn)](availability-modes-always-on-availability-groups.md)   
  [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: Elemento ManufacturingFirstMonth (ASSL) | Documentos de Microsoft
+title: Elemento ManufacturingFirstMonth (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ManufacturingFirstMonth element
 ms.assetid: 3b2fb440-662b-4d88-a133-1e098b9c8169
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c14ca57b15ee4c3a80bf415ca6646f1818bf1a4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cfc62fc2940d73f4ff9c85f9d6aedd65e382bf42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328475"
 ---
 # <a name="manufacturingfirstmonth-element-assl"></a>Elemento ManufacturingFirstMonth (ASSL)
   Define el primer mes de fabricación para un [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36204529"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `ManufacturingFirstMonth` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ El elemento que se corresponde con el elemento primario de `ManufacturingFirstMonth` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

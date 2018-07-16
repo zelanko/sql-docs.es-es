@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01789595c470865d4a422ac87c2814bcc9570468
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 16ea4d4a00726453918577e2eb0eb92d73580ccd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260871"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Crear aplicaciones cliente para datos FILESTREAM
   Puede utilizar Win32 para leer y escribir datos en un FILESTREAM BLOB. Se requieren los pasos siguientes:  
@@ -51,7 +50,7 @@ ms.locfileid: "36202303"
 ##  <a name="steps"></a> Pasos para tener acceso a los datos de FILESTREAM  
   
 ###  <a name="path"></a> Leer la ruta de acceso al archivo FILESTREAM  
- Cada celda de una tabla FILESTREAM tiene una ruta de acceso al archivo que está asociada a él. Para leer la ruta de acceso, utilice la `PathName` propiedad de un `varbinary(max)` columna en un [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción. En el ejemplo siguiente se muestra cómo leer la ruta de acceso de un `varbinary(max)` columna.  
+ Cada celda de una tabla FILESTREAM tiene una ruta de acceso al archivo que está asociada a él. Para leer la ruta de acceso, use el `PathName` propiedad de un `varbinary(max)` columna en un [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción. El ejemplo siguiente muestra cómo leer la ruta de acceso de un `varbinary(max)` columna.  
   
  [!code-sql[FILESTREAM#FS_PathName](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
   

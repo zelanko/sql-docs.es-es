@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
 - user-defined variables [Integration Services]
@@ -21,13 +21,13 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6a5737635ffd69a7d09a93ac1104a1ee65b8277
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7352ff51810a16f2c3e81b5362bad764955f67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283621"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables de Integration Services (SSIS)
   Las variables almacenan valores que un paquete de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus contenedores, tareas y controladores de eventos pueden usar en tiempo de ejecución. Los scripts en la tarea Script y el componente Script también pueden usar variables. Las restricciones de precedencia que ordenan tareas y contenedores en un flujo de trabajo pueden usar variables cuando sus definiciones de restricciones incluyen expresiones.  
@@ -90,7 +90,7 @@ ms.locfileid: "36110749"
  Especifica la descripción de la variable.  
   
  EvaluateAsExpression  
- Cuando la propiedad se establece en `True`, la expresión proporcionada se usa para establecer el valor de la variable.  
+ Cuando la propiedad se establece en `True`, la expresión especificada se usa para establecer el valor de la variable.  
   
  Expresión  
  Especifica la expresión asignada a la variable.  
@@ -118,15 +118,15 @@ ms.locfileid: "36110749"
  IncludeInDebugDump  
  Indica si el valor variable está incluido en los archivos de volcado de depuración.  
   
- Para variables definidas por el usuario y variables del sistema, el valor predeterminado para la **InclueInDebugDump** opción es `true`.  
+ Para variables definidas por el usuario y variables del sistema, el valor predeterminado para el **InclueInDebugDump** opción es `true`.  
   
- Sin embargo, para variables definidas por el usuario, el sistema restablece la **IncludeInDebugDump** opción `false` cuando se cumplen las condiciones siguientes:  
+ Sin embargo, para las variables definidas por el usuario, el sistema restablece la **IncludeInDebugDump** opción `false` cuando se cumplen las condiciones siguientes:  
   
--   Si el **EvaluateAsExpression** propiedad variable se establece en `true`, el sistema restablece la **IncludeInDebugDump** opción `false`.  
+-   Si el **EvaluateAsExpression** propiedad de la variable se establece en `true`, el sistema restablece la **IncludeInDebugDump** opción `false`.  
   
      Para incluir el texto de la expresión como el valor de la variable en los archivos de volcado de depuración, establezca el **IncludeInDebugDump** opción `true`.  
   
--   Si se cambia el tipo de datos de la variable en una cadena, el sistema restablece la **IncludeInDebugDump** opción `false`.  
+-   Si se cambia el tipo de datos en una cadena, el sistema restablece la **IncludeInDebugDump** opción `false`.  
   
  Cuando el sistema restablece la **IncludeInDebugDump** opción `false`, podría invalidarse el valor seleccionado por el usuario.  
   
@@ -146,14 +146,14 @@ ms.locfileid: "36110749"
   
  Para obtener más información sobre las propiedades que puede configurar en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)], consulte [Ventana Variables](../../2014/integration-services/variables-window.md).  
   
- Para obtener más información acerca de propiedades de la variable y para obtener más información acerca de cómo establecer estas propiedades mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
+ Para obtener más información acerca de las propiedades de variables y para obtener más información sobre cómo establecer estas propiedades mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Agregar, eliminar, cambiar el ámbito de la Variable definida por el usuario en un paquete](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
+ [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
- [Establecer las propiedades de una Variable definida por el usuario](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)  
+ [Establecer las propiedades de una variable definida por el usuario](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)  
   
- [Use los valores de Variables y parámetros de un paquete secundario](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
+ [Uso de los valores de variables y parámetros en un paquete secundario](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
   
  [Asignar parámetros de consulta a variables en un componente de flujo de datos](data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento root (XMLA) | Documentos de Microsoft
+title: Elemento root (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - root element
 ms.assetid: ecd9d6e8-b16c-4d62-9a87-107c413a0056
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 481947e1d58fe5da34b29f43405bfff48583b8c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 11045be6946a5a73f0ad86fdcfcc53610800a6c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321085"
 ---
 # <a name="root-element-xmla"></a>Elemento root (XMLA)
-  Contiene un resultado devuelto por la [Discover](../xml-elements-methods-discover.md) método o un comando XML for Analysis (XMLA) ejecutado utilizando el [Execute](../xml-elements-methods-execute.md) método.  
+  Contiene un resultado devuelto por la [Discover](../xml-elements-methods-discover.md) método o un comando XML for Analysis (XMLA) ejecutado con el [Execute](../xml-elements-methods-execute.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36198513"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El `root` elemento contiene la información devuelta en el [DiscoverResponse](../xml-elements-objects-discoverresponse.md) elemento devuelto por una sola `Discover` llamada al método, o en la [ExecuteResponse](../xml-elements-objects-executeresponse.md) elemento devuelto por un comando XMLA único ejecutado por un único `Execute` llamada al método.  
+ El `root` elemento contiene la información devuelta en el [DiscoverResponse](../xml-elements-objects-discoverresponse.md) elemento devuelto por una sola `Discover` llamada al método, o en el [ExecuteResponse](../xml-elements-objects-executeresponse.md) elemento Devuelve un comando XMLA único ejecutado por una sola `Execute` llamada al método.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;XMLA&#41;](xml-elements-properties.md)  

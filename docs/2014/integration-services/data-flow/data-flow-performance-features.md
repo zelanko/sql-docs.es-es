@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - Integration Services packages, performance
@@ -26,13 +26,13 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e812b0f249749c51e482bd27760fa1d5fb7f882f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ef48d82f71441381fca8f8bb2e3d52fee8ea8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287671"
 ---
 # <a name="data-flow-performance-features"></a>Características de rendimiento del flujo de datos
   En este tema se proporcionan sugerencias sobre cómo diseñar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas de rendimiento comunes. También proporciona información sobre las características y las herramientas que puede utilizar para solucionar problemas relacionados con el rendimiento de los paquetes.  
@@ -76,7 +76,7 @@ ms.locfileid: "36201640"
  No aumente el tamaño de los búferes hasta un punto en el que se produzca la paginación del disco. La paginación del disco afecta al rendimiento más que al hecho de no optimizar el tamaño de los búferes. Para saber si se está produciendo la paginación, supervise el contador de rendimiento "Búferes puestos en cola" en el complemento Rendimiento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC).  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>Configurar el paquete para la ejecución en paralelo  
- La ejecución en paralelo mejora el rendimiento en los equipos que tienen varios procesadores físicos o lógicos. Para admitir la ejecución en paralelo de tareas diferentes en el paquete, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utiliza dos propiedades: `MaxConcurrentExecutables` y `EngineThreads`.  
+ La ejecución en paralelo mejora el rendimiento en los equipos que tienen varios procesadores físicos o lógicos. Para admitir la ejecución en paralelo de diferentes tareas en el paquete, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa dos propiedades: `MaxConcurrentExecutables` y `EngineThreads`.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>La propiedad MaxConcurrentExcecutables  
  El `MaxConcurrentExecutables` es una propiedad del propio paquete. Esta propiedad define cuántas tareas se pueden ejecutar simultáneamente. El valor predeterminado es -1, que significa el número de procesadores físicos o lógicos más 2.  
@@ -84,7 +84,7 @@ ms.locfileid: "36201640"
  Para entender cómo funciona esta propiedad, considere un paquete de ejemplo que tiene tres tareas Flujo de datos. Si establece `MaxConcurrentExecutables` en 3, las tres tareas flujo de datos se pueden ejecutar simultáneamente. Sin embargo, suponga que cada tarea Flujo de datos tiene 10 árboles de ejecución de origen a destino. El hecho de establecer `MaxConcurrentExecutables` en 3 no garantiza que los árboles de ejecución de cada tarea Flujo de datos se ejecuten en paralelo.  
   
 #### <a name="the-enginethreads-property"></a>La propiedad EngineThreads  
- La propiedad `EngineThreads` es una propiedad de cada tarea Flujo de datos. Esta propiedad define cuántos subprocesos puede crear y ejecutar en paralelo el motor de flujo de datos. El `EngineThreads` propiedad se aplica igualmente a los subprocesos de origen que crea el motor de flujo de datos para los orígenes y los subprocesos de trabajo que crea el motor para las transformaciones y destinos. Por consiguiente, establecer `EngineThreads` en 10 significa que el motor puede crear hasta diez subprocesos de origen y hasta diez subprocesos de trabajo.  
+ La propiedad `EngineThreads` es una propiedad de cada tarea Flujo de datos. Esta propiedad define cuántos subprocesos puede crear y ejecutar en paralelo el motor de flujo de datos. El `EngineThreads` propiedad se aplica igualmente a ambos los subprocesos de origen que crea el motor de flujo de datos para orígenes y los subprocesos de trabajo que crea el motor para las transformaciones y destinos. Por consiguiente, establecer `EngineThreads` en 10 significa que el motor puede crear hasta diez subprocesos de origen y hasta diez subprocesos de trabajo.  
   
  Para entender cómo funciona esta propiedad, considere el paquete de ejemplo, que tiene tres tareas Flujo de datos. Cada una de las tareas Flujo de datos contiene diez árboles de ejecución de origen a destino. Si establece EngineThreads en 10 en cada tarea Flujo de datos, es posible que los 30 árboles de ejecución se ejecuten simultáneamente.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36201640"
  Utilice las sugerencias de esta sección para mejorar el rendimiento de las transformaciones Agregado, Búsqueda aproximada, Agrupación aproximada, Búsqueda, Combinación de mezcla y Dimensión de variación lenta.  
   
 #### <a name="aggregate-transformation"></a>Transformación Agregado  
- La transformación Agregado incluye las propiedades `Keys`, `KeysScale`, `CountDistinctKeys` y `CountDistinctScale`. Estas propiedades mejoran el rendimiento habilitando la transformación para asignar previamente la cantidad de memoria que necesita la transformación para los datos que almacena en caché. Si conoce el número exacto o aproximado de grupos que se esperan como resultado de un **Agrupar por** operación, establezca la `Keys` y `KeysScale` propiedades, respectivamente. Si conoce el número exacto o aproximado de valores distintos que se esperan como resultado de un **recuento distintivo** operación, establezca la `CountDistinctKeys` y `CountDistinctScale` propiedades, respectivamente.  
+ La transformación Agregado incluye las propiedades `Keys`, `KeysScale`, `CountDistinctKeys` y `CountDistinctScale`. Estas propiedades mejoran el rendimiento habilitando la transformación para asignar previamente la cantidad de memoria que necesita la transformación para los datos que almacena en caché. Si conoce el número exacto o aproximado de grupos que se esperan como resultado de una **Agrupar por** operación, establezca el `Keys` y `KeysScale` propiedades, respectivamente. Si conoce el número exacto o aproximado de valores distintos que esperan obtenerse como resultado de una **recuento distintivo** operación, establezca el `CountDistinctKeys` y `CountDistinctScale` propiedades, respectivamente.  
   
  Si tiene que crear varias agregaciones en un flujo de datos, considere la posibilidad de crear varias agregaciones que utilicen una sola transformación Agregado, en lugar de crear varias transformaciones. Esto mejora el rendimiento cuando una agregación es un subconjunto de otra agregación, ya que la transformación puede optimizar el almacenamiento interno y examinar los datos entrantes una sola vez. Por ejemplo, si una agregación utiliza una cláusula GROUP BY y una agregación AVG, puede mejorar el rendimiento combinándolas en una transformación. No obstante, al realizar varias agregaciones dentro de una transformación Agregado se serializan las operaciones de agregación y, por consiguiente, el rendimiento podría no mejorar cuando haya que calcular varias agregaciones por separado.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "36201640"
 -   Vídeo, [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), en technet.microsoft.com.  
   
 ## <a name="see-also"></a>Vea también  
- [Solución de problemas de herramientas de desarrollo de paquetes](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Solución de problemas de las herramientas de desarrollo de paquetes](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Herramientas para solucionar problemas de la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

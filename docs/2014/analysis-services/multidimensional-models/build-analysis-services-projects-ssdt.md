@@ -1,5 +1,5 @@
 ---
-title: Compilar proyectos de Analysis Services (SSDT) | Documentos de Microsoft
+title: Compilar proyectos de Analysis Services (SSDT) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Analysis Services], building
 - Business Intelligence Development Studio, project building [Analysis Services]
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 697a550dccaf5e89414825efaa137ce146d52cf0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85e3b552234ff34333b8566bdb741b28f2e56d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196175"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Generar proyectos de Analysis Services (SSDT)
   En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], los proyectos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se generan de forma muy similar a como se generan los proyectos de programación de Visual Studio. Al generar el proyecto, se crea un conjunto de archivos XML en el directorio de salida. Estos archivos XML usan el Lenguaje de scripting de Analysis Services (ASSL), que es el dialecto XML que usan las aplicaciones cliente, incluidos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , para comunicarse con una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a fin de crear o modificar objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Los archivos XML se usan para implementar definiciones de objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en una instancia especificada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -57,7 +57,7 @@ ms.locfileid: "36109297"
 |-----------------------------|-----------------|  
 |\<Nombre de configuración > \LastBuilt.xml|Contiene la marca de tiempo y el código hash que identifica la última vez que se generó el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
- Estos archivos XML no contienen \<crear > y \<Alter > etiquetas, que se crean durante la implementación.  
+ Estos archivos XML no contengan \<crear > y \<Alter > etiquetas, que se crean durante la implementación.  
   
  Los ensamblados a los que se hace referencia (excepto los ensamblados estándar del sistema y de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) también se copian en el directorio de salida. Si hay referencias a otros proyectos de una solución, dichos proyectos se generan primero, con la configuración de proyecto adecuada y las dependencias de generación establecidas por las referencias a proyectos; a continuación, los proyectos a los que se hace referencia se copian en la carpeta de salida del proyecto.  
   

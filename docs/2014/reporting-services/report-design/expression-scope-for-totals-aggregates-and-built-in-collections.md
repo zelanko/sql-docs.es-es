@@ -1,5 +1,5 @@
 ---
-title: Ámbito de expresión para totales, agregados y colecciones integradas (generador de informes y SSRS) | Documentos de Microsoft
+title: Ámbito de expresión para totales, agregados y colecciones integradas (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7d5121675cb7448ae939b0442752b33af19dde5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b3347d17fd115e0d9eb8b8d71e672a63f4c0fa5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253517"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>Ámbito de expresión para los totales, agregados y colecciones integradas (Generador de informes y SSRS)
   Al escribir expresiones, encontrará que el término *ámbito* se utiliza en varios contextos. El ámbito puede especificar los datos que se deben utilizar para evaluar una expresión, el conjunto de cuadros de texto de una página representada o el conjunto de elementos de informe que se pueden mostrar u ocultar mediante un comando de alternancia. Verá el término *ámbito* en temas relacionados con la evaluación de expresiones, la sintaxis de funciones de agregado, la visibilidad condicional, y también en mensajes de error relacionados con estas áreas. Las siguientes descripciones le ayudarán a diferenciar el significado de *ámbito* que corresponda:  
@@ -173,8 +173,8 @@ ms.locfileid: "36111742"
 ## <a name="see-also"></a>Vea también  
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)   
- [Crear grupos de jerarquía recursiva &#40;el generador de informes SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Creación de grupos de jerarquía recursiva &#40;generador de informes y SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Listas &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Aplicar formato a texto y marcadores de posición &#40;el generador de informes SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Aplicar formato a texto y marcadores de posición &#40;generador de informes y SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

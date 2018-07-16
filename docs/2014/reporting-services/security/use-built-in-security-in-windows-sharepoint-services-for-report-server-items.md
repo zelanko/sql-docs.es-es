@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -17,13 +17,13 @@ ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4d9231800ea1cf583ae554fe10ecc217fa1e9a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80c3ca9a6ca7b966ba3af54e096d839314158082
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294145"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes
   SharePoint proporciona características de seguridad integradas que se pueden usar para tener acceso a elementos del servidor de informes desde bibliotecas y sitios de SharePoint. Si ya asignó permisos de sitio y lista a los usuarios, dichos usuarios tendrán acceso a los elementos y las operaciones del servidor de informes inmediatamente después de configurar la integración entre SharePoint y un servidor de informes.  
@@ -57,8 +57,8 @@ ms.locfileid: "36111498"
  Si no está usando los niveles de permiso y grupos integrados, debe incluir permisos específicos para tener acceso a las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, consulte [establecer permisos para las operaciones del servidor de informes en una aplicación Web de SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Conceder permisos sobre elementos de servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Comparar Roles y tareas de Reporting Services con permisos y grupos de SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Comparar Roles y tareas de Reporting Services con los permisos y grupos de SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Establecimiento de permisos para las operaciones del servidor de informes en una aplicación web de SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Concesión de permisos sobre elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

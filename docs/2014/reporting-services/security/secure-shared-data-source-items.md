@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], shared
@@ -17,13 +17,13 @@ ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d61801a6eda3250a23d7e9904bf6a372ddf6c8a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71fc9ae4563515bdfebf79af4a41e9379502d872
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256217"
 ---
 # <a name="secure-shared-data-source-items"></a>Proteger elementos de orígenes de datos compartidos
   Puede establecer la seguridad en un origen de datos compartido para habilitar o deshabilitar el acceso a él.  
@@ -44,9 +44,9 @@ ms.locfileid: "36107341"
 |Establecer la seguridad de elementos individuales|Crear y modificar asignaciones de roles que controlen el acceso al origen de datos compartido. Esta tarea debe utilizarse con las tareas "Ver orígenes de datos" o "Administrar orígenes de datos". De lo contrario, no surte efecto porque el usuario no puede seleccionar el elemento.|  
   
 ## <a name="see-also"></a>Vea también  
- [Administrar los orígenes de datos de informe](../report-data/manage-report-data-sources.md)   
+ [Administrar orígenes de datos de informe](../report-data/manage-report-data-sources.md)   
  [Proteger carpetas](secure-folders.md)   
- [Proteger los informes y recursos](secure-reports-and-resources.md)   
+ [Proteger informes y recursos](secure-reports-and-resources.md)   
  [Conceder permisos en un servidor de informes en modo nativo](granting-permissions-on-a-native-mode-report-server.md)   
  [Almacenamiento de las credenciales en un origen de datos de Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Agregar enumeración a un flujo de Control | Documentos de Microsoft
+title: Agregar enumeración a un flujo de Control | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding enumerations
 - Foreach Loop containers
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - enumerations [Integration Services]
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
 caps.latest.revision: 38
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 10d30541be42331b544882f8a8b85f75db7f230d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 039b9a1cd94b3baa207c5d738dc8ed2455bb9d74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223744"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>Agregar enumeración a un flujo de control
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye el contenedor de bucles Para cada uno, un elemento de flujo de control que simplifica la inclusión de una construcción de bucle que enumera archivos y objetos en el flujo de control de un paquete. Para más información, consulte [Foreach Loop Container](control-flow/foreach-loop-container.md).  
@@ -36,10 +36,10 @@ ms.locfileid: "36110994"
   
 ### <a name="to-implement-a-foreach-loop-container-in-a-control-flow"></a>Para implementar un contenedor de bucles Foreach en un flujo de control  
   
-1.  Agregue el contenedor de bucles Foreach al paquete. Para obtener más información, vea [agregar o eliminar una tarea o un contenedor en un flujo de Control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+1.  Agregue el contenedor de bucles Foreach al paquete. Para obtener más información, consulte [agregar o eliminar una tarea o un contenedor en un flujo de Control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
-2.  Agregue tareas y contenedores al contenedor de bucles Foreach. Para obtener más información, vea [agregar o eliminar una tarea o un contenedor en un flujo de Control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+2.  Agregue tareas y contenedores al contenedor de bucles Foreach. Para obtener más información, consulte [agregar o eliminar una tarea o un contenedor en un flujo de Control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 3.  Conecte tareas y contenedores en el contenedor de bucles Foreach mediante restricciones de precedencia. Para más información, vea [Conectar tareas y contenedores mediante una restricción de precedencia predeterminada](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md).  

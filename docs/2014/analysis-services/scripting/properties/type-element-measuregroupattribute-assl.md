@@ -1,5 +1,5 @@
 ---
-title: Tipo de elemento (MeasureGroupAttribute) (ASSL) | Documentos de Microsoft
+title: Type (elemento) (MeasureGroupAttribute) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 93740504-297a-4a06-ab3e-b598e466eebb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d06b5df3ba99e54ec62de5c6f274874289cbbc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49155b00ca70c613ffec01e898e7c6f071e24c84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254857"
 ---
 # <a name="type-element-measuregroupattribute-assl"></a>Elemento Type (MeasureGroupAttribute) (ASSL)
   Contiene el tipo de un [MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md) elemento.  
@@ -67,11 +67,11 @@ ms.locfileid: "36112771"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |*Regular*|Representa un atributo normal.|  
-|*granularidad*|Representa un atributo de granularidad.|  
+|*Granularidad*|Representa un atributo de granularidad.|  
   
  La enumeración que corresponde a los valores permitidos para `Type` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MeasureGroupAttributeType>.  
   
- El elemento que corresponde al elemento primario de `Type` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>.  
+ El elemento que se corresponde con el elemento primario de `Type` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>.  
   
 ## <a name="see-also"></a>Vea también  
  [Atributos de elemento &#40;ASSL&#41;](../collections/attributes-element-assl.md)   

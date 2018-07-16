@@ -1,5 +1,5 @@
 ---
-title: Parámetros de algoritmo (datos de SQL Server a los complementos de minería de datos) | Documentos de Microsoft
+title: Parámetros de algoritmo (datos de SQL Server a los complementos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_STATES
 - FORCED_REGRESSOR
@@ -48,24 +48,24 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e8856d824e043c5cb68f18d3b34c9a07ea21375
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7f640f259375c48584ee33b72e63b082de0a3e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267681"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Parámetros de algoritmo (Complementos de minería de datos de SQL Server)
   Cuando se realiza la minería de datos con las Herramientas de análisis de tabla para Excel, no es necesario configurar el algoritmo de minería de datos ni ningún parámetro; cada herramienta analiza los datos y selecciona automáticamente los parámetros óptimos. Sin embargo, si desea modificar el modelo o crear un modelo de minería de datos desde cero, el Cliente de minería de datos para Excel dispone de varias opciones para la personalización.  
   
--   Crear un modelo de minería de datos manualmente, haciendo clic en **avanzadas** y, a continuación, haga clic en **Agregar modelo a estructura**.  
+-   Crear un modelo de minería de datos manualmente, haga clic en **avanzadas** y, a continuación, haga clic en **Agregar modelo a estructura**.  
   
--   Use cualquiera de los asistentes de modelado en el cliente de minería de datos y haga clic en **parámetros** para controlar el comportamiento de la [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de minería de datos.  
+-   Utilice cualquiera de los asistentes de modelado en el cliente de minería de datos y haga clic en **parámetros** para controlar el comportamiento de la [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de minería de datos.  
   
--   Haga clic en **consulta** para abrir el Asistente para modelos de consulta y, a continuación, haga clic en **avanzadas** para abrir el **Editor minería de datos avanzada consulta**. En este editor, puede generar modelos usando plantillas DMX.  
+-   Haga clic en **consulta** para abrir el Asistente para modelo de consulta y, a continuación, haga clic en **avanzadas** para abrir el **Editor minería de datos avanzada consulta**. En este editor, puede generar modelos usando plantillas DMX.  
   
  También puede modificar el comportamiento de los modelos de minería de datos ya creados o filtrar los resultados estableciendo parámetros en el visor de modelos de minería de datos.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36202198"
 |CLUSTER_COUNT|Algoritmo de clústeres de Microsoft<br /><br /> Algoritmo de clústeres de secuencia de Microsoft|Especifica el número aproximado de clústeres que generará el algoritmo. Si no se puede generar el número aproximado de clústeres a partir de los datos, el algoritmo genera tantos clústeres como sea posible. Si CLUSTER_COUNT se establece en 0, el algoritmo utiliza la heurística para determinar el mejor número de clústeres que debe generar.<br /><br /> El valor predeterminado es 10.|  
 |CLUSTER_SEED|Algoritmo de clústeres de Microsoft|Especifica el número de inicialización usado para generar clústeres aleatoriamente para la fase inicial de generación del modelo.<br /><br /> El valor predeterminado es 0.|  
 |CLUSTERING_METHOD|Algoritmo de clústeres de Microsoft|Especifica el método de agrupación en clústeres que va a usar el algoritmo. Los métodos de agrupación en clústeres disponibles son: EM escalable (1), EM no escalable (2), mediana-K escalable (3) y mediana-K no escalable (4).<br /><br /> El valor predeterminado es 1.|  
-|COMPLEXITY_PENALTY|Algoritmo de árboles de decisión de Microsoft<br /><br /> Algoritmo de serie temporal de Microsoft|Controla el crecimiento del árbol de decisión. Un valor bajo aumenta el número de divisiones y un valor alto lo reduce. El valor predeterminado se basa en el número de atributos de un modelo concreto, como se describe en la lista siguiente:<br /><br /> De 1 a 9 atributos, el valor predeterminado es 0,5.<br /><br /> De 10 a 99 atributos, el valor predeterminado es 0,9.<br /><br /> Para 100 o más atributos, el valor predeterminado es 0,99.<br /><br /> Nota: En los modelos de serie temporal, este parámetro se aplica solo a modelos que se generan mediante el algoritmo ARTxp, o a modelos mixtos.|  
+|COMPLEXITY_PENALTY|Algoritmo de árboles de decisión de Microsoft<br /><br /> Algoritmo de serie temporal de Microsoft|Controla el crecimiento del árbol de decisión. Un valor bajo aumenta el número de divisiones y un valor alto lo reduce. El valor predeterminado se basa en el número de atributos de un modelo concreto, como se describe en la lista siguiente:<br /><br /> De 1 a 9 atributos, el valor predeterminado es 0,5.<br /><br /> De 10 a 99 atributos, el valor predeterminado es 0,9.<br /><br /> Para 100 o más atributos, el valor predeterminado es 0,99.<br /><br /> Nota: En los modelos de serie temporal, este parámetro se aplica únicamente a los modelos generados mediante el algoritmo ARTxp, o a modelos mixtos.|  
 |FORCED_REGRESSOR|Algoritmo de árboles de decisión de Microsoft<br /><br /> Algoritmo de regresión lineal de Microsoft|Fuerza al algoritmo a usar las columnas indicadas como regresores, independientemente de su importancia según los cálculos del algoritmo.<br /><br /> Nota: Este parámetro sólo se utiliza para árboles de decisión que predicen un atributo continuo. Por definición, un modelo de regresión lineal es un caso especial de árboles de decisión que predice atributos continuos. Sin embargo, cualquier modelo de árbol de decisión puede contener un nodo que representa una fórmula de regresión lineal.|  
 |FORECAST_METHOD|Algoritmo de serie temporal de Microsoft|Indica si las predicciones se deben realizar con el algoritmo ARTxp, el algoritmo ARIMA o una combinación de ambos.<br /><br /> El valor predeterminado es MIXED.|  
 |HIDDEN_NODE_RATIO|Microsoft Neural Network Algorithm|Especifica la proporción de neuronas ocultas por neuronas de entrada y de salida. La siguiente fórmula determina el número inicial de neuronas de la capa oculta:<br /><br /> HIDDEN_NODE_RATIO * SQRT(Total de neuronas de entrada \* Total de neuronas de salida)<br /><br /> El valor predeterminado es 4,0.|  
@@ -88,7 +88,7 @@ ms.locfileid: "36202198"
 |HISTORICAL_MODEL_GAP|Algoritmo de serie temporal de Microsoft|Especifica el intervalo temporal entre dos modelos históricos consecutivos. Por ejemplo, si establece este valor en g, se generarán modelos históricos para datos truncados por segmentos temporales a intervalos de g, 2*g, 3\*g, etc.<br /><br /> El valor predeterminado es 10.|  
 |HOLDOUT_PERCENTAGE|Algoritmo de regresión logística de Microsoft<br /><br /> Microsoft Neural Network Algorithm|Especifica el porcentaje de casos de los datos de entrenamiento que se han usado para calcular el error de datos de exclusión, que se usa como parte de los criterios de detención durante el entrenamiento del modelo de minería de datos.<br /><br /> El valor predeterminado es 30.<br /><br /> Nota: Este parámetro es distinto del valor de porcentaje de datos de exclusión que se aplica a una estructura de minería de datos.|  
 |HOLDOUT_SEED|Algoritmo de regresión logística de Microsoft<br /><br /> Microsoft Neural Network Algorithm|Especifica un número que se usa para inicializar el generador pseudoaleatorio cuando el algoritmo determina aleatoriamente los datos de exclusión. Si este parámetro se establece en 0, el algoritmo genera la inicialización basada en el nombre del modelo de minería de datos para garantizar que el contenido del modelo permanece intacto al volver a realizar el proceso.<br /><br /> El valor predeterminado es 0.<br /><br /> Nota: Este parámetro es distinto del valor de inicialización de datos de exclusión que se aplica a una estructura de minería de datos.|  
-|INSTABILITY_SENSITIVITY|Algoritmo de serie temporal de Microsoft|Controla el punto en el que la varianza de la predicción supera un cierto umbral y el algoritmo ARTxp suprime las predicciones. El valor predeterminado es 1.<br /><br /> Nota: Este parámetro se aplica solo a modelos mixtos o modelos que utilizan el algoritmo ARTxp.|  
+|INSTABILITY_SENSITIVITY|Algoritmo de serie temporal de Microsoft|Controla el punto en el que la varianza de la predicción supera un cierto umbral y el algoritmo ARTxp suprime las predicciones. El valor predeterminado es 1.<br /><br /> Nota: Este parámetro se aplica solo a modelos mixtos o los modelos que utilizan el algoritmo ARTxp.|  
 |MAXIMUM_INPUT_ATTRIBUTES|Algoritmo de clústeres de Microsoft<br /><br /> Algoritmo de árboles de decisión de Microsoft<br /><br /> Algoritmo de regresión lineal de Microsoft<br /><br /> Algoritmo Bayes naive de Microsoft<br /><br /> Microsoft Neural Network Algorithm<br /><br /> Algoritmo de regresión logística de Microsoft|Define el número de atributos de entrada que el algoritmo puede controlar antes de invocar la selección de características. Establezca este valor en 0 para desactivar la selección de características.<br /><br /> El valor predeterminado es 255.|  
 |MAXIMUM_ITEMSET_COUNT|Algoritmo de asociación de Microsoft|Especifica el número máximo de conjuntos de elementos que se van a generar. Si no se especifica ningún número, el algoritmo genera todos los conjuntos de elementos posibles.<br /><br /> El valor predeterminado es 200000.|  
 |MAXIMUM_ITEMSET_SIZE|Algoritmo de asociación de Microsoft|Especifica el número máximo de elementos que se admiten en un conjunto de elementos. Si este valor se establece en 0, indica que no hay límite para el tamaño del conjunto de elementos.<br /><br /> El valor predeterminado es 3.|  

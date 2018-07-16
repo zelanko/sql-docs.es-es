@@ -1,5 +1,5 @@
 ---
-title: Configurar propiedades de medidas | Documentos de Microsoft
+title: Configurar propiedades de medidas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - additivity [Analysis Services]
 - ID property
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - ProactiveCaching property
 ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
 caps.latest.revision: 50
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4072342fcdace380e08b507c118279b837ba26fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b7be3b5e73134e65cefad48b3d03c4c912a4279a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323185"
 ---
 # <a name="configure-measure-properties"></a>Configurar propiedades de medidas
   Las medidas tienen propiedades que permiten definir su funcionamiento, así como controlar cómo aparecen ante los usuarios.  
@@ -74,7 +74,7 @@ ms.locfileid: "36197272"
 |`Visible`|Determina la visibilidad de la medida en las aplicaciones cliente.|  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar las propiedades de grupo de medida](configure-measure-group-properties.md)   
+ [Configurar las propiedades del grupo de medida](configure-measure-group-properties.md)   
  [Modificar medidas](../lesson-3-1-modifying-measures.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
@@ -16,13 +16,13 @@ ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ead89e675f08ca9ff5014ae8a03bfd39eabf798f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbceb06967d0bbfb305bd46673c8bbbcb9e1bfcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200391"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324625"
 ---
 # <a name="--subtract-ssis-expression"></a>- (Restar) (expresión de SSIS)
   Resta la segunda expresión numérica de la primera.  
@@ -68,7 +68,7 @@ ListPrice - (ListPrice * @[Discount%])
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Prioridad y asociatividad](operator-precedence-and-associativity.md)   
+ [Precedencia y asociatividad](operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)  
   
   

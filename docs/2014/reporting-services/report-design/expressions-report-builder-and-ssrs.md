@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c57c783be7740e6cfb9223b70bbb49d4eadbebe4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 669b5d6a8514dce55a2f5fadc0d1c239b5b3ab61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268591"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expresiones (Generador de informes y SSRS)
   Las expresiones se utilizan ampliamente a lo largo de un informe para recuperar, calcular, mostrar, agrupar, ordenar, filtrar y parametrizar datos y darles formato. Muchas propiedades de elementos de informe pueden establecerse en una expresión. Las expresiones le ayudan a controlar el contenido, el diseño y la interactividad de un informe. Las expresiones se escriben [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], se guardan en la definición de informe y evaluadas por el procesador de informes al ejecutar el informe.  
   
- A diferencia de aplicaciones como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel en las que trabaja directamente con datos en una hoja de cálculo, en un informe, se trabaja con expresiones que son marcadores de posición para los datos. Para ver los datos reales de las expresiones evaluadas, debe obtener una vista previa del informe. Al ejecutar el informe, el procesador de informes evalúa cada expresión a medida que combina los datos del informe y elementos de diseño del informe, como tablas y gráficos.  
+ A diferencia de aplicaciones como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel donde se trabaja directamente con datos en una hoja de cálculo, en un informe, se trabaja con expresiones que son marcadores de posición para los datos. Para ver los datos reales de las expresiones evaluadas, debe obtener una vista previa del informe. Al ejecutar el informe, el procesador de informes evalúa cada expresión a medida que combina los datos del informe y elementos de diseño del informe, como tablas y gráficos.  
   
  Cuando diseña un informe, muchas expresiones de los elementos de informe se establecen automáticamente. Por ejemplo, al arrastrar un campo desde el panel de datos hasta una celda de la tabla en la superficie de diseño del informe, el valor del cuadro de texto se establece en una expresión simple para el campo. En la siguiente figura, el panel Datos de informe muestra el identificador de los campos de conjunto de datos Name, SalesTerritory, Code y Sales. Se han agregado tres campos a la tabla: [Name], [Code] y [Sales]. La notación [Name] en la superficie de diseño representa la expresión `=Fields!Name.Value`subyacente.  
   
@@ -36,13 +36,13 @@ ms.locfileid: "36202235"
   
  Para obtener más información y ejemplos, vea los siguientes temas:  
   
--   [Expresión que se utiliza en los informes &#40;el generador de informes SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+-   [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
 -   [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [Ejemplos de ecuaciones de filtro &#40;el generador de informes SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Ejemplos de ecuaciones de filtro &#40;generador de informes y SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
--   [Ejemplos de expresiones de grupo &#40;el generador de informes SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
+-   [Ejemplos de expresiones de grupo &#40;generador de informes y SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
   
 -   [Tutoriales &#40;generador de informes&#41;](../report-builder-tutorials.md)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36202235"
  Las expresiones pueden incluir referencias a funciones, operadores, constantes, campos, parámetros, elementos de colecciones integradas y referencias a código personalizado incrustado o a ensamblados personalizados.  
   
 > [!NOTE]  
->  Para desarrollar expresiones complejas o expresiones que utilizan código personalizado o ensamblados personalizados, recomendamos que utilice el Diseñador de informes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Para obtener más información, vea [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+>  Para desarrollar expresiones complejas o expresiones que utilizan código personalizado o ensamblados personalizados, recomendamos que use el Diseñador de informes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Para obtener más información, vea [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
  En la tabla siguiente se enumeran los tipos de referencias que se pueden incluir en una expresión:  
   
@@ -112,8 +112,8 @@ ms.locfileid: "36202235"
 |[Constantes](expressions-report-builder-and-ssrs.md)|Describe las constantes a las que puede tener acceso interactivamente para las propiedades que requieren valores constantes, por ejemplo los colores de fuente.|`="Blue"`|  
 |[Operadores](operators-in-expressions-report-builder-and-ssrs.md)|Describe los operadores que puede utilizar para combinar referencias en una expresión. Por ejemplo, el `&` operador se utiliza para concatenar cadenas.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
 |[Colecciones integradas](built-in-collections-in-expressions-report-builder.md)|Describe las colecciones integradas que puede incluir en una expresión; por ejemplo, `Fields`, `Parameters`y `Variables`.|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
-|[Informe integradas y funciones de agregado](report-builder-functions-aggregate-functions-reference.md)|Describe funciones integradas, como `Sum` o `Previous`, a las que puede tener acceso desde una expresión.|`=Previous(Sum(Fields!Sales.Value))`|  
-|[Diseñador de informes de código personalizado y las referencias de ensamblado en las expresiones de &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Describe cómo puede obtener acceso a las clases integradas de CLR <xref:System.Math> y <xref:System.Convert>, a otras clases de CLR, a funciones de biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] o a métodos de un ensamblado externo.<br /><br /> Describe cómo puede tener acceso a código personalizado incrustado en un informe, o que se compila e instala como un ensamblado personalizado en el cliente de informes y en el servidor de informes.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
+|[Informes integrados y las funciones de agregado](report-builder-functions-aggregate-functions-reference.md)|Describe funciones integradas, como `Sum` o `Previous`, a las que puede tener acceso desde una expresión.|`=Previous(Sum(Fields!Sales.Value))`|  
+|[Código personalizado y las referencias de ensamblado en expresiones en el Diseñador de informes &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Describe cómo puede obtener acceso a las clases integradas de CLR <xref:System.Math> y <xref:System.Convert>, a otras clases de CLR, a funciones de biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] o a métodos de un ensamblado externo.<br /><br /> Describe cómo puede tener acceso a código personalizado incrustado en un informe, o que se compila e instala como un ensamblado personalizado en el cliente de informes y en el servidor de informes.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
   
 
   
@@ -133,11 +133,11 @@ ms.locfileid: "36202235"
 ##  <a name="Section"></a> En esta sección  
  [Agregar una expresión &#40;Generador de informes y SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)  
   
- [Expresión que se utiliza en los informes &#40;el generador de informes SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;el generador de informes SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [Referencia de expresiones &#40;el generador de informes SSRS&#41;](expression-reference-report-builder-and-ssrs.md)  
+ [Referencia de expresiones &#40;generador de informes y SSRS&#41;](expression-reference-report-builder-and-ssrs.md)  
   
 
   

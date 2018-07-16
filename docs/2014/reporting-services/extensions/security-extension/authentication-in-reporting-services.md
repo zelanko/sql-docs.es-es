@@ -17,15 +17,15 @@ helpviewer_keywords:
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: df847dc70d13d61a43b6ba3554280cece774b49a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 18ea77b885dd7aed809eb1ebda04bbfddad11137
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235025"
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticación de Windows en Reporting Services
   La autenticación es el proceso de establecer el derecho de un usuario en una identidad. Hay muchas técnicas que puede utilizar para autenticar a un usuario. La manera más común es mediante contraseñas. Por ejemplo, al implementar la autenticación de formularios, desea una implementación que consulte las credenciales (normalmente con alguna interfaz que solicita un nombre de inicio de sesión y una contraseña) de los usuarios y, a continuación, valida los usuarios con un almacén de datos, como una tabla de base de datos o un archivo de configuración. Si no se pueden validar las credenciales, se produce un error en el proceso de autenticación y el usuario asumirá una identidad anónima.  
@@ -33,7 +33,7 @@ ms.locfileid: "36112638"
 ## <a name="custom-authentication-in-reporting-services"></a>Autenticación personalizada en Reporting Services  
  En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], el sistema operativo Windows administra la autenticación de los usuarios a través de la seguridad integrada o de la recepción explícita y la validación de las credenciales del usuario. La autenticación personalizada se puede desarrollar en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para admitir esquemas de autenticación adicionales. Esto se posibilita a través de la interfaz de extensión de la seguridad <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>. Todas las extensiones heredan de la interfaz base <xref:Microsoft.ReportingServices.Interfaces.IExtension> para cualquier extensión que implemente y use el servidor de informes. <xref:Microsoft.ReportingServices.Interfaces.IExtension>, así como <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>, son miembros del espacio de nombres <xref:Microsoft.ReportingServices.Interfaces>.  
   
- Para autenticar con un servidor de informes en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], se usa principalmente el método <xref:ReportService2010.ReportingService2010.LogonUser%2A>. Este miembro del servicio web de Reporting Services se puede utilizar con el objeto de pasar las credenciales del usuario a un servidor de informes para la validación. Implementa la extensión de seguridad subyacente **IAuthenticationExtension.LogonUser** que contiene el código de autenticación personalizado. En el ejemplo de autenticación de formularios, **LogonUser**, que realiza una comprobación de la autenticación contra las credenciales proporcionadas y un almacén de usuario personalizado en una base de datos. Un ejemplo de implementación de **LogonUser** sería similar a:  
+ Para autenticar con un servidor de informes en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], se usa principalmente el método <xref:ReportService2010.ReportingService2010.LogonUser%2A>. Este miembro del servicio web de Reporting Services se puede utilizar con el objeto de pasar las credenciales del usuario a un servidor de informes para la validación. La extensión de seguridad subyacente implementa **IAuthenticationExtension.LogonUser** que contiene el código de autenticación personalizada. En el ejemplo de autenticación de formularios, **LogonUser**, que realiza una comprobación de la autenticación contra las credenciales proporcionadas y un almacén de usuario personalizado en una base de datos. Un ejemplo de implementación de **LogonUser** sería similar a:  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  

@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones HTTP (página servidor) | Documentos de Microsoft
+title: Editor del Administrador de conexiones HTTP (página servidor) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.httpconnection.server.f1
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9c298c6bb6427b42f0302350919081e2c3e5bc08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 816653a78a5702c4e1308eb5adb1341f527d9aaf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300545"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>Editor del administrador de conexiones HTTP (página Servidor)
   Utilice la pestaña **Servidor** del cuadro de diálogo **Editor del administrador de conexiones HTTP** para configurar el Administrador de conexiones HTTP especificando propiedades como la dirección URL y las credenciales de seguridad. Una conexión HTTP habilita a un paquete para obtener acceso a un servidor web mediante HTTP para enviar o recibir archivos. Después de configurar el Administrador de conexiones HTTP, también puede probar la conexión.  

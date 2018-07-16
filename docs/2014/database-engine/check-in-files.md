@@ -1,5 +1,5 @@
 ---
-title: Proteger archivos | Documentos de Microsoft
+title: Proteger los archivos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.CheckInDialog
 helpviewer_keywords:
 - checking in files
 ms.assetid: 0657a387-8411-4406-bef9-d262a5bfa269
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cf955c5a2101ba6ffa582601cd587b27a63c1621
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b657d02a06d76645fce350e1f6ba82523e69ff37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222655"
 ---
 # <a name="check-in-files"></a>Proteger archivos
   Para poner los archivos controlados por código fuente a disposición de otros usuarios, es necesario proteger esos archivos en el control de código fuente. Al proteger un archivo, la versión que se protege se escribe en el proveedor de control de código fuente y se convierte en la última versión del archivo.  
@@ -45,7 +45,7 @@ ms.locfileid: "36203481"
      **Comentarios**  
      Agregue un comentario para asociarlo a la operación de protección.  
   
-     **No mostrar comprobación en el cuadro de diálogo al proteger elementos**  
+     **No mostrar en el cuadro de diálogo de comprobación al proteger elementos**  
      Suprime el cuadro de diálogo en las operaciones de protección.  
   
      **Vista plana**  

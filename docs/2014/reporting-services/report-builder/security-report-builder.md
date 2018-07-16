@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b83302fb323b9301ef2ec5ce0e51f6201a87a317
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b2f11120fcc98bde39800ad75f94499b0b5f5081
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309377"
 ---
 # <a name="security-report-builder"></a>Seguridad (Generador de informes)
   El Generador de informes es una aplicación cliente de creación de informes diseñada para que funcione con un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . El servidor de informes se puede configurar para funcione en modo nativo como un servidor independiente o en modo integrado de SharePoint, para que admita los informes de un sitio de SharePoint.  

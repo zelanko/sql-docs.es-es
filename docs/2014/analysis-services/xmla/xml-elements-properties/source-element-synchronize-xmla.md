@@ -1,5 +1,5 @@
 ---
-title: Elemento Source (Synchronize) (XMLA) | Documentos de Microsoft
+title: Elemento Source (Synchronize) (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 0a857f91-771f-4c5e-8bf7-4bf17442d4df
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5341a6c993c6053dbe6716dcfcd5155f81a4ae0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 8a9389b47418a581c9d711c9cd29b73b6a8e962d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326425"
 ---
 # <a name="source-element-synchronize-xmla"></a>Elemento Source (Synchronize) (XMLA)
-  Representa una base de datos de origen desde el que se va a sincronizar una base de datos de destino durante una [sincronizar](../xml-elements-commands/synchronize-element-xmla.md) comando.  
+  Representa una base de datos de origen desde el que se va a sincronizar una base de datos de destino durante una [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36202358"
 |Elementos secundarios|[ConnectionString](connectionstring-element-xmla.md), [objeto](object-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notas  
- El `Synchronize` comando usa el `Source` elemento para establecer una conexión con e identificar una base de datos en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] con la que se va a sincronizar la base de datos de destino.  
+ El `Synchronize` comando usa el `Source` elemento para establecer una conexión a e identificar una base de datos en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] con el que se va a sincronizar la base de datos de destino.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;XMLA&#41;](xml-elements-properties.md)  

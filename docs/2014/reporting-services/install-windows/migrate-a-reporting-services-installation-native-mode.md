@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - manual Reporting Services migrations
 - Report Server Windows service
@@ -21,13 +21,13 @@ ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 60c6e0833fb2e8a8c20ca1dca6f3fe8bb43bed9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85ac1d802949d0398f628ba267afb4dcb354151a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309465"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar una instalación de Reporting Services (modo nativo)
   En este tema se proporcionan instrucciones paso a paso para migrar una de las siguientes versiones admitidas de una implementación en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a una nueva instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -38,7 +38,7 @@ ms.locfileid: "36203134"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Requiere más pasos, consulte [no se puede usar SQL Server 2005 al host de bases de datos de 2014 de servidor de informes](http://support.microsoft.com/kb/2796721).  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Requiere más pasos, consulte [no se puede usar SQL Server 2005 para hospedar las bases de datos de informe de servidor 2014](http://support.microsoft.com/kb/2796721).  
   
 ||  
 |-|  
@@ -114,7 +114,7 @@ ms.locfileid: "36203134"
   
 -   Si utiliza hojas de estilos en cascada personalizadas en el entorno de elaboración de informes, no se migrarán. Deberá moverlas manualmente después de la migración.  
   
- Para obtener más información acerca de los cambios en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte la documentación del Asesor de actualizaciones y [What's New &#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
+ Para obtener más información acerca de los cambios en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte la documentación del Asesor de actualizaciones y [What ' s New &#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
   
 ##  <a name="bkmk_backup"></a> Realizar una copia de seguridad de los archivos y los datos  
  Antes de instalar una instancia nueva de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], no olvide hacer una copia de seguridad de todos los archivos de la instalación actual.  
@@ -144,9 +144,9 @@ ms.locfileid: "36203134"
   
  Haga clic en uno de los vínculos siguientes para ver instrucciones sobre cómo instalar una instancia nueva de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
--   [Instalar SQL Server 2014 desde el Asistente para la instalación &#40;el programa de instalación&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+-   [Instalar SQL Server 2014 desde el Asistente para instalación &#40;el programa de instalación&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
   
--   [Instalar a SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+-   [Instalar SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   
 ##  <a name="bkmk_move_database"></a> Mover la base de datos del servidor de informes  
  La base de datos del servidor de informes contiene los informes, modelos, orígenes de datos compartidos, calendarios, recursos, suscripciones y carpetas publicados. También contiene las propiedades de los elementos y del sistema, y los permisos para tener acceso al contenido del servidor de informes.  
@@ -243,7 +243,7 @@ ms.locfileid: "36203134"
 |Administrador de informes en una instancia remota|[Configurar el Administrador de informes &#40;modo nativo&#41;](../report-server/configure-web-portal.md)|  
   
 ##  <a name="bkmk_windowsservice_group"></a> Grupo de servicios de Windows y ACL de seguridad  
- En [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]hay un grupo de servicios, el grupo de servicios [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de Windows, que se usa para crear listas de control de acceso (ACL) de seguridad para todas las claves del Registro, archivos y carpetas que se instalan con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Este nombre de grupo de Windows aparece con el formato SQLServerReportServerUser$\<*nombreDeEquipo*>$\<*nombreDeInstancia*>. Este grupo ocupa el lugar de los dos grupos de servicios de Windows en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si tiene listas ACL personalizadas asociadas con cualquiera de los [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] grupos de Windows, necesitará aplicar esas ACL al nuevo grupo para la nueva instancia de servidor de informes en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ En [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]hay un grupo de servicios, el grupo de servicios [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de Windows, que se usa para crear listas de control de acceso (ACL) de seguridad para todas las claves del Registro, archivos y carpetas que se instalan con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Este nombre de grupo de Windows aparece con el formato SQLServerReportServerUser$\<*nombreDeEquipo*>$\<*nombreDeInstancia*>. Este grupo ocupa el lugar de los dos grupos de servicios de Windows en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si tiene listas ACL personalizadas asociadas a cualquiera de los [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] grupos de Windows, necesitará aplicar esas ACL al nuevo grupo para la nueva instancia de servidor de informes en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_verify"></a> Comprobar la implementación  
   

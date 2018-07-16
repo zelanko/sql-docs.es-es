@@ -1,5 +1,5 @@
 ---
-title: Elemento LogFileAppend (ASSL) | Documentos de Microsoft
+title: Elemento LogFileAppend (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - LogFileAppend element
 ms.assetid: f85e94a9-e5c5-478a-a5a0-fc99ed19b582
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d337d4110afc07d8aa211bc17685bc0fc2e8d81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b4cd2f873b3d7394dac45a1a40b9b98483118f44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190915"
 ---
 # <a name="logfileappend-element-assl"></a>Elemento LogFileAppend (ASSL)
   Determina si el [seguimiento](../objects/trace-element-assl.md) elemento anexa la salida de registro al archivo de registro existente o lo sobrescribe.  
@@ -62,7 +62,7 @@ ms.locfileid: "36197696"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `LogFileAppend` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Trace>.  
+ El elemento que se corresponde con el elemento primario de `LogFileAppend` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Vea también  
  [Realiza un seguimiento de elemento &#40;ASSL&#41;](../collections/traces-element-assl.md)   

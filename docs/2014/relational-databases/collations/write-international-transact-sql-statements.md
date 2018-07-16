@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - writing international statements
 - Transact-SQL international considerations
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dates [SQL Server], international considerations
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cbd8342f74668ba52ff837336bd9b245480f489f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 236948c23164cd0890e7c4fc4455cbc87227d792
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256981"
 ---
 # <a name="write-international-transact-sql-statements"></a>Escribir instrucciones Transact-SQL internacionales
   Las bases de datos y las aplicaciones de bases de datos que utilizan instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] obtendrán una mayor portabilidad de un idioma a otro, o admitirán varios idiomas, si se siguen estas directrices:  

@@ -1,5 +1,5 @@
 ---
-title: Elemento DefaultScript (ASSL) | Documentos de Microsoft
+title: Elemento DefaultScript (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DefaultScript element
 ms.assetid: 60716e63-2d64-4774-9ac9-253efe612fa5
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b0a26b8b703636aebb6d3701c5c7c99d24a25ade
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5de4eca3e226e6eddbe811af5dc089b1965cbd08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200065"
 ---
 # <a name="defaultscript-element-assl"></a>Elemento DefaultScript (ASSL)
   Identifica el valor predeterminado [MdxScript](../objects/mdxscript-element-assl.md) elemento en el [MdxScripts](../collections/mdxscripts-element-assl.md) colección.  
@@ -64,7 +64,7 @@ ms.locfileid: "36204481"
 ## <a name="remarks"></a>Notas  
  Al establecer el valor de `DefaultScript` en `True` para un script, se establece el valor de `DefaultScript` en `False` para todos los demás elementos `MdxScript` de la colección `MdxScripts`.  
   
- El elemento que corresponde al elemento primario de `DefaultScript` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MdxScript>.  
+ El elemento que se corresponde con el elemento primario de `DefaultScript` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MdxScript>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

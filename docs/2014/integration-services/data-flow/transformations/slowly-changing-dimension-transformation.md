@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.slowlychangingdimtrans.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 730e17f4376ddd7ac28c036c10a33db45d3f9b4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c326568be4fa1c5f8088e75ca4609975f6f7561c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314255"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Dimensión de variación lenta, transformación
   La transformación Dimensión de variación lenta coordina la actualización e inserción de registros en las tablas de dimensiones de almacenamiento de datos. Por ejemplo, puede usar esta transformación para configurar las salidas de transformación que insertan y actualizan registros en la tabla DimProduct de la base de datos [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] con datos de la tabla Production.Products de la base de datos OLTP AdventureWorks.  

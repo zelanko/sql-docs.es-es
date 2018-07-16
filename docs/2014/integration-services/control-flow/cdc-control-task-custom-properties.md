@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4a45fb326b728ae5df24f0ea91124d145d2c1761
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 230479af0ffa24130bb1ea63f0a72b758a3c81fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298745"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Propiedades personalizadas de la tarea de control CDC
   En la tabla siguiente se describen las propiedades personalizadas de la tarea de control CDC. Todas las propiedades son de lectura y escritura.  

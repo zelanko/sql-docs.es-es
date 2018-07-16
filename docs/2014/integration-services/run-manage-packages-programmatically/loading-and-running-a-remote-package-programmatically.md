@@ -18,13 +18,13 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c9dfad0b1ed2daa45a967b074982ba80653e84bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df53d355babd082cba4b67404c91b7d4c33bec28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186692"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Cargar y ejecutar mediante programación un paquete remoto
   Para ejecutar los paquetes remotos desde un equipo local que no tiene instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], inicie los paquetes para que se ejecuten en el equipo remoto en el que está instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para ello, haga que el equipo local use el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un servicio web o un componente remoto para iniciar los paquetes en el equipo remoto. Si intenta iniciar los paquetes remotos directamente desde el equipo local, se cargarán y se intentará ejecutar los paquetes desde el equipo local. Si el equipo local no tiene instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], no se ejecutarán los paquetes.  
@@ -41,7 +41,7 @@ ms.locfileid: "36108988"
   
 -   [Uso de un servicio web o el componente remoto para ejecutar el paquete remoto mediante programación](#service)  
   
- Casi todos los métodos que se utilizan en este tema para cargar y guardar los paquetes requieren una referencia al ensamblado `Microsoft.SqlServer.ManagedDTS`. La excepción es el enfoque de ADO.NET mostrado en este tema para ejecutar el **sp_start_job** procedimiento almacenado, lo que requiere sólo una referencia a `System.Data`. Después de agregar la referencia al ensamblado `Microsoft.SqlServer.ManagedDTS` en un nuevo proyecto, importe el espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> con una instrucción `using` o `Imports`.  
+ Casi todos los métodos que se utilizan en este tema para cargar y guardar los paquetes requieren una referencia al ensamblado `Microsoft.SqlServer.ManagedDTS`. La excepción es el enfoque ADO.NET mostrado en este tema para ejecutar el **sp_start_job** procedimiento almacenado, que requiere solo una referencia a `System.Data`. Después de agregar la referencia al ensamblado `Microsoft.SqlServer.ManagedDTS` en un nuevo proyecto, importe el espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> con una instrucción `using` o `Imports`.  
   
 ###  <a name="agent"></a> Uso del Agente SQL Server para ejecutar un paquete remoto mediante programación en el servidor  
  En el ejemplo de código siguiente se muestra cómo utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante programación para ejecutar un paquete remoto en el servidor. En el ejemplo de código se llama al procedimiento almacenado del sistema, **sp_start_job**, que inicia un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El trabajo que el procedimiento inicia se denomina `RunSSISPackage` y este trabajo se encuentra en el equipo remoto. El trabajo `RunSSISPackage` ejecuta luego el paquete en el equipo remoto.  
@@ -427,7 +427,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 -   Vídeo: [Cómo automatizar la ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](http://technet.microsoft.com/sqlserver/ff686764.aspx), en technet.microsoft.com  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services  **<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Descripción de las diferencias entre la ejecución local y remota](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

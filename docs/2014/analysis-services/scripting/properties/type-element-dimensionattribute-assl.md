@@ -1,5 +1,5 @@
 ---
-title: Tipo de elemento (DimensionAttribute) (ASSL) | Documentos de Microsoft
+title: Type (elemento) (DimensionAttribute) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 64fce1f5-39b7-4d0a-ae60-21203a03bd0d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 450f25e039a4efbc2a6ae4175faf396bfbfa9ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b84675dbc0b13d7d73823126e7bc11fb75ad05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293475"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Elemento Type (DimensionAttribute) (ASSL)
   Contiene el tipo del atributo.  
@@ -68,7 +68,7 @@ ms.locfileid: "36201243"
 |-----------|-----------------|  
 |*Cuenta*|El atributo representa el nombre de una cuenta.|  
 |*AccountNumber*|El atributo representa el número de una cuenta.|  
-|*AccountType*|El atributo representa el tipo de una cuenta.|  
+|*Tipo de cuenta*|El atributo representa el tipo de una cuenta.|  
 |*Dirección*|El atributo representa una dirección.|  
 |*AddressBuilding*|El atributo representa un identificador de edificio para una dirección.|  
 |*AddressCity*|El atributo representa una ciudad para una dirección.|  
@@ -229,7 +229,7 @@ ms.locfileid: "36201243"
 |*ProjectCode*|El atributo representa un código de proyecto.|  
 |*Projectcompletion*|El atributo representa el estado de finalización de un proyecto.|  
 |*ProjectEnddate*|El atributo representa una fecha de fin de proyecto.|  
-|*Nombre de proyecto*|El atributo representa un nombre de proyecto.|  
+|*ProjectName*|El atributo representa un nombre de proyecto.|  
 |*ProjectStartDate*|El atributo representa una fecha de inicio de proyecto.|  
 |*Promoción*|El atributo representa una promoción.|  
 |*QtyRangeHigh*|El atributo representa el valor más alto de un intervalo de cantidades.|  
@@ -238,7 +238,7 @@ ms.locfileid: "36201243"
 |*QuarterOfHalfYear*|El atributo representa el ordinal del trimestre de un semestre.|  
 |*QuarterOfYear*|El atributo representa el ordinal del trimestre de un año.|  
 |*Trimestres*|El atributo representa los trimestres.|  
-|*Velocidad*|El atributo representa una tarifa.|  
+|*Velocidad de*|El atributo representa una tarifa.|  
 |*RateType*|El atributo representa un tipo de tarifa.|  
 |*Region*|El atributo representa una región definida por el cliente.|  
 |*Regular*|El atributo representa un atributo normal.|  
@@ -300,7 +300,7 @@ ms.locfileid: "36201243"
   
  La enumeración que corresponde a los valores permitidos para `Type` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.AttributeType>.  
   
- El elemento que corresponde al elemento primario de `Type` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ El elemento que se corresponde con el elemento primario de `Type` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vea también  
  [Atributos de elemento &#40;ASSL&#41;](../collections/attributes-element-assl.md)   

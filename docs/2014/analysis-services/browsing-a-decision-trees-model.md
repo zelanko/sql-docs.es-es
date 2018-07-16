@@ -1,5 +1,5 @@
 ---
-title: Modelo de árbol de exploración una decisión | Documentos de Microsoft
+title: Modelo de árboles de decisión de exploración | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - mining models, viewing
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c95552e6d6cad3fc7574a8a74551d936cf9aa721
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 077a392ff2374c89c5056e71c24fc6969b742a18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255097"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Examinar un modelo de árboles de decisión
-  Cuando se abre un modelo de clasificación con **examinar**, el modelo se muestra en un visor de árbol de decisión interactivo, similar a la [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de árboles de decisión en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El visor muestra los resultados de clasificación en forma de gráfico, que se ha diseñado para resaltar los criterios que distinguen un grupo de datos de otro. También puede explorar en profundidad los subconjuntos individuales del árbol y recuperar los datos subyacentes.  
+  Al abrir un modelo de clasificación con **examinar**, el modelo se muestra en un visor de árbol de decisión interactivo, similar a la [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de árboles de decisión de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El visor muestra los resultados de clasificación en forma de gráfico, que se ha diseñado para resaltar los criterios que distinguen un grupo de datos de otro. También puede explorar en profundidad los subconjuntos individuales del árbol y recuperar los datos subyacentes.  
   
 ##  <a name="bkmk_Top"></a> Explorar el modelo  
- Los modelos basados en el algoritmo de árboles de decisión tienen gran cantidad de información interesante que se puede explorar. El **examinar** ventana incluye las siguientes fichas y paneles para ayudarle a obtener información sobre los patrones y predecir resultados mediante el gráfico:  
+ Los modelos basados en el algoritmo de árboles de decisión tienen gran cantidad de información interesante que se puede explorar. El **examinar** ventana incluye las siguientes fichas y paneles que le ayudarán a aprender los patrones y predecir resultados mediante el gráfico:  
   
 -   [Árbol de decisión](#BKMK_DecisionTree)  
   
@@ -47,13 +47,13 @@ ms.locfileid: "36200262"
   
 -   Los rectángulos, que se conocen como *nodos*, contienen subconjuntos de los datos. La etiqueta del nodo indica las características de definición de ese subconjunto.  
   
--   El nodo más a la izquierda, con la etiqueta **todos los**, representa el conjunto de datos completo. Todos los nodos siguientes representan subconjuntos de los datos.  
+-   El nodo más a la izquierda, con la etiqueta **todas**, representa el conjunto de datos completo. Todos los nodos siguientes representan subconjuntos de los datos.  
   
 -   Un árbol de decisión contiene muchas *divide*, o en lugares donde los datos divergen en varios conjuntos basados en atributos.  
   
      Por ejemplo, la primera división en el modelo de ejemplo divide el conjunto de datos en tres grupos de edad.  
   
--   La división inmediatamente después de la **todos los** nodo es más importante porque muestra la condición principal que divide este conjunto de datos.  
+-   La división inmediatamente después de la **todas** nodo es más importante porque muestra la condición principal que divide este conjunto de datos.  
   
      Las divisiones adicionales se muestran a la derecha. Por tanto, cuando se analizan diferentes segmentos del árbol, podrá saber qué atributos tuvieron mayor influencia en el comportamiento de compra.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36200262"
   
 ##### <a name="explore-the-decision-tree"></a>Explorar el árbol de decisión  
   
-1.  Haga clic en el **todos los** nodo y mire el **leyenda de minería de datos**.  
+1.  Haga clic en el **todas** nodo y mire la **leyenda de minería de datos**.  
   
      Muestra el recuento exacto de casos en el conjunto de datos de aprendizaje, así como un análisis desglosado de los resultados.  
   
@@ -79,13 +79,13 @@ ms.locfileid: "36200262"
   
      Por consiguiente el nodo en el extremo izquierdo es el más oscuro porque contiene el conjunto de datos completo.  
   
-4.  Cambie el valor de **fondo** de **todos los casos** a **Sí**.  
+4.  Cambie el valor de **en segundo plano** desde **todos los casos** a **Sí**.  
   
-     ![cambiar gráfico de árboles de decisión para resaltar los compradores](media/dm13-dectreeshadedbuyer.gif "cambiar el gráfico de árboles de decisión para resaltar los compradores")  
+     ![gráfico de árboles de decisión cambiantes para resaltar los compradores](media/dm13-dectreeshadedbuyer.gif "cambiar el gráfico de árboles de decisión para resaltar los compradores")  
   
 5.  Ahora la intensidad de color indica cuántos clientes en cada nodo compraron una bicicleta, que es el comportamiento que le interesa.  
   
-     Observe las barras coloreadas en cada nodo. Es un histograma que muestra la distribución de los resultados en este subconjunto de datos. Por ejemplo, en el árbol de decisión Bike Buyer de ejemplo, la barra coloreada muestra la proporción de los clientes que compraron bicicletas (valores en Sí) frente a los que no lo hicieron (ningún valor). Para obtener los valores exactos, puede hacer clic en el nodo y ver el **leyenda de minería de datos**.  
+     Observe las barras coloreadas en cada nodo. Es un histograma que muestra la distribución de los resultados en este subconjunto de datos. Por ejemplo, en el árbol de decisión Bike Buyer de ejemplo, la barra coloreada muestra la proporción de los clientes que compraron bicicletas (valores en Sí) frente a los que no lo hicieron (sin valores). Para obtener los valores exactos, puede hacer clic en el nodo y ver el **leyenda de minería de datos**.  
   
 6.  Si observa el gráfico, podrá ver cómo cada subconjunto de datos se va descomponiendo en grupos más pequeños y los atributos que se usan con mayor frecuencia en la predicción de resultados.  
   
@@ -93,9 +93,9 @@ ms.locfileid: "36200262"
   
     -   Edad > = 32 y \< ingresos anuales y 53 > = 26 000 e hijos = 0  
   
-         Total de casos: 1150  
+         Escenarios totales: 1150  
   
-         Probabilidad de ser comprador de una bicicleta: 18%  
+         Probabilidad de ser comprador de bicicletas: 18%  
   
     -   Edad > = 32 y \< ingresos anuales y 53 > = 26 000 e hijos no = 0 y estado civil = 'Single'  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36200262"
   
          Probabilidad de ser comprador de bicicletas: 16 %  
   
-7.  Cambie el valor de **fondo** de **Sí** a **n** y vea cómo cambia el gráfico.  
+7.  Cambie el valor de **en segundo plano** desde **Sí** a **No** y ver cómo cambia el gráfico.  
   
      ![Gráfico de red de dependencias de un modelo de asociación](media/dm13-dec-tree-background-no.gif "gráfico de red de dependencias de un modelo de asociación")  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36200262"
   
      Haga clic en el **histograma** opción, en la esquina superior izquierda del panel de árbol de decisión, para cambiar el número máximo de Estados que pueden aparecer en los histogramas del árbol. Esto resulta útil si el atributo de predicción tiene muchos estados. Los estados aparecen en una histograma en orden de popularidad de izquierda a derecha.  
   
--   También puede utilizar las opciones en el **árbol de decisión** tab para afectan a cómo se mostrará el árbol, acercar o alejar, o el tamaño del gráfico a la ventana.  
+-   También puede utilizar las opciones de la **árbol de decisión** tab para afectar a cómo se muestra el árbol, acercar o alejar o cambiar el tamaño del gráfico a la ventana.  
   
 -   Use **Expansión predeterminada** para configurar el número predeterminado de niveles que van a aparecer en todos los árboles del modelo.  
   
@@ -132,18 +132,18 @@ ms.locfileid: "36200262"
   
 2.  Ahora haga clic en el nodo Bike Buyer.  
   
-     ![Vista de red de dependencia para los árboles de decisión](media/dm13-dectree-depnet.gif "vista de red de dependencia para los árboles de decisión")  
+     ![Vista de dependencia de red para los árboles de decisión](media/dm13-dectree-depnet.gif "vista de dependencia de red para los árboles de decisión")  
   
      Cuando se selecciona un nodo, el visor resalta las dependencias específicas de dicho nodo. En este caso, el visor resalta cada nodo que le ayude a predecir el resultado.  
   
-3.  Si el Visor contiene muchos nodos, puede buscar nodos específicos mediante el uso de la **buscar nodo** botón. Al hacer clic en **Buscar nodo** se abre el cuadro de diálogo **Buscar nodo** , en el que puede utilizar un filtro para buscar y seleccionar nodos específicos.  
+3.  Si el Visor contiene muchos nodos, puede buscar nodos específicos mediante el **buscar nodo** botón. Al hacer clic en **Buscar nodo** se abre el cuadro de diálogo **Buscar nodo** , en el que puede utilizar un filtro para buscar y seleccionar nodos específicos.  
   
 4.  La leyenda de la parte inferior del visor vincula códigos de color con el tipo de dependencia en el gráfico. Por ejemplo, cuando selecciona un nodo de predicción, este nodo se sombrea en color turquesa y los nodos que predicen el nodo seleccionado aparecen sombreados en color naranja.  
   
  [Volver al principio](#bkmk_Top)  
   
 ### <a name="drill-through-to-underlying-data"></a>Obtener información detallada en datos subyacentes  
- Varios tipos de modelos admiten la capacidad de *obtención de detalles* del modelo a los datos del caso subyacentes. Esto puede resultar muy útil para ponerse en contacto con los clientes de un sector determinado o para obtener los datos necesarios para realizar un análisis más profundo.  
+ Varios tipos de modelos admiten la capacidad *obtención de detalles* del modelo a los datos del caso subyacentes. Esto puede resultar muy útil para ponerse en contacto con los clientes de un sector determinado o para obtener los datos necesarios para realizar un análisis más profundo.  
   
 ##### <a name="get-case-data"></a>Obtener datos de un caso  
   
@@ -151,11 +151,11 @@ ms.locfileid: "36200262"
   
     -   **Obtener detalles del modelo**. Esta opción obtiene los casos que pertenecen al nodo seleccionado y los guarda en una tabla de Excel. Obtendrá solamente las columnas de los datos que se usaron realmente en la generación del modelo.  
   
-    -   **Obtención de las columnas de la estructura**. Esta opción obtiene los casos que pertenecen al nodo seleccionado y los guarda en una tabla de Excel. Obtendrá toda la información disponible en los datos subyacentes cuando se crearon, incluso los de las columnas que no se usaron en el modelo. Por ejemplo, puede haber excluido la dirección del cliente y código postal porque esos campos no resultan útiles con el análisis, pero los ha dejado en la estructura.  
+    -   **Obtención de detalles de las columnas de estructura**. Esta opción obtiene los casos que pertenecen al nodo seleccionado y los guarda en una tabla de Excel. Obtendrá toda la información disponible en los datos subyacentes cuando se crearon, incluso los de las columnas que no se usaron en el modelo. Por ejemplo, puede haber excluido la dirección del cliente y código postal porque esos campos no resultan útiles con el análisis, pero los ha dejado en la estructura.  
   
      Vuelva a Excel para ver los datos. El visor Examinar ejecuta una consulta, guarda los datos en una hoja de cálculo nueva y etiqueta los resultados.  
   
-     ![resultados de obtención de detalles se guardan en Excel](media/dm13-dectree-drillthroughresults.gif "resultados de obtención de detalles se guardan en Excel")  
+     ![los resultados de obtención de detalles se guardan en Excel](media/dm13-dectree-drillthroughresults.gif "los resultados de obtención de detalles se guardan en Excel")  
   
 ## <a name="see-also"></a>Vea también  
  [Examinar modelos en Excel &#40;complementos de minería de datos de SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  

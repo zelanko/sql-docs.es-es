@@ -1,5 +1,5 @@
 ---
-title: Mezclar particiones (XMLA) | Documentos de Microsoft
+title: Mezclar particiones (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - XML for Analysis, partitions
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cdcd21c66320c5d29f597bc5f85b35c61f14cf36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a3de50e053ed8b3e16373e4aa5b162991f286dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332725"
 ---
 # <a name="merging-partitions-xmla"></a>Mezclar particiones (XMLA)
-  Si las particiones tienen el mismo diseño de agregaciones y la estructura, puede combinar la partición mediante la [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando de XML for Analysis (XMLA). Combinar particiones es una acción importante que se debe realizar cuando se administran particiones, sobre todo aquellas particiones que contienen datos históricos con particiones por fecha.  
+  Si las particiones tienen el mismo diseño de agregaciones y la estructura, puede combinar la partición mediante la [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando XML for Analysis (XMLA). Combinar particiones es una acción importante que se debe realizar cuando se administran particiones, sobre todo aquellas particiones que contienen datos históricos con particiones por fecha.  
   
  Por ejemplo, un cubo financiero puede usar dos particiones:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36106851"
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="description"></a>Descripción  
- En el ejemplo siguiente se combina todas las particiones en el **Customer Counts** grupo de medida de la **Adventure Works** de cubo en el **Adventure Works DW** ejemplo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la base de datos la **Customers_2004** partición.  
+ El ejemplo siguiente combina todas las particiones de la **Customer Counts** grupo de medida de la **Adventure Works** del cubo en el **Adventure Works DW** ejemplo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la base de datos la **Customers_2004** partición.  
   
 ### <a name="code"></a>código  
   

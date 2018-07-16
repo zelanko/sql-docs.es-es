@@ -1,5 +1,5 @@
 ---
-title: Elemento AttributePermissions (ASSL) | Documentos de Microsoft
+title: Elemento AttributePermissions (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AttributePermissions element
 ms.assetid: ac703177-5936-440e-b1a5-a254a89258bc
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 328442196ded3537b8f6926bdfd67ea8e9100c5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98869453e0ecd50301e94cf5b7034173fc7a8a5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249045"
 ---
 # <a name="attributepermissions-element-assl"></a>Elemento AttributePermissions (ASSL)
-  Contiene la colección de permisos de atributo para las personas [rol](../objects/role-element-assl.md) elemento en una dimensión concreta de un [cubo](../objects/cube-element-assl.md) elemento.  
+  Contiene la colección de permisos de atributo para un usuario individual [rol](../objects/role-element-assl.md) elemento en una dimensión concreta de un [cubo](../objects/cube-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36201239"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[CubeDimensionPermission](../data-type/permission-data-type-assl.md), [DimensionPermission](../objects/dimensionpermission-element-assl.md)|  
-|Elementos secundarios|[Attributepermissions](../objects/attributepermission-element-assl.md)|  
+|Elementos secundarios|[AttributePermission](../objects/attributepermission-element-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
  Para `DimensionPermission`, esta colección puede contener solo un elemento `AttributePermission` por atributo.  

@@ -1,5 +1,5 @@
 ---
-title: Configurar un contenedor de bucles Foreach | Documentos de Microsoft
+title: Configurar un contenedor de bucles Foreach | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Foreach Loop containers
 - containers [Integration Services], Foreach Loop
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
 caps.latest.revision: 36
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 75c118a7d135788e4bd1c320c7f8d4b32482a31b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6eb60b4292ac3357ea2e2fcc27a6a36ae4bea608
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298775"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Configurar un contenedor de bucles Foreach
   Este procedimiento describe cómo configurar un contenedor de bucles Foreach, incluyendo expresiones de propiedad en los niveles de enumerador y contenedor.  

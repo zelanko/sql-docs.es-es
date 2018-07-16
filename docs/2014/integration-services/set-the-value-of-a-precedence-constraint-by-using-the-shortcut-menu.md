@@ -1,5 +1,5 @@
 ---
-title: Establecer el valor de una restricción de precedencia mediante el menú contextual | Documentos de Microsoft
+title: Establecer el valor de una restricción de precedencia mediante el menú contextual | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precedence constraints [Integration Services], values
 ms.assetid: ab9d8e8e-b7da-44b2-b89f-b215d799f032
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bc0775d701309c1a04753be37f36378b9b3e65ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d053263e5e3c2f534f171d0fc110ce0585a3dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262991"
 ---
 # <a name="set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu"></a>Establecer el valor de una restricción de precedencia mediante el menú contextual
   Este procedimiento describe cómo establecer un valor para la restricción de precedencia mediante el menú de acceso directo.  
@@ -42,6 +42,6 @@ ms.locfileid: "36112297"
  [Restricciones de precedencia](control-flow/precedence-constraints.md)   
  [Conectar tareas y contenedores mediante una restricción de precedencia predeterminada](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Establecer las propiedades de una restricción de precedencia](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   
- [Utilizar una expresión en una restricción de precedencia](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
+ [Usar una expresión en una restricción de precedencia](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento DataSourcePermission (ASSL) | Documentos de Microsoft
+title: Elemento DataSourcePermission (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DataSourcePermission element
 ms.assetid: 6dc6fb13-034e-479a-902e-27f3fb78c33f
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ca326118ce782962b0100c310ddb308af91f21b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d88f18a752e96e5081462056d831bc968dc605df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241365"
 ---
 # <a name="datasourcepermission-element-assl"></a>Elemento DataSourcePermission (ASSL)
   Define los permisos predeterminados en un [DataSource](../data-type/datasource-data-type-assl.md) tipo de datos para un determinado [rol](role-element-assl.md) elemento.  

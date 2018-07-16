@@ -1,5 +1,5 @@
 ---
-title: Modificar o eliminar una base de datos de Analysis Services | Documentos de Microsoft
+title: Modificar o eliminar una base de datos de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], modifying
 - removing databases
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - modifying databases
 ms.assetid: e48e3988-c091-4379-aabc-4da62f709a7e
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b13c74449b5a56d956d6043736801a86a7ce5c27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 949767979720880225431bb2e0c928623822ee23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206295"
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>Modificar o eliminar una base de datos de Analysis Services
   Puede cambiar el nombre y la descripción de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] antes de la implementación en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y después de la implementación en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. También puede ajustar parámetros adicionales de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , de acuerdo al entorno.  
@@ -38,7 +38,7 @@ ms.locfileid: "36109295"
  Una vez que se ha implementado una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para cambiar el modo de suplantación que utiliza [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cuando se conecta a los orígenes de datos que contiene la base de datos. El modo de suplantación permite especificar el contexto de seguridad que usa [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cuando intenta conectarse a un origen de datos para el procesamiento, la exploración o la obtención de detalles.  
   
 ## <a name="modifying-databases-using-sql-server-data-tools"></a>Modificar bases de datos mediante las Herramientas de datos de SQL Server  
- Puede utilizar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] en modo de proyecto para modificar las traducciones del título y la descripción de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se usa para definir una base de datos. Para obtener más información sobre el uso de las traducciones en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] la base de datos, vea [escenarios de globalización para Analysis Services multidimensional](../globalization-scenarios-for-analysis-services-multiidimensional.md).  
+ Puede utilizar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] en modo de proyecto para modificar las traducciones del título y la descripción de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se usa para definir una base de datos. Para obtener más información sobre el uso de traducciones en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de base de datos, vea [escenarios de globalización para Analysis Services multidimensional](../globalization-scenarios-for-analysis-services-multiidimensional.md).  
   
  También puede establecer los alias y las funciones de agregación asociados con los tipos de cuenta que utilizan los atributos de cuenta de las dimensiones incluidas en la base de datos. Los alias permiten seleccionar la terminología empresarial específica que usa su organización para los tipos de cuenta de un plan de cuentas. Los miembros de un atributo de cuenta utilizan los tipos de cuenta para indicar cómo se agregan medidas a cada miembro utilizando las funciones de agregación especificadas para cada tipo de cuenta que incluye la base de datos. Para más información sobre los atributos de cuenta, vea [Atributos y jerarquías de atributos](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   

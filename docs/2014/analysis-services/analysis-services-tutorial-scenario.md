@@ -1,5 +1,5 @@
 ---
-title: Escenario del Tutorial de Analysis Services | Documentos de Microsoft
+title: Escenario del Tutorial de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 916cb59e0d6a5621e0cefe41d74b3c5d10c9caf6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7694bdc07e602f9ed93cee5419e51f9c7083d26a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275781"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Escenario de Tutorial de Analysis Services
   Este tutorial se basa en [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], una compañía ficticia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] es una multinacional dedicada a la fabricación y distribución de bicicletas de metal y de metal compuesto en mercados de Norteamérica, Europa y Asia. Las oficinas centrales de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] se encuentran en Bothell, Washington, donde la compañía tiene 500 trabajadores. Además, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] tiene contratados a varios equipos de ventas regionales en toda su base de mercado.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
 caps.latest.revision: 5
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 861c78b6424878d09dd4afa23fc9248cff14e731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97336e053f4c0a9d2cd36bf381bc16f3fd28d919
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218665"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Región de datos Tablix (Generador de informes y SSRS)
   La región de datos Tablix es un elemento de informe de diseño generalizado que muestra los datos del informe en celdas organizadas en filas y columnas. Los datos del informe pueden ser datos detallados tal y como se recuperan del origen de datos, o datos detallados agregados organizados en grupos previamente especificados. Cada celda de Tablix puede contener cualquier elemento de informe, como un cuadro de texto o una imagen, o bien otra región de datos, como una región de Tablix, un gráfico o un medidor. Para agregar varios elementos de informe a una celda, agregue primero un rectángulo que actúe como contenedor. Después, agregue los elementos de informe al rectángulo.  

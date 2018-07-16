@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.manualfailover.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 caps.latest.revision: 34
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2573df633ca63b480869831b2f5edc0993ad4a56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7072e55d4c756be1bb0121e1e58abeb460b6760f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326335"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Realizar una conmutación por error manual planeada de un grupo de disponibilidad (SQL Server)
   En este tema se describe cómo realizar una conmutación por error manual sin pérdida de datos (una *conmutación por error manual planeada*) en un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. Una conmutación por error manual planeada, como cualquier conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , realiza la transición de una réplica secundaria al rol principal y, simultáneamente, realiza la transición de la réplica principal anterior al rol secundario.  
@@ -93,12 +92,12 @@ ms.locfileid: "36106816"
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para realizar la conmutación por error manual de un grupo de disponibilidad**  
   
-1.  Cambie el directorio (`cd`) a la instancia del servidor que hospeda la réplica secundaria de destino.  
+1.  Cambie el directorio (`cd`) a la instancia de servidor que hospeda la réplica secundaria de destino.  
   
-2.  Use la `Switch-SqlAvailabilityGroup` cmdlet.  
+2.  Use el `Switch-SqlAvailabilityGroup` cmdlet.  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use la `Get-Help` cmdlet en el [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el `Get-Help` cmdlet en el [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
      En el ejemplo siguiente, se realiza manualmente una conmutación por error del grupo de disponibilidad *MyAg* a la réplica secundaria que tiene la ruta de acceso especificada.  
   
@@ -116,7 +115,7 @@ ms.locfileid: "36106816"
  Si la conmutación por error se produjo fuera del grupo de disponibilidad de [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] , ajuste los votos de quórum de los nodos de WSFC para reflejar la configuración del nuevo grupo de disponibilidad. Para obtener más información, vea [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Realizar una conmutación por error manual forzada de un grupo de disponibilidad &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c5dbb01a671b6490c798ec9e688a6824efdf122a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c0303996c4db22d05a288ce055201a343e330778
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290251"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>Agregar un marcador a un informe (Generador de informes y SSRS)
   Agregue marcadores y vínculos de marcador a un informe si desea incluir una tabla de contenido personalizada o vínculos de navegación interna personalizados en el informe. Normalmente, se agregan marcadores a las ubicaciones del informe a las que se desea dirigir a los usuarios, como las tablas, los gráficos o los valores de grupo únicos mostrados en una tabla o matriz. Puede crear sus propias cadenas para usarlas como marcadores o, para los grupos, puede establecer el marcador en la expresión de grupo.  
@@ -61,6 +61,6 @@ ms.locfileid: "36203806"
 ## <a name="see-also"></a>Vea también  
  [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Filtrar, agrupar y ordenar datos &#40;el generador de informes SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrar, agrupar y ordenar datos &#40;generador de informes y SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

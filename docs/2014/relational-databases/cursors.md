@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - results [SQL Server], cursors
 - Transact-SQL cursors, about cursors
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - cursors [SQL Server], about cursors
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c434dd673362715e8671901ac0af2fa3ead6ba0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 2c4180de87b9004f53c6a4e2391cd3be9ee23b82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271211"
 ---
 # <a name="cursors"></a>Cursores
   Las operaciones de una base de datos relacional actúan en un conjunto completo de filas. Por ejemplo, el conjunto de filas que devuelve una instrucción SELECT está compuesto por todas las filas que satisfacen las condiciones de la cláusula WHERE de la instrucción. Este conjunto completo de filas que devuelve la instrucción se conoce como conjunto de resultados. Las aplicaciones, especialmente las aplicaciones interactivas en línea, no siempre trabajan de forma eficaz con el conjunto de resultados completo si lo toman como una unidad. Estas aplicaciones necesitan un mecanismo que trabaje con una fila o un pequeño bloque de filas cada vez. Los cursores son una extensión de los conjuntos de resultados que proporcionan dicho mecanismo.  

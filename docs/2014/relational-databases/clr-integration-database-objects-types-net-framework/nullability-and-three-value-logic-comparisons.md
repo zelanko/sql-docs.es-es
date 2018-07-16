@@ -1,13 +1,11 @@
 ---
-title: Nulabilidad y comparaciones lógicas de tres valores | Documentos de Microsoft
+title: Nulabilidad y comparaciones lógicas de tres valores | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - SqlBoolean data type
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 07a0076cadc805b3534d778070b7b61b28e1bf3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 43420c9e796605617e3884d8b5bf0aae0c5cfb6c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198930"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353937"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Nulabilidad y comparaciones lógicas de tres valores
   Si está familiarizado con los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], observará una semántica y precisión similares en el espacio de nombres `System.Data.SqlTypes` de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. No obstante, existen algunas diferencias, y en este tema se describen las más importantes.  

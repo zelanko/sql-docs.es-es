@@ -1,5 +1,5 @@
 ---
-title: Procesar particiones en la base de datos de área de trabajo (SSAS Tabular) | Documentos de Microsoft
+title: Procesar particiones en la base de datos del área de trabajo (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3a369705-43fa-4961-9045-32e06fbdde33
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7341335847d28c8940d361632afaa94d42e21d36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c838f3cac0c9fb1f665abd696c4881202a5aab4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195445"
 ---
 # <a name="process-partitions-in-the-workspace-databse-ssas-tabular"></a>Procesar particiones en la base de datos del área de trabajo (SSAS tabular)
   Las particiones dividen una tabla en partes lógicas. A continuación, cada partición se puede procesar (actualizar) de forma independiente de las demás particiones. Las tareas de este tema describen cómo procesar particiones en la base de datos del área de trabajo del modelo mediante el cuadro de diálogo **Procesar particiones** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "36203495"
 3.  En la columna de casilla **Procesar** , seleccione las particiones que desea procesar con el modo seleccionado y haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Las particiones &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md)   
- [Crear y administrar particiones en la base de datos del área de trabajo &#40;SSAS Tabular&#41;](workspace-database-ssas-tabular.md)  
+ [Las particiones &#40;Tabular de SSAS&#41;](partitions-ssas-tabular.md)   
+ [Crear y administrar particiones en la base de datos del área de trabajo &#40;Tabular de SSAS&#41;](workspace-database-ssas-tabular.md)  
   
   

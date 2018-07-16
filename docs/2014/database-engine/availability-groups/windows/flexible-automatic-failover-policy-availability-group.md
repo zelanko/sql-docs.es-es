@@ -1,14 +1,13 @@
 ---
-title: Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad (SQL Server) | Documentos de Microsoft
+title: Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
 - Availability Groups [SQL Server], failover
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
 caps.latest.revision: 28
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 7ffd60a301d21862d275a95f69f47e18b0d80ded
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 122b48613f0eabe85b18539e594db5602b0c6abd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293185"
 ---
 # <a name="flexible-failover-policy-for-automatic-failover-of-an-availability-group-sql-server"></a>Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad (SQL Server)
   Una directiva de conmutación por error flexible proporciona mayor control sobre las condiciones que produce una [conmutación automática por error](failover-and-failover-modes-always-on-availability-groups.md) para un grupo de disponibilidad. Al cambiar las condiciones de error que activan una conmutación automática por error y la frecuencia de comprobaciones de estado, se puede aumentar o reducir la probabilidad de una conmutación automática por error que sea compatible con su SLA por tener alta disponibilidad.  
@@ -68,14 +67,14 @@ ms.locfileid: "36107492"
   
 -   [Cambiar el modo de conmutación por error de una réplica de disponibilidad &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [Configurar la directiva de conmutación por error Flexible para controlar las condiciones para la conmutación automática por error (grupos de disponibilidad AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
+-   [Configurar la directiva de conmutación por error Flexible para controlar las condiciones para la conmutación por error automática (grupos de disponibilidad AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
 -   [Cómo funciona: Del tiempo de espera SQL Server AlwaysOn concesión](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidad (grupos de disponibilidad AlwaysOn)](availability-modes-always-on-availability-groups.md)   
  [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   

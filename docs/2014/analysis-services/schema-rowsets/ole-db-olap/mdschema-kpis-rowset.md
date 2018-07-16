@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas MDSCHEMA_KPIS | Documentos de Microsoft
+title: Conjunto de filas MDSCHEMA_KPIS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_KPIS rowset
 ms.assetid: 40fb5112-6a90-4455-82b3-8b6322490222
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28a5f4af179c058f822a773dc691383dbee028fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 391c27165b9b4482160b2a8396e64e46650aa87e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314775"
 ---
 # <a name="mdschemakpis-rowset"></a>Conjunto de filas MDSCHEMA_KPIS
   Describe los indicadores clave de rendimiento (KPI) incluidos en una base de datos.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `MDSCHEMA_KPIS` filas contiene las columnas siguientes.  
+ El `MDSCHEMA_KPIS` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "36203050"
 |`KPI_NAME`|`DBTYPE_WSTR`||Nombre del KPI.|  
 |`KPI_CAPTION`|`DBTYPE_WSTR`||Etiqueta o título asociado al KPI. Se utiliza principalmente para la presentación. Si no existe ningún título, se devuelve `KPI_NAME`.|  
 |`KPI_DESCRIPTION`|`DBTYPE_WSTR`||Descripción del KPI en lenguaje natural.|  
-|`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Cadena que identifica la ruta de la carpeta que usa la aplicación cliente para mostrar el miembro. La aplicación cliente define el separador de niveles de carpetas. Para las herramientas y clientes proporcionados por [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], la barra diagonal inversa (\\) es el separador de niveles. Asignar varias carpetas para mostrar, utilice un punto y coma (;) para separar las carpetas.|  
+|`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Cadena que identifica la ruta de la carpeta que usa la aplicación cliente para mostrar el miembro. La aplicación cliente define el separador de niveles de carpetas. Para las herramientas y clientes proporcionados por [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], la barra diagonal inversa (\\) es el separador de niveles. Para proporcionar varias carpetas para mostrar, use un punto y coma (;) para separar las carpetas.|  
 |`KPI_VALUE`|`DBTYPE_WSTR`||Nombre único del miembro en la dimensión de medidas para el valor del KPI.|  
 |`KPI_GOAL`|`DBTYPE_WSTR`||Nombre único del miembro en la dimensión de medidas para el objetivo del KPI.<br /><br /> Devuelve `NULL` si no hay ningún objetivo definido.|  
 |`KPI_STATUS`|`DBTYPE_WSTR`||Nombre único del miembro en la dimensión de medidas para el estado del KPI.<br /><br /> Devuelve `NULL` si no hay ningún estado definido.|  
@@ -59,7 +59,7 @@ ms.locfileid: "36203050"
  Este conjunto de filas de esquema no está ordenado.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `MDSCHEMA_KPIS` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `MDSCHEMA_KPIS` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

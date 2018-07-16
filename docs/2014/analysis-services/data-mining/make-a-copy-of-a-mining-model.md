@@ -1,5 +1,5 @@
 ---
-title: Realizar una copia de un modelo de minería de datos | Documentos de Microsoft
+title: Realizar una copia de un modelo de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], copying
 - mining models [Analysis Services], creating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - copying mining models
 ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da23bba72674c1f9ca4dd80bab01dd9d8e8e35cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 456150a7d7ba6759de20557a273875d95540f77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187782"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>Realizar una copia de un modelo de minería de datos
   La creación de una copia de un modelo de minería de datos resulta útil para crear rápidamente varios modelos de minería de datos basados en los mismos datos. Una vez copiado el modelo, puede modificar la nueva copia de este si cambia los parámetros o agrega un filtro.  
@@ -57,13 +57,13 @@ ms.locfileid: "36108699"
   
      Para más información sobre cómo usar los cuadros de diálogo del editor de filtros, vea [Aplicar un filtro a un modelo de minería de datos](apply-a-filter-to-a-mining-model.md).  
   
-4.  En el **propiedades** ventana, en la `AlgorithmParameters` cuadro de texto, haga clic en **Setalgorithm parámetros**y cambiar los parámetros de algoritmo, si lo desea.  
+4.  En el **propiedades** ventana, en el `AlgorithmParameters` cuadro de texto, haga clic en **establecer parámetros**y cambie los parámetros del algoritmo según sea necesario.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Filtros para modelos de minería de datos de &#40;Analysis Services: minería de datos&#41;](mining-models-analysis-services-data-mining.md)   
- [Tareas y tareas de modelo de minería de datos](mining-model-tasks-and-how-tos.md)   
+ [Filtros para modelos de minería de datos de &#40;Analysis Services - minería de datos&#41;](mining-models-analysis-services-data-mining.md)   
+ [Tareas del modelo de minería de datos y procedimientos](mining-model-tasks-and-how-tos.md)   
  [Eliminar un filtro de un modelo de minería de datos](delete-a-filter-from-a-mining-model.md)  
   
   

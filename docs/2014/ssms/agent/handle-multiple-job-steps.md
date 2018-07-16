@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
 - ordering job steps [SQL Server]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - control of flow for jobs [SQL Server]
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 61ef225fef854dddba24ffc72575e6d1c5c4775f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5ec0a6966a7bb87112329ec20a0c5dd507d791cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111073"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308925"
 ---
 # <a name="handle-multiple-job-steps"></a>Controlar varios pasos del trabajo
   Si el trabajo está formado por varios pasos, debe especificar el orden de ejecución de los pasos del trabajo. Esto se denomina *control de flujo**.* En cualquier momento puede agregar nuevos pasos del trabajo y reorganizar el flujo de los pasos; los cambios se aplicarán la próxima vez que se ejecute el trabajo. Esta ilustración muestra el control de flujo de un trabajo de copia de seguridad de una base de datos.  

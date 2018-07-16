@@ -1,5 +1,5 @@
 ---
-title: Actualización de SSIS asistente (Asistente actualización del paquete SSIS) | Documentos de Microsoft
+title: Actualización de SSIS asistente (Asistente actualización del paquete SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.ssisupgradewizard.f1
 ms.assetid: a8698217-4793-40fd-85a0-ef4dad1c139f
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3002361d8b435e3a0bb1ae617dbd0217f926fdb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e33f4fdc1789f97dd0be33274ecb7d6a590a1492
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186612"
 ---
 # <a name="ssis-upgrade-wizard-ssis-package-upgrade-wizard"></a>Asistente para actualización de SSIS (Asistente para actualización del paquete SSIS)
   Utilice el Asistente para actualizar paquetes de [!INCLUDE[ssIS](../includes/ssis-md.md)] si desea migrar los paquetes que se desarrollaron en [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] y [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] al formato de paquete utilizado por la versión actual de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

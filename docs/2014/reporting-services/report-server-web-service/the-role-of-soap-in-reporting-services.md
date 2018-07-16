@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], SOAP
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8254170f0922d42574153c73012c7ddc27827863
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d37f6f04c0b383493d48f1469535a3f048e97876
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290211"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>El rol de SOAP en Reporting Services
   El servicio web del servidor de informes utiliza la mensajería del Protocolo simple de acceso a objetos (SOAP, Simple Object Access Protocol) para enviar comandos basados en texto a través de una red. Estos comandos adoptan la forma de texto XML que se envía a través de World Wide Web utilizando HTTP. Al usar SOAP como protocolo de comunicaciones, el servicio web del servidor de informes permite a las aplicaciones y componentes intercambiar datos con el servidor de informes utilizando una infraestructura abierta y ampliamente aceptada. El estándar SOAP se define en www.w3.org/TR/SOAP.  

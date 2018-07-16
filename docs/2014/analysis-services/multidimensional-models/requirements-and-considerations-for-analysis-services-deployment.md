@@ -1,5 +1,5 @@
 ---
-title: Requisitos y consideraciones para el análisis de servicios de implementación | Documentos de Microsoft
+title: Requisitos y consideraciones para el análisis de servicios de implementación | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - memory [Analysis Services]
 - scalability [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c77a12ddc9a5be49fbdcd531f0485bbdf5f4055
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3cb9b81c5125f8d4f0e9dd2e0760a072d655f6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247775"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisitos y consideraciones para la implementación de Analysis Services
   El rendimiento y la disponibilidad de una solución dependen de muchos factores, como son las capacidades del hardware subyacente, la topología de la implementación del servidor, las características de la solución (por ejemplo, si tiene particiones distribuidas en varios servidores o usa el almacenamiento ROLAP que requiere acceso directo al motor relacional), los contratos de nivel de servicio y la complejidad del modelo de datos.  
@@ -50,7 +50,7 @@ ms.locfileid: "36106651"
   
  La cantidad de memoria y recursos de procesador disponibles para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende de la edición de SQL Server, sistema operativo, capacidad de hardware y de si usa procesadores virtuales o físicos. Para obtener más información, vea estos vínculos:  
   
- [Requisitos de hardware y Software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Requisitos de hardware y software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
  [Límites de la capacidad de cálculo de cada edición de SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   

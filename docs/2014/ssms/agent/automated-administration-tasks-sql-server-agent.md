@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrative tasks [SQL Server]
 - automating administrative tasks
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - administering SQL Server, automatically
 ms.assetid: 541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 524f977269a74fb6a526efcdeee385c3a5add04e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b1feb6543f576ab0504446b3e751147e83dc6dcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321945"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>Tareas administrativas automatizadas (Agente SQL Server)
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le permite automatizar las tareas administrativas. Para automatizar la administración, se definen las tareas administrativas previsibles y, después, se especifican las condiciones en las que se produce cada tarea. El uso de la administración automatizada para controlar las tareas y eventos habituales le permite disponer de tiempo para realizar otras funciones administrativas.  

@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createapp.f1
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0edae9b1692eb12f14f66ebb067758f5a6c468f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 92ca9531bd94f2fc81fc4c074841b4049b6e3120
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273011"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>Cuadro de diálogo Crear aplicación web (Administrador de configuración de Master Data Services)
   Utilice el cuadro de diálogo **Crear aplicación web** para crear la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Esta aplicación web se crea en el sitio que seleccionó en la página **Configuración web** .  
   
 ## <a name="web-application"></a>Aplicación web  
- El servidor web sirve el contenido para esta aplicación web desde la carpeta [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **de** en el sistema de archivos. Esta ubicación se especifica durante la instalación y, de forma predeterminada es la ruta de acceso *unidad*: \Program SQL Server\120\Master Data Services\WebApplication.  
+ El servidor web sirve el contenido para esta aplicación web desde la carpeta [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **de** en el sistema de archivos. Esta ubicación se especifica durante la instalación y, de forma predeterminada es la ruta de acceso *unidad*: \Program Files\Microsoft SQL Server\120\Master Data Services\WebApplication.  
   
 |Nombre del control|Descripción|  
 |------------------|-----------------|  
@@ -44,9 +44,9 @@ ms.locfileid: "36203663"
 |**Confirmar contraseña**|Vuelva a escribir la contraseña de la cuenta de usuario especificada. Los campos **Contraseña** y **Confirmar contraseña** deben contener la misma contraseña.|  
   
 ## <a name="see-also"></a>Vea también  
- [Página de configuración Web &#40;Administrador de configuración de Master Data Services&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
+ [Página configuración Web &#40;Administrador de configuración de Master Data Services&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
  [Configurar la base de datos y el sitio Web de Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [Requisitos de aplicación Web &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
+ [Requisitos de aplicaciones Web &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [Crear una aplicación web de Master Data Manager &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

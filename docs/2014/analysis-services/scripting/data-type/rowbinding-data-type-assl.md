@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos RowBinding (ASSL) | Documentos de Microsoft
+title: Tipo de datos RowBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RowBinding data type
 ms.assetid: 5a49a6e3-25f3-43c8-8529-bcf245b02415
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e6859f7627be5a9b3ff6ab108962fa71a0d12642
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 599632bd6dd93b05a12a5c7b95facea85ea8c6c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297425"
 ---
 # <a name="rowbinding-data-type-assl"></a>Tipo de datos RowBinding (ASSL)
-  Define un tipo de datos derivado que representa un enlace a las filas de una tabla en una [DataSourceView](../objects/datasourceview-element-assl.md) elemento.  
+  Define un tipo de datos derivado que representa un enlace a las filas de una tabla en un [DataSourceView](../objects/datasourceview-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,12 +58,12 @@ ms.locfileid: "36204032"
 |------------------|-------------|  
 |Elementos primarios|None|  
 |Elementos secundarios|[TableID](../properties/id-element-assl.md)|  
-|Elementos derivados|Vea [enlace](binding-data-type-assl.md)|  
+|Elementos derivados|Consulte [enlace](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
- Para obtener más información sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, consulte [tipo de datos de enlace &#40;ASSL &#41;](binding-data-type-assl.md).  
+ Para obtener más información sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, vea [tipo de enlace de datos &#40;ASSL &#41;](binding-data-type-assl.md).  
   
- Para obtener información general de enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;SSAS multidimensionales&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obtener información general de los enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.RowBinding>.  
   

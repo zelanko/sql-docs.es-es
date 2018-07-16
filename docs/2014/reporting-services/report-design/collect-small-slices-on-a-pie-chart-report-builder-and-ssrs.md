@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: af1a270524d91621cdeb15b56ace7c07ad4a4df7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 91b6e5492566c2ada0857c8708ddc786560ee387
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177192"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Recopilar segmentos pequeños en un gráfico circular (Generador de informes y SSRS)
   Si los gráficos circulares muestran demasiados puntos de datos, pueden parecer desordenados. Para resolver este problema, puede mostrar como un único sector en el gráfico circular todos los datos que estén por debajo de un determinado valor.  
   
- Para recopilar sectores pequeños en un solo sector, en primer lugar debe decidir si el umbral de recopilación de sectores pequeños será un porcentaje del gráfico circular o un valor fijo. A continuación, establezca las propiedades CollectedThreshold y CollectedThresholdUsePercent. Establezca la propiedad CollectedThreshold como el porcentaje del gráfico de un valor que debe quedarse por debajo para que se realice la recopilación o el valor de datos del umbral real de la colección. Establezca la propiedad CollectedThresholdUsePercent en `True` para usar un porcentaje o `False` para utilizar un valor real.  
+ Para recopilar sectores pequeños en un solo sector, en primer lugar debe decidir si el umbral de recopilación de sectores pequeños será un porcentaje del gráfico circular o un valor fijo. A continuación, establezca las propiedades CollectedThreshold y CollectedThresholdUsePercent. Establezca la propiedad CollectedThreshold como el porcentaje del gráfico de un valor que debe quedarse por debajo para que se realice la recopilación o el valor de datos del umbral real de la colección. Establezca la propiedad CollectedThresholdUsePercent en `True` para usar un porcentaje o `False` para usar un valor real.  
   
  También puede recopilar sectores pequeños en un segundo gráfico circular al que se llamará desde un sector recopilado del primer gráfico circular. El segundo gráfico circular se dibuja a la derecha del gráfico circular original.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36107126"
   
 2.  Establezca la propiedad CollectedStyle en **CollectedPie**.  
   
-3.  Establezca la propiedad CollectedThreshold en un valor que represente el umbral de recopilación de los sectores pequeños en un solo sector. Cuando se establece la propiedad CollectedStyle en **CollectedPie**, el CollectedThresholdUsePercentproperty siempre se establece en `True`, y el umbral de recopilación siempre se mide como porcentaje.  
+3.  Establezca la propiedad CollectedThreshold en un valor que represente el umbral de recopilación de los sectores pequeños en un solo sector. Cuando se establece la propiedad CollectedStyle en **CollectedPie**, la propiedad Collectedthresholdusepercent siempre se establece en `True`, y el umbral de recopilación siempre se mide como porcentaje.  
   
 4.  (Opcional) Establezca las propiedades CollectedColor, CollectedLabel, CollectedLegendText y CollectedToolTip. El resto de las propiedades denominadas "Collected" no se aplican al gráfico circular recopilado.  
   
@@ -80,9 +80,9 @@ ms.locfileid: "36107126"
 >  No puede dar formato al gráfico circular secundario. Por esta razón, a la hora de recopilar sectores del gráfico circular se recomienda el uso del primer enfoque.  
   
 ## <a name="see-also"></a>Vea también  
- [Los gráficos circulares &#40;el generador de informes SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Aplicar formato a los puntos de datos en un gráfico &#40;el generador de informes SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Las etiquetas de punto de datos de visualización fuera de un gráfico circular &#40;el generador de informes SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Los gráficos circulares &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Aplicar formato a los puntos de datos en un gráfico &#40;generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Punto de datos para mostrar las etiquetas fuera de un gráfico circular &#40;generador de informes y SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Mostrar valores de porcentaje en un gráfico circular &#40;Generador de informes y SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Agregar efectos 3D a un gráfico &#40;Generador de informes y SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)  
   

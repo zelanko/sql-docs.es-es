@@ -1,5 +1,5 @@
 ---
-title: Particiones y el modo DirectQuery (SSAS Tabular) | Documentos de Microsoft
+title: Particiones y el modo DirectQuery (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6153a5975dd342bfabb00b7f964ee04d6941a363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c928bbc87c39f76e8995c7c2d171d4f731b3171
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269691"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Particiones y el modo DirectQuery (SSAS tabular)
   En esta sección se explica cómo se utilizan las particiones en los modelos DirectQuery. Para obtener información general sobre las particiones en los modelos tabulares, vea [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  
   
- Para obtener instrucciones acerca de cómo cambiar la partición que se utiliza, o ver información acerca de la partición, consulte [cambiar la partición DirectQuery &#40;Tabular de SSAS&#41;](../change-the-directquery-partition-ssas-tabular.md).  
+ Para obtener instrucciones sobre cómo cambiar la partición que se utiliza, o ver información acerca de la partición, consulte [cambiar la partición DirectQuery &#40;Tabular de SSAS&#41;](../change-the-directquery-partition-ssas-tabular.md).  
   
 ## <a name="using-partitions-in-directquery-mode"></a>El uso de particiones en el modo DirectQuery  
  Para cada tabla, debe especificar una única partición para utilizar como origen de datos de DirectQuery.  De forma predeterminada, si existen varias particiones, al cambiar el modelo para habilitar el modo DirectQuery, la primera partición que se creó en la tabla se marcará como la partición DirectQuery. Puede cambiar este comportamiento posteriormente mediante el Administrador de particiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -52,6 +52,6 @@ ms.locfileid: "36198986"
 |InMemory con DirectQuery|Permitir procesar la partición|Si el modelo utiliza el modo híbrido, debe usar la misma partición para las consultas en memoria y las consultas en el origen de datos de DirectQuery.|  
   
 ## <a name="see-also"></a>Vea también  
- [Las particiones &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md)  
+ [Las particiones &#40;Tabular de SSAS&#41;](partitions-ssas-tabular.md)  
   
   

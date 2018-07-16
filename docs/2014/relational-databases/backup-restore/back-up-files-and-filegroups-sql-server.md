@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up filegroups [SQL Server]
 - file backups [SQL Server], how-to topics
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 49e2ba4f8788a60b5d0e00d24539a085c233b446
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f453d2f34713a4a00b1a5d99870f3597ac32262e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332655"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Realizar copias de seguridad de archivos y grupos de archivos (SQL Server)
   En este tema se describe cómo realizar copias de seguridad de archivos y grupos de archivos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell. Cuando el tamaño y los requisitos de rendimiento de la base de datos hagan que no sea práctico realizar una copia de seguridad completa de la base de datos, puede crear una copia de seguridad de archivo en su lugar. Una *copia de seguridad de archivos* contiene todos los datos de uno o varios archivos (o grupos de archivos). Para obtener más información sobre las copias de seguridad de archivos, vea [Copias de seguridad de archivos completas &#40;SQL Server&#41;](full-file-backups-sql-server.md) y [Copias de seguridad diferenciales &#40;SQL Server&#41;](differential-backups-sql-server.md).  
@@ -40,7 +39,7 @@ ms.locfileid: "36199393"
   
      [Seguridad](#Security)  
   
--   **Para hacer copia de seguridad de archivos y grupos de archivos, utilizando:**  
+-   **Para realizar una copia de seguridad de archivos y grupos de archivos, utilizando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -221,9 +220,9 @@ GO
   
 1.  Utilice el cmdlet `Backup-SqlDatabase` y especifique `Files` como el valor del parámetro `-BackupAction`. Especifique también uno de los parámetros siguientes:  
   
-    -   Para hacer copia de seguridad de un archivo específico, especifique el `-DatabaseFile` *cadena* parámetro, donde *cadena* es uno o más archivos de base de datos para realizar copias de seguridad.  
+    -   Para realizar una copia de seguridad de un archivo determinado, especifique el `-DatabaseFile` *cadena* parámetro, donde *cadena* es uno o varios archivos de base de datos a una copia de seguridad.  
   
-    -   Para hacer copia de seguridad de todos los archivos de un grupo de archivos determinado, especifique el `-DatabaseFileGroup` *cadena* parámetro, donde *cadena* es uno o más grupos de base de datos para realizar copias de seguridad.  
+    -   Para realizar copias de seguridad de todos los archivos de un grupo de archivos determinado, especifique el `-DatabaseFileGroup` *cadena* parámetro, donde *cadena* es uno o varios grupos de base de datos a una copia de seguridad.  
   
      En el ejemplo siguiente se crea una copia de seguridad de archivos completa de cada uno de los archivos de los dos grupos de archivos secundarios 'FileGroup1' y 'FileGroup2' de la base de datos `MyDB` . Las copias de seguridad se crean en la ubicación de copia de seguridad predeterminada de la instancia del servidor `Computer\Instance`.  
   

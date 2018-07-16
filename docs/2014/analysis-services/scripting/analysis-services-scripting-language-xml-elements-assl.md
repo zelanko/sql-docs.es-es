@@ -1,5 +1,5 @@
 ---
-title: Los elementos XML de Scripting Language (ASSL) de Analysis Services | Documentos de Microsoft
+title: Los elementos XML de Scripting Language (ASSL) de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ASSL, elements
 ms.assetid: 7ac07e82-8806-4e9e-8123-22c09c0296de
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ceb9c779556bfe05384ca8993a74ea28b8dae2df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84ab700589ac454605aa2128b7057e3aa07c6de9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323085"
 ---
 # <a name="analysis-services-scripting-language-xml-elements-assl"></a>Elementos XML de Analysis Services Scripting Language (ASSL)
   Aunque el esquema del lenguaje de scripting de Analysis Services (ASSL) solamente contiene elementos XML, desde el punto de vista de un programador, estos elementos corresponden a los conceptos siguientes:  
@@ -40,7 +40,7 @@ ms.locfileid: "36110815"
 -   Tipos de datos, como `Binding` y `Permission`, que se utilizan para definir los elementos secundarios y las propiedades de otros objetos.  
   
     > [!NOTE]  
-    >  En esta sección no se tratan los elementos de tipo de datos. Para obtener más información, vea, [Analysis Services Scripting Language XML Data Types &#40;ASSL&#41;](data-type/analysis-services-scripting-language-xml-data-types-assl.md).  
+    >  En esta sección no se tratan los elementos de tipo de datos. Para obtener más información, vea, [Analysis Services Scripting Language tipos de datos XML &#40;ASSL&#41;](data-type/analysis-services-scripting-language-xml-data-types-assl.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36110815"
 |[Propiedades &#40;ASSL&#41;](properties/properties-assl.md)|Contiene información de uso y sintaxis para cada elemento que actúa como propiedad de objeto en el esquema ASSL.|  
   
 ## <a name="see-also"></a>Vea también  
- [Jerarquía Analysis Services Scripting Language XML elemento &#40;ASSL&#41;](analysis-services-scripting-language-xml-element-hierarchy-assl.md)   
+ [Jerarquía de elementos XML de lenguaje Scripting de Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-element-hierarchy-assl.md)   
  [Lenguaje de Scripting de Analysis Services &#40;ASSL&#41; referencia](analysis-services-scripting-language-assl-for-xmla.md)  
   
   

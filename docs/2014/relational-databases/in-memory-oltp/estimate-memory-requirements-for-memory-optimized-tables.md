@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 caps.latest.revision: 21
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b0d22fd13abf68cd9eea1c21b135427161fbf8be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a8a8c2fc949755b5cc3fea644a5b08ee3990c541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207105"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar los requisitos de memoria para las tablas con optimización para memoria
   Si va a crear una nueva tabla optimizada para memoria de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] o va a migrar una tabla basada en disco existente a una tabla optimizada para memoria, es importante contar con una estimación razonable de la memoria que necesita cada tabla, para poder aprovisionar el servidor con suficiente memoria. En esta sección se describe cómo calcular la cantidad de memoria necesaria para almacenar los datos de una tabla optimizada para memoria.  
@@ -126,7 +126,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  **Establecer el tamaño de matriz de índices de hash**  
   
- Establece el tamaño de la matriz hash `(bucket_count= <value>)` donde \<valor > es un valor entero mayor que cero. Si \<valor > no es una potencia de 2, el número de depósitos real se redondea a la siguiente potencia más cercana de 2.  En la tabla de ejemplo (bucket_count = 5000000), como 5.000.000 no es una potencia de 2, el número de depósitos real redondea hasta 8 388 608 (2<sup>23</sup>).  Debe usar este número, no 5.000.000, al calcular la memoria necesaria para la matriz hash.  
+ El tamaño de la matriz hash se establece `(bucket_count= <value>)` donde \<valor > es un valor entero mayor que cero. Si \<valor > no es una potencia de 2, el valor real de bucket_count se redondea a la siguiente potencia más cercana de 2.  En la tabla de ejemplo (bucket_count = 5000000), como 5.000.000 no es una potencia de 2, el número de depósitos real redondea hasta 8.388.608 (2<sup>23</sup>).  Debe usar este número, no 5.000.000, al calcular la memoria necesaria para la matriz hash.  
   
  Así, en nuestro ejemplo, la memoria necesaria para cada matriz hash es:  
   
@@ -134,7 +134,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  Puesto que tenemos tres índices hash, la memoria necesaria para los índices hash es 3 * 64 MB = 192 MB.  
   
- **Memoria para índices no clúster**  
+ **Memoria para índices no agrupados**  
   
  Los índices no clúster se implementan como árboles b donde los nodos internos contienen el valor de índice y punteros a los nodos posteriores.  Los nodos hoja contienen el valor de índice y un puntero a la fila de la tabla en memoria.  
   
@@ -168,7 +168,7 @@ SELECT * FROM t_hk
   
  `rowVersions = durationOfLongestTransactionInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
   
- Necesidades de memoria para las filas obsoletas se calculan después multiplicando el número de filas obsoletas por el tamaño de una fila de tabla optimizada en memoria (vea [memoria para la tabla](#bkmk_MemoryForTable) anteriormente).  
+ Necesidades de memoria para las filas obsoletas se calculan después multiplicando el número de filas obsoletas por el tamaño de una fila de tabla optimizada para memoria (vea [memoria para la tabla](#bkmk_MemoryForTable) anteriormente).  
   
  `memoryForRowVersions = rowVersions * rowSize`  
   

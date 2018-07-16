@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DMSCHEMA_MINING_MODEL_XML | Documentos de Microsoft
+title: Conjunto de filas DMSCHEMA_MINING_MODEL_XML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODEL_XML rowset
 ms.assetid: f58b00e9-3f72-4cff-b448-21a9fb529772
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 37bfb0f304e8204f28f83589a6c16625c178444c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22d68948949fd1e8c5863ad62f73fd9f5f8fd234
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317035"
 ---
 # <a name="dmschemaminingmodelxml-rowset"></a>Conjunto de filas DMSCHEMA_MINING_MODEL_XML
   Devuelve la estructura XML del modelo de minería de datos. El formato de las cadenas XML sigue el estándar PMML 2.1 (Lenguaje de marcado de modelos de predicción).  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DMSCHEMA_MINING_MODEL_XML` filas contiene las columnas siguientes.  
+ El `DMSCHEMA_MINING_MODEL_XML` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  

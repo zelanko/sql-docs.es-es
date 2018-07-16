@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos PerspectiveKpi (ASSL) | Documentos de Microsoft
+title: Tipo de datos PerspectiveKpi (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveKpi data type
 ms.assetid: e8d19ec8-70d3-4947-904a-fb81fcac9afd
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e4e6c512b0cab76a87b0d39428bfc570680fa42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca2bc8d765e7ffe5a0111a22d8b2e5977a17f010
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215925"
 ---
 # <a name="perspectivekpi-data-type-assl"></a>Tipo de datos PerspectiveKpi (ASSL)
   Define un tipo de datos primitivo que representa información sobre un indicador clave de rendimiento (KPI) en un [perspectiva](../objects/perspective-element-assl.md) elemento.  
@@ -57,7 +57,7 @@ ms.locfileid: "36202805"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|None|  
-|Elementos secundarios|[Anotaciones](../collections/annotations-element-assl.md), [KpiID](../properties/id-element-assl.md)|  
+|Elementos secundarios|[Las anotaciones](../collections/annotations-element-assl.md), [KpiID](../properties/id-element-assl.md)|  
 |Elementos derivados|[KPI](../objects/kpi-element-assl.md) ([KPI](../collections/kpis-element-assl.md) colección de [perspectiva](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Notas  

@@ -1,5 +1,5 @@
 ---
-title: Configurar Distributed Replay | Documentos de Microsoft
+title: Configurar Distributed Replay | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98385aae3bea4eff6227edc4a99807f4d2625775
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c213c892403e4d6bdf527601f5f7482ebb7e2ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189652"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
   Los detalles de configuración de Distributed Replay de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se especifican en archivos XML en Distributed Replay Controller, en los clientes y donde se encuentra instalada la herramienta de administración. Entre los archivos figuran los siguientes:  
@@ -94,7 +94,7 @@ ms.locfileid: "36199807"
 |Configuración|Elemento XML|Descripción|Valores permitidos|Obligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Incluir las actividades de sesión de sistema|`<IncSystemSession>`|Indica si las actividades de sesión de sistema en la captura se incluirán durante la reproducción.|`Yes` &#124; `No`|No. El valor es `No`de forma predeterminada.|  
-|Tiempo de inactividad máximo|`<MaxIdleTime>`|Limita el tiempo de inactividad a un número absoluto (en segundos).|Un entero que es > = -1<br /><br /> `-1` indica que no ha habido ningún cambio respecto del valor original en el archivo de seguimiento original.<br /><br /> `0` indica que existe alguna actividad en algún momento.|No. El valor es `-1`de forma predeterminada.|  
+|Tiempo de inactividad máximo|`<MaxIdleTime>`|Limita el tiempo de inactividad a un número absoluto (en segundos).|Un entero > = -1<br /><br /> `-1` indica que no ha habido ningún cambio respecto del valor original en el archivo de seguimiento original.<br /><br /> `0` indica que existe alguna actividad en algún momento.|No. El valor es `-1`de forma predeterminada.|  
   
 ### <a name="example"></a>Ejemplo  
  El archivo de configuración de preproceso predeterminado:  
@@ -168,7 +168,7 @@ ms.locfileid: "36199807"
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Opciones de línea de comandos de herramientas de administración &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Opciones de línea de comandos de la herramienta de administración &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Reproducción distribuida de SQL Server](sql-server-distributed-replay.md)   
  [Foro de SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
  [Usar Distributed Replay para la prueba de carga de SQL Server, parte 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   

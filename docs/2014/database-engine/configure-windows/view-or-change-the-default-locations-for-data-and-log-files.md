@@ -1,5 +1,5 @@
 ---
-title: Ver o cambiar las ubicaciones predeterminadas de los datos y archivos de registro (SQL Server Management Studio) | Documentos de Microsoft
+title: Ver o cambiar las ubicaciones predeterminadas de los datos y archivos de registro (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], changing default location
 - data files [SQL Server], changing default location
 ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 46bab09c5115781d85fdb3e7c8fc73e6428322fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b62c6264686efe2b117ca755fc291c784308fe9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320785"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>Ver o cambiar las ubicaciones predeterminadas de los archivos de datos y registro (SQL Server Management Studio)
   En este tema se describe cómo ver y cambiar las ubicaciones predeterminadas de los archivos de datos y registro nuevos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. La ruta de acceso predeterminada se obtiene del Registro. Después de cambiar la ubicación todas las nuevas bases de datos creadas en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilizará dicha ubicación si no se ha especificado otra.  
@@ -33,7 +33,7 @@ ms.locfileid: "36107710"
   
      [Recomendaciones](#Recommendations)  
   
--   **Para ver o cambiar los datos y registro archivo ubicaciones predeterminadas, use:**  
+-   **Para ver o cambiar los datos y registro predeterminado ubicaciones de archivos, utilizando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   

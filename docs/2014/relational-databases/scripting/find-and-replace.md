@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.quickfind
 - vs.find
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8b41964b364a2ff3f06f6210637af6d3c26f506f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 87780d4f33a3e7674778880423f66ac6369ead5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324315"
 ---
 # <a name="find-and-replace"></a>Buscar y reemplazar
   Utilice el cuadro de diálogo **Buscar y reemplazar** para buscar texto en un archivo y, opcionalmente, reemplazarlo. Pueden aparecer versiones del cuadro de diálogo **Buscar y reemplazar** con opciones ligeramente distintas, en función de la forma en que se haya abierto el cuadro de diálogo. En el menú **Editar** , seleccione **Buscar y reemplazar**y, a continuación, haga clic en **Búsqueda rápida** para abrir el cuadro de diálogo con las opciones de búsqueda, pero sin las opciones de reemplazo. En el menú **Editar** , seleccione **Buscar y reemplazar**y, a continuación, haga clic en **Reemplazo rápido** para abrir el cuadro de diálogo con las opciones de búsqueda y de reemplazo.  

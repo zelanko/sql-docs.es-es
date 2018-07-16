@@ -1,5 +1,5 @@
 ---
-title: Opciones de consulta de resultados (página texto) | Documentos de Microsoft
+title: Opciones (página texto) de los resultados de consulta | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 51e1a98f00bc4d33e0609f1b03ceca928bded049
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6c4fb6fe50f20bcac8d4f16644a35466a7b2f2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205755"
 ---
 # <a name="query-options-results-text-page"></a>Resultados de Opciones de consulta (página Texto)
   Utilice esta página para especificar las opciones para mostrar el conjunto de resultados de una consulta en formato de texto. La configuración de esta página también se aplica cuando está seleccionada la opción **Resultados a archivo** .  
@@ -44,10 +44,10 @@ ms.locfileid: "36201656"
  **Descartar resultados tras la ejecución**  
  Si descarta los resultados de la consulta después de que la pantalla los reciba, liberará memoria.  
   
- **Mostrar los resultados en una pestaña independiente**  
+ **Mostrar resultados en una pestaña independiente**  
  Active esta casilla para mostrar el conjunto de resultados en una nueva ventana de documento, en lugar de en la parte inferior de la ventana de documento de la consulta.  
   
- **Cambiar a la pestaña de resultados tras ejecutar la consulta**  
+ **Cambie a la pestaña de resultados tras ejecutar la consulta**  
  Haga clic en esta opción para establecer automáticamente el foco de pantalla en el conjunto de resultados.  
   
  **Número máximo de caracteres mostrados en cada columna**  

@@ -1,5 +1,5 @@
 ---
-title: Elemento IsDefaultMeasure (XML) | Documentos de Microsoft
+title: Elemento IsDefaultMeasure (XML) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 523cf3d7-9df0-4f9d-8486-9109de8d3cca
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: a4229507c856d511b805a249b162516d8b11feb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c89445c0e31187951b4b4a9f2bbd6f97733e9572
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190855"
 ---
 # <a name="isdefaultmeasure-element-xml"></a>Elemento IsDefaultMeasure (XML)
   Indica que es posible obtener la medida predeterminada de esta entidad navegando por esta relación hasta la otra tabla y capturando el miembro que tiene el atributo, DefaultMeasure.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.upgradedacwizard.reviewpolicy.f1
 - sql12.swb.upgradedacwizard.selectoptions.f1
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - How to [DAC], upgrade
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2406cf16d4c5d6f2a9189e9f513beee0816a9014
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fbe586573ac3ad40e3bc26514020bb928c0f09e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198943"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281701"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
   Use el Asistente Actualizar aplicación de capa de datos o un script de Windows PowerShell para cambiar el esquema y las propiedades de una aplicación de capa de datos (DAC) implementada actualmente para coincidir con el esquema y las propiedades definidas en una versión nueva de la DAC.  
@@ -50,9 +50,9 @@ ms.locfileid: "36198943"
   
 -   **Ignorar la pérdida de datos** : si `True`, la actualización continuará incluso si alguna de las operaciones provocan la pérdida de datos. Si es `False`, estas operaciones terminarán la actualización. Por ejemplo, si una tabla en la base de datos actual no está presente en el esquema de la nueva DAC, la tabla se quitará si `True` se especifica. El valor predeterminado es `True`.  
   
--   **Bloquear si hay cambios** : si `True`, la actualización se termina si el esquema de base de datos es diferente al definido en la DAC anterior. Si `False`, la actualización continúa incluso si se detectan cambios. El valor predeterminado es `False`.  
+-   **Bloquear en cambios** : si `True`, la actualización se termina si el esquema de base de datos es diferente al definido en la DAC anterior. Si `False`, la actualización continúa incluso si se detectan cambios. El valor predeterminado es `False`.  
   
--   **Revertir si hay error** : si `True`, la actualización se incluye en una transacción, y si se producen errores se volverá a intentar una operación de deshacer. Si es `False`, se confirman todos los cambios a medida que se efectúan y, si se producen errores, puede que tenga que restaurar una copia de seguridad anterior de la base de datos. El valor predeterminado es `False`.  
+-   **Reversión en caso de error** : si `True`, la actualización se incluye en una transacción, y si se producen errores se volverá a intentar una operación de reversión. Si es `False`, se confirman todos los cambios a medida que se efectúan y, si se producen errores, puede que tenga que restaurar una copia de seguridad anterior de la base de datos. El valor predeterminado es `False`.  
   
 -   **Omitir validación de directiva** : si `True`, no se evalúa la directiva de selección de servidor DAC. Si `False`, se evalúa la directiva y la actualización se termina si se produce un error de validación. El valor predeterminado es `False`.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "36198943"
   
 5.  Establecer el `DacUpgradeOptions`.  
   
-6.  Use la `IncrementalUpgrade` método para actualizar la DAC.  
+6.  Use el `IncrementalUpgrade` método para actualizar la DAC.  
   
 7.  Cierra la secuencia de archivos usada para leer el archivo de paquete DAC.  
   

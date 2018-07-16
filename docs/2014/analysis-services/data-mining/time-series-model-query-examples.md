@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de consultas de modelo de serie temporal | Documentos de Microsoft
+title: Ejemplos de consultas de modelo de serie temporal | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - MISSING_VALUE_SUBSTITUTION
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8b6c0f25f4d5694d678e51acc0ecb4ccbf98f8a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ec5161fab123b9a0b251cfc570318f58fd57ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319311"
 ---
 # <a name="time-series-model-query-examples"></a>Ejemplos de consultas de modelos de serie temporal
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre las reglas y los conjuntos de elementos detectados durante el análisis, o una consulta de predicción, que usa las asociaciones detectadas en los datos para realizar predicciones. Por ejemplo, una consulta de contenido para un modelo de serie temporal podría proporcionar detalles adicionales sobre las estructuras periódicas que se detectaron, mientras que una consulta de predicción podría ofrecer predicciones para los intervalos de tiempo 5 a 10 siguientes. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  
@@ -70,7 +70,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY = 0,1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT ={1,3},...|  
+|COMPLEXITY_PENALTY = 0.1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT ={1,3},...|  
   
  La sugerencia de periodicidad predeterminada es {1} y aparece en todos los modelos; este modelo de ejemplo se creó con una sugerencia adicional que podría no estar presente en el modelo final.  
   
@@ -182,7 +182,7 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_REPLACE"></a> Realizar predicciones con REPLACE_MODEL_CASES  
  Al reemplazar los casos de un modelo, el tamaño del modelo no se modifica, sino que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reemplaza los casos individuales del modelo. Esto es útil para predicciones cruzadas y escenarios en los que resulta importante mantener el conjunto de datos de aprendizaje con un tamaño uniforme.  
   
- Por ejemplo, una de sus tiendas no dispone de suficientes datos de ventas. Podría crear un modelo general calculando el promedio de las ventas de todas las tiendas de una región determinada y, a continuación, entrenar un modelo. A continuación, para realizar predicciones para el almacén de datos de ventas insuficientes, crearía un `PREDICTION JOIN` en los nuevos datos de ventas de únicamente de dicha tienda. Al hacer esto, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantiene los patrones derivados del modelo regional, pero reemplaza los casos de aprendizaje existentes con los datos de la tienda individual. Como resultado, los valores de predicción estarán más próximos a las líneas de tendencia de la tienda individual.  
+ Por ejemplo, una de sus tiendas no dispone de suficientes datos de ventas. Podría crear un modelo general calculando el promedio de las ventas de todas las tiendas de una región determinada y, a continuación, entrenar un modelo. Posteriormente, para realizar predicciones sobre el almacén de datos de ventas insuficientes, crearía un `PREDICTION JOIN` en los nuevos datos de ventas de únicamente de dicha tienda. Al hacer esto, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantiene los patrones derivados del modelo regional, pero reemplaza los casos de aprendizaje existentes con los datos de la tienda individual. Como resultado, los valores de predicción estarán más próximos a las líneas de tendencia de la tienda individual.  
   
  Al usar el argumento `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agrega continuamente los nuevos casos al final del conjunto de casos y elimina un número correspondiente del principio del conjunto. Si agrega nuevos datos en un número mayor que el conjunto de aprendizaje original, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] descarta los primeros datos. Si proporciona suficientes valores nuevos, las predicciones se pueden basar en datos completamente nuevos.  
   
@@ -205,7 +205,7 @@ AND NODE_TYPE = 15
  Para obtener ejemplos de consulta y obtener más información sobre la sintaxis para usar `REPLACE_MODEL_CASES` y `EXTEND_MODEL_CASES`, consulte [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="bkmk_MissingValues"></a> Sustitución de valores ausentes en modelos de serie temporal  
- Al agregar nuevos datos a un modelo de serie temporal con una instrucción `PREDICTION JOIN`, en el nuevo conjunto de datos no puede faltar ningún valor. Si alguna serie está incompleta, el modelo debe proporcionar los valores ausentes mediante un valor NULL, una media numérica, una media numérica concreta o un valor de predicción. Si especifica `EXTEND_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reemplaza los valores ausentes con predicciones basadas en el modelo original. Si usa `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reemplaza los valores que faltan por el valor que especifique en el *MISSING_VALUE_SUBSTITUTION* parámetro.  
+ Al agregar nuevos datos a un modelo de serie temporal con una instrucción `PREDICTION JOIN`, en el nuevo conjunto de datos no puede faltar ningún valor. Si alguna serie está incompleta, el modelo debe proporcionar los valores ausentes mediante un valor NULL, una media numérica, una media numérica concreta o un valor de predicción. Si especifica `EXTEND_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reemplaza los valores ausentes con predicciones basadas en el modelo original. Si usas `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reemplaza los valores que faltan por el valor que especifique en el *MISSING_VALUE_SUBSTITUTION* parámetro.  
   
 ## <a name="list-of-prediction-functions"></a>Lista de funciones de predicción  
  Todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] son compatibles con un conjunto común de funciones. No obstante, el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las funciones adicionales que figuran en la siguiente tabla.  
@@ -225,6 +225,6 @@ AND NODE_TYPE = 15
  [Consultas de minería de datos](data-mining-queries.md)   
  [Algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm.md)   
  [Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)   
- [Contenido del modelo para los modelos de serie temporal de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenido del modelo para los modelos de serie temporal de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], installing
 - migrating full-text indexes [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 caps.latest.revision: 103
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ab9109e79d845416d89fe44282fe2b2f70629ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 192893274803d5c753fa6bd7acd90c7789d7f8b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106071"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264333"
 ---
 # <a name="upgrade-full-text-search"></a>Actualizar la búsqueda de texto completo
   La actualización de la búsqueda de texto completo a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se realiza durante la instalación y al adjuntar, restaurar o copiar archivos de base de datos y catálogos de texto completo de la versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el Asistente para copiar bases de datos.  
@@ -40,7 +39,7 @@ ms.locfileid: "36106071"
   
 -   [Migrar índices de texto completo al actualizar una base de datos a SQL Server 2014](#Upgrade_Db)  
   
--   [Consideraciones para restaurar un catálogo SQL Server 2005 Full-Text a SQL Server 2014](#Considerations_for_Restore)  
+-   [Consideraciones para restaurar un catálogo de texto completo de 2005 de servidor SQL a SQL Server 2014](#Considerations_for_Restore)  
   
 -   [Adjuntar una base de datos de SQL Server 2005 a SQL Server 2014](#Attaching_2005_ft_catalogs)  
   

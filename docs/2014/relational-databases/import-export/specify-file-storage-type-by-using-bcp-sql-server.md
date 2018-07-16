@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], file storage types
 - importing data, file storage types
@@ -17,18 +16,18 @@ helpviewer_keywords:
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 68630ac6e4a2ffad9079ed620e8d7d9660bf6381
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: fff9084513f21333125eaee8995eebfd3e22e1a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106952"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251997"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Especificar el tipo de almacenamiento de archivos mediante bcp (SQL Server)
-  El *tipo de almacenamiento en archivo* describe cómo se almacenan los datos en el archivo de datos. Datos se pueden exportar a un archivo de datos como el tipo de tabla de base de datos (formato nativo), en su representación de caracteres (formato de carácter) o como cualquier tipo de datos donde se admite la conversión implícita; Por ejemplo, si copia una `smallint` como un `int`. Los tipos de datos definidos por el usuario se exportan como sus tipos base correspondientes.  
+  El *tipo de almacenamiento en archivo* describe cómo se almacenan los datos en el archivo de datos. Datos se pueden exportar a un archivo de datos como el tipo de tabla de base de datos (formato nativo), como su representación en caracteres (formato de caracteres) o como cualquier tipo de datos donde se admite la conversión implícita; Por ejemplo, si copia una `smallint` como un `int`. Los tipos de datos definidos por el usuario se exportan como sus tipos base correspondientes.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Comando bcp para el tipo de almacenamiento en archivo  
  Si un comando **bcp** interactivo contiene la opción **in** u **out** sin el modificador de archivo de formato (**-f**) o un modificador de formato de datos (**-n**, **-c**, **-w**o **-N**), el comando solicita el tipo de almacenamiento de archivos de cada campo de datos, de la manera siguiente:  
@@ -39,9 +38,9 @@ ms.locfileid: "36106952"
   
 -   Para exportar datos de forma masiva desde una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un archivo de datos con el almacenamiento más compacto posible (formato de datos nativo), acepte los tipos de almacenamiento de archivos predeterminados que proporciona **bcp**. Para obtener una lista de los tipos de almacenamiento en archivo nativos, vea "Tipos de almacenamiento en archivo nativos", más adelante en este mismo tema.  
   
--   Para exportar datos de forma masiva desde una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un archivo de datos en el formato de caracteres, especifique `char` como el tipo de almacenamiento de archivo para todas las columnas de la tabla.  
+-   Para exportar datos de forma masiva desde una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un archivo de datos en formato de caracteres, especifique `char` como el tipo de almacenamiento de archivo para todas las columnas de la tabla.  
   
--   Para importar datos de forma masiva a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un archivo de datos, especifique el tipo de almacenamiento de archivo como `char` para los tipos almacenados con un carácter de formato y, para los datos almacenados en formato de tipo de datos nativo, especifique uno de los tipos de almacenamiento de archivo, según corresponda:  
+-   Para importar masivamente datos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un archivo de datos, especifique el tipo de almacenamiento de archivo como `char` para los tipos almacenados en el carácter de formato y, para los datos almacenados en formato de tipo de datos nativo, especifique uno de los tipos de almacenamiento de archivo, según corresponda:  
   
     |tipo de almacenamiento en archivo|Escriba en el símbolo del sistema|  
     |-----------------------|-----------------------------|  
@@ -77,7 +76,7 @@ ms.locfileid: "36106952"
     |`UDT`(un tipo de datos definido por el usuario)|`U`|  
     |`XML`|`X`|  
   
-     <sup>1</sup> la interacción de longitud de campo, longitud de prefijo y terminadores determina la cantidad de espacio de almacenamiento que se asigna en un archivo de datos para los datos que se exportan como el `char` tipo de almacenamiento de archivo.  
+     <sup>1</sup> la interacción de longitud de campo, longitud de prefijo y terminadores determina la cantidad de espacio de almacenamiento que se asigna en un archivo de datos para los datos que no son caracteres que se exportan como el `char` el tipo de almacenamiento de archivo.  
   
      <sup>2</sup> el `ntext`, `text`, y `image` tipos de datos se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En proyectos de desarrollo nuevos evite el uso de estos tipos de datos y planee la modificación de las aplicaciones que los utilicen actualmente. Use `nvarchar(max)`, `varchar(max)`, y `varbinary(max)` en su lugar.  
   
@@ -113,7 +112,7 @@ ms.locfileid: "36106952"
 |`timestamp`|SQLBINARY|  
 |UDT (un tipo de datos definido por el usuario)|SQLUDT|  
   
- <sup>1</sup> archivos de datos que se almacenan con un carácter de formato utilizan `char` como el tipo de almacenamiento de archivo. Por consiguiente, para archivos de datos de caracteres, SQLCHAR es el único tipo de datos que aparece en un archivo de formato.  
+ <sup>1</sup> archivos de datos que se almacenan en el carácter de formato utilizan `char` como el tipo de almacenamiento de archivo. Por consiguiente, para archivos de datos de caracteres, SQLCHAR es el único tipo de datos que aparece en un archivo de formato.  
   
  <sup>2</sup> no se puede importar masivamente datos en `text`, `ntext`, y `image` las columnas que tienen valores predeterminados.  
   
@@ -124,7 +123,7 @@ ms.locfileid: "36106952"
   
 -   Si especifica un tipo de almacenamiento de archivo que representa una conversión implícita no válida, **bcp** se produce un error; por ejemplo, aunque puede especificar `int` para `smallint` datos, si especifica `smallint` para `int` datos, resultado de errores de desbordamiento.  
   
--   Cuando almacenan tipos de datos como `float`, `money`, `datetime`, o `int` se almacenan como los tipos de base de datos, los datos se escriben en el archivo de datos en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] formato nativo.  
+-   Cuando se escribe como datos que no son caracteres `float`, `money`, `datetime`, o `int` se almacenan como los tipos de base de datos, los datos se escriben en el archivo de datos en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] formato nativo.  
   
     > [!NOTE]  
     >  Después de que se especifiquen de forma interactiva todos los campos de un comando **bcp**, el comando solicita que guarde sus respuestas para cada campo en un archivo que no tenga el formato XML. Para obtener más información sobre los archivos con formato distinto de XML, vea [Archivos de formato no XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  

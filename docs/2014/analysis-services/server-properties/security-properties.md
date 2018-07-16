@@ -1,5 +1,5 @@
 ---
-title: Propiedades de seguridad | Documentos de Microsoft
+title: Propiedades de seguridad | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services], properties
 - SecurityPackageList property
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - RequireClientAuthentication property
 ms.assetid: 2fc7fe10-0cbb-49ac-aa8c-8ec3f7a7705f
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8c08854addeaa73675fbf7fcda6a7521c12c44d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28553d897d6e3c8b9672e2b16695c9a8924c0d05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200225"
 ---
 # <a name="security-properties"></a>Propiedades de seguridad
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor de seguridad que aparecen en la tabla siguiente. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "36199209"
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar propiedades del servidor de Analysis Services](server-properties-in-analysis-services.md)   
+ [Configurar las propiedades del servidor en Analysis Services](server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

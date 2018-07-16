@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Commit Tran Completed event class'
 ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1422823237bd5d68b34ba5c33c9e8c1888d80265
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6026573b752088a4910acf09265b66a266c15b88
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199691"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288951"
 ---
 # <a name="tm-commit-tran-completed-event-class"></a>TM: Commit Tran Completed, clase de eventos
   La clase de eventos TM: Commit Tran Completed indica que se ha completado una solicitud COMMIT TRANSACTION. La solicitud fue enviada desde el cliente mediante la interfaz de administración de transacciones. La columna EventSubClass indica si se reiniciará una nueva transacción una vez se confirme la transacción actual.  

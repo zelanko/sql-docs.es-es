@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, technical reference
 - technical reference [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9f749612e65681ec7daf2f556ada02e9f84b5fd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 87b75fe08c201d7aace1d2465351300447e5ae7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255917"
 ---
 # <a name="technical-reference-ssrs"></a>Referencia técnica (SSRS)
   Buscar las herramientas y documentación de referencia de PowerShell para usar o admenistrar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "36200848"
  ![Icono pequeño de carpeta de archivos](../../2014/integration-services/media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **Referencia de características**  
  [Diseñador de informes (Ayuda F1)](tools/report-designer-f1-help.md)  
   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   

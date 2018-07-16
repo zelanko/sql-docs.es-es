@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a8b972b629608cb1c93f1e0cfde6cf305184f3f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 86b8b79fc5bcac1842a4fae82535afdff06c305e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280271"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>Función CountRows (Generador de informes y SSRS)
   Devuelve el número de filas del ámbito especificado, incluidas las filas con valores NULL.  
@@ -45,7 +45,7 @@ CountRows(scope, recursive)
  Devuelve un `Integer`.  
   
 ## <a name="remarks"></a>Notas  
- `CountRows` cuenta todas las filas del ámbito especificado, incluidas las filas que contienen valores null.  
+ `CountRows` cuenta todas las filas del ámbito especificado, incluidas las filas que tienen valores null.  
   
  El valor de *scope* no puede ser una expresión y debe hacer referencia al ámbito actual o a un ámbito contenedor.  
   
@@ -61,9 +61,9 @@ CountRows(scope, recursive)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Expresión que se utiliza en los informes &#40;el generador de informes SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;el generador de informes SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

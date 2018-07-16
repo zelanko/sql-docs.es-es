@@ -1,5 +1,5 @@
 ---
-title: Editor de origen de OLE DB (página Administrador de conexiones) | Documentos de Microsoft
+title: Editor de origen de OLE DB (página Administrador de conexiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsourceadapter.connection.f1
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
 caps.latest.revision: 41
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 48a56983486d07e2331394a9a07b39bde38925b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71b29c69425508e15ba306c6f9ae7d0319c8a6ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201399"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206495"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>Editor de origen de OLE DB (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de origen de OLE DB** para seleccionar el administrador de conexiones OLE DB para el origen. Esta página también permite seleccionar una tabla o vista de la base de datos.  
@@ -34,7 +34,7 @@ ms.locfileid: "36201399"
 >  Para cargar datos desde un origen de datos que use [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2003 o anterior, use un origen de Excel. Para más información, vea [Editor de origen de Excel &#40;página Administrador de conexiones&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md).  
   
 > [!NOTE]  
->  El `CommandTimeout` propiedad del origen de OLE DB no está disponible en la **Editor de origen de OLE DB**, pero se puede establecer mediante el uso de la **Editor avanzado**. Para obtener más información acerca de esta propiedad, vea la sección Origen de Excel de [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
+>  El `CommandTimeout` propiedad del origen de OLE DB no está disponible en el **Editor de origen de OLE DB**, pero se puede establecer utilizando la **Editor avanzado**. Para obtener más información acerca de esta propiedad, vea la sección Origen de Excel de [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
   
  Para obtener más información acerca del origen de OLE DB, vea [OLE DB Source](data-flow/ole-db-source.md).  
   

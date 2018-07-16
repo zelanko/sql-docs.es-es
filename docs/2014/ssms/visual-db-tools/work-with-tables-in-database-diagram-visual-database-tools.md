@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], tables
 - Table Designer, database diagrams
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], Table Designer
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8081b6375241f60c29513a95de2170941e188eff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 763d65d35ee880a5b86bf1f2efd49c4ad258f642
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185732"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>Trabajar con tablas en diagramas de base de datos (Visual Database Tools)
   Puede modificar y crear tablas de base de datos en el Diseñador de tablas o en el Diseñador de diagramas de base de datos.  

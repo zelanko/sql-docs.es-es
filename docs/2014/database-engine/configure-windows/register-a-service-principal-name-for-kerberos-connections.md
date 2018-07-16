@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SPNs
 - network connections [SQL Server], SPNs
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 caps.latest.revision: 56
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 356a475186915a222a8480f4b7f1cbdbc7fa8fed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5a4d8948697fb2cc08c57f2e4621c7401e6d44bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211895"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos
   El uso de la autenticación Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere que se cumplan las siguientes condiciones:  
@@ -104,12 +104,12 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 |-|-|  
 |MSSQLSvc/*fqdn:puerto*|SPN predeterminado generado por el proveedor cuando se usa TCP. *puerto* en un número de puerto TCP.|  
 |MSSQLSvc/*fqdn*|SPN predeterminado generado por el proveedor para una instancia predeterminada cuando se usa un protocolo distinto de TCP. *fqdn* es un nombre de dominio completo.|  
-|MSSQLSvc /*FQDN: nombreDeInstancia*|SPN predeterminado generado por el proveedor para una instancia con nombre cuando se usa un protocolo distinto de TCP. *nombreDeInstancia* es el nombre de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|MSSQLSvc /*fqdn:InstanceName*|SPN predeterminado generado por el proveedor para una instancia con nombre cuando se usa un protocolo distinto de TCP. *nombreDeInstancia* es el nombre de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ##  <a name="Auto"></a> Registro automático de SPN  
  Cuando se inicia una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta registrar el SPN para el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando la instancia se detiene, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta anular el registro del SPN. En una conexión TCP/IP, el SPN se registra con el formato *MSSQLSvc/\<FQDN>*:*\<puertotcp>*. Las instancias con nombre y la instancia predeterminada se registran como *MSSQLSvc* en función del valor *\<puertotcp>* para diferenciar las instancias.  
   
- Para otras conexiones que son compatibles con Kerberos, el SPN se registra con el formato *MSSQLSvc /\<FQDN >*:*\<instancename >* para una instancia con nombre. El formato para registrar la instancia predeterminada es *MSSQLSvc/\<FQDN>*.  
+ Para otras conexiones compatibles con Kerberos, el SPN se registra en el formato *MSSQLSvc /\<FQDN >*:*\<instancename >* para una instancia con nombre. El formato para registrar la instancia predeterminada es *MSSQLSvc/\<FQDN>*.  
   
  Es posible que se requiera una intervención manual para registrar o anular el registro del SPN si la cuenta de servicio carece de los permisos requeridos para estas acciones.  
   

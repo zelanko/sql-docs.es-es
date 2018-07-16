@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 - security [data collector]
 - data collector [SQL Server], security
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1864b580a681cb3c9e7fca612140f21548d2c96a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: df296ef140f92e8a035e85d3123b0f1426e6288a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235285"
 ---
 # <a name="data-collector-security"></a>Seguridad del recopilador de datos
   El recopilador de datos utiliza el modelo de seguridad basada en roles implementado por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este modelo permite al administrador de bases de datos ejecutar las distintas tareas de recopilador de datos en un contexto de seguridad que solo tiene los permisos necesarios realizar dicha tarea. Este enfoque también se utiliza para operaciones que implican tablas internas, a las que solamente se puede tener acceso utilizando un procedimiento almacenado o vista. No se concede ningún permiso a las tablas internas. En lugar de ello, los permisos se comprueban en el usuario del procedimiento almacenado o vista que se utiliza para tener acceso a una tabla.  
@@ -52,13 +52,13 @@ ms.locfileid: "36106562"
   
  Estos roles se almacenan en la base de datos msdb. De manera predeterminada, ningún usuario es miembro de estos roles de base de datos. La pertenencia de los usuarios a estos roles se debe conceder explícitamente.  
   
- Los usuarios que son miembros de la `sysadmin` rol fijo de servidor tienen acceso total a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vistas del recopilador de datos y objetos de agente. No obstante, deben agregarse explícitamente a los roles del recopilador de datos.  
+ Los usuarios que son miembros de la `sysadmin` rol fijo de servidor tienen acceso total a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vistas del recopilador de datos y objetos del agente. No obstante, deben agregarse explícitamente a los roles del recopilador de datos.  
   
 > [!IMPORTANT]  
 >  Los miembros del rol db_ssisadmin y del rol dc_admin quizá puedan elevar sus privilegios a sysadmin. Esta elevación de privilegio se puede producir porque estos roles pueden modificar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] los puede ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el contexto de seguridad de sysadmin del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan paquetes para utilizar una cuenta de proxy con privilegios limitados o agregar solo los miembros de sysadmin a los roles dc_admin y db_ssisadmin.  
   
 ### <a name="dcadmin-role"></a>Rol dc_admin  
- Los usuarios asignados a la `dc_admin` rol tiene acceso de administrador completo (crear, leer, actualizar y eliminar) a la configuración del recopilador de datos en una instancia del servidor. Los miembros de este rol pueden realizar las operaciones siguientes:  
+ Los usuarios asignados a la `dc_admin` rol tiene acceso de administrador completo (creación, lectura, actualización y eliminación) para la configuración del recopilador de datos en una instancia del servidor. Los miembros de este rol pueden realizar las operaciones siguientes:  
   
 -   Establecer propiedades de nivel del recopilador.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36106562"
 -   **SQLAgentUserRole**. Este rol es necesario para crear programaciones y ejecutar trabajos.  
   
     > [!NOTE]  
-    >  Los servidores proxy creados para el recopilador de datos debe conceder acceso a `dc_admin` para crearlos y utilizarlos en los pasos de trabajo que exijan un servidor proxy.  
+    >  Los servidores proxy creados para el recopilador de datos debe conceder acceso a `dc_admin` para crearlos y utilizarlos en todos los pasos de trabajo que exijan un servidor proxy.  
   
 -   **dc_operator**. Los miembros de `dc_admin` heredan los permisos concedidos a **dc_operator**.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "36106562"
 -   Cambiar el esquema del almacén de administración de datos cuando se requiere (por ejemplo, agregando una nueva tabla cuando se instala un nuevo tipo de recopilador).  
   
     > [!NOTE]  
-    >  Si hay un cambio de esquema, el usuario también debe ser miembro de la `dc_admin` rol para instalar un nuevo tipo de recopilador, puesto que esta acción exige permiso para actualizar la configuración del recopilador de datos en msdb.  
+    >  Donde hay un cambio de esquema, el usuario también debe ser un miembro de la `dc_admin` rol para instalar un nuevo tipo de recopilador, puesto que esta acción exige permiso para actualizar la configuración del recopilador de datos en msdb.  
   
 -   Ejecutar trabajos de mantenimiento en el almacén de administración de datos, por ejemplo archivado o limpieza.  
   

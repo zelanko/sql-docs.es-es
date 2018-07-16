@@ -1,25 +1,24 @@
 ---
-title: Usar PowerShell para copias de seguridad de varias bases de datos al servicio de almacenamiento de Windows Azure Blob | Documentos de Microsoft
+title: Usar PowerShell para copia de seguridad de varias bases de datos al servicio de Windows Azure Blob Storage | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: acc1410256b89f3501ab261921d32c582ed2c80e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c53e405bad7e81b4ea0344eea857f5dd2e067151
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269121"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-windows-azure-blob-storage-service"></a>Usar PowerShell para hacer la copia de seguridad de varias bases de datos en el servicio Azure Blob Storage
   Este tema proporciona ejemplos de scripts que se pueden utilizar para automatizar las copias de seguridad del servicio de almacenamiento Blob de Windows Azure con los cmdlets de PowerShell.  
@@ -269,7 +268,7 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+ [SQL Server Backup and Restore con el servicio de Windows Azure Blob Storage](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

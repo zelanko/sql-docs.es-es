@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multiple Flat Files connection manager
 - connections [Integration Services], flat files
@@ -20,18 +20,18 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 68b9fcf9965a3245b869006d1177104702f8079d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88409baa25d3e54319dc5b824494ff6a51d159aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322745"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>administrador de conexiones de varios archivos planos
   Un administrador de conexiones de varios archivos planos permite a un paquete obtener acceso a datos de varios archivos planos. Por ejemplo, un origen de archivos planos puede utilizar un administrador de conexiones para varios archivos planos cuando la tarea Flujo de datos se encuentra en un contenedor de bucles, como el contenedor de bucles For. En cada bucle del contenedor, el origen de archivos planos carga los datos del siguiente nombre de archivo que proporciona el administrador de conexiones de varios archivos planos.  
   
- Cuando se agrega un administrador de conexiones de varios archivos planos a un paquete, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una conexión de administrador que se resuelve como una conexión de varios archivos planos en tiempo de ejecución, Establece las propiedades en el Administrador de conexiones de varios archivos planos, y Agrega el Administrador de conexiones de varios archivos planos para el `Connections` recopilación del paquete.  
+ Cuando se agrega un administrador de conexiones de varios archivos planos a un paquete, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una conexión de administrador que se resuelve como una conexión de varios archivos planos en tiempo de ejecución, Establece las propiedades en el Administrador de conexiones de varios archivos planos, y Agrega el Administrador de conexiones de varios archivos planos a la `Connections` recopilación del paquete.  
   
  El `ConnectionManagerType` propiedad del Administrador de conexiones se establece en `MULTIFLATFILE`.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "36108645"
   
 -   [Editor del Administrador de conexiones de varios archivos planos &#40;página columnas&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [Editor del Administrador de conexiones de varios archivos planos &#40;página avanzadas&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [Editor del Administrador de conexiones de varios archivos planos &#40;página Opciones avanzadas&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
--   [Editor del Administrador de conexiones de varios archivos planos &#40;obtener una vista previa de página&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
+-   [Editor del Administrador de conexiones de varios archivos planos &#40;vista previa de página&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
  Para obtener información acerca de cómo configurar un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Filtrar datos en una tabla (SSAS Tabular) | Documentos de Microsoft
+title: Filtrar datos en una tabla (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.customfilterdb.f1
 - sql12.asvs.bidtoolset.autofiltermenu.f1
 - sql12.asvs.bidtoolset.notallitemsshowing.f1
 ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d58f376d4d7fde1ccd38eab1a1662fb7ad2605cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5232c34c8fdb8a76d24a623103d30863e7e9c21c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197240"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306415"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrar los datos de una tabla (SSAS tabular)
   Puede aplicar filtros al importar datos para controlar las filas que se cargan en una tabla. Después de haber importado los datos, no podrá eliminar filas individuales. Sin embargo, puede aplicar filtros personalizados para controlar la manera en que se muestran las filas. Las filas que no cumplen los criterios de filtrado se ocultan. Puede filtrar por una o más columnas. Los filtros son aditivos, lo que significa que cada filtro adicional se basa en el actual y reduce aún más el subconjunto de datos.  
@@ -56,8 +56,8 @@ ms.locfileid: "36197240"
 2.  Haga clic en el menú **Columna** y, a continuación, haga clic en **Borrar todos los filtros**.  
   
 ## <a name="see-also"></a>Vea también  
- [Filtrar y ordenar datos &#40;SSAS Tabular&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [Las perspectivas &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)   
- [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md)  
+ [Filtrar y ordenar datos &#40;Tabular de SSAS&#41;](../filter-and-sort-data-ssas-tabular.md)   
+ [Las perspectivas &#40;Tabular de SSAS&#41;](perspectives-ssas-tabular.md)   
+ [Roles &#40;Tabular de SSAS&#41;](roles-ssas-tabular.md)  
   
   

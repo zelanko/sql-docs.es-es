@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 caps.latest.revision: 23
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80961e5899162575ae832d5d6a8dd35824b43a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd40a67ecd13dde8c78b38ba0f37d4928b86dd0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324555"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Paso 2: Crear un archivo dañado
   Para demostrar los errores de configuración y el control de los errores de transformación, debe crear un archivo plano de ejemplo que, cuando se procese, genere un error en un componente.  
@@ -38,9 +38,9 @@ ms.locfileid: "36112944"
   
     3.  Haga clic en el archivo SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
-2.  Usar la búsqueda del editor de texto y reemplace la función para buscar todas las instancias de `VEB` y reemplácelas con `BAD`.  
+2.  Usar la búsqueda del editor de texto y para buscar todas las instancias de `VEB` y reemplácelas con `BAD`.  
   
-3.  En la misma carpeta que los archivos de datos de ejemplo, guarde el archivo modificado como `Currency_BAD.txt`.  
+3.  En la misma carpeta que los demás archivos de datos de ejemplo, guarde el archivo modificado como `Currency_BAD.txt`.  
   
     > [!IMPORTANT]  
     >  Asegúrese de que `Currency_BAD.txt` se guarda la misma carpeta que los demás archivos de datos de ejemplo.  
@@ -65,6 +65,6 @@ ms.locfileid: "36112944"
     >  El número 27 es el Id. del componente. Este valor se asigna al generar el flujo de datos, y es posible que el valor del paquete sea diferente.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Paso 3: Agregar redirección de flujo de Error](lesson-4-3-adding-error-flow-redirection.md)  
+ [Paso 3: Agregar redirección de flujo de errores](lesson-4-3-adding-error-flow-redirection.md)  
   
   

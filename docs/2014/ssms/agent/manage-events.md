@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event forwarding servers [SQL Server]
 - events [SQL Server], forwarding
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Agent alerts, management servers
 ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 67dd730cfa06cff637e1ae58d89b18fc8b13bef5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8a8a6e25a518e62c8498fb00fcd45b0217e60d71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286621"
 ---
 # <a name="manage-events"></a>Administrar eventos
   Puede reenviar todos los mensajes de eventos que tengan o superen un nivel de gravedad de error específico a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto se denomina *reenvío de eventos*. El servidor de reenvío es un servidor dedicado que también puede ser un servidor maestro. Puede utilizar el reenvío de eventos para centralizar la administración de alertas para un grupo de servidores, con lo que se reduce la carga de trabajo de los servidores con un alto grado de utilización.  

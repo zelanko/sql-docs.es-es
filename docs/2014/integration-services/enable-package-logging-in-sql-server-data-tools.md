@@ -1,5 +1,5 @@
 ---
-title: Habilitar el registro de paquetes en SQL Server Data Tools | Documentos de Microsoft
+title: Habilitar el registro de paquetes en SQL Server Data Tools | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], enabling
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3bfd9f1fff5f1c9d89edf923c87dfe805825ae56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0c34833bf458ce38a8e83a1a3db2a40f0760b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320675"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Habilitar el registro de paquetes en SQL Server Data Tools
   Este procedimiento describe cómo agregar registros a un paquete, configurar el registro en el nivel de paquete y guardar la configuración de registro en un archivo XML. Solo puede agregar registros en el nivel de paquete, pero el paquete no tiene que realizar registros para habilitar el registro en los contenedores que incluye.  

@@ -1,5 +1,5 @@
 ---
-title: Mostrar el cuadro de diálogo de tabla (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Mostrar el cuadro de diálogo de tabla (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.showtabledialog.f1
 helpviewer_keywords:
 - Show Table dialog box
 ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a025d6134391a02c107e4103dd696b4720c5834
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90ee18b4b16650337255393a392c0b85744aeb3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284081"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Mostrar tabla (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Mostrar tabla** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para incluir tablas de la vista del origen de datos asociada con una dimensión, un cubo o una estructura de minería de datos. Para mostrar este cuadro de diálogo en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] :  
@@ -39,7 +39,7 @@ ms.locfileid: "36199442"
 -   Haga clic con el botón derecho en el fondo del panel **Vista del origen de datos** en la página **Estructura de minería de datos** del **Diseñador de modelos de minería de datos** y seleccione **Mostrar tablas**.  
   
 ## <a name="options"></a>Opciones  
- **Seleccionadas tablas adicionales para mostrar**  
+ **Seleccione tablas adicionales para mostrar**  
  Seleccione las tablas que se van a agregar al panel **Vista del origen de datos** . Esta opción muestra una cuadrícula de objetos disponibles y sus tipos asociados, que coinciden con el filtro establecido en **Filtro** (o bien todas las tablas si no se ha establecido **Filtro** ), y aún no se han mostrado en el diagrama actual.  
   
  **Filter**  

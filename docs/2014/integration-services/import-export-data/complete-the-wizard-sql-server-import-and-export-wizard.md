@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ebf2b83425be8ecad08d2111cc08fae8c0cae3ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86564caa1ab6228c269e07ed84eb7c935f0d9621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233685"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Finalización del asistente (Asistente para importación y exportación de SQL Server)
-  Use la **Complete el asistente** página para confirmar las opciones que haya realizado en el asistente, antes de copiar los datos.  
+  Use la **Complete el asistente** página para confirmar las opciones que ha realizado en el asistente, antes de copiar los datos.  
   
  Para más información acerca de este asistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información acerca de las opciones para iniciar el asistente, así como los permisos necesarios para ejecutar el asistente correctamente, consulte [ejecutar la importación de SQL Server y el Asistente para exportación de](start-the-sql-server-import-and-export-wizard.md).  
   

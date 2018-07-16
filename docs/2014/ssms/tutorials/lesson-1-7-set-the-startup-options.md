@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47dc2b5b-7803-4202-ad53-a431a821ad69
-caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9896d01e2a1352806b1212ffb1f207a8d42bc63b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 719682f5b5f8b595c13f3bdbac587023e52e56ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206405"
 ---
 # <a name="set-the-startup-options"></a>Establecer las opciones de inicio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se puede configurar para abrir la superficie de diseño con la configuración que prefiera al iniciar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Configurar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para que se abra con la configuración deseada puede ahorrarle tiempo.  

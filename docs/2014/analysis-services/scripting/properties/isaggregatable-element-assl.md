@@ -1,5 +1,5 @@
 ---
-title: Elemento IsAggregatable (ASSL) | Documentos de Microsoft
+title: Elemento IsAggregatable (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IsAggregatable element
 ms.assetid: ed7dbe89-259c-4c5c-9660-b965c3af1573
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d167c7c2cf8ce6e1f8092a6378d543ee0ab0d1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c19be225b4a0deadbd618e6012dc17ce2d2f9aa8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252927"
 ---
 # <a name="isaggregatable-element-assl"></a>Elemento IsAggregatable (ASSL)
   Especifica si los valores de la [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) se puede agregar el elemento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36198282"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `IsAggregatable` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ El elemento que se corresponde con el elemento primario de `IsAggregatable` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

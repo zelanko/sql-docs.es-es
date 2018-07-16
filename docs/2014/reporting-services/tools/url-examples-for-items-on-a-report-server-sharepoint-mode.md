@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de direcciones URL para los elementos de informe publicado en un servidor de informes en modo de SharePoint (SSRS) | Documentos de Microsoft
+title: Ejemplos de dirección URL para los elementos de informe publicado en un servidor de informes en modo de SharePoint (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bd98a2e64ca72e0e9b39328620b88732606e98af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ce1e34688069063cde47849d00497a056c964431
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214735"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Ejemplos de dirección URL para los elementos de informe publicados en un servidor de informes en modo de SharePoint (SSRS)
   Para publicar informes y elementos relacionados en una biblioteca de SharePoint, puede publicar el contenido con las herramientas de creación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , como, por ejemplo, el Diseñador de informes o puede cargar el contenido mediante acciones del sitio de SharePoint.  
@@ -79,7 +79,7 @@ ms.locfileid: "36199604"
  Una definición de informe puede incluir un archivo de imagen almacenado como un archivo externo. Puede hacer referencia a ese archivo en la definición de informe estableciendo una dirección URL completa al archivo de imagen. Puede almacenarse en un sitio de SharePoint o en un equipo remoto.  
   
 > [!IMPORTANT]  
->  Si la dirección URL externa es para una imagen en un sitio de SharePoint, el icono de imagen rota aparecerá al obtener una vista previa del informe en el Generador de informes. Al cargar el informe en el sitio de SharePoint y representar el informe en modo conectado, el icono de imagen rota aparecerá si solo tiene `View Items` permisos.  
+>  Si la dirección URL externa es para una imagen en un sitio de SharePoint, el icono de imagen rota aparecerá al obtener una vista previa del informe en el Generador de informes. Al cargar el informe en el sitio de SharePoint y representarlo en modo conectado, el icono de imagen rota aparecerá si solo tiene `View Items` permisos.  
   
  Independientemente del modo del servidor de informes, las referencias a un archivo de imagen externo en un informe deben ser direcciones URL completas. Además, cuando se hace referencia a un archivo de imagen externo, normalmente es necesario configurar la cuenta de procesamiento de informes en modo desatendido.  
   

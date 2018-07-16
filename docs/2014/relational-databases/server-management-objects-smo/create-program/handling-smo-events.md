@@ -1,5 +1,5 @@
 ---
-title: Controlar eventos SMO | Documentos de Microsoft
+title: Controlar eventos SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - events [SMO], about events
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 34d447d0fca75012d786bd7de5911c2846dd76c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e74a05e025f474737130f1faeb61f2647d8e69bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212995"
 ---
 # <a name="handling-smo-events"></a>Controlar eventos SMO
   Hay tipos de evento de servidor a los que se puede suscribir utilizando un controlador de eventos y el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
@@ -40,9 +40,9 @@ ms.locfileid: "36200085"
 ## <a name="event-subscription"></a>Suscripción a eventos  
  Administra los eventos escribiendo una clase de controlador de eventos, creando una instancia de él, asignando el controlador de eventos al objeto primario y suscribiéndose a continuación al evento.  
   
- Una clase de controlador de eventos se debe escribir para administrar los eventos. La clase de controlador de eventos puede contener más de una función de controlador de eventos y se debe instalar para los eventos que se van a administrar. Las funciones de controlador de eventos reciben información sobre el evento desde el *ServerEventNotificatificationArgs* parámetro que puede usarse para notificar información sobre el evento.  
+ Una clase de controlador de eventos se debe escribir para administrar los eventos. La clase de controlador de eventos puede contener más de una función de controlador de eventos y se debe instalar para los eventos que se van a administrar. Las funciones de controlador de eventos reciben información sobre el evento desde el *ServerEventNotificatificationArgs* parámetro que se puede usar para notificar información sobre el evento.  
   
- Se enumeran los tipos de eventos de base de datos y el servidor que se pueden administrar en el <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> clase y la <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>clase.  
+ Se enumeran los tipos de eventos de base de datos y el servidor que se pueden administrar en el <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> clase y el <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>clase.  
   
 ## <a name="example"></a>Ejemplo  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

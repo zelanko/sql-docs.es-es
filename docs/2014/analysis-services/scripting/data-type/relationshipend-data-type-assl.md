@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos RelationshipEnd (ASSL) | Documentos de Microsoft
+title: Tipo de datos RelationshipEnd (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3a974dd4-e1d6-45b2-b8c8-1a914bc13a02
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0f201bd910b9fd7f07b04a9b9f30da659dd32f29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e5afa4e39aef28fec96f473bcbf17b34099a4c57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213965"
 ---
 # <a name="relationshipend-data-type-assl"></a>Tipo de datos RelationshipEnd (ASSL)
   Define un tipo de datos primitivo que representa un extremo de la relación en una relación.  

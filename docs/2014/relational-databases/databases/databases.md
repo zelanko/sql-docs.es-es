@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data warehouse [SQL Server]
 - OLTP databases [SQL Server]
 - databases [SQL Server], about databases
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: de7f79af288674b5bf2dbb53979071dea505428c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d2d95b8a11ba3d1772bbb108435317e2e55e3c89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250245"
 ---
 # <a name="databases"></a>Bases de datos
   Una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consta de una colección de tablas en las que se almacena un conjunto específico de datos estructurados. Una tabla contiene una colección de filas, también denominadas tuplas o registros, y columnas, también denominadas atributos. Cada columna de la tabla se ha diseñado para almacenar un determinado tipo de información; por ejemplo, fechas, nombres, importes en moneda o números.  
@@ -46,7 +46,7 @@ ms.locfileid: "36200899"
 |-|-|  
 |[Bases de datos del sistema](system-databases.md)|[Eliminar archivos de datos o de registro de una base de datos](delete-data-or-log-files-from-a-database.md)|  
 |[Bases de datos independientes](contained-databases.md)|[Mostrar la información del espacio ocupado por los datos y el registro de una base de datos](display-data-and-log-space-information-for-a-database.md)|  
-|[Archivos de datos SQL Server en Windows Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentar el tamaño de una base de datos](increase-the-size-of-a-database.md)|  
+|[Archivos de datos de SQL Server en Windows Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentar el tamaño de una base de datos](increase-the-size-of-a-database.md)|  
 |[Archivos y grupos de archivos de base de datos](database-files-and-filegroups.md)|[Cambiar el nombre de una base de datos](rename-a-database.md)|  
 |[Estados de base de datos](database-states.md)|[Establecer una base de datos en modo de usuario único](set-a-database-to-single-user-mode.md)|  
 |[Estados de los archivos](file-states.md)|[Reducir una base de datos](shrink-a-database.md)|  

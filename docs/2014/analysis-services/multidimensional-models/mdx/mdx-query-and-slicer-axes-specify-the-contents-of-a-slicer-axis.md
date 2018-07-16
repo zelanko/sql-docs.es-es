@@ -1,5 +1,5 @@
 ---
-title: Especificar el contenido de un eje segmentador (MDX) | Documentos de Microsoft
+title: Especificar el contenido de un eje segmentador (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - slicer axis
 - filtering data [MDX]
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e95576acddee05c34096594c7199abf9c1ed7bef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d50271cdf03afd764c1956556e84c74370a182d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289771"
 ---
 # <a name="specifying-the-contents-of-a-slicer-axis-mdx"></a>Especificar el contenido de un eje de división en sectores (MDX)
   El eje segmentador filtra los datos devueltos por la instrucción SELECT de Expresiones multidimensionales (MDX) y restringe los datos devueltos de forma que solamente se devuelvan los datos de intersección entre los miembros especificados. Puede considerarse como eje adicional no visible en una consulta. El eje segmentador se define en la cláusula WHERE de la instrucción SELECT de MDX.  

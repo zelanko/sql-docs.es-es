@@ -1,5 +1,5 @@
 ---
-title: Diseñar la consulta | Documentos de Microsoft
+title: Diseñar la consulta | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designquery.f1
 ms.assetid: 2dad800f-10a1-453c-8761-2935b9826d84
 caps.latest.revision: 39
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2ca850de7e8f09f704434910ccf0fa45cbfca726
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be1faf198c38ee9445602aa0e0bcc8ae66b5461a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270311"
 ---
 # <a name="design-the-query"></a>Diseñar la consulta
   Utilice esta página del Asistente para informes para crear una consulta escribiéndola manualmente, usando el Generador de consultas para crear una consulta de forma interactiva, o importando una consulta de otro informe.  
@@ -44,7 +44,7 @@ ms.locfileid: "36201758"
 SELECT LastName FROM Person.Person;  
 ```  
   
- Para el tipo de origen de datos **Microsoft SQL Server**, la siguiente consulta ejecuta el [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] procedimiento almacenado `uspGetEmployeeManagers` para el empleado con identificación número 1:  
+ Para el tipo de origen de datos **Microsoft SQL Server**, la siguiente consulta ejecuta el [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] procedimiento almacenado `uspGetEmployeeManagers` para el empleado con identificación de número 1:  
   
 ```  
 EXEC uspgetEmployeeManagers '1';  
@@ -53,6 +53,6 @@ EXEC uspgetEmployeeManagers '1';
 ## <a name="see-also"></a>Vea también  
  [Ayuda del Asistente para informes](../../2014/reporting-services/report-wizard-help.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-data/report-datasets-ssrs.md)  
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

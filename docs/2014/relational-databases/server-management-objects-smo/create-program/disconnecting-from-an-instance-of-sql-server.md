@@ -1,5 +1,5 @@
 ---
-title: Desconectar de una instancia de SQL Server | Documentos de Microsoft
+title: Desconectar de una instancia de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - disconnecting [SMO]
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1f2ce4ae7ce42df42be9b6bc68c3d13acf949dba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5a232aefef8293ef84b99dce5aa3864e9702dab1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225265"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>Desconectar de una instancia de SQL Server
   Cerrar ni desconectar manualmente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objetos Management Objects (SMO) no es necesario. Las conexiones se abren y se cierra según se requiere.  
@@ -36,7 +36,7 @@ ms.locfileid: "36198127"
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>Desconectar de una instancia de SQL Server para RMO  
  El cierre de las conexiones de servidor cuando se programa con RMO funciona de forma ligeramente diferente a SMO.  
   
- Dado que la conexión del servidor de un objeto RMO se mantiene por la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> objeto, este objeto también se utiliza al desconectar de una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando se programan mediante RMO. Para cerrar una conexión con el <xref:Microsoft.SqlServer.Management.Common.ServerConnection> objeto, llame a la <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> método del objeto RMO. Una vez cerrada la conexión, no se pueden utilizar objetos RMO.  
+ Dado que la conexión del servidor para un objeto RMO se mantiene por el <xref:Microsoft.SqlServer.Management.Common.ServerConnection> objeto, este objeto también se utiliza al desconectar de una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando se programa mediante el uso de RMO. Para cerrar una conexión con el <xref:Microsoft.SqlServer.Management.Common.ServerConnection> de objeto, llame a la <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> método del objeto RMO. Una vez cerrada la conexión, no se pueden utilizar objetos RMO.  
   
 ## <a name="example"></a>Ejemplo  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

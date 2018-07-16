@@ -1,5 +1,5 @@
 ---
-title: Crear o personalizar una biblioteca de fuentes de datos (PowerPivot para SharePoint) | Documentos de Microsoft
+title: Crear o personalizar una biblioteca de fuentes de datos (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data feed library
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa955fd27e0edde1da50fe608034a98b2107eca4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 865bb5cc87364b4d5240f0365cedb854038fb460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308511"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>Crear o personalizar una biblioteca de fuentes de datos (PowerPivot para SharePoint)
   Una *biblioteca de fuentes de distribución de datos* es una biblioteca de SharePoint especial que le permite registrarse y compartir los documentos (.atomsvc) de servicio de datos de Atom. En estos documentos se proporcionan fuentes de distribución de datos XML para libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] u otras aplicaciones cliente que admitan el formato de distribución de datos Atom. Una biblioteca de fuentes de distribución de datos es diferente de otras bibliotecas de SharePoint porque permite:  
@@ -31,7 +31,7 @@ ms.locfileid: "36105494"
   
 -   Compartir y administrar los documentos de servicio de datos en una ubicación central.  
   
--   Identificar visualmente los documentos de servicio de datos mediante un icono, para que pueda distinguir con facilidad los documentos de servicio de otros documentos almacenados en la misma biblioteca: ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   Identificar visualmente los documentos de servicio de datos mediante un icono, para que pueda distinguir fácilmente los documentos de servicio desde otros documentos almacenados en la misma biblioteca: ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  Una biblioteca de fuentes de distribución de datos siempre contiene archivos de documentos de servicio de datos (.atomsvc) y nunca las propias fuentes de distribución de datos. A diferencia de una fuente de distribución de datos, que consta de datos XML estáticos, el documento de servicio de datos especifica una dirección URL para un servicio o aplicación que genera una fuente tras la solicitud, proporcionando información de conexión reutilizable para las operaciones de importación repetibles.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36105494"
 ## <a name="see-also"></a>Vea también  
  [Usar fuentes de distribución de datos &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)   
  [Eliminar una biblioteca de fuentes de datos de PowerPivot](delete-a-power-pivot-data-feed-library.md)   
- [Administración de servidor de PowerPivot y configuración en Administración Central](power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [Las fuentes de datos de PowerPivot](power-pivot-data-feeds.md)  
+ [Administración de servidor de PowerPivot y la configuración en Administración Central](power-pivot-server-administration-and-configuration-in-central-administration.md)   
+ [Fuentes de distribución de datos de PowerPivot](power-pivot-data-feeds.md)  
   
   

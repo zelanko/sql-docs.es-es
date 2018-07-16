@@ -1,5 +1,5 @@
 ---
-title: Componentes de servidor del motor OLAP | Documentos de Microsoft
+title: Componentes de servidor del motor OLAP | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - server architecture [Analysis Services]
 ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a3486ed70d6da2d2091da02cf7e2a55fcd2b1d1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2471838c89fa2cfb6ded22c9daa8ad9ca6e1cfd8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224127"
 ---
 # <a name="olap-engine-server-components"></a>Componentes de servidor del motor OLAP
   El componente de servidor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] es el **msmdsrv.exe** aplicación, que se ejecuta como un servicio de Windows. Esta aplicación está formada por componentes de seguridad, un componente de escucha XML for Analysis (XMLA), un componente de procesador de consultas y otros componentes internos que realizan las siguientes funciones:  
@@ -56,7 +56,7 @@ ms.locfileid: "36105969"
  ![Diagrama de arquitectura de sistema de Analysis Services](../../../analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "diagrama de arquitectura de sistema de Analysis Services")  
   
 ## <a name="xmla-listener"></a>Componente de escucha XMLA  
- El componente de escucha XMLA controla todas las comunicaciones XMLA entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y sus clientes. El [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` opción de configuración en el archivo msmdsrv.ini puede usarse para especificar un puerto en el que un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia escucha. Un valor de 0 en este archivo indica que [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] escucha en el puerto predeterminado. A menos que se especifique lo contrario, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utiliza los siguientes puertos TCP predeterminados:  
+ El componente de escucha XMLA controla todas las comunicaciones XMLA entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y sus clientes. El [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` puede utilizarse la opción de configuración en el archivo msmdsrv.ini para especificar un puerto en el que un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] escucha la instancia. Un valor de 0 en este archivo indica que [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] escucha en el puerto predeterminado. A menos que se especifique lo contrario, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utiliza los siguientes puertos TCP predeterminados:  
   
 |Puerto|Descripción|  
 |----------|-----------------|  
@@ -64,10 +64,10 @@ ms.locfileid: "36105969"
 |2382|Redirector de otras instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |Se asigna dinámicamente al iniciar el servidor.|Instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
- Vea [configurar Firewall de Windows para permitir el acceso a Analysis Services](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) para obtener más detalles.  
+ Consulte [configurar Firewall de Windows para permitir el acceso a Analysis Services](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) para obtener más detalles.  
   
 ## <a name="see-also"></a>Vea también  
- [Las reglas para nombres de objeto &#40;Analysis Services&#41;](object-naming-rules-analysis-services.md)   
+ [Reglas de nomenclatura de objetos &#40;Analysis Services&#41;](object-naming-rules-analysis-services.md)   
  [Arquitectura física &#40;Analysis Services - datos multidimensionales&#41;](understanding-microsoft-olap-physical-architecture.md)   
  [Arquitectura lógica &#40;Analysis Services - datos multidimensionales&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   

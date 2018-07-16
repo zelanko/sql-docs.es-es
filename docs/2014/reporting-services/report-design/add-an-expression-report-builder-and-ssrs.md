@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a60ee091-b4ed-41e1-9b6a-032c316cd03f
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8defd1a842253d429629538361153cc0cdff8faf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 072af31ff2207822e7e9f1aa63e7d5582550d0dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317965"
 ---
 # <a name="add-an-expression-report-builder-and-ssrs"></a>Agregar una expresión (Generador de informes y SSRS)
   Las expresiones se usan en los informes para definir propiedades de elementos de informe, filtros, grupos, criterios de ordenación, cadenas de conexión y valores de parámetros. Las expresiones comienzan por un signo igual (=) y se escriben en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. El procesador de informes, que combina el resultado de la evaluación con elementos de diseño de informe, evalúa las expresiones en tiempo de ejecución.  
@@ -40,10 +40,10 @@ ms.locfileid: "36197092"
          La expresión aparece en la superficie de diseño como `<<Expr>>`.  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a texto y marcadores de posición &#40;el generador de informes SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Cuadros de texto &#40;el generador de informes SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
- [Expresión que se utiliza en los informes &#40;el generador de informes SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Ejemplos de ecuaciones de filtro &#40;el generador de informes SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
+ [Aplicar formato a texto y marcadores de posición &#40;generador de informes y SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Los cuadros de texto &#40;generador de informes y SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Ejemplos de ecuaciones de filtro &#40;generador de informes y SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
  [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Expresión &#40;cuadro de diálogo del Generador de informes&#41;](../expression-dialog-box-report-builder.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   

@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup priority
 - backup on secondary replicas
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: fdaebbfc823445594e32f18ba1ec858b2350f108
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b3b35cb41610f490b4a12f8deba77e9d34cc7185
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328445"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Configurar la copia de seguridad en réplicas de disponibilidad (SQL Server)
   En este tema se describe cómo configurar la copia de seguridad en réplicas secundarias para un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Para obtener una introducción a la copia de seguridad en réplicas secundarias, consulte [ secundarias activas: copia de seguridad en réplicas secundarias (grupos de disponibilidad AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Para obtener una introducción a copia de seguridad en réplicas secundarias, consulte [ secundarias activas: copia de seguridad en réplicas secundarias (grupos de disponibilidad AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  
   
@@ -115,11 +114,11 @@ ms.locfileid: "36112552"
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para configurar la copia de seguridad en las réplicas secundarias**  
   
-1.  Establezca el valor predeterminado (`cd`) a la instancia del servidor que hospeda la réplica principal.  
+1.  Establezca el valor predeterminado (`cd`) a la instancia de servidor que hospeda la réplica principal.  
   
 2.  Opcionalmente, configure la prioridad de copia de seguridad de cada réplica de disponibilidad que está agregando o modificando. La instancia del servidor que hospeda la réplica principal usa esta prioridad para decidir qué réplica debe atender una solicitud de copia de seguridad automatizada en una base de datos del grupo de disponibilidad (se elige la réplica con mayor prioridad). Esta prioridad puede ser cualquier número comprendido entre 0 y 100, ambos incluidos. Si la prioridad es 0, indica que la réplica no debe considerarse candidata para atender solicitudes de copia de seguridad.  El valor predeterminado es 50.  
   
-     Para agregar una réplica de disponibilidad a un grupo de disponibilidad, use el cmdlet `New-SqlAvailabilityReplica`. Para modificar una réplica de disponibilidad existente, use el cmdlet `Set-SqlAvailabilityReplica`. En cualquier caso, especifique la `BackupPriority` *n* parámetro, donde *n* es un valor entre 0 y 100.  
+     Para agregar una réplica de disponibilidad a un grupo de disponibilidad, use el cmdlet `New-SqlAvailabilityReplica`. Para modificar una réplica de disponibilidad existente, use el cmdlet `Set-SqlAvailabilityReplica`. En cualquier caso, especifique la `BackupPriority` *n* parámetro, donde *n* es un valor comprendido entre 0 y 100.  
   
      Por ejemplo, el siguiente comando establece la prioridad de copia de seguridad de la réplica de disponibilidad `MyReplica` a `60`.  
   
@@ -130,7 +129,7 @@ ms.locfileid: "36112552"
   
 3.  Opcionalmente, configure la preferencia de la copia de seguridad automatizada del grupo de disponibilidad que está creando o modificando. Esta preferencia indica cómo un trabajo de copia de seguridad debe evaluar la réplica principal cuando elige dónde realizar las copias de seguridad. El valor predeterminado es preferir las réplicas secundarias.  
   
-     Al crear un grupo de disponibilidad, use el cmdlet `New-SqlAvailabilityGroup`. Para modificar un grupo de disponibilidad existente, use la `Set-SqlAvailabilityGroup` cmdlet. En cualquier caso, especifique la `AutomatedBackupPreference` parámetro.  
+     Al crear un grupo de disponibilidad, use el cmdlet `New-SqlAvailabilityGroup`. Modificar un grupo de disponibilidad, use el `Set-SqlAvailabilityGroup` cmdlet. En cualquier caso, especifique el `AutomatedBackupPreference` parámetro.  
   
      donde,  
   
@@ -161,7 +160,7 @@ ms.locfileid: "36112552"
     ```  
   
 > [!NOTE]  
->  Para ver la sintaxis de un cmdlet, use la `Get-Help` cmdlet en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  Para ver la sintaxis de un cmdlet, use el `Get-Help` cmdlet en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
@@ -201,10 +200,10 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 -   [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog del equipo de AlwaysOn SQL Server: El Blog oficial del SQL Server AlwaysOn equipo](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog del equipo de AlwaysOn SQL Server: Oficial AlwaysOn Team Blog de SQL Server](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [ Secundarias activas: Copia de seguridad en réplicas secundarias (grupos de disponibilidad AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

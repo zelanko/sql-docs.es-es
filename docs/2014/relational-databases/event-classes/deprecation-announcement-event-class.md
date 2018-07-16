@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Deprecation Announcement event class
 ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e3f0c25031a54be1b4b3131483e3aecacf1bb683
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c0c9511f650f86744b2fe96a724cfbe4c48010bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252517"
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement, clase de eventos
   La clase de eventos **Deprecation Announcement** se produce cuando se usa una característica que se va a quitar de una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero no de la próxima versión principal. Para que sus aplicaciones duren el mayor tiempo posible, debe evitar el uso de características que provoquen la aparición de las clase de eventos **Deprecation Announcement** o **Deprecation Final Support** .  
@@ -35,7 +35,7 @@ ms.locfileid: "36199703"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |ClientProcessID|`int`|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
-|DatabaseID|`int`|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Muestra el nombre de la base de datos si la `ServerName` se captura la columna de datos en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
+|DatabaseID|`int`|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Muestra el nombre de la base de datos si el `ServerName` se captura la columna de datos en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |EventClass|`int`|Tipo de evento = 125.|27|no|  
 |EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|no|  
@@ -51,7 +51,7 @@ ms.locfileid: "36199703"
 |Offset|`int`|Desplazamiento inicial de la instrucción en el procedimiento almacenado o lote.|61|Sí|  
 |IdSolicitud|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
 |ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|no|  
-|SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, `SessionLoginName` mostrará inicioDeSesión1 y `LoginName` mostrará inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
+|SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, `SessionLoginName` muestra inicioDeSesión1 y `LoginName` muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |SqlHandle|`image`|Identificador de binarios que se puede utilizar para identificar procedimientos almacenados o lotes SQL.|63|Sí|  
 |StartTime|`datetime`|Hora a la que se inició el evento, si está disponible.|14|Sí|  
@@ -62,6 +62,6 @@ ms.locfileid: "36199703"
 ## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Deprecation Final Support (clase de eventos)](deprecation-final-support-event-class.md)   
- [Características del motor de base de datos en desuso en SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
+ [Características desusadas del motor de base de datos de SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

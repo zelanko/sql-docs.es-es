@@ -1,5 +1,5 @@
 ---
-title: Developer&#39;guía (Reporting Services) | Documentos de Microsoft
+title: Desarrollador&#39;guía (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - programming [Reporting Services]
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
 caps.latest.revision: 21
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 30fba34bd5c00935e4d41a657481fb8225f9a669
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 0cb0e08f48dbb873d3dec7d4d688182ebe3415fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249905"
 ---
-# <a name="developer39s-guide-reporting-services"></a>Developer&#39;guía (Reporting Services)
+# <a name="developer39s-guide-reporting-services"></a>Desarrollador&#39;guía (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona varias interfaces de programación que puede aprovechar en sus propias aplicaciones. Puede utilizar las características y capacidades existentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para generar herramientas personalizadas de administración y elaboración de informes en los sitios web y en las aplicaciones Windows, o para ampliar la plataforma de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
  Extender la plataforma [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye crear nuevos componentes y recursos que se pueden utilizar para el acceso a los datos, la entrega de informes, etcétera. Puede comercializar estos componentes y recursos para las compañías que utilizan [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en la organización.  

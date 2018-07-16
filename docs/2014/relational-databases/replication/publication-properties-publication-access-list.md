@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.publicationaccesslist.f1
 ms.assetid: 9587bb9e-c66c-4e70-8171-09b943ec2d50
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 33eb87744663dc2f89ea770092fbdfbe0f4f436e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: df9ebce6e148c90298f226dd2cb13ae27b98fe11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232951"
 ---
 # <a name="publication-properties-publication-access-list"></a>Propiedades de la publicación, lista de acceso a la publicación
   La página **Lista de acceso a la publicación** del cuadro de diálogo **Propiedades de la publicación** permite agregar y quitar inicios de sesión, cuentas y grupos de la lista de acceso a la publicación (PAL). La PAL es el mecanismo principal para configurar la seguridad del publicador. Al crear una publicación, la replicación crea una PAL para dicha publicación. La PAL, que ofrece funciones similares a las de una lista de control de acceso de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, contiene una lista de inicios de sesión, cuentas y grupos con permiso de acceso a la publicación.  

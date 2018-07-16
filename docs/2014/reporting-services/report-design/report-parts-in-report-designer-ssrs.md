@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c4f2ae1acfdc15bd8ca2882a7d5acbff88acf965
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5b50efbb6879866d459a775f2c6a0f9ffd86228f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311315"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Elementos de informe en el Diseñador de informes (SSRS)
   En el Diseñador de informes, después de crear tablas, gráficos y otros elementos de informe en un proyecto, puede publicarlos como *elementos de informe* en un servidor de informes o en el sitio de SharePoint integrado con un servidor de informes para que usted y otros usuarios puedan reutilizarlos en otros informes.  
   
- En general, los elementos de informe funcionan de la misma manera en el Diseñador de informes y en el Generador de informes. Para obtener información acerca de la funcionalidad básica, consulte [elementos de informe &#40;el generador de informes y SSRS&#41; ](../report-parts-report-builder-and-ssrs.md) en el [documentación del generador de informes](http://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
+ En general, los elementos de informe funcionan de la misma manera en el Diseñador de informes y en el Generador de informes. Para obtener información acerca de la funcionalidad básica, consulte [elementos de informe &#40;generador de informes y SSRS&#41; ](../report-parts-report-builder-and-ssrs.md) en el [documentación del generador de informes](http://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
   
  Hay diferencias fundamentales en el modo en que los elementos de informe se usan en el Diseñador de informes. Una diferencia principal es el flujo de trabajo. El Generador de informes habilita la creación colaborativa: creo un elemento de informe y lo publico. Puede reutilizarlo, modificarlo y volver a publicarlo. En el Diseñador de informes la publicación es unidireccional: se puede publicar un elemento de informe en el Diseñador de informes y reutilizarlo. Pero no se puede reutilizar un elemento de informe existente en un informe en el Diseñador de informes. En este tema se elaboran estas diferencias, después de una información general rápida de los elementos de informe.  
   

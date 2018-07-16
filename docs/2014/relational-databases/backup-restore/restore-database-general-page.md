@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 caps.latest.revision: 85
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f310d762ca8a8d116b3accc618532b772eef8c26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 79929bf3f9bebec61605ad173a460fbdbe2269f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219485"
 ---
 # <a name="restore-database-general-page"></a>Restaurar la base de datos (página General)
   Use la página **General** para especificar información sobre las bases de datos de destino y de origen para una operación de restauración de base de datos.  
@@ -33,14 +32,14 @@ ms.locfileid: "36200402"
 -   [Definir un dispositivo lógico de copia de seguridad en una unidad de cinta &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 > [!NOTE]  
->  Cuando especifica una tarea de restauración mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar correspondiente [!INCLUDE[tsql](../../includes/tsql-md.md)] [restaurar](/sql/t-sql/statements/restore-statements-transact-sql) script haciendo clic en **Script** y, a continuación, seleccione un destino para la secuencia de comandos.  
+>  Cuando especifica una tarea de restauración mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el correspondiente [!INCLUDE[tsql](../../includes/tsql-md.md)] [restaurar](/sql/t-sql/statements/restore-statements-transact-sql) script haciendo clic en **Script** y, a continuación, selecciona un destino para la secuencia de comandos.  
   
 ## <a name="permissions"></a>Permisos  
  Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator** , y al propietario (**dbo**) de la base de datos.  
   
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
- Restauración de una copia de seguridad cifrada requiere `VIEW DEFINITION` permisos para el certificado o la clave simétrica utilizada para cifrar durante la copia de seguridad.  
+ Restauración de una copia de seguridad cifrada requiere `VIEW DEFINITION` permisos para el certificado o clave asimétrica usada para cifrar durante copia de seguridad.  
   
 ## <a name="options"></a>Opciones  
   
@@ -65,7 +64,7 @@ ms.locfileid: "36200402"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Conjuntos de copia de seguridad para restaurar**|Muestra los conjuntos de copia de seguridad disponibles para la ubicación especificada. Cada conjunto de copia de seguridad, resultado de una sola operación de copia de seguridad, se distribuye entre todos los dispositivos del conjunto de medios. De forma predeterminada, se sugiere un plan de recuperación para alcanzar el objetivo la operación de restauración según la selección de los conjuntos de copia de seguridad necesarios. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa el historial de copias de seguridad de **msdb** para identificar las copias de seguridad que son necesarias para restaurar una base de datos y crea un plan de restauración. Por ejemplo, para la restauración de una base de datos, el plan de restauración selecciona la copia de seguridad completa más reciente de la base de datos y la siguiente copia de seguridad diferencial más reciente de la base de datos, si ésta existiese. Con el modelo de recuperación completa, el plan de restauración selecciona, a continuación, todas las copias de seguridad de registros siguientes.<br /><br /> Para anular el plan de recuperación sugerido, puede cambiar las selecciones siguientes en la cuadrícula. Se anulará automáticamente la selección de aquellas copias de seguridad que dependan de una copia de seguridad cuya selección fue anulada.<br /><br /> **Restauración**:<br />                          Las casillas activadas indican los conjuntos de copias de seguridad que se restaurarán.<br />**Nombre de**: el nombre del conjunto de copia de seguridad.<br />**Componente**: el componente de copia de seguridad: **base de datos**, **archivo**, o  **\<en blanco >** (para registros de transacciones).<br />**Tipo**: el tipo de copia de seguridad realizada: **Completa**, **Diferencial**o **Registro de transacciones**.<br />**Servidor**: nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizó la operación de copia de seguridad.<br />**Base de datos**: el nombre de la base de datos implicada en la operación de copia de seguridad.<br />**Posición**: posición del conjunto de copia de seguridad en el volumen.<br />**Primer LSN**: el número de secuencia de registro de la primera transacción en el conjunto de copia de seguridad. En blanco para las copias de seguridad de archivos.<br />**Último LSN**: el número de secuencia de registro de la última transacción en el conjunto de copia de seguridad. En blanco para las copias de seguridad de archivos.<br />**LSN de punto de comprobación**: el número de secuencia de registro (LSN) del punto de comprobación más reciente en el momento en que se creó la copia de seguridad.<br />**LSN completo**: el número de secuencia de registro de la copia de seguridad completa más reciente.<br />**Fecha de inicio**: la fecha y hora de inicio de la operación de copia de seguridad, presentadas en la configuración regional del cliente.<br />**Fecha de fin**: la fecha y hora en que terminó la operación de copia de seguridad, presentadas en la configuración regional del cliente.<br />**Tamaño**: el tamaño de la copia de seguridad se establece en bytes.<br />**Nombre de usuario**: el nombre del usuario que realizó la operación de copia de seguridad.<br /><br /> **Expiración**: la fecha y hora en que expira el conjunto de copia de seguridad.<br /><br /> Las casillas se habilitan solo cuando se activa la casilla **Selección manual** . Esto permite seleccionar los conjuntos de copia de seguridad que deben restaurarse.<br /><br /> Cuando se activa la casilla **Selección manual** , la precisión del plan de restauraciones se comprueba cada vez que se modifica. Si la secuencia de copias de seguridad es incorrecta, aparecerá un mensaje de error.|  
+|**Conjuntos de copia de seguridad para restaurar**|Muestra los conjuntos de copia de seguridad disponibles para la ubicación especificada. Cada conjunto de copia de seguridad, resultado de una sola operación de copia de seguridad, se distribuye entre todos los dispositivos del conjunto de medios. De forma predeterminada, se sugiere un plan de recuperación para alcanzar el objetivo la operación de restauración según la selección de los conjuntos de copia de seguridad necesarios. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa el historial de copias de seguridad de **msdb** para identificar las copias de seguridad que son necesarias para restaurar una base de datos y crea un plan de restauración. Por ejemplo, para la restauración de una base de datos, el plan de restauración selecciona la copia de seguridad completa más reciente de la base de datos y la siguiente copia de seguridad diferencial más reciente de la base de datos, si ésta existiese. Con el modelo de recuperación completa, el plan de restauración selecciona, a continuación, todas las copias de seguridad de registros siguientes.<br /><br /> Para invalidar el plan de recuperación sugerido, puede cambiar las selecciones siguientes en la cuadrícula. Se anulará automáticamente la selección de aquellas copias de seguridad que dependan de una copia de seguridad cuya selección fue anulada.<br /><br /> **Restauración**:<br />                          Las casillas activadas indican los conjuntos de copias de seguridad que se restaurarán.<br />**Nombre**: el nombre del conjunto de copia de seguridad.<br />**Componente**: el componente de copia de seguridad: **base de datos**, **archivo**, o ** \<en blanco >** (para registros de transacciones).<br />**Tipo**: el tipo de copia de seguridad realizada: **Completa**, **Diferencial**o **Registro de transacciones**.<br />**Servidor**: nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizó la operación de copia de seguridad.<br />**Base de datos**: el nombre de la base de datos implicada en la operación de copia de seguridad.<br />**Posición**: posición del conjunto de copia de seguridad en el volumen.<br />**Primer LSN**: el número de secuencia de registro de la primera transacción en el conjunto de copia de seguridad. En blanco para las copias de seguridad de archivos.<br />**Último LSN**: el número de secuencia de registro de la última transacción en el conjunto de copia de seguridad. En blanco para las copias de seguridad de archivos.<br />**LSN de punto de comprobación**: el número de secuencia de registro (LSN) del punto de comprobación más reciente en el momento en que se creó la copia de seguridad.<br />**LSN completo**: el número de secuencia de registro de la copia de seguridad de base de datos completa más reciente.<br />**Fecha de inicio**: la fecha y hora cuando se inició la operación de copia de seguridad, presentadas en la configuración regional del cliente.<br />**Fecha de finalización**: la fecha y hora en que terminó la operación de copia de seguridad, presentadas en la configuración regional del cliente.<br />**Tamaño**: el tamaño de la copia de seguridad se establece en bytes.<br />**Nombre de usuario**: el nombre del usuario que realizó la operación de copia de seguridad.<br /><br /> **Expiración**: la fecha y hora de expiración del conjunto de copia de seguridad.<br /><br /> Las casillas se habilitan solo cuando se activa la casilla **Selección manual** . Esto permite seleccionar los conjuntos de copia de seguridad que deben restaurarse.<br /><br /> Cuando se activa la casilla **Selección manual** , la precisión del plan de restauraciones se comprueba cada vez que se modifica. Si la secuencia de copias de seguridad es incorrecta, aparecerá un mensaje de error.|  
 |**Comprobar medio de copia de seguridad**|Llama a una instrucción RESTORE VERIFY_ONLY en los conjuntos de copia de seguridad seleccionados.<br /><br /> Nota: Se trata de una operación de ejecución prolongada y se puede realizar un seguimiento de su progreso y cancelarlo utilizando el Monitor de progreso en el Marco de trabajo de cuadro de diálogo.<br /><br /> Este botón permite comprobar la integridad de los archivos de copia de seguridad seleccionados antes de restaurarlos.<br /><br /> Cuando se comprueba la integridad de los conjuntos de copia de seguridad, en el estado de progreso situado en la parte inferior izquierda del cuadro de diálogo se leerá "Comprobando" en lugar de "Ejecutándose".|  
   
 ## <a name="compatibility-support"></a>Soporte de compatibilidad  

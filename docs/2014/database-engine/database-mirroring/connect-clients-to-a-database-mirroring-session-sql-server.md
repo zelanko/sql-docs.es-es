@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
 - database mirroring [SQL Server], connecting clients to
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 caps.latest.revision: 92
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2af439599d16904cf7b66fa78882692ab87c05f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 482b72fac9416918bdee38b74fbc483027b4b345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204053"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a una sesión de creación de reflejo de la base de datos (SQL Server)
   Para conectarse a una sesión de creación de reflejo de la base de datos, un cliente puede usar SQL Native Client de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos proveedores de acceso a datos son totalmente compatibles con la creación de reflejo de la base de datos cuando se configuran para una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obtener información acerca de las consideraciones de programación para el uso de una base de datos reflejada, vea [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Además, la instancia del servidor principal actual debe estar disponible y el inicio de sesión del cliente se debe haber creado en la instancia del servidor. Para obtener más información, vea [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Las conexiones de cliente a una sesión de creación de reflejo de la base de datos no tienen relación con la instancia del servidor testigo, si existe alguno.  
@@ -122,7 +121,7 @@ Server=123.34.45.56,4724;
 >  En esta cadena se omite la información de autenticación.  
   
 > [!IMPORTANT]  
->  Unión del prefijo de protocolo con el `Server` atributo (`Server=tcp:`*\<servername >*) no es compatible con la **red** de atributo y si se especifica el protocolo en ambos lugares, probablemente se producirá un error. Por lo tanto, se recomienda que una cadena de conexión especifique el protocolo con el **red** de atributo y especificar solo el nombre del servidor en el `Server` atributo (`"Network=dbmssocn; Server=`*\<servername >*`"`).  
+>  La unión del prefijo de protocolo con el `Server` atributo (`Server=tcp:`*\<servername >*) no es compatible con la **red** de atributo y especificar el protocolo en ambos lugares, probablemente se producirá un error. Por lo tanto, se recomienda que una cadena de conexión especifique el protocolo con el **red** de atributo y especificar solo el nombre del servidor en el `Server` atributo (`"Network=dbmssocn; Server=`*\<servername >*`"`).  
   
 #### <a name="failover-partner-attribute"></a>Atributo Failover Partner  
  Además del nombre del asociado inicial, el cliente puede especificar también el nombre del asociado de conmutación por error, que debería identificar la instancia del servidor reflejado actual. Una de las palabras clave especifica el asociado de conmutación por error para el atributo de asociado de conmutación por error. La palabra clave para este atributo depende de la API que está utilizando. En la tabla siguiente se enumeran estas palabras clave.  

@@ -25,13 +25,13 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2c72fc04be1ce0f53d755080757c1c521c77bd69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5048d51b89f56a15b14365a89d999a3cd07e3674
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209415"
 ---
 # <a name="developing-a-custom-source-component"></a>Desarrollar un componente de origen personalizado
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite que los desarrolladores escriban componentes de origen que se puedan conectar a los orígenes de datos personalizados y proporcionar datos de estos orígenes a otros componentes en una tarea de flujo de datos. La capacidad para crear orígenes personalizados es importante cuando es necesario conectar a orígenes de datos a los que no se puede tener acceso utilizando uno de los orígenes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existentes.  
@@ -671,7 +671,7 @@ Namespace BlobSrc
 End Namespace  
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services  **<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Developing a Custom Destination Component](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)  (Desarrollo de un componente de destino personalizado)  

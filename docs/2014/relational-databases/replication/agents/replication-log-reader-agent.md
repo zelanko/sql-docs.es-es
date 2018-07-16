@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Log Reader Agent, executables
 - Log Reader Agent, parameter reference
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 caps.latest.revision: 50
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8bef914f1fd6a2cd4dff784808e5334d3871d81c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ff0ad36402857082e069a322e4519d64b13f7e65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215345"
 ---
 # <a name="replication-log-reader-agent"></a>Agente de registro del LOG de replicación
   El Agente de registro del LOG de replicación es un archivo ejecutable que supervisa el registro de transacciones de cada base de datos configurada para la replicación transaccional y copia las transacciones marcadas para ser replicadas desde el registro de transacciones a la base de datos de distribución.  

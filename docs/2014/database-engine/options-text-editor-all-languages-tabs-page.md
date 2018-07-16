@@ -1,5 +1,5 @@
 ---
-title: 'Opciones (Editor de texto - todos los idiomas: página tabulaciones) | Documentos de Microsoft'
+title: Opciones (Editor de texto - todos los idiomas-página tabulaciones) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.Tabs
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f3e0df6dced5c69f60cbb95abcb5ba8eee78879b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cc5922ed04933dcb7a6b09995353e7fd64a3163
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287862"
 ---
-# <a name="options-text-editor---all-languages--tabs-page"></a>Opciones (Editor de texto - todos los idiomas: página tabulaciones)
+# <a name="options-text-editor---all-languages--tabs-page"></a>Opciones (Editor de texto - todos los idiomas-página tabulaciones)
   Utilice este cuadro de diálogo para establecer el comportamiento de tabulación en los cinco editores de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para mostrar estas opciones, haga clic en **Opciones** en el menú **Herramientas** . Seleccione la carpeta **Editor de texto**, expanda la carpeta **Todos los lenguajes** y haga clic en **Tabulaciones**.  
   
 ## <a name="tabbing-options-by-editor"></a>Opciones de tabulación por editor  
@@ -38,7 +38,7 @@ ms.locfileid: "36198253"
  **Ninguno**  
  Cuando se selecciona esta opción, no se aplica ninguna sangría a la nueva línea que se crea al presionar ENTRAR. El cursor se coloca en la primera columna de la nueva línea.  
   
- **bloque**  
+ **Bloque**  
  Cuando se selecciona esta opción, se aplica una sangría de forma automática a la nueva línea que se crea al presionar ENTRAR, a la misma distancia que la línea anterior.  
   
  **Inteligente**  

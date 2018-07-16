@@ -1,5 +1,5 @@
 ---
-title: Crear una vista de suscripción (Master Data Services) | Documentos de Microsoft
+title: Crear una vista de suscripción (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0b79bd1e50871fb921a3ce2b3fe9e43ab0995a9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4d8114d933027d5392896f14c33e1ea9685841b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252287"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>Crear una vista de suscripciones (Master Data Services)
-  Crear una vista de suscripciones si desea crear una vista de los datos en el [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos para su uso en sistemas de suscripción.  
+  Crear una vista de suscripciones cuando desea crear una vista de los datos en el [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos para su uso en sistemas de suscripción.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
@@ -40,9 +40,9 @@ ms.locfileid: "36199939"
   
 2.  En la barra de menús, haga clic en **Crear vistas**.  
   
-3.  En el **vistas de suscripción** página, haga clic en **agregar vista de suscripción**.  
+3.  En el **vistas de suscripciones** página, haga clic en **agregar vista de suscripciones**.  
   
-4.  En el **Crear vista de suscripciones** panel, en la **nombre de la vista de suscripción** , escriba un nombre para la vista.  
+4.  En el **Crear vista de suscripciones** panel, en el **nombre de la vista de suscripción** , escriba un nombre para la vista.  
   
 5.  En la lista **Modelo** , seleccione un modelo.  
   

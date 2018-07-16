@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
 - identity values [SQL Server replication]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 caps.latest.revision: 51
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc8039ed5ea331609e14fc5b1b9cb9dae77f9aee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65d72e4cb94a4085829805278b59512a1a0a2801
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271031"
 ---
 # <a name="replicate-identity-columns"></a>Replicar columnas de identidad
   Cuando asigna una propiedad IDENTITY a una columna, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera automáticamente números que se incrementan secuencialmente para las nuevas filas insertadas en la tabla que contiene la columna de identidad. Para obtener más información, vea [IDENTITY &#40;propiedad &#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Debido a que las columnas de identidad pueden estar incluidas como parte de la clave principal, resulta importante evitar los valores duplicados en las columnas de identidad. Para utilizar columnas de identidad en una topología de replicación que tenga actualizaciones en más de un nodo, cada nodo de la topología de replicación debe usar diferentes valores en el intervalo de identidad con el fin de que no se produzcan duplicados.  

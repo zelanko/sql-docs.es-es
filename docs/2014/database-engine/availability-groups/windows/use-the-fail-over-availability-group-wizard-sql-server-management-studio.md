@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.failoverwizard.progress.f1
 - sql12.swb.failoverwizard.f1
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 caps.latest.revision: 25
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 351c09770b0e0e35c0ab4d039d8f4c9b5c76abe0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4e760ac9e1c806ef742c84f0725b94c204dc8345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314541"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para grupo de disponibilidad de conmutación por error (SQL Server Management Studio)
   En este tema se describe cómo realizar una conmutación por error manual planeada o conmutación por error manual forzada (conmutación por error forzada) en un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. Si se realiza una conmutación por error a una réplica secundaria en el estado SYNCHRONIZED, el asistente realiza una conmutación por error manual planeada (sin pérdida de datos). Si se realiza una conmutación por error a una réplica secundaria en el estado UNSYNCHRONIZED o NOT SYNCHRONIZING, el asistente realiza una conmutación por error manual forzada, también denominada *conmutación por error forzada* (con posible pérdida de datos). En ambas formas de conmutación por error manual tiene lugar la transición a la réplica secundaria a la que se está conectado al rol principal. Una conmutación por error manual planeada actualmente realiza transacciones de la réplica principal anterior al rol secundario. Después de una conmutación por error forzada, cuando la réplica principal pasa a estar en línea, realiza la transición al rol secundario.  
@@ -45,7 +44,7 @@ ms.locfileid: "36108179"
   
      [Página Confirmar la posible pérdida de datos](#ConfirmPotentialDataLoss) (más adelante en este tema)  
   
-     [Página resumen &#40;asistentes para grupos de disponibilidad AlwaysOn&#41;](summary-page-always-on-availability-group-wizards.md)  
+     [Página de resumen &#40;asistentes para grupos de disponibilidad AlwaysOn&#41;](summary-page-always-on-availability-group-wizards.md)  
   
      [Página progreso &#40;asistentes para grupos de disponibilidad AlwaysOn&#41;](progress-page-always-on-availability-group-wizards.md)  
   
@@ -204,7 +203,7 @@ ms.locfileid: "36108179"
  Haga clic en esta opción para finalizar el asistente. Al cancelar el asistente se sale de la página **Conectar a la réplica** sin realizar ninguna acción.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [ Modos de disponibilidad (grupos de disponibilidad AlwaysOn)](availability-modes-always-on-availability-groups.md)   
  [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Realizar una conmutación por error manual planeada de un grupo de disponibilidad &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)   

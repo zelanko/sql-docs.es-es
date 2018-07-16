@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - formats [Reporting Services], URL rendering
 - URL access [Reporting Services], rendering formats
@@ -16,16 +16,16 @@ ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 84bc0567927a1347d6bd5d83eef7f38ea301ba30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d44c68f381ee1fd7b6fed31e15bf2639dd57976e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327445"
 ---
 # <a name="export-a-report-using-url-access"></a>Exportar un informe mediante el acceso URL
-  También puede especificar el formato en el que se representará un informe mediante el *rs: Format* parámetro. Por ejemplo, para obtener una copia PDF de un informe directamente desde un servidor de informes en modo nativo:  
+  Opcionalmente, puede especificar el formato en el que se va a representar un informe de utilizando el *rs: Format* parámetro. Por ejemplo, para obtener una copia PDF de un informe directamente desde un servidor de informes en modo nativo:  
   
 ```  
 http://myrshost/ReportServer?/myreport&rs:Format=PDF  

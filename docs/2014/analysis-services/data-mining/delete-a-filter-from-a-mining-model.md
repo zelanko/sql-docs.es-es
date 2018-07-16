@@ -1,5 +1,5 @@
 ---
-title: Eliminar un filtro de un modelo de minería de datos | Documentos de Microsoft
+title: Eliminar un filtro de un modelo de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [Analysis Services]
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 143ab55a3ebfa3036fe23afd120d8b9c36f73a77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 535859d04212b09af5a96745f3fb4e234af3f6e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289851"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Eliminar un filtro de un modelo de minería de datos
   Al crear un filtro en un modelo de minería de datos, puede crear modelos en un subconjunto de los datos en la vista del origen de datos. Los filtros también son útiles para probar la precisión del modelo en un subconjunto de los datos originales.  
@@ -63,8 +63,8 @@ ms.locfileid: "36105713"
 3.  Presione la tecla Retroceso o Suprimir.  
   
 ## <a name="see-also"></a>Vea también  
- [Profundizar en los datos de los casos de un modelo de minería de datos](drill-through-to-case-data-from-a-mining-model.md)   
- [Tareas y tareas de modelo de minería de datos](mining-model-tasks-and-how-tos.md)   
- [Filtros para modelos de minería de datos de &#40;Analysis Services: minería de datos&#41;](mining-models-analysis-services-data-mining.md)  
+ [Obtener detalles de los datos de casos de un modelo de minería de datos](drill-through-to-case-data-from-a-mining-model.md)   
+ [Tareas del modelo de minería de datos y procedimientos](mining-model-tasks-and-how-tos.md)   
+ [Filtros para modelos de minería de datos de &#40;Analysis Services - minería de datos&#41;](mining-models-analysis-services-data-mining.md)  
   
   

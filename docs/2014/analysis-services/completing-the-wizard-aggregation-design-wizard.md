@@ -1,5 +1,5 @@
 ---
-title: Finalización del asistente (Asistente para diseño de agregaciones) | Documentos de Microsoft
+title: Finalización del asistente (Asistente para diseño de agregaciones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.finish.f1
 ms.assetid: 0081efe0-815d-4c55-9844-965db953aafe
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba71cabd83b7fff5c3ae5069e6ac0adc539daf74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: deaa50661fb466dbe2048569e8d8971e9d527890
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282421"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>Finalización del asistente (Asistente para diseñar agregaciones)
   Utilice la página **Finalización del asistente** para guardar el diseño de agregaciones en las particiones seleccionadas. De manera opcional, también es posible implementar y procesar las particiones seleccionadas después de que el Asistente para diseñar agregaciones haya terminado de diseñar y guardar las agregaciones.  
@@ -37,7 +37,7 @@ ms.locfileid: "36201489"
  Realice los pasos del asistente y asigne el diseño de agregaciones a las particiones seleccionadas, pero no implemente ni procese las particiones seleccionadas.  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda de F1 del Asistente de diseño de agregaciones](aggregation-design-wizard-f1-help.md)   
+ [Ayuda de F1 del Asistente de diseño de agregación](aggregation-design-wizard-f1-help.md)   
  [Asistentes de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

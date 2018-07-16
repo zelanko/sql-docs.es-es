@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
@@ -16,13 +16,13 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4c1dba16a2a0d923bba1d99bad19112634c31ebb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccc292cda8b3263c7e1457a52e4426dc9d24460d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263241"
 ---
 # <a name="change-data-capture-ssis"></a>Captura de datos modificados (SSIS)
   En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la captura de datos modificados ofrece una solución efectiva al desafío de realizar eficazmente las cargas incrementales de las tablas de origen a los data mart y a los almacenamientos de datos.  
@@ -47,7 +47,7 @@ ms.locfileid: "36201639"
  **Paso 1: diseñar el flujo de control**  
  Debe definir las tareas siguientes en el flujo de control del paquete:  
   
--   Calcular la fecha inicial y final `datetime` valores para el intervalo de cambios al origen de datos que se va a recuperar.  
+-   Calcular la fecha inicial y final `datetime` valores para el intervalo de cambios al origen de datos que desea recuperar.  
   
      Para calcular estos valores, utilice una tarea Ejecutar SQL o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] expresiones con `datetime` funciones. A continuación, almacene estos extremos en variables de paquete para usarlas posteriormente en el paquete.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36201639"
   
      Para determinar si están listos los datos, comience con un contenedor de bucles For para retrasar la ejecución, si es necesario, hasta que estén listos los datos modificados para el intervalo seleccionado. Dentro del contenedor de bucles, utilice una tarea Ejecutar SQL para consultar las tablas de asignación de fecha y hora que se mantienen en la captura de datos modificados. A continuación, utilice una tarea Script que llame al método `Thread.Sleep` u otra tarea Ejecutar SQL con una instrucción `WAITFOR`, con objeto de retrasar la ejecución del paquete temporalmente, si es necesario. También puede utilizar otra tarea Script para registrar una condición de error o un tiempo de espera.  
   
-     **Para obtener más información:**[determinar si el cambio de datos está listo  ](determine-whether-the-change-data-is-ready.md)  
+     **Para obtener más información:**[determinar si los datos modificados está preparados  ](determine-whether-the-change-data-is-ready.md)  
   
 -   Prepare la cadena de consulta que se utilizará para consultar los datos modificados.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36201639"
   
  Utilice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para desarrollar y guardar la consulta.  
   
- **Para obtener más información:**[recuperar y describir los datos modificados  ](retrieve-and-understand-the-change-data.md)  
+ **Para obtener más información:**[recuperar y describir datos modificados  ](retrieve-and-understand-the-change-data.md)  
   
  **Paso 3: diseñar el flujo de datos**  
  Debe definir las tareas siguientes en el flujo de datos del paquete:  
@@ -79,13 +79,13 @@ ms.locfileid: "36201639"
   
      Para recuperar los datos, utilice un componente de origen para consultar las tablas de cambios con objeto de detectar los cambios comprendidos en el intervalo seleccionado. El origen llama a una función con valores de tabla de Transact-SQL que deberá haber creado previamente.  
   
-     **Para obtener más información:**[recuperar y describir los datos modificados  ](retrieve-and-understand-the-change-data.md)  
+     **Para obtener más información:**[recuperar y describir datos modificados  ](retrieve-and-understand-the-change-data.md)  
   
 -   Divida los cambios en inserciones, actualizaciones y eliminaciones para su procesamiento.  
   
      Para dividir los cambios, utilice una transformación División condicional para dirigir las inserciones, las actualizaciones y las eliminaciones a las distintas salidas con objeto de procesarlas adecuadamente.  
   
-     **Para obtener más información:**[proceso inserta, actualizaciones y eliminaciones  ](process-inserts-updates-and-deletes.md)  
+     **Para obtener más información:**[procesar inserciones, actualizaciones y eliminaciones  ](process-inserts-updates-and-deletes.md)  
   
 -   Aplique las inserciones, eliminaciones y actualizaciones en el destino.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36201639"
  El proceso descrito en el diagrama y en los pasos anteriores conlleva una carga incremental a partir de una sola tabla. Cuando es preciso realizar una carga incremental a partir de varias tablas, el proceso general es el mismo. Sin embargo, hay que cambiar el diseño del paquete para adaptarlo al procesamiento de varias tablas. Para obtener más información sobre cómo crear un paquete que realiza una carga incremental a partir de varias tablas, vea [Realizar una carga incremental de varias tablas](perform-an-incremental-load-of-multiple-tables.md).  
   
 ## <a name="samples-of-change-data-capture-packages"></a>Ejemplos de paquetes de captura de datos modificados  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona dos ejemplos que muestran cómo utilizar la captura de datos en paquetes de cambio. Para obtener más información, consulte los temas siguientes:  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona dos ejemplos que muestran cómo usar cambiar captura de datos en paquetes. Para obtener más información, consulte los temas siguientes:  
   
 -   [Léame del ejemplo de captura de datos modificados desde el paquete de la última solicitud](http://go.microsoft.com/fwlink/?LinkId=133507)  
   

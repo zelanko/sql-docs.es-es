@@ -1,5 +1,5 @@
 ---
-title: Definir el comportamiento de suma parcial (Asistente de Business Intelligence) | Documentos de Microsoft
+title: Definir el comportamiento de suma parcial (Asistente de Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.semiadditivememberdetection.f1
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 79ee4ffdb89c4ee8ccb13f4a4985f6d545f573ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 201a5a24e8bafa2f2f919f6ad0b072ca801a694e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310815"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>Definir el comportamiento de suma parcial (Asistente de Business Intelligence)
   Use la página **Definir el comportamiento de suma parcial** para habilitar o deshabilitar el comportamiento de suma parcial en medidas. Este comportamiento determina cómo se agregan a una dimensión de tiempo las medidas que contiene un cubo.  
@@ -33,7 +33,7 @@ ms.locfileid: "36107776"
  **Desactivar el comportamiento de suma parcial**  
  Deshabilita el comportamiento de suma parcial en todas las medidas del cubo.  
   
- **El asistente ha detectado el \<nombre de la dimensión > dimensión de cuenta, que contiene miembros de suma parcial. El servidor agregará a los miembros de esta dimensión de acuerdo con el comportamiento de suma parcial especificado para cada tipo de cuenta.**  
+ **El asistente ha detectado el \<nombre de la dimensión > dimensión de cuenta, que contiene miembros semiaditivos. El servidor realizará la agregación de los miembros de esta dimensión de acuerdo con el comportamiento de suma parcial especificado para cada tipo de cuenta.**  
  Habilita el comportamiento de suma parcial para las dimensiones de cuentas que contienen miembros de suma parcial. Al seleccionar esta opción establece la función de agregación de todas las medidas en grupos de medida que hacen referencia a la dimensión de cuenta para `ByAccount`.  
   
  Para más información sobre las dimensiones de cuenta, vea [Crear una cuenta financiera de una dimensión de tipo primario-secundario](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).  
@@ -66,7 +66,7 @@ ms.locfileid: "36107776"
 >  Las selecciones realizadas para esta opción solo se aplican si se ha seleccionado **Define semiadditive behavior for individual members (Definir el comportamiento de suma parcial para miembros individuales)** .  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda de F1 de Asistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Asistente de Business Intelligence F1 Ayuda](business-intelligence-wizard-f1-help.md)   
  [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

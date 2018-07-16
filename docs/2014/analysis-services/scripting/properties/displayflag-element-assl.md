@@ -1,5 +1,5 @@
 ---
-title: Elemento DisplayFlag (ASSL) | Documentos de Microsoft
+title: Elemento DisplayFlag (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DisplayFlag element
 ms.assetid: a6750477-0763-46da-9add-1f4448146a6b
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43c797101826a614c67c7c4f213140a427b51395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1e36ef82a62c91575312fa4c2ead23538983402
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261461"
 ---
 # <a name="displayflag-element-assl"></a>Elemento DisplayFlag (ASSL)
   Contiene una sugerencia de solo lectura que indica si los componentes de la interfaz de usuario deben mostrar asociado [ServerProperty](../objects/serverproperty-element-assl.md) elemento.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - System Monitor [SQL Server], running
 - Windows System Monitor [SQL Server], running
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - RPC
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 53e6fa6b09523bd03e4fbad8e9ae40248e738c78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6aa0a9511ef879848ece51c9d913af92fb460bc2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307415"
 ---
 # <a name="run-system-monitor"></a>Ejecutar Monitor de sistema
   El Monitor del sistema utiliza llamadas a procedimiento remoto (RPC) para recopilar información de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cualquier usuario que disponga de permisos de Microsoft Windows para ejecutar el Monitor del sistema puede utilizarlo para supervisar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

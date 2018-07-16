@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a0deaffca9298b29ceb3d22c85bd199fcfc55ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9844fbe92d37a440bda6a165481e00de5a72c2d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212535"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>Agregar, cambiar o eliminar parámetros de informe (Generador de informes y SSRS)
   Los parámetros de informe permiten elegir datos de informe, conectar informes relacionados y cambiar la presentación de los informes. Puede proporcionar un valor predeterminado y una lista de valores disponibles, y el usuario puede cambiar la selección.  
   
- Una vez publicado el informe, puede cambiar los valores predeterminados, los valores disponibles y otras propiedades del parámetro en el servidor de informes. Puede proporcionar varios conjuntos de valores de parámetros predeterminados creando informes vinculados. Para obtener más información, vea "Establecer parámetro propiedades para un informe publicado" en la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentación en [libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Una vez publicado el informe, puede cambiar los valores predeterminados, los valores disponibles y otras propiedades del parámetro en el servidor de informes. Puede proporcionar varios conjuntos de valores de parámetros predeterminados creando informes vinculados. Para obtener más información, vea "Establecer parámetro de propiedades para un informe publicado" en el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentación en [libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -62,12 +62,12 @@ ms.locfileid: "36199274"
 2.  Haga clic con el botón derecho en el parámetro de informe y, después, haga clic en **Eliminar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar, cambiar o eliminar valores disponibles para un parámetro de informe &#40;el generador de informes SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
+ [Agregar, cambiar o eliminar valores disponibles para un parámetro de informe &#40;generador de informes y SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
  [Agregar, cambiar o eliminar valores predeterminados para un parámetro de informe &#40;Generador de informes y SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
- [Cambiar el orden de un parámetro de informe &#40;el generador de informes SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [Cambiar el orden de un parámetro de informe &#40;generador de informes y SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Agregar parámetros en cascada a un informe &#40;el generador de informes SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Agregar parámetros en cascada a un informe &#40;generador de informes y SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Tutorial: Agregar un parámetro a un informe &#40;Generador de informes&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Tutoriales &#40;generador de informes&#41;](../report-builder-tutorials.md)   
  [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   

@@ -1,5 +1,5 @@
 ---
-title: Proyecto de servicios de creación de un análisis | Documentos de Microsoft
+title: Creación de un análisis Services proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 665a1c4192ae0d88e50683ca6fc26f9e3f75e250
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e365dc5e26692b14b4c7621ca173a8e5e4ef1cdf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104354"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304705"
 ---
 # <a name="creating-an-analysis-services-project"></a>Crear un proyecto de Analysis Services
-  En la tarea siguiente, debe usar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear un nuevo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto denominado `Analysis Services Tutorial`, en función de la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] plantilla de proyecto. Un *proyecto* es una colección de objetos relacionados. Los proyectos existen en una solución, que incluye uno o más proyectos. Para obtener más información, vea [Crear un proyecto de Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md).  
+  En la tarea siguiente, se usa [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear un nuevo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto denominado `Analysis Services Tutorial`, según la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] plantilla de proyecto. Un *proyecto* es una colección de objetos relacionados. Los proyectos existen en una solución, que incluye uno o más proyectos. Para obtener más información, vea [Crear un proyecto de Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md).  
   
 ### <a name="to-create-a-new-analysis-services-project"></a>Para crear un nuevo proyecto de Analysis Services  
   
@@ -38,13 +38,13 @@ ms.locfileid: "36104354"
   
 4.  Cambiar el nombre del proyecto a `Analysis Services Tutorial`, que cambia también el **nombre de la solución** cuadro y, a continuación, haga clic en **Aceptar**.  
   
- Ha creado correctamente el `Analysis Services Tutorial` proyecto, en función de la **Multidimensional de Analysis Services y proyecto de minería de datos** plantilla dentro de una nueva solución que también se denomina `Analysis Services Tutorial`.  
+ Ha creado correctamente el `Analysis Services Tutorial` proyecto, según la **Multidimensional de Analysis Services y proyecto de minería de datos** plantilla dentro de una solución nueva que también se denomina `Analysis Services Tutorial`.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Definir un origen de datos](lesson-1-2-defining-a-data-source.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Crear multidimensionales modelos mediante las herramientas de datos SQL Server &#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Crear multidimensionales modelos utilizando herramientas de datos SQL Server &#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Crear un proyecto de Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   

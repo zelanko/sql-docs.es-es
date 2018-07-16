@@ -1,5 +1,5 @@
 ---
-title: Vistas del sistema, procedimientos almacenados, las DMV y tipos de espera para OLTP en memoria | Documentos de Microsoft
+title: Vistas del sistema, procedimientos almacenados, las DMV y tipos de espera para OLTP en memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
 caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a4e50744a716e42e0fd2767ec9cc677b2ccc085f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0a11867eafdcd747da207c2ff6783391ed3485f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245225"
 ---
-# <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Vistas del sistema, procedimientos almacenados, tipos de espera para OLTP en memoria y DMV
+# <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Vistas del sistema, procedimientos almacenados, las DMV y tipos de espera para OLTP en memoria
   En este tema se ofrecen vínculos y breves descripciones a los múltiples objetos de base de datos que admiten OLTP en memoria.  
   
 ### <a name="system-views"></a>Vistas del sistema  
@@ -58,7 +58,7 @@ ms.locfileid: "36201203"
 ## <a name="dynamic-management-views-dmvs"></a>Vistas de administración dinámica (DMV)  
  Hay varias DMV para tablas optimizadas en memoria.  
   
- Para obtener más información, consulte [vistas de administración dinámica tabla con optimización para memoria &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql).  
+ Para obtener más información, consulte [vistas de administración dinámica tablas con optimización para memoria &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql).  
   
 ## <a name="wait-types"></a>Tipos de espera  
  Hay varios tipos de espera que admiten OLTP en memoria.  

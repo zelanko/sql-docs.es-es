@@ -1,5 +1,5 @@
 ---
-title: Particiones (cuadro de diálogo Restaurar base de datos) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Particiones (cuadro de diálogo Restaurar base de datos) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.partitions.f1
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24e07fc2d8374af6f4bf0b6de5f73bc0df4a3bfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca646ca62f0e91f026c2917325ca6c8c75b63d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269991"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Particiones (cuadro de diálogo Restaurar base de datos) (Analysis Services - Datos multidimensionales)
   Utilice la página **Particiones** del cuadro de diálogo **Restaurar base de datos** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para especificar la ubicación en la que se restaurarán las particiones locales y si es necesario restaurar particiones remotas, así como los archivos de copia de seguridad remotos que se utilizarán al restaurar las particiones remotas.  
@@ -88,7 +88,7 @@ ms.locfileid: "36198064"
 |**...**|Haga clic en este botón para mostrar el cuadro de diálogo **Particiones remotas - Configuración avanzada** y modificar opciones avanzadas, como la cadena de conexión del origen de datos, para restaurar la partición remota. Para más información sobre el cuadro de diálogo **Particiones remotas - Configuración avanzada**, vea [Cuadro de diálogo Particiones remotas: configuración avanzada &#40;Analysis Services - Datos multidimensionales&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Vea también  
- [Restaurar base de datos cuadro de diálogo &#40;Analysis Services - datos multidimensionales&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Restaurar la base de datos cuadro de diálogo &#40;Analysis Services - datos multidimensionales&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [General &#40;restaurar la base de datos cuadro de diálogo&#41; &#40;Analysis Services - datos multidimensionales&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

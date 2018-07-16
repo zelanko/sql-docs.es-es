@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication database upgrades [SQL Server replication]
 - replication [SQL Server], upgrading
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 caps.latest.revision: 71
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 58c7b1de8c75c9cb5d9f57e1df498921de16a6d7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2ce7d9e9a67a11e7df2d2322e2c3c9bda17f3d44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233815"
 ---
 # <a name="upgrade-replicated-databases"></a>Actualizar bases de datos replicadas
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la actualización de bases de datos replicadas desde versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no es necesario detener la actividad en otros nodos mientras se actualiza un nodo. Asegúrese de cumplir las reglas relativas a la versión admitida en una topología:  

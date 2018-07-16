@@ -1,5 +1,5 @@
 ---
-title: Establecer las propiedades de origen de datos (SSAS Multidimensional) | Documentos de Microsoft
+title: Establecer las propiedades del origen de datos (SSAS Multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.datasourceproperties.f1
 helpviewer_keywords:
 - Data Source Properties dialog box
 ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdd8eca5f49e79c3f6d284a404f23121a1182a0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb4fcd1e2945e01b5e81d38542b0b8c7950c1fcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208295"
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>Establecer propiedades de origen de datos (SSAS multidimensional)
   En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un origen de datos especifica una conexión a un almacenamiento de datos externo o a la base de datos relacional que proporciona datos a un modelo multidimensional. Las propiedades del origen de datos determinan la cadena de conexión, un intervalo de tiempo de espera, el número máximo de conexiones y el nivel de aislamiento de transacciones.  

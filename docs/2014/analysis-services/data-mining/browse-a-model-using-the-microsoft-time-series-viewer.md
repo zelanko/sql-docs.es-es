@@ -1,5 +1,5 @@
 ---
-title: Examinar un modelo usando el Visor de Series temporales de Microsoft | Documentos de Microsoft
+title: Examinar un modelo usando el Visor de Series temporales de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], continuous columns
 - mining model content, viewing
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b0431f8820682fee4fba420a197d5a25520eaf08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 740551a33911ed625df252103bb9cae9f1db60cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191175"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Examinar un modelo usando el Visor de serie temporal de Microsoft
   El Visor de series temporales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los modelos de minería de datos que se generan con el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Este algoritmo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de regresión que crea modelos de minería de datos para predecir columnas continuas como las ventas de productos, en un escenario de previsión. Estos modelos de serie temporal pueden incluir información basada en algoritmos diferentes:  
@@ -90,7 +90,7 @@ ms.locfileid: "36203072"
  [Volver al principio](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas y tareas del Visor de modelo de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tareas del Visor de modelo de minería de datos y procedimientos](mining-model-viewer-tasks-and-how-tos.md)   
  [Algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm.md)   
  [Ejemplos de consultas de modelo de serie temporal](time-series-model-query-examples.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)  

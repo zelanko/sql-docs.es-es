@@ -1,5 +1,5 @@
 ---
-title: Ejecutar archivos de plantilla mediante la propiedad CommandStream | Documentos de Microsoft
+title: Ejecutar archivos de plantilla mediante el uso de la propiedad CommandStream | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - CommandStream property
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd2f29f14d4af758581e368986398720dd3b5a0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d149b40acdc7fc81c79f8800787d093636753d39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331295"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Ejecutar archivos de plantilla utilizando la propiedad CommandStream
-  Este ejemplo muestra cómo se pueden especificar archivos de plantilla que están compuestos de consultas SQL o XPath utilizando la propiedad CommandStream del objeto SqlXmlCommand. En esta aplicación, se abre un FileStreamobject para un archivo de comandos y se asigna la secuencia de archivo como el CommandStream que se ejecuta.  
+  En este ejemplo se muestra cómo se pueden especificar archivos de plantilla que están compuestos de consultas SQL o XPath utilizando la propiedad CommandStream del objeto SqlXmlCommand. En esta aplicación, se abre un FileStreamobject para un archivo de comandos y se asigna la secuencia de archivos como el CommandStream que se ejecuta.  
   
- En el ejemplo siguiente, la propiedad CommandType se especifica como SqlXmlCommandType.Template (no requiere tanta TemplateFile).  
+ En el ejemplo siguiente, se especifica la propiedad CommandType como SqlXmlCommandType.Template (no como TemplateFile).  
   
  Esta es la plantilla XML de ejemplo:  
   

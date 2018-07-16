@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -19,13 +19,13 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 37c82e4f4977e9749413a29fd539379476b29c47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b6b76ce027321eb681a2cd6872c1b24050c569f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329915"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Herramientas para solucionar problemas con la ejecución de paquetes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye características y herramientas que puede utilizar para solucionar problemas de los paquetes durante su ejecución, después de que los paquetes se hayan completado e implementado.  
@@ -58,11 +58,11 @@ ms.locfileid: "36107682"
   
      **Agregue la descripción del error**. Es sencillo buscar la descripción de un error mediante un componente de script. Para obtener más información, consulte [mejorar una salida de Error para el componente de Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
-     **Agregue el nombre de la columna de error**. No es sencillo buscar en el componente de script el nombre de la columna que corresponde al Id. de columna guardado por la salida de error, y se requieren pasos adicionales. Cada Id. de columna de un flujo de datos es único dentro de esa tarea Flujo de datos y se mantiene en el paquete en tiempo de diseño. A continuación se sugiere un enfoque posible para agregar el nombre de columna a la salida de error. Para obtener un ejemplo de cómo utilizar este enfoque, consulte [agregar el nombre de columna de error a una salida de error](http://go.microsoft.com/fwlink/?LinkId=261546) en dougbert.com.  
+     **Agregue el nombre de la columna de error**. No es sencillo buscar en el componente de script el nombre de la columna que corresponde al Id. de columna guardado por la salida de error, y se requieren pasos adicionales. Cada Id. de columna de un flujo de datos es único dentro de esa tarea Flujo de datos y se mantiene en el paquete en tiempo de diseño. A continuación se sugiere un enfoque posible para agregar el nombre de columna a la salida de error. Para obtener un ejemplo de cómo usar este enfoque, consulte [agregar el nombre de columna de error a una salida de error](http://go.microsoft.com/fwlink/?LinkId=261546) en dougbert.com.  
   
     1.  **Crear una tabla de búsqueda de nombres de columna**. Cree una aplicación independiente que use la API de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para establecer una iteración en cada paquete guardado, cada flujo de datos del paquete, cada objeto del flujo de datos, y cada entrada y salida del objeto de flujo de datos. La aplicación deberá almacenar el Id. y el nombre de columna de cada columna en una tabla de búsqueda, junto con el Id. de la tarea Flujo de datos primaria y el Id. del paquete.  
   
-    2.  **Agregue el nombre de columna a la salida de**. Agregue una transformación Búsqueda a la salida de error que busque el nombre de columna en la tabla de búsqueda creada en el paso anterior. La búsqueda puede utilizar el Id. de columna en la salida de error, el Id. de paquete (disponible en la variable del sistema System::PackageID) y el Id. de la tarea Flujo de datos (disponible en la variable del sistema System::TaskID).  
+    2.  **Agregar el nombre de columna a la salida**. Agregue una transformación Búsqueda a la salida de error que busque el nombre de columna en la tabla de búsqueda creada en el paso anterior. La búsqueda puede utilizar el Id. de columna en la salida de error, el Id. de paquete (disponible en la variable del sistema System::PackageID) y el Id. de la tarea Flujo de datos (disponible en la variable del sistema System::TaskID).  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>Solucionar problemas de ejecución de paquetes mediante informes de operaciones  
  Los informes de operaciones estándar se encuentran disponibles en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] al objeto de ayudarle a supervisar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se han implementado en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Estos informes sobre paquetes le ayudan a ver el estado e historial y, si fuera necesario, identificar la causa de los errores de ejecución.  
@@ -70,7 +70,7 @@ ms.locfileid: "36107682"
  Para obtener más información, consulte [Troubleshooting Reports for Package Execution](troubleshooting-reports-for-package-execution.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>Solución de problemas de la ejecución de paquetes mediante vistas de SSISDB  
- Se encuentran disponibles diversas vistas de la base de datos de SSISDB, las cuales puede consultar para supervisar la ejecución de paquetes y otra información sobre operaciones. Para obtener más información, consulte [para ejecuciones de paquetes y otras operaciones de supervisión](../performance/monitor-running-packages-and-other-operations.md).  
+ Se encuentran disponibles diversas vistas de la base de datos de SSISDB, las cuales puede consultar para supervisar la ejecución de paquetes y otra información sobre operaciones. Para obtener más información, consulte [supervisión de ejecuciones de paquetes y otras operaciones](../performance/monitor-running-packages-and-other-operations.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Solución de problemas de la ejecución de paquetes mediante el registro  
  Al habilitar el registro, se puede hacer un seguimiento de gran parte de lo que sucede en los paquetes en ejecución. Los proveedores de registro capturan información sobre los eventos especificados para su análisis posterior y guardan la información en una tabla de base de datos, un archivo plano, un archivo XML u otro formato de salida compatible.  
@@ -97,9 +97,9 @@ ms.locfileid: "36107682"
 ## <a name="troubleshoot-run-time-validation-issues"></a>Solución de problemas de validación en tiempo de ejecución  
  Puede haber momentos en los que no sea posible conectarse a los orígenes de datos, o en los que no puedan validarse partes del paquete, sin ejecutar primero tareas anteriores del paquete. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye las siguientes características para ayudarle a evitar los errores de validación que, sin su utilización, se producirían como resultado de las siguientes situaciones:  
   
--   **Configurar la propiedad DelayValidation para los elementos del paquete que no son válidos al cargar el paquete**. Puede establecer `DelayValidation` a `True` elementos del paquete cuya configuración no es válido, para evitar errores de validación al cargar el paquete. Por ejemplo, puede haber una tarea Flujo de datos que utilice una tabla de destino inexistente antes de que la tarea de ejecución de SQL cree la tabla en tiempo de ejecución. El `DelayValidation` propiedad puede estar habilitada en el nivel de paquete o en el nivel de las tareas y contenedores individuales incluidos en el paquete.  
+-   **Configurar la propiedad DelayValidation para los elementos del paquete que no son válidos al cargar el paquete**. Puede establecer `DelayValidation` a `True` los elementos del paquete cuya configuración no es válido, para evitar errores de validación al cargar el paquete. Por ejemplo, puede haber una tarea Flujo de datos que utilice una tabla de destino inexistente antes de que la tarea de ejecución de SQL cree la tabla en tiempo de ejecución. El `DelayValidation` propiedad se puede habilitar en el nivel de paquete, o en el nivel de las tareas y contenedores individuales incluidos en el paquete.  
   
-     El `DelayValidation` propiedad puede establecerse en una tarea de flujo de datos, pero no en datos individuales componentes de flujo. Se puede obtener un resultado similar estableciendo la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> para componentes individuales de flujo de datos en `false`. Sin embargo, cuando el valor de esta propiedad es `false`, el componente no es consciente de los cambios en los metadatos de orígenes de datos externos. Cuando se establece en `true`, el <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> propiedad puede ayudar a evitar problemas de bloqueo causados por bloqueos en la base de datos, especialmente cuando el paquete está utilizando transacciones.  
+     El `DelayValidation` propiedad puede establecerse en una tarea de flujo de datos, pero no en datos individuales componentes de flujo. Se puede obtener un resultado similar estableciendo la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> para componentes individuales de flujo de datos en `false`. Sin embargo, cuando el valor de esta propiedad es `false`, el componente no es consciente de los cambios realizados en los metadatos de orígenes de datos externos. Cuando se establece en `true`, el <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> propiedad puede ayudar a evitar problemas de bloqueo causados por bloqueos en la base de datos, especialmente cuando el paquete usa transacciones.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>Solución de problemas de permisos en tiempo de ejecución  
  Si surgen errores al intentar ejecutar paquetes implementados mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede suceder que las cuentas que utiliza el Agente no cuenten con los permisos necesarios. Para obtener información sobre cómo solucionar problemas de los paquetes que se ejecutan desde trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea el artículo [Un paquete SSIS no se ejecuta al llamar al paquete SSIS desde un paso de trabajo de Agente SQL Server](http://support.microsoft.com/kb/918760). Para más información sobre cómo ejecutar paquetes desde trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Trabajos del Agente SQL Server para paquetes](../packages/sql-server-agent-jobs-for-packages.md).  
@@ -114,7 +114,7 @@ ms.locfileid: "36107682"
  Si se encuentra un error de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que no tiene ninguna descripción asociada, puede ver la descripción en [Referencia de errores y mensajes de Integration Services](../integration-services-error-and-message-reference.md) buscando el error por su número. En este momento, la lista no incluye información sobre cómo solucionar problemas.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Configurar una salida de Error en un componente de flujo de datos](../configure-an-error-output-in-a-data-flow-component.md)  
+ [Configurar una salida de error en un componente de flujo de datos](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  Entrada de blog [Agregar el nombre de columna de error a una salida de error](http://go.microsoft.com/fwlink/?LinkId=261546), en dougbert.com.  

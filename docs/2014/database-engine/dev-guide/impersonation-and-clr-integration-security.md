@@ -1,5 +1,5 @@
 ---
-title: Suplantación y seguridad de la integración de CLR | Documentos de Microsoft
+title: Suplantación y seguridad de la integración de CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - context [CLR integration]
 ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8e5863ed19f306fbaf88cffd02903a958c63cfe0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 05b117f27d0c27ca9288f94aade079df876fafad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243205"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Suplantación y seguridad de la integración CLR
   Cuando el código administrado obtiene acceso a recursos externos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no suplanta automáticamente el contexto de ejecución actual en el que se ejecuta la rutina. El código de los ensamblados `EXTERNAL_ACCESS` y `UNSAFE` puede suplantar explícitamente el contexto de ejecución actual.  
   
 > [!NOTE]  
->  Para obtener información sobre los cambios de comportamiento en la suplantación, consulte [cambios recientes en las características del motor de base de datos en SQL Server 2014](../breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Para obtener información sobre los cambios de comportamiento en la suplantación, vea [cambios recientes en las características del motor de base de datos de SQL Server 2014](../breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
  El proveedor de acceso a datos en proceso proporciona una interfaz de programación de aplicaciones, `SqlContext.WindowsIdentity`, que puede usarse para recuperar el token asociado al contexto de seguridad actual. El código administrado de los ensamblados `EXTERNAL_ACCESS` y `UNSAFE` puede usar este método para recuperar el contexto y usar el método `WindowsIdentity.Impersonate` de .NET Framework para suplantar ese contexto. Se aplican las siguientes restricciones a la suplantación explícita del código de usuario:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36197667"
  Los ensamblados `EXTERNAL_ACCESS` y `UNSAFE` obtienen acceso a los recursos del sistema operativo con la cuenta de servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a menos que suplanten voluntariamente el contexto de seguridad actual tal y como se ha descrito anteriormente. Debido a ello, los autores de ensamblados `EXTERNAL_ACCESS` requieren un mayor nivel de confianza que los autores de ensamblados `SAFE`, que se especifica mediante el permiso de nivel de inicio de sesión `EXTERNAL ACCESS`. Solo debe concederse el permiso `EXTERNAL ACCESS` a los inicios de sesión en los que se confíe para ejecutar código con la cuenta del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [Seguridad de la integración de CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
+ [Seguridad de la integración CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Suplantación y credenciales para conexiones](../../relational-databases/clr-integration/data-access/impersonation-and-credentials-for-connections.md)  
   
   

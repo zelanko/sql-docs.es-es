@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - comparing string data
 - comparison options [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 34e8da7b9d951fa0064bd2cebb2bf7af60403bef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5c471942764076ac0c03044d1037c3600e83fc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280311"
 ---
 # <a name="comparing-string-data"></a>comparar datos de cadena
   Las comparaciones de cadenas son una parte importante de muchas de las transformaciones realizadas por [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], y las comparaciones de cadenas también se utilizan en la evaluación de expresiones en variables y expresiones de propiedades. Por ejemplo, la transformación Ordenar compara valores en un conjunto de datos para ordenar datos en orden ascendente o descendente.  

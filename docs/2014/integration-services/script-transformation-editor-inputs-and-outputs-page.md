@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación script (página entradas y salidas) | Documentos de Microsoft
+title: Editor de transformación script (página entradas y salidas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.columnproperties.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c3d03826e9259a67ddd113e38ba9b58a9054e067
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52d82b5ca8010e3343d089281f3f66e85f32864b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324635"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>Editor de transformación Script (página Entradas y salidas)
   Use la página **Entradas y salidas** del cuadro de diálogo **Editor de transformación Script** para agregar, quitar y configurar las entradas y salidas de la transformación Script.  
@@ -55,7 +55,7 @@ ms.locfileid: "36110973"
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Seleccionar tipo de componente de Script](../../2014/integration-services/select-script-component-type.md)   
+ [Seleccionar el tipo de componente de Script](../../2014/integration-services/select-script-component-type.md)   
  [Editor de transformación script &#40;página columnas de entrada&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
  [Editor de transformación script &#40;página secuencia de comandos&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
  [Editor de transformación script &#40;página Administradores de conexión&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   

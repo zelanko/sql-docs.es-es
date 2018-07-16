@@ -1,5 +1,5 @@
 ---
-title: Ejecutar consultas SQL (clases administradas de SQLXML) | Documentos de Microsoft
+title: Ejecutar consultas SQL (clases administradas de SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - SQL queries [SQLXML]
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2da4e8f0757dad1fb052ec890be695ee957a9df3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 72e16fe5cc17e48b110c70f03a6e900be3b76c2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288301"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>Ejecutar consultas SQL (clases administradas de SQLXML)
-  Este ejemplo se muestra:  
+  En este ejemplo se muestra:  
   
 -   Creación de parámetros (objetos SqlXmlParameter).  
   
--   Asignar valores a las propiedades (nombre y valor) de objetos de SqlXmlParameter.  
+-   Asignar valores a las propiedades (nombre y valor) de objetos SqlXmlParameter.  
   
- En este ejemplo se ejecuta una consulta SQL simple para recuperar el nombre, apellido y fecha de nacimiento del empleado cuyo valor de apellido se pasa como parámetro. Especificar el parámetro (*LastName*), solo la propiedad Value se establece. No se establece la propiedad Name, porque en esta consulta, el parámetro es posicional y se requiere ningún nombre.  
+ En este ejemplo se ejecuta una consulta SQL simple para recuperar el nombre, apellido y fecha de nacimiento del empleado cuyo valor de apellido se pasa como parámetro. Especificar el parámetro (*LastName*), solo la propiedad Value se establece. No se establece la propiedad Name, porque en esta consulta, el parámetro es posicional y no el nombre es obligatorio.  
   
  La propiedad CommandType del objeto SqlXmlCommand predeterminada es **Sql**. Por tanto, la propiedad no se establece de forma explícita.  
   
@@ -104,7 +104,7 @@ public static int Main(String[] args)
   
  Para probar este ejemplo, debe tener instalado [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework en el equipo.  
   
- En lugar de especificar consultas SQL como texto de comando, puede especificar una plantilla (como se muestra en el siguiente fragmento de código) que ejecute un diagrama de actualización (que también es una plantilla) para insertar un registro del cliente. Puede especificar plantillas y diagramas de actualización en archivos y ejecutar los archivos. Para obtener más información, consulte [ejecutar archivos de plantilla mediante el uso de la propiedad CommandText](executing-template-files-by-using-the-commandtext-property.md).  
+ En lugar de especificar consultas SQL como texto de comando, puede especificar una plantilla (como se muestra en el siguiente fragmento de código) que ejecute un diagrama de actualización (que también es una plantilla) para insertar un registro del cliente. Puede especificar plantillas y diagramas de actualización en archivos y ejecutar los archivos. Para obtener más información, consulte [ejecutar archivos de plantilla con la propiedad CommandText](executing-template-files-by-using-the-commandtext-property.md).  
   
 ```  
 SqlXmlCommand cmd = new SqlXmlCommand("Provider=SQLOLEDB;Data Source=SqlServerName;Initial Catalog=Database; Integrated Security=SSPI;");  
@@ -125,7 +125,7 @@ cmd = null;
 ```  
   
 ## <a name="using-executetostream"></a>Usar ExecuteToStream  
- Si tiene una secuencia existente, puede utilizar el método ExecuteToStream en lugar de crear un objeto de secuencia y mediante el método Execute. El código del ejemplo anterior se revisa aquí para utilizar el método ExecuteToStream:  
+ Si tiene una secuencia existente, puede usar el método ExecuteToStream en lugar de crear un objeto Stream y mediante el método Execute. El código del ejemplo anterior se revisa aquí para usar el método ExecuteToStream:  
   
 ```  
 using System;  
@@ -158,6 +158,6 @@ class Test
 ```  
   
 > [!NOTE]  
->  También puede utilizar el ExecuteXMLReadermethod que devuelve un objeto XmlReader. Para obtener más información, consulte [ejecutar consultas SQL mediante el método ExecuteXMLReader](executing-sql-queries-by-using-the-executexmlreader-method.md).  
+>  También puede usar el ExecuteXMLReadermethod que devuelve un objeto XmlReader. Para obtener más información, consulte [ejecutar consultas SQL mediante el método ExecuteXMLReader](executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
   

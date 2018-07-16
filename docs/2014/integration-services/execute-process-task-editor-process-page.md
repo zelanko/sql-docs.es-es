@@ -1,5 +1,5 @@
 ---
-title: Ejecutar el Editor de la tarea de proceso (página procesar) | Documentos de Microsoft
+title: Ejecutar el Editor de la tarea de proceso (página procesar) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.process.f1
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9257d82ea948a8f5561d62af2db8f28ce1bdcdfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd4a604c298f529296ed128f82f658ad3b329b13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246865"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Editor de la tarea Ejecutar proceso (página Procesar)
   Utilice la página **Proceso** del cuadro de diálogo **Editor de la tarea Ejecutar proceso** para configurar las opciones que permitirán ejecutar el proceso. Estas opciones incluyen el ejecutable que se debe instalar, su ubicación, los argumentos de línea de comandos y las variables que proporcionan información de entrada y capturan información de salida.  

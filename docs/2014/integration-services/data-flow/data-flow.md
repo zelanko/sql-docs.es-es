@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - output data [Integration Services]
 - data flow [Integration Services], elements
@@ -20,13 +20,13 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 53e32da7974bbf952a80a08cdf68e8eb2a8451a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d0093e96e4916ce2e23449bcc4044b86955a799
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306205"
 ---
 # <a name="data-flow"></a>Flujo de datos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona tres tipos de componentes de flujo de datos: orígenes, transformaciones y destinos. Los orígenes extraen datos de almacenes de datos tales como tablas y vistas en bases de datos relacionales, archivos y bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Las transformaciones modifican, resumen y limpian datos. Los destinos cargan datos en almacenes de datos o crean conjuntos de datos almacenados en la memoria.  

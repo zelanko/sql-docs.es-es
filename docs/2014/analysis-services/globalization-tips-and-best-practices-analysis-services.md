@@ -1,5 +1,5 @@
 ---
-title: Sugerencias de globalización y procedimientos recomendados (Analysis Services) | Documentos de Microsoft
+title: Sugerencias de globalización y procedimientos recomendados (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - translations [Analysis Services], client applications
 - date comparisons
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - month comparisons [Analysis Services]
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 684da8d68061248556d99dcc06c8c8e9207e65d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb4fa4cb11d4fdbd429cfc01b4dcb3cd43c2a35b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271951"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Sugerencias de globalización y procedimientos recomendados (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  solo a modelos multidimensionales  
@@ -95,7 +95,7 @@ ms.locfileid: "36200259"
  Solo los identificadores de objetos, y no los nombres de objetos, están sujetos a los comportamientos de mayúsculas y minúsculas que se describen en la tabla. Si ve un cambio en el funcionamiento de la solución (una comparación del antes y el después de instalar SQL Server 2012 SP2 o una versión posterior), probablemente se trate de un problema de procesamiento. Las consultas no se ven afectadas por los identificadores de objeto. En los dos lenguajes de consulta (DAX y MDX), el motor de fórmulas utiliza el nombre del objeto (no el identificador).  
   
 > [!NOTE]  
->  Los cambios de código relacionados con la distinción entre mayúsculas y minúsculas han supuesto un cambio importante para algunas aplicaciones. Vea [cambios recientes en las características de Analysis Services en SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md) para obtener más información.  
+>  Los cambios de código relacionados con la distinción entre mayúsculas y minúsculas han supuesto un cambio importante para algunas aplicaciones. Consulte [cambios recientes en las características de Analysis Services en SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md) para obtener más información.  
   
 ##  <a name="bkmk_test"></a> Pruebas de configuración regional con Excel, SQL Server Profiler y SQL Server Management Studio  
  Al probar las traducciones, la conexión debe especificar el LCID de la traducción. Como se documenta en el tema sobre [cómo obtener otro idioma de SSAS en Excel](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx), puede utilizar Excel para probar las traducciones.  

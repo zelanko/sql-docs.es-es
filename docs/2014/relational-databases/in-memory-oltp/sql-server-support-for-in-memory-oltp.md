@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4525df0-a186-44e5-bba6-5d8123a0f965
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 94a7b5478723b030922fdb79895afc048f7d2023
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 8c717aeaffe5bf17c985b201af09f06c8d929c23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322315"
 ---
 # <a name="sql-server-support-for-in-memory-oltp"></a>Compatibilidad de SQL Server con OLTP en memoria
   Esta sección explica la sintaxis nueva y la actualizada y las características que admiten tablas optimizadas en memoria.  

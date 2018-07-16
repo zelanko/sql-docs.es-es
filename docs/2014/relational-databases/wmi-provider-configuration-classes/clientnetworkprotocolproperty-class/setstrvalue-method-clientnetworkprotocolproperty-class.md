@@ -1,5 +1,5 @@
 ---
-title: Método SetStrValue (clase ClientNetworkProtocolProperty) | Documentos de Microsoft
+title: Método SetStrValue (clase ClientNetworkProtocolProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - SetStrValue method
 ms.assetid: 4ff80124-6e2e-4d96-a692-57c17b53c55e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd261b8f9d6106c3d87ccefc559cd450f9f72e01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 80aebeac00e27d9e07321013956a13c61b285160
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276451"
 ---
 # <a name="setstrvalue-method-clientnetworkprotocolproperty-class"></a>Método SetStrValue (clase ClientNetworkProtocolProperty)
-  Establece el valor de cadena de la propiedad actual al que hace referencia el [propiedad PropertyIdx (clase ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) valor.  
+  Establece el valor de cadena de la propiedad actual al que hace referencia el [Propertyidx (clase ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) valor.  
   
 ## <a name="syntax"></a>Sintaxis  
   

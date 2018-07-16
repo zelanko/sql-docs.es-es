@@ -1,5 +1,5 @@
 ---
-title: Power View para modelos multidimensionales | Documentos de Microsoft
+title: Power View para modelos multidimensionales | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ba8299e-b990-4f77-a3c0-eee64e1f4281
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ea4704b0a06d6e19d918f5234b218650b93bd30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d2080bb724f8360cfddaa49de094dea4107920d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263771"
 ---
 # <a name="power-view-for-multidimensional-models"></a>Power View para modelos multidimensionales
   Los modelos multidimensionales de Microsoft SQL Server 2014 Analysis Services permiten el análisis de datos, la exploración y la visualización ad hoc mediante Microsoft Power View.  
@@ -30,6 +30,6 @@ ms.locfileid: "36200227"
   
 -   [Crear un origen de datos de informe](create-a-report-data-source.md)  
   
--   [Crear un informe de Power View con un origen de datos Multidimensional](create-a-power-view-report-with-a-multidimensional-data-source.md)  
+-   [Crear un informe de Power View con un origen de datos multidimensionales](create-a-power-view-report-with-a-multidimensional-data-source.md)  
   
   

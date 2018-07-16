@@ -1,5 +1,5 @@
 ---
-title: Propiedades del modelo de minería de datos | Documentos de Microsoft
+title: Las propiedades del modelo de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - data mining [Analysis Services], properties
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b0d00f10bd4ab4ac5f11b0af3e798c873cc5493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 731ce6e077040767fd5f1bd4eec05242977097a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330905"
 ---
 # <a name="mining-model-properties"></a>Propiedades del modelo de minería de datos
   Los modelos de minería de datos tienen las siguientes clases de propiedades:  
@@ -64,8 +64,8 @@ ms.locfileid: "36198081"
   
 ## <a name="see-also"></a>Vea también  
  [Columnas del modelo de minería de datos](mining-model-columns.md)   
- [Estructuras de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
- [Tareas y tareas de modelo de minería de datos](mining-model-tasks-and-how-tos.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Tareas del modelo de minería de datos y procedimientos](mining-model-tasks-and-how-tos.md)   
  [Cambiar las propiedades de un modelo de minería de datos](change-the-properties-of-a-mining-model.md)   
  [Herramientas de minería de datos](data-mining-tools.md)   
  [Crear una estructura de minería de datos relacional](create-a-relational-mining-structure.md)   

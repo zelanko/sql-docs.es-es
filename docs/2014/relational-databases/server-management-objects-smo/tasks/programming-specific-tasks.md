@@ -1,5 +1,5 @@
 ---
-title: Tareas específicas de programación | Documentos de Microsoft
+title: Tareas específicas de programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 00bd816625c9f4aa4116c1c3810957f8a95bc12e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 114cc7d651318a0c3892427a54fefb3c5f6bb781
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274411"
 ---
 # <a name="programming-specific-tasks"></a>Tareas específicas de programación
   La programación de tareas específicas con objetos SMO incluye temas complejos que solo son necesarios en programas con una función concreta, como copia de seguridad, supervisión de estadísticas, replicación, administración de objetos de instancia y establecimiento de opciones de configuración.  
@@ -40,7 +40,7 @@ ms.locfileid: "36106288"
 |[Usar particiones de tabla e índice](using-table-and-index-partitioning.md)|Describe cómo utilizar particiones de índice y tabla en SMO.|  
 |[Usar grupos de archivos y archivos para almacenar datos](using-filegroups-and-files-to-store-data.md)|Describe cómo utilizar grupos de archivos en SMO.|  
 |[Administrar servicios y configuración de red mediante el proveedor WMI](managing-services-and-network-settings-by-using-wmi-provider.md)|Describe varias maneras de realizar el seguimiento de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante el objeto <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> que representa el proveedor WMI de administración de configuración.|  
-|[Trabajar con objetos de base de datos](creating-altering-and-removing-database-objects.md)|Describe cómo crear clases de instancia que representan objetos de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|[Trabajar con objetos de bases de datos](creating-altering-and-removing-database-objects.md)|Describe cómo crear clases de instancia que representan objetos de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[Administrar usuarios, roles e inicios de sesión](managing-users-roles-and-logins.md)|Describe cómo utilizar los roles de seguridad en SMO.|  
 |[Conceder, revocar y denegar permisos](granting-revoking-and-denying-permissions.md)|Describe cómo utilizar SMO para conceder, revocar y denegar permisos a usuarios o miembros de un rol.|  
 |[Utilizar el cifrado](using-encryption.md)|Describe cómo proteger los datos mediante el cifrado en SMO.|  

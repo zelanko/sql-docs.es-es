@@ -1,5 +1,5 @@
 ---
-title: Definir períodos de tiempo (Asistente para dimensiones) | Documentos de Microsoft
+title: Definir períodos de tiempo (Asistente para dimensiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.timefrequency.f1
 ms.assetid: 6bda6b7e-d306-4e68-9acb-84de8f44d1b4
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d0eaa7b29e84be26032618fe7470652adc1a7b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f46d6cea52d34599e44a4439121730c1412e08bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315935"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Definir períodos de tiempo (Asistente para dimensiones)
   Use la página **Definir períodos de tiempo** para definir la información del año natural y las frecuencias de tiempo que se deben incluir en la dimensión de tiempo o en la dimensión de tiempo de servidor.  
@@ -52,7 +52,7 @@ ms.locfileid: "36196851"
  Seleccione el idioma de los miembros de dimensión de tiempo.  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente de dimensiones (Ayuda F1)](dimension-wizard-f1-help.md)   
+ [Ayuda de F1 del Asistente para dimensiones](dimension-wizard-f1-help.md)   
  [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Seleccionar calendarios &#40;Asistente para dimensiones&#41;](select-calendars-dimension-wizard.md)  

@@ -1,5 +1,5 @@
 ---
-title: Migrar planes de consulta | Documentos de Microsoft
+title: Migrar los planes de consulta | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query plans [SQL Server], migrating
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 66b481ab27af87a20f1a509cb10749c9f2ca1c15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 86396a835b68e9a6028bce45a68110e337ce9131
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324975"
 ---
 # <a name="migrate-query-plans"></a>Migrar los planes de consulta
   En la mayoría de los casos, al actualizar una base de datos a la versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se obtendrá una mejora del rendimiento de las consultas. No obstante, si tiene consultas de gran importancia que se han optimizado cuidadosamente con el fin de obtener el máximo rendimiento, es probable que desee conservar los planes de consulta de dichas consultas antes de llevar a cabo la actualización mediante la creación de una guía de plan para cada una de ellas. Si tras la actualización, el optimizador de consultas elige un plan menos eficiente para una o varias de las consultas, podrá habilitar las guías de plan y obligar al optimizador de consultas a utilizar los planes previos a la actualización.  
@@ -54,7 +54,7 @@ ms.locfileid: "36112527"
   
 -   Consultando la columna query_plan de la [sys.dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) función de administración dinámica.  
   
--   El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md), y [Showplan XML For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) clases de eventos.  
+-   El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md), y [Showplan XML For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) las clases de eventos.  
   
  En el siguiente ejemplo se recopila el plan de consulta para la instrucción `SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` mediante la consulta a vistas de administración dinámica.  
   

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 421567faa999f075bb3961b82f23c14aa14334b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 17b03e4ca74b5aa8d9e59d6bcc32eafe4ef1139e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191805"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo de conexión XML (SSRS)
   Para incluir los datos de un origen de datos XML en el informe, deberá tener un conjunto de datos basado en un origen de datos de informe de tipo XML. Este tipo de origen de datos integrado se basa en la extensión de datos XML. Utilice este tipo de origen de datos para conectarse y recuperar datos de documentos XML, servicios web o XML incrustado en la consulta.  
   
  Esta extensión de datos admite parámetros y credenciales administrados independientemente de la cadena de conexión.  
   
- Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones detalladas, consulte [agregar y comprobar una conexión de datos o un origen de datos &#40;el generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones detalladas, consulte [agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Cadena de conexión  
  La cadena de conexión debe ser una dirección URL que señale al servicio web, la aplicación basada en web o el documento XML disponible a través de HTTP. Los documentos XML deben tener la extensión XML. También se puede utilizar una cadena de conexión vacía si se van a incrustar datos XML en la consulta del conjunto de datos.  
@@ -54,7 +54,7 @@ ms.locfileid: "36201747"
   
  Las credenciales almacenadas o solicitadas no están admitidas. Recuerde que si deshabilita la seguridad integrada de Windows, no podrá usarla para recuperar datos. Si especifica credenciales almacenadas o solicitadas, se producirá un error en tiempo de ejecución.  
   
- Para obtener más información, consulte [las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [especificar credenciales en el generador de informes](../specify-credentials-in-report-builder.md).  
+ Para obtener más información, consulte [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [especificar credenciales en Generador de informes](../specify-credentials-in-report-builder.md).  
   
 ##  <a name="Query"></a> Consultas  
  Una consulta especifica qué datos se van a recuperar para un conjunto de datos de informe. Las columnas del conjunto de resultados de una consulta rellenan la colección de campos de un conjunto de datos. Un informe procesa solamente el primer conjunto de resultados recuperado por una consulta.  
@@ -69,7 +69,7 @@ ms.locfileid: "36201747"
   
 -   Una ruta de acceso de elemento: especifica la secuencia de nodos que se va a utilizar al recuperar datos XML desde el origen de datos.  
   
--   Un elemento de consulta XML: especificación de consulta XML con los siguientes elementos opcionales:  
+-   Un elemento XML Query: especificación de consulta XML con los siguientes elementos opcionales:  
   
     -   **Para un servicio Web:**  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36201747"
 ##  <a name="HowTo"></a> Temas de procedimientos  
  Esta sección contiene instrucciones paso a paso para trabajar con conexiones de datos, orígenes de datos y conjuntos de datos.  
   
- [Agregar y comprobar una conexión de datos o un origen de datos &#40;el generador de informes SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -151,7 +151,7 @@ ms.locfileid: "36201747"
 ##  <a name="Related"></a> Secciones relacionadas  
  Estas secciones de la documentación proporcionan información conceptual detallada sobre los datos de informe, así como información de procedimientos acerca de cómo definir, personalizar y usar las partes de un informe que están relacionadas con datos.  
   
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-datasets-ssrs.md)  
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)  
  Proporciona información general sobre cómo obtener acceso a los datos del informe.  
   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

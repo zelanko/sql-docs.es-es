@@ -1,5 +1,5 @@
 ---
-title: Implementación de proyectos y paquetes | Documentos de Microsoft
+title: Implementación de proyectos y paquetes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50da655d029228c4fc2339b49245cd11f5967305
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf58e533b46304d4d8833626381e52e86d017404
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221671"
 ---
 # <a name="deployment-of-projects-and-packages"></a>Implementación de proyectos y paquetes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite dos modelos de implementación, el modelo de implementación del proyecto y el modelo de implementación de paquetes. El modelo de implementación del proyecto le permite implementar sus proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Para más información sobre la implementación de proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Implementación de paquetes en el servidor de Integration Services](../deploy-projects-to-integration-services-server.md).  
   
- Para obtener más información acerca del modelo de implementación de paquetes, consulte [implementación de paquetes &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
+ Para obtener más información acerca del modelo de implementación de paquetes, consulte [la implementación del paquete &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
   
 ## <a name="compare-project-deployment-and-package-deployment"></a>Comparar la implementación del proyecto y la implementación de paquetes  
  El tipo de modelo de implementación que elija para un proyecto determina qué opciones de desarrollo y administrativas están disponibles para ese proyecto. En la tabla siguiente se muestran las diferencias y similitudes entre utilizar el modelo de implementación del proyecto y utilizar el modelo de implementación de paquetes.  

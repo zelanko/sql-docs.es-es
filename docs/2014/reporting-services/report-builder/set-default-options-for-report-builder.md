@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo, configuración (generador de informes) de opciones del generador de informes | Documentos de Microsoft
+title: El generador de informes las opciones de cuadro de diálogo de configuración (generador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7ae2490cf5dcdc241120c683994e7f46bcf0b6c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 49449391408701c16b7b6da9106913a24d084d66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110886"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218845"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Cuadro de diálogo Opciones del Generador de informes, Configuración (Generador de informes)
-  Haga clic en el **Report Builder** botón y, a continuación, haga clic en **opciones** para establecer las opciones para mostrar archivos y conexiones recientes. También puede cambiar el servidor de informes predeterminado o agregar uno si no lo tiene predeterminado.  
+  Haga clic en el **Report Builder** botón y, a continuación, haga clic en **opciones** para establecer las opciones para mostrar archivos recientes y las conexiones. También puede cambiar el servidor de informes predeterminado o agregar uno si no lo tiene predeterminado.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
  **Usar este servidor de informes o sitio de SharePoint de forma predeterminada**  

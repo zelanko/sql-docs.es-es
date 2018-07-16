@@ -1,5 +1,5 @@
 ---
-title: Ver historial de archivos | Documentos de Microsoft
+title: Ver historial de archivos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version control services [SQL Server], file history
 - historical information [SQL Server], files
 ms.assetid: 9d80d4ea-a0f6-4a79-885d-79143ca09c00
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7ec533709d829807311f1c6aef4af1cbad006a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e0e658cbbc1d121c6433a49d5d42d8a42962eb02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318855"
 ---
 # <a name="view-file-history"></a>Ver el historial de un archivo
-  Puede usar el **historial** comando para ver un historial de versiones de archivos controlados por código fuente. Este historial incluye la fecha y la hora en que el archivo se agregó al control de código fuente o se protegió en él.  
+  Puede usar el **historial** comando para ver un historial de versiones para los archivos controlados por código fuente. Este historial incluye la fecha y la hora en que el archivo se agregó al control de código fuente o se protegió en él.  
   
 ### <a name="to-view-the-history-of-a-file"></a>Para ver el historial de un archivo  
   
@@ -33,7 +33,7 @@ ms.locfileid: "36203468"
   
 2.  En el **archivo** menú, elija **Control de código fuente** y haga clic en **historial**.  
   
-3.  En el **historial de archivo** diálogo cuadro, realice cualquiera de las siguientes acciones:  
+3.  En el **historial de archivo** diálogo cuadro, lleve a cabo cualquiera de las siguientes acciones:  
   
 4.  Vea la versión seleccionada.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36203468"
   
 9. Exporte el informe de historial a una impresora, a un archivo o al Portapapeles de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
- Para obtener información sobre cómo realizar estas tareas, haga clic en el **ayuda** botón en el **historial de archivo** cuadro de diálogo.  
+ Para obtener información sobre cómo realizar estas tareas, haga clic en el **ayuda** situado en la **historial de archivo** cuadro de diálogo.  
   
 ## <a name="see-also"></a>Vea también  
  [Establecer y recuperar información de versión](../../2014/database-engine/set-and-retrieve-version-information.md)   

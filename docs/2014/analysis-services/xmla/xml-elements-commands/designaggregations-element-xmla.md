@@ -1,5 +1,5 @@
 ---
-title: Elemento DesignAggregations (XMLA) | Documentos de Microsoft
+title: Elemento DesignAggregations (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DesignAggregations command
 ms.assetid: 4c419dbc-7405-40aa-8ddd-6b46685a297d
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d448a7cc815dddcc4e9568831f2d652fc7a22680
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 31810abf4462b45fb7346a028255b6f49769e9d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332505"
 ---
 # <a name="designaggregations-element-xmla"></a>Elemento DesignAggregations (XMLA)
   Crea agregaciones para un diseño de agregaciones en una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia.  

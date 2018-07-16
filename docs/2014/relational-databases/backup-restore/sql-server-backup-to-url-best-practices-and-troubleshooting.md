@@ -5,28 +5,27 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b4da3c1af787d41c7b1b49ba3edc6b2a191d3ac1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f2c7a2cc478659dc3ba50a650a15168b37644619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277081"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server
   Este tema incluye prácticas recomendadas y sugerencias para la solución de problemas de copias de seguridad y restauraciones de SQL Server en el servicio Blob de Windows Azure.  
   
  Para obtener más información sobre cómo usar el servicio de almacenamiento Blob de Windows Azure para realizar operaciones de copia de seguridad o restauración de SQL Server, vea:  
   
--   [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+-   [Copia de seguridad y restauración de SQL Server con el servicio Windows Azure Blob Storage](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
 -   [Tutorial: copias de seguridad y restauración de SQL Server en el servicio de almacenamiento Blob de Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md) (Copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage)  
   
@@ -52,7 +51,7 @@ ms.locfileid: "36110740"
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Resolución de problemas para realizar la copia de seguridad de una dirección URL o una restauración a partir de esta  
  A continuación se indican algunas formas rápidas de solucionar errores al hacer copia de seguridad o restaurar desde el servicio de almacenamiento Blob de Windows Azure.  
   
- Para evitar errores debidos a opciones no admitidas o limitaciones, revise la lista de limitaciones y copia de seguridad y restaurar información de comandos de compatibilidad con la [SQL Server Backup and Restore con el servicio de almacenamiento de blobs de Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) artículo.  
+ Para evitar errores debidos a opciones no admitidas o limitaciones, consulte la lista de limitaciones y copia de seguridad y restaurar información de comandos de compatibilidad con la [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) artículo.  
   
  **Errores de autenticación:**  
   
@@ -98,7 +97,7 @@ ms.locfileid: "36110740"
 -   Al restaurar desde una copia de seguridad comprimida, puede aparecer el siguiente error:  
   
     -   **SqlException 3284. Gravedad: 16 Estado: 5**  
-        **Mensaje la marca de archivo en el dispositivo 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' no está alineada. Emita de nuevo la instrucción Restore con el mismo tamaño de bloque usado para crear el conjunto de copia de seguridad: '65536' parece un valor posible.**  
+        **Marca de archivo del mensaje en el dispositivo 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' no está alineada. Emita de nuevo la instrucción Restore con el mismo tamaño de bloque usado para crear el conjunto de copia de seguridad: '65536' parece un valor posible.**  
   
          Para resolver este error, vuelva a emitir la instrucción `BACKUP` especificando `BLOCKSIZE = 65536`.  
   
@@ -158,9 +157,9 @@ ms.locfileid: "36110740"
 2.  Coloque el archivo de configuración en la carpeta Binn de la instancia de SQL Server. Por ejemplo, si SQL Server está instalado en la unidad C de la máquina, coloque el archivo de configuración aquí: *C:\Program Files\Microsoft SQL Server\MSSQL12.\< InstanceName > \MSSQL\Binn*.  
   
 ## <a name="troubleshooting-sql-server-managed-backup-to-windows-azure"></a>Solucionar problemas de la Copia de seguridad administrada de SQL Server para Microsoft Azure  
- Puesto que Copia de seguridad administrada de SQL Server se basa en Copia de seguridad en URL, las sugerencias para la solución de problemas que se han descrito en las secciones anteriores son aplicables también a las bases de datos o las instancias que utilizan Copia de seguridad administrada de SQL Server.  Obtener información sobre solución de problemas de SQL Server Managed Backup to Windows Azure se describe detalladamente en [solución de problemas de SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md).  
+ Puesto que Copia de seguridad administrada de SQL Server se basa en Copia de seguridad en URL, las sugerencias para la solución de problemas que se han descrito en las secciones anteriores son aplicables también a las bases de datos o las instancias que utilizan Copia de seguridad administrada de SQL Server.  Información sobre cómo solucionar problemas de SQL Server Managed Backup to Windows Azure se describe detalladamente en [solución de problemas de SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Restaurar a partir de copias de seguridad almacenadas en Windows Azure](restoring-from-backups-stored-in-microsoft-azure.md)  
+ [Restauración de las copias de seguridad archivadas en Microsoft Azure](restoring-from-backups-stored-in-microsoft-azure.md)  
   
   

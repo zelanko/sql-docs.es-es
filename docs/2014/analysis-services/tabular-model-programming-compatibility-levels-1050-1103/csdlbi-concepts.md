@@ -1,5 +1,5 @@
 ---
-title: Conceptos de CSDLBI | Documentos de Microsoft
+title: Conceptos de CSDLBI | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 caps.latest.revision: 28
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 150ebbbf646f8c51a226f25f9b4799463608f823
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cf610ad76b4ccc4e30e5f1e4f55c5dcd293a8bc9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257311"
 ---
 # <a name="csdlbi-concepts"></a>Conceptos de CSDLBI
   El lenguaje de definición de esquemas conceptuales con anotaciones BI (CSDLBI) se basa en Entity Data Framework, que es una abstracción para representar datos de una forma que permita el acceso, la consulta o la exportación de conjuntos de datos diversos mediante programación. CSDLBI se emplea para representar modelos de datos creados mediante [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] porque admite informes y aplicaciones completos controlados por datos.  
@@ -88,11 +88,11 @@ ms.locfileid: "36110810"
  Para limitar el tamaño del documento de CSDLBI que se genera, las propiedades que aparecen varias veces en una entidad se especifican mediante una referencia a una propiedad existente, de modo que solo es necesario indicar la propiedad una vez para `EntityType`. La aplicación cliente puede obtener el valor de la propiedad mediante la búsqueda del elemento `EntityType` que coincide con `OriginEntityType`.  
   
 ### <a name="relationships"></a>Relaciones  
- En los datos de Entity Framework, las relaciones se definen como *asociaciones* entre entidades.  
+ En el Entity Data Framework, las relaciones se definen como *asociaciones* entre entidades.  
   
  Las asociaciones siempre tienen exactamente dos extremos, uno que apunta a un campo o columna de una tabla. Por lo tanto, son posibles múltiples relaciones entre dos tablas, si las relaciones tienen extremos distintos. Un nombre de rol se asigna a los extremos de la asociación, e indica como se usa la asociación en el contexto del modelo de datos. Un ejemplo de un nombre de rol podría ser **ShipTo**, cuando se aplica a un identificador de cliente que está relacionado con el identificador de cliente en una tabla de pedidos.  
   
- La representación CSDLBI del modelo también contiene atributos en la asociación que determinan el modo en que las entidades se asignan entre sí en términos de la *multiplicidad* de la asociación. La multiplicidad indica si el atributo o la columna en el extremo de una relación entre tablas está en el lado uno de una relación o en el lado de varios. No hay ningún valor independiente para las relaciones uno a uno. Las anotaciones CSDLBI admiten la multiplicidad de 0 (lo que significa que la entidad no está asociada a nada) o 0..1, lo que significa una relación de uno a uno o una relación de uno a varios.  
+ La representación CSDLBI del modelo también contiene atributos sobre la asociación que determinan cómo se asignan las entidades entre sí en términos de la *multiplicidad* de la asociación. La multiplicidad indica si el atributo o la columna en el extremo de una relación entre tablas está en el lado uno de una relación o en el lado de varios. No hay ningún valor independiente para las relaciones uno a uno. Las anotaciones CSDLBI admiten la multiplicidad de 0 (lo que significa que la entidad no está asociada a nada) o 0..1, lo que significa una relación de uno a uno o una relación de uno a varios.  
   
  El ejemplo siguiente representa la salida CSDLBI para una relación entre las tablas Date y ProductInventory, donde las dos tablas están combinadas por la columna DateAlternateKey. Observe que, de forma predeterminada, el nombre de `AssociationSet` es el nombre completo de las columnas que intervienen en la relación. No obstante, puede cambiar este comportamiento al diseñar el modelo, para usar otro formato de nomenclatura.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36110810"
 ## <a name="additions-to-support-multidimensional-models"></a>Adiciones para admitir modelos multidimensionales  
  La versión 1.0 de las anotaciones CSDLBI solo admitía modelos tabulares. En la versión 1.1 se agregó compatibilidad con los modelos multidimensionales (cubos OLAP) creados mediante herramientas tradicionales de desarrollo de BI. Por consiguiente, ahora se puede emitir una solicitud XML a un modelo multidimensional y recibir una definición CSDLBI del modelo, para su uso en los informes.  
   
- **Cubos:** un SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos tabular puede contener solo un modo. En cambio, cada base de datos multidimensional puede contener varios cubos y cada base de datos está asociada a un cubo predeterminado. Por lo tanto, al emitir una solicitud XML en un servidor multidimensional, es necesario especificar el cubo; en caso contrario, se devolverá el XML del cubo predeterminado.  
+ **Cubos:** un servidor SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos tabular puede contener solo un modo. En cambio, cada base de datos multidimensional puede contener varios cubos y cada base de datos está asociada a un cubo predeterminado. Por lo tanto, al emitir una solicitud XML en un servidor multidimensional, es necesario especificar el cubo; en caso contrario, se devolverá el XML del cubo predeterminado.  
   
  Por lo demás, la representación de un cubo es muy similar a la de una base de datos de modelo tabular. El nombre del cubo y el cubo corresponden al nombre de la base de datos tabular y al identificador de la base de datos.  
   
@@ -136,13 +136,13 @@ ms.locfileid: "36110810"
   
  **Perspectivas:** un cliente puede solicitar CSDL para perspectivas individuales. Para obtener más información, consulte [conjunto de filas DISCOVER_CSDL_METADATA](../schema-rowsets/xml/discover-csdl-metadata-rowset.md).  
   
- **Jerarquías:** jerarquías se admiten y se representan en CSDLBI como un conjunto de niveles.  
+ **Jerarquías:** se admiten y se representan en CSDLBI como un conjunto de niveles de jerarquías.  
   
- **Miembros:** la compatibilidad con el miembro predeterminado se ha agregado y valores predeterminados se agregan automáticamente a la salida CSDLBI.  
+ **Miembros:** la compatibilidad con el miembro predeterminado se ha agregado y los valores predeterminados se agregan automáticamente a la salida CSDLBI.  
   
- **Los miembros calculados:** modelos multidimensionales admiten miembros calculados para los secundarios de **todos los** con un único miembro real.  
+ **Los miembros calculados:** modelos multidimensionales admiten miembros calculados para el elemento secundario de **todas** con un único miembro real.  
   
- **Atributos de dimensión:** en la salida CSDLBI, se admiten los atributos de dimensión y se marca automáticamente como no agregable.  
+ **Atributos de dimensión:** en la salida CSDLBI, se admiten los atributos de dimensión y se marcan automáticamente como no agregable.  
   
  **KPI:** KPI se admitían en la versión 1.1 de CSDLBI, pero la representación ha cambiado. Antes, un KPI era una propiedad de una medida. En la versión 1.1, el elemento KPI puede agregarse a una medida  
   

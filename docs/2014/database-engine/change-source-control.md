@@ -1,5 +1,5 @@
 ---
-title: Cambiar Control de código fuente | Documentos de Microsoft
+title: Cambiar Control de código fuente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDD_SCC_CONNECTION_DIALOG
 helpviewer_keywords:
 - Change Source Control dialog box
 ms.assetid: e6a5d83c-5809-4c56-907a-73d0c7ccdd7a
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e2584a7981662bc96fff975d93dfd24ec79d5d77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 825cdbb6f25afb31d49e8150c19790385bc1cf14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312305"
 ---
 # <a name="change-source-control"></a>Cambiar el control de código fuente
   Crea y administra las conexiones y los enlaces que vinculan una solución o un proyecto guardados localmente con una carpeta de la base de datos de control de código fuente.  
@@ -62,7 +62,7 @@ ms.locfileid: "36203726"
  **Actualizar**  
  Actualiza la información de conexión de todos los proyectos que aparecen en este cuadro de diálogo.  
   
- **Enlaces de servidor**  
+ **Enlace del servidor**  
  Indica el enlace del elemento con un servidor de control de código fuente.  
   
  **Nombre de servidor**  
@@ -84,7 +84,7 @@ ms.locfileid: "36203726"
 |Desconocido|El estado del elemento en el control de código fuente no se ha determinado todavía.|  
 |No controlado|El elemento no se ha colocado en el control de código fuente.|  
   
- **Desenlace**  
+ **Desenlazar**  
  Muestra el cuadro de diálogo **Control de código fuente** para permitirle eliminar los elementos seleccionados del control de código fuente y anular definitivamente la asociación de los elementos con sus carpetas actuales.  
   
 ## <a name="see-also"></a>Vea también  

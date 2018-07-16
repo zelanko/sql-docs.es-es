@@ -1,5 +1,5 @@
 ---
-title: Elemento AggregationInstanceSource (ASSL) | Documentos de Microsoft
+title: Elemento AggregationInstanceSource (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - AggregationInstanceSource element
 ms.assetid: ab58c817-eb2b-4974-8470-2946ca5affea
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 318f70f156d78df90ceeb53e56cbc83f9d4e43a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd2001d304d951f4eeb2ac737e3cfe6e8526c1af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312415"
 ---
 # <a name="aggregationinstancesource-element-assl"></a>Elemento AggregationInstanceSource (ASSL)
-  Identifica el origen de datos para las instancias de agregación definidas por el usuario enlazadas a un [partición](../objects/partition-element-assl.md) elemento.  
+  Identifica el origen de datos para las instancias de agregación definido por el usuario enlazadas a un [partición](../objects/partition-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36204256"
 ## <a name="remarks"></a>Notas  
  Si este elemento falta o está establecido en una cadena vacía, se utiliza de manera predeterminada la vista del origen de datos del cubo propietario de la partición.  
   
- Para obtener información adicional sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, consulte [tipo de enlace de datos &#40;ASSL&#41;](../data-type/binding-data-type-assl.md).  
+ Para obtener más información sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, vea [tipo de enlace de datos &#40;ASSL&#41;](../data-type/binding-data-type-assl.md).  
   
- Para obtener información general de enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;SSAS multidimensionales&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obtener información general de los enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

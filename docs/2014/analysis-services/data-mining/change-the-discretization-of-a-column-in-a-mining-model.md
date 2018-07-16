@@ -1,5 +1,5 @@
 ---
-title: Cambiar la discretización de una columna en un modelo de minería de datos | Documentos de Microsoft
+title: Cambiar la discretización de una columna en un modelo de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
 - mining structures [Analysis Services], how-to topics
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - bucketing problems [Analysis Services]
 ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc0352074e37bf284bd4ea033bae759638e040a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af80e187acceb9565e939dbb3699c98b827cf648
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202175"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>Cambiar la discretización de una columna en un modelo de minería de datos
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] discretiza valores automáticamente, es decir, agrupa los datos de las columnas numéricas, en determinadas situaciones. Por ejemplo, si la información contiene datos numéricos continuos y crea un modelo de árbol de decisión, cada columna de datos continuos se discretizará automáticamente según la distribución de los datos. Si desea controlar cómo se discretizan los datos, debe cambiar las propiedades en la columna de la estructura de minería de datos que controlan cómo se usan los datos en el modelo.  
@@ -43,14 +43,14 @@ ms.locfileid: "36110845"
   
 ### <a name="to-change-the-discretization-method"></a>Para cambiar el método de discretización  
   
-1.  En el **propiedades de minería de datos** (ventana), haga clic en el cuadro de texto junto a **contenido**y seleccione `Discretized` en la lista desplegable.  
+1.  En el **propiedades de minería de datos** ventana, haga clic en el cuadro de texto situado junto a **contenido**y seleccione `Discretized` en la lista desplegable.  
   
      La ventana <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> y <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> ya están habilitadas.  
   
-2.  En el **propiedades** (ventana), haga clic en el cuadro de texto junto a <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> y seleccione uno de los siguientes valores: `Automatic`, `EqualAreas`, o `Cluster`.  
+2.  En el **propiedades** ventana, haga clic en el cuadro de texto situado junto a <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> y seleccione uno de los siguientes valores: `Automatic`, `EqualAreas`, o `Cluster`.  
   
     > [!NOTE]  
-    >  Si el uso de las columnas se establece en `Ignore`, **propiedades** ventana de la columna está en blanco.  
+    >  Si el uso de la columna se establece en `Ignore`, **propiedades** ventana para la columna está en blanco.  
   
      El nuevo valor tendrá efecto cuando se seleccione otro elemento diferente en el diseñador.  
   

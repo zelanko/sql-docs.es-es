@@ -1,5 +1,5 @@
 ---
-title: Usar diagramas de actualización para modificar datos en SQLXML 4.0 | Documentos de Microsoft
+title: Usar diagramas de actualización para modificar datos en SQLXML 4.0 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d085fdb34388071019001dd2fbf445903052bdf2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f838dd23a17e2fc4555b8f9dc69e185fc8caefeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221065"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>Utilizar los diagramas de actualización para modificar datos en SQLXML 4.0
-  Puede modificar (Insertar, actualizar o eliminar) una base de datos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde un documento XML de documento mediante un diagrama de actualización o el OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] función.  
+  Puede modificar (Insertar, actualizar o eliminar) una base de datos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde un documento XML de documentos mediante el uso de un diagrama de actualización o la OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] función.  
   
  En esta sección se proporciona información sobre los diagramas de actualización y ejemplos de uso.  
   
@@ -60,13 +60,13 @@ ms.locfileid: "36110892"
  [Actualizar datos con diagramas de actualización XML &#40;SQLXML 4.0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md)  
  Describe y proporciona ejemplos de uso de los diagramas de actualización para modificar los datos existentes.  
   
- [Pasar parámetros a los diagramas de actualización &#40;SQLXML 4.0&#41;](passing-parameters-to-updategrams-sqlxml-4-0.md)  
+ [Pasar parámetros a diagramas de actualización &#40;SQLXML 4.0&#41;](passing-parameters-to-updategrams-sqlxml-4-0.md)  
  Describe y proporciona ejemplos de paso de parámetros a los diagramas de actualización.  
   
- [Control de problemas de simultaneidad de base de datos en los diagramas de actualización &#40;SQLXML 4.0&#41;](handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
+ [Controlar problemas de simultaneidad de base de datos en los diagramas de actualización &#40;SQLXML 4.0&#41;](handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
  Describe los distintos niveles de protección posibles para administrar los problemas de simultaneidad en los diagramas de actualización y proporciona los ejemplos.  
   
- [Aplicaciones de ejemplo de diagrama de actualización &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/updategram-sample-applications-sqlxml-4-0.md)  
+ [Aplicaciones de ejemplo de updategram &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/updategram-sample-applications-sqlxml-4-0.md)  
  Proporciona aplicaciones de ejemplo que usan los diagramas de actualización.  
   
  [Instrucciones y limitaciones de los diagramas de actualización XML &#40;SQLXML 4.0&#41;](guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md)  

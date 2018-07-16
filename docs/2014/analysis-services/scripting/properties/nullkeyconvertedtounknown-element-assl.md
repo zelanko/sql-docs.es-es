@@ -1,5 +1,5 @@
 ---
-title: Elemento NullKeyConvertedToUnknown (ASSL) | Documentos de Microsoft
+title: Elemento NullKeyConvertedToUnknown (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NullKeyConvertedToUnknown element
 ms.assetid: 1a6cde33-01ba-4095-b464-16d1ad3c6905
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e11f7de1b3fa7b11774a960351a1b3c974ce4f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cebeef3421533b429a38f6c5696780cb008eca69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316925"
 ---
 # <a name="nullkeyconvertedtounknown-element-assl"></a>Elemento NullKeyConvertedToUnknown (ASSL)
   Especifica la acción que se ha de llevar a cabo si se encuentra un error de conversión nulo.  
@@ -62,7 +62,7 @@ ms.locfileid: "36204264"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- Los errores de conversión nulos tienen lugar cuando se detecta un valor nulo en una columna de clave que se interpreta como el miembro `Unknown`. Sin embargo, este error se produce solo si la [NullProcessing](nullprocessing-element-assl.md) (elemento) para la [DataItem](../data-type/dataitem-data-type-assl.md) antecesor de la `ErrorConfiguration` elemento primario se establece en *UnknownMember*.  
+ Los errores de conversión nulos tienen lugar cuando se detecta un valor nulo en una columna de clave que se interpreta como el miembro `Unknown`. Sin embargo, este error se produce solo si el [NullProcessing](nullprocessing-element-assl.md) (elemento) para el [DataItem](../data-type/dataitem-data-type-assl.md) antecesor de la `ErrorConfiguration` elemento primario se establece en *UnknownMember*.  
   
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   

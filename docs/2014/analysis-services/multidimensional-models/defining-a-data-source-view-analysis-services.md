@@ -1,5 +1,5 @@
 ---
-title: Definir los datos de un origen de vista (Analysis Services) | Documentos de Microsoft
+title: Definir los datos de un origen de vista (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], data source views
 - name matching criteria [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90c3085f0dde8ba5fd317ce8768926787ac5f585
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46e84e7a5f546dc90bf3ffbe141dcf5bec4b2792
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308555"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definir una vista del origen de datos (Analysis Services)
   Una vista del origen de datos contiene el modelo lógico del esquema que utilizan los objetos de bases de datos multidimensionales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , a saber, cubos, dimensiones y estructuras de minería de datos. Una vista del origen de datos es la definición de metadatos, almacenada en formato XML, de estos elementos de esquema que utilizan el modelo UDM (Unified Dimensional Model) y las estructuras de minería de datos. Una vista del origen de datos:  
@@ -111,7 +111,7 @@ ms.locfileid: "36203525"
 ##  <a name="bkmk_secondaryDS"></a> Agregar un origen de datos secundario  
  Al definir una vista del origen de datos con tablas, vistas o columnas de varios orígenes de datos, el primer origen de datos desde el que agrega objetos a la vista del origen de datos se designa como origen de datos principal (una vez que se ha definido, no se puede cambiar). Después de definir una vista del origen de datos basada en objetos de un solo origen de datos, puede agregar objetos de otros orígenes de datos.  
   
- Si un procesamiento OLAP o una consulta de minería de datos requiere que los datos de varios orígenes de datos en una sola consulta, el origen de datos principal debe admitir consultas remotas mediante `OpenRowset`. Normalmente, será un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, si designa una dimensión OLAP que contenga atributos enlazados a columnas de varios orígenes de datos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] generará una consulta `OpenRowset` para llenar esta dimensión durante el procesamiento. Sin embargo, si un objeto OLAP se puede rellenar o minería de datos de consulta resolver desde un único origen de datos, un `OpenRowset` no se creará la consulta. En ciertas situaciones, podría definir relaciones de atributo entre atributos para que no sea necesaria una consulta `OpenRowset`. Para más información sobre las relaciones de atributos, vea [Relaciones de atributos](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) y [Define Relaciones de atributos](attribute-relationships-define.md).  
+ Si un procesamiento OLAP o una consulta de minería de datos requiere datos de varios orígenes de datos en una sola consulta, el origen de datos principal debe admitir consultas remotas mediante `OpenRowset`. Normalmente, será un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, si designa una dimensión OLAP que contenga atributos enlazados a columnas de varios orígenes de datos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] generará una consulta `OpenRowset` para llenar esta dimensión durante el procesamiento. Sin embargo, si un objeto OLAP se puede rellenar o minería de datos de consulta puede resolver desde un único origen de datos, una `OpenRowset` no se construirá la consulta. En ciertas situaciones, podría definir relaciones de atributo entre atributos para que no sea necesaria una consulta `OpenRowset`. Para más información sobre las relaciones de atributos, vea [Relaciones de atributos](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) y [Define Relaciones de atributos](attribute-relationships-define.md).  
   
  Para agregar tablas y columnas de un segundo origen de datos, haga doble clic en la DSV en el Explorador de soluciones para abrirla en el Diseñador de vistas del origen de datos y, a continuación, use el cuadro de diálogo Agregar o quitar tablas para incluir objetos de otros orígenes de datos que estén definidos en el proyecto. Para obtener más información, vea [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   

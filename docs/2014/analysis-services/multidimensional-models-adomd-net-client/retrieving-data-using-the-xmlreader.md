@@ -1,5 +1,5 @@
 ---
-title: Recuperar datos mediante XmlReader | Documentos de Microsoft
+title: Recuperar datos mediante XmlReader | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], XmlReader object
 ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 257777c40c829921680b8fce333bd6e44f6f57fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa47902131522f807ebe96b0b14a3df28aaf657f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267571"
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>Recuperar datos mediante XmlReader
   La clase `XmlReader`, parte del espacio de nombres `System.Xml` para la Biblioteca de clases de Microsoft .NET Framework, es similar a la clase <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> en que la clase `XmlReader` también proporciona acceso rápido, sin caché y de solo avance a los datos. Si no es necesaria una vista en memoria y analítica de los datos mediante el objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, el objeto `XmlReader` es perfecto para recuperar datos XML, especialmente grandes cantidades de datos. Dado que `XmlReader` transmite datos por secuencias, `XmlReader` no tiene que recuperar y almacenar en caché todos los datos antes de exponerlos al autor de las llamada, que sería el caso si se utilizara un objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> para convertir la respuesta de XML for Analysis en una representación de modelo de objetos analítico.  
@@ -38,7 +38,7 @@ ms.locfileid: "36108215"
   
      Para crear una nueva instancia de la clase `XmlReader`, llame al método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.Execute%2A> o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteXmlReader%2A> del objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>.  
   
-2.  **Recuperar los datos.**  
+2.  **Recuperar datos.**  
   
      Una vez que el comando ejecuta la consulta y devuelve `XmlReader`, debe analizar los datos y metadatos. Los datos y metadatos XML se presentan en el formato nativo que utiliza el proveedor XML for Analysis. Para la mayoría de los proveedores XML for Analysis, el formato nativo es el formato `MDDataSet`. El formato `MDDataSet` proporciona datos y metadatos para conjuntos de celdas en un formato estructurado. Para obtener más información acerca del formato `MDDataSet`, vea la especificación de XML for Analysis.  
   
@@ -52,8 +52,8 @@ ms.locfileid: "36108215"
  [!code-csharp[Adomd.NetClient#OutputDataWithXML](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#outputdatawithxml)]  
   
 ## <a name="see-also"></a>Vea también  
- [Recuperar datos de un origen de datos analíticos](retrieving-data-from-an-analytical-data-source.md)   
- [Recuperar datos mediante el conjunto de celdas](retrieving-data-using-the-cellset.md)   
+ [Recuperación de datos de origen de datos analíticos](retrieving-data-from-an-analytical-data-source.md)   
+ [Recuperar datos mediante el objeto CellSet](retrieving-data-using-the-cellset.md)   
  [Recuperación de datos mediante AdomdDataReader](retrieving-data-using-the-adomddatareader.md)  
   
   

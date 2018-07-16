@@ -1,5 +1,5 @@
 ---
-title: Clase SqlServiceAdvancedProperty | Documentos de Microsoft
+title: Clase SqlServiceAdvancedProperty | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,24 +20,24 @@ helpviewer_keywords:
 - SqlServiceAdvancedProperty class
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a9d1d9f3fc8f30047542e35bce4e7549d41d2d8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 903d18b16aba79f4b0188058dbf801d09808a540
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197075"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Clase SqlServiceAdvancedProperty
   El [clase SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) representa una propiedad avanzada del servicio al que hace referencia el [clase SqlService](../sqlservice-class/sqlservice-class.md) objeto.  
   
  El [propiedad AdvancedProperties (clase SqlService)](../sqlservice-class/advancedproperties-property-sqlservice-class.md) hace referencia a una matriz de [clase SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) objetos.  
   
- El [iniciar y detener servicios](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) clase representa propiedades que son únicas para el servicio. Estas propiedades no están en la lista de propiedades que está asociado el [clase SqlService](http://technet.microsoft.com/library/ms186497.aspx) clase. El [clase SqlServiceAdvancedProperty](http://technet.microsoft.com/library/ms182447.aspx) permite la representación de propiedades de cadena, numérico o booleano. Puede utilizar esta clase para ver las propiedades únicas del servicio especificado.  
+ El [iniciar y detener servicios](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) clase representa las propiedades que son únicas para el servicio. Estas propiedades no están en la lista de propiedades que está asociado el [clase SqlService](http://technet.microsoft.com/library/ms186497.aspx) clase. El [clase SqlServiceAdvancedProperty](http://technet.microsoft.com/library/ms182447.aspx) permite la representación de propiedades de cadena, numérico o booleano. Puede utilizar esta clase para ver las propiedades únicas del servicio especificado.  
   
 ## <a name="see-also"></a>Vea también  
- [Iniciales, detener y pausar servicios](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Iniciales, pausar y detener servicios](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

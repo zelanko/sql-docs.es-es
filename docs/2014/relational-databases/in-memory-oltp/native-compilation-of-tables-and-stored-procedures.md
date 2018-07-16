@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: d0e96880f661a05f150785c53c24afbfbf66d2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4130e24dc67fd174130ed0e45e145242e79b86d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217355"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilación nativa de tablas y procedimientos almacenados
   OLTP en memoria introduce el concepto de compilación nativa. 
             [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede compilar de forma nativa procedimientos almacenados que acceden a tablas optimizadas para memoria. 
             [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también puede compilar de forma nativa las tablas optimizadas para memoria. La compilación nativa permite un acceso más rápido a los datos y una ejecución de consultas más eficiente que el lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado (tradicional). La compilación nativa de tablas y procedimientos almacenados produce los archivos DLL.  
   
- Se admite también la compilación nativa de los tipos de tabla con optimización para memoria. Para obtener más información, consulte [Variables de tabla con optimización para memoria](../../database-engine/memory-optimized-table-variables.md).  
+ Se admite también la compilación nativa de los tipos de tabla con optimización para memoria. Para obtener más información, consulte [las Variables de tabla con optimización para memoria](../../database-engine/memory-optimized-table-variables.md).  
   
  La compilación nativa se refiere al proceso de convertir construcciones de programación a código nativo, que consta de instrucciones de procesador sin necesidad de compilación o interpretación adicional.  
   

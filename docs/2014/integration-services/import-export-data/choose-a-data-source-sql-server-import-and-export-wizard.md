@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c814b8d89686c635fd0479576eeda982a8b7b957
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 9a1696168c72bf65c3a1771c0a54c51d9080d091
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266841"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Elegir un origen de datos (Asistente para importación y exportación de SQL Server)
   Use la **elegir un origen de datos** página para especificar el origen de los datos que se van a copiar.  
   
- Para más información acerca de este asistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información acerca de las opciones para iniciar el asistente y sobre los permisos necesarios para ejecutar el asistente correctamente, consulte [ejecutar la importación de SQL Server y el Asistente para exportación de](start-the-sql-server-import-and-export-wizard.md).  
+ Para más información acerca de este asistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información sobre las opciones para iniciar el asistente y sobre los permisos necesarios para ejecutar el asistente correctamente, consulte [ejecutar la importación de SQL Server y el Asistente para exportación de](start-the-sql-server-import-and-export-wizard.md).  
   
  El propósito de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard consiste en copiar datos desde un origen a un destino. El asistente también puede crear una base de datos y tablas de destino. Sin embargo, si tiene que copiar diversas bases de datos o tablas, u otros tipos de objetos de bases de datos, debe utilizar el Asistente para copiar bases de datos. Para más información, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36324619"
  Escriba el nombre de la base de datos de origen.  
   
  **Seguridad integrada**  
- Especifique `True` para conectarse mediante la autenticación integrada de Windows, lo que se recomienda, o `False` para conectarse mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. Si especifica `False`, debe especificar un Id. de usuario y una contraseña. El valor predeterminado es `False`.  
+ Especificar `True` para conectarse mediante autenticación integrada de Windows, que se recomienda, o `False` para conectarse mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. Si especifica `False`, debe especificar un Id. de usuario y una contraseña. El valor predeterminado es `False`.  
   
  **Id. de usuario**  
  Especifique un nombre de usuario para la conexión de base de datos cuando se usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.  
@@ -84,7 +84,7 @@ ms.locfileid: "36324619"
 ### <a name="data-source--microsoft-excel"></a>Origen de datos = Microsoft Excel  
   
 > [!NOTE]  
->  Seleccione **Microsoft Excel** únicamente si desea conectarse a un origen de datos que utiliza Excel 2003 o versiones anteriores. Para conectarse a un origen de datos que usa Excel 2007, seleccione **Microsoft Office 12.0 Access Database Engine OLE DB Provider**, haga clic en **propiedades**y, a continuación, en la **todos los** pestaña de la **Propiedades de vínculo de datos** diálogo cuadro, escriba `Excel 12.0` como el valor de **propiedades extendidas**.  
+>  Seleccione **Microsoft Excel** únicamente si desea conectarse a un origen de datos que utiliza Excel 2003 o versiones anteriores. Para conectarse a un origen de datos que usa Excel 2007, seleccione **Microsoft Office 12.0 Access Database Engine OLE DB Provider**, haga clic en **propiedades**y, a continuación, en el **todas** pestaña de la **Propiedades de vínculo de datos** diálogo cuadro, escriba `Excel 12.0` como el valor de **propiedades extendidas**.  
   
  **Ruta de acceso del archivo Excel**  
  Especifique la ruta de acceso y el nombre de archivo correspondientes a la hoja de cálculo desde la que se importarán los datos. Por ejemplo, **C:\MyData.xls, \\\Sales\Database\Northwind.xls**. O bien, haga clic en **Examinar**.  
@@ -116,7 +116,7 @@ ms.locfileid: "36324619"
  Especifique una contraseña de usuario para la conexión de base de datos si hay un archivo de información de grupo de trabajo asociado a la base de datos. Si la base de datos está protegida con una única contraseña para todos los usuarios, debe proporcionar este valor en el cuadro de diálogo **Propiedades de vínculo de datos** , al que puede obtener acceso haciendo clic en **Avanzadas**.  
   
  **Avanzadas**  
- Puede que desee especificar opciones avanzadas, como la contraseña de la base de datos o un archivo de información de grupo de trabajo no predeterminado, mediante el uso de la **propiedades de vínculo de datos** cuadro de diálogo. Para obtener más información acerca de las propiedades del proveedor OLE DB, busque en la sección acceso a datos de la [MSDN library](http://go.microsoft.com/fwlink/?linkid=62553).  
+ Puede desear especificar opciones avanzadas, como la contraseña de la base de datos o un archivo de información de grupo de trabajo no predeterminado, mediante la **propiedades de vínculo de datos** cuadro de diálogo. Para obtener más información acerca de las propiedades del proveedor OLE DB, busque en la sección de acceso a datos de la [biblioteca MSDN](http://go.microsoft.com/fwlink/?linkid=62553).  
   
 ### <a name="data-source--flat-file-source"></a>Origen de datos = Origen de archivo plano  
  Vea los temas siguientes para obtener información acerca de las opciones para un origen de datos de archivo plano.  

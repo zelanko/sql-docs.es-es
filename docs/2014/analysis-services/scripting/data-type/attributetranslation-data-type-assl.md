@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos AttributeTranslation (ASSL) | Documentos de Microsoft
+title: Tipo de datos AttributeTranslation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AttributeTranslation data type
 ms.assetid: a0e29941-ef08-42ad-ab9c-b2efd7910895
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e7f5fe2157b407cae3909666329537f85a8b7e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05e846e1cdec16388a96f7e0043aa5b0d49235be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267661"
 ---
 # <a name="attributetranslation-data-type-assl"></a>Tipo de datos AttributeTranslation (ASSL)
-  Define un tipo de datos derivado que representa una traducción asociada con una [atributo](../objects/attribute-element-assl.md) elemento  
+  Define un tipo de datos derivado que representa una traducción asociada con un [atributo](../objects/attribute-element-assl.md) elemento  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36108193"
 |------------------|-------------|  
 |Elementos primarios|None|  
 |Elementos secundarios|[CaptionColumn](../objects/column-element-assl.md), [MembersWithDataCaption](../properties/caption-element-assl.md)|  
-|Elementos derivados|Vea [traducción](../objects/translation-element-assl.md) ([traducciones](../collections/translations-element-assl.md) colección de [DimensionAttribute](dimensionattribute-data-type-assl.md) o [ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md))|  
+|Elementos derivados|Consulte [traducción](../objects/translation-element-assl.md) ([traducciones](../collections/translations-element-assl.md) colección de [DimensionAttribute](dimensionattribute-data-type-assl.md) o [ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Notas  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.AttributeTranslation>.  

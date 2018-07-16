@@ -1,5 +1,5 @@
 ---
-title: Elemento Invocation (ASSL) | Documentos de Microsoft
+title: Elemento Invocation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Invocation element
 ms.assetid: f6bf64ad-ae57-4d46-bf92-1d07a65378bb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bd9d04f677049a932e3f974c22d7e2fb7cb8aade
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62f6b15f8aa8426930fdc3572bbd37bfb033afd6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312245"
 ---
 # <a name="invocation-element-assl"></a>Elemento Invocation (ASSL)
-  Especifica cómo un [acción](../objects/action-element-assl.md) se debe invocar.  
+  Especifica cómo un [acción](../objects/action-element-assl.md) debe invocarse.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36203501"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- La invocación de una acción depende de la aplicación cliente. El `Invocation` elemento sugiere a una aplicación cliente cómo debe controlarse una acción y no se indica a la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] cómo invocar una acción.  
+ La invocación de una acción depende de la aplicación cliente. El `Invocation` elemento sugiere a una aplicación cliente cómo debe controlarse una acción y no indica a la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] cómo invocar una acción.  
   
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   

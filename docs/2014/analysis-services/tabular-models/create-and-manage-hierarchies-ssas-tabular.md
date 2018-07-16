@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar jerarquías (SSAS Tabular) | Documentos de Microsoft
+title: Crear y administrar jerarquías (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4faae5fb17bf2be67fa33e590a65fce222f7cbb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e729d8963149809ba53a423a19bf9c2c7eac6fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293254"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Crear y administrar jerarquías (SSAS tabular)
   Las jerarquías se pueden crear y administrar en la Vista de diagrama del diseñador de modelos. Para ver el diseñador de modelos en la Vista de diagrama, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en el menú **Modelo** , seleccione **Vista de modelo**y haga clic en **Vista de diagrama**.  
@@ -98,8 +98,8 @@ ms.locfileid: "36204257"
 -   O bien, haga clic en el nivel primario de la jerarquía y, a continuación, presione Supr. Esto también quitará todos los niveles secundarios.  
   
 ## <a name="see-also"></a>Vea también  
- [Diseñador de modelos tabulares &#40;SSAS Tabular&#41;](../tabular-model-designer-ssas-tabular.md)   
- [Jerarquías &#40;SSAS Tabular&#41;](hierarchies-ssas-tabular.md)   
- [Las medidas &#40;SSAS Tabular&#41;](measures-ssas-tabular.md)  
+ [Diseñador de modelos tabulares &#40;Tabular de SSAS&#41;](../tabular-model-designer-ssas-tabular.md)   
+ [Jerarquías &#40;Tabular de SSAS&#41;](hierarchies-ssas-tabular.md)   
+ [Las medidas &#40;Tabular de SSAS&#41;](measures-ssas-tabular.md)  
   
   

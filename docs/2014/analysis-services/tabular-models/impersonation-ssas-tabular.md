@@ -1,5 +1,5 @@
 ---
-title: Suplantación (SSAS Tabular) | Documentos de Microsoft
+title: Suplantación (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 16323d7df2fa3620bbdd6fb541f028ebaf582cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c60f64bc76967fb6d4191aee4f1de7c7bbbb537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176492"
 ---
 # <a name="impersonation-ssas-tabular"></a>Suplantación (SSAS tabular)
   Este tema proporciona a los autores de modelos tabulares una descripción de cómo usa Analysis Services las credenciales de inicio de sesión al conectarse a un origen de datos para importar y procesar (actualizar) datos.  
@@ -74,9 +74,9 @@ ms.locfileid: "36106189"
 |**Nombre de usuario de Windows específico y la contraseña** <sup>2</sup>|ImpersonateWindowsUserAccount|Esta opción especifica que el modelo usa una cuenta de usuario de Windows para importar o procesar datos del origen de datos. El dominio y el nombre de la cuenta de usuario tienen el siguiente formato:**\<nombre de dominio >\\< nombre de la cuenta de usuario\>**. Esta es la opción predeterminada al crear un modelo nuevo mediante el Asistente para la importación de tablas.|  
 |**Cuenta de servicio**|ImpersonateServiceAccount|Esta opción especifica que el modelo usa las credenciales de seguridad asociadas a la instancia de servicio de Analysis Services que administra el modelo.|  
   
- <sup>1</sup>ImpersonationMode especifica el valor de la [datasourceimpersonationinfo, elemento &#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md) propiedad en el origen de datos.  
+ <sup>1</sup>ImpersonationMode especifica el valor de la [elemento DataSourceImpersonationInfo &#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md) propiedad del origen de datos.  
   
- <sup>2</sup>cuando se usa esta opción, si la base de datos del área de trabajo se quita de la memoria, ya sea debido a un reinicio o **retención de área de trabajo** propiedad está establecida en **descargar de la memoria** o  **Eliminar área de trabajo**, y el proyecto de modelo está cerrada, en la sesión posterior, si intenta procesar los datos de la tabla, se le pedirá que especifique las credenciales para cada origen de datos. De forma similar, si una base de datos de modelo implementada se quita de la memoria, se le pedirán las credenciales para cada origen de datos.  
+ <sup>2</sup>cuando se usa esta opción, si se quita la base de datos del área de trabajo de la memoria, ya sea debido a un reinicio o el **retención de área de trabajo** propiedad está establecida en **descargar de la memoria** o ** Eliminar área de trabajo**, y el proyecto de modelos está cerrado, en la sesión posterior, si intenta procesar los datos de tabla, se le pedirá que escriba las credenciales para cada origen de datos. De forma similar, si una base de datos de modelo implementada se quita de la memoria, se le pedirán las credenciales para cada origen de datos.  
   
 ##  <a name="bkmk_impers_sec"></a> Seguridad  
  Las credenciales utilizadas con la suplantación las almacena en memoria el motor analítico en memoria xVelocity (VertiPaq)™ asociado al servidor de Analysis Services que administra la base de datos del área de trabajo o un modelo implementado.  Las credenciales no se almacenan en el disco en ningún momento. Si la base de datos del área de trabajo no está en la memoria cuando se implementa el modelo, se pedirá al usuario que escriba las credenciales necesarias para conectarse al origen de datos y capturar los datos.  
@@ -87,7 +87,7 @@ ms.locfileid: "36106189"
 ##  <a name="bkmk_imp_newmodel"></a> Suplantación al importar un modelo  
  A diferencia de los modelos tabulares, que pueden usar varios modos de suplantación para admitir la recopilación de datos fuera de proceso, PowerPivot usa un solo modo: ImpersonateCurrentUser. Dado que PowerPivot siempre se ejecuta en proceso, se conecta a orígenes de datos mediante las credenciales del usuario que ha iniciado sesión actualmente. Con los modelos tabulares, las credenciales del usuario que ha iniciado sesión actualmente solo se usan con la característica **Vista previa y filtrar** del Asistente para la importación de tablas y cuando se ven las **Propiedades de tabla**. Las credenciales de suplantación se usan al importar o procesar datos en la base de datos del área de trabajo, o al importar o procesar datos en un modelo implementado.  
   
- Al crear un modelo nuevo importando un libro PowerPivot existente, de forma predeterminada, el diseñador de modelos configurará la suplantación para usar la cuenta de servicio (ImpersonateServiceAccount). Se recomienda cambiar las credenciales de suplantación en los modelos importados desde PowerPivot a una cuenta de usuario de Windows. Después de que se ha importado el libro de PowerPivot y creado el nuevo modelo en el Diseñador de modelos, puede cambiar las credenciales mediante el **las conexiones existentes** cuadro de diálogo.  
+ Al crear un modelo nuevo importando un libro PowerPivot existente, de forma predeterminada, el diseñador de modelos configurará la suplantación para usar la cuenta de servicio (ImpersonateServiceAccount). Se recomienda cambiar las credenciales de suplantación en los modelos importados desde PowerPivot a una cuenta de usuario de Windows. Una vez importado el libro PowerPivot y creado el nuevo modelo en el Diseñador de modelos, puede cambiar las credenciales mediante el **las conexiones existentes** cuadro de diálogo.  
   
  Al crear un modelo nuevo importando desde un modelo existente en un servidor de Analysis Services, las credenciales de suplantación se pasan de la base de datos del modelo existente a la base de datos del área de trabajo del modelo nuevo. Si fuera necesario, puede cambiar las credenciales en el modelo nuevo mediante el cuadro de diálogo **Conexiones existentes** .  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36106189"
   
 ## <a name="see-also"></a>Vea también  
  [Modo DirectQuery &#40;SSAS tabular&#41;](directquery-mode-ssas-tabular.md)   
- [Orígenes de datos &#40;SSAS Tabular&#41;](../data-sources-ssas-tabular.md)   
- [Implementación de la solución de modelo tabular &#40;SSAS Tabular&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Orígenes de datos &#40;Tabular de SSAS&#41;](../data-sources-ssas-tabular.md)   
+ [Implementación de la solución de modelo tabular &#40;Tabular de SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

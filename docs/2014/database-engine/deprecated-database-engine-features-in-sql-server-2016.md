@@ -1,5 +1,5 @@
 ---
-title: En desuso características del motor de base de datos en SQL Server 2014 | Documentos de Microsoft
+title: Las características del motor de base de datos en SQL Server 2014 en desuso | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 caps.latest.revision: 208
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 553d47cd9c9637492fce0fe0a943e8de6cde3eb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 05cf9071049947adceaeeccf2e728f1d5045d05d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326405"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>Características desusadas del motor de base de datos de SQL Server 2014
   Este tema describe las características desusadas de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que siguen estando disponibles en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
@@ -117,7 +117,7 @@ ms.locfileid: "36200229"
 |Seguridad|Algoritmos de cifrado RC4 y DESX|Use otro algoritmo; por ejemplo, AES.|Algoritmo DESX|238|  
 |Opciones de Set|SET FMTONLY|[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql), [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql) y [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql).|SET FMTONLY|250|  
 |Opciones de configuración del servidor|Opción de auditoría c2<br /><br /> opción default trace enabled|[common criteria compliance enabled (opción de configuración del servidor)](configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Eventos extendidos](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
-|Clases SMO|`Microsoft.SQLServer.Management.Smo.Information` Clase<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` Clase<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` Clase<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` propiedad|`Microsoft.SqlServer.Management.Smo.Server` Clase<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` Clase<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` Clase<br /><br /> None|None|None|  
+|Clases SMO|`Microsoft.SQLServer.Management.Smo.Information` clase<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` clase<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` clase<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` propiedad|`Microsoft.SqlServer.Management.Smo.Server` clase<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` clase<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` clase<br /><br /> None|None|None|  
 |Agente SQL Server|Notificación mediante**NET SEND** <br /><br /> Notificación mediante buscapersonas<br /><br /> Subsistema ActiveX|Notificación mediante correo electrónico<br /><br /> Notificación mediante correo electrónico<br /><br /> Comando o scripts de PowerShell|None|None|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Integración del Explorador de soluciones en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> Integración del Control de código fuente [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||None|None|  
 |Procedimientos almacenados del sistema|sp_db_increased_partitions|Ninguno. La compatibilidad con más particiones está disponible de forma predeterminada en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|sp_db_increased_partitions|253|  
@@ -150,8 +150,8 @@ ms.locfileid: "36200229"
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|La aplicación indirecta de sugerencias de tabla a la invocación de una función con valores de tabla (TVF) de múltiples instrucciones a través de una vista.|Ninguno.|Sugerencias TVF indirectas|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Sintaxis de ALTER DATABASE:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
 |Otros|DB-Library<br /><br /> Embedded SQL para C|Aunque el [!INCLUDE[ssDE](../includes/ssde-md.md)] sigue admitiendo conexiones de las aplicaciones existentes que usan las API DB-Library y Embedded SQL, no incluye los archivos ni la documentación necesarios para realizar los trabajos de programación en aplicaciones que utilizan estas API. Una versión futura del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eliminará la compatibilidad para las conexiones desde aplicaciones de DB-Library o Embedded SQL. No utilice DB-Library ni Embedded SQL para desarrollar nuevas aplicaciones. Quite las dependencias de DB-Library o Embedded SQL cuando modifique las aplicaciones existentes. En lugar de estas API, use el espacio de nombres SQLClient o una API como ODBC. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] no incluye la DLL DB-Library necesaria para ejecutar estas aplicaciones. Para ejecutar aplicaciones de DB-Library o Embedded SQL, debe estar disponible la DLL DB-Library de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versión 6.5, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 o [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)].|None|None|  
-|Herramientas|SQL Server Profiler para captura de seguimiento|Use el generador de perfiles de eventos extendidos integrado en SQL Server Management Studio.<br /><br /> Nota: Seguir usando SQL Server Profiler para captura de seguimiento para las cargas de trabajo de Analysis Services.|SQL Server Profiler|None|  
-|Herramientas|SQL Server Profiler para reproducción de seguimiento|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> Nota: Seguir usando a SQL Server Profiler para reproducción de seguimiento para las cargas de trabajo de Analysis Services.|SQL Server Profiler|None|  
+|Herramientas|SQL Server Profiler para captura de seguimiento|Use el generador de perfiles de eventos extendidos integrado en SQL Server Management Studio.<br /><br /> Nota: Seguir usando SQL Server Profiler para capturar el seguimiento para las cargas de trabajo de Analysis Services.|SQL Server Profiler|None|  
+|Herramientas|SQL Server Profiler para reproducción de seguimiento|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> Nota: Seguir usando a SQL Server Profiler para reproducción de seguimiento para cargas de trabajo de Analysis Services.|SQL Server Profiler|None|  
 |Objetos de administración de seguimiento|Microsoft.SqlServer.Management.Trace namespace (contiene las API para Seguimiento de SQL Server y los objetos de reproducción)|Configuración de seguimiento: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> Lectura de seguimiento: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> Reproducción de seguimiento: ninguno|||  
 |Procedimientos almacenados, funciones y vistas de catálogo de seguimiento de SQL|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[Eventos extendidos](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   

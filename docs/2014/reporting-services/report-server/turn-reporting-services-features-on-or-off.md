@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
@@ -16,13 +16,13 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1362919f44915616d244364cee116c8fab376831
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6521a2bcdf080eb4a22c9540d965d0b5829d74fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282601"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Activar o desactivar las características de Reporting Services
   Puede desactivar características del servidor de informes que no use como parte de una estrategia de bloqueo para reducir la superficie de ataque de un servidor de informes de producción. En la mayoría de los casos, le interesará ejecutar las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] simultáneamente para poder hacer uso de toda la funcionalidad de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Sin embargo, dependiendo del modelo de implementación, puede deshabilitar aquellas características que no necesite. Por ejemplo, si todo el procesamiento de informes está configurado como operaciones programadas, puede habilitar solo el procesamiento en segundo plano. Del mismo modo, puede ejecutar simplemente el servicio web del servidor de informes si solo desea informes a petición e interactivos.  
@@ -133,7 +133,7 @@ ms.locfileid: "36199610"
     <IsReportManagerEnabled>true</IsReportManagerEnabled>  
     ```  
   
-3.  Para desactivar el Administrador de informes, establecer `IsReportManagerEnabled` a `false`:  
+3.  Para desactivar el Administrador de informes, establezca `IsReportManagerEnabled` a `false`:  
   
     ```  
     <IsReportManagerEnabled>false</IsReportManagerEnabled>  
@@ -153,7 +153,7 @@ ms.locfileid: "36199610"
   
     -   Para desactivar el Administrador de informes, establezca **ReportManagerEnabled** a `True`.  
   
-    -   Para desactivar el Administrador de informes, establecer **ReportManagerEnabled** a `False`.  
+    -   Para desactivar el Administrador de informes, establezca **ReportManagerEnabled** a `False`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: ¿Qué&#39;incluido en los datos a los complementos de minería de datos para Office | Documentos de Microsoft
+title: ¿Qué&#39;incluido en los datos a los complementos de minería de datos para Office | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 282155ff681830e3b6c1b3f0bc0d4f281a6435e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5630c67926713b997adfe85fe0fd9f8da10e03e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232005"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>¿Qué&#39;incluido en los datos a los complementos de minería de datos para Office
   Al instalar los Complementos de minería de datos para Office 2013 y seleccionar todas las opciones de instalación, se agregarán las barras de herramientas y las plantillas siguientes:  
   
--   [Herramientas de análisis de tabla para Excel](table-analysis-tools-for-excel.md)  
+-   [Herramientas de análisis de tablas para Excel](table-analysis-tools-for-excel.md)  
   
      Tareas sencillas pero eficaces que utilizan tablas de Excel. No se requiere ninguna personalización; los algoritmos detectan los parámetros correctos y genera todos los gráficos y los informes necesarios para entender el modelo.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "36199750"
   
 -   [Utilidad de configuración del servidor &#40;datos complementos de minería de datos para Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
-     Para generar modelos, es necesaria una conexión con un servidor de minería de datos. Si necesita ayuda para configuración, simplemente haga clic en **ayuda** y siga las instrucciones que aparecen en cada página del Asistente para la configuración. Puede corregir los problemas por sí mismo o el asistente le proporcionará información que puede enviar al administrador del sistema para realizar la configuración correctamente.  
+     Para generar modelos, es necesaria una conexión con un servidor de minería de datos. Si necesita ayuda para configuración, simplemente haga clic en **ayuda** y siga las instrucciones en cada página del Asistente para configuración. Puede corregir los problemas por sí mismo o el asistente le proporcionará información que puede enviar al administrador del sistema para realizar la configuración correctamente.  
   
--   [Elegir datos y usar los datos de ejemplo](choosing-data-for-data-mining.md)  
+-   [Elegir los datos y el uso de los datos de ejemplo](choosing-data-for-data-mining.md)  
   
      Para el análisis de datos es fundamental saber qué datos hay que utilizar y cómo prepararlos. En este tema se proporcionan sugerencias sobre cómo preparar los datos para conseguir el mejor modelo posible.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "36199750"
   
      La ubicación predeterminada del libro de ejemplo depende de la versión instalada:  
   
-    -   \<unidad >: \Program complementos de minería de datos de SQL Server 2014  
+    -   \<unidad >: \Program Files\Microsoft complementos de minería de datos de SQL Server 2014  
   
     -   \<unidad >: \Program Files (x86) \Microsoft complementos de minería de datos de SQL Server 2014  
   
 ## <a name="see-also"></a>Vea también  
- [Introducción a la minería de datos &#40;datos complementos de minería de datos para Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
+ [Introducción a minería de datos &#40;datos complementos de minería de datos para Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
   
   

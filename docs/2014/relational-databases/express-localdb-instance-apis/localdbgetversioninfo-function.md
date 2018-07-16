@@ -1,5 +1,5 @@
 ---
-title: Función LocalDBGetVersionInfo | Documentos de Microsoft
+title: Función LocalDBGetVersionInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03e8e4a07dfed1dc2430f020ad221bfb494eb41f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: dc8b45c449a8bea7ca25e2f75fd0e21432838af1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186543"
 ---
 # <a name="localdbgetversioninfo-function"></a>Función LocalDBGetVersionInfo
   Devuelve información de la versión de SQL Server Express LocalDB especificada, por ejemplo si existe y el número de versión completo de LocalDB (incluida la compilación y los números de versión).  
@@ -90,11 +90,11 @@ HRESULT LocalDBGetVersionInfo(
  Error inesperado. Vea el registro de eventos para obtener detalles.  
   
 ## <a name="details"></a>Detalles  
- El análisis razonado respecto a la introducción de la `struct` argumento de tamaño (*lpVersionInfoSize*) consiste en permitir a la API que devuelva distintas versiones de la **LocalDBVersionInfostruct**, de forma eficaz habilitar la compatibilidad con versiones anteriores y posteriores.  
+ La lógica subyacente en la introducción de la `struct` argumento de tamaño (*lpVersionInfoSize*) consiste en habilitar la API que devuelva distintas versiones de la **LocalDBVersionInfostruct**, eficaz habilitar la compatibilidad con versiones anteriores y posteriores.  
   
  Si el `struct` argumento de tamaño (*lpVersionInfoSize*) coincide con el tamaño de una versión conocida de la **LocalDBVersionInfostruct**, esa versión de la `struct` se devuelve. De lo contrario, se devuelve LOCALDB_ERROR_INVALID_PARAMETER.  
   
- Un ejemplo típico de **LocalDBGetVersionInfo** uso de la API tiene el siguiente aspecto:  
+ Un ejemplo típico de **LocalDBGetVersionInfo** uso de la API tiene este aspecto:  
   
 ```  
 LocalDBVersionInfo vi;  

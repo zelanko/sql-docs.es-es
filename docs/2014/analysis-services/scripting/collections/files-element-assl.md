@@ -1,5 +1,5 @@
 ---
-title: Archivos de elemento (ASSL) | Documentos de Microsoft
+title: Archivos de elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Files element
 ms.assetid: 8a1327cb-1f60-42a7-b8ef-213d45a63e55
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5f7556009881e1d4155e47a368bcff4b49aa7988
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d4ed9199f5b715c00e70da39e1742a2638cf67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196045"
 ---
 # <a name="files-element-assl"></a>Elemento Files (ASSL)
   Contiene la colección de [archivo](../objects/file-element-assl.md) elementos que componen un [ClrAssembly](../data-type/assembly-data-type-assl.md) elemento.  
@@ -60,8 +60,8 @@ ms.locfileid: "36107312"
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[Ensamblado](../objects/assembly-element-assl.md) de tipo [ClrAssembly](../data-type/assembly-data-type-assl.md)|  
-|Elementos secundarios|[Archivo](../objects/file-element-assl.md) de tipo [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)|  
+|Elementos primarios|[Ensamblado](../objects/assembly-element-assl.md) typu [ClrAssembly](../data-type/assembly-data-type-assl.md)|  
+|Elementos secundarios|[Archivo](../objects/file-element-assl.md) typu [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.ClrAssemblyFileCollection>.  

@@ -1,5 +1,5 @@
 ---
-title: Guía de programación de (SQL SMO) de objetos de administración de SQL Server | Documentos de Microsoft
+title: Guía de programación de (SQL SMO) de objetos de administración de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - programming [SMO]
 ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d747c0562ba0bc41f7f29378f5a44516afb6a016
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 737acb943974dd8657998b73b61efb92e256b5cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189922"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>Guía de programación para objetos de administración de SQL Server (SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objetos de administración (SMO) es una colección de objetos que están diseñados para programar todos los aspectos de la administración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Replication Management Objects (RMO) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una colección de objetos que encapsula la administración de replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

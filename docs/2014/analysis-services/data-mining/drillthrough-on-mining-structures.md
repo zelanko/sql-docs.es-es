@@ -1,5 +1,5 @@
 ---
-title: Obtención de detalles en estructuras de minería de datos | Documentos de Microsoft
+title: Obtención de detalles en estructuras de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7f65a4b6e97fab978ec156d97f525818722b299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e01f903d28368179a7c249f3a8bbb7ac7c159e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246109"
 ---
 # <a name="drillthrough-on-mining-structures"></a>Obtención de detalles en estructuras de minería de datos
   La*obtención de detalles* se refiere a la capacidad de consultar un modelo o una estructura de minería de datos y obtener datos detallados que no se exponen en el modelo.  
@@ -36,11 +36,11 @@ ms.locfileid: "36106463"
 ## <a name="enabling-drillthrough-to-structure-data"></a>Habilitar la obtención de detalles en los datos de la estructura  
  Para utilizar la obtención de detalles en la estructura de minería de datos, se deben cumplir las condiciones siguientes:  
   
--   La obtención de detalles en el modelo también debe estar habilitada. De forma predeterminada, ambos tipos de obtención de detalles están deshabilitados. Para habilitar la obtención de detalles en el Asistente para minería de datos, seleccione la opción para habilitar la obtención de detalles en los casos del modelo en la página final del asistente. Se puede agregar la capacidad de obtención de detalles en un modelo más adelante cambiando el `AllowDrillthrough` propiedad.  
+-   La obtención de detalles en el modelo también debe estar habilitada. De forma predeterminada, ambos tipos de obtención de detalles están deshabilitados. Para habilitar la obtención de detalles en el Asistente para minería de datos, seleccione la opción para habilitar la obtención de detalles en los casos del modelo en la página final del asistente. También puede agregar la capacidad de obtener detalles de un modelo más adelante cambiando el `AllowDrillthrough` propiedad.  
   
 -   Si crea la estructura de minería de datos mediante DMX, use la cláusula WITH DRILLTHROUGH. Para obtener más información, consulte [CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx).  
   
--   La obtención de detalles funciona recuperando la información sobre los casos de entrenamiento que se almacenó en memoria caché al procesar la estructura de minería de datos. Por lo tanto, si borra los datos almacenados en caché después de procesar la estructura cambiando la <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> propiedad `ClearAfterProcessing`, obtención de detalles no funcionará. Para habilitar la obtención de detalles de las columnas de estructura, debe cambiar la <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> propiedad `KeepTrainingCases` y, a continuación, volver a procesar la estructura.  
+-   La obtención de detalles funciona recuperando la información sobre los casos de entrenamiento que se almacenó en memoria caché al procesar la estructura de minería de datos. Por lo tanto, si borra los datos en caché después de procesar la estructura cambiando la <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> propiedad `ClearAfterProcessing`, obtención de detalles no funcionará. Para habilitar la obtención de detalles de las columnas de estructura, debe cambiar la <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> propiedad `KeepTrainingCases` y, a continuación, volver a procesar la estructura.  
   
 -   Compruebe que la estructura de minería de datos y el modelo de minería de datos tienen la [AllowDrillThrough](../scripting/properties/allowdrillthrough-element-assl.md) propiedad establecida en `True`. Es más, debe ser miembro de un rol con los permisos de obtención de detalles para la estructura y el modelo.  
   

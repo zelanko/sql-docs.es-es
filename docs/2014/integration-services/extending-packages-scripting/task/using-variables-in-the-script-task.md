@@ -24,13 +24,13 @@ ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 caps.latest.revision: 62
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7a8179cd44f9cb9bb2c97971ca2c347eb76b3f82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a9e2fac6ad07c177dc3f3247207dc3d6224d9d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193525"
 ---
 # <a name="using-variables-in-the-script-task"></a>Utilizar variables en la tarea Script
   Las variables permiten que la tarea Script intercambie datos con otros objetos del paquete. Para más información, vea [Integration Services &#40;SSIS&#41; Variables](../../integration-services-ssis-variables.md).  
@@ -51,10 +51,10 @@ ms.locfileid: "36106394"
   
  Las variables consiguen que sea posible esta comunicación entre el contenedor de bucles Foreach y la tarea Script. En la página **Asignaciones de variables** del **Editor de bucles Para cada uno**, asigne variables a cada elemento de datos que devuelve un único elemento enumerado. Por ejemplo, un enumerador de archivos Foreach solamente devuelve un nombre de archivo en Índice 0 y por tanto solamente requiere una asignación de variable, en tanto que un enumerador que devuelve varias columnas de datos en cada fila requiere que asigne una variable diferente a cada columna que desea utilizar en la tarea Script.  
   
- Después de asignar los elementos enumerados a las variables, debe agregar las variables asignadas a la `ReadOnlyVariables` propiedad en el **Script** página de la **Editor de la tarea de secuencia de comandos** para que estén disponibles para su secuencia de comandos. Para obtener un ejemplo de una tarea Script dentro de un contenedor de bucles Para cada uno que procesa los archivos de imagen en una carpeta, vea [Trabajar con imágenes con la tarea Script](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md).  
+ Después de asignar los elementos enumerados a las variables, debe agregar las variables asignadas a la `ReadOnlyVariables` propiedad en el **Script** página de la **Editor de la tarea Script** para que estén disponibles para su secuencia de comandos. Para obtener un ejemplo de una tarea Script dentro de un contenedor de bucles Para cada uno que procesa los archivos de imagen en una carpeta, vea [Trabajar con imágenes con la tarea Script](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md).  
   
 ## <a name="variables-example"></a>Ejemplo de variables  
- En el ejemplo siguiente se muestra cómo obtener acceso y utilizar las variables en una tarea Script para determinar la ruta de acceso de flujo de trabajo del paquete. El ejemplo se supone que ha creado las variables de entero denominadas `CustomerCount` y `MaxRecordCount` y agregarlos a la `ReadOnlyVariables` colección en la **Editor de la tarea de secuencia de comandos**. La variable `CustomerCount` contiene el número de registros del cliente que se van a importar. Si su valor es mayor que el valor de `MaxRecordCount`, la tarea Script informa del error. Cuando se produce un error porque se ha superado el umbral `MaxRecordCount`, la ruta de acceso de error del flujo de trabajo puede implementar cualquier limpieza necesaria.  
+ En el ejemplo siguiente se muestra cómo obtener acceso y utilizar las variables en una tarea Script para determinar la ruta de acceso de flujo de trabajo del paquete. El ejemplo supone que ha creado variables de entero denominadas `CustomerCount` y `MaxRecordCount` y ha agregado a la `ReadOnlyVariables` colección en el **Editor de la tarea Script**. La variable `CustomerCount` contiene el número de registros del cliente que se van a importar. Si su valor es mayor que el valor de `MaxRecordCount`, la tarea Script informa del error. Cuando se produce un error porque se ha superado el umbral `MaxRecordCount`, la ruta de acceso de error del flujo de trabajo puede implementar cualquier limpieza necesaria.  
   
  Para compilar correctamente el ejemplo, debe agregar una referencia al ensamblado Microsoft.SqlServer.ScriptTask.  
   
@@ -119,10 +119,10 @@ public class ScriptMain
   
 ```  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services  **<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Servicios de integración &#40;SSIS&#41; Variables](../../integration-services-ssis-variables.md)   
- [Usar Variables en paquetes](../../use-variables-in-packages.md)  
+ [Usar variables en paquetes](../../use-variables-in-packages.md)  
   
   

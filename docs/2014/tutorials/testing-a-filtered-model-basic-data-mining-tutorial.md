@@ -1,5 +1,5 @@
 ---
-title: Probar un modelo filtrado (Tutorial de minería de datos básicos) | Documentos de Microsoft
+title: Probar un modelo filtrado (Tutorial de minería de datos básicos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f0d74f8c-600d-4df5-a742-695e6947a071
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 0dfb4b3ae34b230c591071f02cdaa9b0984cf05e
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 87af6785855f81abcffe57e3672e59fcf00b5e2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319735"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>Probar un modelo filtrado (Tutorial básico de minería de datos)
-  Ahora que ha determinado que la `TM_Decision_Tree` modelo es el más preciso, personalizará el modelo para satisfacer mejor las necesidades de la [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] campaña de distribución de correo directo. Concretamente, el departamento de marketing desea saber si hay alguna diferencia entre los clientes masculinos y femeninos. Esta información puede ayudarles a decidir qué revistas utilizar para los anuncios y qué productos ofrecer en sus campañas.  
+  Ahora que ha determinado que el `TM_Decision_Tree` modelo es el más preciso, lo personalizará el modelo para satisfacer mejor las necesidades de la [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] campaña de distribución de correo directo. Concretamente, el departamento de marketing desea saber si hay alguna diferencia entre los clientes masculinos y femeninos. Esta información puede ayudarles a decidir qué revistas utilizar para los anuncios y qué productos ofrecer en sus campañas.  
   
 ## <a name="using-filters"></a>Usar filtros  
  El filtrado permite crear con facilidad modelos basados en subconjuntos de datos. El filtro se aplica solo al modelo y no cambia el origen de datos subyacente.  
   
  En esta lección, creará un modelo filtrado por género para predecir las características que más influyen en el comportamiento de compra de los hombres y las mujeres.  
   
- En primer lugar se realizará una copia de la `TM_Decision_Tree` modelo.  
+ Primero realizará una copia de la `TM_Decision_Tree` modelo.  
   
 #### <a name="to-copy-the-decision-tree-model"></a>Para copiar el modelo del árbol de decisión  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36312553"
   
 2.  Haga clic en la pestaña **Modelos de minería de datos** .  
   
-3.  Haga clic con el `TM_Decision_Tree` de modelo y seleccione **nuevo modelo de minería de datos.**  
+3.  Haga clic en el `TM_Decision_Tree` del modelo y seleccione **nuevo modelo de minería de datos.**  
   
 4.  En el **nombre del modelo** , escriba `TM_Decision_Tree_Male`.  
   
@@ -71,14 +71,14 @@ ms.locfileid: "36312553"
   
      El filtro se muestra en la ventana **Propiedades** . Como alternativa, puede iniciar el cuadro de diálogo **Filtro del modelo** en la ventana **Propiedades** .  
   
-8.  Repita los pasos anteriores, pero esta vez asigne el nombre modelo `TM_Decision_Tree_Female` y tipo **F** en el **valor** cuadro de texto.  
+8.  Repita los pasos anteriores, pero esta vez el nombre del modelo `TM_Decision_Tree_Female` y tipo **F** en el **valor** cuadro de texto.  
   
 ## <a name="process-the-filtered-models"></a>Procesar los modelos filtrados  
- Los modelos no se pueden utilizar hasta que se hayan implementado y procesado. Para obtener más información sobre los modelos de procesamiento, vea [modelos de procesamiento de la estructura de distribución de correo de destino &#40;Tutorial básico de minería de datos&#41;](../../2014/tutorials/processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md).  
+ Los modelos no se pueden utilizar hasta que se hayan implementado y procesado. Para obtener más información sobre los modelos de procesamiento, vea [modelos de procesamiento de la estructura de distribución de correo electrónico dirigido &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md).  
   
 #### <a name="to-process-the-filtered-model"></a>Para procesar el modelo filtrado  
   
-1.  Haga clic en el `TM_Decision_Tree_Male` de modelo y seleccione **procesar estructura de minería de datos y todos los modelos**s  
+1.  Haga clic en el `TM_Decision_Tree_Male` del modelo y seleccione **procesar estructura de minería de datos y todos los modelos**s  
   
 2.  Haga clic en **Ejecutar** para procesar los nuevos modelos.  
   
@@ -101,17 +101,17 @@ ms.locfileid: "36312553"
   
 3.  Deslice **Mostrar nivel** a `3`.  
   
-4.  Cambiar el **fondo** valor a `1`.  
+4.  Cambiar el **en segundo plano** valor `1`.  
   
 5.  Coloque el cursor sobre el nodo con la etiqueta **Todos** para ver el número de compradores de bicicleta con respecto a los no compradores.  
   
 6.  Repita los pasos del 1 al 5 para `TM_Decision_Tree_Female`.  
   
-7.  Explorar los resultados de la `TM_Decision_Tree` y los modelos filtran por el género. Si se comparan todos los compradores de bicicletas, los compradores masculinos y femeninos comparten algunas de las mismas características de los compradores de bicicletas sin filtrar, pero los tres también presentan diferencias interesantes. Esta información es útil que [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] puede usar para desarrollar su campaña de marketing.  
+7.  Explore los resultados para el `TM_Decision_Tree` y los modelos filtran por el género. Si se comparan todos los compradores de bicicletas, los compradores masculinos y femeninos comparten algunas de las mismas características de los compradores de bicicletas sin filtrar, pero los tres también presentan diferencias interesantes. Esta información es útil que [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] puede usar para desarrollar su campaña de marketing.  
   
 #### <a name="to-test-the-lift-of-the-filtered-models"></a>Para probar la mejora en la predicción de los modelos filtrados  
   
-1.  Cambie a la **gráfico de precisión de minería de datos** ficha en el Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y seleccione la **selección de entrada** ficha.  
+1.  Cambie a la **gráfico de precisión de minería de datos** ficha en el Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y seleccione el **selección de entrada** ficha.  
   
 2.  En el cuadro de grupo **Seleccionar un conjunto de datos para usarlo en un gráfico de precisión** , seleccione **Usar casos de prueba de estructura de minería de datos**.  
   
@@ -128,9 +128,9 @@ ms.locfileid: "36312553"
      Observará ahora que los tres modelos de Árbol de decisión proporcionan una mejora significativa con respecto al modelo de estimación aleatoria, además de superar a los modelos de agrupación en clústeres y Bayes naive.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- Para obtener más información acerca de los filtros, vea [filtros para los modelos de minería de datos &#40;Analysis Services: minería de datos&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ Para obtener más información sobre los filtros, consulte [filtros para modelos de minería de datos de &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
- Para obtener un ejemplo de cómo aplicar filtros a las tablas anidadas, vea [Tutorial intermedio de minería de datos &#40;Analysis Services: minería de datos&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md).  
+ Para obtener un ejemplo de cómo aplicar filtros a tablas anidadas, vea [Tutorial intermedio de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md).  
   
 ## <a name="previous-task-in-lesson"></a>Tarea anterior de la lección  
  [Probar la exactitud con gráficos de elevación &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
@@ -139,9 +139,9 @@ ms.locfileid: "36312553"
  [Lección 6: Crear y trabajar con predicciones &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Intermedio de Tutorial de minería de datos &#40;Analysis Services: minería de datos&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [Tareas y tareas de modelo de minería de datos](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Tutorial de minería de datos de datos intermedio &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
+ [Tareas del modelo de minería de datos y procedimientos](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Eliminar un filtro de un modelo de minería de datos](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
- [Filtros para modelos de minería de datos de &#40;Analysis Services: minería de datos&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Filtros para modelos de minería de datos de &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

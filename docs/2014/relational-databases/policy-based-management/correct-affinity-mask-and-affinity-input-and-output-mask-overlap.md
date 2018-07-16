@@ -1,5 +1,5 @@
 ---
-title: Máscara de afinidad correcto y afinidad de entrada y salida de máscara de superposición | Documentos de Microsoft
+title: Superposición de máscara de máscara de afinidad correcto y afinidad de entrada y salida | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 1a0da6df-57ff-4f3f-aae9-2fbc4897508c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9a5cc744eb941d309ff938452fef01a24716a946
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 14dbd2e0f3815e500d5742822f7ca8157408c917
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324205"
 ---
-# <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>Máscara de afinidad correcto y solapamiento de máscara de afinidad de entrada y salida
+# <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>Máscara de afinidad correcto y superposición de máscara de afinidad de entrada y salida
   Esta regla comprueba si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene uno o varios procesadores que están asignados para usarse con las opciones de máscara de afinidad y de máscara de afinidad de E/S. En un equipo con más de un procesador, las opciones de máscara de afinidad y de máscara de afinidad de E/S se utilizan para designar qué CPU usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al habilitar una CPU con la máscara de afinidad y con la máscara de afinidad de E/S, se puede ralentizar el rendimiento al exigir que el procesador se use demasiado.  
   
 ## <a name="best-practices-recommendations"></a>Prácticas recomendadas  

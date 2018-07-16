@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f8982e0f600d48680283507dc7ef3d6fba274520
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 58fe8e149a4152399738def5401a7a976cea827f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218715"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>Método GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
   Genera un script SQL que se puede usar para conceder derechos a un usuario sobre la base de datos del servidor de informes y otras bases de datos necesarias para el funcionamiento de un servidor de informes. Se espera que el autor de la llamada se conecte al servidor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecute el script.  
@@ -71,11 +71,11 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>Notas  
  Si *DatabaseName* está vacío, *IsRemote* se omite y el valor del archivo de configuración del servidor de informes se usa para el nombre de base de datos.  
   
- Si *IsWindowsUser* está establecido en `true`, *nombre de usuario* debe tener el formato \<dominio >\\< nombre de usuario\>.  
+ Si *IsWindowsUser* está establecido en `true`, *UserName* debe tener el formato \<dominio >\\< nombre de usuario\>.  
   
- Cuando *IsWindowsUser* está establecido en `true`, el script generado concede derechos de inicio de sesión para el usuario para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], configurar una base de datos del servidor de informes como la base de datos predeterminada y concede el **RSExec** rol en la base de datos del servidor de informes, la base de datos temporal del servidor informes, la base de datos maestra y la base de datos del sistema MSDB.  
+ Cuando *IsWindowsUser* está establecido en `true`, el script generado concede derechos de inicio de sesión al usuario para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], establecer la base de datos del servidor de informes como la base de datos predeterminada y concede el **RSExec** rol en la base de datos del servidor de informes, la base de datos temporal del servidor informes, la base de datos maestra y la base de datos del sistema MSDB.  
   
- Cuando *IsWindowsUser* se establece en `true`, el método acepta los SID de Windows estándar como entrada. Cuando se proporciona un SID de Windows estándar o el nombre de la cuenta de servicio, se traduce a una cadena de nombre de usuario. Si la base de datos es local, la cuenta se traduce a la representación localizada correcta de la cuenta. Si la base de datos es remota, la cuenta se representa como la cuenta del equipo.  
+ Cuando *IsWindowsUser* está establecido en `true`, el método acepta los SID de Windows estándar como entrada. Cuando se proporciona un SID de Windows estándar o el nombre de la cuenta de servicio, se traduce a una cadena de nombre de usuario. Si la base de datos es local, la cuenta se traduce a la representación localizada correcta de la cuenta. Si la base de datos es remota, la cuenta se representa como la cuenta del equipo.  
   
  En la tabla siguiente, se muestran las cuentas que están traducidas y su representación remota.  
   
@@ -110,7 +110,7 @@ out Int32 HRESULT);
   
  Cuando *IsWindowsUser* está establecido en `false`, el script generado concede el **RSExec** rol en la base de datos del servidor de informes, la base de datos temporal del servidor informes y la base de datos MSDB.  
   
- Cuando *IsWindowsUser* está establecido en `false`, el usuario de SQL Server ya debe existir en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el script se ejecute correctamente.  
+ Cuando *IsWindowsUser* está establecido en `false`, el usuario de SQL Server ya debe existir en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el script se ejecute correctamente.  
   
  Si el servidor de informes no cuenta con una base de datos del servidor de informes especificada, al llamar a GrantRightsToDatabaseUser se devuelve un error.  
   

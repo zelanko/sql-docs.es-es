@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], effective permissions
 - permissions [Master Data Services], model and member overlaps
 - members [Master Data Services], effective permissions
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd9706ee95376500993089a496f216c2fe113b27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 468d23a4bddd0df301d263e6c2fd6e22a167ef27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219685"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Superponer permisos de modelo y de miembro (Master Data Services)
   El permiso que se asigne a un miembro puede solaparse con el permiso asignado a un objeto del modelo. Cuando se producen las superposiciones, el permiso más restrictivo será el que surta efecto.  
@@ -32,7 +32,7 @@ ms.locfileid: "36201172"
   
 -   **Denegar** invalida al resto de permisos.  
   
--   **Sólo lectura** invalida **actualización**.  
+-   **Solo lectura** invalida **actualización**.  
   
  La siguiente imagen muestra qué permisos surten efecto en un valor de atributo individual cuando los permisos de atributo son diferentes que los permisos de miembro.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36201172"
   
  En el **miembros de la jerarquía** ficha, el nodo de subcategoría de bicicletas de montaña de una jerarquía derivada se asigna explícitamente **de sólo lectura** permiso.  
   
- Consecuencia, en **Explorer**, el usuario tiene **de sólo lectura** permiso para los valores de atributo de subcategoría para los miembros en el nodo de bicicletas de montaña. Se ocultan todos los demás miembros y atributos.  
+ Resultado: En **Explorer**, el usuario tiene **de sólo lectura** permiso para los valores de atributo de subcategoría para los miembros en el nodo de bicicletas de montaña. Se ocultan todos los demás miembros y atributos.  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36201172"
   
  En la pestaña **Miembros** , el nodo de subcategoría de bicicletas de montaña de una jerarquía derivada tiene asignado el permiso **Actualizar** explícitamente.  
   
- Consecuencia, en **Explorer**, el usuario tiene **de sólo lectura** permiso para los valores de atributo. Se ocultan todos los demás miembros y atributos.  
+ Resultado: En **Explorer**, el usuario tiene **de sólo lectura** permiso a los valores de atributo. Se ocultan todos los demás miembros y atributos.  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   

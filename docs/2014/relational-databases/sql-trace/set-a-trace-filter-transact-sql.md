@@ -1,5 +1,5 @@
 ---
-title: Método SetBoolValue (clase SqlServiceAdvancedProperty) | Documentos de Microsoft
+title: Método SetBoolValue (clase SqlServiceAdvancedProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetBoolValue method
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a26fae3ba51f68dbcd2e519ea6a711b2fd471c43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 508a9c7f0423da077519fe8c6a046638e88f946a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208585"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>Método SetBoolValue (clase SqlServiceAdvancedProperty)
   Establece el valor booleano de una propiedad.  

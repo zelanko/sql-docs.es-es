@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 caps.latest.revision: 61
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b619d8e97c18d002c5e5588305e4889234db49c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 324143732c9ae7830e1fb588cb0793795acb6f5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285241"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Crear y administrar el almacenamiento de objetos con optimización para memoria
   El motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] está integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que le permite tener las tablas optimizadas para memoria y las tablas basadas en disco (tradicionales) en la misma base de datos. Sin embargo, la estructura de almacenamiento para tablas optimizadas para memoria es diferente de las tablas basadas en disco.  
@@ -36,7 +36,7 @@ ms.locfileid: "36200119"
   
  El almacenamiento de tablas optimizadas para memoria tiene los siguientes atributos clave:  
   
--   Todas las tablas optimizadas en memoria se asignan a un grupo de archivos con optimización para memoria. Este grupo de archivos se basa en el grupo de archivos filestream.  
+-   Todas las tablas optimizadas para memoria se asignan a un grupo de archivos optimizados para memoria. Este grupo de archivos se ha creado mediante el grupo de archivos filestream.  
   
 -   No existen páginas y los datos se guardan como una fila.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36200119"
   
 -   A diferencia de las tablas basadas en disco, el almacenamiento de tablas optimizadas para memoria no se comprime. Al migrar una tabla basada en disco (ROW o PAGE) comprimida tabla a una tabla optimizada para memoria, debe tener en cuenta el cambio del tamaño.  
   
--   Una tabla optimizada para memoria puede ser durable o no durable. Solo debe configurar el almacenamiento para durable optimizar la memoria las tablas.  
+-   Una tabla optimizada para memoria puede ser durable o no durable. Solo deberá configurar el almacenamiento para la optimización de memoria de durable tablas.  
   
  En esta sección se describen los pares de archivos de punto de comprobación y otros aspectos de cómo se almacenan los datos en tablas optimizadas para memoria.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36200119"
   
 -   [Comparar el almacenamiento de tablas basadas en disco con el almacenamiento de tablas con optimización para memoria](comparing-disk-based-table-storage-to-memory-optimized-table-storage.md)  
   
--   [Supervisión y solución de problemas de replicación de mezcla en pares de archivos Delta y de datos](../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md)  
+-   [Supervisar y solucionar los problemas de la mezcla para los pares de archivos delta y de datos](../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md)  
   
 ## <a name="see-also"></a>Vea también  
  [OLTP en memoria &#40;optimización en memoria&#41;](in-memory-oltp-in-memory-optimization.md)  

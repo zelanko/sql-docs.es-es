@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 caps.latest.revision: 21
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 29c42e491c6d36c20073a801051d8861d03ab0f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c77240716811c47f28577577c89647f141fdd53f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329995"
 ---
 # <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Paso 4: agregar una tarea de flujo de datos al paquete
   Una vez que ha creado los administradores de conexión para los datos de origen y de destino, la siguiente tarea consiste en agregar una tarea de flujo de datos al paquete. La tarea de flujo de datos encapsula el motor de flujo de datos que mueve datos entre orígenes y destinos, y proporciona la funcionalidad para transformar, limpiar y modificar los datos a medida que se mueven. En la tarea de flujo de datos se lleva a cabo la mayor parte del proceso de extracción, transformación y carga (ETL).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] separa el flujo de datos de flujo de control.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] separa el flujo de datos del flujo de control.  
   
 ### <a name="to-add-a-data-flow-task"></a>Para agregar una tarea de flujo de datos  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36199733"
     > [!NOTE]  
     >  Si el cuadro de herramientas de SSIS no está disponible, en el menú principal seleccione SSIS y después el cuadro de herramientas de SSIS para mostrar el cuadro de herramientas de SSIS.  
   
-3.  En el **flujo de Control** superficie de diseño, haga clic en el recién agregado **tarea flujo de datos**, haga clic en **cambiar el nombre de**y cambie el nombre a `Extract Sample Currency Data`.  
+3.  En el **flujo de Control** superficie de diseño, haga clic en la recién agregada **Data Flow Task**, haga clic en **cambiar el nombre de**y cambie el nombre a `Extract Sample Currency Data`.  
   
      Es aconsejable proporcionar nombres únicos a todos los componentes que se agregan a una superficie de diseño. Para facilitar su uso y mantenimiento, los nombres deben describir la función que lleva a cabo cada componente. Seguir estas directrices de nomenclatura permite que los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sean autodocumentados. Los paquetes también pueden documentarse mediante anotaciones. Para obtener más información sobre cómo usar anotaciones, consulte [Usar anotaciones en paquetes](use-annotations-in-packages.md).  
   

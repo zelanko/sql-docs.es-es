@@ -1,5 +1,5 @@
 ---
-title: Propiedad FlagName (clase ServerSettingsGeneralFlag) | Documentos de Microsoft
+title: Propiedad FlagName (clase ServerSettingsGeneralFlag) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - FlagName property
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1f17e4af06f6f4e1c61c861bf2769f2f89f2b283
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 5301ee43c8f4fde1d0a8b25541ada2e494aef43c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313395"
 ---
 # <a name="flagname-property-serversettingsgeneralflag-class"></a>Propiedad FlagName (clase ServerSettingsGeneralFlag)
   Obtiene el nombre de la marca.  
@@ -51,6 +51,6 @@ object
 ## <a name="remarks"></a>Notas  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurar protocolos de red de servidor y las bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

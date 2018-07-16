@@ -1,5 +1,5 @@
 ---
-title: Administrar el servicio Integration Services | Documentos de Microsoft
+title: Administrar el servicio Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
 - services [Integration Services], configuring
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
 caps.latest.revision: 60
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45952fdec3955614cb7b69b053ffc635d9ab2ae3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e356283274c7ea741acfabcd6d56cb6bc0db7ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200411"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281521"
 ---
 # <a name="manage-the-integration-services-service"></a>Administrar el servicio Integration Services
     
@@ -32,7 +32,7 @@ ms.locfileid: "36200411"
  Al instalar el componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se instala también el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . De forma predeterminada, el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se inicia y el tipo de inicio del servicio se establece en automático. Sin embargo, también debe instalar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para usar el servicio y administrar los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] almacenados y en ejecución.  
   
 > [!NOTE]  
->  No se puede conectar a una instancia de la [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] desde el [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] versión de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Es decir, en el cuadro de diálogo **Conectar con el servidor** , no se puede escribir el nombre de un servidor en el que solamente se está ejecutando [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Sin embargo, puede modificar el archivo de configuración para el servicio y, de ese modo, administrar paquetes almacenados en una instancia de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] desde [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Para obtener más información, vea [Configurar el servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md).  
+>  No se puede conectar a una instancia de la [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] desde el [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] verzi [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Es decir, en el cuadro de diálogo **Conectar con el servidor** , no se puede escribir el nombre de un servidor en el que solamente se está ejecutando [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Sin embargo, puede modificar el archivo de configuración para el servicio y, de ese modo, administrar paquetes almacenados en una instancia de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] desde [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Para obtener más información, vea [Configurar el servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md).  
   
  Solo puede instalar una única instancia del servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en un equipo. El servicio no es específico de una instancia determinada de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para realizar la conexión con el servicio se utiliza el nombre del equipo en el que se ejecuta.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36200411"
   
 ### <a name="to-set-properties-of-integration-services-service-using-the-services-snap-in"></a>Para establecer las propiedades del servicio Integration Services con el complemento Servicios  
   
--   [Establecer las propiedades de los servicios de integración](../../2014/integration-services/set-the-properties-of-the-integration-services-service.md)  
+-   [Establecer las propiedades del servicio Integration Services](../../2014/integration-services/set-the-properties-of-the-integration-services-service.md)  
   
 ### <a name="to-view-service-events-for-integration-services-service"></a>Para ver los eventos del servicio para el servicio Integration Services  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36200411"
   
 ## <a name="see-also"></a>Vea también  
  [Servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)   
- [Configurar la integración de servicios &#40;servicio SSIS&#41;](configuring-the-integration-services-service-ssis-service.md)   
+ [Configurar la integración de servicios de Service &#40;servicio SSIS&#41;](configuring-the-integration-services-service-ssis-service.md)   
  [Importación de SQL Server y el Asistente para exportación](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [dtexec (utilidad)](packages/dtexec-utility.md)   
  [Execution of Projects and Packages](packages/run-integration-services-ssis-packages.md) (Ejecución de proyectos y paquetes)  

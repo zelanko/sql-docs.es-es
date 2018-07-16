@@ -1,5 +1,5 @@
 ---
-title: Ejecutar consultas SQL (proveedor SQLXMLOLEDB) | Documentos de Microsoft
+title: Ejecutar consultas SQL (proveedor SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL queries [SQLXML]
 ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 746c3869fb7c10fcedc3452e67acb85b487c11dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1173e11fb6a5b1ed6dd61af23491cc8146a36d7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225225"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>Ejecutar consultas SQL (proveedor SQLXMLOLEDB)
   En este ejemplo se muestra el uso de las siguientes propiedades SQLXMLOLEDB específicas del proveedor:  
@@ -34,7 +34,7 @@ ms.locfileid: "36200317"
   
 -   xml root  
   
- En esta aplicación de ejemplo ADO del lado cliente, se ejecuta una consulta SQL simple en el cliente. Porque clientsidexml, propiedad está establecida en True, la instrucción SELECT sin la cláusula FOR XML se envía al servidor. El servidor ejecuta la consulta y devuelve un conjunto de filas al cliente. A continuación, el cliente aplica la transformación FOR XML al conjunto de filas y genera un documento XML.  
+ En esta aplicación de ejemplo ADO del lado cliente, se ejecuta una consulta SQL simple en el cliente. Dado que el clientsidexml, propiedad se establece en True, la instrucción SELECT sin la cláusula FOR XML se envía al servidor. El servidor ejecuta la consulta y devuelve un conjunto de filas al cliente. A continuación, el cliente aplica la transformación FOR XML al conjunto de filas y genera un documento XML.  
   
  La propiedad de la raíz de xml proporciona el elemento raíz de nivel superior único para el documento XML que se genera.  
   

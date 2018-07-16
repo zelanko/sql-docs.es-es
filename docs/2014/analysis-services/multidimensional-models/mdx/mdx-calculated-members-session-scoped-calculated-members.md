@@ -1,5 +1,5 @@
 ---
-title: Crear ámbito de sesión calcula miembros (MDX) | Documentos de Microsoft
+title: Crear ámbito de sesión calculados miembros (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE MEMBER statement
 - session-scoped calculated members [MDX]
 ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8e51a2fa5d8179134ac2654f55e9da7ff5ced67
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79e6466c7f514b3453f8840a72dc0028a215259b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106231"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249865"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>Crear miembros calculados de ámbito de sesión (MDX)
   Para crear un miembro calculado que esté disponible en una sesión de expresiones multidimensionales (MDX), es necesario usar la instrucción [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member). Un miembro calculado creado mediante la instrucción CREATE MEMBER no se eliminará hasta que se cierre la sesión MDX.  
@@ -56,6 +56,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Crear ámbito de consulta miembros calculados &#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
+ [Crear ámbito de consulta de miembros calculados &#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

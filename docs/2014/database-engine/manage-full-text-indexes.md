@@ -1,25 +1,24 @@
 ---
-title: Administrar índices de texto completo | Documentos de Microsoft
+title: Administrar índices de texto completo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
 caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9a38476f427cbc2c9630c66020f35c5f7355e9bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f9dc86071bbed98e835b9b7849c4a1fd4c58f43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243115"
 ---
 # <a name="manage-full-text-indexes"></a>Administrar índices de texto completo
      
@@ -41,11 +40,11 @@ ms.locfileid: "36198973"
     |----------|-----------------|  
     |**General**|Muestra las propiedades básicas de un índice de texto completo. Entre estas propiedades se incluyen varias propiedades modificables y varias propiedades invariables, como el nombre de base de datos, el nombre de tabla y el nombre de columna de clave de texto completo. Las propiedades modificables son:<br /><br /> **Lista de palabras irrelevantes de índice de texto completo**<br /><br /> **Indexación de texto completo habilitada**<br /><br /> **Seguimiento de los cambios**<br /><br /> **Lista de propiedades de búsqueda**<br /><br /> <br /><br /> Para obtener más información, consulte [propiedades del índice de texto completo &#40;página General&#41;](full-text-index-properties-general-page.md).|  
     |**Columnas**|Muestra las columnas de tabla que están disponibles para la indización de texto completo. La columna o columnas seleccionadas son de índices de texto completo. Puede seleccionar tantas columnas disponibles como desee incluir en el índice de texto completo. Para obtener más información, consulte [propiedades del índice de texto completo &#40;página columnas&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md).|  
-    |**Programaciones**|Utilice esta página para crear o administrar programaciones para un trabajo del Agente SQL Server que inicie un rellenado de tabla incremental para los rellenados del índice de texto completo. Para obtener más información, vea [Rellenar índices de texto completo](../relational-databases/indexes/indexes.md).<br /><br /> **\*\* Importante \* \***  después de salir del **propiedades del índice de texto completo** cuadro de diálogo, cualquier programación que se cree está asociado con un trabajo de agente SQL Server (iniciar rellenado Incremental de tablas en *database_name*. *table_name*).|  
+    |**Programaciones**|Utilice esta página para crear o administrar programaciones para un trabajo del Agente SQL Server que inicie un rellenado de tabla incremental para los rellenados del índice de texto completo. Para obtener más información, vea [Rellenar índices de texto completo](../relational-databases/indexes/indexes.md).<br /><br /> **\*\* Importante \* \* ** después de salir el **propiedades del índice de texto completo** cuadro de diálogo, cualquier programación recién creado está asociado con un trabajo del Agente SQL Server (iniciar rellenado Incremental de tablas en *database_name*.* table_name*).|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] para guardar cualquier cambio y salir del cuadro de diálogo **Propiedades del índice de texto completo**.  
   
-##  <a name="props"></a> Ver las propiedades de tablas y columnas indizadas  
+##  <a name="props"></a> Ver las propiedades de tablas y columnas indexadas  
  Varias de las funciones de [!INCLUDE[tsql](../includes/tsql-md.md)], como OBJECTPROPERTYEX, se pueden usar para obtener el valor de diversas propiedades de indización de texto completo. Esta información es útil para administrar y solucionar problemas de la búsqueda de texto completo.  
   
  En la siguiente tabla se enumeran las propiedades de texto completo relacionadas con las tablas y columnas indexadas y sus funciones de [!INCLUDE[tsql](../includes/tsql-md.md)] relacionadas.  
@@ -72,7 +71,7 @@ ms.locfileid: "36198973"
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>Para consultar si un índice único determinado se utiliza como columna de clave de texto completo  
   
-1.  Utilice una instrucción [SELECT](/sql/t-sql/queries/select-transact-sql) para llamar a la función [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) . En la función llamada, use la función OBJECT_ID para convertir el nombre de la tabla (*table_name*) en el identificador de tabla, especifique el nombre de un índice único para la tabla y especifique el `IsFulltextKey` index (propiedad), como se indica a continuación:  
+1.  Utilice una instrucción [SELECT](/sql/t-sql/queries/select-transact-sql) para llamar a la función [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) . En la función llamada utiliza la función OBJECT_ID para convertir el nombre de la tabla (*table_name*) en el identificador de tabla, especifique el nombre de un índice único para la tabla y especifique el `IsFulltextKey` index (propiedad), como sigue:  
   
     ```  
     SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  

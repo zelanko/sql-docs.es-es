@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 caps.latest.revision: 8
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 5a81849f65e5b71acf233febb61e7725ec1e804e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 81f9d8c849622a622631bc8153dc7d4cffc7d258
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251887"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimación de cardinalidad (SQL Server)
-  La lógica de estimación de cardinalidad, denominada Estimador de cardinalidad, se ha rediseñado en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para mejorar la calidad de los planes de consulta y, por tanto, para mejorar el rendimiento de las consultas. El nuevo estimador de cardinalidad incorpora suposiciones y algoritmos que funcionan bien en las cargas de trabajo OLTP y de almacenamiento de datos modernas. Se basa en un profundo estudio sobre la estimación de cardinalidad en las cargas de trabajo modernas y en lo que hemos aprendido durante los últimos 15 años para mejorar el estimador de cardinalidad de SQL Server. Los comentarios de los clientes indican que si bien la mayoría de las consultas se beneficiarán del cambio o no cambiarán, un número reducido puede mostrar regresiones en comparación con el estimador de cardinalidad anterior.  
+  La lógica de estimación de cardinalidad, denominada Estimador de cardinalidad, se ha rediseñado en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para mejorar la calidad de los planes de consulta y por lo tanto, para mejorar el rendimiento de las consultas. El nuevo estimador de cardinalidad incorpora suposiciones y algoritmos que funcionan bien en las cargas de trabajo OLTP y de almacenamiento de datos modernas. Se basa en un profundo estudio sobre la estimación de cardinalidad en las cargas de trabajo modernas y en lo que hemos aprendido durante los últimos 15 años para mejorar el estimador de cardinalidad de SQL Server. Los comentarios de los clientes indican que si bien la mayoría de las consultas se beneficiarán del cambio o no cambiarán, un número reducido puede mostrar regresiones en comparación con el estimador de cardinalidad anterior.  
   
 > [!NOTE]  
 >  Las estimaciones de cardinalidad son una predicción del número de filas del resultado de la consulta. El optimizador de consultas utiliza estas estimaciones a la hora de elegir un plan para ejecutar la consulta. La calidad del plan de consulta tiene un impacto directo sobre la mejora del rendimiento de las consultas.  
@@ -40,9 +40,9 @@ ms.locfileid: "36107167"
   
 2.  Ejecute la carga de trabajo de prueba con el nuevo estimador de cardinalidad y solucione cualquier problema nuevo de rendimiento del mismo modo que lo hace ahora.  
   
-3.  Una vez que se está ejecutando la carga de trabajo con el nuevo Estimador de cardinalidad (nivel de compatibilidad de base de datos (SQL Server 2014) 120) y ha hecho la regresión de una consulta concreta, puede ejecutar la consulta con la marca de seguimiento 9481 para usar la versión del estimador de cardinalidad utilizado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]y versiones anteriores. Para ejecutar una consulta con una marca de seguimiento, vea el artículo de KB [Habilitar el plan afecta al comportamiento del optimizador de consultas de SQL Server, que se puede controlar mediante distintas marcas de seguimiento en un nivel de consulta específico](http://support.microsoft.com/kb/2801413).  
+3.  Una vez que se está ejecutando la carga de trabajo con el nuevo Estimador de cardinalidad (nivel de compatibilidad de base de datos (SQL Server 2014) 120) y ha hecho la regresión de una consulta concreta, puede ejecutar la consulta con la marca de seguimiento 9481 para utilizar la versión del estimador de cardinalidad utilizado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]y versiones anteriores. Para ejecutar una consulta con una marca de seguimiento, vea el artículo de KB [Habilitar el plan afecta al comportamiento del optimizador de consultas de SQL Server, que se puede controlar mediante distintas marcas de seguimiento en un nivel de consulta específico](http://support.microsoft.com/kb/2801413).  
   
-4.  Si no se puede cambiar todas las bases de datos a la vez para que utilicen el nuevo Estimador de cardinalidad, puede usar el Estimador de cardinalidad anterior para todas las bases de datos mediante [nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) a establecer el nivel de compatibilidad de base de datos a 110.  
+4.  Si no se puede cambiar todas las bases de datos a la vez para usar el nuevo Estimador de cardinalidad, puede usar el Estimador de cardinalidad anterior para todas las bases de datos mediante [nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) a establecer el nivel de compatibilidad de base de datos a 110.  
   
 5.  Si la carga de trabajo se está ejecutando con el nivel de compatibilidad de base de datos 110 y desea probar o ejecutar una consulta concreta con el nuevo estimador de cardinalidad, puede ejecutar la consulta con la marca de seguimiento 2312 para utilizar la versión de SQL Server 2014 del estimador de cardinalidad.  Para ejecutar una consulta con una marca de seguimiento, vea el artículo de KB [Habilitar el plan afecta al comportamiento del optimizador de consultas de SQL Server, que se puede controlar mediante distintas marcas de seguimiento en un nivel de consulta específico](http://support.microsoft.com/kb/2801413).  
   
@@ -79,7 +79,7 @@ SELECT year, purchase_price FROM dbo.Cars WHERE Make = 'Honda' AND Model = 'Civi
   
  Este comportamiento ha cambiado. Ahora, las nuevas estimaciones de cardinalidad suponen que las columnas Make y Model tienen *alguna* correlación. El optimizador de consultas estima una cardinalidad mayor al agregar un componente exponencial a la ecuación de estimación. El optimizador de consultas estima ahora que 22,36 filas (.05 * SQRT(.20) \* 1000 filas = 22,36 filas) coinciden con el predicado. En este escenario y en esta distribución de datos específica, 22,36 filas es un valor más cercano a las 50 filas reales que devolverá la consulta.  
   
- Tenga en cuenta que la nueva lógica del estimador de cardinalidad ordena las selectividades de predicado y aumenta el exponente. Por ejemplo, si las selectividades de predicado fueran.05,.20 y. 25, la estimación de cardinalidad sería (.05 * SQRT(.20) \* SQRT(SQRT(.25))).  
+ Tenga en cuenta que la nueva lógica del estimador de cardinalidad ordena las selectividades de predicado y aumenta el exponente. Por ejemplo, si las selectividades de predicado fueran 05,.20 y.25, la estimación de cardinalidad sería (.05 * SQRT(.20) \* SQRT(SQRT(.25))).  
   
 ### <a name="example-c-new-cardinality-estimates-assume-filtered-predicates-on-different-tables-are-independent"></a>Ejemplo C. Las nuevas estimaciones de cardinalidad suponen que los predicados filtrados en tablas diferentes son independientes.  
  En este ejemplo, el estimador de cardinalidad anterior supone que los filtros de predicado s.type y r.date están correlacionados. Sin embargo, los resultados de las pruebas en cargas de trabajo modernas mostraron que los filtros de predicados en columnas de tablas diferentes no suelen estar correlacionados entre sí.  

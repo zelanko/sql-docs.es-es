@@ -1,5 +1,5 @@
 ---
-title: Programación de modelo tabular | Documentos de Microsoft
+title: Programación de modelo tabular | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 785e4818d635d41dc27eea8fc63b62cf63e0ff92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0725d20308e750fe6b4fc9d2ceb6a8068747b68a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300865"
 ---
 # <a name="tabular-model-programming"></a>Programación de modelo tabular
   Los modelos tabulares utilizan estructuras relacionales para modelar los datos de Analysis Services utilizados por aplicaciones analíticas y de informes. Estos modelos se ejecutan en una instancia de Analysis Services configurada para el modo tabular, usando un motor de análisis en memoria para el almacenamiento y recorridos de tabla rápidos que agregan y calculan datos conforme se solicitan.  
@@ -39,7 +39,7 @@ ms.locfileid: "36199452"
  [Interfaz IMDEmbedded](imdembeddeddata-interface.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Creación de modelos tabular &#40;SSAS Tabular&#41;](../tabular-models/tabular-models-ssas.md)   
- [Diseñador de modelos tabulares &#40;SSAS Tabular&#41;](../tabular-model-designer-ssas-tabular.md)  
+ [Modelado tabular &#40;Tabular de SSAS&#41;](../tabular-models/tabular-models-ssas.md)   
+ [Diseñador de modelos tabulares &#40;Tabular de SSAS&#41;](../tabular-model-designer-ssas-tabular.md)  
   
   

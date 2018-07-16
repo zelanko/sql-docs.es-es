@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 517208d1fa790739a2008cd5e149147cbf91643c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 458fa987ee31f024534b184b2729667cea3597c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287231"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos
   Este tema describe instrucciones para llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos.  
@@ -40,7 +40,7 @@ ms.locfileid: "36199132"
   
  Las siguientes recomendaciones se aplican a las llamadas a procedimientos almacenados compilados de forma nativa con el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- La forma más eficaz de llamar a un procedimiento almacenado es emitir una llamada RPC directa con `SQLExecDirect` y cláusulas ODBC CALL. No utilice la [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` instrucción. Si un procedimiento almacenado se llama más de una vez, la ejecución preparada es más eficaz.  
+ La manera más eficaz llamar una vez a un procedimiento almacenado es emitir una llamada RPC directa con `SQLExecDirect` y cláusulas ODBC CALL. No utilice el [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` instrucción. Si un procedimiento almacenado se llama más de una vez, la ejecución preparada es más eficaz.  
   
  La forma más eficaz de llamar a un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] más de una vez es a través de llamadas a procedimientos RPC preparadas. Las llamadas a RPC preparadas se realizan como se indica a continuación con el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
   

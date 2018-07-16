@@ -1,5 +1,5 @@
 ---
-title: Contadores de rendimiento para el modo de SharePoint de MSRS 2014 Web Service y MSRS 2014 Windows Service SharePoint modo de objetos de rendimiento (modo de SharePoint) | Documentos de Microsoft
+title: Contadores de rendimiento para el modo de SharePoint de MSRS 2014 Web Service y MSRS 2014 Windows Service SharePoint modo objetos de rendimiento (modo SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - counters [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 caps.latest.revision: 54
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 05e07f38382c6cdc8892c3ffd90ed63798b6f797
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 459d82ce5dfdbc445b05c3eb9f59325791ab4ff0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280791"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>Contadores de rendimiento para los objetos de rendimiento en modo SharePoint de MSRS 2014 Web Service y SharePoint de MSRS 2014 Windows Service (modo SharePoint)
   En este tema se describen los contadores de rendimiento para los objetos de rendimiento `MSRS 2014 Web Service SharePoint Mode` y `MSRS 2014 Windows Service SharePoint Mode` que forman parte de una implementación de modo [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint.  
@@ -47,7 +47,7 @@ ms.locfileid: "36107128"
 -   [Usar cmdlets de PowerShell para devolver listas](#bkmk_powershell)  
   
 ##  <a name="bkmk_webservice"></a> Contadores de rendimiento del modo de SharePoint de MSRS 2014 Web Service  
- El objeto de rendimiento `MSRS 2014 Web Service SharePoint Mode` supervisa el rendimiento del servidor de informes. Este objeto de rendimiento incluye una colección de contadores que se usan para realizar el seguimiento del procesamiento del servidor de informes que se suele iniciar mediante operaciones interactivas de visualización de informes. Cuando se configura este contador, puede aplicar el contador de todas las instancias de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] o puede seleccionar instancias concretas. Estos contadores se restablecen siempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.  
+ El objeto de rendimiento `MSRS 2014 Web Service SharePoint Mode` supervisa el rendimiento del servidor de informes. Este objeto de rendimiento incluye una colección de contadores que se usan para realizar el seguimiento del procesamiento del servidor de informes que se suele iniciar mediante operaciones interactivas de visualización de informes. Al configurar este contador, puede aplicar el contador de todas las instancias de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] o puede seleccionar instancias concretas. Estos contadores se restablecen siempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.  
   
  En la tabla siguiente se enumera los contadores que se incluyen con el `MSRS 2014 Web Service SharePoint Mode` objeto de rendimiento.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36107128"
 |`Memory Cache Misses/Sec`|Número de veces por segundo que no se han podido recuperar informes de la memoria caché en memoria.|  
 |`Next Session Requests/Sec`|Número de solicitudes por segundo de informes que se abren en una sesión existente (como informes que se representan a partir de una instantánea de sesión).|  
 |`Report Requests`|Número de informes actualmente activos que el servidor de informes está procesando.|  
-|`Reports Executed/Sec`|Número de ejecuciones de informes logradas por segundo. Este contador proporciona estadísticas sobre el volumen de informes. Utilice este contador con `Request/Sec` para comparar la ejecución de informes para las solicitudes de informes que pueden devolverse desde la memoria caché.|  
+|`Reports Executed/Sec`|Número de ejecuciones de informes logradas por segundo. Este contador proporciona estadísticas sobre el volumen de informes. Utilice este contador con `Request/Sec` para comparar la ejecución de informes a las solicitudes de informes que pueden devolverse desde la memoria caché.|  
 |`Requests/Sec`|Número de solicitudes por segundo realizadas al servidor de informes. Este contador realiza un seguimiento de todos los tipos de solicitudes que procesa el servidor de informes.|  
 |`Total Cache Hits`|Número total de solicitudes de informes de la memoria caché después del inicio del servicio. Este contador se restablece siempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.|  
 |`Total Cache Hits (Semantic Models)`|Número total de solicitudes del modelo de la memoria caché después del inicio del servicio. Este contador se restablece siempre que ASP.NET detiene el servicio web del servidor de informes.|  
@@ -77,7 +77,7 @@ ms.locfileid: "36107128"
 |`Total Requests`|Número total de solicitudes efectuadas al servidor de informes después del inicio del servicio. Este contador se restablece siempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.|  
   
 ##  <a name="bkmk_windowsservice"></a> Contadores de rendimiento del modo de SharePoint de MSRS 2014 Windows Service  
- El objeto de rendimiento `MSRS 2014 Windows Service SharePoint Mode` se usa para supervisar el servicio Servidor de informes de Windows. Este objeto de rendimiento incluye una colección de contadores que se usan para realizar el seguimiento del procesamiento de informes que se inicia mediante operaciones programadas. Entre las operaciones programadas se incluyen la suscripción y la entrega, las instantáneas de ejecución de informes y el historial del informe. Cuando se configura este contador, puede aplicar el contador de todas las instancias de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] o puede seleccionar instancias concretas.  
+ El objeto de rendimiento `MSRS 2014 Windows Service SharePoint Mode` se usa para supervisar el servicio Servidor de informes de Windows. Este objeto de rendimiento incluye una colección de contadores que se usan para realizar el seguimiento del procesamiento de informes que se inicia mediante operaciones programadas. Entre las operaciones programadas se incluyen la suscripción y la entrega, las instantáneas de ejecución de informes y el historial del informe. Al configurar este contador, puede aplicar el contador de todas las instancias de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] o puede seleccionar instancias concretas.  
   
  En la tabla siguiente se enumera los contadores que se incluyen en el `MSRS 2014 Windows Service SharePoint mode` objeto de rendimiento.  
   
@@ -108,10 +108,10 @@ ms.locfileid: "36107128"
 |`Requests/Sec`|Número total de solicitudes correctas que el servicio del servidor de informes procesó por segundo.|  
 |`Snapshot Updates/Sec`|Número total de actualizaciones de instantánea de ejecución de informes por segundo.|  
 |`Total App Domain Recycles`|Número total de ciclos de dominio de aplicación después del inicio del servicio Windows del servidor de informes.|  
-|**Total de vaciados de caché**|Número total de actualizaciones de memoria caché del servidor de informes después del inicio del servicio. Este contador se restablece tras los reciclamientos de dominio de aplicación. Vea `Cache Flushes/Sec`.|  
-|`Total Cache Hits`|Número total de solicitudes de informes procesadas directamente desde la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación. Vea `Cache Hits/Sec`.|  
+|**Total de vaciados de caché**|Número total de actualizaciones de memoria caché del servidor de informes después del inicio del servicio. Este contador se restablece tras los reciclamientos de dominio de aplicación. Consulte `Cache Flushes/Sec`.|  
+|`Total Cache Hits`|Número total de solicitudes de informes procesadas directamente desde la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación. Consulte `Cache Hits/Sec`.|  
 |`Total Cache Hits (Semantic Models)`|Número total de solicitudes de modelo procesadas directamente desde la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación.|  
-|`Total Cache Misses`|Número total de veces que no se ha podido devolver un informe de la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación. Vea `Cache Misses/Sec`.|  
+|`Total Cache Misses`|Número total de veces que no se ha podido devolver un informe de la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación. Consulte `Cache Misses/Sec`.|  
 |`Total Cache Misses (Semantic Models)`|Número total de veces que no se ha podido devolver un modelo de la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación.|  
 |`Total Deliveries`|Número total de informes entregados por el Procesador de entrega y programación para todas las extensiones de entrega. Este contador se restablece tras los reciclamientos de dominio de aplicación.|  
 |`Total Events`|Número total de eventos después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación.|  
@@ -141,6 +141,6 @@ CounterSetName     : MSRS 2014 Web Service SharePoint Mode
   
 ## <a name="see-also"></a>Vea también  
  [Supervisar el rendimiento del servidor de informes](monitoring-report-server-performance.md)   
- [Contadores de rendimiento para el servicio Web de MSRS 2014 y objetos de rendimiento de servicio de Windows de MSRS 2014 &#40;modo nativo&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
+ [Contadores de rendimiento para el servicio Web de MSRS 2014 y objetos de rendimiento de MSRS 2014 Windows Service &#40;modo nativo&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
   
   

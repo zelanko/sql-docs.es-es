@@ -1,5 +1,5 @@
 ---
-title: Control de errores (MDX) | Documentos de Microsoft
+title: (MDX) de control de errores | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [MDX], exceptions
 - exceptions [MDX]
 ms.assetid: bc6ff0af-9fe6-44d6-bc3c-801d71ea41a9
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d04c59c1af5a942fa53bf2fd2fe47369a15c29f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbbe021cbb65803f79a4aa0a92791441e22e9cb6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332685"
 ---
 # <a name="error-handling-mdx"></a>Control de errores (MDX)
   Todos los cubos pueden controlar la forma en que se administran los errores de los scripts de expresiones multidimensionales (MDX). Control de errores se realiza a través de la `ScriptErrorHandlingMode` enumerador. Los valores posibles que admite este enumerador son los siguientes:  

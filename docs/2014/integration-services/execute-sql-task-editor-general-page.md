@@ -1,5 +1,5 @@
 ---
-title: Ejecutar el Editor de la tarea SQL (página General) | Documentos de Microsoft
+title: Ejecutar el Editor de la tarea SQL (página General) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.general.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 caps.latest.revision: 45
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 853586d51aff06012734a677794f29a9e7991878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68610e2f72c1fa2f47219a7af9620ec911d7d022
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322655"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Editor de la tarea Ejecutar SQL (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Ejecutar SQL** para configurar la tarea Ejecutar SQL y proporcionar la instrucción SQL de ejecución de la tarea.  
@@ -50,7 +50,7 @@ ms.locfileid: "36203001"
 >  Cuando la tarea Ejecutar SQL utiliza un administrador de conexiones ADO u ODBC, la propiedad **CodePage** no está disponible. Si la solución requiere el uso de una página de códigos, utilice un administrador de conexiones OLE DB o ADO.NET con la tarea Ejecutar SQL.  
   
  **TypeConversionMode**  
- Cuando se establece esta propiedad en `Allowed`, la tarea Ejecutar SQL intentará convertir el parámetro de salida y resultados a los datos de tipo de la variable de los resultados de consulta se han asignado. Esto se aplica al tipo de conjunto de resultados de **Fila única** .  
+ Al establecer esta propiedad `Allowed`, la tarea Ejecutar SQL intentará convertir el parámetro de salida y resultados a los datos de tipo de la variable de los resultados de consulta que se asignan. Esto se aplica al tipo de conjunto de resultados de **Fila única** .  
   
  **ResultSet**  
  Especifique el tipo de resultados esperado tras la ejecución de la instrucción SQL. Elija **Fila única**, **Conjunto de resultados completo**, **XML**o **Ninguno**.  

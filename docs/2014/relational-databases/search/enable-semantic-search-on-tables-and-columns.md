@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 64ed077658de8ba855bc2301a3db403e12a47511
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 8187e19e40eba87e663c800ba9e593b30fe87a86
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296445"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar la búsqueda semántica en tablas y columnas
   Describe cómo habilitar o deshabilitar la indización semántica estadística de las columnas seleccionadas que contienen documentos o texto.  
@@ -46,7 +45,7 @@ ms.locfileid: "36105810"
   
 -   Puede crear un índice en columnas que contenga cualquiera de los tipos de datos admitidos para la indización de texto completo. Para obtener más información, vea [Crear y administrar índices de texto completo](create-and-manage-full-text-indexes.md).  
   
--   Puede especificar cualquier tipo de documento que se admite para la indización de texto completo `varbinary(max)` columnas. Para obtener más información, vea [Cómo: determinar qué tipos de documento se pueden indizar](#doctypes) más adelante en este tema.  
+-   Puede especificar cualquier tipo de documento admitido para la indización de texto completo `varbinary(max)` columnas. Para obtener más información, vea [Cómo: determinar qué tipos de documento se pueden indizar](#doctypes) más adelante en este tema.  
   
 -   La indización semántica crea dos tipos de índices para las columnas que seleccione: un índice de frases clave y un índice de similitud de documentos. No puede seleccionar solo uno de los tipos de índice o el otro cuando habilite la indización semántica. Sin embargo, puede consultar estos dos índices por separado. Para obtener más información, vea [Buscar frases clave en documentos con la búsqueda semántica](find-key-phrases-in-documents-with-semantic-search.md) y [Buscar documentos similares y relacionados con la búsqueda semántica](find-similar-and-related-documents-with-semantic-search.md).  
   
@@ -116,7 +115,7 @@ ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO
 GO  
 ```  
   
- **Crear un nuevo índice semántico mediante SQL Server Management Studio**  
+ **Crear un nuevo índice semántico con SQL Server Management Studio**  
  Ejecute el Asistente para indexación de texto completo y habilite **Semántica estadística** en la página **Seleccionar columnas de la tabla** para cada columna en la que quiera crear un índice semántico. Para obtener más información, incluida la información sobre cómo iniciar el Asistente para indexación de texto completo, vea [Usar el Asistente para indexación de texto completo](use-the-full-text-indexing-wizard.md).  
   
 ###  <a name="HowToEnableAlter"></a> Cómo: Crear un índice semántico cuando hay un índice de texto completo existente  
@@ -159,7 +158,7 @@ GO
 ###  <a name="drophow"></a> Cómo: quitar un índice semántico  
  Puede quitar la indexación semántica cuando modifique un índice de texto completo existente con la instrucción **ALTER FULLTEXT INDEX** . También puede quitar la indización semántica con varios cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Agregar o quitar un índice semántico con Transact-SQL**  
+ **Quitar un índice semántico con Transact-SQL**  
  -   Para quitar la indexación semántica solo de una columna o de algunas columnas, se debe llamar a la instrucción **ALTER FULLTEXT INDEX** con la opción **ALTER COLUMN***nombre_columna***DROP STATISTICAL_SEMANTICS**. Puede quitar la indización de varias columnas en una sola instrucción **ALTER** .  
   
     ```tsql  
@@ -184,7 +183,7 @@ GO
     GO  
     ```  
   
- **Agregar o quitar un índice semántico con SQL Server Management Studio**  
+ **Quitar un índice semántico con SQL Server Management Studio**  
  Puede cambiar las columnas habilitadas para la indexación semántica y de texto completo en la página **Columnas de índice de texto completo** del cuadro de diálogo **Propiedades del índice de texto completo** . Para obtener más información, vea [Administrar índices de texto completo](../../database-engine/manage-full-text-indexes.md).  
   
 ###  <a name="dropreq"></a> Requisitos y restricciones para quitar un índice semántico  
@@ -243,7 +242,7 @@ GO
   
 ## <a name="determining-what-can-be-indexed-for-semantic-search"></a>Determinar qué se puede indizar para la búsqueda semántica  
   
-###  <a name="HowToCheckLanguages"></a> Cómo: Comprobar los idiomas compatibles para la búsqueda semántica  
+###  <a name="HowToCheckLanguages"></a> Cómo: Comprobar qué lenguajes se admiten para la búsqueda semántica  
   
 > [!IMPORTANT]  
 >  Hay menos idiomas que sean compatibles con la indización semántica que con la indización de texto completo. Como resultado, puede haber columnas que pueda indizar para la búsqueda de texto completo, pero que no para la búsqueda semántica.  
@@ -270,16 +269,16 @@ GO
 |Portugués (Portugal)|2070|  
 |Español|3082|  
   
-###  <a name="doctypes"></a> Cómo: Determinar qué tipos de documento se pueden indizar  
+###  <a name="doctypes"></a> Cómo: Determinar qué tipos de documentos se pueden indizar  
  Consulte la vista de catálogo [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
  Si el tipo de documento que desea indizar no está en la lista de tipos compatibles, puede tener que buscar, descargar, e instalar filtros adicionales. Para obtener más información, consulte [View or Change Registered Filters and Word Breakers](view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="BestPracticeFilegroup"></a> Práctica recomendada: Plantearse crear un grupo de archivos independiente para la búsqueda de texto completo e índices semánticos  
+##  <a name="BestPracticeFilegroup"></a> Procedimiento recomendado: Considere la posibilidad de crear un grupo de archivos independiente para el texto completo e índices semánticos  
  Plantéese crear un grupo de archivos independiente para los índices de texto completo y semántico si la asignación de espacio en disco es un problema. Los índices semánticos se crean en el mismo grupo de archivos que el índice de texto completo. Un índice semántico totalmente rellenado puede contener una gran cantidad de datos.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="IssueNoResults"></a> Problema: Buscar en una columna específica nunca devuelve resultados  
+##  <a name="IssueNoResults"></a> Problema: Buscar en una columna específica no devuelve ningún resultado  
  **¿Se especificó un LCID que no sea Unicode para un idioma Unicode?**  
  Se puede habilitar la indización semántica en un tipo de columna que no sea Unicode con un LCID para un idioma que solo tenga palabras Unicode, como LCID 1049 para ruso. En este caso, nunca se obtendrán resultados de los índices semánticos de esta columna.  
   

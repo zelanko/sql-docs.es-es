@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a772fba6776195e914d9e4109a7973f355f3a270
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1989f166f519ddf732cca8cd47e32a14c414cae1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268651"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   Un `CurvePolygon` es una superficie cerrada topológicamente definida por un anillo de límite exterior y cero o más anillos interiores  
@@ -33,13 +33,13 @@ ms.locfileid: "36201124"
   
 -   El interior de la instancia de `CurvePolygon` es el espacio entre el anillo exterior y todos los anillos interiores.  
   
- A `CurvePolygon` instancia difiere de un `Polygon` instancia en que un `CurvePolygon` instancia puede contener los siguientes segmentos de arco circular: `CircularString` y `CompoundCurve`.  
+ Un `CurvePolygon` instancia difiere de un `Polygon` instancia en que un `CurvePolygon` instancia puede contener los siguientes segmentos de arco circular: `CircularString` y `CompoundCurve`.  
   
 ## <a name="compoundcurve-instances"></a>Instancias de CompoundCurve  
- Ilustración siguiente muestra `CurvePolygon` cifras:  
+ Ilustración siguiente se muestran válido `CurvePolygon` cifras:  
   
 ### <a name="accepted-instances"></a>Instancias aceptadas  
- Para una `CurvePolygon` instancia que se acepte, tiene que estar vacía o contener solo los anillos de arco circular que se aceptan. Un anillo de arco circular aceptado cumple los siguientes requisitos.  
+ Para un `CurvePolygon` que se acepte tiene que estar vacía o contener anillos de arco circulares aceptados. Un anillo de arco circular aceptado cumple los siguientes requisitos.  
   
 1.  Es una instancia de `LineString`, `CircularString` o `CompoundCurve` aceptada. Para obtener más información sobre instancias aceptadas, vea [LineString](linestring.md), [CircularString](circularstring.md)y [CompoundCurve](compoundcurve.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36201124"
     > [!NOTE]  
     >  Se omiten los valores Z y M.  
   
- En el ejemplo siguiente se muestra aceptado `CurvePolygon` instancias.  
+ El ejemplo siguiente se muestra aceptado `CurvePolygon` instancias.  
   
 ```  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
@@ -72,7 +72,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
  `@g1` no se acepta porque los puntos inicial y final no tienen el mismo valor Y. `@g2` no se acepta porque el anillo no tiene suficientes puntos.  
   
 ### <a name="valid-instances"></a>Instancias válidas  
- Para una `CurvePolygon` instancia sea válida los anillos exterior e interiores deben cumplir los siguientes criterios:  
+ Para un `CurvePolygon` instancia sea válida los anillos exterior e interiores deben cumplir los siguientes criterios:  
   
 1.  Solo pueden tocar en puntos de tangencia únicos.  
   
@@ -82,7 +82,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
 4.  Cada anillo debe ser un tipo de curva aceptable.  
   
- `CurvePolygon` instancias también tienen que cumplir criterios concretos en función de si están `geometry` o `geography` tipos de datos.  
+ `CurvePolygon` las instancias también deben cumplir criterios concretos en función de si son `geometry` o `geography` tipos de datos.  
   
 #### <a name="geometry-data-type"></a>Tipo de datos geometry  
  Una instancia de **geometryCurvePolygon** válida debe tener los siguientes atributos:  
@@ -136,7 +136,7 @@ SET @g = geometry::Parse('CURVEPOLYGON EMPTY');
 ```  
   
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. Declarar y crear instancias de una instancia geometry con un CurvePolygon en la misma instrucción  
- Este fragmento de código muestra cómo declarar e inicializar una instancia geometry con un `CurvePolygon` en la misma instrucción:  
+ Este fragmento de código muestra cómo declarar e inicializar una instancia de geometry con un `CurvePolygon` en la misma instrucción:  
   
 ```tsql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
@@ -159,7 +159,7 @@ SELECT @g.STArea() AS Area;
 ```  
   
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. Almacenar un CurvePolygon que contiene anillos interiores  
- En este ejemplo se crea un anillo en una `CurvePolygon` instancia (un límite de anillo y un anillo interior exterior se usa para definir el anillo):  
+ En este ejemplo se crea un anillo en una `CurvePolygon` instancia (se usa un límite de anillo y un anillo interior exterior para definir el anillo):  
   
 ```tsql  
 DECLARE @g geometry;  
@@ -167,7 +167,7 @@ SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), 
 SELECT @g.STArea() AS Area;  
 ```  
   
- Este ejemplo muestra ambos válido `CurvePolygon` instancia y una instancia no válida al usar los anillos interiores:  
+ En este ejemplo muestra ambos válido `CurvePolygon` instancia y una instancia no válida al usar los anillos interiores:  
   
 ```tsql  
 DECLARE @g1 geometry, @g2 geometry;  

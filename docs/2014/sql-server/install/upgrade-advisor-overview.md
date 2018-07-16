@@ -1,5 +1,5 @@
 ---
-title: Introducción al Asistente de actualización | Documentos de Microsoft
+title: Introducción del Asistente para actualización | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Report Viewer
 - SQL Server Upgrade Advisor, components
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], about analysis
 ms.assetid: f5c56f63-4478-40af-abb9-642f58a0026c
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b204fd2f108ce4a2a12d6036e4ddc51ea5e9edfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b30fddb6ce8570b438c869d72c2d3d0ac48036e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315965"
 ---
 # <a name="upgrade-advisor-overview"></a>Información general sobre el Asesor de actualizaciones
   El Asesor de actualizaciones proporciona una consola central para analizar los componentes de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] y [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] así como para ver informes que contienen información sobre los resultados del análisis.  
@@ -43,10 +43,10 @@ ms.locfileid: "36199289"
   
 -   Ayuda del Asesor de actualizaciones  
   
- La primera vez que utilice el Asesor de actualizaciones, ejecute el Asistente para análisis del Asesor de actualizaciones para analizar un servidor. Cuando el asistente finalice el análisis, haga clic en **iniciar informe** desde el asistente o vuelva a la página de inicio del Asesor de actualizaciones. Desde allí, ejecute el Visor de informes del Asesor de actualizaciones para ver el informe. El informe proporciona vínculos a temas de información que le ayudarán a resolver los problemas conocidos.  
+ La primera vez que utilice el Asesor de actualizaciones, ejecute el Asistente para análisis del Asesor de actualizaciones para analizar un servidor. Cuando el análisis complete el asistente, haga clic en **iniciar informe** desde el asistente o vuelva a la página de inicio del Asesor de actualizaciones. Desde allí, ejecute el Visor de informes del Asesor de actualizaciones para ver el informe. El informe proporciona vínculos a temas de información que le ayudarán a resolver los problemas conocidos.  
   
 ## <a name="upgrade-advisor-analysis-wizard"></a>Asistente para análisis del Asesor de actualizaciones  
- Para llevar a cabo un análisis, haga clic en **iniciar el Asistente de análisis de Asesor de actualizaciones** en la página de inicio del Asesor de actualizaciones. El Asistente para análisis del Asesor de actualizaciones recopilará información sobre el equipo, las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los archivos de seguimiento que desea analizar. Una vez recopilada y confirmada toda la información, el Asistente para análisis del Asesor de actualizaciones analizará los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para llevar a cabo un análisis, haga clic en **iniciar Asistente de análisis del Asistente para actualización** en la página de inicio del Asesor de actualizaciones. El Asistente para análisis del Asesor de actualizaciones recopilará información sobre el equipo, las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los archivos de seguimiento que desea analizar. Una vez recopilada y confirmada toda la información, el Asistente para análisis del Asesor de actualizaciones analizará los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Cada vez que ejecute el Asistente para análisis del Asesor de actualizaciones, se generará un informe independiente y no se sobrescribirá los informes existentes relativos a los componentes seleccionados. No obstante, el visor de informes solo muestra los cinco últimos informes.  
@@ -75,13 +75,13 @@ ms.locfileid: "36199289"
  El Asesor de actualizaciones no analiza procedimientos almacenados cifrados, código escrito en procedimientos almacenados extendidos ni código fuente escrito en un lenguaje que no sea [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="upgrade-advisor-report-viewer"></a>Visor de informes del Asesor de actualizaciones  
- Para ver un informe del Asesor de actualizaciones, haga clic en **iniciar el Visor de informes de Asesor de actualizaciones** en la página de inicio del Asesor de actualizaciones. Cuando se inicie el Visor de informes del Asesor de actualizaciones, se cargarán los informes ubicados en el directorio predeterminado. Los informes no se muestran si el Visor de informes del Asesor de actualizaciones no encuentra ningún informe en el directorio predeterminado. Si no hay ningún informe en el directorio predeterminado, puede ejecutar el Asistente para análisis del Asesor de actualizaciones para crear un informe o cargar un informe existente de otro servidor o de un subdirectorio.  
+ Para ver un informe del Asesor de actualizaciones, haga clic en **iniciar Visor de informes de Asesor de actualizaciones** en la página de inicio del Asesor de actualizaciones. Cuando se inicie el Visor de informes del Asesor de actualizaciones, se cargarán los informes ubicados en el directorio predeterminado. No se muestran los informes si el Visor de informes del Asesor de actualizaciones no encuentra ningún informe en el directorio predeterminado. Si no hay ningún informe en el directorio predeterminado, puede ejecutar el Asistente para análisis del Asesor de actualizaciones para crear un informe o cargar un informe existente de otro servidor o de un subdirectorio.  
   
- El Asesor de actualizaciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no sobrescribe informes existentes. No obstante, el visor de informes solo muestra los cinco últimos informes. Para ver un informe anterior, seleccione el informe en el **informe** cuadro de lista desplegable. La marca de tiempo indica la fecha y la hora en que se generó el informe.  
+ El Asesor de actualizaciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no sobrescribe informes existentes. No obstante, el visor de informes solo muestra los cinco últimos informes. Para ver un informe anterior, seleccione el informe desde el **informe** cuadro de lista desplegable. La marca de tiempo indica la fecha y la hora en que se generó el informe.  
   
  Cuando los archivos XML del Asistente para análisis del Asesor de actualizaciones se cargan en el Visor de informes del Asesor de actualizaciones, aparecerá un informe por cada componente. El informe contiene todos los problemas conocidos, tanto detectables como no detectables, que deben solucionarse. Para cada problema existe un icono que indica la importancia, una etiqueta que informa de cuándo debe corregirse el problema y una breve descripción. Cuando expanda un problema, verá una descripción más extensa, un vínculo a los detalles del problema y otro vínculo al archivo de Ayuda. La información de cada problema está diseñada para proporcionar la información necesaria para corregir el problema.  
   
- La mayoría de los componentes tienen problemas que no se pueden detectar. Para ver estos problemas, expanda la **otros problemas de actualización** de elemento para el componente y, a continuación, haga clic en el vínculo para ver información adicional sobre los problemas en la documentación. Para obtener más información sobre los problemas de compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ La mayoría de los componentes tienen problemas que no se pueden detectar. Para ver estos problemas, expanda el **otros problemas de actualización** elemento para el componente y, a continuación, haga clic en el vínculo para ver información adicional sobre los problemas en la documentación. Para obtener más información sobre los problemas de compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
  [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

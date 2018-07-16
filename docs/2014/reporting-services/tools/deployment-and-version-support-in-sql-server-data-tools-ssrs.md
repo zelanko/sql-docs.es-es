@@ -1,5 +1,5 @@
 ---
-title: Implementación y compatibilidad de versiones de SQL Server Data Tools (SSRS) | Documentos de Microsoft
+title: Implementación y compatibilidad de versiones en SQL Server Data Tools (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d52ae21eb9313bbb58d04305c9dd79eb41551290
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 856834aa8c29ebaba0661012383d52ad30e3ad59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313237"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] admite los escenarios siguientes:  
@@ -74,7 +74,7 @@ ms.locfileid: "36199840"
 |[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Diseñador de informes RDLC|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|Esquema RDL 2005|No compatible|No admite el esquema RDL 2008.|  
 |[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Controles del Visor|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|RDL 2008 no se admite en modo local|N/D|Puede ver informes RDL 2008 en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de informes en modo de servidor.|  
   
- Para obtener más información acerca de cómo abrir informes en una versión anterior del esquema de definición de informe, vea [Upgrade Reports](../install-windows/upgrade-reports.md). Para obtener más información sobre esquemas de definición de informe concretos, vea la [SQL Server RDL Specification](http://go.microsoft.com/fwlink/?linkid=116865).  
+ Para obtener más información acerca de cómo abrir informes en una versión anterior del esquema de definición de informe, vea [actualizar informes](../install-windows/upgrade-reports.md). Para obtener más información sobre esquemas de definición de informe concretos, vea la [SQL Server RDL Specification](http://go.microsoft.com/fwlink/?linkid=116865).  
   
 ## <a name="see-also"></a>Vea también  
  [Publicación de orígenes de datos e informes](../reports/publishing-data-sources-and-reports.md)  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: 52
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2d9c3d3bbae3d7c267a6196eef0d7d0660c4302b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2e80c45aeab9b9ea762b56640d68d46df0d4d4fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307005"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Informes de Reporting Services (SSRS)
   Los informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] son definiciones de informe basadas en XML que incluyen los datos y elementos de diseño de los informes. En un sistema de archivos de cliente, las definiciones de informe tienen la extensión de archivo .rdl. Una vez que se publica un informe, se convierte en un elemento de informe que se almacena en el servidor de informes o en el sitio de SharePoint. Los informes constituyen un único componente de la plataforma de generación de informes basada en servidor que proporciona [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -87,7 +87,7 @@ ms.locfileid: "36199851"
   
         -   [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
-        -   [Gráficos &#40;el generador de informes SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+        -   [Los gráficos &#40;generador de informes y SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
         -   [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36199851"
   
     -   **Personalice los datos y el diseño.** Cree el diseño del informe. Una definición de informe tiene un cuerpo, orígenes de datos, conjuntos de datos, regiones de datos, cuadros de texto, líneas e imágenes de informe. Los rectángulos se usan como contenedores de diseño, además de como elementos visuales. Personalice cada región de datos escribiendo expresiones para controlar el filtrado, la agrupación, la ordenación, el formato y la visualización de los datos. Agregue los nombres, las ubicaciones y otra información de identificación del informe que ayude a administrar docenas o cientos de informes. Agregue los elementos visuales y los contenedores para organizar los elementos de diseño de la página. Para obtener más información, consulte los temas siguientes:  
   
-        -   [Filtrar, agrupar y ordenar datos &#40;el generador de informes SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [Filtrar, agrupar y ordenar datos &#40;generador de informes y SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
         -   [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36199851"
   
         -   [Imágenes, cuadros de texto rectángulos y líneas &#40;Generador de informes y SSRS&#41;](../report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
-        -   [Representación y diseño de página &#40;el generador de informes SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+        -   [Representación y diseño de página &#40;generador de informes y SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
     -   **Configure las características de interactividad.** Agregue características de interactividad para los lectores del informe. Por ejemplo, agregue botones de ordenación o elementos de alternancia para ver las consultas. Para más información, vea [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36199851"
 ##  <a name="bkmk_SecureReportsSummary"></a> Proteger informes  
  Para proteger un informe:  
   
--   En el administrador del servidor de informes, identifique el sistema de autorización y autenticación empleado para la instalación de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. De forma predeterminada, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza autenticación de Windows, la seguridad integrada y asignación de roles para ayudar a controlar el acceso a los informes publicados. Para más información, vea [Roles y permisos &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) y [Seguridad y protección de Reporting Services](../security/reporting-services-security-and-protection.md).  
+-   En el administrador del servidor de informes, identifique el sistema de autorización y autenticación empleado para la instalación de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. De forma predeterminada, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza autenticación de Windows, la seguridad integrada y asignación de roles para ayudar a controlar el acceso a informes publicados. Para más información, vea [Roles y permisos &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) y [Seguridad y protección de Reporting Services](../security/reporting-services-security-and-protection.md).  
   
 ## <a name="create-notifications-based-on-report-data"></a>Crear notificaciones basadas en datos del informe  
  Puede crear alertas de datos de los informes publicados en un sitio de SharePoint. Las alertas de datos se basan en las fuentes de distribución de datos de las regiones de datos del informe. De forma predeterminada, las regiones de datos se asignan automáticamente. Los autores de informes pueden facilitar la creación de alertas de datos en sus informes asignando los nombres de las regiones de datos en función de su objetivo comercial. Cuando cree una alerta de datos, recibirá un mensaje de correo electrónico en el que se le notificará cuándo los datos cumplen las condiciones especificadas. Para más información, vea [Generar fuentes de distribución de datos a partir de informes &#40;Generador de informes y SSRS&#41;](../report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Crear una alerta de datos en el Diseñador de alertas de datos](../create-a-data-alert-in-data-alert-designer.md) y [Alertas de datos de Reporting Services](../reporting-services-data-alerts.md).  

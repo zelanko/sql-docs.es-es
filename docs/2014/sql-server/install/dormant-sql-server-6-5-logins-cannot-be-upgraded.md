@@ -1,5 +1,5 @@
 ---
-title: No se pueden actualizar los inicios de sesión de SQL Server 6.5 inactivos | Documentos de Microsoft
+title: Inicios de sesión de SQL Server 6.5 inactivos no se puede actualizar | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - passwords [SQL Server], dormant logins
 - dormant logins
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - password hashes [SQL Server]
 ms.assetid: ebe18a74-0375-4df4-b894-239f8fdabb64
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7bf1bc14deea80f60692b9b25cc1f119ac69d307
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0103f835ddd3e876984a771901e72926de4c4614
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323685"
 ---
 # <a name="dormant-sql-server-65-logins-cannot-be-upgraded"></a>No se pueden actualizar los inicios de sesión inactivos de SQL Server 6.5
   El Asesor de actualizaciones detectó un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuya contraseña no se puede actualizar directamente a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

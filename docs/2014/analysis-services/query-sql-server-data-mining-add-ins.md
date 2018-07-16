@@ -1,5 +1,5 @@
 ---
-title: Consulta (complementos de minería de datos de servidor SQL) | Documentos de Microsoft
+title: Consulta (datos de SQL Server a los complementos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [data mining]
 - Data Mining Query Advanced Editor
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - DMX
 ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d2314c847745ac51d1bc7fb99b7c6f55a3f061af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c2ddae6582355e271488389d6e4005a5d235a74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289781"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>Consulta (Complementos de minería de datos de SQL Server)
-  ![Botón de consulta de modelo, cinta de opciones de minería de datos](media/dmc-query.gif "botón consulta modelo, cinta de opciones de minería de datos")  
+  ![Botón de consulta de modelo, cinta de opciones minería de datos](media/dmc-query.gif "botón modelo de consultas, cinta de opciones minería de datos")  
   
  El Asistente para **Consulta** le permite interactuar con modelos de minería de datos existentes con el fin de realizar predicciones a partir de los datos de una tabla de Excel, un rango de Excel u otro origen de datos. El proceso de aplicar nuevos datos a un modelo existente para predecir tendencias se denomina *consulta de predicción*.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36197703"
   
 4.  Por último, el asistente le ofrece también la posibilidad de elegir una o varias predicciones, y especificar un destino donde guardar los resultados.  
   
- En cualquier momento puede hacer clic en **Avanzadas** para cambiar al **Editor de consultas avanzadas de minería de datos**, que le permitirá controlar mejor cada parte de la instrucción DMX. Para obtener más información sobre cómo usar la herramientas de edición avanzada de consultas, vea [avanzada Editor de consultas de minería de datos](advanced-data-mining-query-editor.md).  
+ En cualquier momento puede hacer clic en **Avanzadas** para cambiar al **Editor de consultas avanzadas de minería de datos**, que le permitirá controlar mejor cada parte de la instrucción DMX. Para obtener más información sobre cómo usar las herramientas de edición de consultas avanzadas, vea [avanzada Editor de consultas de minería de datos](advanced-data-mining-query-editor.md).  
   
 ### <a name="requirements"></a>Requisitos  
  Para usar el **consulta** asistente, debe estar conectado a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Además, el servidor debe contener como mínimo un modelo de minería de datos de un tipo adecuado. Si no hay disponible ningún modelo de minería de datos, puede crear uno con los asistentes que ofrece el Cliente de minería de datos para Excel. Para obtener información sobre cómo crear un nuevo modo de minería de datos mediante un asistente, vea [crear un modelo de minería de datos](creating-a-data-mining-model.md).  

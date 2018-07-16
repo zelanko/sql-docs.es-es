@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 8: Crear una regla de dominio compuesto | Documentos de Microsoft'
+title: 'Tarea 8: Crear una regla de dominio compuesto | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -10,31 +10,31 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 18461e889e56f647b869d2b60cae49d662786160
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c8779496e3e352a59477cf10f12a13011c5c6b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189352"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>Tarea 8: crear una regla de dominio compuesto
-  En esta tarea, crear una regla para la **validación de direcciones** dominio compuesto. Definir una regla entre dominios: si **City** es **Los Ángeles**, **estado** debe ser **CA** donde **City** y **estado** son dos dominios.  
+  En esta tarea, creará una regla para el **validación de direcciones** dominio compuesto. Definir una regla entre dominios: si **Ciudad** es **Los Ángeles**, **estado** debe ser **CA** donde **Ciudad** y **estado** son dos dominios.  
   
 1.  En el panel derecho, cambie a la **reglas de CD** ficha.  
   
 2.  Haga clic en **agregar una nueva regla de dominio** desde la barra de herramientas.  
   
-3.  Tipo de **regla ciudad-estado** para **nombre** y presione **ENTRAR**.  
+3.  Tipo **regla ciudad-estado** para **nombre** y presione **ENTRAR**.  
   
-4.  En el **una regla de generación** panel, seleccione **City** en la lista de dominios y seleccione la condición **es igual al valor** y tipo **Los Ángeles** para el valor.  
+4.  En el **una regla de generación** panel, seleccione **Ciudad** en la lista de dominios y seleccione la condición **es igual al valor** y tipo **Los Ángeles** para el valor.  
   
-5.  En el **, a continuación,** panel, seleccione **estado** en la lista de dominios y seleccione **es igual al valor**, tipo **CA** del valor y presione **Ficha**.  
+5.  En el **, a continuación,** panel, seleccione **estado** en la lista de dominios y seleccione **es igual al valor**, tipo **CA** para el valor y presione **Ficha**.  
   
      ![Regla de dominio compuesto](../../2014/tutorials/media/et-creatingacompositedomainrule.jpg "regla de dominio compuesto")  
   

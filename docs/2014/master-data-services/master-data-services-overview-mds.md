@@ -1,5 +1,5 @@
 ---
-title: Introducción a Master Data Services | Documentos de Microsoft
+title: Introducción a Master Data Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 caps.latest.revision: 24
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6ba63353b1a5fba1e5853f641cc6217002f0c805
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 121113386ac42e689b2b8f73e60642c868c170f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329955"
 ---
 # <a name="master-data-services-overview"></a>Introducción a Master Data Services
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], el modelo es el contenedor de nivel superior de la estructura de datos maestros. Cree un modelo para administrar grupos de datos similares, por ejemplo, para administrar los datos de productos en línea. Un modelo contiene una o más entidades y las entidades contienen miembros que son los registros de datos.  
@@ -39,7 +39,7 @@ ms.locfileid: "36202117"
   
  Por ejemplo, la entidad Producto podría tener los atributos de forma libre Costo y Peso. Además, hay un atributo basado en dominio para el color que contiene valores que se rellenan con los miembros de la entidad de color. Esta lista maestra de colores se usa como valores de atributo para la entidad Producto.  
   
- ![Entidad de producto con el atributo Color a ambos basado en dominio](../../2014/master-data-services/media/mds-productentity-colorattribute.png "entidad de producto con el atributo Color a ambos basado en dominio")  
+ ![Entidad de producto con el atributo de Color basado en dominio](../../2014/master-data-services/media/mds-productentity-colorattribute.png "entidad de producto con el atributo de Color basado en dominio")  
   
  Las jerarquías derivadas proceden de las relaciones entre entidades en un modelo. Estas son las relaciones de atributo basado en dominio. Por ejemplo, en el modelo de producto, puede tener una jerarquía de color derivada que proviene de la relación entre las entidades de color y producto.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "36202117"
 |Si es necesario, crear jerarquías explícitas|Si desea crear jerarquías que no se basen en niveles y que incluyan miembros de una sola entidad, puede crear jerarquías explícitas.|[Jerarquías explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)<br /><br /> [Crear una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |Si es necesario, crear colecciones|Si desea ver agrupaciones diferentes de miembros para notificación o análisis, y no necesita una jerarquía completa, cree una colección.<br /><br /> Nota: Los usuarios pueden crear colecciones en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] si tienen el permiso **Actualizar** , como mínimo, respecto al objeto de modelo de colección y acceso al área funcional del **Explorador** .|[Colecciones &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)<br /><br /> [Crear una colección &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
 |Crear metadatos definidos por el usuario|Para describir los objetos de modelo, agregue los metadatos definidos por el usuario al modelo. Los metadatos podrían incluir el propietario de un objeto o el origen del que proceden los datos.|[Metadatos &#40;Master Data Services&#41;](../../2014/master-data-services/metadata-master-data-services.md)<br /><br /> [Agregar metadatos &#40;Master Data Services&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)|  
-|Bloquear una versión del modelo y asignar una marca de versión|Bloquee una versión del modelo para evitar cambios en los miembros, excepto los realizados por los administradores. Cuando los datos de la versión se han validado correctamente con las reglas de negocios, puede confirmar la versión, lo que evita los cambios en los miembros realizados por todos los usuarios.<br /><br /> Cree y asigne una marca de versión al modelo. Las marcas ayudan a los usuarios y sistemas de suscripción a identificar la versión del modelo que utilizan.|[Versiones &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)<br /><br /> [Bloquear una versión &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)<br /><br /> [Crear una marca de versión &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
-|Crear vistas de suscripción|Para que los sistemas de suscripción usen sus datos maestros, cree vistas de suscripción, que crean vistas estándar en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Exportar datos &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)<br /><br /> [Crear una vista de suscripción &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)|  
+|Bloquear una versión del modelo y asignar una marca de versión|Bloquee una versión del modelo para evitar cambios en los miembros, excepto los realizados por los administradores. Cuando los datos de la versión se han validado correctamente con las reglas de negocios, puede confirmar la versión, lo que evita los cambios en los miembros realizados por todos los usuarios.<br /><br /> Cree y asigne una marca de versión al modelo. Las marcas ayudan a los usuarios y sistemas de suscripción a identificar la versión del modelo que utilizan.|[Las versiones &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)<br /><br /> [Bloquear una versión &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)<br /><br /> [Crear una marca de versión &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
+|Crear vistas de suscripción|Para que los sistemas de suscripción usen sus datos maestros, cree vistas de suscripción, que crean vistas estándar en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Exportar datos &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)<br /><br /> [Crear una vista de suscripciones &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)|  
 |Configurar los permisos de usuario y de grupo|No puede copiar los permisos de usuario y de grupo de una prueba en un entorno de producción. Sin embargo, puede utilizar su entorno de pruebas para determinar la seguridad que desea utilizar posteriormente en producción.|[Seguridad &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)<br /><br /> [Agregar un grupo &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)<br /><br /> [Agregar un usuario &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)|  
   
  Cuando esté listo, puede implementar su modelo, con o sin sus datos, en el entorno de producción. Para obtener más información, consulte [Implementar modelos &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md).  

@@ -1,5 +1,5 @@
 ---
-title: Elemento Usage (MiningModelColumn) (ASSL) | Documentos de Microsoft
+title: Elemento Usage (MiningModelColumn) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Usage element
 ms.assetid: 435a857e-37a9-434e-9de1-354f1ff2993f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a4e4c2b11a9a9281f64062390257bf5ddf3145b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6767c4c5ac535ac603cc6182cbe645088c8ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265308"
 ---
 # <a name="usage-element-miningmodelcolumn-assl"></a>Elemento Usage (MiningModelColumn) (ASSL)
   Describe cómo la columna asociada en el elemento primario [MiningStructure](../objects/miningstructure-element-assl.md) se utiliza.  
@@ -70,7 +70,7 @@ ms.locfileid: "36199440"
 |*Entrada*|La columna es una columna de entrada.|  
 |*Predict*|La columna es una columna de predicción.|  
 |*PredictOnly*|La columna es solo una columna de predicción.|  
-|*Ninguno*|El modelo no utiliza la columna. **Advertencia:** cuando el valor de uso es "None", Analysis Services no envía ningún valor para el servidor de forma predeterminada; por lo tanto, el atributo de uso no está incluido en la solicitud/respuesta.|  
+|*Ninguno*|El modelo no utiliza la columna. **Advertencia:** cuando el valor de Usage es "None", Analysis Services no envía ningún valor para el servidor de forma predeterminada; por lo tanto, el atributo de uso no está incluido en la solicitud/respuesta.|  
   
  La enumeración que corresponde a los valores permitidos para `Usage` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MiningModelColumnUsages>.  
   

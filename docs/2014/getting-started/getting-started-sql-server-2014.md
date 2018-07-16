@@ -1,5 +1,5 @@
 ---
-title: Introducción (SQL Server 2014) | Documentos de Microsoft
+title: Introducción (SQL Server 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
@@ -15,27 +15,27 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
 caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6fdc2a443c0318fc7a40a21034171c5a043fd43d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5dc6314da166a0503f31326dfd562fc42a635f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205875"
 ---
 # <a name="getting-started-sql-server-2014"></a>Introducción (SQL Server 2014)
   Buscar orígenes de información, requisitos del sistema, instrucciones de instalación y mucho más de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
- [Especificaciones de producto de SQL Server 2014](sql-server-2014-product-specifications.md)  
+ [Especificaciones de producto para SQL Server 2014](sql-server-2014-product-specifications.md)  
   
  [Novedades de SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)  
   
- [Introducción a la nube híbrida SQL Server 2014](introduction-to-sql-server-2014-hybrid-cloud.md)  
+ [Introducción a la nube híbrida de SQL Server 2014](introduction-to-sql-server-2014-hybrid-cloud.md)  
   
  [Inicio rápido de instalación de SQL Server 2014](quick-start-installation-of-sql-server-2014.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36199732"
   
  [Compatibilidad con versiones anteriores](backward-compatibility.md)  
   
- [Acerca de los términos de licencia SQL Server](about-the-sql-server-license-terms.md)  
+ [Acerca de los términos de licencia de SQL Server](about-the-sql-server-license-terms.md)  
   
  [Declaración de privacidad de Microsoft SQL Server](microsoft-sql-server-privacy-statement.md)  
   

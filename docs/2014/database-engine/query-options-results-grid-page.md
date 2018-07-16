@@ -1,5 +1,5 @@
 ---
-title: Opciones de consulta de resultados (página de cuadrícula) | Documentos de Microsoft
+title: Opciones de consulta (página de cuadrícula) resultados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.grid.f1
 ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4a06b4ad95b844dd002bf1efbb367b22193d3979
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba8b1d1fb182ca0f16fe157630253b74b9580eb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312295"
 ---
 # <a name="query-options-results-grid-page"></a>Resultados de Opciones de consulta (página Cuadrícula)
   Utilice esta página para especificar las opciones de visualización de un conjunto de resultados de consulta en formato de cuadrícula.  
   
 ## <a name="options"></a>Opciones  
- **Incluir la consulta en el conjunto de resultados**  
+ **Incluir la consulta del conjunto de resultados**  
  Devuelve el texto de la consulta como parte del conjunto de resultados.  
   
  **Incluir encabezados de columna al copiar o guardar los resultados**  
@@ -36,10 +36,10 @@ ms.locfileid: "36199735"
  **Descartar resultados tras la ejecución**  
  Si descarta los resultados de la consulta después de que la pantalla los reciba, liberará memoria.  
   
- **Mostrar los resultados en una pestaña independiente**  
+ **Mostrar resultados en una pestaña independiente**  
  Muestra el conjunto de resultados en una nueva ventana de documento, en lugar de mostrarlos en la parte inferior de la ventana del documento de consulta.  
   
- **Cambiar a la pestaña de resultados tras ejecutar la consulta**  
+ **Cambie a la pestaña de resultados tras ejecutar la consulta**  
  Establece el foco de la pantalla automáticamente en el conjunto de resultados.  
   
  **Número máximo de caracteres recuperado**  

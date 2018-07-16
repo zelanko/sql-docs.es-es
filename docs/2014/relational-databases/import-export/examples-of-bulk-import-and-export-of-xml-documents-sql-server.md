@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - field terminators [SQL Server]
 - bulk importing [SQL Server], data formats
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ef7ed95cce28904377f0aa9fd1b446c89fb0db1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 957ca45730f0f16febff3c86d2c459965069bd3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303935"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Ejemplos de importación y exportación de forma masiva documentos XML (SQL Server)
     
-##  <a name="top"></a> Puede de forma masiva documentos XML de importación a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos o de forma masiva exportarlos desde un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos. Este tema proporciona ejemplos de ambos casos.  
+##  <a name="top"></a> Puede de forma masiva documentos XML de importación en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos o de forma masiva exportarlos desde un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos. Este tema proporciona ejemplos de ambos casos.  
   
  Para importar datos de forma masiva de un archivo de datos a una tabla o vista sin particiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede utilizar lo siguiente:  
   
@@ -43,7 +42,7 @@ ms.locfileid: "36199366"
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- Para obtener más información, consulte [importar y exportar datos de forma masiva con la utilidad bcp &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) y [importación masiva de datos mediante el uso de BULK INSERT u OPENROWSET&#40;masiva... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ Para obtener más información, consulte [importar y exportar datos de forma masiva con la utilidad bcp &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) y [importación masiva de datos mediante BULK INSERT u OPENROWSET&#40;masiva... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ## <a name="examples"></a>Ejemplos  
  Los ejemplos son los siguientes:  
@@ -52,7 +51,7 @@ ms.locfileid: "36199366"
   
 -   B. [Importación masiva de datos XML en una fila existente](#existing_row)  
   
--   C. [Importación masiva de datos XML de un archivo que contiene una DTD](#file_contains_dtd)  
+-   C. [Importación masiva datos XML desde un archivo que contiene una DTD](#file_contains_dtd)  
   
 -   D. [Especificar el terminador de campo explícitamente mediante un archivo de formato](#field_terminator_in_format_file)  
   

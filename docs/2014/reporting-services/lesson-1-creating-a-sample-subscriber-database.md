@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c1b01246166c6d7e75f1083fc23b9bd15502c731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72d19e915fc937eb18ca1713e190d077f2e92d5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286721"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lección 1: Crear una base de datos de suscriptor de ejemplo
   Antes de que pueda definir una suscripción controlada por datos, debe disponer de un origen de datos que proporcione datos de suscripción. En este paso, creará una pequeña base de datos para almacenar los datos de suscripción utilizados en este tutorial. Más adelante, cuando la suscripción se haya procesado, el servidor de informes recupera estos datos y los utiliza para personalizar los resultados del informe, las opciones de entrega y el formato de presentación del informe.  
   
- Esta lección se supone que usa [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para crear un [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] base de datos.  
+ En esta lección se da por supuesto que usa [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para crear un [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] base de datos.  
   
 ### <a name="to-create-a-sample-subscriber-database"></a>Para crear una base de datos de suscriptor de ejemplo  
   
@@ -32,7 +32,7 @@ ms.locfileid: "36106284"
   
 2.  Haga clic con el botón derecho en Bases de datos y seleccione **Nueva base de datos...**.  
   
-3.  En el cuadro de diálogo nueva base de datos, en nombre de la base de datos, escriba *suscriptores*. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  En el cuadro de diálogo nueva base de datos, nombre de la base de datos, escriba *suscriptores*. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  Haga clic en el botón **Nueva consulta** de la barra de herramientas.  
   

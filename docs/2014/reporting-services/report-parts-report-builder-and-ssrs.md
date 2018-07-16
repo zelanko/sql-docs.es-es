@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fe79b6a9cd0e3c25caa2e3a1bccc67f0ac3e9be5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3fd8f519abce87b224d062cb245365b42d5ffc79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262081"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Elementos de informe (Generador de informes y SSRS)
   Las tablas, las matrices, los gráficos y las imágenes que se incluyen en los informes, se pueden publicar como *elementos de informe*. Se trata de elementos de informe que se han publicado por separado en un servidor de informes y se pueden volver a utilizar en otros informes. Los elementos de informe tienen una extensión de archivo .rsc.  
@@ -78,7 +78,7 @@ ms.locfileid: "36200389"
   
  Algunos elementos de informe pueden contener otros elementos de informe. Por ejemplo, una tabla puede contener un gráfico y un rectángulo puede contener una matriz y un gráfico. Al publicar un elemento de informe que contiene otros elementos de informe, se guardan como una unidad. Los demás elementos de informe se guardan incrustados en el elemento de informe que los contiene. No puede actualizarlos por separado, ni guardar los elementos del contenedor como elementos de informe independientes.  
   
- Para obtener más información sobre cómo publicar elementos de informe, vea [publicar y volver a publicar elementos de informe &#40;el generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
+ Para obtener más información sobre cómo publicar elementos de informe, vea [publicar y volver a publicar elementos de informe &#40;generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
   
 ### <a name="modifying-report-part-metadata"></a>Modificar los metadatos del elemento de informe  
  Puede publicar elementos de informe con la configuración predeterminada en una ubicación predeterminada, o guardar cada elemento de informe en una ubicación distinta y modificar los metadatos, por ejemplo el título y la descripción.  
@@ -97,12 +97,12 @@ ms.locfileid: "36200389"
 ### <a name="searching-for-report-parts"></a>Buscar elementos de informe  
  Pueden buscar elementos de informe en la galería de elementos de informe para agregarlos a un informe. Puede filtrar los elementos de informe por el nombre completo o solo parte de él, quien los creó, quien los modificó por última vez, cuando se modificaron por última vez, donde están almacenados, o el tipo de elemento de informe. Por ejemplo, podría buscar todos los gráficos creados la semana pasada por uno de sus colaboradores.  
   
- Puede ver los resultados de la búsqueda como miniaturas o como lista, y ordenar los resultados de la búsqueda por nombre, fechas de creación y modificación, y autor. Para obtener más información, consulte [buscar elementos de informe y establecer una carpeta predeterminada &#40;el generador de informes y SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
+ Puede ver los resultados de la búsqueda como miniaturas o como lista, y ordenar los resultados de la búsqueda por nombre, fechas de creación y modificación, y autor. Para obtener más información, consulte [buscar elementos de informe y establecer una carpeta predeterminada &#40;generador de informes y SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
   
 ### <a name="what-comes-with-a-report-part"></a>Componentes de un elemento de informe  
  Al agregar un elemento de informe al informe, también agrega todo lo que debe tener para que funcione. Por ejemplo, cualquier objeto que muestre datos depende de un conjunto de datos, es decir, una consulta y una conexión a un origen de datos. También puede tener uno o varios parámetros. Todos los elementos de los que depende son sus *dependencias*y todos ellos, o punteros que los señalan, se incluyen con el elemento de informe al agregarlo a un informe. El conjunto de datos y los parámetros se enumeran en el panel Datos de informe en el informe.  
   
- El conjunto de datos para el elemento de informe se puede incrustar en el elemento de informe, o puede ser un conjunto de datos independiente y compartido al que el elemento de informe señala. Si se incrusta en el elemento de informe, quizá puede modificarlo. Si es un conjunto de datos compartido, es un objeto independiente para el que necesitaría permisos. Para obtener más información sobre compartidos y conjuntos de datos incrustados, vea [agregar datos a un informe &#40;el generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md).  
+ El conjunto de datos para el elemento de informe se puede incrustar en el elemento de informe, o puede ser un conjunto de datos independiente y compartido al que el elemento de informe señala. Si se incrusta en el elemento de informe, quizá puede modificarlo. Si es un conjunto de datos compartido, es un objeto independiente para el que necesitaría permisos. Para obtener más información sobre compartidos y conjuntos de datos incrustados, vea [agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md).  
   
 ### <a name="resolving-naming-conflicts"></a>Solucionar conflictos de nomenclatura  
  Cuando agrega un elemento de informe, el Generador de informes corrige los conflictos de nombre. Por ejemplo, si ya tiene Chart1 en un informe y agrega un elemento de informe denominado Chart1, el Generador de informes cambia el nombre del nuevo elemento de informe a Chart2 automáticamente. Si ya tiene Dataset1 en un informe y agrega un elemento de informe que hace referencia a otro conjunto de datos que también se llama Dataset1, el Generador de informes cambia el nombre del nuevo a Dataset2 y actualiza las referencias.  
@@ -118,7 +118,7 @@ ms.locfileid: "36200389"
  Cada vez que abre un informe, el Generador de informes comprueba si las instancias del servidor de elementos de ese informe se han actualizado en el servidor. También comprueba los cambios de los elementos dependientes de elementos de informe, como el conjunto de datos y los parámetros. Si algún elemento de informe publicado o sus dependencias se han actualizado en el servidor, una barra de información del informe muestra el número de elementos actualizados. Puede elegir ver, y aceptar o rechazar las actualizaciones, o bien descartar la barra de información. Si decide ver las actualizaciones, ve una miniatura del elemento de informe, quien realizó la última modificación y cuando tuvo lugar. A continuación, puede aceptar alguno de los elementos actualizados, o todos ellos.  
   
 > [!NOTE]  
->  Puede deshabilitar la barra de información y no ser informado si un elemento de informe ha cambiado. Establece esta opción al agregar el elemento de informe a su informe. Aunque haya deshabilitado la barra de información, aún puede comprobar las actualizaciones. Para obtener más información, consulte [seleccionar o desactivar las actualizaciones de &#40;el generador de informes y SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md).  
+>  Puede deshabilitar la barra de información y no ser informado si un elemento de informe ha cambiado. Establece esta opción al agregar el elemento de informe a su informe. Aunque haya deshabilitado la barra de información, aún puede comprobar las actualizaciones. Para obtener más información, consulte [buscar o desactivar actualizaciones &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md).  
   
  El Generador de informes busca diferencias entre la fecha de la última actualización del elemento de informe del servidor y la fecha en que usted sincronizó por última vez ese elemento de informe con el servidor. No comprueba la fecha en que modificó el elemento en su informe. Así, el elemento de informe en su informe y el elemento de informe en el servidor podrían ser bastante distintos, pero cuando el Generador de informes comprueba si hay actualizaciones, no encontrará ninguno.  
   
@@ -145,17 +145,17 @@ ms.locfileid: "36200389"
  Los elementos de informe funcionan de forma algo diferente en el Diseñador de informes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En el Diseñador de informes, la publicación es unidireccional: puede publicar un elemento de informe del Diseñador de informes, pero no puede reutilizar un elemento de informe existente en el Diseñador de informes. Para obtener más información, vea [Elementos de informe en el Diseñador de informes &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
- [Publicar y volver a publicar elementos de informe &#40;el generador de informes SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Publicar y volver a publicar elementos de informe &#40;generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [Buscar elementos de informe y establecer una carpeta predeterminada &#40;el generador de informes SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [Buscar elementos de informe y establecer una carpeta predeterminada &#40;generador de informes y SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [Busque actualizaciones o Turn Off &#40;el generador de informes SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
+ [Buscar o desactivar actualizaciones &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Elementos de informe y conjuntos de datos en el generador de informes](report-data/report-parts-and-datasets-in-report-builder.md)   
- [Solucionar problemas de elementos de informe &#40;el generador de informes SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Solucionar problemas de elementos de informe &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Administrar elementos de informe](report-design/managing-report-parts.md)   
  [El generador de informes elementos de informes 3 en SQL Server 2008 R2 (vídeo)](http://technet.microsoft.com/edge/Video/ff711300)   
- [Cómo Crear informes reutilizables partes con el generador de informes de SQL Server (vídeo)](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
+ [¿Cómo lo hago?: elementos de informe reutilizables crear con SQL Server Report Builder (vídeo)](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
   
   

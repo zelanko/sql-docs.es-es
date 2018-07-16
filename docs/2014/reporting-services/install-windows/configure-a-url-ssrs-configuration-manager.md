@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8426f8980bd10877c07d814921f3c73ee91f0c4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c22aac59568cac600904ebdd7e1508d0ada8bc98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288581"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar una dirección URL (Administrador de configuración de SSRS)
   Para poder utilizar el Administrador de informes o el servicio web del servidor de informes, debe configurar al menos una dirección URL para cada aplicación. Configurar las direcciones URL es obligatorio si ha instalado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de "solo archivos" (es decir, al seleccionar la opción **Install but do not configure the server (Instalar pero no configurar el servidor)** en la página Opciones de instalación del servidor de informes del Asistente para la instalación). Si instaló [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada, las direcciones URL ya están configuradas para cada aplicación. Si tiene un servidor de informes que está configurado para utilizar el modo integrado de SharePoint y actualiza la dirección URL del servicio web del servidor de informes utilizando la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], también debe actualizar la dirección URL en la Administración central de SharePoint.  
@@ -38,7 +38,7 @@ ms.locfileid: "36199079"
   
 -   Establecer propiedades avanzadas de las direcciones URL para definir más direcciones URL.  
   
- Para obtener más información acerca de cómo se almacenan y mantienen las direcciones URL o problemas de interoperabilidad, consulte [sobre reservas de direcciones URL y el registro &#40;Administrador de configuración de SSRS&#41; ](about-url-reservations-and-registration-ssrs-configuration-manager.md) y [Install Reporting Servicios y Internet Information Services Side-by-Side &#40;modo nativo de SSRS&#41;](install-reporting-and-internet-information-services-side-by-side.md)en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla. Para revisar ejemplos de direcciones URL que suelen usarse en una instalación de Reporting Services, vea [Ejemplos de direcciones URL](#URLExamples) en este tema.  
+ Para obtener más información acerca de cómo se almacenan y mantienen las direcciones URL o problemas de interoperabilidad, consulte [sobre reservas de direcciones URL y el registro &#40;SSRS Configuration Manager&#41; ](about-url-reservations-and-registration-ssrs-configuration-manager.md) y [Install Reporting Services e Internet Information Services Side-by-Side &#40;modo nativo de SSRS&#41;](install-reporting-and-internet-information-services-side-by-side.md)en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla. Para revisar ejemplos de direcciones URL que suelen usarse en una instalación de Reporting Services, vea [Ejemplos de direcciones URL](#URLExamples) en este tema.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Antes de crear o modificar una dirección URL, recuerde los puntos siguientes:  
@@ -51,7 +51,7 @@ ms.locfileid: "36199079"
   
 -   Elija una hora en la que haya poca actividad con los informes. Cada vez que la reserva de direcciones URL cambie, puede esperar que los dominios de aplicación para el servicio web del servidor de informes y el Administrador de informes se pudieran reciclar.  
   
--   Para obtener información general de la construcción de la dirección URL y el uso de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [configurar direcciones URL de servidor de informes &#40;Administrador de configuración de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md).  
+-   Para obtener información general de la construcción de la dirección URL y el uso de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [configurar direcciones URL del servidor de informes &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md).  
   
 ### <a name="to-configure-a-url-for-the-report-server-web-service"></a>Para configurar una dirección URL para el servicio web del servidor de informes  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36199079"
   
          Si tiene varias tarjetas o si la tarjeta de red admite tanto direcciones IPv4 como direcciones IPv6, verá varias direcciones IP. Si selecciona solo una dirección IP, limitará el acceso de la aplicación únicamente a la dirección IP (y a cualquier nombre de host que un servidor de nombres de dominio asigne a esa dirección). No puede utilizar el host local para tener acceso a un servidor de informes y no puede utilizar las direcciones IP de otras tarjetas de adaptadores de red que estén instalados en el equipo del servidor de informes. Normalmente, si selecciona este valor, es porque está configurando varias reservas de direcciones URL que también especifican direcciones IP explícitas o nombres de host (por ejemplo, uno para una tarjeta de un adaptador de red que se use para las conexiones de intranet y un segundo que se use para las conexiones de extranet).  
   
-5.  Especifique el puerto. El puerto 80 es el valor predeterminado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] y Windows Server 2008 porque se puede compartir con otras aplicaciones. Si desea utilizar un número de puerto personalizado, recuerde que tendrá que especificarlo siempre en la dirección URL que se usa para tener acceso al servidor de informes. Puede utilizar las técnicas siguientes para buscar un puerto disponible:  
+5.  Especifique el puerto. El puerto 80 es el valor predeterminado para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] y Windows Server 2008 porque se puede compartir con otras aplicaciones. Si desea utilizar un número de puerto personalizado, recuerde que tendrá que especificarlo siempre en la dirección URL que se usa para tener acceso al servidor de informes. Puede utilizar las técnicas siguientes para buscar un puerto disponible:  
   
     -   Desde un símbolo del sistema, escriba el comando siguiente para devolver una lista de los puertos TCP que se estén utilizando:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36199079"
   
 10. Pruebe la dirección URL haciendo clic en el vínculo en la sección **Direcciones URL** de la página. Observe que la base de datos del servidor de informes debe crearse y configurarse para poder probar la dirección URL. Para más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
-11. Además, si su servidor de informes se configura para utilizar el modo integrado de SharePoint, debe configurar la dirección URL del servicio web del servidor de informes en la Administración central de SharePoint. Para obtener más información sobre cómo actualizar la dirección URL del servicio Web del servidor de informes en Administración Central de SharePoint, vea [configuración y administración de un servidor de informes &#40;Reporting Services SharePoint Mode&#41; ](../configure-administer-report-server-reporting-services-sharepoint-mode.md) y [Informes SQL Server reporting Services &#40;el modo de SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md).  
+11. Además, si su servidor de informes se configura para utilizar el modo integrado de SharePoint, debe configurar la dirección URL del servicio web del servidor de informes en la Administración central de SharePoint. Para obtener más información sobre cómo actualizar la dirección URL del servicio Web del servidor de informes en Administración Central de SharePoint, vea [configuración y administración de un servidor de informes &#40;Reporting Services SharePoint Mode&#41; ](../configure-administer-report-server-reporting-services-sharepoint-mode.md) y [Servidor de reporting Services informe &#40;el modo de SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md).  
   
 ### <a name="to-create-a-url-reservation-for-report-manager"></a>Para crear una reserva de direcciones URL para el Administrador de informes  
   

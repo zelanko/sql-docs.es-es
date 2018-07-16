@@ -1,5 +1,5 @@
 ---
-title: 'Lección 6: Crear columnas calculadas | Documentos de Microsoft'
+title: 'Lección 6: Crear columnas calculadas | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: efec616591ab3e6d85b9199a5a4706ecd740c66e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f837fd314cd8a279e03cdfa2aa420920509510a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228415"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lección 6: Crear columnas calculadas
   En esta lección creará nuevos datos en el modelo agregando columnas calculadas. Una columna calculada está basada en datos que ya existen en el modelo. Para obtener más información, consulte [Columnas calculadas &#40;SSAS tabular&#41;](tabular-models/ssas-calculated-columns.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "36106646"
     > [!NOTE]  
     >  Si aparece un error, compruebe que los nombres de columna de la fórmula coinciden con los nombres de columna que cambió en [Lección 3: Cambiar el nombre de las columnas](rename-columns.md).  
   
-5.  Cambiar el nombre de esta columna para `Month Calendar`.  
+5.  Cambiar el nombre de esta columna a `Month Calendar`.  
   
  La columna calculada Calendario del mes proporciona un nombre ordenable del mes.  
   

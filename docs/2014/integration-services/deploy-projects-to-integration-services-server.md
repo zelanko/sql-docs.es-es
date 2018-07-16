@@ -1,5 +1,5 @@
 ---
-title: Implementar proyectos en el servidor de Integration Services | Documentos de Microsoft
+title: Implementar proyectos en el servidor de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 caps.latest.revision: 21
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d70afea75523ddd231a26186ec6f2e8af317cee9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 615d289b3232c59c6266ec8864d52b0a14a67591
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316895"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Implementación de paquetes en el servidor de Integration Services
   En la versión actual de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], puede implementar los proyectos en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . El servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permite administrar paquetes, ejecutar paquetes y configurar valores de tiempo de ejecución para paquetes usando entornos.  
@@ -27,7 +27,7 @@ ms.locfileid: "36199410"
  Para obtener más información sobre los entornos, vea [Crear y asignar un entorno de servidor](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
 > [!NOTE]  
->  Al igual que en versiones anteriores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], en la versión actual también puede implementar los paquetes en una instancia de SQL Server y usar el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para ejecutar y administrar los paquetes. Se usa el modelo de implementación de paquetes. Para obtener más información, consulte [implementación de paquetes &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+>  Al igual que en versiones anteriores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], en la versión actual también puede implementar los paquetes en una instancia de SQL Server y usar el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para ejecutar y administrar los paquetes. Se usa el modelo de implementación de paquetes. Para obtener más información, consulte [la implementación del paquete &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
   
  Para implementar un proyecto en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , debe completar las tareas siguientes:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36199410"
   
      -o bien-  
   
-     En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expanda la [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  **SSISDB** nodo en el Explorador de objetos y busque la carpeta de proyectos para el proyecto que desea implementar. Haga clic con el botón derecho en la carpeta **Proyectos** y, después, haga clic en **Implementar proyecto**.  
+     En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expanda el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  **SSISDB** nodo en el Explorador de objetos y busque la carpeta de proyectos para el proyecto que desea implementar. Haga clic con el botón derecho en la carpeta **Proyectos** y, después, haga clic en **Implementar proyecto**.  
   
      -o bien-  
   

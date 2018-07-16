@@ -1,5 +1,5 @@
 ---
-title: Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales (generador de informes y SSRS) | Documentos de Microsoft
+title: Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 89df13eecdce33869199e0b5a8e82b0395679475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 50da5a57968a7304c206f2aceb2efc24239600b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224685"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales (Generador de informes y SSRS)
   Su informe podría incluir conjuntos de datos generados automáticamente (también conocidos como conjuntos de datos ocultos) que no aparecen de forma predeterminada en el panel Datos de informe. Estos conjuntos de datos se crean de las formas siguientes:  
@@ -43,6 +43,6 @@ ms.locfileid: "36106706"
  [Diseñadores de consultas &#40;Generador de informes&#41;](../query-designers-report-builder.md)   
  [Diseñadores de consultas de Reporting Services](../reporting-services-query-designers.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-datasets-ssrs.md)  
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)  
   
   

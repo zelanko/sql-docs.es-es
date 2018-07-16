@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3745d2334f8b8abf4c60c292bba1a820432d088e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d1883651cc37b93383792b94f94695e0775436a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319835"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Mover las bases de datos del servidor de informes a otro equipo (Modo nativo de SSRS)
   Las bases de datos del servidor de informes que se emplean en una instalación se pueden mover a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se encuentre en un equipo diferente. Las bases de datos reportserver y reportservertempdb se deben mover o copiar en conjunto. Una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere las dos bases de datos; la base de datos reportservertempdb debe estar relacionada por nombre con la base de datos reportserver principal que se vaya a mover.  
@@ -62,7 +62,7 @@ ms.locfileid: "36197317"
   
 8.  Haga clic en **Agregar** para seleccionar los archivos .mdf y .ldf de la base de datos del servidor de informes que desea adjuntar. Repita este paso para la base de datos temporal del servidor de informes.  
   
-9. Una vez adjuntadas las bases de datos, compruebe que la `RSExecRole` es un rol de base de datos de la base de datos de servidor de informes y la base de datos temporal. `RSExecRole` debe tener select, insert, update, delete y permisos de referencia en las tablas de base de datos del servidor de informes y permisos de ejecución en los procedimientos almacenados. Para obtener más información, vea [Crear el RSExecRole](../security/create-the-rsexecrole.md).  
+9. Una vez adjuntadas las bases de datos, compruebe que el `RSExecRole` es un rol de base de datos en la base de datos de servidor de informes y la base de datos temporal. `RSExecRole` debe tener select, insert, update, delete y permisos de referencia en las tablas de base de datos del servidor de informes y los permisos de ejecución en los procedimientos almacenados. Para obtener más información, vea [Crear el RSExecRole](../security/create-the-rsexecrole.md).  
   
 10. Inicie la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y abra una conexión con el servidor de informes.  
   
@@ -218,11 +218,11 @@ GO
 7.  Haga clic en **Siguiente** y, a continuación, en **Finalizar**.  
   
 > [!NOTE]  
->  A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalación requiere que el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instancia incluye el `RSExecRole` rol. La creación de roles, el registro de inicio de sesión y las asignaciones de roles tienen lugar cuando se establece la conexión de la base de datos del servidor de informes a través de la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si se utilizan métodos alternativos (concretamente, si se utiliza la herramienta del símbolo del sistema rsconfig.exe) para configurar la conexión, el servidor de informes no estará en estado de funcionamiento. Es posible que tenga que escribir código WMI para que el servidor de informes esté disponible. Para más información, vea [Obtener acceso al proveedor WMI de Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
+>  Un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalación requiere que el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instancia incluye la `RSExecRole` rol. La creación de roles, el registro de inicio de sesión y las asignaciones de roles tienen lugar cuando se establece la conexión de la base de datos del servidor de informes a través de la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si se utilizan métodos alternativos (concretamente, si se utiliza la herramienta del símbolo del sistema rsconfig.exe) para configurar la conexión, el servidor de informes no estará en estado de funcionamiento. Es posible que tenga que escribir código WMI para que el servidor de informes esté disponible. Para más información, vea [Obtener acceso al proveedor WMI de Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Crear el RSExecRole](../security/create-the-rsexecrole.md)   
- [Iniciar y detener el servicio de servidor de informes](start-and-stop-the-report-server-service.md)   
+ [Iniciar y detener el servicio del servidor de informes](start-and-stop-the-report-server-service.md)   
  [Configurar una conexión de base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   

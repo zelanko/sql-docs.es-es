@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ec77f66bc627d851295a6afa90fb515c85b2ab84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9082ded2ceacd4a29364e3ee9b513887b2fcb1a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320775"
 ---
 # <a name="ado-net-source"></a>Origen de ADO NET
   El origen de ADO NET consume datos de un proveedor .NET y hace que los datos estén disponibles para el flujo de datos.  
@@ -71,7 +71,7 @@ ms.locfileid: "36200412"
 >  Cuando use una instrucción SQL para invocar un procedimiento almacenado que devuelve resultados de una tabla temporal, use la opción WITH RESULT SETS para definir los metadatos del conjunto de resultados.  
   
 > [!NOTE]  
->  Si usa una instrucción SQL para ejecutar un procedimiento almacenado y se produce un error en el paquete con el siguiente error, es posible que pueda resolver el error agregando la `SET FMTONLY OFF` instrucción antes de la instrucción exec.  
+>  Si usa una instrucción SQL para ejecutar un procedimiento almacenado y se produce un error en el paquete con el siguiente error, es posible que pueda resolver el error agregando la `SET FMTONLY OFF` antes de la instrucción exec.  
 >   
 >  **La columna <column_name> no se encuentra en el origen de datos.**  
   

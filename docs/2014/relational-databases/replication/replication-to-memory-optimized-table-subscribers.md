@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 569e88c7fbf844494276948690c583f69737ff14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bf93e552732ea0a5659211fbc11c2d3751a326a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188492"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicación en suscriptores de tablas con optimización para memoria
   Las tablas que actúan como suscriptores de replicación transaccional, excluida la replicación transaccional punto a punto, pueden configurarse como tablas optimizadas para memoria. Otras configuraciones de replicación no son compatibles con las tablas optimizadas para memoria.  
@@ -27,7 +27,7 @@ ms.locfileid: "36106528"
 ## <a name="configuring-a-memory-optimized-table-as-a-subscriber"></a>Configurar una tabla optimizada para memoria como suscriptor  
  Para configurar una tabla optimizada para memoria como suscriptor, realice los pasos siguientes.  
   
- **Crear y habilitar una publicación**  
+ **Crear y habilitar la publicación**  
   
 1.  Crear una publicación.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36106528"
   
 2.  Navegue hasta la carpeta de la instantánea. La ubicación predeterminada es "C:\Program Files\Microsoft SQL Server\MSSQL12. \<Instancia > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\".  
   
-3.  Busque la **. SCH** para la tabla y ábralo en Management Studio. Cambie el esquema de tabla y actualice el procedimiento almacenado como se describe a continuación.  
+3.  Busque el **. SCH** para la tabla de archivo y ábralo en Management Studio. Cambie el esquema de tabla y actualice el procedimiento almacenado como se describe a continuación.  
   
      Evalúe los índices definidos en el archivo IDX. Modifique `CREATE TABLE` para especificar los índices, las restricciones, la clave principal y la sintaxis optimizada para memoria necesarios. Para las tablas optimizadas para memoria, las columnas de índice deben ser NOT NULL y las columnas de índice de tipos de caracteres deben ser Unicode y usar la intercalación BIN2. Vea el ejemplo siguiente:  
   
@@ -230,7 +230,7 @@ ms.locfileid: "36106528"
     go  
     ```  
   
-5.  Crear la base de datos de suscriptor mediante la **elevar sus privilegios al aislamiento de instantánea** opción y establezca la intercalación predeterminada en Latin1_General_CS_AS_KS_WS usan tipos de datos de caracteres no Unicode.  
+5.  Crear la base de datos del suscriptor mediante la **elevar sus privilegios a aislamiento de instantánea** opción y establezca la intercalación predeterminada en Latin1_General_CS_AS_KS_WS usan tipos de datos de caracteres no Unicode.  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -305,7 +305,7 @@ GO
   
 -   Hay ciertas restricciones para la actualización de la clave principal de tablas que se replican en una tabla optimizada para memoria en un suscriptor. Para obtener más información, consulte [replicar cambios en una clave principal](#PrimaryKey).  
   
--   En las tablas optimizadas para memoria no se admiten claves externas, restricciones UNIQUE, desencadenadores, modificaciones de esquema, ROWGUIDCOL, columnas calculadas, compresión de datos, tipos de datos de alias, control de versiones ni bloqueos. Vea [Transact-SQL construcciones no admitidas por OLTP en memoria](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obtener información.  
+-   En las tablas optimizadas para memoria no se admiten claves externas, restricciones UNIQUE, desencadenadores, modificaciones de esquema, ROWGUIDCOL, columnas calculadas, compresión de datos, tipos de datos de alias, control de versiones ni bloqueos. Consulte [Transact-SQL construcciones no admitidas por OLTP en memoria](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obtener información.  
   
 ##  <a name="Schema"></a> Modificar un archivo de esquema  
   
@@ -317,7 +317,7 @@ GO
   
 -   ANSI_PADDING debe ser ON.  
   
-##  <a name="PrimaryKey"></a> Replicación de cambios en una clave principal  
+##  <a name="PrimaryKey"></a> Replicar cambios en una clave principal  
  La clave principal de una tabla optimizada para memoria no se puede actualizar. Para replicar la actualización de una clave principal en un suscriptor, modifique el procedimiento almacenado de actualización para entregar la actualización como un par de eliminación e inserción.  
   
 ## <a name="see-also"></a>Vea también  

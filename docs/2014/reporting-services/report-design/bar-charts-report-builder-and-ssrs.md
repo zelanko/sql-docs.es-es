@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1686efc8440a912ec54ab31532f5f4089a61ae7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: eb477d33d1e9f6d10d4c2b89d6fd9472725041ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224765"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Gráficos de barras (Generador de informes y SSRS)
   Un gráfico de barras muestra las series como conjuntos de barras horizontales. El gráfico de barras sencillo está estrechamente relacionado con el gráfico de columnas, que muestra las series como conjuntos de barras verticales, y con el gráfico de intervalos de barras, que muestra las series como conjuntos de barras horizontales con puntos iniciales y finales que varían.  
   
- El gráfico de barras es el único tipo de gráfico que muestra los datos horizontalmente. Por esta razón, se usa habitualmente para representar datos que se producen a lo largo del tiempo, con una fecha de inicio y otra de finalización. También se suele usar para mostrar información de categorías, ya que las categorías se pueden mostrar horizontalmente. Para obtener más información acerca de cómo agregar datos a un gráfico de barras, vea [gráficos &#40;el generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ El gráfico de barras es el único tipo de gráfico que muestra los datos horizontalmente. Por esta razón, se usa habitualmente para representar datos que se producen a lo largo del tiempo, con una fecha de inicio y otra de finalización. También se suele usar para mostrar información de categorías, ya que las categorías se pueden mostrar horizontalmente. Para obtener más información acerca de cómo agregar datos a un gráfico de barras, vea [gráficos &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  En la ilustración siguiente se muestra un gráfico de barras. El gráfico de barras se adapta perfectamente a estos datos porque las tres series comparten un período de tiempo común, lo que permite llevar a cabo comparaciones válidas.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36200314"
   
 -   Si desea agregar barras a una tabla o a una matriz del informe, considere la posibilidad de usar un medidor lineal en lugar de un gráfico de barras. El medidor lineal está diseñado para mostrar un valor en lugar de varios grupos, por lo que su uso es más flexible dentro de una lista o una región de datos de la tabla. Para obtener más información, vea [Medidores &#40;Generador de informes y SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
--   Puede agregar estilos de dibujo especiales a las barras de un gráfico de barras para aumentar su impacto visual. En los estilos de dibujo se incluyen cuñas, relieves, cilindros y degradados. Estos efectos han sido diseñados para mejorar el aspecto de los gráficos 2D. Si su gráfico es un gráfico 3D, se aplicarán los estilos de dibujo, pero el efecto puede no ser el mismo. Para obtener más información acerca de cómo agregar un estilo de dibujo a un gráfico de barras, vea [agregar bisel, relieve y estilos de textura a un gráfico &#40;el generador de informes y SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
+-   Puede agregar estilos de dibujo especiales a las barras de un gráfico de barras para aumentar su impacto visual. En los estilos de dibujo se incluyen cuñas, relieves, cilindros y degradados. Estos efectos han sido diseñados para mejorar el aspecto de los gráficos 2D. Si su gráfico es un gráfico 3D, se aplicarán los estilos de dibujo, pero el efecto puede no ser el mismo. Para obtener más información acerca de cómo agregar un estilo de dibujo a un gráfico de barras, vea [agregar estilos con bisel, relieve y textura a un gráfico &#40;generador de informes y SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
 -   Los gráficos de barras apiladas colocan las series una encima de otra para crear una barra apilada. Tiene la opción de separar el gráfico de barras apiladas en varios conjuntos de pilas para cada categoría. Las series apiladas agrupadas se muestran unas junto a las otras. Puede tener cualquier número de series apiladas agrupadas en un gráfico.  
   
@@ -66,10 +66,10 @@ ms.locfileid: "36200314"
  [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Puntos de datos vacíos y nulos en los gráficos &#40;Generador de informes y SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Gráficos de columnas &#40;Generador de informes y SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
- [Gráficos de intervalo &#40;el generador de informes SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
+ [Rangos de intervalos &#40;generador de informes y SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Aplicar formato a la leyenda en un gráfico &#40;el generador de informes SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [Aplicar formato a la leyenda en un gráfico &#40;generador de informes y SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Agregar estilos con bisel, relieve y textura a un gráfico &#40;Generador de informes y SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [Tutorial: Agregar un gráfico de barras a un informe (Generador de informes)](http://go.microsoft.com/fwlink/?LinkId=198052)   
  [Tutorial: Agregar un gráfico de barras a un informe](http://go.microsoft.com/fwlink/?LinkId=198042)  

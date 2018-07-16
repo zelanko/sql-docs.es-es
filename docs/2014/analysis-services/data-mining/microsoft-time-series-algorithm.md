@@ -1,5 +1,5 @@
 ---
-title: Algoritmo de serie temporal de Microsoft | Documentos de Microsoft
+title: Algoritmo de serie temporal de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - time series algorithms [Analysis Services]
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 caps.latest.revision: 74
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0291f91ea4432c9bf4a51b617f7e44fe92130d1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 428a6433222c4d6d0aca47e065d85130792b94ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325115"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo de serie temporal de Microsoft
-  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de serie temporal proporciona algoritmos de regresión que se optimizan para la previsión de valores continuos, como las ventas de producto, con el tiempo. Mientras que otros algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , como por ejemplo los árboles de decisión, requieren columnas adicionales de nueva información como entrada para predecir una tendencia, los modelos de serie temporal no las necesitan. Un modelo de serie temporal puede predecir tendencias basadas únicamente en el conjunto de datos original utilizado para crear el modelo. Es posible también agregar nuevos datos al modelo al realizar una predicción e incorporar automáticamente los nuevos datos en el análisis de tendencias.  
+  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de serie temporal proporciona los algoritmos de regresión que se optimizan para la previsión de los valores continuos, como las ventas de producto, con el tiempo. Mientras que otros algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , como por ejemplo los árboles de decisión, requieren columnas adicionales de nueva información como entrada para predecir una tendencia, los modelos de serie temporal no las necesitan. Un modelo de serie temporal puede predecir tendencias basadas únicamente en el conjunto de datos original utilizado para crear el modelo. Es posible también agregar nuevos datos al modelo al realizar una predicción e incorporar automáticamente los nuevos datos en el análisis de tendencias.  
   
  El siguiente diagrama muestra un modelo típico de previsión en el tiempo de las ventas de un producto en cuatro regiones de ventas diferentes. El modelo presentado en el diagrama de ventas muestra las ventas de cada región como líneas de color rojo, amarillo, púrpura y azul. La línea de cada región consta de dos partes:  
   
@@ -51,9 +51,9 @@ ms.locfileid: "36201490"
  Cada trimestre, la compañía tiene previsto actualizar el modelo con datos recientes de ventas y actualizar sus predicciones a las tendencias recientes del modelo. Para suplir los datos de los almacenes que no actualizan los datos de ventas de forma precisa o regular, crearán un modelo de predicción general que utilizarán para crear predicciones para todas las regiones.  
   
 ## <a name="how-the-algorithm-works"></a>Cómo funciona el algoritmo  
- En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de serie temporal utilizaba un único algoritmo, ARTXP. El algoritmo ARTXP se optimizó para predicciones a corto plazo y por lo tanto, predecir el siguiente valor probable de una serie. A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de serie temporal que usa el algoritmo ARTXP y un segundo algoritmo, ARIMA. El algoritmo ARIMA está optimizado para la predicción a largo plazo. Para obtener una explicación detallada sobre la implementación de los algoritmos ARIMA y ARTXP, vea [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).  
+ En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de serie temporal utilizaba un único algoritmo, ARTXP. El algoritmo ARTXP se optimizó para predicciones a corto plazo y por consiguiente, predecía el siguiente valor probable de una serie. A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de serie temporal usa el algoritmo ARTXP y un segundo algoritmo, ARIMA. El algoritmo ARIMA está optimizado para la predicción a largo plazo. Para obtener una explicación detallada sobre la implementación de los algoritmos ARIMA y ARTXP, vea [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).  
   
- De forma predeterminada, el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] utiliza una mezcla de los dos algoritmos al analizar patrones y realizar predicciones. El algoritmo entrena dos modelos independientes sobre los mismos datos: otro modelo utiliza el algoritmo ARTXP y otro modelo utiliza el algoritmo ARIMA. A continuación, el algoritmo combina los resultados de los dos modelos para obtener la mejor predicción sobre un número variable de intervalos de tiempo. Dado que ARTXP obtiene mejores resultados en las predicciones a corto plazo, se le da mayor importancia al principio de una serie de predicciones. Sin embargo, a medida que los intervalos de tiempo que se están prediciendo se adentran en el futuro, se va dando más importancia a ARIMA.  
+ De forma predeterminada, el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] utiliza una mezcla de los dos algoritmos al analizar patrones y realizar predicciones. El algoritmo entrena dos modelos independientes sobre los mismos datos: un modelo utiliza el algoritmo ARTXP y otro modelo utiliza el algoritmo ARIMA. A continuación, el algoritmo combina los resultados de los dos modelos para obtener la mejor predicción sobre un número variable de intervalos de tiempo. Dado que ARTXP obtiene mejores resultados en las predicciones a corto plazo, se le da mayor importancia al principio de una serie de predicciones. Sin embargo, a medida que los intervalos de tiempo que se están prediciendo se adentran en el futuro, se va dando más importancia a ARIMA.  
   
  Es posible también controlar la mezcla de algoritmos para favorecer la predicción a corto o a largo plazo en las series temporales. A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] estándar, puede especificar que el [!INCLUDE[msCoName](../../includes/msconame-md.md)] uso del algoritmo de serie temporal una de las siguientes opciones:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36201490"
   
 -   Utilizar la mezcla predeterminada de los dos algoritmos.  
   
- A partir de [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], puede personalizar el modo [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de serie temporal combina los modelos de predicción. Al utilizar un modelo mixto, el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] combina los dos algoritmos de la manera siguiente:  
+ A partir de [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], puede personalizar el modo [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de serie temporal que combina los modelos de predicción. Al utilizar un modelo mixto, el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] combina los dos algoritmos de la manera siguiente:  
   
 -   Solo ARTXP se utiliza siempre para realizar el primer par de predicciones.  
   
@@ -157,10 +157,10 @@ ms.locfileid: "36201490"
 -   Admite la obtención de detalles.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Examinar un modelo usando el Visor de Series temporales de Microsoft](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)   
  [Ejemplos de consultas de modelo de serie temporal](time-series-model-query-examples.md)   
- [Contenido del modelo para los modelos de serie temporal de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenido del modelo para los modelos de serie temporal de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

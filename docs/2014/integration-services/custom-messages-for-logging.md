@@ -1,5 +1,5 @@
 ---
-title: Mensajes personalizados para registro | Documentos de Microsoft
+title: Custom Messages for Logging | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], custom
 - writing log entries
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - custom messages for logging [Integration Services]
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80086e7a946ad9d5457e95646bcd9c8bce3e3df3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3929d8c861723c2204214ba66e73ea9268c19cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221845"
 ---
 # <a name="custom-messages-for-logging"></a>Mensajes personalizados para registro
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Proporciona un amplio conjunto de eventos personalizados para escribir entradas del registro para paquetes y muchas tareas. Puede utilizar estas entradas para guardar información detallada sobre el progreso, resultados y problemas de ejecución al registrar eventos predefinidos o mensajes definidos por el usuario para su análisis posterior. Por ejemplo, puede registrar cuando se inicia y finaliza la inserción masiva para identificar los problemas de rendimiento en la ejecución del paquete.  
   
  Las entradas del registro personalizadas pertenecen a un conjunto de entradas diferente de los eventos estándar de registro que están disponibles para los paquetes y todos los contenedores y tareas. Las entradas del registro personalizadas se han adaptado para capturar información de utilidad sobre una tarea específica de un paquete. Por ejemplo, una de las entradas de registro personalizadas para la tarea Ejecutar SQL registra la instrucción SQL que ejecuta la tarea en el registro.  
   
- Todas las entradas del registro incluyen información de fecha y hora, incluidas las entradas del registro que se escriben automáticamente cuando se inicia o finaliza un paquete. Muchos de los eventos de registro escriben varias entradas en el registro. Esto ocurre generalmente cuando los eventos tienen diferentes fases. Por ejemplo, el `ExecuteSQLExecutingQuery` registro de eventos escribe tres entradas: una entrada después de que la tarea adquiere una conexión a la base de datos, otra después de que la tarea comienza a preparar la instrucción SQL y otra más una vez que se completa la ejecución de la instrucción SQL.  
+ Todas las entradas del registro incluyen información de fecha y hora, incluidas las entradas del registro que se escriben automáticamente cuando se inicia o finaliza un paquete. Muchos de los eventos de registro escriben varias entradas en el registro. Esto ocurre generalmente cuando los eventos tienen diferentes fases. Por ejemplo, el `ExecuteSQLExecutingQuery` registro de eventos escribe tres entradas: una entrada después de la tarea adquiere una conexión a la base de datos, otra después de que la tarea comienza a preparar la instrucción SQL y otra más una vez completada la ejecución de la instrucción SQL.  
   
  Los siguientes objetos [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] poseen entradas del registro personalizadas:  
   
@@ -103,9 +103,9 @@ ms.locfileid: "36106154"
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Indica que la tarea Flujo de datos cambió el tamaño del búfer. En la entrada del registro se describen las razones del cambio de tamaño y se indica el nuevo tamaño temporal del búfer.|  
-|`OnPipelinePostEndOfRowset`|Indica que un componente se ha dado su señal de fin del conjunto de filas, que está establecido por la última llamada de la `ProcessInput` método. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
+|`OnPipelinePostEndOfRowset`|Indica que un componente se ha dado la señal de fin del conjunto de filas, que se establece mediante la última llamada de la `ProcessInput` método. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
 |`OnPipelinePostPrimeOutput`|Indica que el componente ha completado su última llamada a la `PrimeOutput` método. En función del flujo de datos, es posible que se escriban varias entradas. Si el componente es un origen, esto significa que el componente ha terminado de procesar filas.|  
-|`OnPipelinePreEndOfRowset`|Indica que un componente está a punto de recibir su señal de fin del conjunto de filas, que está establecido por la última llamada de la `ProcessInput` método. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
+|`OnPipelinePreEndOfRowset`|Indica que un componente está a punto de recibir la señal de fin del conjunto de filas, que se establece mediante la última llamada de la `ProcessInput` método. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
 |`OnPipelinePrePrimeOutput`|Indica que el componente está a punto de recibir su última llamada del método `PrimeOutput`. En función del flujo de datos, es posible que se escriban varias entradas.|  
 |`OnPipelineRowsSent`|Informa del número de filas que se proporciona a una entrada de componentes a través de una llamada al método `ProcessInput`. La entrada del registro incluye el nombre del componente.|  
 |`PipelineBufferLeak`|Proporciona información sobre cualquier componente que mantuvo la conexión de los búferes después de que desapareciera el administrador de búferes. Esto significa que no se liberaron los recursos de los búferes y podría ocasionar pérdidas de memoria. La entrada del registro proporciona el nombre del componente y el Id. del búfer.|  

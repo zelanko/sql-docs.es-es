@@ -1,5 +1,5 @@
 ---
-title: Cambiar la cuenta de inicio de servicio para SQL Server (Administrador de configuración de SQL Server) | Documentos de Microsoft
+title: Cambiar la cuenta de inicio de servicio para SQL Server (Administrador de configuración de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server services, startup account changes
 - startup accounts [SQL Server]
 - changing startup accounts for services
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6bb27d98c781f6e828df5fdb65a8f153bd63a5db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1e2b7f28d40a3d0db5feb7d49b445f9e4122a691
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306195"
 ---
 # <a name="change-the-service-startup-account-for-sql-server-sql-server-configuration-manager"></a>Cambiar la cuenta de inicio del servicio para SQL Server (Administrador de configuración de SQL Server)
   En este tema se describe cómo usar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cambiar las opciones de inicio de los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las cuentas de servicio usadas por [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell. Para obtener más información sobre cómo seleccionar la cuenta de servicio adecuada, vea [Configurar los permisos y las cuentas de servicio de Windows](configure-windows-service-accounts-and-permissions.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "36196992"
   
 -   Actualización de SKU (de[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] a SKU no Express)  
   
-     Durante la instalación de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se configura para usar la cuenta Servicio de red, pero está deshabilitado. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrador de configuración puede cambiar la cuenta asignada para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente, pero el servicio no puede habilitarse o iniciado. Después de la actualización de SKU de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] a no Express, el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se habilita automáticamente, pero se puede habilitar cuando sea necesario usando el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y cambiando el modo de inicio del servicio a Manual o Automático.  
+     Durante la instalación de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se configura para usar la cuenta Servicio de red, pero está deshabilitado. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager puede cambiar la cuenta asignada para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente, pero el servicio no puede habilitarse o iniciado. Después de la actualización de SKU de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] a no Express, el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se habilita automáticamente, pero se puede habilitar cuando sea necesario usando el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y cambiando el modo de inicio del servicio a Manual o Automático.  
   
 ##  <a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
   
@@ -55,9 +55,9 @@ ms.locfileid: "36196992"
     >  Como el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un complemento del programa [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console y no un programa independiente, el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no aparece como aplicación en las versiones más recientes de Windows.  
     >   
     >  -   **Windows 10**:  
-    >          Para abrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, en la **página de inicio**, escriba SQLServerManager12.msc (para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). Para versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reemplace el 12 por un número más pequeño. Haga clic en SQLServerManager12.msc abrir el Administrador de configuración. Para anclar el Administrador de configuración para la página de inicio o la barra de tareas, haga clic en SQLServerManager12.msc y, a continuación, haga clic en **Abrir ubicación del archivo**. En el Explorador de archivos de Windows, haga clic en SQLServerManager12.msc y, a continuación, haga clic en **anclar a inicio** o **anclar a la barra de tareas**.  
+    >          Para abrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, en el **página de inicio**, escriba SQLServerManager12.msc (para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). Para versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reemplace el 12 por un número más pequeño. Haga clic en SQLServerManager12.msc abrir el Administrador de configuración. Para anclar el Administrador de configuración a la página de inicio o la barra de tareas, haga clic en SQLServerManager12.msc y, a continuación, haga clic en **Abrir ubicación del archivo**. En el Explorador de archivos de Windows, haga clic en SQLServerManager12.msc y, a continuación, haga clic en **anclar a inicio** o **anclar a la barra de tareas**.  
     > -   **Windows 8**:  
-    >          Para abrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, en la **búsqueda** acceso, en **aplicaciones**, tipo **SQLServerManager\<versión > .msc** como `SQLServerManager12.msc`y, a continuación, presione **ENTRAR**.  
+    >          Para abrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, en el **búsqueda** acceso a **aplicaciones**, tipo **SQLServerManager\<versión > .msc** como `SQLServerManager12.msc`y, a continuación, presione **ENTRAR**.  
   
 2.  En el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en **Servicios de SQL Server**.  
   

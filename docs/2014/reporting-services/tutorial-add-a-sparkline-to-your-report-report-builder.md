@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7051dfeda3af9e4bc8de42eaee7f1b52c92589d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f4e61e4ce1c3db29354657f4eb6e3e6c746d7f3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214505"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Agregar un minigráfico a un informe (Generador de informes)
   En este tutorial, crea un informe de la tabla básico basado en datos de ventas de ejemplo y, a continuación, agrega un minigráfico a una celda de la tabla.  
   
- Una versión mejorada del informe que creará en este tutorial está disponible como informe de ejemplo del Generador de informes de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener más información acerca de cómo descargar este ejemplo y otros informes, consulte [informes del generador de informes de ejemplo](http://go.microsoft.com/fwlink/?LinkId=184851). La siguiente ilustración muestra un informe de ejemplo similar al que creará.  
+ Una versión mejorada del informe que creará en este tutorial está disponible como informe de ejemplo del Generador de informes de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener más información acerca de cómo descargar este ejemplo y otros informes, vea [informe del generador de informes de ejemplo](http://go.microsoft.com/fwlink/?LinkId=184851). La siguiente ilustración muestra un informe de ejemplo similar al que creará.  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
- El vídeo [Cómo: crear un minigráfico en una tabla (vídeo del generador de informes)](http://technet.microsoft.com/bi/ff871942.aspx) muestra cómo crear un informe similar con minigráficos.  
+ El vídeo [Cómo: crear un minigráfico en una tabla (vídeo del generador de informes)](http://technet.microsoft.com/bi/ff871942.aspx) se muestra cómo crear un informe similar con minigráficos.  
   
 ##  <a name="BackToTop"></a> Qué aprenderá  
  En este tutorial, aprenderá a realizar las siguientes tareas:  
@@ -42,9 +42,9 @@ ms.locfileid: "36106692"
  4. [Alinear los minigráficos vertical y horizontalmente](#AlignSparklines)  
   
 ### <a name="other-optional-steps"></a>Otros pasos opcionales  
- 5. [Dar formato a datos como moneda](#FormatCurrency)  
+ 5. [Formato de datos como moneda](#FormatCurrency)  
   
- 6. [Dar formato a datos como fechas](#FormatDates)  
+ 6. [Formato de datos como fechas](#FormatDates)  
   
  7. [Cambiar el ancho de columna](#Width)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36106692"
      El **Introducción** abre el cuadro de diálogo.  
   
     > [!NOTE]  
-    >  Si el **Introducción** cuadro de diálogo no aparece, desde el **Report Builder** botón, haga clic en **nuevo**.  
+    >  Si el **Introducción** no aparece el cuadro de diálogo, desde el **Report Builder** botón, haga clic en **New**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -200,7 +200,7 @@ ms.locfileid: "36106692"
   
 3.  Haga clic con el botón derecho, señale **Insertar columna**y, después, haga clic en **Izquierda**.  
   
-4.  En la nueva columna, haga clic en la fila [Product], seleccione la **insertar** ficha de cinta y, a continuación, haga clic en **minigráfico**.  
+4.  En la nueva columna, haga clic en la fila [Product], seleccione el **insertar** ficha de cinta y, a continuación, haga clic en **minigráfico**.  
   
 5.  Asegúrese de que el primer minigráfico de la **columna** fila está seleccionada y, a continuación, haga clic en **Aceptar**.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "36106692"
   
 1.  Haga clic en **Diseño** para cambiar a la vista de diseño.  
   
-2.  Haga clic en la celda de la segunda fila (bajo la fila de encabezados de columna) en el **SalesDate** columna y arrastre para seleccionar todas las celdas que contienen `[Sum(Sales)]`.  
+2.  Haga clic en la celda en la segunda fila (bajo la fila de encabezados de columna) en el **SalesDate** columna y arrastre para seleccionar todas las celdas que contienen `[Sum(Sales)]`.  
   
 3.  En la pestaña **Inicio** , en el grupo **Número** , haga clic en el botón **Moneda** . Las celdas cambian para mostrar la moneda con formato.  
   
@@ -294,7 +294,7 @@ ms.locfileid: "36106692"
   
      Las barras grises situadas en la parte superior y en el lado de la tabla son los identificadores de fila y de columna.  
   
-3.  Sitúe el cursor en la línea que hay entre los controladores de columna para que cambie a una flecha doble. Arrastre las columnas hasta que tengan el tamaño deseado. Por ejemplo, expanda la columna **producto** para que muestre el nombre del producto en una línea.  
+3.  Sitúe el cursor en la línea que hay entre los controladores de columna para que cambie a una flecha doble. Arrastre las columnas hasta que tengan el tamaño deseado. Por ejemplo, expanda la columna **producto** para que muestre el nombre del producto en una sola línea.  
   
 4.  Haga clic en **Ejecutar** para obtener una vista previa del informe.  
   

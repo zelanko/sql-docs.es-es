@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f6d3eb993b999d17fa4d9c7ac547d30e4489afc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd72de564b67b9130f2cf4d8175a190f8d76a302
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300585"
 ---
 # <a name="sap-bw-destination"></a>Destino de SAP BW
   El destino de SAP BW es el componente de destino de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. De esta forma, el destino de SAP BW carga los datos desde el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en la versión 7 del sistema SAP Netweaver BW.  
@@ -98,7 +98,7 @@ ms.locfileid: "36199740"
   
 -   [Editor de destino de SAP BW &#40;página de salida de Error&#41;](sap-bw-destination-editor-error-output-page.md)  
   
--   [Editor de destino de SAP BW &#40;página avanzadas&#41;](sap-bw-destination-editor-advanced-page.md)  
+-   [Editor de destino de SAP BW &#40;página Opciones avanzadas&#41;](sap-bw-destination-editor-advanced-page.md)  
   
  Mientras configura el destino de SAP BW, también puede usar varios cuadros de diálogo para buscar o crear objetos de SAP Netweaver BW. Para obtener más información sobre estos cuadros de diálogo, haga clic en uno de los temas siguientes:  
   
@@ -119,6 +119,6 @@ ms.locfileid: "36199740"
 -   [Crear InfoPackage](create-infopackage.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Microsoft Connector 1.1 for SAP BW componentes](../microsoft-connector-for-sap-bw-components.md)  
+ [Componentes de Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-components.md)  
   
   

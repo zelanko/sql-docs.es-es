@@ -1,5 +1,5 @@
 ---
-title: Propiedades de la dimensión de base de datos | Documentos de Microsoft
+title: Propiedades de la dimensión de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - properties [Analysis Services], dimensions
 ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f426560d08d9ba4600a3619828d29d658145b8f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e9b86509f0b4a5ab87102c43838cfa1b18376a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200231"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194335"
 ---
 # <a name="database-dimension-properties"></a>Propiedades de la dimensión de base de datos
-  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], las características de una dimensión se definen mediante los metadatos de la dimensión, basándose en los valores de varias propiedades de dimensión y en los atributos o jerarquías que están incluidas en la dimensión. En la siguiente tabla se describen las propiedades de dimensión de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], las características de una dimensión se definen mediante los metadatos de la dimensión, basándose en la configuración de varias propiedades de dimensión y en los atributos o jerarquías que están incluidas en la dimensión. En la siguiente tabla se describen las propiedades de dimensión de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 |Property|Descripción|  
 |--------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "36200231"
 |`MiningModelID`|Contiene el Id. del modelo de minería de datos al que se asocia la dimensión de minería de datos. Esta propiedad solo se aplica si la dimensión es una dimensión de modelo de minería de datos.|  
 |`Name`|Especifica el nombre de la dimensión.|  
 |`ProactiveCaching`|Define la configuración de almacenamiento en caché automático de la dimensión.|  
-|`ProcessingGroup`|Especifica el grupo de procesamiento. Sus valores son ByAttribute o ByTable. Valor predeterminado es `ByAttribute`.|  
+|`ProcessingGroup`|Especifica el grupo de procesamiento. Sus valores son ByAttribute o ByTable. El valor predeterminado es `ByAttribute`.|  
 |`ProcessingMode`|Indica si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] debe indizar y agregar durante o después del procesamiento.|  
 |`ProcessingPriority`|Determina la prioridad de procesamiento de la dimensión durante operaciones en segundo plano como la agregación diferida, la indización o la agrupación en clústeres.|  
 |`Source`|Identifica la vista del origen de datos a la que está enlazada la dimensión.|  

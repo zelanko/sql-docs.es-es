@@ -1,5 +1,5 @@
 ---
-title: Propiedad ExitCode (clase SqlService) | Documentos de Microsoft
+title: Propiedad ExitCode (clase SqlService) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ExitCode property
 ms.assetid: e6b8bff2-946f-4abe-bd50-1f7bb11fdddf
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c1866ced05724a95f17ebcd8e73af60412c5289e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 33f4f09edd36381cb5ecf4768caeef9ac7b495bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191665"
 ---
 # <a name="exitcode-property-sqlservice-class"></a>Propiedad ExitCode (clase SqlService)
   Obtiene o establece el código de error de Win32 de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] que define los problemas encontrados al iniciar y detener el servicio.  

@@ -1,5 +1,5 @@
 ---
-title: Crear predicciones de serie temporal (Tutorial de minería de datos intermedios) | Documentos de Microsoft
+title: Crear predicciones de serie temporal (Tutorial de minería de datos intermedios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fb22cffa-ac99-4d34-ac4a-9c93068e33e8
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 999dcdec7c6a30617c9c9e04512da26ddebfdcc3
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 2e2a9fa7f42e547940e1b4576f63cc3067e01da0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310835"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Crear predicciones de serie temporal (Tutorial intermedio de minería de datos)
   En las tareas anteriores de esta lección, creó un modelo de serie temporal y exploró los resultados. De forma predeterminada, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] siempre crea un conjunto de cinco (5) predicciones para un modelo de serie temporal y muestra los valores de predicción como parte del gráfico de pronóstico. Sin embargo, también puede crear predicciones personalizadas si crea consultas de predicción de las extensiones de minería de datos (DMX).  
@@ -33,29 +33,29 @@ ms.locfileid: "36312953"
   
 #### <a name="to-select-a-model-and-input-table"></a>Para seleccionar un modelo de minería de datos y una tabla de entrada  
   
-1.  En el **predicción de modelo de minería de datos** pestaña del Diseñador de minería de datos, en la **Mining Model** cuadro, haga clic en **Seleccionar modelo**.  
+1.  En el **predicción de modelo de minería de datos** ficha del Diseñador de minería de datos, en el **Mining Model** cuadro, haga clic en **Seleccionar modelo**.  
   
-2.  En el **Seleccionar modelo de minería de datos** cuadro de diálogo, expanda la estructura predicción, seleccione la **Forecasting** de modelo de la lista y, a continuación, haga clic en **Aceptar**.  
+2.  En el **Seleccionar modelo de minería de datos** cuadro de diálogo, expanda la estructura predicción, seleccione el **Forecasting** del modelo en la lista y, a continuación, haga clic en **Aceptar**.  
   
-3.  Pasar por alto la **Seleccionar tabla (s) de entrada** cuadro.  
+3.  Omitir la **Seleccionar tabla (s) de entrada** cuadro.  
   
     > [!NOTE]  
     >  En un modelo de serie temporal no necesita especificar ninguna entrada independiente a menos que esté haciendo una predicción cruzada.  
   
-4.  En el **origen** columna, en la cuadrícula en el **predicción de modelo de minería de datos** pestaña, haga clic en la celda de la primera fila vacía y, a continuación, seleccione **modelo de minería de datos de pronóstico**.  
+4.  En el **origen** columna, en la cuadrícula en el **predicción de modelo de minería de datos** pestaña, haga clic en la celda de la primera fila vacía y, a continuación, seleccione **modelo de minería de datos Forecasting**.  
   
 5.  En el **campo** columna, seleccione **Model Region**.  
   
      Esta acción agrega el identificador de la serie a la consulta de predicción para indicar la combinación de modelo y la región a las que se aplica la predicción.  
   
-6.  Haga clic en la siguiente fila vacía en la **origen** columna y, a continuación, seleccione **función de predicción**.  
+6.  Haga clic en la siguiente fila vacía en el **origen** columna y, a continuación, seleccione **función de predicción**.  
   
 7.  En el **campo** columna, seleccione **PredictTimeSeries**.  
   
     > [!NOTE]  
     >  También puede usar la función `Predict` con modelos de serie temporal. Sin embargo, la función de predicción solo crea una predicción para cada serie de forma predeterminada. Por lo tanto, para especificar varios pasos de predicción, debe usar el **PredictTimeSeries** función.  
   
-8.  En el **modelo de minería de datos** panel, seleccione la columna del modelo de minería de datos **cantidad.** Arrastre importe hasta el **criterios o argumentos** cuadro para la **PredictTimeSeries** función que agregó anteriormente.  
+8.  En el **modelo de minería de datos** panel, seleccione la columna del modelo de minería de datos, **cantidad.** Arrastre importe hasta el **criterios o argumentos** cuadro para la **PredictTimeSeries** función que agregó anteriormente.  
   
 9. Haga clic en el **criterios o argumentos** cuadro y escriba una coma, seguida de **5**, después del nombre del campo.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "36312953"
   
 10. En el **Alias** columna, escriba `PredictAmount`.  
   
-11. Haga clic en la siguiente fila vacía en la **origen** columna y, a continuación, seleccione **función de predicción** nuevo.  
+11. Haga clic en la siguiente fila vacía en el **origen** columna y, a continuación, seleccione **función de predicción** nuevo.  
   
 12. En el **campo** columna, seleccione **PredictTimeSeries**.  
   
-13. En el **Mining Model** panel, seleccione la columna cantidad y, a continuación, arrástrelo en la **criterios o argumentos** cuadro para el segundo **PredictTimeSeries** función.  
+13. En el **Mining Model** panel, seleccione la columna Quantity y, a continuación, arrástrelo el **criterios o argumentos** cuadro para el segundo **PredictTimeSeries** función.  
   
 14. Haga clic en el **criterios o argumentos** cuadro y escriba una coma, seguida de **5**, después del nombre del campo.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36312953"
 |25/10/2008|57|  
 |25/11/2008|54|  
   
- **M200 North America - PredictAmount**  
+ **M200 Norteamérica - PredictAmount**  
   
 |$TIME|Amount|  
 |-----------|------------|  
@@ -117,7 +117,7 @@ ms.locfileid: "36312953"
 |25/10/2008|374658.24|  
 |25/11/2008|379241.44|  
   
- **M200 North America - PredictQuantity**  
+ **M200 Norteamérica - PredictQuantity**  
   
 |$TIME|Cantidad|  
 |-----------|--------------|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], events
 - events [SQL Server], filters
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 23d93e00dde20ef9d97fd707dbb938907e9ef7a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 367a9669c11cb1841a4af3801abb98e385571388
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199886"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212835"
 ---
 # <a name="filter-a-trace"></a>Filtrar un seguimiento
   Los filtros limitan los eventos que se recopilan en el seguimiento. Si no se establece un filtro, se devolverán todos los eventos de las clases de eventos seleccionadas en el resultado del seguimiento. Por ejemplo, si limita los nombres de usuarios de Windows de un seguimiento para usuarios específicos, los datos de la salida se limitarán solo a aquellos usuarios.  
@@ -141,7 +141,7 @@ ms.locfileid: "36199886"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup> si el seguimiento de eventos de la **osql** utilidad o **sqlcmd** utilidad, agregue siempre **%** a los filtros de la **TextData**  columna de datos.  
+ <sup>1</sup> si el seguimiento de eventos desde el **osql** utilidad o **sqlcmd** utilidad, agregue siempre ** % ** a los filtros de la **TextData ** columna de datos.  
   
  Como mecanismo de seguridad, Seguimiento de SQL omite automáticamente del seguimiento la información de los procedimientos almacenados relacionados con la seguridad que afecten a contraseñas. Este mecanismo de seguridad no es configurable y siempre está activo, lo que impide que los usuarios, que de otra manera tendrían los permisos para realizar el seguimiento de toda la actividad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], capturen contraseñas.  
   

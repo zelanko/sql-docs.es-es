@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
 - overriding default startup options
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - starting SQL Server, options
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 caps.latest.revision: 75
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 66aa5a32ddc527ccde99fcf990eb73046123d65f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 373f9493ac9effd62bb0c7178fca09289f70b4bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219835"
 ---
 # <a name="database-engine-service-startup-options"></a>Opciones de inicio del servicio de motor de base de datos
   Las opciones de inicio señalan ciertas ubicaciones de archivos necesarios durante el inicio y especifican algunas condiciones generales del servidor. La mayoría de los usuarios no necesitan especificar opciones de inicio a menos que estén solucionando un problema de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o que tengan un problema muy poco frecuente y que se les indique que usen una opción de inicio desde el soporte al cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

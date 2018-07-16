@@ -1,5 +1,5 @@
 ---
-title: Elemento VisualTotals (ASSL) | Documentos de Microsoft
+title: Elemento VisualTotals (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - VisualTotals element
 ms.assetid: 352a05b1-846c-4d58-ac36-1f5ad418ba7d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 73d5bb9579c078fab44a04d173edc2f606c856a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf4eb3a172571ee7456f0da1cb0df60852132e03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319294"
 ---
 # <a name="visualtotals-element-assl"></a>Elemento VisualTotals (ASSL)
   Contiene una expresión MDX (Expresiones multidimensionales) que determina si los totales visuales se muestran para los miembros de este atributo.  
@@ -58,11 +58,11 @@ ms.locfileid: "36203036"
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elemento primario|[Attributepermissions](../objects/attributepermission-element-assl.md)|  
+|Elemento primario|[AttributePermission](../objects/attributepermission-element-assl.md)|  
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `VisualTotals` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.AttributePermission>.  
+ El elemento que se corresponde con el elemento primario de `VisualTotals` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.AttributePermission>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

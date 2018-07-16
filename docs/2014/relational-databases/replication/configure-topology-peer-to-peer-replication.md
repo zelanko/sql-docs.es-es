@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 87dba93120a3779a35f7f445427dc48f228cd012
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 55a85b29827973522684820600f3a93b19c58200
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322327"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurar topología (replicación punto a punto)
   Utilice la página **Configurar topología** para realizar las tareas de configuración comunes, como agregar nuevos nodos, eliminando nodos y agregar las nuevas conexiones entre los nodos existentes. El nodo que seleccionó en la página **Publicación** de este asistente se muestra en la superficie de diseño. Para especificar las opciones de configuración, haga clic con el botón secundario en un nodo, una conexión o la superficie de diseño.  
@@ -37,7 +37,7 @@ ms.locfileid: "36202275"
 |Superficie de diseño|Muestra otros elementos de interfaz. Para agregar elementos, haga clic con el botón secundario en la superficie de diseño.|  
 |![El primer nodo de una topología](media/p2pwizard-firstnode.gif "El primer nodo de una topología")|El nodo original en la topología. Los nodos nuevos se inicializan utilizando una copia de la base de datos de publicación del nodo original.|  
 |![Un nodo para el que tenemos información completa](media/p2pwizard-complete.gif "un nodo para el que tenemos información completa") o una versión posterior, para que la replicación tiene información completa. Para especificar las opciones de configuración, haga clic con el botón secundario en el nodo.|  
-|![Un nodo para el que tenemos información incompleta](media/p2pwizard-incomplete.gif "Un nodo para el que tenemos información incompleta")|Un nodo para el que la replicación tiene información incompleta. Para especificar las opciones de configuración, haga clic con el botón secundario en el nodo. La replicación tiene información incompleta debido a una de las razones siguientes:<br /><br /> El nodo está ejecutando una instancia de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], que no almacena todos los metadatos requerida por el asistente.<br /><br /> El nodo está ejecutando una versión posterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero la replicación no puede recuperar información de la suscripción del nodo. Para solucionar esta situación:<br />-Asegúrese seguro de que la base de datos en el nodo está en línea y que puede conectarse a él mediante el uso de las mismas credenciales que los agentes de distribución que se conectan al nodo.<br />-Compruebe que se estén ejecutando el agente de lector del registro y todos los agentes de distribución que se conectan al nodo.<br />-Compruebe que el tiempo de espera de actualización está establecida suficientemente alto como para recopilar toda la información de topología. Para establecer el tiempo de espera, haga clic con el botón secundario en la superficie de diseño y haga clic en **Establecer tiempo de espera de la actualización**.|  
+|![Un nodo para el que tenemos información incompleta](media/p2pwizard-incomplete.gif "Un nodo para el que tenemos información incompleta")|Un nodo para el que la replicación tiene información incompleta. Para especificar las opciones de configuración, haga clic con el botón secundario en el nodo. La replicación tiene información incompleta debido a una de las razones siguientes:<br /><br /> El nodo está ejecutando una instancia de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], que no almacena todos los metadatos requerida por el asistente.<br /><br /> El nodo está ejecutando una versión posterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero la replicación no puede recuperar información de la suscripción del nodo. Para solucionar esta situación:<br />-Asegúrese está seguro de que la base de datos en el nodo está en línea y que puede conectarse a él mediante el uso de las mismas credenciales que los agentes de distribución que se conectan al nodo.<br />-Asegúrese que se ejecuta el agente de lector del registro y todos los agentes de distribución que se conectan al nodo.<br />-Compruebe que el tiempo de espera de actualización está establecida suficientemente alto como para reunir toda la información de topología. Para establecer el tiempo de espera, haga clic con el botón secundario en la superficie de diseño y haga clic en **Establecer tiempo de espera de la actualización**.|  
 |Línea gris con flechas|La conexión entre dos nodos. Para agregar una conexión, haga clic con el botón secundario en uno de los nodos que desea conectar. Para quitar una conexión, haga clic con el botón secundario en la conexión.<br /><br /> Si la línea tiene una flecha única, la replicación tiene información incompleta para uno de los nodos.|  
   
 ### <a name="options-for-the-design-surface"></a>Opciones para la superficie de diseño  

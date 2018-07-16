@@ -1,5 +1,5 @@
 ---
-title: Establecer las bases de datos definidos por el usuario de intercalación coinciden con los del maestro y bases de datos modelo | Documentos de Microsoft
+title: Establecer las bases de datos definido por el usuario de intercalación coinciden con los del patrón y bases de datos modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,16 +8,16 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cd89de1101d7efe67379ed7e9ea5a0acb674b37c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.topic: conceptual
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: dab49ec4d72afb28535cbcd0c61609ef71518e45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188542"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Establecer la intercalación de bases de datos definidas por el usuario para que coincidan con las de las bases de datos modelo y maestra
-Vea [establece las bases de datos definidos por el usuario de intercalación coinciden con los del maestro y bases de datos modelo](../../database-engine/set-collation-user-defined-databases-match-master-model-databases.md).
+Consulte [establecer las bases de datos definido por el usuario de intercalación coinciden con los del patrón y bases de datos modelo](../../database-engine/set-collation-user-defined-databases-match-master-model-databases.md).

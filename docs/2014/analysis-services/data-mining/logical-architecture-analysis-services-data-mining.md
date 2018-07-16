@@ -1,5 +1,5 @@
 ---
-title: 'Arquitectura lógica (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Arquitectura lógica (Analysis Services - minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], about mining structures
 - logical architecture [Data Mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - architecture [Analysis Services]
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4505a89b4ea9e815b2fedbe8dbfddbfe70bff6c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0314d921a69b20286b9c525d3de9a1fa898b74a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299305"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Arquitectura lógica (Analysis Services - Minería de datos)
   La minería de datos es un proceso que implica la interacción de varios componentes.  
@@ -45,7 +45,7 @@ ms.locfileid: "36197507"
 ##  <a name="bkmk_SourceData"></a> Datos de origen de la minería de datos  
  Los datos que se usan en la minería de datos no se almacenan en la solución de minería de datos; solo se almacenan los enlaces. Los datos podrían residir en una base de datos creada en una versión anterior de SQL Server, en un sistema CRM o incluso en un archivo plano. Cuando se entrena la estructura o el modelo mediante un proceso, se crea un resumen estadístico de los datos y se almacena en una memoria caché que puede conservarse para usarse en operaciones posteriores, o puede eliminarse después del procesamiento. Para obtener más información, vea [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md).  
   
- Combine datos dispares dentro del objeto de vista del origen de datos (DSV) de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], que proporciona una capa de abstracción sobre el origen de datos. También puede especificar combinaciones entre tablas o agregar tablas que tengan una relación de varios a uno para crear columnas de tabla anidadas. La definición de estos objetos, el origen de datos y la vista del origen de datos se almacenan en la solución con las extensiones de nombre de archivo *.ds y \*.dsv. Para obtener más información sobre cómo crear y usar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] orígenes de datos y vistas del origen de datos, vea [orígenes de datos admitidos &#40;SSAS multidimensionales&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
+ Combine datos dispares dentro del objeto de vista del origen de datos (DSV) de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], que proporciona una capa de abstracción sobre el origen de datos. También puede especificar combinaciones entre tablas o agregar tablas que tengan una relación de varios a uno para crear columnas de tabla anidadas. La definición de estos objetos, el origen de datos y la vista del origen de datos se almacenan en la solución con las extensiones de nombre de archivo *.ds y \*.dsv. Para obtener más información sobre cómo crear y usar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] orígenes de datos y vistas del origen de datos, vea [Data Sources Supported &#40;Multidimensional de SSAS&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
  También puede definir y modificar orígenes de datos y vistas del origen de datos utilizando AMO o XMLA. Para obtener más información sobre cómo trabajar con estos objetos mediante programación, vea [Información general de arquitectura lógica &#40;Analysis Services - Datos multidimensionales&#41;](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36197507"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  Una estructura de minería de datos es un contenedor de datos lógico que define el dominio de datos a partir del cual se generan los modelos de minería de datos. Una sola estructura de minería de datos puede admitir varios modelos de minería de datos.  
   
- Cuando tenga que usar los datos en la solución de minería de datos, Analysis Services leerá los datos del origen y genera una memoria caché de agregados y otra información. De forma predeterminada, esta memoria caché se mantiene para poder reutilizar datos de entrenamiento y admitir modelos adicionales. Si necesita eliminar la memoria caché, cambie la `CacheMode` propiedad en el objeto de estructura de minería de datos para el valor `ClearAfterProcessing`. Para obtener más información, vea [Clases de minería de datos de AMO](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
+ Cuando tenga que usar los datos en la solución de minería de datos, Analysis Services leerá los datos del origen y genera una memoria caché de agregados y otra información. De forma predeterminada, esta memoria caché se mantiene para poder reutilizar datos de entrenamiento y admitir modelos adicionales. Si necesita eliminar la memoria caché, cambie el `CacheMode` propiedad en el objeto de estructura de minería de datos en el valor, `ClearAfterProcessing`. Para obtener más información, vea [Clases de minería de datos de AMO](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
   
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] también proporciona la capacidad de separar los datos en conjuntos de datos de prueba y de entrenamiento, para que pueda probar sus modelos de minería de datos en un conjunto de datos representativo y seleccionado de forma aleatoria. Los datos no se almacenan en realidad por separado; en su lugar, los datos de caso de la memoria caché de la estructura se marcan con una propiedad que indica si ese caso se utiliza para el entrenamiento o para las pruebas. Si la memoria caché se elimina, esta información no se puede recuperar.  
   
@@ -92,12 +92,12 @@ ms.locfileid: "36197507"
   
  Los procedimientos almacenados siguientes pueden usarse al realizar la validación cruzada.  
   
- [Procedimientos almacenados de minería de datos &#40;Analysis Services: minería de datos&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Procedimientos almacenados de minería de datos &#40;Analysis Services - minería de datos&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
  Además, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contiene muchos procedimientos almacenados del sistema que se usan internamente para la minería de datos. Aunque los procedimientos almacenados del sistema son para uso interno, es posible le resulten útiles. Microsoft se reserva el derecho de cambiar estos procedimientos almacenados según sea necesario; por consiguiente, para utilizarlos en producción, se recomienda crear consultas con DMX, AMO o XMLA.  
   
  **Crear algoritmos de complemento**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Proporciona un mecanismo para crear sus propios algoritmos y, a continuación, agregar los algoritmos como un nuevo servicio de minería de datos a la instancia del servidor.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Proporciona un mecanismo para crear sus propios algoritmos y, a continuación, agregar los algoritmos como un nuevo servicio de minería de datos en la instancia del servidor.  
   
  Analysis Services utiliza las interfaces COM para comunicarse con los algoritmos de complemento. Para obtener más información sobre cómo implementar nuevos algoritmos, vea [Plugin Algorithms](plugin-algorithms.md).  
   

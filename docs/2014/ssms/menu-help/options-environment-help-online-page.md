@@ -1,5 +1,5 @@
 ---
-title: Opciones (página entorno-Help-Online) | Documentos de Microsoft
+title: Opciones (entorno-ayuda-página en línea) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Help.Online
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0a6be02ad438f35c145c7cadc3738525c1ea60d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2e15edf6e83edf97d39da4a20e99891c7b08a3a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204395"
 ---
 # <a name="options-environment-help-online-page"></a>Options (Environment-Help-Online Page)
   El cuadro de diálogo **Opciones** le permite especificar los orígenes de la Ayuda que se van a utilizar para las búsquedas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , incluida la Ayuda F1. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** , seleccione **Ayuda**y, a continuación, haga clic en **En línea**. Si la página **En línea** no aparece en la lista, active la casilla **Mostrar todas las configuraciones** en el cuadro de diálogo **Opciones** .  

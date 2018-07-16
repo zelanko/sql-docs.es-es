@@ -1,5 +1,5 @@
 ---
-title: Especificar el destino de la instalación | Documentos de Microsoft
+title: Especificar el destino de instalación | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input files [Analysis Services]
 - installation targets [Analysis Services]
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - modifying installation targets
 ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3e2f46eeb01baa5f6f208a612ecba5ad61dad004
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a779e6ecbc32316d6d22ef8f270d9d0d2af6738e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254957"
 ---
 # <a name="specifying-the-installation-target"></a>Especificar el destino de instalación
-  El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente para implementar lee la información de destino de la instalación de la \< *nombre del proyecto*> .deploymenttargets archivo. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crea este archivo cuando se genera el proyecto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa la base de datos y el servidor especificado en el **implementación** página de la  *\<nombre del proyecto >* **páginas de propiedades** cuadro de diálogo para crear el \< *nombre del proyecto*> archivo .targets.  
+  El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente para implementación de lee la información del destino de instalación la \< *nombre del proyecto*> .deploymenttargets archivo. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crea este archivo cuando se genera el proyecto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa la base de datos y servidor especificados en el **implementación** página de la * \<nombre del proyecto >* **las páginas de propiedades** cuadro de diálogo para crear el \< *nombre del proyecto*> archivo .targets.  
   
 ## <a name="modifying-the-installation-target-for-deployment"></a>Modificar el destino de instalación para la implementación  
  En algunas situaciones, puede que necesite implementar un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en una base de datos o en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que sea diferente a la especificada en la página **Implementación** . Por ejemplo, puede que desee implementar el proyecto en un servidor para realizar pruebas antes de la implementación y, a continuación, implementarlo en un servidor de producción. Puede que también desee implementar un proyecto finalizado y probado en varios servidores de producción de un clúster de equilibrio de carga de red (NLB), o en un servidor de ensayo y un servidor de producción.  
@@ -46,11 +46,11 @@ ms.locfileid: "36200012"
   
      O bien  
   
--   Modificar el \< *nombre del proyecto*> .deploymenttargets archivo utilizando cualquier editor de texto.  
+-   Modificar el \< *nombre del proyecto*> archivo .deploymenttargets usando cualquier editor de texto.  
   
 ## <a name="see-also"></a>Vea también  
  [Especificar opciones de implementación de roles y particiones](deployment-script-files-partition-and-role-deployment-options.md)   
- [Especificar la configuración de implementación de soluciones](deployment-script-files-solution-deployment-config-settings.md)   
+ [Especificar la configuración de implementación de la solución](deployment-script-files-solution-deployment-config-settings.md)   
  [Especificar opciones de procesamiento](deployment-script-files-specifying-processing-options.md)  
   
   

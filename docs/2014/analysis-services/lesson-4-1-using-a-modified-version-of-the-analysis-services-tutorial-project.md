@@ -1,5 +1,5 @@
 ---
-title: Usar una versión modificada del análisis Services proyecto Tutorial | Documentos de Microsoft
+title: Usar una versión modificada del análisis de proyecto del Tutorial de servicios | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 7ede395d0053775cd2be7adefbd158b17e69357f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b198990c967b6ef40eaa4bfdc2bfeedfff13e13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220341"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Usar una versión modificada del proyecto Tutorial de Analysis Services
   Las lecciones restantes de este tutorial se basan en una versión mejorada del proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que completó en las tres primeras lecciones. Se han agregado tablas y cálculos con nombre adicionales a la vista del origen de datos **Adventure Works DW 2012** , se han agregado más dimensiones al proyecto y estas nuevas dimensiones se han agregado al cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Además, se ha agregado un segundo grupo de medidas, que contiene medidas de una segunda tabla de hechos. Este proyecto mejorado le permitirá continuar aprendiendo a agregar funciones adicionales a la aplicación de Business Intelligence sin necesidad de tener que repetir las técnicas ya aprendidas.  
@@ -60,7 +60,7 @@ ms.locfileid: "36106232"
 ### <a name="data-source-view"></a>Vista del origen de datos  
  La vista del origen de datos del proyecto mejorado contiene una tabla de hechos adicional y cuatro tablas de dimensiones adicionales de la base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- Observe que con diez tablas en los datos del origen de la vista, la \<todas las tablas > diagrama se pase a ser demasiado lleno. Esto dificulta la comprensión de las relaciones entre las tablas y la localización de tablas específicas. Para resolver este problema, las tablas están organizadas en dos diagramas lógicos, el diagrama **Internet Sales** y el diagrama **Reseller Sales** . Estos diagramas están organizados cada uno en una única tabla de hechos. Crear diagramas lógicos permite ver y utilizar un subconjunto específico de tablas de la vista del origen de datos en lugar de ver siempre todas las tablas y sus relaciones en un único diagrama.  
+ Tenga en cuenta que con diez tablas en los datos de origen de la vista, el \<todas las tablas > se está convirtiendo en diagrama de gran volumen. Esto dificulta la comprensión de las relaciones entre las tablas y la localización de tablas específicas. Para resolver este problema, las tablas están organizadas en dos diagramas lógicos, el diagrama **Internet Sales** y el diagrama **Reseller Sales** . Estos diagramas están organizados cada uno en una única tabla de hechos. Crear diagramas lógicos permite ver y utilizar un subconjunto específico de tablas de la vista del origen de datos en lugar de ver siempre todas las tablas y sus relaciones en un único diagrama.  
   
 #### <a name="internet-sales-diagram"></a>Diagrama Internet Sales  
  El diagrama **Internet Sales** contiene las tablas que están relacionadas con la venta directa de productos de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] a los clientes a través de Internet. Las tablas del diagrama son las cuatro tablas de dimensiones y la tabla de hechos que agregó a la vista del origen de datos **Adventure Works DW 2012** en la Lección 1. Estas tablas son las siguientes:  

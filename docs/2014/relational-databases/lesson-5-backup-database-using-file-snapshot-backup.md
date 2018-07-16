@@ -1,5 +1,5 @@
 ---
-title: 'Lección 6: Migrar una base de datos de un origen de la máquina local a una máquina de destino de Windows Azure | Documentos de Microsoft'
+title: 'Lección 6: Migrar una base de datos desde un origen de máquina local a un equipo de destino de Windows Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2f6f0ac359d5358994c0a3a5367c676ca2f83969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0412dad97550d5a9aaf601488559ef7c91e1880a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199907"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207065"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Lección 6: Migrar una base de datos de una máquina de origen local a un equipo de destino de Windows Azure
   En esta lección se supone que ya tiene otro servidor SQL Server, que puede residir en otro equipo local o en una máquina virtual de Windows Azure. Para obtener información sobre cómo crear una máquina virtual de SQL Server en Windows Azure, consulte [aprovisionamiento de una máquina Virtual de SQL Server en Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Después de aprovisionar una máquina virtual de SQL Server en Windows Azure, asegúrese de que puede conectarse a una instancia de SQL Server en esta máquina virtual a través de SQL Server Management Studio en otro equipo.  
@@ -138,11 +138,11 @@ ms.locfileid: "36199907"
   
 4.  En **Explorador de objetos**, haga clic en **bases de datos** y haga clic en **adjuntar**.  
   
-5.  En el **adjuntar bases de datos** cuadro de diálogo, para especificar la base de datos que se adjuntará, haga clic en **agregar**. En el **buscar archivos de base de datos** cuadro de diálogo:  
+5.  En el **adjuntar bases de datos** cuadro de diálogo, para especificar la base de datos que se adjuntará, haga clic en **agregar**. En el **buscar archivos de base de datos** ventana de cuadro de diálogo:  
   
      Ubicación del archivo de datos de base de datos, escriba: `https://teststorageaccnt.blob.core.windows.net/testcontainer/`.  
   
-     Para nombre de archivo, escriba: `TestDB1Data.mdf`.  
+     Nombre de archivo, escriba: `TestDB1Data.mdf`.  
   
 6.  Haga clic en **Aceptar**.  
   
@@ -150,6 +150,6 @@ ms.locfileid: "36199907"
   
  **Lección siguiente:**  
   
- [Lección 7: Mover los archivos de datos al almacenamiento de Windows Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [Lección 7: Mover los archivos de datos a Azure Storage](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
   

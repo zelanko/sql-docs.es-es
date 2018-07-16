@@ -1,5 +1,5 @@
 ---
-title: Resaltar excepciones (herramientas de análisis de tabla para Excel) | Documentos de Microsoft
+title: Resaltar excepciones (herramientas de análisis de tabla para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - highlight exceptions
 ms.assetid: d90a12f8-7bc3-4fdb-95a1-7c89058f0d9a
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 359ca09bdb3e722d44a42bde001eaffc58794ac5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 61fd647efcb2cbb0758117b7839ab19a958bb9cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263701"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>Resaltar excepciones (Herramientas de análisis de tabla para Excel)
   ![Botón Resaltar excepciones en la cinta de opciones](media/tat-highlightex.gif "botón Resaltar excepciones en la cinta de opciones")  
   
- En ocasiones, los datos pueden contener valores peculiares. Por ejemplo, la lista de edades de propietarios de casas podría empezar en cinco años. Estos valores, a menudo denominados *valores atípicos*, podría ser incorrecto debido a un error de entrada de datos o podrían indicar tendencias poco habituales. De cualquier modo, las excepciones pueden afectar a la calidad del análisis. El **Resaltar excepciones** herramienta le ayuda a encontrar estos valores y revisarlos para realizar más acciones.  
+ En ocasiones, los datos pueden contener valores peculiares. Por ejemplo, la lista de edades de propietarios de casas podría empezar en cinco años. Estos valores, a menudo denominados *valores atípicos*, podrían ser incorrectos debido a un error de entrada de datos, o que podrían indicar tendencias poco habituales. De cualquier modo, las excepciones pueden afectar a la calidad del análisis. El **Resaltar excepciones** herramienta le ayuda a encontrar estos valores y revisarlos para tomar medidas.  
   
- El **Resaltar excepciones** herramienta puede trabajar con todo el rango de datos en una tabla de datos de Excel, o puede seleccionar solo unas pocas columnas. También es posible ajustar un umbral que controle la variabilidad de los datos para encontrar más o menos excepciones.  
+ El **Resaltar excepciones** herramienta puede trabajar con todo el rango de datos en una tabla de datos de Excel, o puede seleccionar sólo unas pocas columnas. También es posible ajustar un umbral que controle la variabilidad de los datos para encontrar más o menos excepciones.  
   
- Al completar el análisis, la herramienta crea una hoja de cálculo nueva que contiene un informe de resumen sobre el número de valores atípicos que se encontraron en cada una de las columnas analizadas. La herramienta también resalta las excepciones en la tabla de datos original. Puesto que la herramienta analiza tendencias globales, quizás encuentre que la mayoría de los valores de una fila son normales y resalte sólo una celda de esa fila. En el ejemplo de propietarios de casas anterior, solo la **edad** se resaltaría la columna.  
+ Al completar el análisis, la herramienta crea una hoja de cálculo nueva que contiene un informe de resumen sobre el número de valores atípicos que se encontraron en cada una de las columnas analizadas. La herramienta también resalta las excepciones en la tabla de datos original. Puesto que la herramienta analiza tendencias globales, quizás encuentre que la mayoría de los valores de una fila son normales y resalte sólo una celda de esa fila. En el ejemplo de vivienda anterior, solo el **Age** columna podría resaltarse.  
   
- También puede cambiar la **umbral de excepción** valor en el **informe resumen de**. Este valor indica la probabilidad de que una celda determinada contenga un valor atípico. Por tanto, si aumenta el valor, se resaltarán menos valores como valores atípicos. Por el contrario, cuando el valor se disminuye, se verán más celdas resaltadas.  
+ También puede cambiar el **umbral de excepción** valor en el **informe resumen de**. Este valor indica la probabilidad de que una celda determinada contenga un valor atípico. Por tanto, si aumenta el valor, se resaltarán menos valores como valores atípicos. Por el contrario, cuando el valor se disminuye, se verán más celdas resaltadas.  
   
 ## <a name="using-the-highlight-exceptions-tool"></a>Usar la herramienta Resaltar excepciones  
   
@@ -78,13 +78,13 @@ ms.locfileid: "36199596"
  El gráfico de resumen muestra el número de celdas de cada columna que estaban por encima del umbral de excepción.  
   
 ## <a name="related-tools"></a>Herramientas relacionadas  
- Cuando esté limpiando o revisando datos como preparación para la minería de datos, también debería probar las características de exploración de datos del Cliente de minería de datos para Excel. Este complemento dispone de más herramientas avanzadas que le ayudarán a encontrar valores atípicos, cambiar etiquetas de datos o ver la distribución de datos. Para obtener más información acerca de las herramientas de exploración de datos en el cliente de minería de datos para Excel, vea [explorador y limpieza de datos](exploring-and-cleaning-data.md).  
+ Cuando esté limpiando o revisando datos como preparación para la minería de datos, también debería probar las características de exploración de datos del Cliente de minería de datos para Excel. Este complemento dispone de más herramientas avanzadas que le ayudarán a encontrar valores atípicos, cambiar etiquetas de datos o ver la distribución de datos. Para obtener más información acerca de las herramientas de exploración de datos en el cliente de minería de datos para Excel, vea [exploración y limpieza de datos](exploring-and-cleaning-data.md).  
   
- El **Resaltar excepciones** herramienta utiliza el [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo de clústeres. Un modelo de clústeres detecta grupos de filas que comparten características similares. El cliente de minería de datos para Excel proporciona una **examinar** ventana que usa gráficos y perfiles de características que le permiten explorar modelos de minería de datos creados mediante agrupación en clústeres. Para obtener información acerca de cómo examinar el modelo de agrupación en clústeres creado por el **Resaltar excepciones** herramienta, consulte [examinar modelos (datos de cliente de minería de datos para Excel)](highlight-exceptions-table-analysis-tools-for-excel.md).  
+ El **Resaltar excepciones** herramienta usa la [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo de clústeres. Un modelo de clústeres detecta grupos de filas que comparten características similares. El cliente de minería de datos para Excel proporciona un **examinar** ventana que usa gráficos y perfiles de características que le permiten explorar modelos de minería de datos creados mediante agrupación en clústeres. Para obtener información acerca de cómo examinar el modelo de agrupación en clústeres creado por el **Resaltar excepciones** herramienta, consulte [examinar modelos (datos de cliente de minería de datos para Excel)](highlight-exceptions-table-analysis-tools-for-excel.md).  
   
  Para obtener más información sobre el algoritmo de clústeres de [!INCLUDE[msCoName](../includes/msconame-md.md)], vea el tema "Algoritmo de clústeres de Microsoft" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [Herramientas de análisis de tabla para Excel](table-analysis-tools-for-excel.md)  
+ [Herramientas de análisis de tablas para Excel](table-analysis-tools-for-excel.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Página Cargar archivo (Administrador de informes) | Documentos de Microsoft
+title: Página Cargar archivo (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5cdc35c029b40489e43e8e8b5715846cdab1fa6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bc5efd9e45b875e66b9ffd1a223a5b375740381
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200849"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272321"
 ---
 # <a name="upload-file-page-report-manager"></a>Cargar archivo (página del Administrador de informes)
   Use la página Cargar archivo para publicar un archivo del sistema de archivos en la base de datos del servidor de informes. Los archivos cargados se representan como elementos en la jerarquía de carpetas del servidor de informes.  
@@ -54,7 +54,7 @@ ms.locfileid: "36200849"
  Haga clic para elegir un archivo del sistema de archivos.  
   
  **Nombre**  
- Escriba el nombre del archivo tal como desea que aparezca en el espacio de nombres del servidor de informes. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : @ & = +, $ * \< > | "o / para especificar un nombre de elemento.  
+ Escriba el nombre del archivo tal como desea que aparezca en el espacio de nombres del servidor de informes. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : @ & = +, $ * \< > | "o / al especificar un nombre de elemento.  
   
  **Sobrescribir elemento si existe**  
  Active esta casilla si desea reemplazar un elemento por una versión más reciente. Para que se sobrescriba una versión existente, deben coincidir exactamente el nombre del elemento nuevo y el nombre del elemento existente.  

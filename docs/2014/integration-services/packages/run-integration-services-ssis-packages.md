@@ -1,5 +1,5 @@
 ---
-title: Ejecución de proyectos y paquetes | Documentos de Microsoft
+title: Ejecución de proyectos y paquetes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, running
 - SSIS packages, running
@@ -21,20 +21,20 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21c4bff7eb74b556aa41e27430b23e9eb2e2d061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc9e292b67bd282351bdea60068a58a39ecb0aad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287611"
 ---
 # <a name="execution-of-projects-and-packages"></a>Ejecución de proyectos y paquetes
   Para ejecutar un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede utilizar una de las herramientas en función de dónde se almacenan los paquetes. Las herramientas se enumeran en la tabla a continuación.  
   
  Para almacenar un paquete en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , utilice el modelo de implementación del proyecto para implementar el proyecto en el servidor. Para obtener información, consulte [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md).  
   
- Para almacenar un paquete en el almacén de paquetes SSIS, la base de datos msdb o en el sistema de archivos, utilice el modelo de implementación de paquetes. Para obtener más información, consulte [implementación de paquetes &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
+ Para almacenar un paquete en el almacén de paquetes SSIS, la base de datos msdb o en el sistema de archivos, utilice el modelo de implementación de paquetes. Para obtener más información, consulte [la implementación del paquete &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
   
 |Herramienta|Paquetes que están almacenados en el servidor de Integration Services|Paquetes que están almacenados en el almacén de paquetes SSIS o en la base de datos msdb|Paquetes que están almacenados en el sistema de archivos, fuera de la ubicación que forma parte del almacén de paquetes SSIS|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
@@ -45,8 +45,8 @@ ms.locfileid: "36200577"
 |**dtexecui**<br /><br /> Para más información, vea [Referencia de la interfaz de usuario de la Utilidad de ejecución de paquetes &#40;DtExecUI&#41;](execute-package-utility-dtexecui-ui-reference.md)|no|Sí|Sí|  
 |**Agente SQL Server**<br /><br /> Use un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para programar un paquete.<br /><br /> Para más información, consulte [SQL Server Agent Jobs for Packages](sql-server-agent-jobs-for-packages.md).|Sí|Sí|Sí|  
 |**Procedimiento almacenado integrado**<br /><br /> Para más información, vea [catalog.start_execution &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)|Sí|no|no|  
-|**API administrada, con tipos y miembros del espacio de nombres**  <xref:Microsoft.SqlServer.Management.IntegrationServices>|Sí|no|no|  
-|**API administrada, con tipos y miembros del espacio de nombres**  <xref:Microsoft.SqlServer.Dts.Runtime>|No actualmente|Sí|Sí|  
+|**API administrada, con tipos y miembros del espacio de nombres ** <xref:Microsoft.SqlServer.Management.IntegrationServices>|Sí|no|no|  
+|**API administrada, con tipos y miembros del espacio de nombres ** <xref:Microsoft.SqlServer.Dts.Runtime>|No actualmente|Sí|Sí|  
   
 ## <a name="execution-and-logging"></a>Ejecución y registro  
  Los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se pueden habilitar para el registro y el usuario puede capturar la información en tiempo de ejecución de los archivos de registro. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md).  

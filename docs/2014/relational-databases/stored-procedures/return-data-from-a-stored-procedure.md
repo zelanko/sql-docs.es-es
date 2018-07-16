@@ -3,26 +3,24 @@ title: Devolver datos de un procedimiento almacenado | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b8120714aba03f2be632d19e846daea3789dba54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bd21d239fb1a4a947e5f6d17120cc6a63feb575b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249695"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Devolver datos de un procedimiento almacenado
   Existen dos formas de devolver conjuntos de resultados o datos de un procedimiento a un programa de llamada: parámetros de salida y códigos de retorno. En este tema se proporciona información sobre ambos enfoques.  
@@ -75,10 +73,10 @@ GO
  Si especifica OUTPUT para un parámetro cuando llama a un procedimiento y dicho parámetro no está definido mediante OUTPUT en la definición del procedimiento, se emite un mensaje de error. No obstante, puede ejecutar un procedimiento con parámetros de salida y no especificar OUTPUT al ejecutar el procedimiento. No se devuelve ningún error, pero no podrá utilizar el valor de salida en el programa que realiza la llamada.  
   
 ### <a name="using-the-cursor-data-type-in-output-parameters"></a>Usar el tipo de datos de cursor en parámetros OUTPUT  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] pueden usar los procedimientos del `cursor` de tipo de datos solo para los parámetros OUTPUT. Si el `cursor` se especifica el tipo de datos para un parámetro, se debe especificar palabras clave tanto el VARYING y OUTPUT para ese parámetro en la definición del procedimiento. Puede especificarse un parámetro como único resultado, pero si se especifica la palabra clave VARYING en la declaración del parámetro, el tipo de datos debe ser `cursor` y también se debe especificar la palabra clave OUTPUT.  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)] pueden usar los procedimientos del `cursor` solo para los parámetros de salida de tipo de datos. Si el `cursor` se especifica el tipo de datos para un parámetro, se deben especificar palabras clave tanto el VARYING y OUTPUT para ese parámetro en la definición del procedimiento. Se puede especificar un parámetro como una salida única, pero si se especifica la palabra clave VARYING en la declaración de parámetro, el tipo de datos debe ser `cursor` y también se debe especificar la palabra clave OUTPUT.  
   
 > [!NOTE]  
->  El `cursor` tipo de datos no se puede enlazar a variables de aplicación a través de la API como OLE DB, ODBC, ADO y DB-Library de base de datos. Debido a parámetros OUTPUT deben estar enlazados antes de que una aplicación pueda ejecutar un procedimiento, dichos procedimientos con `cursor` parámetros OUTPUT no pueden llamarse desde la API de base de datos. Estos procedimientos pueden llamarse desde [!INCLUDE[tsql](../../../includes/tsql-md.md)] procesos por lotes, procedimientos o desencadenadores solo cuando la `cursor` variable de salida se asigna a un [!INCLUDE[tsql](../../../includes/tsql-md.md)] local `cursor` variable.  
+>  El `cursor` tipo de datos no se puede enlazar a variables de aplicación a través de la base de datos de las API como OLE DB, ODBC, ADO y DB-Library. Dado que los parámetros de salida deben estar enlazados antes de que una aplicación pueda ejecutar un procedimiento, dichos procedimientos con `cursor` los parámetros de salida no se puede llamar desde la API de base de datos. Estos procedimientos pueden llamarse desde [!INCLUDE[tsql](../../../includes/tsql-md.md)] procesos por lotes, procedimientos, o solo cuando se desencadena el `cursor` variable de salida se asigna a un [!INCLUDE[tsql](../../../includes/tsql-md.md)] local `cursor` variable.  
   
 ### <a name="rules-for-cursor-output-parameters"></a>Reglas para parámetros de salida de cursor  
  Las reglas siguientes se aplican a `cursor` parámetros de salida cuando se ejecuta el procedimiento:  
@@ -108,7 +106,7 @@ GO
     >  El estado cerrado solo tiene importancia en el momento del retorno. Por ejemplo, es válido cerrar un cursor a mitad del procedimiento, volver a abrirlo posteriormente en el procedimiento y devolver el conjunto de resultados de ese cursor al proceso por lotes, procedimiento o desencadenador de llamada.  
   
 ### <a name="examples-of-cursor-output-parameters"></a>Ejemplos de parámetros de salida de cursor  
- En el ejemplo siguiente, se crea un procedimiento que especifica un parámetro de salida, `@currency`_`cursor` mediante el `cursor` tipo de datos. A continuación, se llama al procedimiento desde un lote.  
+ En el ejemplo siguiente, se crea un procedimiento que especifica un parámetro de salida, `@currency`_`cursor` utilizando el `cursor` tipo de datos. A continuación, se llama al procedimiento desde un lote.  
   
  Primero, crea el procedimiento de declaración y, luego, abre un cursor en la tabla Currency.  
   
@@ -149,7 +147,7 @@ GO
 ```  
   
 ## <a name="returning-data-using-a-return-code"></a>Devolver datos con un código de retorno  
- Un procedimiento puede devolver un valor entero, denominado código de retorno, para indicar el estado de ejecución de un procedimiento. Se especifica el código de retorno para un procedimiento mediante la instrucción RETURN. Al igual que con los parámetros OUTPUT, debe guardar el código de retorno en una variable cuando se ejecute el procedimiento a fin de usar su valor en el programa de llamada. Por ejemplo, la variable de asignación `@result` del tipo de datos `int` se utiliza para almacenar el código de retorno del procedimiento `my_proc`, como:  
+ Un procedimiento puede devolver un valor entero, denominado código de retorno, para indicar el estado de ejecución de un procedimiento. Se especifica el código de retorno para un procedimiento mediante la instrucción RETURN. Al igual que con los parámetros OUTPUT, debe guardar el código de retorno en una variable cuando se ejecute el procedimiento a fin de usar su valor en el programa de llamada. Por ejemplo, la variable de asignación `@result` del tipo de datos `int` se usa para almacenar el código de retorno del procedimiento `my_proc`, tales como:  
   
 ```  
 DECLARE @result int;  

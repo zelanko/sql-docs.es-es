@@ -1,5 +1,5 @@
 ---
-title: Implementar columnas LOB en una tabla con optimización para memoria | Documentos de Microsoft
+title: Implementar columnas LOB en una tabla optimizada para memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 2af703360aa56e48658fc7b76098eb5db0cdc2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 733183e50a631e86f391070ae45b1e70d179a643
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283841"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implementar columnas LOB en una tabla con optimización para memoria
   Las tablas con optimización para memoria no tienen almacenamiento no consecutivo o de objetos grandes (LOB), y el límite de tamaño de fila es de 8060 bytes. El almacenamiento de valores binarios o de cadenas de caracteres grandes se puede realizar de dos maneras:  

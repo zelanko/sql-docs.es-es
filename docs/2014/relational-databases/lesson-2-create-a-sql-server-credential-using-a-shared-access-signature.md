@@ -1,5 +1,5 @@
 ---
-title: 'Lección 3: Crear una credencial de SQL Server | Documentos de Microsoft'
+title: 'Lección 3: Crear una credencial de SQL Server | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 201863a1df64cdc85ef41a55170948dbf4eba419
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 486917c0cd6a36bbf2004e17ffaf0607e04ecbb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219255"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>Lección 3: Crear una credencial de SQL Server
   En esta lección, creará una credencial para almacenar la información de seguridad usada para tener acceso a la cuenta de almacenamiento de Windows Azure.  
@@ -51,7 +51,7 @@ ms.locfileid: "36201366"
   
     ```  
   
-     Para obtener información detallada, vea [CREATE CREDENTIAL &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-credential-transact-sql) en libros en pantalla de SQL Server.  
+     Para obtener información detallada, consulte [CREATE CREDENTIAL &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-credential-transact-sql) en libros en pantalla de SQL Server.  
   
 5.  Para ver todas las credenciales disponibles, puede ejecutar la siguiente instrucción en la ventana de consulta:  
   
@@ -63,6 +63,6 @@ ms.locfileid: "36201366"
   
  **Lección siguiente:**  
   
- [Lección 4: Crear una base de datos en almacenamiento de Windows Azure](lesson-3-database-backup-to-url.md)  
+ [Lección 4: Crear una base de datos de Azure Storage](lesson-3-database-backup-to-url.md)  
   
   

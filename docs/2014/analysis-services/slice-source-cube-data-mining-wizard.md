@@ -1,5 +1,5 @@
 ---
-title: Segmentar el cubo de origen (Asistente para minería de datos) | Documentos de Microsoft
+title: Segmentar el cubo de origen (Asistente para minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.slicesourcecube.f1
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a0e3badd385e654db3b869a197130fde26fbffcc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6024c1e58b48c8661eaa15a0ea85c464103403ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326555"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Segmentar el cubo de origen (Asistente para minería de datos)
   Puede utilizar el cuadro de diálogo **Segmentar el cubo de origen** para restringir los datos usados para entrenar el modelo. Un cubo suele contener datos relacionados con muchas dimensiones y atributos diferentes, como todas las tiendas, todas las regiones y todos los productos. No resulta práctico entrenar un modelo en combinaciones ilimitadas de atributos, por lo que debe utilizar este cuadro de diálogo para elegir un conjunto específico que se empleará para entrenar un modelo.  
@@ -64,8 +64,8 @@ ms.locfileid: "36197468"
  Esta opción no se utiliza para los modelos de minería de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Finalización del Asistente para &#40;Asistente para minería de datos&#41;](completing-the-wizard-data-mining-wizard.md)   
- [Ayuda F1 del Asistente para minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Finalización del asistente &#40;Asistente para minería de datos&#41;](completing-the-wizard-data-mining-wizard.md)   
+ [Asistente para la Ayuda de F1 de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Especificar el uso de la columna de modelo de minería de datos &#40;Asistente para minería de datos&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

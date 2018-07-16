@@ -1,5 +1,5 @@
 ---
-title: Previsión de asistente (datos de complementos de minería de datos para Excel) | Documentos de Microsoft
+title: Pronóstico (complementos de minería de datos para Excel de datos) del Asistente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - forecasting [data mining]
 - time series [data mining]
 ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 118d66a0bd06ced70860e7de91938115b1e499be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84860116150a802648e93686d3e8beb86c4ba037
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323255"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>Asistente para pronóstico (Complementos de minería de datos para Excel)
-  ![Asistente para asociación en la cinta de opciones de minería de datos](media/dmc-forecast.gif "Asistente para minería de datos de cinta de opciones de asociación")  
+  ![Asistente para asociación en la cinta de opciones minería de datos](media/dmc-forecast.gif "asociar el Asistente en la cinta de opciones minería de datos")  
   
  El Asistente para pronóstico le permite predecir valores en una serie temporal. El Asistente para pronóstico usa el algoritmo de serie temporal de [!INCLUDE[msCoName](../includes/msconame-md.md)], que es un algoritmo de regresión que se usa para predecir columnas continuas, como ventas de productos.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "36201040"
   
  Puede crear predicciones a partir de un modelo de predicción sin proporcionar nuevos datos de entrada.  
   
- El [previsión &#40;herramientas de análisis de tabla para Excel&#41; ](forecast-table-analysis-tools-for-excel.md) herramienta, en el **analizar** cinta de opciones, también permite crear modelos de predicción, pero es menos personalizable y solo se pueden usar datos en tablas de Excel.  
+ El [previsión &#40;herramientas de análisis de tabla para Excel&#41; ](forecast-table-analysis-tools-for-excel.md) herramienta, en el **analizar** cinta de opciones, también le permite crear modelos de predicción, pero es menos personalizable y solo se pueden usar datos en tablas de Excel.  
   
 ## <a name="using-the-forecast-wizard"></a>Usar el Asistente para pronóstico  
   
@@ -43,9 +43,9 @@ ms.locfileid: "36201040"
   
      Si utiliza un origen de datos externo, puede definir consultas o vistas personalizadas y guardarlas como un origen de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-3.  En el **Forecasting** página, para **marca de tiempo**, seleccione una columna que contiene el valor numérico único (Esto incluye valores de fecha y hora) que puede utilizarse como la serie de casos. El origen de datos se debe ordenar de forma ascendente según esta columna.  
+3.  En el **Forecasting** página, para **marca de tiempo**, seleccione una columna que contiene el valor numérico único (Esto incluye los valores de fecha y hora) que puede usarse como la serie de casos. El origen de datos se debe ordenar de forma ascendente según esta columna.  
   
-     Si los datos no tienen este tipo de columna, puede utilizar la opción \<sin marca de tiempo >. El asistente agregará una columna de orden única para los datos de entrada; por consiguiente, debe asegurarse de que los datos están ordenados de la manera que desea antes de ejecutar el asistente y elegir esta opción.  
+     Si los datos no tienen este tipo de columna, puede usar la opción \<sin marca de tiempo >. El asistente agregará una columna de orden única para los datos de entrada; por consiguiente, debe asegurarse de que los datos están ordenados de la manera que desea antes de ejecutar el asistente y elegir esta opción.  
   
 4.  Si lo desea, puede hacer clic en **parámetros** y personalizar el comportamiento del modelo de minería de datos.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36201040"
   
 5.  En el **finalizar** página, proporcione un nombre descriptivo para el conjunto de datos y el modelo y establecer las siguientes opciones que controlan cómo trabajar con el modelo terminado:  
   
-    -   **Examinar modelo**. Cuando se selecciona esta opción, tan pronto como el asistente termina de procesar el modelo, se abre un **examinar** ventana que le ayudarán a explorar los resultados. El contenido del visor depende del tipo de modelo que creó. Para obtener más información, consulte [examinar un modelo de previsión](browsing-a-forecasting-model.md).  
+    -   **Examinar modelo**. Cuando se selecciona esta opción, tan pronto como el asistente finaliza el procesamiento del modelo, se abre un **examinar** ventana que le ayudarán a explorar los resultados. El contenido del visor depende del tipo de modelo que creó. Para obtener más información, consulte [examinar un modelo de previsión](browsing-a-forecasting-model.md).  
   
     -   **Habilitar obtención de detalles**. Seleccione esta opción para ver los datos subyacentes desde el modelo terminado. Esta opción solo está disponible si se crea un modelo de árbol de decisión.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36201040"
  Si los datos no incluyen una columna de hora o de fecha, puede asignar una serie numérica arbitraria o permitir al asistente crearla. Si permite al asistente crear la columna de orden de la serie, asegúrese de que las otras columnas están ordenadas en el orden que desea antes de iniciar el asistente.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear un modelo de minería de datos](creating-a-data-mining-model.md)   
+ [Creación de un modelo de minería de datos](creating-a-data-mining-model.md)   
  [Previsión &#40;herramientas de análisis de tabla para Excel&#41;](forecast-table-analysis-tools-for-excel.md)   
  [Examinar un modelo de pronóstico](browsing-a-forecasting-model.md)  
   

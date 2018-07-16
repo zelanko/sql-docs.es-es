@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.toolboxcommon.F1
 - sql12.dts.designer.toolbox.F1
@@ -17,13 +17,13 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b34cd549a8a8debf43121f8b401d16c41acde66a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 779b710f06a32a7e5add974281d9cd5c2e6eed93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248735"
 ---
 # <a name="ssis-toolbox"></a>Cuadro de herramientas de SSIS
   Todos los componentes instalados en el equipo local, incluidos los componentes de terceros generados para SQL Server 2008 y 2008 R2, aparecen ahora automáticamente en el nuevo **Cuadro de herramientas de SSIS**. Al instalar componentes adicionales, haga clic con el botón derecho en el cuadro de herramientas y, después, haga clic en **Actualizar cuadro de herramientas** para agregar los componentes.  
@@ -43,6 +43,6 @@ ms.locfileid: "36197638"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Mover elementos del cuadro de herramientas SSIS](../../2014/integration-services/move-ssis-toolbox-items.md)  
+-   [Mover elementos del cuadro de herramientas de SSIS](../../2014/integration-services/move-ssis-toolbox-items.md)  
   
   

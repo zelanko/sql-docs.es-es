@@ -1,5 +1,5 @@
 ---
-title: Ejecutar un diagrama de actualización mediante ADO (SQLXML 4.0) | Documentos de Microsoft
+title: Ejecutar un diagrama de actualización mediante ADO (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37a8cb3f06152ac2bc7dc682ae8d06e54d33ef6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ad4ed1723cc8ad49ed18304c106b0849e6bc2fb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319975"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Ejecutar un diagrama de actualización mediante ADO (SQLXML 4.0)
   Esta aplicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic utiliza ADO para establecer una conexión a una instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y ejecutar un diagrama de actualización. El diagrama de actualización actualiza el apellido de un empleado concreto. En este ejemplo se utiliza la base de datos de ejemplo AdventureWorks.  
   
  En esta aplicación de ejemplo:  
   
--   El **conn** objeto (**ADODB. Conexión**) establece una conexión con una instancia en ejecución de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un equipo de servidor específico.  
+-   El **conn** objeto (**ADODB. Conexión**) establece una conexión a una instancia de ejecución [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un equipo servidor concreto.  
   
 -   El **cmd** objeto (**ADODB.Command**) se ejecuta en la conexión establecida.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36199866"
   
 -   El diagrama de actualización se copia en la secuencia de comandos (**strmIn**).  
   
--   Flujo de salida del comando se establece en el **StrmOut** objeto (**ADODB. Transmitir**) recibir cualquier devolvió datos.  
+-   Flujo de salida del comando se establece en el **StrmOut** objeto (**ADODB. Stream**) a reciba cualquiera de los datos devueltos.  
   
 -   Finalmente se ejecuta el comando (diagrama de actualización).  
   
@@ -187,7 +187,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>Pasar parámetros  
- En las aplicaciones Visual Basic proporcionadas anteriormente, los parámetros no se pasan. En esta aplicación, el **ContactID** y **MiddleName** valores se pasan como entrada parametrizada al diagrama de actualización.  
+ En las aplicaciones Visual Basic proporcionadas anteriormente, los parámetros no se pasan. En esta aplicación, el **ContactID** y **MiddleName** valores se pasan como entrada parametrizada en el diagrama de actualización.  
   
 ```vb  
 Private Sub Form_Load()  

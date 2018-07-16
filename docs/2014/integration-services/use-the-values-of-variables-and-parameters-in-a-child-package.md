@@ -1,5 +1,5 @@
 ---
-title: Use los valores de Variables y parámetros de un paquete secundario | Documentos de Microsoft
+title: Use los valores de Variables y parámetros de un paquete secundario | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
 - configurations [Integration Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5ff545e52e36ca6019a6d9e367b8466d99bd7983
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1c522a87bfd20608d1e42080ad9ff3d3ae10973
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287521"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Usar los valores de variables y parámetros en un paquete secundario
   Este procedimiento describe cómo crear una configuración de paquete que utiliza el tipo de configuración de variables primarias. Este tipo de configuración habilita un paquete secundario que se ejecuta desde un paquete primario para tener acceso a una variable del elemento primario.  
@@ -111,6 +111,6 @@ ms.locfileid: "36200992"
  [Configuraciones de paquetes](../../2014/integration-services/package-configurations.md)   
  [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md)   
  [Servicios de integración &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
- [Usar Variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)  
+ [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)  
   
   

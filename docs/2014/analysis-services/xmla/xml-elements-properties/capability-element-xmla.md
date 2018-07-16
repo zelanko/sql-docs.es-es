@@ -1,5 +1,5 @@
 ---
-title: Elemento Capability (XMLA) | Documentos de Microsoft
+title: Elemento Capability (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Capability element
 ms.assetid: 544a733e-77fc-48a0-8f92-9cd1fdbcf824
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 7fd495ff0abf921b377526f6030d5207d962e1bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a5b14b43b41f74c05d433c599b18486c5737b27c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201895"
 ---
 # <a name="capability-element-xmla"></a>Elemento Capability (XMLA)
-  Indica la compatibilidad con una prestación de protocolo en el elemento primario de [ProtocolCapabilities](../xml-elements-headers/protocolcapabilities-element-xmla.md) elemento de encabezado.  
+  Indica la compatibilidad con una prestación de protocolo en el elemento primario [ProtocolCapabilities](../xml-elements-headers/protocolcapabilities-element-xmla.md) elemento de encabezado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36107942"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El `Capability` elemento indica que cierta prestación específica, como binario o compresión, es compatible con la aplicación que incluyen la `ProtocolCapabilities` elemento de encabezado en el encabezado SOAP de la solicitud SOAP o la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que incluyen la `ProtocolCapabilities` elemento de encabezado en el encabezado SOAP de la respuesta SOAP. El valor del elemento `Capability` es el nombre de la función que se va a admitir.  
+ El `Capability` elemento indica que cierta prestación específica, como binario o compresión, es compatible con la aplicación que incluye el `ProtocolCapabilities` elemento de encabezado en el encabezado SOAP de la solicitud SOAP o la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que incluyen el `ProtocolCapabilities` elemento de encabezado en el encabezado SOAP de la respuesta SOAP. El valor del elemento `Capability` es el nombre de la función que se va a admitir.  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] admite las prestaciones descritas en la siguiente tabla.  
   

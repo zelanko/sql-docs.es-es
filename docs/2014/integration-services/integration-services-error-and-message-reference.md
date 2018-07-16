@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 38dccbf58c4e0cbfee98b10c7cd8974198bceabc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 111a6cddaae54f05bb751e569487c4b94542bf07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300005"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referencia de errores y mensajes de Integration Services
   En las tablas siguientes se muestra una lista de los errores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] predefinidos, advertencias y mensajes informativos, en orden numérico ascendente dentro de cada categoría, junto con sus códigos numéricos y nombres simbólicos. Cada uno de estos errores se define como un campo en la clase <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> en el espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -48,7 +48,7 @@ ms.locfileid: "36105553"
 -   [Mensajes de error de componentes de flujo de datos (DTSBC_E_*)](#msgPipeline)  
   
 ##  <a name="msgError"></a> mensajes de error  
- Los nombres simbólicos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mensajes de error comienzan por `DTS_E_`.  
+ Los nombres simbólicos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mensajes de error que comienzan por `DTS_E_`.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2267,7 +2267,7 @@ ms.locfileid: "36105553"
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|La propiedad de tamaño máximo de confirmación de inserción del destino de OLE DB "%1" está establecida en 0. Este valor de la propiedad puede hacer que el paquete en ejecución deje de responder. Para obtener más información, vea el tema de Ayuda F1 del Editor de destino de OLE DB (página Administrador de conexiones).|  
   
 ##  <a name="msgGeneral"></a> Mensajes generales y de eventos  
- Los nombres simbólicos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mensajes de error comienzan por `DTS_MSG_`.  
+ Los nombres simbólicos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mensajes de error que comienzan por `DTS_MSG_`.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2306,7 +2306,7 @@ ms.locfileid: "36105553"
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|Nombre del evento: %1<br /><br /> Mensaje: %9<br /><br /> Operador: %2<br /><br /> Nombre de origen: %3<br /><br /> Id. de origen: %4<br /><br /> Id. de ejecución: %5<br /><br /> Hora de inicio: %6<br /><br /> Hora de finalización: %7<br /><br /> Código de datos: %8|  
   
 ##  <a name="msgSuccess"></a> Mensajes de aprobación  
- Los nombres simbólicos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mensajes de aprobación comienzan por `DTS_S_`.  
+ Los nombres simbólicos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mensajes de aprobación que comienzan por `DTS_S_`.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
 |----------------------|------------------|-------------------|-----------------|  

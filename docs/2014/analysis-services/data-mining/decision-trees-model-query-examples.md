@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de consultas de modelo de árboles de decisión | Documentos de Microsoft
+title: Ejemplos de consultas de modelo de árboles de decisión | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - content queries [DMX]
 - decision trees [Analysis Services]
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56763f6e1b207e0f676c08e5bbca7066b680dcda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 734402a21381ef6bf60eec5860b887ae3e0a73f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261521"
 ---
 # <a name="decision-trees-model-query-examples"></a>Ejemplos de consultas de modelos de árboles de decisión
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles de los patrones detectados durante el análisis, o de una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones de los nuevos datos. Por ejemplo, una consulta de contenido para un modelo de árboles de decisión puede proporcionar estadísticas sobre el número de casos en cada nivel del árbol, o de las reglas que diferencian los casos. O bien, una consulta de predicción asigna el modelo a los datos nuevos para generar recomendaciones, clasificaciones, etc. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  
@@ -70,7 +70,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
  Esta consulta devuelve todos los nodos de tipo 2, que son los nodos de nivel superior de un árbol que representa un atributo de predicción determinado.  
   
 > [!NOTE]  
->  La columna `CHILDREN_CARDINALITY`, debe ir entre corchetes para distinguirlo de la palabra clave reservada MDX del mismo nombre.  
+>  La columna, `CHILDREN_CARDINALITY`, debe escribirse entre corchetes para distinguirla de la palabra clave reservada MDX del mismo nombre.  
   
 ```  
 SELECT MODEL_NAME, NODE_NAME, NODE_CAPTION,   
@@ -90,7 +90,7 @@ WHERE NODE_TYPE = 2
  La consulta relacionada siguiente devuelve los elementos secundarios para estos cinco subgrupos, junto con la distribución de atributos y valores de los nodos secundarios. Dado que elementos estadísticos como compatibilidad, probabilidad y varianza se almacenan en la tabla anidada, `NODE_DISTRIBUTION`, este ejemplo utiliza la palabra clave `FLATTENED` para generar las columnas de la tabla anidada.  
   
 > [!NOTE]  
->  La columna de tabla anidada, `SUPPORT`, debe ir entre corchetes para distinguirlo de la palabra clave reservada con el mismo nombre.  
+>  La columna de tabla anidada, `SUPPORT`, debe escribirse entre corchetes para distinguirla de la palabra clave reservada con el mismo nombre.  
   
 ```  
 SELECT FLATTENED NODE_NAME, NODE_CAPTION,  
@@ -111,7 +111,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|1|473|  
   
- En estos resultados, puede indicar que los clientes que compraron una bicicleta (`[Bike Buyer]` = 1), 1067 clientes tenían 0 automóviles y 473 clientes tenían 3 automóviles.  
+ En estos resultados, se puede decir que, de los clientes que compraron una bicicleta (`[Bike Buyer]` = 1), 1067 clientes tenían 0 automóviles y 473 clientes tenían 3 automóviles.  
   
 ###  <a name="bkmk_Query3"></a> Consulta de ejemplo 3: Recuperar subárboles a partir del modelo  
  Suponga que desea averiguar más sobre los clientes que compraron una bicicleta. Puede ver detalles adicionales de cualquiera de los subárboles usando la función [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) en la consulta, como se muestra en el ejemplo siguiente. La consulta devuelve el recuento de compradores de bicicletas recuperando los nodos hoja (NODE_TYPE = 4) del árbol que contiene clientes con más de 42 años de edad. La consulta restringe las filas de la tabla anidada a aquellos en los que Bike Buyer = 1.  
@@ -279,6 +279,6 @@ WHERE NODE_TYPE = 25
  [Consultas de minería de datos](data-mining-queries.md)   
  [Algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm.md)   
  [Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)   
- [Contenido para los modelos de árbol de decisión del modelo de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Contenido del modelo para los modelos de árboles de decisión de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

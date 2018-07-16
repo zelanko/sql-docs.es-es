@@ -1,5 +1,5 @@
 ---
-title: Visores (Diseñador de modelos de minería de datos) del modelo de minería de datos | Documentos de Microsoft
+title: (Diseñador de modelos de minería de datos) de visores de modelos de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.viewers.f1
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e04799cbd5d78f82612732506e460008a4138117
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9fd7d89abbbbce1c55b20227d44c191cf315d52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293635"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Visores de modelos de minería de datos (Diseñador de modelos de minería de datos)
   Use la pestaña **Visor de modelos de minería de datos** para explorar los modelos de minería de datos que contiene una estructura de minería de datos.  
@@ -141,7 +141,7 @@ ms.locfileid: "36201242"
   
 -   [Examinar un modelo usando el Visor de serie temporal de Microsoft](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
-    -   [Ficha de modelo &#40;visores de modelos de minería de datos&#41;](model-tab-mining-model-viewers.md)  
+    -   [Pestaña de modelo &#40;visores de modelos de minería de datos&#41;](model-tab-mining-model-viewers.md)  
   
     -   [Pestaña de gráfico &#40;visores de modelos de minería de datos&#41;](chart-tab-mining-model-viewers.md)  
   
@@ -150,7 +150,7 @@ ms.locfileid: "36201242"
 ## <a name="see-also"></a>Vea también  
  [Vista de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-models-view-data-mining-model-designer.md)   
  [Vista de la estructura de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-structure-view-data-mining-model-designer.md)   
- [Diseñador de gráficos de precisión de minería de datos &#40;minería de datos&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Diseñador gráfico de precisión de minería de datos &#40;minería de datos&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Generador de consultas de predicción &#40;minería de datos&#41;](prediction-query-builder-data-mining.md)  
   
   

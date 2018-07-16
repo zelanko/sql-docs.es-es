@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
 - tasks [Integration Services], variables
@@ -19,13 +19,13 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b820a671418fc3126f2b5904f9a2a1c0c881eaa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c5f708afa4ce172807c1e0fd0697f6f7a29542d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311976"
 ---
 # <a name="system-variables"></a>Variables del sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona un conjunto de variables del sistema que almacenan información sobre el paquete en ejecución y sus objetos. Estas variables se pueden usar en expresiones y expresiones de propiedad para personalizar paquetes, contenedores, tareas y controladores de eventos.  
@@ -45,7 +45,7 @@ ms.locfileid: "36198953"
 |`ExecutionInstanceGUID`|String|Identificador exclusivo de la instancia de ejecución de un paquete.|  
 |`FailedConfigurations`|String|Nombres de las configuraciones de paquete que no se pudieron realizar.|  
 |`IgnoreConfigurationsOnLoad`|Boolean|Indica si las configuraciones de paquete se omiten al cargar el paquete.|  
-|**InteractiveMode**|Boolean|Indica si el paquete se ejecuta en modo interactivo. Si un paquete se ejecuta en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)], esta propiedad se establece en `True`. Si se ejecuta un paquete mediante la **DTExec** utilidad de símbolo del sistema, la propiedad se establece en `False`.|  
+|**InteractiveMode**|Boolean|Indica si el paquete se ejecuta en modo interactivo. Si un paquete se ejecuta en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)], esta propiedad se establece en `True`. Si se ejecuta un paquete mediante el **DTExec** utilidad de símbolo del sistema, la propiedad se establece en `False`.|  
 |`LocaleId`|Int32|Configuración regional que usa el paquete.|  
 |**MachineName**|String|Nombre del equipo en el que se está ejecutando el paquete.|  
 |**OfflineMode**|Boolean|Indica si el paquete está en el modo sin conexión. El modo sin conexión no adquiere conexiones a orígenes de datos.|  
@@ -108,6 +108,6 @@ ms.locfileid: "36198953"
  Esta regla se aplica también a las variables definidas por el usuario. No obstante, si bien los tipos de datos de las variables del sistema no se pueden cambiar y usted debe adaptar el uso de estas variables para que se ajusten a los tipos de datos, las variables definidas por el usuario son más flexibles. Las variables definidas por el usuario que se utilizan en enlaces de parámetros generalmente se definen con tipos de datos que son compatibles con los tipos de datos de parámetros a los que se asignan.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Asignar parámetros de consulta a Variables en una tarea Ejecutar SQL](control-flow/execute-sql-task.md)  
+ [Asignar parámetros de consulta a variables en una tarea Ejecutar SQL](control-flow/execute-sql-task.md)  
   
   

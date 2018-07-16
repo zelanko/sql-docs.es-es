@@ -1,5 +1,5 @@
 ---
-title: Los totales visuales y totales no visuales | Documentos de Microsoft
+title: Totales visuales y totales no visuales | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea9d02f2-a668-4547-ade5-e3d077a2e1bd
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae51861e90628621e776b7153b6d23ec0c44a047
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b211305babfee92a85469257795b6124f2ab4b54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253037"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Totales visuales y totales no visuales
   Los totales visuales son totales que se encuentran al final de una columna o fila que suman todos los elementos visibles de la columna o fila. Este es el comportamiento predeterminado de la mayoría de las tablas cuando se muestran. Sin embargo, a veces el usuario desea mostrar solo ciertas columnas de una tabla manteniendo los totales de toda la fila, incluidos los que no se muestran y que se denominan `Non Visual Totals`, porque el total proviene de los valores tanto visibles como no visibles.  
@@ -102,9 +102,9 @@ ms.locfileid: "36198784"
   
 ## <a name="see-also"></a>Vea también  
  [Conceptos clave para MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [Autoexist](autoexists.md)   
+ [Autoexists](autoexists.md)   
  [Trabajar con miembros, tuplas y conjuntos &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Aspectos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [Aspectos básicos de consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [Consulta de MDX básica &#40;MDX&#41;](mdx-query-the-basic-query.md)   
  [Restringir la consulta con ejes de consulta y segmentador &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
  [Establecer el contexto de cubo en una consulta &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, operators
 - SQL Server Integration Services, operators
@@ -18,13 +18,13 @@ ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d907683caf7add1a3d0e7747a3e3c1ce7eaded94
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 779597ab830df7cf89ad3d830c41402b43a91768
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320695"
 ---
 # <a name="operators-ssis-expression"></a>Operadores (expresión de SSIS)
   En esta sección se describen los operadores que proporciona el lenguaje de expresiones, así como la precedencia y la capacidad de asociación de los operadores que el evaluador de expresiones utiliza.  
@@ -52,7 +52,7 @@ ms.locfileid: "36197644"
 |[== &#40;Igual&#41; &#40;expresión de SSIS&#41;](equal-ssis-expression.md)|Realiza una comparación para determinar si dos expresiones son iguales.|  
 |[\!= &#40;Diferente&#41; &#40;expresión de SSIS&#41;](unequal-ssis-expression.md)|Realiza una comparación para determinar si dos expresiones no son iguales.|  
 |[&#62;&#40;Mayor&#41; &#40;expresión de SSIS&#41;](greater-than-ssis-expression.md)|Realiza una comparación para determinar si la primera expresión es mayor que la segunda.|  
-|[&#60;&#40;Inferior a&#41; &#40;expresión de SSIS&#41;](less-than-ssis-expression.md)|Realiza una comparación para determinar si la primera expresión es menor que la segunda.|  
+|[&#60;&#40;Menor&#41; &#40;expresión de SSIS&#41;](less-than-ssis-expression.md)|Realiza una comparación para determinar si la primera expresión es menor que la segunda.|  
 |[&#62;= &#40;Mayor o igual que&#41; &#40;expresión de SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)|Realiza una comparación para determinar si la primera expresión es mayor o igual que la segunda.|  
 |[&#60;= &#40;Menor o igual a&#41; &#40;expresión de SSIS&#41;](less-than-or-equal-to-ssis-expression.md)|Realiza una comparación para determinar si la primera expresión es menor o igual que la segunda.|  
 |[? : &#40;Condicional&#41; &#40;expresión de SSIS&#41;](conditional-ssis-expression.md)|Devuelve una de dos expresiones en función del resultado de la evaluación de una expresión booleana.|  

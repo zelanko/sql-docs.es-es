@@ -1,5 +1,5 @@
 ---
-title: Editor de bucles foreach (página colección) | Documentos de Microsoft
+title: Editor de bucles foreach (página colección) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50ab22c5b36390645aa8f6fb961531479e592188
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d10057943aa872c919171227f072f6b2836eba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318885"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Editor de bucles Foreach (página Colección)
   Use la página **Colección** del cuadro de diálogo **Editor de bucles Foreach** para especificar el tipo de enumerador y configurarlo.  
@@ -42,7 +42,7 @@ ms.locfileid: "36199745"
 |**Enumerador de lista de nodos para Para cada uno**|Enumera los nodos de un documento XML. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de lista de nodos para Foreach**.|  
 |**Enumerador de SMO para Para cada uno**|Enumera un objeto SMO. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de SMO para Foreach**.|  
 |**Enumerador de blob de Azure para Para cada uno**|Enumerar archivos blob en la ubicación de blob especificada. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de blob de Azure para Foreach**.|  
-|**Enumerador de archivos de ADLS para Para cada uno**|Enumerar los archivos en ADLS con filtros. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de archivos ADLS para Para cada uno**.|
+|**Enumerador de archivos de ADLS para Para cada uno**|Enumerar archivos en ADLS con filtros. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de archivos ADLS para Para cada uno**.|
   
  **Expresiones**  
  Haga clic en **Expresiones** o expándalo para ver la lista de expresiones de propiedad existentes. Haga clic en el botón de puntos suspensivos **(…)** para agregar una expresión de propiedad para una propiedad de enumerador o para editar y evaluar una expresión de propiedad existente.  
@@ -165,7 +165,7 @@ ms.locfileid: "36199745"
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerador = Enumerador de lista de nodos para Foreach  
  El enumerador de lista de nodos para Foreach se utiliza para enumerar el conjunto de nodos XML que resultan de aplicar una expresión XPath a un archivo XML. Por ejemplo, si el bucle Foreach incluye una tarea Script, puede utilizar el enumerador de lista de nodos para Foreach para pasar un valor que coincida con los criterios de la expresión XPath del archivo XML a la tarea Script.  
   
- La expresión XPath que se aplica al archivo XML es la operación XPath externa, almacenada en la propiedad OuterXPathString. Si el tipo de enumeración de XPath se establece en `ElementCollection`, el enumerador Foreach NodeList puede aplicar una expresión XPath interna, almacenada en la propiedad InnerXPathString para una colección de elementos.  
+ La expresión XPath que se aplica al archivo XML es la operación XPath externa, almacenada en la propiedad OuterXPathString. Si se establece el tipo de enumeración de XPath en `ElementCollection`, el enumerador Foreach NodeList puede aplicar una expresión XPath interna, almacenada en la propiedad InnerXPathString, a una colección de elementos.  
   
  Para obtener más información acerca de cómo trabajar con datos y documentos XML, vea el artículo sobre el[uso de XML en .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)en MSDN Library.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "36199745"
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
   
  **InnerElementType**  
- Si **EnumerationType** se establece en `ElementCollection`, seleccione el tipo de elemento interno en la lista.  
+ Si **EnumerationType** está establecido en `ElementCollection`, seleccione el tipo del elemento interno en la lista.  
   
  **InnerXPathStringSourceType**  
  Seleccione el tipo de origen de la cadena XPath interna. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
@@ -277,8 +277,8 @@ ms.locfileid: "36199745"
   
  **Filtro de intervalo de tiempo desde/hasta de blob**  
  Especifique un filtro de intervalo de tiempo. Se enumerarán los archivos modificados después de **TimeRangeFrom** y antes de **TimeRangeTo** .  
-### <a name="enumerator--foreach-adls-file-enumerator"></a>Enumerador = enumerador de archivos para Foreach ADLS  
-El **enumerador de archivos de ADLS** permite que un paquete SSIS enumerar los archivos en ADLS con filtros. La barra diagonal (`/`)-con prefijo ruta de acceso completa de los archivos enumerados se puede almacenar en una variable y usar en tareas en el contenedor de bucles Foreach.
+### <a name="enumerator--foreach-adls-file-enumerator"></a>Enumerador = enumerador de archivos de ADLS de Foreach  
+El **enumerador de archivos ADLS** habilita un paquete SSIS enumerar los archivos en ADLS con filtros. La barra diagonal (`/`)-ruta de acceso completa con prefijo de los archivos enumerados se puede almacenar en una variable y usar en tareas en el contenedor de bucles Foreach.
   
 **AzureDataLakeConnection**  
 Especifica un administrador de conexiones de Azure Data Lake, o crea uno nuevo que hace referencia a una cuenta de ADLS.   
@@ -287,7 +287,7 @@ Especifica un administrador de conexiones de Azure Data Lake, o crea uno nuevo q
 Especifica el directorio ADLS para buscar.
   
 **FileNamePattern**  
-Especifica un filtro de nombre de archivo. Se enumerarán sólo los archivos cuyo nombre coincida con el patrón especificado. Se admite el uso de los caracteres comodín `*` y `?`. 
+Especifica un filtro de nombre de archivo. Se van a enumerar solo los archivos cuyo nombre coincide con el patrón especificado. Se admite el uso de los caracteres comodín `*` y `?`. 
   
 **SearchRecursively**  
 Especifica si se debe buscar de forma recursiva en el directorio especificado.  

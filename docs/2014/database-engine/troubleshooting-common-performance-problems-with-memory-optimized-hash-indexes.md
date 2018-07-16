@@ -1,5 +1,5 @@
 ---
-title: Solución de problemas de rendimiento comunes con los índices Hash con optimización para memoria | Documentos de Microsoft
+title: Solución de problemas de rendimiento comunes con los índices Hash optimizados para memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
 caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 625bde655c6d95ac30966dd39a52534fc5a84299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96153240af41f0942f93fe0a6dddc0f2149c2d9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316945"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>Solucionar problemas habituales de rendimiento con los índices hash con optimización para memoria
   Este tema se centrará en la solución de problemas y soluciones alternativas a los problemas comunes con índices de hash.  
   
 ## <a name="search-requires-a-subset-of-hash-index-key-columns"></a>La búsqueda requiere un subconjunto de columnas de clave de índice de hash  
- **Problema:** índices de Hash requieren valores para todas las columnas de clave de índice para calcular el valor hash y ubicar las filas correspondientes en la tabla hash. Por consiguiente, si una consulta incluye predicados de igualdad únicamente para un subconjunto de las claves de índice en la cláusula WHERE, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no puede utilizar una operación INDEX SEEK para ubicar las filas correspondientes a los predicados de la cláusula WHERE.  
+ **Problema:** índices Hash requieren valores para todas las columnas de clave de índice con el fin de calcular el valor hash y ubicar las filas correspondientes en la tabla hash. Por consiguiente, si una consulta incluye predicados de igualdad únicamente para un subconjunto de las claves de índice en la cláusula WHERE, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no puede utilizar una operación INDEX SEEK para ubicar las filas correspondientes a los predicados de la cláusula WHERE.  
   
  En cambio, los índices ordenados como los índices no clúster basados en disco y los índices no clúster optimizados para memoria admiten INDEX SEEK en un subconjunto de las columnas de clave de índice, siempre y cuando sean las columnas iniciales del índice.  
   
- **Síntoma:** Esto da como resultado una degradación del rendimiento, como [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] debe ejecutar recorridos de tabla completos en lugar de index seek, que normalmente es una operación más rápida.  
+ **Síntoma:** Esto da como resultado una degradación del rendimiento, como [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] debe ejecutar recorridos de tabla completos en lugar de una búsqueda de índice, que normalmente es una operación más rápida.  
   
- **Cómo solucionar problemas:** además de la degradación del rendimiento, la inspección de los planes de consulta mostrará un recorrido en lugar de una búsqueda de índice. Si la consulta es bastante simple, la inspección del texto de la consulta y de la definición de índice también mostrará si la búsqueda requiere un subconjunto de las columnas de clave de índice.  
+ **Solución de problemas:** además de la degradación del rendimiento, la inspección de los planes de consulta mostrará un recorrido en lugar de una búsqueda de índice. Si la consulta es bastante simple, la inspección del texto de la consulta y de la definición de índice también mostrará si la búsqueda requiere un subconjunto de las columnas de clave de índice.  
   
  Considere la consulta y la tabla siguientes:  
   
@@ -52,7 +52,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
  La tabla tiene un índice de hash en las dos columnas (o_id, od_id), mientras que la consulta tiene un predicado de igualdad en (o_id). Como la consulta tiene predicados de igualdad en un solo subconjunto de las columnas de clave de índice, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no puede realizar una operación INDEX SEEK con PK_od; en su lugar, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene que volver a un recorrido del índice completo.  
   
- **Soluciones alternativas:** hay varias soluciones alternativas posibles. Por ejemplo:  
+ **Soluciones alternativas:** hay una serie de posibles soluciones. Por ejemplo:  
   
 -   Vuelva a crear el índice que sea de tipo no clúster en lugar de hash no clúster. El índice no clúster optimizado para memoria está ordenado y así [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede realizar una búsqueda de índice en las columnas iniciales de clave de índice. La definición resultante de clave principal del ejemplo sería `constraint PK_od primary key nonclustered`.  
   

@@ -1,5 +1,5 @@
 ---
-title: Especificar un conjunto de datos de prueba para la estructura (Tutorial de minería de datos básicos) | Documentos de Microsoft
+title: Especificar un conjunto de datos de prueba para la estructura (Tutorial de minería de datos básicos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 75cd508f-b126-418b-848d-3c4c3e6c303f
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2023672b21e8ffde191b400329031895d200e1ea
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 09822e47f6fb8e1a4b91832a2b47492ae1d8c2b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198375"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>Especificar un conjunto de datos de pruebas para la estructura (Tutorial básico de minería de datos)
   En las pantallas finales del Asistente para minería de datos dividirá los datos en un conjunto de pruebas y en un conjunto de entrenamiento. Después, asignará nombre a la estructura y habilitará la obtención de detalles en el modelo.  
   
 ## <a name="specifying-a-testing-set"></a>Especificar un conjunto de pruebas  
- Al separar los datos en conjuntos de entrenamiento y de pruebas cuando se crea una estructura de minería de datos, es posible evaluar fácilmente la precisión de los modelos de minería de datos que se crean después. Para obtener más información sobre conjuntos de pruebas, vea [entrenamiento y conjuntos de datos de pruebas](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md).  
+ Al separar los datos en conjuntos de entrenamiento y de pruebas cuando se crea una estructura de minería de datos, es posible evaluar fácilmente la precisión de los modelos de minería de datos que se crean después. Para obtener más información sobre conjuntos de pruebas, vea [conjuntos de datos de prueba y entrenamiento](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md).  
   
 #### <a name="to-specify-the-testing-set"></a>Para especificar el conjunto de pruebas  
   
@@ -42,13 +42,13 @@ ms.locfileid: "36312633"
   
 #### <a name="to-name-the-model-and-structure-and-specify-drillthrough"></a>Para denominar el modelo y la estructura, y especificar la obtención de detalles  
   
-1.  En el **finalización del Asistente para** página **nombre de la estructura de minería de datos**, tipo `Targeted Mailing`.  
+1.  En el **completando el Asistente para** página **nombre de la estructura de minería de datos**, tipo `Targeted Mailing`.  
   
 2.  En **nombre del modelo de minería de datos**, tipo `TM_Decision_Tree`.  
   
 3.  Seleccione el **permitir obtención de detalles** casilla de verificación.  
   
-4.  Revise el **vista previa** panel. Tenga en cuenta que solo las columnas seleccionadas como **clave**, **entrada** o **Predictable** se muestran. Las otras columnas que seleccionó (por ejemplo, AddressLine1) no se usan para generar el modelo, pero estarán disponibles en la estructura subyacente y se pueden consultar una vez procesado e implementado el modelo.  
+4.  Revise el **Preview** panel. Tenga en cuenta que solo las columnas seleccionadas como **clave**, **entrada** o **Predictable** se muestran. Las otras columnas que seleccionó (por ejemplo, AddressLine1) no se usan para generar el modelo, pero estarán disponibles en la estructura subyacente y se pueden consultar una vez procesado e implementado el modelo.  
   
 5.  Haga clic en **Finalizar**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Página Mis suscripciones (Administrador de informes) | Documentos de Microsoft
+title: Página Mis suscripciones (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5f75d31ab49d706200ff90d49295d18bc9ba6487
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e973ec6a3c50c43f6ee6bdee4ecfd70f2e2c9b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177622"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Mis suscripciones (página del Administrador de informes)
   Use la página Mis suscripciones para ver todas sus suscripciones en un solo lugar. Desde esta página, puede obtener acceso a cualquier suscripción de su propiedad, modificarla o eliminarla. Es propietario solamente de las suscripciones que ha creado. No puede obtener acceso a las suscripciones de otros usuarios, ni siquiera aunque las utilice (por ejemplo, si se ha agregado su nombre a una suscripción existente definida por otro usuario). Desde esta página no se pueden crear suscripciones. Para obtener más información sobre cómo crear suscripciones, vea el [página nueva suscripción o Editar suscripción &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
@@ -72,6 +72,6 @@ ms.locfileid: "36200308"
   
 ## <a name="see-also"></a>Vea también  
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bf3e24dd3fe06a06b26adcbfcbf9da57d5b6916a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 73246b1aa2413315718680437ba1da8f46b705fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254097"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Agregar lógica comercial a los datos XML
   La lógica de negocios se puede agregar a los datos XML de varias formas:  
@@ -35,7 +35,7 @@ ms.locfileid: "36106048"
 -   Se pueden escribir procedimientos almacenados de Transact-SQL y funciones que inicien el procesamiento en la columna XML de acuerdo con las necesidades de la empresa.  
   
 ## <a name="example-applying-xsl-transformation"></a>Ejemplo: Aplicar transformación XSL  
- Considere la posibilidad de una función CLR **TransformXml()** que acepta un `xml` tipo de instancia y una transformación XSL almacenada en un archivo de datos, se aplica la transformación a los datos XML y, a continuación, devuelve el XML transformado en el resultado. A continuación, se muestra una función esquemática escrita en C#:  
+ Considere una función CLR **TransformXml()** que acepta un `xml` tipo instancia y una transformación XSL almacenada en un archivo de datos, se aplica la transformación a los datos XML y, a continuación, devuelve el código XML transformado en el resultado. A continuación, se muestra una función esquemática escrita en C#:  
   
 ```  
 public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {  

@@ -1,5 +1,5 @@
 ---
-title: Cómo representa Diseñador de consultas y vistas combinaciones (Visual Database Tools) | Documentos de Microsoft
+title: Cómo consultas y vistas representa combinaciones el diseñador (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL pane [Visual Database Tools]
 - joins [SQL Server], Query and View Designer
 - Diagram pane [Visual Database Tools]
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 26c8285db35f00361465340824ec3e8b71a67f35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b1ee25f33d06c1d0df0be8ae31b4d3f265cd07db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299435"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Cómo representa combinaciones el Diseñador de consultas y vistas (Visual Database Tools)
   Si las tablas están combinadas, el [Diseñador de consultas y vistas](visual-database-tools.md) representa la combinación de forma gráfica en el [panel Diagrama](diagram-pane-visual-database-tools.md) y mediante sintaxis SQL en el [panel SQL](sql-pane-visual-database-tools.md).  

@@ -1,5 +1,5 @@
 ---
-title: Página de almacenamiento en caché, compartidos conjuntos de datos (Administrador de informes) | Documentos de Microsoft
+title: Página almacenamiento en caché, compartidos (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 42b50337fe529517d791cf5992e09f3a3f8235b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fdd495e3110deb2cc8c9fc7b8a4848f0252f206
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247995"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>Página de almacenamiento en caché, conjuntos de datos compartidos (Administrador de informes)
   Use la página Propiedades de almacenamiento en caché para establecer las opciones de memoria caché de un conjunto de datos compartido.  
@@ -41,19 +41,19 @@ ms.locfileid: "36198846"
 4.  Haga clic en la pestaña de **almacenamiento en caché** .  
   
 ## <a name="options"></a>Opciones  
- **Conjunto de datos de memoria caché compartida**  
+ **Almacenar en caché conjunto de datos compartido**  
  Coloca una copia temporal de los datos en una memoria caché cuando un usuario abre por primera vez un informe que usa este conjunto de datos compartido. Los usuarios siguientes que ejecuten el informe dentro del período de almacenamiento en caché reciben la copia en caché de los datos. El almacenamiento en memoria caché suele mejorar el rendimiento porque los datos se devuelven desde la memoria caché en lugar de ejecutarse de nuevo la consulta del conjunto de datos.  
   
  **Expirar la memoria caché después de un número de minutos**  
  Especifique el número de minutos durante los que guardar la copia en caché de los datos. Tan pronto como expire una copia temporal, los datos ya no se devolverán de la memoria caché. La próxima vez que un usuario abra un informe que use este conjunto de datos compartido, la consulta del conjunto de datos se ejecutará y el servidor de informes colocará de nuevo una copia de los datos actualizados en la memoria caché.  
   
- **Expirar la memoria caché en la siguiente programación.**  
+ **Expirar la memoria caché en la siguiente programación**  
  Programe el tiempo en el que los datos en caché dejarán de ser válidos y se quitarán de la memoria caché. La programación puede ser compartida o puede ser una específica solamente para el conjunto de datos compartido actual.  
   
  **Programación específica del conjunto de datos**  
  Especifique una programación que solo use este conjunto de datos.  
   
- **programación compartida**  
+ **Programación compartida**  
  Especifique una programación que se comparta entre los informes, suscripciones y otros conjuntos de datos compartidos.  
   
  **Aplicar**  

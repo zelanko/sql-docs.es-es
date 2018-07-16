@@ -1,5 +1,5 @@
 ---
-title: Elemento LogFileRollover (ASSL) | Documentos de Microsoft
+title: Elemento LogFileRollover (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - LogFileRollover element
 ms.assetid: 5484e167-b891-431a-bbae-946ea6eb4a3c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4ecaf972c701175d388ab71fa61d94de1c6f2cad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12ed8df0217baeb5f760273ad6998e2344f4fbb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299025"
 ---
 # <a name="logfilerollover-element-assl"></a>Elemento LogFileRollover (ASSL)
-  Especifica si el registro de [seguimiento](../objects/trace-element-assl.md) salida debería escribirse en un archivo nuevo o debería detenga la aplicación cuando el archivo de registro máximo tamaño especificado en [LogFileSize](logfilesize-element-assl.md) se alcanza.  
+  Especifica si el registro de [seguimiento](../objects/trace-element-assl.md) salida debería escribirse en un archivo nuevo o debería detenerse en el archivo de registro máximo tamaño especificado en [LogFileSize](logfilesize-element-assl.md) se alcanza.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36104786"
 ## <a name="remarks"></a>Notas  
  Si el valor del elemento `LogFileRollover` está establecido en True, se inicia un nuevo archivo cuando el tamaño del archivo de registro supera el valor especificado en el elemento `LogFileSize` del elemento primario `Trace`; de lo contrario, se detiene el registro.  
   
- El elemento que corresponde al elemento primario de `LogFileRollover` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Trace>.  
+ El elemento que se corresponde con el elemento primario de `LogFileRollover` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Vea también  
  [Realiza un seguimiento de elemento &#40;ASSL&#41;](../collections/traces-element-assl.md)   

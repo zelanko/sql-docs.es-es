@@ -1,5 +1,5 @@
 ---
-title: Especifique los datos de entrenamiento (Asistente para minería de datos) | Documentos de Microsoft
+title: Especifique los datos de entrenamiento (Asistente para minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytrainingdata.f1
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6c6239831cc1e53ba1925b022d310f5cef907e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f32fe8718acdfbb16e549154ff030ca493f2768c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291431"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>Especificar los datos de entrenamiento (Asistente para minería de datos)
   Utilice la página **Especificar los datos de aprendizaje** para identificar las columnas que se van a incluir en la estructura de minería de datos. Puede seleccionar columnas para que se incluyan en la estructura aunque no las utilice en todos los modelos. Por ejemplo, si desea obtener detalles de las columnas del modelo de minería, puede incluirlas en la estructura pero no en el modelo.  
@@ -34,7 +34,7 @@ ms.locfileid: "36198983"
  **Para más información:** [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Columnas del modelo de minería de datos](data-mining/mining-model-columns.md), [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opciones  
- **Tablas y columnas**  
+ **Las tablas y columnas**  
  Muestra las tablas y columnas seleccionadas en la página anterior del asistente.  
   
  **\<casilla de verificación >**  
@@ -68,7 +68,7 @@ ms.locfileid: "36198983"
  **Nota** : esta columna solo está disponible cuando se crea un modelo de minería junto con la estructura de minería de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda F1 del Asistente para minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Asistente para la Ayuda de F1 de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Sugerir columnas relacionadas &#40;Asistente para minería de datos&#41;](suggest-related-columns-data-mining-wizard.md)   
  [Especificar tipos de tablas &#40;Asistente para minería de datos&#41;](specify-table-types-data-mining-wizard.md)   
  [Especificar el contenido y el tipo de datos de la columna &#40;Asistente para minería de datos&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  

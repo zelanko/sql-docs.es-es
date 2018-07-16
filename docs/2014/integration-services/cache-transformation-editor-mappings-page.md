@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación de caché (página asignaciones) | Documentos de Microsoft
+title: Editor de transformación de caché (página asignaciones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17e8b9894ddd1aa375a16703bced5d0cf05b77bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3ec474543bad0eb83d313fd4bf16b2b3163176b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243065"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Editor de transformación de caché (página Asignaciones)
   Utilice la página **Asignaciones** del **Editor de transformación Caché** para asignar las columnas de entrada de la transformación de caché a las columnas de destino del administrador de conexiones de caché.  

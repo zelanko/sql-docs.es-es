@@ -1,5 +1,5 @@
 ---
-title: Página de selección (Administrador de informes) del origen de datos | Documentos de Microsoft
+title: Origen de datos de la página de selección (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 800b6fdbe63ca1c7adb5f79367e317a4a2a62167
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 528e30c885150e3d9fc422449987ba211e77161b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256484"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Selección de origen de datos (página del Administrador de informes)
   Use la página Selección de origen de datos para seleccionar un elemento de origen de datos compartido existente con el fin de usarlo con un informe o modelo de informe. También puede usar esta página para seleccionar un origen de datos diferente. Para ver el tipo de origen de datos o la cadena de conexión, debe navegar al origen de datos compartido y abrir las páginas de propiedades.  
@@ -50,10 +50,10 @@ ms.locfileid: "36106496"
  Haga clic en Aceptar para copiar la selección de origen de datos en la página de propiedades Orígenes de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Administrar los orígenes de datos de informe](report-data/manage-report-data-sources.md)   
+ [Administrar orígenes de datos de informe](report-data/manage-report-data-sources.md)   
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Orígenes de datos &#40;página de propiedades del Administrador de informes&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
  [Nuevo origen de datos &#40;página del Administrador de informes&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Configuración (SSAS) avanzada | Documentos de Microsoft
+title: (SSAS) de la configuración avanzada | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.advancedsettings.f1
 ms.assetid: f6ccea00-3419-489c-affc-ed8b002cffc9
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a812b8d09094350cf676e38c5e6181e401f519b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d5df5683e365f5781ed07a903fb28f17bac4cb7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319395"
 ---
 # <a name="advanced-settings-ssas"></a>Configuración avanzada (SSAS)
   Este cuadro de diálogo del **Asistente para la importación de tablas** le permite especificar la codificación y la configuración regional del archivo plano con el que se está conectando. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  

@@ -1,5 +1,5 @@
 ---
-title: Guardar una copia de un paquete | Documentos de Microsoft
+title: Guardar una copia de un paquete | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, saving
 - packages [Integration Services], saving
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, saving
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d1a550e97bcb4cb14c56492edfa8cdd333599ecb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94439ee54ad468af77b89557fa63ad9c108d4f63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314165"
 ---
 # <a name="save-a-copy-of-a-package"></a>Guardar una copia de un paquete
   Este procedimiento describe cómo guardar una copia de un paquete en el sistema de archivos, en el almacén de paquetes o en la base de datos **msdb** en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Al especificar una ubicación para guardar la copia del paquete, puede actualizar también el nombre del paquete.  
@@ -69,6 +69,6 @@ ms.locfileid: "36197948"
   
 ## <a name="see-also"></a>Vea también  
  [Servicios de integración &#40;SSIS&#41; paquetes](../../2014/integration-services/integration-services-ssis-packages.md)   
- [Configurar la integración de servicios &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)  
+ [Configurar la integración de servicios de Service &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

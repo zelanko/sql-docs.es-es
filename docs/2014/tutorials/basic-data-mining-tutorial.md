@@ -1,5 +1,5 @@
 ---
-title: Tutorial de minería de datos básicos | Documentos de Microsoft
+title: Tutorial de minería de datos básicos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -17,26 +17,26 @@ ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
 caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 92e55dccdd72e07b4303d6c996a002fc4fcca8af
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 5711bc105432b0d23f5fd2fd2b429449c2549258
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314975"
 ---
 # <a name="basic-data-mining-tutorial"></a>Tutorial básico de minería de datos
-  Asistente para la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial de minería de datos básicos. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Proporciona un entorno integrado para crear modelos de minería de datos y realizar predicciones. En este tutorial, completará un escenario de una campaña de envío de correo directo en el que se utiliza aprendizaje automático para analizar y predecir el comportamiento de compra de los clientes. En el tutorial se muestra cómo utilizar tres de los algoritmos más importantes de minería de datos: agrupación en clústeres, árboles de decisión y Bayes Naive. También aprenderá a analizar los hallazgos con los visores de modelos de minería de datos y crear predicciones y gráficos de precisión con las herramientas de minería de datos que se incluyen en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La compañía ficticia, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], se utiliza en todos los ejemplos.  
+  Bienvenido a la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial de minería de datos básicos. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Proporciona un entorno integrado para crear modelos de minería de datos y realizar predicciones. En este tutorial, completará un escenario de una campaña de envío de correo directo en el que se utiliza aprendizaje automático para analizar y predecir el comportamiento de compra de los clientes. En el tutorial se muestra cómo utilizar tres de los algoritmos más importantes de minería de datos: agrupación en clústeres, árboles de decisión y Bayes Naive. También obtendrá información sobre cómo analizar los hallazgos con los visores de modelos de minería de datos y crear predicciones y gráficos de precisión con las herramientas de minería de datos que se incluyen en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La compañía ficticia, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], se utiliza en todos los ejemplos.  
   
- Cuando esté familiarizado con el uso de las herramientas de minería de datos, se recomienda que también complete el [Tutorial intermedio de minería de datos &#40;Analysis Services: minería de datos&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md). En las lecciones se muestra cómo utilizar el pronóstico, análisis de la cesta de compras, series temporales, modelos de asociación, tablas anidadas y clústeres de secuencia.  
+ Cuando esté familiarizado con el uso de las herramientas de minería de datos, recomendamos que también complete el [Tutorial intermedio de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md). En las lecciones se muestra cómo utilizar el pronóstico, análisis de la cesta de compras, series temporales, modelos de asociación, tablas anidadas y clústeres de secuencia.  
   
 ## <a name="tutorial-scenario"></a>Escenario del tutorial  
- En este tutorial, es un empleado de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] con la tarea de obtener más información sobre los clientes de la compañía basándose en el historial de compras, y utilizando a continuación ese datos históricos para realizar predicciones que pueden usarse en el mercado. La compañía no ha trabajado previamente con minería de datos, por lo que debe crear una nueva base de datos específica para minería de datos y configurar varios modelos de minería de datos.  
+ En este tutorial, es un empleado de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] con la tarea se aprender más sobre los clientes de la empresa según el historial de compras, y utilizando a continuación ese datos históricos para realizar predicciones que pueden usarse en el mercado. La compañía no ha trabajado previamente con minería de datos, por lo que debe crear una nueva base de datos específica para minería de datos y configurar varios modelos de minería de datos.  
   
 ## <a name="what-you-will-learn"></a>Aprendizaje  
  Este tutorial le enseña a crear diferentes tipos de métodos de aprendizaje automático y a trabajar con ellos. También aprenderá a crear una copia de un modelo de minería de datos y aplicar un filtro a los datos de entrada para obtener resultados diferentes. Después, puede comparar los resultados de ambos modelos mediante un gráfico de elevación. Por último, utilizará la obtención de detalles para recuperar datos adicionales de la estructura de minería de datos subyacente.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Minería de datos incluye las siguientes características que ayudan con facilidad desarrollar y comparar varios modelos predictivos y, a continuación, realizar acciones en los resultados:  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Minería de datos incluye las siguientes características que ayudan con facilidad, desarrollar y comparar varios modelos predictivos y, a continuación, realizar acciones en los resultados:  
   
 -   *Conjuntos de pruebas de datos de exclusión*: al crear una estructura de minería de datos, ahora puede dividir los datos de la estructura en conjuntos de prueba y de entrenamiento. Esto permite probar modelos en conjuntos de datos similares y comparar la precisión de los modelos relacionados.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36312393"
  [Lección 1: Preparar el análisis de servicios de base de datos &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)  
  En esta lección, aprenderá a crear una nueva base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], agregar un origen de datos y una vista del origen de datos, y preparar la nueva base de datos que se va a utilizar para la minería de datos.  
   
- [Lección 2: Generar una estructura de distribución de correo directo &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [Lección 2: Creación de una estructura de distribución de correo directo &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
  En esta lección, aprenderá a crear una estructura de modelos de minería de datos que se puede utilizar como parte de un escenario de distribución de correo directo.  
   
  [Lección 3: Agregar y procesar los modelos](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
@@ -75,7 +75,7 @@ ms.locfileid: "36312393"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en modo multidimensional  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el modo multidimensional  
   
 -   Las base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)].  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36312393"
   
 ## <a name="see-also"></a>Vea también  
  [Soluciones de minería de datos](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
- [Tareas y tareas de modelo de minería de datos](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Crear y consultar modelos de minería de datos con DMX: tutoriales &#40;Analysis Services: minería de datos&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Tareas del modelo de minería de datos y procedimientos](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Crear y consultar modelos de minería de datos con DMX: tutoriales &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

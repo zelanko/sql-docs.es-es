@@ -1,5 +1,5 @@
 ---
-title: Elemento DbTableName (ASSL) | Documentos de Microsoft
+title: Elemento DbTableName (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DbTableName element
 ms.assetid: 842cae85-ab9c-4c75-ab44-51a4d9b1b943
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d167ccdd39d00e3071281d87cad0bf133237f5f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84c0b6ecb600a21eec059b2d1ddc7184c1c46e14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297385"
 ---
 # <a name="dbtablename-element-assl"></a>Elemento DbTableName (ASSL)
   Contiene el nombre de la tabla a la que se enlaza el elemento primario.  

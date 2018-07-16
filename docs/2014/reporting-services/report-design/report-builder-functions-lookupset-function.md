@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c7721c5cc57392f1e9968b4b59cb01ba07916f00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 05fe44b16818d52b861fe63dd657e60fef5793fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311255"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>Función LookupSet (Generador de informes y SSRS)
   Devuelve el conjunto de valores coincidentes para el nombre especificado de un conjunto de datos que contiene pares nombre/valor.  
@@ -42,7 +42,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  (`Variant`) Una expresión que se evalúa para cada fila de un conjunto de datos y que especifica el nombre o la clave que se hará coincidir. Por ejemplo, `=Fields!CustomerID.Value`.  
   
  *result_expression*  
- (`Variant`) Una expresión que se evalúa para la fila del conjunto de datos donde *source_expression* = *destination_expression*, y que especifica el valor que se recuperará. Por ejemplo, `=Fields!PhoneNumber.Value`.  
+ (`Variant`) Una expresión que se evalúa para la fila del conjunto de datos donde *source_expression* = *destination_expression*, y que especifica el valor que se va a recuperar. Por ejemplo, `=Fields!PhoneNumber.Value`.  
   
  *conjunto de datos*  
  Una constante que especifica el nombre de un conjunto de datos del informe. Por ejemplo, "ContactInformation".  
@@ -51,9 +51,9 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  Devuelve un `VariantArray`, o `Nothing` si no hay ninguna coincidencia.  
   
 ## <a name="remarks"></a>Notas  
- Use `LookupSet` para recuperar un conjunto de valores del conjunto de datos especificado para un par de nombre/valor donde hay una relación de 1 a muchos. Por ejemplo, para un identificador de cliente en una tabla, puede usar `LookupSet` para recuperar todos los números de teléfono asociados para ese cliente de un conjunto de datos que no está enlazado a la región de datos.  
+ Use `LookupSet` para recuperar un conjunto de valores del conjunto de datos especificado para un par nombre/valor donde hay una relación 1 a varios. Por ejemplo, para un identificador de cliente en una tabla, puede usar `LookupSet` para recuperar todos los números de teléfono asociados a ese cliente de un conjunto de datos que no está enlazado a la región de datos.  
   
- `LookupSet` hace lo siguiente:  
+ `LookupSet` ocurre lo siguiente:  
   
 -   Evalúa la expresión de origen en el ámbito actual.  
   
@@ -63,11 +63,11 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Devuelve el conjunto de valores de expresión de resultado.  
   
- Para recuperar un único valor de un conjunto de datos con pares nombre-valor para un nombre especificado donde hay una relación de uno a uno, use la [función Lookup &#40;Generador de informes y SSRS&#41;](report-builder-functions-lookup-function.md). Para llamar a `Lookup` para un conjunto de valores, utilice [función Multilookup &#40;el generador de informes y SSRS&#41;](report-builder-functions-multilookup-function.md).  
+ Para recuperar un único valor de un conjunto de datos con pares nombre-valor para un nombre especificado donde hay una relación de uno a uno, use la [función Lookup &#40;Generador de informes y SSRS&#41;](report-builder-functions-lookup-function.md). Para llamar a `Lookup` para un conjunto de valores, use [función Multilookup &#40;el generador de informes y SSRS&#41;](report-builder-functions-multilookup-function.md).  
   
  Se aplican las siguientes restricciones:  
   
--   `LookupSet` se evalúa después de aplicar todas las expresiones de filtro.  
+-   `LookupSet` se evalúa después de aplicarán todas las expresiones de filtro.  
   
 -   Solo se admite un nivel de búsqueda. Un origen, un destino o una expresión de resultado no pueden incluir una referencia a una función de búsqueda.  
   
@@ -75,7 +75,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Las expresiones de origen, destino y resultado no pueden incluir referencias a variables de informe o de grupo.  
   
--   `LookupSet` no se puede usar como una expresión para los siguientes elementos de informe:  
+-   `LookupSet` no se puede usar como una expresión para los elementos de informe siguientes:  
   
     -   Cadenas de conexión dinámicas para un origen de datos.  
   
@@ -105,7 +105,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Use la [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] función `Join` crear una cadena delimitada a partir de un conjunto de objetos. Use la coma como separador para combinar los objetos en una sola línea. En algunos representadores, puede usar un salto de línea de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) como separador para enumerar cada valor en una nueva línea.  
   
- La siguiente expresión, cuando se utiliza como la propiedad Value para un cuadro de texto utiliza `Join` para crear una lista.  
+ La siguiente expresión, cuando se utiliza como la propiedad Value de un cuadro de texto utiliza `Join` para crear una lista.  
   
 ```  
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
@@ -151,9 +151,9 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Expresión que se utiliza en los informes &#40;el generador de informes SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;el generador de informes SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

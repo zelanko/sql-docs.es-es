@@ -1,5 +1,5 @@
 ---
-title: Elemento ConnectionString (ASSL) | Documentos de Microsoft
+title: Elemento ConnectionString (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ConnectionString element
 ms.assetid: f74181c4-7df7-4fbd-94dd-e4ad03dffe14
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3f1782eb62cec4d028a17f380a8bd924458e1e65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca1905c6790ff71b9a263182a4812c2fedaa1e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286001"
 ---
 # <a name="connectionstring-element-assl"></a>Elemento ConnectionString (ASSL)
   Contiene la cadena de conexión cifrada para un [DataSource](../objects/datasource-element-assl.md) elemento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36200434"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `ConnectionString` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DataSource>.  
+ El elemento que se corresponde con el elemento primario de `ConnectionString` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DataSource>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

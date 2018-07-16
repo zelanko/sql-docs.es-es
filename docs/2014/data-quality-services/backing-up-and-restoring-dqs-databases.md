@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6403dd558991a38bfad6e89224ba3b93d60c57eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c12611f98ce2309e2102f2cd8134659a6534ace5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235655"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Realizar copias de seguridad de bases de datos de DQS y restaurarlas
   En este tema se describe cómo realizar copias de seguridad de las bases de datos de DQS y cómo restaurarlas.  
@@ -30,7 +30,7 @@ ms.locfileid: "36198981"
   
 -   Debe saber o recordar la contraseña de la clave maestra de base de datos que proporcionó durante la instalación del servidor DQS.  
   
--   Asegúrese de que no haya actividades o procesos de DQS en ejecución. Utilice la pantalla **Supervisión de actividades** para comprobarlo. Para obtener información detallada sobre cómo trabajar en esta pantalla, consulte [supervisar las actividades de DQS](../../2014/data-quality-services/monitor-dqs-activities.md).  
+-   Asegúrese de que no haya actividades o procesos de DQS en ejecución. Utilice la pantalla **Supervisión de actividades** para comprobarlo. Para obtener información detallada sobre cómo trabajar en esta pantalla, consulte [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   
 -   Asegúrese de que ningún usuario haya iniciado sesión en el servidor DQS.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36198981"
   
 6.  Desconéctese de la instancia actual de SQL Server y conéctese a la instancia de SQL Server donde desea restaurar estas bases de datos.  
   
-7.  Restaure la base de datos DQS_MAIN. Para que obtener instrucciones paso a paso restaurar una base de datos de SQL Server, vea [restaurar una copia de seguridad de base de datos &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
+7.  Restaure la base de datos DQS_MAIN. Para que obtener instrucciones paso a paso restaurar una base de datos de SQL Server, consulte [restaurar una copia de seguridad de base de datos &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
   
 8.  Restaure la base de datos DQS_PROJECTS.  
   

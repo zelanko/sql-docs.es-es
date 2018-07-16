@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptions.FontsAndColors.ColorPicker
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 89605a9aa9a1dd6f5fdf0a5042d39d1afa5600c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a2b6ecc75ade6da9d489c30105ad3bc4e961bf59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220555"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Color (cuadro de diálogo, Visual Database Tools)
   El cuadro de diálogo **Color** devuelve el valor RGB de un color seleccionado por el usuario. El usuario puede seleccionarlo desde un conjunto de colores básicos determinados por el controlador de pantalla o desde un conjunto de colores personalizados. Seleccione desde los colores básicos o cree colores personalizados. Puede definir colores haciendo clic en la matriz de color o escribiendo en los cuadros **Matiz**, **Sat.**, **Lum.**, **Rojo**, **Verde**y **Azul** .  

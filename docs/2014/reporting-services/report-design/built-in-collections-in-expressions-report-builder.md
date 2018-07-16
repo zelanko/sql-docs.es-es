@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ab07059eb104ecc5e14390eced75d9adad7beae4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c478ee22ae7a92feeeba059780705df2255a363d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299865"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>Colecciones integradas en expresiones (Generador de informes y SSRS)
   En una expresión de un informe, puede incluir referencias a las siguientes colecciones integradas: ReportItems, Parameters, Fields, DataSets, DataSources, Variables y a campos integrados para información global, como el nombre del informe. No todas las colecciones aparecen en el cuadro de diálogo **Expresión** . Las colecciones DataSets y DataSources solo están disponibles en tiempo de ejecución para los informes publicados en un servidor de informes. ReportItems es un conjunto de cuadros de texto situados en una región del informe; por ejemplo, los cuadros de texto de una página o de un encabezado de página.  
@@ -55,7 +55,7 @@ ms.locfileid: "36198627"
 |*Collection.Member*|`=User.Language`|  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar una expresión &#40;el generador de informes SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)   
+ [Agregar una expresión &#40;generador de informes y SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

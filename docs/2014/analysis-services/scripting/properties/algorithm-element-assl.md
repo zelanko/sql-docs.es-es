@@ -1,5 +1,5 @@
 ---
-title: Elemento Algorithm (ASSL) | Documentos de Microsoft
+title: Elemento Algorithm (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Algorithm element
 ms.assetid: 188bf7ce-c5c9-406a-af75-5a026c92a569
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86e44cf8069d9ed78a414cad5ac5079f8f2faa22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ca7406538a81768e8cab8d0c24142c8105c963
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218495"
 ---
 # <a name="algorithm-element-assl"></a>Elemento Algorithm (ASSL)
-  Define el algoritmo usado por un [MiningModel](../objects/miningmodel-element-assl.md) elemento.  
+  Define el algoritmo utilizado por un [MiningModel](../objects/miningmodel-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36200221"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El valor del elemento `Algorithm` es una cadena que identifica el algoritmo. Por ejemplo, podría ser la cadena *Microsoft_Naive_Bayes*, *Microsoft_Decision_Trees*, o *Microsoft_Clustering.* La cadena identifica los algoritmos proporcionados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] y algoritmos personalizados proporcionados por el usuario. Los valores disponibles para la `Algorithm` se puede recuperar el elemento de la columna SERVICE_NAME de la [DMSCHEMA_MINING_SERVICES](../../schema-rowsets/data-mining/dmschema-mining-services-rowset.md) de filas de esquema.  
+ El valor del elemento `Algorithm` es una cadena que identifica el algoritmo. Por ejemplo, podría ser la cadena *Microsoft_Naive_Bayes*, *Microsoft_Decision_Trees*, o *Microsoft_Clustering.* La cadena identifica los algoritmos suministrados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] y los algoritmos personalizados proporcionados por el usuario. Los valores disponibles para el `Algorithm` se puede recuperar el elemento de la columna SERVICE_NAME del [DMSCHEMA_MINING_SERVICES](../../schema-rowsets/data-mining/dmschema-mining-services-rowset.md) de filas de esquema.  
   
- El elemento que corresponde al elemento primario de `Algorithm` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MiningModel>. Un elemento estrechamente relacionado en el modelo de objetos de Objetos de administración de análisis (AMO) es <xref:Microsoft.AnalysisServices.MiningModelAlgorithms>.  
+ El elemento que se corresponde con el elemento primario de `Algorithm` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MiningModel>. Un elemento estrechamente relacionado en el modelo de objetos de Objetos de administración de análisis (AMO) es <xref:Microsoft.AnalysisServices.MiningModelAlgorithms>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento AlgorithmParameter &#40;ASSL&#41;](../objects/algorithmparameter-element-assl.md)   

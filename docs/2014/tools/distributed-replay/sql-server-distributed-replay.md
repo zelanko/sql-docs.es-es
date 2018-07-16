@@ -1,5 +1,5 @@
 ---
-title: SQL Server Distributed Replay | Documentos de Microsoft
+title: SQL Server Distributed Replay | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Distributed Replay
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 63974e86420e347d66b36e361e9b68fc0f54c318
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 20ea880286578872964ffe88123c41ee4201f573
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232635"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   La característica Distributed Replay de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le ayuda a evaluar el impacto de las actualizaciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] futuras. También puede usarla para ayudar a evaluar el impacto de las actualizaciones del sistema operativo y el hardware, y de la optimización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -35,7 +35,7 @@ ms.locfileid: "36106469"
  La característica [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay puede usar varios equipos para reproducir los datos de seguimiento y simular una carga de trabajo esencial. Utilice Distributed Replay para probar la compatibilidad de las aplicaciones o el rendimiento, o planear la capacidad.  
   
 ## <a name="when-to-use-distributed-replay"></a>Cuándo usar Distributed Replay  
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] y Distributed Replay tienen algunas se solapan en la funcionalidad.  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] y Distributed Replay proporcionan cierta superposición en la funcionalidad.  
   
  Puede usar [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] para volver a consultar un seguimiento capturado en un entorno de pruebas actualizado. También puede analizar los resultados de la reproducción para buscar posibles incompatibilidades en el rendimiento y la funcionalidad. Sin embargo, [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] solo puede reproducir una carga de trabajo de un equipo. Al reproducir una aplicación OLTP que requiere muchos recursos y que tiene muchas conexiones simultáneas activas o un rendimiento alto, [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] se puede convertir en un cuello de botella para los recursos.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36106469"
 ## <a name="distributed-replay-concepts"></a>Conceptos de Distributed Replay  
  Los siguientes componentes conforman el entorno de Distributed Replay:  
   
--   **Herramienta de administración de Distributed Replay**: una aplicación de consola, `DReplay.exe`, que se usa para comunicarse con el controlador de reproducción distribuida. Use la herramienta de administración para controlar la reproducción distribuida.  
+-   **Herramienta de administración de Distributed Replay**: una aplicación de consola, `DReplay.exe`, que se usa para comunicarse con distributed replay controller. Use la herramienta de administración para controlar la reproducción distribuida.  
   
 -   **Distributed Replay Controller**: equipo que ejecuta el servicio de Windows denominado Distributed Replay Controller de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El controlador de Distributed Replay orquestra las acciones de los clientes de Distributed Replay. Solo puede haber una instancia de controlador en cada entorno de Distributed Replay.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36106469"
 |Describe cómo preparar la información de seguimiento de entrada.|[Preparar los datos de seguimiento de entrada](prepare-the-input-trace-data.md)|  
 |Describe cómo reproducir los datos de seguimiento.|[Reproducir datos de seguimiento](replay-trace-data.md)|  
 |Describe cómo revisar los resultados de los datos de seguimiento de Distributed Replay.|[Revisar los resultados de la reproducción](review-the-replay-results.md)|  
-|Describe cómo usar la herramienta de administración para iniciar, supervisar y cancelar operaciones en el controlador.|[Opciones de línea de comandos de herramientas de administración &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|  
+|Describe cómo usar la herramienta de administración para iniciar, supervisar y cancelar operaciones en el controlador.|[Opciones de línea de comandos de la herramienta de administración &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Foro de SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   

@@ -1,5 +1,5 @@
 ---
-title: Componentes de SQL Server | Documentos de Microsoft
+title: Componentes de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Upgrade Advisor, components
 - listing components to analyze
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - identifying components to analyze
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85a89e2114cd00b28444cf6ee62d12ff1abdec42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99998b5b9e24de92f826a73941bf6b86e5ad4318
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177128"
 ---
 # <a name="sql-server-components"></a>Componentes de SQL Server
-  Puede ejecutar el Asistente para análisis Asesor de actualizaciones en un equipo local o remoto que tiene [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instalado. El primer paso en el análisis previo a la actualización es identificar el equipo y los componentes para el análisis.  
+  Puede ejecutar el Asistente para actualización de análisis de Advisor en un equipo local o remoto que tenga [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instalado. El primer paso en el análisis previo a la actualización es identificar el equipo y los componentes para el análisis.  
   
 ## <a name="options"></a>Opciones  
  **Nombre del equipo**  
@@ -55,7 +55,7 @@ ms.locfileid: "36200283"
  Si está examinando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe especificar el nombre del equipo local. El Asesor de actualizaciones solo examina los servidores de informes locales.  
   
  **Detectar**  
- El **detectar** botón obtiene acceso al equipo especificado y detecta los componentes que desea analizar:  
+ El **detectar** botón obtiene acceso al equipo especificado y detecta los componentes para analizar:  
   
 -   Si se está analizando una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo remoto, deberá habilitar los servicios de Registro remoto en dicho equipo.  
   
@@ -70,6 +70,6 @@ ms.locfileid: "36200283"
   
 ## <a name="see-also"></a>Vea también  
  [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
- [Upgrade Advisor referencia de la interfaz de usuario](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
+ [Actualización del Asistente para la referencia de la interfaz de usuario](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   

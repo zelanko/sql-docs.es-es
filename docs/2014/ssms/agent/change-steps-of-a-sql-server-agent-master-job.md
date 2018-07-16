@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d90a6d3162c90ce80281d53d8fe73c8ce2da4a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 243f5f15535a785e544c6b4e081d3404fb7ad26c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187622"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
   En este tema se describe cómo cambiar los pasos de un trabajo maestro del Agente SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -62,7 +62,7 @@ ms.locfileid: "36201954"
   
 5.  En el cuadro de diálogo **Propiedades del trabajo –***nombre_de_trabajo*, en **Seleccionar una página**, seleccione **Pasos**.  
   
-6.  Para abrir el cuadro de diálogo **Propiedades de paso de trabajo –***nombre_de_paso_de_trabajo*, haga clic en **Editar**. Para obtener más información sobre las opciones disponibles en este cuadro de diálogo, vea [Job Step Properties: nuevo paso de trabajo &#40;página General&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) y [Job Step Properties: nuevo paso de trabajo &#40;página avanzadas&#41; ](job-step-properties-new-job-step-advanced-page.md).  
+6.  Para abrir el cuadro de diálogo **Propiedades de paso de trabajo –***nombre_de_paso_de_trabajo*, haga clic en **Editar**. Para obtener más información sobre las opciones disponibles en este cuadro de diálogo, vea [propiedades de paso de trabajo: nuevo paso de trabajo &#40;página General&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) y [propiedades de paso de trabajo: nuevo paso de trabajo &#40;página avanzadas&#41; ](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Cuando termine, haga clic en **Aceptar**.  
   

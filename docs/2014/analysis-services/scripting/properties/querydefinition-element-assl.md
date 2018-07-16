@@ -1,5 +1,5 @@
 ---
-title: Elemento QueryDefinition (ASSL) | Documentos de Microsoft
+title: Elemento QueryDefinition (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - QueryDefinition element
 ms.assetid: 25bf0e93-d5c5-41df-b310-a253a4ace80e
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8dc7a5407514bbe212aa7425fe9fc886ac3c7126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bcfe589a233d17f51220db3a46bc5e69b42a5bb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231885"
 ---
 # <a name="querydefinition-element-assl"></a>Elemento QueryDefinition (ASSL)
   Contiene una expresión opaca para una consulta asociada con un [DataSource](../objects/datasource-element-assl.md) elemento en un [QueryBinding](../data-type/binding-data-type-assl.md) elemento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36107038"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `QueryDefinition` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.QueryBinding>.  
+ El elemento que se corresponde con el elemento primario de `QueryDefinition` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.QueryBinding>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

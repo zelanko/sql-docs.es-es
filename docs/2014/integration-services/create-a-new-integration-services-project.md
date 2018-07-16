@@ -1,5 +1,5 @@
 ---
-title: Crear un nuevo proyecto de Integration Services | Documentos de Microsoft
+title: Crear un nuevo proyecto de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
 - Integration Services projects, creating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SSIS projects, creating
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
 caps.latest.revision: 51
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4ee4484b97102b6bae3bd9496ee161233c47ee12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd06f9372092ccbbe221796555c63880d3566f91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298735"
 ---
 # <a name="create-a-new-integration-services-project"></a>Crear un proyecto de Integration Services
   Este procedimiento crea un nuevo proyecto y una nueva solución de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -52,7 +52,7 @@ ms.locfileid: "36105654"
     > [!NOTE]  
     >  Para ver y cambiar el complemento de control de código fuente seleccionado y para configurar el entorno de control de código fuente, haga clic en **Opciones** en el menú **Herramientas** y, después, expanda el nodo **Control de código fuente**.  
   
-8.  Haga clic en **Aceptar** para agregar la solución al **el Explorador de soluciones**r y agregar el proyecto a la solución.  
+8.  Haga clic en **Aceptar** para agregar la solución a **el Explorador de soluciones**r y agregar el proyecto a la solución.  
   
 ## <a name="see-also"></a>Vea también  
  [Servicios de integración &#40;SSIS&#41; proyectos](integration-services-ssis-projects-and-solutions.md)   

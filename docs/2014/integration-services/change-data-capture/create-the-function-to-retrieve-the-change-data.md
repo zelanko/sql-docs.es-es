@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c9367e4715022afcff7c988cbe877a1565f41cab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c8eec2498cace997c8f67493772c9ac23d374bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217835"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Crear la función para recuperar los datos modificados
   Después de completar el flujo de control para un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la tarea siguiente es crear una función con valores de tabla que recupere los datos modificados. Solo tiene que crear esta función una vez antes de la primera carga incremental.  
@@ -145,7 +145,7 @@ deallocate #hfunctions
 ## <a name="writing-your-own-table-value-function"></a>Escribir su propia función con valores de tabla  
  También puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para escribir su propia función de contenedor con valores de tabla que llame a la función de consulta de captura de datos modificados y almacenar la función de contenedor con valores de tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información sobre cómo crear una función Transact-SQL, vea [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
- En el ejemplo siguiente se define una función con valores de tabla que recupera los cambios de una tabla Customer para el intervalo de cambios especificado. Esta funciones de captura de datos de función usa cambio para asignar el `datetime` valores de número (LSN) que las tablas de cambios utilizan internamente de secuencia de valores en el registro binario. Esta función también controla varias condiciones especiales:  
+ En el ejemplo siguiente se define una función con valores de tabla que recupera los cambios de una tabla Customer para el intervalo de cambios especificado. Esta función usa cambio datos captura las funciones para asignar el `datetime` valores en el registro binario de secuencia de valores de número (LSN) que las tablas de cambios usan internamente. Esta función también controla varias condiciones especiales:  
   
 -   Cuando se pasa un valor nulo para la fecha y hora de inicio, esta función utiliza el primer valor disponible.  
   

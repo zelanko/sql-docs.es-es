@@ -1,5 +1,5 @@
 ---
-title: Elemento (XMLA) como destino | Documentos de Microsoft
+title: (XMLA) del elemento Target | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Target element
 ms.assetid: 9a69a777-5f34-4e94-b470-6bab2a98df8b
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cd34f3102d477d9a2e89af8c8ba7e5ff2d37ef62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 08c231b16e6f61f2aa42770ee06832b99a0de5dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287871"
 ---
 # <a name="target-element-xmla"></a>Elemento Target (XMLA)
   Representa la partición de destino que se combinará durante un [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) comando.  
@@ -67,7 +67,7 @@ ms.locfileid: "36198051"
 |Elementos secundarios|[CubeID](id-element-xmla.md), [DatabaseID](databaseid-element-xmla.md), [MeasureGroupID](measuregroupid-element-xmla.md), [PartitionID](partitionid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notas  
- El `Target` elemento es una referencia de objeto a una sola partición en la que el contenido de las particiones de origen, especificado por el [orígenes](sources-element-xmla.md) elemento del elemento primario `MergePartitions` elemento, vayan a combinarse.  
+ El `Target` elemento es una referencia de objeto a una única partición en la que el contenido de las particiones de origen, especificado por el [orígenes](sources-element-xmla.md) elemento primario `MergePartitions` elemento, vayan a combinarse.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente combina las cuatro particiones del grupo de medida Internet Sales en la partición de destino `Internet_Sales_2004`. El ejemplo hace referencia al cubo de [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

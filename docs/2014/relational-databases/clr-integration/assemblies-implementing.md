@@ -1,28 +1,26 @@
 ---
-title: Implementar ensamblados | Documentos de Microsoft
+title: Implementación de ensamblados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], implementing
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efd00348db3f4c92ad90f79e4e87094a542f1f95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: c9306c3b8a86595268e9108844686d40c65b6f40
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104294"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353357"
 ---
 # <a name="implementing-assemblies"></a>Implementar ensamblados
   En este tema se proporciona información acerca de las áreas siguientes para ayudarle a implementar ensamblados y trabajar con ellos en la base de datos:  
@@ -76,14 +74,14 @@ ms.locfileid: "36104294"
   
 -   [Eliminar objetos](../../ssms/object/delete-objects.md)  
   
- De forma predeterminada, ningún ensamblado creado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede ejecutar. Puede usar el **clr habilitado** opción de la **sp_configure** procedimiento para deshabilitar o habilitar la ejecución de todos los ensamblados que se cargan en almacenado del sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al deshabilitar la ejecución de ensamblados se impide la ejecución de funciones, procedimientos almacenados, desencadenadores, agregados y tipos definidos por el usuario CLR (Common Language Runtime), y se detienen los que se están ejecutando. El hecho de deshabilitar la ejecución no deshabilita la capacidad de crear, alterar o quitar ensamblados. Para obtener más información, consulte [clr enabled (opción) de configuración de servidor](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
+ De forma predeterminada, ningún ensamblado creado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede ejecutar. Puede usar el **clr habilitado** opción de la **sp_configure** deshabilitar o habilitar la ejecución de todos los ensamblados que se cargan en el procedimiento almacenado del sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al deshabilitar la ejecución de ensamblados se impide la ejecución de funciones, procedimientos almacenados, desencadenadores, agregados y tipos definidos por el usuario CLR (Common Language Runtime), y se detienen los que se están ejecutando. El hecho de deshabilitar la ejecución no deshabilita la capacidad de crear, alterar o quitar ensamblados. Para obtener más información, consulte [clr enabled (opción) configuración de servidor](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   
  **Para deshabilitar y habilitar la ejecución de ensamblado**  
   
 -   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
 ##  <a name="_managing"></a> Administración de versiones de ensamblado  
- Cuando un ensamblado se carga en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se almacena y administra en los catálogos de sistema de la base de datos. Los cambios realizados en la definición del ensamblado en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] debería propagar al ensamblado que se almacena en el catálogo de base de datos.  
+ Cuando un ensamblado se carga en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se almacena y administra en los catálogos de sistema de la base de datos. Los cambios realizados en la definición del ensamblado en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] se deben propagar al ensamblado que se almacena en el catálogo de base de datos.  
   
  Si desea modificar un ensamblado, debe emitir una instrucción ALTER ASSEMBLY para actualizar el ensamblado en la base de datos. De este modo se actualizará el ensamblado a la copia más reciente de los módulos [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que almacenan su implementación.  
   
@@ -102,7 +100,7 @@ ms.locfileid: "36104294"
   
  Para resolver la integridad de los datos no comprobados, ejecute DBCC CHECKTABLE en cada tabla que tenga datos no comprobados. Si DBCC CHECKTABLE provoca un error, deberá eliminar las filas de la tabla que no sean válidas o modificar el código del ensamblado para solucionar los problemas y, a continuación, escribir instrucciones ALTER ASSEMBLY adicionales.  
   
- ALTER ASSEMBLY cambia la versión de ensamblado. La referencia cultural y el token de clave pública del ensamblado siguen siendo los mismos. SQL Server no permite registrar distintas versiones de un ensamblado con el mismo nombre, referencia cultural y clave pública.  
+ ALTER ASSEMBLY cambia la versión de ensamblado. La referencia cultural y token de clave pública del ensamblado siguen siendo los mismos. SQL Server no permite registrar distintas versiones de un ensamblado con el mismo nombre, referencia cultural y clave pública.  
   
 ### <a name="interactions-with-computer-wide-policy-for-version-binding"></a>Interacciones con la directiva de equipos para los enlaces de versión  
  Si las referencias a ensamblados almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se redirigen a versiones determinadas mediante una directiva de edición o una directiva de administrador de equipos, debe realizar una de las acciones siguientes:    
@@ -118,7 +116,7 @@ ms.locfileid: "36104294"
 -   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
 ## <a name="see-also"></a>Vea también  
- [Ensamblados &#40;motor de base de datos&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Los ensamblados &#40;motor de base de datos&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Obtener información sobre los ensamblados](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   
   

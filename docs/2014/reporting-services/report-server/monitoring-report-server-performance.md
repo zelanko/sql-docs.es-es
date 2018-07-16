@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - report servers [Reporting Services], performance
@@ -21,13 +21,13 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 caps.latest.revision: 64
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c672255a822313437682e0dc9e91c73d38a7563f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: facca3a93bb3681903ff6bb9ee7b6cf219c9ffcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244345"
 ---
 # <a name="monitoring-report-server-performance"></a>Supervisar el rendimiento del servidor de informes
   Utilice las herramientas de supervisión del rendimiento para supervisar el rendimiento del servidor de informes a fin de evaluar la actividad del servidor, observar tendencias, diagnosticar cuellos de botella del sistema y recopilar datos que pueden ayudar a determinar si la configuración actual del sistema es suficiente. Para optimizar el rendimiento del servidor, puede especificar la frecuencia con que se recicla el dominio de aplicación del servidor de informes. Para obtener más información, vea [Configurar la memoria disponible para las aplicaciones del servidor de informes](../report-server/configure-available-memory-for-report-server-applications.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "36200305"
   
  El Administrador de tareas brinda información sobre los programas y los procesos que se ejecutan en el equipo. Puede utilizar el Administrador de tareas para supervisar indicadores clave del rendimiento del servidor de informes. También puede evaluar la actividad de ejecutar procesos y visualizar gráficos y datos con relación al uso de la CPU y de la memoria. Para obtener información sobre cómo utilizar el Administrador de tareas, vea la documentación del producto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- Puede utilizar la consola Rendimiento y el Visor de eventos para crear registros y alertas sobre el procesamiento de informes y la utilización de recursos. Para obtener información sobre los eventos de Windows que se generan por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [registro de aplicación Windows](windows-application-log.md). Para obtener información sobre la consola Rendimiento, vea "Contadores de rendimiento de Windows" más adelante en este tema.  
+ Puede utilizar la consola Rendimiento y el Visor de eventos para crear registros y alertas sobre el procesamiento de informes y la utilización de recursos. Para obtener información acerca de los eventos de Windows que se generan mediante [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [registro de aplicación de Windows](windows-application-log.md). Para obtener información sobre la consola Rendimiento, vea "Contadores de rendimiento de Windows" más adelante en este tema.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también proporcionan información acerca de la base de datos del servidor de informes y las bases de datos temporales que se usan para la administración de sesiones y el almacenamiento en caché.  
   
@@ -83,10 +83,10 @@ ms.locfileid: "36200305"
  Además de los objetos de rendimiento de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , también puede configurar eventos de SharePoint si está ejecutando un servidor de informes en modo integrado de SharePoint y ha configurado el entorno de informes para utilizar un producto de SharePoint. En esta sección, utilice Eventos para un servidor de informes en modo integrado de SharePoint para revisar los eventos de diagnóstico que pueden proporcionar información útil si el entorno de informes está integrado en SharePoint.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Contadores de rendimiento para el servicio Web de MSRS 2014 y objetos de rendimiento de servicio de Windows de MSRS 2014 &#40;modo nativo&#41;](performance-counters-msrs-2011-web-service-performance-objects.md)  
+ [Contadores de rendimiento para el servicio Web de MSRS 2014 y objetos de rendimiento de MSRS 2014 Windows Service &#40;modo nativo&#41;](performance-counters-msrs-2011-web-service-performance-objects.md)  
  Describe los contadores de rendimiento que utiliza el servicio web del servidor de informes.  
   
- [Contadores de rendimiento para el modo de SharePoint de MSRS 2014 Web Service y objetos de rendimiento del modo de SharePoint de MSRS 2014 Windows Service &#40;el modo de SharePoint&#41;](performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [Contadores de rendimiento para el modo de SharePoint de MSRS 2014 Web Service y los objetos de rendimiento del modo de SharePoint de MSRS 2014 Windows Service &#40;el modo de SharePoint&#41;](performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  Describe los contadores de rendimiento que utiliza el servicio de Windows del servidor de informes.  
   
  [Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service](performance-counters-reportserver-service-performance-objects.md)  

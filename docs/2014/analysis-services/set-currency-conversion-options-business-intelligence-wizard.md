@@ -1,5 +1,5 @@
 ---
-title: Establecer las opciones de conversión de moneda (Asistente de Business Intelligence) | Documentos de Microsoft
+title: Establecer las opciones de conversión de moneda (Asistente de Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.calculationsettings.f1
 ms.assetid: a49d4e1f-bdda-4a83-ab4f-ce8c500e1d6d
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e16756745d8b42bfe0043915b8d6e53b595d3669
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6ecdd5959754ab2ca7d4d9e5fc32d313dacfa00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289517"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>Establecer las opciones de conversión de moneda (Asistente de Business Intelligence)
   Use la página **Definir la conversión de moneda** para definir los cálculos de conversión de moneda para un grupo de medida que incluye tasas de cambio.  
@@ -46,7 +46,7 @@ ms.locfileid: "36108175"
  Seleccione esta opción para indicar que las tasas de cambio del grupo de medida de tarifas representan un multiplicador para la moneda de ejemplo especificada.  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda de F1 de Asistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Asistente de Business Intelligence F1 Ayuda](business-intelligence-wizard-f1-help.md)   
  [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

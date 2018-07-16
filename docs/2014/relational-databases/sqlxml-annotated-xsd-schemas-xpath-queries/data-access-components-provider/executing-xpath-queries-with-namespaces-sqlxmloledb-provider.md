@@ -1,5 +1,5 @@
 ---
-title: Ejecutar consultas XPath con espacios de nombres (proveedor SQLXMLOLEDB) | Documentos de Microsoft
+title: Ejecutar consultas XPath con espacios de nombres (proveedor SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - namespaces [SQLXML], XPath queries
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93c2c5d0388f3bd0fa396e1e689eb29fbd98ba7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d5a5149b56d98cc319a06b9cbb8129f7699a17fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301735"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Ejecutar consultas XPath con espacios de nombres (proveedor SQLXMLOLEDB)
   Las consultas XPath pueden incluir espacios de nombres. Si los elementos de esquema son espacios de nombres calificados (es decir, si incluyen un espacio de nombres de destino), las consultas XPath que se realicen en el esquema deben especificar este espacio de nombres.  
   
- Dado que no se admite el uso del carácter comodín (*) en SQLXML 4.0, la consulta XPath debe especificarse utilizando un prefijo de espacio de nombres. Para resolver este prefijo, use la propiedad de los espacios de nombres para especificar el enlace de espacio de nombres.  
+ Dado que no se admite el uso del carácter comodín (*) en SQLXML 4.0, la consulta XPath debe especificarse utilizando un prefijo de espacio de nombres. Para resolver este prefijo, utilice la propiedad de los espacios de nombres para especificar el enlace de espacio de nombres.  
   
- En el ejemplo siguiente, la consulta XPath especifica los espacios de nombres mediante el carácter comodín (\*) y las funciones de XPath local-name() y espacio. Esta consulta XPath devuelve todos los elementos donde el nombre local es `Contact` y el URI del espacio de nombres es `urn:myschema:Contacts`.  
+ En el ejemplo siguiente, la consulta XPath especifica los espacios de nombres con el carácter comodín (\*) y las funciones de XPath local-name() y espacio. Esta consulta XPath devuelve todos los elementos donde el nombre local es `Contact` y el URI del espacio de nombres es `urn:myschema:Contacts`.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  

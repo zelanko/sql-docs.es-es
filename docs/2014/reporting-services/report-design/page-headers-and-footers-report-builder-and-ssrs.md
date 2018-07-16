@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.fill.f1
 - "10125"
@@ -24,15 +24,15 @@ f1_keywords:
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3fcfbe65dae6aaba100eadc122ed0f820f6ac714
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 863a4415bb75b5a5cd4fe017de4ebeca975e32a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202449"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328906"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Encabezados y pies de página (Generador de informes y SSRS)
   Un informe puede contener un encabezado y un pie de página que aparecen en la parte superior e inferior de cada página, respectivamente. Los encabezados y pies de página pueden contener texto estático, imágenes, líneas, rectángulos, bordes, color de fondo, imágenes de fondo y expresiones. Las expresiones incluyen referencias a campos de conjunto de datos para informes que tienen un conjunto de datos y llamadas a funciones de agregado que incluyen el conjunto de datos como ámbito.  
@@ -131,7 +131,7 @@ ms.locfileid: "36202449"
  Para obtener más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Incrustar una imagen en un informe &#40;el generador de informes SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Rectángulos y líneas &#40;el generador de informes SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Incrustar una imagen en un informe &#40;generador de informes y SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Rectángulos y líneas &#40;generador de informes y SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

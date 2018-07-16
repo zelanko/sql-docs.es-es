@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 caps.latest.revision: 137
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 262d4eb283d8149e5a339fe2e95954d4558b26a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0e4ec4708141badd4f215484cf746633f8a670eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268161"
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar los clústeres de conmutación por error
   Antes de instalar un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe seleccionar el hardware y el sistema operativo en el que se ejecutará [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. También deberá configurar el servicio de clústeres de conmutación por error de Windows Server (WSFC), así como revisar la red, la seguridad y las consideraciones relativas al resto del software que se ejecutará en los clústeres de conmutación por error.  
@@ -34,7 +34,7 @@ ms.locfileid: "36204756"
   
 |Descripción del tema|Tema|  
 |-----------------------|-----------|  
-|Describe los conceptos de clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y proporciona vínculos a las tareas y contenido asociados.|[Instancias de clúster de conmutación por error de AlwaysOn (SQL Server)](../windows/always-on-failover-cluster-instances-sql-server.md)|  
+|Describe los conceptos de clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y proporciona vínculos a las tareas y contenido asociados.|[Instancias de clúster de conmutación por error AlwaysOn (SQL Server)](../windows/always-on-failover-cluster-instances-sql-server.md)|  
 |Describe los conceptos de la directiva de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y proporciona vínculos para configurarla de modo que satisfaga los requisitos de su organización.|[Failover Policy for Failover Cluster Instances](../windows/failover-policy-for-failover-cluster-instances.md)|  
 |Describe cómo mantener el clúster de conmutación por error existente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Administración y mantenimiento de la instancia de clúster de conmutación por error](../windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |Explica cómo instalar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en un Clúster de conmutación por error de Windows Server (WSFC).|[Organizar en clúster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548)|  
@@ -47,7 +47,7 @@ ms.locfileid: "36204756"
   
 -   Instale el software previo requerido. Antes de ejecutar el programa de instalación para instalar o actualizar a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], instale el software previo siguiente para reducir el tiempo de instalación. Puede instalar el software previo en cada nodo de clúster de conmutación por error y, a continuación, reiniciar los nodos una vez antes de ejecutar el programa de instalación.  
   
-    -   El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya no instala Windows PowerShell. Windows PowerShell 2.0 es un requisito previo para la instalación de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] componentes y [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Si Windows PowerShell 2.0 no está presente en su equipo, puede habilitarlo mediante las instrucciones de la página [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214).  
+    -   El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya no instala Windows PowerShell. Windows PowerShell 2.0 es un requisito previo para instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] componentes y [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Si Windows PowerShell 2.0 no está presente en su equipo, puede habilitarlo mediante las instrucciones de la página [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214).  
   
     -   El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya no instala .NET Framework 3.5 SP1 pero quizá se necesite al instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en los sistemas operativos Windows anteriores. Para más información, consulte las [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Notas de la versión](http://go.microsoft.com/fwlink/?LinkId=296445).  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36204756"
   
  <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clústeres no se admiten en el modo WOW. Eso incluye las actualizaciones desde versiones anteriores de clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que estaban instaladas originalmente en WOW. La única opción de actualización en estos casos es instalar la nueva versión en paralelo y migrar.  
   
- <sup>2</sup> compatibles con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de agrupación en clústeres de conmutación por error de múltiples subredes.  
+ <sup>2</sup> compatibles con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agrupación en clústeres de conmutación por error de múltiples subredes.  
   
   
   

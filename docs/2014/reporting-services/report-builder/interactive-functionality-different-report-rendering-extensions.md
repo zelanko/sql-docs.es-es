@@ -1,5 +1,5 @@
 ---
-title: Funcionalidad interactiva para diferentes extensiones (generador de informes y SSRS) de representación de informes | Documentos de Microsoft
+title: Funcionalidad interactiva para diferentes informes (generador de informes y SSRS) de extensiones de representación | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 12aba044c373c9a75c9be3754ece6703eae0e5a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a61442deaf2ca75bd3fb85f5eb8c83f6f58c4fee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238497"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>Funcionalidad interactiva para diferentes extensiones de representación de informes (Generador de informes y SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona características de informe interactivas que permiten trabajar con un informe en tiempo de ejecución. No todos los formatos de representación de informes son compatibles con todas las características interactivas. Consulte la tabla siguiente para comprender el funcionamiento de las características interactivas en los diferentes formatos.  
@@ -113,10 +113,10 @@ ms.locfileid: "36106911"
 |Otros|El servidor de informes exporta el informe a otros formatos utilizando los datos filtrados en el informe actual.|  
   
 ## <a name="see-also"></a>Vea también  
- [Exportar informes &#40;el generador de informes SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [Exportar informes &#40;generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Matrices &#40;Generador de informes y SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Gráficos &#40;el generador de informes SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+ [Los gráficos &#40;generador de informes y SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
   

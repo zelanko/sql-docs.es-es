@@ -19,13 +19,13 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cbc0be5255b3345ba27297123981f2b0138e4437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c34669ffc14ee623b17549f588385886488ed02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287601"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analizar formatos de archivo de texto no estándar con el componente de script
   Cuando los datos de origen están organizados en un formato no estándar, puede resultar más cómodo consolidar toda la lógica de análisis en un único script que encadenar varias transformaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para lograr el mismo resultado.  
@@ -40,7 +40,7 @@ ms.locfileid: "36202332"
 ##  <a name="example1"></a> Ejemplo 1: Analizar registros delimitados por fila  
  En este ejemplo se muestra cómo tomar un archivo de texto en el que cada columna de datos aparece en una línea independiente y analizarlo en una tabla de destino utilizando el componente de script.  
   
- Para obtener más información acerca de cómo configurar el componente de Script para su uso como una transformación en el flujo de datos, vea [crear una transformación sincrónica con el componente de secuencia de comandos](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)y [crear una asincrónica La transformación con el componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Para obtener más información acerca de cómo configurar el componente de Script para su uso como una transformación del flujo de datos, vea [crear una transformación sincrónica con el componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)y [creando una asincrónica Transformación con el componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Para configurar este ejemplo de componente de script  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36202332"
   
     -   StateProvince  
   
-13. En el **Script** página de la **Editor de transformación Script**, haga clic en **editar Script** y escriba el código mostrado en la `ScriptMain` clase del ejemplo. Cierre el entorno de desarrollo de script y el **Editor de transformación Script**.  
+13. En el **Script** página de la **Editor de transformación Script**, haga clic en **editar Script** y escriba el código se muestra en el `ScriptMain` clase del ejemplo. Cierre el entorno de desarrollo de script y el **Editor de transformación Script**.  
   
 14. Agregue un destino de SQL Server al flujo de datos. Configúrelo para utilizar el administrador de conexiones OLE DB y la tabla RowDelimitedData. Conecte la salida del componente de script a este destino.  
   
@@ -198,7 +198,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 > [!CAUTION]  
 >  El único fin de este ejemplo es usarlo para realizar una demostración. Si ejecuta más de una vez el ejemplo, se insertan valores de clave duplicados en la tabla de destino.  
   
- Para obtener más información acerca de cómo configurar el componente de Script para su uso como una transformación en el flujo de datos, vea [crear una transformación sincrónica con el componente de secuencia de comandos](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)y [crear una asincrónica La transformación con el componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Para obtener más información acerca de cómo configurar el componente de Script para su uso como una transformación del flujo de datos, vea [crear una transformación sincrónica con el componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)y [creando una asincrónica Transformación con el componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Para configurar este ejemplo de componente de script  
   
@@ -351,7 +351,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services  **<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear una transformación sincrónica con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  

@@ -1,5 +1,5 @@
 ---
-title: Ocultar o Inmovilizar columnas (SSAS Tabular) | Documentos de Microsoft
+title: Ocultar o Inmovilizar columnas (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.hideunhidecolumnsdb.f1
 ms.assetid: 5407aee5-6a07-4559-a2ba-2ca00a242f02
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a83b824fc6e2079c5c1db1ac9c673f9e42f7568e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3277c722652e67036d0c0bfe2a904797f327a4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214055"
 ---
 # <a name="hide-or-freeze-columns-ssas-tabular"></a>Ocultar o inmovilizar columnas (SSAS tabular)
   Si en el diseñador de modelos hay columnas que no desea mostrar en una tabla, puede ocultarlas temporalmente. Si oculta una columna, dispone de más espacio en la pantalla para agregar columnas nuevas o para trabajar solo con las columnas de datos pertinentes. Puede ocultar y mostrar columnas desde el menú **Columna** del diseñador de modelos y desde el menú contextual disponible en cada encabezado de columna. Para mantener visible un área de un modelo mientras se desplaza a otra área del modelo, puede inmovilizar columnas específicas para bloquearlas.  
@@ -62,8 +62,8 @@ ms.locfileid: "36111219"
     >  Cuando se inmovilizan columnas, estas se mueven a la izquierda (o delante) de la tabla en el diseñador. Cuando se libera una columna, esta no recupera su ubicación original.  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas y columnas &#40;SSAS Tabular&#41;](tables-and-columns-ssas-tabular.md)   
- [Las perspectivas &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)   
- [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md)  
+ [Tablas y columnas &#40;Tabular de SSAS&#41;](tables-and-columns-ssas-tabular.md)   
+ [Las perspectivas &#40;Tabular de SSAS&#41;](perspectives-ssas-tabular.md)   
+ [Roles &#40;Tabular de SSAS&#41;](roles-ssas-tabular.md)  
   
   

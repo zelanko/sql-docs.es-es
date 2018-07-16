@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainerdetails.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47b5fffebd2ce4eba41aceb88725e4dc4c867348
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15e2239a7285e4d460e4fa5a85add8445f797ede
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227855"
 ---
 # <a name="for-loop-container"></a>Contenedor de bucles For
   El contenedor de bucles For define un flujo de control que se repite en un paquete. La implementación del bucle es similar a la estructura de bucle **For** de los lenguajes de programación. En cada repetición del bucle, el contenedor de bucles for evalúa una expresión y repite su flujo de trabajo hasta que la expresión se evalúa como `False`.  
@@ -55,7 +55,7 @@ ms.locfileid: "36198261"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de bucles for](../for-loop-editor.md)  
+-   [Editor de bucles For](../for-loop-editor.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

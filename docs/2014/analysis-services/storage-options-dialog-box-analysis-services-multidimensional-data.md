@@ -1,5 +1,5 @@
 ---
-title: (Analysis Services - datos multidimensionales) del cuadro de diálogo de opciones de almacenamiento | Documentos de Microsoft
+title: (Analysis Services - datos multidimensionales) del cuadro de diálogo de opciones de almacenamiento de información | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagesettingsdialog.f1
 ms.assetid: 58b26088-f4b1-4962-b824-3e360e955671
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e2f8e326e690c7f158ffd94391479bced250e37d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8dc26c4b2d56f34136d45efe80faee953298082e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233905"
 ---
 # <a name="storage-options-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Opciones de almacenamiento (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Opciones de almacenamiento** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para especificar el modo de almacenamiento personalizado, el almacenamiento en caché automático y las opciones de notificación para las dimensiones, los cubos, los grupos de medida y las particiones. Para ver el cuadro de diálogo **Opciones de almacenamiento** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , haga clic en **Opciones** en el cuadro de diálogo **Configuración de almacenamiento** . Para más información sobre el cuadro de diálogo **Opciones de almacenamiento**, vea [Cuadro de diálogo Configuración de almacenamiento&#40;Analysis Services - Datos multidimensionales&#41;](storage-settings-dialog-box-analysis-services-multidimensional-data.md).  

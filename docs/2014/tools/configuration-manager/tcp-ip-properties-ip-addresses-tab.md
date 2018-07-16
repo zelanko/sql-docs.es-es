@@ -1,5 +1,5 @@
 ---
-title: Propiedades de TCP / IP (pestaña de direcciones IP) | Documentos de Microsoft
+title: Propiedades de TCP / IP (pestaña de direcciones IP) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8325999f00f7b5b84bc01d1de188802c27dba7b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cb09573cd77f74044647925bd43310223c4ce67e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187601"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>Propiedades de TCP / IP (pestaña de direcciones IP)
   Use el cuadro de diálogo **Propiedades de TCP/IP (pestaña Direcciones IP)** para configurar las opciones del protocolo TCP/IP para una dirección IP específica. Solo las opciones **Puertos dinámicos TCP** y **Puerto TCP** pueden configurarse para todas las direcciones al mismo tiempo seleccionando **IPAll**.  
@@ -58,7 +58,7 @@ ms.locfileid: "36110858"
  Para configurar que una dirección IP única escuche en varios puertos, el parámetro **Escuchar todo** también se debe establecer en **No**, en la pestaña **Protocolos** del cuadro de diálogo **Propiedades de TCP/IP** . Para obtener más información, vea: "Cómo: Configurar el motor de base de datos para escuchar en varios puertos TCP" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Agregar o quitar direcciones IP  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager muestra las direcciones IP que no estaban disponibles en el momento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se instaló. Las direcciones IP disponibles pueden cambiar cuando se agregan o se quitan tarjetas de red, cuando expira una dirección IP asignada dinámicamente, cuando se vuelve a configurar la estructura de red o cuando cambia la ubicación física del equipo, por ejemplo un equipo portátil que se conecta a la red en un edificio diferente. Para cambiar una dirección IP, edite el cuadro **Dirección IP** y, a continuación, reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager muestra las direcciones IP que estaban disponibles en el momento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se instaló. Las direcciones IP disponibles pueden cambiar cuando se agregan o se quitan tarjetas de red, cuando expira una dirección IP asignada dinámicamente, cuando se vuelve a configurar la estructura de red o cuando cambia la ubicación física del equipo, por ejemplo un equipo portátil que se conecta a la red en un edificio diferente. Para cambiar una dirección IP, edite el cuadro **Dirección IP** y, a continuación, reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
  [Elegir un protocolo de red](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

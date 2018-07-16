@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponentdetails.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 56b26f0c43df3257fc563ea246045ad3baf1e3ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 73a67a807ee928315b264ea52bd0d993e0ee81f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295085"
 ---
 # <a name="script-component"></a>Componente de script
   El componente de script hospeda el script y permite a un paquete incluir y ejecutar código personalizado de script. Puede usar el componente de script en paquetes para los siguientes fines:  

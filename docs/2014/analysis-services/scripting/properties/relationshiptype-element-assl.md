@@ -1,5 +1,5 @@
 ---
-title: Elemento RelationshipType (ASSL) | Documentos de Microsoft
+title: Elemento RelationshipType (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RelationshipType element
 ms.assetid: 72e1ab0e-a95d-4ebe-857d-21de1bf9fe03
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2e5b5ec9e9591a45a80f099397ed6568a986313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21ddd4506a2c2a6168779aa40735eb7177406597
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271601"
 ---
 # <a name="relationshiptype-element-assl"></a>Elemento RelationshipType (ASSL)
   Indica si las relaciones de miembros para un [AttributeRelationship](../objects/attributerelationship-element-assl.md) puede cambiarse.  
@@ -66,10 +66,10 @@ ms.locfileid: "36202803"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|*Rígida*|Las relaciones de miembro entre un atributo y un atributo relacionado no se pueden cambiar.|  
+|*Rígido*|Las relaciones de miembro entre un atributo y un atributo relacionado no se pueden cambiar.|  
 |*Flexible*|Las relaciones de miembro entre un atributo y un atributo relacionado se pueden cambiar.|  
   
- Por ejemplo, si `ZipCode` no se puede cambiar de una `City` a otro, la relación de `ZipCode` a `City` está marcada como *rígida*.  
+ Por ejemplo, si `ZipCode` no se puede cambiar de uno `City` a otro, la relación de `ZipCode` a `City` está marcado como *rígida*.  
   
  La enumeración que corresponde a los valores permitidos para `RelationshipType` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.RelationshipType>.  
   

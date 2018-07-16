@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.sorting.f1
 - "10403"
@@ -20,15 +20,15 @@ f1_keywords:
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c6e738ae473636e3fdd0c9d7efa1512a6b5b68f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4ba8d34b6f56bec66ce2fc1a8f0d4024e4a45493
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256354"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrar, agrupar y ordenar datos (Generador de informes y SSRS)
   En un informe, las expresiones sirven para ayudar a controlar, organizar y ordenar los datos de informe. De forma predeterminada, cuando se crean conjuntos de datos y se diseñan informes, las propiedades de los elementos de informe están se establecen de forma automática en las expresiones basadas en los campos de conjunto de datos, los parámetros y otros elementos que aparecen en el panel Datos de informe. Puede agregar también un botón de ordenación interactivo a una tabla o a una celda de la matriz para permitir a los usuarios cambiar el criterio de ordenación de las filas para los grupos o las filas dentro de los grupos.  
@@ -45,9 +45,9 @@ ms.locfileid: "36203123"
   
  Para obtener más información y ejemplos, vea los siguientes temas:  
   
--   [Ejemplos de expresiones de grupo &#40;el generador de informes SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [Ejemplos de expresiones de grupo &#40;generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [Ejemplos de ecuaciones de filtro &#40;el generador de informes SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Ejemplos de ecuaciones de filtro &#40;generador de informes y SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
 -   [Tutoriales &#40;generador de informes&#41;](../report-builder-tutorials.md)  
   
@@ -101,10 +101,10 @@ ms.locfileid: "36203123"
 ### <a name="defining-group-variables"></a>Definir variables de grupo  
  Al definir un grupo, puede crear una variable de grupo para utilizar en expresiones cuyo ámbito es el grupo y a las que se puede obtener acceso desde los grupos anidados. Una variable de grupo se calcula una vez por instancia de grupo y se puede obtener acceso a ella desde expresiones en grupos secundarios. Por ejemplo, para los datos que están agrupados por región y subregión, se puede calcular un impuesto para cada región y utilizarlo en los cálculos del grupo de subregiones.  
   
- Para obtener más información, consulte [informes y referencias de colecciones de Variables de grupo &#40;el generador de informes y SSRS&#41; ](built-in-collections-report-and-group-variables-references-report-builder.md) y [ámbito de expresión para totales, agregados y colecciones integradas &#40;informes El generador y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Para obtener más información, consulte [informes y referencias a colecciones de Variables de grupo &#40;el generador de informes y SSRS&#41; ](built-in-collections-report-and-group-variables-references-report-builder.md) y [ámbito de expresión para totales, agregados y colecciones integradas &#40;informes El generador y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="groups-and-scope-in-data-regions"></a>Grupos y ámbitos de regiones de datos  
- Para proporcionar varias vistas de los datos del mismo conjunto de datos, puede especificar las mismas expresiones de grupo para cada región de datos. Por ejemplo, puede mostrar los datos por categorías en una tabla para mostrar todos los datos detallados y mostrar los agregados en un gráfico circular para ayudar a visualizar cada categoría en relación con el conjunto de datos completo. Para obtener más información, consulte [vincular varias regiones de datos para el mismo conjunto de datos &#40;el generador de informes y SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+ Para proporcionar varias vistas de los datos del mismo conjunto de datos, puede especificar las mismas expresiones de grupo para cada región de datos. Por ejemplo, puede mostrar los datos por categorías en una tabla para mostrar todos los datos detallados y mostrar los agregados en un gráfico circular para ayudar a visualizar cada categoría en relación con el conjunto de datos completo. Para obtener más información, consulte [vincular varias regiones de datos al mismo conjunto de datos &#40;generador de informes y SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
  Al anidar una región de datos en la celda de una tabla, una matriz o una lista, el ámbito de los datos se establecerá automáticamente en las pertenencias de grupo más internas de la celda. Por ejemplo, supongamos que agrega un gráfico a una celda que se encuentra en un grupo de filas y en un grupo de columnas. Los datos disponibles para ese gráfico pertenecerán al ámbito de la instancia del grupo de filas más interior y de la instancia del grupo de columnas más interior en tiempo de ejecución. Para obtener más información, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)subyacente.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36203123"
 ### <a name="sorting-data-in-a-dataset-query"></a>Ordenar datos en una consulta de conjunto de datos  
  Incluya el criterio de ordenación en la consulta de conjunto de datos para preordenar los datos antes de que estos se recuperen para un informe. La ordenación de los datos en la consulta permite que el trabajo de ordenación lo realice el origen de datos en lugar del procesador de informes.  
   
- Para una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de origen de datos puede agregar una cláusula ORDER BY a la consulta de conjunto de datos. Por ejemplo, la consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] siguiente ordena las columnas Sales y Region por la columna Sales en orden descendente en la tabla SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Para obtener más información, vea el tema que explica cómo ordenar filas con ORDER BY en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+ Para un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de origen de datos puede agregar una cláusula ORDER BY a la consulta de conjunto de datos. Por ejemplo, la consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] siguiente ordena las columnas Sales y Region por la columna Sales en orden descendente en la tabla SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Para obtener más información, vea el tema que explica cómo ordenar filas con ORDER BY en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
   
 > [!NOTE]  
 >  No todos los orígenes de datos permiten especificar el criterio de ordenación en la consulta.  
@@ -175,43 +175,43 @@ FROM Production.Product
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
- [Mantener visibles los encabezados al desplazarse a través de un informe &#40;el generador de informes SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+ [Mantener visibles los encabezados al desplazarse a través de un informe &#40;generador de informes y SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
- [Mostrar encabezados y pies de página con un grupo &#40;el generador de informes SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Mostrar encabezados y pies de página con un grupo &#40;generador de informes y SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [Agregar una ordenación interactiva a una tabla o matriz &#40;el generador de informes SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Agregar una ordenación interactiva a una tabla o matriz &#40;generador de informes y SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
- [Establecer un mensaje no hay datos para una región de datos &#40;el generador de informes SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Establecer un mensaje cuando no hay datos para una región de datos &#40;generador de informes y SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Crear un grupo de jerarquía recursiva &#40;el generador de informes SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+ [Crear un grupo de jerarquía recursiva &#40;generador de informes y SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
- [Agregar o eliminar un grupo en una región de datos &#40;el generador de informes SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+ [Agregar o eliminar un grupo en una región de datos &#40;generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
- [Mostrar encabezados y pies de página con un grupo &#40;el generador de informes SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Mostrar encabezados y pies de página con un grupo &#40;generador de informes y SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [Agregar o eliminar un grupo en un gráfico de &#40;el generador de informes SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [Agregar o eliminar un grupo en un gráfico &#40;generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
   
- [Agregar un Total a un grupo o región de datos Tablix &#40;el generador de informes SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+ [Agregar un Total a un grupo o región de datos Tablix &#40;generador de informes y SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
 ##  <a name="Section"></a> En esta sección  
- [Ejemplos de expresiones de grupo &#40;el generador de informes SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+ [Ejemplos de expresiones de grupo &#40;generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
- [Ejemplos de ecuaciones de filtro &#40;el generador de informes SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+ [Ejemplos de ecuaciones de filtro &#40;generador de informes y SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
- [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;el generador de informes SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
+ [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;generador de informes y SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
   
 ##  <a name="Related"></a> Secciones relacionadas  
- [Descripción de los grupos &#40;el generador de informes SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [Descripción de los grupos &#40;generador de informes y SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
   
- [Crear grupos de jerarquía recursiva &#40;el generador de informes SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [Creación de grupos de jerarquía recursiva &#40;generador de informes y SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;el generador de informes SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [Informar y las referencias de las colecciones de Variables de grupo &#40;el generador de informes SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [Informe y de grupo de referencias a las colecciones de Variables &#40;generador de informes y SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [Mostrar una serie con varios intervalos de datos en un gráfico &#40;el generador de informes SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [Mostrar una serie con varios rangos de datos en un gráfico &#40;generador de informes y SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
   
- [Vincular varias regiones de datos al mismo conjunto de datos &#40;el generador de informes SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [Vincular varias regiones de datos al mismo conjunto de datos &#40;generador de informes y SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
@@ -219,7 +219,7 @@ FROM Production.Product
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Medidores &#40;el generador de informes SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [Los medidores &#40;generador de informes y SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Indicadores &#40;Generador de informes y SSRS&#41;](indicators-report-builder-and-ssrs.md)  
   
   

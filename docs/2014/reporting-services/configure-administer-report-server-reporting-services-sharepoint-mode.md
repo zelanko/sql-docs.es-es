@@ -1,5 +1,5 @@
 ---
-title: Configuración y administración de un servidor de informes (modo de SharePoint de Reporting Services) | Documentos de Microsoft
+title: Configuración y administración de un servidor de informes (modo de SharePoint de Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bd580d08512b72d6643e97b1dda6f7a58d092714
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7546ee205dc20dccbac6a83e8f1fea8420ee511d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329356"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Configuración y administración de un servidor de informes (modo de SharePoint de Reporting Services)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] es una plataforma de informes basada en servidor que proporciona una amplia gama de herramientas y servicios para ayudarle a crear, implementar y administrar informes para su organización, así como las características de programación que permiten ampliar y personalizar los informes listos para usar funcionalidad. Puede integrar su entorno de informes con un producto o tecnología de SharePoint para experimentar las ventajas de usar el entorno colaborativo proporcionado por los sitios de SharePoint.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] es una plataforma de informes basada en servidor que proporciona una gama completa de servicios que le ayudarán a crear, implementar y administrar informes para su organización, así como características de programación que le permiten ampliar y personalizar los informes y herramientas listos para usar funcionalidad. Puede integrar su entorno de informes con un producto o tecnología de SharePoint para experimentar las ventajas de usar el entorno colaborativo proporcionado por los sitios de SharePoint.  
   
 ## <a name="in-this-section"></a>En esta sección  
  Use las siguientes secciones como ayuda para entender los conceptos, los escenarios de implementación, los procedimientos y otras cuestiones para integrar el entorno de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con un producto o tecnología de SharePoint.  

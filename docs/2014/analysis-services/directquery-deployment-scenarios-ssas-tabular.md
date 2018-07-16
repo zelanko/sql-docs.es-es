@@ -1,5 +1,5 @@
 ---
-title: Escenarios de implementación de DirectQuery (SSAS Tabular) | Documentos de Microsoft
+title: Escenarios de implementación de DirectQuery (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e2b6434b8916e0a2f21486c227b649f834823a93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89454dfd53b641401352928ecf8e08b4b23e784c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268021"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>Escenarios de implementación de DirectQuery (SSAS tabular)
   Este tema proporciona un tutorial del proceso de diseño e implementación para los modelos de DirectQuery. Puede configurar DirectQuery para utilizar solo datos relacionales (solo DirectQuery), o puede configurar el modelo para cambiar entre usar solo datos en caché o solo datos relacionales (modo híbrido). En este tema se describe el proceso de implementación para ambos modos, y describe diferencias posibles en los resultados de la consulta dependiendo del modo y configuración de seguridad.  
   
  [Diseño y los pasos de implementación](#bkmk_DQProcedure)  
   
- [Comparar las configuraciones de DirectQuery](#bkmk_Configurations)  
+ [Comparación de las configuraciones de DirectQuery](#bkmk_Configurations)  
   
 ##  <a name="bkmk_DQProcedure"></a> Diseño y los pasos de implementación  
  **Paso 1. Crear la solución**  
@@ -55,7 +55,7 @@ ms.locfileid: "36105712"
   
 -   Cambie los valores de las propiedades requeridos para el modo DirectQuery, tal como se describe en los mensajes de error.  
   
--   Quite las columnas calculadas. Si necesita una columna calculada para una medida determinada, siempre puede crear la columna mediante la [Diseñador de consultas relacionales &#40;SSAS&#41; ](relational-query-designer-ssas.md) proporcionada en el Asistente de importación de tablas.  
+-   Quite las columnas calculadas. Si necesita una columna calculada para una medida determinada, siempre puede crear la columna mediante el uso de la [Diseñador de consultas relacionales &#40;SSAS&#41; ](relational-query-designer-ssas.md) proporcionada en el Asistente de importación de tablas.  
   
 -   Modifique o quite las fórmulas incompatibles con el modo DirectQuery. Si necesita una determinada función para un cálculo, considere las posibles formas de proporcionar un equivalente usando Transact-SQL.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36105712"
   
 |||  
 |-|-|  
-|**Solo DirectQuery**|En la propiedad  **Configuración de suplantación** , especifique la cuenta que se utilizará para conectar con el origen de datos de SQL Server.<br /><br /> Si utiliza el valor, **ImpersonateCurrentUser**, la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que hospeda el modelo pasará las credenciales del usuario actual del modelo de la base de datos de SQL Server.|  
+|**Solo DirectQuery**|En la propiedad  **Configuración de suplantación** , especifique la cuenta que se utilizará para conectar con el origen de datos de SQL Server.<br /><br /> Si usa el valor, **ImpersonateCurrentUser**, la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que hospeda el modelo pasará las credenciales del usuario actual del modelo de la base de datos de SQL Server.|  
 |**Modo híbrido**|En la propiedad **Configuración de suplantación** , especifique la cuenta que se utilizará para acceder a los datos del origen de datos de SQL Server.<br /><br /> Esta configuración no afecta a las credenciales utilizadas para procesar la memoria caché usada por el modelo.|  
   
  **Paso 7. Implementar el modelo**  
@@ -92,7 +92,7 @@ ms.locfileid: "36105712"
   
 |||  
 |-|-|  
-|**Solo DirectQuery**|**DirectQueryOnly**<br /><br /> Dado que ha especificado solo Direct Query, los metadatos del modelo se implementarán en el servidor, pero no se procesará el modelo.<br /><br /> Tenga en cuenta que la memoria caché utilizada por la base de datos del área de trabajo no se eliminará automáticamente. Si desea asegurarse de que los usuarios no puedan ver los datos de la memoria caché, borre la caché de tiempo de diseño. Para obtener más información, consulte [borrar las memorias caché de Analysis Services](instances/clear-the-analysis-services-caches.md).|  
+|**Solo DirectQuery**|**DirectQueryOnly**<br /><br /> Dado que ha especificado solo Direct Query, los metadatos del modelo se implementarán en el servidor, pero no se procesará el modelo.<br /><br /> Tenga en cuenta que la memoria caché utilizada por la base de datos del área de trabajo no se eliminará automáticamente. Si desea asegurarse de que los usuarios no puedan ver los datos de la memoria caché, borre la caché de tiempo de diseño. Para obtener más información, consulte [borrar las cachés de Analysis Services](instances/clear-the-analysis-services-caches.md).|  
 |**Modo híbrido**|**DirectQuery con In-Memory**<br /><br /> **In-Memory con DirectQuery**<br /><br /> Ambos valores le permiten utilizar la memoria caché o el origen de datos relacional según sea necesario. El orden define el origen de datos que se utiliza de forma predeterminada al responder a las consultas realizadas en el modelo.<br /><br /> En un modo híbrido, la memoria caché se debe procesar al mismo tiempo que los metadatos del modelo se implementan en el servidor.<br /><br /> Puede cambiar este valor una vez realizada la implementación.|  
   
  **Paso 8. Comprobar el modelo implementado**  
@@ -116,7 +116,7 @@ ms.locfileid: "36105712"
 |||  
 |-|-|  
 |**DirectQuery sin caché**|No se carga ningún dato en la memoria caché. El modelo no se podrá procesar nunca.<br /><br /> Solo se podrán realizar consultas en el modelo utilizando clientes compatibles con las consultas DAX. Los resultados de la consulta siempre se devolverán desde el origen de datos original.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **DirectQuery**|  
-|**DirectQuery con consultas a la caché únicamente**|Se produce un error en la implementación. No se admite esta configuración.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **In-Memory**|  
+|**DirectQuery con consultas en caché solo**|Se produce un error en la implementación. No se admite esta configuración.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **In-Memory**|  
   
  **Modo híbrido**  
  La implementación del modelo en un modo híbrido tiene muchas ventajas: permite conseguir datos actualizados del origen de datos de SQL Server si es necesario, pero la conservación de la memoria caché le ofrece la posibilidad de trabajar con datos en memoria mientras diseña informes o prueba el modelo, obteniendo un mejor rendimiento.  

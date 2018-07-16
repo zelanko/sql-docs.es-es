@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2e1600f24a0cd4d8b667e5fa6a8110bd52dcb2e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e7f6f90aab70c08be52c002dc92a9bc3f1943358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314005"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Área funcional de Administración del sistema (Master Data Manager)
   En el área funcional de Administración del sistema, los administradores pueden crear un modelo y todos sus objetos. También pueden crear reglas de negocios y crear e implementar paquetes de modelos. Para obtener más información sobre los administradores, consulte [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "36203213"
   
  [Crear un grupo de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
   
- [Implementar modelos &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+ [Implementación de modelos &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
  [Implementar un paquete de implementación de modelo mediante el asistente](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36203213"
   
  [Crear y publicar una regla de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
- [Condiciones de reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rule-conditions-master-data-services.md)  
+ [Condiciones de regla de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rule-conditions-master-data-services.md)  
   
  [Acciones de regla de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rule-actions-master-data-services.md)  
   

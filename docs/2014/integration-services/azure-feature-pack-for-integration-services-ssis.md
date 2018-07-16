@@ -1,5 +1,5 @@
 ---
-title: Feature Pack de Azure | Documentos de Microsoft
+title: Azure Feature Pack de | Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
@@ -16,13 +16,13 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43ddc105e442e510b54a70ed22ef27336f1497bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c2e496c8fb9aebff66d998f742d8604558112e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281741"
 ---
 # <a name="azure-feature-pack"></a>Feature Pack de Azure
 Feature Pack de SQL Server Integration Services (SSIS) para Azure es una extensión que proporciona los componentes que se muestran en esta página para que SSIS se conecte a los servicios de Azure, para transferir datos entre Azure y orígenes de datos locales, y para procesar los datos almacenados en Azure.
@@ -69,7 +69,7 @@ Feature Pack de SQL Server Integration Services (SSIS) para Azure es una extensi
     
     -   [Destino de Azure Data Lake Store](../../2014/integration-services/azure-data-lake-store-destination.md)
   
--   Enumerador de blobs de Azure & enumerador de archivos ADLS. Consulte [Foreach Loop Container](control-flow/foreach-loop-container.md).  
+-   Enumerador de blobs de Azure y enumerador de archivos ADLS. Consulte [Foreach Loop Container](control-flow/foreach-loop-container.md).  
   
  
 ## <a name="download-the-feature-pack"></a>Descarga del Feature Pack  
@@ -98,7 +98,7 @@ Necesita instalar los siguientes requisitos previos antes de instalar este Featu
   
 5.  Utilice la tarea de descarga de blobs de HDInsight de Azure para descargar los datos de salida de Pig o Hive del almacenamiento de blobs de Azure.  
   
- ![SSIS-AzureConnector-BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "BigDataScenario de AzureConnector de SSIS")  
+ ![SSIS-AzureConnector-BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "SSIS-AzureConnector-BigDataScenario")  
   
 ### <a name="cloud-data-archiving"></a>Archivado de datos en la nube  
  Use el destino de blobs de Azure en un paquete de SSIS para escribir los datos de salida en un almacenamiento de blobs de Azure o para utilizar el origen de blobs de Azure para leer datos desde un almacenamiento de blobs de Azure.  

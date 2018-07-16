@@ -1,5 +1,5 @@
 ---
-title: Advanced predicciones de serie temporal (Tutorial de minería de datos intermedios) | Documentos de Microsoft
+title: Advanced predicciones de serie temporal (Tutorial de minería de datos intermedios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2d26b05a6d6929947054cd1546b46a976aa2dc2c
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 81297beab8cea567277bd7f1e015859547ab2f7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326895"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Predicciones de serie temporal avanzadas (Tutorial intermedio de minería de datos)
   Al explorar el modelo de predicción, observó que, aunque las ventas de la mayoría de las regiones siguen un patrón similar, algunas regiones y algunos modelos, como el modelo M200 en la región del Pacífico, muestran tendencias muy diferentes. Esto no le sorprende, ya que sabe que las diferencias entre regiones son comunes y pueden deberse a muchos factores, como las promociones de marketing, los informes inexactos o los acontecimientos geopolíticos.  
@@ -32,9 +32,9 @@ ms.locfileid: "36312923"
   
 1.  [Preparar los datos extendidos de ventas (para la predicción)](#bkmk_newExtendData)  
   
-2.  [Preparar los datos agregados (para crear el modelo)](#bkmk_newReplaceData)  
+2.  [Preparar los datos agregados (para generar el modelo)](#bkmk_newReplaceData)  
   
-3.  [Preparar los datos de serie (para la predicción cruzada)](#bkmk_CrossData2)  
+3.  [Preparar los datos de series (para la predicción cruzada)](#bkmk_CrossData2)  
   
 4.  [Predecir mediante EXTEND](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36312923"
   
      **Origen de datos**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Seleccionar tablas y vistas**: seleccione la tabla recién creada, NewSalesData.  
+     **Seleccionar tablas y vistas**: seleccione la tabla que acaba de crear, NewSalesData.  
   
 3.  Haga clic en **Finalizar**.  
   
@@ -114,8 +114,8 @@ ms.locfileid: "36312923"
 > [!WARNING]  
 >  Usará estos datos solo para la predicción, por lo que no importa que sean incompletos.  
   
-##  <a name="bkmk_CrossData2"></a> Crear los datos para el modelo de predicción cruzada  
- Los datos que se usan en el original ya estaba el modelo de previsión agrupados de algún modo por la vista vTimeSeries, que contraen diversos modelos de bicicletas en un número menor de categorías y combina los resultados de países individuales en las regiones. Para crear un modelo que se puede usar para las proyecciones mundiales, creará algunas agregaciones simples adicionales directamente en el Diseñador de vistas del origen de datos. La nueva vista del origen de datos contiene solo una suma y un promedio de las ventas de todos los productos para todas las regiones.  
+##  <a name="bkmk_CrossData2"></a> Creación de los datos para el modelo de predicción cruzada  
+ Los datos que se usan en el original ya estaba el modelo de previsión agrupados de algún modo por la vista vTimeSeries que contraen los diversos modelos de bicicletas en un número menor de categorías y combinar los resultados de países individuales en las regiones. Para crear un modelo que se puede usar para las proyecciones mundiales, creará algunas agregaciones simples adicionales directamente en el Diseñador de vistas del origen de datos. La nueva vista del origen de datos contiene solo una suma y un promedio de las ventas de todos los productos para todas las regiones.  
   
  Después de crear el origen de datos usado para el modelo, debe crear una nueva vista del origen de datos que usará para la predicción. Por ejemplo, si desea predecir las ventas de Europa con el nuevo modelo mundial, debe suministrar los datos de la región de Europa solamente. De esta forma, configurará una nueva vista del origen de datos que filtra los datos originales y cambiará la condición de filtro para cada conjunto de consultas de predicción.  
   
@@ -129,11 +129,11 @@ ms.locfileid: "36312923"
   
 4.  En la página, **Seleccionar tablas y vistas**, no agregue ninguna tabla; sólo haga clic en **Siguiente**.  
   
-5.  En la página, **finalización del Asistente para**, escriba el nombre `AllRegions`y, a continuación, haga clic en **finalizar**.  
+5.  En la página, **completando el Asistente para**, escriba el nombre `AllRegions`y, a continuación, haga clic en **finalizar**.  
   
 6.  Después, haga clic con el botón secundario en la superficie de diseño de la vista del origen de datos en blanco y seleccione **Nueva consulta con nombre**.  
   
-7.  En el **crear consulta con nombre** cuadro de diálogo para **nombre**, tipo `AllRegions`y para **descripción**, tipo **suma y promedio de ventas para todos los modelos y las regiones**.  
+7.  En el **crear consulta con nombre** cuadro de diálogo para **nombre**, tipo `AllRegions`y para **descripción**, tipo **suma y promedio de ventas para todos los modelos y regiones**.  
   
 8.  En el panel de texto SQL, escriba la siguiente instrucción y, a continuación, haga clic en Aceptar:  
   

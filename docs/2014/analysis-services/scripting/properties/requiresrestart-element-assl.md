@@ -1,5 +1,5 @@
 ---
-title: Elemento RequiresRestart (ASSL) | Documentos de Microsoft
+title: Elemento RequiresRestart (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RequiresRestart element
 ms.assetid: 9e98f956-c41e-4e15-a7bd-e17c10ee6fc6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cde3c22439c06e254191a2a732e7030fab36cc7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7790c12c0b5889ef89991de042db8d8a6a93a7e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295425"
 ---
 # <a name="requiresrestart-element-assl"></a>Elemento RequiresRestart (ASSL)
-  Contiene un valor de solo lectura asociado con un [ServerProperty](../objects/serverproperty-element-assl.md) elemento que determina si cambia el valor de la propiedad del servidor requiere reiniciar la instancia para que el cambio surta efecto.  
+  Contiene un valor de solo lectura asociado con un [ServerProperty](../objects/serverproperty-element-assl.md) elemento que determina si el cambio del valor de la propiedad del servidor requiere que se reinicie la instancia para que el cambio surta efecto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36104527"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `RequiresRestart` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ServerProperty>.  
+ El elemento que se corresponde con el elemento primario de `RequiresRestart` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento ServerProperties &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: (Pestaña estructura de dimensión, Diseñador de dimensiones) de la vista del origen de datos (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: (Pestaña estructura de dimensión, Diseñador de dimensiones) de la vista del origen de datos (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.datasourcepane.f1
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c960a5c08f3d95ee6ef0813db67f8d9a33a6a683
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa82d94a6e034c514b173e623f8c6d0ab9932880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246165"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Vista del origen de datos (pestaña Estructura de dimensión, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use el panel **Vista del origen de datos** para ver las tablas y columnas desde la vista del origen de datos asociada a la dimensión seleccionada. Este panel se utiliza para crear atributos, propiedades de miembros, jerarquías y niveles al arrastrar las columnas del panel **Vista del origen de datos** al panel **Atributos** o **Jerarquías y niveles** .  
@@ -30,7 +30,7 @@ ms.locfileid: "36105995"
  **Vista del origen de datos**  
  Muestra la vista del origen de datos asociada a la dimensión seleccionada.  
   
- **(Mover el punto de vista)**  
+ **(Mover punto de vista)**  
  Haga clic en la esquina inferior derecha del panel, entre las barras de desplazamiento, para seleccionar el área del panel **Vista del origen de datos** que quiere ver.  
   
 ## <a name="diagram-context-menu"></a>Menú contextual del diagrama  

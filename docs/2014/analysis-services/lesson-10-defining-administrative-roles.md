@@ -1,5 +1,5 @@
 ---
-title: 'Lección 10: Definir Roles administrativos | Documentos de Microsoft'
+title: 'Lección 10: Definir Roles administrativos | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 411bbda6dfcfefaac694189b0c2a2f041d4e41ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 360005ce130825c694091c382193cecab7c74693
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201935"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Lección 10: definir roles administrativos
   En esta lección, aprenderá a definir roles de seguridad para tareas administrativas.  

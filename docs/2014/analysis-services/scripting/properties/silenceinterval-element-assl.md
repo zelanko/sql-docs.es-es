@@ -1,5 +1,5 @@
 ---
-title: Elemento SilenceInterval (ASSL) | Documentos de Microsoft
+title: Elemento SilenceInterval (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SilenceInterval element
 ms.assetid: c22060a9-99ca-4b81-9df3-89b020b4d1d4
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5914d870d9ebcd288dffa19d9402bf8c92e525a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c099e86540a29c6f60fb4510266d51fceaaed98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293071"
 ---
 # <a name="silenceinterval-element-assl"></a>Elemento SilenceInterval (ASSL)
   Define la cantidad mínima de tiempo de la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pausa antes de iniciar la OLAP multidimensional (MOLAP) procesamiento de imágenes.  
@@ -62,7 +62,7 @@ ms.locfileid: "36198746"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `SilenceInterval` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
+ El elemento que se corresponde con el elemento primario de `SilenceInterval` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

@@ -1,25 +1,24 @@
 ---
-title: El uso de índices de almacén de columnas agrupado | Documentos de Microsoft
+title: El uso de índices de almacén de columnas agrupado | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 caps.latest.revision: 6
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 527905bc0b0be07c178c873ae22fd06a0166b963
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a439826920b98098d1ed8a30540c39509b7083d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254607"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Usar índices clúster de almacén de columnas
   Tareas para utilizar índices clúster de almacén de columnas en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -32,7 +31,7 @@ ms.locfileid: "36107939"
   
 -   [Crear un índice agrupado de almacén de columnas](#create)  
   
--   [Quitar un índice clúster de almacén de columnas](#drop)  
+-   [Quitar un índice de almacén de columnas en clúster](#drop)  
   
 -   [Cargar datos en un índice agrupado de almacén de columnas](#load)  
   
@@ -43,7 +42,7 @@ ms.locfileid: "36107939"
 -   [Reorganizar un índice agrupado de almacén de columnas](#reorganize)  
   
 ##  <a name="create"></a> Crear un índice agrupado de almacén de columnas  
- Para crear un índice de almacén de columnas agrupado, primero cree una tabla de almacén de filas como un índice agrupado o montón y, a continuación, use la [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) instrucción que se va a convertir la tabla en un clúster índice de almacén de columnas. Si desea que el índice clúster de almacén de columnas tenga el mismo nombre que el índice clúster, use la opción DROP_EXISTING.  
+ Para crear un índice agrupado, primero cree una tabla de almacén de filas como un índice agrupado o montón y, a continuación, utilice el [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) instrucción para convertir la tabla en un clúster índice de almacén de columnas. Si desea que el índice clúster de almacén de columnas tenga el mismo nombre que el índice clúster, use la opción DROP_EXISTING.  
   
  En este ejemplo se crea una tabla como un montón y después se convierte en un índice clúster de almacén de columnas denominado cci_Simple. Esto cambia el almacenamiento de la tabla de un almacén de filas a un almacén de columnas.  
   
@@ -60,7 +59,7 @@ GO
   
  Para obtener más ejemplos, vea la sección de ejemplos en [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
   
-##  <a name="drop"></a> Quitar un índice clúster de almacén de columnas  
+##  <a name="drop"></a> Quitar un índice de almacén de columnas en clúster  
  Use la [DROP INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql) instrucción para quitar un índice de almacén de columnas agrupado. Esta operación quitará el índice y convertirá la tabla de almacén de columnas en un montón de almacenes de filas.  
   
 ##  <a name="load"></a> Cargar datos en un índice agrupado de almacén de columnas  
@@ -119,7 +118,7 @@ SELECT * FROM sys.column_store_row_groups
 -   Si la fila se encuentra en el almacén delta, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la actualiza en ese almacén.  
   
 ##  <a name="rebuild"></a> Volver a generar un índice agrupado de almacén de columnas  
- Use [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) o [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) para realizar una reconstrucción completa de un índice de almacén de columnas clúster existente. Además, puede usar ALTER INDEX... REBUILD para volver a crear una partición específica.  
+ Use [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) o [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) para realizar una reconstrucción completa de un índice agrupado existente. Además, puede usar ALTER INDEX... REBUILD para volver a crear una partición específica.  
   
 ### <a name="rebuild-process"></a>Proceso de regeneración  
  Para volver a generar un índice de almacén de columnas clúster, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  

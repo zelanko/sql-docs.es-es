@@ -5,24 +5,23 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], installing
 - semantic search [SQL Server], configuring
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8af441227c9a584b6252d5d02b7e9989a772d526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f0c12ef425f898b8406884fef8eff27c8c80c3df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329335"
 ---
 # <a name="install-and-configure-semantic-search"></a>Instalar y configurar la búsqueda semántica
   Describe los requisitos previos de la búsqueda semántica estadística y cómo instalarlos o comprobarlos.  
@@ -101,7 +100,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
   
-###  <a name="HowToUnregister"></a> Cómo: Eliminar del registro, separar y quitar la base de datos de estadísticas semánticas de lenguaje  
+###  <a name="HowToUnregister"></a> Cómo: Anular el registro, separar y quitar la base de datos de estadísticas semánticas de lenguaje  
  **Anular el registro de la base de datos de estadísticas semánticas de lenguaje.**  
  Llame al procedimiento almacenado [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql). No tiene que proporcionar el nombre de la base de datos ya que una instancia solo puede tener una base de datos de estadísticas semánticas de lenguaje.  
   
@@ -110,7 +109,7 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
- **Separe la base de datos de estadísticas semánticas de lenguaje.**  
+ **Desasociar la base de datos de estadísticas semánticas de lenguaje.**  
  Llame al procedimiento almacenado [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql) y proporcione el nombre de la base de datos.  
   
 ```tsql  
@@ -138,7 +137,7 @@ GO
   
 ## <a name="installing-optional-support-for-newer-document-types"></a>Instalar compatibilidad opcional para nuevos tipos de documento  
   
-###  <a name="office"></a> Cómo: instalar los filtros más recientes para Microsoft Office y otros tipos de documento de Microsoft  
+###  <a name="office"></a> Cómo: instalar los filtros más recientes para Microsoft Office y otros tipos de documentos de Microsoft  
  Esta versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala los separadores de palabras y analizadores lingüísticos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] más recientes, pero no instala los últimos filtros para los documentos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office ni otros tipos de documento de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Estos filtros son necesarios para indizar documentos creados con versiones recientes de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office y otras aplicaciones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Para descargar los filtros más recientes, vea [Paquetes de filtros de Microsoft Office 2010](http://go.microsoft.com/fwlink/?LinkId=218293).  
   
   

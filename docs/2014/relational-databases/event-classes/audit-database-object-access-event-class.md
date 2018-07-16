@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Database Object Access event class
 ms.assetid: 0294ba51-6085-4de2-a52d-dac1a87fbd4d
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6186f1cd5ec99df169774a13095fd84f028e69f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7484130e2b71ec40b26ca34d7c10436a847ba77e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314035"
 ---
 # <a name="audit-database-object-access-event-class"></a>Audit Database Object Access, clase de eventos
   La clase de eventos **Audit Database Object Access** se produce cuando se tiene acceso a objetos de base de datos, como esquemas.  

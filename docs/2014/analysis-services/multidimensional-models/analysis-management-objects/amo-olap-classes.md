@@ -1,5 +1,5 @@
 ---
-title: Clases de OLAP en AMO | Documentos de Microsoft
+title: Clases de OLAP en AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6db043eff86d0cd1675674cefee6aa74508e33f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1fcf669d63554c9a57dc927cb0071fbc17a9f2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280411"
 ---
 # <a name="amo-olap-classes"></a>Clases de OLAP en AMO
   Las clases de OLAP en AMO (Objetos de administración de análisis) sirven de ayuda para crear, modificar, eliminar y procesar cubos, dimensiones y objetos relacionados como indicadores de clave de rendimiento (KPI), acciones y almacenamiento en caché automático.  
@@ -45,7 +45,7 @@ ms.locfileid: "36202625"
   
 -   [Objetos Aggregation](#Aggregation)  
   
--   [Objetos Action](#Action)  
+-   [Objetos de acción](#Action)  
   
 -   [Objetos KPI](#KPI)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36202625"
   
  La ilustración siguiente muestra la relación de las clases que se explican en este tema.  
   
- ![Clases OLAP en AMO](../../../analysis-services/dev-guide/media/amo-olapclasses.gif "clases OLAP en AMO")  
+ ![Clases de OLAP en AMO](../../../analysis-services/dev-guide/media/amo-olapclasses.gif "clases de OLAP en AMO")  
   
 ## <a name="basic-classes"></a>Clases básicas  
   
@@ -116,10 +116,10 @@ ms.locfileid: "36202625"
   
  AMO se usa para establecer las definiciones de este comportamiento mejorado, pero la experiencia real la define el cliente de exploración que implementa todas estas mejoras.  
   
-###  <a name="Action"></a> Objetos Action  
+###  <a name="Action"></a> Objetos de acción  
  Para crear un objeto <xref:Microsoft.AnalysisServices.Action>, éste se agrega a la colección de acciones del cubo y el objeto <xref:Microsoft.AnalysisServices.Cube> se actualiza en el servidor mediante el método Update. El método Update del cubo puede incluir el parámetro UpdateOptions.ExpandFull, que garantiza que todos los objetos del cubo que se han modificado se actualizarán en el servidor con esta acción de actualización.  
   
- Para quitar un <xref:Microsoft.AnalysisServices.Action> objeto, éste se debe quitar de la colección y se debe actualizar el cubo primario.  
+ Para quitar un <xref:Microsoft.AnalysisServices.Action> objeto, éste se debe quitar de la colección y el cubo primario debe actualizarse.  
   
  Un cubo se debe actualizar y procesar antes de que se pueda utilizar la acción desde el cliente.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36202625"
 ###  <a name="KPI"></a> Objetos KPI  
  Para crear un objeto  <xref:Microsoft.AnalysisServices.Kpi>, éste se agrega a la colección KPI del cubo y el objeto <xref:Microsoft.AnalysisServices.Cube> se actualiza en el servidor mediante el método Update. El método Update del cubo puede incluir el parámetro UpdateOptions.ExpandFull, que garantiza que todos los objetos del cubo que se han modificado se actualizarán en el servidor con esta acción de actualización.  
   
- Para quitar un <xref:Microsoft.AnalysisServices.Kpi> objeto, éste se debe quitar de la colección, y se debe actualizar el cubo primario.  
+ Para quitar un <xref:Microsoft.AnalysisServices.Kpi> objeto, éste se debe quitar de la colección, a continuación, y debe actualizarse el cubo primario.  
   
  Un cubo se debe actualizar y procesar antes de que se pueda usar el KPI.  
   

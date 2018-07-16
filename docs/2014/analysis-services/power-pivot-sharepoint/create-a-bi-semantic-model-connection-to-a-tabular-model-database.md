@@ -1,5 +1,5 @@
 ---
-title: Crear una conexión de modelo semántico de BI en una base de datos de modelo Tabular | Documentos de Microsoft
+title: Crear una conexión de modelo semántico de BI a una base de datos de modelo Tabular | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 084de463855ba83051d5d4ceb41e58431ae5e4f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d1bac7c3bc5e328db1bc54908f1d78ad5829c45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269941"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Crear una conexión de modelo semántico de BI a una base de datos de modelo tabular
   Utilice la información de este tema para configurar una conexión de modelo semántico de BI que se redirija a una base de datos modelo tabular que se ejecuta en una instancia de Analysis Services fuera de la granja de SharePoint.  
@@ -43,7 +43,7 @@ ms.locfileid: "36201249"
 ##  <a name="bkmk_prereq"></a> Requisitos previos de revisión  
  Debe tener permisos de contribución o superiores para poder crear un archivo de conexión de modelo semántico de BI.  
   
- Debe tener una biblioteca que admita el tipo de contenido de la conexión de modelo semántico de BI. Para obtener más información, consulte [agregar un BI semántica modelo de conexión de tipo de contenido a una biblioteca &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
+ Debe tener una biblioteca que admita el tipo de contenido de la conexión de modelo semántico de BI. Para obtener más información, consulte [agregar BI semántica modelo de conexión de tipo de contenido en una biblioteca de &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
  Debe conocer el servidor y el nombre de la base de datos para los que va a configurar una conexión de modelo semántico de BI. Analysis Services debe estar configurado para el modo tabular. Las bases de datos que se ejecutan en el servidor deben ser bases de datos de modelos tabulares. Para obtener instrucciones sobre cómo comprobar el modo del servidor, vea [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
@@ -148,6 +148,6 @@ ms.locfileid: "36201249"
   
 ## <a name="see-also"></a>Vea también  
  [Conexión de modelo semántico de BI PowerPivot &#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
- [Crear una conexión de modelo semántico de BI a un libro de PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
+ [Creación de una conexión de modelo semántico de BI a un libro de PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
   

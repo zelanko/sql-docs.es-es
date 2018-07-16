@@ -1,5 +1,5 @@
 ---
-title: Elemento ConnectionString (XMLA) | Documentos de Microsoft
+title: Elemento ConnectionString (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ConnectionString element
 ms.assetid: 3b0575aa-79ed-4f14-ae7e-dd587af4cdb1
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 12d69bfe2b8dc8bda91bc873167bb3208203d728
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e7345d2a35d80a2ce4d72875c4afb082b57ec1a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293215"
 ---
 # <a name="connectionstring-element-xmla"></a>Elemento ConnectionString (XMLA)
   Contiene una cadena de conexión utilizada por el elemento primario [ubicación](location-element-xmla.md) o [origen](source-element-xmla.md) elemento.  

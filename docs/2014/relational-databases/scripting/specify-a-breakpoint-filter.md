@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.contraints
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8a55eb14c606348a63072d669db98fe3cae6b3f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9bf7e4f7a162bf172812ed555463c061611237e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191785"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Especificar un filtro del punto de interrupción
   Un filtro del punto de interrupción limita el punto de interrupción de manera que solo actúe en los equipos, procesos del sistema operativo y subprocesos especificados. Los filtros del punto de interrupción suelen utilizarse al depurar aplicaciones en paralelo.  
@@ -43,9 +43,9 @@ ms.locfileid: "36203378"
   
     -   `MachineName` es el equipo que ejecuta la instancia del Motor de base de datos.  
   
-    -   `ProcessID`, y `ProcessName` son el proceso de sistema operativo que se ejecuta la instancia del motor de base de datos.  
+    -   `ProcessID`, y `ProcessName` son el proceso de sistema operativo que ejecuta la instancia del motor de base de datos.  
   
-    -   `ThreadID` y `ThreadName` son el subproceso de sistema operativo que se ejecuta el [!INCLUDE[tsql](../../includes/tsql-md.md)] por lotes, procedimiento o función en la instancia del motor de base de datos.  
+    -   `ThreadID` y `ThreadName` son el subproceso del sistema operativo que ejecuta el [!INCLUDE[tsql](../../includes/tsql-md.md)] por lotes, procedimiento o función en la instancia del motor de base de datos.  
   
 3.  Haga clic en **Aceptar** para implementar los cambios o en **Cancelar** para salir sin aplicar los cambios.  
   

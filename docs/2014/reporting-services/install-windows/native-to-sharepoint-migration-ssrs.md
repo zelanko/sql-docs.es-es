@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: c8e7684f241ea5ab69709cdaaea9b2c6faffe889
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0667c3fc2154875d3f68e5eea22f9cd0a6600956
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264321"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Migración del modo nativo al modo de SharePoint (SSRS)
   No se puede actualizar o convertir desde un modo de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a otro. Por ejemplo, no puede actualizar o convertir un servidor de informes en modo nativo al modo de SharePoint. No puede copiar las bases de datos del servidor de informes entre distintos modos porque usan distintos esquemas de la base de datos. Puede migrar el contenido de un servidor de informes a otro. Las herramientas que use dependen del modo del servidor de informes configurado para los servidores de origen y de destino.  
@@ -38,7 +38,7 @@ ms.locfileid: "36201997"
   
 2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :** escriba un script de Visual Basic que llame a métodos SOAP del servicio Web del servidor de informes para copiar datos entre las bases de datos. Emplee la utilidad **RS.exe** para ejecutar el script. Rs.exe se instala con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-    -   [Script rs.exe para migrar contenido entre servidores de informes de servicios de informes de ejemplo](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md). En los temas se explica cómo usar el script de ejemplo que puede descargar de CodePlex.  
+    -   [Ejemplo de Reporting Services rs.exe Script para migrar contenido entre servidores de informes](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md). En los temas se explica cómo usar el script de ejemplo que puede descargar de CodePlex.  
   
     -   El script de rss de ejemplo de CodePlex, [Script Reporting Services RS.exe que migra contenido de un servidor de informes a otro](http://azuresql.codeplex.com/releases/view/115207).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36201997"
 |Conjuntos de datos|Sí||  
 |Elementos de informe||Tras la migración, compruebe o actualice la ruta de acceso a los elementos de informe.|  
 |Programaciones|Sí|Vea el método ListSchedules [métodos de suscripción y entrega](../report-server-web-service/methods/subscription-and-delivery-methods.md)|  
-|Suscripciones|sí|Vea el método List Subscriptions [métodos de suscripción y entrega](../report-server-web-service/methods/subscription-and-delivery-methods.md) y el método changesubscriptionowner en <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
+|Suscripciones|sí|Vea el método List Subscriptions [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md) y el método ChangeSubscriptionOwner <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
 |Instantáneas|||  
 ||||  
   

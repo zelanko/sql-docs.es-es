@@ -1,5 +1,5 @@
 ---
-title: Extensiones de AdventureWorks para mostrar OLTP en memoria | Documentos de Microsoft
+title: Las extensiones de AdventureWorks para mostrar OLTP en memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 6bc04894a372f4391c12622158673e4ba4068098
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f8135f70466ecef4fb77a876a38823af7dd8c27d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312335"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensiones de AdventureWorks para mostrar OLTP en memoria
     
 ## <a name="overview"></a>Información general  
- Este ejemplo muestra la nueva [!INCLUDE[hek_2](../includes/hek-2-md.md)] característica, que forma parte de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Muestra las nuevas tablas con optimización para memoria y procedimientos almacenados compilados de forma nativa y puede utilizarse para mostrar las ventajas de rendimiento de [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
+ Este ejemplo muestra la nueva [!INCLUDE[hek_2](../includes/hek-2-md.md)] característica, que forma parte de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Muestra las nuevas tablas optimizadas para memoria y procedimientos almacenados compilados de forma nativa y puede usarse para mostrar las ventajas de rendimiento de [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
 >  Para ver este tema de SQL Server 2016, consulte [Extensiones de AdventureWorks para mostrar OLTP en memoria](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
   
  El ejemplo migra 5 tablas de la base de datos AdventureWorks a tablas optimizadas para memoria e incluye una carga de trabajo de demostración para el procesamiento de pedidos de venta. Puede usar esta carga de trabajo de demostración para ver la ventaja de rendimiento que supone emplear [!INCLUDE[hek_2](../includes/hek-2-md.md)] en el servidor.  
   
- En la descripción del ejemplo se explican los compromisos realizados al migrar las tablas a [!INCLUDE[hek_2](../includes/hek-2-md.md)] para tener en cuenta las características que no son admiten (todavía) para las tablas optimizadas en memoria en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ En la descripción del ejemplo se explican los compromisos realizados al migrar las tablas a [!INCLUDE[hek_2](../includes/hek-2-md.md)] para compensar las características que no son admiten (todavía) para las tablas optimizadas para memoria en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
  La documentación de este ejemplo está estructurada de la manera siguiente:  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36111234"
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM: edición Evaluation, Developer o Enterprise  
   
--   Para las pruebas de rendimiento, un servidor con unas especificaciones similares al entorno de producción. Para esta muestra concreta, debe haber al menos 16 GB de memoria disponible para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Recomendaciones generales de hardware para [!INCLUDE[hek_2](../includes/hek-2-md.md)], consulte el blog siguiente:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   Para las pruebas de rendimiento, un servidor con unas especificaciones similares al entorno de producción. Para esta muestra concreta, debe haber al menos 16 GB de memoria disponible para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener instrucciones generales de hardware para [!INCLUDE[hek_2](../includes/hek-2-md.md)], consulte el blog siguiente:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Instalar el ejemplo de [!INCLUDE[hek_2](../includes/hek-2-md.md)] basado en AdventureWorks  
  Siga estos pasos para instalar el ejemplo:  
@@ -91,7 +91,7 @@ ms.locfileid: "36111234"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Descargar el script de ejemplo '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' desde [ejemplo de OLTP de SQL Server 2014 RTM en memoria](http://go.microsoft.com/fwlink/?LinkID=396372) en una carpeta local.  
+5.  Descargue el script de ejemplo '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' desde [ejemplo de OLTP de SQL Server 2014 RTM en memoria](http://go.microsoft.com/fwlink/?LinkID=396372) en una carpeta local.  
   
 6.  Actualice el valor de la variable 'checkpoint_files_location' en el script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' para que apunte a la ubicación de destino de los archivos de puntos de comprobación de [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Los archivos de punto de comprobación deben colocarse en una unidad que tenga un buen rendimiento de E/S secuencial.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "36111234"
 -   
             *Columnas calculadas:* se omiten las columnas calculadas SalesOrderNumber y TotalDue, ya que [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] no admite columnas calculadas en tablas optimizadas para memoria. La nueva vista Sales.vSalesOrderHeader_extended_inmem refleja las columnas SalesOrderNumber y TotalDue. Por tanto, puede usar esta vista si se necesitan estas columnas.  
   
--   *Las restricciones Foreign key* no se admiten para tablas optimizadas en memoria en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Además, SalesOrderHeader_inmem es una tabla sin interrupción en la carga de trabajo de ejemplo, y las restricciones de clave externa requieren un procesamiento adicional para todas las operaciones DML, ya que tienen que hacer búsquedas en todas las demás tablas a las que se hace referencia en estas restricciones. Por tanto, la suposición es que la aplicación garantiza la integridad referencial, y la integridad referencial no se valida cuando se insertan filas. La integridad referencial de los datos de esta tabla se puede comprobar con el procedimiento almacenado dbo.usp_ValidateIntegrity, mediante el script siguiente:  
+-   *Restricciones Foreign key* no se admiten para las tablas optimizadas para memoria en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Además, SalesOrderHeader_inmem es una tabla sin interrupción en la carga de trabajo de ejemplo, y las restricciones de clave externa requieren un procesamiento adicional para todas las operaciones DML, ya que tienen que hacer búsquedas en todas las demás tablas a las que se hace referencia en estas restricciones. Por tanto, la suposición es que la aplicación garantiza la integridad referencial, y la integridad referencial no se valida cuando se insertan filas. La integridad referencial de los datos de esta tabla se puede comprobar con el procedimiento almacenado dbo.usp_ValidateIntegrity, mediante el script siguiente:  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -469,7 +469,7 @@ END
  Se usará la herramienta ostress para ejecutar los scripts con varias conexiones simultáneas. Usaremos el parámetro '-n' para controlar el número de conexiones y el parámetro 'r' para controlar cuántas veces se ejecuta el script en cada conexión.  
   
 #### <a name="functional-validation-of-the-workload"></a>Validación funcional de la carga de trabajo  
- Para comprobar que todo funciona, iniciaremos una prueba de ejemplo, usando 10 conexiones simultáneas y 5 iteraciones, para insertar un total de 10 * 5 \* 20 = 1000 pedido de ventas.  
+ Para comprobar que todo funciona, comenzaremos con una prueba de ejemplo, usando 10 conexiones simultáneas y 5 iteraciones, para insertar un total de 10 * 5 \* 20 = 1000 pedidos de ventas.  
   
  Con el comando siguiente suponemos que se usa la instancia predeterminada en el equipo local. Si va a usar una instancia con nombre o un servidor remoto, cambie el nombre del servidor en consecuencia con el parámetro -S.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Contenido del modelo para los modelos de clústeres de secuencia de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Para los modelos de clústeres de secuencia de contenido del modelo de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, sequence clustering models
 - sequence clustering algorithms [Analysis Services]
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb03523f20468a24cb901f08dd0eff9a368aa8cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0b505e01e6b8334ed1a0baeaacbda7e29ba7407
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208155"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia(Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de clústeres de secuencia de Microsoft. Para obtener una explicación de terminología general y de estadística relacionada con el contenido del modelo de minería de datos válida para todos los tipos de modelo, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -158,7 +158,7 @@ ms.locfileid: "36107105"
 ###  <a name="bkmk_NODEDIST"></a> Tabla NODE_DISTRIBUTION  
  En la tabla NODE_DISTRIBUTION se proporciona información detallada de la compatibilidad y la probabilidad de las transiciones y secuencias de un clúster concreto.  
   
- Una fila siempre se agrega a la tabla de transiciones para representar los posibles valores `Missing`. Para obtener información acerca de lo que el `Missing` valor significa y cómo afecta a los cálculos, vea [valores que faltan &#40;Analysis Services: minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
+ Una fila siempre se agrega a la tabla de transiciones para representar los posibles valores `Missing`. Para obtener información acerca de lo que el `Missing` valor medio, y cómo afecta a los cálculos, vea [los valores que faltan &#40;Analysis Services - minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
   
  Los cálculos de compatibilidad y probabilidad difieren en función de si el cálculo se aplica a los casos de entrenamiento o al modelo terminado. Esto se debe a que el método de agrupación en clústeres predeterminado, maximización de la expectativa (EM), supone que cualquier caso puede pertenecer a más de un clúster. Al calcular la compatibilidad para los casos en el modelo, es posible utilizar recuentos netos y probabilidades netas. Sin embargo, las probabilidades de una secuencia determinada en un clúster deben ser compensadas por la suma de todas las combinaciones posibles de clústeres y secuencias.  
   
@@ -265,7 +265,7 @@ ORDER BY Count(*) DESC
  Para conocer cómo obtener la lista de rutas de acceso observadas consultando el contenido del modelo y ver otros ejemplos de consultas en un modelo de agrupación en clústeres de secuencia, vea [Ejemplos de consultas de modelos de clústeres de secuencia](clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm.md)   
  [Ejemplos de consultas de modelos de clústeres de secuencia](clustering-model-query-examples.md)  
   

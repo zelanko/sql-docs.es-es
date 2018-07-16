@@ -1,5 +1,5 @@
 ---
-title: Crear conjunto de pruebas (Asistente para minería de datos) | Documentos de Microsoft
+title: Crear conjunto de pruebas (Asistente para minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.holdout.f1
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ced530beaaa09954e94c851069ca76d01f3023d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f9f671a0980d979436e4780579d99122cb9e669
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326885"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Crear conjunto de pruebas (Asistente para minería de datos)
   Utilice la página **Crear conjunto de pruebas** para especificar qué cantidad de datos se va a utilizar para el entrenamiento y cuánta se va a reservar para utilizarla en un conjunto de pruebas. Al separar los datos en un conjunto de aprendizaje y de pruebas cuando se crea una estructura de minería de datos, resulta más fácil evaluar la exactitud de los modelos de minería que se crean después.  
@@ -30,7 +30,7 @@ ms.locfileid: "36198779"
   
  De manera predeterminada, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] genera un valor de inicialización numérico que se usa para iniciar las particiones. Este valor de inicialización está basado en el nombre de la estructura de minería de datos. Si desea asegurarse de que la partición se queda igual incluso si se cambia el nombre de la estructura de minería de datos, puede especificar un valor de inicialización si establece la propiedad HoldoutSeed de la estructura de minería de datos. Si cambia el valor de inicialización de la exclusión, debe volver a procesar la estructura.  
   
- Si posteriormente desea cambiar la cantidad de datos de entrenamiento o pruebas, puede modificar el `HoldoutMaxCases` y `HoldoutMaxPercent` propiedades en la estructura de minería de datos mediante el uso de la **propiedades** ventana. Sin embargo, después de realizar la modificación debe volver a procesar la estructura de minería de datos y todos los modelos de minería asociados. También se aplican las siguientes limitaciones:  
+ Si desea cambiar la cantidad de datos de entrenamiento o pruebas más adelante, puede modificar el `HoldoutMaxCases` y `HoldoutMaxPercent` propiedades en la estructura de minería de datos mediante el uso de la **propiedades** ventana. Sin embargo, después de realizar la modificación debe volver a procesar la estructura de minería de datos y todos los modelos de minería asociados. También se aplican las siguientes limitaciones:  
   
 -   El particionamiento de una estructura de minería de datos solamente se admite cuando la estructura está almacenada en [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no permiten almacenar en memoria caché información de la partición para las estructuras de minería de datos.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36198779"
  El valor predeterminado es NULL. Esto significa que no hay ningún límite.  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda F1 del Asistente para minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Asistente para la Ayuda de F1 de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Sugerir columnas relacionadas &#40;Asistente para minería de datos&#41;](suggest-related-columns-data-mining-wizard.md)   
  [Especificar tipos de tablas &#40;Asistente para minería de datos&#41;](specify-table-types-data-mining-wizard.md)   
  [Especificar el contenido y el tipo de datos de la columna &#40;Asistente para minería de datos&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  

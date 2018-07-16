@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - joins [SQL Server], operators
 - modifying join operators
 - join operators
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 87174d9f5c13ebc29252076db2f919445181aa6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 865eee3e48d99914e2f04ad0ae59e42443447f59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304955"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modificar operadores de combinación (Visual Database Tools)
   De forma predeterminada, el [Diseñador de consultas y vistas](visual-database-tools.md) combina tablas usando un signo igual (una combinación de igualdad), que compara los valores de las dos columnas de combinación. Si lo desea, puede cambiar el operador utilizado para comparar valores de las columnas de combinación.  

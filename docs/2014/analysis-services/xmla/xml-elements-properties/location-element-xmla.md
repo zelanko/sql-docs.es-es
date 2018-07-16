@@ -1,5 +1,5 @@
 ---
-title: Elemento location (XMLA) | Documentos de Microsoft
+title: Elemento location (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Location element
 ms.assetid: cea5e776-f435-425a-9bce-812d727a2b71
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 51b0838b9843658b4081f9464c63274631ed74be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6674d88797e738c4120a7cafae3d12a71e52e36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295395"
 ---
 # <a name="location-element-xmla"></a>Elemento Location (XMLA)
-  Contiene información sobre un servidor remoto para el elemento primario [copia de seguridad](../xml-elements-commands/backup-element-xmla.md), [restaurar](../xml-elements-commands/restore-element-xmla.md), o [sincronizar](../xml-elements-commands/synchronize-element-xmla.md) comando.  
+  Contiene información acerca de un servidor remoto para el elemento primario [copia de seguridad](../xml-elements-commands/backup-element-xmla.md), [restaurar](../xml-elements-commands/restore-element-xmla.md), o [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -85,13 +85,13 @@ ms.locfileid: "36201891"
 |[Sincronizar](../xml-elements-commands/synchronize-element-xmla.md)|[ConnectionString](connectionstring-element-xmla.md), [DataSourceID](datasourceid-element-xmla.md), [DataSourceType](type-element-xmla.md), [carpetas](folders-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notas  
- Para `Backup` comandos, el `Location` elemento proporciona información acerca de cómo crear un archivo de copia de seguridad remoto para una instancia remota de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Para `Backup` comandos, el `Location` elemento proporciona información sobre cómo crear un archivo de copia de seguridad remoto para una instancia remota de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  Para los comandos `Restore`, el elemento `Location` proporciona información sobre cómo identificar y conectar con una instancia remota de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], así como el archivo de copia de seguridad remoto utilizado para restaurar las particiones remotas en esa instancia remota.  
   
  Para los comandos `Synchronize`, el elemento `Location` describe un origen de datos que va a utilizar la instancia de destino o una instancia remota definida en la instancia de origen que se debe sincronizar con la instancia de destino, dependiendo del valor del elemento `DataSourceType` para el comando primario `Synchronize`.  
   
- Para obtener más información acerca de la copia de seguridad y restauración de instancias remotas, consulte [realizar copias de seguridad y restauración de objetos (XMLA)](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Para obtener más información acerca de la copia de seguridad y restauraciones de instancias remotas, consulte [copia de seguridad y restauración de objetos (XMLA)](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento BackupRemotePartitions &#40;XMLA&#41;](backupremotepartitions-element-xmla.md)   

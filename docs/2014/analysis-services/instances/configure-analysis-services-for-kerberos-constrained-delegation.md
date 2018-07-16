@@ -1,5 +1,5 @@
 ---
-title: Configurar Analysis Services para delegación limitada de Kerberos | Documentos de Microsoft
+title: Configurar Analysis Services para delegación limitada de Kerberos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6a47530c6c38c67b865c808ef0e80ea235d658b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3436b2d0e73fc452c12e1aa5a71724e9f8dcd31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191315"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Configurar Analysis Services para la delegación restringida de Kerberos
   Al configurar Analysis Services para la autenticación Kerberos, lo más probable es que le interese conseguir uno de los resultados siguientes o ambos: hacer que Analysis Services suplante una identidad de usuario al consultar datos o hacer que Analysis Services delegue una identidad de usuario a un servicio de nivel inferior. Cada escenario necesita requisitos de configuración ligeramente diferentes. En ambos escenarios es necesario asegurarse de que la configuración se ha realizado correctamente.  
@@ -47,7 +47,7 @@ ms.locfileid: "36201267"
   
 |Tarea|Descripción|  
 |----------|-----------------|  
-|Paso 1: Comprobación de que las cuentas son adecuadas para la delegación|Asegúrese de que las cuentas empleadas para ejecutar los servicios tienen las propiedades correctas en Active Directory. Las cuentas de servicio de Active Directory no se deben marcar como cuentas confidenciales ni excluir específicamente de los escenarios de delegación. Para obtener más información, vea [Información acerca de las cuentas de usuario](http://go.microsoft.com/fwlink/?LinkId=235818).<br /><br /> **\*\* Importante \* \***  por lo general, todas las cuentas y los servidores deben pertenecer al mismo dominio de Active Directory o a dominios de confianza en el mismo bosque. Sin embargo, dado que Windows Server 2012 admite la delegación entre límites de dominio, podrá configurar la delegación limitada de Kerberos en un límite de dominio si el nivel funcional de este dominio es Windows Server 2012. O bien, puede configurar Analysis Services para tener acceso HTTP y usar métodos de autenticación de IIS en la conexión de cliente. Para obtener más información, vea [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).|  
+|Paso 1: Comprobación de que las cuentas son adecuadas para la delegación|Asegúrese de que las cuentas empleadas para ejecutar los servicios tienen las propiedades correctas en Active Directory. Las cuentas de servicio de Active Directory no se deben marcar como cuentas confidenciales ni excluir específicamente de los escenarios de delegación. Para obtener más información, vea [Información acerca de las cuentas de usuario](http://go.microsoft.com/fwlink/?LinkId=235818).<br /><br /> **\*\* Importante \* \* ** por lo general, todas las cuentas y los servidores deben pertenecer al mismo dominio de Active Directory o a dominios de confianza en el mismo bosque. Sin embargo, dado que Windows Server 2012 admite la delegación entre límites de dominio, podrá configurar la delegación limitada de Kerberos en un límite de dominio si el nivel funcional de este dominio es Windows Server 2012. O bien, puede configurar Analysis Services para tener acceso HTTP y usar métodos de autenticación de IIS en la conexión de cliente. Para obtener más información, vea [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).|  
 |Paso 2: Registro del SPN|Antes de configurar una delegación, es preciso que registre un nombre principal de servicio (SPN) para la instancia de Analysis Services. Necesitará configurar el SPN de Analysis Services en el momento que configure la delegación restringida de Kerberos para servicios de nivel intermedio. Para obtener instrucciones, vea [SPN registration for an Analysis Services instance](spn-registration-for-an-analysis-services-instance.md) .<br /><br /> Un nombre principal del servicio (SPN) especifica la identidad única de un servicio en un dominio configurado para la autenticación Kerberos. Las conexiones de cliente que usan seguridad integrada suelen solicitar un SPN como parte de la autenticación SSPI. La solicitud se reenvía a un controlador de dominio (DC) de Active Directory y el KDC concede un vale si el SPN presentado por el cliente tiene un registro SPN coincidente en Active Directory.|  
 |Paso 3: Configuración de la delegación restringida|Tras validar las cuentas que desea usar y registrar los SPN para esas cuentas, el siguiente paso es configurar los servicios de nivel superior, como IIS, Reporting Services o servicios Web de SharePoint para la delegación restringida, para lo cual, hay que especificar el SPN de Analysis Services como el servicio específico para el que se permite la delegación.<br /><br /> Los servicios que se ejecutan en SharePoint, como Excel Services o Reporting Services en modo de SharePoint, suelen hospedar libros e informes que usan datos multidimensionales o tabulares de Analysis Services. La configuración de la delegación restringida para estos servicios es una tarea de configuración frecuente y es necesaria para admitir la actualización de datos desde Excel Services. Los vínculos siguientes proporcionan instrucciones para los servicios de SharePoint así como otros que es probable que presenten una conexión de flujo de datos de nivel inferior para los datos de Analysis Services:<br /><br /> [Delegación de identidad para Servicios de Excel (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299826) o [Cómo configurar Excel Services en SharePoint Server 2010 para la autenticación Kerberos](http://support.microsoft.com/kb/2466519)<br /><br /> [Delegación de identidad para PerformancePoint Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299827)<br /><br /> [Delegación de identidad de SQL Server Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299828)<br /><br /> Para IIS 7.0, vea [Configurar la autenticación de Windows (IIS 7.0)](http://technet.microsoft.com/library/cc754628\(v=ws.10\).aspx) o [Cómo configurar SQL Server 2008 Analysis Services y SQL Server 2005 Analysis Services para utilizar autenticación Kerberos](http://support.microsoft.com/kb/917409).|  
 |Paso 4: Prueba de conexiones|Cuando lo pruebe, conéctese desde equipos remotos, con distintas identidades y haga consultas a Analysis Services con las mismas aplicaciones como usuario empresarial. Puede servirse de SQL Server Profiler para supervisar la conexión. En la solicitud, se debe ver la identidad del usuario. Para obtener más información, vea [Probar la identidad suplantada o delegada](#bkmk_test) en esta sección.|  

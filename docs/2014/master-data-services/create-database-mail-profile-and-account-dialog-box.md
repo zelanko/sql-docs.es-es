@@ -1,5 +1,5 @@
 ---
-title: Crear perfil de correo electrónico de base de datos y un cuadro de diálogo de cuenta (Administrador de configuración de Master Data Services) | Documentos de Microsoft
+title: Crear perfil de correo electrónico de base de datos y el cuadro de diálogo de cuenta (Administrador de configuración de Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82901acbfe20a0ec475fc859935c8abdf472b300
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: ef6d589c42c6abfd72975d1fbc1c98de76d908fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289131"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>Cuadro de diálogo Crear un perfil y una cuenta de Correo electrónico de base datos (Administrador de configuración de Master Data Services)
   Utilice el cuadro de diálogo **Crear un perfil y una cuenta de Correo electrónico de base de datos** para crear un perfil de Correo electrónico de base de datos y una cuenta de Correo electrónico de base de datos para la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Este perfil se utilizará para notificar por correo electrónico a usuarios y grupos cuando se produzcan errores en la validación de una regla de negocios.  
@@ -44,7 +44,7 @@ ms.locfileid: "36202114"
 |**Dirección de correo electrónico**|Escriba el nombre de la dirección de correo electrónico de la cuenta. Es la dirección de correo electrónico desde la que se envían los correos electrónicos y debe tener el formato *nombre_correo*@*nombre_dominio*. Un ejemplo de dirección de correo electrónico sería sales@contoso.com.|  
 |**Nombre para mostrar**|Valor opcional. Escriba el nombre para mostrar en los mensajes de correo electrónico enviados desde esta cuenta. Un ejemplo de nombre para mostrar es Grupo de ventas Contoso.|  
 |**Dirección de correo electrónico de respuesta**|Valor opcional. Escriba la dirección de correo electrónico que se utilizará para las respuestas a los mensajes enviados desde esta cuenta. Un ejemplo de dirección de correo electrónico de respuesta sería admin@contoso.com.|  
-|**Servidor SMTP**|Escriba el nombre o la dirección IP del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Es un formato de servidor SMTP de ejemplo `smtp.` *< nombreDeDominio >*`.com`. Si necesita ayuda, consulte a su administrador de correo.|  
+|**Servidor SMTP**|Escriba el nombre o la dirección IP del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Es un formato de servidor SMTP de ejemplo `smtp.` *< company_name >*`.com`. Si necesita ayuda, consulte a su administrador de correo.|  
 |**Número de puerto**|Escriba el número de puerto del servidor SMTP de esta cuenta. El número de puerto SMTP es 25.|  
 |**Este servidor requiere una conexión segura (SSL)**|Cifra la comunicación mediante SSL (Capa de sockets seguros).|  
   
@@ -62,6 +62,6 @@ ms.locfileid: "36202114"
   
 ## <a name="see-also"></a>Vea también  
  [Página Configuración de base de datos &#40;Administrador de configuración de Master Data Services&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [Configurar la base de datos y el sitio Web de Master Data Services](set-up-the-database-and-website-for-master-data-services.md)  
+ [Configurar la base de datos y el sitio web para Master Data Services](set-up-the-database-and-website-for-master-data-services.md)  
   
   

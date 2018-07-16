@@ -1,5 +1,5 @@
 ---
-title: Elemento CustomRollupColumn (ASSL) | Documentos de Microsoft
+title: Elemento CustomRollupColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CustomRollupColumn element
 ms.assetid: 8c825f16-0d17-4ff8-bc18-b52cf11edba7
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e57329b1112441ddba51eeaaf709f18219d8db33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ac09217cc0a48b079580b908db599f109a029982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291491"
 ---
 # <a name="customrollupcolumn-element-assl"></a>Elemento CustomRollupColumn (ASSL)
   Define los detalles de la columna que proporciona una fórmula de resumen personalizada.  
@@ -50,7 +50,7 @@ ms.locfileid: "36105949"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|[Elemento de datos](../data-type/dataitem-data-type-assl.md)|  
+|Tipo y longitud de los datos|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Valor predeterminado|None|  
 |Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36105949"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- Para obtener información adicional acerca de la `DataItem` tipo, incluida una tabla de objetos de Analysis Services Scripting Language (ASSL) y las propiedades de la `DataItem` los tipos, vea [tipo de datos DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+ Para obtener más información sobre la `DataItem` tipo, incluida una tabla de objetos de Analysis Services Scripting Language (ASSL) y las propiedades de la `DataItem` , vea [tipo de datos DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- El elemento que corresponde al elemento primario de `CustomRollupColumn` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ El elemento que se corresponde con el elemento primario de `CustomRollupColumn` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vea también  
  [Objetos &#40;ASSL&#41;](objects-assl.md)  

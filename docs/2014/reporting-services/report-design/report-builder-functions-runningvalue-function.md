@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 41f2345cf31347fba98448a02d4d3014b8883d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: be8b75318aec2bd921a7d995f63e722f38881426
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319865"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>Función RunningValue (Generador de informes y SSRS)
   Devuelve un agregado actualizado de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.  
@@ -52,7 +52,7 @@ RunningValue(expression, function, scope)
   
  `RunningValue` no se puede utilizar en un filtro o expresión de ordenación.  
   
- El conjunto de datos para los que se calcula el valor en ejecución debe tener el mismo tipo de datos. Para convertir los datos que tienen varios tipos de datos numéricos en el mismo tipo de datos, use funciones de conversión como `CInt`, `CDbl` o `CDec`. Para obtener más información, vea [Funciones de conversión de tipos](http://go.microsoft.com/fwlink/?LinkId=96142).  
+ El conjunto de datos para los que se calcula el valor en ejecución debe tener el mismo tipo de datos. Para convertir datos de varios tipos de datos numéricos al mismo tipo de datos, use funciones de conversión como `CInt`, `CDbl` o `CDec`. Para obtener más información, vea [Funciones de conversión de tipos](http://go.microsoft.com/fwlink/?LinkId=96142).  
   
  *Scope* no puede ser una expresión.  
   
@@ -62,7 +62,7 @@ RunningValue(expression, function, scope)
   
 -   El ámbito para los agregados anidados no puede ser el nombre de un conjunto de datos.  
   
--   *Expresión* no debe contener `First`, `Last`, `Previous`, o `RunningValue` funciones.  
+-   *Expresión* no puede contener `First`, `Last`, `Previous`, o `RunningValue` funciones.  
   
 -   *Expression* no debe contener a los agregados anidados que especifican *recursive*.  
   
@@ -92,9 +92,9 @@ RunningValue(expression, function, scope)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Expresión que se utiliza en los informes &#40;el generador de informes SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;el generador de informes SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

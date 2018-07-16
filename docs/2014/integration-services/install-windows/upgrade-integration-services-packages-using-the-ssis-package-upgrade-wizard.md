@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, upgrading
 - upgrading Integration Services packages
@@ -16,13 +16,13 @@ ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 44ffe15525667ad907e282efda510a63d347c30e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cccc4857558d90f25b9b246391a66fdd81d46bdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199625"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS
   Puede actualizar los paquetes que se crearon en versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al formato de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utiliza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona el Asistente para actualización del paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] para ayudar en este proceso. Como puede configurar el asistente para realizar una copia de seguridad de los paquetes originales, puede continuar utilizando los paquetes originales si experimenta dificultades en la actualización.  
@@ -90,7 +90,7 @@ ms.locfileid: "36202528"
 2.  En la página **Seleccionar opciones de administración de paquetes** del asistente, seleccione la opción **Realizar copia de seguridad de paquetes originales** .  
   
     > [!WARNING]  
-    >  El **paquetes originales de la copia de seguridad** opción no se muestra cuando se abre un [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] proyecto en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], que inicia el asistente automáticamente.  
+    >  El **paquetes originales de la copia de seguridad** opción no aparece al abrir un [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] project en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], que inicia el asistente automáticamente.  
   
 3.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ejecute el Asistente para actualización del paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   

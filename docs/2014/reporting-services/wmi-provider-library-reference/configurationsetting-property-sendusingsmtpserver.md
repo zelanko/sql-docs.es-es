@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SendUsingSMTPServer
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SendUsingSMTPServer property
 ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
 caps.latest.revision: 18
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f38cd078ad299cb94e21f227465887caffb81011
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 29d9af567f1b3fe9e57671731fc622735ce77e4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222795"
 ---
 # <a name="sendusingsmtpserver-property-wmi-msreportserverconfigurationsetting"></a>Propiedad SendUsingSMTPServer (MSReportServer_ConfigurationSetting de WMI)
   Especifica si el elemento `SendUsing` de la configuración del correo electrónico para el servidor de informes se ha establecido en `true`.  
@@ -43,7 +43,7 @@ public Boolean SendUsingSMTPServer;
 ```  
   
 ## <a name="property-values"></a>Valores de propiedad  
- Sólo lectura `Boolean` objeto.  
+ Solo lectura `Boolean` objeto.  
   
 ## <a name="example-code"></a>Código de ejemplo  
  [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  

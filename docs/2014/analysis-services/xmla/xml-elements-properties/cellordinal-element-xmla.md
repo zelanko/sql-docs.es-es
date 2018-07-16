@@ -1,5 +1,5 @@
 ---
-title: Elemento CellOrdinal (XMLA) | Documentos de Microsoft
+title: Elemento CellOrdinal (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CellOrdinal element
 ms.assetid: 1808c498-e3b4-4e5c-9e22-7f8662d32874
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2fbcf210fa9c1d816ef78c20fe762e7a7b15d636
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0e8e0413afb58ae448a053e9eab20d77a1b36096
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245375"
 ---
 # <a name="cellordinal-element-xmla"></a>Elemento CellOrdinal (XMLA)
-  Contiene la posición ordinal dentro de un cubo de una celda que se va a actualizar una [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md) comando.  
+  Contiene la posición ordinal dentro de un cubo de una celda que se va a actualizar un [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36201441"
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[celda](cell-element-xmla.md)|  
+|Elementos primarios|[Celda](cell-element-xmla.md)|  
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  

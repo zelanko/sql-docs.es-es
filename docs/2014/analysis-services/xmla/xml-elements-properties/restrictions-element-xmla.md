@@ -1,5 +1,5 @@
 ---
-title: Elemento Restrictions (XMLA) | Documentos de Microsoft
+title: Elemento Restrictions (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Restrictions element
 ms.assetid: e745ce13-b468-4372-a6f0-0da3d772dda3
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: a096ea973d6b8ba900c3b1d890f49ad019d8e93f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fd8e2be999b848524a2d62d921b24bfc07be89fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257081"
 ---
 # <a name="restrictions-element-xmla"></a>Elemento Restrictions (XMLA)
-  Contiene las columnas de restricción y datos utilizados por la [Discover](../xml-elements-methods-discover.md) método.  
+  Contiene las columnas de restricción y datos utilizados por el [Discover](../xml-elements-methods-discover.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   

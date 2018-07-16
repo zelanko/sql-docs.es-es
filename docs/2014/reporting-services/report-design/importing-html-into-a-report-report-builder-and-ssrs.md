@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bf60290c4946ef6f45bccba32632ed81dfaf650b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a90dfbac3006f7dfbf27b38a8ab584ebb9e5d710
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249635"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importar HTML en un informe (Generador de informes y SSRS)
   Se puede usar un cuadro de texto para insertar en un informe texto con formato HTML recuperado de un campo de conjunto de datos. El texto puede proceder de cualquier expresión simple o compleja que se evalúe como HTML con un formato correcto. El texto con formato se puede representar en todos los formatos de salida compatibles, incluso PDF.  
@@ -39,7 +39,7 @@ ms.locfileid: "36105771"
 ## <a name="supported-html-tags"></a>Etiquetas HTML compatibles  
  La lista siguiente es una lista completa de las etiquetas que se representarán como HTML cuando se definan como texto de marcador de posición:  
   
--   Encabezado, estilo y elementos de bloque: \<H {n} >, \<DIV >, \<intervalo >,\<P >, \<LI >  
+-   Encabezado, estilo y elementos de bloque: \<H {n} >, \<DIV >, \<SPAN >,\<P >, \<LI >  
   
  Cualquier otra etiqueta de marcado HTML se omitirá durante el procesamiento del informe. Si el HTML representado por la expresión en el texto del marcador de posición no está bien formado, el marcador de posición se representa como texto simple. Todas las etiquetas HTML distinguen entre mayúsculas y minúsculas.  
   
@@ -81,6 +81,6 @@ ms.locfileid: "36105771"
 -   Para los atributos y los estilos CSS, si una propiedad se especifica más de una vez, solo se aplica la última instancia de la propiedad. Por ejemplo, si el texto es **\<p align="left" align="right">**, el texto estará alineado a la derecha.  
   
 ## <a name="see-also"></a>Vea también  
- [Representación en HTML &#40;el generador de informes SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
+ [Representación en HTML &#40;generador de informes y SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

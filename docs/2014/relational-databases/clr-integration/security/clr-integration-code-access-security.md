@@ -1,13 +1,11 @@
 ---
-title: CLR Integration Code Access Security | Documentos de Microsoft
+title: CLR Integration Code Access Security | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - EXTERNAL_ACCESS assemblies
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8ccb03b45b27150c00a5620f772afc764dc6ff0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: c2e0d51e1c3268fd7399467f22fb833e77f14131
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108361"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349887"
 ---
 # <a name="clr-integration-code-access-security"></a>Seguridad de acceso del código de integración CLR
   Common Language Runtime (CLR) admite un modelo de seguridad denominado seguridad de acceso del código para el código administrado. En este modelo, se conceden permisos a los ensamblados basados en la identidad del código. Para obtener más información, vea la sección sobre seguridad de acceso del código en el kit de desarrollo de software de .NET Framework.  
@@ -40,9 +38,9 @@ ms.locfileid: "36108361"
   
 -   Directiva de host: es la directiva configurada por el host de CLR (en este caso, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) que está activa para el código administrado que se ejecuta en ese host.  
   
- El mecanismo de seguridad de acceso del código admitido por CLR se basa en el supuesto de que el tiempo de ejecución puede hospedar código de plena confianza y código de confianza parcial. Los recursos que están protegidos por la seguridad de acceso del código CLR se suelen empaquetar mediante interfaces de programación de aplicaciones administradas ese permiso correspondiente requirethe antes de permitir el acceso al recurso. El demandfor el permiso sólo se satisface si todos los llamadores (en el nivel de ensamblado) en la pila de llamadas tienen el permiso de recurso correspondiente.  
+ El mecanismo de seguridad de acceso del código admitido por CLR se basa en el supuesto de que el tiempo de ejecución puede hospedar código de plena confianza y código de confianza parcial. Los recursos que están protegidos por la seguridad de acceso del código CLR normalmente se encapsulan las interfaces de programación de aplicaciones administradas que requirethe correspondiente permiso antes de permitir el acceso al recurso. El permiso demandfor solamente se satisface si todos los llamadores (en el nivel de ensamblado) en la pila de llamadas tienen el permiso de recurso correspondiente.  
   
- El conjunto de permisos de seguridad de acceso del código que se conceden al código administrado cuando se ejecuta en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] concede un conjunto de permisos a un ensamblado cargado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el conjunto de permisos concedidos al código de usuario final puede restringirse aún más mediante la usuario y las directivas de nivel de equipo.  
+ El conjunto de permisos de seguridad de acceso del código que se conceden al código administrado cuando se ejecuta en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] concede un conjunto de permisos a un ensamblado cargado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el conjunto de permisos concedidos al código de usuario final puede restringirse más mediante el el usuario y las directivas de nivel de equipo.  
   
 ## <a name="sql-server-host-policy-level-permission-sets"></a>Conjuntos de permisos de nivel de directiva de host de SQL Server  
  El conjunto de permisos de seguridad de acceso del código que se concede a los ensamblados mediante el nivel de directiva de host de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene determinado por el conjunto de permisos especificado al crear el ensamblado. Hay tres conjuntos de permisos: `SAFE`, `EXTERNAL_ACCESS` y `UNSAFE` (especificado mediante el **PERMISSION_SET** opción de[CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)) .  
@@ -66,7 +64,7 @@ ms.locfileid: "36108361"
 |`SqlClientPermission`|`Context connection = true`, `context connection = yes`: solo puede usarse la conexión de contexto (context-connection) y la cadena de conexión solo puede especificar un valor "context connection=true" o "context connection=yes".<br /><br /> **AllowBlankPassword = false:** no se permiten contraseñas en blanco.|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
- Ensamblados EXTERNAL_ACCESS tienen los mismos permisos que `SAFE` ensamblados, con la capacidad adicional para tener acceso a recursos externos del sistema, como archivos, redes, variables de entorno y el registro.  
+ Los ensamblados EXTERNAL_ACCESS tienen los mismos permisos que `SAFE` ensamblados, con la capacidad adicional para tener acceso a recursos externos del sistema como archivos, redes, variables de entorno y el registro.  
   
  Los ensamblados `EXTERNAL_ACCESS` también tienen los siguientes permisos y valores:  
   
@@ -93,7 +91,7 @@ ms.locfileid: "36108361"
  A los ensamblados `UNSAFE` se les concede `FullTrust`.  
   
 > [!IMPORTANT]  
->  `SAFE` es la configuración de permiso recomendada para los ensamblados que realizan tareas de administración de datos y cálculos sin tener acceso a los recursos fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. `EXTERNAL_ACCESS` ensamblados de forma predeterminada se ejecutan como la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuenta de servicio, permiso para ejecutar `EXTERNAL_ACCESS` solo se debe conceder a los inicios de sesión de confianza para ejecutarse como la cuenta de servicio. Desde el punto de vista de la seguridad, los ensamblados `EXTERNAL_ACCESS` y `UNSAFE` son idénticos. Sin embargo, los ensamblados `EXTERNAL_ACCESS` proporcionan diferentes protecciones de confiabilidad y solidez que no se incluyen en los ensamblados `UNSAFE`. Especificar `UNSAFE` permite al código del ensamblado realizar operaciones ilegales en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información sobre cómo crear ensamblados CLR en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [administrar ensamblados de integración de CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
+>  `SAFE` es la configuración de permiso recomendada para los ensamblados que realizan tareas de administración de datos y cálculos sin tener acceso a los recursos fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. `EXTERNAL_ACCESS` los ensamblados de forma predeterminada se ejecutan como la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuenta de servicio, permiso para ejecutar `EXTERNAL_ACCESS` sólo debería concederse a los inicios de sesión de confianza para ejecutarse como la cuenta de servicio. Desde el punto de vista de la seguridad, los ensamblados `EXTERNAL_ACCESS` y `UNSAFE` son idénticos. Sin embargo, los ensamblados `EXTERNAL_ACCESS` proporcionan diferentes protecciones de confiabilidad y solidez que no se incluyen en los ensamblados `UNSAFE`. Especificar `UNSAFE` permite que el código en el ensamblado para realizar operaciones ilegales en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información acerca de cómo crear ensamblados CLR en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [administrar ensamblados de integración de CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
   
 ## <a name="accessing-external-resources"></a>Obtener acceso a recursos externos  
  Si un tipo definido por el usuario (UDT), un procedimiento almacenado u otro tipo de ensamblado de construcción se registra con el conjunto de permisos `SAFE`, el código administrado que se ejecuta en la construcción no puede obtener acceso a los recursos externos. Sin embargo, si se especifica cualquiera de los conjuntos de permisos `EXTERNAL_ACCESS` o `UNSAFE` y el código administrado intenta obtener acceso a recursos externos, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aplica las reglas siguientes:  
@@ -118,8 +116,8 @@ ms.locfileid: "36108361"
 |`Ability to call native code`|no|no|Sí|  
   
 ## <a name="see-also"></a>Vea también  
- [Seguridad de la integración de CLR](clr-integration-security.md)   
- [Atributos de protección de host y programación de la integración de CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
+ [Seguridad de la integración CLR](clr-integration-security.md)   
+ [Atributos de protección de host y programación de la integración CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
  [Restricciones del modelo de programación de integración de CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
  [Entorno hospedado CLR](../clr-integration-architecture-clr-hosted-environment.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data changes [SQL Server]
 - tracking data changes [SQL Server]
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - data [SQL Server], changing
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 62309ba34829657eee57398c48df90a232ae4f11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 8953f24d60b3007ab2fee218507cdd77c69561ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276151"
 ---
 # <a name="about-change-tracking-sql-server"></a>Acerca del seguimiento de cambios (SQL Server)
-  El seguimiento de cambios es una solución ligera que proporciona un mecanismo de seguimiento de cambios eficaz para las aplicaciones. Normalmente, para permitir que las aplicaciones consulten los cambios de los datos en una base de datos y tener acceso a la información relacionada con los mismos, los programadores de aplicaciones tenían que implementar mecanismos personalizados de seguimiento de cambios. Crear estos mecanismos normalmente implica mucho trabajo y, frecuentemente, conlleva el uso de una combinación de desencadenadores, `timestamp` columnas, tablas nuevas para almacenar información de seguimiento y procesos de limpieza personalizado.  
+  El seguimiento de cambios es una solución ligera que proporciona un mecanismo de seguimiento de cambios eficaz para las aplicaciones. Normalmente, para permitir que las aplicaciones consulten los cambios de los datos en una base de datos y tener acceso a la información relacionada con los mismos, los programadores de aplicaciones tenían que implementar mecanismos personalizados de seguimiento de cambios. Crear estos mecanismos normalmente implica mucho trabajo y, frecuentemente, conlleva el uso de una combinación de desencadenadores, `timestamp` columnas, tablas nuevas para almacenar información de seguimiento y procesos de limpieza personalizados.  
   
  Los diferentes tipos de aplicaciones tienen requisitos distintos en cuanto a la cantidad de información que necesitan sobre los cambios. Las aplicaciones pueden utilizar el seguimiento de cambios para responder a las preguntas siguientes sobre las modificaciones que se han realizado en una tabla de usuario:  
   

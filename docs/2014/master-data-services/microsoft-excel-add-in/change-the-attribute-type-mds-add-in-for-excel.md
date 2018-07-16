@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: db45c51e597f739a443027e2e3390656d0820710
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: c1e087cb853e6517c0977b2db33c31312631c1ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195435"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Cambar el tipo de atributo (complemento MDS para Excel)
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], los administradores pueden cambiar el tipo de atributo cuando el tipo de datos o el número de caracteres permitido sea incorrecto.  
@@ -55,7 +55,7 @@ ms.locfileid: "36199152"
   
 -   Cambiar el tipo de datos del atributo.  
   
--   Generar una copia del atributo con el sufijo "_old” que no contiene ningún valor. Esto se denomina una **en desuso** atributo.  
+-   Generar una copia del atributo con el sufijo "_old” que no contiene ningún valor. Esto se denomina un **en desuso** atributo.  
   
  Sin embargo, todas las dependencias existentes en el atributo original apuntarán al atributo desusado, no al modificado.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36199152"
   
 -   Debe actualizar las reglas de negocios para que apunten al atributo modificado, ya que la lógica puede no ser la misma dado el nuevo tipo de datos del atributo. Tendrá que editar todas las reglas afectadas y hacer que las expresiones que apuntan a referencias quitadas del atributo desusado (_old) apunten al atributo actualizado.  
   
--   Debe abrir las vistas de suscripción en la selección de la administración de integraciones, seleccione la fila de la vista, abren para su edición haciendo clic en el icono de lápiz y, a continuación, haga clic en el **guardar disco** icono para actualizar la definición de vista. No es necesario hacer ningún otro cambio para regenerar la sintaxis de la vista.  
+-   Debe abrir todas las vistas de suscripción en la selección de la administración de integraciones, seleccione la fila de la vista, abrirlo y editarlo al hacer clic en el icono de lápiz y, a continuación, haga clic en el **guardar disco** icono para actualizar la definición de vista. No es necesario hacer ningún otro cambio para regenerar la sintaxis de la vista.  
   
 -   En las tablas de ensayo que incluyen el atributo se agregará una columna de atributo desusado, lo que significa que el código de ensayo se verá afectado. Para deshacerse del atributo desusado, puede eliminarlo después de haber actualizado las reglas de negocios y las vistas de suscripción.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36199152"
   
  Antes de eliminar cualquier atributo desusado, debe quitar las referencias al mismo, como corregir las reglas de negocios y regenerar las vistas de suscripción como se ha descrito anteriormente. De lo contrario, cuando intente eliminar el atributo desusado obtendrá un error en la página web Administración del sistema que indica que no se puede eliminar el atributo porque un objeto hace referencia a él.  
   
- Para eliminar un atributo, vea [eliminar un atributo &#40;Master Data Services&#41;](../delete-an-attribute-master-data-services.md)  
+ Para eliminar un atributo, consulte [eliminar un atributo &#40;Master Data Services&#41;](../delete-an-attribute-master-data-services.md)  
   
 > [!TIP]  
 >  Es tedioso cambiar los tipos de datos de los atributos de MDS que tienen datos y entidades relacionadas existentes, especialmente si se ha declarado una regla de negocios o una vista de suscripción que depende de la entidad. La práctica recomendada es empezar con un tipo de datos que sea suficientemente flexible como para contener los valores necesarios. Por ejemplo, las cadenas pueden ser pequeñas al principio, pero quizás haya que agrandarlas con el tiempo, por lo que debe considerar los escenarios de caso peor. La longitud adicional de las cadenas de texto puede ser molesta (por ejemplo, es difícil encajar en la pantalla cuadros de texto anchos de la GUI), por lo que debe evitar una longitud grande de las cadenas.  

@@ -14,13 +14,13 @@ ms.assetid: c6c15ae6-da52-4638-93d3-61c7242e8a0b
 caps.latest.revision: 12
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1329e7b4da266ea6024ed8bbc760b5eed636a30a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc3eeb21918886c1b738891b7b0453cbc5712212
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285131"
 ---
 # <a name="developer39s-guide-how-to-topics-replication"></a>Guía del programador: temas de procedimientos (replicación)
   Este tema proporciona vínculos a información acerca cómo realizar las tareas relacionadas con la replicación mediante programación.  

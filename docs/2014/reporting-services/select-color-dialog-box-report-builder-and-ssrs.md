@@ -1,5 +1,5 @@
 ---
-title: Seleccione el cuadro de diálogo Color (generador de informes y SSRS) | Documentos de Microsoft
+title: Seleccione el cuadro de diálogo Color (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.selectcolor.f1
 - "10090"
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1829f9d5b598f42b54be3d6d08cb7a78ea5e11f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2b14615cb231f6df5385306ded4257a86998a56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185784"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Cuadro de diálogo Seleccionar color (Generador de informes y SSRS)
   Use el cuadro de diálogo **Seleccionar color** para especificar las opciones de color para el fondo de una o varias celdas de una región de datos o un cuadro de texto de un gráfico.  
@@ -44,15 +44,15 @@ ms.locfileid: "36108928"
   
  Cuando se elige un color, el centro del círculo determina el color. Use el control deslizante de color para cambiar el matiz. Las coordenadas x e y representan los valores de saturación y luminosidad, respectivamente.  
   
- **Cuadros de color**  
+ **Cuadrado de colores**  
  Se usa para los colores RGB porque los valores RGB se asignan a un sistema de coordenadas cartesiano. R es el valor para el rojo, G es el valor para el verde y B es el valor para el azul.  
   
  Cuando se elige un color, el centro del cuadrado determina el color. Use el control deslizante de color para cambiar la gama del color elegido. Las coordenadas x e y representan los otros dos colores. Por ejemplo, si elige el color verde, el control deslizante muestra la gama de valores de verde, y las coordenadas x e y representan los valores para el rojo y el azul, respectivamente.  
   
  **Paleta de colores estándar**  
- Uso de colores con nombre de la [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` enumeración.  
+ Uso de colores con nombre desde el [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` enumeración.  
   
- **Sistema de color**  
+ **Sistema de colores**  
  Especifique si desea colores RGB o HSB. Esta opción cambia la presentación para mostrar valores RGB o HSB que se actualizan interactivamente cuando se utiliza un círculo o un cuadrado de colores para el **Selector de colores**.  
   
  El valor **Alpha** se muestra para algunas propiedades cuando un color puede incluir un valor de transparencia. Por ejemplo, el relleno para las series del gráfico. Para las propiedades que no admiten la transparencia, este valor está deshabilitado.  
@@ -83,6 +83,6 @@ ms.locfileid: "36108928"
   
 ## <a name="see-also"></a>Vea también  
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Aplicar formato a texto y marcadores de posición &#40;el generador de informes SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Aplicar formato a texto y marcadores de posición &#40;generador de informes y SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

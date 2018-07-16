@@ -1,5 +1,5 @@
 ---
-title: Propiedad PropertyType (clase ServerNetworkProtocolProperty) | Documentos de Microsoft
+title: Propiedad PropertyType (clase ServerNetworkProtocolProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyType property
 ms.assetid: d4932eaf-da7c-4b09-8298-ffb6333dfba2
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b9abb0c20817172b01f48bc83a7ef6b353143cd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f57b2404724a13505130dbc0d328e4a7823c55cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266101"
 ---
 # <a name="propertytype-property-servernetworkprotocolproperty-class"></a>Propiedad PropertyType (clase ServerNetworkProtocolProperty)
   Obtiene el tipo de propiedad.  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>Partes  
  *object*  
- A [clase ServerNetworkProtocolProperty](servernetworkprotocolproperty-class.md) objeto que representa un atributo del protocolo de red en la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Un [clase ServerNetworkProtocolProperty](servernetworkprotocolproperty-class.md) objeto que representa un atributo del protocolo de red en la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de `uint32` que especifica el tipo de propiedad.  
@@ -51,6 +51,6 @@ object
 ## <a name="remarks"></a>Notas  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurar protocolos de red de servidor y las bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Editor de destino de SQL (página avanzadas) | Documentos de Microsoft
+title: Editor de destino de SQL (página avanzadas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdestadapter.advanced.f1
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0f793be2507c1d390cbf955cce200b8edcf4d8bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7fa256ff2a160572f91ea4d885d572341f4357b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207725"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>Editor de destino de SQL (página Avanzadas)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de SQL** para especificar opciones avanzadas de inserción masiva.  

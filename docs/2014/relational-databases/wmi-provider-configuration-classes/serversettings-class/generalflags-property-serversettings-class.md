@@ -1,5 +1,5 @@
 ---
-title: Propiedad GeneralFlags (clase ServerSettings) | Documentos de Microsoft
+title: Propiedad GeneralFlags (clase ServerSettings) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - GeneralFlags property
 ms.assetid: 129bff8d-d2bc-4297-952f-d0a919d169f7
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0e548356253d0f5610d9b2ab76e31f644ff6a5a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 90e10e1d0c98f6ce93f5cc3362d93eb087a8b60d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197095"
 ---
 # <a name="generalflags-property-serversettings-class"></a>Propiedad GeneralFlags (clase ServerSettings)
   Obtiene las marcas generales asociadas a la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -51,6 +51,6 @@ object
 ## <a name="remarks"></a>Notas  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurar protocolos de red de servidor y las bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

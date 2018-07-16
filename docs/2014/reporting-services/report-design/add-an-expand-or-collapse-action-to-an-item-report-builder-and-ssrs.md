@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e01b13d7d8f4d7abc5e57a7bb7ebf23457bfe83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 45b6a7ccfb2a6d19fb85fc016cbcf66995976fc2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238485"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Agregar una acción de expandir y contraer a un elemento (Generador de informes y SSRS)
   Podrá permitir a los usuarios expandir o contraer interactivamente elementos de informe o expandir o contraer las filas y columnas asociadas a un grupo para una tabla o una matriz. Para permitir a los usuarios expandir o contraer un elemento, debe establecer las propiedades de visibilidad del elemento. El establecimiento de la visibilidad funciona en un visor de informes HTML y en ocasiones se denomina acción *de obtención de detalles* .  
@@ -100,7 +100,7 @@ ms.locfileid: "36203114"
      ![Informe en ejecución con una tabla expandida](../media/expandcollapse-runreport-reporttable.png "Informe en ejecución con una tabla expandida")  
   
 ## <a name="see-also"></a>Vea también  
- [Acción de obtención de detalles &#40;el generador de informes SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [Acción de obtención de detalles &#40;generador de informes y SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [Ocultar un elemento &#40;Generador de informes y SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

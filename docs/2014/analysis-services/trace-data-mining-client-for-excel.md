@@ -1,5 +1,5 @@
 ---
-title: Seguimiento (cliente de minería de datos para Excel) | Documentos de Microsoft
+title: Seguimiento (cliente de minería de datos para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tracer
 - connections
 ms.assetid: 4aea3e17-cd0f-48dd-8f22-b54a6c716426
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a62e3116fc9ba6bf3423faaf92b5374514174e42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee0268eb960aab09029774b6ad26ccccd3d352e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326525"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>Seguimiento (Cliente de minería de datos para Excel)
   ![Botón seguimiento](media/misc-trace.gif "botón seguimiento")  
   
- El **seguimiento** cuadro de diálogo le ayuda a supervisar las instrucciones que se envían a la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que está usando para la minería de datos. Después de haber creado una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], todas las interacciones entre el cliente y el servidor se registran en el **seguimiento** panel, incluidas las instrucciones que crean estructuras, agregan modelos de minería de datos y realizan las predicciones, así como algunos mensajes que devuelve el servidor.  
+ El **seguimiento** cuadro de diálogo le ayuda a supervisar las instrucciones que se envían a la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que está usando para la minería de datos. Después de haber creado una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], todas las interacciones entre el cliente y el servidor se registran en el **seguimiento** panel, incluidas las instrucciones que crean estructuras, agregar modelos de minería de datos y realizan las predicciones, así como algunos mensajes que devuelve el servidor.  
   
  Dependiendo de la acción que se solicita, la instrucción puede ser una consulta de definición de datos o una consulta de manipulación de datos de Extensiones de Minería de Datos (DMX), un paquete de Analysis Services Scripting Language (ASSL), o una llamada a un procedimiento almacenado de Analysis Services. Sin embargo, no se muestran resultados numéricos ni valores de datos reales.  
   

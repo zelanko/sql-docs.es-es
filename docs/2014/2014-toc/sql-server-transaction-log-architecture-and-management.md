@@ -1,25 +1,24 @@
 ---
-title: Arquitectura del registro de transacciones de SQL Server y la administración | Documentos de Microsoft
+title: Arquitectura del registro de transacciones de SQL Server y la administración | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
 caps.latest.revision: 14
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 15e0b458e74df9e40a05a4abbeeeb730b0bc0cea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0575762bbdb9446fc461bca6d09f71e174138177
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301345"
 ---
 # Arquitectura y administración de registros de transacciones de SQL Server
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "36200839"
   
  Cuando el final del registro lógico llega al final del archivo de registro físico, las nuevas entradas del registro se escriben al principio del archivo de registro físico.  
   
- ![Entradas de registro encapsulado aproximadamente al principio del archivo de registro](media/tranlog4.gif "entradas del registro se ajustan alrededor al principio del archivo de registro")  
+ ![Entradas de registro encapsulado alrededor al principio del archivo de registro](media/tranlog4.gif "entradas del registro de ajustan alrededor para el inicio del archivo de registro")  
   
  El ciclo se repite indefinidamente, siempre que el final del registro lógico no alcance el inicio del registro lógico. Si las entradas antiguas se truncan con la frecuencia suficiente para disponer siempre de espacio para todas las nuevas entradas de registro que se van a crear hasta el próximo punto de comprobación, el registro no se llena nunca. Sin embargo, si el final del registro lógico llega al principio del registro lógico, se produce una de estas dos situaciones:  
   

@@ -1,5 +1,5 @@
 ---
-title: Editor de destino de Excel (página de salida de Error) | Documentos de Microsoft
+title: Editor de destino de Excel (página salida de Error) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldestadapter.erroroutput.f1
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1c61d0ea9ed41bf238aa1cfdc05cb7c7615b657
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2199a6f6524e403139dba85c63519773cdceb1e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324645"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Editor de destino de Excel (página Salida de error)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de Excel** para especificar opciones para el control de errores.  

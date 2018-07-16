@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexión de WMI | Documentos de Microsoft
+title: Editor del Administrador de conexiones WMI | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmiconnection.f1
 helpviewer_keywords:
 - WMI Connection Manager Editor
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 092b52765cefdb24004e94e5963f6905f3beab5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 53f403d9c4fd109e9d468658a8455f0ac06d1bb6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269101"
 ---
 # <a name="wmi-connection-manager-editor"></a>Editor del administrador de conexiones WMI
   Use el cuadro de diálogo **Administrador de conexiones WMI** para especificar una conexión del Instrumental de administración de Microsoft Windows (WMI) a un servidor.  
@@ -57,7 +57,7 @@ ms.locfileid: "36204432"
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Proveedor WMI de conceptos de administración de configuración](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
+ [Proveedor WMI para conocer los conceptos de administración de configuración](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [Conceptos del proveedor WMI para eventos de servidor](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

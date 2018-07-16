@@ -1,5 +1,5 @@
 ---
-title: Diagrama de relación (pestaña Diseñador de relación de atributos, Diseñador de dimensiones) de los atributos (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Diagrama de relación (pestaña Diseñador de relación de atributos, Diseñador de dimensiones) de los atributos (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.ardiagram.f1
 ms.assetid: 320989ad-bd95-43f4-a2e7-b262d66dbda7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a8d895599cf800b7ca0e6b882f3d1451800b0db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4467e0ca268edd9d9e38ca4d915c489c5f65014
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208125"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Diagrama Relación de los atributos (pestaña Diseñador de Relación de los atributos, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use el panel que se encuentra inmediatamente debajo de la barra de herramientas en la pestaña **Relación de los atributos** para ver el diagrama de la relación de los atributos y para crear, modificar y eliminar relaciones de atributo.  

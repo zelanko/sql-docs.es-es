@@ -1,5 +1,5 @@
 ---
-title: Implementar soluciones de PowerPivot para SharePoint | Documentos de Microsoft
+title: Implementar soluciones de PowerPivot para SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdbae4a2f54d6f3f2c12562a70eb5f1076046947
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce0863ef023f96580eb809b6562cfc54b0de5b60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243665"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Implementar las soluciones de PowerPivot en SharePoint
-  Use las instrucciones siguientes para implementar manualmente dos paquetes de soluciones que agregan características de PowerPivot a un entorno de SharePoint Server 2010. La implementación de soluciones es un paso necesario para configurar PowerPivot para SharePoint en un servidor SharePoint 2010. Para ver una lista completa de pasos necesarios, vea [administración del servidor de PowerPivot y configuración en Administración Central](power-pivot-server-administration-and-configuration-in-central-administration.md).  
+  Use las instrucciones siguientes para implementar manualmente dos paquetes de soluciones que agregan características de PowerPivot a un entorno de SharePoint Server 2010. La implementación de soluciones es un paso necesario para configurar PowerPivot para SharePoint en un servidor SharePoint 2010. Para ver una lista completa de los pasos necesarios, consulte [configuración en Administración Central y administración de servidores PowerPivot](power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
- O bien, puede usar la Herramienta de configuración de PowerPivot para implementar las soluciones. Usar la herramienta de configuración es más fácil y más eficiente para una única instalación de servidor, pero podría ser conveniente usar Administración central y PowerShell si prefiere usar una herramienta conocida o si va a configurar varias características al mismo tiempo. Para obtener más información acerca de cómo utilizar la herramienta de configuración, consulte [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).  
+ O bien, puede usar la Herramienta de configuración de PowerPivot para implementar las soluciones. Usar la herramienta de configuración es más fácil y más eficiente para una única instalación de servidor, pero podría ser conveniente usar Administración central y PowerShell si prefiere usar una herramienta conocida o si va a configurar varias características al mismo tiempo. Para obtener más información sobre cómo usar la herramienta de configuración, consulte [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).  
   
  Antes de implementar las soluciones, primero debe instalar PowerPivot para SharePoint usando los medios de instalación de SQL Server 2012. El programa de instalación de SQL Server instala los paquetes de soluciones que está a punto de implementar.  
   
@@ -43,13 +43,13 @@ ms.locfileid: "36106834"
  [Acerca de las soluciones de PowerPivot](#intro)  
   
 ##  <a name="bkmk_classic"></a> Requisitos previos: compruebe que la aplicación web usa el Modo clásico de autenticación  
- PowerPivot para SharePoint solo se admite en las aplicaciones Web que usan el modo clásico de autenticación de Windows. Para comprobar si la aplicación usa el modo clásico, ejecute el siguiente cmdlet de PowerShell desde la **SharePoint 2010 Management Shell**y reemplace `http://<top-level site name>` con el nombre de su sitio de SharePoint:  
+ PowerPivot para SharePoint solo se admite en las aplicaciones Web que usan el modo clásico de autenticación de Windows. Para comprobar si la aplicación usa el modo clásico, ejecute el siguiente cmdlet de PowerShell desde la **SharePoint 2010 Management Shell**, reemplazando `http://<top-level site name>` con el nombre del sitio de SharePoint:  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
 ```  
   
- Se debería devolver el valor **false**. Si es **true**, no se puede obtener acceso a datos de PowerPivot con esta aplicación web.  
+ Se debería devolver el valor **false**. Si es **true**, no se puede obtener acceso a datos PowerPivot con esta aplicación web.  
   
 ##  <a name="bkmk_farm"></a> Paso 1: implementar la solución de granja  
  En esta sección se muestra cómo implementar soluciones con PowerShell, pero también puede utilizar la Herramienta de configuración de PowerPivot para completar esta tarea. Para obtener más información, consulte [configurar o reparar PowerPivot para SharePoint 2010 &#40;herramienta de configuración de PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
@@ -108,7 +108,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Haga clic en **Implementar solución**.  
   
-4.  En **implementarla?**, seleccione la aplicación web de SharePoint para el que desea agregar compatibilidad con características de PowerPivot.  
+4.  En **implementarla?**, seleccione la aplicación web de SharePoint para el que desea agregar compatibilidad con las características de PowerPivot.  
   
 5.  Haga clic en **Aceptar**.  
   
@@ -153,7 +153,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 ## <a name="see-also"></a>Vea también  
  [Actualizar PowerPivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
- [Administración de servidor de PowerPivot y configuración en Administración Central](power-pivot-server-administration-and-configuration-in-central-administration.md)   
+ [Administración de servidor de PowerPivot y la configuración en Administración Central](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Configuración de PowerPivot mediante Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Página nuevo modelo (Administrador de informes) | Documentos de Microsoft
+title: Página nuevo modelo (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ecccc18fc4b00433c864fea03440beb5e89191d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78ce09a93d36daf74150750f3f13ce6cbdb242a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292195"
 ---
 # <a name="new-model-page-report-manager"></a>Página Nuevo modelo (Administrador de informes)
-  Use esta página para generar un modelo de informe predeterminado desde un origen de datos compartido. Solamente puede generar modelos de informe [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] orígenes de datos multidimensionales, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] orígenes de datos relacionales y orígenes de datos relacionales de Oracle.  
+  Use esta página para generar un modelo de informe predeterminado desde un origen de datos compartido. Solo puede generar modelos de informe desde [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] orígenes de datos multidimensionales, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] orígenes de datos relacionales y orígenes de datos relacionales de Oracle.  
   
  Los modelos que se generan en el Administrador de informes se basan en el esquema del origen de datos compartido. Las entidades, las carpetas y los campos se crean para todas las tablas y columnas del origen de datos. No puede excluir elementos ni puede establecer opciones que determinen la manera en la que se genera el modelo. Si desea personalizar o perfeccionar un modelo, debe usar el Diseñador de modelos.  
   

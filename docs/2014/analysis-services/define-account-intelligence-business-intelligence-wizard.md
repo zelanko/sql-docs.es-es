@@ -1,5 +1,5 @@
 ---
-title: Definir la inteligencia de cuentas (Asistente de Business Intelligence) | Documentos de Microsoft
+title: Definir la inteligencia de cuentas (Asistente de Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.mapaccounttype.f1
 ms.assetid: fe4c204b-1031-4ac4-9916-8052ce2301cc
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3b55d270b9b7ae2a2094c24e0f71bdcd0f72a0ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 780f13e8ef18a4c17e3bec0322bd3c498efff4d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319245"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>Definir la inteligencia de cuentas (Asistente de Business Intelligence)
   Use la página **Definir la inteligencia de cuentas** para asignar tipos de cuenta definidos en la instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a tipos de cuenta definidos por una tabla de origen en el origen de datos que proporciona datos para la dimensión de cuenta.  
@@ -49,7 +49,7 @@ ms.locfileid: "36198555"
 |**Estadísticas**|Proporción calculada de algo o cuenta de algo que no se agrega.|  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda de F1 de Asistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Asistente de Business Intelligence F1 Ayuda](business-intelligence-wizard-f1-help.md)   
  [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

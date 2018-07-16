@@ -1,5 +1,5 @@
 ---
-title: Objeto de elemento (Dimension) (XMLA) | Documentos de Microsoft
+title: Objeto de elemento (Dimension) (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Object element
 ms.assetid: db7feb39-7cc1-4b54-8979-77ce402ef71f
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2f0a80bcd26e5a54a0c45adff7667b4cfebdc467
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 652e5b2b42df856c7668e690b6595ecd41f8d8a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228155"
 ---
 # <a name="object-element-dimension-xmla"></a>Elemento Object (Dimension) (XMLA)
   Contiene una referencia de objeto para la dimensión en la que el elemento primario [insertar](../xml-elements-commands/insert-element-xmla.md), [actualización](../xml-elements-commands/update-element-xmla.md), o [Drop](../xml-elements-commands/drop-element-xmla.md) se ejecuta el comando.  
@@ -64,7 +64,7 @@ ms.locfileid: "36105919"
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[Quitar](../xml-elements-commands/drop-element-xmla.md), [insertar](../xml-elements-commands/insert-element-xmla.md), [actualización](../xml-elements-commands/update-element-xmla.md)|  
+|Elementos primarios|[Quitar](../xml-elements-commands/drop-element-xmla.md), [insertar](../xml-elements-commands/insert-element-xmla.md), [Update](../xml-elements-commands/update-element-xmla.md)|  
 |Elementos secundarios|[Cubo](cube-element-xmla.md), [base de datos](database-element-xmla.md), [dimensión](dimension-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notas  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.tablix.visibility.f1
 - sql12.rtp.rptdesigner.groupproperties.advanced.f1
@@ -36,15 +36,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.tablix.filter.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 80661ab558038af26a9b98fef925c2ec24df83ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8579071257a3f4026a111aaf16d7898bbd28cbb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323905"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tablas, matrices y listas (Generador de informes y SSRS)
   Las tablas, matrices y listas son regiones de datos en las que se muestran los datos del informe en celdas organizadas en filas y columnas. Normalmente, las celdas contienen datos como texto, fechas y números, pero también pueden contener medidores, gráficos o elementos de informe como imágenes. Colectivamente, las tablas, matrices y listas se denominan a menudo regiones de datos Tablix.  
@@ -91,7 +91,7 @@ ms.locfileid: "36198617"
   
  También puede incluir controles de alternancia de obtención de detalles que ocultan inicialmente los datos detallados; de esta forma, el usuario podrá hacer clic en dichos controles para mostrar más o menos detalles, según sea necesario.  
   
- Para obtener más información, consulte [Matrices &#40;el generador de informes y SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md).  
+ Para obtener más información, consulte [Matrices &#40;generador de informes y SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md).  
   
 
   
@@ -100,7 +100,7 @@ ms.locfileid: "36198617"
   
  ![Nueva lista agregada desde el cuadro de herramientas, seleccionada](../media/rs-listtemplatenewselected.gif "Nueva lista agregada desde el cuadro de herramientas, seleccionada")  
   
- Para obtener más información, consulte [enumera &#40;el generador de informes y SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ Para obtener más información, consulte [enumera &#40;generador de informes y SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 
   
@@ -134,51 +134,51 @@ ms.locfileid: "36198617"
 ##  <a name="HowTo"></a> Temas de procedimientos  
  En esta sección se describen procedimientos que muestran, paso a paso, cómo trabajar con tablas, matrices y listas en los informes; cómo mostrar los datos en filas y columnas, agregar y eliminar columnas, combinar celdas, e incluir subtotales para los grupos de filas y columnas.  
   
--   [Agregar un grupo de detalles &#40;el generador de informes SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
+-   [Agregar un grupo de detalles &#40;generador de informes y SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
   
--   [Agregar un Total a un grupo o región de datos Tablix &#40;el generador de informes SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+-   [Agregar un Total a un grupo o región de datos Tablix &#40;generador de informes y SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
--   [Cambiar un elemento dentro de una celda &#40;el generador de informes SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
+-   [Cambiar un elemento de una celda &#40;generador de informes y SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
   
--   [Cambiar el alto de fila o el ancho de columna &#40;el generador de informes SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
+-   [Cambiar el alto de fila o el ancho de columna &#40;generador de informes y SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
   
--   [Insertar o eliminar una columna &#40;el generador de informes SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
+-   [Insertar o eliminar una columna &#40;generador de informes y SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
   
--   [Insertar o eliminar una fila &#40;el generador de informes SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
+-   [Insertar o eliminar una fila &#40;generador de informes y SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
   
--   [Combinar celdas en una región de datos &#40;el generador de informes SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
+-   [Combinar celdas en una región de datos &#40;generador de informes y SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [Crear un grupo de jerarquía recursiva &#40;el generador de informes SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+-   [Crear un grupo de jerarquía recursiva &#40;generador de informes y SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
--   [Agregar o eliminar un grupo en una región de datos &#40;el generador de informes SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+-   [Agregar o eliminar un grupo en una región de datos &#40;generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [Mostrar encabezados y pies de página con un grupo &#40;el generador de informes SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+-   [Mostrar encabezados y pies de página con un grupo &#40;generador de informes y SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
--   [Crear un informe escalonado &#40;el generador de informes SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
+-   [Crear un informe escalonado &#40;generador de informes y SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
   
--   [Agregar, mover o eliminar una tabla, matriz o lista &#40;el generador de informes SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
+-   [Agregar, mover o eliminar una tabla, matriz o lista &#40;generador de informes y SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
 
   
 ##  <a name="InThisSection"></a> En esta sección  
  En los siguientes temas se proporciona información adicional acerca de cómo trabajar con la región de datos Tablix.  
   
- [Región de datos Tablix &#40;el generador de informes SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Región de datos Tablix &#40;generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
  Explica los conceptos clave relacionados con la región de datos Tablix, por ejemplo las áreas de Tablix, datos detallados y agrupados, grupos de filas y columnas, filas y columnas dinámicas y estáticas.  
   
- [Agregar datos a una región de datos Tablix &#40;el generador de informes SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [Agregar datos a una región de datos Tablix &#40;generador de informes y SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  Proporciona información detallada sobre cómo agregar a una región de datos Tablix datos detallados y agrupados, subtotales y totales, y etiquetas.  
   
- [Controlar la presentación de la región de datos Tablix en una página del informe &#40;el generador de informes SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
+ [Controlar la presentación de la región de datos Tablix en una página de informe &#40;generador de informes y SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
  Se describen las propiedades que puede modificar en una región de datos Tablix para cambiar la manera en la que aparece dicha región al verla en un informe.  
   
- [Controlar los encabezados de columna y fila &#40;el generador de informes SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
+ [Controlar los encabezados de columna y fila &#40;generador de informes y SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
  Se describe cómo controlar los encabezados de filas y columnas cuando región de datos de tabla, matriz o lista abarca varias páginas horizontal o verticalmente.  
   
- [Crear grupos de jerarquía recursiva &#40;el generador de informes SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [Creación de grupos de jerarquía recursiva &#40;generador de informes y SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
  Se describe cómo mostrar datos recursivos donde la relación entre el elemento primario y el elemento secundario se representa mediante campos en el conjunto de datos.  
   
- [Descripción de los grupos &#40;el generador de informes SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [Descripción de los grupos &#40;generador de informes y SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
  Se explica qué son los grupos y cuándo utilizarlos, y se describen los grupos disponibles para las distintas regiones de datos Tablix.  
   
 

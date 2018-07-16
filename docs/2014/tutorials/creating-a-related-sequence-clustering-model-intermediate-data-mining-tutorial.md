@@ -1,5 +1,5 @@
 ---
-title: Crear un modelo (Tutorial de minería de datos intermedio) de clúster de secuencia relacionado | Documentos de Microsoft
+title: Crear un modelo (Tutorial de minería de datos intermedios) de clúster de secuencia relacionado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1fb4f5bc-1756-45ca-9cd7-411a8c5992a9
 caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: c0820b087583194e78af1d1de46b4affe3a1d9fc
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 2fe714a808a7b5e8b31b674027e00814a9632f58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234415"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Crear un modelo de agrupación en clústeres de secuencia relacionado (tutorial intermedio de minería de datos)
   En el modelo de agrupación en clústeres de secuencia aprendió que otros atributos como Region o Income influyen considerablemente en los modelos; por tanto, para ampliar sus conocimientos sobre las secuencias, creará un modelo de agrupación en clústeres de secuencia relacionado y quitará los atributos relacionados con los datos demográficos de los clientes.  
@@ -66,7 +66,7 @@ ms.locfileid: "36311813"
   
 3.  En el **modelo de minería de datos de proceso** cuadro de diálogo, haga clic en **ejecutar**.  
   
-4.  Haga clic en **cerrar** para cerrar el **progreso del proceso** cuadro de diálogo y, a continuación, haga clic en **cerrar** en el **modelo de minería de datos de proceso** cuadro de diálogo.  
+4.  Haga clic en **cerrar** para cerrar el **progreso del proceso** cuadro de diálogo y, a continuación, haga clic en **cerrar** nuevo en el **modelo de minería de datos de proceso** cuadro de diálogo.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Crear predicciones en una modelo de clústeres de secuencia &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  

@@ -1,5 +1,5 @@
 ---
-title: Procesar (Analysis Services - datos multidimensionales) del cuadro de diálogo | Documentos de Microsoft
+title: Procesar (Analysis Services - datos multidimensionales) del cuadro de diálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processdialog.f1
 ms.assetid: c065248c-9001-4f0c-928f-9c59eccb618b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5788bce44bc3ad63956183ac4e8950a0ace11d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 187de4a1978b20065080f50a1d9924e8d1138e7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315005"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Procesar (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Proceso** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para procesar objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para mostrar el cuadro de diálogo **Procesar** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] :  
@@ -47,7 +47,7 @@ ms.locfileid: "36199554"
  Muestra el tipo de objeto que se va a procesar.  
   
  **Opciones de proceso**  
- Seleccione el tipo de procesamiento que desea realizar para el objeto seleccionado. Para obtener más información acerca de las opciones de procesamiento disponibles, consulte [procesamiento del objeto de modelo multidimensionales](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Seleccione el tipo de procesamiento que desea realizar para el objeto seleccionado. Para obtener más información acerca de las opciones de procesamiento disponibles, consulte [procesamiento del objeto de modelo Multidimensional](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  **Configuración**  
  Muestra el hipervínculo **Configurar** si elige **Procesar incremental** en **Opciones de proceso** para cubos, grupos de medida o particiones. Haga clic en **Configurar** para abrir el cuadro de diálogo **Actualización incremental** . Para obtener más información sobre el cuadro de diálogo **Actualización incremental**, vea [Cuadro de diálogo Actualización incremental &#40;Analysis Services - Datos multidimensionales&#41;](incremental-update-dialog-box-analysis-services-multidimensional-data.md).  

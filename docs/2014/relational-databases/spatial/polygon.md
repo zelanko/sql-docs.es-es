@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geometry subtypes [SQL Server]
 - Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6a76fc29f234418e5f44586f4fb7e121c3395264
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 629dd979c00c9a40915c94c5bfe79d28b746f44a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238765"
 ---
 # <a name="polygon"></a>Polygon
-  A `Polygon` es una superficie bidimensional almacenada como una secuencia de puntos que definen un anillo delimitador exterior y cero o más anillos interiores.  
+  Un `Polygon` es una superficie bidimensional almacenada como una secuencia de puntos que definen un anillo delimitador exterior y cero o más anillos interiores.  
   
 ## <a name="polygon-instances"></a>Instancias de Polygon  
- Un `Polygon` instancia se puede formar a partir de un anillo que tenga al menos tres puntos distintos. Un `Polygon` instancia también puede estar vacía.  
+ Un `Polygon` instancia puede formarse a partir de un anillo que tenga al menos tres puntos distintos. Un `Polygon` instancia también puede estar vacía.  
   
- Anillo exterior junto con los anillos interiores de una `Polygon` definir su límite. El espacio encerrado dentro de los anillos define el interior de la instancia de `Polygon`.  
+ El anillo exterior junto con los anillos interiores de un `Polygon` definir su límite. El espacio encerrado dentro de los anillos define el interior de la instancia de `Polygon`.  
   
  La ilustración siguiente muestra ejemplos de `Polygon` instancias.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36204568"
 ### <a name="accepted-instances"></a>Instancias aceptadas  
  Las instancias aceptadas de `Polygon` son las instancias que pueden almacenarse en una variable de tipo `geometry` o `geography` sin generar una excepción. Se aceptan las siguientes `Polygon` instancias:  
   
--   Vacío `Polygon` instancia  
+-   Un valor vacío `Polygon` instancia  
   
 -   Una instancia de `Polygon` que tiene un anillo exterior aceptable y cero o más anillos interiores aceptables.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36204568"
   
 -   Los puntos inicial y final de la instancia de `LineString` deben ser el mismo.  
   
- En el ejemplo siguiente se muestra aceptado `Polygon` instancias.  
+ El ejemplo siguiente se muestra aceptado `Polygon` instancias.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON EMPTY';  
@@ -85,9 +85,9 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
 ```  
   
 ### <a name="valid-instances"></a>Instancias válidas  
- Los anillos interiores de un `Polygon` pueden tocarse a sí mismos y unos con otros en tangentes únicos puntos, pero si los anillos interiores de una `Polygon` cruzan, la instancia no es válida.  
+ Los anillos interiores de un `Polygon` pueden tocarse a sí mismos y unos con otros en tangentes únicos puntos, pero si los anillos interiores de un `Polygon` cross, la instancia no es válida.  
   
- En el ejemplo siguiente se muestra válido `Polygon` instancias.  
+ El ejemplo siguiente se muestra válido `Polygon` instancias.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20))';  

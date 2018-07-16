@@ -1,5 +1,5 @@
 ---
-title: Extender OLAP mediante personalizaciones | Documentos de Microsoft
+title: Extender OLAP mediante personalizaciones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Analysis Services, extensibility
 ms.assetid: 348e49fc-4390-43c1-9b6c-61b386ff4373
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d2c1bdea4c59a047f613033ae0e8aa8515c8232f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf7785c3acd3815f78e656951e8ae3f05e125245
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280361"
 ---
 # <a name="extending-olap-through-personalizations"></a>Extender OLAP mediante personalizaciones
   Microsoft [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] proporciona numerosas funciones intrínsecas para su uso con los lenguajes MDX (Expresiones multidimensionales) y DMX (Extensiones de minería de datos). Estas funciones están diseñadas para realizar multitud de tareas, desde cálculos estadísticos estándar hasta recorridos por los miembros de una jerarquía. No obstante, al igual que sucede con cualquier otro producto de gran complejidad y solidez, existe siempre la necesidad de ampliar su funcionalidad en el futuro.  
@@ -36,7 +36,7 @@ ms.locfileid: "36201715"
  Las extensiones de personalización de SQL Server Analysis Services constituyen el fundamento de la idea de implementar una arquitectura de complemento. Las extensiones de personalización de Analysis Services son una modificación simple y elegante de la arquitectura de ensamblado administrado existente y se exponen en el modelo de objetos <xref:Microsoft.AnalysisServices.AdomdServer>, la sintaxis de Expresiones multidimensionales (MDX) y los conjuntos de filas de esquema de Analysis Services.  
   
 ## <a name="see-also"></a>Vea también  
- [Administración de ensamblados de modelos multidimensionales](../multidimensional-model-assemblies-management.md)   
+ [Administración de los ensamblados de modelos multidimensionales](../multidimensional-model-assemblies-management.md)   
  [Extensiones de personalización de Analysis Services](analysis-services-personalization-extensions.md)  
   
   

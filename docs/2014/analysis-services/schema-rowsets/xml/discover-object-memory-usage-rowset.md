@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_OBJECT_MEMORY_USAGE | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_OBJECT_MEMORY_USAGE | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DISCOVER_OBJECT_MEMORY_USAGE rowset
 ms.assetid: 211cfa04-7bd6-43fe-8bd5-bfbff78bdafb
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae1f26c1bc55c8aa080915a372710e4d59064979
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: afd5d5f612693150cc476c69c3fe0dcf16917d64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291521"
 ---
 # <a name="discoverobjectmemoryusage-rowset"></a>DISCOVER_OBJECT_MEMORY_USAGE, conjunto de filas
   Proporciona información sobre los recursos de memoria utilizados por los objetos.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_OBJECT_MEMORY_USAGE` filas contiene las columnas siguientes.  
+ El `DISCOVER_OBJECT_MEMORY_USAGE` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "36204694"
  Este conjunto de filas de esquema no está ordenado.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DISCOVER_OBJECT_MEMORY_USAGE` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DISCOVER_OBJECT_MEMORY_USAGE` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

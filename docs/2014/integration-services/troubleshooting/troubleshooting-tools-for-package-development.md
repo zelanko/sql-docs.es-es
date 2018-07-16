@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -19,13 +19,13 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aae2fac11aab58193883c43e1062e12be837e065
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4ee6252daa58a5e99b8fdd5be6099e8e9de936d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320685"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Herramientas para solucionar problemas con el desarrollo de paquetes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye características y herramientas que se pueden usar para solucionar problemas de los paquetes mientras estos se desarrollan en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -47,9 +47,9 @@ ms.locfileid: "36199707"
   
 -   **Establezca todo el paquete y todas las conexiones para trabajar sin conexión cuando los orígenes de datos no estén disponibles**. Puede habilitar **Trabajar sin conexión** en el menú **SSIS** . A diferencia de la `DelayValidation` propiedad, el **trabajar sin conexión** opción está disponible incluso antes de abrir un paquete. También se puede habilitar la opción **Trabajar sin conexión** para acelerar las operaciones en el diseñador, y deshabilitarla solo cuando se quiere validar el paquete.  
   
--   **Configure la propiedad DelayValidation para los elementos del paquete que no son válidos hasta el tiempo de ejecución**. Se puede establecer `DelayValidation` en `True` para los elementos del paquete cuya configuración no sea válida en tiempo de diseño a fin de evitar errores de validación. Por ejemplo, puede haber una tarea Flujo de datos que utilice una tabla de destino inexistente antes de que la tarea de ejecución de SQL cree la tabla en tiempo de ejecución. El `DelayValidation` propiedad puede estar habilitada en el nivel de paquete o en el nivel de las tareas y contenedores individuales incluidos en el paquete. Normalmente debe dejar esta propiedad establecida en `True` en los mismos elementos de paquete cuando se implementa el paquete, a fin de evitar los mismos errores de validación en tiempo de ejecución.  
+-   **Configure la propiedad DelayValidation para los elementos del paquete que no son válidos hasta el tiempo de ejecución**. Se puede establecer `DelayValidation` en `True` para los elementos del paquete cuya configuración no sea válida en tiempo de diseño a fin de evitar errores de validación. Por ejemplo, puede haber una tarea Flujo de datos que utilice una tabla de destino inexistente antes de que la tarea de ejecución de SQL cree la tabla en tiempo de ejecución. El `DelayValidation` propiedad se puede habilitar en el nivel de paquete, o en el nivel de las tareas y contenedores individuales incluidos en el paquete. Normalmente debe dejar esta propiedad establecida en `True` en los mismos elementos del paquete cuando se implementa el paquete, para evitar que los mismos errores de validación en tiempo de ejecución.  
   
-     El `DelayValidation` propiedad puede establecerse en una tarea de flujo de datos, pero no en datos individuales componentes de flujo. Se puede obtener un resultado similar estableciendo la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> para componentes individuales de flujo de datos en `false`. Sin embargo, cuando el valor de esta propiedad es `false`, el componente no es consciente de los cambios en los metadatos de orígenes de datos externos.  
+     El `DelayValidation` propiedad puede establecerse en una tarea de flujo de datos, pero no en datos individuales componentes de flujo. Se puede obtener un resultado similar estableciendo la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> para componentes individuales de flujo de datos en `false`. Sin embargo, cuando el valor de esta propiedad es `false`, el componente no es consciente de los cambios realizados en los metadatos de orígenes de datos externos.  
   
  Si los objetos de base de datos usados por el paquete están bloqueados durante la validación, es posible que este proceso deje de responder. En estas circunstancias, el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] también deja de responder. Puede reanudar la validación usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para cerrar la sesión asociada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede evitar este problema si usa la configuración descrita en esta sección.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "36199707"
     > [!NOTE]  
     >  Al depurar un paquete que contiene varias tareas Script, el depurador alcanzará los puntos de interrupción solo en una de las tareas Script y omitirá los puntos de interrupción del resto. Si una tarea Script forma parte de un contenedor de bucles Foreach o For, el depurador omite los puntos de interrupción en la tarea Script después de la primera iteración del bucle.  
   
- Para más información, consulte [Debugging Script](debugging-script.md). Para obtener sugerencias sobre cómo depurar el componente de Script, vea [codificar y depurar el componente de Script] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
+ Para más información, consulte [Debugging Script](debugging-script.md). Para obtener sugerencias sobre cómo depurar el componente de Script, consulte [codificar y depurar el componente de Script] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
   
 ## <a name="troubleshooting-errors-without-a-description"></a>Solucionar problemas de errores sin descripción  
  Si se encuentra con un número de error de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sin una descripción asociada durante el desarrollo de un paquete, puede ver la descripción en [Referencia de errores y mensajes de Integration Services](../integration-services-error-and-message-reference.md). En este momento, la lista no incluye información sobre cómo solucionar problemas.  
   
 ## <a name="see-also"></a>Vea también  
- [Herramientas para solucionar problemas de ejecución del paquete](troubleshooting-tools-for-package-execution.md)   
+ [Herramientas de solución de problemas de ejecución del paquete](troubleshooting-tools-for-package-execution.md)   
  [Características de rendimiento del flujo de datos](../data-flow/data-flow-performance-features.md)  
   
   

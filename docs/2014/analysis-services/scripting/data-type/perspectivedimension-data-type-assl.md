@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos PerspectiveDimension (ASSL) | Documentos de Microsoft
+title: Tipo de datos PerspectiveDimension (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveDimension data type
 ms.assetid: c4bc56de-4f42-4ceb-a68d-a4fec92fdfa9
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2ec6ecb714ad87b32683f667514fe4badcabeda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 305219e524868a2dc036c07bedcff5876699e560
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323265"
 ---
 # <a name="perspectivedimension-data-type-assl"></a>Tipo de datos PerspectiveDimension (ASSL)
   Define un tipo de datos primitivo que representa información sobre una dimensión en una perspectiva.  
@@ -59,7 +59,7 @@ ms.locfileid: "36198749"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|None|  
-|Elementos secundarios|[Anotaciones](../collections/annotations-element-assl.md), [atributos](../collections/attributes-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md), [jerarquías](../collections/hierarchies-element-assl.md)|  
+|Elementos secundarios|[Las anotaciones](../collections/annotations-element-assl.md), [atributos](../collections/attributes-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md), [jerarquías](../collections/hierarchies-element-assl.md)|  
 |Elementos derivados|[Dimensión](../objects/dimension-element-assl.md) ([dimensiones](../collections/dimensions-element-assl.md) colección de [perspectiva](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Notas  

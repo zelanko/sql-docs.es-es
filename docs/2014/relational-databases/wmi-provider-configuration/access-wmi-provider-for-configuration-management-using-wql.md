@@ -1,5 +1,5 @@
 ---
-title: Obtener acceso a proveedor WMI de administración de configuración mediante WQL | Documentos de Microsoft
+title: Obtener acceso el proveedor WMI para la administración de configuración mediante WQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, WQL
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3c9ced24edc7e7f3537a73d074cf7cd73128dc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f35c895597bf19a7cc4ad20614d2d2f29521504e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313365"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Obtener acceso al proveedor WMI para la administración de configuración mediante WQL
   En esta sección se describe cómo ejecutar instrucciones WQL (Lenguaje de consulta de Instrumental de administración de Windows) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] con el proveedor WMI para la Administración de equipos.  
@@ -40,7 +40,7 @@ ms.locfileid: "36107159"
   
 3.  En el primer campo de texto, escriba el espacio de nombres del proveedor WMI de Administración de equipos: raíz\Microsoft\SqlServer\ComputerManagement11. Haga clic en **Conectar**.  
   
-4.  Haga clic en **consulta**. Escriba una consulta que devuelva los servicios actuales que se ejecutan en el equipo local: **seleccione \* de SqlService.** Haga clic en **Aplicar**.  
+4.  Haga clic en **consulta**. Escriba una consulta que devuelve los servicios actuales que se ejecutan en el equipo local: **seleccione \* de SqlService.** Haga clic en **Aplicar**.  
   
 5.  Además, refine la consulta agregando `WHERE ServiceName = "MSSQLSERVER"`.  
   

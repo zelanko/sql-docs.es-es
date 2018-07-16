@@ -1,5 +1,5 @@
 ---
-title: Elemento Tuples (XMLA) | Documentos de Microsoft
+title: Elemento Tuples (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Tuples element
 ms.assetid: 5494bbaa-c1aa-43fa-b3e0-83befb2bccdd
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: da9614fb01620a3dec5bdff9f63d044652a4749b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5e5f6f1dbddea4e5e962d30f352c254b0f2a7a80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254597"
 ---
 # <a name="tuples-element-xmla"></a>Elemento Tuples (XMLA)
-  Contiene un conjunto de [tupla](tuple-element-xmla.md) de objetos para un [eje](axis-element-xmla.md) elemento que usa el [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) tipo de datos, devuelto por la [Execute](../xml-elements-methods-execute.md) método.  
+  Contiene un conjunto de [tupla](tuple-element-xmla.md) de objetos para un [eje](axis-element-xmla.md) elemento que usa el [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) tipo de datos devuelto por la [Execute](../xml-elements-methods-execute.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -63,13 +63,13 @@ ms.locfileid: "36199747"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Axis](axis-element-xmla.md)|  
-|Elementos secundarios|[tupla](tuple-element-xmla.md)|  
+|Elementos secundarios|[Tupla](tuple-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notas  
- Cuando una aplicación cliente establece el `AxisFormat` propiedad *TupleFormat*, un eje se representa como un conjunto de tuplas. Cada `Axis` elemento contiene un `Tuples` elemento que representa el conjunto de tuplas en ese eje. Cada tupla se representa mediante el uso de un `Tuple` elemento que contiene [miembro](member-element-xmla.md) elementos de cada jerarquía del eje.  
+ Cuando una aplicación cliente establece el `AxisFormat` propiedad *TupleFormat*, un eje se representa como un conjunto de tuplas. Cada `Axis` elemento contiene un `Tuples` elemento que representa el conjunto de tuplas de ese eje. Cada tupla se representa mediante el uso de un `Tuple` elemento que contiene [miembro](member-element-xmla.md) elementos de cada jerarquía del eje.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra la estructura de la `Tuples` elemento cuando un cliente especifica *TupleFormat* o *CustomFormat* para el `AxisFormat` XML para la propiedad Analysis (XMLA) dados a los siguientes miembros para el eje:  
+ El ejemplo siguiente muestra la estructura de la `Tuples` elemento cuando un cliente especifica *TupleFormat* o *CustomFormat* para el `AxisFormat` XML para la propiedad Analysis (XMLA) dados a los siguientes miembros para el eje:  
   
 |||||  
 |-|-|-|-|  

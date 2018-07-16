@@ -1,5 +1,5 @@
 ---
-title: Elemento DisplayKeyPosition (XML) | Documentos de Microsoft
+title: Elemento DisplayKeyPosition (XML) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 345a24e6-186c-4570-baf2-7bfe9b7b4cc1
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1f79833d15868d3e866e2a7eafd43cc352165751
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 95dca43ed30d0edfaa0c400906233dd41cda889e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215885"
 ---
 # <a name="displaykeyposition-element-xml"></a>Elemento DisplayKeyPosition (XML)
   Contiene información sobre la posición del elemento en una colección de elementos.  

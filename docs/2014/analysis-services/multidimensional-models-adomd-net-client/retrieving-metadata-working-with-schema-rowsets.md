@@ -1,5 +1,5 @@
 ---
-title: Trabajar con conjuntos de filas de esquema en ADOMD.NET | Documentos de Microsoft
+title: Trabajar con conjuntos de filas de esquema en ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c6acc3ffe3a0f0b7ae5523833cbb85f0c152cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e77a3a4c7d38779da149f63644ad9a3106034f51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310755"
 ---
 # <a name="working-with-schema-rowsets-in-adomdnet"></a>Trabajar con conjuntos de filas de esquema en ADOMD.NET
   Si necesita más metadatos de los que hay disponibles en el modelo de objetos ADOMD.NET, ADOMD.NET proporciona la capacidad de recuperar toda la variedad disponible de conjuntos de filas de esquema de XML for Analysis (XMLA), OLE DB, OLE DB para OLAP y OLE DB para minería de datos:  
@@ -32,7 +32,7 @@ ms.locfileid: "36197269"
  **XML de metadatos de análisis**  
  Los conjuntos de filas de esquema de XML for Analysis proporcionan un método para recuperar información de bajo nivel sobre el servidor. Entre la información disponible se incluyen los orígenes de datos disponibles en el servidor, las palabras clave reservadas por el proveedor, los literales admitidos por el proveedor, etc. Incluso puede utilizar un conjunto de filas de esquema de XML for Analysis para detectar todos los conjuntos de filas de esquema admitidos por el proveedor.  
   
- Para obtener más información: [XML for Analysis Schema Rowsets](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ Para obtener más información: [XML para conjuntos de filas de esquema de análisis](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
  **Metadatos de OLE DB**  
  Los conjuntos de filas de esquema de OLE DB proporcionan un método estándar del sector para recuperar información de diversos proveedores.  
@@ -75,7 +75,7 @@ ms.locfileid: "36197269"
  Cada uno de estos métodos devuelve una instancia de un objeto `DataSet` que se rellena con la información de esquema. El objeto `DataSet` pertenece al espacio de nombres `System.Data` de la biblioteca de clases Microsoft .NET Framework.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, la función GetActions toma una conexión, el nombre del cubo, una coordenada y un tipo de coordenada, recupera un [de filas MDSCHEMA_ACTIONS](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)y devuelve las acciones disponibles en la coordenada seleccionada.  
+ En el ejemplo siguiente, la función GetActions toma una conexión, el nombre del cubo, una coordenada y un tipo de coordenada, recupera una [de filas MDSCHEMA_ACTIONS](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)y devuelve las acciones disponibles en la coordenada seleccionada.  
   
  [!code-csharp[Adomd.NetClient#GetActions](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#getactions)]  
   

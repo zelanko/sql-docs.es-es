@@ -1,5 +1,5 @@
 ---
-title: Elemento ordinal (ASSL) | Documentos de Microsoft
+title: Elemento ordinal (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Ordinal element
 ms.assetid: 64e68ad5-439c-4c1d-9df4-ee90c56761b4
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c9328a33db828af8bb7b0b129574d8ba855433e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91119d5eb5107dd691141c03a24cef7140999094
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195945"
 ---
 # <a name="ordinal-element-assl"></a>Elemento Ordinal (ASSL)
   Indica el número ordinal al que enlazar en las colecciones, como pueden ser claves y traducciones.  
@@ -62,7 +62,7 @@ ms.locfileid: "36105215"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- `AttributeBinding` y `CubeAttributeBinding` elementos en los que la [tipo](type-element-binding-assl.md) propiedad está establecida en *clave* o *traducción* puede enlazarse a un atributo que a su vez se enlaza a una colección de vista del origen de las columnas de los datos. El valor del elemento `Ordinal` determina a qué columna hacen referencia `AttributeBinding` o `CubeAttributeBinding` en esa colección.  
+ `AttributeBinding` y `CubeAttributeBinding` elementos en los que el [tipo](type-element-binding-assl.md) propiedad está establecida en *clave* o *traducción* se puede enlazar a un atributo que a su vez se enlaza a una colección de columnas de datos de la vista del origen. El valor del elemento `Ordinal` determina a qué columna hacen referencia `AttributeBinding` o `CubeAttributeBinding` en esa colección.  
   
  Los elementos que corresponden a los elementos primarios de `Ordinal` en el modelo de objetos de Analysis Management Objects (AMO) son <xref:Microsoft.AnalysisServices.AttributeBinding> y <xref:Microsoft.AnalysisServices.CubeAttributeBinding>.  
   

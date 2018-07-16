@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación Agrupación aproximada (pestaña Avanzadas) | Documentos de Microsoft
+title: Editor de transformación Agrupación aproximada (pestaña Avanzadas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtransformation.advanced.f1
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1696734810b1b3fd4ceccb624139358cea0dcaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7e8c12ad683e46838a88359170ea970f20c02828
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231525"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>Editor de transformación Agrupación aproximada (pestaña Avanzadas)
   Use la pestaña **Avanzadas** del cuadro de diálogo **Editor de transformación Agrupación aproximada** para especificar las columnas de entrada y salida, configurar umbrales de similitud y definir delimitadores.  
   
 > [!NOTE]  
->  El `Exhaustive` y `MaxMemoryUsage` propiedades de la transformación Agrupación aproximada no están disponibles en la **Editor de transformación Agrupación aproximada**, pero se puede establecer mediante el uso de la **Editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre la transformación Agrupación aproximada en [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  El `Exhaustive` y `MaxMemoryUsage` propiedades de la transformación Agrupación aproximada no están disponibles en el **Editor de transformación Agrupación aproximada**, pero se puede establecer mediante el uso de la **Editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre la transformación Agrupación aproximada en [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Para obtener más información acerca de la transformación Agrupación aproximada, vea [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   

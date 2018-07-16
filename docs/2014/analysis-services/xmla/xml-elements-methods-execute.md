@@ -1,5 +1,5 @@
 ---
-title: Método Execute (XMLA) | Documentos de Microsoft
+title: Método Execute (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,22 +26,22 @@ helpviewer_keywords:
 - Execute method
 ms.assetid: 0fff5221-7164-4bbc-ab58-49cf04c52664
 caps.latest.revision: 34
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5c32261e06788f366a6c5ce5af24c508b87a6882
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ec3fa458148638af5431b4a519acf8556d29b122
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235565"
 ---
 # <a name="execute-method-xmla"></a>Método Execute (XMLA)
   Envía el XML para los comandos de Analysis (XMLA) a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Están incluidas las solicitudes que conllevan transferencia de datos, como recuperar o actualizar los datos del servidor.  
   
  **Espacio de nombres** urn:schemas-microsoft-com:xml-analysis  
   
- **Acción SOAP** "urn: schemas-microsoft-com-analysis: ejecutar"  
+ **Acción SOAP** "urn: schemas-microsoft-com-analysis: Execute"  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36105905"
 |Elementos secundarios|[Comando](xml-elements-properties/command-element-xmla.md), [parámetros](xml-elements-properties/parameters-element-xmla.md), [propiedades](xml-elements-properties/properties-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notas  
- El `Execute` método ejecuta comandos XMLA proporcionados en el `Command` elemento y devuelve cualquier dato resultante mediante XMLA [conjunto de filas](xml-data-types/rowset-data-type-xmla.md) tipo de datos (para conjuntos de resultados tabulares) o el XMLA [MDDataSet](xml-data-types/mddataset-data-type-xmla.md) tipo de datos (para conjuntos de resultados multidimensionales.)  
+ El `Execute` método ejecuta comandos XMLA proporcionados en el `Command` elemento y devuelve cualquier dato resultante mediante XMLA [conjunto de filas](xml-data-types/rowset-data-type-xmla.md) tipo de datos (para conjuntos de resultados tabulares) o XMLA [MDDataSet](xml-data-types/mddataset-data-type-xmla.md) tipo de datos (para conjuntos de resultados multidimensionales.)  
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente es un ejemplo de una llamada al método  `Execute` que contiene una instrucción SELECT de Expresiones multidimensionales (MDX).  

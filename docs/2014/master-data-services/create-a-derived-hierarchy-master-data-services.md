@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, creating
 - creating derived hierarchies [Master Data Services]
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eed0b86271cb44565e2724cc6c961521c8d683ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 696b4bc98f4feb47ae7db6cae99d1ba9ae8a6628
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217645"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>Crear una jerarquía derivada (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una jerarquía derivada cuando desee una jerarquía basada en nivel que garantice que los miembros existen en el nivel correcto. Las jerarquías derivadas se basan en las relaciones de atributo basados en dominios que existen en un modelo.  
@@ -54,7 +54,7 @@ ms.locfileid: "36105887"
   
 6.  Haga clic en **Guardar jerarquía derivada**.  
   
-7.  En el **Editar jerarquía derivada** página, en la **entidades y jerarquías disponibles** panel, haga clic en una entidad o jerarquía y arrástrelo hasta el **niveles actuales** panel.  
+7.  En el **Editar jerarquía derivada** página, en el **entidades y jerarquías disponibles** panel, haga clic en una entidad o jerarquía y arrástrelo hasta el **niveles actuales** panel.  
   
 8.  Siga arrastrando entidades o jerarquías hasta que la jerarquía esté completa.  
   

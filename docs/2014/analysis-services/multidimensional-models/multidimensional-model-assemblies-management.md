@@ -1,5 +1,5 @@
 ---
-title: Administración de ensamblados de modelos multidimensionales | Documentos de Microsoft
+title: Administración de los ensamblados de modelos multidimensionales | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], assemblies
 - calling user-defined functions
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c8c27856135007c172e2e53b066b14a1a3a7eb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa24fc7d6b9bc2d22ef852d039637cf5c0f35b71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243495"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Administración de ensamblados de modelos multidimensionales
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona gran cantidad de funciones intrínsecas que se pueden usar con los lenguajes MDX (Expresiones multidimensionales) y DMX (Extensiones de minería de datos), y que están diseñadas para realizar multitud de tareas, desde cálculos estadísticos estándar hasta recorridos por los miembros de una jerarquía. No obstante, al igual que con cualquier otro producto complejo, existe siempre la necesidad de ampliar la funcionalidad.  
@@ -103,13 +103,13 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  Las rutinas de ensamblado COM (o no administradas) no admiten el modelo de seguridad de CLR.  
   
 ### <a name="impersonation"></a>Suplantación  
- Siempre que exista código administrado que tenga acceso a cualquier recurso externo a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sigue las reglas asociadas a la configuración de la propiedad `ImpersonationMode` del ensamblado para asegurar que el acceso se produce en un contexto de seguridad de Windows adecuado. Porque ensamblados mediante el `Safe` configuración de los permisos no puede tener acceso a recursos fuera de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], estas reglas son se aplica solo a los ensamblados que utilizan el `ExternalAccess` y `Unsafe` configuración de permisos.  
+ Siempre que exista código administrado que tenga acceso a cualquier recurso externo a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sigue las reglas asociadas a la configuración de la propiedad `ImpersonationMode` del ensamblado para asegurar que el acceso se produce en un contexto de seguridad de Windows adecuado. Porque los ensamblados que utilizan el `Safe` configuración de permisos no puede tener acceso a recursos fuera de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], estas reglas son aplicables solo a los ensamblados que utilizan el `ExternalAccess` y `Unsafe` configuración de permisos.  
   
 -   Si el contexto de ejecución actual corresponde al inicio de sesión autenticado de Windows y es el mismo contexto del autor de la llamada original (es decir, EXECUTE AS no se encuentra en el medio), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suplantará el inicio de sesión autenticado de Windows para tener acceso al recurso.  
   
 -   Si hay un EXECUTE AS intermedio que ha cambiado el contexto del llamador original, se producirá un error al intentar obtener acceso al recurso externo.  
   
- El `ImpersonationMode` propiedad puede establecerse en `ImpersonateCurrentUser` o `ImpersonateAnonymous`. El valor predeterminado, `ImpersonateCurrentUser`, ejecuta un ensamblado en la cuenta de inicio de sesión de red del usuario actual. Si el `ImpersonateAnonymous` configuración se utiliza, el contexto de ejecución es corresponde a la cuenta de usuario de inicio de sesión de Windows IUSER_*servername* en el servidor. Se trata de la cuenta de invitado para Internet, que tiene privilegios limitados en el servidor. Un ensamblado que se ejecute en este contexto solamente podrá tener acceso a recursos limitados del servidor local.  
+ El `ImpersonationMode` propiedad puede establecerse en `ImpersonateCurrentUser` o `ImpersonateAnonymous`. La configuración predeterminada, `ImpersonateCurrentUser`, ejecuta un ensamblado en la cuenta de inicio de sesión de red del usuario actual. Si el `ImpersonateAnonymous` es usar la configuración, el contexto de ejecución es corresponde a la cuenta de usuario de inicio de sesión de Windows IUSER_*servername* en el servidor. Se trata de la cuenta de invitado para Internet, que tiene privilegios limitados en el servidor. Un ensamblado que se ejecute en este contexto solamente podrá tener acceso a recursos limitados del servidor local.  
   
 ### <a name="application-domains"></a>Dominios de aplicación  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no ofrece dominios de aplicación directamente. Dado que un conjunto de ensamblados se ejecuta en el mismo dominio de aplicación, los dominios de aplicación podrán descubrirse entre ellos en el tiempo de ejecución mediante el espacio de nombres `System.Reflection` de .NET Framework o de alguna otra forma, y podrán realizar en ellos llamadas enlazadas en tiempo de ejecución. Tales llamadas estarán sujetas a las comprobaciones de permiso utilizadas por la seguridad basada en autorizaciones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

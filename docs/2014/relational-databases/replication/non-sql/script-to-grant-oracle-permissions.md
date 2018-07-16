@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], script to grant permissions
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 89829997447453f336065dd1e9c94ca48c53607e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: de3df0aa4e66f882f618fc4db13bcce544ce6fab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307515"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Script para conceder permisos en Oracle
   El script que se proporciona en este tema se utiliza durante la configuración de una base de datos de Oracle que publicará datos utilizando la replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Este script también está disponible en el directorio siguiente después de la instalación de: *\<unidad>*:\\\Archivos de programa\Microsoft SQL Server\\*\<<nombreDeInstancia>* \MSSQL\Install\oracleadmin.sql. Para más información sobre la configuración de la base de datos de Oracle, vea [Configurar un publicador de Oracle](configure-an-oracle-publisher.md).  

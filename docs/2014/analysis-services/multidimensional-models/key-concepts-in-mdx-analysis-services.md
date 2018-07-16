@@ -1,5 +1,5 @@
 ---
-title: Conceptos clave para MDX (Analysis Services) | Documentos de Microsoft
+title: Conceptos clave para MDX (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], about MDX
 - dimensional modeling [MDX]
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - MDX [Analysis Services], dimensional modeling
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 060ad452001605ee0df4d0c84381044cb38e6493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5d6e59827b0b816b898322adf729d2299540e38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272021"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Conceptos clave de MDX (Analysis Services)
   Para poder utilizar las expresiones multidimensionales (MDX) para consultar datos multidimensionales o crear expresiones MDX en un cubo, viene bien conocer los conceptos y los términos multidimensionales.  
   
  La mejor forma de empezar es con un ejemplo de resumen de datos que ya conozca y, entonces, ver cómo se relacionan con él las MDX. Esta es una tabla dinámica creada en Excel que contiene datos extraídos de un cubo de muestras de Analysis Services.  
   
- ![Tabla dinámica con medidas y dimensiones mencionadas](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "tabla dinámica con medidas y dimensiones que se menciona dónde se encuentra")  
+ ![PivotTable con medidas y dimensiones que se mencionan](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "PivotTable con medidas y dimensiones que se mencionan")  
   
 ## <a name="measures-and-dimensions"></a>Medidas y dimensiones  
  Un cubo de Analysis Services consta de medidas, dimensiones y atributos de dimensiones, los cuales resultan evidentes en el ejemplo de tabla dinámica.  
@@ -65,11 +65,11 @@ ms.locfileid: "36108211"
   
  Las agregaciones como estas están precalculadas y se almacenan con antelación, lo que forma parte del secreto de la rápida respuesta de las consultas de Analysis Services.  
   
- ![Tabla dinámica con todos los miembros que se menciona dónde se encuentra](../media/ssas-keyconcepts-pivot2-allmember.png "tabla dinámica con todos los miembros que se menciona dónde se encuentra")  
+ ![Tabla dinámica con todos los miembros que se mencionan](../media/ssas-keyconcepts-pivot2-allmember.png "tabla dinámica con todos los miembros que se mencionan")  
   
  Vaya expandiendo la jerarquía y llegará al nivel más bajo. Es lo que se conoce como el **miembro "hoja"**. Un miembro hoja es un miembro de una jerarquía que no posee miembros secundarios. En este ejemplo, Australia es el miembro hoja.  
   
- ![Tabla dinámica con indicado de calle de miembro hoja](../media/ssas-keyconcepts-pivot3-leafparent.PNG "tabla dinámica con indicado de calle de miembro hoja")  
+ ![Tabla dinámica con documentos de calle de miembro hoja](../media/ssas-keyconcepts-pivot3-leafparent.PNG "tabla dinámica con documentos de calle de miembro hoja")  
   
  Todo lo que está por encima se denomina **miembro "primario"**. Pacífico es el miembro primario de Australia.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "36108211"
   
 |||  
 |-|-|  
-|![PivotTable con jerarquía equilibrada mencionada](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "PivotTable con jerarquía equilibrada mencionada")|Una **jerarquía equilibrada** es una jerarquía en la que existe el mismo número de niveles entre el nivel superior y cualquier miembro hoja.<br /><br /> Una **jerarquía natural** es la que combina de forma natural los datos subyacentes. Algunos ejemplos comunes son País-Región-Provincia o Año-Mes-Día o Categoría-Subcategoría, donde se puede predecir de qué nivel se desprende cada nivel subordinado.<br /><br /> En un modelo multidimensional, la mayoría de las jerarquías son jerarquías equilibradas y muchas de ellas también son naturales.<br /><br /> Otra relación con el término de modelado es un `user-defined hierarchy`, que se usa a menudo como un contraste con las jerarquías de atributo. Designa sencillamente una jerarquía creada por el programador de BI, por oposición a las jerarquías de atributo, generadas automáticamente por Analysis Services cuando se define un atributo.|  
+|![PivotTable con jerarquía equilibrada mencionada](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "PivotTable con jerarquía equilibrada mencionada")|Una **jerarquía equilibrada** es una jerarquía en la que existe el mismo número de niveles entre el nivel superior y cualquier miembro hoja.<br /><br /> Una **jerarquía natural** es la que combina de forma natural los datos subyacentes. Algunos ejemplos comunes son País-Región-Provincia o Año-Mes-Día o Categoría-Subcategoría, donde se puede predecir de qué nivel se desprende cada nivel subordinado.<br /><br /> En un modelo multidimensional, la mayoría de las jerarquías son jerarquías equilibradas y muchas de ellas también son naturales.<br /><br /> Otro término de modelos relacionado es una `user-defined hierarchy`, que se usa a menudo por oposición a las jerarquías de atributo. Designa sencillamente una jerarquía creada por el programador de BI, por oposición a las jerarquías de atributo, generadas automáticamente por Analysis Services cuando se define un atributo.|  
   
  **Jerarquías desequilibradas**  
   
 |||  
 |-|-|  
-|![PivotTable con jerarquía desigual mencionada](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "PivotTable con jerarquía desigual mencionada")|Una **jerarquía desigual** o **desequilibrada** es una jerarquía en la que el número de niveles entre el nivel superior y los miembros hoja es distinto. También esta es una jerarquía creada por el programador de BI, pero en este caso existen espacios en los datos.<br /><br /> En el modelo de ejemplo AdventureWorks, Territorio de ventas ilustra una jerarquía desigual porque Estados Unidos tiene un nivel adicional (Regiones) que no existe en otros países del ejemplo.<br /><br /> Las jerarquías desiguales plantean un reto para los programadores de BI si la aplicación cliente no controla las jerarquías desiguales con elegancia. En el modelo de Analysis Services, se puede crear una **jerarquía de tipo primario-secundario** que defina explícitamente una relación entre datos de varios niveles, eliminando toda ambigüedad en lo que respecta a cómo se relaciona un nivel con el siguiente. Vea [jerarquía de elementos primarios y secundarios](parent-child-dimension.md) para obtener más información.|  
+|![PivotTable con jerarquía desigual mencionada](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "PivotTable con jerarquía desigual mencionada")|Una **jerarquía desigual** o **desequilibrada** es una jerarquía en la que el número de niveles entre el nivel superior y los miembros hoja es distinto. También esta es una jerarquía creada por el programador de BI, pero en este caso existen espacios en los datos.<br /><br /> En el modelo de ejemplo AdventureWorks, Territorio de ventas ilustra una jerarquía desigual porque Estados Unidos tiene un nivel adicional (Regiones) que no existe en otros países del ejemplo.<br /><br /> Las jerarquías desiguales plantean un reto para los programadores de BI si la aplicación cliente no controla las jerarquías desiguales con elegancia. En el modelo de Analysis Services, se puede crear una **jerarquía de tipo primario-secundario** que defina explícitamente una relación entre datos de varios niveles, eliminando toda ambigüedad en lo que respecta a cómo se relaciona un nivel con el siguiente. Consulte [jerarquía de elementos primarios y secundarios](parent-child-dimension.md) para obtener más información.|  
   
 ## <a name="key-attributes"></a>Atributos clave  
  Los modelos son una colección de objetos relacionados que requieren claves e índices para establecer las asociaciones. Los modelos de Analysis Services no son diferentes. Para cada dimensión (recuerde que es equivalente a una tabla en un modelo relacional), hay un atributo clave. El **atributo clave** se usa en relaciones de clave externa con la tabla de hechos (grupo de medidas). Todos los atributos sin clave de la dimensión están enlazados (directa o indirectamente) con el atributo clave.  
@@ -112,7 +112,7 @@ ms.locfileid: "36108211"
   
  Para definir el atributo de granularidad, use la pestaña Uso de dimensiones en el Diseñador de cubos de SQL Server Data Tools. En el modelo de ejemplo AdventureWorks, el atributo clave de la dimensión Fecha es la clave Fecha. En Pedidos de ventas, el atributo de granularidad es equivalente al atributo clave. En Objetivos de ventas, el nivel de granularidad es trimestral y, por tanto, el atributo de granularidad se define en Trimestre natural.  
   
- ![Modelo que muestra el atributo de granularidad](../media/ssas-keyconcepts-granularityattrib.png "que muestra el atributo de granularidad de modelo")  
+ ![Modelo que muestra el atributo de granularidad](../media/ssas-keyconcepts-granularityattrib.png "que muestra el atributo de granularidad del modelo")  
   
 > [!NOTE]  
 >  Si el atributo de granularidad y el atributo clave son diferentes, los atributos que no son clave deben vincularse, directa o indirectamente, con el atributo de granularidad. Dentro de un cubo, el atributo de granularidad define la granularidad de una dimensión.  
@@ -151,10 +151,10 @@ ms.locfileid: "36108211"
 ## <a name="see-also"></a>Vea también  
  [Espacio de cubo](mdx/cube-space.md)   
  [Tuplas](mdx/tuples.md)   
- [Autoexist](mdx/autoexists.md)   
+ [Autoexists](mdx/autoexists.md)   
  [Trabajar con miembros, tuplas y conjuntos &#40;MDX&#41;](mdx/working-with-members-tuples-and-sets-mdx.md)   
- [Los totales visuales y totales no visuales](mdx/visual-totals-and-non-visual-totals.md)   
- [Aspectos básicos de consulta MDX &#40;Analysis Services&#41;](mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Totales visuales y totales no visuales](mdx/visual-totals-and-non-visual-totals.md)   
+ [Aspectos básicos de consultas MDX &#40;Analysis Services&#41;](mdx/mdx-query-fundamentals-analysis-services.md)   
  [Aspectos básicos de Scripting de MDX &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Referencia del lenguaje MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [Expresiones multidimensionales &#40;MDX&#41; referencia](/sql/mdx/multidimensional-expressions-mdx-reference)  

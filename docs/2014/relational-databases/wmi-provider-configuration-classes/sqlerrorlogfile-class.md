@@ -1,5 +1,5 @@
 ---
-title: Clase SqlErrorLogFile | Documentos de Microsoft
+title: Clase SqlErrorLogFile | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5e23c4512f04370fa24b3eb4ff3b74a072f6a2e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 8f3157554a234017ecf9c6ebd86148412b44f797
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244595"
 ---
 # <a name="sqlerrorlogfile-class"></a>Clase SqlErrorLogFile
   Proporciona propiedades para ver información sobre un archivo de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -92,16 +92,16 @@ Next
 -   Acceso de lectura a la **Root\Microsoft\SqlServer\ComputerManagement10** espacio de nombres WMI. De forma predeterminada, todos tienen acceso de lectura mediante el permiso Habilitar cuenta.  
   
     > [!NOTE]  
-    >  Para obtener información sobre cómo comprobar los permisos de WMI, vea la sección seguridad del tema [ver sin conexión archivos de registro](../logs/view-offline-log-files.md).  
+    >  Para obtener información sobre cómo comprobar los permisos de WMI, consulte la sección seguridad del tema [ver sin conexión archivos de registro](../logs/view-offline-log-files.md).  
   
--   Permiso de lectura a la carpeta que contiene los registros de errores. De forma predeterminada el error registros se encuentran en la ruta de acceso siguiente (donde \< *unidad >* representa la unidad donde se instaló [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y \< *nombreDeInstancia*> es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Permiso de lectura a la carpeta que contiene los registros de errores. De forma predeterminada, el error registros se encuentran en la siguiente ruta de acceso (donde \< *unidad >* representa la unidad donde se instaló [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y \< *nombreDeInstancia*> es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
-     **\<Unidad >: \Program SQL Server\MSSQL11** **.\< NombreDeInstancia > \MSSQL\Log**  
+     **\<Unidad >: \Program Files\Microsoft SQL Server\MSSQL11** **.\< NombreDeInstancia > \MSSQL\Log**  
   
- Si se conecta a través de un firewall, asegúrese de que se establece una excepción en el firewall para WMI en los equipos de destino remotos. Para obtener más información, consulte [conectar con WMI de forma remota comenzando con Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
+ Si se conecta a través de un firewall, asegúrese de que se establece una excepción en el firewall para WMI en los equipos de destino remotos. Para obtener más información, consulte [conectarse a WMI de forma remota comenzando con Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
   
 ## <a name="see-also"></a>Vea también  
- [Sqlerrorlogevent, clase](sqlerrorlogevent-class.md)   
+ [Clase SqlErrorLogEvent](sqlerrorlogevent-class.md)   
  [Ver archivos del registro sin conexión](../logs/view-offline-log-files.md)  
   
   

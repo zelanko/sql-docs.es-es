@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c048a416-900e-4c77-8243-e0f0d8b94068
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9bc8b7b1ca0f80389b3d617f5178f587719dd143
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9620394788729b28eb040d6e5293d39e188e2763
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290931"
 ---
 # <a name="remove-a-utility-control-point-sql-server-utility"></a>Quitar un punto de control de la utilidad de SQL Server (utilidad de SQL Server)
   En este tema se describe cómo quitar un punto de control de la utilidad (UCP) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -50,7 +50,7 @@ ms.locfileid: "36198222"
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permissions  
- Este procedimiento se debe ejecutar un usuario con `sysadmin` permisos; los mismos permisos que necesitan para crear un UCP.  
+ Este procedimiento se debe ejecutar un usuario con `sysadmin` permisos; los mismos permisos necesarios para crear un UCP.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

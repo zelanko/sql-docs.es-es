@@ -1,5 +1,5 @@
 ---
-title: Análisis rápido | Documentos de Microsoft
+title: Análisis rápido | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - fast parse [Integration Services]
 ms.assetid: 6688707d-3c5b-404e-aa2f-e13092ac8d95
 caps.latest.revision: 49
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6d0e09311964b93a6a1413ba9e9b0c9c64e1f9c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7ae98d9bd29b5d6d444c08fa358500d8da066e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233715"
 ---
 # <a name="fast-parse"></a>Fast Parse
   El análisis rápido ofrece un conjunto rápido y simple de rutinas para analizar datos. Estas rutinas no son dependientes de la configuración regional y solo admiten un subconjunto de formatos de fecha, hora y número entero.  

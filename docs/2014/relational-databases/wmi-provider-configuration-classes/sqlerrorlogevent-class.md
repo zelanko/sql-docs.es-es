@@ -1,5 +1,5 @@
 ---
-title: Sqlerrorlogevent, clase | Documentos de Microsoft
+title: Clase SqlErrorLogEvent | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SqlErrorLogFile class
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95588b82a36bb5d7d5d520a5f54ca968a9198112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 65c2eb3758524788d0c65645d3b5736c930d58ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204903"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent, clase
   Proporciona las propiedades para ver los eventos en un archivo de registro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificado.  
@@ -43,7 +43,7 @@ class SQLErrorLogEvent
 ```  
   
 ## <a name="properties"></a>Propiedades  
- Sqlerrorlogevent, clase define las siguientes propiedades.  
+ La clase SQLErrorLogEvent define las siguientes propiedades.  
   
 |||  
 |-|-|  
@@ -94,11 +94,11 @@ Next
   
 -   Acceso de lectura a la **Root\Microsoft\SqlServer\ComputerManagement10** espacio de nombres WMI. De forma predeterminada, todos tienen acceso de lectura mediante el permiso Habilitar cuenta.  
   
--   Permiso de lectura a la carpeta que contiene los registros de errores. De forma predeterminada el error registros se encuentran en la ruta de acceso siguiente (donde \< *unidad >* representa la unidad donde se instaló [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y \< *nombreDeInstancia*> es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Permiso de lectura a la carpeta que contiene los registros de errores. De forma predeterminada, el error registros se encuentran en la siguiente ruta de acceso (donde \< *unidad >* representa la unidad donde se instaló [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y \< *nombreDeInstancia*> es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
-     **\<Unidad >: \Program SQL Server\MSSQL12** **.\< NombreDeInstancia > \MSSQL\Log**  
+     **\<Unidad >: \Program Files\Microsoft SQL Server\MSSQL12** **.\< NombreDeInstancia > \MSSQL\Log**  
   
- Si se conecta a través de un firewall, asegúrese de que se establece una excepción en el firewall para WMI en los equipos de destino remotos. Para obtener más información, consulte [conectar con WMI de forma remota comenzando con Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
+ Si se conecta a través de un firewall, asegúrese de que se establece una excepción en el firewall para WMI en los equipos de destino remotos. Para obtener más información, consulte [conectarse a WMI de forma remota comenzando con Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
   
 ## <a name="see-also"></a>Vea también  
  [Clase SqlErrorLogFile](sqlerrorlogfile-class.md)   

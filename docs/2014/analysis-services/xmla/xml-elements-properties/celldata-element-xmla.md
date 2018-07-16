@@ -1,5 +1,5 @@
 ---
-title: Elemento CellData (XMLA) | Documentos de Microsoft
+title: Elemento CellData (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - CellData element
 ms.assetid: 0ebfb5e1-a674-4b9b-bd8c-c529da105f61
 caps.latest.revision: 27
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: ce445127e78f7f503bf3b81a640047f0d1f1d87f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 370837c78fe1fa49396a5209dd94dd0e7cb4f69d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202375"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330415"
 ---
 # <a name="celldata-element-xmla"></a>Elemento CellData (XMLA)
   Contiene una colección de los elementos Cell que representan los datos de celda contenidos por un elemento [root](root-element-xmla.md) que utiliza el tipo de datos [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) .  
@@ -63,7 +63,7 @@ ms.locfileid: "36202375"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[raíz](root-element-xmla.md)|  
-|Elementos secundarios|[celda](cell-element-mddataset-xmla.md)|  
+|Elementos secundarios|[Celda](cell-element-mddataset-xmla.md)|  
   
 ## <a name="remarks"></a>Notas  
  En el elemento raíz primario, el elemento `Axes` va seguido del elemento `CellData`, una colección de elementos `Cell` que contienen los valores de propiedad para cada celda devuelta en un conjunto de datos multidimensional.  

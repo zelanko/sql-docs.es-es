@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: d4f9da688927d7e96ac2162eb504e0bc15f27526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4722b2eb26f86537deb0283df0df384a4b565101
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292717"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Estadísticas para las tablas con optimización para memoria
   El optimizador de consultas utiliza las estadísticas de las columnas para crear planes de consulta que mejoren el rendimiento de las consultas. Las estadísticas se recopilan de las tablas de la base de datos y se almacenan en los metadatos de la base de datos.  
@@ -28,13 +28,13 @@ ms.locfileid: "36105370"
   
  Normalmente, los datos de tabla cambian a medida que se insertan, se actualizan y se eliminan filas. Esto significa que las estadísticas deben actualizarse periódicamente. De forma predeterminada, las estadísticas basadas en disco se actualizan automáticamente cuando el optimizador determina que podrían estar obsoletas.  
   
- Las estadísticas de tablas optimizadas para memoria no se actualizan de forma predeterminada. En su lugar, debe actualizarlas manualmente. Use [UPDATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/update-statistics-transact-sql) para columnas individuales, índices o tablas. Use [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) para actualizar las estadísticas para todos los usuarios y las tablas internas de la base de datos.  
+ Las estadísticas de tablas optimizadas para memoria no se actualizan de forma predeterminada. En su lugar, debe actualizarlas manualmente. Use [UPDATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/update-statistics-transact-sql) para columnas individuales, los índices o tablas. Use [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) para actualizar las estadísticas para todos los usuarios y las tablas internas de la base de datos.  
   
- Cuando se usa [CREATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) o [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), debe especificar `NORECOMPUTE` para deshabilitar las estadísticas automáticas actualización de tablas optimizadas en memoria. Para las tablas basadas en disco, [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) solo actualiza las estadísticas si la tabla se ha modificado desde la última [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql). Para las tablas optimizadas en memoria, [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) siempre genera estadísticas actualizadas. [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) es una buena opción para tablas optimizadas en memoria; en caso contrario, debe saber qué tablas tienen cambios significativos para que pueda actualizar las estadísticas individualmente.  
+ Cuando se usa [CREATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) o [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), debe especificar `NORECOMPUTE` para deshabilitar las estadísticas automáticas actualización de las tablas optimizadas para memoria. Para las tablas basadas en disco, [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) solo actualiza las estadísticas si se ha modificado la tabla desde la última [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql). Para las tablas optimizadas para memoria, [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) siempre genera estadísticas actualizadas. [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) es una buena opción para las tablas optimizadas para memoria; en caso contrario, deberá saber qué tablas tienen cambios significativos para que pueda actualizar las estadísticas individualmente.  
   
  Se pueden generar estadísticas mediante el muestreo de los datos o realizando un examen completo. Las estadísticas muestreadas solo usan un ejemplo de los datos de la tabla para estimar la distribución de los datos. Las estadísticas completas examinan toda la tabla para determinar la distribución de los datos. Las estadísticas completas suelen ser más precisas pero tardan más tiempo en calcularse. Las estadísticas muestreadas se pueden recopilar más rápidamente.  
   
- Las tablas basadas en disco usan las estadísticas muestreadas de forma predeterminada. Las tablas con optimización para memoria solo admiten las estadísticas completas. Cuando se usa [CREATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) o [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), debe especificar el `FULLSCAN` opción optimizadas en memoria tablas.  
+ Las tablas basadas en disco usan las estadísticas muestreadas de forma predeterminada. Las tablas con optimización para memoria solo admiten las estadísticas completas. Cuando se usa [CREATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) o [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), debe especificar el `FULLSCAN` opción optimizadas para memoria tablas.  
   
  Consideraciones adicionales sobre las estadísticas de tablas optimizadas para memoria:  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36105370"
 ## <a name="guidelines-for-statistics-when-deploying-memory-optimized-tables"></a>Directrices para las estadísticas cuando se implementan tablas con optimización para memoria  
  Para asegurarse de que el optimizador de consultas dispone de estadísticas actualizadas al crear los planes de consulta, implemente las tablas optimizadas para memoria siguiendo estos cinco pasos:  
   
-1.  Cree tablas e índices. Los índices están insertadas en la `CREATE TABLE` las instrucciones.  
+1.  Cree tablas e índices. Los índices están alineados especificado en el `CREATE TABLE` instrucciones.  
   
 2.  Cargue datos en las tablas.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36105370"
   
 4.  Cree procedimientos almacenados que tengan acceso a las tablas.  
   
-5.  Ejecutar la carga de trabajo, que puede contener una combinación de compilados de forma nativa e interpretados [!INCLUDE[tsql](../../../includes/tsql-md.md)] almacena los procedimientos, así como lotes ad hoc.  
+5.  Ejecutar la carga de trabajo, que puede contener una combinación de compilado de forma nativa e interpretados [!INCLUDE[tsql](../../../includes/tsql-md.md)] almacena los procedimientos, así como lotes ad hoc.  
   
  El hecho de crear procedimientos almacenados compilados de forma nativa después de cargar los datos y actualizar las estadísticas asegura que el optimizador dispondrá de estadísticas para las tablas optimizadas para memoria. Esto garantizará planes de consulta eficaces cuando se compile el procedimiento.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36105370"
   
  Para actualizar las estadísticas:  
   
--   Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] a [crear un Plan de mantenimiento](../maintenance-plans/create-a-maintenance-plan.md) con un [actualizar tarea de estadística](../maintenance-plans/update-statistics-task-maintenance-plan.md)  
+-   Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] a [crear un Plan de mantenimiento](../maintenance-plans/create-a-maintenance-plan.md) con un [tarea Actualizar estadísticas](../maintenance-plans/update-statistics-task-maintenance-plan.md)  
   
 -   O bien, actualice las estadísticas mediante un script [!INCLUDE[tsql](../../../includes/tsql-md.md)], tal como se describe a continuación.  
   

@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) Server | Documentos de Microsoft
+title: Integration Services Server (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
 - managing packages [Integration Services]
@@ -16,13 +16,13 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 69598f8ca412e32a76ea841f9a234d01c6847718
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea60bbdac3df4cd1130ba4afee83f882f138d33d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289401"
 ---
 # <a name="integration-services-ssis-server"></a>Servidor de Integration Services (SSIS)
   Después de diseñar y probar paquetes en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], puede implementar los proyectos que contienen los paquetes en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -36,7 +36,7 @@ ms.locfileid: "36203006"
  Para obtener información general de la funcionalidad del catálogo de SSISDB, consulte [SSIS Catalog (Catálogo de SSIS)](ssis-catalog.md).  
   
 ## <a name="high-availability"></a>Alta disponibilidad  
- Al igual que otras bases de datos de usuario, la `SSISDB` base de datos admite la creación de reflejo de base de datos y la replicación. Para obtener más información sobre la creación de reflejo y la replicación, consulte [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+ Al igual que otras bases de datos de usuario, el `SSISDB` base de datos admite la creación de reflejo de base de datos y la replicación. Para obtener más información sobre la creación de reflejo y la replicación, consulte [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
  También puede proporcionar alta disponibilidad de SSISDB y de su contenido mediante SSIS y los grupos de disponibilidad AlwaysOn. Para obtener más información, vea esta entrada de blog de Matt Masson, [SSIS con AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873), en blogs.msdn.com.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36203006"
   
 -   **Base de datos SSISDB**  
   
-     El `SSISDB` base de datos aparece en la **bases de datos** nodo en el Explorador de objetos. Puede consultar las vistas y llamar a los procedimientos almacenados que administran el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los objetos que están almacenados en el servidor.  
+     El `SSISDB` base de datos aparece bajo el **bases de datos** nodo en el Explorador de objetos. Puede consultar las vistas y llamar a los procedimientos almacenados que administran el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los objetos que están almacenados en el servidor.  
   
 -   **Catálogos de Integration Services**  
   

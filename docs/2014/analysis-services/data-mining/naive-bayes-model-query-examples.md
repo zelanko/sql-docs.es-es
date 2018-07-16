@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de consultas de modelo Bayes naive | Documentos de Microsoft
+title: Ejemplos de consultas del modelo Bayes naive | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
 - naive bayes algorithms [Analysis Services]
 - content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 29267826bd90ef82cdf28ffb99e265ec135d37cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a2fb2a44ff12ef938abc09f7e307841a1b057be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224695"
 ---
 # <a name="naive-bayes-model-query-examples"></a>Ejemplos de consultas del modelo Bayes naive
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre las reglas y los conjuntos de elementos detectados durante el análisis, o una consulta de predicción, que usa las asociaciones detectadas en los datos para realizar predicciones. También puede recuperar los metadatos sobre el modelo utilizando una consulta del conjunto de filas de esquema de minería de datos. En esta sección se explica cómo crear estas consultas para los modelos que se basan en el algoritmo Bayes naive de Microsoft.  
@@ -261,6 +261,6 @@ AS t
 ## <a name="see-also"></a>Vea también  
  [Referencia técnica del algoritmo Bayes Naive de Microsoft](microsoft-naive-bayes-algorithm-technical-reference.md)   
  [Algoritmo Bayes Naive de Microsoft](microsoft-naive-bayes-algorithm.md)   
- [Contenido del modelo para los modelos Bayes Naive de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Para los modelos Bayes Naive contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

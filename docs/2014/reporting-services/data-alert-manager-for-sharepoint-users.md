@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
@@ -16,13 +16,13 @@ ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0d482e6c217e8af61a2419fc3bf5e0c82e09d420
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e09359864b17d3d354df518d43395253b711ab6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234775"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Administrador de alertas de datos para los usuarios de SharePoint
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona el Administrador de alertas de datos para que los trabajadores de la información administren las alertas de datos. Pueden ver la información sobre las alertas que crearon, eliminar alertas, abrir definiciones de alertas para su edición y ejecutar alertas a petición. Pueden optar por ver las alertas de un único informe o de todos los informes. La imagen siguiente muestra las características disponibles para los trabajadores de la información en el Administrador de alertas de datos.  

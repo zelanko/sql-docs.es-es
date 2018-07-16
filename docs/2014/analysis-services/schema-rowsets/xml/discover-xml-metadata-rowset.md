@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_XML_METADATA | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_XML_METADATA | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DISCOVER_XML_METADATA rowset
 ms.assetid: 0befd026-db1b-43ac-b0e6-734abb56a4b1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4452408b36fe50300277d0d0f8e076357403539f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 616e7c06087fff3d2c2e0388ba44a3e30b200e5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214015"
 ---
 # <a name="discoverxmlmetadata-rowset"></a>Conjunto de filas DISCOVER_XML_METADATA
   Devuelve un documento XML que describe un objeto solicitado. El conjunto de filas que se devuelve siempre consta de una fila y una columna.  
@@ -46,7 +46,7 @@ ms.locfileid: "36202383"
 >  El conjunto de filas `DISCOVER_XML_METADATA` no se puede consultar mediante la sintaxis del comando SELECT. Sin embargo, el conjunto de filas `DISCOVER_XML_METADATA` se puede consultar usando <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.GetSchemaDataSet%2A>  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DISCOVER_XML_METADATA` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DISCOVER_XML_METADATA` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "36202383"
 |`DataSourcePermissionID`|`DBTYPE_WSTR`|Opcional.|  
 |`ObjectExpansion`|`DBTYPE_WSTR`|Opcional.|  
   
- La restricción, `ObjectExpansion`, está disponible para todos los objetos principales de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. El cliente normalmente usa las restricciones para describir los objetos OLAP para los que se va a devolver el DDL y utiliza la restricción `ObjectExpansion` para definir el grado de expansión en el DDL devuelto. En la tabla siguiente indica si se permite el valor de enumeración para [Modificar elemento &#40;XMLA&#41; ](../../xmla/xml-elements-commands/alter-element-xmla.md) comandos.  
+ La restricción, `ObjectExpansion`, está disponible para todos los objetos principales de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. El cliente normalmente usa las restricciones para describir los objetos OLAP para los que se va a devolver el DDL y utiliza la restricción `ObjectExpansion` para definir el grado de expansión en el DDL devuelto. En la tabla siguiente indica si se permite el valor de enumeración para [elemento Alter &#40;XMLA&#41; ](../../xmla/xml-elements-commands/alter-element-xmla.md) comandos.  
   
 |Valor de enumeración|Descripción|  
 |-----------------------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: Usar un diagrama de actualización en una aplicación de ASP de ejemplo (SQLXML 4.0) | Documentos de Microsoft
+title: Uso de un diagrama de actualización en una aplicación de ASP de ejemplo (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - updategrams [SQLXML], ASP applications
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 851d82413ec1959487132ec277d50e3f0a771b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 037b7fc64a53bdba26154933a19b3f147b8c1b3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260421"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Utilizar un diagrama de actualización en una aplicación ASP de ejemplo (SQLXML 4.0)
   Esta aplicación ASP (Páginas Active Server) le permite actualizar la información del cliente en la tabla Person.Contact de la base de datos de ejemplo AdventureWorks de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La aplicación hace lo siguiente:  

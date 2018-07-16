@@ -1,5 +1,5 @@
 ---
-title: 'Agregar modelos de minería de datos a una estructura (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Agregar modelos de minería de datos a una estructura (Analysis Services - minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], creating
 - mining models [Analysis Services], creating
 - mining models [Analysis Services], modifying
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5252db242cba7fb9a1f3bca54289cdb7b3ee8870
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0813b466184123fea433ccf3467fdf14b5f58740
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330925"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Agregar modelos de minería de datos a una estructura (Analysis Services - Minería de datos)
   Una estructura de minería de datos se ha diseñado para admitir varios modelos de minería de datos. Por tanto, cuando el asistente finalice, puede abrir la estructura y agregar nuevos modelos de minería de datos. Cada vez que cree un modelo, puede utilizar un algoritmo diferente, cambiar los parámetros o aplicar filtros para utilizar un subconjunto distinto de datos.  
@@ -62,7 +62,7 @@ ms.locfileid: "36106015"
  Para algunas columnas, también puede ser necesario especificar el *contenido de la columna*. En la minería de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la propiedad Tipo de contenido de cada columna de datos indica al algoritmo cómo debe procesar los datos de esa columna. Por ejemplo, si los datos tienen una columna Ingresos , debe especificar que la columna contiene números continuos estableciendo el tipo de contenido en Continuous. Sin embargo, también puede especificar que los números de la columna Ingresos se agrupen en cubos estableciendo el tipo de contenido en Discretized y, opcionalmente, especificando el número exacto de cubos. Puede crear distintos modelos que procesen las columnas de manera diferente: por ejemplo, puede probar un modelo que agrupe clientes en tres cubos en función de la edad, y otro modelo que los agrupe en 10 cubos en función de la edad.  
   
 ## <a name="see-also"></a>Vea también  
- [Estructuras de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
  [Crear una estructura de minería de datos relacional](create-a-relational-mining-structure.md)   
  [Propiedades del modelo de minería de datos](mining-model-properties.md)   
  [Columnas del modelo de minería de datos](mining-model-columns.md)  

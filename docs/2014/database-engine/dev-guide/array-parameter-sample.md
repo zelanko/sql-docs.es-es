@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de parámetro de matriz | Documentos de Microsoft
+title: Ejemplo de parámetro de matriz | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0f550af33b55d7b54a5bc88b69ecf419e07a3116
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9b3675473d52edb767c0aa96fa73e8775430d97e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328195"
 ---
 # <a name="array-parameter-sample"></a>Ejemplo de parámetro de matriz
   A veces resulta útil crear, actualizar o eliminar un conjunto de filas en una base de datos. Este objetivo puede conseguirse mediante distintos enfoques. Uno de ellos es pasar una matriz de información de un cliente a un procedimiento almacenado de integración CLR (Common Language Runtime) del servidor mediante un tipo CLR de datos de integración definido por el usuario. La naturaleza de los tipos de datos definidos por el usuario de este tipo limita el tamaño de los datos proporcionados al servidor a 8.000 bytes. Por lo tanto, este enfoque no resulta satisfactorio para datos grandes o complejos. Si los datos que se tratan son pequeños y sencillos, este enfoque puede ser mucho más eficaz que llamar a un procedimiento almacenado para cada fila. Al pasar una matriz, el orden de los datos se conserva en las aplicaciones donde es significativo. Este ejemplo contiene lo siguiente:  

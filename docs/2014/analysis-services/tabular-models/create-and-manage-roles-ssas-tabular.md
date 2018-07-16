@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar Roles (SSAS Tabular) | Documentos de Microsoft
+title: Crear y administrar Roles (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.rolemanager.f1
 - sql12.asvs.bidtoolset.roledb.f1
 ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b1cc9692f7eb74cadb89b7b3a439600db775913b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 771dc3c7d0da05292c132f2b5460e7d05de1f796
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254897"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>Crear y administrar roles (SSAS tabular)
   Los roles, en los modelos tabulares, definen los permisos de los miembros para un modelo. Los roles se definen para un proyecto de modelos mediante el cuadro de diálogo Administrador de roles de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Al implementar un modelo, los administradores de bases de datos pueden administrar los roles mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -68,9 +68,9 @@ ms.locfileid: "36198757"
 9. Haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md)   
- [Las perspectivas &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)   
- [Analizar en Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md)   
+ [Roles &#40;Tabular de SSAS&#41;](roles-ssas-tabular.md)   
+ [Las perspectivas &#40;Tabular de SSAS&#41;](perspectives-ssas-tabular.md)   
+ [Analizar en Excel &#40;Tabular de SSAS&#41;](analyze-in-excel-ssas-tabular.md)   
  [Función USERNAME &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [Función CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   

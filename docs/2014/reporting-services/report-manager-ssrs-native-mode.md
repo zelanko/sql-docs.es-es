@@ -1,5 +1,5 @@
 ---
-title: El Administrador de informes (modo nativo de SSRS) | Documentos de Microsoft
+title: El Administrador de informes (modo nativo de SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], managing
 - Report Manager [Reporting Services], about Report Manager
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 caps.latest.revision: 69
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 012b0a7d775050108305d44a1eb595a9f8b7b789
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8fc0febe87f937e8ad301bb070e22dcd44b788c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327075"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Administrador de informes (Modo nativo de SSRS)
   El Administrador de informes es una herramienta basada en Web para el acceso a informes y su administración que se utiliza para administrar una única instancia de servidor de informes desde una ubicación remota a través de una conexión HTTP. También puede utilizar el Administrador de informes por su visor de informes y sus características de navegación. En este tema:  
@@ -51,7 +51,7 @@ ms.locfileid: "36201316"
   
 -   Configurar propiedades de ejecución del informe, historial del informe y parámetros del informe.  
   
--   Crear modelos de informe que conectan y recuperan datos de un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] origen de datos o desde un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] origen de datos relacional.  
+-   Crear modelos de informe que conexión y recuperan datos desde un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] origen de datos o desde un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] origen de datos relacional.  
   
 -   Establezca la seguridad de los elementos del modelo para permitir el acceso a entidades concretas del modelo o asigne entidades a informes click-through predefinidos creados previamente.  
   
@@ -114,15 +114,15 @@ ms.locfileid: "36201316"
 |![Icono de suscripción controlada por datos](media/hlp-16subscriptiondd.gif "icono de suscripción controlada por datos")|Suscripción controlada por datos|Haga clic en un icono de suscripción controlada por datos o en una descripción para editar una suscripción.|  
 |![Icono de recurso genérico](media/hlp-16file.gif "Icono de recurso genérico")|Recurso|Haga clic en el icono de recurso o en el nombre del mismo para abrir el recurso. El recurso se abre en una ventana aparte.|  
 |![Icono de origen de datos compartido](media/hlp-16datasource.png "Icono de origen de datos compartido")|Elemento de origen de datos compartido|Haga clic en un icono de origen de datos compartido para abrir las páginas de propiedades, la lista de informes y una lista de suscripción del origen de datos.|  
-|![Icono de la página de propiedades](media/hlp-16prop.gif "el icono de página de propiedades")|Página de propiedades|Haga clic en el icono de propiedades para obtener acceso a páginas adicionales donde establecer valores de propiedades y seguridad.|  
+|![Icono de la página de propiedades](media/hlp-16prop.gif "icono de la página de propiedades")|Página de propiedades|Haga clic en el icono de propiedades para obtener acceso a páginas adicionales donde establecer valores de propiedades y seguridad.|  
   
 ## <a name="see-also"></a>Vea también  
  [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Planeación de Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
+ [Planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Generador de informes &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
  [Herramientas de Reporting Services](tools/reporting-services-tools.md)   
  [Administración de contenido del servidor de informes &#40;modo nativo de SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [Ver y explorar los informes de modo nativo usando elementos Web de SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Ver y explorar los informes en modo nativo usando elementos Web de SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

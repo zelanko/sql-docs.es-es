@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
 - Integration Services packages, expressions
@@ -19,13 +19,13 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8bd434ee91f53e747b6291d6c718f9e073f8af5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbd5e04688dcea2b43d7093a73b828ba58ff1460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292835"
 ---
 # <a name="integration-services-ssis-expressions"></a>Expresiones de Integration Services (SSIS)
   Una expresión es una combinación de símbolos: identificadores, literales, funciones y operadores, que produce un solo valor de datos. Las expresiones simples pueden ser una sola constante, variable o función. Es más frecuente que las expresiones sean complejas, con varios operadores y funciones, y que hagan referencia a varias columnas y variables. En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], se pueden usar expresiones para definir condiciones para las instrucciones CASE, crear y actualizar valores de las columnas de datos, asignar valores a variables, actualizar o llenar propiedades en tiempo de ejecución, definir restricciones en las restricciones de precedencia y proporcionar las expresiones que utiliza el contenedor de bucles For.  
@@ -36,7 +36,7 @@ ms.locfileid: "36201400"
   
 -   [Literales &#40;SSIS&#41;](numeric-string-and-boolean-literals.md)  
   
--   [Identificadores &#40;SSIS&#41;](identifiers-ssis.md)  
+-   [Los identificadores &#40;SSIS&#41;](identifiers-ssis.md)  
   
 ## <a name="components-that-use-expressions"></a>Componentes que usan expresiones  
  Los siguientes elementos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pueden usar expresiones:  
@@ -47,7 +47,7 @@ ms.locfileid: "36201400"
   
 -   Las variables utilizan una expresión para establecer su valor. Por ejemplo, GETDATE() establece el valor de la variable en la fecha actual.  
   
--   Las restricciones de precedencia pueden usar expresiones para especificar las condiciones que determinan si se ejecuta la tarea o el contenedor restringido de un paquete. Se deben evaluar las expresiones usadas en una restricción de precedencia para `true` o `false`. Por ejemplo, la expresión @A > @B compara dos variables definidas por el usuario para determinar si se ejecuta la tarea restringida.  
+-   Las restricciones de precedencia pueden usar expresiones para especificar las condiciones que determinan si se ejecuta la tarea o el contenedor restringido de un paquete. Las expresiones usadas en una restricción de precedencia deben evaluarse como `true` o `false`. Por ejemplo, la expresión @A > @B compara dos variables definidas por el usuario para determinar si se ejecuta la tarea restringida.  
   
 -   El contenedor de bucles For puede usar expresiones para generar las instrucciones de inicialización, evaluación e incremento utilizadas por la estructura de bucle. Por ejemplo, la expresión @Counter = 1 inicializa el contador de bucle.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36201400"
  Las variables tienen un ámbito y en la carpeta **Variables** del Generador de expresiones solo se muestran las variables que están en el ámbito y disponibles para su uso. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Utilizar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)  
+ [Usar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  Artículo técnico, sobre [ejemplos de expresiones SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  

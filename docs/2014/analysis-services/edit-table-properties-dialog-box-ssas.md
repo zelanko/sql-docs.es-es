@@ -1,5 +1,5 @@
 ---
-title: Editar cuadro de diálogo de propiedades de tabla (SSAS) | Documentos de Microsoft
+title: Editar cuadro de diálogo Propiedades de tabla (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.edittablepropdb.f1
 ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36cabf1186738420e3dbd35504a81ea0318b966b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd8e464967dbe4b2546f51889f2a2da49d81e4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249595"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Editar propiedades de tabla, cuadro de diálogo (SSAS)
   El cuadro de diálogo **Editar propiedades de tabla** le permite ver y modificar las propiedades de las tablas importadas en el diseñador de modelos mediante el Asistente para la importación de tablas. Para obtener acceso a este cuadro de diálogo, en el diseñador de modelos, seleccione una tabla, haga clic en el menú **Tabla** y, a continuación, haga clic en **Propiedades de tabla**.  
@@ -103,6 +103,6 @@ ms.locfileid: "36196796"
  Haga clic en esta opción para aplicar todos los cambios, incluso el reemplazo de columnas.  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas y columnas &#40;SSAS Tabular&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [Tablas y columnas &#40;Tabular de SSAS&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

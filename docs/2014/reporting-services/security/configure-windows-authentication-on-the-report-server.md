@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
@@ -16,13 +16,13 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3147e590c5a7fa7c258b705404d5b9ae5a8c1ea3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c71455bc6f9748cdd31cddfde2f3cfb01f6a9589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325725"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar la autenticación de Windows en el servidor de informes
   De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si la implementación incluye aplicaciones cliente y exploradores que utilizan estos proveedores de seguridad, puede utilizar los valores predeterminados sin necesidad de ninguna configuración adicional. Si desea utilizar un proveedor de seguridad diferente para la seguridad integrada de Windows (por ejemplo, si desea utilizar directamente Kerberos) o si modificó los valores predeterminados y prefiere restaurar los originales, puede utilizar la información de este tema para especificar los valores de autenticación en el servidor de informes.  
@@ -34,9 +34,9 @@ ms.locfileid: "36202865"
 -   Los archivos RSeportServer.config deben tener `AuthenticationType` establecido en `RSWindowsNegotiate`, `RSWindowsKerberos`, o `RSWindowsNTLM`. De forma predeterminada, el archivo RSReportServer.config incluye el valor `RSWindowsNegotiate` si la cuenta de servicio del servidor de informes es NetworkService o LocalSystem; de lo contrario, se usa el valor `RSWindowsNTLM`. Puede agregar `RSWindowsKerberos` si tiene aplicaciones que solo utilizan la autenticación Kerberos.  
   
     > [!IMPORTANT]  
-    >  Con `RSWindowsNegotiate` se producirá un error de autenticación de Kerberos si configuró el servicio de servidor de informes para ejecutarse bajo una cuenta de usuario de dominio y no se registró un nombre Principal de servicio (SPN) para la cuenta. Para obtener más información, vea [Resolver los errores de autenticación Kerberos al conectarse a un servidor de informes](#proxyfirewallRSWindowsNegotiate) en este tema.  
+    >  Uso de `RSWindowsNegotiate` se producirá un error de autenticación Kerberos si ha configurado el servicio servidor de informes para ejecutarse bajo una cuenta de usuario de dominio y no se registró un nombre Principal de servicio (SPN) para la cuenta. Para obtener más información, vea [Resolver los errores de autenticación Kerberos al conectarse a un servidor de informes](#proxyfirewallRSWindowsNegotiate) en este tema.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] se debe configurar para la autenticación de Windows. De forma predeterminada, se incluyen los archivos Web.config para el servicio Web del servidor de informes y el Administrador de informes la \<modo de autenticación = "Windows" > configuración. Si lo cambia a \<authentication mode="Forms">, se producirá un error en la autenticación de Windows para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] se debe configurar para la autenticación de Windows. De forma predeterminada, los archivos Web.config para el servicio Web del servidor de informes y el Administrador de informes incluyen el \<modo de autenticación = "Windows" > configuración. Si lo cambia a \<authentication mode="Forms">, se producirá un error en la autenticación de Windows para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 -   Los archivos Web.config para el servicio Web del servidor de informes y el Administrador de informes debe tener \<identity impersonate = "true" / >.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36202865"
   
  Para cambiar la configuración de autenticación del servidor de informes, modifique los valores y los elementos XML en el archivo RSReportServer.config. Puede copiar y pegar los ejemplos de este tema para implementar combinaciones concretas.  
   
- La configuración predeterminada funciona mejor si todos los equipos cliente y servidor se encuentran en el mismo dominio o en un dominio de confianza, y el servidor de informes se implementa para el acceso a la intranet detrás de un firewall corporativo. Los dominios únicos y de confianza son un requisito necesario para pasar credenciales de Windows. Las credenciales se pueden pasar más de una vez si se habilita la versión 5 del protocolo Kerberos para los servidores. De lo contrario, las credenciales se pueden pasar solo una vez antes de que expiren. Para obtener más información acerca de cómo configurar las credenciales para varias conexiones de equipo, consulte [especificar credenciales y la información de conexión para orígenes de datos de informe](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+ La configuración predeterminada funciona mejor si todos los equipos cliente y servidor se encuentran en el mismo dominio o en un dominio de confianza, y el servidor de informes se implementa para el acceso a la intranet detrás de un firewall corporativo. Los dominios únicos y de confianza son un requisito necesario para pasar credenciales de Windows. Las credenciales se pueden pasar más de una vez si se habilita la versión 5 del protocolo Kerberos para los servidores. De lo contrario, las credenciales se pueden pasar solo una vez antes de que expiren. Para obtener más información acerca de cómo configurar las credenciales para conexiones a varios equipos, consulte [especificar credenciales y la información de conexión de orígenes de datos de informe](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
  Las instrucciones siguientes están pensadas para un servidor de informes en modo nativo. Si el servidor de informes se implementa en modo integrado de SharePoint, se deben utilizar los valores de autenticación predeterminados que especifican la seguridad integrada de Windows. El servidor de informes utiliza las características internas de la extensión de autenticación de Windows predeterminada para admitir los servidores de informes en modo integrado de SharePoint.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36202865"
   
 1.  Abra RSReportServer.config en un editor de texto.  
   
-2.  Buscar <`Authentication`>.  
+2.  Busque <`Authentication`>.  
   
 3.  De las estructuras XML siguientes, copie la que mejor se ajuste a sus necesidades. Puede especificar `RSWindowsNegotiate`, `RSWindowsNTLM`, y `RSWindowsKerberos` en cualquier orden. Debe habilitar la persistencia de autenticación si desea autenticar la conexión en lugar de cada solicitud individual. Con la persistencia de autenticación, todas las solicitudes que requieran autenticación se permitirán mientras dure la conexión.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36202865"
   
  Puede detectar el error si habilitó el registro de Kerberos. Otro síntoma del error es que se solicitan varias veces las credenciales y, a continuación, aparece una ventana del explorador vacía.  
   
- Puede confirmar que se está produciendo un error de autenticación de Kerberos mediante la eliminación de < `RSWindowsNegotiate` / > desde el archivo de configuración y volver a intentar realizar la conexión.  
+ Puede confirmar que se está produciendo un error de autenticación de Kerberos eliminando < `RSWindowsNegotiate` / > del archivo de configuración y volver a intentar realizar la conexión.  
   
  Después de confirmar el problema, puede abordarlo de las maneras siguientes:  
   
@@ -136,7 +136,7 @@ ms.locfileid: "36202865"
   
 -   Cambie la cuenta de servicio para que se ejecute en una cuenta integrada como servicio de red. Las cuentas integradas asignan el SPN HTTP al SPN de host, que se define al unir un equipo a la red. Para más información, vea [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md).  
   
--   Use NTLM. Generalmente, NTLM funcionará en los casos en que no lo haga la autenticación Kerberos. Para utilizar NTLM, quite `RSWindowsNegotiate` del archivo RSReportServer.config y compruebe que sólo `RSWindowsNTLM` se especifica. Si elige esta solución, puede continuar utilizando una cuenta de usuario de dominio para el servicio del servidor de informes aunque no defina un SPN para él.  
+-   Use NTLM. Generalmente, NTLM funcionará en los casos en que no lo haga la autenticación Kerberos. Para utilizar NTLM, quite `RSWindowsNegotiate` del archivo RSReportServer.config y compruebe que solo `RSWindowsNTLM` se especifica. Si elige esta solución, puede continuar utilizando una cuenta de usuario de dominio para el servicio del servidor de informes aunque no defina un SPN para él.  
   
 #### <a name="logging-information"></a>Registrar información  
  Hay varios orígenes de información de registro que pueden servir de ayuda para resolver problemas relacionados con Kerberos.  

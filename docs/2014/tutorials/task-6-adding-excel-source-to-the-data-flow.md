@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 6: Agregar el origen de Excel al flujo de datos | Documentos de Microsoft'
+title: 'Tarea 6: Agregar origen de Excel al flujo de datos | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cde5dc49851e7d8c808d4a6273f4d4caf6603e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ce6d1ec5ab2fc9c57bd56e12b56b13231e74606
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280001"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Tarea 6: agregar el origen de Excel al flujo de datos
   En esta tarea, agregará un origen de Excel al flujo de datos para leer datos de proveedor del archivo de Excel de origen. El origen de Excel extrae datos de hojas de cálculo o de rangos de libros de Microsoft Excel. Vea el tema [Origen de Excel](http://msdn.microsoft.com/library/ms141683.aspx) para obtener más detalles.  
@@ -51,6 +51,6 @@ ms.locfileid: "36204719"
 10. Arrastre y coloque la transformación **Limpieza de DQS** de **Otras transformaciones** del **Cuadro de herramientas de SSIS** hasta la pestaña **Flujo de datos** bajo **Leer datos de proveedor de archivo de Excel**. La transformación Limpieza de DQS emplea Data Quality Services (DQS) para corregir datos aplicando reglas aprobadas de la base de conocimiento. Esta transformación, en tiempo de ejecución, crea un proyecto de limpieza de DQS en el servidor de DQS. Vea el tema [Transformación Limpieza de DQS](http://msdn.microsoft.com/library/ee677619.aspx) para obtener más detalles.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 7: Agregar transformación al flujo de datos de limpieza de DQS](../integration-services/data-flow/data-flow.md)  
+ [Tarea 7: Agregar la transformación Limpieza de DQS al flujo de datos](../integration-services/data-flow/data-flow.md)  
   
   

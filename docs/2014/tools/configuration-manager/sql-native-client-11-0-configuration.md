@@ -1,5 +1,5 @@
 ---
-title: Configuración de SQL Native Client 11.0 | Documentos de Microsoft
+title: Configuración de SQL Native Client 11.0 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - client configuration [SQL Server], SQL Server Native Client
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f83aa59c76750a0e6384a88e9755b0c51333bb58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a7d2397f64e5e987e2346938d5c4a9a4ad805482
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282401"
 ---
 # <a name="sql-native-client-110-configuration"></a>Configuración de SQL Native Client 11.0
   Esta sección contiene los temas de la Ayuda F1 para los cuadros de diálogo de **Configuración de SQL Server Native Client** del Administrador de configuración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Native Client es la biblioteca de red que los equipos cliente utilizan para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y se inicia con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -42,13 +42,13 @@ ms.locfileid: "36109132"
   
     -   [Protocolos de cliente: propiedades IP y TCP &#40;ficha del protocolo&#41;](../../../2014/tools/configuration-manager/client-protocols-tcp-and-ip-properties-protocol-tab.md)  
   
-    -   [Protocolos de cliente: las propiedades de canalizaciones con nombre &#40;ficha del protocolo&#41;](../../../2014/tools/configuration-manager/client-protocols-named-pipes-properties-protocol-tab.md)  
+    -   [Protocolos de cliente: propiedades de canalizaciones con &#40;ficha del protocolo&#41;](../../../2014/tools/configuration-manager/client-protocols-named-pipes-properties-protocol-tab.md)  
   
 -   [Alias &#40;Administrador de configuración de SQL Server&#41;](../../../2014/tools/configuration-manager/aliases-sql-server-configuration-manager.md)  
   
-    -   [Nuevo Alias &#40;ficha Alias&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)  
+    -   [Nuevo Alias &#40;pestaña Alias&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)  
   
-    -   [&#60;Alias&#62; propiedades &#40;ficha Alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
+    -   [&#60;Alias&#62; propiedades &#40;pestaña Alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   
     -   [Crear una cadena de conexión válida con el protocolo de memoria compartida](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)  
   

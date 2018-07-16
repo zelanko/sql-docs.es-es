@@ -1,5 +1,5 @@
 ---
-title: Cubos elemento (ASSL) | Documentos de Microsoft
+title: Los cubos de elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Cubes element
 ms.assetid: 0eaaaf3f-0c78-4eb4-bc3a-d266579eca56
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 07fb51c5c02a8931ce582f9115ab82b922ba5709
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d63af6605e1633f310f6c7089fc4e6ffaa481ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194275"
 ---
 # <a name="cubes-element-assl"></a>Elemento Cubes (ASSL)
-  Contiene la colección de [cubo](../objects/cube-element-assl.md) elementos asociados a un [base de datos](../objects/database-element-assl.md) elemento.  
+  Contiene la colección de [cubo](../objects/cube-element-assl.md) elementos asociados con un [base de datos](../objects/database-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   

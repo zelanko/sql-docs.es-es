@@ -1,5 +1,5 @@
 ---
-title: Cubo o modelo de cuadro de diálogo de propiedades (SSAS) | Documentos de Microsoft
+title: Cubo o modelo de cuadro de diálogo de propiedades (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.f1
 ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90efe4a053104491b24e290641205d85628c3689
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ad93386960630ffe1a49b473304cce80e580e61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317484"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Propiedades del cubo o Propiedades del modelo (cuadro de diálogo) (SSAS)
   Utilice el cuadro de diálogo **Propiedades de la base de datos** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para establecer las propiedades de un cubo o una base de datos de modelos. Para mostrar este cuadro de diálogo, haga clic con el botón derecho en un cubo o en un modelo del **Explorador de objetos** y seleccione **Propiedades**.  

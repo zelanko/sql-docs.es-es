@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3491f444347d57273cd86914e21c4d7b46ad02b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 35bd6647459cff188ff90553fdaa824d85ac9459
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300365"
 ---
 # <a name="toolbox-component-f1-help"></a>Cuadro de herramientas (Ayuda F1)
   El**cuadro de herramientas** muestra varios elementos que se utilizan en los proyectos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . El **cuadro de herramientas** puede abrirse desde el menú **Ver** , y esta ventana puede acoplarse como se desee. Cuando está acoplado, el **cuadro de herramientas** puede estar abierto de forma permanente o puede configurarse de modo que se **oculte automáticamente** si no se utiliza.  

@@ -1,5 +1,5 @@
 ---
-title: Las operaciones de registro en Analysis Services | Documentos de Microsoft
+title: Las operaciones de registro en Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2748496ead805834f0b6051f159dcca551b0b178
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 332f1ff5bff2379f3d11fa61bf3423a9d8e06347
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228377"
 ---
 # <a name="log-operations-in-analysis-services"></a>Operaciones de registro en Analysis Services
   Una instancia de Analysis Services registrará las advertencias, los errores y las notificaciones del servidor en el archivo msmdsrv.log: uno para cada instancia que instale. Los administradores consultan este registro para obtener información sobre eventos, tanto rutinarios como extraordinarios. En las versiones recientes, los registros se han mejorado para incluir más información. Las entradas de registro ahora incluyen información de la versión y la edición, así como del procesador, la memoria, la conectividad y los eventos de bloqueo. Puede revisar la lista completa de cambios en [Mejoras de los registros](http://support.microsoft.com/kb/2965035).  
@@ -66,9 +66,9 @@ ms.locfileid: "36202824"
   
  Este archivo de registro se vacía en cada reinicio del servicio. En versiones anteriores, en ocasiones los administradores podían reiniciar el servicio con el único objetivo de vaciar el archivo de registro para evitar que creciera tanto que no pudiera usarse. Ya no es necesario. Las opciones de configuración, introducidas en SQL Server 2012 SP2 y versiones posteriores, le permiten controlar el tamaño del archivo de registro y su historial:  
   
--   `MaxFileSizeMB` especifica un tamaño de archivo de registro máximo en megabytes. El valor predeterminado es 256. Un valor de reemplazo válido debe ser un entero positivo. Cuando `MaxFileSizeMB` es alcanza, Analysis Services cambia el nombre del archivo actual msmdsrv {actual timestamp} .log y empieza un nuevo archivo msmdsrv.log.  
+-   `MaxFileSizeMB` especifica un tamaño de archivo de registro máximo en megabytes. El valor predeterminado es 256. Un valor de reemplazo válido debe ser un entero positivo. Cuando `MaxFileSizeMB` es alcanzado, Analysis Services cambia el nombre del archivo actual del archivo msmdsrv {actual timestamp} .log y empieza un nuevo archivo msmdsrv.log.  
   
--   `MaxNumberFiles` Especifica la retención de archivos de registro antiguos. El valor predeterminado es 0 (deshabilitado). Puede cambiarlo a un número entero positivo para mantener las versiones del archivo de registro. Cuando `MaxNumberFiles` es alcanza, Analysis Services elimina el archivo con la marca de tiempo más antigua en su nombre.  
+-   `MaxNumberFiles` Especifica la retención de archivos de registro antiguos. El valor predeterminado es 0 (deshabilitado). Puede cambiarlo a un número entero positivo para mantener las versiones del archivo de registro. Cuando `MaxNumberFiles` es alcanzado, Analysis Services elimina el archivo con la marca de tiempo más antigua en su nombre.  
   
  Para usar esta configuración, realice lo siguiente:  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36202824"
   
  La configuración del registro de consultas se aplica a todo el servidor. La configuración que especifique se usará en todas las bases de datos que se ejecuten en este servidor.  
   
- ![Consultar la configuración del registro en Management Studio](../media/ssas-querylogsettings.png "configuración de registro de consultas en Management Studio")  
+ ![Consultar la configuración del registro en Management Studio](../media/ssas-querylogsettings.png "configuración del registro de consultas en Management Studio")  
   
  Una vez especificados los ajustes de configuración, ejecute una consulta MDX varias veces. Si el muestreo está establecido en 10, ejecute la consulta 11 veces. Compruebe que se crea la tabla. En Management Studio, conecte el motor de base de datos relacional, abra la carpeta de la base de datos, abra la carpeta **Tablas** y compruebe que hay un archivo **OlapQueryLog** . Si no ve la tabla inmediatamente, actualice la carpeta para recoger cualquier cambio que haya en su contenido.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "36202824"
   
  A menos que el soporte técnico de Microsoft indique lo contrario, la mayoría de los administradores usan la configuración predeterminada. Este artículo anterior de Knowledge Base aún se utiliza para proporcionar instrucciones sobre cómo configurar los archivos de volcado: [Cómo configurar Analysis Services para generar archivos de volcado de memoria](http://support.microsoft.com/kb/919711).  
   
- La configuración que se modificará con más probabilidad es la `CreateAndSendCrashReports` configuración que se usa para determinar si se generará un archivo de volcado de memoria.  
+ El valor más probable que se modifiquen de configuración es la `CreateAndSendCrashReports` usa para determinar si se generará un archivo de volcado de memoria.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -186,6 +186,6 @@ ms.locfileid: "36202824"
 ## <a name="see-also"></a>Vea también  
  [Administración de una instancia de Analysis Services](analysis-services-instance-management.md)   
  [Introducción a la supervisión de Analysis Services con SQL Server Profiler](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
- [Configurar propiedades del servidor de Analysis Services](../server-properties/server-properties-in-analysis-services.md)  
+ [Configurar las propiedades del servidor en Analysis Services](../server-properties/server-properties-in-analysis-services.md)  
   
   

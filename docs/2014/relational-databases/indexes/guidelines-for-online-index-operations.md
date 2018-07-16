@@ -5,10 +5,9 @@ ms.date: 11/11/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustered indexes, online operations
 - online index operations
@@ -18,20 +17,20 @@ helpviewer_keywords:
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: 62
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0a7ea8359dfaff23a2d3926c1cfa7ccc41065a2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e027535f9b70acc518bd6fa3e3f4324007021311
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316135"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
   Al realizar operaciones de índice en línea se aplican las siguientes directrices:  
   
--   Índices agrupados deben crearse, reconstruirse o quitarse sin conexión cuando la tabla subyacente contiene los siguientes tipos de datos de objetos grandes (LOB): `image`, **ntext**, y `text`.  
+-   Índices agrupados deben crearse, reconstruirse o quitarse sin conexión cuando la tabla subyacente contienen los siguientes tipos de datos de objetos grandes (LOB): `image`, **ntext**, y `text`.  
   
 -   Los índices de tablas temporales locales no se pueden crear, reconstruir o quitar en línea. Esta restricción no se aplica a los índices de tablas temporales globales.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "36199129"
   
  Aunque se recomiendan las operaciones en línea, se debe evaluar el entorno y los requisitos específicos. Puede ser mejor ejecutar operaciones de índice sin conexión. Al hacerlo así, los usuarios tienen acceso restringido a los datos durante la operación, pero la operación acaba más rápido y utiliza menos recursos.  
   
- En los equipos con varios procesadores que ejecutan [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], las instrucciones sobre índices pueden usar más procesadores para realizar las operaciones de examen y ordenación asociadas a dicha instrucción, al igual que hacen otras consultas. Puede utilizar la opción de índice MAXDOP para controlar el número de procesadores dedicados a la operación de índice en línea. De este modo, puede equilibrar los recursos utilizados por la operación de índice con los de los usuarios simultáneos. Para obtener más información, vea [Configurar operaciones de índice en paralelo](configure-parallel-index-operations.md). Para obtener más información acerca de las ediciones de SQL Server que admiten indizadas en paralelo las operaciones, vea [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ En los equipos con varios procesadores que ejecutan [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], las instrucciones sobre índices pueden usar más procesadores para realizar las operaciones de examen y ordenación asociadas a dicha instrucción, al igual que hacen otras consultas. Puede utilizar la opción de índice MAXDOP para controlar el número de procesadores dedicados a la operación de índice en línea. De este modo, puede equilibrar los recursos utilizados por la operación de índice con los de los usuarios simultáneos. Para obtener más información, vea [Configurar operaciones de índice en paralelo](configure-parallel-index-operations.md). Para obtener más información acerca de las ediciones de SQL Server que admiten indexadas en paralelo las operaciones, consulte [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Debido a que un bloqueo S o un bloqueo Sch-M se conservan en la fase final de la operación de índice, debe tener cuidado cuando ejecute una operación de índice en línea dentro de una transacción de usuario explícita, como el bloque BEGIN TRANSACTION...COMMIT. De esta manera el bloqueo se conserva hasta el final de la transacción y se impide la simultaneidad de usuarios.  
   

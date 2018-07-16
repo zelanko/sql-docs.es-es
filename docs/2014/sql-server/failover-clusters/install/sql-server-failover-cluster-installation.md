@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e5c5909a4cd6a098498029abaccd77ce568dc217
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9b11a175ddf9a7a12610c2f3588e4bbf42ac7802
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317845"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Instalación de clúster de conmutación por error de SQL Server
   Para instalar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , debe crear y configurar una instancia en clúster de conmutación por error mediante la ejecución del programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -87,6 +87,6 @@ ms.locfileid: "36107114"
  [Antes de instalar los clústeres de conmutación por error](before-installing-failover-clustering.md)   
  [Crear un nuevo clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](create-a-new-sql-server-failover-cluster-setup.md)   
  [Instalar a SQL Server 2014 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [Actualizar un clúster de conmutación por error SQL Server](../windows/upgrade-a-sql-server-failover-cluster-instance.md)  
+ [Actualizar un clúster de conmutación por error de SQL Server](../windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   

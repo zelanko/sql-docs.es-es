@@ -1,5 +1,5 @@
 ---
-title: Conectar una aplicación de servicio PowerPivot a una aplicación Web de SharePoint en Administración Central | Documentos de Microsoft
+title: Conectar una aplicación de servicio PowerPivot a una aplicación Web de SharePoint en Administración Central | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6e2f65e97eaff15057b5d427a09f015b7bcdd218
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0e206306e959df9e61e2f07d842fad7900cabb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272031"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>Conectar una aplicación de servicio PowerPivot a una aplicación Web de SharePoint en Administración Central
   Una aplicación de servicio PowerPivot puede ser utilizada por cualquier número de aplicaciones web de SharePoint de la granja de servidores. Para hacer que una aplicación de servicio PowerPivot esté disponible, agréguela a una lista de asociaciones de servicio.  
@@ -29,11 +29,11 @@ ms.locfileid: "36200448"
   
  Este tema contiene las siguientes secciones:  
   
- [Agregar la aplicación de servicios de PowerPivot al grupo predeterminado](#default)  
+ [Agregar la aplicación de servicios PowerPivot al grupo predeterminado](#default)  
   
  [Agregar una lista de asociaciones de servicio personalizado de aplicación de servicios de PowerPivot](#custom)  
   
-##  <a name="default"></a> Agregar la aplicación de servicios de PowerPivot al grupo predeterminado  
+##  <a name="default"></a> Agregar la aplicación de servicios PowerPivot al grupo predeterminado  
  Una lista de asociaciones de servicio es una lista de servicios compartidos que proporcionan recursos a otras aplicaciones web de SharePoint en la granja. Hay un grupo predeterminado de asociaciones del servicio para la granja.  
   
  Para estar en la lista, una aplicación de servicio PowerPivot puede agregarse al crear la aplicación o después siguiendo estos pasos.  

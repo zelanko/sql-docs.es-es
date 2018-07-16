@@ -1,5 +1,5 @@
 ---
-title: Configurar la actualización de datos dedicada o procesamiento de una sola consulta (PowerPivot para SharePoint) | Documentos de Microsoft
+title: Configurar la actualización de datos dedicada o procesamiento de una sola consulta (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d84528c4d4db768ba58f125e15175604aed7af0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b56558bf2e7d49f336d756699f8b5dc59f2ac58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222305"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Configurar la actualización de datos dedicada o el proceso de una sola consulta (PowerPivot para SharePoint)
   En el modo integrado de SharePoint, se puede configurar una instancia del servidor de Analysis Services para admitir un tipo específico de solicitud de procesamiento, como la actualización de datos o el procesamiento de una sola consulta. De forma predeterminada, ambos tipos de solicitudes de carga están habilitados. Puede desactivar cualquiera de los tipos para crear un motor de consulta dedicado o un servidor de actualización de datos.  
@@ -47,7 +47,7 @@ ms.locfileid: "36108227"
   
 5.  En Uso de instancia del servidor, elija entre lo siguiente:  
   
-    1.  Desactive la casilla de verificación **habilita la carga de las bases de datos de solo lectura** para desactivar el procesamiento de consultas a petición que se produce cuando un usuario abre un libro que contiene datos de PowerPivot.  
+    1.  Desactive la casilla de verificación **habilita la carga de bases de datos de solo lectura** para desactivar el procesamiento de consulta y a petición que se produce cuando un usuario abre un libro que contiene datos PowerPivot.  
   
     2.  Desactive la casilla de verificación **habilita la carga de bases de datos para la actualización** para desactivar la actualización de datos programada.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36108227"
   
 |Configuración|Valores válidos|Descripción|  
 |-------------|------------------|-----------------|  
-|Valor predeterminado|Se calcula en función de la RAM.|El valor predeterminado se basa en la cantidad de memoria disponible dividida entre 4 gigabytes. Una fórmula calcula el valor predeterminado para que la configuración se pueda ajustar en función de las capacidades del sistema.<br /><br /> Nota: El divisor de 4 gigabytes se seleccionó según el uso de memoria RAM para un muestreo grande de orígenes de datos de PowerPivot reales. No se basa en la arquitectura física o lógica de PowerPivot.|  
+|Valor predeterminado|Se calcula en función de la RAM.|El valor predeterminado se basa en la cantidad de memoria disponible dividida entre 4 gigabytes. Una fórmula calcula el valor predeterminado para que la configuración se pueda ajustar en función de las capacidades del sistema.<br /><br /> Nota: El divisor de 4 gigabytes se seleccionó según el uso de memoria RAM para un muestreo grande de orígenes de datos PowerPivot reales. No se basa en la arquitectura física o lógica de PowerPivot.|  
 |Valor máximo|Se calcula en función del número de CPU.|El número máximo de trabajos simultáneos que puede especificar se basa en el número de procesadores del equipo. Por ejemplo, en un equipo de cuatro núcleos y cuatros sockets, el número máximo de trabajos que puede ejecutar de forma simultánea es 16.|  
   
 #### <a name="increasing-the-default-value-to-a-higher-value"></a>Aumentar el valor predeterminado a un valor más alto  
@@ -87,6 +87,6 @@ ms.locfileid: "36108227"
  Cada trabajo de actualización de datos tendrá características de carga diferentes que dependen del número y tamaño de los orígenes de datos que se están actualizando. Los libros que tienen un único origen de datos con un número menor de filas tienen una carga de procesamiento mucho más ligera que un libro que tiene numerosos orígenes de datos y conjuntos de filas muy grandes.  
   
 ## <a name="see-also"></a>Vea también  
- [Actualización de datos de PowerPivot con SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
+ [Actualización de datos PowerPivot con SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
   
   

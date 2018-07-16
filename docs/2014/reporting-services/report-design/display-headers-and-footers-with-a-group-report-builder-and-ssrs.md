@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b1870bc8fdff52294fa2430534a7aed0b0c96680
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6b8813ab6a1d623cf8578bb498ffa4435438c37c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315625"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Mostrar encabezados y pies de página con un grupo (Generador de informes y SSRS)
   Puede ayudar a controlar si una fila estática, como un encabezado o un pie de grupo, se representa en filas dinámicas asociadas a un grupo en una región de datos Tablix.  
@@ -73,8 +73,8 @@ ms.locfileid: "36114204"
 5.  (Opcional) Obtenga una vista previa del informe. Donde sea posible, el representador de informes mantendrá este miembro con los miembros de grupo de columnas especificados.  
   
 ## <a name="see-also"></a>Vea también  
- [Columnas, filas y celdas de la región de datos Tablix &#40;generador de informes&#41; y SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
- [Áreas de la región de datos Tablix &#40;el generador de informes SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
+ [Las columnas, filas y celdas de la región de datos Tablix &#40;generador de informes&#41; y SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [Áreas de la región de datos Tablix &#40;generador de informes y SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tablas &#40;Generador de informes y SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrices &#40;Generador de informes y SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

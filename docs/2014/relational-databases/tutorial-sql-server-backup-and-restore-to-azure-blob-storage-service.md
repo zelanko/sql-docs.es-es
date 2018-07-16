@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: SQL Server Backup and Restore a Windows Azure Blob Storage Service | Documentos de Microsoft'
+title: 'Tutorial: Copia de seguridad SQL Server y la restauración en Windows Azure Blob Storage Service | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85f16d4f3a96c8d661981a998eab93eaffdc67d7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 856ff3ec55236b8216c04fbffeb4f5abed6dbc5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188022"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>Tutorial: copias de seguridad y restauración de SQL Server en el servicio Azure Blob Storage
   Este es el tutorial Introducción a las copias de seguridad y la restauración de SQL Server con el servicio de almacenamiento Blob de Windows Azure. Este tutorial le ayudará a entender cómo escribir copias de seguridad en el servicio almacenamiento Blob de Windows Azure y cómo restaurar desde el mismo.  
@@ -27,13 +27,13 @@ ms.locfileid: "36204559"
 ## <a name="what-you-will-learn"></a>Aprendizaje  
  Este tutorial muestra cómo crear una cuenta de almacenamiento de Windows, un contenedor de blobs, crear credenciales para tener acceso a la cuenta de almacenamiento, escribir una copia de seguridad en el servicio de blob y realizar una restauración simple. El tutorial está compuesto por cuatro lecciones:  
   
- [Lección 1: Crear objetos de almacenamiento de Azure de Windows](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
+ [Lección 1: Crear objetos de Azure Storage](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
  En esta lección, creará una cuenta de almacenamiento de Windows Azure y un contenedor de blobs.  
   
  [Lección 2: Crear una credencial de SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  En esta lección, creará una credencial para almacenar la información de seguridad usada para tener acceso a la cuenta de almacenamiento de Windows Azure.  
   
- [Lección 3: Escribir una copia de seguridad completa de la base de datos en el servicio de almacenamiento de blobs de Azure de Windows](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
+ [Lección 3: Escribir una copia de seguridad completa de la base de datos en el servicio Azure Blob Storage](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
  En esta lección, emitirá una instrucción T-SQL para escribir una copia de seguridad de la base de datos AdventureWorks2012 en el servicio de almacenamiento Blob de Windows Azure.  
   
  [Lección 4: Realizar una restauración desde una copia de seguridad completa de la base de datos](../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)  
@@ -53,7 +53,7 @@ ms.locfileid: "36204559"
 ### <a name="additional-reading"></a>Lecturas adicionales  
  A continuación se indican algunas lecturas recomendadas para entender los conceptos y las prácticas recomendadas cuando se usa el servicio de almacenamiento Blob de Windows Azure para copias de seguridad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-1.  [SQL Server Backup and Restore with Windows Azure Blob Storage Service](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+1.  [Copia de seguridad y restauración de SQL Server con el servicio Windows Azure Blob Storage](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
 2.  [Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services]
 - links [Reporting Services], URL access
@@ -20,13 +20,13 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1e969deea2a5a2ca99af25a763adf324818ce741
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11542b799e24e33fea852e8cac9e118349787a03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216475"
 ---
 # <a name="url-access-ssrs"></a>Acceso URL (SSRS)
   El acceso URL del servidor de informes de SQL Server Reporting Services (SSRS) permite enviar comandos a un servidor de informes a través de una solicitud URL. Por ejemplo, puede personalizar la representación de un informe en una biblioteca de SharePoint o un servidor de informes en modo nativo. Es posible que haya visto el informe usando un conjunto específico de valores de parámetro de informe o tal vez haya consultado una determina página de su interés. Puede encapsular esta información en la dirección URL usando los parámetros de acceso URL predefinidos. Puede personalizar más el modo en el que el servidor de informes procesa el informe incorporando parámetros sobre los formatos de representación o sobre la apariencia del visor de informes. Puede pegar esta dirección URL directamente en un mensaje de correo electrónico o una página web para permitir que otras personas tengan acceso al informe del mismo modo en el explorador.  
@@ -43,7 +43,7 @@ ms.locfileid: "36106037"
   
 -   Administrar sesiones del informe.  
   
- Para obtener la lista completa de comandos y los valores disponibles a través del acceso de dirección URL, vea [URL Access Parameter Reference](url-access-parameter-reference.md).  
+ Para obtener una lista completa de comandos y valores disponibles a través del acceso de dirección URL, vea [URL Access Parameter Reference](url-access-parameter-reference.md).  
   
 ## <a name="url-access-concepts"></a>Conceptos del acceso URL  
  Las solicitudes URL que se dirigen a un servidor de informes contienen parámetros que se procesan en el servidor de informes. La manera en la que el servidor de informes administra las solicitudes URL depende de los parámetros, prefijos de parámetro y tipos de elementos que están incluidos en la dirección URL. Las direcciones URL del servidor de informes se rigen por las instrucciones de formato de dirección URL propuestas por el estándar de borrador W3C/IETF del World Wide Web Consortium. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] es compatible con la mayor parte de los exploradores de Internet o aplicaciones que admiten el direccionamiento con direcciones URL estándar.  
@@ -108,7 +108,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  Texto de la dirección URL que corresponde al valor del parámetro que se va a usar.  
   
- **Nota:** para obtener una lista de los parámetros de acceso URL disponibles, consulte [URL Access Parameter Reference](url-access-parameter-reference.md). Para obtener ejemplos que pasar parámetros de informe en la dirección URL, vea [pasar un parámetro de informe Within a URL](pass-a-report-parameter-within-a-url.md).  
+ **Nota:** para obtener una lista de los parámetros de acceso URL disponibles, consulte [URL Access Parameter Reference](url-access-parameter-reference.md). Para pasar parámetros de informe en la dirección URL de ejemplos, vea [pasar un parámetro de informe Within a URL](pass-a-report-parameter-within-a-url.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

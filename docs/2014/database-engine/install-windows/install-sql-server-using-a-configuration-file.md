@@ -1,5 +1,5 @@
 ---
-title: Instalar SQL Server 2014 mediante un archivo de configuración | Documentos de Microsoft
+title: Instalar SQL Server 2014 mediante un archivo de configuración | Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 33039ca7f957614e4c17d6dbff7a9f68aa21404e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9536c674f9bf5733fb6d20109ee03206a50570c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231865"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>Instalar SQL Server 2014 mediante un archivo de configuración
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación permite generar un archivo de configuración basado en las entradas de tiempo de ejecución y en la configuración predeterminada del sistema. Puede usar el archivo de configuración para implementar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en toda la empresa con la misma configuración. También puede normalizar las instalaciones manuales en toda la empresa mediante la creación de un archivo por lotes que inicie Setup.exe.  
@@ -60,7 +60,7 @@ FEATURES=SQL,Tools
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  Siga los pasos del asistente hasta llegar a la página **Listo para instalar** . La ruta de acceso al archivo de configuración se especifica en la sección que así lo indica en la página **Listo para instalar** . Para obtener más información sobre cómo instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [instalar SQL Server 2014 desde el Asistente para la instalación &#40;el programa de instalación&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
+2.  Siga los pasos del asistente hasta llegar a la página **Listo para instalar** . La ruta de acceso al archivo de configuración se especifica en la sección que así lo indica en la página **Listo para instalar** . Para obtener más información sobre cómo instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [instalar SQL Server 2014 desde el Asistente para instalación &#40;instalación&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
   
 3.  Cancele la instalación sin completarla realmente para generar el archivo INI.  
   
@@ -145,6 +145,6 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
 ## <a name="see-also"></a>Vea también  
  [Instalar a SQL Server 2014 desde el símbolo del sistema](install-sql-server-from-the-command-prompt.md)   
  [Instalación de clúster de conmutación por error de SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
- [Actualizar un clúster de conmutación por error SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
+ [Actualizar un clúster de conmutación por error de SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   

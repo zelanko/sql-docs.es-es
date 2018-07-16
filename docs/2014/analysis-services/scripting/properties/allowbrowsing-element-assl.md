@@ -1,5 +1,5 @@
 ---
-title: Elemento AllowBrowsing (ASSL) | Documentos de Microsoft
+title: Elemento AllowBrowsing (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllowBrowsing element
 ms.assetid: e5d09f8c-080b-4013-8c6a-0c9775e6ab25
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 722923cff6a839b6882c5a44de67ca075d0ea46f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26c93ea360fb7036179375ff62aa6f182c9b790f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282011"
 ---
 # <a name="allowbrowsing-element-assl"></a>Elemento AllowBrowsing (ASSL)
-  Define si los miembros de un [rol](../objects/role-element-assl.md) elemento tiene permiso de exploración en un [MiningModel](../objects/miningmodel-element-assl.md) elemento.  
+  Define si los miembros de un [rol](../objects/role-element-assl.md) elemento tiene el permiso de exploración en un [MiningModel](../objects/miningmodel-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36107306"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `AllowBrowsing` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MiningModelPermission>.  
+ El elemento que se corresponde con el elemento primario de `AllowBrowsing` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MiningModelPermission>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

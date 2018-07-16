@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de reglas de Color, General mapa | Documentos de Microsoft
+title: Asignar el cuadro de diálogo de reglas de Color, General | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10541"
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 103e038b715f07c50d702a659f396f9cdd34ffee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2de58631464b4d96ebde5cac82778f6b365e5b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201533"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238525"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Cuadro de diálogo de Reglas de color de mapa, General
   Seleccione **General** en el cuadro de diálogo **Propiedades de reglas de color** para definir las opciones de color de los elementos de mapa en esta capa. Entre los elementos de mapa se incluyen los polígonos, líneas y puntos. Las reglas de color se pueden aplicar cuando se haya creado una relación entre los elementos de mapa basada en los datos espaciales y los datos analíticos desde un campo de conjunto de datos o desde un campo de origen de datos espaciales.  
@@ -36,7 +36,7 @@ ms.locfileid: "36201533"
  **Visualizar datos mediante la paleta de colores**  
  Seleccione esta opción para visualizar los datos analíticos utilizando los colores de una paleta de colores concreta.  
   
- **Visualizar datos mediante el uso de rangos de colores**  
+ **Visualizar datos mediante los rangos de colores**  
  Seleccione esta opción para visualizar los datos analíticos utilizando una gama de colores para cada elemento de mapa. Por ejemplo, al especificar rojo como color inicial, amarillo como color medio y verde como color final, los valores del rango inferior son rojos, los valores del rango intermedio son amarillos y los valores en el rango superior son verdes.  
   
  **Visualizar datos mediante el uso de colores personalizados**  
@@ -64,6 +64,6 @@ ms.locfileid: "36201533"
   
 ## <a name="see-also"></a>Vea también  
  [Mapas &#40;Generador de informes y SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;el generador de informes SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;generador de informes y SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

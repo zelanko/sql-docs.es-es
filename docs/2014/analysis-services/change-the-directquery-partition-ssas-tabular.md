@@ -1,5 +1,5 @@
 ---
-title: Cambiar la partición de DirectQuery (SSAS Tabular) | Documentos de Microsoft
+title: Cambiar la partición de DirectQuery (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f9df1e66-dd23-41b4-95eb-af110d10eda4
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5c777c0ce70d06b979fbc26ac8f50df1bdbd858d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3115805cf5d6d8fabfa67100305f7bdffea1d339
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312685"
 ---
 # <a name="change-the-directquery-partition-ssas-tabular"></a>Cambiar la partición DirectQuery (SSAS Tabular)
   Dado que únicamente se puede designar una partición de una tabla como la partición DirectQuery, Analysis Services utiliza de forma predeterminada la primera partición que se creó en la tabla. Durante la creación del proyecto de modelos, puede cambiar la partición DirectQuery utilizando el cuadro de diálogo Administrador de particiones de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para los modelos implementados, puede cambiar la partición DirectQuery utilizando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -49,6 +49,6 @@ ms.locfileid: "36197049"
 4.  Elija una partición diferente en la lista desplegable **Nombre de partición** y, a continuación, cambie las opciones de procesamiento de la partición si es necesario.  
   
 ## <a name="see-also"></a>Vea también  
- [Las particiones &#40;SSAS Tabular&#41;](tabular-models/partitions-ssas-tabular.md)  
+ [Las particiones &#40;Tabular de SSAS&#41;](tabular-models/partitions-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Transferir el Editor de la tarea de trabajos (página General) | Documentos de Microsoft
+title: Transferir el Editor de la tarea de trabajos (página General) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferjobstask.general.f1
 helpviewer_keywords:
 - Transfer Jobs Task Editor
 ms.assetid: 96531920-92d4-4a3b-a38a-6f0c8bc78ada
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 823c41b94b712a49660f17b4db7d18025f8a54bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ce0f81b113a248223265b8e2df3613a1b79c26a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252607"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>Editor de la tarea Transferir trabajos (página General)
   Utilice la página **General** del cuadro de diálogo **Editor de la tarea Transferir trabajos** para asignar un nombre y describir la tarea Transferir trabajos. Para obtener más información acerca de la tarea Transferir trabajos, vea [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "36203978"
 ## <a name="see-also"></a>Vea también  
  [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
- [Editor de la tarea de trabajos de transferencia &#40;trabajos de página&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
+ [Editor de la tarea de trabajos de transferencia &#40;página de trabajos&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
  [Página Expresiones](expressions/expressions-page.md)  
   
   

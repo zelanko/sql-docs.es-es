@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], Flat File
 - connections [Integration Services], flat files
@@ -20,13 +20,13 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c8af018faa1ed8de9d47cb640e485ce17d5cbe56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56b90bb24e67b5cdb511a5729c4c7396aed5e93d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285611"
 ---
 # <a name="flat-file-connection-manager"></a>Administrador de conexiones de archivos planos
   Un administrador de conexiones de archivos planos permite a un paquete obtener acceso a datos en un archivo plano. Por ejemplo, el origen y el destino de archivos planos pueden hacer que los administradores de conexión de archivos planos extraigan y carguen datos.  
@@ -39,13 +39,13 @@ ms.locfileid: "36198042"
  Si actualiza las longitudes de columna en el administrador de conexiones de archivos planos una vez que ya ha agregado y configurado el origen de archivo plano que utiliza el administrador de conexiones, no tiene que cambiar manualmente el tamaño de las columnas de salida en el origen de archivo plano. Cuando abre el cuadro de diálogo **Origen de archivo plano** , el origen de archivo plano proporciona una opción para sincronizar los metadatos de columna.  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>Configuración del administrador de conexiones de archivos planos  
- Cuando se agrega un administrador de conexión de archivos planos a un paquete, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una conexión de administrador que se resuelve en una conexión de archivos planos en tiempo de ejecución, Establece las propiedades de conexión de archivos planos y agrega el Administrador de conexión de archivos planos para el `Connections` recopilación del paquete.  
+ Cuando se agrega un administrador de conexiones de archivos planos a un paquete, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una conexión de administrador que se resuelve como una conexión de archivos planos en tiempo de ejecución, Establece las propiedades de conexión de archivos planos y agrega el Administrador de conexiones de archivos planos a la `Connections` recopilación del paquete.  
   
  El `ConnectionManagerType` propiedad del Administrador de conexiones se establece en `FLATFILE`.  
   
  De forma predeterminada, el administrador de conexiones de archivos planos comprueba siempre si hay un delimitador de filas de datos sin comillas e inicia una nueva fila cuando se encuentra un delimitador de filas. Esta opción permite al administrador de conexiones analizar correctamente los archivos con filas que son campos de columna ausentes.  
   
- En algunos casos, si se deshabilita esta característica, se puede mejorar el rendimiento del paquete. Puede deshabilitar esta característica estableciendo la propiedad del Administrador de conexión de archivos planos **AlwaysCheckForRowDelimiters**a `False`.  
+ En algunos casos, si se deshabilita esta característica, se puede mejorar el rendimiento del paquete. Puede deshabilitar esta característica estableciendo la propiedad del Administrador de conexiones de archivos planos **AlwaysCheckForRowDelimiters**a `False`.  
   
  Puede configurar el administrador de conexiones de archivos planos de las maneras siguientes:  
   

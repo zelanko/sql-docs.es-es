@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos EmptyResult (XMLA) | Documentos de Microsoft
+title: Tipo de datos EmptyResult (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - EmptyResult data type
 ms.assetid: 63818123-acbb-4220-9d60-1aa20a7326a1
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bba727b2d7d612fa59c99665bd16d936da137fb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea04f2f170a61bafed2fa06cdb3260668120899c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257161"
 ---
 # <a name="emptyresult-data-type-xmla"></a>Tipo de datos EmptyResult (XMLA)
-  Define un tipo de datos derivado que representa un [raíz](../xml-elements-properties/root-element-xmla.md) elemento que no devuelve datos desde una [Discover](../xml-elements-methods-discover.md) o [Execute](../xml-elements-methods-execute.md) llamada al método.  
+  Define un tipo de datos derivado que representa un [raíz](../xml-elements-properties/root-element-xmla.md) elemento que no devuelve datos desde un [Discover](../xml-elements-methods-discover.md) o [Execute](../xml-elements-methods-execute.md) llamada al método.  
   
  **Espacio de nombres** urn:schemas-microsoft-com:xml-analysis:empty  
   

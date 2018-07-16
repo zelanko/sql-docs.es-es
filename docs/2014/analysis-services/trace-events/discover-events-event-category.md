@@ -1,5 +1,5 @@
 ---
-title: Detectar la categoría de eventos | Documentos de Microsoft
+title: Categoría de eventos de eventos detección | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Discover Events event category
 - discover events [Analysis Services]
 - event classes [Analysis Services], discover events
 ms.assetid: fb964bac-dc68-4ad0-80f5-aeb677277169
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 73530937aaad5a364dd6f802995f69ccdf224c2b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d442af2b41c5f1ce91a022aae037427a59efd475
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190875"
 ---
 # <a name="discover-events-event-category"></a>eventos de detección, categoría de eventos
   La categoría de eventos Eventos de detección tiene las clases de eventos que se describen en la siguiente tabla.  

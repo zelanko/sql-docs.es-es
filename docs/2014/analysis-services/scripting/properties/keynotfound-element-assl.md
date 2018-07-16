@@ -1,5 +1,5 @@
 ---
-title: Elemento KeyNotFound (ASSL) | Documentos de Microsoft
+title: Elemento KeyNotFound (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyNotFound element
 ms.assetid: 2a93bbfa-2409-4e94-8b68-926532895a4c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 545ae163b4dda53adb60f5300e7f8b75cf926d52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58228d8f4029fecf22062a3e3c5c0c9adf3eafe1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281811"
 ---
 # <a name="keynotfound-element-assl"></a>Elemento KeyNotFound (ASSL)
   Especifica cómo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] responde cuando encuentra un error de integridad referencial.  

@@ -1,5 +1,5 @@
 ---
-title: Quitar columnas de una estructura de minería de datos | Documentos de Microsoft
+title: Quitar columnas de una estructura de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], columns
 - removing columns
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - columns [data mining], mining structure columns
 ms.assetid: 41073ffe-9351-416b-9f0c-62634bc213f9
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 85906ae2b1388b7937f5420ba04144426475ffc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 61bca79fe550622ac5c5967a71a2705aa8891536
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286341"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>Quitar columnas de una estructura de minería de datos
   Puede usar el Diseñador de minería de datos para quitar columnas de la estructura de minería de datos después de que haya sido creada. Algunos ejemplos de razones para quitar una columna de la estructura de minería de datos son:  

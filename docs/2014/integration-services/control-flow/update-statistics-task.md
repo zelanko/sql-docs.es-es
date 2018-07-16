@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.updatestatisticstask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45e4cc5b9e27b08d226dd59114aa9cee48356f2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c81bd46453a8f34d5428808361ed2be31c3f5c89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108141"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274991"
 ---
 # <a name="update-statistics-task"></a>Tarea Actualizar estadísticas
   La tarea Actualizar estadísticas actualiza información sobre la distribución de valores clave para uno o varios grupos de estadísticas (colecciones) de la tabla o vista indizada especificada. Para obtener más información, vea [Statistics](../../relational-databases/statistics/statistics.md).  

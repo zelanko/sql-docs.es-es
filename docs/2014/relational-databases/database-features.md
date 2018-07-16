@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04518abb-8581-47c8-a601-ee9136c3c0eb
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bc9aa961911f8686ba3921fcf773ed47ecfb43a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: d1f3b7908e0ea58dad3f91b7a877fe5d64a1762a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197187"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292695"
 ---
 # <a name="database-features"></a>Características de la base de datos
   Esta sección contiene las características y las tareas asociadas a bases de datos, objetos de base de datos, tipos de datos y mecanismos usados para trabajar con datos o para administrarlos.  
@@ -38,6 +38,6 @@ ms.locfileid: "36197187"
 |[Búsqueda &#40;SQL Server&#41;](../database-engine/search-sql-server.md)|[Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](blob/binary-large-object-blob-data-sql-server.md)||  
 |[Funciones definidas por el usuario](user-defined-functions/user-defined-functions.md)|[Aplicaciones de capa de datos](data-tier-applications/data-tier-applications.md)||  
 |[Estadísticas](statistics/statistics.md)|[El registro de transacciones &#40;SQL Server&#41;](logs/the-transaction-log-sql-server.md)||  
-|[Guías de plan](performance/plan-guides.md)|[Los puntos de comprobación de la base de datos &#40;SQL Server&#41;](logs/database-checkpoints-sql-server.md)||  
+|[Guías de plan](performance/plan-guides.md)|[Los puntos de control de la base de datos &#40;SQL Server&#41;](logs/database-checkpoints-sql-server.md)||  
   
   

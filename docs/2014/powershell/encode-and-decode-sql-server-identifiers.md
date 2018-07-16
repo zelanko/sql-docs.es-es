@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: f7651c43569003862f41a62f5e2a9917f3d534a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c2a997ec2df79b600b73be0bd5a33f7144fe119
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195365"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Codificar y descodificar identificadores de SQL Server
   Los identificadores delimitados de SQL Server a veces contienen caracteres no admitidos en las rutas de acceso de Windows PowerShell. Estos caracteres se pueden especificar codificando sus valores hexadecimales.  
@@ -34,7 +34,7 @@ ms.locfileid: "36202048"
  El cmdlet **Encode-SqlName** toma como entrada un identificador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Genera una cadena con todos los caracteres que no son admitidos por el lenguaje de Windows PowerShell codificados con "%xx". El cmdlet **Decode-SqlName** toma como entrada un identificador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] codificado y devuelve el identificador original.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
- El `Encode-Sqlname` y `Decode-Sqlname` cmdlets solo codifican o descodifican caracteres que se permiten en los identificadores delimitados de SQL Server, pero no se admiten en las rutas de acceso de PowerShell. Estos son los caracteres codificados por **Encode-SqlName** y descodificados por **Decode-SqlName**:  
+ El `Encode-Sqlname` y `Decode-Sqlname` cmdlets solo codifican o descodifican caracteres que se permiten en los identificadores delimitados de SQL Server, pero no se admiten en las rutas de PowerShell. Estos son los caracteres codificados por **Encode-SqlName** y descodificados por **Decode-SqlName**:  
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
@@ -66,7 +66,7 @@ Set-Location (Encode-SqlName "Table:Test")
 ##  <a name="DecodeIdent"></a> Descodificar un identificador  
  **Descodificar un identificador de SQL Server de una ruta de PowerShell**  
   
- Use la `Decode-Sqlname` cmdlet para reemplazar las codificaciones hexadecimales con caracteres representados por la codificación.  
+ Use el `Decode-Sqlname` cmdlet para reemplazar las codificaciones hexadecimales con caracteres representados por la codificación.  
   
 ### <a name="examples-decoding"></a>Ejemplos (descodificación)  
  Este ejemplo devuelve "Table:Test":  

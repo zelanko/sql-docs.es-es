@@ -1,5 +1,5 @@
 ---
-title: Elemento EndOfData (ASSL) | Documentos de Microsoft
+title: Elemento EndOfData (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - EndOfData element
 ms.assetid: 4cee48bc-d486-4125-9d65-f323c6ec9d09
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b82240de66655ac829566adc56bc2d48c8afdf1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1640b052f72e28790a131ddd63eecaa833ced52a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285961"
 ---
 # <a name="endofdata-element-assl"></a>Elemento EndOfData (ASSL)
-  Indica el final de los datos recibidos de un [PushedDataSource](../data-type/datasource-data-type-assl.md) elemento.  
+  Indica el final de los datos recibidos desde un [PushedDataSource](../data-type/datasource-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   

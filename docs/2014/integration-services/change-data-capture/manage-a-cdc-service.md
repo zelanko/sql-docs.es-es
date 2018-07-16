@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 69e44adb0ee84c2831062acd7cd35432f5de5af5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0c2078adeff636f11acdc86b78355c43c46a30a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329925"
 ---
 # <a name="manage-a-cdc-service"></a>Administrar un servicio CDC
   Puede usar la Consola del diseñador CDC para ver los servicios que creó con la Consola de configuración del servicio CDC y administrar todas las instancias del servicio CDC de Oracle.  
@@ -47,7 +47,7 @@ ms.locfileid: "36198740"
  Haga clic en **Detener todas las instancias** para detener la captura de datos modificados para todas las instancias del servicio.  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo crear la instancia de base de datos de cambios SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
+ [Creación de la instancia de base de datos de cambios SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Cómo administrar un servicio CDC desde la consola del diseñador CDC](how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [Usar el Asistente para nueva instancia](use-the-new-instance-wizard.md)  
   

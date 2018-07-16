@@ -1,5 +1,5 @@
 ---
-title: Configuración de la instancia | Documentos de Microsoft
+title: Configuración de la instancia | Microsoft Docs
 ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 757b29a54828816de27559715e88b337bd5a06a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bdcfdc34d61b38992c44a220b7b58041cd496200
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274331"
 ---
 # <a name="instance-configuration"></a>Configuración de instancia
   Use la página **Configuración de instancia** del Asistente para instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el fin de especificar si quiere crear una instancia predeterminada o una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si aún no hay instalada ninguna instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se creará una predeterminada, a menos que especifique una instancia con nombre.  
@@ -75,7 +75,7 @@ ms.locfileid: "36199598"
   
 -   En los nombres de instancia no se permiten espacios insertados ni otros caracteres especiales. Tampoco se permiten la barra diagonal inversa (\\), la coma (,), los dos puntos (:), el punto y coma (;), la comilla simple ('), el símbolo Y comercial (&), el guion (-) ni la arroba (@).  
   
--   **Solo los caracteres que son válidos en la página de códigos actual de Windows pueden utilizarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nombres de instancia. Si se utiliza un carácter Unicode no admitido, se producirá un error en el programa de instalación.**  
+-   **Se pueden usar únicamente caracteres que son válidos en la página de códigos actual de Windows en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los nombres de instancia. Si se usa un carácter Unicode no admitido, se producirá un error de instalación.**  
   
  **Instancias y características detectadas**  
  Vea una lista de las instancias y los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalados en el equipo en el que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

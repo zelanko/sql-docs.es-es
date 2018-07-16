@@ -1,5 +1,5 @@
 ---
-title: Relación (pestaña Diseñador de relación de atributos, Diseñador de dimensiones) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Relaciones (pestaña Diseñador de relación de atributos, Diseñador de dimensiones) de los atributos (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.attributerelationships.f1
 ms.assetid: abc8af00-5389-456d-b0f1-ec3e7403d4f9
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ea9c91e9584f2b5e7f561e9982ef1427340c470d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b362285a6ac8cee1551ad9c4bed36e6d9b5e5d0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253217"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Relación de los atributos (pestaña Diseñador de Relación de los atributos, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use la lista **Relación de los atributos** para buscar una relación de atributo concreta en el diagrama de relación de atributo y para administrar dicha relación. Este panel aparece inmediatamente debajo del panel que contiene el diagrama de la relación de los atributos.  

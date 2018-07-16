@@ -1,5 +1,5 @@
 ---
-title: Características compatibles con las ediciones de SQL Server 2014 | Documentos de Microsoft
+title: Características compatibles con las ediciones de SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -14,25 +14,25 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 caps.latest.revision: 126
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9fea176058eeb35d13ab3e104652fdeb13979238
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: dac6134987f8a6d3964d919d1aff7688b74da7fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312315"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Características compatibles con las ediciones de SQL Server 2014
   Este tema proporciona información detallada de las características admitidas por las diversas ediciones de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > **Nota:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponible en una edición de evaluación durante un período de prueba de 180 días. Para obtener más información, consulte el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [sitio Web de Software de prueba](http://go.microsoft.com/fwlink/?LinkId=190955).  
   
-> **Nota:** para características compatibles con las ediciones Evaluation y Developer, vea el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] conjunto de características de Enterprise.  
+> **Nota:** para características compatibles con las ediciones Evaluation y Developer, consulte el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] conjunto de características de Enterprise.  
   
  Para navegar hasta la tabla de una tecnología de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , haga clic en su vínculo:  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36113452"
 |Memoria máxima usada (por instancia de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|Sistema operativo máximo|Sistema operativo máximo|64 GB|64 GB|4 GB|N/D|N/D|  
 |Tamaño máximo de la base de datos relacional|524 PB|524 PB|524 PB|524 PB|10 GB|10 GB|10 GB|  
   
- <sup>1</sup> Enterprise Edition con el servidor y cliente acceso licencia (CAL) en función de licencias (no disponible para nuevos contratos) está limitado a un máximo de 20 núcleos por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancia. No hay ningún límite en el modelo de licencias de servidor basado en núcleos. Para obtener más información, consulte [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+ <sup>1</sup> Enterprise Edition con el servidor y cliente acceso licencia (CAL) en función de licencias (no disponible para nuevos contratos) está limitada a un máximo de 20 núcleos por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancia. No hay ningún límite en el modelo de licencias de servidor basado en núcleos. Para obtener más información, consulte [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ##  <a name="High_availability"></a> Alta disponibilidad  
   
@@ -157,7 +157,7 @@ ms.locfileid: "36113452"
   
 |Nombre de la característica|Enterprise|Business Intelligence|Estándar|Web|Express con Advanced Services|Express con herramientas|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Seguimiento de cambios|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] seguimiento de cambios|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
 |Replicación de mezcla|Sí|Sí|Sí|Sí (solo suscriptor)|Sí (solo suscriptor)|Sí (solo suscriptor)|Sí (solo suscriptor)|  
 |Replicación transaccional|Sí|Sí|Sí|Sí (solo suscriptor)|Sí (solo suscriptor)|Sí (solo suscriptor)|Sí (solo suscriptor)|  
 |Replicación de instantáneas|Sí|Sí|Sí|Sí (solo suscriptor)|Sí (solo suscriptor)|Sí (solo suscriptor)|Sí (solo suscriptor)|  
@@ -176,16 +176,16 @@ ms.locfileid: "36113452"
 |Distributed Replay: herramienta de administración|Sí|Sí|Sí|Sí|Sí|Sí||  
 |Distributed Replay: cliente|Sí|no|Sí|Sí||||  
 |Distributed Replay: controlador|Sí (Enterprise admite hasta 16 clientes, Developer admite solo 1 cliente)|no|Sí (solo admite 1 cliente)|Sí (solo admite 1 cliente)||||  
-|SQL Profiler|Sí|Sí|Sí|Ya no<sup>2</sup>|Ya no<sup>2</sup>|Ya no<sup>2</sup>|Ya no<sup>2</sup>|  
+|SQL Profiler|Sí|Sí|Sí|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|  
 |e[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Sí|Sí|Sí|Sí||||  
 |Paquete de administración de Microsoft System Center Operations Manager|Sí|Sí|Sí|Sí||||  
 |Asistente para la optimización de motor de base de datos (DTA)|Sí|Sí|Sí<sup>3</sup>|Sí<sup>3</sup>||||  
 |Asistente para implementar una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en una máquina virtual de Windows Azure|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Archivos de datos en Windows Azure|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
   
- <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] web, [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Tools y [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] con Advanced Services se pueden personalizar con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] estándar y [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition.  
+ <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] web, [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] con herramientas, y [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] con Advanced Services se pueden personalizar con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] estándar y [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition.  
   
- <sup>3</sup> optimización se habilita solo en las características de edición Standard.  
+ <sup>3</sup> optimización se habilita solo en las características de Standard edition.  
   
 ##  <a name="RDBMS_mgmt"></a> RDBMS Manageability  
   
@@ -208,7 +208,7 @@ ms.locfileid: "36113452"
 |Operaciones indizadas en paralelo|Sí|||||||  
 |Uso automático de vistas indexadas por el optimizador de consultas|Sí|||||||  
 |Comprobación de coherencia en paralelo|Sí|||||||  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] punto de control de utilidad|Sí|||||||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Punto de control de utilidad|Sí|||||||  
 |Bases de datos independientes|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
 |Extensión del grupo de búferes<sup>2</sup>|Sí|Sí|Sí|||||  
   
@@ -224,8 +224,8 @@ ms.locfileid: "36113452"
 |IntelliSense ([!INCLUDE[tsql](../includes/tsql-md.md)] y MDX)|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Sí|Sí|Sí|Sí|Sí|||  
 |Herramientas de edición y diseño de consultas de SQL<sup>1</sup>|Sí|Sí|Sí|||||  
-|Compatibilidad con control de versiones<sup>1</sup>|Sí|Sí|Sí|||||  
-|Edición MDX, depuración y herramientas de diseño<sup>1</sup>|Sí|Sí|Sí|||||  
+|Compatibilidad de control de versiones<sup>1</sup>|Sí|Sí|Sí|||||  
+|Edición MDX, depuración y las herramientas de diseño<sup>1</sup>|Sí|Sí|Sí|||||  
   
  <sup>1</sup> esta característica no está disponible para la versión de 64 bits de Standard edition.  
   
@@ -317,7 +317,7 @@ ms.locfileid: "36113452"
   
 |Nombre de la característica|Enterprise|Business Intelligence|Estándar|Web|Express con Advanced Services|Express con herramientas|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Medidas de suma parcial|Sí|Sí|Ya no<sup>1</sup>|||||  
+|Medidas de suma parcial|Sí|Sí|No<sup>1</sup>|||||  
 |Jerarquías|Sí|Sí|Sí|||||  
 |KPI|Sí|Sí|Sí|||||  
 |perspectivas|Sí|Sí||||||  
@@ -348,7 +348,7 @@ ms.locfileid: "36113452"
 |Reescritura directa|Sí|Sí||||||  
 |Expresiones de medida|Sí|Sí||||||  
   
- <sup>1</sup>LastChild la medida de suma parcial se admite en standard edition, pero otras medidas semiaditivas, como None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren y ByAccount, no lo son. En todas las ediciones se admiten medidas de suma, como Sum, Count, Min y Max, y medidas de no suma (DistinctCount).  
+ <sup>1</sup>medida de suma parcial LastChild the se admite en standard edition, pero no lo son otras medidas de suma parcial, como None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren y ByAccount. En todas las ediciones se admiten medidas de suma, como Sum, Count, Min y Max, y medidas de no suma (DistinctCount).  
   
 ###  <a name="BISemModel_tabular"></a> BI Semantic Model (Tabular)  
   
@@ -363,7 +363,7 @@ ms.locfileid: "36113452"
 |Particiones|Sí|Sí||||||  
 |Modos de almacenamiento In-Memory y DirectQuery (solo tabulares)|Sí|Sí||||||  
   
-###  <a name="PowerPivot"></a> PowerPivot para SharePoint  
+###  <a name="PowerPivot"></a> Modelo de objetos de informe utilizado por las extensiones de representación.  
   
 |Nombre de la característica|Enterprise|Business Intelligence|Estándar|Web|Express con Advanced Services|Express con herramientas|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -442,7 +442,7 @@ ms.locfileid: "36113452"
 |Evaluation|Evaluation|  
   
 ##  <a name="BIClients"></a> Clientes de Business Intelligence  
- Las siguientes aplicaciones cliente de software están disponibles en el centro de Downloads de Microsoft y se proporcionan para ayudarle a crear documentos de business intelligence que se ejecutan en un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancia. Si hospeda estos documentos en un entorno de servidor, utilice una edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que es compatible con ese tipo de documento. En la siguiente tabla se indica qué edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene las características de servidor necesarias para hospedar los documentos creados en estas aplicaciones cliente.  
+ Las siguientes aplicaciones cliente de software están disponibles en el centro de Microsoft Downloads y se proporcionan para ayudarle a crear documentos de business intelligence que se ejecutan en un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancia. Si hospeda estos documentos en un entorno de servidor, utilice una edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que es compatible con ese tipo de documento. En la siguiente tabla se indica qué edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene las características de servidor necesarias para hospedar los documentos creados en estas aplicaciones cliente.  
   
 |Nombre de la característica|Enterprise|Business Intelligence|Estándar|Web|Express con Advanced Services|Express con herramientas|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -453,7 +453,7 @@ ms.locfileid: "36113452"
   
 > [!NOTE]  
 >  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] es un complemento de Excel y no depende de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sin embargo se requiere [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] para el uso compartido y la colaboración con los libros de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] de SharePoint y esta función está disponible como parte de las ediciones Enterprise y Business Intelligence de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
-> 2.  La tabla anterior se identifican los [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ediciones que son necesarias para habilitar estas herramientas de cliente; sin embargo estas características pueden acceder a los datos hospedados en cualquier edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+> 2.  La tabla anterior se identifican los [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ediciones que son necesarios para habilitar estas herramientas de cliente; sin embargo estas características pueden tener acceso a datos hospedados en cualquier edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##  <a name="Spatial"></a> Spatial and Location Services  
   
@@ -480,7 +480,7 @@ ms.locfileid: "36113452"
 |StreamInsight HA|StreamInsight Premium Edition|||||||  
   
 ## <a name="see-also"></a>Vea también  
- [Especificaciones de producto de SQL Server 2014](../../2014/getting-started/sql-server-2014-product-specifications.md)   
+ [Especificaciones de producto para SQL Server 2014](../../2014/getting-started/sql-server-2014-product-specifications.md)   
  [Instalación de SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
  [Inicio rápido de instalación de SQL Server 2014](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   

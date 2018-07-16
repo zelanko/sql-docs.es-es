@@ -1,5 +1,5 @@
 ---
-title: Elemento AccountType (ASSL) | Documentos de Microsoft
+title: Elemento AccountType (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AccountType element
 ms.assetid: 4fdf17d3-cd84-4bf6-9baf-21e15d4bf71e
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff7203d2882689b21a6ab3171880c26a8d385f7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b79eec0531cf2ab9451a93df2e5f1bf0eb2adf0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243435"
 ---
 # <a name="accounttype-element-assl"></a>Elemento AccountType (ASSL)
   Contiene el nombre de un tipo de cuenta definido en un [base de datos](../objects/database-element-assl.md) elemento.  

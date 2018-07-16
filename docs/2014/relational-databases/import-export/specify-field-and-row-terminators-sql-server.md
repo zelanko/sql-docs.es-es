@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], terminators
 - field terminators [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9730f5e59d302b95f892d4de2860f3f8a0b147f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5ba5e58a3f3c05985b8219e004e803a516a2ff81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197215"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo y de fila (SQL Server)
   En los campos de datos de caracteres, los caracteres de terminación opcionales permiten marcar el final de cada campo de un archivo de datos con un *terminador de campo* y el final de cada fila con un *terminador de fila*. Los caracteres de terminación son una forma de indicar a los programas que leen el archivo de datos dónde termina un campo o una fila y dónde comienza otro.  
@@ -46,9 +45,9 @@ ms.locfileid: "36204015"
 |Cualquier carácter imprimible (los caracteres de control no se pueden imprimir, excepto los valores NULL, tabulaciones, caracteres de nueva línea y retornos de carro)|(*, A, t, l, etc.)|  
 |Una cadena de hasta 10 caracteres imprimibles, incluidos algunos o todos los terminadores enumerados anteriormente|(**\t\*\*, end, !!!!!!!!!!, \t—\n, etc.)|  
   
- <sup>1</sup> sólo el t, n, r, 0 y '\0' caracteres trabajar con el carácter de escape de barra diagonal inversa para crear un carácter de control.  
+ <sup>1</sup> sólo el t, n, r, 0 y '\0' caracteres trabajar con el carácter de escape de barra diagonal inversa para generar un carácter de control.  
   
- <sup>2</sup> , aunque el carácter de control null (\0) no es visible al imprimir, es un carácter distintivo en el archivo de datos. Esto significa que el uso del carácter de control NULL como terminador de campo o de fila es diferente a no tener ningún terminador de campo o de fila.  
+ <sup>2</sup> incluso aunque el carácter de control null (\0) no sea visible al imprimir, es un carácter distintivo en el archivo de datos. Esto significa que el uso del carácter de control NULL como terminador de campo o de fila es diferente a no tener ningún terminador de campo o de fila.  
   
 > [!IMPORTANT]  
 >  Si en los datos hay un carácter terminador, se interpreta como un terminador, no como datos, y se interpreta que los datos posteriores a ese carácter pertenecen al campo o registro siguiente. Por lo tanto, elija los terminadores con atención para asegurarse de que nunca aparezcan en los datos. Por ejemplo, un terminador de campo que funcione como suplente inferior no resultaría una buena opción para un terminador de campo si los datos contienen dicho suplente inferior.  
@@ -60,7 +59,7 @@ ms.locfileid: "36204015"
 >  Cuando usa **bcp** en modo interactivo y especifica \n (nueva línea) como terminador de fila, **bcp** antepondrá automáticamente el carácter \r (retorno de carro) como prefijo, lo que genera un terminador de fila \r\n.  
   
 ## <a name="specifying-terminators-for-bulk-export"></a>Especificar terminadores para la exportación masiva  
- Cuando se realiza una exportación masiva `char` o `nchar` datos y desea usar un terminador no predeterminado, deberá especificar el terminador para la **bcp** comando. Los terminadores se pueden especificar de cualquiera de las siguientes maneras:  
+ Cuando se realiza la exportación `char` o `nchar` datos y desea volver a usar un terminador no predeterminado, debe especificar el terminador en el **bcp** comando. Los terminadores se pueden especificar de cualquiera de las siguientes maneras:  
   
 -   Con un archivo de formato que especifica el terminador campo a campo.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "36204015"
         >  Después de que se especifiquen de forma interactiva todos los campos de un comando **bcp**, el comando solicita que guarde sus respuestas para cada campo en un archivo que no tenga el formato XML. Para obtener más información sobre los archivos de formato no XML, vea [Archivos de formato no XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Directrices para utilizar terminadores  
- En algunas situaciones, un terminador resulta útil para una `char` o `nchar` campo de datos. Por ejemplo:  
+ En algunas situaciones, un terminador resulta útil para un `char` o `nchar` campo de datos. Por ejemplo:  
   
 -   En el caso de una columna de datos que contiene un valor NULL de un archivo de datos que se va a importar a un programa que no entiende la información sobre la longitud de prefijo.  
   

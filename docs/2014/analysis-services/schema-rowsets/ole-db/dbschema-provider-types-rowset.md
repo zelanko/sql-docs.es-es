@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DBSCHEMA_PROVIDER_TYPES | Documentos de Microsoft
+title: Conjunto de filas DBSCHEMA_PROVIDER_TYPES | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DBSCHEMA_PROVIDER_TYPES rowset
 ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c26c713f7032038b3cb969ff7681dc23c7deea2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7bca2527b77df65dede59878e91ef88ec5f933e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250955"
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>Conjunto de filas DBSCHEMA_PROVIDER_TYPES
   Identifica los tipos de datos (básicos) admitidos por el proveedor de datos.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DBSCHEMA_PROVIDER_TYPES` filas contiene las columnas siguientes.  
+ El `DBSCHEMA_PROVIDER_TYPES` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "36200820"
 |`CREATE_PARAMS`|`DBTYPE_WSTR`||Los parámetros de creación especificados por el consumidor al crear una columna de este tipo de datos. Por ejemplo, el tipo de datos SQL, `DECIMAL,` necesita una precisión y una escala. En este caso, los parámetros de creación podrían ser la cadena la "precisión, escala." En un comando de texto, para crear una columna `DECIMAL` con una precisión de 10 y una escala de 2, el valor de la columna `TYPE_NAME` podría ser `DECIMAL()` y la especificación de tipo completa sería `DECIMAL(10,2)`.<br /><br /> Los parámetros de creación aparecen como una lista separada por comas de valores, en el orden que se proporcionarán y sin estar entre paréntesis. Si un parámetro de creación es longitud, longitud máxima, precisión, escala, semilla o incremento, utilice la "longitud", "longitud del máximo", "precisión", "escala", "inicialización" e "incremento", respectivamente. Si el parámetro de creación es algún otro valor, el proveedor determina el texto que se utilizará para describir el parámetro de creación.<br /><br /> Si el tipo de datos requiere los parámetros de creación, "()" aparece normalmente en el nombre de tipo. Esto indica la posición en la que se insertarán los parámetros de creación. Si el nombre de tipo no incluye "()", los parámetros de creación se colocan entre paréntesis y anexan al nombre del tipo de datos.|  
 |`IS_NULLABLE`|`DBTYPE_BOOL`||Un booleano que indica si el tipo de datos admite valores NULL.<br /><br /> `VARIANT_TRUE` indica que el tipo de datos admite valores NULL.<br /><br /> `VARIANT_FALSE` indica que el tipo de datos no admite valores NULL.<br /><br /> `NULL` indica que no se conoce si el tipo de datos admite valores NULL.|  
 |`CASE_SENSITIVE`|`DBTYPE_BOOL`||Un booleano que indica si el tipo de datos es un tipo de caracteres y con distinción entre mayúsculas y minúsculas.<br /><br /> `VARIANT_TRUE` indica que el tipo de datos es un tipo de caracteres y distingue entre mayúsculas y minúsculas.<br /><br /> `VARIANT_FALSE` indica que el tipo de datos no es un tipo de caracteres o no distingue entre mayúsculas y minúsculas.|  
-|`SEARCHABLE`|`DBTYPE_UI4`||Un entero que indica cómo el tipo de datos se puede utilizar en búsquedas si el proveedor admite `ICommandText`; en caso contrario, `NULL`.<br /><br /> Esta columna admite cualquiera de los siguientes valores:<br /><br /> -   `DB_UNSEARCHABLE` indica que no se puede usar el tipo de datos en un `WHERE` cláusula.<br />-   `DB_LIKE_ONLY` indica que se puede utilizar el tipo de datos en un `WHERE` cláusula solo con el `LIKE` predicado.<br />-   `DB_ALL_EXCEPT_LIKE` indica que se puede utilizar el tipo de datos en un `WHERE` cláusula con todos los operadores de comparación excepto `LIKE`.<br />-   `DB_SEARCHABLE` indica que se puede utilizar el tipo de datos en un `WHERE` cláusula con cualquier operador de comparación.|  
+|`SEARCHABLE`|`DBTYPE_UI4`||Un entero que indica cómo el tipo de datos se puede utilizar en búsquedas si el proveedor admite `ICommandText`; en caso contrario, `NULL`.<br /><br /> Esta columna admite cualquiera de los siguientes valores:<br /><br /> -   `DB_UNSEARCHABLE` indica que no se puede usar el tipo de datos en un `WHERE` cláusula.<br />-   `DB_LIKE_ONLY` indica que se puede utilizar el tipo de datos en un `WHERE` cláusula sólo con el `LIKE` predicado.<br />-   `DB_ALL_EXCEPT_LIKE` indica que se puede utilizar el tipo de datos en un `WHERE` cláusula con todos los operadores de comparación excepto `LIKE`.<br />-   `DB_SEARCHABLE` indica que se puede utilizar el tipo de datos en un `WHERE` cláusula con cualquier operador de comparación.|  
 |`UNSIGNED_ATTRIBUTE`|`DBTYPE_BOOL`||Un booleano que indica si el tipo de datos es sin signo.<br /><br /> `VARIANT_TRUE` indica que el tipo de datos es sin signo.<br /><br /> `VARIANT_FALSE` indica que el tipo de datos es con signo.<br /><br /> `NULL` indica que esto no es aplicable al tipo de datos.|  
 |`FIXED_PREC_SCALE`|`DBTYPE_BOOL`||Un booleano que indica si el tipo de datos tiene una precisión y escala fijas.<br /><br /> `VARIANT_TRUE` indica que el tipo de datos tiene una precisión y escala fijas.<br /><br /> `VARIANT_FALSE` indica que el tipo de datos no tiene ninguna precisión y escala fijas.|  
 |`AUTO_UNIQUE_VALUE`|`DBTYPE_BOOL`||Un booleano que indica si el tipo de datos aumenta automáticamente.<br /><br /> `VARIANT_TRUE` indica que los valores de este tipo pueden estar incrementando automáticamente.<br /><br /> `VARIANT_FALSE` indica que los valores de este tipo no pueden aumentar automáticamente.<br /><br /> Si este valor es `VARIANT_TRUE`, si una columna o no de este tipo siempre aumenta automáticamente depende de la propiedad de columna `DBPROP_COL_AUTOINCREMENT` del proveedor. Si la propiedad `DBPROP_COL_AUTOINCREMENT` es de lectura/escritura, el aumento automático de una columna de este tipo depende del valor de la propiedad `DBPROP_COL_AUTOINCREMENT`. Si `DBPROP_COL_AUTOINCREMENT` es una propiedad de solo lectura, todas o ninguna de las columnas de este tipo aumentan automáticamente.|  
@@ -61,7 +61,7 @@ ms.locfileid: "36200820"
  El conjunto de filas se ordena en `DATA_TYPE`.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DBSCHEMA_PROVIDER_TYPES` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DBSCHEMA_PROVIDER_TYPES` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

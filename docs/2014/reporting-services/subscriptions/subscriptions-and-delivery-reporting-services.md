@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
 - reports [Reporting Services], distributing
@@ -24,13 +24,13 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 083cadfe123af29861e4bfccd8ed6182705003c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa14730ce105b17e3eb016effd2c409fc4a37851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268611"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Suscripciones y entrega (Reporting Services)
   Una suscripción [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] es una configuración que entrega un informe a una hora concreta o a raíz de un evento. Lo hace en el formato de archivo que se especifique. Por ejemplo, todos los miércoles, se guarda el informe VentasMensuales en formato de documento Microsoft Word en un recurso compartido de archivos. Las suscripciones se pueden utilizar para programar y automatizar la entrega de un informe con un conjunto concreto de valores de parámetros de informes.  
@@ -42,11 +42,11 @@ ms.locfileid: "36204346"
  Las suscripciones no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 > [!NOTE]  
->  A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] puede transferir la propiedad de una suscripción mediante programación. No hay ninguna interfaz de usuario que pueda utilizar para transferir la propiedad de las suscripciones. Para obtener más información, consulte <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>y [usar PowerShell para cambiar y Reporting Services Subscription Owners de lista y realizar una suscripción](manage-subscription-owners-and-run-subscription-powershell.md).  
+>  A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] puede transferir la propiedad de una suscripción mediante programación. No hay ninguna interfaz de usuario que pueda utilizar para transferir la propiedad de las suscripciones. Para obtener más información, consulte <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>y [usar PowerShell para Change y List Reporting Services Subscription Owners and Run una suscripción](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  **En este tema:**  
   
--   [Escenarios de suscripción y entrega](#bkmk_subscription_scenarios)  
+-   [Suscripción y los escenarios de entrega](#bkmk_subscription_scenarios)  
   
 -   [Suscripciones estándar y controladas por datos](#bkmk_standard_and_datadriven)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36204346"
   
 -   [Uso de PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](manage-subscription-owners-and-run-subscription-powershell.md)  
   
-##  <a name="bkmk_subscription_scenarios"></a> Escenarios de suscripción y entrega  
+##  <a name="bkmk_subscription_scenarios"></a> Suscripción y los escenarios de entrega  
  Para cada suscripción, se pueden configurar las opciones de entrega y las opciones disponibles dependen de la extensión de entrega que seleccione. Una extensión de entrega es un módulo que admite alguna manera de distribución. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye varias extensiones de entrega y, además, la extensión de entrega puede estar disponible con proveedores de terceros.  
   
  Si es un programador, puede crear extensiones de entrega personalizadas para admitir otros escenarios. Para más información, consulte [Implementing a Delivery Extension](../extensions/delivery-extension/implementing-a-delivery-extension.md).  
@@ -108,7 +108,7 @@ ms.locfileid: "36204346"
 |-----------------|-----------------|  
 |Permisos|Debe tener acceso al informe. Para poder suscribirse a un informe, debe tener permiso para verlo.<br /><br /> La asignación de roles debe incluir la tarea "Administrar suscripciones individuales".|  
 |Credenciales almacenadas|Para crear una suscripción, el informe debe utilizar credenciales almacenadas o ninguna credencial para recuperar datos en tiempo de ejecución. No puede suscribirse a un informe configurado para usar las credenciales representadas o delegadas del usuario actual para conectarse a un origen de datos externo. Las credenciales almacenadas pueden ser una cuenta de Windows o una cuenta de usuario de base de datos. Para más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Debe tener el permiso para ver el informe y crear suscripciones individuales. La opción**Eventos programados y entrega de informes** debe estar habilitada en el servidor de informes. Para obtener más información, consulte [crear y administrar suscripciones para servidores de informes de modo nativo](../create-manage-subscriptions-native-mode-report-servers.md).|  
-|Valores dependientes de usuario en un informe|Únicamente en el caso de las suscripciones estándar, es posible crear suscripciones a informes que incluyan información de cuenta de usuario en un filtro o como texto que aparezca en el informe. En el informe, se especifica el nombre de cuenta de usuario a través de un `User!UserID` expresión que se resuelve al usuario actual. Cuando se crea una suscripción, se considera que el usuario actual es el que la crea.|  
+|Valores dependientes de usuario en un informe|Únicamente en el caso de las suscripciones estándar, es posible crear suscripciones a informes que incluyan información de cuenta de usuario en un filtro o como texto que aparezca en el informe. En el informe, se especifica el nombre de cuenta de usuario a través de un `User!UserID` expresión que se resuelve como el usuario actual. Cuando se crea una suscripción, se considera que el usuario actual es el que la crea.|  
 |Sin seguridad de elemento de modelo|No es posible suscribirse a un informe del Generador de informes que utilice como origen de datos un modelo si éste contiene una configuración de seguridad de elementos de modelo. Esta restricción solo se aplica a los informes que utilizan seguridad de elementos de modelo.|  
 |Valores de parámetros|Si el informe utiliza parámetros, se debe especificar un valor de parámetro con el propio informe o en la suscripción que defina. Si se han definido valores predeterminados en el informe, puede establecer el valor del parámetro para que utilice la opción predeterminada.|  
   

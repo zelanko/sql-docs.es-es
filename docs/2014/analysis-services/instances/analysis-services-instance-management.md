@@ -1,5 +1,5 @@
 ---
-title: Administración de la instancia de Analysis Services | Documentos de Microsoft
+title: Administración de la instancia de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5b4bbcc49f28b0f8cd75d8d00e6935559d50c44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11f18bd8c1c72bcaf93b74529e604c69440506c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289791"
 ---
 # <a name="analysis-services-instance-management"></a>Administración de una instancia de Analysis Services
   Una instancia de Analysis Services es una copia del ejecutable `msmdsrv.exe` que se ejecuta como un servicio de sistema operativo. Cada instancia es totalmente independiente de otras instancias en el mismo servidor y tiene su propia configuración, permisos, puertos, cuentas de inicio, almacenamiento de archivos, y propiedades del modo de servidor.  
@@ -60,7 +60,7 @@ ms.locfileid: "36104364"
 ## <a name="see-also"></a>Vea también  
  [Comparar soluciones tabulares y multidimensionales &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Herramientas de configuración de PowerPivot](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
- [Administración de servidor de PowerPivot y configuración en Administración Central](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
+ [Administración de servidor de PowerPivot y la configuración en Administración Central](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

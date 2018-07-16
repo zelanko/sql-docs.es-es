@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones de SAP BW | Documentos de Microsoft
+title: Editor del Administrador de conexiones de SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 caps.latest.revision: 9
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1aa5052eb720fd212426bda989ada2f26993364
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbfeaf04ca7eb8a07637c295a5aa80cc02bedd58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231475"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>Editor del administrador de conexiones SAP BW
   Use el **Editor del administrador de conexiones de SAP BW** para especificar las propiedades que se van a usar para establecer una conexión con la versión 7 del sistema SAP Netweaver BW.  
@@ -117,6 +117,6 @@ ms.locfileid: "36110754"
  Permite probar la conexión con los valores que ha especificado. Después de hacer clic en **Probar conexión**, aparecerá un cuadro de mensaje que indica si la conexión se realizó correctamente o no.  
   
 ## <a name="see-also"></a>Vea también  
- [Microsoft Connector 1.1 for SAP BW F1 Ayuda](microsoft-connector-for-sap-bw-f1-help.md)  
+ [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -5,10 +5,9 @@ ms.date: 10/14/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 f1_keywords:
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 caps.latest.revision: 63
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4f4be5133cc17aef8c24bea72c214039debffb34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: f45a4c892af973850161733508cd9ab43eb7e772
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331475"
 ---
 # <a name="permissions-database-engine"></a>Permisos (motor de base de datos)
   Todos los elementos protegibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen permisos asociados que se pueden conceder a una entidad de seguridad. Este tema proporciona la siguiente información:  
@@ -122,7 +121,7 @@ ms.locfileid: "36108093"
 > [!CAUTION]  
 >  Los permisos predeterminados que se conceden a objetos del sistema en el momento de la instalación se evalúan detenidamente frente a posibles amenazas y no necesitan modificarse como parte de la protección de la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los cambios a los permisos de los objetos del sistema podrían limitar o interrumpir la funcionalidad y dejar potencialmente a su instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un estado no admitido.  
   
-##  <a name="_permissions"></a> SQL Server y los permisos de base de datos SQL  
+##  <a name="_permissions"></a> SQL Server y permisos de base de datos SQL  
  La tabla siguiente contiene una lista completa de los permisos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los permisos de[!INCLUDE[ssSDS](../../includes/sssds-md.md)] solo están disponibles para elementos protegibles de base que se admiten. No se pueden conceder permisos de nivel de servidor en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; sin embargo, en algunos casos los permisos de base de datos están disponibles en su lugar.  
   
 |Elemento protegible base|Permisos granulares del elemento protegible base|Código del tipo de permiso|Elemento protegible que contiene un elemento protegible base|Permiso para el elemento protegible contenedor que implica permiso granular para el elemento protegible base|  

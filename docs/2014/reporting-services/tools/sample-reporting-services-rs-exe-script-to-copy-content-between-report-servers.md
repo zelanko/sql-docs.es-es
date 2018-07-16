@@ -1,5 +1,5 @@
 ---
-title: Script rs.exe para migrar contenido entre servidores de informes de servicios de informes de ejemplo | Documentos de Microsoft
+title: Ejemplo de Reporting Services rs.exe Script para migrar contenido entre servidores de informes | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2015
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a1490220bc414ba4ad830bea7dfcfe0134363c56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 51008a07a327a9601de1bd52795e19eee44af016
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290301"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>Script rs.exe de ejemplo de Reporting Services para migrar contenido entre servidores de informes
   Este tema incluye y describe un script RSS de ejemplo de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que copia elementos y configuraciones de contenido de un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] a otro servidor de informes mediante la utilidad **RS.exe** . RS.exe se instala con [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], en los modos nativo y de SharePoint. El script copia elementos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], como informes y suscripciones, de un servidor a otro. El script admite servidores de informes del modo de SharePoint y de modo nativo.  
@@ -74,7 +74,7 @@ ms.locfileid: "36197547"
   
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
   
- El script se puede usar para copiar contenido entre servidores de informes del mismo modo o de modos diferentes. Por ejemplo, puede ejecutar la secuencia de comandos para copiar el contenido de un [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] servidor de informes de modo nativo a un [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] servidor de informes de modo de SharePoint. Puede ejecutar el script desde cualquier servidor en el que esté instalado RS.exe. Por ejemplo, en la implementación siguiente, puede:  
+ El script se puede usar para copiar contenido entre servidores de informes del mismo modo o de modos diferentes. Por ejemplo, puede ejecutar el script para copiar el contenido de un [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] servidor de informes de modo nativo a un [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] servidor de informes de modo de SharePoint. Puede ejecutar el script desde cualquier servidor en el que esté instalado RS.exe. Por ejemplo, en la implementación siguiente, puede:  
   
 -   Ejecutar RS.exe y el script **EN** el servidor A.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36197547"
 |Elemento|Migrado|SharePoint|Descripción|  
 |----------|--------------|----------------|-----------------|  
 |Contraseñas|**No**|**No**|Las contraseñas **NO** se migran. Después de migrar elementos de contenido, actualice la información de credenciales en el servidor de destino. Por ejemplo, orígenes de datos con credenciales almacenadas.|  
-|Mis informes|**No**|**No**|La característica "Mis informes" del modo nativo se basa en inicios de sesión de usuarios individuales, por lo que el servicio de scripting no tiene acceso al contenido de las carpetas "Mis informes" para los usuarios que no hayan usado el parámetro **– u** para ejecutar el script RSS. Además, "Mis informes" no es una característica del modo de SharePoint de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y los elementos de las carpetas no se pueden copiar a un entorno de SharePoint. Por lo tanto, el script no copia elementos de informe que se encuentran en las carpetas "Mis informes" en un servidor de informes de modo nativo de origen. Para migrar el contenido de las carpetas "Mis informes" con este script, haga lo siguiente:<br /><br /> (1) cree nuevas carpetas en el Administrador de informes. Opcionalmente, puede crear carpetas o subcarpetas para cada usuario.<br /><br /> (2) inicio de sesión como uno de los usuarios con contenido de "Mis informes".<br /><br /> (3) en el Administrador de informes, haga clic en el **Mis informes** carpeta.<br /><br /> (4) haga clic en el **detalles** vista para la carpeta.<br /><br /> 5), seleccione cada informe que se va a copiar.<br /><br /> (6) haga clic en **mover** en la barra de herramientas del Administrador de informes.<br /><br /> 7), seleccione la carpeta de destino deseado.<br /><br /> 8) Repita los pasos del 2 al 7 para cada usuario.<br /><br /> 9) ejecute la secuencia de comandos.|  
+|Mis informes|**No**|**No**|La característica "Mis informes" del modo nativo se basa en inicios de sesión de usuarios individuales, por lo que el servicio de scripting no tiene acceso al contenido de las carpetas "Mis informes" para los usuarios que no hayan usado el parámetro **– u** para ejecutar el script RSS. Además, "Mis informes" no es una característica del modo de SharePoint de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y los elementos de las carpetas no se pueden copiar a un entorno de SharePoint. Por lo tanto, el script no copia los elementos de informe que se encuentran en las carpetas "Mis informes" en un servidor de informes de modo nativo de origen. Para migrar el contenido de las carpetas "Mis informes" con este script, haga lo siguiente:<br /><br /> (1) cree nuevas carpetas en el Administrador de informes. Opcionalmente, puede crear carpetas o subcarpetas para cada usuario.<br /><br /> (2) inicie sesión como uno de los usuarios con contenido de "Mis informes".<br /><br /> (3) en el Administrador de informes, haga clic en el **Mis informes** carpeta.<br /><br /> (4) haga clic en el **detalles** vista para la carpeta.<br /><br /> 5), seleccione cada informe que se va a copiar.<br /><br /> 6) haga clic en **mover** en la barra de herramientas del Administrador de informes.<br /><br /> 7), seleccione la carpeta de destino deseado.<br /><br /> 8) Repita los pasos del 2 al 7 para cada usuario.<br /><br /> 9) ejecute la secuencia de comandos.|  
 |Historial|**No**|**No**||  
 |Configuración del historial|Sí|Sí|La configuración del historial se migra, pero los detalles del historial NO se migran.|  
 |Programaciones|sí|sí|Para migrar programaciones, es necesario que el Agente SQL Server se esté ejecutando en el servidor de destino. Si el Agente SQL Server no se está ejecutando en el destino, verá un mensaje de error similar al siguiente:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
@@ -109,7 +109,7 @@ ms.locfileid: "36197547"
 |Suscripciones|Sí|Sí||  
 |Configuración del historial|Sí|Sí|La configuración del historial se migra, pero los detalles del historial NO se migran.|  
 |opciones de procesamiento|Sí|Sí||  
-|Opciones de actualización de caché|Sí|Sí|La configuración dependiente se migra como parte de un elemento de catálogo. A continuación se muestra una salida de ejemplo del script a medida que migra un informe (.rdl) y configuraciones relacionadas, como opciones de actualización de caché:<br /><br /> Migrating parameters for report TitleOnly.rdl 0 items found.<br /><br /> Migrating subscriptions for report TitleOnly.rdl: 1 items found.<br /><br /> Migración de la suscripción de almacenamiento en \\\server\public\savedreports como TitleOnly... CORRECTA<br /><br /> Migrating history settings for report TitleOnly.rdl ... CORRECTA<br /><br /> Migrating processing options for report TitleOnly.rdl ... 0 items found.<br /><br /> Migrating cache refresh options for report TitleOnly.rdl ... CORRECTA<br /><br /> Migrating cache refresh plans for report TitleOnly.rdl: 1 items found.<br /><br /> Migrating cache refresh plan titleonly_refresh735amM2F ... CORRECTA|  
+|Opciones de actualización de caché|Sí|Sí|La configuración dependiente se migra como parte de un elemento de catálogo. A continuación se muestra una salida de ejemplo del script a medida que migra un informe (.rdl) y configuraciones relacionadas, como opciones de actualización de caché:<br /><br /> Migrating parameters for report TitleOnly.rdl 0 items found.<br /><br /> Migrating subscriptions for report TitleOnly.rdl: 1 items found.<br /><br /> Migrando suscripción guardar en \\\server\public\savedreports como TitleOnly... CORRECTA<br /><br /> Migrating history settings for report TitleOnly.rdl ... CORRECTA<br /><br /> Migrating processing options for report TitleOnly.rdl ... 0 items found.<br /><br /> Migrating cache refresh options for report TitleOnly.rdl ... CORRECTA<br /><br /> Migrating cache refresh plans for report TitleOnly.rdl: 1 items found.<br /><br /> Migrating cache refresh plan titleonly_refresh735amM2F ... CORRECTA|  
 |Planes de actualización de caché|Sí|Sí||  
 |Imágenes|Sí|Sí||  
 |Elementos de informe|Sí|Sí||  
@@ -232,7 +232,7 @@ ms.locfileid: "36197547"
   
          `Report: /Reports/TitleOnly`  
   
--   SOURCE_URL y TARGET_URL deben ser direcciones URL de servidor de informes válidas que apunten al origen y destino [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] servidor de informes. En modo nativo, la dirección URL de un servidor de informes es similar a la siguiente:  
+-   El SOURCE_URL y TARGET_URL deben ser direcciones URL de servidor de informes válido que elija para el origen y destino [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] servidor de informes. En modo nativo, la dirección URL de un servidor de informes es similar a la siguiente:  
   
     -   `http://servername/reportserver`  
   

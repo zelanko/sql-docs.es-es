@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 caps.latest.revision: 36
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3f0691fea33b8e69fcea5f58eba6f60318dfadbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52aa26064a9a0e80af03649d89140a71a78f41d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312005"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Paso 2: agregar y configurar el contenedor de bucles Foreach
   En esta tarea, agregará la capacidad de buscar en una carpeta de archivos planos y aplicará la misma transformación de flujo de datos utilizada en la lección 1 a cada uno de dichos archivos planos. Para ello, agregará y configurará un contenedor de bucles Foreach para el flujo de control.  
@@ -30,7 +30,7 @@ ms.locfileid: "36202323"
   
 -   **Contenedor de bucles Foreach:** Asignará el valor enumerado del contenedor a una variable de paquete definida por el usuario. El contenedor utilizará esta variable definida por el usuario para modificar de forma dinámica la propiedad `ConnectionString` del administrador de conexiones de archivos planos y conectar de forma iterativa cada uno de los archivos planos de la carpeta.  
   
--   **Administrador de conexión de archivos planos:** modificará el Administrador de conexiones que se creó en la lección 1 usando una variable definida por el usuario para rellenar el Administrador de conexiones `ConnectionString` propiedad.  
+-   **Administrador de conexiones de archivos planos:** modificará el Administrador de conexiones que se creó en la lección 1 mediante el uso de una variable definida por el usuario para rellenar el Administrador de conexiones `ConnectionString` propiedad.  
   
  En los procedimientos de esta tarea se muestra cómo crear y modificar el contenedor de bucles Foreach para utilizar una variable de paquete definida por el usuario y agregar la tarea de flujo de datos al bucle. Aprenderá a modificar el administrador de conexiones de archivos planos para utilizar una variable definida por el usuario en la siguiente tarea.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36202323"
   
 3.  Haga clic con el botón derecho en el **Contenedor de bucles Foreach** que acaba de agregar y seleccione **Editar**.  
   
-4.  En el **Editor de bucles Foreach** cuadro de diálogo, en la **General** página, para **nombre**, escriba `Foreach File in Folder`. Haga clic en **Aceptar**.  
+4.  En el **Editor de bucles Foreach** cuadro de diálogo el **General** página, para **nombre**, escriba `Foreach File in Folder`. Haga clic en **Aceptar**.  
   
 5.  Haga clic en el contenedor de bucles Foreach, haga clic en **propiedades**y en la ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **inglés (Estados Unidos)**.  
   
@@ -90,13 +90,13 @@ ms.locfileid: "36202323"
   
 ### <a name="to-add-the-data-flow-task-to-the-loop"></a>Para agregar la tarea de flujo de datos al bucle  
   
--   Arrastre el **Extract Sample Currency Data** tarea de flujo de datos en el contenedor de bucles Foreach ahora de nombre `Foreach File in Folder`.  
+-   Arrastre el **Extract Sample Currency Data** tarea de flujo de datos en el contenedor de bucles Foreach que ahora se denomina `Foreach File in Folder`.  
   
 ## <a name="next-lesson-task"></a>Tarea de la siguiente lección  
- [Paso 3: Modificar el Administrador de conexión de archivos planos](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [Paso 3: Modificar el Administrador de conexiones de archivos planos](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Configurar un contenedor de bucles Foreach](control-flow/foreach-loop-container.md)   
- [Usar Variables en paquetes](use-variables-in-packages.md)  
+ [Usar variables en paquetes](use-variables-in-packages.md)  
   
   

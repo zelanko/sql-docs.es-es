@@ -1,5 +1,5 @@
 ---
-title: Algoritmo de clústeres de Microsoft | Documentos de Microsoft
+title: Algoritmo de clústeres de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
 - nearest neighbor [Data Mining]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
 caps.latest.revision: 61
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74e1a00c89050b632ca01a5f67f734484bff8de7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d42992680de6772d305c425d1f921fea44cd584
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308795"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Algoritmo de clústeres de Microsoft
   El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de clústeres es un algoritmo de segmentación suministrado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El algoritmo utiliza técnicas iterativas para agrupar los casos de un conjunto de datos dentro de clústeres que contienen características similares. Estas agrupaciones son útiles para la exploración de datos, la identificación de anomalías en los datos y la creación de predicciones.  
@@ -46,7 +46,7 @@ ms.locfileid: "36106647"
 ## <a name="how-the-algorithm-works"></a>Cómo funciona el algoritmo  
  El algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] identifica primero las relaciones de un conjunto de datos y genera una serie de clústeres basándose en ellas. Un gráfico de dispersión es una forma útil de representar visualmente el modo en que el algoritmo agrupa los datos, tal como se muestra en el siguiente diagrama. El gráfico de dispersión representa todos los casos del conjunto de datos; cada caso es un punto del gráfico. Los clústeres agrupan los puntos del gráfico e ilustran las relaciones que identifica el algoritmo.  
   
- ![Gráfico de dispersión de casos en un conjunto de datos](../media/clustering-plot.gif "gráfico de dispersión de casos de un conjunto de datos")  
+ ![Gráfico de dispersión de casos de un conjunto de datos](../media/clustering-plot.gif "gráfico de dispersión de casos de un conjunto de datos")  
   
  Después de definir los clústeres, el algoritmo calcula el grado de perfección con que los clústeres representan las agrupaciones de puntos y, a continuación, intenta volver a definir las agrupaciones para crear clústeres que representen mejor los datos. El algoritmo establece una iteración en este proceso hasta que ya no es posible mejorar los resultados mediante la redefinición de los clústeres.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36106647"
   
 -   **Columnas de entrada** Cada modelo debe tener al menos una columna de entrada que contenga los valores que se utilizan para generar los clústeres. Puede tener tantas columnas de entrada como desee, pero dependiendo del número de valores existentes en cada columna, la adición de columnas adicionales podría aumentar el tiempo necesario para entrenar el modelo.  
   
--   **Una columna de predicción opcional** El algoritmo no necesita una columna de predicción para generar el modelo, pero puede agregar una columna de predicción de casi cualquier tipo de datos. Los valores de la columna de predicción se pueden tratar como entradas del modelo de agrupación en clústeres, o se puede especificar que solo se utilicen para las predicciones. Por ejemplo, si desea predecir los ingresos del cliente agrupando en datos demográficos como la región o la edad, se deberían especificar los ingresos como `PredictOnly` y agregar todas las demás columnas, por ejemplo, la región o la edad, como entradas.  
+-   **Una columna de predicción opcional** El algoritmo no necesita una columna de predicción para generar el modelo, pero puede agregar una columna de predicción de casi cualquier tipo de datos. Los valores de la columna de predicción se pueden tratar como entradas del modelo de agrupación en clústeres, o se puede especificar que solo se utilicen para las predicciones. Por ejemplo, si desea predecir los ingresos del cliente agrupando en clústeres en datos demográficos como la región o la edad, especificaría ingresos como `PredictOnly` y agregar todas las demás columnas, por ejemplo, región o la edad, como entradas.  
   
  Para obtener información más detallada sobre los tipos de contenido y los tipos de datos compatibles con los modelos de agrupación en clústeres, vea la sección Requisitos de [Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md).  
   
@@ -86,9 +86,9 @@ ms.locfileid: "36106647"
 -   Admite el uso de modelos de minería de datos OLAP y la creación de dimensiones de minería de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md)   
- [Contenido del modelo de minería de datos para los modelos de clústeres &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos para los modelos de clústeres &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [Ejemplos de consultas de modelos de agrupación en clústeres](clustering-model-query-examples.md)  
   
   

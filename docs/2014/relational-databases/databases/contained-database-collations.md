@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2858721cdfa3de8c9ebbe2dff0897c1dd806047e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1677c81bb13261e054d352697faeaf96aefd392c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316485"
 ---
 # <a name="contained-database-collations"></a>Intercalaciones de bases de datos independientes
   Varias propiedades afectan a la semántica de igualdad y al criterio de ordenación de los datos de texto, como son la distinción entre mayúsculas y minúsculas y de los acentos, y el idioma básico que se usa. Estas cualidades se expresan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de la opción de intercalación de los datos. Para obtener una explicación más detallada de las intercalaciones, vea [Compatibilidad con la intercalación y Unicode](../collations/collation-and-unicode-support.md).  
@@ -159,7 +159,7 @@ JOIN #T2
   
 -   La base de datos en la que el lote comienza determina el comportamiento de la intercalación de un lote.  
   
- Tenga en cuenta que esta decisión se toma antes de que se ejecute ningún comando, incluido un inicial `USE`. Es decir, si un lote comienza en una base de datos independiente, pero el primer comando es una `USE` a una base de datos dependiente, todavía se utilizará el comportamiento de la intercalación independientes para el lote. Por tanto, una referencia a una variable, por ejemplo, puede tener varios resultados posibles:  
+ Tenga en cuenta que esta decisión antes de que se emiten los comandos, incluido un inicial `USE`. Es decir, si un lote comienza en una base de datos independiente, pero el primer comando es un `USE` a una base de datos dependiente, el comportamiento de la intercalación contenida se seguirá usando para el lote. Por tanto, una referencia a una variable, por ejemplo, puede tener varios resultados posibles:  
   
 -   La referencia puede encontrar una coincidencia exactamente. En este caso, la referencia funcionará sin generar un error.  
   

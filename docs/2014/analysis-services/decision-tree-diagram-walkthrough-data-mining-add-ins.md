@@ -1,5 +1,5 @@
 ---
-title: Tutorial del diagrama de árbol (complementos de minería de datos) de decisión | Documentos de Microsoft
+title: Tutorial (complementos de minería de datos) del diagrama de árbol de decisión | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - shapes, data mining
 - diagram, decision tree
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - decision tree [data mining]
 ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 951a0e0722aaa5a631140da9ddec9255246aaffd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4b4eb570d1d81bc724c885e8c277aa662cf4ff5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291721"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Tutorial de diagrama de árbol de decisión (complementos de minería de datos)
-  Si ha creado un modelo de árbol de decisión, podrá crear un diagrama personalizado en Visio con la forma Árbol de decisión o la forma Red de dependencias. En este tema se describe las personalizaciones que puede realizar mediante el **árbol de decisión** forma y estos controles:  
+  Si ha creado un modelo de árbol de decisión, podrá crear un diagrama personalizado en Visio con la forma Árbol de decisión o la forma Red de dependencias. En este tema se describe las personalizaciones que puede realizar con el **árbol de decisión** forma y estos controles:  
   
 -   Representar los controles del diagrama de árbol de decisión  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36201255"
      Estas opciones se agregan al área de trabajo de Visio con el fin de ayudarle a interactuar con la forma.  
   
 ## <a name="build-a-decision-tree-diagram"></a>Generar un diagrama de árbol de decisión  
- Coloque la forma de árbol de decisión en la página de Visio para iniciar la **Asistente para formas de Visio de árbol de decisión** y establecer opciones del diagrama.  
+ Coloque la forma de árbol de decisión en la página de Visio para iniciar el **Asistente para la forma de Visio de árbol de decisión** y establecer las opciones del diagrama.  
   
 #### <a name="use-the-decision-tree-wizard"></a>Usar el Asistente para árbol de decisión  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36201255"
   
 2.  Arrastre el **árbol de decisión** forma en la página.  
   
-3.  En la página de bienvenida la **Asistente para formas de Visio de árbol de decisión**, haga clic en **siguiente**.  
+3.  En la página principal de la **Asistente para la forma de Visio de árbol de decisión**, haga clic en **siguiente**.  
   
 4.  En el **seleccionar un origen de datos** página de la **Asistente para clúster**, elegir una conexión a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] servidor que contiene el modelo que desea visualizar.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36201255"
   
      El valor predeterminado es tres niveles de nodos.  
   
-     **Seleccionar color y mostrar el texto de valores**  
+     **Seleccione un color y mostrar el texto de valores**  
      Elija el color que representará cada uno de los resultados. Si no especifica colores, se generan automáticamente mediante los colores del tema de vídeo.  
   
 8.  Haga clic en **avanzadas** para personalizar las opciones siguientes para cada uno de los nodos en el diagrama de árbol de decisión.  
@@ -83,13 +83,13 @@ ms.locfileid: "36201255"
      **Mostrar etiqueta**  
      Agrega nombres de columna al histograma.  
   
-     **Mostrar probabilidad**  
+     **Mostrar la probabilidad**  
      Muestra la probabilidad de cada valor.  
   
      **Mostrar compatibilidad**  
      Muestra el soporte de cada valor.  
   
-     **Mostrar pie de página**  
+     **Mostrar pie**  
      Agrega un pie de página que reúne a todos los valores mostrados.  
   
      **Mostrar encabezado**  
@@ -104,35 +104,35 @@ ms.locfileid: "36201255"
     >  En algunos entornos, los conectores del gráfico podrían producir errores de representación en Office 2013.  
   
 ## <a name="explore-and-modify-the-finished-diagram"></a>Explorar y modificar el diagrama finalizado  
- Después de haber completado la **Asistente para formas de Visio de árbol de decisión**, Visio crea un diagrama de árbol en la página que muestra gráficamente las reglas que conducen al resultado pronosticado.  
+ Después de haber completado la **Asistente para la forma de Visio de árbol de decisión**, Visio crea un diagrama de árbol en la página que muestra gráficamente las reglas que conducen al resultado pronosticado.  
   
  Puede seguir modificando la forma si usa los controles siguientes para diagramas de árbol de decisión:  
   
 #### <a name="using-the-decision-tree-option-menus"></a>Usar los menús de opción del árbol de decisión  
   
-1.  Haga clic en el **Add-Ins** la cinta de opciones y, a continuación, muestra una de las barras de herramientas personalizados utilizados para trabajar con diagramas de minería de datos:  
+1.  Haga clic en el **Add-Ins** la cinta de opciones y, a continuación, mostrar una de las barras de herramientas personalizados utilizados para trabajar con diagramas de minería de datos:  
   
      **Diseño**  
      Optimiza la organización del árbol para que se ajuste a la página actual.  
   
      **Cambiar el tamaño de página**  
-     Este control se ha diseñado para la versiones anteriores de HTML. Use la página de Visio cambiando el tamaño de controles en su lugar,  
+     Este control se ha diseñado para la versiones anteriores de HTML. Use la página de Visio, cambiar el tamaño de los controles en su lugar,  
   
      **Descripción**  
      Cuando se selecciona un nodo del árbol, haga clic en esta opción para mostrar los detalles sobre los casos del nodo.  
   
-2.  Use la **rediseñar página** opción en Visio **diseño** cinta de opciones para experimentar con distintos diseños de árbol.  
+2.  Use la **rediseñar página** opción en el Visio **diseño** cinta de opciones para experimentar con distintos diseños de árbol.  
   
-3.  Use la **conectores** opción el **diseño** ficha para cambiar los conectores que se utilizan entre nodos en el árbol.  
+3.  Use la **conectores** opción el **diseño** tab para cambiar los conectores usan entre nodos en el árbol.  
   
-4.  Use la **realizar una panorámica y Zoom** controlar, en la **panel de tareas** área no cliente de Visio **vista** cinta de opciones, para centrarse en un área determinada del diagrama.  
+4.  Use la **panorámica y Zoom** controlar, en el **panel de tareas** área de la Visio **vista** cinta de opciones para centrarse en un área determinada del diagrama.  
   
 5.  Haga clic con el botón secundario en cualquier nodo del árbol y elija en el menú contextual las opciones específicas de los diagramas de árbol de decisión:  
   
      **Mejorar el diseño de página**  
      Distribuye uniformemente los nodos en la página y ajusta la vista de la misma para que se vean todos ellos.  
   
-     **Mover a elementos secundarios a nueva página**  
+     **Mover a los elementos secundarios a nueva página**  
      Mueve los elementos secundarios del nodo seleccionado actualmente a una página nueva.  
   
      **Contraer nodos secundarios**  
@@ -142,6 +142,6 @@ ms.locfileid: "36201255"
      Muestra los nodos secundarios del nodo seleccionado actualmente.  
   
 ## <a name="see-also"></a>Vea también  
- [Solucionar problemas de diagramas de minería de datos de Visio &#40;complementos de minería de datos de SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
+ [Solución de problemas de diagramas de minería de datos de Visio &#40;complementos de minería de datos de SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   
   

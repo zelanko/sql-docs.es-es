@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - global default for all users [SQL Server]
 - users [SQL Server], global defaults
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 88edb881309b66cd84f953d8166a47b9e4eeb472
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a746b087259d5159f693198a3cf60a1ce98ce6e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257071"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Establecer la opción de configuración del servidor Opciones de usuario
   En este tema se describe cómo establecer la opción de configuración de servidor para **opciones de usuario** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción para **opciones de usuario** especifica valores predeterminados globales para todos los usuarios. Hay establecida una lista de opciones de procesamiento de consultas predeterminadas para la duración de la sesión de trabajo de un usuario. La opción **opciones de usuario** permite cambiar los valores predeterminados de las opciones SET si no resultan adecuados los valores predeterminados del servidor.  

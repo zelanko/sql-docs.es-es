@@ -1,5 +1,5 @@
 ---
-title: Configurar PowerPivot e implementar soluciones (SharePoint 2013) | Documentos de Microsoft
+title: Configurar PowerPivot e implementar soluciones (SharePoint 2013) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 caps.latest.revision: 10
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f06b47e8f30c60152912c49901341a2d8fdef359
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: bb76491d121921f4e5b826ecf760923ba9e2238e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312675"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configurar PowerPivot e implementar soluciones (SharePoint 2013)
-  Estos temas se explica la implementación y configuración de mejoras de nivel intermedio a las características de PowerPivot en [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] incluidas la Galería de PowerPivot, programar los proveedores de datos, panel de administración y actualización de datos. Ejecute la herramienta de **Configuración de PowerPivot para SharePoint 2013** para hacer lo siguiente:  
+  En este tema se describe la implementación y configuración de las características de PowerPivot en mejoras de nivel intermedio [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , incluidas la Galería de PowerPivot, programar los proveedores de datos, panel de administración y actualización de datos. Ejecute la herramienta de **Configuración de PowerPivot para SharePoint 2013** para hacer lo siguiente:  
   
 -   Implementar archivos de solución de SharePoint.  
   
 -   Crear una aplicación de servicio PowerPivot.  
   
--   Configurar una aplicación de Excel Services para que use un servidor de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de SharePoint. Para obtener información sobre servicios back-end y la instalación una [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server en el modo de SharePoint, consulte [PowerPivot para SharePoint 2013 Installation](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+-   Configurar una aplicación de Excel Services para que use un servidor de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de SharePoint. Para obtener información acerca de servicios back-end e instalar un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server en el modo de SharePoint, consulte [PowerPivot para SharePoint 2013 Installation](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
- Para obtener información acerca de cómo instalar PowerPivot para SharePoint 2013, vea [instalar o desinstalar PowerPivot para SharePoint Add- &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
+ Para obtener información acerca de cómo instalar PowerPivot para SharePoint 2013, vea [instalar o desinstalar PowerPivot para SharePoint Add-in &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
  Este tema contiene las siguientes secciones:  
   
@@ -68,11 +68,11 @@ ms.locfileid: "36196151"
   
     3.  **Frase de contraseña**: escriba una frase de contraseña. Si va a crear una nueva granja de SharePoint, la frase de contraseña se usa siempre que se agrega un servidor o una aplicación a la granja de servidores de SharePoint. Si la granja existe todavía, escriba la frase de contraseña que le permitirá agregar una aplicación de servidor a la granja.  
   
-    4.  **Servidor de PowerPivot para Excel Services**: escriba el nombre de un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servidor de modo de SharePoint. En una implementación de un solo servidor, es el mismo que el servidor de bases de datos. `[ServerName]\powerpivot`  
+    4.  **Servidor de PowerPivot para Excel Services**: escriba el nombre de un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server de modo de SharePoint. En una implementación de un solo servidor, es el mismo que el servidor de bases de datos. `[ServerName]\powerpivot`  
   
     5.  Haga clic en **Crear colección de sitios** en la ventana izquierda. Anote la **Dirección URL del sitio** para pueda consultarla en pasos posteriores. Si el servidor de SharePoint no está configurado todavía, el asistente para la configuración usa como valor predeterminado la aplicación web y las direcciones URL de las colecciones de sitios hasta la raíz de `http://[ServerName]`. Para modificar los valores predeterminados, examine las páginas siguientes en la ventana izquierda: **Crear aplicación web predeterminada** e **Implementar solución de aplicación web**  
   
-5.  Opcionalmente, revise los valores restantes de entrada utilizados para completar cada acción. Haga clic en cada acción de la ventana izquierda para ver y examinar los detalles de la acción. Para obtener más información acerca de cada uno, vea la sección "valores de entrada utilizados para configurar el servidor en [configurar o reparar PowerPivot para SharePoint 2010 &#40;PowerPivot configuración herramienta&#41; ](../../../analysis-services/configure-repair-powerpivot-sharepoint-2010.md) en este tema.  
+5.  Opcionalmente, revise los valores restantes de entrada utilizados para completar cada acción. Haga clic en cada acción de la ventana izquierda para ver y examinar los detalles de la acción. Para obtener más información sobre cada uno de ellos, consulte la sección "valores de entrada utilizados para configurar el servidor en [configurar o reparar PowerPivot para SharePoint 2010 &#40;PowerPivot configuración herramienta&#41; ](../../../analysis-services/configure-repair-powerpivot-sharepoint-2010.md) en este tema.  
   
 6.  Si lo desea, quite cualquier acción que no desee procesar en este momento. Por ejemplo, si desea configurar el Servicio de almacenamiento seguro más adelante, haga clic en **Configurar el servicio de almacenamiento seguro**y, a continuación, desactive la casilla **Incluir esta acción en la lista de tareas**.  
   
@@ -138,8 +138,8 @@ ms.locfileid: "36196151"
   
 5.  Haga clic en **Aceptar**.  
   
- Para obtener más información sobre la actualización de datos de solución de problemas, consulte [Troubleshooting PowerPivot Data Refresh](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
+ Para obtener más información sobre la actualización de datos de la solución de problemas, consulte [Troubleshooting PowerPivot Data Refresh](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- Para obtener más información acerca de la herramienta de configuración, consulte [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md).  
+ Para obtener más información sobre la herramienta de configuración, consulte [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
   

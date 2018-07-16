@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DMSCHEMA_MINING_STRUCTURES | Documentos de Microsoft
+title: Conjunto de filas DMSCHEMA_MINING_STRUCTURES | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_STRUCTURES rowset
 ms.assetid: 6224556b-08a0-496e-bd7c-632c3e833e26
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b61df846e3b9da7301650a8029d12eb72a218049
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab600b39e4a8347e470153cf21510554605d1c71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323075"
 ---
 # <a name="dmschemaminingstructures-rowset"></a>Conjunto de filas DMSCHEMA_MINING_STRUCTURES
   Enumera información sobre las estructuras de minería de datos del catálogo actual.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DMSCHEMA_MINING_STRUCTURES` filas contiene las columnas siguientes.  
+ El `DMSCHEMA_MINING_STRUCTURES` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -55,7 +55,7 @@ ms.locfileid: "36204484"
  El conjunto de filas se ordena en `STRUCTURE_CATALOG`, `STRUCTURE_SCHEMA`, `STRUCTURE_NAME`.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DMSCHEMA_MINING_STRUCTURES` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DMSCHEMA_MINING_STRUCTURES` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

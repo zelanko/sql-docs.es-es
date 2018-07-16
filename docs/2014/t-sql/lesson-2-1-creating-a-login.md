@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating a login
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 33e3b3bcccfc88a3071a053de7154bf16d50265d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 3ec962379f992bcb89b6227cf3af13705d1193ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312775"
 ---
 # <a name="creating-a-login"></a>Crear un inicio de sesión
   Para tener acceso a [!INCLUDE[ssDE](../includes/ssde-md.md)], los usuarios necesitan un inicio de sesión. El inicio de sesión puede representar la identidad del usuario como una cuenta de Windows o como un miembro de un grupo de Windows, o el inicio de sesión puede ser un inicio de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que solo exista en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Siempre que sea posible, use la autenticación de Windows.  
@@ -30,7 +30,7 @@ ms.locfileid: "36108237"
   
 ### <a name="to-create-a-new-windows-account"></a>Para crear una cuenta de Windows nueva  
   
-1.  Haga clic en **iniciar**, haga clic en **ejecutar**, en la **abrir** , escriba `%SystemRoot%\system32\compmgmt.msc /s`y, a continuación, haga clic en **Aceptar** para abrir el programa de administración de equipos.  
+1.  Haga clic en **iniciar**, haga clic en **ejecutar**, en el **abrir** , escriba `%SystemRoot%\system32\compmgmt.msc /s`y, a continuación, haga clic en **Aceptar** para abrir el programa de administración de equipos.  
   
 2.  En **Herramientas del sistema**, expanda **Usuarios y grupos locales**, haga clic con el botón derecho en **Usuarios**y luego haga clic en **Nuevo usuario**.  
   

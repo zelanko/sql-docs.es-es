@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 178ca5746ee5c7936d8a2cab6c4d0d08ad227364
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8f87139ed82025b35173465f346709e384a858c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299775"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>Tipo de conexión de SQL Server (SSRS)
   Para incluir en el informe los datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe tener un conjunto de datos basado en un origen de datos de informe de tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tipo de origen de datos integrado se basa en la extensión de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use este tipo de origen de datos para conectar y recuperar los datos de la versión actual y de las versiones anteriores de bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Esta extensión de datos admite parámetros de varios valores, agregados del servidor y credenciales administrados con independencia de la cadena de conexión.  
   
- Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones detalladas, consulte [agregar y comprobar una conexión de datos o un origen de datos &#40;el generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones detalladas, consulte [agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Cadena de conexión  
  Al conectar a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , está conectando con el objeto de base de datos de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un servidor. La base de datos podría tener varios esquemas que tienen varias tablas, vistas y procedimientos almacenados. Especifique el objeto de base de datos que se va a usar en el diseñador de consultas. Si no especifica una base de datos en la cadena de conexión, puede conectar con la base de datos predeterminada que le asignó el administrador de bases de datos.  
@@ -54,7 +54,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   No se necesitan credenciales. Para usar esta opción, debe tener la cuenta de ejecución desatendida configurada en el servidor de informes. Para más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en msdn.microsoft.com.  
   
- Para obtener más información, consulte [las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [especificar credenciales en el generador de informes](../specify-credentials-in-report-builder.md).  
+ Para obtener más información, consulte [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [especificar credenciales en Generador de informes](../specify-credentials-in-report-builder.md).  
   
   
 ##  <a name="Query"></a> Consultas  
@@ -134,7 +134,7 @@ WHERE EmployeeID = (@EmpID)
   
 -   De forma predeterminada, cada parámetro de informe es un tipo de datos **Texto**. Si los datos subyacentes son un tipo de datos diferente, debe cambiar el tipo de datos de parámetro.  
   
--   Si selecciona la opción de parámetros de varios valores, debe cambiar manualmente la consulta para comprobar si los valores son parte de un conjunto mediante la `IN` operador, por ejemplo, `WHERE EmployeeID IN (@EmpID)`.  
+-   Si selecciona la opción de parámetros de varios valores, debe cambiar manualmente la consulta para comprobar si los valores forman parte de un conjunto utilizando la `IN` operador, por ejemplo, `WHERE EmployeeID IN (@EmpID)`.  
   
  Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
@@ -149,7 +149,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="HowTo"></a> Temas de procedimientos  
  Esta sección contiene instrucciones paso a paso para trabajar con conexiones de datos, orígenes de datos y conjuntos de datos.  
   
- [Agregar y comprobar una conexión de datos o un origen de datos &#40;el generador de informes SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -159,7 +159,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="Related"></a> Secciones relacionadas  
  Estas secciones de la documentación proporcionan información conceptual detallada sobre los datos de informe, así como información de procedimientos acerca de cómo definir, personalizar y usar elementos de informe relacionados con datos.  
   
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-datasets-ssrs.md)  
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)  
  Proporciona información general sobre cómo obtener acceso a los datos del informe.  
   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

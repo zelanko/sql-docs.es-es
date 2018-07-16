@@ -1,5 +1,5 @@
 ---
-title: Elemento DataSourceViewID (ASSL) | Documentos de Microsoft
+title: Elemento DataSourceViewID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataSourceViewID element
 ms.assetid: dcf617fe-0bf6-4767-af35-07c0c7fd96e5
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2c1789393052688657dcd2d05e2e03d4a04b9986
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5f74aa1a747dedce0d3b9beae8b8aa9886bb681
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271551"
 ---
 # <a name="datasourceviewid-element-assl"></a>Elemento DataSourceViewID (ASSL)
-  Identifica la [DataSourceView](../objects/datasourceview-element-assl.md) elemento asociado a la [enlace](../data-type/binding-data-type-assl.md) elemento primario.  
+  Identifica el [DataSourceView](../objects/datasourceview-element-assl.md) elemento asociado con el [enlace](../data-type/binding-data-type-assl.md) elemento primario.  
   
 ## <a name="syntax"></a>Sintaxis  
   

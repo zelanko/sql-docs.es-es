@@ -1,5 +1,5 @@
 ---
-title: Elemento CubeID (XMLA) | Documentos de Microsoft
+title: Elemento CubeID (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CubeID element
 ms.assetid: 9dba605a-c45e-4730-827b-b7c55c8110da
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 16a923ee40c26fba6ee0eca1995f12d04609e681
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1c0734e6a78b6bcec849f0d9db9a04785f370e88
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314615"
 ---
 # <a name="cubeid-element-xmla"></a>Elemento CubeID (XMLA)
   Identifica un cubo dentro de un elemento primario que contiene una referencia de objeto.  

@@ -1,5 +1,5 @@
 ---
-title: Programar objetos básicos OLAP en AMO | Documentos de Microsoft
+title: Programar objetos básicos OLAP en AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df3206f9bf6bd0548749abf981d6088e9ab85c0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b36af3a013c10567e23852c338c79a834bc8376
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228255"
 ---
 # <a name="programming-amo-olap-basic-objects"></a>Programar objetos básicos OLAP en AMO
   La creación de objetos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] es un proceso sencillo y directo, pero requiere prestar atención a los detalles. En este tema se explican los detalles de la programación de objetos básicos OLAP. Este tema contiene las siguientes secciones:  
@@ -165,7 +165,7 @@ static DataItem CreateDataItem(DataSourceView dsv, string tableName, string colu
 ### <a name="processing-a-dimension"></a>Procesar una dimensión  
  Procesar una dimensión es tan simple como utilizar el método Process del objeto <xref:Microsoft.AnalysisServices.Dimension>.  
   
- El procesamiento de una dimensión puede afectar a todos los cubos que la utilizan. Para obtener más información acerca de las opciones de procesamiento, vea [Processing Objects &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) y [procesamiento del objeto de modelo multidimensionales](../processing-a-multidimensional-model-analysis-services.md).  
+ El procesamiento de una dimensión puede afectar a todos los cubos que la utilizan. Para obtener más información acerca de las opciones de procesamiento, vea [procesar objetos &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) y [procesamiento del objeto de modelo Multidimensional](../processing-a-multidimensional-model-analysis-services.md).  
   
  El código siguiente realiza una actualización incremental en todas las dimensiones de una base de datos proporcionada:  
   
@@ -252,7 +252,7 @@ static void CreateAdventureWorksCube(Database db, string datasourceName)
 ### <a name="processing-a-cube"></a>Procesar un cubo  
  Procesar un cubo es tan simple como utilizar el método Process del objeto <xref:Microsoft.AnalysisServices.Cube>. Al procesar un cubo, también se procesan todos los grupos de medida incluidos en éste y todas las particiones del grupo de medida. En un cubo, las particiones son los únicos objetos que se pueden procesar; para fines de procesamiento, los grupos de medida solamente son contenedores de particiones. El tipo de procesamiento especificado para el cubo se propaga a las particiones. El procesamiento interno de cada cubo y grupo de medida se resuelve en el procesamiento de dimensiones y particiones.  
   
- Para obtener más información acerca de las opciones de procesamiento, vea [Processing Objects &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), y [procesamiento del objeto de modelo multidimensionales](../processing-a-multidimensional-model-analysis-services.md).  
+ Para obtener más información acerca de las opciones de procesamiento, vea [procesar objetos &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), y [procesamiento del objeto de modelo Multidimensional](../processing-a-multidimensional-model-analysis-services.md).  
   
  El código siguiente realizará un procesamiento completo de todos los cubos de una base de datos especificada:  
   
@@ -419,7 +419,7 @@ static void CreateInternetSalesMeasureGroup(Cube cube)
 ### <a name="processing-a-measure-group"></a>Procesar un grupo de medida  
  Procesar un grupo de medida es tan simple como utilizar el método Process del objeto <xref:Microsoft.AnalysisServices.MeasureGroup>. Al procesar un grupo de medida, se procesarán todas las particiones que pertenecen a dicho grupo. El procesamiento interno de un grupo de medida se resuelve en el procesamiento de dimensiones y particiones. Vea la sección [Procesar una partición](#ProcPart) de este documento.  
   
- Para obtener más información acerca de las opciones de procesamiento, vea [Processing Objects &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), y [procesamiento del objeto de modelo multidimensionales](../processing-a-multidimensional-model-analysis-services.md).  
+ Para obtener más información acerca de las opciones de procesamiento, vea [procesar objetos &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), y [procesamiento del objeto de modelo Multidimensional](../processing-a-multidimensional-model-analysis-services.md).  
   
  El código siguiente realizará un procesamiento completo en todos los grupos de medida de un cubo proporcionado.  
   
@@ -485,7 +485,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 ###  <a name="ProcPart"></a> Procesar una partición  
  Procesar una partición es tan simple como utilizar el método Process del objeto <xref:Microsoft.AnalysisServices.Partition>.  
   
- Para obtener más información acerca de las opciones de procesamiento, vea [Processing Objects &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) y [procesamiento del objeto de modelo multidimensionales](../processing-a-multidimensional-model-analysis-services.md).  
+ Para obtener más información acerca de las opciones de procesamiento, vea [procesar objetos &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) y [procesamiento del objeto de modelo Multidimensional](../processing-a-multidimensional-model-analysis-services.md).  
   
  El ejemplo de código siguiente realiza un procesamiento completo de todas las particiones de un grupo de medida especificado.  
   
@@ -510,7 +510,7 @@ static void FullProcessAllPartitions(MeasureGroup mg)
   
 -   Las particiones residen en el mismo servidor; las particiones remotas pueden mezclarse si están en el mismo servidor.  
   
- A diferencia de las versiones anteriores, en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no es necesario que todas las particiones de origen tengan un diseño de agregaciones idénticos.  
+ A diferencia de las versiones anteriores, en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no es necesario que todas las particiones de origen tienen un diseño de agregaciones idéntico.  
   
  El conjunto de agregaciones resultante para la partición de destino es el mismo conjunto de agregaciones del estado anterior a la ejecución del comando merge.  
   

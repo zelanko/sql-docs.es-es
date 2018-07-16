@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2720d4e3a767a66768909bccad6cf1a7fdf78722
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9aa5b777f8e05b9a3bd8784c15ae8294e9caa8bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264282"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportar a Microsoft Word (Generador de informes y SSRS)
   La extensión de representación de Word representa informes en el formato nativo de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. El formato es Office Open XML.  
@@ -140,14 +140,14 @@ ms.locfileid: "36198637"
   
 -   Una vez exportado el informe, Word lo pagina de nuevo. Esto puede hacer que aparezcan saltos de página adicionales en el informe representado.  
   
--   Word no repite las filas de encabezado en la página dos y siguientes, aunque se establezca la propiedad RepeatOnNewPage de la fila de encabezado estática en un tablix (tabla, matriz o lista) en `True`. Puede definir saltos de página explícitos en su informe para obligar a las filas de encabezado a aparecer en nuevas páginas. Sin embargo, dado que Word aplica su propia paginación al informe representado exportado a Word, los resultados podrían variar y la fila de encabezado podría no repetirse previsiblemente. La fila de encabezado estática es la fila que contiene los encabezados de columna.  
+-   Word no repite las filas de encabezado en la página dos y siguientes, aunque se establezca la propiedad RepeatOnNewPage de la fila de encabezado estático en un tablix (tabla, matriz o lista) en `True`. Puede definir saltos de página explícitos en su informe para obligar a las filas de encabezado a aparecer en nuevas páginas. Sin embargo, dado que Word aplica su propia paginación al informe representado exportado a Word, los resultados podrían variar y la fila de encabezado podría no repetirse previsiblemente. La fila de encabezado estática es la fila que contiene los encabezados de columna.  
   
 -   Los cuadros de texto aumentan de tamaño cuando contienen espacios de no separación.  
   
 -   Cuando se exporta texto a Word, el texto con decoración en determinadas fuentes puede generar glifos inesperados en el informe representado o la pérdida de glifos en el mismo.  
   
 ##  <a name="WordBenefits"></a> Ventajas de usar el representador de Word  
- Además de realizar las características que son nuevas en [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 estén disponibles para exportar informes, los archivos *.docx de los informes exportados suelen ser menores. Los informes exportados mediante el representador de Word suelen ser mucho menores que los mismos informes exportados mediante el representador de Word 2003.  
+ Además de las características que son nuevas en [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 estén disponibles para exportar informes, los archivos *.docx de los informes exportados suelen ser menores. Los informes exportados mediante el representador de Word suelen ser mucho menores que los mismos informes exportados mediante el representador de Word 2003.  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>Compatibilidad con versiones anteriores de los informes exportados  
  Puede seleccionar un modo de compatibilidad de Word y establecer opciones de compatibilidad. El representador de Word crea documentos con el modo de compatibilidad activado. Al volver a guardar los documentos con el modo de compatibilidad desactivado, el diseño del documento puede verse afectado.  
@@ -159,7 +159,7 @@ ms.locfileid: "36198637"
   
  La opción de menú **Word 2003** nunca está visible en los escenarios siguientes:  
   
--   El Generador de informes está en modo sin conexión y se obtiene la vista previa de un informe en el Generador de informes. Esto se produce tanto en el [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] y versiones independientes del generador de informes.  
+-   El Generador de informes está en modo sin conexión y se obtiene la vista previa de un informe en el Generador de informes. Esto es así en el [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] y versiones independientes del generador de informes.  
   
 -   El elemento web Visor de informes está en modo local y la granja de servidores de SharePoint no está integrada en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, vea [Informes en modo local frente al modo conectado en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
@@ -181,7 +181,7 @@ ms.locfileid: "36198637"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- La extensión WORDOPENXML define el representador de Word para [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. La extensión WORD define la versión de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = “false”` indica que el representador de Word 2003 está oculto. Para obtener más información, consulte [archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md) y [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
+ La extensión WORDOPENXML define el representador de Word para [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. La extensión WORD define la versión de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = “false”` indica que el representador de Word 2003 está oculto. Para obtener más información, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) y [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
   
 ##  <a name="Differences"></a> Diferencias entre los representadores de 2003 de Word y Word  
  Los informes representados mediante el representador de Word o Word 2003 no se suelen distinguir visualmente. Sin embargo, puede observar pequeñas diferencias entre los dos formatos de Word o Word 2003.  
@@ -192,7 +192,7 @@ ms.locfileid: "36198637"
 ## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;el generador de informes SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

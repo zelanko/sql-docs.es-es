@@ -1,5 +1,5 @@
 ---
-title: Conceptos de minería de datos | Documentos de Microsoft
+title: Conceptos de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data mining
 - cleaning data
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 296ef0bf077c7d28e7288e1c7cae999de592b8e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1236bc9b0c7e18331d2a3dea660f38d81408176b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212015"
 ---
 # <a name="data-mining-concepts"></a>Conceptos de minería de datos
   La minería de datos es el proceso de detectar la información procesable de los conjuntos grandes de datos. Utiliza el análisis matemático para deducir los patrones y tendencias que existen en los datos. Normalmente, estos patrones no se pueden detectar mediante la exploración tradicional de los datos porque las relaciones son demasiado complejas o porque hay demasiado datos.  
@@ -66,7 +66,7 @@ ms.locfileid: "36198315"
   
  El siguiente diagrama describe las relaciones existentes entre cada paso del proceso y las tecnologías de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se pueden usar para completar cada paso.  
   
- ![Pasos clave del proceso de minería de datos de](../media/data-mining-process.gif "pasos clave del proceso de minería de datos de")  
+ ![Pasos clave del proceso de minería de datos de](../media/data-mining-process.gif "pasos clave en el proceso de minería de datos")  
   
  El proceso que se ilustra en el diagrama es cíclico, lo que significa que la creación de un modelo de minería de datos es un proceso dinámico e iterativo. Una vez que ha explorado los datos, puede que descubra que resultan insuficientes para crear los modelos de minería de datos adecuados y que, por tanto, debe buscar más datos. O bien, puede generar varios modelos y descubrir entonces que no responden adecuadamente al problema planteado cuando los definió y que, por tanto, debe volver a definir el problema. Es posible que deba actualizar los modelos una vez implementados debido a que haya más datos disponibles. Puede que haya que repetir cada paso del proceso muchas veces para crear un modelo adecuado.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36198315"
 ##  <a name="PreparingData"></a> Preparar los datos  
  El segundo paso del proceso de minería de datos, como se indica en el siguiente diagrama, consiste en consolidar y limpiar los datos identificados en el paso [Definir el problema](#DefiningTheProblem) .  
   
- ![Segundo paso de minería de datos: preparar los datos](../media/dmprocess-preparing.gif "segundo paso de minería de datos: preparar los datos")  
+ ![Segundo paso de minería de datos: preparación de datos](../media/dmprocess-preparing.gif "segundo paso de minería de datos: preparación de datos")  
   
  Los datos pueden estar dispersos en la empresa y almacenados en formatos distintos; también pueden contener incoherencias como entradas que faltan o incorrectas. Por ejemplo, los datos pueden mostrar que un cliente adquirió un producto incluso antes que se ofreciera en el mercado o que el cliente compra regularmente en una tienda situada a 2.000 kilómetros de su casa.  
   
@@ -112,12 +112,12 @@ ms.locfileid: "36198315"
   
 -   [Data Quality Services](../../data-quality-services/data-quality-services.md)  
   
- Es importante tener en cuenta que los datos que se usan para la minería de datos no necesitan almacenarse en un cubo de procesamiento analítico en línea (OLAP), ni siquiera en una base de datos relacional, aunque puede usar ambos como orígenes de datos. Puede realizar minería de datos mediante cualquier origen de datos definido como origen de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Por ejemplo, archivos de texto, libros de Excel o datos de otros proveedores externos. Para obtener más información, consulte [orígenes de datos admitidos &#40;SSAS multidimensionales&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
+ Es importante tener en cuenta que los datos que se usan para la minería de datos no necesitan almacenarse en un cubo de procesamiento analítico en línea (OLAP), ni siquiera en una base de datos relacional, aunque puede usar ambos como orígenes de datos. Puede realizar minería de datos mediante cualquier origen de datos definido como origen de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Por ejemplo, archivos de texto, libros de Excel o datos de otros proveedores externos. Para obtener más información, consulte [Data Sources Supported &#40;Multidimensional de SSAS&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
 ##  <a name="ExploringData"></a> Explorar los datos  
  El tercer paso del proceso de minería de datos, como se resalta en el siguiente diagrama, consiste en explorar los datos preparados.  
   
- ![Tercer paso de minería de datos: explorar datos](../media/dmprocess-exploring.gif "tercer paso de minería de datos: explorar datos")  
+ ![Tercer paso de minería de datos: explorar datos](../media/dmprocess-exploring.gif "tercer paso de minería de datos: exploración de datos")  
   
  Debe conocer los datos para tomar las decisiones adecuadas al crear los modelos de minería de datos. Entre las técnicas de exploración se incluyen calcular los valores mínimos y máximos, calcular la media y las desviaciones estándar, y examinar la distribución de los datos. Por ejemplo, al revisar el máximo, el mínimo y los valores de la media se podría determinar que los datos no son representativos de los clientes o procesos de negocio, y que por consiguiente debe obtener más datos equilibrados o revisar las suposiciones que son la base de sus expectativas. Las desviaciones estándar y otros valores de distribución pueden proporcionar información útil sobre la estabilidad y exactitud de los resultados. Una desviación estándar grande puede indicar que agregar más datos podría ayudarle a mejorar el modelo. Los datos que se desvían mucho de una distribución estándar se podrían sesgar o podrían representar una imagen precisa de un problema de la vida real, pero dificultar el ajustar un modelo a los datos.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36198315"
 ##  <a name="BuildingModels"></a> Generar modelos  
  El cuarto paso del proceso de minería de datos, como se resalta en el siguiente diagrama, consiste en generar el modelo o modelos de minería de datos. Usará los conocimientos adquiridos en el paso [Explorar los datos](#ExploringData) para definir y crear los modelos.  
   
- ![Cuarto paso de minería de datos: creación de modelos de minería de datos](../media/dmprocess-building.gif "paso cuarto de minería de datos: creación de modelos de minería de datos")  
+ ![Cuarto paso de minería de datos: creación de modelos de minería de datos](../media/dmprocess-building.gif "cuarto paso de minería de datos: creación de modelos de minería de datos")  
   
  Deberá definir qué columnas de datos desea que se usen; para ello, creará una estructura de minería de datos. La estructura de minería de datos se vincula al origen de datos, pero en realidad no contiene ningún dato hasta que se procesa. Al procesar la estructura de minería de datos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera agregados y otra información estadística que se puede usar para el análisis. Cualquier modelo de minería de datos que esté basado en la estructura puede utilizar esta información. Para obtener más información sobre cómo se relacionan las estructuras de minería de datos con los modelos de minería de datos, vea [Arquitectura lógica &#40;Analysis Services - Minería de datos&#41;](logical-architecture-analysis-services-data-mining.md).  
   

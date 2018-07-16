@@ -1,5 +1,5 @@
 ---
-title: Opciones de restauración | Documentos de Microsoft
+title: Opciones de restauración | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], restoring
 - restoring databases [Analysis Services]
 ms.assetid: 75c73802-f321-4671-afc7-54505d62c013
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dab1bfda7ce682646cd8810ffe7317e2e65f2c04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d12a3491ba2eade07f780bb1941126dcad24426
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317065"
 ---
 # <a name="restore-options"></a>Opciones de restauración
   Existen muchas formas de restaurar las bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pero todas ellas requieren que tenga permisos de administrador para el equipo servidor y para la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para restaurar una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede abrir el cuadro de diálogo **Restaurar base de datos** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], seleccionar la configuración adecuada de las opciones y, a continuación, ejecutar la restauración desde el cuadro de diálogo. O bien, puede crear un script que utilice los valores ya especificados en el archivo; así podrá guardar el script y ejecutarlo tan a menudo como sea necesario. De esta forma, la restauración se lleva a cabo mediante XMLA, como se describe en la siguiente sección.  
@@ -37,9 +37,9 @@ ms.locfileid: "36108448"
 >  Después de restaurar una base de datos existente, el usuario que restauró la base de datos podría perder el acceso a la base de datos restaurada. Esta pérdida de acceso puede producirse si, en el momento en que se realizó la copia de seguridad, el usuario no era miembro del rol de servidor o no era miembro de rol de base de datos con permisos de Control total (Administrador).  
   
 ## <a name="see-also"></a>Vea también  
- [Restaurar base de datos cuadro de diálogo &#40;Analysis Services - datos multidimensionales&#41;](../restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Restaurar la base de datos cuadro de diálogo &#40;Analysis Services - datos multidimensionales&#41;](../restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](backup-and-restore-of-analysis-services-databases.md)   
  [Elemento restore &#40;XMLA&#41;](../xmla/xml-elements-commands/restore-element-xmla.md)   
- [Copia de seguridad, restaurar y sincronizar las bases de datos &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [Copia de seguridad, restaurar, sincronizar y las bases de datos &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-notifications
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e52a31296cee16b8580d08bc4eaf016f9d0cc3e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f26d6b4622d11ae9a620d5cbdb03eed737de1645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305115"
 ---
 # <a name="event-notifications"></a>Notificaciones de eventos
   Las notificaciones de eventos envían información acerca de los eventos a un servicio [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Las notificaciones de eventos se ejecutan como respuesta a una variedad de instrucciones del lenguaje de definición de datos (DDL) [!INCLUDE[tsql](../../includes/tsql-md.md)] y eventos de Seguimiento de SQL enviando información acerca de esos eventos a un servicio de [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
@@ -55,7 +54,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>Conceptos de las notificaciones de eventos  
  Cuando se crea una notificación de eventos, se abren una o más conversaciones de [!INCLUDE[ssSB](../../includes/sssb-md.md)] entre una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el servicio de destino que se especifica. Normalmente, las conversaciones permanecen abiertas mientras existe la notificación de eventos como objeto de la instancia de servidores. En algunos casos de error, las conversaciones se pueden cerrar antes de que se quite la notificación de eventos. Esas conversaciones nunca se comparten entre notificaciones de eventos. Cada notificación de eventos tiene sus propias conversaciones exclusivas. Al finalizar una conversación explícitamente se impide que el servicio de destino reciba más mensajes y la conversación no se vuelve a abrir la próxima vez que se activa la notificación de eventos.  
   
- Información de eventos se entrega a la [!INCLUDE[ssSB](../../includes/sssb-md.md)] servicio como una variable de tipo `xml` que proporciona información acerca de cuándo se produce un evento, el objeto de base de datos afectado, la [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción por lotes implicada y otra información. Para obtener más información sobre el esquema XML producido por las notificaciones de eventos, vea [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
+ Información de eventos se entrega a la [!INCLUDE[ssSB](../../includes/sssb-md.md)] servicio como una variable de tipo `xml` que proporciona información sobre cuándo se produce un evento, el objeto de base de datos afectado, la [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción por lotes implicada y otra información. Para obtener más información sobre el esquema XML producido por las notificaciones de eventos, vea [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
   
 ### <a name="event-notifications-vs-triggers"></a>Notificaciones de eventos y Desencadenadores  
  En la siguiente tabla se comparan y contrastan los desencadenadores y las notificaciones de eventos.  
@@ -71,7 +70,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Los nombres de desencadenador DML se encuentran en el ámbito de esquema. Los nombres de desencadenador DDL se encuentran en el ámbito de la base de datos o del servidor.|Los nombres de notificación de eventos se encuentran en el ámbito de la base de datos o del servidor. Las notificaciones de eventos en un evento QUEUE_ACTIVATION se encuentran en el ámbito de una cola específica.|  
 |El mismo propietario posee los desencadenadores DML y las tablas en que se aplican.|El propietario de una notificación de eventos en una cola puede tener un propietario diferente que el objeto en el que se aplica.|  
 |Los desencadenadores admiten la cláusula EXECUTE AS.|Las notificaciones de eventos no admiten la cláusula EXECUTE AS.|  
-|Se puede capturar información de eventos de desencadenador DDL mediante la función EVENTDATA, que devuelve un `xml` tipo de datos.|Envían notificaciones de eventos `xml` información de evento en un servicio de Service Broker. El formato de la información usa el mismo esquema que la función EVENTDATA.|  
+|Puede capturar la información de eventos de desencadenador DDL mediante la función EVENTDATA, que devuelve un `xml` tipo de datos.|Envían notificaciones de eventos `xml` información de evento en un servicio de Service Broker. El formato de la información usa el mismo esquema que la función EVENTDATA.|  
 |Los metadatos sobre los desencadenadores se encuentran en las vistas de catálogo **sys.triggers** y **sys.server_triggers** .|Los metadatos sobre las notificaciones de eventos se encuentran en las vistas de catálogo **sys.event_notifications** y **sys.server_event_notifications**.|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Notificaciones de eventos y Seguimiento de SQL  

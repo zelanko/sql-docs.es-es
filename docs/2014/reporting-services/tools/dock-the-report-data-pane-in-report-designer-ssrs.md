@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0792825135920bff993088c00bf5eec1694a342d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3d682f7018261e967729a26db201bef5a3b6e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220725"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Acoplar el panel Datos de informe en el Diseñador de informes (SSRS)
-  En el Diseñador de informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el panel de datos de informe muestra una vista jerárquica de objetos de datos que puede usar en un informe, incluidos los orígenes de datos, conjuntos de datos, campos, parámetros e imágenes. Los orígenes de datos de esta vista pueden estar incrustados o ser referencias a orígenes de datos compartidos que se muestran en el Explorador de soluciones.  
+  En el Diseñador de informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el panel datos de informe muestra una vista jerárquica de objetos de datos que puede usar en un informe, incluidos los orígenes de datos, conjuntos de datos, campos, parámetros e imágenes. Los orígenes de datos de esta vista pueden estar incrustados o ser referencias a orígenes de datos compartidos que se muestran en el Explorador de soluciones.  
   
 ### <a name="to-display-the-report-data-pane"></a>Para mostrar el panel Datos de informe  
   
@@ -38,11 +38,11 @@ ms.locfileid: "36111941"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>Para cambiar el panel Datos de informe de una ventana acoplada a una ventana con fichas  
   
--   Haga clic en la barra de título del panel de datos de informe y, a continuación, haga clic en **fichas**.  
+-   Haga clic en la barra de título del panel datos de informe y, a continuación, haga clic en **fichas**.  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>Para cambiar el panel Datos de informe de una ventana con fichas a una ventana acoplada  
   
--   Haga clic en la ficha de datos de informe y, a continuación, haga clic en **acoplable**.  
+-   Haga clic en la pestaña datos de informe y, a continuación, haga clic en **acoplable**.  
   
      Para alternar entre los dos últimos estados de presentación, haga doble clic en la barra de título del panel Datos de informe.  
   

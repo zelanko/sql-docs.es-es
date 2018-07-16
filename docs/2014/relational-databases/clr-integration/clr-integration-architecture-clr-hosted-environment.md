@@ -1,13 +1,11 @@
 ---
-title: Entorno de CLR hospedado | Documentos de Microsoft
+title: Entorno de CLR hospedado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -29,15 +27,15 @@ helpviewer_keywords:
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06301efa5022c5ed686a4db97951c62bc85daf35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ea3ca5dbbc51a7e675d1876114209d37fc928c89
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106370"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354697"
 ---
 # <a name="clr-hosted-environment"></a>Entorno hospedado CLR
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework Common Language Runtime (CLR) es un entorno que ejecuta muchos lenguajes de programación modernos, incluidos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++. CLR presenta memoria de recopilación de elementos no utilizados, subprocesamiento preferente, servicios de metadatos (reflexión de tipos), capacidad de comprobar el código y seguridad de acceso del código. CLR usa metadatos para localizar y cargar clases, colocar instancias en memoria, resolver invocaciones a métodos, generar código nativo, exigir mecanismos de seguridad y establecer los límites del contexto en tiempo de ejecución.  
@@ -100,7 +98,7 @@ ms.locfileid: "36106370"
   
 -   ExternalProcessMgmt, que indica si la API expone una forma de controlar el proceso de host.  
   
- Dados estos atributos, el host puede especificar una lista de atributos HPA, como el atributo SharedState, que no deberían permitirse en el entorno hospedado. En este caso, CLR rechaza los intentos del código de usuario de llamar a las API anotadas por los HPA en la lista de atributos prohibidos. Para obtener más información, consulte [atributos de protección de Host y la programación de integración de CLR](../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
+ Dados estos atributos, el host puede especificar una lista de atributos HPA, como el atributo SharedState, que no deberían permitirse en el entorno hospedado. En este caso, CLR rechaza los intentos del código de usuario de llamar a las API anotadas por los HPA en la lista de atributos prohibidos. Para obtener más información, consulte [atributos de protección de Host y programación de integración de CLR](../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
   
 ## <a name="how-sql-server-and-the-clr-work-together"></a>Cómo trabajan juntos SQL Server y CLR  
  En esta sección se describe el modo en que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integra los modelos de subprocesamiento, programación, sincronización y administración de memoria de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y CLR. En concreto, en esta sección se examina la integración a la luz de los objetivos de escalabilidad, confiabilidad y seguridad. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] actúa esencialmente como sistema operativo para CLR cuando se hospeda en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. CLR llama a las rutinas de bajo nivel implementadas por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el subprocesamiento, la programación, la sincronización y la administración de memoria. Éstos son los mismos tipos primitivos que usa el resto del motor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este enfoque proporciona varias ventajas de escalabilidad, confiabilidad y seguridad.  
@@ -148,7 +146,7 @@ ms.locfileid: "36106370"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tampoco permite las llamadas a las API de .NET Framework anotadas con los atributos de protección del host `SharedState`, `Synchronization` y `ExternalProcessMgmt`. Esto impide que los ensamblados EXTERNAL_ACCESS y SAFE llamen a cualquiera de las API que habilitan el estado compartido, ejecuten la sincronización y puedan afectar a la integridad del proceso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [restricciones del modelo de programación de integración de CLR](database-objects/clr-integration-programming-model-restrictions.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Seguridad de la integración de CLR](security/clr-integration-security.md)   
+ [Seguridad de la integración CLR](security/clr-integration-security.md)   
  [Rendimiento de la integración CLR](clr-integration-architecture-performance.md)  
   
   

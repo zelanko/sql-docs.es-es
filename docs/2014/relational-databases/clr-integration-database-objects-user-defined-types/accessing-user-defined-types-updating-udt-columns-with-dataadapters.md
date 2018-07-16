@@ -1,13 +1,11 @@
 ---
-title: Actualizar columnas de UDT con DataAdapters | Documentos de Microsoft
+title: Actualizar columnas de UDT con DataAdapters | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -25,21 +23,21 @@ helpviewer_keywords:
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 683e1f82aaf76a21f20fed02b6be1c39347d7302
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 7a69065a293d5ffedba91308c9b4ac7c6d02b7c7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104050"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354877"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>Actualizar columnas de UDT con DataAdapters
   Los tipos definidos por el usuario (UDT) se admiten utilizando `System.Data.DataSet` y `System.Data.SqlClient.SqlDataAdapter` para recuperar y modificar los datos.  
   
 ## <a name="populating-a-dataset"></a>Rellenar un conjunto de datos  
- Puede utilizar la instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] para seleccionar los valores de columna UDT y rellenar un conjunto de datos mediante un adaptador de datos. En el ejemplo siguiente se supone que tiene un **puntos** tabla definida con la siguiente estructura y algunos datos de ejemplo. El siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones crean la **puntos** tabla e insertar algunas filas.  
+ Puede utilizar la instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] para seleccionar los valores de columna UDT y rellenar un conjunto de datos mediante un adaptador de datos. El ejemplo siguiente se supone que tiene un **puntos** tabla definida con la siguiente estructura y algunos datos de ejemplo. La siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones crean la **puntos** tabla e insertar algunas filas.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -51,7 +49,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- El siguiente fragmento de código ADO.NET recupera una cadena de conexión válida, crea un nuevo `SqlDataAdapter`y rellena una `System.Data.DataTable` con las filas de datos de la **puntos** tabla.  
+ El siguiente fragmento de código ADO.NET recupera una cadena de conexión válida, se crea un nuevo `SqlDataAdapter`y rellena un `System.Data.DataTable` con las filas de datos desde el **puntos** tabla.  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -90,9 +88,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  El siguiente ejemplo de ADO.NET incluye dos métodos:  
   
--   `UserProvidedCommands`, que muestra cómo proporcionar `InsertCommand`, `UpdateCommand`, y `DeleteCommand` objetos para actualizar la `Point` UDT en el **puntos** tabla (que no contiene un `timestamp` columna).  
+-   `UserProvidedCommands`, que muestra cómo proporcionar `InsertCommand`, `UpdateCommand`, y `DeleteCommand` objetos para actualizar el `Point` UDT en el **puntos** tabla (que no contiene un `timestamp` columna).  
   
--   `CommandBuilder`, que muestra cómo utilizar un `SqlCommandBuilder` en el **Points_ts** tabla que contiene la `timestamp` columna.  
+-   `CommandBuilder`, que muestra cómo usar un `SqlCommandBuilder` en el **Points_ts** tabla que contiene el `timestamp` columna.  
   
 ```vb  
 Imports System  

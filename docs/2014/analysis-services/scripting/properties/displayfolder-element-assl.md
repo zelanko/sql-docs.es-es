@@ -1,5 +1,5 @@
 ---
-title: Elemento DisplayFolder (ASSL) | Documentos de Microsoft
+title: Elemento DisplayFolder (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DisplayFolder element
 ms.assetid: 55184c02-03e7-4d6c-b87a-d4d34bc11d0e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c959f1c2fe298217b46849c6a13d3e0f313f6803
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 646a98170e24c36841ab445bf87897a0b4e9686f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293205"
 ---
 # <a name="displayfolder-element-assl"></a>Elemento DisplayFolder (ASSL)
-  Especifica la carpeta en la que se enumerará el elemento primario. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las aplicaciones para desarrolladores y administradores pueden admitir el uso de carpetas para mostrar para categorizar visualmente múltiples elementos.  
+  Especifica la carpeta en la que se enumerará el elemento primario. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las aplicaciones para desarrolladores y administradores pueden admitir el uso de carpetas para mostrar a fin de categorizar visualmente múltiples elementos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -68,9 +68,9 @@ ms.locfileid: "36111031"
   
 -   Puede contener un único nombre de carpeta, lo que indica que la medida debería representarse como perteneciente a una carpeta con el mismo nombre.  
   
--   Contienen varios nombres de carpeta separados por una barra diagonal inversa (\\), lo que indica una jerarquía de carpetas incrustada.  
+-   Contener varios nombres de carpetas separados por una barra diagonal inversa (\\), que indica una jerarquía de carpetas incrustada.  
   
- El `DisplayFolder` propiedad se aplica a `CalculationProperty` if solo elementos el valor de [CalculationType](calculationtype-element-assl.md) está establecido en *miembro*.  
+ El `DisplayFolder` propiedad se aplica a `CalculationProperty` solo si de elementos del valor de [CalculationType](calculationtype-element-assl.md) está establecido en *miembro*.  
   
  Los elementos que corresponden a los elementos primarios de `DisplayFolder` en el modelo de objetos de Objetos de administración de análisis (AMO) son <xref:Microsoft.AnalysisServices.CalculationProperty>, <xref:Microsoft.AnalysisServices.Hierarchy>, <xref:Microsoft.AnalysisServices.Kpi>, <xref:Microsoft.AnalysisServices.Measure> y <xref:Microsoft.AnalysisServices.Translation>.  
   

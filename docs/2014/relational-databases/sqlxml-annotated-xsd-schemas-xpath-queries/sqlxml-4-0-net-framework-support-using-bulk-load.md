@@ -1,5 +1,5 @@
 ---
-title: Con carga masiva SQLXML en el entorno .NET | Documentos de Microsoft
+title: Con la carga masiva SQLXML en el entorno .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,23 +17,23 @@ helpviewer_keywords:
 - bulk load [SQLXML], .NET environment
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f597ddc37d61337bd60714afbcb564c87c6747f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 8133a762b1bc0f687529ee375bd8e9c5699051b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307485"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>Usar la carga masiva SQLXML en el entorno .NET
-  En este tema se explica cómo se puede usar la funcionalidad de carga masiva XML en el entorno .NET. Para obtener información detallada sobre la carga masiva XML, vea [realizar carga masiva de datos XML &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
+  En este tema se explica cómo se puede usar la funcionalidad de carga masiva XML en el entorno .NET. Para obtener información detallada acerca de la carga masiva XML, vea [realizar carga masiva de datos XML &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
   
  Para utilizar el objeto COM de carga masiva SQLXML desde un entorno administrado, tiene que agregar una referencia de proyecto a este objeto. Esto genera una interfaz de contenedor administrado para el objeto COM de carga masiva.  
   
 > [!NOTE]  
->  La carga masiva XML administrada no funciona con flujos administrados y requiere un contenedor para los flujo nativos. El componente Carga masiva SQLXML no se ejecutará en un entorno multiproceso (atributo ' [MTAThread]'). Si intenta ejecutar el componente de carga masiva en un entorno multiproceso, obtendrá una excepción InvalidCastException con la siguiente información adicional: "Error de QueryInterface para la interfaz SQLXMLBULKLOADLib.ISQLXMLBulkLoad". La solución consiste en hacer que el objeto que contiene la carga masiva objeto subproceso único accesible (por ejemplo, mediante la **[STAThread]** atributo tal como se muestra en el ejemplo).  
+>  La carga masiva XML administrada no funciona con flujos administrados y requiere un contenedor para los flujo nativos. El componente Carga masiva SQLXML no se ejecutará en un entorno multiproceso (atributo ' [MTAThread]'). Si intenta ejecutar el componente carga masiva en un entorno multiproceso, obtendrá una excepción InvalidCastException con la siguiente información adicional: "Error de QueryInterface para la interfaz SQLXMLBULKLOADLib.ISQLXMLBulkLoad". La solución consiste en hacer que el objeto que contiene la carga masiva objeto único subproceso accesible (por ejemplo, mediante el **[STAThread]** atributo tal como se muestra en el ejemplo).  
   
  En este tema se proporciona una aplicación de ejemplo funcional en C# para realizar la carga masiva de los datos XML de la base de datos. Para crear un ejemplo funcional, siga estos pasos:  
   

@@ -1,5 +1,5 @@
 ---
-title: Conectarse a una base de datos de Informix (SSAS) | Documentos de Microsoft
+title: Conectarse a una base de datos de Informix (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.conninformixdb.f1
 ms.assetid: b01d537c-1c04-4d7d-9146-051c249b08e4
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c1ad99a867064b0d228875e88252b1cd30234820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c36a378d229b30d65113512581d52c13deef1b6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216195"
 ---
 # <a name="connect-to-an-informix-database-ssas"></a>Conectarse a una base de datos de Informix (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite especificar los valores para conectarse con una base de datos de Informix. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  

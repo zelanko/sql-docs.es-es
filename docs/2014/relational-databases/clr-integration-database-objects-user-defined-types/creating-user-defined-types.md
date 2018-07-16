@@ -1,13 +1,11 @@
 ---
-title: Crear un tipo definido por el usuario | Documentos de Microsoft
+title: Creación de un tipo definido por el usuario | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -17,17 +15,17 @@ helpviewer_keywords:
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b832d8191cd153f5f11af88263f4ecbeb1021ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4446d468738ea9db533488de62705c548e777f0a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108115"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350981"
 ---
-# <a name="creating-a-user-defined-type"></a>Crear un tipo definido por el usuario
+# <a name="creating-a-user-defined-type"></a>Creación de un tipo definido por el usuario
   Para crear un tipo definido por el usuario (UDT) capaz de instalarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe crear primero una clase en uno de los lenguajes de programación de .NET Framework compatibles, como Visual C# o Visual Basic, que se ajuste a las especificaciones para crear UDT. A continuación, la clase puede compilarse como una biblioteca de vínculos dinámicos (DLL), que puede cargarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede crear e implementar UDT con Visual Studio.  
   
  La capacidad de ejecutar el código de Common Language Runtime (CLR) está establecida de forma predeterminada en OFF en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CLR puede habilitarse usando el procedimiento almacenado del sistema `sp_configure`, como se muestra en las siguientes instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
@@ -38,16 +36,16 @@ Reconfigure
 ```  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Requisitos de tipo definido por el usuario](creating-user-defined-types-requirements.md)  
+ [Requisitos de tipos definidos por el usuario](creating-user-defined-types-requirements.md)  
  Describe los requisitos para codificar los tipos definidos por el usuario.  
   
  [Codificar tipos definidos por el usuario](creating-user-defined-types-coding.md)  
  Muestra las técnicas de codificación implicadas en la creación de tipos definidos por el usuario.  
   
 ## <a name="example"></a>Ejemplo  
- La lista de código siguiente define el UDT Point, que se describe en detalle en [Coding User-Defined tipos](creating-user-defined-types-coding.md).  
+ La lista de código siguiente define el UDT Point, que se describe en detalle en [codificación de tipos](creating-user-defined-types-coding.md).  
   
- Las listas de códigos completas para el resto de los ejemplos que se describen en esta sección pueden obtenerse instalando los ejemplos de CLR. Para obtener instrucciones acerca de cómo instalar estos ejemplos, vea [ejemplos de motor de base de datos de SQL Server](http://msftengprodsamples.codeplex.com/).  
+ Las listas de códigos completas para el resto de los ejemplos que se describen en esta sección pueden obtenerse instalando los ejemplos de CLR. Para obtener instrucciones acerca de cómo instalar estos ejemplos, consulte [ejemplos de motor de base de datos de SQL Server](http://msftengprodsamples.codeplex.com/).  
   
  C#  
   

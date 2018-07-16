@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - herramientas-opciones (página de opciones generales) | Documentos de Microsoft
+title: SQL Server Profiler - opciones de herramientas (página de opciones generales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.generaloptions.f1
 helpviewer_keywords:
 - General Options dialog box
 ms.assetid: a888246d-ccfe-415f-bbdc-d6adafac250a
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fed3aec717b21b3c3486d5fd25b27892969de44c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 695c1fc16604c4ce0e0a49da67016acbaa663d50
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243075"
 ---
-# <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler - herramientas-opciones (página de opciones de General)
+# <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler - opciones de herramientas (página de opciones generales)
   Utilice el cuadro de diálogo **Opciones generales** para ver o especificar las siguientes opciones.  
   
 ## <a name="options"></a>Opciones  
@@ -77,12 +77,12 @@ ms.locfileid: "36112067"
  Especifique el intervalo de sondeo del monitor de estado durante la reproducción en segundos. El valor predeterminado es 60 segundos. Este valor permite al usuario configurar la frecuencia con que el monitor de estado sondea los candidatos para terminar.  
   
 ## <a name="see-also"></a>Vea también  
- [Iniciar un seguimiento automáticamente después de conectarse a un servidor &#40;analizador de SQL Server&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [Establecer valores predeterminados de presentación de seguimiento &#40;analizador de SQL Server&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
- [Reproducir una tabla de seguimiento &#40;analizador de SQL Server&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [Iniciar un seguimiento automáticamente después de conectarse a un servidor &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [Establecer valores predeterminados de presentación de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [Reproducir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Reproducir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Reproducir seguimientos](../tools/sql-server-profiler/replay-traces.md)   
- [Establecer opciones globales de seguimiento &#40;analizador de SQL Server&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   
+ [Establecer opciones globales de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Propiedades de miembro intrínsecas (MDX) | Documentos de Microsoft
+title: Propiedades de miembro intrínsecas (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - intrinsic member properties [MDX]
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ac41e667c11812243aceeb9f6fd71a8a64fc2cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9cbfcb8926d8d4b1ae71c5a3b6ed35c3beb7796c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236035"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Propiedades de miembro intrínsecas (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] expone propiedades intrínsecas de los miembros de dimensión que se pueden incluir en una consulta para devolver datos o metadatos adicionales para usarlos en una aplicación personalizada o como ayuda durante la investigación o la construcción de un modelo. Si utiliza las herramientas de cliente de SQL Server, puede ver las propiedades intrínsecas en SQL Server Management Studio (SSMS).  
@@ -48,7 +48,7 @@ ms.locfileid: "36112128"
  Propiedades de miembro no contextuales  
  Estas propiedades de miembro no pueden utilizarse en el contexto de una dimensión o un nivel específicos y devuelven los valores para todos los miembros de un eje.  
   
- Las propiedades no contextuales son independientes y no incluyen información de ruta de acceso. Observe que no se ninguna dimensión o un nivel especificado para `PARENT_UNIQUE_NAME` en el ejemplo siguiente: `DIMENSION PROPERTIES PARENT_UNIQUE_NAME ON COLUMNS`  
+ Las propiedades no contextuales son independientes y no incluyen información de ruta de acceso. Observe cómo no hay ninguna dimensión o un nivel especificado para `PARENT_UNIQUE_NAME` en el ejemplo siguiente: `DIMENSION PROPERTIES PARENT_UNIQUE_NAME ON COLUMNS`  
   
  Independientemente de si la propiedad de miembro intrínseca es contextual o no, se rige por las siguientes reglas:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36112128"
   
 -   Se puede utilizar la palabra clave `PROPERTIES` para realizar consultas sobre las propiedades.  
   
- Las siguientes secciones describen tanto las diversos sensible al contexto y no contextuales propiedades de miembro intrínsecas disponibles en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]y cómo usar el `PROPERTIES` palabra clave a cada tipo de propiedad.  
+ Las secciones siguientes describen las distintas miembro intrínsecas contextuales sensible al contexto y sin contexto propiedades disponibles en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]y cómo usar el `PROPERTIES` palabra clave con cada tipo de propiedad.  
   
 ## <a name="context-sensitive-member-properties"></a>Propiedades de miembro contextuales  
  Todos los miembros de dimensión y de nivel admiten una lista de propiedades de miembro intrínsecas contextuales. En la siguiente tabla se incluyen estas propiedades contextuales.  
@@ -91,7 +91,7 @@ ms.locfileid: "36112128"
  En la tabla siguiente se incluyen las propiedades intrínsecas no contextuales compatibles con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
->  Las columnas del conjunto de filas del esquema MEMBERS admiten las propiedades de miembro intrínsecas incluidas en la siguiente tabla. Para obtener más información sobre la `MEMBERS` de filas de esquema, consulte [conjunto de filas MDSCHEMA_MEMBERS](../../schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
+>  Las columnas del conjunto de filas del esquema MEMBERS admiten las propiedades de miembro intrínsecas incluidas en la siguiente tabla. Para obtener más información sobre la `MEMBERS` de filas de esquema, vea [filas MDSCHEMA_MEMBERS](../../schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
   
 |Property|Descripción|  
 |--------------|-----------------|  
@@ -105,7 +105,7 @@ ms.locfileid: "36112128"
 |`IS_DATAMEMBER`|Valor booleano que indica si el miembro es un miembro de datos.|  
 |`IS_PLACEHOLDERMEMBER`|Valor booleano que indica si el miembro es un marcador de posición.|  
 |`KEYx`|Clave del miembro, donde x es el valor ordinal (con base cero) de la clave. KEY0 está disponible para claves compuestas y no compuestas.<br /><br /> Si la clave no es compuesta, KEY0 equivale a `Key`.<br /><br /> Para las claves compuestas, el conjunto KEY0, KEY1, KEY2, etc. forma la clave compuesta. Puede hacer referencia a cualquiera de ellas por separado en una consulta para devolver esa parte de la clave compuesta. Por ejemplo, si se especifica KEY0, se devuelve la primera parte de la clave compuesta, si se especifica KEY1, se devuelve la parte siguiente de la clave compuesta, y así sucesivamente.<br /><br /> Tenga en cuenta que `KEYx` se puede utilizar tanto con contexto como sin contexto. Por esta razón, aparece en las dos listas.<br /><br /> Para obtener un ejemplo de cómo utilizar esta propiedad de miembro, vea [Una sencilla curiosidad de MDX: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364).|  
-|`LCID` *X*|Traducción del título de miembro al valor hexadecimal del id. de configuración regional, donde *x* es el valor decimal del id. de configuración regional (por ejemplo, LCID1009 como inglés de Canadá). Disponible únicamente si la traducción tiene una columna de descripción enlazada al origen de datos.|  
+|`LCID` *x*|Traducción del título de miembro al valor hexadecimal del id. de configuración regional, donde *x* es el valor decimal del id. de configuración regional (por ejemplo, LCID1009 como inglés de Canadá). Disponible únicamente si la traducción tiene una columna de descripción enlazada al origen de datos.|  
 |`LEVEL_NUMBER`|Distancia al miembro desde la raíz de la jerarquía. El nivel raíz es cero.|  
 |`LEVEL_UNIQUE_NAME`|Nombre único del nivel al que pertenece el miembro. Los proveedores que generan nombres únicos por calificación tienen delimitados todos los componentes del nombre.|  
 |`MEMBER_CAPTION`|Etiqueta o descripción asociada al miembro. El título se utiliza principalmente para la visualización. Si no existe ningún título, la consulta devuelve `MEMBER_NAME`.|  
@@ -122,13 +122,13 @@ ms.locfileid: "36112128"
 |`UNIQUE_NAME`|El nombre completo del miembro, con este formato: [dimensión].[nivel].[key6.]|  
   
 ### <a name="properties-syntax-for-non-context-sensitive-properties"></a>Sintaxis de PROPERTIES para las propiedades no contextuales  
- Use la siguiente sintaxis para especificar una propiedad de miembro intrínseca, sin contexto mediante la `PROPERTIES` palabra clave:  
+ Use la siguiente sintaxis para especificar una propiedad de contexto que no son miembro intrínseca mediante el `PROPERTIES` palabra clave:  
   
  `DIMENSION PROPERTIES Property`  
   
  Tenga en cuenta que esta sintaxis no permite calificar la propiedad con una dimensión o un nivel. La propiedad no puede calificarse porque las propiedades de miembro intrínsecas no contextuales se aplican a todos los miembros de un eje.  
   
- Por ejemplo, una instrucción MDX que especifica la `DESCRIPTION` propiedad de miembro intrínseca debería tener la sintaxis siguiente:  
+ Por ejemplo, una instrucción MDX que especifica el `DESCRIPTION` propiedad de miembro intrínseca tendría la siguiente sintaxis:  
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
@@ -211,15 +211,15 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vea también  
  [PeriodsToDate &#40;MDX&#41;](/sql/mdx/periodstodate-mdx)   
- [Elementos secundarios &#40;MDX&#41;](/sql/mdx/children-mdx)   
+ [Los elementos secundarios &#40;MDX&#41;](/sql/mdx/children-mdx)   
  [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
- [Recuento de &#40;establecer&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
+ [Recuento &#40;establecer&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
  [Filtro &#40;MDX&#41;](/sql/mdx/filter-mdx)   
  [AddCalculatedMembers &#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
  [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
  [Propiedades &#40;MDX&#41;](/sql/mdx/properties-mdx)   
  [PrevMember &#40;MDX&#41;](/sql/mdx/prevmember-mdx)   
- [Mediante las propiedades de miembro &#40;MDX&#41;](mdx-member-properties.md)   
+ [Uso de las propiedades de miembro &#40;MDX&#41;](mdx-member-properties.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

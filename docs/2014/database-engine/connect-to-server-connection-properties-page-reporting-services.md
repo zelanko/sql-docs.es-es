@@ -1,5 +1,5 @@
 ---
-title: Conectar al servidor (página de propiedades de conexión) Reporting Services | Documentos de Microsoft
+title: Conectar al servidor (página de propiedades de conexión) Reporting Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttors.connectionproperties.f1
 ms.assetid: 66761a14-d646-44bb-9dff-be5ab2c40e88
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a66de16f4454742983bde4f45d3da496122ed9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1f079e76c4f3d7b659d3b48cf94a9e7fe54d27a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308035"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>Conectar al servidor (página Propiedades de conexión de Reporting Services)
   Use esta pestaña para ver o especificar opciones cuando se conecte a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] o cuando registre [!INCLUDE[ssRS](../includes/ssrs-md.md)] en **Servidores registrados**. **Conectar** y **Opciones** solo aparecen en este cuadro de diálogo al conectar. **Probar** y **Guardar** solo aparecen en este cuadro de diálogo al registrar [!INCLUDE[ssRS](../includes/ssrs-md.md)].  

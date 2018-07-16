@@ -1,5 +1,5 @@
 ---
-title: Procesar manualmente los datos (SSAS Tabular) | Documentos de Microsoft
+title: Procesar manualmente los datos (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.datarefreshprogressdb.f1
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edfb5ab290d6a5756e88f23497a4ea88c14db5d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 427d7439395c9264741e215672d1ae9390b41b04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304615"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>Procesar manualmente los datos (SSAS tabular)
   En este tema se describe cómo procesar manualmente los datos del área de trabajo en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -77,7 +77,7 @@ ms.locfileid: "36204049"
  Haga clic aquí para detener la operación de procesamiento. Esta opción resulta útil si la operación tarda demasiado o hay demasiados errores.  
   
 ## <a name="see-also"></a>Vea también  
- [Procesar datos &#40;SSAS Tabular&#41;](process-data-ssas-tabular.md)   
- [Solucionar problemas de procesamiento de datos &#40;SSAS Tabular&#41;](troubleshoot-process-data-ssas-tabular.md)  
+ [Procesar datos &#40;Tabular de SSAS&#41;](process-data-ssas-tabular.md)   
+ [Solución de problemas de procesamiento de datos &#40;Tabular de SSAS&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

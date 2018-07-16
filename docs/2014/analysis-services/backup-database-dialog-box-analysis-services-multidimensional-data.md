@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de la base de datos (Analysis Services - datos multidimensionales) de copia de seguridad | Documentos de Microsoft
+title: Cuadro de diálogo de la base de datos (Analysis Services - datos multidimensionales) de copia de seguridad | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.Backup.f1
 ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 64e8b814cab69ca66127f28b55062232e45a60fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d325d1cb634f1fb7548ff0a1030c97e866681b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234445"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Copia de seguridad de la base de datos (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Copia de seguridad de la base de datos** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para hacer una copia de seguridad de una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en un archivo de copia de seguridad con el formato de copia de seguridad de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (.abf).  
@@ -58,7 +58,7 @@ ms.locfileid: "36112357"
  **Examinar**  
  Haga clic para mostrar el cuadro de diálogo **Guardar archivo como** y seleccione la ruta de acceso y el nombre del archivo de copia de seguridad que quiere usar. Para obtener más información sobre el cuadro de diálogo **Guardar archivo como**, vea [Cuadro de diálogo Guardar archivo como &#40;Analysis Services - Datos multidimensionales&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Permitir la sobrescritura de archivos**  
+ **Permitir sobrescritura de archivos**  
  Seleccione esta opción para sobrescribir un archivo de copia de seguridad existente o un archivo de copia de seguridad remoto, si existiese.  
   
 > [!NOTE]  

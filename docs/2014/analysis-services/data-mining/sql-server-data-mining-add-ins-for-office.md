@@ -1,5 +1,5 @@
 ---
-title: Complementos de minería de datos para Office de datos de SQL Server | Documentos de Microsoft
+title: Los datos de SQL Server a los complementos de minería de datos para Office | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 66865664b7713f869ef1f007ba5b35f04218e8f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d8897cdb41d1d72806bf93335b13bf8c683cc31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273901"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Complementos de minería de datos de SQL Server para Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Complementos de minería de datos para Office es un conjunto ligero de herramientas para análisis predictivos que permite utilizar datos de Excel para generar modelos analíticos para la predicción, recomendación o exploración.  
@@ -61,11 +61,11 @@ ms.locfileid: "36110848"
   
 -   [Cliente de minería de datos para Excel &#40;complementos de minería de datos de SQL Server&#41;](../data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
--   [Herramientas de análisis de tabla para Excel](../table-analysis-tools-for-excel.md)  
+-   [Herramientas de análisis de tablas para Excel](../table-analysis-tools-for-excel.md)  
   
 -   [Formas de minería de datos para Visio](../data-mining-shapes-for-visio.md)  
   
--   [Conectarse a un servidor de minería de datos](../connect-to-a-data-mining-server.md)  
+-   [Conectar con un servidor de minería de datos](../connect-to-a-data-mining-server.md)  
   
 ## <a name="support-and-requirements"></a>Compatibilidad y requisitos  
  Los Complementos de minería de datos de SQL Server para Office se descargan gratuitamente. Para usar estas herramientas, debe tener instalada una de las siguientes versiones de Office:  

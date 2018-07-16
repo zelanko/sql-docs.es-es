@@ -1,5 +1,5 @@
 ---
-title: Base de datos del área de trabajo (SSAS Tabular) | Documentos de Microsoft
+title: Base de datos del área de trabajo (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a52eb01f176eddd8e69dcdc14609c3776bd54a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 54a56f1339a3a81385afc9b41fa4b202fed22cd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271591"
 ---
 # <a name="workspace-database-ssas-tabular"></a>Base de datos del área de trabajo (SSAS tabular)
   La base de datos del área del trabajo de modelos tabulares, utilizada durante la creación de modelos, se crea cuando se crea un nuevo proyecto de modelos tabulares en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. La base de datos del área de trabajo reside en memoria, en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecuta en modo tabular (normalmente, en el mismo equipo que [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]).  
@@ -69,7 +69,7 @@ ms.locfileid: "36111017"
 |--------------|---------------------|-----------------|  
 |**Base de datos del área de trabajo**|El nombre del proyecto seguido de un carácter de subrayado, el nombre de usuario, otro carácter de subrayado y un GUID.|El nombre de la base de datos del área de trabajo usada para almacenar y editar el proyecto de modelos en memoria. Después de crear un proyecto de modelos tabulares, esta base de datos aparecerá en la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] especificada en la propiedad **Servidor del área de trabajo** . Esta propiedad no se puede establecer en la ventana Propiedades.|  
 |**Retención de área de trabajo**|Descargar de la memoria|Especifica cómo se conserva una base de datos del área de trabajo después de cerrar un proyecto de modelos. Una base de datos del área de trabajo incluye los metadatos del modelo y los datos importados. En algunos casos, la base de datos del área de trabajo puede ser muy grande y usar una gran cantidad de memoria. De forma predeterminada, cuando se cierra un proyecto de modelos en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la base de datos del área de trabajo se descarga de la memoria. Si se cambia este valor, es importante tener en cuenta los recursos de memoria disponibles, así como la frecuencia con que se piensa trabajar en el proyecto de modelos. El valor de esta propiedad tiene las opciones siguientes:<br /><br /> **Mantener en memoria** : especifica que, después de cerrar un proyecto de modelos, es necesario mantener en memoria la base de datos del área de trabajo. Esta opción usará más memoria; sin embargo, al abrir un proyecto de modelos en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], se usan menos recursos y la base de datos del área de trabajo se cargará más rápido.<br /><br /> **Descargar de la memoria** : especifica que, después de cerrar un proyecto de modelos, es necesario conservar en el disco la base de datos del área de trabajo, pero no en memoria. Aunque esta opción usa menos memoria, al abrir un proyecto de modelos en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], es necesario volver a adjuntar la base de datos del área de trabajo, con lo que se usan recursos adicionales y el proyecto de modelos se carga más lentamente que cuando la base de datos del área de trabajo se mantiene en memoria. Use esta opción cuando los recursos de memoria sean limitados o cuando trabaje en una base de datos de área de trabajo remota.<br /><br /> **Eliminar área de trabajo** : especifica que es necesario eliminar de la memoria la base de datos del área de trabajo y que no hay que mantenerla en el disco después de cerrar el proyecto de modelos. Aunque esta opción usa menos memoria y espacio de almacenamiento, al abrir un proyecto de modelos en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], se usan recursos adicionales y el proyecto de modelos se cargará con mayor lentitud que cuando la base de datos del área de trabajo se mantiene en memoria o en disco. Utilice esta opción cuando solo trabaje ocasionalmente con proyectos de modelos.<br /><br /> <br /><br /> La configuración predeterminada de esta propiedad se puede cambiar en la página **Modelado de datos** , en la configuración de **Analysis Server** del cuadro de diálogo Herramientas\Opciones.|  
-|**Servidor del área de trabajo**|localhost|Esta propiedad especifica el servidor predeterminado que se usará para hospedar la base de datos del área de trabajo mientras se crea el proyecto de modelos en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Todas las instancias disponibles de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecutan en el equipo local se incluyen en el cuadro de lista.<br /><br /> Para especificar un servidor diferente de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (que se ejecute en modo tabular), escriba su nombre. El usuario que ha iniciado sesión debe ser administrador del servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .<br /><br /> Tenga en cuenta que se recomienda especificar una variable local [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] servidor que el servidor de área de trabajo. Para las bases de datos del área de trabajo de un servidor remoto, la importación desde PowerPivot no se admite, no se pueden realizar copias de seguridad de los datos localmente y la interfaz de usuario puede experimentar latencia durante las consultas.<br /><br /> Tenga en cuenta también que el valor predeterminado de esta propiedad puede modificarse en la página modelado de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuración en el cuadro de diálogo Herramientas\Opciones.|  
+|**Servidor del área de trabajo**|localhost|Esta propiedad especifica el servidor predeterminado que se usará para hospedar la base de datos del área de trabajo mientras se crea el proyecto de modelos en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Todas las instancias disponibles de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecutan en el equipo local se incluyen en el cuadro de lista.<br /><br /> Para especificar un servidor diferente de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (que se ejecute en modo tabular), escriba su nombre. El usuario que ha iniciado sesión debe ser administrador del servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .<br /><br /> Tenga en cuenta que se recomienda especificar una variable local [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] servidor como servidor de área de trabajo. Para las bases de datos del área de trabajo de un servidor remoto, la importación desde PowerPivot no se admite, no se pueden realizar copias de seguridad de los datos localmente y la interfaz de usuario puede experimentar latencia durante las consultas.<br /><br /> Tenga en cuenta también que se puede cambiar la configuración predeterminada para esta propiedad en la página modelado de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuración en el cuadro de diálogo Herramientas\Opciones.|  
   
 ##  <a name="bkmk_use_ssms"></a> Usar SSMS para administrar la base de datos del área de trabajo  
  Puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) para conectarse con el servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que hospeda la base de datos del área de trabajo. Por lo general, no es necesaria ninguna administración de la base de datos del área de trabajo; la excepción es cuando hay que separar o eliminar una base de datos del área de trabajo, operación que debe realizarse desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -81,10 +81,10 @@ ms.locfileid: "36111017"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Propiedades de los modelos &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md)|Proporciona descripciones y pasos de configuración para las propiedades de la base de datos del área de trabajo de un modelo.|  
+|[Propiedades de los modelos &#40;Tabular de SSAS&#41;](model-properties-ssas-tabular.md)|Proporciona descripciones y pasos de configuración para las propiedades de la base de datos del área de trabajo de un modelo.|  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar las propiedades de implementación y predeterminadas de modelado de datos &#40;SSAS Tabular&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [Propiedades del proyecto &#40;SSAS Tabular&#41;](properties-ssas-tabular.md)  
+ [Configurar las propiedades de implementación y modelado de datos predeterminada &#40;Tabular de SSAS&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Las propiedades del proyecto &#40;Tabular de SSAS&#41;](properties-ssas-tabular.md)  
   
   

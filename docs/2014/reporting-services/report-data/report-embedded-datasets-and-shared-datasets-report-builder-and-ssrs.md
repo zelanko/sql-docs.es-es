@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 caps.latest.revision: 16
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 78da740dfbdaa9976b2a518cbb5b12146e1371f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7ba4bd70c21072d77f4972870fbbee7e27b18b18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218935"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de datos incrustados y compartidos de informe (Generador de informes y SSRS)
   Un conjunto de datos especifica los datos que desea usar de una conexión de datos. Un conjunto de datos se basa en una conexión de datos guardada en el informe como un origen del datos incrustado o una referencia a un origen de datos compartido en un servidor de informes. El conjunto de datos incluye una consulta que especifica un conjunto de campos. Al arrastrar estos campos hacia la superficie de diseño, se crean expresiones que se evalúan como los datos reales cuando se ejecuta el informe.  
@@ -50,7 +50,7 @@ ms.locfileid: "36113330"
   
 7.  **Metadatos del esquema** El proveedor de datos ejecuta un comando de consulta de esquema de forma independiente de la consulta para recuperar los metadatos para la colección de campos de conjunto de datos. Por ejemplo, un [!INCLUDE[tsql](../../../includes/tsql-md.md)] `SELECT` instrucción devuelve los nombres de columna para una tabla de base de datos. Utilice el panel Datos de informe para expandir el conjunto de datos y ver la colección de campos del conjunto de datos.  
   
- Los datos también pueden incluirse en un informe utilizando conjuntos de datos compartidos y elementos de informe predefinidos. Estos elementos ya tienen la información de la conexión de datos que necesita. Para obtener más información, consulte [agregar datos a un informe &#40;el generador de informes y SSRS&#41; ](report-datasets-ssrs.md) y [elementos de informe &#40;el generador de informes y SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
+ Los datos también pueden incluirse en un informe utilizando conjuntos de datos compartidos y elementos de informe predefinidos. Estos elementos ya tienen la información de la conexión de datos que necesita. Para obtener más información, consulte [agregar datos a un informe &#40;generador de informes y SSRS&#41; ](report-datasets-ssrs.md) y [elementos de informe &#40;generador de informes y SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
  Para obtener más información sobre tipos de orígenes de datos integrados y extensiones de datos, vea [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36113330"
 ##  <a name="Overview"></a> Descripción de los conjuntos de datos y las consultas de informe  
  Un conjunto de datos de informe contiene un comando de consulta que se ejecuta en el origen de datos externo y especifica qué datos recuperar. Para crear el comando de consulta, se utiliza el diseñador de consultas asociado a la extensión de datos para el origen de datos externo. En el diseñador de consultas puede ejecutar el comando de consulta y ver un conjunto de resultados. El conjunto de resultados es un conjunto de filas rectangular que tiene nombres de columna y filas con el mismo número de valores en cada fila. No se admiten datos jerárquicos, también conocidos como *jerarquías desiguales*. Los nombres de columna se guardan en la definición del informe en forma de lista de campos de conjunto de datos.  
   
- Después de agregar conjuntos de datos a un informe, puede arrastrar campos desde las colecciones de campos del panel Datos de informe hasta las tablas, gráficos y otros elementos de informe que utiliza para diseñar el informe. Para obtener más información sobre cómo trabajar con campos, consulte [colección de campos de conjunto de datos &#40;el generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
+ Después de agregar conjuntos de datos a un informe, puede arrastrar campos desde las colecciones de campos del panel Datos de informe hasta las tablas, gráficos y otros elementos de informe que utiliza para diseñar el informe. Para obtener más información sobre cómo trabajar con campos, consulte [colección de campos de conjunto de datos &#40;generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### <a name="understanding-data-from-a-report-dataset"></a>Descripción de los datos del conjunto de datos de informe  
  Dependiendo de la extensión de los datos, un conjunto de datos de informe puede estar formado por los siguientes tipos de datos:  
@@ -81,9 +81,9 @@ ms.locfileid: "36113330"
   
 -   Datos de un modelo de informe que se ha diseñado para un origen de datos concreto, con entidades, relaciones de entidad y campos predefinidos. Para obtener más información, consulte "**Usar modelos de informe** como orígenes de datos" en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) , en los Libros en pantalla de SQL Server.  
   
- Cuando el informe se procesa en tiempo de ejecución, el conjunto de resultados real devuelto para una consulta puede tener cero o más filas. También es posible que las columnas definidas en la consulta no estén presentes en el origen de datos. Valores NULL del origen de datos se asignan a la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] valor `System.DBNull.Value`.  
+ Cuando el informe se procesa en tiempo de ejecución, el conjunto de resultados real devuelto para una consulta puede tener cero o más filas. También es posible que las columnas definidas en la consulta no estén presentes en el origen de datos. Los valores NULL del origen de datos se asignan a la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] valor `System.DBNull.Value`.  
   
- Para obtener más información acerca de los campos de conjunto de datos, vea [colección de campos de conjunto de datos &#40;el generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
+ Para obtener más información acerca de los campos de conjunto de datos, vea [colección de campos de conjunto de datos &#40;generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### <a name="dataset-query"></a>Consulta de conjunto de datos  
  Al ejecutar en tiempo de diseño una consulta de conjunto de datos en un diseñador de consultas, podrá ver un conjunto de filas del origen de datos con datos de ejemplo. Cuando un usuario ve el informe en tiempo de ejecución, la consulta de conjunto de datos puede generar valores diferentes, ya que los datos en el origen de datos han cambiado. Cada vez que se procesa el informe, pueden aparecer nuevos datos.  
@@ -110,7 +110,7 @@ ms.locfileid: "36113330"
   
 -   Cree un nuevo campo personalizado basado en un campo de base de datos y proporcione un formato personalizado.  
   
- Para obtener más información, consulte [colección de campos de conjunto de datos &#40;el generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
+ Para obtener más información, consulte [colección de campos de conjunto de datos &#40;generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### <a name="importing-existing-queries-for-a-dataset"></a>Importar consultas existentes para un conjunto de datos  
  Cuando se crea un conjunto de datos, es posible crear una nueva consulta o importar una ya existente de un archivo o de otro informe. Cuando se importa una consulta de otro informe, es posible elegir qué consulta se debe importar en la lista de conjuntos de datos del informe.  
@@ -209,7 +209,7 @@ ms.locfileid: "36113330"
   
 -   Muestre los datos de cada conjunto de datos usando una región de datos independiente. Para más información, vea [Regiones de datos y mapas &#40;Generador de informes y SSRS&#41;](../report-design/data-regions-and-maps-report-builder-and-ssrs.md).  
   
--   Puede vincular más de una región de datos a un conjunto de datos y proporcionar varias vistas de los mismos datos. Para obtener más información, consulte [vincular varias regiones de datos para el mismo conjunto de datos &#40;el generador de informes y SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+-   Puede vincular más de una región de datos a un conjunto de datos y proporcionar varias vistas de los mismos datos. Para obtener más información, consulte [vincular varias regiones de datos al mismo conjunto de datos &#40;generador de informes y SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
 -   Puede usar conjuntos de datos para proporcionar una lista desplegable de valores disponibles o valores predeterminados para un parámetro de informe. Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
@@ -226,6 +226,6 @@ ms.locfileid: "36113330"
 ## <a name="see-also"></a>Vea también  
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-datasets-ssrs.md)  
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)  
   
   

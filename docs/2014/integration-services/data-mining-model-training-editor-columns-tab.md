@@ -1,5 +1,5 @@
 ---
-title: Editor de entrenamiento de modelos de minería de datos (pestaña columnas) | Documentos de Microsoft
+title: Editor de entrenamiento de modelos de minería de datos (pestaña columnas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmmtrainingtransformation.columns.f1
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 0891254c-74c2-4482-b41a-fd69b1677b23
 caps.latest.revision: 21
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4f3300a8dd536d0110ca82657e676476b932b482
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bffc0cc328fd775c445c14537092bb7785a64b65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250675"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>Editor de entrenamiento de modelos de minería de datos (pestaña Columnas)
   Utilice la página **Columnas** del cuadro de diálogo **Editor de entrenamiento de modelos de minería de datos** para asignar columnas de entrada a las columnas de la estructura de minería de datos.  
@@ -45,6 +45,6 @@ ms.locfileid: "36112046"
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de entrenamiento de modelos de minería de datos &#40;pestaña conexión&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
+ [Editor de entrenamiento de modelos de minería de datos &#40;ficha conexión&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
   
   

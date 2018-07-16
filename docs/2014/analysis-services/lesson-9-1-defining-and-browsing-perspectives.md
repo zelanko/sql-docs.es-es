@@ -1,5 +1,5 @@
 ---
-title: Definir y examinar perspectivas | Documentos de Microsoft
+title: Definir y examinar perspectivas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 461c093bb3b946316cfee37cd531d1492176db9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 642d9a0f80f0efb0bc9d26b9a08ab7a6dbd521e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208195"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definir y examinar perspectivas
   Una perspectiva puede simplificar la vista de un cubo para fines específicos. De manera predeterminada, los usuarios pueden ver todos los elementos de un cubo para los que tengan permisos. Lo que observan los usuarios cuando ven un cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] entero es la perspectiva predeterminada del cubo. Una vista de todo el cubo puede resultar muy compleja para que los usuarios naveguen por ella, en especial aquellos usuarios que solo necesitan interactuar con una pequeña parte del cubo a fin de satisfacer sus requisitos de informes e inteligencia empresarial.  
@@ -97,7 +97,7 @@ ms.locfileid: "36113280"
   
 1.  En la barra de herramientas de la pestaña **Perspectivas** , haga clic en el botón **Nueva perspectiva** .  
   
-2.  Cambiar el nombre de la nueva perspectiva por `Reseller Sales`.  
+2.  Cambiar el nombre de la nueva perspectiva a `Reseller Sales`.  
   
 3.  Establezca **Reseller Sales-Sales Amount** como medida predeterminada.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36113280"
   
 1.  En la barra de herramientas de la pestaña **Perspectivas** , haga clic en el botón **Nueva perspectiva** .  
   
-2.  Cambiar el nombre de la nueva perspectiva por `Sales Summary`.  
+2.  Cambiar el nombre de la nueva perspectiva a `Sales Summary`.  
   
     > [!NOTE]  
     >  No puede especificar una medida calculada como medida predeterminada.  
@@ -174,7 +174,7 @@ ms.locfileid: "36113280"
   
 4.  Analizar en Excel le pedirá que elija qué perspectiva desea usar al examinar el modelo en Excel, como se muestra en la ilustración siguiente.  
   
-     ![Objetos de la perspectiva de ventas por Internet](../../2014/tutorials/media/l9-perspectives-3.gif "objetos de la perspectiva venta por Internet")  
+     ![Objetos de la perspectiva venta por Internet](../../2014/tutorials/media/l9-perspectives-3.gif "objetos para la perspectiva venta por Internet")  
   
 5.  Como alternativa, puede iniciar Excel en el menú Inicio de Windows, definir una conexión a la base de datos Tutorial de Analysis Services en localhost y elegir una perspectiva en el Asistente para la conexión de datos, como se muestra en la ilustración siguiente.  
   
@@ -186,7 +186,7 @@ ms.locfileid: "36113280"
   
 7.  En el panel de metadatos, expanda **Medidas**.  
   
-     Observe que solo el `Internet Sales` aparece el grupo de medida, conjuntamente con la **Internet GPM** y **Internet Sales Ratio to All Products** miembros calculados.  
+     Observe que solo el `Internet Sales` aparece el grupo de medida, juntos con el **Internet GPM** y **Internet Sales Ratio to All Products** miembros calculados.  
   
 8.  En el modelo, seleccione Excel de nuevo. Seleccione `Sales Summary`.  
   

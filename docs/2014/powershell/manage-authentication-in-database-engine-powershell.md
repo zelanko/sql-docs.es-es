@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: d444739180c4326dd68af08be0a382c0e0ff6cb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f7ec9327a35e9ba110dd9d93db53c50b5c130f6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227815"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Administrar la autenticación en PowerShell del motor de base de datos
-  De forma predeterminada, los componentes PowerShell de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usan la autenticación de Windows para conectarse a una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Puede usar autenticación de SQL Server definiendo una unidad virtual de PowerShell o especificando el `–Username` y `–Password` parámetros para `Invoke-Sqlcmd`.  
+  De forma predeterminada, los componentes PowerShell de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usan la autenticación de Windows para conectarse a una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Puede utilizar autenticación de SQL Server definiendo una unidad virtual de PowerShell o especificando el `–Username` y `–Password` parámetros para `Invoke-Sqlcmd`.  
   
 1.  **Antes de empezar:**  [Permisos](#Permissions)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36112294"
 ##  <a name="Permissions"></a> Permissions  
  Todas las acciones que se pueden realizar en una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)] se controlan mediante los permisos concedidos a las credenciales de autenticación usadas para conectarse a la instancia. De forma predeterminada, el proveedor y los cmdlets de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa la cuenta de Windows de ejecución para establecer una conexión de autenticación de Windows con [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
- Para establecer una conexión de autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] debe proporcionar un identificador de inicio de sesión y contraseña de autenticación de SQL Server. Cuando se usa el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proveedor, debe asociar el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] las credenciales de inicio de sesión con una unidad virtual y, a continuación, utilice el comando de cambio de directorio (`cd`) para conectarse a esa unidad. En Windows PowerShell, las credenciales de seguridad solo se pueden asociar con unidades virtuales.  
+ Para establecer una conexión de autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] debe proporcionar un identificador de inicio de sesión y contraseña de autenticación de SQL Server. Cuando se usa el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proveedor, debe asociar el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] credenciales de inicio de sesión con una unidad virtual y, a continuación, use el comando de cambio de directorio (`cd`) para conectarse a esa unidad. En Windows PowerShell, las credenciales de seguridad solo se pueden asociar con unidades virtuales.  
   
 ##  <a name="SQLAuthVirtDrv"></a> Autenticación de SQL Server mediante una unidad virtual  
  **Para crear una unidad virtual asociada con el inicio de sesión de autenticación de SQL Server**  
@@ -44,14 +44,14 @@ ms.locfileid: "36112294"
   
     3.  Usa `new-object` para crear un objeto de credenciales.  
   
-    4.  Utiliza `new-psdrive` para crear una unidad virtual con las credenciales proporcionadas.  
+    4.  Usa `new-psdrive` para crear una unidad virtual con las credenciales proporcionadas.  
   
 2.  Invocar la función para crear una unidad virtual con las credenciales proporcionadas.  
   
 ### <a name="example-virtual-drive"></a>Ejemplo (unidad virtual)  
  En este ejemplo se crea una función denominada **sqldrive** que se puede usar para crear una unidad virtual asociada a la instancia e inicio de sesión de la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificados.  
   
- La función **sqldrive** pide que especifique la contraseña para su inicio de sesión, enmascarándola a medida que la escribe. A continuación, siempre que se use el comando de cambio de directorio (`cd`) para conectarse a una ruta de acceso con el nombre de la unidad virtual, todas las operaciones se realizan mediante el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] las credenciales de inicio de sesión de autenticación que especificó al crear la unidad.  
+ La función **sqldrive** pide que especifique la contraseña para su inicio de sesión, enmascarándola a medida que la escribe. Entonces, siempre que use el comando de cambio de directorio (`cd`) para conectarse a una ruta de acceso con el nombre de la unidad virtual, todas las operaciones se realizan mediante el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] las credenciales de inicio de sesión de autenticación que especificó al crear la unidad.  
   
 ```  
 ## Create a function that specifies the login and prompts for the password.  
@@ -74,7 +74,7 @@ cd SQLAuth
 ##  <a name="SQLAuthInvSqlCmd"></a> Autenticación de SQL Server mediante Invoke-Sqlcmd  
  **Para usar Invoke-Sqlcmd con la autenticación de SQL Server**  
   
-1.  Use la `–Username` parámetro para especificar un identificador de inicio de sesión y el `–Password` para especificar la contraseña asociada.  
+1.  Use la `–Username` parámetro para especificar un identificador de inicio de sesión y el `–Password` parámetro para especificar la contraseña asociada.  
   
 ### <a name="example-invoke-sqlcmd"></a>Ejemplo (Invoke-Sqlcmd)  
  En este ejemplo se usa el cmdlet read-host para pedir al usuario una contraseña, y después se conecta con la autenticación de SQL Server.  

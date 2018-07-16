@@ -1,5 +1,5 @@
 ---
-title: Elemento AllowDrillThrough (ASSL) | Documentos de Microsoft
+title: Elemento AllowDrillThrough (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllowDrillThrough element
 ms.assetid: 53c9e4a3-a376-447d-a13f-80d845cc9789
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e5ee132903b98c616ce756b423455302ca6e65f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f98b16569c3a7f4ab136be291d7bfd45698b5b11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178872"
 ---
 # <a name="allowdrillthrough-element-assl"></a>Elemento AllowDrillThrough (ASSL)
   Determina si se permite la obtención de detalles para el elemento primario.  

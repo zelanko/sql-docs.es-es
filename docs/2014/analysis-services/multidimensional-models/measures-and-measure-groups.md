@@ -1,5 +1,5 @@
 ---
-title: Las medidas y grupos de medida | Documentos de Microsoft
+title: Las medidas y grupos de medida | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services]
 - measures [Analysis Services], about measures
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74904af589aee642d0c83524f3a6dd71b3390371
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba5a5c5b9ebf6bf7dcbf3b5340db941c7f662cf7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255637"
 ---
 # <a name="measures-and-measure-groups"></a>Medidas y grupos de medida
   Un cubo incluye *medidas* en *grupos de medida*, lógica de negocios y una colección de dimensiones que proporcionan contexto para evaluar los datos numéricos que proporciona una medida. Las medidas y los grupos de medida son componentes esenciales de un cubo. Un cubo no puede existir sin, al menos, uno de cada uno de estos componentes.  
@@ -50,17 +50,17 @@ ms.locfileid: "36111447"
   
  Cada cubo debe tener al menos una medida, pero la mayoría tienen muchas, a veces, cientos. Estructuralmente, una medida se asigna, por lo general, a una columna de origen de una tabla de hechos. Dicha columna proporciona los valores usados para cargar la medida. De forma alternativa, también puede definir una medida mediante MDX.  
   
- Las medidas son contextuales, lo cual significa que funcionan con datos numéricos en un contexto que viene determinado por los miembros de dimensión que estén incluidos en la consulta. Por ejemplo, una medida que calcula **ventas del distribuidor** deberá estar respaldada por un `Sum` operador y agregará los importes de ventas para cada miembro de dimensión incluido en la consulta. Si la consulta especifica productos individuales, se acumula en una categoría o se segmenta por hora o ubicación geográfica, la medida debe producir una operación que sea válida para las dimensiones incluidas en la consulta.  
+ Las medidas son contextuales, lo cual significa que funcionan con datos numéricos en un contexto que viene determinado por los miembros de dimensión que estén incluidos en la consulta. Por ejemplo, una medida que calcula **las ventas del distribuidor** deberá estar respaldada por un `Sum` operador y agregará los importes de ventas para cada miembro de dimensión incluido en la consulta. Si la consulta especifica productos individuales, se acumula en una categoría o se segmenta por hora o ubicación geográfica, la medida debe producir una operación que sea válida para las dimensiones incluidas en la consulta.  
   
  En este ejemplo, **Reseller Sales** se agrega a varios niveles de la jerarquía **Sales Territory** (zona de ventas).  
   
- ![Tabla dinámica con medidas y dimensiones mencionadas](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "tabla dinámica con medidas y dimensiones que se menciona dónde se encuentra")  
+ ![PivotTable con medidas y dimensiones que se mencionan](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "PivotTable con medidas y dimensiones que se mencionan")  
   
  Las medidas generan resultados válidos cuando la tabla de hechos que contiene los datos de origen numéricos también contiene punteros a las tablas de dimensiones que se usan en la consulta. En el ejemplo de Reseller Sales, si cada fila que contiene un importe de ventas también incluye un puntero a una tabla de productos, una tabla de fechas o una tabla de zona de ventas, las consultas que incluyan miembros de esas dimensiones se resolverán correctamente.  
   
  ¿Qué ocurre si la medida está relacionada con las dimensiones que se usan en la consulta? Normalmente, Analysis Services muestra la medida predeterminada, y el valor es el mismo para todos los miembros. En este ejemplo, **Internet Sales**(ventas por Internet), que mide las ventas directas a los clientes que usan el catálogo en línea, no tiene relación con la organización de ventas.  
   
- ![Valores de la medida de tabla dinámica que muestra repetidas](../media/ssas-unrelatedmeasure.PNG "valores de medida de la tabla dinámica que muestra repetidos")  
+ ![Tabla dinámica que muestra repetidas medir valores](../media/ssas-unrelatedmeasure.PNG "valores de medida de tabla dinámica que muestra repetidas")  
   
  Para reducir las posibilidades de que se produzcan estos comportamientos en una aplicación cliente, puede crear varios cubos o perspectivas en la misma base de datos y asegurarse de que cada cubo o perspectiva contenga solo los objetos relacionados. Las relaciones que debe comprobar son las del grupo de medida (asignado a la tabla de hechos) con las dimensiones.  
   

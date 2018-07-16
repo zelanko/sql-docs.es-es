@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports, creating
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03ec9b9f8f953f0c4947e3f39cd125e54d6d7272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a5298705230f13aca363cd266a274c807e4e09a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216815"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Crear un informe de gráfico rápido sin conexión (Generador de informes)
   En este tutorial, creará un gráfico circular usando un asistente y, a continuación, lo modificará un poco, solo para hacerse una idea de las posibilidades. Puede hacerlo de dos maneras diferentes: Ambos métodos tienen el mismo resultado; un gráfico circular como el de la siguiente ilustración:  
   
- ! ["Mi primer gráfico circular" en ejecución ver] (.. /Media/RS-my1stpierunview.gif "" Mi primer gráfico circular "en ejecución ver")  
+ ! [Ver "Mi primer gráfico circular" en ejecución] (.. /Media/RS-my1stpierunview.gif "" Mi primer gráfico circular "en ejecución ver")  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Si usa datos XML o una consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)], necesita tener acceso al Generador de informes [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Puede ejecutar la versión independiente o la versión de ClickOnce disponible en el Administrador de informes o en un sitio de SharePoint. El primer paso, cómo abrir el generador de informes, es diferente para las versiones de ClickOnce. Para obtener más información, consulte [instalar, desinstalar y asistencia del generador de informes](../install-uninstall-and-report-builder-support.md).  
+ Si usa datos XML o una consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)], necesita tener acceso al Generador de informes [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Puede ejecutar la versión independiente o la versión de ClickOnce disponible en el Administrador de informes o en un sitio de SharePoint. El primer paso, cómo abrir el generador de informes es diferente para las versiones de ClickOnce. Para obtener más información, consulte [instalar, desinstalar y asistencia del generador de informes](../install-uninstall-and-report-builder-support.md).  
   
 ##  <a name="TwoWays"></a> Dos maneras de hacer este tutorial  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36112900"
 ## <a name="also-in-this-article"></a>También en este artículo  
  [Después de ejecutar el Asistente](#AfterWizard)  
   
- [¿Qué es el siguiente](#WhatsNext)  
+ [Próxima Novedades](#WhatsNext)  
   
 ##  <a name="CreatePieChartXML"></a> Crear el gráfico circular con datos XML  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36112900"
      Aparecerá el cuadro de diálogo **Introducción** .  
   
     > [!NOTE]  
-    >  Si el **Introducción** cuadro de diálogo no aparece, desde el **Report Builder** botón, haga clic en **nuevo**.  
+    >  Si el **Introducción** no aparece el cuadro de diálogo, desde el **Report Builder** botón, haga clic en **New**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Informe** .  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36112900"
   
 7.  En el **Seleccionar tipo de conexión** cuadro, haga clic en **XML.**  
   
-8.  Haga clic en la pestaña **Credenciales** y seleccione **Usar usuario de Windows actual. La delegación de Kerberos puede ser necesaria**y, a continuación, haga clic en **Aceptar**.  
+8.  Haga clic en la pestaña **Credenciales** y seleccione **Usar usuario de Windows actual. Es posible que se requiera la delegación de Kerberos**y, a continuación, haga clic en **Aceptar**.  
   
 9. En la página **Elegir una conexión a un origen de datos** , haga clic en **miGráficoCircular**y, a continuación, haga clic en **Siguiente**.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "36112900"
   
 2.  Haga doble clic en las etiquetas y seleccione **propiedades de la etiqueta de serie**. Aparece el cuadro de diálogo **Propiedades de la etiqueta de la serie** .  
   
-3.  Tipo de `#PERCENT{P0}` para el **etiquetar los datos** opción.  
+3.  Tipo `#PERCENT{P0}` para el **etiquetar datos** opción.  
   
      El `{P0}` le da el porcentaje sin decimales. Si simplemente escribe `#PERCENT`, los números tendrán dos posiciones decimales. `#PERCENT` es una palabra clave que realiza un cálculo o función automáticamente; Hay muchas otras.  
   
@@ -215,11 +215,11 @@ ms.locfileid: "36112900"
 ##  <a name="WhatsNext"></a> ¿Qué debe hacer a continuación?  
  Ahora que ha creado su primer informe en el Generador de informes, está listo para leer los demás tutoriales y empezar a crear informes a partir de sus propios datos. Para ejecutar el generador de informes, necesita permiso para tener acceso a los orígenes de datos, como bases de datos, con un *cadena de conexión*, que le conecta al origen de datos. El administrador del sistema tiene esta información y puede facilitársela.  
   
- Para trabajar con los otros tutoriales, necesita el nombre de una instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] y credenciales suficientes para tener acceso de solo lectura a cualquier base de datos. El administrador del sistema puede facilitárselo también.  
+ Para trabajar con otros tutoriales, necesita el nombre de una instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] y credenciales suficientes para tener acceso de solo lectura a cualquier base de datos. El administrador del sistema puede facilitárselo también.  
   
  Finalmente, para guardar los informes en un servidor de informes o en un sitio de SharePoint integrado con un servidor de informes, necesitará la dirección URL y los permisos necesarios. Puede ejecutar cualquier informe que cree directamente desde su equipo, pero los informes tienen más funcionalidad cuando se ejecutan desde el servidor de informes o desde el sitio de SharePoint. Necesita permisos para ejecutar sus informes u otros desde el servidor de informes o desde el sitio de SharePoint donde estén publicados. Hable con el administrador del sistema para obtener acceso.  
   
- Podría resultarle de ayuda leer sobre algunos conceptos y términos antes de empezar. Para obtener más información, consulte [conceptos de creación de informes &#40;el generador de informes y SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md). Además, dedique algún tiempo al planeamiento antes de crear su primer informe. Será tiempo bien invertido. Para obtener más información, consulte [planear un informe &#40;Report Builder&#41;](../report-design/planning-a-report-report-builder.md).  
+ Podría resultarle de ayuda leer sobre algunos conceptos y términos antes de empezar. Para obtener más información, consulte [conceptos de creación de informes &#40;generador de informes y SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md). Además, dedique algún tiempo al planeamiento antes de crear su primer informe. Será tiempo bien invertido. Para obtener más información, consulte [planear un informe &#40;Report Builder&#41;](../report-design/planning-a-report-report-builder.md).  
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#TwoWays)  
   

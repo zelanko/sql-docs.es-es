@@ -1,5 +1,5 @@
 ---
-title: Editor de la tarea de inserción (página conexión) de forma masiva | Documentos de Microsoft
+title: Editor de la tarea de inserción (página conexión) de forma masiva | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.connection.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 04c81b9bd101ec66d0ec1f47fb4c48c2179635ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed6ab27e4c60aa398cafe1be0d4bbcb19ce3bb3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201815"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Editor de la tarea Inserción masiva (página Conexión)
   Use la página **Conexión** del cuadro de diálogo **Editor de la tarea Inserción masiva** para especificar el origen y el destino de la operación de inserción masiva y el formato que se debe utilizar.  
@@ -45,7 +45,7 @@ ms.locfileid: "36112522"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**Utilizar archivo**|Seleccione un archivo que contenga la especificación de formato. Si se selecciona esta opción, se muestra la opción dinámica **FormatFile**.|  
-|**Especificar**|Especifique el formato. Al seleccionar esta opción muestra las opciones dinámicas, `RowDelimiter` y `ColumnDelimiter`.|  
+|**Especificar**|Especifique el formato. Al seleccionar esta opción muestra las opciones dinámicas `RowDelimiter` y `ColumnDelimiter`.|  
   
  **Archivo**  
  Seleccione un administrador de conexiones de archivos o archivos planos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear una conexión.  

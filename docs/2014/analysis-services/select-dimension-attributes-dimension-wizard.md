@@ -1,5 +1,5 @@
 ---
-title: Seleccione los atributos de dimensión (Asistente para dimensiones) | Documentos de Microsoft
+title: Seleccione los atributos de dimensión (Asistente para dimensiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensionattributes.f1
 ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6af0f81a3b356427d4279bfcdcb88f1c7b14ba57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08e54b933094b86c68af60277ff73b701bb5e4f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263451"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Seleccionar los atributos de la dimensión (Asistente para dimensiones)
   Utilice la página **Seleccionar los atributos de la dimensión** para seleccionar y modificar los atributos para la dimensión que debe crearse.  
@@ -44,7 +44,7 @@ ms.locfileid: "36111436"
 > [!NOTE]  
 >  No se puede desactivar la casilla para el atributo clave.  
   
- **Nombre del atributo**  
+ **Nombre de atributo**  
  Enumera los atributos disponibles.  
   
  Para cambiar el nombre de un atributo, haga clic en el nombre del atributo y escriba otro nombre.  
@@ -56,7 +56,7 @@ ms.locfileid: "36111436"
   
 |Caso|Configuración|  
 |----------|--------------|  
-|Una dimensión contiene una jerarquía de elementos primarios y secundarios, y la opción **Habilitar exploración** no está seleccionada|El asistente deja la `AttributeHierarchyEnabled` propiedad establecida en `True`y establece la `AttributeHierarchyVisible` atribuir a `False` para el atributo clave.|  
+|Una dimensión contiene una jerarquía de elementos primarios y secundarios, y la opción **Habilitar exploración** no está seleccionada|El asistente deja la `AttributeHierarchyEnabled` propiedad establecida en `True`y establece el `AttributeHierarchyVisible` atributo `False` para el atributo clave.|  
 |Una tabla de una dimensión contiene una clave externa a una tabla que no se encuentra en la dimensión.|El asistente selecciona la clave externa como un atributo que se va a incluir pero no seleccionará **Habilitar exploración**. Si mantiene esta configuración, la propiedad `AttributeHiearchyEnabled` del atributo se establecerá en `True`y la propiedad `AttributeHieararchyVisible` se establecerá en `False`.|  
 |Una dimensión contiene tablas de copo de nieve a las que se tiene acceso a través de columnas de clave externa que admiten valores NULL<br /><br /> y<br /><br /> la opción Habilitar exploración para el atributo que está basado en la clave de la tabla de copo de nieve no está seleccionada.|El asistente creará el nuevo atributo que tiene el `AttributeHiearchyEnabled` propiedad establecida en `True`y el `AttributeHieararchyVisible` propiedad establecida en `False`.|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36111436"
  (Opcional) Establezca el tipo para el atributo. El valor predeterminado es **Regular**. El tipo de atributo proporciona orientación a las aplicaciones cliente sobre qué información podría contener el atributo.  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente de dimensiones (Ayuda F1)](dimension-wizard-f1-help.md)   
+ [Ayuda de F1 del Asistente para dimensiones](dimension-wizard-f1-help.md)   
  [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

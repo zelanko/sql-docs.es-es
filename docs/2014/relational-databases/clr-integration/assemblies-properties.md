@@ -1,28 +1,26 @@
 ---
-title: Propiedades del ensamblado (página General) | Documentos de Microsoft
+title: Propiedades del ensamblado (página General) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql12.swb.assemblies.general.f1
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fe54e6e2cf6930f958f4f2cafe272cc79d37b64e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: fde2e92113e3fa32df4491a89e5fed348513bd4e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105867"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351167"
 ---
 # <a name="assembly-properties-general-page"></a>Propiedades del ensamblado (página General)
   Utilice esta página para ver o modificar propiedades del ensamblado.  
@@ -48,7 +46,7 @@ ms.locfileid: "36105867"
  Muestra la fecha de creación o registro del ensamblado.  
   
  **Nombre seguro**  
- Muestra **True** si el ensamblado se ha firmado digitalmente, **False** si no se ha firmado digitalmente.  
+ Muestra **True** si el ensamblado se ha firmado digitalmente, **False** si no lo ha firmado digitalmente.  
   
  **Versión**  
  Muestra el número de versión del ensamblado.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
 caps.latest.revision: 52
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f5c7dd02a31a466e5e6e96a815ed27795f62f978
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2900d6cd155faf29dbd3ecb398320c0e5311d747
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242555"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Compatibilidad de Transact-SQL con OLTP en memoria
   Puede acceder a las tablas optimizadas para memoria con cualquier consulta de Transact-SQL o instrucción DML (SELECT, INSERT, UPDATE o DELETE), instrucción ad hoc o módulo SQL como, por ejemplo, procedimientos almacenados, funciones con valores de tabla, funciones escalares, desencadenadores y vistas. Para obtener más información, consulte [acceso tablas mediante Transact-SQL interpretado](accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "36111359"
   
  Al crear y modificar objetos de base de datos (instrucciones DDL), se modificaron las siguientes instrucciones:  
   
--   [MODIFICAR el archivo de base de datos y las opciones de grupo de archivos &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) (consulte `MEMORY_OPTIMIZED_DATA`)  
+-   [Opciones ALTER DATABASE File y Filegroup &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) (consulte `MEMORY_OPTIMIZED_DATA`)  
   
 -   [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41; ](/sql/t-sql/statements/create-database-sql-server-transact-sql) (consulte `MEMORY_OPTIMIZED_DATA`)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36111359"
   
 -   [DECLARAR @local_variable &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (consulte `NULL`  |  `NOT NULL`)  
   
- Las tablas con optimización para memoria admiten las restricciones `PRIMARY KEY` y `NOT NULL`. Para obtener información sobre la implementación de restricciones no admitidas, vea [comprobación de migración y las restricciones de clave externa](../../database-engine/migrating-check-and-foreign-key-constraints.md).  
+ Las tablas con optimización para memoria admiten las restricciones `PRIMARY KEY` y `NOT NULL`. Para obtener información sobre la implementación de restricciones no admitidas, vea [restricciones Foreign Key y comprobación de migración](../../database-engine/migrating-check-and-foreign-key-constraints.md).  
   
  Para obtener más información sobre las características no compatibles, vea [Construcciones Transact-SQL no admitidas por OLTP en memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   

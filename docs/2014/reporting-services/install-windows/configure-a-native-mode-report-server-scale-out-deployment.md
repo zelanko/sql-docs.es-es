@@ -1,5 +1,5 @@
 ---
-title: Configurar una implementación de ampliación horizontal de servidor de informes de modo nativo (Administrador de configuración de SSRS) | Documentos de Microsoft
+title: Configurar una implementación de escalabilidad horizontal de servidor de informes de modo nativo (Administrador de configuración de SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], deployments
 - deploying [Reporting Services], scale-out deployment model
@@ -17,13 +17,13 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 04d66fcb5151a325402ff541fb4fd4f97d442d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 153d97c15dcde21e70f29aeb77d80aee1e55adc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296075"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo (Administrador de configuración de SSRS)
   Reporting Services en modo nativo admite un modelo de implementación de ampliación horizontal que permite ejecutar varias instancias del servidor de informes que comparten una única base de datos del servidor de informes. Las implementaciones escaladas se utilizan para aumentar la escalabilidad de los servidores de informes para administrar más usuarios con acceso simultáneo y mayores cargas de ejecución de informes. También se pueden utilizar para dedicar servidores concretos en el procesamiento de informes interactivos o programados.  
@@ -42,7 +42,7 @@ ms.locfileid: "36111105"
   
  **Para planear, instalar y configurar una implementación escalada, siga estos pasos:**  
   
--   Revisión [instalar SQL Server 2014 desde el Asistente para la instalación &#40;el programa de instalación&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla para obtener instrucciones sobre cómo instalar instancias del servidor de informes.  
+-   Revisión [instalar SQL Server 2014 desde el Asistente para instalación &#40;instalación&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla para obtener instrucciones sobre cómo instalar instancias del servidor de informes.  
   
 -   Si tiene previsto hospedar la implementación escalada en un clúster con equilibrio de carga de red (NLB), deberá configurar el clúster NLB antes de configurar la implementación escalada. Para más información, consulte [Configurar un servidor de informes en un clúster con equilibrio de carga de red](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   

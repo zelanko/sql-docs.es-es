@@ -1,5 +1,5 @@
 ---
-title: Elemento Subscribe (XMLA) | Documentos de Microsoft
+title: Elemento Subscribe (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Subscribe command
 ms.assetid: aad50dd7-44d4-4d83-a973-187f9aed35ec
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 94caa1327febf0c7fd5a489c7558ea793977d027
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 97b473820ee809f5a606e8bb9f30be6e315a2801
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247265"
 ---
 # <a name="subscribe-element-xmla"></a>Elemento Subscribe (XMLA)
-  Se suscribe a un seguimiento y devuelve un conjunto de filas que contiene los eventos de seguimiento desde una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia.  
+  Se suscribe a un seguimiento y devuelve un conjunto de filas que contiene los eventos de seguimiento desde un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36111216"
 |Elementos secundarios|[Objeto](../xml-elements-properties/object-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notas  
- El `Subscribe` comando se suscribe a y secuencias de realizar la copia de un conjunto de filas de un seguimiento especificado en un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia. Si se especifica un objeto que no sea un seguimiento en el `Object` elemento, que se produce un error.  
+ El `Subscribe` comando se suscribe a y secuencias devuelve un conjunto de filas de un seguimiento especificado en un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia. Si se especifica un objeto que no sea un seguimiento en el `Object` elemento, que se produce un error.  
   
  Si no se especifica el elemento `Object`, se define un seguimiento de la sesión, a la que se suscribe, en la instancia [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. El seguimiento de la sesión devuelve un conjunto fijo de eventos de seguimiento desde la sesión actual.  
   
- La secuencia de conjunto de filas devuelta por este comando se termina si la aplicación cliente cierra la conexión con el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia, o si la sesión en la que el `Subscribe` se ejecuta el comando finaliza.  
+ El flujo de conjunto de filas devuelto por este comando se interrumpe si la aplicación cliente cierra la conexión con el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia, o si la sesión en el que el `Subscribe` se ejecuta el comando finaliza.  
   
 ## <a name="see-also"></a>Vea también  
  [Comandos &#40;XMLA&#41;](xml-elements-commands.md)  

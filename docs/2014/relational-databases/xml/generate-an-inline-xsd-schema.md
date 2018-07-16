@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
 - XMLSCHEMA option
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8cc6009563ca46e47e40e61c054fbe732ccc401a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e629d7c6e23f5e609f0d6734774d58bbc16f83f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194794"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generar un esquema XSD insertado
   En una cláusula FOR XML, se puede solicitar que una consulta devuelva un esquema insertado con los resultados de la consulta. Si se desea un esquema XDR, se utiliza la palabra clave XMLDATA en la cláusula FOR XML. Si se desea un esquema XSD, se utiliza la palabra clave XMLSCHEMA.  
@@ -36,7 +36,7 @@ ms.locfileid: "36111749"
   
 -   XMLSCHEMA solo se puede especificar en los modos RAW y AUTO, no en el modo EXPLICIT.  
   
--   Si una consulta FOR XML anidada especifica la directiva TYPE, el resultado de la consulta es de `xml` tipo y este resultado se trata como una instancia de datos XML sin tipo. Para obtener más información, vea [Datos XML &#40;SQL Server&#41;](xml-data-sql-server.md).  
+-   Si una consulta FOR XML anidada especifica la directiva TYPE, el resultado de consulta es de `xml` tipo y este resultado se trata como una instancia de datos XML sin tipo. Para obtener más información, vea [Datos XML &#40;SQL Server&#41;](xml-data-sql-server.md).  
   
  Cuando se especifica XMLSCHEMA en una consulta FOR XML, se reciben un esquema y datos XML, el resultado de la consulta. Cada elemento de nivel superior de los datos hace referencia al esquema anterior por medio de una declaración de espacio de nombres predeterminado que, a su vez, hace referencia al espacio de nombres de destino del esquema insertado.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36111749"
   
 -   Otro documento de esquema que describe la forma del resultado de la consulta FOR XML.  
   
- Además, si la hubiera escrito `xml` tipos de datos se incluyen en el resultado de la consulta, los esquemas asociados a esos escrito `xml` se incluyen tipos de datos.  
+ Además, si la hubiera escrito `xml` tipos de datos se incluyen en el resultado de la consulta, los esquemas asociados a esos escrito `xml` se incluyen los tipos de datos.  
   
  El espacio de nombres de destino del documento de esquema que describe la forma del resultado de la consulta FOR XML contiene una parte fija y una parte numérica que se incrementa automáticamente. El formato de este espacio de nombres se muestra a continuación, siendo *n* un entero positivo. Por ejemplo, en la consulta anterior, urn:schemas-microsoft-com:sql:SqlRowSet1 es el espacio de nombres de destino.  
   

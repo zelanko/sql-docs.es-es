@@ -1,5 +1,5 @@
 ---
-title: Directrices para la lógica de reintento para las transacciones en tablas optimizadas en memoria | Documentos de Microsoft
+title: Directrices para la lógica de reintento para las transacciones en tablas optimizadas para memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
 caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 3949860a76801061a8ff01f73a417c32c5056dc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0b7d4a0799a70a91c99297c3c077100235852cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243145"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>Instrucciones para la lógica de reintento de transacciones en tablas con optimización para memoria
   Hay varias condiciones de error que aparecen con las transacciones que tienen acceso a tablas optimizadas para memoria.  
@@ -34,7 +34,7 @@ ms.locfileid: "36109275"
   
  Una causa común de estos errores son las interferencias entre transacciones que se ejecutan simultáneamente. La acción correctora común es reintentar la transacción.  
   
- Para obtener más información acerca de estas condiciones de error, vea la sección sobre la detección de conflictos, validación y comprobaciones de dependencia de confirmación en [transacciones en tablas con optimización para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Para obtener más información acerca de estas condiciones de error, vea la sección en la detección de conflictos, validación y comprobaciones de dependencia de confirmación en [transacciones en tablas optimizadas para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Los interbloqueos (código de error 1205) no pueden aparecer en las tablas optimizadas para memoria. Los bloqueos no se utilizan en las tablas optimizadas para memoria. Sin embargo, si la aplicación ya contiene lógica de reintento para los interbloqueos, la lógica existente se puede ampliar para incluir los nuevos códigos de error.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36109275"
   
 -   La aplicación cliente tiene lógica de reintento para otros códigos de error, como 1205, que puede ampliar.  
   
--   Los conflictos son raros y es importante reducir la latencia de un extremo a otro mediante la ejecución preparada. Para obtener más información acerca de cómo ejecutar de forma nativa los procedimientos almacenados compilados directamente, vea [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+-   Los conflictos son raros y es importante reducir la latencia de un extremo a otro mediante la ejecución preparada. Para obtener más información acerca de cómo ejecutar de forma nativa compila los procedimientos almacenados directamente, vea [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
  En el siguiente ejemplo se muestra la lógica de reintento de un procedimiento almacenado de [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado que contiene una llamada a un procedimiento almacenado compilado de forma nativa o a una transacción entre contenedores.  
   
@@ -130,8 +130,8 @@ END
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Descripción de las transacciones en tablas optimizadas en memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Transacciones en tablas optimizadas en memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [Directrices para los niveles de aislamiento de transacciones con tablas optimizadas en memoria](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  
+ [Descripción de las transacciones en tablas optimizadas para memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Transacciones en tablas optimizadas para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [Instrucciones para los niveles de aislamiento de transacciones con tablas optimizadas para memoria](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  
   
   

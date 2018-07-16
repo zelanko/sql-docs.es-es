@@ -1,5 +1,5 @@
 ---
-title: Esquema de almacenamiento en caché (SQLXML 4.0) | Documentos de Microsoft
+title: Esquema de almacenamiento en caché (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - schemas [SQLXML]
 ms.assetid: 7e5fda21-b435-41fd-b637-8b616560a93f
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6ddf2b95f9b72a0def960f6159cd8646a6b4439c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2bf1398a83badd1ea52fd15484b4e2cda8ec8b8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186202"
 ---
 # <a name="schema-caching-sqlxml-40"></a>Almacenamiento de esquemas en caché (SQLXML 4.0)
-  Con una instalación en paralelo de XML de Microsoft SQL Server 2000 Web Release 1, Microsoft SQLXML 2.0 y SQLXML 3.0, puede controlar explícitamente el esquema de almacenamiento en caché en todas las versiones con las claves del registro siguientes:  
+  Con una instalación en paralelo de XML de Microsoft SQL Server 2000 Web Release 1, Microsoft SQLXML 2.0 y SQLXML 3.0, puede controlar explícitamente el esquema de almacenamiento en caché en todas las versiones con las siguientes claves del registro:  
   
  Web Release 1:  
   
@@ -50,13 +50,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- Para obtener más información acerca de la instalación en paralelo, vea [What's New en SQLXML 4.0 SP1](../../sqlxml/what-s-new-in-sqlxml-4-0-sp1.md).  
+ Para obtener más información acerca de la instalación en paralelo, vea [Novedades de SQLXML 4.0 SP1](../../sqlxml/what-s-new-in-sqlxml-4-0-sp1.md).  
   
  El almacenamiento de esquemas en la memoria caché mejora significativamente el rendimiento de una consulta XPath. Cuando se ejecuta una consulta XPath para un esquema de asignación, el esquema se almacena en memoria y las estructuras de datos necesarias se generan en memoria. Si se establece el almacenamiento en caché del esquema, el esquema permanece en memoria, con lo que se mejora el rendimiento de las consultas XPath subsiguientes.  
   
  Puede establecer el tamaño de caché para el esquema agregando la clave anterior en el Registro  
   
- El tamaño del esquema se establece en función de la memoria disponible y el número de esquemas que esté utilizando. El valor predeterminado **SchemaCacheSize** es 31. Si establece **SchemaCacheSize** superior, se usa más memoria. Por consiguiente, puede aumentar el tamaño de caché si el acceso al esquema parece lento o puede reducirlo si hay poca memoria.  
+ El tamaño del esquema se establece en función de la memoria disponible y el número de esquemas que esté utilizando. El valor predeterminado **SchemaCacheSize** es 31. Si establece **SchemaCacheSize** superior, se utiliza más memoria. Por consiguiente, puede aumentar el tamaño de caché si el acceso al esquema parece lento o puede reducirlo si hay poca memoria.  
   
  Por motivos de rendimiento, se recomienda que establezca **SchemaCacheSize** mayor que el número de esquemas de asignación que normalmente utiliza. A medida que aumenta el número de esquemas, si **SchemaCacheSize** es menor que el número de esquemas que tiene, el rendimiento es peor.  
   
@@ -65,6 +65,6 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
   
 ## <a name="see-also"></a>Vea también  
  [Almacenamiento en caché de plantilla &#40;SQLXML 4.0&#41;](template-caching-sqlxml-4-0.md)   
- [Almacenamiento en caché XSL &#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
+ [Almacenamiento en caché de XSL &#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: PowerPivot para SharePoint (SSAS) | Documentos de Microsoft
+title: PowerPivot para SharePoint (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1caed8888e1307950971914f48887facac409741
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11ee7e6690c0937477374337d80a4b239bdb7f3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224855"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot para SharePoint (SSAS)
   PowerPivot para SharePoint es un servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint. PowerPivot para SharePoint proporciona hospedaje de servidor de datos PowerPivot en una granja de SharePoint. Los datos de PowerPivot son un modelo de datos analíticos que se genera mediante uno de los siguientes procedimientos:  
@@ -58,25 +58,25 @@ ms.locfileid: "36111653"
  Una instancia de servidor de Analysis Services en modo integrado de SharePoint completa la implementación. Carga, consulta, y descarga los datos. También procesa los datos si el libro se configura para la actualización de datos PowerPivot.  Cada instancia está unida estrechamente al Servicio de sistema de PowerPivot local que forma parte de la misma instalación.  
   
 ##  <a name="bkmk_RelatedContent"></a> En esta sección  
- [Administración de servidor de PowerPivot y configuración en Administración Central](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Administración y configuración del servidor PowerPivot en Administración central](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Configuración de PowerPivot mediante Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   
  [Herramientas de configuración de PowerPivot](power-pivot-configuration-tools.md)  
   
- [Autorización y autenticación de PowerPivot](power-pivot-authentication-and-authorization.md)  
+ [Autenticación y autorización de PowerPivot](power-pivot-authentication-and-authorization.md)  
   
- [Configurar las reglas de mantenimiento de PowerPivot:](configure-power-pivot-health-rules.md)  
+ [Configurar reglas de mantenimiento de PowerPivot:](configure-power-pivot-health-rules.md)  
   
  [Panel de administración de PowerPivot y datos de uso](power-pivot-management-dashboard-and-usage-data.md)  
   
- [Galería de PowerPivot](../../2014-toc/books-online-for-sql-server-2014.md)  
+ [La Galería de PowerPivot](../../2014-toc/books-online-for-sql-server-2014.md)  
   
  [Acceso a datos PowerPivot](power-pivot-data-access.md)  
   
- [Actualización de datos de PowerPivot](power-pivot-data-refresh.md)  
+ [Actualización de datos PowerPivot](power-pivot-data-refresh.md)  
   
- [Las fuentes de datos de PowerPivot](power-pivot-data-feeds.md)  
+ [Fuentes de distribución de datos de PowerPivot](power-pivot-data-feeds.md)  
   
  [Conexión de modelo semántico de BI PowerPivot &#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
   
@@ -85,11 +85,11 @@ ms.locfileid: "36111653"
 ## <a name="additional-topics"></a>Temas adicionales  
  [Actualizar PowerPivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
- [PowerPivot para SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [Instalación de PowerPivot para SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
  [Referencia de PowerShell para PowerPivot para SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
- [Topologías de licencia de ejemplo y los costos de SQL Server 2014 autoservicio Business Intelligence](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
+ [Costes y topologías de licencia de ejemplo de inteligencia empresarial de autoasistencia de SQL Server 2014](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Planeación de PowerPivot e implementación](http://go.microsoft.com/fwlink/?linkID=220972)   

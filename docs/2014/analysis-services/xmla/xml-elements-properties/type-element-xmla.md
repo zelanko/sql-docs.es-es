@@ -1,5 +1,5 @@
 ---
-title: Tipo de elemento (XMLA) | Documentos de Microsoft
+title: Type (elemento) (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 5d898123-a635-402a-be86-8249d7304fa4
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 38b4442afe95f06d9a6f437e906c01b7386d91ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 336266b8290f1a4eb10d200d8c1c31bf00f96879
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193785"
 ---
 # <a name="type-element-xmla"></a>Elemento Type (XMLA)
-  Determina el tipo de procesamiento que debe realizar la [proceso](../xml-elements-commands/process-element-xmla.md) elemento.  
+  Determina el tipo de procesamiento para realizar la [proceso](../xml-elements-commands/process-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36111638"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- Para obtener más información acerca del procesamiento de las opciones disponibles en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], consulte [procesamiento del objeto de modelo multidimensionales](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Para obtener más información acerca del procesamiento de las opciones disponibles para los objetos en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], consulte [procesamiento del objeto de modelo Multidimensional](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  El valor del elemento `Type` se limita a las cadenas listadas en la tabla siguiente.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36111638"
 |*ProcessUpdate*|Actualiza los datos el objeto afectado.|  
 |*ProcessIndexes*|Crea o vuelve a generar índices y agregaciones en el objeto afectado.|  
 |*ProcessScriptCache*|Si se procesa el cubo, el servidor volverá a generar la caché de script de MDX. Si no, se producirá un error.<br /><br /> **Tenga en cuenta** se aplica solo al cubo.|  
-|*ProcessData*|Procesa los datos sólo en el objeto afectado.|  
+|*ProcessData*|Procesa los datos solo en el objeto afectado.|  
 |*ProcessDefault*|Detecta el estado del objeto afectado y después ejecuta la opción de procesamiento adecuada en el objeto afectado para optimizarlo y volver a dejarlo en un estado totalmente procesado.|  
 |*ProcessClear*|Quita los datos del objeto afectado y todos los objetos relacionados.|  
 |*ProcessStructure*|Únicamente procesa los datos del objeto afectado.|  

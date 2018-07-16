@@ -1,5 +1,5 @@
 ---
-title: Administrar los metadatos cuando pasa a una base de datos disponible en otra instancia del servidor (SQL Server) | Documentos de Microsoft
+title: Administrar los metadatos cuando pasa a una base de datos disponibles en otra instancia de servidor (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
 - logins [SQL Server], recreating on another server instance
@@ -35,15 +35,15 @@ helpviewer_keywords:
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 caps.latest.revision: 82
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ffc720988d80a77e2b540b89c258f2b943d9445e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cbea790b9376f254be6c1de3179cc1057d5f8b7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207215"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia de servidor (SQL Server)
   Este tema es pertinente en las siguientes situaciones:  
@@ -112,7 +112,7 @@ ms.locfileid: "36112310"
  Para obtener más información sobre esta característica, vea [Credenciales &#40;motor de base de datos&#41;](../security/authentication-access/credentials-database-engine.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Las cuentas de Proxy del agente usan credenciales. Para conocer el identificador de la credencial de una cuenta proxy, use la tabla del sistema [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) .  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Las cuentas de Proxy del agente utilizan credenciales. Para conocer el identificador de la credencial de una cuenta proxy, use la tabla del sistema [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) .  
   
  [&#91;Principio&#93;](#information_entities_and_objects)  
   

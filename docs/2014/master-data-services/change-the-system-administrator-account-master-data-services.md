@@ -1,5 +1,5 @@
 ---
-title: Cambiar la cuenta de administrador del sistema (Master Data Services) | Documentos de Microsoft
+title: Cambiar la cuenta de administrador del sistema (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], changing
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0e9a79120b4f184fb7acf07eeaf46101740a173
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6d15bf7b140445ca80f23fe22e058a78d6fdce0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298615"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>Cambiar la cuenta de administrador del sistema (Master Data Services)
   Puede cambiar la cuenta de usuario que se designa como la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] administrador del sistema.  
@@ -44,7 +44,7 @@ ms.locfileid: "36108986"
   
 3.  Cree una nueva consulta.  
   
-4.  Escriba el texto siguiente, reemplazando *dominio ombre_de_usuario* con el nombre de usuario del nuevo administrador y *SID* con el valor que copió en el paso 2.  
+4.  Escriba el texto siguiente, reemplazando *DOMINIO\nombre_de_usuario* con el nombre de usuario del nuevo administrador y *SID* con el valor que copió en el paso 2.  
   
     ```  
     EXEC [mdm].[udpSecuritySetAdministrator] @UserName='DOMAIN\user_name', @SID = 'SID', @PromoteNonAdmin = 1  

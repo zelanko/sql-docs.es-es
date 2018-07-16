@@ -1,5 +1,5 @@
 ---
-title: Descripción de orden de paso y orden de resolución (MDX) | Documentos de Microsoft
+title: Descripción, orden de paso y orden (MDX) de resolución | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - evaluation order [MDX]
 - calculation order [MDX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6275971580e7885d0ccdd92aa128811c07f297bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e62af2057276bf6533753d5c1543e686ddb5e92c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196535"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Descripción de orden de paso y orden de resolución (MDX)
   Cuando un cubo se calcula como el resultado de un script de MDX, puede atravesar varias fases de computación según el uso de varias características relativas al cálculo. Cada una de estas fases se denomina paso de cálculo.  
@@ -127,9 +127,9 @@ FROM [Adventure Works]
  La diferencia de los conjuntos de resultados entre la primera y la segunda consulta radica en la distinta colocación del miembro calculado. En la primera consulta, el miembro calculado se encuentra en el eje ROWS, mientras que en la segunda consulta se encuentra en el eje COLUMNS. Esta distinta colocación adquiere importancia en la siguiente consulta, en la que se combinan dos miembros calculados en una única consulta MDX.  
   
 ### <a name="query-3combined-year-difference-and-net-income-calculations"></a>Consulta 3—Cálculos combinados de Year Difference y Net Income  
- En esta consulta final que combina los dos ejemplos previos en una sola consulta MDX, el orden de resolución es importante debido a los cálculos de ambas columnas y filas. Para asegurarse de que los cálculos se realizan en la secuencia correcta, defina la secuencia en la que los cálculos se realizan mediante el uso de la `SOLVE_ORDER` (palabra clave).  
+ En esta consulta final que combina los dos ejemplos previos en una sola consulta MDX, el orden de resolución es importante debido a los cálculos de ambas columnas y filas. Para asegurarse de que los cálculos se realizan en la secuencia correcta, defina la secuencia en que los cálculos se realizan con el `SOLVE_ORDER` palabra clave.  
   
- La palabra clave `SOLVE_ORDER` especifica el orden de resolución de los miembros calculados en una consulta MDX o en un comando `CREATE MEMBER`. Los valores de entero utilizados con el `SOLVE_ORDER` palabra clave son relativos, no necesita comenzar en cero y no necesita ser consecutivos. El valor ordena a MDX calcular un miembro según los valores resultantes del cálculo de miembros con un valor superior. Si se define un miembro calculado sin la `SOLVE_ORDER` (palabra clave), el valor predeterminado de la que calcula el miembro es cero.  
+ La palabra clave `SOLVE_ORDER` especifica el orden de resolución de los miembros calculados en una consulta MDX o en un comando `CREATE MEMBER`. Los valores enteros usados con el `SOLVE_ORDER` palabra clave son relativos, no necesitan empieza en cero y tienen que ser consecutivos. El valor ordena a MDX calcular un miembro según los valores resultantes del cálculo de miembros con un valor superior. Si se define un miembro calculado sin la `SOLVE_ORDER` palabra clave, el valor predeterminado es cero.  
   
  Por ejemplo, si combina los cálculos utilizados en las dos primeras consultas de ejemplo, la intersección de los dos miembros calculados, `Year Difference` y `Profit Margin`, se produce en una única celda en el conjunto de datos de resultados del ejemplo de consulta MDX. La única manera de determinar cómo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] evaluará esta celda es mediante el orden de resolución. Las fórmulas utilizadas para crear esta celda ofrecerán resultados diferentes según del orden de resolución de los dos miembros calculados.  
   

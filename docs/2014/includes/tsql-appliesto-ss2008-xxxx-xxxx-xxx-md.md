@@ -1,1 +1,1 @@
-**En este tema se aplica a:** ![Sí](media/yes.png "Sí")SQL Server \(a partir de 2008\) ![no](media/no.png "no")Base de datos SQL azure ![no](media/no.png "no")almacenamiento de datos SQL Azure ![no](media/no.png "ningún")almacenamiento de datos paralelos
+**En este tema se aplica a:** ![Sí](media/yes.png "Sí")SQL Server \(a partir de 2008\) ![ningún](media/no.png "ningún")Base de datos SQL azure ![ningún](media/no.png "ningún")Azure SQL Data Warehouse ![ningún](media/no.png "ningún")almacenamiento de datos paralelos

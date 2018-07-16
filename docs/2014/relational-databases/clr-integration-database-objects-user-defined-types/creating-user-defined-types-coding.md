@@ -1,13 +1,11 @@
 ---
-title: Codificar tipos definidos por el usuario | Documentos de Microsoft
+title: Codificar tipos definidos por el usuario | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -33,15 +31,15 @@ helpviewer_keywords:
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab1bc1114d6bfd0ab29a2cc1e16b73466baa1d9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 25560f82b1a697618dd606f7df8393abb74727c6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111805"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354427"
 ---
 # <a name="coding-user-defined-types"></a>Codificar tipos definidos por el usuario
   Al codificar la definición de un tipo definido por el usuario (UDT), debe implementar varias características, en función de si implementa el UDT como una clase o como una estructura, así como de las opciones de formato y serialización que haya elegido.  
@@ -375,7 +373,7 @@ private bool ValidatePoint()
  Debe llamar explícitamente al método de validación de establecedores de propiedad y el `Parse` método si desea que el método de validación debe ejecutar en todas las situaciones. No se trata de ningún requisito e incluso, en algunos casos, es posible que no se desee.  
   
 ### <a name="parse-validation-example"></a>Ejemplo de validación de Parse  
- Para asegurarse de que el `ValidatePoint` se invoca al método en el `Point` (clase), debe llamarlo desde el `Parse` método y de la propiedad de los procedimientos que establece X e Y valores de las coordenadas. El siguiente fragmento de código muestra cómo llamar a la `ValidatePoint` método de validación de la `Parse` (función).  
+ Para asegurarse de que el `ValidatePoint` se invoca al método en el `Point` (clase), se debe llamar desde el `Parse` método y de la propiedad de los procedimientos que establezca X e Y valores de las coordenadas. El siguiente fragmento de código muestra cómo llamar a la `ValidatePoint` método de validación de la `Parse` función.  
   
 ```vb  
 <SqlMethod(OnNullCall:=False)> _  
@@ -495,10 +493,10 @@ public Int32 Y
 ```  
   
 ## <a name="coding-udt-methods"></a>Codificar métodos UDT  
- Cuando codifique los métodos UDT, tenga en cuenta si el algoritmo usado podría cambiar con el tiempo. En ese caso, es posible que desee considerar la posibilidad de crear una clase independiente para los métodos que usa el UDT. Si el algoritmo cambia, puede volver a compilar la clase con el nuevo código, así como cargar el ensamblado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin que esto afecte al UDT. En muchos casos, los UDT pueden volver a cargarse mediante la instrucción ALTER ASSEMBLY de [!INCLUDE[tsql](../../includes/tsql-md.md)], pero eso podría causar problemas con los datos existentes. Por ejemplo, el `Currency` UDT incluido con el **AdventureWorks** usos de la base de datos de ejemplo un **ConvertCurrency** función para convertir los valores de moneda, que se implementa en una clase independiente. Es posible que en un futuro los algoritmos de conversión cambien de modo impredecible o que se necesite nueva funcionalidad. Separar la **ConvertCurrency** funcionar desde el `Currency` implementación de UDT proporciona mayor flexibilidad al planear los cambios futuros.  
+ Cuando codifique los métodos UDT, tenga en cuenta si el algoritmo usado podría cambiar con el tiempo. En ese caso, es posible que desee considerar la posibilidad de crear una clase independiente para los métodos que usa el UDT. Si el algoritmo cambia, puede volver a compilar la clase con el nuevo código, así como cargar el ensamblado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin que esto afecte al UDT. En muchos casos, los UDT pueden volver a cargarse mediante la instrucción ALTER ASSEMBLY de [!INCLUDE[tsql](../../includes/tsql-md.md)], pero eso podría causar problemas con los datos existentes. Por ejemplo, el `Currency` UDT incluido con el **AdventureWorks** usos de la base de datos de ejemplo una **ConvertCurrency** función para convertir los valores de moneda, que se implementa en una clase independiente. Es posible que en un futuro los algoritmos de conversión cambien de modo impredecible o que se necesite nueva funcionalidad. Separar la **ConvertCurrency** funcionar desde el `Currency` implementación de UDT proporciona mayor flexibilidad al planear los cambios futuros.  
   
 ### <a name="example"></a>Ejemplo  
- El `Point` clase contiene tres métodos simples para calcular la distancia: **distancia**, **DistanceFrom** y **DistanceFromXY**. Cada uno de estos métodos devuelve un valor de tipo `double` y calcula la distancia de `Point` a cero, la distancia de un punto determinado a `Point` y la distancia de las coordenadas X e Y especificadas a `Point`, respectivamente. **Distancia** y **DistanceFrom** cada llamada **DistanceFromXY**y se muestra cómo usar argumentos distintos para cada método.  
+ El `Point` clase contiene tres métodos simples para calcular la distancia: **distancia**, **DistanceFrom** y **DistanceFromXY**. Cada uno de estos métodos devuelve un valor de tipo `double` y calcula la distancia de `Point` a cero, la distancia de un punto determinado a `Point` y la distancia de las coordenadas X e Y especificadas a `Point`, respectivamente. **Distancia** y **DistanceFrom** cada llamada **DistanceFromXY**y muestran cómo usar argumentos distintos para cada método.  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -548,7 +546,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  La clase `Microsoft.SqlServer.Server.SqlMethodAttribute` proporciona atributos personalizados que pueden usarse para marcar las definiciones de método a fin de especificar el determinismo en comportamientos de llamada NULL, así como para especificar si un método es un método mutador. Se asume el uso de valores predeterminados para estas propiedades y solamente se usa el atributo personalizado cuando se necesita un valor no predeterminado.  
   
 > [!NOTE]  
->  La clase `SqlMethodAttribute` se hereda de la clase `SqlFunctionAttribute`; por ello, `SqlMethodAttribute` hereda los campos `FillRowMethodName` y `TableDefinition` de `SqlFunctionAttribute`. Esto significa que es posible escribir un método con valores de tabla, que no es el caso. Compila el método y el ensamblado de implementar, pero un error sobre la `IEnumerable` devolver el tipo se genera en tiempo de ejecución con el siguiente mensaje: "método, propiedad o campo '\<nombre >' en clase\<clase >' en el ensamblado '\<ensamblado >' tiene el tipo de valor devuelto no válido. "  
+>  La clase `SqlMethodAttribute` se hereda de la clase `SqlFunctionAttribute`; por ello, `SqlMethodAttribute` hereda los campos `FillRowMethodName` y `TableDefinition` de `SqlFunctionAttribute`. Esto significa que es posible escribir un método con valores de tabla, que no es el caso. Compila el método y el ensamblado se implementa, pero un error sobre la `IEnumerable` devolver el tipo se genera en tiempo de ejecución con el siguiente mensaje: "método, propiedad o campo '\<nombre >' en la clase\<clase >' en el ensamblado '\<ensamblado >' tiene el tipo de valor devuelto no válido. "  
   
  En la tabla siguiente se describen algunas de las propiedades más relevantes de `Microsoft.SqlServer.Server.SqlMethodAttribute` que pueden usarse en métodos UDT y se indican sus valores predeterminados.  
   
@@ -556,16 +554,16 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  Indica si la función implica el acceso a los datos de usuario almacenados en la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El valor predeterminado es `DataAccessKind``None`.  
   
  IsDeterministic  
- Indica si la función genera los mismos valores de salida si se especifican los mismos valores de entrada y el mismo estado de la base de datos. Valor predeterminado es `false`.  
+ Indica si la función genera los mismos valores de salida si se especifican los mismos valores de entrada y el mismo estado de la base de datos. El valor predeterminado es `false`.  
   
  IsMutator  
- Indica si el método produce un cambio de estado en la instancia del UDT. Valor predeterminado es `false`.  
+ Indica si el método produce un cambio de estado en la instancia del UDT. El valor predeterminado es `false`.  
   
  IsPrecise  
- Indica si la función implica cálculos imprecisos, como operaciones de punto flotante. Valor predeterminado es `false`.  
+ Indica si la función implica cálculos imprecisos, como operaciones de punto flotante. El valor predeterminado es `false`.  
   
  OnNullCall  
- Indica si se llama al método cuando se especifican argumentos de entrada de referencia NULL. Valor predeterminado es `true`.  
+ Indica si se llama al método cuando se especifican argumentos de entrada de referencia NULL. El valor predeterminado es `true`.  
   
 ### <a name="example"></a>Ejemplo  
  La propiedad `Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator` permite marcar un método que admite un cambio en el estado de una instancia de un UDT. [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite que el usuario establezca dos propiedades UDT en la cláusula SET de una instrucción UPDATE. Sin embargo, puede tener un método marcado como mutador que cambie los dos miembros.  
@@ -625,7 +623,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  El propósito del relleno es asegurarse de que la referencia cultural esté completamente separada del valor de moneda, de forma que al comparar un UDT con otro en código [!INCLUDE[tsql](../../includes/tsql-md.md)], los bytes de la referencia cultural se comparen con los bytes de la referencia cultural y los valores de bytes de moneda se comparen con los valores de bytes de moneda.  
   
- Para la lista de código completa la `Currency` UDT, siga las instrucciones para instalar el CLR ejemplos que encontrará en [ejemplos de motor de base de datos de SQL Server](http://msftengprodsamples.codeplex.com/).  
+ Para la lista de código completa la `Currency` UDT, siga las instrucciones de instalación de CLR ejemplos que encontrará en [ejemplos de motor de base de datos de SQL Server](http://msftengprodsamples.codeplex.com/).  
   
 ### <a name="currency-attributes"></a>Atributos de Currency  
  El UDT `Currency` se define con los atributos siguientes.  

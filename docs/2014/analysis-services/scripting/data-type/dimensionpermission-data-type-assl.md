@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos DimensionPermission (ASSL) | Documentos de Microsoft
+title: Tipo de datos DimensionPermission (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DimensionPermission data type
 ms.assetid: 066405ff-903f-467a-b0d5-e58653952c52
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c614d2fd30f7bd3b831c571cc4d3de0cf26e365
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 740479b334195b36ac7f8d04446575917da04d02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178842"
 ---
 # <a name="dimensionpermission-data-type-assl"></a>Tipo de datos DimensionPermission (ASSL)
   Define un tipo de datos derivado que representa los permisos asignados a una dimensión de la base de datos.  

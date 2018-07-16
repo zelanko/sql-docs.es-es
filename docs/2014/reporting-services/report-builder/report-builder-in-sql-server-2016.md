@@ -1,5 +1,5 @@
 ---
-title: En SQL Server 2014 del generador de informes | Documentos de Microsoft
+title: Generador de informes en SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10428"
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 caps.latest.revision: 29
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ab3d87e730ee8788f010f776899d3d494887ed96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 911b88bc7b707e837bbd042814a2f8e84a61daa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261931"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Generador de informes en SQL Server 2014
   El Generador de informes es un entorno de creación de informes destinado a los usuarios empresariales que prefieren trabajar en el entorno de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office. Al diseñar un informe, especifica dónde obtener los datos, qué datos obtener y cómo mostrar los datos. Al ejecutar el informe, el procesador de informes toma toda la información especificada, recupera los datos y los combina con el diseño del informe para generar el informe. Puede obtener una vista previa de los informes en el Generador de informes o publicar el informe en un servidor de informes o en un servidor de informes en el modo integrado de SharePoint, donde otros usuarios podrán ejecutarlo.  
@@ -35,7 +35,7 @@ ms.locfileid: "36112409"
   
 ##  <a name="JumpStartReptCreation"></a> Iniciar la creación del informe  
   
--   **Iniciar elementos de informe withreport** creado por otra persona de su equipo. Las partes de informe son elementos de informe que se han publicado aparte en un servidor de informes o en un sitio de SharePoint integrado con un servidor de informes. Se pueden volver a usar en otros informes. Los elementos de informe, como las tablas, las matrices, los gráficos y las imágenes, se pueden publicar como elementos de informe.  
+-   **Iniciar los elementos de informe withreport** creado por otra persona de su equipo. Las partes de informe son elementos de informe que se han publicado aparte en un servidor de informes o en un sitio de SharePoint integrado con un servidor de informes. Se pueden volver a usar en otros informes. Los elementos de informe, como las tablas, las matrices, los gráficos y las imágenes, se pueden publicar como elementos de informe.  
   
 -   **Comience con un conjunto de datos compartido** creado por otra persona de su equipo. Los conjuntos de datos compartidos son consultas basadas en un origen de datos compartido almacenadas en un servidor de informes o en un sitio de SharePoint integrado con un servidor de informes.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "36112409"
   
 ##  <a name="DesignRept"></a> Diseñar el informe  
   
--   **Crear informes con la tabla, matriz, gráfico y diseños de informe de forma libre.** Cree informes de tabla para datos basados en columnas, informes de matrices (como informes para referencias cruzadas de tabla o para PivotTable) para datos resumidos, informes de gráficos para datos gráficos e informes de formato libre para todo los demás. Los informes pueden incrustar otros informes y gráficos, junto con listas, gráficos y controles para las aplicaciones dinámicas basadas en web.  
+-   **Cree informes con la tabla, matriz, gráfico y diseños de informe de forma libre.** Cree informes de tabla para datos basados en columnas, informes de matrices (como informes para referencias cruzadas de tabla o para PivotTable) para datos resumidos, informes de gráficos para datos gráficos e informes de formato libre para todo los demás. Los informes pueden incrustar otros informes y gráficos, junto con listas, gráficos y controles para las aplicaciones dinámicas basadas en web.  
   
 -   **Informes a partir de diferentes orígenes de datos.** Cree informes con datos de cualquier tipo de origen de datos que tenga un proveedor de datos administrado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], un proveedor OLE DB o un origen de datos ODBC. Puede crear informes que utilizan datos relacionales y multidimensionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion y otras bases de datos. Puede utilizar una extensión de procesamiento de datos XML para recuperar datos desde cualquier origen de datos XML. Puede utilizar funciones con valores de tabla para diseñar orígenes de datos personalizados.  
   
--   **Modifique los informes existentes.** Mediante el generador de informes, puede personalizar y actualizar informes creados en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]el Diseñador de informes.  
+-   **Modifique los informes existentes.** Al usar el generador de informes, puede personalizar y actualizar informes creados en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]el Diseñador de informes.  
   
--   **Modificar los datos** filtrar, agrupar y ordenar datos, o agregando fórmulas o expresiones.  
+-   **Modificar los datos** filtrando, agrupando y ordenando los datos, o agregando fórmulas o expresiones.  
   
 -   **Agregue gráficos, medidores, minigráficos e indicadores** para resumir los datos en un formato visual y presentar grandes volúmenes de información agregada de un vistazo.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36112409"
 
   
 ##  <a name="InThisSection"></a> En esta sección  
- [Novedades en el generador de informes para SQL Server 2014](../what-s-new-in-report-builder-for-sql-server-2014.md)  
+ [Novedades en el Generador de informes para SQL Server 2014](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  Describe las nuevas características de esta versión del Generador de informes, incluidos los mapas.  
   
  [Tutorial: Crear un informe de gráfico rápido sin conexión](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
@@ -88,13 +88,13 @@ ms.locfileid: "36112409"
  [Planear un informe &#40;generador de informes&#41;](../report-design/planning-a-report-report-builder.md)  
  Proporciona información acerca de lo que debería tener en cuenta antes de empezar a generar el informe.  
   
- [Conceptos de creación de informes &#40;el generador de informes SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Conceptos de creación de informes &#40;generador de informes y SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  Define conceptos clave usados a lo largo de toda la documentación del Generador de informes.  
   
  [Vista Diseño del informe &#40;generador de informes&#41;](report-design-view-report-builder.md)  
  Explica los diferentes paneles y regiones de la vista de diseño del informe.  
   
- [Vista de diseño de conjunto de datos compartidos &#40;generador de informes&#41;](shared-dataset-design-view-report-builder.md)  
+ [Vista de diseño de conjunto de datos compartido &#40;generador de informes&#41;](shared-dataset-design-view-report-builder.md)  
  Explica los diferentes paneles y regiones de la vista de diseño del conjunto de datos compartido.  
   
  [Métodos abreviados de teclado &#40;generador de informes&#41;](keyboard-shortcuts-report-builder.md)  

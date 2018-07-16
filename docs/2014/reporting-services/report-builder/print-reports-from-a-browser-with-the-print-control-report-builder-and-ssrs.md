@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f92d638c07d28f424c0e6338f953cd716205f48b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e120229a41ae80490ab1950113c4de6f37b70c9e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270341"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Imprimir informes desde un explorador usando el control de impresión (Generador de informes y SSRS)
   Aunque los exploradores son las aplicaciones cliente habitualmente más usadas para ver un informe, la funcionalidad de impresión que incluyen no es la ideal para imprimir informes. La funcionalidad de impresión de un explorador está diseñada para imprimir páginas web. Normalmente, las páginas que imprime desde un explorador incluyen todos los elementos visuales de una página web, además de la información del encabezado y del pie de página que identifica la página o el sitio web. Al imprimir desde un explorador, se imprime el contenido de la ventana actual. En el caso de un informe compuesto por varias páginas, el explorador imprime como máximo la primera página y posiblemente incluso menos si la página del informe tiene unas dimensiones superiores a las de una página impresa.  
   
  Para mejorar la calidad de impresión de los informes que ve en un explorador y para imprimir varias páginas, puede usar la funcionalidad de impresión del lado cliente ofrecida en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. La impresión del lado cliente proporciona un cuadro de diálogo **Imprimir** estándar que puede usarse para seleccionar una impresora, especificar páginas y márgenes, y previsualizar el informe antes de su impresión. La impresión del lado cliente está concebida para que se use en lugar del comando **Imprimir** del menú **Archivo** del explorador. Si utiliza la impresión del lado cliente, el informe se imprime tal y como se diseñó, sin los elementos adicionales que se ven en la impresión de una página web.  
   
- Para usar la impresión del lado cliente, necesita instalar un control ActiveX de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener más información, consulte [habilitar y deshabilitar la impresión de cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Para usar la impresión del lado cliente, necesita instalar un control ActiveX de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener más información, consulte [habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -45,6 +45,6 @@ ms.locfileid: "36111294"
   
 ## <a name="see-also"></a>Vea también  
  [Imprimir informes &#40;Generador de informes y SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
- [Imprimir un informe &#40;el generador de informes SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
+ [Imprimir un informe &#40;generador de informes y SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
   
   

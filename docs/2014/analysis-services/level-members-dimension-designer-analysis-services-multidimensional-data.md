@@ -1,5 +1,5 @@
 ---
-title: Nivel y miembros (pestaña explorador, Diseñador de dimensiones) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Nivel y miembros (pestaña explorador, Diseñador de dimensiones) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsertab.levelsandmembers.f1
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb9a6361159c67c24b8254939f3353a2a0063c04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e30aae23fda8e929b3348ef09d20265ae1d9784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193975"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Nivel y miembros (pestaña Explorador, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use este panel para examinar los miembros del idioma y la jerarquía seleccionados actualmente. Para seleccionar el idioma o la jerarquía que se examinará, use las opciones **Jerarquía** e **Idioma** del panel **Barra de herramientas** . Para obtener más información sobre el panel Barra de herramientas, vea [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="writeback-mode"></a>Modo de reescritura  
- La funcionalidad de este panel cambia si el modo de reescritura está habilitado. La dimensión seleccionada debe estar habilitada para escritura (en otras palabras, el `WriteEnabled` propiedad de la dimensión debe establecerse en true) y la dimensión debe implementarse en un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia con el fin de habilitar el modo de reescritura.  
+ La funcionalidad de este panel cambia si el modo de reescritura está habilitado. La dimensión seleccionada debe estar habilitado para escritura (en otras palabras, el `WriteEnabled` propiedad de la dimensión debe establecerse en true) y la dimensión debe implementarse en un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para habilitar el modo de reescritura.  
   
  Para habilitar el modo de reescritura, puede seleccionar **Reescritura** en el panel **Barra de herramientas** , o hacer clic con el botón derecho en el panel **Nivel y miembros** y seleccionar **Reescritura** en el menú contextual.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36111903"
 ## <a name="context-menu"></a>Menú contextual  
  Las siguientes opciones están disponibles en el menú contextual que se muestra al hacer clic con el botón derecho en cualquier parte del panel **Nivel y miembros** del miembro seleccionado:  
   
- **Crear igual**  
+ **Creación del mismo nivel**  
  Crea un nuevo miembro en el mismo nivel que el miembro seleccionado.  
   
 > [!NOTE]  
@@ -127,7 +127,7 @@ ms.locfileid: "36111903"
  Seleccione esta opción para habilitar el modo de reescritura.  
   
 ## <a name="see-also"></a>Vea también  
- [Barra de herramientas &#40;pestaña explorador, Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Barra de herramientas &#40;pestaña del explorador, Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
  [Explorador &#40;Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

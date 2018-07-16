@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 0d742a0985177d9a6c860c6dedcb34eba128c930
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: ece469ea1140265ef70ecbd720bad350ca04905b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290881"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidad de las tablas con optimización para memoria
   
@@ -29,7 +29,7 @@ ms.locfileid: "36108975"
  Todos los cambios realizados en tablas basadas en disco o en tablas optimizadas para memoria se capturan en una o más entradas del registro de transacciones. Cuando se confirma una transacción, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] escribe en el disco las entradas de registro asociadas a la transacción antes de comunicar a la aplicación o a la sesión de usuario que la transacción se ha confirmado. Esto garantiza que los cambios realizados por la transacción sean durables. El registro de transacciones para las tablas optimizadas para memoria está totalmente integrado con el mismo flujo de registro que emplean las tablas basadas en disco. Esta integración permite que las operaciones de copia de seguridad, recuperación y restauración de registros de transacciones existentes sigan funcionando sin necesidad de realizar ningún paso adicional. Sin embargo, puesto que [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] puede mejorar considerablemente el rendimiento de transacciones de la carga de trabajo, debe asegurarse de que el almacenamiento del registro de transacciones está configurado correctamente para controlar los requisitos crecientes de E/S.  
   
 ## <a name="data-and-delta-files"></a>Archivos delta y de datos  
- Los datos de las tablas optimizadas para memoria se almacenan en memoria como filas de datos de forma libre que se vinculan mediante uno o varios índices en memoria. No hay ninguna estructura de página para las filas de datos, como las empleadas para las tablas basadas en disco. Cuando la aplicación está lista para confirmar la transacción, la [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] genera las entradas del registro para la transacción. La persistencia de las tablas optimizadas para memoria se realiza con un conjunto de archivos de datos y delta mediante un subproceso en segundo plano. Los archivos de datos y delta se encuentran en uno o varios contenedores (con el mismo mecanismo empleado para los datos FILESTREAM). Estos contenedores se asignan a un nuevo tipo de grupo de archivos, denominado un grupo de archivos optimizados para memoria.  
+ Los datos de las tablas optimizadas para memoria se almacenan en memoria como filas de datos de forma libre que se vinculan mediante uno o varios índices en memoria. No hay ninguna estructura de página para las filas de datos, como las empleadas para las tablas basadas en disco. Cuando la aplicación está preparada confirmar la transacción, el [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] genera las entradas del registro para la transacción. La persistencia de las tablas optimizadas para memoria se realiza con un conjunto de archivos de datos y delta mediante un subproceso en segundo plano. Los archivos de datos y delta se encuentran en uno o varios contenedores (con el mismo mecanismo empleado para los datos FILESTREAM). Estos contenedores se asignan a un nuevo tipo de grupo de archivos, denominado un grupo de archivos optimizados para memoria.  
   
  Los datos se escriben en estos archivos de un modo estrictamente secuencial, lo que reduce la latencia de disco para las unidades de disco. Puede utilizar varios contenedores en discos diferentes para distribuir la actividad de E/S. Los archivos delta y de datos en varios contenedores de discos distintos aumentarán el rendimiento de la recuperación cuando se leen los datos de los archivos delta y de datos en disco, en memoria.  
   
@@ -114,12 +114,12 @@ ms.locfileid: "36108975"
   
  No todos los CFP con espacio disponible con aptos para la combinación. Por ejemplo, si dos CFP adyacentes están completos al 60%, no optarán por la combinación y cada uno de estos CFP tendrá un almacenamiento del 40% no utilizado. En el peor de los casos, todos los CFP estarán completos al 50%, una utilización del almacenamiento de solo el 50%. Mientras que las filas eliminadas pueden existir en almacenamiento porque los CFP no son aptos para la combinación, es posible que el recolector de elementos no utilizados en memoria haya quitado ya las filas eliminadas. La administración de almacenamiento y de la memoria es independiente de la recolección de elementos no utilizados. El almacenamiento ocupado por los CFP (no todos los CFP se actualizan) puede ser hasta 2 veces mayor que el tamaño de las tablas durables en memoria.  
   
- Si es necesario, se puede realizar una combinación manual explícitamente mediante una llamada a [sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
+ Si es necesario, puede realizar explícitamente una combinación manual llamando [sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
   
 ### <a name="life-cycle-of-a-cfp"></a>Ciclo de vida de un CFP  
  Los CPF realizan una transición por varios estados antes de que se puedan desasignar. En un momento dado, los CFP están en una de las fases siguientes: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE y TOMBSTONE. Para obtener una descripción de estas fases, vea [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
- Después de tener en cuenta el almacenamiento ocupado por los CFP en distintos estados, el almacenamiento total ocupado por las tablas durables optimizadas para memoria puede ser mucho mayor que el doble del tamaño de las tablas en memoria. La DMV [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) se pueden consultar para obtener una lista de todos los CFP de archivos con optimización para memoria, incluida su fase. La transición de los CFP del estado SOURCE MERGE a TOMBSTONE y en última instancia a la recolección de elementos no utilizados puede consumir hasta cinco puntos de comprobación, donde cada punto de comprobación va seguido de una copia de seguridad de registros de transacciones, si la base de datos está configurada para el modelo de recuperación completa u optimizado para cargas masivas de registros.  
+ Después de tener en cuenta el almacenamiento ocupado por los CFP en distintos estados, el almacenamiento total ocupado por las tablas durables optimizadas para memoria puede ser mucho mayor que el doble del tamaño de las tablas en memoria. La DMV [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) se puede consultar para enumerar todos los CFP del grupo de archivos optimizados para memoria, incluida su fase. La transición de los CFP del estado SOURCE MERGE a TOMBSTONE y en última instancia a la recolección de elementos no utilizados puede consumir hasta cinco puntos de comprobación, donde cada punto de comprobación va seguido de una copia de seguridad de registros de transacciones, si la base de datos está configurada para el modelo de recuperación completa u optimizado para cargas masivas de registros.  
   
  Puede forzarse manualmente el punto de comprobación seguido de la copia de seguridad de registros para acelerar la recolección de elementos no utilizados pero esto agregará 5 CFP vacíos (5 pares de archivos de datos y delta con un archivo de datos de un tamaño de 128 MB cada uno). En escenarios de producción, los puntos de comprobación automáticos y las copias de seguridad de registros realizados como parte de la estrategia de copia de seguridad simplificarán la transición de los CFP por estas fases sin que sea necesaria ninguna intervención manual. El efecto del proceso de recolección de elementos no utilizados es que las bases de datos con tablas optimizadas para memoria pueden tener un tamaño de almacenamiento máximo respecto a su tamaño en memoria. No es infrecuente que los CFP tengan en memoria un tamaño que es hasta cuatro veces el de las tablas durables optimizadas para memoria.  
   

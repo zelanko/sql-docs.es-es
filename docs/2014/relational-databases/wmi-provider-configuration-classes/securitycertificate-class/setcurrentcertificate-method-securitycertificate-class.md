@@ -1,5 +1,5 @@
 ---
-title: Método SetCurrentCertificate (clase SecurityCertificate) | Documentos de Microsoft
+title: Método SetCurrentCertificate (clase SecurityCertificate) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetCurrentCertificate method
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6dbc39c89311681026b190eb3032ce6a1ecc5981
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: b406ecc02bcdf0466903beb71de9e633cc2d985c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191775"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>Método SetCurrentCertificate (clase SecurityCertificate)
   Establece el certificado de seguridad actual.  
@@ -46,7 +46,7 @@ SHA , SQLInstance
   
 ## <a name="parts"></a>Partes  
  *object*  
- Un securitycertificate [clase SecurityCertificate]-class.md) objeto que representa un certificado de seguridad.  
+ Una [clase SecurityCertificate] securitycertificate-class.md) objeto que representa un certificado de seguridad.  
   
 #### <a name="parameters"></a>Parámetros  
   
@@ -61,6 +61,6 @@ SHA , SQLInstance
 ## <a name="remarks"></a>Notas  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurar protocolos de red de servidor y las bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

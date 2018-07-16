@@ -1,5 +1,5 @@
 ---
-title: Revise el uso de agregaciones (Asistente para optimización basada en uso) | Documentos de Microsoft
+title: Revise el uso de agregaciones (Asistente para optimización basada en uso) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.reviewaggregationusage.f1
 ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 21618aabe9c7e429c7d78a68c7fcfb9d61a0754c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76140fbc19eaa8beae41c1196143a326dc5c6414
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235685"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>Revisar el uso de agregaciones (Asistente para optimización basada en el uso)
   Utilice la página **Revisar el uso de agregaciones** para configurar el uso de agregaciones.  
@@ -39,11 +39,11 @@ ms.locfileid: "36112778"
  **Sin restricciones**  
  Seleccione esta opción para establecer la configuración del uso de agregaciones del atributo en Unrestricted. Esta configuración impide que se coloquen las restricciones en el diseñador de agregaciones. Sin embargo, el atributo todavía se tiene que evaluar para determinar si es un candidato importante de la agregación.  
   
- **Set All en la configuración predeterminada**  
+ **Establezca todas en la configuración predeterminada**  
  Seleccione esta opción para establecer como predeterminada la configuración del uso de agregaciones de todos atributos.  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda de F1 del Asistente de diseño de agregaciones](aggregation-design-wizard-f1-help.md)   
+ [Ayuda de F1 del Asistente de diseño de agregación](aggregation-design-wizard-f1-help.md)   
  [Asistentes de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

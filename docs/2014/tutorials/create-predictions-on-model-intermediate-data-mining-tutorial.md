@@ -1,5 +1,5 @@
 ---
-title: Crear predicciones en una modelo (Tutorial de minería de datos intermedio) de clústeres de secuencia | Documentos de Microsoft
+title: Crear predicciones en una modelo (Tutorial de minería de datos intermedios) de clústeres de secuencia | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2334975b13b3d503a2208f5a73997549befae219
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 006418a07f393fd50334a2ea9c122cdd92353cda
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198305"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Crear predicciones en un modelo de agrupación en clústeres de secuencia (Tutorial intermedio de minería de datos)
-  Una vez que comprenda la secuencia mejor modelo de agrupación en clústeres al examinar en el Visor, puede crear consultas de predicción mediante el generador de consultas de predicción en el **predicción de modelo de minería de datos** ficha en el Diseñador de minería de datos. Para crear una predicción, seleccione primero el modelo de agrupación en clústeres de secuencia y, a continuación, seleccione los datos de entrada. Para las entradas, puede utilizar un origen de datos externo o puede crear una consulta singleton y proporcionar los valores en un cuadro de diálogo.  
+  Una vez que comprenda el mejor modelo de clústeres examinando en el Visor de secuencia, puede crear consultas de predicción utilizando el generador de consultas de predicción en el **predicción de modelo de minería de datos** ficha en el Diseñador de minería de datos. Para crear una predicción, seleccione primero el modelo de agrupación en clústeres de secuencia y, a continuación, seleccione los datos de entrada. Para las entradas, puede utilizar un origen de datos externo o puede crear una consulta singleton y proporcionar los valores en un cuadro de diálogo.  
   
  En esta lección se presupone que sabe utilizar el Generador de consultas de predicción y desea obtener información acerca de cómo se crean consultas específicas para un modelo de agrupación en clústeres de secuencia. Para obtener información general acerca de cómo utilizar el generador de consultas de predicción, vea [Interfaces de consultas de minería de datos](../../2014/analysis-services/data-mining/data-mining-query-tools.md) o en la sección del tutorial básico de minería de datos, [crear predicciones &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md).  
   
@@ -31,9 +31,9 @@ ms.locfileid: "36312993"
   
 #### <a name="to-create-a-singleton-query-on-a-sequence-clustering-model"></a>Para crear una consulta singleton en un modelo de agrupación en clústeres de secuencia  
   
-1.  Haga clic en el **predicción de modelo de minería de datos** pestaña del Diseñador de minería de datos.  
+1.  Haga clic en el **predicción de modelo de minería de datos** ficha del Diseñador de minería de datos.  
   
-2.  En el **Mining Model** menú de la columna, seleccione **consulta Singleton**.  
+2.  En el **Mining Model** menú de columna, seleccione **consulta Singleton**.  
   
      El **Mining Model** panel y **entrada de consulta Singleton** panel aparece.  
   
@@ -43,18 +43,18 @@ ms.locfileid: "36312993"
   
 4.  Expanda el nodo que representa la estructura de minería de datos **Sequence Clustering with Region**y seleccione el modelo **Sequence Clustering with Region**. Haga clic en **Aceptar**. De momento haga caso omiso al panel de entrada. Especificará los datos de entrada cuando haya configurado las funciones de predicción.  
   
-5.  En la cuadrícula, haga clic en la celda vacía situada debajo **origen** y seleccione **función de predicción.** En la celda situada bajo **campo**, seleccione **PredictSequence**.  
+5.  En la cuadrícula, haga clic en la celda vacía bajo **origen** y seleccione **función de predicción.** En la celda bajo **campo**, seleccione **PredictSequence**.  
   
     > [!NOTE]  
-    >  También puede usar el **Predict** función. Si hace, asegúrese de elegir la versión de la **Predict** función que toma una columna de tabla como argumento...  
+    >  También puede usar el **Predict** función. Si lo hace, asegúrese que elija la versión de la **Predict** función que toma como argumento una columna de tabla...  
   
-6.  En el **modelo de minería de datos** panel, seleccione la tabla anidada `v Assoc Seq Line Items`y arrástrelo hasta la cuadrícula, en el **criterios o argumento** cuadro para el **PredictSequence** (función).  
+6.  En el **Mining Model** panel, seleccione la tabla anidada `v Assoc Seq Line Items`y arrástrela hasta la cuadrícula, al **criterios o argumento** cuadro para la **PredictSequence** función.  
   
-     Arrastrando y colocando nombres de tabla y columna le permite crear instrucciones complejas sin errores de sintaxis. Sin embargo, se reemplazará el contenido actual de la celda, que contiene otros argumentos opcionales para el **PredictSequence** función. Para consultar los demás argumentos, puede agregar provisionalmente una segunda instancia de la función a la cuadrícula como referencia.  
+     Arrastrar y colocar los nombres de tabla y columna permite crear instrucciones complejas sin errores de sintaxis. Sin embargo, se reemplazará el contenido actual de la celda, que contiene otros argumentos opcionales para el **PredictSequence** función. Para consultar los demás argumentos, puede agregar provisionalmente una segunda instancia de la función a la cuadrícula como referencia.  
   
 7.  Haga clic en el **resultado** situado en la esquina superior del generador de consultas de predicción.  
   
- Los resultados esperados contienen una sola columna con el encabezado **expresión**. El **expresión** columna contiene una tabla anidada con tres columnas como se indica a continuación:  
+ Los resultados esperados contienen una sola columna con el encabezado **expresión**. El **expresión** columna contiene una tabla anidada con tres columnas como sigue:  
   
 |$SEQUENCE|Line Number|Modelo|  
 |---------------|-----------------|-----------|  
@@ -63,42 +63,42 @@ ms.locfileid: "36312993"
  ¿Qué significan estos resultados? Recuerde que no especificó ninguna entrada. Por tanto, la predicción se realiza con todos los datos de casos rellenados, y Analysis Services devuelve la predicción que, en términos generales, es más probable.  
   
 ### <a name="adding-inputs-to-a-singleton-prediction-query"></a>Agregar entradas a una consulta de predicción singleton  
- Hasta ahora, no había especificado ninguna entrada. En la tarea siguiente, utilizará el **entrada de consulta Singleton** panel para especificar algunas entradas en la consulta. En primer lugar, utilizará [Region] como entrada en el modelo de agrupación en clústeres de secuencia regional para determinar si las secuencias predichas son las mismas en todas las regiones. A continuación, aprenderá a modificar la consulta para agregar la probabilidad de cada predicción y simplificará los resultados para que resulte más sencillo consultarlos.  
+ Hasta ahora, no había especificado ninguna entrada. En la siguiente tarea, utilizará el **entrada de consulta Singleton** panel para especificar algunas entradas en la consulta. En primer lugar, utilizará [Region] como entrada en el modelo de agrupación en clústeres de secuencia regional para determinar si las secuencias predichas son las mismas en todas las regiones. A continuación, aprenderá a modificar la consulta para agregar la probabilidad de cada predicción y simplificará los resultados para que resulte más sencillo consultarlos.  
   
 ##### <a name="to-generate-predictions-for-a-specific-customer-group"></a>Para generar predicciones de un grupo de clientes concreto  
   
-1.  Haga clic en el **diseño** botón en la esquina superior izquierda del generador de consultas de predicción para volver a la cuadrícula de la creación de consultas.  
+1.  Haga clic en el **diseño** botón en la esquina superior izquierda del generador de consultas de predicción para volver a la cuadrícula de generación de consultas.  
   
 2.  En el **entrada de consulta Singleton** cuadro de diálogo, haga clic en el **valor** cuadro `Region`y seleccione **Europa**.  
   
-3.  Haga clic en el **resultado** botón para ver las predicciones de los clientes en Europa.  
+3.  Haga clic en el **resultado** botón para ver las predicciones para los clientes de Europa.  
   
-4.  Haga clic en el **diseño** botón en la esquina superior izquierda del generador de consultas de predicción para volver a la cuadrícula de la creación de consultas.  
+4.  Haga clic en el **diseño** botón en la esquina superior izquierda del generador de consultas de predicción para volver a la cuadrícula de generación de consultas.  
   
 5.  En el **entrada de consulta Singleton** cuadro de diálogo, haga clic en el **valor** cuadro `Region`y seleccione **Norteamérica**.  
   
-6.  Haga clic en el **resultado** botón para ver las predicciones de los clientes en América del Norte.  
+6.  Haga clic en el **resultado** botón para ver las predicciones para los clientes en América del Norte.  
   
 ### <a name="adding-probabilities-by-using-a-custom-expression"></a>Agregar probabilidades utilizando una expresión personalizada  
  Generar la probabilidad de cada predicción resulta algo más complicado, pues la probabilidad es un atributo de predicción y se genera como una tabla anidada. Si conoce las extensiones de minería de datos (DMX), puede modificar con facilidad la consulta y agregar una instrucción sub-SELECT a la tabla anidada. No obstante, también puede crear una instrucción sub-SELECT en el Generador de consultas de predicción mediante una expresión personalizada.  
   
 ##### <a name="to-output-probabilities-for-a-predicted-sequence-by-using-a-custom-expression"></a>Para generar probabilidades de una secuencia de predicción utilizando una expresión personalizada  
   
-1.  Haga clic en el **diseño** botón en la esquina superior izquierda del generador de consultas de predicción para volver a la cuadrícula de la creación de consultas.  
+1.  Haga clic en el **diseño** botón en la esquina superior izquierda del generador de consultas de predicción para volver a la cuadrícula de generación de consultas.  
   
 2.  En la cuadrícula, en **origen**, haga clic en una nueva fila y seleccione **expresión personalizada**.  
   
-3.  Deje la casilla en **campo** en blanco.  
+3.  Deje la casilla bajo **campo** en blanco.  
   
 4.  Para **Alias**, tipo `t`.  
   
-5.  En el **criterios o argumento** , escriba la instrucción Sub-select completa tal como se muestra en el ejemplo de código siguiente. No olvide incluir los paréntesis de apertura y cierre.  
+5.  En el **criterios o argumento** , escriba la instrucción Sub-select completa tal como se muestra en el siguiente ejemplo de código. No olvide incluir los paréntesis de apertura y cierre.  
   
     ```  
     (SELECT PredictProbability([Model]) FROM PredictSequence([Sequence Clustering with Region].[v Assoc Seq Line Items]))  
     ```  
   
-6.  Haga clic en el **resultado** botón para ver las predicciones de los clientes en Europa.  
+6.  Haga clic en el **resultado** botón para ver las predicciones para los clientes de Europa.  
   
  Los resultados contienen dos tablas anidadas: una con la predicción  y otra con la probabilidad de la predicción. Si la consulta no funciona, puede cambiar a la vista de diseño de consultas y revisar toda la instrucción de consulta, que debería ser como la siguiente:  
   
@@ -143,13 +143,13 @@ NATURAL PREDICTION JOIN
  En los ejemplos anteriores se utilizó una columna de una tabla de casos, Region, como entrada de la consulta de predicción singleton, porque lo que se pretendía era saber si el modelo encontraba diferencias entre las regiones. Sin embargo, después de analizar el modelo, decidió que las diferencias no eran lo suficientemente sólidas como para justificar que las recomendaciones del producto se personalizaran según la región. Lo que realmente le interesa predecir son los artículos que seleccionan los clientes. Por tanto, en las consultas siguientes, utilizará el modelo de agrupación en clústeres de secuencia que no incluye Region para generar las recomendaciones de todos los clientes.  
   
 ### <a name="using-nested-table-columns-as-input"></a>Utilizar las columnas de una tabla anidada como entrada  
- En primer lugar, creará una consulta de predicción singleton que tome un único elemento como entrada y devuelva el siguiente elemento más probable. Para obtener una predicción de este tipo, deberá utilizar una columna de tabla anidada como valor de entrada. Esto se debe a que el atributo que está prediciendo, Modelo, forma parte de una tabla anidada. Analysis Services proporciona la **entrada de tabla anidada** cuadro de diálogo para simplificar la creación de consultas de predicción en anidados atributos de tabla, utilizando el generador de consultas de predicción.  
+ En primer lugar, creará una consulta de predicción singleton que tome un único elemento como entrada y devuelva el siguiente elemento más probable. Para obtener una predicción de este tipo, deberá utilizar una columna de tabla anidada como valor de entrada. Esto se debe a que el atributo que está prediciendo, Modelo, forma parte de una tabla anidada. Analysis Services proporciona la **entrada de tabla anidada** cuadro de diálogo que le ayudarán a crear fácilmente consultas de predicción en anidados atributos de tabla, utilizando el generador de consultas de predicción.  
   
 ##### <a name="to-use-a-nested-table-as-input-to-a-prediction"></a>Para utilizar una tabla anidada como entrada de una predicción  
   
-1.  Haga clic en el **diseño** botón en la esquina superior izquierda del generador de consultas de predicción para volver a la cuadrícula de la creación de consultas.  
+1.  Haga clic en el **diseño** botón en la esquina superior izquierda del generador de consultas de predicción para volver a la cuadrícula de generación de consultas.  
   
-2.  En el **entrada de consulta Singleton** cuadro de diálogo, haga clic en el **valor** cuadro `Region`y seleccione la fila vacía para borrar la entrada de este campo.  
+2.  En el **entrada de consulta Singleton** cuadro de diálogo, haga clic en el **valor** cuadro `Region`y seleccione la fila vacía para borrar la entrada para este campo.  
   
 3.  En el **entrada de consulta Singleton** cuadro de diálogo, haga clic en el **valor** cuadro `vAssocSeqLineItems`y, a continuación, haga clic en el botón (…).  
   
@@ -178,19 +178,19 @@ NATURAL PREDICTION JOIN
   
 2.  En el **Seleccionar tabla (s) de entrada** cuadro de diálogo, haga clic en **Seleccionar tabla de casos**.  
   
-3.  En el **Seleccionar tabla** cuadro de diálogo, origen de datos, seleccione Orders. En el **nombre de tabla o vista** lista, seleccione vAssocSeqOrders y, a continuación, haga clic en **Aceptar**.  
+3.  En el **Seleccionar tabla** cuadro de diálogo origen de datos, seleccione Orders. En el **nombre de tabla o vista** lista, seleccione vAssocSeqOrders y, a continuación, haga clic en **Aceptar**.  
   
 4.  En el **Seleccionar tabla (s) de entrada** cuadro de diálogo, haga clic en **Seleccionar tabla anidada**.  
   
 5.  En el **Seleccionar tabla** cuadro de diálogo para **origen de datos**, seleccione Orders. En el **nombre de tabla o vista** lista, seleccione Vassocseqlineitem y, a continuación, haga clic en **Aceptar**.  
   
-     Analysis Services intentará detectar las relaciones y crearlas automáticamente si los tipos de datos coinciden y los nombres de columna son similares. Si las relaciones que crea son erróneas, puede haga clic en la línea de combinación y seleccione **modificar conexiones** para editar la columna asignación, o haga clic en la línea de combinación y seleccione **eliminar** a quitar definitivamente la relación. En este caso, dado que las tablas ya estuvieron unidas en la vista del origen de datos, esas relaciones se agregan automáticamente al panel de diseño.  
+     Analysis Services intentará detectar las relaciones y crearlas automáticamente si los tipos de datos coinciden y los nombres de columna son similares. Si las relaciones que crea son erróneas, puede haga clic en la línea de combinación y seleccionar **modificar conexiones** para editar la columna asignación, o haga clic en la línea de combinación y seleccionar **eliminar** a quitar definitivamente la relación. En este caso, dado que las tablas ya estuvieron unidas en la vista del origen de datos, esas relaciones se agregan automáticamente al panel de diseño.  
   
-6.  Agregue una nueva fila a la cuadrícula. Para **origen**, seleccione el vAssocSeqOrders y **campo**, seleccione CustomerKey.  
+6.  Agregue una nueva fila a la cuadrícula. Para **origen**, seleccione el vAssocSeqOrders y para **campo**, seleccione CustomerKey.  
   
 7.  Agregue una nueva fila a la cuadrícula. Para **origen**, seleccione **función de predicción**y para **campo**, seleccione **PredictSequence**.  
   
-8.  Arrastre vAssocSeqLineItems el **criterios o argumento** cuadro. Haga clic al final de la **criterios o argumento** cuadro y, a continuación, escriba los siguientes argumentos: `2`.  
+8.  Arrastre vAssocSeqLineItems al **criterios o argumento** cuadro. Haga clic al final de la **criterios o argumento** cuadro y, a continuación, escriba los siguientes argumentos: `2`.  
   
      El texto completo en el **criterios o argumento** cuadro debe ser: `[Sequence Clustering].[v Assoc Seq Line Items],2`  
   
@@ -199,12 +199,12 @@ NATURAL PREDICTION JOIN
  Ha completado el tutorial sobre modelos de agrupación en clústeres de secuencia.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Si ya ha terminado todas las secciones de la [Tutorial intermedio de minería de datos &#40;Analysis Services: minería de datos&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), podría ser el siguiente paso aprender a utilizar las instrucciones de extensiones de minería de datos (DMX) para generar modelos y generar predicciones. Para obtener más información, consulte [crear y consultar datos de modelos de minería con DMX: tutoriales &#40;Analysis Services: minería de datos&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
+ Si ya ha terminado todas las secciones de la [Tutorial intermedio de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), podría ser el siguiente paso aprender a usar las instrucciones de extensiones de minería de datos (DMX) para crear modelos y generar predicciones. Para obtener más información, consulte [crear y consultar datos de modelos de minería con DMX: tutoriales &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
   
  Si tiene algunos conceptos de programación, también puede utilizar Objetos de administración de análisis (AMO) para trabajar mediante programación con objetos de minería de datos. Para obtener más información, vea [Clases de minería de datos de AMO](../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplos de consultas de modelo de clústeres de secuencia](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Contenido del modelo para los modelos de clústeres de secuencia de minería de datos &#40;Analysis Services: minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Para los modelos de clústeres de secuencia de contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

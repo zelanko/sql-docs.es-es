@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], about administrators
 - administrators [Master Data Services]
 - models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 11abfb4949bdd7917066ed785dd1014efc026e9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fcad38283e902b305afc5db3e47671b12e91b41f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304125"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], hay dos tipos de administradores: los administradores de modelo y el administrador del sistema de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 ## <a name="model-administrators"></a>Administradores de modelos  
- En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrador de modelo es un usuario que tenga **actualización** permiso asignado al objeto de modelo de nivel superior en el **objetos del modelo** ficha y ningún otro asignan permisos.  
+ En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrador de modelo es un usuario que tiene **actualización** permiso asignado al objeto de modelo de nivel superior en el **objetos del modelo** pestaña y ningún otro asignan permisos.  
   
 -   Si el usuario tiene acceso al área funcional del **Explorador** , podrá agregar, eliminar y actualizar todos los datos maestros de esta área.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36108618"
   
 -   Tiene acceso a todas las áreas funcionales automáticamente.  
   
--   Puede agregar, eliminar y actualizar todos los datos maestros para todos los modelos en el **Explorer** área funcional.  
+-   Puede agregar, eliminar y actualizar todos los datos maestros de todos los modelos en el **Explorer** área funcional.  
   
  Puede cambiar el usuario que está asignado como administrador del sistema. Para obtener más información, consulte [cambiar la cuenta de administrador del sistema &#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md).  
   
@@ -54,8 +54,8 @@ ms.locfileid: "36108618"
   
 |Tipo de administrador|Descripción|  
 |------------------------|-----------------|  
-|Administrador del sistema de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Los permisos asignados en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] no tienen ningún efecto sobre el acceso del administrador.<br /><br /> Tiene automáticamente **actualización** permiso a todos los modelos.<br /><br /> Tiene acceso a todas las áreas funcionales automáticamente.<br /><br /> En mdm.tblUser, el valor de la **identificador** columna es **1**.|  
-|Administrador de modelo|Los permisos asignados en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] determinan si el usuario es o no un administrador de modelo.<br /><br /> Puede ser administrador de modelo según los permisos que se le asignen explícitamente o los permisos heredados de un grupo.<br /><br /> Un administrador solo para los modelos que tienen **actualización** permiso asignado al objeto de modelo de nivel superior y ningún otro permiso.<br /><br /> Solo tiene acceso a áreas funcionales a las que se permita el acceso.<br /><br /> En mdm.tblUser, el valor de la **identificador** columna no es **1**.|  
+|Administrador del sistema de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Los permisos asignados en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] no tienen ningún efecto sobre el acceso del administrador.<br /><br /> Tiene automáticamente **actualización** permiso a todos los modelos.<br /><br /> Tiene acceso a todas las áreas funcionales automáticamente.<br /><br /> En mdm.tblUser, el valor de la **ID** columna es **1**.|  
+|Administrador de modelo|Los permisos asignados en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] determinan si el usuario es o no un administrador de modelo.<br /><br /> Puede ser administrador de modelo según los permisos que se le asignen explícitamente o los permisos heredados de un grupo.<br /><br /> Es un administrador solo para los modelos que tienen **actualización** permiso asignado al objeto de modelo de nivel superior y ningún otro permiso.<br /><br /> Solo tiene acceso a áreas funcionales a las que se permita el acceso.<br /><br /> En mdm.tblUser, el valor de la **ID** columna no es **1**.|  
   
 ## <a name="see-also"></a>Vea también  
  [Crear un administrador de modelo &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md)   

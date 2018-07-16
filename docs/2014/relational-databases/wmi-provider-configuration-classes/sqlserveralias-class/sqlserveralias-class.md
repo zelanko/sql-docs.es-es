@@ -1,5 +1,5 @@
 ---
-title: Clase SqlServerAlias | Documentos de Microsoft
+title: Clase SqlServerAlias | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SqlServerAlias class
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01e66c9362a8e1c91bd43e4d6821e12f93d23152
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 68976bc9c8683554ac58a0744196ecfa5bc7e689
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274281"
 ---
 # <a name="sqlserveralias-class"></a>Clase SqlServerAlias
   La [clase SqlServerAlias](sqlserveralias-class.md) representa un alias de conexión del servidor.  

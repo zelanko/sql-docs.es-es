@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de propiedades de conjunto de datos, realice una consulta | Documentos de Microsoft
+title: Cuadro de diálogo de propiedades de conjunto de datos, la consulta | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10160"
 - sql12.rtp.rptdesigner.datasetproperties.query.f1
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
 caps.latest.revision: 37
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 56030cb08b8197958436e46438e1561165776101
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db00bf6e36f20da59e548acef394c786a70d40fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208565"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>Propiedades del conjunto de datos (cuadro de diálogo), Consulta
   Seleccione **Consulta** en el cuadro de diálogo **Propiedades del conjunto de datos** para elegir un origen de datos y crear una consulta.  
@@ -31,7 +31,7 @@ ms.locfileid: "36111300"
   
 -   [Propiedades del conjunto de datos (cuadro de diálogo), Parámetros](report-data/dataset-properties-dialog-box-parameters.md)  
   
--   [Cuadro de diálogo Propiedades del conjunto de datos, campos](../../2014/reporting-services/dataset-properties-dialog-box-fields.md)  
+-   [Propiedades del conjunto de datos (cuadro de diálogo), Campos](../../2014/reporting-services/dataset-properties-dialog-box-fields.md)  
   
 -   [Propiedades del conjunto de datos (cuadro de diálogo), Opciones](../../2014/reporting-services/dataset-properties-dialog-box-options.md)  
   
@@ -66,8 +66,8 @@ ms.locfileid: "36111300"
  Escriba el número de segundos que deben transcurrir para que se supere el tiempo de espera de la consulta. El valor predeterminado es 30 segundos. El valor de **Tiempo de espera** debe permanecer en blanco o ser mayor que cero. Si está en blanco, nunca se supera el tiempo de espera de la consulta.  
   
 ## <a name="see-also"></a>Vea también  
- [Las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Diseñadores de consultas &#40;Generador de informes&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
  [Diseñadores de consultas de Reporting Services](../../2014/reporting-services/reporting-services-query-designers.md)  
   

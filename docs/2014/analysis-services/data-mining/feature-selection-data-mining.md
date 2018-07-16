@@ -1,5 +1,5 @@
 ---
-title: (Minería de datos) de la selección de características | Documentos de Microsoft
+title: (Minería de datos) de la selección de características | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
 - attributes [data mining]
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 35afd46d2956cd61669e9a4ea8168e3e3759ec47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb4a3282137aa76db08b1d6084db27d1a476140f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296005"
 ---
 # <a name="feature-selection-data-mining"></a>Selección de características (minería de datos)
-  *Selección de características* es un término usado habitualmente en la minería de datos para describir las herramientas y técnicas disponibles para reducir las entradas a un tamaño apropiado para su procesamiento y análisis. Selección de características implica no solo *reducción de cardinalidad*, lo que significa que se impone un límite arbitrario o predefinido en el número de atributos que puede tener en cuenta al generar un modelo, sino también la elección de atributos, lo que significa que que el analista o la herramienta de modelado activamente activa o descarta los atributos basados en su utilidad para el análisis.  
+  *Selección de características* es un término usado habitualmente en la minería de datos para describir las herramientas y técnicas disponibles para reducir las entradas a un tamaño apropiado para su procesamiento y análisis. Selección de características implica no solo *reducción de cardinalidad*, lo que significa que impone un límite arbitrario o predefinido en el número de atributos que se pueden considerar al crear un modelo, sino también la elección de atributos, lo que significa que el analista o la herramienta de modelado activamente selecciona o descarta los atributos según su utilidad para el análisis.  
   
  La capacidad de aplicar la selección de características es esencial para un análisis eficiente, ya que los conjuntos de datos suelen contener mucha más información de la necesaria para la generación del modelo. Por ejemplo, un conjunto de datos puede contener 500 columnas que describen las características de los clientes, pero si los datos de algunas de ellas están muy dispersos, no obtendrá muchas ventajas al agregarlas al modelo. Si mantiene las columnas innecesarias durante la generación del modelo, se necesitarán más CPU y memoria durante el proceso de entrenamiento, así como más espacio de almacenamiento para el modelo completado.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36110854"
  Si solo 50 de las 500 columnas del origen de datos tienen información útil para la generación de un modelo, puede dejar fuera del modelo las que no son útiles o usar técnicas de selección de características para detectar automáticamente las mejores características y excluir los valores estadísticamente no significativos. La selección de características ayuda a resolver el problema de tener demasiados datos de escaso valor o muy pocos datos de mucho valor.  
   
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Selección de características en minería de datos de Analysis Services  
- Normalmente, la selección de características se realiza automáticamente en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], y cada algoritmo tiene un conjunto de técnicas predeterminadas para aplicar de forma inteligente reducción de características. La selección de características siempre se realiza antes del entrenamiento del modelo y permite elegir automáticamente en un conjunto de datos los atributos que con toda probabilidad se usarán en el mismo. Sin embargo, también puede establecer parámetros manualmente para influir en el comportamiento de la selección de características.  
+ Por lo general, la selección de características se realiza automáticamente en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], y cada algoritmo tiene un conjunto de técnicas predeterminadas para aplicar de forma inteligente la reducción de la característica. La selección de características siempre se realiza antes del entrenamiento del modelo y permite elegir automáticamente en un conjunto de datos los atributos que con toda probabilidad se usarán en el mismo. Sin embargo, también puede establecer parámetros manualmente para influir en el comportamiento de la selección de características.  
   
  En general, la selección de características funciona calculando una puntuación para cada atributo y seleccionando a continuación solo los atributos que han obtenido las mejores puntuaciones. También puede ajustar el umbral para las puntuaciones más altas. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varios métodos para calcular estas puntuaciones y el método exacto que se aplica en un modelo depende de estos factores:  
   
@@ -71,9 +71,9 @@ ms.locfileid: "36110854"
  En la sección siguiente se describe cada uno de los métodos de selección de características.  
   
 #### <a name="interestingness-score"></a>Puntuación interestingness  
- Una característica es interesante si ofrece información útil. Dado que la definición de lo que es útil varía según el escenario, el sector de la minería de datos ha desarrollado diversas maneras para medir *interestingness*. Por ejemplo, *novelty* podrían ser interesantes en detección de valores atípicos, pero la capacidad para distinguir entre los elementos estrechamente relacionados, o *diferenciar su importancia*, podría resultar más interesante para clasificación.  
+ Una característica es interesante si ofrece información útil. Dado que la definición de lo que es útil varía según el escenario, el sector de la minería de datos ha desarrollado diversas maneras de medir *interestingness*. Por ejemplo, *novedad* podría ser interesante detectar valores atípicos, pero la capacidad de diferenciar entre elementos estrechamente relacionados, o *diferenciar su importancia*, podría resultar más interesante para clasificación.  
   
- La medida de grado de interés que se usa en SQL Server Analysis Services es *basada en entropía*, lo que significa que atributos con distribuciones aleatorias tienen una entropía más alta y obtienen menos información; por lo tanto, estos atributos son menores interesantes. La entropía para cualquier atributo se compara con la entropía de todos los demás atributos de la manera siguiente:  
+ La medida del grado de interés que se usa en SQL Server Analysis Services es *basada en entropía*, lo que significa que los atributos con distribuciones aleatorias tienen una entropía más alta y obtienen menos información; por lo tanto, esos atributos son menos interesante. La entropía para cualquier atributo se compara con la entropía de todos los demás atributos de la manera siguiente:  
   
  Interestingness(Atributo) = - (m - Entropy(Atributo)) * (m - Entropy(Atributo))  
   

@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_MEMORYUSAGE | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_MEMORYUSAGE | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 248b1a999cafddd69a4b71aebdb9d52210d38646
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7cbe35889e3a703e85b37f2f1c107a9a72ecff90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304585"
 ---
 # <a name="discovermemoryusage-rowset"></a>Conjunto de filas DISCOVER_MEMORYUSAGE
   Devuelve las estadísticas de DISCOVER_MEMORYUSAGE para diversos objetos asignados por el servidor.  
@@ -33,7 +33,7 @@ ms.locfileid: "36110825"
  **Se aplica a:** modelos tabulares, modelos multidimensionales  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_MEMORYUSAGE` filas contiene las columnas siguientes.  
+ El `DISCOVER_MEMORYUSAGE` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Restricción|Descripción|  
 |-----------------|--------------------|-----------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "36110825"
 |`ElementCount`|`DBTYPE_UI4`||Para un objeto contenedor, es el número de objetos que incluye dicho objeto.|  
 |`Shrinkable`|`DBTYPE_BOOL`|Sí|Valor booleano que indica si la memoria se puede reducir (se puede desalojar debido a la presión de memoria). Si es true, la memoria se puede reducir; si es false, la memoria no se puede reducir.|  
 |`ObjectParentPath`|`DBTYPE_WSTR`||Cadena que identifica la ruta de acceso completa de este objeto.|  
-|`ObjectID`|`DBTYPE_WSTR`||Cadena que identifica el objeto. La ruta de acceso completa de este objeto se representa mediante la cadena: (ObjectParentPath + '.' + ObjectId).|  
+|`ObjectID`|`DBTYPE_WSTR`||Una cadena que identifica el objeto. La ruta de acceso completa de este objeto se representa mediante la cadena: (ObjectParentPath + '.' + ObjectId).|  
   
  Este conjunto de filas de esquema no está ordenado.  
   

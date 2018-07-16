@@ -1,5 +1,5 @@
 ---
-title: Página de propiedades (Administrador de informes) opciones de instantánea | Documentos de Microsoft
+title: Opciones de instantánea de la página de propiedades (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b89de53a1e17413f8ebe6869122ea9d4b61af6dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a221095f73da5d68256f91298e3bb0d35ee4121b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218877"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Página de propiedades de opciones de instantánea (Administrador de informes)
   Use la página de propiedades Opciones de instantánea para programar las instantáneas de informe que se van a agregar al historial del informe, y para establecer los límites del número de ellas que se almacenarán en el historial.  
@@ -44,10 +44,10 @@ ms.locfileid: "36112167"
  **Permitir que el historial de informe se cree manualmente**  
  Active esta casilla para agregar instantáneas a un historial de informe según sea necesario. Al activarla, aparece el botón **Nueva instantánea** en la página Historial.  
   
- **Almacenar todas las instantáneas de ejecución de informes en el historial de informes**  
+ **Store todas las instantáneas de ejecución de informes en el historial de informes**  
  Active esta casilla para copiar en el historial de un informe una instantánea del informe generada según las propiedades de ejecución del informe. Puede establecer las propiedades de ejecución de informes para ejecutar un informe a partir de una instantánea generada. Al establecer esta propiedad del historial del informe, se puede mantener un registro de todas las instantáneas del informe generadas con el tiempo, colocando copias de las mismas en el historial.  
   
- **Utilizar la siguiente programación para agregar instantáneas al historial del informe**  
+ **Utilice la siguiente programación para agregar instantáneas al historial de informes**  
  Active esta casilla para agregar instantáneas al historial de un informe según una programación. Puede crear una programación exclusivamente con esta finalidad o seleccionar una programación compartida predefinida, si alguna contiene la información de programación que desea.  
   
  **Seleccione el número de instantáneas que desea mantener**  
@@ -67,7 +67,7 @@ ms.locfileid: "36112167"
 ## <a name="see-also"></a>Vea también  
  [Agregar una instantánea al historial del informe &#40;el Administrador de informes&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Crear, modificar y eliminar instantáneas de historial de informes](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Crear, modificar y eliminar instantáneas del historial de informes](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

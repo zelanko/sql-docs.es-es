@@ -1,5 +1,5 @@
 ---
-title: Cuadrícula (pestaña uso de dimensiones, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Cuadrícula (pestaña uso de dimensiones, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5a470ffb94a457d68b8f47b30b06520984aba87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e112b3cd1a732b403c7e2da2dde185e5e4c7df5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295835"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Cuadrícula (pestaña Uso de dimensiones, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Utilice el panel **Cuadrícula** de la pestaña **Uso de dimensiones** del Diseñador de cubos para ver y modificar las relaciones existentes entre las dimensiones de cubo y los grupos de medida. Cada relación de dimensión se representa como una celda de una cuadrícula, en la que los grupos de medida se muestran como columnas, y las dimensiones, como filas.  

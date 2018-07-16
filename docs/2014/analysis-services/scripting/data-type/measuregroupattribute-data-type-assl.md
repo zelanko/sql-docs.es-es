@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos MeasureGroupAttribute (ASSL) | Documentos de Microsoft
+title: Tipo de datos MeasureGroupAttribute (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupAttribute data type
 ms.assetid: dc7f71e6-3755-4d99-9fcd-5830e10eb653
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 05dfd16d5e1f3cb5a2af3926cca398678b649675
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43177fe7c63c241f4a66b326af2eca94bcd5d600
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261331"
 ---
 # <a name="measuregroupattribute-data-type-assl"></a>Tipo de datos MeasureGroupAttribute (ASSL)
   Define un tipo de datos primitivo que representa la relación entre un atributo y un grupo de medida.  
@@ -59,7 +59,7 @@ ms.locfileid: "36112090"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|None|  
-|Elementos secundarios|[Anotaciones](../collections/annotations-element-assl.md), [AttributeID](../properties/id-element-assl.md), [KeyColumns](../collections/columns-element-assl.md), [tipo](../properties/type-element-measuregroupattribute-assl.md)|  
+|Elementos secundarios|[Las anotaciones](../collections/annotations-element-assl.md), [AttributeID](../properties/id-element-assl.md), [KeyColumns](../collections/columns-element-assl.md), [tipo](../properties/type-element-measuregroupattribute-assl.md)|  
 |Elementos derivados|[Atributo](../objects/attribute-element-assl.md) ([atributos](../collections/attributes-element-assl.md) colección de [RegularMeasureGroupDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Notas  

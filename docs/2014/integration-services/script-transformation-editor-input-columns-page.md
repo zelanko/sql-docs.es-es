@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación script (página columnas de entrada) | Documentos de Microsoft
+title: Editor de transformación script (página columnas de entrada) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.inputcolumn.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 456f1abba1045da01c162dfb23738bcb989a9341
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a08f02fec89079e50842de83ec79061e31d83f0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256771"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>Editor de transformación Script (página Columnas de entrada)
   Utilice la página **Columnas de entrada** del cuadro de diálogo **Editor de transformación Script** para definir las propiedades de las columnas de entrada.  
@@ -51,7 +51,7 @@ ms.locfileid: "36111588"
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Seleccionar tipo de componente de Script](../../2014/integration-services/select-script-component-type.md)   
+ [Seleccionar el tipo de componente de Script](../../2014/integration-services/select-script-component-type.md)   
  [Editor de transformación script &#40;entradas y salidas de página&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
  [Editor de transformación script &#40;página secuencia de comandos&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
  [Editor de transformación script &#40;página Administradores de conexión&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   

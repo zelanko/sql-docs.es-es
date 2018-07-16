@@ -1,5 +1,5 @@
 ---
-title: Elemento Columns (ASSL) | Documentos de Microsoft
+title: Elemento Columns (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Columns element
 ms.assetid: 14011eed-6f10-4120-b256-d599d59bde80
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e635738dddc7eabda62f0c35df860db3d9a10b60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad5104e3b0fc0b6b34c7b0a4aa3eed9b18336aab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231915"
 ---
 # <a name="columns-element-assl"></a>Elemento Columns (ASSL)
   Contiene la colección de columnas asociada al elemento primario.  
@@ -70,7 +70,7 @@ ms.locfileid: "36111651"
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[Acción](../objects/action-element-assl.md) de tipo [DrillThroughAction](../data-type/action-data-type-assl.md), [eventos](../objects/event-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [ MiningStructure](../objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
+|Elementos primarios|[Acción](../objects/action-element-assl.md) typu [DrillThroughAction](../data-type/action-data-type-assl.md), [eventos](../objects/event-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [ MiningStructure](../objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
   
 |Antecesor o elemento primario|Elementos secundarios|  
 |------------------------|--------------------|  
@@ -82,7 +82,7 @@ ms.locfileid: "36111651"
 ## <a name="remarks"></a>Notas  
  Para `DrillThroughAction` elementos, el `Columns` colección identifica las columnas que contienen datos que se devolverán cuando se realiza la acción.  
   
- Para `TableMiningStructureColumn` elementos, el `Columns` colección permite solo uno nivel de recursividad. En otras palabras, cualquier `TableMiningStructureColumn` los elementos incluidos en esta colección no pueden contener ninguno `TableMiningStructureColumn` elementos en su `Columns` colección.  
+ Para `TableMiningStructureColumn` elementos, el `Columns` colección permite sólo un nivel de recursividad. En otras palabras, cualquier `TableMiningStructureColumn` los elementos incluidos en esta colección no pueden contener ninguno `TableMiningStructureColumn` elementos en su `Columns` colección.  
   
  Algunos de los elementos correspondientes en el modelo de objetos de Objetos de administración de análisis (AMO) son <xref:Microsoft.AnalysisServices.TraceColumnCollection>, <xref:Microsoft.AnalysisServices.MiningModelColumnCollection> y <xref:Microsoft.AnalysisServices.MiningStructureColumnCollection>.  
   

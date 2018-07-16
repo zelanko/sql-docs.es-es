@@ -1,5 +1,5 @@
 ---
-title: Configurar el Administrador de informes (modo nativo) | Documentos de Microsoft
+title: Configurar el Administrador de informes (modo nativo) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7af188d6f1adf097de20bf08ef8343c9e075c073
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9156e229188621fb6c5524f1b6bf9e25c72570c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299765"
 ---
 # <a name="configure-report-manager-native-mode"></a>Configurar el Administrador de informes (modo nativo)
   El Administrador de informes es una aplicación front-end web que se usa para ver informes, administrar el contenido del servidor de informes y conceder acceso de usuario a un servidor de informes en modo nativo. El Administrador de informes se instala con el servicio web del servidor de informes en la misma instancia del servidor de informes y, opcionalmente, se configura si se selecciona la opción **Instalar la configuración predeterminada del modo nativo** en el programa de instalación. También puede configurar el Administrador de informes después de haber realizado la instalación. En este tema se proporciona información sobre los siguientes escenarios de configuración del Administrador de informes:  
@@ -90,7 +90,7 @@ ms.locfileid: "36109417"
   
 4.  Guarde los cambios y cierre el archivo.  
   
- Para obtener más información sobre el archivo de configuración, consulte [modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41; ](modify-a-reporting-services-configuration-file-rsreportserver-config.md) y [archivo de configuración RSReportServer](rsreportserver-config-configuration-file.md).  
+ Para obtener más información sobre el archivo de configuración, consulte [modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41; ](modify-a-reporting-services-configuration-file-rsreportserver-config.md) y [RSReportServer Configuration File](rsreportserver-config-configuration-file.md).  
   
 ##  <a name="ConfigureRemoteRS"></a> Configurar el Administrador de informes para que use un servidor de informes remoto  
  En las configuraciones de implementación que sitúan el Administrador de informes y el servidor de informes en equipos diferentes, debe tener dos instalaciones independientes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. El Administrador de informes se incrusta en el servicio del servidor de informes y no se instala solo. Si desea ejecutar el Administrador de informes en otro equipo dentro de su propio proceso, debe instalar un segundo servidor de informes. Ambas instancias del servidor deben ser servidores de informes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
@@ -117,7 +117,7 @@ ms.locfileid: "36109417"
   
 4.  En el equipo del Administrador de informes, modifique la configuración en RSReportServer.config para que señale a la instancia del servidor de informes remota. Al iniciarse, el Administrador de informes leerá el archivo de configuración para obtener la dirección URL para el servidor de informes:  
   
-    1.  Abra RSReportServer.config en un editor de texto. De forma predeterminada, se encuentra en \Program SQL Server\MSRS11. \< *nombreDeInstancia*> \Reporting.  
+    1.  Abra RSReportServer.config en un editor de texto. De forma predeterminada, se encuentra en \Program Files\Microsoft SQL Server\MSRS11. \< *nombreDeInstancia*> \Reporting.  
   
     2.  Buscar `ReportServerURL`.  
   
@@ -134,9 +134,9 @@ ms.locfileid: "36109417"
   
 8.  Desactive las características del servidor que no esté utilizando:  
   
-    -   En el equipo Administrador de informes, desactive la opción `WebServiceAndHTTPAccessEnabled` y `ScheduleEventsAndReportDeliveryEnabled`.  
+    -   En el equipo del Administrador de informes, desactive la opción `WebServiceAndHTTPAccessEnabled` y `ScheduleEventsAndReportDeliveryEnabled`.  
   
-    -   En el equipo servidor de informes, desactive la opción `ReportManagerEnabled`.  
+    -   En el equipo del servidor de informes, desactive la opción `ReportManagerEnabled`.  
   
  Para obtener más información sobre cómo desactivar características, vea [Activar o desactivar las características de Reporting Services](turn-reporting-services-features-on-or-off.md).  
   
@@ -164,7 +164,7 @@ ms.locfileid: "36109417"
   
 #### <a name="to-turn-off-report-manager"></a>Para desactivar el Administrador de informes  
   
-1.  Abra el archivo RSReportServer.config en un editor de texto. De forma predeterminada, se encuentra en \Program SQL Server\MSRS11. \< *nombreDeInstancia*> \Reporting.  
+1.  Abra el archivo RSReportServer.config en un editor de texto. De forma predeterminada, se encuentra en \Program Files\Microsoft SQL Server\MSRS11. \< *nombreDeInstancia*> \Reporting.  
   
 2.  Busque **IsReportManagerEnabled**.  
   
@@ -176,11 +176,11 @@ ms.locfileid: "36109417"
   
 ## <a name="see-also"></a>Vea también  
  [El Administrador de informes &#40;modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Planeación de Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
+ [Planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Comprobar una instalación de Reporting Services](../install-windows/verify-a-reporting-services-installation.md)   
  [Personalizar hojas de estilos para el Visor de HTML y el Administrador de informes](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
- [Activar o desactivar los informes de características de servicios](turn-reporting-services-features-on-or-off.md)   
+ [Activar o desactivar los informes de las características de servicios](turn-reporting-services-features-on-or-off.md)   
  [Administrar un servidor de informes de modo nativo de Reporting Services](manage-a-reporting-services-native-mode-report-server.md)   
  [Archivo de configuración RSReportServer](rsreportserver-config-configuration-file.md)   
  [Configurar un servidor de informes de modo nativo para la administración Local &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  

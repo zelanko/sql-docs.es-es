@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Dynamics
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0187f27bd7375b22cd703c6e7caa818cc3a7dd38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 83a51fb2449bce6f671ad8ba73d4c6dd4cd79714
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300475"
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics (clase de eventos)
   La clase de eventos QN:Dynamics ofrece información acerca de la actividad en segundo plano que realiza [!INCLUDE[ssDE](../../includes/ssde-md.md)] para admitir las notificaciones de consulta. En el [!INCLUDE[ssDE](../../includes/ssde-md.md)], un subproceso en segundo plano supervisa los tiempos de espera de las suscripciones, las suscripciones pendientes que se deben activar y la destrucción de tablas de parámetros.  
@@ -38,7 +38,7 @@ ms.locfileid: "36109256"
 |DatabaseName|`nvarchar`|Nombre de la base de datos en que se ejecuta la instrucción del usuario.|35|Sí|  
 |EventClass|`int`|Tipo de evento = 202|27|no|  
 |EventSequence|`int`|Número de secuencia de este evento.|51|no|  
-|EventSubClass|`nvarchar`|Tipo de subclase de evento que proporciona más información acerca de cada clase de evento. Esta columna puede incluir los valores siguientes:<br /><br /> Reloj ejecutar iniciada: indica que el subproceso en segundo plano en el [!INCLUDE[ssDE](../../includes/ssde-md.md)] que programaciones tablas de parámetros expiradas ha iniciado la limpieza.<br /><br /> Reloj ejecutar terminado: indica que el subproceso en segundo plano en el [!INCLUDE[ssDE](../../includes/ssde-md.md)] que programaciones tablas de parámetros expiradas ha finalizado la limpieza.<br /><br /> Tarea de limpieza maestra iniciada: indica cuándo empieza la limpieza (recolección de elementos) para eliminar los datos de suscripción de notificaciones de consulta expiradas.<br /><br /> Finalizar la tarea de limpieza maestro: indica cuándo finaliza la limpieza (recolección de elementos) para eliminar los datos de suscripción de notificación de consulta expiradas.<br /><br /> Tarea de limpieza maestro omitido: indica que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] no realizó la limpieza (recolección de elementos) para eliminar los datos de suscripción de notificaciones de consulta expiradas.|21|Sí|  
+|EventSubClass|`nvarchar`|Tipo de subclase de evento que proporciona más información acerca de cada clase de evento. Esta columna puede incluir los valores siguientes:<br /><br /> Ejecución iniciada de reloj: indica que el subproceso en segundo plano el [!INCLUDE[ssDE](../../includes/ssde-md.md)] que las programaciones expiradas tablas de parámetros para ha iniciado la limpieza.<br /><br /> Reloj ejecución finalizada: indica que el subproceso en segundo plano el [!INCLUDE[ssDE](../../includes/ssde-md.md)] que las programaciones expiradas tablas de parámetros para ha finalizado la limpieza.<br /><br /> Tarea de limpieza maestra iniciada: indica cuándo empieza la limpieza (recolección de elementos) para eliminar los datos de suscripciones de notificación de consulta expiradas.<br /><br /> Tarea de limpieza maestro finalizó: indica cuándo finaliza la limpieza (recolección de elementos) para eliminar los datos de suscripciones de notificación de consulta expiradas.<br /><br /> Tarea de limpieza maestro omitido: indica que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] no realizó la limpieza (recolección de elementos) para eliminar los datos de suscripción de notificaciones de consulta expiradas.|21|Sí|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IsSystem|`int`|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario.<br /><br /> 0 = usuario<br /><br /> 1 = sistema|60|no|  

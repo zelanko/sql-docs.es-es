@@ -1,5 +1,5 @@
 ---
-title: Tutoriales (generador de informes) | Documentos de Microsoft
+title: Tutoriales (generador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 92d54d4e6f0db25605bf3d59ac7de59953d43d71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d5c422eded8ac3ffb54306790c88a80b0f841736
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266161"
 ---
 # <a name="tutorials-report-builder"></a>Tutoriales (Generador de informes)
   Consulte los siguientes tutoriales del Generador de informes para obtener información sobre cómo crear informes básicos.  
   
- [Requisitos previos para ver los tutoriales &#40;generador de informes&#41;](prerequisites-for-tutorials-report-builder.md)  
+ [Requisitos previos para los tutoriales &#40;generador de informes&#41;](prerequisites-for-tutorials-report-builder.md)  
  Para usar estos tutoriales, debe tener acceso de solo lectura a una base de datos de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] y permisos de acceso a un servidor de informes de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] .  
   
  Para obtener ayuda con estos requisitos previos, póngase en contacto con el administrador del servidor de informes.  
@@ -32,7 +32,7 @@ ms.locfileid: "36108514"
  [Maneras alternativas de obtener una conexión de datos &#40;generador de informes&#41;](alternative-ways-to-get-a-data-connection-report-builder.md)  
  La mayor parte de estos tutoriales usan orígenes de datos incrustados. Si tiene acceso a orígenes de datos compartidos, puede utilizarlos en su lugar. En este tema se proporciona el procedimiento para utilizar orígenes de datos compartidos.  
   
- [Tutorial: Crear un informe tabular básico &#40;generador de informes&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
+ [Tutorial: Crear un informe de tabla básico &#40;generador de informes&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
  Siga los pasos de este tutorial para aprender a crear su primer informe. Este tutorial le muestra cómo trabajar con el Generador de informes para crear una conexión a un origen de datos, definir una consulta simple, generar un diseño para contener sus datos, dar formato a su informe y agregar agrupación y totales.  
   
  [Tutorial: Crear un informe de matriz &#40;generador de informes&#41;](tutorial-creating-a-matrix-report-report-builder.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "36108514"
  [Tutorial: Informe de mapa &#40;generador de informes&#41;](tutorial-map-report-report-builder.md)  
  Siga los pasos de este tutorial para aprender a agregar un mapa a un informe.  
   
- [Tutorial: Agregar un parámetro a un informe &#40;generador de informes&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Tutorial: Agregar un parámetro al informe &#40;generador de informes&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
  Siga los pasos de este tutorial para aprender a personalizar la apariencia y el contenido de un informe mediante el uso de parámetros.  
   
  [Tutorial: Crear informes principales y obtención de detalles &#40;generador de informes&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  

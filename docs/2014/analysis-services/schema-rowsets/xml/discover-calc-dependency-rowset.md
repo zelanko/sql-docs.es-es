@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_CALC_DEPENDENCY | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_CALC_DEPENDENCY | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fff5a7975d19ca53ea9cca780f792a2d5c6057e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57f839d6c50208828de3441ec6e3c5f5f77c67c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297245"
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY, conjunto de filas
   Informa sobre las dependencias entre los cálculos y sobre los objetos a los que se hace referencia en dichos cálculos. Puede utilizar esta información en una aplicación cliente para informar sobre los problemas con fórmulas complejas o para avisar cuándo se eliminan o modifican objetos relacionados. También puede utilizar el conjunto de filas para extraer las expresiones de DAX que se utilizan en medidas o columnas calculadas.  
@@ -30,7 +30,7 @@ ms.locfileid: "36109108"
  **Se aplica a:** modelos tabulares  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_CALC_DEPENDENCY` filas contiene las columnas siguientes. La tabla también especifica el tipo de datos, indica si la columna se puede restringir para limitar las filas que se devuelven y proporciona una descripción de cada columna.  
+ El `DISCOVER_CALC_DEPENDENCY` conjunto de filas contiene las siguientes columnas. La tabla también especifica el tipo de datos, indica si la columna se puede restringir para limitar las filas que se devuelven y proporciona una descripción de cada columna.  
   
 |Nombre de columna|Indicador de tipo|Restricción|Descripción|  
 |-----------------|--------------------|-----------------|-----------------|  
@@ -91,7 +91,7 @@ SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE OBJECT_TYPE = 'MEASURE' OR 
  La primera consulta muestra cómo especificar una restricción QUERY para los nombres de objeto que incluyen espacios. La segunda consulta, tomada prestada de [Ejecutar consultas DAX a través de OLE DB y ADOMD.NET](http://go.microsoft.com/fwlink/?LinkId=254329), es una consulta más compleja que incluye objetos de varias tablas.  
   
 > [!NOTE]  
->  Aunque las consultas parecen usar dobles comillas, de hecho solo se usan comillas simples. Un par de comillas simples encierra ' Evaluate \<Tablename >', y las comillas sencillas usadas alrededor del nombre de tabla tienen que evitarse duplicándolas. Las comillas sencillas alrededor de un nombre de tabla solo son necesarias para los nombres de tabla que incluyen un espacio.  
+>  Aunque las consultas parecen usar dobles comillas, de hecho solo se usan comillas simples. Un par de comillas simples encierra ' Evaluate \<Tablename >', y debe evitarse duplicándolas las comillas sencillas usadas en torno a nombre de la tabla. Las comillas sencillas alrededor de un nombre de tabla solo son necesarias para los nombres de tabla que incluyen un espacio.  
   
 ```  
 SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE ''Reseller Sales'''  
@@ -102,7 +102,7 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
 ```  
   
 ## <a name="example"></a>Ejemplo  
- **Ejemplo XMLA de restricción de consulta**  
+ **Ejemplo de consulta XMLA de restricción**  
   
  Puede usar un comando XMLA Discover para devolver los objetos de consulta en una tabla. XMLA devuelve los resultados como XML sin formato. Puede usar ADOMD.NET para analizar los resultados en un formato más legible.  
   

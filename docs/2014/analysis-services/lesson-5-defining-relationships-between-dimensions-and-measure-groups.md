@@ -1,5 +1,5 @@
 ---
-title: 'Lección 5: Definir relaciones entre las dimensiones y grupos de medida | Documentos de Microsoft'
+title: 'Lección 5: Definir relaciones entre dimensiones y grupos de medida | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: f771136a3e6a237261eb6d7c0efa0b0113df2d61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 193c1188c13e797f7505595b20ca5d2565792e3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282091"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lección 5: definir relaciones entre dimensiones y grupos de medida
   En las lecciones anteriores de este tutorial, ha aprendido que las dimensiones de base de datos que se agregan a un cubo pueden utilizarse como base para una o más dimensiones de cubo. En esta lección, aprenderá a definir distintos tipos de relaciones entre dimensiones de cubo y grupos de medida, así como a especificar las propiedades de estas relaciones.  
@@ -40,7 +40,7 @@ ms.locfileid: "36111251"
  [Definir una relación de varios a varios](lesson-5-3-defining-a-many-to-many-relationship.md)  
  En esta tarea, aprende a relacionar un hecho con varios miembros de dirección a través de la definición de una relación de varios a varios entre tablas de dimensiones y tablas de hechos.  
   
- [Definir la granularidad de dimensión en un grupo de medida](lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+ [Definir la granularidad de las dimensiones en un grupo de medida](lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
  En esta tarea, aprende a modificar la granularidad de una dimensión para un grupo de medida específico.  
   
 ## <a name="next-lesson"></a>Lección siguiente  

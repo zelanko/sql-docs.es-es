@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linked reports [Reporting Services], creating
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 87e95389a4571162e07efce30c4bcd933309bef7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 971f07256e5f8b678d62f3a9b75e13299fad3ed3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191335"
 ---
 # <a name="create-a-linked-report"></a>Crear un informe vinculado
   Un informe vinculado es un elemento del servidor de informes que proporciona un punto de acceso a un informe existente. Conceptualmente, es similar a los accesos directos a programa que se usan para ejecutar un programa o abrir un archivo.  
@@ -38,7 +38,7 @@ ms.locfileid: "36111287"
   
 2.  Escriba un nombre para el nuevo informe vinculado. Si lo desea, escriba una descripción.  
   
-3.  Para guardar el informe en una carpeta diferente, haga clic en **Cambiar ubicación**. Haga clic en la carpeta que desee utilizar o escriba el nombre de la carpeta en el cuadro **Ubicación** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Si no selecciona una carpeta diferente, el informe vinculado se crea en la carpeta actual (donde se almacena el informe se basa en).  
+3.  Para guardar el informe en una carpeta diferente, haga clic en **Cambiar ubicación**. Haga clic en la carpeta que desee utilizar o escriba el nombre de la carpeta en el cuadro **Ubicación** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Si no selecciona una carpeta diferente, el informe vinculado se crea en la carpeta actual (donde está almacenado el informe se basa en).  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Se abre el informe vinculado.  
   

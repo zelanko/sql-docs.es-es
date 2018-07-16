@@ -1,5 +1,5 @@
 ---
-title: Elemento PendingValue (ASSL) | Documentos de Microsoft
+title: Elemento PendingValue (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PendingValue element
 ms.assetid: 386b2ec6-3d83-42d2-b83a-83e375fbdcbd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 120c98d128698331a054a89be97ffa1513bb0191
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef24ae229f879adc15fa9f2ecfd8cb10a19d09ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263401"
 ---
 # <a name="pendingvalue-element-assl"></a>Elemento PendingValue (ASSL)
-  Contiene solo lectura valor pendiente de asociado [ServerProperty](../objects/serverproperty-element-assl.md) elemento.  
+  Contiene la lectura-valor pendiente de solo asociado [ServerProperty](../objects/serverproperty-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36110816"
 ## <a name="remarks"></a>Notas  
  Este elemento contiene el valor de la `ServerProperty` que se usará la próxima vez que la instancia actual de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] se inicia. Este valor se recupera normalmente de dondequiera que esté almacenado el valor para la propiedad del servidor: en un archivo de inicialización, el Registro de Windows [!INCLUDE[msCoName](../../../includes/msconame-md.md)] u otro mecanismo de almacenamiento.  
   
- El elemento que corresponde al elemento primario de `PendingValue` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ServerProperty>.  
+ El elemento que se corresponde con el elemento primario de `PendingValue` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento ServerProperties &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   

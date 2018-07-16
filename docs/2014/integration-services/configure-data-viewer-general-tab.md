@@ -1,5 +1,5 @@
 ---
-title: Configurar visor de datos (pestaña General) | Documentos de Microsoft
+title: Configurar visor de datos (pestaña General) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.general.f1
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7a58a85deedb322ce43a5b1d4881e457097abda0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35458ecc9e5c7482365ce53fefd32558d04872ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275001"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Configurar visor de datos (pestaña General)
   Un visor de datos muestra los datos como si se moviera por la ruta que conecta dos componentes de flujo de datos durante la ejecución de un paquete.  
@@ -43,7 +43,7 @@ ms.locfileid: "36111838"
 ## <a name="see-also"></a>Vea también  
  [Configurar visor de datos &#40;pestaña gráfico de columnas&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Configurar visor de datos &#40;pestaña cuadrícula&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
- [Configurar visor de datos &#40;ficha Histograma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
+ [Configurar visor de datos &#40;pestaña histograma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
  [Configurar visor de datos &#40;pestaña gráfico de dispersión&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
  [Flujo de datos](data-flow/data-flow.md)   
  [Depurar el flujo de datos](troubleshooting/debugging-data-flow.md)  

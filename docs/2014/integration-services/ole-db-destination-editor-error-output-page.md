@@ -1,5 +1,5 @@
 ---
-title: Editor de destino de OLE DB (página de salida de Error) | Documentos de Microsoft
+title: Editor de destino de OLE DB (página salida de Error) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.errorhandling.f1
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 684c16cfa2456d811f1866d2c6e2b805e30362b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ac164885aaa3e5d96716946bda912a48181d52d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190725"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>Editor de destino de OLE DB (página Salida de error)
   Utilice la página **Salida de error** del cuadro de diálogo **Editor de destino de OLE DB** para especificar las opciones de control de errores.  

@@ -1,5 +1,5 @@
 ---
-title: Implementar la funcionalidad MERGE | Documentos de Microsoft
+title: Implementar la funcionalidad MERGE | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 caps.latest.revision: 6
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e2d4c6255b7b6a91fad1d99c2676bf76fae68385
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 428c8102409a9f927bbb092a24d4809d1abfc0f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294655"
 ---
 # <a name="implementing-merge-functionality"></a>Implementar la funcionalidad MERGE
   Una base de datos puede necesitar realizar una inserción o una actualización, dependiendo de si una fila determinada ya existe en la base de datos.  
   
- Sin usar la `MERGE` (instrucción), éste es un método que puede utilizar en [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+ Sin usar el `MERGE` instrucción, el siguiente es un enfoque que puede usar en [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 ```tsql  
 UPDATE mytable SET col=@somevalue WHERE myPK = @parm  

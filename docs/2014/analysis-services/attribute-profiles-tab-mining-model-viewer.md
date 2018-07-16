@@ -1,5 +1,5 @@
 ---
-title: Atributo perfiles de pestaña (Visor de modelos de minería de datos) | Documentos de Microsoft
+title: Atributo de perfiles de pestaña (Visor de modelos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.profiles.f1
 ms.assetid: 17c7e7ae-273c-4a6b-9a35-e8b9b8e65999
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6c9c5e0dfee13c8c0bd08ad5d1c6433d16ca7df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cdfd3f5d3e9fbf433f4c041a156adb31a4264fc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191265"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>Pestaña Perfiles del atributo (Visor de modelos de minería de datos)
   Utilice la pestaña **Perfiles del atributo** para ver cómo la distribución de los valores de entrada en un estado del modelo Bayes naive contribuye a cada estado del atributo de resultados. La distribución de los valores se muestra como un histograma con colores, todas las distribuciones se presentan en un formato tabular, para facilitar la comparación de los valores.  
@@ -55,10 +55,10 @@ ms.locfileid: "36111686"
 |**Atributos**|Muestra las columnas del modelo de minería de datos contenidas en el modelo de minería de datos.|  
 |**Estados**|Una columna opcional que describe el estado que representa el color en la fila de atributos correspondiente. Agregue o quite mediante la casilla **Mostrar leyenda** .|  
 |**Población**|Muestra la distribución del atributo en todo el conjunto de datos.|  
-|**Columna para Estados de atributo de predicción**|Muestra una columna para cada estado de la columna de predicción, con cada fila correspondiente a un atributo de entrada en el modelo.|  
+|**Columna de Estados del atributo de predicción**|Muestra una columna para cada estado de la columna de predicción, con cada fila correspondiente a un atributo de entrada en el modelo.|  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   

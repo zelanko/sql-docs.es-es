@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 3: Crear y ejecutar un proyecto de calidad de datos para buscar coincidencias | Documentos de Microsoft'
+title: 'Tarea 3: Crear y ejecutar un proyecto de calidad de datos para buscar coincidencias | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -10,27 +10,27 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2080aac8b429a9bc3ae21313f2163316b6cebeae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf5fc254aff0398b40605fdc6c568d9dc01b3a60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216275"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tarea 3: crear y ejecutar un proyecto de calidad de datos para buscar coincidencias
   En esta tarea, creará un proyecto de calidad de datos para la actividad de búsqueda de coincidencias y ejecutará el proceso de coincidencia en los datos limpios de proveedores para quitar duplicados en los datos.  
   
 1.  En la página principal de **cliente DQS**, haga clic en **nuevo proyecto de calidad de datos**.  
   
-2.  Tipo de **quitar proveedores duplicados** desde el **nombre del proyecto**.  
+2.  Tipo **quitar proveedores duplicados** desde el **nombre del proyecto**.  
   
-3.  Seleccione **proveedores** en la lista de KB/s para la **usar Base de conocimiento** campo. En la lección anterior creó una directiva de coincidencia en esta base de conocimiento.  
+3.  Seleccione **proveedores** en la lista de artículos de KB para la **usar Base de conocimiento** campo. En la lección anterior creó una directiva de coincidencia en esta base de conocimiento.  
   
 4.  Seleccione **coincidencia** desde el **lista de actividades** desde el panel de la esquina inferior derecha.  
   

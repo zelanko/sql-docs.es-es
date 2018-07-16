@@ -1,5 +1,5 @@
 ---
-title: Ayuda F1 del generador de informes | Documentos de Microsoft
+title: Ayuda F1 del generador de informes | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10426"
 helpviewer_keywords:
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - dialog boxes
 - Help, dialog boxes
 - user interface, dialog boxes
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 40fe2d677d3189cbf5fecaff6cc1164a2798271b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a40bdd3e1081d7e7b6fde7071dcd03ae57c560a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191645"
 ---
 # <a name="report-builder-f1-help"></a>Generador de informes (Ayuda F1)
-  Esta sección contiene ayuda para asistentes, vistas, paneles y cuadros de diálogo de generador de informes. También puede abrir la ayuda presionando F1 o haciendo clic en el botón de ayuda en un cuadro de diálogo.  
+  Esta sección contiene ayuda para los asistentes, vistas, paneles y cuadros de diálogo Generador de informes. También puede abrir la ayuda presionando F1 o haciendo clic en el botón Ayuda en un cuadro de diálogo.  
   
 ## <a name="see-also"></a>Vea también  
  [Ayuda para cuadros de diálogo, paneles y asistentes (F1)](../report-builder-help-for-dialog-boxes-panes-and-wizards.md) [vista Diseño del informe &#40;generador de informes&#41;](report-design-view-report-builder.md)   

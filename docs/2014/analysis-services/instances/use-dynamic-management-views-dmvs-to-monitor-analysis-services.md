@@ -1,5 +1,5 @@
 ---
-title: Usar vistas de administración dinámica (DMV) para supervisar Analysis Services | Documentos de Microsoft
+title: Usar vistas de administración dinámica (DMV) para supervisar Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ef037d3d2745a5cfce8949ca7ac14e0d5743326
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 789811d4588efe47848d7a6045342d506e1975ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203071"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288571"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Usar vistas de administración dinámica (DMV) para supervisar Analysis Services
   Las vistas de administración dinámica (DMV) de Analysis Services son estructuras de consulta que exponen información sobre las operaciones del servidor local y el estado del servidor. La estructura de consulta es una interfaz para los conjuntos de filas de esquema que devuelven metadatos y la información de supervisión acerca de una instancia de Analysis Services.  
   
- Para la mayoría de las consultas DMV, use un `SELECT` instrucción y `$System` esquema con un conjunto de filas de esquema XML/A.  
+ La mayoría de las consultas DMV, usa un `SELECT` instrucción y el `$System` esquema con un conjunto de filas de esquema XML/A.  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  
@@ -102,7 +102,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Si no hay una DMV para un conjunto de filas determinado, el servidor devuelve el siguiente error: "el \<schemarowset > el servidor no reconoció el tipo de solicitud". El resto de los errores indica problemas con la sintaxis.  
+>  Si una DMV no está disponible para un conjunto de filas determinado, el servidor devuelve el siguiente error: "el \<schemarowset > el servidor no reconoció el tipo de solicitud". El resto de los errores indica problemas con la sintaxis.  
   
 |Conjunto de filas|Descripción|  
 |------------|-----------------|  

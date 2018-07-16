@@ -1,5 +1,5 @@
 ---
-title: Agregar un modelo de regresión logística a la estructura de centro de llamadas (Tutorial de minería de datos intermedios) | Documentos de Microsoft
+title: Adición de un modelo de regresión logística a la estructura de centro de llamadas (Tutorial de minería de datos intermedios) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 97abb77a-346c-44fa-8959-688dee1af6a8
 caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: ccadf7665b112b6ba1055fdcf69aeb99609c3ab3
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: deeb55b64b8053aefd130891fb114ea174e2b7cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261841"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>Agregar un modelo de regresión logística a la estructura de centro de llamadas (Tutorial intermedio de minería de datos)
   Además de analizar los factores que pueden influir en las operaciones del centro de llamadas, se le pidió que proporcionara recomendaciones concretas sobre la manera en que el personal puede mejorar la calidad de servicio. En esta tarea usará la misma estructura de minería de datos con la que creó el modelo de exploración y agregará un modelo de minería de datos que después se usará para crear predicciones.  
@@ -36,7 +36,7 @@ ms.locfileid: "36312434"
   
 2.  En el Diseñador de minería de datos, haga clic en el **modelos de minería de datos** ficha.  
   
-3.  Haga clic en **crear un modelo de minería de datos relacionadas**.  
+3.  Haga clic en **crear un modelo de minería de datos relacionado**.  
   
 4.  En el **nuevo modelo de minería de datos** cuadro de diálogo para **nombre del modelo**, tipo `Call Center - LR`.  Para **nombre del algoritmo**, seleccione **regresión logística de Microsoft**.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "36312434"
   
      Ambas columnas se usarán como entrada y para la predicción. Básicamente, crea dos modelos independientes en los mismos datos: uno que predice el número de operadores y otro que predice la calificación del servicio.  
   
-3.  Cambiar todas las demás columnas a **entrada**.  
+3.  Cambiar todas las columnas a **entrada**.  
   
 ### <a name="to-specify-the-seed-and-process-the-models"></a>Para especificar el valor de inicialización y procesar los modelos  
   
 1.  En el **Mining Model** pestaña, haga clic en la columna del modelo denominado Call Center - LR y seleccione **establecer parámetros de algoritmo**.  
   
-2.  En la fila correspondiente al parámetro HOLDOUT_SEED, haga clic en la celda vacía situada debajo **valor**y el tipo de `1`. Haga clic en **Aceptar**.  
+2.  En la fila correspondiente al parámetro HOLDOUT_SEED, haga clic en la celda vacía bajo **valor**y el tipo `1`. Haga clic en **Aceptar**.  
   
     > [!NOTE]  
     >  El valor de inicialización que elija no es importante siempre y cuando use el mismo para todos los modelos relacionados.  
@@ -67,7 +67,7 @@ ms.locfileid: "36312434"
   
 4.  En el **modelo de minería de datos de proceso** cuadro de diálogo, haga clic en **ejecutar**.  
   
-5.  Haga clic en **cerrar** para cerrar el **progreso del proceso** cuadro de diálogo y, a continuación, haga clic en **cerrar** en el **modelo de minería de datos de proceso** cuadro de diálogo.  
+5.  Haga clic en **cerrar** para cerrar el **progreso del proceso** cuadro de diálogo y, a continuación, haga clic en **cerrar** nuevo en el **modelo de minería de datos de proceso** cuadro de diálogo.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Crear predicciones para los modelos de centro de llamadas &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  

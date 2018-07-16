@@ -1,5 +1,5 @@
 ---
-title: Adaptador de SQL Server para la nube | Documentos de Microsoft
+title: Adaptador para la nube para SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cloud adapter
 - Deploy to Windows Azure
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74a991f9dc8c20e1cf4342312ecd66f95e1b240d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fd0a6901770c3c30138e694c9e792146be85ba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243385"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adaptador para la nube de SQL Server
   El servicio del adaptador para la nube se crea como parte del aprovisionamiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en una máquina virtual de Windows Azure. El servicio Adaptador para la nube genera un certificado SSL autofirmado la primera vez que se ejecuta y, después, se ejecuta como una cuenta de **sistema local** . Genera un archivo de configuración que utiliza para configurarse a sí mismo. El adaptador para la nube también crea una regla de Firewall de Windows para permitir conexiones entrantes de TCP en el puerto predeterminado 11435.  
@@ -49,7 +49,7 @@ ms.locfileid: "36107032"
   
 -   **Ruta de acceso predeterminada del archivo de configuración** : C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
   
--   **Parámetros de archivo de configuración** -  
+-   **Parámetros del archivo de configuración** -  
   
     -   \<Configuración >  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36107032"
   
 -   **Seguimiento, eventos** : todos los eventos se escriben en el registro de eventos de aplicación.  
   
--   **Control, configuración** : usar el archivo de configuración que se encuentra en: C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
+-   **Control, configuración** : utilice el archivo de configuración ubicado en: C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
   
 |Error|Id. de error|Causa|Solución|  
 |-----------|--------------|-----------|----------------|  

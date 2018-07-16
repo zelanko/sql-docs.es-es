@@ -1,5 +1,5 @@
 ---
-title: Perspectivas de modelos multidimensionales | Documentos de Microsoft
+title: Perspectivas de modelos multidimensionales | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default members
 - hiding objects from perspective
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - deleting perspectives
 ms.assetid: 5a3d6577-6833-4c24-820c-b65bb856157b
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bcc2b08b642ec32a6165cf42b2de19c3820a2092
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 65bda021dbb7f52b9039255226221b3718b61d8b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188932"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>Perspectivas de modelos multidimensionales
   Una perspectiva es un subconjunto de un cubo creado para una aplicación o grupo de usuarios específico. El cubo es la perspectiva predeterminada. Una perspectiva se muestra al cliente como un cubo. Cuando el usuario ve una perspectiva, se muestra como otro cubo. Los cambios realizados en los datos del cubo mediante la reescritura en la perspectiva se realizan en el cubo original. Para obtener más información sobre las vistas de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Perspectivas](../multidimensional-models-olap-logical-cube-objects/perspectives.md).  

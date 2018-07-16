@@ -1,5 +1,5 @@
 ---
-title: Consideraciones de seguridad de carga (SQLXML 4.0) de forma masiva | Documentos de Microsoft
+title: Consideraciones de seguridad de carga (SQLXML 4.0) de forma masiva | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML Bulk Load [SQLXML], security
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c64b20924f12a94b467f32659009bea9760d0e71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 428041edc6418e71f08b757b622b6e5ebb640dba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280561"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Consideraciones de seguridad sobre la carga masiva (SQLXML 4.0)
   A continuación se muestran una serie de instrucciones de seguridad para utilizar la carga masiva XML:  

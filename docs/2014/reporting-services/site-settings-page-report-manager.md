@@ -1,5 +1,5 @@
 ---
-title: Página de configuración (Administrador de informes) del sitio | Documentos de Microsoft
+title: Página de configuración (Administrador de informes) del sitio | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dd5360f4f001d85c883291bf87a85ae0e48e3362
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ab466c2e6029a0da5e3ce5498fd85f8a1c8724f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232615"
 ---
 # <a name="site-settings-page-report-manager"></a>Página Configuración del sitio (Administrador de informes)
   Use la página Configuración del sitio para cambiar el título de la aplicación, establecer los valores predeterminados para los valores de tiempo de espera de procesamiento de informes y límites del historial de informes, administrar asignaciones de roles del nivel del sistema y administrar programaciones compartidas. Debe tener permisos de Administrador de contenido y Administrador del sistema para ver esta página.  
@@ -36,13 +36,13 @@ ms.locfileid: "36201738"
   
 2.  En la parte superior de la página, haga clic en **Configuración del sitio**. Esto abre la página de propiedades General del sitio.  
   
-     **Nota:** si no ve el **configuración del sitio** opción en el menú, no tiene los permisos necesarios, para obtener más información, vea la sección "configuración del sitio" de [configurar un servidor de informes de modo nativo de Administración local &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+     **Nota:** si no ve el **configuración del sitio** opción en el menú, no tiene los permisos necesarios, para obtener más información, consulte la sección "configuración del sitio" de [configurar un servidor de informes de modo nativo de Administración local &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="options"></a>Opciones  
  **Nombre**  
- Especificar el título que se utilizará para esta instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] el Administrador de informes. De forma predeterminada, el título es "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]".  
+ Especifique el título que se utilizará para esta instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] el Administrador de informes. De forma predeterminada, el título es "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]".  
   
- **Seleccione la configuración predeterminada para el historial del informe**  
+ **Seleccione la configuración predeterminada para el historial de informes**  
  Seleccione un valor predeterminado para el número de copias del historial del informe que deben guardarse. El valor predeterminado proporciona un valor inicial que establece los límites del historial del informe. Esta configuración se puede modificar en el nivel de informe. Para más información, vea [Página de propiedades de opciones de instantánea &#40;Administrador de informes&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md).  
   
  Si posteriormente limita el historial del informe, cuando el historial del informe existente exceda el límite especificado, el servidor de informes lo reducirá según el nuevo límite. Las instantáneas de informe más antiguas son las que se eliminan primero. Si el historial del informe está vacío o por debajo del límite, se agregan nuevas instantáneas de informe. Cuando se alcanza el límite, se elimina la instantánea del informe más antigua cuando se agrega una nueva.  
@@ -57,7 +57,7 @@ ms.locfileid: "36201738"
  **URL de inicio del generador de informes personalizado**  
  Especifique una dirección URL personalizada si el servidor de informes no utiliza la dirección URL predeterminada del Generador de informes. Este valor es opcional. Si no especifica un valor, se usará la dirección URL predeterminada, que inicia el Generador de informes como aplicación ClickOnce. La dirección URL predeterminada es una de las siguientes:  
   
- **Servidor de informes de modo nativo:** en una instalación en modo nativo, la dirección URL predeterminada tendrá el formato http://\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application.  
+ **Servidor de informes en modo nativo:** en una instalación en modo nativo, la dirección URL predeterminada adoptará el formato http://\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application.  
   
  El modo integrado de SharePoint: la dirección URL predeterminada adoptará el formato http://\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. "  
   
@@ -74,6 +74,6 @@ ms.locfileid: "36201738"
  [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Conceder permisos en un servidor de informes en modo nativo](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Roles predefinidos](security/role-definitions-predefined-roles.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

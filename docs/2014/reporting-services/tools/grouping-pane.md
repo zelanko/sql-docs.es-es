@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10033"
 - sql12.rtp.rptdesigner.group.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 caps.latest.revision: 21
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e989f128bba1f122091da48a0c57f82db18f0bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9a6895b0b0654f5309aaec9debb88b26c7a9a15a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189822"
 ---
 # <a name="grouping-pane"></a>Panel de agrupación
   El panel Agrupación muestra los grupos de filas y de columnas para la región de datos Tablix seleccionada actualmente. El panel de agrupación no está disponible para las regiones de datos Gráfico o Medidor. El panel Agrupación consta de los paneles Grupos de filas y Grupos de columnas. El panel en cuestión tiene dos modos: predeterminado y avanzado. El modo predeterminado muestra una vista jerárquica de los miembros dinámicos para los grupos de filas y de columnas. El modo avanzado muestra los miembros dinámicos y estáticos para los grupos de filas y de columnas. Un grupo es un conjunto de datos con nombre de un conjunto de datos de informe que se muestra en una región de datos. Los grupos se organizan en jerarquías que incluyen miembros estáticos y dinámicos. Para más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
@@ -86,6 +86,6 @@ ms.locfileid: "36108492"
 ## <a name="see-also"></a>Vea también  
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Filtrar, agrupar y ordenar datos &#40;el generador de informes SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrar, agrupar y ordenar datos &#40;generador de informes y SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

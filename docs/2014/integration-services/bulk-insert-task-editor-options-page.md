@@ -1,5 +1,5 @@
 ---
-title: Editor de la tarea de inserción (página Opciones) de forma masiva | Documentos de Microsoft
+title: Editor de la tarea de inserción (página Opciones) de forma masiva | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.options.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a1a958108c8b6975c3aa362ba6512b995759ff99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b878f48473e70d61f6de2a02c9268eb4fc91f0ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326215"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Editor de la tarea Inserción masiva (página Opciones)
   Use la página **Opciones** del cuadro de diálogo **Editor de la tarea Inserción masiva** para establecer las propiedades de la operación de inserción masiva. La tarea Inserción masiva copia gran cantidad de datos en una tabla o vista de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

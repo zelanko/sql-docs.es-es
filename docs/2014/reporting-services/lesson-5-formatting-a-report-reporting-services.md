@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: db481a9a35cd55ecef08cf86802196d2a1c94b45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 19e238919a00bf022cd924be7a66a4d990d8f7c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227103"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
   Ahora que ha agregado una región de datos y algunos campos al informe Sales Orders, puede dar formato a los campos de moneda y de fecha, así como a los encabezados de columna.  
@@ -30,7 +30,7 @@ ms.locfileid: "36202876"
   
 -   [Dar formato a la moneda](#bkmk_format_currency)  
   
--   [Cambiar estilo de texto y los anchos de columna](#bkmk_change_textstyle)  
+-   [Cambiar el estilo de texto y los anchos de columna](#bkmk_change_textstyle)  
   
 ##  <a name="bkmk_format_date"></a> Dar formato a la fecha  
  En el campo Date, se muestra información de fecha y hora de manera predeterminada. Puede darle formato para mostrar solo la fecha.  
@@ -41,7 +41,7 @@ ms.locfileid: "36202876"
   
 2.  Haga clic con el botón derecho en la celda con la expresión de campo `[Date]` y, después, haga clic en **Propiedades de cuadro de texto**.  
   
-3.  Haga clic en **número**y, a continuación, en la **categoría** campo, seleccione `Date`.  
+3.  Haga clic en **número**y, a continuación, en el **categoría** campos, seleccione `Date`.  
   
 4.  En el cuadro **Tipo** , seleccione **January 31, 2000**.  
   
@@ -74,14 +74,14 @@ ms.locfileid: "36202876"
   
 6.  Obtenga una vista previa del informe para ver el cambio en el campo `[LineTotal]` y, después, vuelva a cambiar a la vista de diseño.  
   
-##  <a name="bkmk_change_textstyle"></a> Cambiar estilo de texto y los anchos de columna  
+##  <a name="bkmk_change_textstyle"></a> Cambiar el estilo de texto y los anchos de columna  
  También puede cambiar el formato de la fila de encabezado para diferenciarlo de las filas de datos del informe. Por último, ajustará el ancho de las columnas.  
   
 #### <a name="to-format-header-rows-and-table-columns"></a>Para dar formato a las filas de encabezado y las columnas de tabla  
   
 1.  Haga clic en la tabla para que los identificadores de columna y de fila aparezcan encima y al lado de la tabla.  
   
-     ![Diseño, tabla con fila de encabezado y fila de detalle](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "de diseño, tabla con fila de encabezado y fila de detalles")  
+     ![Diseño, tabla con fila de encabezado y fila de detalle](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "diseño, tabla con fila de encabezado y fila de detalles")  
   
      Las barras grises situadas en la parte superior y en el lado de la tabla son los identificadores de fila y de columna.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36202876"
  Ha aplicado formato correctamente a los encabezados de columna y los valores de moneda y fecha. A continuación, agregará características de agrupación y totales al informe. Vea [Lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a números y fechas &#40;el generador de informes SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Aplicar formato a números y fechas &#40;generador de informes y SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

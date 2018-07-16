@@ -1,5 +1,5 @@
 ---
-title: Elemento Row (XMLA) | Documentos de Microsoft
+title: Elemento Row (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - row element
 ms.assetid: 4d9977a0-c396-44c7-9fd4-97f4c3d643aa
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: de6460bc6d51c4205752b7db186412e420438145
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 17bc202bb7e1d2c0701b478409b02f4bbb160958
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223995"
 ---
 # <a name="row-element-xmla"></a>Elemento row (XMLA)
-  Contiene una sola fila de datos para un [raíz](root-element-xmla.md) elemento que contiene datos tabulares devueltos por un [Discover](../xml-elements-methods-discover.md) o [Execute](../xml-elements-methods-execute.md) llamada al método.  
+  Contiene una sola fila de datos para un [raíz](root-element-xmla.md) elemento que contiene datos tabulares devueltos por una [Discover](../xml-elements-methods-discover.md) o [Execute](../xml-elements-methods-execute.md) llamada al método.  
   
 ## <a name="syntax"></a>Sintaxis  
   

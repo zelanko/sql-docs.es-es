@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3cd11409f4194e6eaa63c03d4ca211fe633a721a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 268fc3b35408c144d1eda570d92b9b166b96769e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239065"
 ---
 # <a name="create-an-encrypted-backup"></a>Crear una copia de seguridad cifrada
   En este tema se describen los pasos necesarios para crear una copia de seguridad cifrada mediante Transact-SQL.  
@@ -76,7 +75,7 @@ ms.locfileid: "36201395"
  Para obtener un ejemplo sobre cómo cifrar una copia de seguridad protegida por EKM, vea [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 ### <a name="backup-to-windows-azure-storage-with-encryption"></a>Copia de seguridad en Almacenamiento de Windows Azure con cifrado  
- Si crea una copia de seguridad en Almacenamiento de Windows Azure con la opción **Copia de seguridad en URL de SQL Server** , los pasos de cifrado son los mismos pero debe usar una dirección URL como destino y una credencial SQL para autenticarse en Almacenamiento de Windows Azure. Si desea configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con opciones de cifrado, vea [configurar SQL Server Managed Backup to Windows Azure](enable-sql-server-managed-backup-to-microsoft-azure.md) y [configuración de SQL Server Managed Backup to Windows Azure para grupos de disponibilidad](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
+ Si crea una copia de seguridad en Almacenamiento de Windows Azure con la opción **Copia de seguridad en URL de SQL Server** , los pasos de cifrado son los mismos pero debe usar una dirección URL como destino y una credencial SQL para autenticarse en Almacenamiento de Windows Azure. Si desea configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con opciones de cifrado, consulte [configurar SQL Server Managed Backup to Windows Azure](enable-sql-server-managed-backup-to-microsoft-azure.md) y [configuración de SQL Server Managed Backup to Windows Azure para grupos de disponibilidad](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
   
  **Requisitos previos:**  
   

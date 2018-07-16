@@ -1,5 +1,5 @@
 ---
-title: Cursores XTP | Documentos de Microsoft
+title: Cursores XTP | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b404b5d425fe6116087821a4c51e1f5dd552dd7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c5eab11a0ee57a8545a2d19f8a7472392635e690
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206985"
 ---
 # <a name="xtp-cursors"></a>Cursores XTP
   El objeto de rendimiento Cursores XTP contiene contadores relacionados con los cursores internos del motor de XTP. Los cursores son los bloques de creación de bajo nivel que el motor de XTP utiliza para procesar consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Por tanto, el usuario no tiene normalmente control directo sobre ellos.  
@@ -42,6 +42,6 @@ ms.locfileid: "36204796"
 |**Filas tocadas eliminadas provisionalmente/s**|Número de filas que van a expirar tocadas mediante cursores (en promedio), por segundo. Una fila va a expirar si la transacción que la eliminó permanece activa (es decir, no se confirma o anula).|  
   
 ## <a name="see-also"></a>Vea también  
- [XTP &#40;OLTP en memoria&#41; contadores de rendimiento](../../integration-services/performance/performance-counters.md)  
+ [XTP &#40;OLTP en memoria&#41; los contadores de rendimiento](../../integration-services/performance/performance-counters.md)  
   
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user accounts [SQL Server], failover clustering
 - clusters [SQL Server], maintaining
@@ -24,18 +23,18 @@ helpviewer_keywords:
 - virtual servers [SQL Server], adding nodes
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 caps.latest.revision: 34
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 3c5364ad63b446abc4e79e0d3ac986f86e8432a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a954eb61a7cf5b4ed39ca2cd62ab763d753ac3d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317565"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Administración y mantenimiento de la instancia de clúster de conmutación por error
-  Se llevan a cabo tareas de mantenimiento como agregar o quitar nodos de una instancia de clúster de conmutación por error (FCI) de AlwaysOn existente usando el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programa de instalación. Otras tareas de administración, como cambiar el recurso de dirección IP o recuperarse de determinados escenarios de la FCI, se llevan a cabo con el complemento Administrador de clústeres de conmutación por error, que es el complemento de administración del servicio de clústeres de conmutación por error de Windows Server (WSFC).  
+  Se llevan a cabo tareas de mantenimiento, como agregar o quitar nodos de una instancia de clúster de conmutación por error (FCI) de AlwaysOn existente utilizando el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programa de instalación. Otras tareas de administración, como cambiar el recurso de dirección IP o recuperarse de determinados escenarios de la FCI, se llevan a cabo con el complemento Administrador de clústeres de conmutación por error, que es el complemento de administración del servicio de clústeres de conmutación por error de Windows Server (WSFC).  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>Realizar el mantenimiento de una instancia de clúster de conmutación por error  
  Después de instalar una FCI, puede cambiarla o repararla con el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por ejemplo, puede agregar nodos adicionales a una FCI, ejecutar una FCI como instancia independiente o quitar un nodo de la configuración de una FCI.  

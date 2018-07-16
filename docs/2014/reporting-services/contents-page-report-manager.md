@@ -1,5 +1,5 @@
 ---
-title: El contenido de página (Administrador de informes) | Documentos de Microsoft
+title: El contenido de página (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 32054fea94b8786fca74ecca9c223d4af9c9d6d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05e7f592527e237798618b8af08cf471759d8786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224825"
 ---
 # <a name="contents-page-report-manager"></a>Contenido (página del Administrador de informes)
   Use la página Contenido para ver el contenido de la carpeta actual, seleccionar elementos para verlos o navegar a otras carpetas. Esta página se abre cuando se selecciona una carpeta. Es también la página principal del Administrador de informes.  
@@ -61,6 +61,6 @@ ms.locfileid: "36204113"
 ## <a name="see-also"></a>Vea también  
  [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Administración de contenido del servidor de informes &#40;modo nativo de SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

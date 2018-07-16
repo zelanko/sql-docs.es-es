@@ -1,5 +1,5 @@
 ---
-title: Combinaciones admitidas de SharePoint y Reporting Services Server y el complemento (SQL Server 2014) | Documentos de Microsoft
+title: Combinaciones admitidas de SharePoint y Reporting Services Server y el complemento (SQL Server 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint mode
 - add-in for sharepoint
@@ -16,13 +16,13 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 4aaaa578f438beabd9c9c661eaaf852971545695
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49b19aaf7d34b052eac0e53c44814a961d6c4b74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194811"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server-and-add-in-sql-server-2014"></a>Combinaciones admitidas del servidor y el complemento de SharePoint y Reporting Services (SQL Server 2014)
   Los servidores de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pueden instalarse en modo de SharePoint e integrarse con una implementación de SharePoint. No todas las características se admiten en todas las combinaciones de servidor de informes, complemento de Reporting Services para SharePoint y productos de SharePoint. En este tema se resumen las combinaciones admitidas. En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] la integración es el resultado de la combinación de las siguientes acciones:  
@@ -66,7 +66,7 @@ ms.locfileid: "36202461"
   
 -   Los servidores de informes de SQL Server 2012 (o posterior) no admiten el complemento de SQL Server 2008 R2. El instalador de requisitos previos de SharePoint 2010 instala automáticamente el complemento de SQL Server 2008 R2. Debe desinstalarse antes de instalar las versiones más recientes del complemento. No se admite la actualización en contexto del complemento.  
   
--   **Actualización:** SharePoint 2010 con el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado no se puede actualizar en contexto a SharePoint 2013. SharePoint 2013 requiere la versión de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] o posterior del complemento y el servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información sobre la actualización, vea [actualizar y migrar Reporting Services](upgrade-and-migrate-reporting-services.md).  
+-   **Actualización:** SharePoint 2010 con el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado no se puede actualizar en contexto a SharePoint 2013. SharePoint 2013 requiere la versión de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] o posterior del complemento y el servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información acerca de la actualización, consulte [actualizar y migrar Reporting Services](upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Dónde encontrar el complemento de Reporting Services para productos de SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   

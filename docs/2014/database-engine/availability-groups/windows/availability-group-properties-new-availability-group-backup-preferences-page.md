@@ -1,29 +1,28 @@
 ---
-title: 'Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad (página Preferencias de copia de seguridad) | Documentos de Microsoft'
+title: 'Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad (página Preferencias de copia de seguridad) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroupproperties.backuppreferences.f1
 helpviewer_keywords:
 - read-only routing
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 caps.latest.revision: 6
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 9b6e5c1753a7d627e482029fc416928545efc05b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1ef3e0183202428e8c3bb6d8785a357406fec338
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193925"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad (página Preferencias de copia de seguridad)
   Utilice este cuadro de diálogo para ver y cambiar las preferencias de copia de seguridad del grupo de disponibilidad seleccionado.  

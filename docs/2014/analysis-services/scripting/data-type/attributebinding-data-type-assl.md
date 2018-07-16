@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos AttributeBinding (ASSL) | Documentos de Microsoft
+title: Tipo de datos AttributeBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeBinding data type
 ms.assetid: 24d511a9-d0eb-4150-9f78-541e03963d67
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 796e20c3047914ca65e7d48be26fbc951695e583
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e475cb0ecb867daec6864fb5d078835e8fe95688
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279751"
 ---
 # <a name="attributebinding-data-type-assl"></a>Tipo de datos AttributeBinding (ASSL)
   Define un tipo de datos derivado que representa un enlace para un [atributo](../objects/attribute-element-assl.md) elemento.  
@@ -59,12 +59,12 @@ ms.locfileid: "36108437"
 |------------------|-------------|  
 |Elementos primarios|None|  
 |Elementos secundarios|[AttributeID](../properties/id-element-assl.md), [Ordinal](../properties/ordinal-element-assl.md), [tipo](../properties/type-element-binding-assl.md)|  
-|Elementos derivados|Vea [enlace](binding-data-type-assl.md)|  
+|Elementos derivados|Consulte [enlace](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
- Para obtener información adicional sobre la `Binding` tipo de datos, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) derivados de la `Binding` tipo de datos, vea [tipo de datos de enlace &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Para obtener más información sobre la `Binding` tipo de datos, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) derivados de la `Binding` tipo de datos, vea [tipo de datos de enlace &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- Para obtener información general de enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;SSAS multidimensionales&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obtener información general de los enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.AttributeBinding>.  
   

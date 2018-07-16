@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identity values [SQL Server], bulk imports
 - data formats [SQL Server], identity values
 - bulk importing [SQL Server], identity values
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d43b95ce6025047f2721f6eb56925478a7cde262
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5870c305e74435b6c21fe0a4f872629216203990
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242565"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantener valores de identidad al importar datos de forma masiva (SQL Server)
   Los archivos de datos contienen valores de identidad que pueden importarse de forma masiva en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De manera predeterminada, los valores de la columna de identidad del archivo de datos que se importa se omiten y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente valores únicos. Los valores únicos se basan en los valores de inicialización y de incremento especificados durante la creación de la tabla.  
@@ -83,7 +82,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
 |Calificadores|Descripción|  
 |----------------|-----------------|  
 |**-E**|Especifica el valor o valores de identidad del archivo de datos que se van a usar en la columna de identidad.|  
-|**-T**|Especifica que la `bcp` utilidad se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza.|  
+|**-T**|Especifica que el `bcp` utilidad se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza.|  
   
  En el símbolo del sistema de Windows, escriba:  
   

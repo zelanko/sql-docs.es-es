@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], creating
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 75bf7b8fc40f7eb4a926ec1d43a858b06f704a2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3b1ff0b00bbbee79b5d24144e733f367807a91d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257701"
 ---
 # <a name="create-queries-visual-database-tools"></a>Crear consultas (Visual Database Tools)
   Las consultas le permiten recuperar datos de las tablas y las vistas de su base de datos. El **Diseñador de consultas y vistas**, que permite crear y trabajar con consultas, se compone de cuatro paneles: el [panel Diagrama](visual-database-tools.md), el [panel SQL](sql-pane-visual-database-tools.md), el [panel Criterios](criteria-pane-visual-database-tools.md)y el [panel Resultados](results-pane-visual-database-tools.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "36107088"
  [Guardar consultas &#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
  [Tipos de consultas &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
  [Especificar criterios de búsqueda &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [Resumir los resultados de la consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Resumir los resultados de consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Realizar operaciones básicas con consultas (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

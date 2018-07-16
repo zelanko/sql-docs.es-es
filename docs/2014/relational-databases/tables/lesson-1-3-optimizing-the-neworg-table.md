@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 549ebbb55faa6debf772c654dd3c51fcf6beadf1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0146a68973f7a80c6166e1dd91a0a4852d40f35c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236565"
 ---
 # <a name="optimizing-the-neworg-table"></a>Optimizar la tabla NewOrg
   El **NewOrd** tabla que creó en el [rellenar una tabla con datos jerárquicos existentes](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) tarea contiene toda la información de empleado y representa la estructura jerárquica mediante un `hierarchyid`tipo de datos. Esta tarea agrega los nuevos índices que admiten las búsquedas en la columna `hierarchyid`.  
   
 ## <a name="clustered-index"></a>Índice agrupado  
- El `hierarchyid` columna (**OrgNode**) es la clave principal para la **NewOrg** tabla. Al crear la tabla, contenía un índice agrupado denominado **PK_NewOrg_OrgNode** para exigir la singularidad de la columna **OrgNode** . Este índice clúster también admite una búsqueda con prioridad a la profundidad de la tabla.  
+ El `hierarchyid` columna (**OrgNode**) es la clave principal para el **NewOrg** tabla. Al crear la tabla, contenía un índice agrupado denominado **PK_NewOrg_OrgNode** para exigir la singularidad de la columna **OrgNode** . Este índice clúster también admite una búsqueda con prioridad a la profundidad de la tabla.  
   
 ## <a name="nonclustered-index"></a>Índice no agrupado  
  Este paso crea dos índices no clúster que admiten búsquedas típicas.  

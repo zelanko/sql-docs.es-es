@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
@@ -17,13 +17,13 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b585849d6bb585a2d7008894c874b84d0a87f17e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02aa88c80200ece060204fc339e84560a069cc17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260991"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar paquetes de usando puntos de comprobación
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede reiniciar los paquetes con errores desde el punto del error, en lugar de volver a ejecutar todo el paquete. Si se configura un paquete para que utilice puntos de comprobación, la información relacionada con la ejecución del paquete se escribirá en un archivo de punto de comprobación. Cuando se vuelve a ejecutar el paquete con error, se utiliza el archivo de punto de comprobación para reiniciar el paquete desde el punto del error. Si el paquete se ejecuta correctamente, el archivo de punto de comprobación se elimina y se vuelve a crear la siguiente vez que se ejecuta el paquete.  
@@ -63,7 +63,7 @@ ms.locfileid: "36203666"
 |CheckpointUsage|Especifica si se utilizarán puntos de comprobación.|  
 |SaveCheckpoints|Indica si el paquete guarda puntos de comprobación. Esta propiedad debe estar establecida en True para poder reiniciar un paquete desde el punto del error.|  
   
- Además, debe establecer la propiedad FailPackageOnFailure `true` para todos los contenedores en el paquete que desea identificar como puntos de reinicio.  
+ Además, debe establecer la propiedad FailPackageOnFailure en `true` para todos los contenedores del paquete que desea identificar como puntos de reinicio.  
   
  Puede usar la propiedad ForceExecutionResult para probar el uso de los puntos de comprobación de un paquete. Si establece ForceExecutionResult de una tarea o un contenedor en Error, puede simular un error en tiempo real. Al volver a ejecutar el paquete, se volverá a ejecutar la tarea que generó el error y los contenedores.  
   
@@ -77,14 +77,14 @@ ms.locfileid: "36203666"
 |`IfExists`|Especifica que se utilizará el archivo de punto de comprobación, si existe. Si existe un archivo de punto de comprobación, el paquete se reiniciará desde el punto del error de ejecución anterior; de lo contrario, se ejecutará desde el inicio del flujo de trabajo del paquete.|  
   
 > [!NOTE]  
->  El **/CheckPointing en** opción de dtexec es equivalente a establecer el `SaveCheckpoints` propiedad del paquete en `True`y el `CheckpointUsage` propiedad Always. Para más información, consulte [dtexec Utility](dtexec-utility.md).  
+>  El **/CheckPointing en** opción de dtexec es equivalente a establecer el `SaveCheckpoints` propiedad del paquete para `True`y el `CheckpointUsage` propiedad como siempre. Para más información, consulte [dtexec Utility](dtexec-utility.md).  
   
 ## <a name="securing-checkpoint-files"></a>Proteger archivos de puntos de comprobación  
  El nivel de protección de paquetes no incluye la protección de archivos de puntos de comprobación; estos archivos se deben proteger por separado. Solo puede almacenar datos de puntos de comprobación en el sistema de archivos y debe utilizar una lista de control de acceso (ACL) al sistema operativo para proteger la ubicación o carpeta en la que ha almacenado el archivo. Es importante proteger los archivos de puntos de comprobación, dado que contienen información sobre el estado del paquete, incluidos los valores actuales de las variables. Por ejemplo, una variable puede contener un conjunto de registros con varias filas de datos privados, tales como números de teléfono. Para obtener más información, vea [Acceso a los archivos usados por los paquetes](../access-to-files-used-by-packages.md).  
   
 ### <a name="to-configure-the-checkpoint-properties"></a>Para configurar las propiedades del punto de comprobación  
   
--   [Configurar los puntos de control para reiniciar un paquete con error](../configure-checkpoints-for-restarting-a-failed-package.md)  
+-   [Configurar puntos de comprobación para reiniciar un paquete con error](../configure-checkpoints-for-restarting-a-failed-package.md)  
   
 ## <a name="external-resources"></a>Recursos externos  
   

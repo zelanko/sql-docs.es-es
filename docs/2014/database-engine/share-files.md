@@ -1,5 +1,5 @@
 ---
-title: Compartir archivos | Documentos de Microsoft
+title: Compartir archivos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sharing files
 - file sharing [SQL Server]
 - version control services [SQL Server], file sharing
 ms.assetid: 645f5c0a-e949-4e87-8988-85e4d6128464
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 528e0ac6eb185089fc7e5e38f654dd1acf2fb64e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b931d9ebcf8ef5889158a4c393833298dc3b097a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308085"
 ---
 # <a name="share-files"></a>Compartir archivos
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] se puede utilizar para compartir elementos entre proyectos de control de código fuente. Cuando se comparte un elemento, los cambios realizados en éste se reflejan en todos los proyectos que comparten ese elemento.  
@@ -38,13 +38,13 @@ ms.locfileid: "36199957"
   
 1.  En el Explorador de soluciones, seleccione la carpeta o proyecto en que desea colocar los archivos compartidos.  
   
-2.  En el **archivo** menú, elija **Control de código fuente**y, a continuación, haga clic en **recurso compartido**.  
+2.  En el **archivo** menú, elija **Control de código fuente**y, a continuación, haga clic en **Share**.  
   
-3.  En el **compartir con** cuadro de diálogo, busque en la lista de directorios para el elemento que desea compartir y haga clic en ese elemento.  
+3.  En el **compartir con** cuadro de diálogo Examinar la lista de directorios para el elemento que desea compartir y haga clic en ese elemento.  
   
-4.  Haga clic en **recurso compartido**.  
+4.  Haga clic en **Share**.  
   
 ## <a name="see-also"></a>Vea también  
- [Fundamentos del Control de código fuente](../../2014/database-engine/source-control-basics.md)  
+ [Fundamentos del control de código fuente](../../2014/database-engine/source-control-basics.md)  
   
   

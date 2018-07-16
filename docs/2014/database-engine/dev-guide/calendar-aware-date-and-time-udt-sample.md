@@ -1,5 +1,5 @@
 ---
-title: Ejemplo UDT para calendario fecha y hora | Documentos de Microsoft
+title: Ejemplo UDT para calendario fecha y hora | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a324a9b0f5ce90c7990bdc44c352df1e7a48c206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 161395e5c57e8355c75f952f0ea0998feb487c26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330465"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>Ejemplo UDT para calendario fecha y hora
   El almacenamiento de fechas como cadenas puede resultar confuso porque las fechas no tienen significado si no se conoce cuál es el sistema de calendario utilizado. El ejemplo `CADatetime` define dos tipos de datos definidos por el usuario, `CADatetime` y `CADate`, que proporcionan control de fechas y horas para el calendario.  

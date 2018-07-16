@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2306c5d35aa6b36196348c6733430dadbbf0b5be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7016c90e98e7719c4566e53b7aa071edf469b080
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269791"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurar SQL Server en una instalación Server Core
   En este tema se trata información detallada sobre la configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una instalación Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. Consulte las secciones siguientes:  
@@ -31,7 +31,7 @@ ms.locfileid: "36203473"
   
 -   [Instalar actualizaciones de SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_installsqlupdates)  
   
--   [Iniciar o detener el servicio de SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_startstopservices)  
+-   [Iniciar o detener servicio SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_startstopservices)  
   
 -   [Habilitar a los grupos de disponibilidad AlwaysOn](configure-sql-server-on-a-server-core-installation.md#bkmk_enablealwayson)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36203473"
   
 -   [Utilidades del símbolo del sistema](configure-sql-server-on-a-server-core-installation.md#bkmk_cmd)  
   
--   [Usar herramientas para solucionar problemas](configure-sql-server-on-a-server-core-installation.md#bkmk_troubleshoot)  
+-   [Usar herramientas de solución de problemas](configure-sql-server-on-a-server-core-installation.md#bkmk_troubleshoot)  
   
 ##  <a name="BKMK_ConfigureWindows"></a> Configurar y administrar Server Core en Windows Server  
  La sección proporciona referencias a los temas de ayuda para configurar y administrar una instalación de Server Core.  
@@ -54,17 +54,17 @@ ms.locfileid: "36203473"
   
 -   [Windows Server 2008 R2: Prácticas recomendadas para las implementaciones de Server Core](http://go.microsoft.com/fwlink/?LinkID=245957) ()http://go.microsoft.com/fwlink/?LinkID=245957)  
   
--   [Configurar una instalación de Server Core: información general sobre](http://go.microsoft.com/fwlink/?LinkId=245958) ()http://go.microsoft.com/fwlink/?LinkId=245958)  
+-   [Configurar una instalación Server Core: información general sobre](http://go.microsoft.com/fwlink/?LinkId=245958) ()http://go.microsoft.com/fwlink/?LinkId=245958)  
   
 -   [Configuración de una instalación Server Core de Windows Server 2008 R2 con Sconfig.cmd](http://go.microsoft.com/fwlink/?LinkId=245959) ()http://go.microsoft.com/fwlink/?LinkId=245959)  
   
 -   [Instalar un rol de servidor en un servidor que ejecuta una instalación Server Core de Windows Server 2008 R2: información general sobre](http://go.microsoft.com/fwlink/?LinkId=245960) ()http://go.microsoft.com/fwlink/?LinkId=245960)  
   
--   [Instalar las características de Windows en un servidor que ejecuta una instalación Server Core de Windows Server 2008 R2: información general sobre](http://go.microsoft.com/fwlink/?LinkId=245961) ()http://go.microsoft.com/fwlink/?LinkId=245961)  
+-   [Instalar características de Windows en un servidor que ejecuta una instalación Server Core de Windows Server 2008 R2: información general sobre](http://go.microsoft.com/fwlink/?LinkId=245961) ()http://go.microsoft.com/fwlink/?LinkId=245961)  
   
 -   [Administrar una instalación Server Core: información general sobre](http://go.microsoft.com/fwlink/?LinkId=245962) ()http://go.microsoft.com/fwlink/?LinkId=245962)  
   
--   [Administración de una instalación de Server Core](http://go.microsoft.com/fwlink/?LinkId=245963) ()http://go.microsoft.com/fwlink/?LinkId=245963)  
+-   [Administración de una instalación Server Core](http://go.microsoft.com/fwlink/?LinkId=245963) ()http://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="BKMK_InstallSQLUpdates"></a> Instalar las actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  En esta sección se proporciona información sobre la instalación de actualizaciones para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en un equipo con Windows Server Core. Se recomienda que los clientes evalúen e instalen las últimas actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puntualmente para asegurarse de que los sistemas están al día con las actualizaciones de seguridad más recientes. Para obtener más información acerca de cómo instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en un equipo Windows Server Core, vea [instalar SQL Server 2014 en Server Core](install-sql-server-on-server-core.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "36203473"
   
 -   [Instalar actualizaciones para SQL Server 2014 durante una instalación nueva](configure-sql-server-on-a-server-core-installation.md#bkmk_newinstall)  
   
--   [Al instalar las actualizaciones de SQL Server 2014 después de que se ha instalado](configure-sql-server-on-a-server-core-installation.md#bkmk_alreadyinstall)  
+-   [Instalar actualizaciones para SQL Server 2014 después de que se ha instalado](configure-sql-server-on-a-server-core-installation.md#bkmk_alreadyinstall)  
   
 ###  <a name="bkmk_NewInstall"></a> Instalar actualizaciones para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] durante una nueva instalación  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite solo instalaciones del símbolo del sistema en el sistema operativo Server Core. Para obtener más información, vea [Instalar SQL Server 2014 desde el símbolo del sistema](install-sql-server-from-the-command-prompt.md).  
@@ -117,10 +117,10 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
  También puede usar los servicios Net para iniciar y detener los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="BKMK_EnableAlwaysON"></a> Habilitar los grupos de disponibilidad de AlwaysOn  
- Al estar habilitado para los Grupos de disponibilidad de AlwaysOn es un requisito previo para que una instancia de servidor use los grupos de disponibilidad como solución de alta disponibilidad y recuperación ante desastres. Para obtener más información acerca de cómo administrar los grupos de disponibilidad AlwaysOn, vea [habilitar y deshabilitar grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+ Al estar habilitado para los Grupos de disponibilidad de AlwaysOn es un requisito previo para que una instancia de servidor use los grupos de disponibilidad como solución de alta disponibilidad y recuperación ante desastres. Para obtener más información acerca de cómo administrar los grupos de disponibilidad AlwaysOn, consulte [habilitar y deshabilitar grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>Usar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma remota  
- Estos pasos están pensados para realizarse en un equipo ejecutando la versión de cliente de [!INCLUDE[win7](../../includes/win7-md.md)] o una versión posterior, o en otro servidor que tenga instalado el Shell gráfico de servidor (es decir, una instalación completa de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] o una instalación de Windows Server 8 con el servidor Característica Shell gráfico habilitada).  
+ Estos pasos están pensados para realizarse en un equipo ejecutar la edición de cliente de [!INCLUDE[win7](../../includes/win7-md.md)] o posterior, o en otro servidor que tenga instalado el Shell gráfico de servidor (es decir, una instalación completa de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] o una instalación de Windows Server 8 con el servidor Característica Shell gráfico habilitada).  
   
 1.  Abra Administración de equipos. Para abrir Administración de equipos, realice una de las acciones siguientes:  
   

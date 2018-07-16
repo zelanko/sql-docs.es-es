@@ -1,5 +1,5 @@
 ---
-title: Objetos avanzados OLAP en AMO programación | Documentos de Microsoft
+title: Objetos avanzados OLAP en AMO programación | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6408cfd8dd3a7b8f7d6993ca84c3325bedddee24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c511fe1a542804ebf05077d5f9a46c77dd69b2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254927"
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Programar objetos avanzados OLAP en AMO
   En este tema se explican los detalles de la programación de objetos avanzados OLAP en Objetos de administración de análisis (AMO). Este tema contiene las siguientes secciones:  
   
--   [Objetos Action](#Action)  
+-   [Objetos de acción](#Action)  
   
 -   [Objetos KPI](#KPI)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36107322"
   
 -   [Objetos Translation](#Transl)  
   
-##  <a name="Action"></a> Objetos Action  
+##  <a name="Action"></a> Objetos de acción  
  Las clases Action se utilizan para crear una respuesta activa al examinar ciertas áreas del cubo. Los objetos Action pueden definirse mediante AMO, pero se utilizan desde la aplicación cliente que examina los datos. Las acciones pueden ser de distintos tipos y se deben crear según su tipo. Las acciones pueden ser:  
   
 -   Acciones de obtención de detalles, que devuelven el conjunto de filas que representa los datos subyacentes de las celdas seleccionadas del cubo donde se produce la acción.  
@@ -61,7 +61,7 @@ ms.locfileid: "36107322"
   
 3.  Agregar la acción a la colección de cubos y actualizar el cubo. La acción no es un objeto actualizable.  
   
- Para probar la acción se requiere una aplicación de programa diferente. Puede probar su acción en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. En primer lugar, debe instalar [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ejemplos, vea [procesamiento del objeto de modelo multidimensionales](../processing-a-multidimensional-model-analysis-services.md).  
+ Para probar la acción se requiere una aplicación de programa diferente. Puede probar su acción en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. En primer lugar, debe instalar [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ejemplos, consulte [procesamiento del objeto de modelo Multidimensional](../processing-a-multidimensional-model-analysis-services.md).  
   
  El código muestra siguiente replica tres acciones diferentes del proyecto de muestra Adventure Works de Analysis Services. Puede diferenciar las acciones porque las que se introducen mediante el ejemplo siguiente empiezan por "My".  
   

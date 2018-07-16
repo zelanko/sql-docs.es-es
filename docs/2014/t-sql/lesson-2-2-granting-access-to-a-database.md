@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database access
 ms.assetid: 686edfe2-3650-48a6-a2da-9d46fa211ad8
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2fb1db5b03e7379052e006c6c68d8cf1efd5404b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 8a4d07c99cfe060962842e7d13bafe121c731cf8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204515"
 ---
 # <a name="granting-access-to-a-database"></a>Conceder acceso a una base de datos
   Mary ahora tiene acceso a esta instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], pero no tiene permiso para tener acceso a las bases de datos. Incluso no tiene acceso a su propia base de datos **TestData** hasta que la autorice como usuario de base de datos.  
@@ -44,6 +44,6 @@ ms.locfileid: "36110859"
      Ahora, Mary tiene acceso a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y a la base de datos `TestData` .  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Creación de vistas y procedimientos almacenados](lesson-2-3-creating-views-and-stored-procedures.md)  
+ [Crear vistas y procedimientos almacenados](lesson-2-3-creating-views-and-stored-procedures.md)  
   
   

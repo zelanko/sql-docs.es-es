@@ -1,5 +1,5 @@
 ---
-title: 'Lección 11: Crear particiones | Documentos de Microsoft'
+title: 'Lección 11: Creación de particiones | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: c480583da42aee4f73e6053d20e7bf8b6542547c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e2f9ab8d98ae4ffbb8be67c4b64f5022b0f7f8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261377"
 ---
 # <a name="lesson-11-create-partitions"></a>Lección 11: Crear particiones
   En esta lección, creará particiones para dividir la tabla Internet Sales en piezas lógicas más pequeñas que puedan procesarse (actualizarse) independientemente de otras particiones. De forma predeterminada, cada tabla que incluye en el modelo tiene una partición que incluye todas las columnas y filas de la tabla. Para las tabla Internet Sales, queremos dividir los datos por año, una partición para cada uno de los cinco años de la tabla.  Cada partición se podrá procesar entonces independientemente. Para obtener más información, consulte [Particiones &#40;SSAS tabular&#41;](tabular-models/partitions-ssas-tabular.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "36107068"
   
      Se abrirá el cuadro de diálogo **Administrador de partición** .  
   
-2.  En el **Partition Manager** cuadro de diálogo **particiones**, haga clic en el **venta por Internet** partición.  
+2.  En el **Partition Manager** cuadro de diálogo **particiones**, haga clic en el **Internet Sales** partición.  
   
 3.  En **nombre de la partición**, cambie el nombre a `Internet Sales 2005`.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36107068"
   
 6.  Haga clic en **Validar**.  
   
-     Observe que se muestra una advertencia en la que se indica que algunas columnas no existen en el origen. Esto es porque en [lección 3: cambiar el nombre de columnas](rename-columns.md), cambiar el nombre de las columnas de la tabla de ventas por Internet en el modelo sea distinto de las columnas en el origen.  
+     Observe que se muestra una advertencia en la que se indica que algunas columnas no existen en el origen. Esto es porque en [lección 3: cambiar el nombre de columnas](rename-columns.md), cambió el nombre de las columnas de la tabla de ventas por Internet en el modelo sea distinto de las columnas en el origen.  
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>Para crear una partición para el año 2006 en la tabla de ventas por Internet  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36107068"
   
 2.  En **nombre de la partición**, tipo `Internet Sales 2006`.  
   
-3.  En la instrucción SQL, en orden de la partición incluir solo las filas para el año 2006, reemplace la cláusula WHERE con lo siguiente:  
+3.  En la instrucción SQL, en orden para la partición incluya solamente las filas del año 2006, reemplace la cláusula WHERE por lo siguiente:  
   
     ```  
     WHERE (([OrderDate] >= N'2006-01-01 00:00:00') AND ([OrderDate] < N'2007-01-01 00:00:00'))  
@@ -105,7 +105,7 @@ ms.locfileid: "36107068"
   
 3.  En **cambiar a**, seleccione **Editor de consultas**.  
   
-4.  En la instrucción SQL, en orden de la partición incluir solo las filas para el año 2007, reemplace la cláusula WHERE con lo siguiente:  
+4.  En la instrucción SQL, en orden para la partición incluya solamente las filas del año 2007, reemplace la cláusula WHERE por lo siguiente:  
   
     ```  
     WHERE (([OrderDate] >= N'2007-01-01 00:00:00') AND ([OrderDate] < N'2008-01-01 00:00:00'))  
@@ -119,7 +119,7 @@ ms.locfileid: "36107068"
   
 3.  En **cambiar a**, seleccione **Editor de consultas**.  
   
-4.  En la instrucción SQL, en orden de la partición incluir solo las filas para el año 2008, reemplace la cláusula WHERE con lo siguiente:  
+4.  En la instrucción SQL, en orden para la partición incluya solamente las filas del año 2008, reemplace la cláusula WHERE por lo siguiente:  
   
     ```  
     WHERE (([OrderDate] >= N'2008-01-01 00:00:00') AND ([OrderDate] < N'2009-01-01 00:00:00'))  
@@ -154,7 +154,7 @@ ms.locfileid: "36107068"
   
      Si se le piden credenciales de suplantación, especifique el nombre de usuario y la contraseña de Windows que especificó en la lección 2, paso 6.  
   
-     El **proceso datos** , a continuación, aparece el cuadro de diálogo y muestra los detalles del proceso para cada partición. Observe que se ha transferido un número diferente de filas para cada partición. Esto es porque cada partición incluye solamente las filas del año especificado en la cláusula WHERE de la instrucción SQL. No hay datos para el año 2010.  
+     El **proceso datos** , a continuación, aparecerá el cuadro de diálogo y muestra los detalles del proceso para cada partición. Observe que se ha transferido un número diferente de filas para cada partición. Esto es porque cada partición incluye solamente las filas del año especificado en la cláusula WHERE de la instrucción SQL. No hay datos para el año 2010.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
  Para continuar este tutorial, vaya a la lección siguiente: [Lección 12: Crear roles](lesson-11-create-roles.md).  

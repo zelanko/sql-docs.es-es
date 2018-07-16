@@ -1,5 +1,5 @@
 ---
-title: Varias transacciones | Documentos de Microsoft
+title: Varias transacciones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], multiple
 - multiple transactions
 ms.assetid: c3664a94-be89-40c0-a3a0-84b74a7fedbe
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c98fa7454a1a01ee6879a514f369e6fb6c1a0570
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa4e3015365166fc827170f021292a65d5d52dc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107278"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219515"
 ---
 # <a name="multiple-transactions"></a>Varias transacciones
   Un paquete puede incluir transacciones no relacionadas en un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Cuando un contenedor situado en medio de una jerarquía de contenedores anidados no admite transacciones, los contenedores situados en un nivel superior o inferior de la jerarquía inician transacciones independientes, si están configurados para admitir transacciones. Las transacciones se confirman o se revierten en orden, desde la tarea más interna en la jerarquía de contenedores anidados hasta el paquete. Sin embargo, una vez confirmada la transacción interna, no se revierte aunque se anule una transacción externa.  
@@ -43,6 +43,6 @@ ms.locfileid: "36107278"
  ![Implementación de varias transacciones](media/mw-dts-trans2.gif "Implementation of multiple transactions")  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Configurar un paquete para que utilice transacciones](../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [Configurar un paquete para el uso de transacciones](../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

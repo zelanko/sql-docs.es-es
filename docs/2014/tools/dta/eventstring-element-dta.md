@@ -1,5 +1,5 @@
 ---
-title: Elemento EventString (DTA) | Documentos de Microsoft
+title: El elemento EventString (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - EventString element
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6155627f60694cf1a21d39893e40b106b9df0886
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: db55d1d2451ab8febf984deb9e5bcb6d4718353f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291701"
 ---
 # <a name="eventstring-element-dta"></a>EventString (DTA, elemento)
   Especifica una carga de trabajo de scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] directamente en el archivo de entrada XML.  
@@ -51,13 +51,13 @@ ms.locfileid: "36105519"
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|`string`, longitud es ilimitada.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Repetición**|Una obligatoria si no se especifica ningún otro tipo de carga de trabajo. Debe especificar un `EventString`, `File`, o un `Database` elemento secundario para el `Workload` primario, pero solo un tipo puede utilizarse. Por ejemplo, si especifica una carga de trabajo con el `EventString` elemento, no se puede especificar una carga de trabajo con el `File` elemento en el mismo archivo de entrada XML.|  
+|**Repetición**|Una obligatoria si no se especifica ningún otro tipo de carga de trabajo. Debe especificar un `EventString`, un `File`, o un `Database` elemento secundario para el `Workload` primario, pero solo un tipo se puede usar. Por ejemplo, si especifica una carga de trabajo con el `EventString` elemento, y no se puede especificar una carga de trabajo con el `File` elemento en el mismo archivo de entrada XML.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Workload, elemento &#40;DTA&#41;](workload-element-dta.md)|  
+|**Elemento primario**|[Elemento de la carga de trabajo &#40;DTA&#41;](workload-element-dta.md)|  
 |**Elementos secundarios**|Ninguno.|  
   
 ## <a name="example"></a>Ejemplo  

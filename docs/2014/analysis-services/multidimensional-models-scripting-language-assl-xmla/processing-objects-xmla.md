@@ -1,5 +1,5 @@
 ---
-title: Procesar objetos (XMLA) | Documentos de Microsoft
+title: Procesamiento de objetos (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - XMLA, objects
 ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b4bb32d561a140746fb7b64dc9f9181f23306da9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce70d5d9168d1158b98453553b2323afc8da8e11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306515"
 ---
 # <a name="processing-objects-xmla"></a>Procesar objetos (XMLA)
-  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el procesamiento es el paso o serie de pasos que permiten convertir datos en información para análisis de negocios. El procesamiento varía en función del tipo de objeto, pero siempre forma parte de la conversión de datos en información.  
+  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], procesar es el paso o serie de pasos que permiten convertir datos en información para análisis de negocios. El procesamiento varía en función del tipo de objeto, pero siempre forma parte de la conversión de datos en información.  
   
  Para procesar un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto, puede usar el [proceso](../xmla/xml-elements-commands/process-element-xmla.md) comando. El comando `Process` puede procesar los siguientes objetos en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
@@ -72,25 +72,25 @@ ms.locfileid: "36202388"
 |*ProcessClearStructureOnly*|Estructura de minería de datos|  
 |*ProcessScriptCache*|Cube|  
   
- Para obtener más información sobre el procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] los objetos, vea [procesamiento del objeto de modelo multidimensionales](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Para obtener más información sobre el procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos, vea [procesamiento del objeto de modelo Multidimensional](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ## <a name="specifying-objects-to-be-processed"></a>Especificar los objetos que se van a procesar  
- El [objeto](../xmla/xml-elements-properties/object-element-xmla.md) propiedad de la `Process` comando contiene el identificador de objeto del objeto que se procesarán. En un comando `Process` solamente puede especificarse un objeto, si bien al procesar un objeto también se procesan sus objetos secundarios. Por ejemplo, al procesar un grupo de medida de un cubo se procesan todas las particiones de dicho grupo de medida, mientras que al procesar una base de datos se procesan todos los objetos contenidos en ésta (incluidos los cubos, las dimensiones y las estructuras de minería de datos).  
+ El [objeto](../xmla/xml-elements-properties/object-element-xmla.md) propiedad de la `Process` comando contiene el identificador de objeto del objeto que se va a procesar. En un comando `Process` solamente puede especificarse un objeto, si bien al procesar un objeto también se procesan sus objetos secundarios. Por ejemplo, al procesar un grupo de medida de un cubo se procesan todas las particiones de dicho grupo de medida, mientras que al procesar una base de datos se procesan todos los objetos contenidos en ésta (incluidos los cubos, las dimensiones y las estructuras de minería de datos).  
   
- Si establece el atributo `ProcessAffectedObjects` del comando `Process` en true, también se procesa cualquier objeto relacionado afectado por el procesamiento del objeto especificado. Por ejemplo, si una dimensión se actualiza de forma incremental mediante el uso de la *ProcessUpdate* procesamiento opción en el `Process` de comandos, cualquier partición cuyas agregaciones se invaliden debido a los miembros que se va a agregar o eliminar también es procesados por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si `ProcessAffectedObjects` está establecido en true. En este caso, un único comando `Process` puede procesar varios objetos de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], si bien [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determina qué objetos deberán procesarse además del objeto único especificado en el comando `Process`.  
+ Si establece el atributo `ProcessAffectedObjects` del comando `Process` en true, también se procesa cualquier objeto relacionado afectado por el procesamiento del objeto especificado. Por ejemplo, si una dimensión se actualiza de forma incremental mediante el uso de la *ProcessUpdate* procesamiento opción en el `Process` de comandos, cualquier partición cuyas agregaciones se invaliden debido a los miembros que se agreguen o eliminen también es procesó [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si `ProcessAffectedObjects` está establecido en true. En este caso, un único comando `Process` puede procesar varios objetos de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], si bien [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determina qué objetos deberán procesarse además del objeto único especificado en el comando `Process`.  
   
  No obstante, puede procesar diversos objetos (como dimensiones) al mismo tiempo si utiliza varios comandos `Process` dentro de un comando `Batch`. Las operaciones por lotes proporcionan un control más preciso para el procesamiento en serie o en paralelo de los objetos de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que el uso del atributo `ProcessAffectedObjects`; además, permiten optimizar el enfoque del procesamiento para bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de mayor tamaño. Para obtener más información acerca de cómo realizar operaciones por lotes, vea [realizar operaciones por lotes &#40;XMLA&#41;](performing-batch-operations-xmla.md).  
   
 ## <a name="specifying-out-of-line-bindings"></a>Especificar enlaces fuera de línea  
- Si el `Process` comando no está incluido en un `Batch` comando, también puede especificar enlaces fuera de línea en el [enlaces](../xmla/xml-elements-properties/bindings-element-xmla.md), [DataSource](../xmla/xml-elements-properties/source-element-xmla.md), y [DataSourceView ](../xmla/xml-elements-properties/datasourceview-element-xmla.md) propiedades de la `Process` comando para los objetos que se va a procesar. Los enlaces fuera de línea son referencias a orígenes de datos, vistas del origen de datos y otros objetos en los que el enlace existe solamente durante la ejecución del comando `Process` y que invalidan cualquier enlace existente asociado a los objetos que se procesan. Si no se especifican enlaces fuera de línea, se utilizan los enlaces actualmente asociados a los objetos que se van a procesar.  
+ Si el `Process` comando no está incluido en un `Batch` comando, también puede especificar enlaces fuera de línea en el [enlaces](../xmla/xml-elements-properties/bindings-element-xmla.md), [DataSource](../xmla/xml-elements-properties/source-element-xmla.md), y [DataSourceView ](../xmla/xml-elements-properties/datasourceview-element-xmla.md) propiedades de la `Process` el comando para los objetos que se va a procesarse. Los enlaces fuera de línea son referencias a orígenes de datos, vistas del origen de datos y otros objetos en los que el enlace existe solamente durante la ejecución del comando `Process` y que invalidan cualquier enlace existente asociado a los objetos que se procesan. Si no se especifican enlaces fuera de línea, se utilizan los enlaces actualmente asociados a los objetos que se van a procesar.  
   
  Los enlaces fuera de línea se utilizan en las circunstancias siguientes:  
   
 -   Procesamiento incremental de una partición, donde debe especificarse una tabla de hechos alternativa o aplicarse un filtro a la tabla de hechos existente para asegurarse de que las filas no se cuentan dos veces.  
   
--   Utilizando una tarea de flujo de datos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para proporcionar datos al procesar una dimensión, el modelo de minería de datos o la partición.  
+-   Uso de una tarea de flujo de datos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para proporcionar datos al procesar una dimensión, el modelo de minería de datos o la partición.  
   
- Los enlaces fuera de línea se describen como parte de Analysis Services Scripting Language (ASSL). Para obtener más información sobre los enlaces fuera de línea en ASSL, vea [orígenes de datos y enlaces &#40;SSAS multidimensionales&#41;](../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Los enlaces fuera de línea se describen como parte de Analysis Services Scripting Language (ASSL). Para obtener más información sobre los enlaces fuera de línea en ASSL, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ### <a name="incrementally-updating-partitions"></a>Actualizar particiones de forma incremental  
  La actualización incremental de una partición ya procesada suele requerir un enlace fuera de línea, ya que el enlace especificado para la partición hace referencia a datos de la tabla de hechos ya agregados en la partición. Al actualizar incrementalmente una partición ya procesada mediante el comando `Process`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] realiza las siguientes acciones:  
@@ -104,7 +104,7 @@ ms.locfileid: "36202388"
  Para obtener más información acerca de cómo combinar particiones con XML for Analysis (XMLA), consulte [mezclar particiones &#40;XMLA&#41;](merging-partitions-xmla.md).  
   
 ## <a name="handling-processing-errors"></a>Controlar los errores de procesamiento  
- El [ErrorConfiguration](../xmla/xml-elements-properties/errorconfiguration-element-xmla.md) propiedad de la `Process` comando le permite especificar cómo controlar los errores encontrados al procesar un objeto. Por ejemplo, durante el procesamiento de una dimensión, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] encuentra un valor duplicado en la columna de clave del atributo clave. Dado que las claves de atributo deben ser únicas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] descarta los registros duplicados. En función de la [KeyDuplicate](../scripting/properties/keyduplicate-element-assl.md) propiedad de `ErrorConfiguration`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] podría:  
+ El [ErrorConfiguration](../xmla/xml-elements-properties/errorconfiguration-element-xmla.md) propiedad de la `Process` comando le permite especificar cómo controlar los errores detectados al procesar un objeto. Por ejemplo, durante el procesamiento de una dimensión, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] encuentra un valor duplicado en la columna de clave del atributo clave. Dado que las claves de atributo deben ser únicas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] descarta los registros duplicados. Según el [KeyDuplicate](../scripting/properties/keyduplicate-element-assl.md) propiedad de `ErrorConfiguration`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] podría:  
   
 -   Omitir el error y continuar el procesamiento de la dimensión.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36202388"
 ```  
   
 ### <a name="description"></a>Descripción  
- En el ejemplo siguiente se procesa de forma incremental el **Internet_Sales_2004** de partición en el **venta por Internet** grupo de medida de la **Adventure Works DW** cubo en el [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] ejemplo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos. El `Process` comando es agregar agregaciones para el orden de fechas a más tardar el 31 de diciembre de 2006 a la partición mediante un enlace de consultas fuera de línea en el `Bindings` propiedad de la `Process` comandos para recuperar las filas de la tabla de hechos desde el que se va a generar agregaciones para agregar a la partición.  
+ El ejemplo siguiente se procesa de forma incremental el **Internet_Sales_2004** de partición en la **Internet Sales** grupo de medida de la **Adventure Works DW** cubo en el [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] ejemplo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos. El `Process` comando es agregar agregaciones para el orden de fechas posterior al 31 de diciembre de 2006 a la partición mediante el uso de un enlace de consultas fuera de línea de la `Bindings` propiedad de la `Process` comando para recuperar las filas de tabla de hechos desde el que se va a generar agregaciones para agregar a la partición.  
   
 ### <a name="code"></a>código  
   

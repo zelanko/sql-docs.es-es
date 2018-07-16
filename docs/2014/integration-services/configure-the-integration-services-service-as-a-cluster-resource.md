@@ -1,5 +1,5 @@
 ---
-title: Configurar el servicio Integration Services como un recurso de clúster | Documentos de Microsoft
+title: Configurar el servicio Integration Services como un recurso de clúster | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8455d0a43e478cdb05f945269a3999b72fc581ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b524b2c570b3fac16403565716aaea36a31a7f24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223775"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Configurar el servicio Integration Services como recurso de clúster
   Para los clientes que decidan que las ventajas de configurar el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] como un recurso de clúster son más que los inconvenientes, esta sección contiene las instrucciones de configuración necesarias. Sin embargo, [!INCLUDE[msCoName](../includes/msconame-md.md)] no recomienda que el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se configure como un recurso de clúster.  
@@ -106,7 +106,7 @@ ms.locfileid: "36203243"
   
 3.  En el disco compartido, abra el archivo de configuración en un editor XML o de texto. Cambie el valor de la `ServerName` elemento en el nombre de la memoria virtual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se encuentra en el mismo grupo de recursos.  
   
-4.  Cambie el valor de la `StorePath` elemento a la ruta de acceso completa de la **paquetes** carpetas creados en el disco compartido en un paso anterior.  
+4.  Cambie el valor de la `StorePath` elemento a la ruta de acceso completa de la **paquetes** carpeta creada en el disco compartido en un paso anterior.  
   
 5.  Actualice el valor de **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** en el Registro a la ruta de acceso completa y el nombre de archivo del archivo de configuración del servicio en el disco compartido.  
   

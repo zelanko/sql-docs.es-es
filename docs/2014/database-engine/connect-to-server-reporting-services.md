@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connection.login.reportserver.f1
 ms.assetid: ef81b658-8eb5-4636-ac81-eead10cc7b9f
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 500624fbf81bc4ffc98ed3342878c2bf811005d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f98d7d47820765e4e4920c95f92d1154350af278
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293195"
 ---
 # <a name="connect-to-server-reporting-services"></a>Conectar al servidor (Reporting Services)
   Use este cuadro de diálogo para ver o especificar opciones cuando se conecte a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "36106592"
  **Nombre del servidor**  
  El modo de servidor de la instancia del servidor de informes al que se está conectando determina el valor que debe especificar.  
   
- En un servidor de informes que se ejecute en modo nativo, especifique la instancia del servidor de informes a la que conectarse. Si utiliza la instancia predeterminada, el nombre del servidor suele ser el nombre del equipo. Si ha instalado una instancia con nombre, anexe el nombre de instancia para el nombre del servidor en este formato: \<servername >\\< InstanceName\>. Reporting Services usa el carácter de barra diagonal inversa para delimitar el nombre de instancia.  
+ En un servidor de informes que se ejecute en modo nativo, especifique la instancia del servidor de informes a la que conectarse. Si utiliza la instancia predeterminada, el nombre del servidor suele ser el nombre del equipo. Si ha instalado una instancia con nombre, anexe el nombre de instancia al nombre del servidor en este formato: \<servername >\\< nombreDeInstancia\>. Reporting Services usa el carácter de barra diagonal inversa para delimitar el nombre de instancia.  
   
  Con un servidor de informes que se ejecute en el modo integrado de SharePoint, debe especificar un sitio de SharePoint. Puede especificar un sitio de una colección de sitios que esté integrada con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. La dirección URL que proporcione debe incluir el prefijo HTTP o HTTPS. Debe disponer de permiso para tener acceso al sitio de SharePoint con el fin de conectarse a él en Management Studio. El nivel de permisos que se le asigne determinará qué elementos puede ver y administrar. Para obtener más información, consulte [conectarse a un servidor de informes en Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: FORMAT_STRING, contenido (MDX) | Documentos de Microsoft
+title: FORMAT_STRING, contenido (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
 - VALUE property
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f017cd8b6f3e47e5c99e563babbfa3904dbd6f2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 198fadc6d3f2e1599c98ba5146e830fef5b8be17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293595"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING, contenido (MDX)
-  El `FORMAT_STRING` formatos de propiedad de celda la `VALUE` propiedad de celda, crea el valor para el `FORMATTED_VALUE` propiedad de la celda. El `FORMAT_STRING` controla la propiedad de celda numéricos y cadena de valores sin formato, aplicando una expresión de formato con el valor para devolver un valor con formato para el `FORMATTED_VALUE` propiedad de la celda. En las siguientes tablas se detallan la sintaxis y los caracteres de formato utilizados para controlar los valores numéricos y de cadena.  
+  El `FORMAT_STRING` formatos de la propiedad de celda el `VALUE` propiedad de celda, crea el valor para el `FORMATTED_VALUE` propiedad de celda. El `FORMAT_STRING` propiedad de celda controla los valores sin procesar numéricos y de cadena, aplicando una expresión de formato con respecto al valor para devolver un valor con formato para el `FORMATTED_VALUE` propiedad de celda. En las siguientes tablas se detallan la sintaxis y los caracteres de formato utilizados para controlar los valores numéricos y de cadena.  
   
 ## <a name="string-values"></a>Valores de cadena  
  Una expresión de formato para cadenas puede tener una sección o dos, separadas con punto y coma (;).  
@@ -154,8 +154,8 @@ ms.locfileid: "36203069"
   
 ## <a name="see-also"></a>Vea también  
  [LANGUAGE y FORMAT_STRING en FORMATED_VALUE](mdx-cell-properties-formatted-value-property.md)   
- [Uso de propiedades de celda &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
- [Crear y usar los valores de propiedad &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
- [Aspectos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Uso de las propiedades de celda &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
+ [Creación y uso de los valores de propiedad &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
+ [Aspectos básicos de consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Soluciones de modelos multidimensionales (SSAS) | Documentos de Microsoft
+title: Soluciones de modelos multidimensionales (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - objects [Analysis Services], defining objects
 - multidimensional data [Analysis Services], designing objects
 ms.assetid: fbc0698f-93d3-4292-86cd-afe3a2ec5b0a
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c85555caa6ef6ef832e7e01613bd636e59ccdca5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 566c9a2b53f58629148e28b57dfe9d98a55fd39b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330375"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>Soluciones de modelos multidimensionales (SSAS)
     
 ## <a name="in-this-section"></a>En esta sección  
  Los temas siguientes proporcionan orientación para diseñar objetos de base de datos multidimensionales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- [Las bases de datos de modelo multidimensional &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Bases de datos modelo multidimensionales &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
  Describe cómo definir una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  [Orígenes de datos admitidos &#40;SSAS Multidimensional&#41;](supported-data-sources-ssas-multidimensional.md)  

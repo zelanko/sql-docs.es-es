@@ -1,5 +1,5 @@
 ---
-title: Función LocalDBStartInstance | Documentos de Microsoft
+title: Función LocalDBStartInstance | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e484d362d5bc25a5aeddd6ed2ad9fee417837f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 4e2ecc8dbf59ddf108b8090bbcb5ad784b09fe67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242825"
 ---
 # <a name="localdbstartinstance-function"></a>Función LocalDBStartInstance
   Inicia la instancia de SQL Server Express LocalDB especificada.  

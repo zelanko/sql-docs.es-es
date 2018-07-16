@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d79eda61276d4251835b582b9a4f7cb52e8995b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1732ec8f0456fdb64860b5ac352edf6c99aaced
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228175"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Crear y editar un servicio CDC de Oracle
   Para crear y editar un nuevo servicio de Windows CDC de Oracle se emplea la Consola de configuración del servicio CDC.  

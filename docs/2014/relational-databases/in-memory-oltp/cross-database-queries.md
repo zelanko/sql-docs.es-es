@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 caps.latest.revision: 6
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: dd86d3e1c67cb1a87690919a6d9336a434d14954
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4a05172ba60d8aa200191065663f931a6bbffc03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264761"
 ---
 # <a name="cross-database-queries"></a>Consultas entre bases de datos
   En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], las tablas optimizadas para memoria no admiten las transacciones entre bases de datos. No puede tener acceso a otra base de datos desde la misma transacción o desde la misma consulta que tiene acceso también a una tabla optimizada para memoria. No puede copiar fácilmente los datos de una tabla de una base de datos en una tabla optimizada para memoria de otra base de datos.  
   
  Las variables de tabla no son transaccionales. Por tanto, se pueden utilizar las variables de tabla optimizada para memoria en consultas entre bases de datos y pueden así facilitar la migración de datos de una base de datos a tablas optimizadas para memoria de otra. Puede utilizar dos transacciones. En la primera transacción, inserte los datos de la tabla remota en la variable. En la segunda transacción, inserte los datos en la tabla optimizada para memoria local desde la variable.  
   
- Por ejemplo, para copiar las filas de la tabla t1 de la base de datos db1 en la tabla t2 de db2, utilizando variable @v1 de tipo dbo.tt1, puede usar algo parecido:  
+ Por ejemplo, para copiar la fila de la tabla t1 en la base de datos db1 en la tabla t2 de db2, utilizando la variable @v1 de tipo dbo.tt1, puede usar algo como:  
   
 ```tsql  
 USE db2   

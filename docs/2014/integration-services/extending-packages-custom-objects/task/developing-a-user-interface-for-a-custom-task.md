@@ -25,13 +25,13 @@ ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 354420f069357b7a8d350049cbddb04d25caf627
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d86350195a980f87e5e67ea4634ebadd0116355
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217635"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Desarrollar una interfaz de usuario para una tarea personalizada
   El modelo de objetos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permite a los desarrolladores de tareas personalizadas crear con facilidad una interfaz de usuario personalizada para una tarea que posteriormente se puede integrar y mostrar en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. La interfaz de usuario puede proporcionar información útil al usuario en el Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] y guiar a los usuarios para configurar correctamente las propiedades y los valores de la tarea personalizada.  
@@ -202,7 +202,7 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services  **<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Creating a Custom Task](creating-a-custom-task.md)  (Crear una tarea personalizada)  

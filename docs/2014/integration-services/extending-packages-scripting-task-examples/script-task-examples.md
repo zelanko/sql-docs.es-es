@@ -20,13 +20,13 @@ ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
 caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 97d23bdd3618943fa0dcba8b37ec762ab7225152
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fc17272161d3f93618ddd4e559bb630efdd50ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322605"
 ---
 # <a name="script-task-examples"></a>Ejemplos de tarea Script
   La tarea Script es una herramienta con varias funciones que puede utilizar en un paquete para satisfacer casi cualquier requisito que no cumplan las tareas incluidas con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. En este tema se enumeran los ejemplos de código de la tarea Script que muestran alguna de las funciones disponibles.  
@@ -81,6 +81,6 @@ ms.locfileid: "36204853"
  [Registrar en la tarea Script](../extending-packages-scripting/task/logging-in-the-script-task.md)  
  Registra el número de elementos procesados por la tarea para los proveedores de registro habilitados.  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services  **<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
   

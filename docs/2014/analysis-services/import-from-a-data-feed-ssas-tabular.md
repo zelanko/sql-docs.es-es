@@ -1,5 +1,5 @@
 ---
-title: Importar desde una fuente de datos (SSAS Tabular) | Documentos de Microsoft
+title: Importar desde una fuente de datos (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7869e07a67e7e3a74ee93ebef495eaba26d55317
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b476ed1641b5db87afefc8bc4787efed01e2a5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325145"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importar datos de una fuente de distribución de datos (SSAS tabular)
   Las fuentes de distribución de datos son uno o varios flujos de datos XML que se generan a partir de un origen de datos en línea y se transmiten a un documento o aplicación de destino. Puede importar datos desde una fuente de distribución de datos en el modelo mediante el Asistente para la importación de tablas.  
@@ -194,10 +194,10 @@ ms.locfileid: "36201711"
 12. En la página **Seleccionar tablas y vistas** , haga clic en **Finalizar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Orígenes de datos admitidos &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [Tipos de datos admitidos &#40;SSAS Tabular&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
- [Suplantación &#40;SSAS Tabular&#41;](tabular-models/impersonation-ssas-tabular.md)   
- [Procesar datos &#40;SSAS Tabular&#41;](process-data-ssas-tabular.md)   
- [Importar datos &#40;SSAS Tabular&#41;](import-data-ssas-tabular.md)  
+ [Orígenes de datos admitidos &#40;Tabular de SSAS&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Tipos de datos admitidos &#40;Tabular de SSAS&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
+ [Suplantación &#40;Tabular de SSAS&#41;](tabular-models/impersonation-ssas-tabular.md)   
+ [Procesar datos &#40;Tabular de SSAS&#41;](process-data-ssas-tabular.md)   
+ [Importar datos &#40;Tabular de SSAS&#41;](import-data-ssas-tabular.md)  
   
   

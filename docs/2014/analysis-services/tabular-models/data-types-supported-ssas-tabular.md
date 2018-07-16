@@ -1,5 +1,5 @@
 ---
-title: Tipos de datos compatibles (SSAS Tabular) | Documentos de Microsoft
+title: Tipos de datos compatibles (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee05d2f7d3526aafd180e9eda5372668f164cb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57bf1633f05f9692c3e5cc132bce6585734830a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237635"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Tipos de datos compatibles (SSAS tabular)
   En este artículo se describen los tipos de datos que se pueden usar en los modelos tabulares, así como la conversión implícita de los tipos de datos cuando los datos se calculan o se usan en una fórmula DAX (Expresiones de análisis de datos).  
@@ -50,11 +50,11 @@ ms.locfileid: "36203048"
 |Moneda|Moneda|El tipo de datos de moneda permite los valores comprendidos entre -922.337.203.685.477,5808 y 922.337.203.685.477,5807 con cuatro dígitos decimales de precisión fija.|  
 |N/D|En blanco|Un tipo en blanco es un tipo de datos de DAX que representa y reemplaza los valores NULL de SQL. Un valor en blanco se puede crear con la función BLANK y se puede comprobar si es tal con la función lógica ISBLANK.|  
   
- <sup>1</sup> fórmulas DAX no admiten tipos de datos que son menores que los enumerados en la tabla.  
+ <sup>1</sup> las fórmulas DAX no admiten tipos de datos que son menores que los enumerados en la tabla.  
   
- <sup>2</sup> si intenta importar datos con valores numéricos muy grandes, importación puede producir el siguiente error:  
+ <sup>2</sup> si intenta importar datos con valores numéricos muy elevados, puede producir un error de importación con el siguiente error:  
   
- Error de base de datos en memoria: el '\<nombre de columna >' columna de la '\<nombre de tabla >' tabla contiene un valor, ' 1. 7976931348623157E + 308' que no es compatible. La operación se ha cancelado.  
+ Error de base de datos en memoria: el '\<nombre de columna >' columna de la '\<nombre de tabla >' tabla contiene un valor, ' 1.7976931348623157e + 308', que no se admite. La operación se ha cancelado.  
   
  Este error se produce porque el diseñador de modelos utiliza ese valor para representar los valores NULL. Los valores de la siguiente lista son sinónimos del valor NULL mencionado anteriormente:  
   
@@ -195,7 +195,7 @@ ms.locfileid: "36203048"
  Para obtener información detallada sobre cómo una determinada función u operador trata los valores en blanco, vea los temas de cada función DAX en la sección [Referencia de funciones DAX](https://msdn.microsoft.com/library/ee634396.aspx).  
   
 ## <a name="see-also"></a>Vea también  
- [Orígenes de datos &#40;SSAS Tabular&#41;](../data-sources-ssas-tabular.md)   
- [Importar datos &#40;SSAS Tabular&#41;](../import-data-ssas-tabular.md)  
+ [Orígenes de datos &#40;Tabular de SSAS&#41;](../data-sources-ssas-tabular.md)   
+ [Importar datos &#40;Tabular de SSAS&#41;](../import-data-ssas-tabular.md)  
   
   

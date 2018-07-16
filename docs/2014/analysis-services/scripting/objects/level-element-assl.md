@@ -1,5 +1,5 @@
 ---
-title: Nivel de elemento (ASSL) | Documentos de Microsoft
+title: Nivel de elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Level element
 ms.assetid: 66ee2c16-d6b8-4dd3-879f-1f2b6923bc43
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 028375d525ec0197aec24a9005fd3f5f0e8fe769
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba9ca10d1d3ad2319e451d6008c6e8ad77078fc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263881"
 ---
 # <a name="level-element-assl"></a>Elemento Level (ASSL)
   Define un nivel en un [jerarquía](hierarchy-element-assl.md) elemento.  
@@ -65,7 +65,7 @@ ms.locfileid: "36202807"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elemento primario|[Levels](../collections/levels-element-assl.md)|  
-|Elementos secundarios|[Anotaciones](../collections/annotations-element-assl.md), [descripción](../properties/description-element-assl.md), [HideMemberIf](../properties/hidememberif-element-assl.md), [identificador](../properties/id-element-assl.md), [nombre](../properties/name-element-assl.md), [SourceAttributeID](../properties/attributeid-element-assl.md), [Traducciones](../collections/translations-element-assl.md)|  
+|Elementos secundarios|[Las anotaciones](../collections/annotations-element-assl.md), [descripción](../properties/description-element-assl.md), [HideMemberIf](../properties/hidememberif-element-assl.md), [ID](../properties/id-element-assl.md), [nombre](../properties/name-element-assl.md), [SourceAttributeID](../properties/attributeid-element-assl.md), [Traducciones](../collections/translations-element-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
  Este tipo de datos no tiene ninguna restricción en ningún modo de implementación (1-Multidimensional y minería de datos, 2-SharePoint y 3-Tabular).  

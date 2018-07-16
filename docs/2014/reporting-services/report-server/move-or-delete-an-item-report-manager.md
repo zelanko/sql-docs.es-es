@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving items
 - items [Reporting Services], moving
@@ -16,13 +16,13 @@ ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b3b4ede3a29c43cf2c77b61e2fe8fb6fb3b9e6ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ac8b351e0d3cd76650df17e2aa5aa00ed427be3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309325"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Mover o eliminar un elemento (Administrador de informes)
   Los informes y los elementos relacionados con los informes que se publican en un servidor de informes se almacenan en carpetas. Puede mover los elementos a una carpeta diferente, y el servidor de informes se ocupará de mantener las referencias a ellos automáticamente. Antes de eliminar un elemento, piense si otros elementos dependen de él.  
@@ -62,7 +62,7 @@ ms.locfileid: "36201299"
  O bien puede navegar hasta el objeto que desea mover, hacer clic en **Propiedades**y, a continuación, en **Mover** al principio de la página.  
   
 ## <a name="delete-an-item"></a>Eliminar un elemento  
- Antes de eliminar un elemento, piense si lo utilizan otros elementos. Por ejemplo, si elimina un origen de datos compartido, ya no se ejecutarán los informes y los modelos que usan dicho origen de datos. Si elimina un informe, también se eliminarán las suscripciones y el historial de informes asociado a dicho informe. Para buscar elementos dependientes para un elemento, vea [página elementos dependientes &#40;el Administrador de informes&#41;]... / dependientes de elementos de página de informe manager.md).  
+ Antes de eliminar un elemento, piense si lo utilizan otros elementos. Por ejemplo, si elimina un origen de datos compartido, ya no se ejecutarán los informes y los modelos que usan dicho origen de datos. Si elimina un informe, también se eliminarán las suscripciones y el historial de informes asociado a dicho informe. Para buscar elementos dependientes para un elemento, consulte [página elementos dependientes &#40;el Administrador de informes&#41;]... / dependiente de elementos de página de informe manager.md).  
   
 #### <a name="to-delete-a-report-or-item"></a>Para eliminar un informe o un elemento  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36201299"
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [El contenido de página &#40;el Administrador de informes&#41;]... / contenido-página-informes-manager.md)   
+ [El contenido de página &#40;el Administrador de informes&#41;]... / manager.md-contenido-página de informe)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

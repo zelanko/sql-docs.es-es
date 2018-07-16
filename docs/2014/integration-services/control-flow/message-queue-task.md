@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.messagequeuetask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3be2c48f2a3b2dc552d3f9c89bf2caf57b0e0bf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 176e1798f453771f17aa197e122521bb3852bbc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107693"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269671"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   La tarea Cola de mensajes le permite usar Message Queue Server (que también recibe el nombre de MSMQ) para enviar y recibir mensajes entre paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o enviar mensajes a una cola de aplicaciones procesada por una aplicación personalizada. Estos mensajes pueden adoptar la forma de texto simple, archivos o variables y sus valores.  
@@ -73,7 +73,7 @@ ms.locfileid: "36107693"
   
 -   Sobrescribir un archivo existente, si el mensaje se guarda en un `Data file`.  
   
--   Guardar el archivo de mensaje con un nombre de archivo diferente, si el mensaje utiliza el `Data file message` tipo.  
+-   Guardar el archivo de mensaje con un nombre de archivo diferente, si el mensaje usa el `Data file message` tipo.  
   
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>Mensajes de registro personalizados disponibles en la tarea Cola de mensajes  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Cola de mensajes. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
@@ -92,11 +92,11 @@ ms.locfileid: "36107693"
 ## <a name="configuration-of-the-message-queue-task"></a>Configuración de la tarea Cola de mensajes  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación. Para obtener información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de tareas de cola de mensajes &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea cola de mensajes &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de tareas de cola de mensajes &#40;página de recepción&#41;](../message-queue-task-editor-receive-page.md)  
+-   [Editor de la tarea cola de mensajes &#40;página de recepción&#41;](../message-queue-task-editor-receive-page.md)  
   
--   [Editor de tareas de cola de mensajes &#40;Enviar página&#41;](../message-queue-task-editor-send-page.md)  
+-   [Editor de la tarea cola de mensajes &#40;Enviar página&#41;](../message-queue-task-editor-send-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

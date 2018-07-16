@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de nivel de protección de proyecto y paquete | Documentos de Microsoft
+title: Cuadro de diálogo de nivel de protección de proyecto y de paquete | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.packageprotectionlevel.f1
 - sql12.ssis.bids.projectprotectionlevel.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Package Protection Level dialog box
 ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6e1f6bea2a13e223aa1466e43c600a83e32544f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 038c4b3f03b2dca9b0c6fd9676d21f7c16747a47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248835"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>Nivel de protección de paquetes y del proyecto, cuadro de diálogo
   Utilice el cuadro de diálogo **Nivel de protección de paquetes** para actualizar el nivel de protección de un paquete. El nivel de protección determina el método de protección, la contraseña o la clave de usuario, así como el ámbito de protección de paquetes. La protección puede incluir todos los datos o solo los datos confidenciales.  

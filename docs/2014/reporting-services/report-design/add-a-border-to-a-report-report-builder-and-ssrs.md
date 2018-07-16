@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4295a712f277047c4e205d83c44bbc0ff444db32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 086ed75848ad4b55178e1b64ad41ca052ef024ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272911"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Agregar un borde a un informe (Generador de informes y SSRS)
   Puede agregar un borde a un informe agregando bordes a los encabezados, pies de página y cuerpo del informe, sin tener que agregar líneas o rectángulos.  
@@ -41,6 +41,6 @@ ms.locfileid: "36202446"
 3.  Haga clic con el botón derecho en el pie de página, pero fuera de cualquier elemento del pie de página, y haga clic en **Propiedades de pie de página**. En la pestaña **Borde** , agregue un borde izquierdo, inferior y derecho con el estilo que desee.  
   
 ## <a name="see-also"></a>Vea también  
- [Rectángulos y líneas &#40;el generador de informes SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Rectángulos y líneas &#40;generador de informes y SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

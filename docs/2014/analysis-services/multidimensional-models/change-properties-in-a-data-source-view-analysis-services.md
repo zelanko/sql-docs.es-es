@@ -1,5 +1,5 @@
 ---
-title: Cambiar las propiedades de una vista del origen de datos (Analysis Services) | Documentos de Microsoft
+title: Cambiar las propiedades de una vista del origen de datos (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - friendly names [Analysis Services]
 - names [Analysis Services], data source views
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c740690921e496cffc70959e0494bcdfb190b16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f264928a8abde5e20738b0fb60d712aa9bef2320
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332515"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Cambiar las propiedades de una vista del origen de datos (Analysis Services)
   Una vez que haya definido una vista del origen de datos mediante el Asistente para vistas del origen de datos y le haya agregado tablas, vistas, cálculos con nombre y consultas con nombre, podría interesarle cambiar las propiedades relativas a:  

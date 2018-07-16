@@ -1,5 +1,5 @@
 ---
-title: Elemento BackupRemotePartitions (XMLA) | Documentos de Microsoft
+title: Elemento BackupRemotePartitions (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - BackupRemotePartitions element
 ms.assetid: bd68bcf9-b324-4fa8-b6e5-1f5531f9992c
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c32fd50514e96fee8de289666d8e559a78fe985b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d7cc7ccb441995d1c4aa3b22cccefcdc5224e486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200075"
 ---
 # <a name="backupremotepartitions-element-xmla"></a>Elemento BackupRemotePartitions (XMLA)
-  Determina si el elemento primario [copia de seguridad](../xml-elements-commands/backup-element-xmla.md) comando realiza una copia de las particiones remotas asociadas con el objeto.  
+  Determina si el elemento primario [copia de seguridad](../xml-elements-commands/backup-element-xmla.md) comando realiza una copia de las particiones remotas asociadas al objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36203492"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- Si `BackupRemotePartitions` se establece en `True`, se debe incluir un elemento `Locations` con uno o más elementos `Location` en el comando `Backup`, o se produce un error. Para obtener más información acerca de la copia de seguridad y restaurar las particiones remotas, consulte [realizar copias de seguridad, restaurar y sincronizar bases de datos &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Si `BackupRemotePartitions` se establece en `True`, se debe incluir un elemento `Locations` con uno o más elementos `Location` en el comando `Backup`, o se produce un error. Para obtener más información acerca de la copia de seguridad y restaurar particiones remotas, consulte [realizar copias de seguridad, restaurar y sincronizar bases de datos &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento Locations &#40;XMLA&#41;](locations-element-xmla.md)   

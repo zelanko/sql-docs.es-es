@@ -1,5 +1,5 @@
 ---
-title: El Script MDX básico (MDX) | Documentos de Microsoft
+title: El Script MDX básico (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default MDX scripts
 - statements [MDX]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - scripts [MDX], about scripts
 ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 501268fe4537e261b21af317fd90da32efb0e917
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fcdb7be7a4e3a9ab29dc93f899f3035cf68264c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303105"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>Script MDX básico (MDX)
   Un script MDX (Expresiones multidimensionales) define el proceso de cálculo de un cubo en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Hay dos tipos de scripts MDX:  
@@ -64,7 +64,7 @@ ms.locfileid: "36107748"
   
  Para más información sobre las instrucciones para scripting de MDX, vea [Instrucciones para scripting de MDX &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx).  
   
- [CREAR MIEMBROS](/sql/mdx/mdx-data-definition-create-member)  
+ [CREAR MIEMBRO](/sql/mdx/mdx-data-definition-create-member)  
  La instrucción CREATE MEMBER crea miembros calculados. Para más información sobre cómo crear miembros calculados, vea [Generar miembros calculados en MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md).  
   
  [CREAR CONJUNTO](/sql/mdx/mdx-data-definition-create-set)  

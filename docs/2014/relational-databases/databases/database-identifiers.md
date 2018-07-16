@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 70656cbec692852b60fd6b683e96fd1489f0f2a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ec8e78ebf44a325490e937bea070cb4fc4d59178
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231265"
 ---
 # <a name="database-identifiers"></a>Identificadores de base de datos
   El nombre de un objeto de base de datos se conoce como su identificador. Cualquier elemento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede tener un identificador. Servidores, bases de datos y objetos de bases de datos, como tablas, vistas, columnas, índices, desencadenadores, procedimientos, restricciones, reglas, etc. pueden tener identificadores. Se requiere que la mayor parte de los objetos tengan identificadores; pero para ciertos objetos, como las restricciones, son opcionales.  

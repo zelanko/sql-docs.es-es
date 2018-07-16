@@ -1,5 +1,5 @@
 ---
-title: 'Estructuras de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Estructuras de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - mining structures [Analysis Services], about mining structures
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
 caps.latest.revision: 76
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fd363ece9193f05bf3cb9026b8520b027023b015
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c51246efc1e93c596ad18aec7ba4e72e1399e2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288501"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Estructuras de minería de datos (Analysis Services - Minería de datos)
   La estructura de minería de datos define los datos a partir de los cuales se generan los modelos de minería de datos: especifica la vista de datos de origen, el número y el tipo de columnas, y una partición opcional en conjuntos de entrenamiento y de pruebas. Una misma estructura de minería de datos puede admitir varios modelos de minería de datos que comparten el mismo dominio. En el diagrama siguiente, se muestra la relación de la estructura de minería de datos con el origen de datos y con los modelos de minería de datos que la componen.  
@@ -126,6 +126,6 @@ ms.locfileid: "36107517"
   
 ## <a name="see-also"></a>Vea también  
  [Objetos de base de datos &#40;Analysis Services - datos multidimensionales&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Modelos de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-models-analysis-services-data-mining.md)  
+ [Los modelos de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-models-analysis-services-data-mining.md)  
   
   

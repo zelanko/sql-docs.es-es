@@ -1,5 +1,5 @@
 ---
-title: Opciones (Editor de texto - General-Transact-SQL) | Documentos de Microsoft
+title: Opciones (Editor de texto - página General-Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.General
 dev_langs:
@@ -17,15 +17,15 @@ ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d25699b25ec9bcde2a2df2bc1115a1e3f752c035
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3732baa8de28448b578673ead90e9cbfa62abba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257211"
 ---
-# <a name="options-text-editor---transact-sql--general-page"></a>Opciones (Editor de texto - General-Transact-SQL)
+# <a name="options-text-editor---transact-sql--general-page"></a>Opciones (Editor de texto - página General-Transact-SQL)
   Utilice el cuadro de diálogo **General** para cambiar el comportamiento general de la edición del Editor de consultas del [!INCLUDE[ssDE](../includes/ssde-md.md)] , que se utiliza para modificar los scripts de [!INCLUDE[tsql](../includes/tsql-md.md)] . Para mostrar esta configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda la subcarpeta **Transact-SQL** y luego haga clic en **General**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Establecer opciones en varias ubicaciones  
@@ -45,13 +45,13 @@ ms.locfileid: "36108151"
  **Habilitar espacio virtual**  
  Cuando esta casilla está activada, puede hacer clic en cualquier parte situada más allá del final de una línea de código y escribir. Seleccione esta casilla para colocar comentarios en un punto coherente junto al código. Si se activa esta casilla, se deshabilita la casilla **Ajuste de línea** .  
   
- **Ajuste automático de línea**  
+ **Ajuste de línea**  
  Cuando se selecciona esta casilla, cualquier parte de una línea que se extienda horizontalmente fuera del área visible del editor se mostrará automáticamente en la siguiente línea. La activación de esta casilla habilita la casilla **Mostrar glifos visuales para ajuste de línea** y deshabilita la casilla **Habilitar espacio virtual** .  
   
  **Mostrar glifos visuales para ajuste de línea**  
  Cuando esta casilla está activada, aparecerá un indicador de flecha de retorno donde una línea larga se ajusta respecto a la línea siguiente.  
   
- **Aplicar comandos Cortar o copiar a líneas en blanco si no hay selección**  
+ **Aplicar comandos Cortar o copiar a líneas en blanco cuando no hay ninguna selección**  
  Esta casilla establece el comportamiento del editor cuando el punto de inserción se coloca en una línea en blanco, no se selecciona nada y se hace clic en **Copiar** o **Cortar**.  
   
  Cuando se selecciona esta casilla, se copia o se corta la línea en blanco. Si luego hace clic en **Pegar**, se insertará una nueva línea en blanco.  

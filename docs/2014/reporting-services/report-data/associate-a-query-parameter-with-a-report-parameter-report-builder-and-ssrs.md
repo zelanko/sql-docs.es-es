@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [Reporting Services], parameters
 - parameters [Reporting Services], queries
 ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 caps.latest.revision: 47
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c9d7c519e79330e3295a7d3b3dca1e6a9a131087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d1755bf2afe801626d81689ba2a520a39137fa06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272351"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>Asociar un parámetro de consulta a un parámetro de informe (Generador de informes y SSRS)
   Cuando define una consulta de conjunto de datos que contiene una variable de consulta, se analiza el comando de consulta. Para cada variable de consulta, se crea un parámetro de informe y un parámetro de conjunto de datos correspondientes. El parámetro de conjunto de datos señala el parámetro de informe. Esto permite al usuario especificar un valor que pasa directamente a la consulta. Cada vez que se modifica el comando de consulta, se realiza el mismo proceso.  
@@ -52,6 +52,6 @@ ms.locfileid: "36201535"
   
 ## <a name="see-also"></a>Vea también  
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Concepto de parámetros de informe &#40;el generador de informes SSRS&#41;](../report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
+ [Concepto de parámetros de informe &#40;generador de informes y SSRS&#41;](../report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
   

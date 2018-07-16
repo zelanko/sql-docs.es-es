@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b92aba7afebc203ba8d32386eaf0dd154d97c208
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8d47f5480a5e01000b23830d36fb6b0da586dfa4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246475"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lección 3: Diseñar el informe primario usando el Asistente para informes
   Después de crear una conexión de datos y una tabla de datos para el informe primario, el paso siguiente consiste en diseñar dicho informe usando el Asistente para informes del Diseñador de informes. Para más información sobre el Diseñador de informes, vea [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "36106905"
   
      Así se inicia el Asistente para informes.  
   
-4.  En el **propiedades de conjunto de datos** página, en la **origen de datos** cuadro, seleccione la **DataSet1** que creó en [lección 2: definir una conexión de datos y la tabla de datos para Primario informe](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+4.  En el **las propiedades del conjunto de datos** página, en el **origen de datos** cuadro, seleccione el **DataSet1** que creó en [lección 2: definir una conexión de datos y una tabla de datos para Primario informe](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
     El cuadro **Conjuntos de datos disponibles** se actualiza automáticamente con la **DataTable** que creó anteriormente.  
   
 5.  Haga clic en **Siguiente**.  

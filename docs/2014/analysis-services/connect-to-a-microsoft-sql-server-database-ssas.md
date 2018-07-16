@@ -1,5 +1,5 @@
 ---
-title: Conectarse a una base de datos de Microsoft SQL Server (SSAS) | Documentos de Microsoft
+title: Conectarse a una base de datos de Microsoft SQL Server (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlserverdb.f1
 ms.assetid: 6ebfe029-dbba-4f0d-a556-328e79ef629f
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 30c7c942e2df39ceb1bf1bd7f4afd91c54f6f238
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 50dcb1cfa930a6fd09ff1f25d91b4ad4e5b42acb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189462"
 ---
 # <a name="connect-to-a-microsoft-sql-server-database-ssas"></a>Conectarse a una base de datos de Microsoft SQL Server (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite especificar los valores para conectarse con una base de datos de Microsoft SQL Server. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  

@@ -1,5 +1,5 @@
 ---
-title: Elemento KeyColumn (ASSL) | Documentos de Microsoft
+title: Elemento KeyColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - KeyColumn element
 ms.assetid: 7b03eeb3-d478-4c38-822e-8cdfcc485039
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7594a92eb8c2eb4cdb423c7298bc3929dc49dc32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e27744d2c8e2d54d44318ceac7b79dc4e4e10e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247765"
 ---
 # <a name="keycolumn-element-assl"></a>Elemento KeyColumn (ASSL)
-  Contiene la definición de una columna que es o forma parte de la clave de un atributo.  
+  Contiene la definición de una columna que es o forma parte de la clave para un atributo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36107730"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|[Elemento de datos](../data-type/dataitem-data-type-assl.md)|  
+|Tipo y longitud de los datos|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Valor predeterminado|None|  
 |Cardinalidad|1-n: Elemento necesario que puede aparecer más de una vez.|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36107730"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- Para obtener más información sobre la `DataItem` tipo, incluida una tabla de objetos de Analysis Services Scripting Language (ASSL) y las propiedades de la `DataItem` los tipos, vea [tipo de datos DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+ Para obtener más información sobre la `DataItem` tipo, incluida una tabla de objetos de Analysis Services Scripting Language (ASSL) y las propiedades de la `DataItem` , vea [tipo de datos DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
  Los elementos que corresponden a los elementos primarios de la colección `KeyColumns` en el modelo de objetos de Objetos de administración de análisis (AMO) son <xref:Microsoft.AnalysisServices.AggregationInstanceAttribute>, <xref:Microsoft.AnalysisServices.DimensionAttribute>, <xref:Microsoft.AnalysisServices.MeasureGroupAttribute> y <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   

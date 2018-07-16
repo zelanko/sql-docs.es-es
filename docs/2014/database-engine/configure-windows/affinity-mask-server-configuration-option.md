@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default affinity mask option
 - reloading processor cache
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6c0c94785452841642edac541d9c120bfbd7ad14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 41fad115e39068b60f9d1a08b4fcf08b2c3d392a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271971"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask (opción de configuración del servidor)
     
@@ -118,7 +118,7 @@ GO
 |127|01111111|0, 1, 2, 3, 4, 5 y 6|  
 |255|11111111|0, 1, 2, 3, 4, 5, 6 y 7|  
   
- La opción affinity mask es una opción avanzada. Si utiliza el procedimiento almacenado del sistema sp_configure para cambiar la configuración, puede cambiar `affinity mask` sólo cuando **Mostrar opciones avanzadas** está establecido en 1. Después de ejecutar el comando RECONFIGURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] , la nueva configuración se aplica inmediatamente sin necesidad de reiniciar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ La opción affinity mask es una opción avanzada. Si utiliza el procedimiento almacenado del sistema sp_configure para cambiar la configuración, puede cambiar `affinity mask` solo cuando **Mostrar opciones avanzadas** está establecido en 1. Después de ejecutar el comando RECONFIGURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] , la nueva configuración se aplica inmediatamente sin necesidad de reiniciar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="non-uniform-memory-access-numa"></a>Acceso no uniforme a memoria (NUMA)  
  Cuando se utiliza el acceso no uniforme a memoria (NUMA) basado en hardware y se ha establecido affinity mask, se establecerá la afinidad de cada programador de un nodo con su propia CPU. Cuando no se establece la opción affinity mask, se establece la afinidad de cada programador con el grupo de CPU en un nodo NUMA y un programador asignado al nodo NUMA N1 puede programar trabajos en cualquier CPU del nodo, pero no en las CPU asociadas a otro nodo.  

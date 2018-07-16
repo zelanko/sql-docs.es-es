@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar perspectivas (SSAS Tabular) | Documentos de Microsoft
+title: Crear y administrar perspectivas (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.perspectivedb.f1
 ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3d49d87c3cd5ff2b4ae68e485cfa9cc5afe31d6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 799e225a852f0eb1b4a35861df64fbe437af6a91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254837"
 ---
 # <a name="create-and-manage-perspectives-ssas-tabular"></a>Crear y administrar perspectivas (SSAS tabular)
   Las perspectivas definen subconjuntos visibles de un modelo que ofrecen puntos de vista centrados, específicos del negocio o específicos de la aplicación del modelo. Las tareas de este tema explican cómo crear y administrar perspectivas mediante el cuadro de diálogo **Perspectivas** del diseñador de modelos.  
@@ -64,7 +64,7 @@ ms.locfileid: "36107714"
 -   Al mantener el mouse sobre el encabezado de columna de una perspectiva, aparece el botón **Copiar** . Para crear una copia de esa perspectiva, haga clic en el botón **Copiar** . Se agregará una copia de la perspectiva seleccionada como una perspectiva nueva a la derecha de las perspectivas existentes. La nueva perspectiva hereda el nombre de la perspectiva copiada y se anexa una anotación *-Copia* al final del nombre. Por ejemplo, si se crea una copia de la perspectiva *Ventas* , la nueva perspectiva se llama *Ventas – Copiar*.  
   
 ## <a name="see-also"></a>Vea también  
- [Las perspectivas &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)   
- [Jerarquías &#40;SSAS Tabular&#41;](hierarchies-ssas-tabular.md)  
+ [Las perspectivas &#40;Tabular de SSAS&#41;](perspectives-ssas-tabular.md)   
+ [Jerarquías &#40;Tabular de SSAS&#41;](hierarchies-ssas-tabular.md)  
   
   

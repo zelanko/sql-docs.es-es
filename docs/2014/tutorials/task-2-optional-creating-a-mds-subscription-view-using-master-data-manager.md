@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 2 (opcional): Crear una vista de suscripciones de MDS con Master Data Manager | Documentos de Microsoft'
+title: 'Tarea 2 (opcional): Crear una vista de suscripciones de MDS con Master Data Manager | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,21 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f3da8219-e0cb-4848-95ca-285a76ec1ba9
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4883d4f5c7bef05de9625c2fcb7bac235c0306e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1245beb168f2781e5acca344eb412bde104e4c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284251"
 ---
 # <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Tarea 2 (opcional): crear una vista de suscripciones de MDS con Master Data Manager
-  En esta tarea, creará una vista de suscripciones para exponer el **proveedor** entidad en el **proveedores** modelo para otras aplicaciones. No use esta vista en la versión actual del tutorial.  
+  En esta tarea, creará una vista de suscripciones para exponer el **proveedor** entidad en el **proveedores** modelos para otras aplicaciones. No use esta vista en la versión actual del tutorial.  
   
 1.  Cambie a la página principal de **Master Data Manager** ([http://localhost/MDS](http://localhost/MDS)), haga clic en **SQL Server 2012 Master Data Services** en la parte superior.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "36203315"
   
 9. Seleccione **miembros hoja** para **formato**.  
   
-     ![Botón de vista de suscripción guardar](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-02.jpg "guardar botón de vista de suscripción")  
+     ![Botón de vista de suscripción guardar](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-02.jpg "guardar el botón de vista de suscripción")  
   
-10. Haga clic en **guardar** en la barra de herramientas para guardar la vista de suscripción. Esta acción crea una vista en SQL Server denominada **proveedores**. Puede comprobarlo con SQL Server Management Studio (SSMS).  
+10. Haga clic en **guardar** en la barra de herramientas para guardar la vista de suscripciones. Esta acción crea una vista en SQL Server denominada **proveedores**. Puede comprobarlo con SQL Server Management Studio (SSMS).  
   
 ## <a name="next-step"></a>Paso siguiente  
  [Tarea 3 &#40;opcional&#41;: revisar las vistas de suscripción](task-3-optional-reviewing-the-subscription-views.md)  

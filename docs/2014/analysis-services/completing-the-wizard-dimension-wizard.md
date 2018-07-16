@@ -1,5 +1,5 @@
 ---
-title: Finalización del asistente (Asistente para dimensiones) | Documentos de Microsoft
+title: Finalización del asistente (Asistente para dimensiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.finish.f1
 ms.assetid: 1137740d-3063-4ab1-9cfe-8319194db937
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 191c0fd95b4a6a12517bb926b631cbfe05979e68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91e498fc8ca6b995dc30b2a2e271b90a627b8940
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196565"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>Finalización del asistente (Asistente para dimensiones)
   Use la página **Finalización del asistente** para realizar los procedimientos siguientes:  
@@ -50,7 +50,7 @@ ms.locfileid: "36203068"
 >  Esta opción solo aparece si ha seleccionado **Generar una tabla de tiempos en el origen de datos** o **Generar una tabla que no sea de tiempos en el origen de datos** en la página **Seleccionar método de creación**. Para obtener más información, vea [Seleccionar método de creación &#40;Asistente para dimensiones&#41;](select-creation-method-dimension-wizard.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente de dimensiones (Ayuda F1)](dimension-wizard-f1-help.md)   
+ [Ayuda de F1 del Asistente para dimensiones](dimension-wizard-f1-help.md)   
  [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

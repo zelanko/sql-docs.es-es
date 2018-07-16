@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.newaglistener.general.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 caps.latest.revision: 50
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2594ecdb53df53413f3851203ae110c1de754dd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ae14ea283a7558b854481f435d6c9a62e5b51e52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225905"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Crear o configurar un agente de escucha del grupo de disponibilidad (SQL Server)
   En este tema se describe cómo crear o configurar un único *agente de escucha del grupo de disponibilidad* para un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -242,14 +241,14 @@ ms.locfileid: "36107957"
   
      **Ventajas:** no necesita aumentar el valor de tiempo de espera de la conexión de cliente.  
   
-     **Inconvenientes:** si se produce una conmutación por entre subredes, el tiempo de recuperación de cliente podría ser de 15 minutos o más, según su `HostRecordTTL` configuración y la configuración de la programación de replicación DNS/AD entre sitios.  
+     **Inconvenientes:** si se produce una conmutación por entre subredes, el tiempo de recuperación del cliente podría ser de 15 minutos o más, según su `HostRecordTTL` configuración y la configuración de la programación de replicación DNS/AD entre sitios.  
   
 ###  <a name="RegisterAllProvidersIP"></a> Valor de RegisterAllProvidersIP  
  Cuando usa [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell para crear un agente de escucha del grupo de disponibilidad, el punto de acceso cliente se crea en WSFC con la propiedad `RegisterAllProvidersIP` configurada a 1 (true). El efecto de este valor de propiedad depende de la cadena de conexión de cliente, de la manera siguiente:  
   
 -   Cadenas de conexión que establecen `MultiSubnetFailover` en true  
   
-     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] establece el `RegisterAllProvidersIP` propiedad en 1 para reducir el tiempo de reconexión después de una conmutación por error para los clientes cuyas cadenas de conexión de cliente especifican `MultiSubnetFailover = True`, como se recomienda. Tenga en cuenta que para aprovechar la característica de múltiples subredes del agente de escucha, puede que los clientes necesiten un proveedor de datos que admita la palabra clave `MultiSubnetFailover`. Para más información sobre la compatibilidad del controlador con la conmutación por error de varias subredes, vea [Conectividad de cliente de AlwaysOn &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
+     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] establece el `RegisterAllProvidersIP` propiedad en 1 para reducir el tiempo de reconexión tras una conmutación por error para los clientes cuyas cadenas de conexión de cliente especifiquen `MultiSubnetFailover = True`, como se recomienda. Tenga en cuenta que para aprovechar la característica de múltiples subredes del agente de escucha, puede que los clientes necesiten un proveedor de datos que admita la palabra clave `MultiSubnetFailover`. Para más información sobre la compatibilidad del controlador con la conmutación por error de varias subredes, vea [Conectividad de cliente de AlwaysOn &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
   
      Para obtener información sobre la agrupación en clústeres de varias subredes, vea [Agrupación en clústeres de varias subredes de SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
@@ -265,7 +264,7 @@ ms.locfileid: "36107957"
      Cuando `RegisterAllProvidersIP = 1`, los clientes cuyas cadenas de conexión no usan =MultiSubnetFailover = True `MultiSubnetFailover = True`, experimentarán conexiones con latencia elevada. Esto se debe a que estos clientes intentan conexiones a todas las direcciones IP de forma secuencial. En cambio, si `RegisterAllProvidersIP` se cambia a 0, la dirección IP activa se registra en el punto de acceso cliente del clúster de WSFC, lo que reduce la latencia de los clientes heredados. Por tanto, si tiene clientes heredados que necesitan conectarse a un agente de escucha del grupo de disponibilidad y no puede usar la propiedad `MultiSubnetFailover`, se recomienda cambiar `RegisterAllProvidersIP` a 0.  
   
     > [!IMPORTANT]  
-    >  Cuando se crea un agente de escucha del grupo de disponibilidad en el clúster de WSFC (GUI del Administrador de clústeres de conmutación por error), `RegisterAllProvidersIP` será 0 (false) de forma predeterminada.  
+    >  Cuando se crea un agente de escucha del grupo de disponibilidad a través del clúster WSFC (GUI del Administrador de clústeres de conmutación por error), `RegisterAllProvidersIP` será 0 (false) de forma predeterminada.  
   
 ###  <a name="HostRecordTTL"></a> Configuración de HostRecordTTL  
  De forma predeterminada, los clientes almacenan en memoria caché los registros DNS de clúster durante 20 minutos.  Al reducir el valor de `HostRecordTTL`, el Período de vida (TTL), para el registro almacenado en memoria caché, los clientes heredados pueden reconectarse más rápidamente.  Sin embargo, la reducción del valor `HostRecordTTL` puede producir también mayor tráfico hacia los servidores DNS.  
@@ -331,10 +330,10 @@ Start-ClusterResource yourAGResource
   
 -   [How to create multiple listeners for same availability group (Cómo crear varios agentes de escucha para el mismo grupo de disponibilidad)](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)  
   
--   [Blog del equipo de AlwaysOn SQL Server: Blog oficial del SQL Server AlwaysOn equipo](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog del equipo de AlwaysOn SQL Server: El blog oficial AlwaysOn de SQL Server del equipo](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Agrupación en clústeres de varias subredes de SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
   

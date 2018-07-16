@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data types [SQL Server], extended stored procedures
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9bf26c199332522c91bdc014f6b38b96bd913287
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 6bbf8c994f86502dd43b26ef588d864aa4dbbc4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208995"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Tipos de datos (API de procedimiento almacenado extendido)
     

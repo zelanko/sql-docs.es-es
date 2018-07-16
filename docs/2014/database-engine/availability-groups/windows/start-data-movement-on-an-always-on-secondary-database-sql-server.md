@@ -1,27 +1,26 @@
 ---
-title: Iniciar el movimiento de datos en una base de datos secundaria AlwaysOn (SQL Server) | Documentos de Microsoft
+title: Iniciar el movimiento de datos en una base de datos secundaria AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 caps.latest.revision: 15
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 90fac7dfcd395b3a788360232c872c830259ba0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cbec6a7aa6c1ac92dbf64fe018800a223084e4e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252797"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>Iniciar el movimiento de datos en una base de datos secundaria AlwaysOn (SQL Server)
   Este tema contiene información sobre cómo iniciar la sincronización de datos después de agregar una base de datos a un grupo de disponibilidad AlwaysOn. Para cada nueva réplica principal, las bases de datos secundarias deben estar preparadas en las instancias de servidor que hospedan las réplicas secundarias. Después, cada una de estas bases de datos secundarias se debe unir manualmente al grupo de disponibilidad.  
@@ -46,7 +45,7 @@ ms.locfileid: "36203260"
   
          **Para obtener más información:**  
   
-         [Requisitos previos para la migración de trasvase de registros a grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+         [Requisitos previos para migrar de trasvase de registros a grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
          [Configurar la copia de seguridad en réplicas de disponibilidad &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -65,6 +64,6 @@ ms.locfileid: "36203260"
 -   [Usar el Asistente para agregar una base de datos al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

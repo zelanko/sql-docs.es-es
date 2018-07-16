@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 caps.latest.revision: 57
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a65acdb83f7a9bccc36751a760d61133597caf8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ecdadef4e49f3630c78fc33c1c6f490deda26b5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274751"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Usar expresiones en informes (Generador de informes y SSRS)
   Las expresiones se usan durante la definición de informe para especificar o calcular valores para: parámetros, consultas, filtros, propiedades de elementos de informe, definiciones de ordenación y de grupos, propiedades de cuadros de texto, marcadores, mapas de documento, contenido de encabezados y pies de página dinámicos, imágenes y definiciones de orígenes de datos dinámicas. En este tema, se proporcionan ejemplos de los muchos lugares en los que se pueden usar expresiones para modificar el contenido o el aspecto de un informe. Esta lista no es una lista completa. Puede establecer una expresión para una propiedad de un cuadro de diálogo que muestre el botón (**fx**) de la expresión o en una lista desplegable que muestre **\<Expression...>**.  
@@ -80,10 +80,10 @@ ms.locfileid: "36107818"
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md)   
- [Ejemplos de ecuaciones de filtro &#40;el generador de informes SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
+ [Ejemplos de ecuaciones de filtro &#40;generador de informes y SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Encabezados y pies de página &#40;el generador de informes SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [Aplicar formato a texto y marcadores de posición &#40;el generador de informes SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Encabezados y pies de página &#40;generador de informes y SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Aplicar formato a texto y marcadores de posición &#40;generador de informes y SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Ocultar un elemento &#40;Generador de informes y SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

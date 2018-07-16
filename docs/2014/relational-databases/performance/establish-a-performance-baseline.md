@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database performance [SQL Server], baselines
 - monitoring performance [SQL Server], baselines
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - database monitoring [SQL Server], baselines
 ms.assetid: dc5aa8d6-2507-448f-ad86-4196443915fc
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e0eea5cd429daa580bd3193050f4267b361e66dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a7f7d262360a4f8d5e5530ea31934faed563a0e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296615"
 ---
 # <a name="establish-a-performance-baseline"></a>Establecer una línea base del rendimiento
   Para determinar si el sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funciona de forma óptima, tome medidas del rendimiento a intervalos regulares, incluso cuando no existan problemas, para establecer una línea base del rendimiento del servidor. Compare cada conjunto de medidas nuevo con las medidas tomadas anteriormente.  

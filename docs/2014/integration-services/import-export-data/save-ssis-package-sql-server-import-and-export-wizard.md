@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 71f0b516b53a7682665c54be4403c5d10a4e5417
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f3d8c7a80e7303c6120eabd029791a5401e4d253
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304315"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Guardar el paquete SSIS (Asistente para importación y exportación de SQL Server)
-  Use la **guardar el paquete SSIS** página Nombre, describir y guardar un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) el paquete a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` la base de datos o a un archivo que tiene el dtsx extensión.  
+  Use la **guardar el paquete SSIS** página Nombre, describir y guardar un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) del paquete para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` de base de datos o a un archivo que tiene el dtsx extensión.  
   
 > [!NOTE]  
 >  En [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], la opción para guardar el paquete creado por el asistente no está disponible.  
   
- Para más información acerca de este asistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información acerca de las opciones para iniciar el asistente y sobre los permisos necesarios para ejecutar el asistente correctamente, consulte [ejecutar la importación de SQL Server y el Asistente para exportación de](start-the-sql-server-import-and-export-wizard.md).  
+ Para más información acerca de este asistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información sobre las opciones para iniciar el asistente y sobre los permisos necesarios para ejecutar el asistente correctamente, consulte [ejecutar la importación de SQL Server y el Asistente para exportación de](start-the-sql-server-import-and-export-wizard.md).  
   
  La finalidad del Asistente para importación y exportación de SQL Server es copiar datos desde un origen a un destino. El asistente también puede crear una base de datos y tablas de destino. Sin embargo, si tiene que copiar diversas bases de datos o tablas, u otros tipos de objetos de bases de datos, debe utilizar el Asistente para copiar bases de datos. Para más información, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36200990"
  Escriba una descripción para el paquete. Como práctica recomendada, describa el paquete en función de su objetivo para que los paquetes se documenten por sí mismos y su mantenimiento resulte sencillo.  
   
  **Destino**  
- Ver el destino ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un archivo) que se especificó anteriormente para el archivo de destino.  
+ Ver el destino ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o archivo) que se especificó anteriormente para el archivo de destino.  
   
 ## <a name="target-dynamic-options"></a>Opciones dinámicas de destino  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36200990"
  Cuando haya seleccionado un destino de archivo, escriba la ruta de acceso del archivo de destino, o utilice el **examinar** botón.  
   
  **Examinar**  
- Cuando haya seleccionado un destino de archivo, busque el archivo de destino mediante el uso de la **Guardar paquete** cuadro de diálogo.  
+ Cuando haya seleccionado un destino de archivo, busque el archivo de destino mediante el **guardar el paquete** cuadro de diálogo.  
   
 ## <a name="see-also"></a>Vea también  
  [Guardar paquetes](../save-packages.md)  

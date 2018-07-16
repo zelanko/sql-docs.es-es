@@ -1,5 +1,5 @@
 ---
-title: Usar Variables en paquetes | Documentos de Microsoft
+title: Usar Variables en paquetes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined variables [Integration Services]
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 81678b498e9c4eca48a0d9de2b5f7070693e7d90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0cc23cf94eef3998e1079a09be5978e4c594ca9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285421"
 ---
 # <a name="use-variables-in-packages"></a>Usar variables en paquetes
   Las variables son una adición útil y flexible para los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ; las variables pueden permitir la comunicación entre los objetos del paquete, y entre los paquetes primarios y secundarios. También se pueden utiliza variables en expresiones y scripts.  
@@ -57,8 +57,8 @@ ms.locfileid: "36201181"
   
 ### <a name="to-add-modify-and-delete-user-defined-variables"></a>Para agregar, modificar y eliminar variables definidas por el usuario  
   
--   [Agregar, eliminar, cambiar el ámbito de la Variable definida por el usuario en un paquete](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
+-   [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
--   [Establecer las propiedades de una Variable definida por el usuario](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)  
+-   [Establecer las propiedades de una variable definida por el usuario](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)  
   
   

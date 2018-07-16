@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.LOGIN.SERVERROLES.F1
 - sql12.swb.login.databaseaccess.f1
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 27f80c34522042794bae5fee9a99bfd95bb15d4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 01ea98feb38ee8fcfdf7a021f9663bd8001ff941
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274671"
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
   En este tema se describe cómo crear un inicio de sesión en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un inicio de sesión es la identidad de la persona o proceso que se está conectando a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -58,7 +57,7 @@ ms.locfileid: "36106547"
 > [!NOTE]  
 >  Para usar la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] debe utilizar la autenticación de modo mixto. Para obtener más información, vea [Elegir un modo de autenticación](../choose-an-authentication-mode.md).  
   
- Como entidad de seguridad, se pueden conceder permisos a los inicios de sesión. El ámbito de un inicio de sesión es todo el [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Para establecer conexión con una base de datos concreta de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un inicio de sesión debe estar asignado a un usuario de la base de datos. Los permisos dentro de la base de datos se conceden y deniegan al usuario de la base de datos, no al inicio de sesión. Los permisos que tienen el ámbito de la instancia completa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (por ejemplo, el `CREATE ENDPOINT` permiso) se pueden conceder a un inicio de sesión.  
+ Como entidad de seguridad, se pueden conceder permisos a los inicios de sesión. El ámbito de un inicio de sesión es todo el [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Para establecer conexión con una base de datos concreta de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un inicio de sesión debe estar asignado a un usuario de la base de datos. Los permisos dentro de la base de datos se conceden y deniegan al usuario de la base de datos, no al inicio de sesión. Los permisos que tienen como ámbito la instancia completa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (por ejemplo, el `CREATE ENDPOINT` permiso) se pueden conceder a un inicio de sesión.  
   
 ##  <a name="Security"></a> Seguridad  
   
@@ -183,7 +182,7 @@ ms.locfileid: "36106547"
 2.  En el cuadro de diálogo **Agregar objetos**, seleccione una de las opciones siguientes: **Objetos específicos…**, **Todos los objetos de los tipos…** o **El servidor***nombre_servidor*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  Seleccionar **el servidor *** nombre_servidor* rellena automáticamente la cuadrícula superior con todos los objetos protegibles de ese servidor.  
+    >  Selección de **el servidor *** nombre_servidor* rellena automáticamente la cuadrícula superior con todos los objetos protegibles de ese servidor.  
   
 3.  Si selecciona **Objetos específicos**:  
   

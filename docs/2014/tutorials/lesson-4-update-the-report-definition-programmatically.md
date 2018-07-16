@@ -1,5 +1,5 @@
 ---
-title: 'Lección 4: Actualizar la definición de informe mediante programación | Documentos de Microsoft'
+title: 'Lección 4: Actualizar la definición de informe mediante programación | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1f0a1d46-6d6d-4f67-b51e-06dbbbffacf9
 caps.latest.revision: 20
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bb51cfc7677f60d729efeb1e878c4d4709943860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18fc88beee15b995c3f705e9b6582d695d94d703
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286501"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>Lección 4: Actualizar la definición del informe mediante programación
   Ahora que se ha cargado la definición del informe desde el servidor de informes y que el campo del informe le proporciona una referencia a la definición del informe, necesita actualizarla. En este ejemplo, actualizará la propiedad `Description` para el informe.  
@@ -92,7 +92,7 @@ ms.locfileid: "36202203"
     ```  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- En la siguiente lección, aprenderá a guardar la definición del informe actualizada en el servidor de informes. Vea [lección 5: publicar la definición de informe en el servidor de informes](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
+ En la siguiente lección, aprenderá a guardar la definición del informe actualizada en el servidor de informes. Consulte [lección 5: publicar la definición de informe en el servidor de informes](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Actualizar informes con clases generadas a partir del esquema RDL &#40;Tutorial de SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  

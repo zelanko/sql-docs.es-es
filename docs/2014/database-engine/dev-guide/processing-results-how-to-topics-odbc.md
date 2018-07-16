@@ -1,5 +1,5 @@
 ---
-title: Temas "Cómo..." de resultados (ODBC) para procesar | Documentos de Microsoft
+title: Procesamiento de temas de procedimientos de resultados (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ODBC, results processing
 ms.assetid: 772d9064-c91d-4cac-8b60-fcc16bf76e10
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a35789c6d4a93a4199948035fc79aefd520173de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 704339552a2b5d6b8a58bedfa39081c5bd0bcdea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193865"
 ---
 # <a name="processing-results-how-to-topics-odbc"></a>Temas de procedimientos para procesar resultados (ODBC)
   Procesar resultados en una aplicación ODBC implica primero determinar las características del conjunto de resultados, a continuación, recuperar los datos en variables de programa utilizando [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) o [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) .  

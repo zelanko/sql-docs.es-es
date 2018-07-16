@@ -14,15 +14,15 @@ helpviewer_keywords:
 - authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 caps.latest.revision: 19
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e84bc4ca13d6352b90aa51b172db095fb06f4063
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4a764394b02379459dcf5b3a77396210c1e3f060
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284681"
 ---
 # <a name="authorization-in-reporting-services"></a>La autorización en Reporting Services
   La autorización es el proceso de determinar si se debería conceder a una identidad el tipo solicitado de acceso a un recurso determinado en la base de datos del servidor de informes. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza una arquitectura de autorización basada en roles que concede a los usuarios acceso a un recurso determinado según la asignación de roles del usuario para la aplicación. Las extensiones de seguridad para [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contienen una implementación de un componente de autorización que se utiliza para conceder acceso a los usuarios una vez autenticados en el servidor de informes. La autorización se invoca cuando un usuario intenta realizar una operación en el sistema o en un elemento del servidor de informes a través del acceso de dirección URL y la API SOAP. Esto se posibilita a través de la interfaz de extensión de la seguridad **IAuthorizationExtension**. Según se ha indicado previamente, todas las extensiones heredan de **IExtension** la interfaz básica de cualquier extensión que implemente. **IExtension** e **IAuthorizationExtension** son miembros del espacio de nombres **Microsoft.ReportingServices.Interfaces** .  

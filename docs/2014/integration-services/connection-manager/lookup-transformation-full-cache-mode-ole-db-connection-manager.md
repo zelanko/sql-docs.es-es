@@ -1,5 +1,5 @@
 ---
-title: Implementar una transformación Búsqueda en modo de caché completa mediante el Administrador de conexiones OLE DB | Documentos de Microsoft
+title: Implementar una transformación Búsqueda en el modo de caché completa mediante el Administrador de conexiones OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f7932404b80694629176c5c65b3e17fcc5b83eb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb6751b8f6cb3ebd982e53d4735c1aad940eb00f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280381"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>Implementar una transformación Búsqueda en el modo de caché completa mediante el Administrador de conexiones OLE DB
   Puede configurar la transformación Búsqueda para que use el modo de caché completa y un administrador de conexiones OLE DB. En el modo de caché completa, el conjunto de datos de referencia se carga en la memoria caché antes de que se ejecute la transformación Búsqueda.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6bfd685dd37b40f943a014c2a7230b11c4495216
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8954e5f1959460c8546543e79b2db9cd49c8342b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270251"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Crear, modificar y eliminar instantáneas del historial de informes
   El historial de informe es un conjunto de instantáneas de informe. Puede mantener el historial del informe agregando y eliminando instantáneas, o bien modificando las propiedades correspondientes al almacenamiento del historial. Es posible crear el historial del informe de manera manual o programada.  
@@ -64,7 +64,7 @@ ms.locfileid: "36107119"
  El historial del informe también se elimina cuando se elimina un informe. Por ejemplo, si elimina un informe de ventas mensual porque lo va a sustituir por una versión más reciente, también se eliminará todo el historial del informe asociado al informe. Asimismo, si mueve un informe, se moverá también todo su historial con él.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear el historial del informe &#40;modo integrado de Reporting Services en SharePoint&#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Crear historial de informes &#40;modo integrado de Reporting Services en SharePoint&#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
  [El Administrador de informes &#40;modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Administración de contenido del servidor de informes &#40;modo nativo de SSRS&#41;](report-server-content-management-ssrs-native-mode.md)   
  [Agregar una instantánea al historial del informe &#40;el Administrador de informes&#41;](add-a-snapshot-to-report-history-report-manager.md)   

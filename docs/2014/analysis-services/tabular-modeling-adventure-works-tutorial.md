@@ -1,5 +1,5 @@
 ---
-title: Creación de modelos (Tutorial de Adventure Works) tabulares | Documentos de Microsoft
+title: Modelos (Tutorial de Adventure Works) tabulares | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3d8b4a492a5da9ae0f709c0ab98189e74ed21269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69522d087dffcebf88b011f27797cafc6c0f947e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247375"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Creación de modelos tabulares (tutorial de Adventure Works)
   En este tutorial se proporcionan lecciones sobre cómo crear un modelo tabular de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services mediante [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -62,7 +62,7 @@ ms.locfileid: "36200814"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   Base de datos de ejemplo AdventureWorksDW. Esta base de datos de ejemplo incluye los datos necesarios para completar este tutorial. Para descargar la base de datos de ejemplo, vea [ http://go.microsoft.com/fwlink/?LinkID=335807 ](http://go.microsoft.com/fwlink/?LinkID=335807).  
+-   Base de datos de ejemplo AdventureWorksDW. Esta base de datos de ejemplo incluye los datos necesarios para completar este tutorial. Para descargar la base de datos de ejemplo, consulte [ http://go.microsoft.com/fwlink/?LinkID=335807 ](http://go.microsoft.com/fwlink/?LinkID=335807).  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 o posterior (para su uso con la característica Analizar de Excel en la lección 11)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36200814"
 |------------|--------------------------------|  
 |[Lección 1: Crear un nuevo proyecto de modelo tabular](lesson-1-create-a-new-tabular-model-project.md)|10 minutos|  
 |[Lección 2: Agregar datos](lesson-2-add-data.md)|20 minutos|  
-|[Lección 3: Cambiar el nombre de columnas](rename-columns.md)|20 minutos|  
+|[Lección 3: Cambiar el nombre de las columnas](rename-columns.md)|20 minutos|  
 |[Lección 4: Marcar como tabla de fechas](lesson-3-mark-as-date-table.md)|3 minutos|  
 |[Lección 5: Crear relaciones](lesson-4-create-relationships.md)|10 minutos|  
 |[Lección 6: Crear columnas calculadas](lesson-5-create-calculated-columns.md)|15 minutos|  
@@ -82,9 +82,9 @@ ms.locfileid: "36200814"
 |[Lección 9: Crear perspectivas](lesson-8-create-perspectives.md)|5 minutos|  
 |[Lección 10: Crear jerarquías](lesson-9-create-hierarchies.md)|20 minutos|  
 |[Lección 11: Crear particiones](lesson-10-create-partitions.md)|15 minutos|  
-|[Lección 12: Crear Roles](lesson-11-create-roles.md)|15 minutos|  
+|[Lección 12: Crear roles](lesson-11-create-roles.md)|15 minutos|  
 |[Lección 13: Analizar en Excel](lesson-12-analyze-in-excel.md)|20 minutos|  
-|[Lección 14: implementar](lesson-13-deploy.md)|5 minutos|  
+|[Lección 14: Implementar](lesson-13-deploy.md)|5 minutos|  
   
 ## <a name="supplemental-lessons"></a>Lecciones complementarias  
  Este tutorial también incluye [lecciones complementarias](../tutorials/supplemental-lessons.md). Los temas de esta sección no son necesarios para completar el tutorial, pero pueden ser útiles para comprender mejor las características avanzadas de creación de modelos tabulares.  
@@ -93,7 +93,7 @@ ms.locfileid: "36200814"
   
 |Lección|Tiempo estimado para completar la lección|  
 |------------|--------------------------------|  
-|[Implementar seguridad dinámica utilizando filtros de fila](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 minutos|  
+|[Implementar seguridad dinámica utilizando filtros de filas](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 minutos|  
 |[Configurar propiedades de informes para informes de Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)configurar propiedades de informes para informes de Power View|30 minutos|  
   
 ## <a name="next-step"></a>Paso siguiente  

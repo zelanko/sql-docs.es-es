@@ -1,5 +1,5 @@
 ---
-title: Topologías de licencia de ejemplo y los costos de SQL Server 2014 autoservicio Business Intelligence | Documentos de Microsoft
+title: Costes y topologías de licencia de ejemplo de inteligencia empresarial de autoasistencia de SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 5939b834b50161e31cbbbf3290ab2342bcda59fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4672647d8e9caae94e3b64fc43c3b687aa010920
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185809"
 ---
 # <a name="example-license-topologies-and-costs--for-sql-server-2014-self-service-business-intelligence"></a>Ejemplos de topologías y costos de licencias para Business Intelligence de autoservicio de SQL Server 2014
-  Este tema explican las consideraciones de alto nivel para seleccionar la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edición Business Intelligence o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. El tema incluye varios ejemplos de topologías locales de Business Intelligence (BI) de autoservicio de Microsoft. Los ejemplos incluyen las ediciones y las licencias que puede utilizar para optimizar el equilibrio entre el costo y el rendimiento. Las topologías, el número de servidores y el costo de las licencias se ofrecen **solo a modo de ejemplo**. Con Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y Microsoft SharePoint 2013 se introdujeron varios cambios en la estructura de licencias que proporcionan más opciones para obtener licencias para servidores, usuarios y dispositivos. Las licencias de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admiten los mismos escenarios de Business Intelligence.  
+  En este tema se muestra algunas consideraciones de alto nivel para elegir el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edición Business Intelligence o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. El tema incluye varios ejemplos de topologías locales de Business Intelligence (BI) de autoservicio de Microsoft. Los ejemplos incluyen las ediciones y las licencias que puede utilizar para optimizar el equilibrio entre el costo y el rendimiento. Las topologías, el número de servidores y el costo de las licencias se ofrecen **solo a modo de ejemplo**. Con Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y Microsoft SharePoint 2013 se introdujeron varios cambios en la estructura de licencias que proporcionan más opciones para obtener licencias para servidores, usuarios y dispositivos. Las licencias de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admiten los mismos escenarios de Business Intelligence.  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] está disponible en la edición Business Intelligence y ofrece licencias por núcleo para algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36108259"
   
 -   [Topología de 2 niveles](#bkmk_2tier)  
   
--   [Contenido de referencia y de la Comunidad](#bkmk_reference)  
+-   [Contenido de referencia y la Comunidad](#bkmk_reference)  
   
 ##  <a name="bkmk_bi_components"></a> Componentes de SQL Server Business Intelligence  
  Este tema se centra en las tecnologías de servidor de SQL Server y de SharePoint. Los costos y los ejemplos no indican específicamente los componentes de Microsoft Windows Server o Microsoft Office necesarios para una solución completa de cliente y servidor. Los componentes de SQL Server Business Intelligence de los que trata este tema son SQL Server Reporting Services que se ejecuta en modo de SharePoint y PowerPivot para SharePoint. Los componentes incluyen las características siguientes:  
@@ -86,13 +86,13 @@ ms.locfileid: "36108259"
 |Business Intelligence|**(Sí)** $8592 + $199 por CAL|No aplicable|  
 |Estándar|**(Sí)**|**(Sí)**|  
   
- Para obtener más información sobre el ejemplo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la licencia de los precios, vea:  
+ Para obtener más información acerca de ejemplo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los precios de licencias, consulte:  
   
--   [Administrador de licencias para entornos virtuales](http://www.microsoft.com/licensing/about-licensing/virtualization.aspx) (http://www.microsoft.com/licensing/about-licensing/virtualization.aspx).  
+-   [Concesión de licencias para entornos virtuales](http://www.microsoft.com/licensing/about-licensing/virtualization.aspx) (http://www.microsoft.com/licensing/about-licensing/virtualization.aspx).  
   
 -   [SQL Server 2014 licencias de hoja de datos - página principal de Microsoft](http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf) (http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf).  
   
--   [Licencias y ediciones de SQL server 2014](http://www.microsoft.com/licensing/about-licensing/sql2014.aspx#tab=2)  
+-   [Ediciones de SQL server 2014 y licencias](http://www.microsoft.com/licensing/about-licensing/sql2014.aspx#tab=2)  
   
 1.  **Suposiciones sobre SQL Server y más información de licencia:**  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36108259"
   
  Las implementaciones de ejemplo son todas entornos de intranet, por lo que es necesaria la licencia CAL de SharePoint.  
   
--   [Lista completa de SharePoint de licencias](http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise).  
+-   [La lista completa de licencias de SharePoint](http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise).  
   
 -   [Cómo comprar SharePoint](http://sharepoint.microsoft.com/en-in/Pages/buy.aspx) (http://sharepoint.microsoft.com/en-in/Pages/buy.aspx).  
   
@@ -184,13 +184,13 @@ ms.locfileid: "36108259"
   
  ![bi_license_2tiers_calcs1](../../../2014/sql-server/install/media/bi-license-2tiers-calcs1.gif "bi_license_2tiers_calcs1")  
   
-##  <a name="bkmk_reference"></a> Contenido de referencia y de la Comunidad  
+##  <a name="bkmk_reference"></a> Contenido de referencia y la Comunidad  
   
 ### <a name="license-tools"></a>Herramientas de licencias  
   
--   [Asesor de licencias de Microsoft](http://mla.microsoft.com/default.aspx) (http://mla.microsoft.com/default.aspx).  
+-   [Microsoft License Advisor](http://mla.microsoft.com/default.aspx) (http://mla.microsoft.com/default.aspx).  
   
--   [Licencia de acceso de cliente (CAL) Decisión herramienta](http://www.microsoft.com/licensing/CalTool/) (http://www.microsoft.com/licensing/CalTool/).  
+-   [Herramienta de decisión (CAL) de la licencia de acceso de cliente](http://www.microsoft.com/licensing/CalTool/) (http://www.microsoft.com/licensing/CalTool/).  
   
 -   [Centro de negocios de Microsoft: Cómo comprar](http://www.microsoftbusinesshub.com/How_To_Buy#) (http://www.microsoftbusinesshub.com/How_To_Buy#).  
   
@@ -198,7 +198,7 @@ ms.locfileid: "36108259"
   
 -   [Acerca de las licencias: Licencias de acceso de cliente y licencias de administración](http://www.microsoft.com/licensing/about-licensing/client-access-license.aspx) (http://www.microsoft.com/licensing/about-licensing/client-access-license.aspx).  
   
--   [Acerca de las licencias: Producto búsqueda de licencias](http://www.microsoftvolumelicensing.com/default.aspx) (http://www.microsoftvolumelicensing.com/default.aspx).  
+-   [Acerca de las licencias: Búsqueda de licencias de producto](http://www.microsoftvolumelicensing.com/default.aspx) (http://www.microsoftvolumelicensing.com/default.aspx).  
   
 -   [Licencias por volumen: precios y cómo comprar](http://www.microsoft.com/licensing/how-to-buy/how-to-buy.aspx) (http://www.microsoft.com/licensing/how-to-buy/how-to-buy.aspx).  
   
@@ -212,6 +212,6 @@ ms.locfileid: "36108259"
   
 -   [Estimar los costos de licencias de SharePoint 2013](http://www.degdigital.com/blog/sharepoint-2013-licensing-for-dummies/) (http://www.degdigital.com/blog/sharepoint-2013-licensing-for-dummies/).  
   
--   [Comunidad de clientes con licencia por volumen de Microsoft](http://www.microsoft.com/licensing/existing-customers/community.aspx) (http://www.microsoft.com/licensing/existing-customers/community.aspx).  
+-   [Comunidad de clientes de licencias por volumen](http://www.microsoft.com/licensing/existing-customers/community.aspx) (http://www.microsoft.com/licensing/existing-customers/community.aspx).  
   
   

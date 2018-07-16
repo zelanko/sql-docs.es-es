@@ -1,5 +1,5 @@
 ---
-title: Página nueva suscripción o Editar suscripción (Administrador de informes) | Documentos de Microsoft
+title: Página nueva suscripción o Editar suscripción (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: af32c10bd6c18a4cafc46ccba36859413942c98d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4cbed3ea7bb8d96f82ae7ef14294d1f5f02c3d5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203354"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212595"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>Página Nueva suscripción o Editar suscripción (Administrador de informes)
   Use la página Nueva suscripción o Editar suscripción para crear una nueva suscripción a un informe o modificar una existente. Las opciones de esta página varían dependiendo de los roles que tenga asignados. Los usuarios con permisos avanzados pueden trabajar con más opciones.  
@@ -50,7 +50,7 @@ ms.locfileid: "36203354"
   
 -   En las suscripciones por correo electrónico, se incluyen campos que son conocidos para los usuarios del correo electrónico, como **Para**, **Asunto**y **Prioridad** . Especifique **Incluir informe** para incrustar o adjuntar el informe, o **Incluir vínculo** , para incluir una dirección URL en el informe. Especifique **Formato de representación** para elegir un formato de presentación para el informe que ha adjuntado o incrustado.  
   
--   La suscripción a recursos compartidos de archivos proporciona campos que permiten especificar una ubicación de destino. Puede entregar cualquier informe a un recurso compartido de archivos. Sin embargo, los informes que admiten características interactivas, como los informes matriciales que permiten obtener detalles de filas y columnas complementarias, se representan como archivos estáticos. En este tipo de archivos, no es posible ver filas y columnas de detalle. El nombre de recurso compartido de archivos debe especificarse en formato de convención de nomenclatura universal (UNC) (por ejemplo, \\\mycomputer\public\myreportfiles). No incluya una barra inversa al final del nombre de la ruta de acceso. El archivo del informe se entregará en un formato de archivo basado en el formato de representación (por ejemplo, si elige **Excel**, el informe se entrega como archivo .xls).  
+-   La suscripción a recursos compartidos de archivos proporciona campos que permiten especificar una ubicación de destino. Puede entregar cualquier informe a un recurso compartido de archivos. Sin embargo, los informes que admiten características interactivas, como los informes matriciales que permiten obtener detalles de filas y columnas complementarias, se representan como archivos estáticos. En este tipo de archivos, no es posible ver filas y columnas de detalle. Se debe especificar el nombre del recurso compartido de archivo en formato de convención de nomenclatura universal (UNC) (por ejemplo, \\\mycomputer\public\myreportfiles). No incluya una barra inversa al final del nombre de la ruta de acceso. El archivo del informe se entregará en un formato de archivo basado en el formato de representación (por ejemplo, si elige **Excel**, el informe se entrega como archivo .xls).  
   
  La disponibilidad de una extensión de entrega depende de si está instalada y configurada en el servidor de informes. El correo electrónico del Servidor de informes es la extensión de entrega predeterminada, pero debe configurarla primero para poder utilizarla. No es necesario configurar la entrega al recurso compartido de archivos, pero se debe definir una carpeta compartida para poder utilizarla.  
   
@@ -60,10 +60,10 @@ ms.locfileid: "36203354"
  **Cuando se actualiza el contenido del informe**  
  Seleccione esta opción para suscribirse a una instantánea de informe que se actualiza según una programación. Esta opción solo está visible si se suscribe a un informe que se ejecuta como instantánea de ejecución de informes. Normalmente, el contenido de una instantánea de ejecución de informes se actualiza según una programación. Para los informes que se ejecutan en este modo, puede definir una suscripción que se realice cuando se actualice la instantánea.  
   
- **Cuando esté completada la ejecución del informe programado**  
+ **Cuando está completa la ejecución del informe programado**  
  Cree una programación que determine cuándo se procesa la suscripción.  
   
- **En una programación compartida**  
+ **Según una programación compartida**  
  Seleccione una programación predefinida para procesar la suscripción.  
   
  **Escriba los valores de parámetro**  
@@ -73,6 +73,6 @@ ms.locfileid: "36203354"
  [Configurar un servidor de informes para la entrega de correo electrónico &#40;Administrador de configuración de SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Crear, modificar y eliminar programaciones](subscriptions/create-modify-and-delete-schedules.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

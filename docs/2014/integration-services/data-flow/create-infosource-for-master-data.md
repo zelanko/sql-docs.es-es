@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d3eaf1b67e763b48067cbca3314788ac216ab0ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52ed129a45ce66596ff243a1a75b71b65d1e1dd1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314295"
 ---
 # <a name="create-infosource-for-master-data"></a>Crear InfoSource para datos maestros
   Use el cuadro de diálogo **Crear InfoSource para los datos maestros** para crear un InfoSource nuevo para los datos maestros en el sistema SAP Netweaver BW.  
@@ -78,6 +78,6 @@ ms.locfileid: "36204646"
   
 ## <a name="see-also"></a>Vea también  
  [Crear InfoSource](create-infosource.md)   
- [Microsoft Connector 1.1 for SAP BW F1 Ayuda](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

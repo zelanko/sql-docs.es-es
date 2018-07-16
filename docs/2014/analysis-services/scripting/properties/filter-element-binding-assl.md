@@ -1,5 +1,5 @@
 ---
-title: Elemento Filter (Binding) (ASSL) | Documentos de Microsoft
+title: Elemento Filter (Binding) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Filter element
 ms.assetid: 3d4cd169-2903-4266-8541-540ece424b7b
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 659719ea4ba87b548b08b5b7cb680e1b28b563d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca1fe43bfe98061065cda1da5b1ff64772a4751d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291311"
 ---
 # <a name="filter-element-binding-assl"></a>Elemento Filter (Binding) (ASSL)
   Contiene una expresión MDX (Expresiones multidimensionales) que filtra el contenido del elemento primario.  
@@ -62,14 +62,14 @@ ms.locfileid: "36202381"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- Para obtener más información sobre la `Binding` tipo, incluidas las tablas de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos de Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, consulte [tipo de datos de enlace &#40;ASSL &#41;](../data-type/binding-data-type-assl.md).  
+ Para obtener más información sobre la `Binding` tipo, incluidas las tablas de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos de Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, vea [tipo de datos de enlace &#40;ASSL &#41;](../data-type/binding-data-type-assl.md).  
   
- Para obtener información general de enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;SSAS multidimensionales&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obtener información general de los enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  Los elementos que corresponden a los elementos primarios de `Filter` en el modelo de objetos de Analysis Management Objects (AMO) son <xref:Microsoft.AnalysisServices.CubeDimensionBinding> y <xref:Microsoft.AnalysisServices.MeasureGroupBinding>.  
   
 ## <a name="see-also"></a>Vea también  
- [Tipo de datos de enlace &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   
+ [Tipo de datos Binding &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   
  [Orígenes de datos y enlaces &#40;SSAS Multidimensional&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)   
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  
   

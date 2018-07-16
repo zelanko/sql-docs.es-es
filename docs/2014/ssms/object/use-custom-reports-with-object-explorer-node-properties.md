@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5da4d8cc46e141fb404ee0f63876178f41464b2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 94dd1cc0e96e11eb24e1d7f09665960485f758df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323705"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Usar informes personalizados con las propiedades de nodo del Explorador de objetos
   Los informes personalizados se pueden ejecutar en el contexto de un nodo del Explorador de objetos si los informes personalizados hacen referencia a los parámetros de informe de dicho nodo. Esto permite que los informes usen el contexto actual como, por ejemplo, la base de datos actual o un objeto de la base de datos o del servidor.  

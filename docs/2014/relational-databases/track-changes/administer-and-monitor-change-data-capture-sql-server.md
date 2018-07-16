@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
 - change data capture [SQL Server], administering
 - change data capture [SQL Server], jobs
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc5accd969ae0a19d99610edca0023337321f657
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ebc75d5750d77ac4166375f47b1301d7686f1a99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244575"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar y supervisar la captura de datos modificados (SQL Server)
   En este tema se describe cómo administrar y supervisar la captura de datos modificados.  
@@ -44,7 +44,7 @@ ms.locfileid: "36202001"
  El *continua* parámetro controla si `sp_cdc_scan` abandona el control después de agotar el registro o ejecutando el número máximo de ciclos de examen (modo de una instantánea). También controla si `sp_cdc_scan` continúa ejecutándose hasta detenerse explícitamente (modo continuo).  
   
 ##### <a name="one-shot-mode"></a>Modo de una instantánea  
- En este modo, el trabajo de captura solicita `sp_cdc_scan` para realizar hasta *maxtrans* exámenes para tratar de agotar el registro y volver. Cualquier transacción adicional a *maxtrans* que se encuentre en el registro se procesará en exámenes posteriores.  
+ En el modo de una instantánea, el trabajo de captura solicita `sp_cdc_scan` realizar hasta *maxtrans* exámenes para tratar de agotar el registro y volver. Cualquier transacción adicional a *maxtrans* que se encuentre en el registro se procesará en exámenes posteriores.  
   
  El modo de una instantánea se utiliza en pruebas controladas, en las que se conoce el volumen de las transacciones que se van a procesar, y hay ventajas en el hecho de que el trabajo se cierra automáticamente en cuanto finaliza. Este modo no se recomienda para usarse en producción. Esto se debe a que se basa en la programación de trabajos para administrar la frecuencia con la que se ejecuta el ciclo de examen.  
   
@@ -57,13 +57,13 @@ ms.locfileid: "36202001"
  Si se fuera a usar el modo de una instantánea para regular el examen de registros, la programación del trabajo tendría que regir el número de segundos entre el procesamiento de registros. Cuando se desea este tipo de comportamiento, ejecutar el trabajo de captura en el modo continuo es el método mejor para administrar la reprogramación del examen de registros.  
   
 ##### <a name="continuous-mode-and-the-polling-interval"></a>Modo continuo e intervalo de sondeo  
- En el modo continuo, el trabajo de captura solicita que `sp_cdc_scan` se ejecutan continuamente. Esto permite que el procedimiento almacenado administre su propio bucle de espera proporcionando no solo los valores de los parámetros maxtrans y maxscans sino también un valor para el número de segundos entre el procesamiento de registros (el intervalo de sondeo). Se ejecuta en este modo, el trabajo de captura sigue estando activo, ejecutando un `WAITFOR` entre el examen de registro.  
+ En el modo continuo, el trabajo de captura solicita que `sp_cdc_scan` ejecutarse continuamente. Esto permite que el procedimiento almacenado administre su propio bucle de espera proporcionando no solo los valores de los parámetros maxtrans y maxscans sino también un valor para el número de segundos entre el procesamiento de registros (el intervalo de sondeo). Que se ejecutan en este modo, el trabajo de captura sigue estando activo, ejecutando un `WAITFOR` entre el examen de registro.  
   
 > [!NOTE]  
 >  Cuando el valor del intervalo de sondeo es mayor que 0, el mismo límite superior para el rendimiento del trabajo de una instantánea repetido se aplica también al funcionamiento del trabajo en el modo continuo. Es decir, (*maxtrans* \* *maxscans*) dividido entre un intervalo de sondeo distinto de cero impondrá un límite superior en el número medio de transacciones que pueden ser procesadas por el trabajo de captura.  
   
 ### <a name="capture-job-customization"></a>Personalización del trabajo de captura  
- En el trabajo de captura se puede aplicar una lógica adicional para determinar si un examen nuevo comienza inmediatamente o si se impone una suspensión antes de iniciarse en lugar de basarse en un intervalo de sondeo fijo. La opción podría basarse simplemente en la hora del día, exigiendo quizás suspensiones muy largas durante las horas de actividad máxima, e incluso el paso a un intervalo de sondeo igual a 0 al final del día, cuando es importante completar el procesamiento de los días y preparar las ejecuciones nocturnas. El progreso del proceso de captura también se puede supervisar para determinar el momento en que todas las transacciones confirmadas a media noche han sido examinadas y depositadas en las tablas de cambios. Esto permite que el trabajo de captura finalice y se reinicie de la forma programada diariamente. Si se reemplaza la llamada de paso de trabajo entregado `sp_cdc_scan` con una llamada a un usuario escrito el contenedor de `sp_cdc_scan`, se puede obtener el comportamiento muy personalizado con poco esfuerzo adicional.  
+ En el trabajo de captura se puede aplicar una lógica adicional para determinar si un examen nuevo comienza inmediatamente o si se impone una suspensión antes de iniciarse en lugar de basarse en un intervalo de sondeo fijo. La opción podría basarse simplemente en la hora del día, exigiendo quizás suspensiones muy largas durante las horas de actividad máxima, e incluso el paso a un intervalo de sondeo igual a 0 al final del día, cuando es importante completar el procesamiento de los días y preparar las ejecuciones nocturnas. El progreso del proceso de captura también se puede supervisar para determinar el momento en que todas las transacciones confirmadas a media noche han sido examinadas y depositadas en las tablas de cambios. Esto permite que el trabajo de captura finalice y se reinicie de la forma programada diariamente. Si se reemplaza la llamada de paso de trabajo entregado `sp_cdc_scan` con una llamada a un usuario escrito el contenedor para `sp_cdc_scan`, se puede obtener un comportamiento muy personalizado con poco esfuerzo adicional.  
   
 ##  <a name="Cleanup"></a> Trabajo de limpieza  
  En esta sección se proporciona información sobre cómo funciona el trabajo de limpieza de la captura de datos modificados.  
@@ -71,7 +71,7 @@ ms.locfileid: "36202001"
 ### <a name="structure-of-the-cleanup-job"></a>Estructura del trabajo de limpieza  
  La captura de datos modificados utiliza una estrategia de limpieza basada en la retención para administrar el tamaño de la tabla de cambios. El mecanismo de limpieza consta de un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] que se crea cuando se habilita la primera tabla de la base de datos. Un único trabajo de limpieza controla la limpieza para todas las tablas de cambios de base de datos y aplica el mismo valor de retención a todas las instancias de captura definidas.  
   
- El trabajo de limpieza se inicia ejecutando el procedimiento almacenado sin parámetros `sp_MScdc_cleanup_job`. Este procedimiento almacenado empieza extrayendo los valores de retención y el umbral configurados para el trabajo de limpieza desde `msdb.dbo.cdc_jobs`. El valor de retención se utiliza para calcular una nueva marca de límite inferior para las tablas de cambios. El número especificado de minutos es resta del máximo *tran_end_time* valor desde el `cdc.lsn_time_mapping` tabla para obtener la nueva marca de límite mínimo expresada como un valor de fecha y hora. A continuación, la tabla CDC.lsn_time_mapping se utiliza para convertir este valor datetime en un valor de `lsn` correspondiente. Si varias entradas comparten la misma hora de confirmación en la tabla, el `lsn` que corresponde a la entrada que tiene el valor más pequeño `lsn` se elige como el nuevo límite inferior. Este valor de `lsn` se pasa al procedimiento `sp_cdc_cleanup_change_tables` para quitar las entradas de las tablas de cambios de base de datos.  
+ El trabajo de limpieza se inicia ejecutando el procedimiento almacenado sin parámetros `sp_MScdc_cleanup_job`. Este procedimiento almacenado empieza extrayendo los valores de retención y el umbral configurados para el trabajo de limpieza de `msdb.dbo.cdc_jobs`. El valor de retención se utiliza para calcular una nueva marca de límite inferior para las tablas de cambios. El número especificado de minutos es resta del máximo *tran_end_time* valor desde el `cdc.lsn_time_mapping` tabla para obtener la nueva marca de límite mínimo expresada como un valor de fecha y hora. A continuación, la tabla CDC.lsn_time_mapping se utiliza para convertir este valor datetime en un valor de `lsn` correspondiente. Si varias entradas comparten la misma hora de confirmación en la tabla, el `lsn` que corresponde a la entrada que tiene el valor más pequeño `lsn` se elige como el nuevo límite inferior. Este valor de `lsn` se pasa al procedimiento `sp_cdc_cleanup_change_tables` para quitar las entradas de las tablas de cambios de base de datos.  
   
 > [!NOTE]  
 >  La ventaja de utilizar el tiempo de confirmación de la transacción reciente como base para calcular la nueva marca de límite inferior es que permite que los cambios permanezcan en las tablas de cambios durante el tiempo especificado. Esto sucede incluso cuando el proceso de captura se ejecuta en segundo plano. Todas las entradas que tienen la misma hora de confirmación como límite inferior actual continúan siendo representadas dentro de las tablas de cambios eligiendo el valor más pequeño `lsn` que tenga el tiempo de confirmación compartido para el límite mínimo real.  
@@ -79,7 +79,7 @@ ms.locfileid: "36202001"
  Cuando se realiza una limpieza, la marca de límite inferior para todas las instancias de captura se actualiza inicialmente en una única transacción. A continuación, intenta quitar las entradas obsoletas de las tablas de cambios y de la tabla cdc.lsn_time_mapping. El valor de umbral configurable limita el número de entradas que se eliminan en una única instrucción. El que no se pueda realizar la eliminación en alguna tabla individual no impide que la operación se intente en las tablas restantes.  
   
 ### <a name="cleanup-job-customization"></a>Personalización del trabajo de limpieza  
- La posibilidad de personalización de los trabajos de limpieza radica en la estrategia que se usa para determinar qué entradas de la tabla de cambios se van a descartar. La única estrategia admitida en el trabajo de limpieza entregado es la que se basa en el tiempo. En esa situación, la nueva marca de límite inferior se calcula restando el período de retención permitido del tiempo de confirmación de la última transacción procesada. Dado que los procedimientos de limpieza subyacentes se basan en `lsn` en lugar de tiempo, se puede utilizar la cantidad de estrategias para determinar el menor `lsn` para mantener en las tablas de cambios. Solo algunas se basan estrictamente en el tiempo. Por ejemplo, el conocimiento sobre los clientes se puede utilizar para proporcionar un seguro si los procesos de niveles inferiores que requieren acceso a las tablas de cambios no se pueden ejecutar. Además, aunque la estrategia predeterminada aplica el mismo `lsn` para limpiar las tablas de cambios de todas las bases de datos, el procedimiento de limpieza subyacente, también se puede llamar para limpiar en el nivel de instancia de captura.  
+ La posibilidad de personalización de los trabajos de limpieza radica en la estrategia que se usa para determinar qué entradas de la tabla de cambios se van a descartar. La única estrategia admitida en el trabajo de limpieza entregado es la que se basa en el tiempo. En esa situación, la nueva marca de límite inferior se calcula restando el período de retención permitido del tiempo de confirmación de la última transacción procesada. Dado que los procedimientos de limpieza subyacentes se basan en `lsn` en lugar de tiempo, se puede usar cualquier número de estrategias para determinar el `lsn` mantener en las tablas de cambios. Solo algunas se basan estrictamente en el tiempo. Por ejemplo, el conocimiento sobre los clientes se puede utilizar para proporcionar un seguro si los procesos de niveles inferiores que requieren acceso a las tablas de cambios no se pueden ejecutar. Además, aunque la estrategia predeterminada aplica el mismo `lsn` para limpiar las tablas de todas las bases de datos cambios, también se puede llamar el procedimiento de limpieza subyacente para limpiar en el nivel de instancia de captura.  
   
 ##  <a name="Monitor"></a> Supervisar el proceso de captura de datos modificados  
  Supervisar el proceso de captura de datos modificados permite determinar si los cambios se están escribiendo correctamente y con una latencia razonable en las tablas de cambios. La supervisión también puede ayudar a identificar los errores que puedan producirse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye dos vistas de administración dinámica para ayudar a supervisar la captura de datos modificados: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) y [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  

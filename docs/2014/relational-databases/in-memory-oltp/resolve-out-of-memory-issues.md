@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 caps.latest.revision: 15
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b57ae0faef29326a510dddbbfe049c1c9b4a9b3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2e866c2899ff4172e969cba97e4b10f1ce0fac3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253987"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memoria insuficiente
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] usa más memoria y de maneras diferentes que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es posible que la cantidad de memoria que instaló y asignó para [!INCLUDE[hek_2](../../includes/hek-2-md.md)] no sea suficiente para sus necesidades en crecimiento. En ese caso, podría quedarse sin memoria. En este tema se describe cómo recuperarse de una situación de OOM (memoria insuficiente). Vea [Supervisar y solucionar problemas del uso de la memoria](monitor-and-troubleshoot-memory-usage.md) para obtener instrucciones específicas que pueden ayudarle a evitar muchas situaciones de memoria insuficiente.  
@@ -139,7 +139,7 @@ GO
 > Vea el tema [Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información.  
   
 ##  <a name="bkmk_PageAllocFailure"></a> Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible  
- Si aparece el mensaje de error "No se permiten asignaciones de páginas para la base de datos '*\<nombreDeBaseDeDatos>*' debido a memoria insuficiente en el grupo de recursos de servidor '*\<nombreDeGrupoDeRecursos>*'". Vea 'http://go.microsoft.com/fwlink/?LinkId=330673' para obtener más información. " en el registro de errores cuando hay suficiente memoria física disponible para asignar la página, puede ser debido a un regulador de recursos deshabilitado. Cuando el Regulador de recursos está deshabilitado, MEMORYBROKER_FOR_RESERVE induce una presión de memoria artificial.  
+ Si aparece el mensaje de error "No se permiten asignaciones de páginas para la base de datos '*\<nombreDeBaseDeDatos>*' debido a memoria insuficiente en el grupo de recursos de servidor '*\<nombreDeGrupoDeRecursos>*'". Consulte 'http://go.microsoft.com/fwlink/?LinkId=330673' para obtener más información. " en el registro de errores cuando hay suficiente memoria física disponible para asignar la página, puede ser debido a un regulador de recursos deshabilitado. Cuando el Regulador de recursos está deshabilitado, MEMORYBROKER_FOR_RESERVE induce una presión de memoria artificial.  
   
  Para resolver este problema necesita habilitar el Regulador de recursos.  
   

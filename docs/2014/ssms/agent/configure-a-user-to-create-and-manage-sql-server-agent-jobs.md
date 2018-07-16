@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, user configuration
 - jobs [SQL Server Agent], user configuration
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - proxy accounts [SQL Server Agent]
 ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e39427bf18fafd44bf48eb869d11d901a4dcea8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2804168db65322d9c51219dad044ac0fe211163b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234355"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configurar un usuario para crear y administrar trabajos del Agente SQL Server
   En este tema se describe cómo configurar un usuario para que cree o ejecute trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -52,7 +52,7 @@ ms.locfileid: "36202422"
   
 3.  Haga clic con el botón derecho en el inicio de sesión que desee agregar a un rol fijo de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y seleccione **Propiedades**.  
   
-4.  En el **asignación de usuario** página de la **propiedades de inicio de sesión** cuadro de diálogo, seleccione la fila que contiene `msdb`.  
+4.  En el **User Mapping** página de la **propiedades de inicio de sesión** cuadro de diálogo, seleccione la fila que contiene `msdb`.  
   
 5.  En **Miembros del rol de base de datos para: msdb**, active el rol fijo de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adecuado.  
   

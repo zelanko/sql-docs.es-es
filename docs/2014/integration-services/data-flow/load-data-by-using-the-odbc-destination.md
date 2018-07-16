@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e65f7d46506d611118b7e3ee43d630503a81c0d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5baccb74f86d4de59d5323c647db5378d5469e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298675"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Cargar datos mediante el destino de ODBC
   Este procedimiento muestra cómo cargar datos mediante el destino ODBC. Para agregar y configurar un destino ODBC el paquete ya debe incluir al menos una tarea Flujo de datos y un origen.  
@@ -57,6 +57,6 @@ ms.locfileid: "36106381"
 ## <a name="see-also"></a>Vea también  
  [Editor de destino de ODBC &#40;página Administrador de conexiones&#41;](../odbc-destination-editor-connection-manager-page.md)   
  [Editor de destino de ODBC &#40;página Asignaciones&#41;](../odbc-destination-editor-mappings-page.md)   
- [Editor de origen ODBC &#40;página de salida de Error&#41;](../odbc-source-editor-error-output-page.md)  
+ [Editor de orígenes ODBC &#40;página de salida de Error&#41;](../odbc-source-editor-error-output-page.md)  
   
   

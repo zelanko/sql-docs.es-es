@@ -1,5 +1,5 @@
 ---
-title: Conceptos básicos del Control de origen | Documentos de Microsoft
+title: Fundamentos del Control de origen | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], providers
 - source controls [SQL Server Management Studio]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - source controls [SQL Server Management Studio], clients
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5da8bd18f4ae5e62e5b9177a3ba76ac446bc1a6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1c70c039fd32643dc69c12e76109f5a7fc900379
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217855"
 ---
 # <a name="source-control-basics"></a>Fundamentos del control de código fuente
   El control de código fuente hace referencia a un sistema en el que una pieza central de software del servidor almacena y realiza un seguimiento de las versiones de los archivos, además de controlar el acceso a esos archivos. Un sistema típico de control de código fuente incluye un proveedor de control de código fuente y dos o más clientes de control de código fuente.  
@@ -56,8 +56,8 @@ ms.locfileid: "36108405"
 |||  
 |-|-|  
 |**Tarea**|**Tema**|  
-|Establecer las opciones de Control de código fuente|[Establecer opciones de Control de código fuente](../../2014/database-engine/set-source-control-options.md)|  
-|Cambiar las conexiones de control de código fuente|[Cambio de conexiones de Control de código fuente](../../2014/database-engine/change-source-control-connections.md)|  
-|Excluir archivos de control de código fuente|[Excluir archivos de Control de código fuente](../../2014/database-engine/exclude-files-from-source-control.md)|  
+|Establecer las opciones de Control de código fuente|[Establecer las opciones de control de código fuente](../../2014/database-engine/set-source-control-options.md)|  
+|Cambiar las conexiones de control de código fuente|[Cambiar las conexiones del control de código fuente](../../2014/database-engine/change-source-control-connections.md)|  
+|Excluir archivos de control de código fuente|[Excluir archivos desde el control de código fuente](../../2014/database-engine/exclude-files-from-source-control.md)|  
   
   

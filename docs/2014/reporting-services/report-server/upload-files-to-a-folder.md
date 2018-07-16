@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publishing reports [Reporting Services], uploading files
 - reports [Reporting Services], publishing
@@ -21,13 +21,13 @@ ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 579d4d16e72b349ac4c2aa5d083d8dc1cfeb85a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9abf4ad5aef29b6064b53af80553b02ee01c2fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266151"
 ---
 # <a name="upload-files-to-a-folder"></a>Cargar archivos a una carpeta
   Puede cargar archivos desde el sistema de archivos y almacenarlos en una base de datos del servidor de informes como elementos administrados. Lo que sucede al cargar el archivo depende del tipo de archivo.  
@@ -63,7 +63,7 @@ Icono de recurso genérico
 |Ver el contenido de una carpeta|Ver recursos, Ver informes|  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40;modo nativo de SSRS&#41;]... / informe manager ssrs native mode.md)   
+ [Administrador de informes &#40;modo nativo de SSRS&#41;]... / informe manager ssrs native mode.md)   
  [Conceder permisos en un servidor de informes en modo nativo](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tareas y permisos](../security/tasks-and-permissions.md)   
  [Cargar un archivo o un informe &#40;Administrador de informes&#41;](../reports/upload-a-file-or-report-report-manager.md)  

@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos StandardAction (ASSL) | Documentos de Microsoft
+title: Tipo de datos StandardAction (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StandardAction data type
 ms.assetid: 81b574d5-06c1-4587-8bd2-0e5c5e3b1d99
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bdf3282c6f75cc762ae67a9fab9fc641f25fa3a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57116b91719dec65efef9be50926456e33109b4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267551"
 ---
 # <a name="standardaction-data-type-assl"></a>Tipo de datos StandardAction (ASSL)
   Define un tipo de datos derivado que representa cualquier [acción](../objects/action-element-assl.md) elemento que no sea un [DrillThroughAction](action-data-type-assl.md) elemento o un [ReportAction](reportaction-data-type-assl.md) elemento.  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring [SQL Server], log backups
 - transaction log backups [SQL Server], applying backups
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab3a27eea48c0d34d2cf994c29fff99f91f3ef37
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 287fbe416b7e0b824f9a6287b85e8dcb7aa17aa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289121"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Aplicar copias de seguridad de registros de transacción (SQL Server)
   Este tema solo es relevante para el modelo de recuperación completa o para el modelo de recuperación optimizado para cargas masivas de registros.  
@@ -36,7 +35,7 @@ ms.locfileid: "36106136"
   
 -   [Requisitos para restaurar las copias de seguridad del registro de transacciones](#Requirements)  
   
--   [Registros de transacciones y recuperación](#RecoveryAndTlogs)  
+-   [Los registros de transacciones y recuperación](#RecoveryAndTlogs)  
   
 -   [Usar copias de seguridad del registro para restaurar hasta el momento del error](#PITrestore)  
   
@@ -54,7 +53,7 @@ ms.locfileid: "36106136"
     > [!TIP]  
     >  Un procedimiento recomendado consiste en restaurar todas las copias de seguridad de registros (RESTORE LOG *nombre_base_de_datos* WITH NORECOVERY). Tras restaurar la última copia de seguridad de registros, recupere la base de datos en una operación aparte (RESTORE DATABASE *nombre_base_de_datos* WITH RECOVERY).  
   
-##  <a name="RecoveryAndTlogs"></a> Registros de transacciones y recuperación  
+##  <a name="RecoveryAndTlogs"></a> Los registros de transacciones y recuperación  
  Cuando termina la operación de restauración y recupera la base de datos, la recuperación revierte todas las transacciones incompletas. Este paso se conoce como la *fase de deshacer*. Revertir es necesario para restaurar la integridad de la base de datos. Después de la reversión, la base de datos pasa a estar en línea y no se pueden aplicar más copias de seguridad del registro de transacciones a la base de datos.  
   
  Por ejemplo, una serie de copias de seguridad del registro de transacciones contiene una transacción de larga duración. El inicio de la transacción se registra en la primera copia de seguridad del registro de transacciones, pero el final de la transacción se registra en la segunda copia de seguridad. En la primera copia de seguridad del registro de transacciones no se registra ninguna operación de confirmación o reversión. Si se ejecuta una operación de recuperación cuando se aplica la primera copia de seguridad del registro de transacciones, la transacción de larga ejecución se trata como incompleta y se revierten las modificaciones de datos registradas en la primera copia de seguridad del registro de transacciones de la transacción. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite la aplicación de la segunda copia de seguridad del registro de transacciones a partir de este punto.  

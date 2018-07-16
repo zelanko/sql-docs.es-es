@@ -1,5 +1,5 @@
 ---
-title: Depurar un paquete estableciendo puntos de interrupción en una tarea o un contenedor | Documentos de Microsoft
+title: Depurar un paquete estableciendo puntos de interrupción en una tarea o un contenedor | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], breakpoints
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 caps.latest.revision: 33
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6535657a5b193b92b76fd32fee9497e8ef76580e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b063089105af1de7656387be8cc12639498e7c37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308115"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Depurar un paquete estableciendo puntos de interrupción en una tarea o un contenedor
   Este procedimiento describe cómo establecer puntos de interrupción en un paquete, una tarea, un contenedor de bucles For o Foreach o un contenedor de secuencias.  
@@ -49,9 +49,9 @@ ms.locfileid: "36203232"
 6.  Para guardar el paquete, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
   
 ## <a name="see-also"></a>Vea también  
- [Solución de problemas de herramientas de desarrollo de paquetes](troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Solución de problemas de las herramientas de desarrollo de paquetes](troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Depurar un Script estableciendo puntos de interrupción en una tarea Script y componente de Script](data-flow/transformations/script-component.md)   
- [Codificar y depurar la tarea de secuencia de comandos](control-flow/script-task.md)   
+ [Codificar y depurar la tarea Script](control-flow/script-task.md)   
  [Codificar y depurar el componente de script](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

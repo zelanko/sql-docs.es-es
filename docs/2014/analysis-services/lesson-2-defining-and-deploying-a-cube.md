@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Definir e implementar un cubo | Documentos de Microsoft'
+title: 'Lección 2: Definir e implementar un cubo | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 527781bac1cdab44c0fd750bfb939ec80ae145a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 077d422f47fa62083420713b580100afcccf1712
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284131"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Lección 2: Definir e implementar un cubo
   Ahora que ha definido una vista del origen de datos en un proyecto de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , está preparado para definir el cubo inicial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -40,7 +40,7 @@ ms.locfileid: "36204287"
  [Agregar atributos a dimensiones](lesson-2-3-adding-attributes-to-dimensions.md)  
  En esta tarea, debe agregar atributos a las dimensiones que creó.  
   
- [Revisar las propiedades de dimensión y el cubo](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
+ [Revisar las propiedades de cubo y dimensión](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
  En esta tarea, debe revisar la estructura del cubo que definió utilizando el Asistente para cubos.  
   
  [Implementar un proyecto de Analysis Services](lesson-2-5-deploying-an-analysis-services-project.md)  

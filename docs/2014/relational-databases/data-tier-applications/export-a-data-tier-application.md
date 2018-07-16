@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.exportdac.settings.f1
 - sql12.swb. exportdac.settings.f1
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - data-tier application [SQL Server], export
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fbf78870df7abcb72a2474f6e14fae6efec5f8f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 047a7c5c20a0c9335fe6da1fa0d07a0dceff03a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248804"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar una aplicación de capa de datos
   Al exportar una aplicación de capa de datos (DAC) o base de datos implementada se crea un archivo de exportación que incluye las definiciones de los objetos de la base de datos y todos los datos contenidos en las tablas. El archivo de exportación se podrá importar a otra instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]o a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación-importación se pueden combinar para migrar una DAC de una instancia a otra, crear una copia de seguridad lógica o crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

@@ -1,5 +1,5 @@
 ---
-title: Buscar tabla, cuadro de diálogo (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Cuadro de diálogo de tabla (Analysis Services - datos multidimensionales) Buscar | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.findtabledialog.f1
 helpviewer_keywords:
 - Find Table dialog box
 ms.assetid: 133d28e8-55eb-4783-bb8b-d3776a95ebda
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e3386756ade73e6e04391debdae8415b9b00c75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 489f85e874c6cb8ba2c9d9ca457626e52db89cce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107505"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243675"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Buscar tabla (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Buscar tabla** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para ubicar una tabla en la vista del origen de datos asociada con una dimensión, un cubo o una estructura de minería de datos. Para mostrar este cuadro de diálogo en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] :  
@@ -39,7 +39,7 @@ ms.locfileid: "36107505"
 -   Haga clic con el botón derecho en el fondo del panel **Vista del origen de datos** que se encuentra en la página **Estructura de minería de datos** del **Diseñador de modelos de minería de datos** y seleccione **Buscar tabla**.  
   
 ## <a name="options"></a>Opciones  
- **Seleccione una tabla en la vista del origen de datos**  
+ **Seleccione una tabla de vista del origen de datos**  
  Seleccione la tabla que quiere buscar en el panel **Vista del origen de datos** . Esta opción muestra una cuadrícula de objetos disponibles y sus tipos asociados, que coinciden con el filtro establecido en **Filtro** (o bien todas las tablas si no se ha establecido **Filtro** ), y aún no se han mostrado en el diagrama actual.  
   
  **Filter**  

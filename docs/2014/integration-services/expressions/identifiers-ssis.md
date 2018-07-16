@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - regular identifiers [Integration Services]
 - variables [Integration Services], expressions
@@ -23,13 +23,13 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17236ca6698b1daf947d4364b38eb3ef0e9a60b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84a20b15390463d19577ab6ae800bcb7f0579bb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295055"
 ---
 # <a name="identifiers-ssis"></a>Identificadores (SSIS)
   En las expresiones, los identificadores son columnas y variables que están disponibles para la operación. Puede utilizar en las expresiones identificadores regulares y calificados.  
@@ -118,7 +118,7 @@ ms.locfileid: "36198040"
   
  Si el valor de **recuento** en el **usuario** espacio de nombres es 10 y el valor de **recuento** en **MyNamespace** es 2, la expresión se evalúa como `true` porque el evaluador de expresiones reconoce dos variables distintas.  
   
- Si los nombres de las variables no son únicos, no se produce un error. El evaluador de expresiones utilizará una sola instancia de la variable para evaluar la expresión y devolverá un resultado incorrecto. Por ejemplo, la siguiente expresión intenta comparar los valores (10 y 2) para dos **recuento** variables pero la expresión se evalúa como `false` porque el evaluador de expresiones utiliza la misma instancia de la  **Recuento de** variable dos veces.  
+ Si los nombres de las variables no son únicos, no se produce un error. El evaluador de expresiones utilizará una sola instancia de la variable para evaluar la expresión y devolverá un resultado incorrecto. Por ejemplo, la siguiente expresión intenta comparar los valores (10 y 2) para dos **recuento** variables, pero la expresión se evalúa como `false` porque el evaluador de expresiones utiliza la misma instancia de la  **Recuento** variable dos veces.  
   
 ```  
 @Count > @Count  

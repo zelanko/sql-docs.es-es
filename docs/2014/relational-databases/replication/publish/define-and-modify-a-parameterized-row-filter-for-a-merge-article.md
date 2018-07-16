@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], defining
 - parameterized filters [SQL Server replication], modifying
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: eea2edc2e87d6a7f63f01a28ef06a1d3b3d179da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3b3d8b397617674f4b297488e9cc8e2b541698df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296505"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Definir y modificar un filtro de fila con parámetros para un artículo de mezcla
   En este tema se describe cómo definir y modificar un filtro de fila con parámetros en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -115,9 +115,9 @@ ms.locfileid: "36112466"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Para cambiar un filtro de fila con parámetros para un artículo en una publicación de combinación  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especifique **@publication**, **@article**, un valor de `subset_filterclause` para **@property**, la expresión que define el filtro con parámetros para **@value** (sin incluir `WHERE`) y un valor de **1** para ambos **@force_invalidate_snapshot** y **@force_reinit_subscription**.  
+1.  En la base de datos de publicación del publicador, ejecute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especificar **@publication**, **@article**, un valor de `subset_filterclause` para **@property**, la expresión que define el filtro con parámetros para **@value** (sin incluir `WHERE`) y un valor de **1** para ambos **@force_invalidate_snapshot** y **@force_reinit_subscription**.  
   
-2.  Si este cambio produce un comportamiento de particionamiento diferente, a continuación, ejecute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) de nuevo. Especifique **@publication**, **@article**, un valor de `partition_options` para **@property**y la opción de particionamiento más adecuada para **@value**, que puede ser uno de los siguientes:  
+2.  Si este cambio produce un comportamiento de particionamiento diferente, a continuación, ejecute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) de nuevo. Especificar **@publication**, **@article**, un valor de `partition_options` para **@property**y la opción de particionamiento más adecuada para **@value**, que puede ser uno de los siguientes:  
   
     -   **0** : El filtro del artículo es estático o no produce un subconjunto de datos único para cada partición (una partición "superpuesta").  
   

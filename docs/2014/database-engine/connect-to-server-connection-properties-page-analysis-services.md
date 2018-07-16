@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttoas.connectionproperties.f1
 ms.assetid: 26cf53e3-3bcb-4697-8a88-53e93bc68b56
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1a757ba43fe2a90f532fde71c9bbc0bbf0e902ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a50e63ecd929581f9ae9c185c714fd21dc171c6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225865"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>Conectar al servidor (página Propiedades de conexión de Analysis Services)
   Use esta pestaña para ver o especificar opciones cuando se conecte a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o cuando registre [!INCLUDE[ssAS](../includes/ssas-md.md)] en **Servidores registrados**. **Conectar** y **Opciones** solo aparecen en este cuadro de diálogo al conectar. **Probar** y **Guardar** solo aparecen en este cuadro de diálogo al registrar [!INCLUDE[ssAS](../includes/ssas-md.md)].  
   
 ## <a name="options"></a>Opciones  
  **Conectar con base de datos**  
- Seleccione en la lista una base de datos a la que conectarse. Si selecciona  **\<predeterminado >**, se conectará a la base de datos predeterminada para el servidor. Si selecciona  **\<Examinar servidor >**, puede buscar el servidor de la base de datos que le gustaría conectarse.  
+ Seleccione en la lista una base de datos a la que conectarse. Si selecciona  **\<predeterminado >**, se conectará a la base de datos predeterminada para el servidor. Si selecciona  **\<Examinar servidor >**, puede examinar el servidor para que le gustaría conectarse a la base de datos.  
   
  **Tiempo de espera de la conexión**  
  Escriba el número de segundos que hay que esperar a que se establezca una conexión antes de que se agote el tiempo de espera. El valor predeterminado es 15 segundos.  

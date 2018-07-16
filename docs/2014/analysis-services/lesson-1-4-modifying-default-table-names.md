@@ -1,5 +1,5 @@
 ---
-title: Modificar los nombres de tabla predeterminados | Documentos de Microsoft
+title: Modificar los nombres de tabla predeterminados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 87328bab0552074462ec039cbcb9c8184639f350
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0051a4bdd4a274ee91997117f491c435a556c04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308595"
 ---
 # <a name="modifying-default-table-names"></a>Modificar los nombres de tabla predeterminados
   Puede cambiar el valor de la propiedad **FriendlyName** para los objetos de la vista del origen de datos para que sean más fáciles de identificar y usar.  
@@ -37,7 +37,7 @@ ms.locfileid: "36112116"
   
      Es más fácil cambiar las propiedades de cada tabla en la vista del origen de datos cuando la ventana Propiedades permanece abierta. Si no fija la ventana abierta mediante el botón **Ocultar automáticamente** , la ventana se cerrará al hacer clic en un objeto distinto del panel **Diagrama** .  
   
-3.  Cambiar el **FriendlyName** propiedad para la **FactInternetSales** el objeto a *`InternetSales`*.  
+3.  Cambiar el **FriendlyName** propiedad para el **FactInternetSales** objeto *`InternetSales`*.  
   
      Al hacer clic fuera de la celda de la propiedad **FriendlyName** , se aplica el cambio. En la siguiente lección, definirá un grupo de medida que se basa en esta tabla de hechos. El nombre de la tabla de hechos será InternetSales en lugar de FactInternetSales debido al cambio realizado en esta lección.  
   

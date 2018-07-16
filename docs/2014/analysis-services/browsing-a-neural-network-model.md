@@ -1,5 +1,5 @@
 ---
-title: Examinar un modelo de red neuronal | Documentos de Microsoft
+title: Examinar un modelo de red neuronal | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - mining models, viewing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1eecb17419c6b0f89f9049bf7d9269b2d1ec32c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ddfa179c57082eec38e14f0693cd707922f0812a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286371"
 ---
 # <a name="browsing-a-neural-network-model"></a>Examinar un modelo de red neuronal
   Cuando abre un modelo de red neuronal o de regresión lógica a través de **Examinar**, el modelo se muestra en un visor interactivo, similar al visor de modelos de red neuronal en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El visor sirve para explorar correlaciones y obtener información sobre los patrones del modelo y los datos subyacentes.  
@@ -64,7 +64,7 @@ ms.locfileid: "36201250"
   
      Para los ingresos, la columna se ha subdividido de grupos, como por ejemplo, 78,4-154,06 (para el nivel de ingresos más elevado).  
   
-     ![ordenación para ver cómo se agrupan las variables](media/dm13-nn-bucketing-variables.gif "ordenación para ver cómo se agrupan las variables")  
+     ![Ordenar para ver cómo se agrupan las variables](media/dm13-nn-bucketing-variables.gif "ordenar para ver cómo se agrupan las variables")  
   
      Si quiere hacer grupos diferentes, use la herramienta [Cambiar etiquetas &#40;Complementos de minería de datos de SQL Server&#41;](relabel-sql-server-data-mining-add-ins.md) o las funciones de Excel para crear nuevas categorías de ingresos antes de generar el modelo.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36201250"
   
 1.  Imagine que desea fijar como destino un grupo específico y que sabe los factores que influencian en mayor medida a las compras de ese grupo.  
   
-     En el **entrada** panel, haga clic en el  **\<todos los >** de celda en **atributo**y seleccione **Age**.  
+     En el **entrada** panel, haga clic en el  **\<todas >** celda bajo **atributo**y seleccione **Age**.  
   
      Para **Valor**, seleccione la categoría de edad más joven.  
   

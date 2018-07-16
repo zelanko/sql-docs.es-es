@@ -1,5 +1,5 @@
 ---
-title: Especificar funciones booleanas en consultas XPath (SQLXML 4.0) | Documentos de Microsoft
+title: Especificar funciones booleanas en consultas XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Boolean functions
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06b35c5a8e2e7e6e03c0fd943572b25b30bf017e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 86a05a23577eefa1231a4a5f4bdf8447e4f6b285
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233005"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Especificar funciones booleanas en consultas XPath (SQLXML 4.0)
   Los ejemplos siguientes muestran cómo se especifican funciones booleanas en consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "36109220"
 ## <a name="examples"></a>Ejemplos  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. Especificar la función booleana not()  
- Esta consulta devuelve todos los  **\<cliente >** los elementos secundarios del nodo de contexto que no tienen  **\<orden >** elementos secundarios:  
+ Esta consulta devuelve todos los  **\<cliente >** elementos secundarios del nodo de contexto que no tienen  **\<orden >** elementos secundarios:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -48,7 +48,7 @@ ms.locfileid: "36109220"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (BooleanFunctionsA.xml) y guárdela en el directorio donde esté guardado el archivo SampleSchema1.xml.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36109220"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Especificar las funciones booleanas true () y false ()  
- Esta consulta devuelve todos los  **\<cliente >** elementos secundarios del nodo de contexto que no tiene  **\<orden >** los elementos secundarios. En términos relacionales, esta consulta devuelve todos los clientes que no han realizado ningún pedido.  
+ Esta consulta devuelve todos los  **\<cliente >** elementos secundarios del nodo de contexto que no tienen  **\<orden >** elementos secundarios. En términos relacionales, esta consulta devuelve todos los clientes que no han realizado ningún pedido.  
   
 ```  
 /child::Customer[child::Order=false()]  
@@ -114,7 +114,7 @@ ms.locfileid: "36109220"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (BooleanFunctionsB.xml) y guárdela en el directorio donde esté guardado el archivo SampleSchema1.xml.  
   

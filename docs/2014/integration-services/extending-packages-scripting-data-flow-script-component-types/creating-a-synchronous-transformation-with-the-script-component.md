@@ -20,13 +20,13 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3bfa2cd1c622041936d36edccc8e832359f74c56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6e2b34352e3fbb84a3f801919537b5936322ae7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300595"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Crear una transformación sincrónica con el componente de script
   Un componente de transformación se utiliza en el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar y analizar los datos cuando pasan del origen al destino. Una transformación con salidas sincrónicas procesa cada fila de entrada a medida que pasa por el componente. Una transformación con salidas asincrónicas espera hasta que haya recibido todas las filas de entrada para completar su procesamiento. En este tema se describe una transformación sincrónica. Para obtener información sobre transformaciones asincrónicas, vea [Crear una transformación asincrónica con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Para obtener más información acerca de la diferencia entre los componentes sincrónicos y asincrónicos, consulte [Understanding Synchronous and Asynchronous Transformations](../understanding-synchronous-and-asynchronous-transformations.md) (Descripción de las transformaciones sincrónicas y asincrónicas).  
@@ -74,7 +74,7 @@ ms.locfileid: "36204012"
  Para obtener más información acerca de la página **Entradas y salidas** del **Editor de transformación Script**, vea [Script Transformation Editor &#40;Inputs and Outputs Page&#41;](../script-transformation-editor-inputs-and-outputs-page.md) (Editor de transformación Script [página Entradas y salidas]).  
   
 ### <a name="adding-variables"></a>Agregar variables  
- Si desea utilizar variables existentes en el script, puede agregarlos en el `ReadOnlyVariables` y `ReadWriteVariables` campos de propiedades en el **Script** página de la **Editor de transformación Script**.  
+ Si desea utilizar variables existentes en el script, puede agregarlas en los `ReadOnlyVariables` y `ReadWriteVariables` campos de propiedades el **Script** página de la **Editor de transformación Script**.  
   
  Cuando agregue varias variables a los campos de propiedades, separe sus nombres con comas. También puede seleccionar varias variables, haga clic en el botón de puntos suspensivos (**...** ) situado junto a la `ReadOnlyVariables` y `ReadWriteVariables` campos de propiedades y, a continuación, seleccionar las variables en el **seleccionar variables** cuadro de diálogo.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36204012"
 ### <a name="understanding-the-auto-generated-code"></a>Descripción del código generado automáticamente  
  Al abrir el IDE de VSTA después de crear y configurar un componente de transformación, la clase `ScriptMain` modificable aparece en el editor de código con un código auxiliar para el método `ProcessInputRow`. En la clase `ScriptMain` se escribirá el código personalizado y `ProcessInputRow` es el método más importante de un componente de transformación.  
   
- Si abre el **el Explorador de proyectos** ventana en VSTA, puede ver que el componente de Script también ha generado de solo lectura `BufferWrapper` y `ComponentWrapper` elementos de proyecto. El `ScriptMain` clase hereda de la `UserComponent` clase en el `ComponentWrapper` elemento de proyecto.  
+ Si abre el **Explorador de proyectos** ventana en VSTA, puede ver que el componente de Script también ha generado de solo lectura `BufferWrapper` y `ComponentWrapper` elementos de proyecto. El `ScriptMain` clase hereda de la `UserComponent` clase en el `ComponentWrapper` elemento de proyecto.  
   
  En tiempo de ejecución, el motor de flujo de datos invoca el método `ProcessInput` de la clase `UserComponent`, lo que invalida el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> de la clase primaria <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A su vez, el método `ProcessInput` recorre las filas del búfer de entrada y llama al método `ProcessInputRow` una vez por cada fila.  
   
@@ -141,7 +141,7 @@ else
  En los ejemplos que figuran aquí se muestra el código personalizado requerido en la clase `ScriptMain` para crear un componente de transformación sincrónica.  
   
 > [!NOTE]  
->  Estos ejemplos utilizan la **Person.Address** tabla el `AdventureWorks` base de datos de ejemplo y pasar sus columnas primeros y cuarto, el **intAddressID** y **ciudad nvarchar (30)** columnas, a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino de esta sección. Se documentan requisitos previos y suposiciones adicionales para cada ejemplo.  
+>  Estos ejemplos se usa el **Person.Address** de tabla en la `AdventureWorks` base de datos de ejemplo y pasar sus columnas primeros y cuarta, las **intAddressID** y **nvarchar (30) City**columnas, a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino de esta sección. Se documentan requisitos previos y suposiciones adicionales para cada ejemplo.  
   
 ### <a name="single-output-synchronous-transformation-example"></a>Ejemplo de transformación sincrónica de salida única  
  En este ejemplo se muestra un componente de transformación sincrónica con una salida única. Esta transformación pasa por la columna **AddressID** y convierte la columna **City** a mayúsculas.  
@@ -150,7 +150,7 @@ else
   
 1.  Agregue un nuevo componente de script a la superficie del diseñador de flujo de datos y configúrelo como una transformación.  
   
-2.  Conecte la salida de un origen o de otra transformación al nuevo componente de transformación en el diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Esta salida debe proporcionar datos de la **Person.Address** tabla de la `AdventureWorks` base de datos de ejemplo que contiene el **AddressID** y **City** columnas.  
+2.  Conecte la salida de un origen o de otra transformación al nuevo componente de transformación en el diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Esta salida debe proporcionar datos de la **Person.Address** tabla de la `AdventureWorks` base de datos de ejemplo que contiene el **AddressID** y **Ciudad** columnas.  
   
 3.  Abra el **Editor de transformación Script**. En la página **Columnas de entrada**, seleccione las columnas **AddressID** y **City**. Marque la columna **City** como de lectura y escritura.  
   
@@ -202,7 +202,7 @@ public class ScriptMain:
   
 1.  Agregue un nuevo componente de script a la superficie del diseñador de flujo de datos y configúrelo como una transformación.  
   
-2.  Conecte la salida de un origen o de otra transformación al nuevo componente de transformación en el diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Esta salida debe proporcionar datos de la **Person.Address** tabla de la `AdventureWorks` base de datos de ejemplo que contiene al menos el **AddressID** y **City** columnas.  
+2.  Conecte la salida de un origen o de otra transformación al nuevo componente de transformación en el diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Esta salida debe proporcionar datos de la **Person.Address** tabla de la `AdventureWorks` base de datos de ejemplo que contiene al menos el **AddressID** y **Ciudad** columnas.  
   
 3.  Abra el **Editor de transformación Script**. En la página **Columnas de entrada**, seleccione las columnas **AddressID** y **City**. Marque la columna **City** como de lectura y escritura.  
   
@@ -266,6 +266,6 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 |![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
- [Descripción de las transformaciones sincrónicas y asincrónicas](../understanding-synchronous-and-asynchronous-transformations.md) [crear una transformación asincrónica con el componente de secuencia de comandos](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md) [desarrollar un componente de transformación personalizado con sincrónico Salidas](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)  
+ [Descripción de las transformaciones sincrónicas y asincrónicas](../understanding-synchronous-and-asynchronous-transformations.md) [crear una transformación asincrónica con el componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md) [desarrollar un componente de transformación personalizado con sincrónica Salidas](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)  
   
   

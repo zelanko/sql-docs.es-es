@@ -1,5 +1,5 @@
 ---
-title: 'Excluir elementos de esquema del documento XML resultante mediante sql: mapped (SQLXML 4.0) | Documentos de Microsoft'
+title: 'Excluir elementos de esquema del documento XML resultante mediante sql: mapped (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7061a1cb6fac88223f41875b7a1c45f7dfb7e9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 266f53a202906b05421b113a10e5853946810612
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244565"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>Excluir elementos de esquema del documento XML resultante mediante sql:mapped (SQLXML 4.0)
   Cada elemento y atributo del esquema XSD se asigna a una tabla/vista y columna de base de datos debido a la asignación predeterminada. Si desea crear un elemento en el esquema XSD que no se asigne a ninguna tabla (vista) o columna de base de datos y que no aparezca en el XML, puede especificar la anotación `sql:mapped`.  
@@ -45,9 +45,9 @@ ms.locfileid: "36107847"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Especificar la anotación sql:mapped  
- Suponga que tiene un esquema XSD de algún otro origen. Este esquema XSD está compuesto de un  **\<Person.Contact >** elemento con **ContactID**, **FirstName**, **LastName**, y **HomeAddress** atributos.  
+ Suponga que tiene un esquema XSD de algún otro origen. Este esquema XSD consta de un  **\<Person.Contact >** elemento con **ContactID**, **FirstName**, **LastName**, y **HomeAddress** atributos.  
   
- Al asignar este esquema XSD a la tabla Person.Contact en la base de datos de AdventureWorks, `sql:mapped` se especifica en el **HomeAddress** atributo porque la tabla Employees no almacena direcciones particulares de los empleados. Por consiguiente, este atributo no se asigna a la base de datos y no se devuelve en el documento XML resultante cuando se especifica una consulta XPath en el esquema de asignación.  
+ En este esquema XSD de asignación a la tabla Person.Contact en la base de datos AdventureWorks, `sql:mapped` se especifica en el **HomeAddress** atributo porque la tabla Employees no almacena direcciones particulares de los empleados. Por consiguiente, este atributo no se asigna a la base de datos y no se devuelve en el documento XML resultante cuando se especifica una consulta XPath en el esquema de asignación.  
   
  Para el resto del esquema se produce una asignación predeterminada. El  **\<Person.Contact >** elemento se asigna a la tabla Person.Contact y todos los atributos se asignan a las columnas con el mismo nombre en la tabla Person.Contact.  
   
@@ -109,6 +109,6 @@ ms.locfileid: "36107847"
  Observe que ContactID, FirstName y LastName están presentes, pero no lo está HomeAddress porque el esquema de asignación especificó 0 para el atributo `sql:mapped`.  
   
 ## <a name="see-also"></a>Vea también  
- [Asignación predeterminada de elementos y atributos a las tablas y columnas XSD &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [Asignación predeterminada de atributos y elementos XSD a tablas y columnas &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

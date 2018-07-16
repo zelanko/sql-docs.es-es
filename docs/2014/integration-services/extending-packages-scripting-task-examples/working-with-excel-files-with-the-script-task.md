@@ -20,13 +20,13 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 62c35066634f291eb8fa3e5bc39425d11afe6a1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba52df081b4f40afc7ad32e80c716d96e7bf0c36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113399"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192125"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Trabajar con archivos de Excel con la tarea Script
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona el administrador de conexiones de Excel, el origen de Excel y el destino de Excel para trabajar con datos almacenados en hojas de cálculo en el formato de archivo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Las técnicas descritas en este tema usan la tarea Script para obtener información acerca de las bases de datos de Excel disponibles (archivos de libro) y tablas (hojas de cálculo y rangos con nombre). Estos ejemplos se pueden modificar con facilidad para trabajar con cualquiera de los demás orígenes de datos basados en archivos que admite el proveedor OLE DB para [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
@@ -88,19 +88,19 @@ ms.locfileid: "36113399"
   
 2.  En el **Editor de la tarea Script**, en la pestaña **Script**, haga clic en **ReadOnlyVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
-    -   Tipo de `ExcelFile`.  
+    -   Tipo `ExcelFile`.  
   
          -o bien-  
   
-    -   Haga clic en el botón de puntos suspensivos (**...** ) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la `ExcelFile` variable.  
+    -   Haga clic en el botón de puntos suspensivos (**...** ) situado junto al campo de propiedad y, en el **seleccionar variables** cuadro de diálogo, seleccione el `ExcelFile` variable.  
   
 3.  Haga clic en **ReadWriteVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
-    -   Tipo de `ExcelFileExists`.  
+    -   Tipo `ExcelFileExists`.  
   
          -o bien-  
   
-    -   Haga clic en el botón de puntos suspensivos (**...** ) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la `ExcelFileExists` variable.  
+    -   Haga clic en el botón de puntos suspensivos (**...** ) situado junto al campo de propiedad y, en el **seleccionar variables** cuadro de diálogo, seleccione el `ExcelFileExists` variable.  
   
 4.  Haga clic en **Modificar script** para abrir el editor de script.  
   
@@ -158,19 +158,19 @@ public class ScriptMain
   
 2.  En el **Editor de la tarea Script**, en la pestaña **Script**, haga clic en **ReadOnlyVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
-    -   Tipo de `ExcelTable` y `ExcelFile` separados por comas`.`  
+    -   Tipo `ExcelTable` y `ExcelFile` separados por comas`.`  
   
          -o bien-  
   
-    -   Haga clic en el botón de puntos suspensivos (**...** ) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la `ExcelTable` y `ExcelFile` variables.  
+    -   Haga clic en el botón de puntos suspensivos (**...** ) situado junto al campo de propiedad y, en el **seleccionar variables** cuadro de diálogo, seleccione el `ExcelTable` y `ExcelFile` variables.  
   
 3.  Haga clic en **ReadWriteVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
-    -   Tipo de `ExcelTableExists`.  
+    -   Tipo `ExcelTableExists`.  
   
          -o bien-  
   
-    -   Haga clic en el botón de puntos suspensivos (**...** ) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la `ExcelTableExists` variable.  
+    -   Haga clic en el botón de puntos suspensivos (**...** ) situado junto al campo de propiedad y, en el **seleccionar variables** cuadro de diálogo, seleccione el `ExcelTableExists` variable.  
   
 4.  Haga clic en **Modificar script** para abrir el editor de script.  
   
@@ -273,7 +273,7 @@ public class ScriptMain
   
 3.  Haga clic en **ReadWriteVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
-    -   Tipo de `ExcelFiles`.  
+    -   Tipo `ExcelFiles`.  
   
          -o bien-  
   
@@ -340,7 +340,7 @@ public class ScriptMain
   
 2.  Abra el **Editor de la tarea Script**, en la pestaña **Script**, haga clic en **ReadOnlyVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
-    -   Tipo de `ExcelFile`.  
+    -   Tipo `ExcelFile`.  
   
          -o bien-  
   
@@ -348,7 +348,7 @@ public class ScriptMain
   
 3.  Haga clic en **ReadWriteVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
-    -   Tipo de `ExcelTables`.  
+    -   Tipo `ExcelTables`.  
   
          -o bien-  
   
@@ -546,7 +546,7 @@ public class ScriptMain
 }  
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Administrador de conexiones de Excel](../connection-manager/excel-connection-manager.md)   

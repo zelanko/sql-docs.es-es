@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing publications
 - publications [SQL Server replication], deleting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deleting publications
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8ab132b903fcb15d11bac4a6d21ab6670397a13e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e13b845d6fba844ccf4199403240c5e8cb79bdbd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303725"
 ---
 # <a name="delete-a-publication"></a>Eliminar una publicación
   En este tema se describe cómo eliminar una publicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -106,7 +106,7 @@ ms.locfileid: "36104485"
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para la publicación y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
   
-4.  Compruebe la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para asegurarse de que la publicación existe. Si el valor de esta propiedad es `false`, significa que las propiedades de la publicación en el paso 3 se definieron incorrectamente o la publicación no existe.  
+4.  Compruebe la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para asegurarse de que la publicación existe. Si el valor de esta propiedad es `false`, ya sea que las propiedades de publicación en el paso 3 se definieron incorrectamente o no existe la publicación.  
   
 5.  Llame al método <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> .  
   
@@ -130,7 +130,7 @@ ms.locfileid: "36104485"
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para la publicación y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
   
-4.  Compruebe la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para asegurarse de que la publicación existe. Si el valor de esta propiedad es `false`, significa que las propiedades de la publicación en el paso 3 se definieron incorrectamente o la publicación no existe.  
+4.  Compruebe la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para asegurarse de que la publicación existe. Si el valor de esta propiedad es `false`, ya sea que las propiedades de publicación en el paso 3 se definieron incorrectamente o no existe la publicación.  
   
 5.  Llame al método <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> .  
   

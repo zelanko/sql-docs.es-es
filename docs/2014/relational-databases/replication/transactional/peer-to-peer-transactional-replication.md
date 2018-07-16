@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bidirectional replication
 - transactional replication, bidirectional replication
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 299b9968d9daebc61c9625a661125d45f33a3dfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 838d3fa3190e592c0b46529ea45b7e1a7b91c8be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236655"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
   La replicación punto a punto proporciona una solución escalada y de alta disponibilidad manteniendo copias de datos en varias instancias de servidor, también denominadas *nodos*. Generada en la base de replicación transaccional, la replicación punto a punto propaga transaccionalmente los cambios coherentes en tiempo casi real. Esto permite a las aplicaciones que requieran una escalada de las operaciones de lectura distribuir las lecturas de los clientes en varios nodos. Dado que los datos se mantienen en los nodos en tiempo casi real, la replicación punto a punto proporciona redundancia de datos, lo que aumenta la disponibilidad de los mismos.  
@@ -149,9 +149,9 @@ ms.locfileid: "36200329"
   
 -   La propiedad de publicación **@allow_initialize_from_backup** requiere un valor de `true`.  
   
--   La propiedad de artículo **@replicate_ddl** requiere un valor de `true`; **@identityrangemanagementoption** requiere un valor de `manual`; y **@status** requiere que la opción **24** se establece.  
+-   La propiedad de artículo **@replicate_ddl** requiere un valor de `true`; **@identityrangemanagementoption** requiere un valor de `manual`; y **@status** requiere que la opción **24** está establecido.  
   
--   El valor de propiedades del artículo **@ins_cmd**, **@del_cmd**, y **@upd_cmd** no puede establecerse en `SQL`.  
+-   El valor de las propiedades de artículo **@ins_cmd**, **@del_cmd**, y **@upd_cmd** no puede establecerse en `SQL`.  
   
 -   La propiedad de suscripción **@sync_type** requiere un valor de `none` o `automatic`.  
   

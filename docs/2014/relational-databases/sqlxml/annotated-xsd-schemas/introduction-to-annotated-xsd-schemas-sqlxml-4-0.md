@@ -1,5 +1,5 @@
 ---
-title: Introducción a los esquemas XSD anotados (SQLXML 4.0) | Documentos de Microsoft
+title: Introducción a los esquemas XSD anotados (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -23,24 +23,24 @@ helpviewer_keywords:
 - XML views [SQLXML]
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fcca99420bce14de1147b8ef2cf0d9756bd6a00a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 257b27033dfce5f9011da2786fdc7482a046b4d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216895"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Introducción a los esquemas XSD anotados (SQLXML 4.0)
   Puede crear vistas XML de datos relacionales utilizando el lenguaje de definición de esquemas XML (XSD). Estas vistas pueden consultarse después utilizando consultas XPath (Lenguaje de rutas XML). Es parecido a crear vistas utilizando instrucciones CREATE VIEW y, a continuación, especificar consultas SQL en la vista.  
   
  Un esquema XML describe la estructura de un documento XML y también describe las diversas restricciones en los datos en el documento. Cuando se especifican consultas XPath en el esquema, la estructura del documento XML devuelto viene determinada por el esquema en el que se ejecuta la consulta XPath.  
   
- En un esquema XSD, el  **\<xsd: schema >** elemento abarca todo el esquema; todas las declaraciones de elemento deben estar contenidas en el  **\<xsd: schema >** elemento. Puede describir los atributos que definen el espacio de nombres en que reside el esquema y los espacios de nombres que se utilizan en el esquema como propiedades de la  **\<xsd: schema >** elemento.  
+ En un esquema XSD, el  **\<xsd: schema >** elemento abarca todo el esquema; todas las declaraciones de elemento deben estar dentro del  **\<xsd: schema >** elemento. Puede describir los atributos que definen el espacio de nombres en el que reside el esquema y los espacios de nombres que se usan en el esquema como propiedades de la  **\<xsd: schema >** elemento.  
   
- Un esquema XSD válido debe contener el  **\<xsd: schema >** elemento definido como se indica a continuación:  
+ Un esquema XSD válido debe contener el  **\<xsd: schema >** elemento que se define como sigue:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -49,7 +49,7 @@ ms.locfileid: "36112417"
 </xsd:schema>  
 ```  
   
- El  **\<xsd: schema >** elemento se deriva de la especificación de espacio de nombres de esquema XML en http://www.w3.org/2001/XMLSchema.  
+ El  **\<xsd: schema >** elemento se deriva de la especificación de espacio de nombres del esquema XML en http://www.w3.org/2001/XMLSchema.  
   
 ## <a name="annotations-to-the-xsd-schema"></a>Anotaciones en el esquema XSD  
  Puede usar un esquema XSD con anotaciones que describan la asignación a una base de datos, consultar la base de datos y devolver los resultados en forma de documento XML. Las anotaciones se proporcionan para asignar un esquema XSD a las tablas y columnas de base de datos. Pueden especificarse consultas XPath en la vista XML creada por el esquema XSD para consultar la base de datos y obtener los resultados en un documento XML.  
@@ -57,10 +57,10 @@ ms.locfileid: "36112417"
 > [!NOTE]  
 >  En [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, el lenguaje de esquemas XSD admite las anotaciones introducidas por el lenguaje de esquemas reducidos de datos XML (XDR) anotados de [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]. Los esquemas XDR anotados han quedado desusados en SQLXML 4.0.  
   
- En el contexto de la base de datos relacional, resulta de gran utilidad para asignar el esquema XSD arbitrario a un almacén relacional. Una forma de conseguirlo es anotar el esquema XSD. Un esquema XSD con anotaciones se conoce como un *esquema de asignación*, que proporciona información sobre la forma de datos XML que debe asignarse al almacén relacional. Un esquema de asignación es realmente una vista XML de los datos relacionales. Estas asignaciones pueden usarse para recuperar los datos relacionales como un documento XML.  
+ En el contexto de la base de datos relacional, resulta de gran utilidad para asignar el esquema XSD arbitrario a un almacén relacional. Una forma de conseguirlo es anotar el esquema XSD. Un esquema XSD con anotaciones se conoce como un *esquema de asignación*, que proporciona información relativa al modo datos XML que debe asignarse al almacén relacional. Un esquema de asignación es realmente una vista XML de los datos relacionales. Estas asignaciones pueden usarse para recuperar los datos relacionales como un documento XML.  
   
 ## <a name="namespace-for-annotations"></a>Espacio de nombres para las anotaciones  
- En un esquema XSD, las anotaciones se especifican mediante el espacio de nombres **urn: schemas-microsoft-mapping-schema**. Como se muestra en el ejemplo siguiente, la manera más fácil de especificar el espacio de nombres es especificarlo en el  **\<xsd: schema >** etiqueta.  
+ En un esquema XSD, las anotaciones se especifican mediante el espacio de nombres **urn: schemas-microsoft-mapping-schema**. Como se muestra en el ejemplo siguiente, la manera más fácil para especificar el espacio de nombres es especificarlo en el  **\<xsd: schema >** etiqueta.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -113,7 +113,7 @@ ms.locfileid: "36112417"
 </xsd:schema>  
 ```  
   
- En el esquema de asignación, el  **\<póngase en contacto con >** elemento se asigna a la tabla Person.Contact en la base de datos de AdventureWorks de ejemplo mediante el uso de la `sql:relation` anotación. Los atributos ConID, FName y LName se asignan a las columnas ContactID, FirstName y LastName de la tabla Person.Contact mediante las anotaciones `sql:field`.  
+ En el esquema de asignación, el  **\<contacto >** elemento se asigna a la tabla Person.Contact de la base de datos de ejemplo AdventureWorks mediante el uso de la `sql:relation` anotación. Los atributos ConID, FName y LName se asignan a las columnas ContactID, FirstName y LastName de la tabla Person.Contact mediante las anotaciones `sql:field`.  
   
  Este esquema XSD anotado proporciona la vista XML de los datos relacionales. Esta vista XML puede consultarse utilizando el lenguaje XPath. Una consulta XPath devuelve como resultado un documento XML en lugar del conjunto de filas que devuelven las consultas SQL.  
   
@@ -123,15 +123,15 @@ ms.locfileid: "36112417"
 ## <a name="other-resources"></a>Otros recursos  
  Puede buscar más información sobre el lenguaje de definición de esquemas XML (XSD), el lenguaje de rutas XML (XPath) y el lenguaje de transformación basado en hojas de estilo (XSLT) en los siguientes sitios web:  
   
--   XML Schema Part 0: Manual, el W3C recomendación (http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Manual, el W3C recomendación ()http://www.w3.org/TR/xmlschema-0/)  
   
--   Esquema XML parte 1: Estructuras, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Estructuras, el W3C recomendación ()http://www.w3.org/TR/xmlschema-1/)  
   
--   Esquema XML parte 2: Datatypes, W3C Recommendation (http://www.w3.org/TR/xmlschema-2/)  
+-   Esquema XML parte 2: Datatypes, W3C recomendación ()http://www.w3.org/TR/xmlschema-2/)  
   
 -   XML Path Language (XPath) ()http://www.w3.org/TR/xpath)  
   
--   (XSL Transformations (XSLT)http://www.w3.org/TR/xslt)  
+-   () XSL Transformations (XSLT)http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>Vea también  
  [Anotar las consideraciones de seguridad de esquema &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   

@@ -1,5 +1,5 @@
 ---
-title: Especificar operadores aritméticos en consultas XPath (SQLXML 4.0) | Documentos de Microsoft
+title: Especificar operadores aritméticos en consultas XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - operators [SQLXML]
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4fe4e247041306cfd00854ae021e2fb5ec64c0b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 389c249203416041831edec0f910a661f695805d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309455"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Especificar operadores aritméticos en consultas XPath (SQLXML 4.0)
   En el ejemplo siguiente se muestra cómo se especifican los operadores aritméticos en consultas XPath. La consulta XPath de este ejemplo se especifica en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -33,20 +33,20 @@ ms.locfileid: "36196405"
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. Especificar el operador aritmético *  
- Esta consulta XPath devuelve  **\<OrderDetail >** elementos que satisfacen el predicado especificado:  
+ Esta consulta XPath devuelve  **\<OrderDetail >** los elementos que satisfacen el predicado especificado:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- En la consulta, `child` es el eje y `OrderDetail` es la prueba de nodo (TRUE si **OrderDetail** es un  **\<nodo element >**, porque la  **\< elemento >** nodo es el nodo principal para el `child` eje). Para todos los  **\<OrderDetail >** y nodos de elementos, se aplica la prueba en el predicado, se devuelven únicamente aquellos nodos que satisfacen la condición.  
+ En la consulta, `child` es el eje y `OrderDetail` es la prueba de nodo (TRUE si **OrderDetail** es un  **\<nodo element >**, porque el  **\< elemento >** nodo es el nodo principal para el `child` eje). Para todos los  **\<OrderDetail >** nodos de elemento, la prueba del predicado se aplica y se devuelven únicamente los nodos que satisfacen la condición.  
   
 > [!NOTE]  
 >  Los números en XPath son números de punto flotante de precisión doble y la comparación de números de punto flotante, como los del ejemplo, hace que éstos se redondeen.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (ArithmeticOperatorA.xml) y guárdela en el directorio donde haya guardado el archivo SampleSchema1.xml.  
   

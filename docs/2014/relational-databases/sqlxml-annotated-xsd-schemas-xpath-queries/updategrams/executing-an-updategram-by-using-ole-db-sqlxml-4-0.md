@@ -1,5 +1,5 @@
 ---
-title: Ejecutar un diagrama de actualización mediante OLE DB (SQLXML 4.0) | Documentos de Microsoft
+title: Ejecutar un diagrama de actualización mediante OLE DB (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,29 +17,29 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 058504e130291b8cc5e5adc812d51ac541d3f2d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7affd08d1b670fa653facb47f5aae5d0bd1d1aed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177742"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Ejecutar un diagrama de actualización mediante OLE DB (SQLXML 4.0)
   En este tema se proporciona un ejemplo funcional de usingOLE DB para ejecutar un diagrama de actualización.  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>Usar ICommandStream para establecer un comando XML  
- La interfaz ICommandStream de OLE DB (versión 2.6 o posterior) pasa un comando como un objeto de secuencia, en lugar de como una cadena.  
+ La interfaz OLE DB (versión 2.6 o posterior) ICommandStream pasa un comando como un objeto de secuencia, en lugar de como una cadena.  
   
- Esta interfaz permite a un comando estar en cualquier codificación que el analizador XML entienda. Cuando se llama a ICommand:: Execute, el texto del comando se lee directamente desde el flujo y se requiere ninguna conversión. Por lo tanto, ejecutar los comandos XML mediante ICommandStream interfaz es más eficaz.  
+ Esta interfaz permite a un comando estar en cualquier codificación que el analizador XML entienda. Cuando se llama ICommand:: Execute, el texto del comando se lee directamente desde el flujo y se requiere ninguna conversión. Por lo tanto, ejecutar los comandos XML mediante ICommandStream interfaz es más eficaz.  
   
 ### <a name="setting-xml-as-a-command-using-icommandstream-and-retrieving-the-results-as-an-xml-document"></a>Establecer XML como un comando mediante ICommandStream y recuperar los resultados como un documento XML  
- La interfaz ICommandStream puede usarse para establecer documentos XML como un comando y se pueden recuperar los resultados como un documento XML.  
+ Se puede usar la interfaz ICommandStream para establecer documentos XML como un comando y se pueden recuperar los resultados como un documento XML.  
   
 #### <a name="executing-templates-with-xpath-queries"></a>Ejecutar plantillas con consultas XPath  
- La siguiente plantilla XML que se compone de una consulta XPath se especifica como un comando mediante ICommandStream:  
+ La siguiente plantilla XML, que consta de una consulta XPath se especifica como un comando mediante ICommandStream:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -63,17 +63,17 @@ ms.locfileid: "36199637"
 </Schema>  
 ```  
   
- La consulta devuelve todos los elementos de empleado. Con la asignación predeterminada, el  **\<Person.Contact >** elemento se asigna a la tabla Person.Contact en la base de datos de AdventureWorks.  
+ La consulta devuelve todos los elementos de empleado. Con la asignación predeterminada, el  **\<Person.Contact >** elemento se asigna a la tabla Person.Contact de la base de datos AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Para establecer XML como un comando y recuperar el resultado como un documento XML  
   
 1.  Inicialice y establezca una conexión a la base de datos.  
   
-2.  Obtenga la interfaz ICommandStream en ICommand.  
+2.  Obtener la interfaz ICommandStream en ICommand.  
   
 3.  Establezca las propiedades de comando necesarias. En este ejemplo, la propiedad SSPROP_STREAM_BASEPATH específica del proveedor está establecida en el directorio donde están almacenados el esquema de asignación y los archivos de plantilla.  
   
-4.  Utilice ICommandStream:: SetCommandStream para especificar la secuencia de comandos. En este ejemplo, la plantilla XML que se ejecuta se lee de un archivo. Esto resulta útil si desea ejecutar plantillas XML grandes.  
+4.  Usar ICommandStream:: SetCommandStream para especificar la secuencia de comandos. En este ejemplo, la plantilla XML que se ejecuta se lee de un archivo. Esto resulta útil si desea ejecutar plantillas XML grandes.  
   
 5.  Ejecute el comando XML mediante ICommand:: Execute, que solicita el identificador de interfaz de IID_ISequentialStream.  
   
@@ -518,7 +518,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- La plantilla incluye una consulta SQL. La consulta requiere un valor para su parámetro (@Title). Si no se pasa ningún valor de parámetro, se utiliza el valor predeterminado ("Mr.").  
+ La plantilla incluye una consulta SQL. La consulta requiere un valor para el parámetro (@Title). Si no se pasa ningún valor de parámetro, se utiliza el valor predeterminado ("Mr.").  
   
  Al pasar valores de parámetro a una plantilla, se deben especificar tanto el nombre de parámetro como el valor.  
   

@@ -1,5 +1,5 @@
 ---
-title: Clases complementarias de AMO y métodos de programación | Documentos de Microsoft
+title: Clases complementarias de AMO y métodos de programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - backups [AMO]
 ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d7f1a2a00b91e9bff4b735ff80d4ac927032ea2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 66fcd0c30acb2ddf62288cb549b96b74ebf7f7b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317335"
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>Programar clases y métodos complementarios de AMO
   Este tema contiene las siguientes secciones:  
@@ -43,7 +43,7 @@ ms.locfileid: "36107315"
 -   [Clase CaptureLog y atributo CaptureXML](#CL)  
   
 ##  <a name="Assembly"></a> Assembly (clase)  
- Ensamblados los usuarios pueden extender la funcionalidad de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] mediante la adición de nuevos procedimientos almacenados o funciones de expresiones multidimensionales (MDX). Para obtener más información, consulte [AMO otras clases y métodos](amo-other-classes-and-methods.md).  
+ Los ensamblados permiten a los usuarios extender la funcionalidad de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] agregando nuevos procedimientos almacenados o funciones de expresiones multidimensionales (MDX). Para obtener más información, consulte [AMO otras clases y métodos](amo-other-classes-and-methods.md).  
   
  Agregar y quitar ensamblados es sencillo y se puede realizar en línea. Debe ser un administrador de bases de datos para agregar un ensamblado a la base de datos o bien un administrador del servidor para agregar el ensamblado al objeto de servidor.  
   

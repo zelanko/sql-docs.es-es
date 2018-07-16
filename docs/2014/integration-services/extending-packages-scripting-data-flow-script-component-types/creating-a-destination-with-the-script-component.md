@@ -20,13 +20,13 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 61a029231238a0ac47e9a1863f3d4bebeec66eee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f32e91ff81e333a15bd13a3db13aabf0e1340d21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221715"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Crear un destino con el componente de script
   Los componentes de destino se utilizan en el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para guardar datos recibidos de orígenes y transformaciones de nivel superior en un origen de datos. Por lo general, el componente de destino se conecta al origen de datos a través de un administrador de conexiones existente.  
@@ -71,7 +71,7 @@ ms.locfileid: "36107684"
  Para obtener más información acerca de la página **Entradas y salidas** del **Editor de transformación Script**, vea [Script Transformation Editor &#40;Inputs and Outputs Page&#41;](../script-transformation-editor-inputs-and-outputs-page.md) (Editor de transformación Script [página Entradas y salidas]).  
   
 ### <a name="adding-variables"></a>Agregar variables  
- Si desea utilizar variables existentes en el script, puede agregarlos en el `ReadOnlyVariables` y `ReadWriteVariables` campos de propiedades en el **Script** página de la **Editor de transformación Script**.  
+ Si desea utilizar variables existentes en el script, puede agregarlas en los `ReadOnlyVariables` y `ReadWriteVariables` campos de propiedades el **Script** página de la **Editor de transformación Script**.  
   
  Cuando agregue varias variables a los campos de propiedades, separe sus nombres con comas. También puede seleccionar varias variables, haga clic en el botón de puntos suspensivos (**...** ) situado junto a la `ReadOnlyVariables` y `ReadWriteVariables` campos de propiedades y, a continuación, seleccionar las variables en el **seleccionar variables** cuadro de diálogo.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36107684"
 ### <a name="understanding-the-auto-generated-code"></a>Descripción del código generado automáticamente  
  Al abrir el IDE de VSTA después de crear y configurar un componente de destino, la clase `ScriptMain` modificable aparece en el editor de código con un código auxiliar para el método `ProcessInputRow`. En la clase `ScriptMain` se escribirá el código personalizado; `ProcessInputRow` es el método más importante de un componente de destino.  
   
- Si abre el **el Explorador de proyectos** ventana en VSTA, puede ver que el componente de Script también ha generado de solo lectura `BufferWrapper` y `ComponentWrapper` elementos de proyecto. La clase `ScriptMain` hereda de la clase `UserComponent` en el elemento de proyecto `ComponentWrapper`.  
+ Si abre el **Explorador de proyectos** ventana en VSTA, puede ver que el componente de Script también ha generado de solo lectura `BufferWrapper` y `ComponentWrapper` elementos de proyecto. La clase `ScriptMain` hereda de la clase `UserComponent` en el elemento de proyecto `ComponentWrapper`.  
   
  En tiempo de ejecución, el motor de flujo de datos invoca el método `ProcessInput` de la clase `UserComponent`, lo que invalida el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> de la clase primaria <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A su vez, el método `ProcessInput` recorre las filas del búfer de entrada y llama al método `ProcessInputRow` una vez por cada fila.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36107684"
  Los ejemplos siguientes muestran código que se requiere en la clase `ScriptMain` para crear un componente de destino.  
   
 > [!NOTE]  
->  Estos ejemplos utilizan la **Person.Address** tabla el `AdventureWorks` base de datos de ejemplo y pasar sus columnas primeros y cuarto, el **int * AddressID*** y **ciudad nvarchar (30)** columnas, a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino de esta sección. Se documentan requisitos previos y suposiciones adicionales para cada ejemplo.  
+>  Estos ejemplos se usa el **Person.Address** de tabla en la `AdventureWorks` base de datos de ejemplo y pasar sus columnas primeros y cuarta, las **int * AddressID*** y **nvarchar (30) City**columnas, a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino de esta sección. Se documentan requisitos previos y suposiciones adicionales para cada ejemplo.  
   
 ### <a name="adonet-destination-example"></a>Ejemplo de destino ADO.NET  
  En este ejemplo se muestra un componente de destino que utiliza un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existente para guardar datos del flujo de datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -124,7 +124,7 @@ ms.locfileid: "36107684"
   
 3.  Agregue un nuevo componente de script a la superficie del diseñador de flujo de datos y configúrelo como destino.  
   
-4.  Conecte la salida de un origen o transformación de nivel superior al componente de destino en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Puede conectar directamente un origen a un destino sin ninguna transformación.) Esta salida debe proporcionar datos de la **Person.Address** tabla de la `AdventureWorks` base de datos de ejemplo que contiene al menos el **AddressID** y **City** columnas.  
+4.  Conecte la salida de un origen o transformación de nivel superior al componente de destino en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Puede conectar directamente un origen a un destino sin ninguna transformación.) Esta salida debe proporcionar datos de la **Person.Address** tabla de la `AdventureWorks` base de datos de ejemplo que contiene al menos el **AddressID** y **Ciudad** columnas.  
   
 5.  Abra el **Editor de transformación Script**. En la página **Columnas de entrada**, seleccione las columnas de entrada **AddressID** y **City**.  
   
@@ -241,7 +241,7 @@ public class ScriptMain:
   
 2.  Agregue un nuevo componente de script a la superficie del diseñador de flujo de datos y configúrelo como destino.  
   
-3.  Conecte la salida de un origen o transformación de nivel superior al componente de destino en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Puede conectar directamente un origen a un destino sin ninguna transformación.) Esta salida debe proporcionar datos de la **Person.Address** tabla de la `AdventureWorks` base de datos de ejemplo y debe contener al menos el **AddressID** y **City** columnas.  
+3.  Conecte la salida de un origen o transformación de nivel superior al componente de destino en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Puede conectar directamente un origen a un destino sin ninguna transformación.) Esta salida debe proporcionar datos de la **Person.Address** tabla de la `AdventureWorks` base de datos de ejemplo y debe contener al menos el **AddressID** y **Ciudad** columnas.  
   
 4.  Abra el **Editor de transformación Script**. En la página **Columnas de entrada**, seleccione las columnas **AddressID** y **City**.  
   
@@ -354,7 +354,7 @@ public class ScriptMain:
 }  
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Creating a Source with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  (Crear un origen con el componente de script)  

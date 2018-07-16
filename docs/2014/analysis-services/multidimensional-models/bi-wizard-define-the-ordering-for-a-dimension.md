@@ -1,5 +1,5 @@
 ---
-title: Definir la ordenación en una dimensión | Documentos de Microsoft
+title: Definir la ordenación de una dimensión | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OrderBy property
 - dimensions [Analysis Services], ordering
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - OrderByAttributeID property
 ms.assetid: c42fbd58-244d-4e0a-b715-6f919cbc3ad9
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d9a0fa0464c2263d21e50fa53c3b577a42d0a950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 622dc698bfcae76297e208015a7c257feadd6b5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293565"
 ---
 # <a name="define-the-ordering-for-a-dimension"></a>Definir la ordenación en una dimensión
   Agregar la mejora de orden de los atributos a un cubo o una dimensión para especificar de qué manera se ordenan los miembros de un atributo. Los miembros pueden ordenarse por el nombre o la clave del atributo, o bien por el nombre o la clave de otro atributo (en función de la relación de atributo). De forma predeterminada, los miembros se ordenan por nombre. Esta mejora cambia la `OrderBy` y `OrderByAttributeID` valores de propiedad para los atributos de una dimensión.  
@@ -39,7 +39,7 @@ ms.locfileid: "36199764"
 ## <a name="specifying-ordering"></a>Especificar el orden  
  En la segunda página **Especificar el orden de los atributos** del asistente, se especifica de qué manera se ordenan todos los atributos de la dimensión.  
   
- En la columna **Atributo de orden** , se puede cambiar el atributo utilizado para aplicar el orden. Si el atributo que desea usar para ordenar los miembros no está en la lista, desplácese hacia abajo en la lista y, a continuación, seleccione  **\<nuevo atributo... >** para abrir el **seleccione una columna** cuadro de diálogo, siempre que sea posible Seleccione una columna en una tabla de dimensiones. Al seleccionar una columna mediante el cuadro de diálogo **Seleccionar una columna** se crea un atributo adicional con el que se ordenan los miembros de un atributo.  
+ En la columna **Atributo de orden** , se puede cambiar el atributo utilizado para aplicar el orden. Si el atributo que desea usar para ordenar los miembros no está en la lista, desplácese hacia abajo en la lista y, a continuación, seleccione  **\<nuevo atributo... >** para abrir el **seleccionar una columna** cuadro de diálogo, donde puede Seleccione una columna en una tabla de dimensiones. Al seleccionar una columna mediante el cuadro de diálogo **Seleccionar una columna** se crea un atributo adicional con el que se ordenan los miembros de un atributo.  
   
  En la columna **Criterios** , puede seleccionar si ordena los miembros del atributo por **Clave** o **Nombre**.  
   

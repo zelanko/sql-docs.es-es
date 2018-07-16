@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, migrating
 - migrating packages [Integration Services]
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 caps.latest.revision: 50
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3d975c0ee5764ca0e7038b51392309b52bf17641
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 39f07febdc8c5c9bc8e63b61d42b0a7ff5927ee0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107475"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233445"
 ---
 # <a name="upgrade-integration-services-packages"></a>Actualizar paquetes de Integration Services
-  Cuando se actualiza una instancia de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sus [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] paquetes no se actualizan automáticamente al formato de paquete que la versión actual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa. Tendrá que seleccionar un método de actualización y actualizar manualmente los paquetes.  
+  Cuando se actualiza una instancia de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], existentes [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] paquetes no se actualizan automáticamente al formato de paquete que la versión actual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se utiliza. Tendrá que seleccionar un método de actualización y actualizar manualmente los paquetes.  
   
  Cuando actualiza un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] migra los scripts de las tareas Script y componentes Script a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools para aplicaciones (VSTA). En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], los scripts de tareas Script o componentes Script usaban [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] para aplicaciones (VSA). Para más información sobre los cambios que es posible que haya que realizar en los scripts antes de la migración y sobre los errores de conversión de scripts, vea [Migrar scripts a VSTA](../../sql-server/install/migrate-scripts-to-vsta.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36107475"
   
 -   DTExecUI.exe.config  
   
- Usar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para diseñar paquetes que incluyen [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] componentes personalizados, debe modificar el archivo devenv.exe.config que se encuentra en  *\<unidad >*: \Program Files\ Microsoft Visual Studio 10.0\Common7\IDE.  
+ Para usar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para diseñar paquetes que incluyen [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] componentes personalizados, deberá modificar el archivo devenv.exe.config que se encuentra en  *\<unidad >*: \Program Files\ Microsoft Visual Studio 10.0\Common7\IDE.  
   
  Para usar estos paquetes con aplicaciones cliente compiladas con el motor de ejecución para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], incluya reglas de redirección en la sección de configuración del archivo *.exe.config para el ejecutable. Las reglas redirigirán los ensamblados en tiempo de ejecución a la versión 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Para obtener más información sobre la redirección de la versión de ensamblado, vea [Elemento \<assemblyBinding> para \<runtime>](http://msdn.microsoft.com/library/twy1dw1e.aspx).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36107475"
   
 |Componente o característica|Resultados de la actualización|  
 |--------------------------|---------------------|  
-|Cadenas de conexión|En el caso de paquetes de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , los nombres de ciertos proveedores han cambiado y requieren valores diferentes en las cadenas de conexión. Para actualizar las cadenas de conexión, utilice uno de los procedimientos siguientes:<br /><br /> -Use el Asistente para actualizar paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] para actualizar el paquete y seleccione la opción **Actualizar las cadenas de conexión para usar nuevos nombres de proveedor**.<br /><br /> -En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en la página General del cuadro de diálogo Opciones, seleccione la opción **Actualizar las cadenas de conexión para usar nuevos nombres de proveedor**. Para obtener más información acerca de esta opción, vea [General Page](../general-page-of-integration-services-designers-options.md).<br /><br /> -En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el paquete y cambie manualmente el texto de la propiedad ConnectionString.<br /><br /> Nota: No se puede usar los procedimientos anteriores para actualizar una cadena de conexión cuando la cadena de conexión se almacena en un archivo de configuración o en un archivo de origen de datos, o cuando una expresión establece la `ConnectionString` propiedad. Para actualizar la cadena de conexión en estos casos, debe actualizar manualmente el archivo o la expresión.<br /><br /> Para obtener más información sobre los orígenes de datos, vea [Orígenes de datos](../connection-manager/data-sources.md).|  
+|Cadenas de conexión|En el caso de paquetes de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , los nombres de ciertos proveedores han cambiado y requieren valores diferentes en las cadenas de conexión. Para actualizar las cadenas de conexión, utilice uno de los procedimientos siguientes:<br /><br /> -Use el Asistente para actualizar paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] para actualizar el paquete y seleccione la opción **Actualizar las cadenas de conexión para usar nuevos nombres de proveedor**.<br /><br /> -En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en la página General del cuadro de diálogo Opciones, seleccione la opción **Actualizar las cadenas de conexión para usar nuevos nombres de proveedor**. Para obtener más información acerca de esta opción, vea [General Page](../general-page-of-integration-services-designers-options.md).<br /><br /> -En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el paquete y cambie manualmente el texto de la propiedad ConnectionString.<br /><br /> Nota: No se puede usar los procedimientos anteriores para actualizar una cadena de conexión cuando la cadena de conexión se almacena en un archivo de configuración o un archivo de origen de datos, o cuando una expresión establece la `ConnectionString` propiedad. Para actualizar la cadena de conexión en estos casos, debe actualizar manualmente el archivo o la expresión.<br /><br /> Para obtener más información sobre los orígenes de datos, vea [Orígenes de datos](../connection-manager/data-sources.md).|  
 |Transformación de búsqueda|Para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] paquetes, el proceso de actualización actualiza automáticamente la transformación búsqueda a la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Sin embargo, la versión de este componente tiene algunas capacidades adicionales que podría ser conveniente aprovechar.<br /><br /> Para obtener más información, vea [Lookup Transformation](../data-flow/transformations/lookup-transformation.md).|  
 |Tarea Script y componente Script|El caso de paquetes [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , el proceso de actualización migra automáticamente los scripts de la tarea Script y del componente Script de VSA a VSTA.<br /><br /> Para más información sobre los cambios que es posible que haya que realizar en los scripts antes de la migración y sobre los errores de conversión de scripts, vea [Migrar scripts a VSTA](../../sql-server/install/migrate-scripts-to-vsta.md).|  
   

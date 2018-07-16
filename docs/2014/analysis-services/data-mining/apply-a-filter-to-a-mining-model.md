@@ -1,5 +1,5 @@
 ---
-title: Aplicar un filtro a un modelo de minería de datos | Documentos de Microsoft
+title: Aplicar un filtro a un modelo de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
 - filters [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - filtering data [Analysis Services]
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb6cdfdf92e5cec0da4e27a78474037e2bd7d70e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f550dde21f45d7850db5cc6a27d2247c565dcee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253207"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Aplicar un filtro a un modelo de minería de datos
   Si la estructura de minería de datos contiene una tabla anidada, puede aplicar un filtro a la tabla de casos, a la tabla anidada o a ambas.  
@@ -70,7 +70,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Haga clic en el cuadro de texto **Valor** y escriba un valor:  
   
-     Por ejemplo, seleccione `Income` como columna, seleccione el mayor que (>), operador y, a continuación, escriba `30000`.  
+     Por ejemplo, seleccione `Income` como columna, seleccione el mayor que (>) de operador y, a continuación, escriba `30000`.  
   
 9. Haga clic en la siguiente fila de la cuadrícula.  
   
@@ -130,8 +130,8 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
   
   
 ## <a name="see-also"></a>Vea también  
- [Filtros para modelos de minería de datos de &#40;Analysis Services: minería de datos&#41;](mining-models-analysis-services-data-mining.md)   
- [Tareas y tareas de modelo de minería de datos](mining-model-tasks-and-how-tos.md)   
+ [Filtros para modelos de minería de datos de &#40;Analysis Services - minería de datos&#41;](mining-models-analysis-services-data-mining.md)   
+ [Tareas del modelo de minería de datos y procedimientos](mining-model-tasks-and-how-tos.md)   
  [Eliminar un filtro de un modelo de minería de datos](delete-a-filter-from-a-mining-model.md)  
   
   

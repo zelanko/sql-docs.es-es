@@ -1,5 +1,5 @@
 ---
-title: Elemento BackColor (ASSL) | Documentos de Microsoft
+title: Elemento BackColor (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - BackColor element
 ms.assetid: 9024d131-74cc-4815-833a-f8cae57b7453
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe0ab54477b22f1e6ea1bdc55156ea8318dd87a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed491d6307e6e5776843c3f5e490d9369235143b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274121"
 ---
 # <a name="backcolor-element-assl"></a>Elemento BackColor (ASSL)
   Describe las características de presentación del elemento principal relacionadas con el color.  
@@ -64,7 +64,7 @@ ms.locfileid: "36105944"
 ## <a name="remarks"></a>Notas  
  El `BackColor` propiedad contiene una expresión de lenguaje de expresiones multidimensionales (MDX) y se aplica a `CalculationProperty` elementos con un [CalculationType](calculationtype-element-assl.md) de *miembro* o  *Las celdas*.  
   
- El elemento que corresponde al elemento primario de `BackColor` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ El elemento que se corresponde con el elemento primario de `BackColor` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento CalculationProperties &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

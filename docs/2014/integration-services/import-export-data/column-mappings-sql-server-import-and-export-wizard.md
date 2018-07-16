@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b4afba941b06e073f2dddffdb96a2dd95ffda5b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb9f39f0eb06bb3a4bd4c2921b23736d1305db3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281511"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Asignaciones de columnas (Asistente para importación y exportación de SQL Server)
   Use la **asignaciones de columnas** cuadro de diálogo para editar los parámetros de transformación.  
   
 > [!NOTE]  
->  No es necesario copiar todas las columnas en una tabla al seleccionar la opción de copia de tabla. Seleccione  **\<omitir >** en el **destino** columnas de este cuadro de diálogo para las columnas que desea omitir.  
+>  No es necesario copiar todas las columnas en una tabla al seleccionar la opción de copia de tabla. Seleccione  **\<omitir >** en el **destino** columna de este cuadro de diálogo para las columnas que desea omitir.  
   
  Para más información acerca de este asistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información acerca de las opciones para iniciar el asistente, así como los permisos necesarios para ejecutar el asistente correctamente, consulte [ejecutar la importación de SQL Server y el Asistente para exportación de](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36105893"
  Especifique si deben anexarse datos nuevos a los datos que contiene una tabla existente.  
   
  **Editar SQL**  
- Utilice la instrucción de forma predeterminada en el **instrucción Create Table de SQL** diálogo cuadro, o modificarlo para sus fines. Si modifica la instrucción, también deberá realizar los cambios asociados en la asignación de tablas.  
+ Utilice la instrucción predeterminada en el **instrucción Create Table SQL** diálogo cuadro o modificarlo para sus fines. Si modifica la instrucción, también deberá realizar los cambios asociados en la asignación de tablas.  
   
  **Quitar y volver a crear la tabla de destino**  
  Elija esta opción para sobrescribir la tabla de destino. Esta opción solo está disponible si se usa el asistente para crear la tabla de destino. La tabla de destino se quita y se vuelve a crear solo si guarda el paquete que el asistente crea y, a continuación, ejecuta el paquete de nuevo.  

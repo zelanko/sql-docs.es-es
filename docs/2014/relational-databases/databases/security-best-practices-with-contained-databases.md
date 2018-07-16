@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: aef1d046b409a7ebcaa0cb7db8370cf2f61590eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f6bc6472ed6e40016448b9088db497c770eaaa09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300525"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Prácticas recomendadas de seguridad con bases de datos independientes
-  Las bases de datos independientes tienen algunas amenazas únicas que los administradores de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] deben comprender y mitigar. Relacionados con la mayoría de las amenazas el `USER WITH PASSWORD` proceso de autenticación, que traslada el límite de autenticación desde el [!INCLUDE[ssDE](../../includes/ssde-md.md)] nivel en el nivel de base de datos.  
+  Las bases de datos independientes tienen algunas amenazas únicas que los administradores de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] deben comprender y mitigar. Está relacionados con la mayoría de las amenazas el `USER WITH PASSWORD` proceso de autenticación, que traslada el límite de autenticación desde el [!INCLUDE[ssDE](../../includes/ssde-md.md)] nivel en el nivel de base de datos.  
   
 ## <a name="threats-related-to-users"></a>Amenazas relacionadas con usuarios  
- Los usuarios de una base de datos independiente con el `ALTER ANY USER` permiso, como los miembros de la **db_owner** y **db_securityadmin** fijas de base de datos, puede conceder acceso a la base de datos sin el conocimiento o permiso si la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrador. La concesión de acceso a usuarios en una base de datos independiente incrementa el área expuesta al ataque potencial en toda la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los administradores deben comprender esta delegación de control de acceso y ser sumamente cuidadosos de conceder a los usuarios en la base de datos independiente del `ALTER ANY USER` permiso. Todos los propietarios de base de datos tienen la `ALTER ANY USER` permiso. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben auditar periódicamente a los usuarios de una base de datos independiente.  
+ Los usuarios de una base de datos independiente con el `ALTER ANY USER` permiso, como los miembros de la **db_owner** y **db_securityadmin** fijas de base de datos, puede conceder acceso a la base de datos sin el conocimiento o permiso si el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrador. La concesión de acceso a usuarios en una base de datos independiente incrementa el área expuesta al ataque potencial en toda la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los administradores deben comprender esta delegación de control de acceso y ser sumamente cuidadosos de conceder a los usuarios en la base de datos independiente del `ALTER ANY USER` permiso. Todos los propietarios de base de datos tienen la `ALTER ANY USER` permiso. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben auditar periódicamente a los usuarios de una base de datos independiente.  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>Acceder a otras bases de datos mediante la cuenta Invitado  
  Los propietarios y los usuarios de bases de datos con el permiso `ALTER ANY USER` pueden crear usuarios de bases de datos independientes. Después de conectarse a una base de datos independiente en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un usuario de base de datos independiente puede obtener acceso a otras bases de datos en [!INCLUDE[ssDE](../../includes/ssde-md.md)], si en estas bases de datos se ha habilitado la cuenta **Invitado** .  
@@ -67,7 +67,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 -   Cuando estén presentes bases de datos independientes, los usuarios de base de datos que no sean bases de datos independientes deben conectarse al [!INCLUDE[ssDE](../../includes/ssde-md.md)] sin usar ningún catálogo inicial ni especificar el nombre de una base de datos dependiente como el catálogo inicial. De esta forma, se evita la conexión a la base de datos independiente bajo un control menos directo por parte de los administradores de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ### <a name="increasing-access-by-changing-the-containment-status-of-a-database"></a>Incrementar el acceso cambiando el estado de contención de una base de datos  
- Inicios de sesión que tienen el `ALTER ANY DATABASE` permiso, como los miembros de la **dbcreator** fijo de rol de servidor y los usuarios de una base de datos dependiente con el `CONTROL DATABASE` permiso, como los miembros de la **db_owner**  rol fijo de base de datos, puede cambiar la configuración de contención de una base de datos. Si la configuración de contención de una base de datos se cambia de `NONE` a `PARTIAL` o `FULL`, se puede conceder acceso de usuario mediante la creación de usuarios de bases de datos independientes con contraseñas. De esta forma, se podría proporcionar acceso sin el conocimiento ni el consentimiento de los administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para evitar que las bases de datos sean independientes, establezca el [!INCLUDE[ssDE](../../includes/ssde-md.md)] `contained database authentication` opción en 0. Para evitar que se conecten los usuarios de bases de datos independientes con contraseñas en las bases de datos independientes seleccionadas, use desencadenadores de inicio de sesión para cancelar los intentos de inicios de sesión de los usuarios de bases de datos independientes con contraseñas.  
+ Inicios de sesión que tienen el `ALTER ANY DATABASE` permiso, como los miembros de la **dbcreator** fija de servidor y los usuarios de una base de datos dependiente con la `CONTROL DATABASE` permiso, como los miembros de la **db_owner**  rol fijo de base de datos, puede cambiar la configuración de contención de una base de datos. Si la configuración de contención de una base de datos se cambia de `NONE` a `PARTIAL` o `FULL`, se puede conceder acceso de usuario mediante la creación de usuarios de bases de datos independientes con contraseñas. De esta forma, se podría proporcionar acceso sin el conocimiento ni el consentimiento de los administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para evitar que las bases de datos sean independientes, establezca el [!INCLUDE[ssDE](../../includes/ssde-md.md)] `contained database authentication` opción en 0. Para evitar que se conecten los usuarios de bases de datos independientes con contraseñas en las bases de datos independientes seleccionadas, use desencadenadores de inicio de sesión para cancelar los intentos de inicios de sesión de los usuarios de bases de datos independientes con contraseñas.  
   
 ### <a name="attaching-a-contained-database"></a>Adjuntar una base de datos independiente  
  Si se adjunta una base de datos independiente, un administrador podría dar acceso a usuarios no deseados a la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Un administrador al que le preocupe este riesgo puede poner en línea la base de datos en el modo `RESTRICTED_USER`, que evita la autenticación de usuarios de bases de datos independientes con contraseñas. Solo las entidades de seguridad autorizadas mediante inicios de sesión podrán acceder a [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

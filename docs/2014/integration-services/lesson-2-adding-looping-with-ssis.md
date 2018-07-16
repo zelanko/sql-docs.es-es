@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Agregar bucles | Documentos de Microsoft'
+title: 'Lección 2: Agregar bucles | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 caps.latest.revision: 31
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 46f67531366ef7ff91e3afcc4b8d55b7cc08635e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d1d67ffcac889a49de14f628cf7eb996895cf8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281481"
 ---
 # <a name="lesson-2-adding-looping"></a>Lección 2: Agregar bucles
-  En [lección 1: crear el proyecto y el paquete básico](lesson-1-create-a-project-and-basic-package-with-ssis.md), creó un paquete que extrae datos de un origen de archivo sin formato único, transforma los datos mediante transformaciones de búsqueda y, por último, cargó los datos en el  **FactCurrency** tabla de hechos de la **AdventureWorksDW2012** base de datos de ejemplo.  
+  En [lección 1: crear el proyecto y el paquete básico](lesson-1-create-a-project-and-basic-package-with-ssis.md), creó un paquete que extraía datos de origen de un único archivo plano, transformó los datos mediante transformaciones de búsqueda y, por último, cargó los datos en el  **FactCurrency** tabla de hechos de la **AdventureWorksDW2012** base de datos de ejemplo.  
   
  No obstante, no es muy habitual utilizar un solo archivo plano para el proceso de extracción, transformación y carga (ETL). Un proceso ETL típico utilizaría datos extraídos de varios orígenes de archivos planos. Para extraer datos de varios orígenes, se requiere un flujo de control iterativo. Una de las características más esperadas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es la capacidad de agregar fácilmente una iteración o un bucle a los paquetes.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "36105644"
   
 -   [Paso 2: Agregar y configurar el contenedor de bucles Foreach](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [Paso 3: Modificar el Administrador de conexión de archivos planos](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [Paso 3: Modificar el Administrador de conexiones de archivos planos](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [Paso 4: Probar el paquete del Tutorial lección 2](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+-   [Paso 4: Probar el paquete del tutorial de la lección 2](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
  [Paso 1: Copiar el paquete de la lección 1](lesson-2-1-copying-the-lesson-1-package.md)  

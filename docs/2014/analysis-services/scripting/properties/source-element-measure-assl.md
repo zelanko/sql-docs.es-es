@@ -1,5 +1,5 @@
 ---
-title: Origen de elemento (Measure) (ASSL) | Documentos de Microsoft
+title: (Medida) (ASSL) del elemento de origen | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 9bae7ba4-3065-4623-b3e0-d54cebea7503
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed41316f62469268d86a89d0c0a5e59f07c8f726
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d4e374490fdfe04e5da39a0f4e9424b2cb1ccde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323215"
 ---
 # <a name="source-element-measure-assl"></a>Elemento Source (Measure) (ASSL)
   Contiene los detalles de la fuente que contiene el valor de la [medida](../objects/measure-element-assl.md) elemento.  
@@ -50,7 +50,7 @@ ms.locfileid: "36107496"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|[Elemento de datos](../data-type/dataitem-data-type-assl.md)|  
+|Tipo y longitud de los datos|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Valor predeterminado|None|  
 |Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36107496"
 ## <a name="remarks"></a>Notas  
  El `Source` de la `DataItem`, que actúa como el `Source` de la `Measure`, a su vez puede ser de tipo [RowBinding](../data-type/binding-data-type-assl.md), [ColumnBinding](../data-type/columnbinding-data-type-assl.md), [MeasureBinding ](../data-type/measurebinding-data-type-assl.md), o [CubeDimensionBinding](../data-type/dimensionbinding-data-type-assl.md).  
   
- Para obtener información adicional acerca de la `DataItem` tipo, incluida una tabla de objetos ASSL y las propiedades de la `DataItem` los tipos, vea [tipo de datos DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+ Para obtener más información sobre la `DataItem` tipo, incluida una tabla de objetos ASSL y propiedades de la `DataItem` , vea [tipo de datos DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
  El elemento correspondiente al elemento primario de `Source` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Measure>.  
   

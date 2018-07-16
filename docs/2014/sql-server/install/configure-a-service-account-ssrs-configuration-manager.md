@@ -1,5 +1,5 @@
 ---
-title: Configurar una cuenta de servicio (Administrador de configuración de SSRS) | Documentos de Microsoft
+title: Configurar una cuenta de servicio (Administrador de configuración de SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Web service, accounts
 - service accounts [Reporting Services]
@@ -18,18 +18,18 @@ ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2f680cf4f291bed7a82bb3b7aadd0e8c1871ef17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8f16a73e32557345086a3363e619e56891f1c65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234495"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Configurar una cuenta de servicio (Administrador de configuración de SSRS)
   En una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el servicio web del servidor de informes, el Administrador de informes y la aplicación de procesamiento en segundo plano se ejecutan dentro de un único servicio. La cuenta en la que el servicio se ejecuta se define durante la instalación, al especificar la cuenta en la página Identidad de servicio, pero puede utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si desea usar una cuenta diferente o actualizar la contraseña.  
   
- Si tiene un servidor de informes que está configurado para utilizar el modo integrado de SharePoint y cambiar la cuenta de servicio mediante el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] herramienta de configuración, también debe abrir Administración Central de SharePoint y usar el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  **Conceder acceso a la base de datos** página para volver a aplicar la configuración de servidor e instancia de informe. Este paso permitirá el nuevo acceso cuenta de servicio para las bases de datos de SharePoint, lo que es necesario para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
+ Si tiene un servidor de informes está configurado para usar el modo integrado de SharePoint y cambiar la cuenta de servicio mediante el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] herramienta de configuración, también debe abrir Administración Central de SharePoint y usar el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  **Conceder acceso a la base de datos** página para volver a aplicar la configuración de instancia y el servidor de informes. Este paso, concederá la nueva cuenta service acceso a las bases de datos de SharePoint, que es necesaria para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
  Use siempre la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para actualizar la cuenta de servicio y que se pueda actualizar simultáneamente otra configuración que dependa de la identidad del servicio.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36112885"
   
 1.  Inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y conéctese al servidor de informes.  
   
-2.  En la página Cuenta de servicio, seleccione la opción que describa el tipo de cuenta que desea utilizar. Para obtener recomendaciones sobre qué tipo de cuenta para especificar, vea [configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+2.  En la página Cuenta de servicio, seleccione la opción que describa el tipo de cuenta que desea utilizar. Para obtener recomendaciones sobre qué tipo de cuenta para especificar, vea [configurar la cuenta de servicio del servidor de informes &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 3.  Si seleccionó una cuenta de usuario de Windows, especifique la nueva cuenta y la contraseña. La cuenta no puede tener más de 20 caracteres.  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 520d0b15fb5c2ad7e666bbb5804e2325865700e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d8d693e328aafb852e5878418401495ffd61a2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234735"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar un servidor de informes en un clúster con equilibrio de carga de red
   Si va a configurar una ampliación escalada de un servidor de informes para ejecutarse en un clúster con equilibrio de carga de red (NLB), debe hacer lo siguiente:  
@@ -39,10 +39,10 @@ ms.locfileid: "36202237"
   
 |Paso|Descripción|Más información|  
 |----------|-----------------|----------------------|  
-|1|Antes de instalar Reporting Services en los nodos de servidor en un clúster NLB, compruebe los requisitos de la implementación escalada.|[Configurar una implementación de ampliación horizontal del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41; ](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla|  
+|1|Antes de instalar Reporting Services en los nodos de servidor en un clúster NLB, compruebe los requisitos de la implementación escalada.|[Configurar una implementación escalada de servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41; ](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en línea|  
 |2|Configure el clúster NLB y compruebe si funciona correctamente.<br /><br /> Asegúrese de asignar un nombre de encabezado de host a la dirección IP del servidor virtual del clúster NLB. El nombre de encabezado de host se utiliza en la dirección URL del servidor de informes y es más fácil de recordar y escribir que una dirección IP.|Para obtener más información, consulte la documentación de producto de Windows Server correspondiente a la versión del sistema operativo Windows que se ejecute.|  
 |3|Agregue NetBIOS y el nombre de dominio completo (FQDN) del encabezado de host a la lista de **BackConnectionHostNames** almacenada en el Registro de Windows. Siga los pasos de **Método 2: especificar los nombres de host** en [KB 896861](http://support.microsoft.com/kb/896861) (http://support.microsoft.com/kb/896861), con el ajuste siguiente. El**paso 7** del artículo de KB dice que “salga del Editor del Registro y después reinicie el servicio de IISAdmin”. En su lugar, reinicie el equipo para asegurarse de que los cambios surten efecto.<br /><br /> Por ejemplo, si el nombre de encabezado de host \<MyServer> es un nombre virtual para el nombre de equipo Windows de "contoso", probablemente pueda hacer referencia al formato FQDN como "contoso.domain.com". Deberá agregar tanto el nombre de hostheader (MyServer) como el nombre FQDN (contoso.domain.com) a la lista de **BackConnectionHostNames**.|Se requiere este paso si el entorno de servidor incluye la autenticación NTLM en el equipo local, creando una conexión de bucle invertido.<br /><br /> Si es así, notará que las solicitudes entre el Administrador de informes y el servidor de informes dan el error 401 (no autorizado).|  
-|4|Instale [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de solo archivos en los nodos que ya formen parte de un clúster NLB y configure las instancias del servidor de informes para la implementación escalada.<br /><br /> La implementación escalada que configure podría no responder a las solicitudes que se dirijan a la dirección IP del servidor virtual. La configuración de la implementación escalada para utilizar la dirección IP del servidor virtual se produce en un paso posterior, después de configurar la validación del estado de la vista.|[Configurar una implementación de ampliación horizontal del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
+|4|Instale [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de solo archivos en los nodos que ya formen parte de un clúster NLB y configure las instancias del servidor de informes para la implementación escalada.<br /><br /> La implementación escalada que configure podría no responder a las solicitudes que se dirijan a la dirección IP del servidor virtual. La configuración de la implementación escalada para utilizar la dirección IP del servidor virtual se produce en un paso posterior, después de configurar la validación del estado de la vista.|[Configurar una implementación escalada de servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|Configure la validación del estado de la vista.<br /><br /> Para obtener los mejores resultados, realice este paso después de configurar la implementación escalada y antes de configurar las instancias del servidor de informes para utilizar la dirección IP del servidor virtual. Al configurar la validación del estado de la vista primero, puede evitar las excepciones de la validación del estado con errores que se producen cuando los usuarios intentan tener acceso a informes interactivos.|[Cómo configurar la validación del estado de la vista](#ViewState) en este tema.|  
 |6|Configurar `Hostname` y `UrlRoot` para usar la dirección IP del servidor virtual del clúster NLB.|[Cómo configurar Hostname y UrlRoot](#SpecifyingVirtualServerName) en este tema.|  
 |7|Compruebe que los servidores son accesibles a través del nombre de host que especificó.|[Comprobar el acceso del servidor de informes](#Verify) en este tema.|  
@@ -54,7 +54,7 @@ ms.locfileid: "36202237"
   
  Para evitar este problema, puede generar una clave de validación arbitraria que admita la validación del estado de la vista y, después, configurar manualmente cada nodo del servidor de informes para que utilice la misma clave. Puede utilizar cualquier secuencia hexadecimal generada de forma aleatoria. El algoritmo de validación (como SHA1) determina la longitud que debe tener la secuencia hexadecimal.  
   
-1.  Genere una clave de validación y una clave de descifrado utilizando la funcionalidad de generación automática que proporciona [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Al final, debe tener un único <`machineKey`> entrada que puede pegar en el archivo Web.config para cada instancia del Administrador de informes en la implementación de ampliación horizontal.  
+1.  Genere una clave de validación y una clave de descifrado utilizando la funcionalidad de generación automática que proporciona [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Al final, debe tener un único <`machineKey`> entrada que puede pegar en el archivo Web.config para cada instancia del Administrador de informes en la implementación escalada.  
   
      En el ejemplo siguiente se ilustra el valor que se debe obtener. No copie el ejemplo en sus archivos de configuración; los valores de las claves no son válidos.  
   
@@ -79,19 +79,19 @@ ms.locfileid: "36202237"
   
  Además, configure la propiedad `UrlRoot` para que los vínculos de informe funcionen en los informes que se hayan exportado a informes estáticos, como en formato de Excel o PDF, o en informes que generen las suscripciones, por ejemplo las de correo electrónico.  
   
- Si integra [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 o [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007, u hospedar los informes en una aplicación Web personalizada, tendrá que configurar solo la `UrlRoot` propiedad. En este caso, configure la propiedad `UrlRoot` para que sea la dirección URL del sitio de SharePoint o aplicación web. Esto dirigirá el tráfico de red para el entorno de informe a la aplicación que administra los informes en lugar de al servidor de informes o al clúster NLB.  
+ Si integra [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 o [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007, u hospeda los informes en una aplicación Web personalizada, es posible que deba configurar solo la `UrlRoot` propiedad. En este caso, configure la propiedad `UrlRoot` para que sea la dirección URL del sitio de SharePoint o aplicación web. Esto dirigirá el tráfico de red para el entorno de informe a la aplicación que administra los informes en lugar de al servidor de informes o al clúster NLB.  
   
  No modifique `ReportServerUrl`. Si modifica esta dirección URL, añadirá un viaje de ida y vuelta adicional a través del servidor virtual cada vez que se administre una solicitud interna. Para más información, vea [Direcciones URL en archivos de configuración &#40;Administrador de configuración de SSRS&#41;](../install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). Para más información sobre cómo editar el archivo de configuración, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 1.  Abra RSReportServer.config en un editor de texto.  
   
-2.  Buscar el  **\<servicio >** sección y agregue la siguiente información al archivo de configuración, reemplazando la `Hostname` valor con el nombre del servidor virtual para el servidor NLB:  
+2.  Buscar el  **\<servicio >** sección y agregue la siguiente información al archivo de configuración, reemplazando la `Hostname` valor con el nombre del servidor virtual del servidor NLB:  
   
     ```  
     <Hostname>virtual_server</Hostname>  
     ```  
   
-3.  Buscar `UrlRoot`. El elemento no está especificado en el archivo de configuración, pero el valor predeterminado utilizado es una dirección URL en este formato: http:// o https://\<*computername*>/\<*reportserver*>, donde \< *reportserver*> es el nombre de directorio virtual del servicio Web del servidor de informes.  
+3.  Buscar `UrlRoot`. El elemento no está especificado en el archivo de configuración, pero el valor predeterminado utilizado es una dirección URL con este formato: http:// o https://\<*computername*>/\<*reportserver*>, donde \< *reportserver*> es el nombre del directorio virtual del servicio Web del servidor de informes.  
   
 4.  Escriba un valor para `UrlRoot` que incluya el nombre virtual del clúster en este formato: http:// o https://\<*servidor_virtual*>/\<*reportserver*>.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36202237"
 ##  <a name="Verify"></a> Comprobar el acceso del servidor de informes  
  Compruebe que puede tener acceso a la implementación escalada a través del nombre de servidor virtual (por ejemplo, https://MyVirtualServerName/reportserver y https://MyVirtualServerName/reports).  
   
- Para comprobar qué nodo procesa los informes en realidad, consulte los archivos de registro del servidor de informes o el registro de ejecución de RS (la tabla del registro de ejecución contiene una columna denominada **InstanceName** que muestra qué instancia ha procesado una solicitud concreta). Para obtener más información, consulte [archivos de registro de servicios de informes y orígenes de](../report-server/reporting-services-log-files-and-sources.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+ Para comprobar qué nodo procesa los informes en realidad, consulte los archivos de registro del servidor de informes o el registro de ejecución de RS (la tabla del registro de ejecución contiene una columna denominada **InstanceName** que muestra qué instancia ha procesado una solicitud concreta). Para obtener más información, consulte [archivos de registro de Reporting Services y orígenes](../report-server/reporting-services-log-files-and-sources.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
   
  Si no puede conectarse al servidor de informes, compruebe el NLB para asegurarse de que las solicitudes se envían al servidor de informes y vea el registro HTTP del servidor de informes para asegurarse de que el servidor está recibiendo las solicitudes.  
   

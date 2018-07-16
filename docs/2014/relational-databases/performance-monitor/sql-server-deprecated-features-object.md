@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
 - performance counters [SQL Server], deprecated features
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e093deb7505ecd6bf7b5afd0b66da2791f34cc51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227415"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Objeto SQL Server, Características en desuso
   El objeto SQLServer:Características desusadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un contador para supervisar las características designadas como desusadas. En cada caso, el contador proporciona un recuento de la utilización que muestra el número de veces que la característica desusada se encontró desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez.  
@@ -34,7 +34,7 @@ ms.locfileid: "36197950"
 |Instancias del contador Características desusadas de SQL Server|Descripción|  
 |------------------------------------------------------|-----------------|  
 |'#' y '##' como el nombre de tablas temporales y procedimientos almacenados|Se encontró un identificador que no contenía ningún carácter a parte de #. Utilice al menos un carácter adicional. Se produce una vez por cada compilación.|  
-|'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplace por `SELECT column_list FROM`  *\< nombre_función >*`()`. Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  
+|'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplazar por `SELECT column_list FROM`  *\< nombre_función >*`()`. Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  
 |'@' y nombres que comiencen por '@@' como identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]|Se encontró un identificador que comenzaba por @ o @@. No utilice @ o @@, o nombres que comiencen por @@ como identificadores. Se produce una vez por cada compilación.|  
 |ADDING TAPE DEVICE|La característica desusada sp_addumpdevice'`tape`' se encontró. Utilice sp_addumpdevice'`disk`' en su lugar. Se produce una vez en cada uso.|  
 |ALL Permission|Número total de veces que se encontró la sintaxis GRANT ALL, DENY ALL o REVOKE ALL. Modifique la sintaxis para denegar permisos concretos. Se produce una vez por cada consulta.|  
@@ -50,7 +50,7 @@ ms.locfileid: "36197950"
 |CREATE TRIGGER WITH APPEND|Se encontró una instrucción CREATE TRIGGER con la cláusula WITH APPEND. Vuelva a crear el desencadenador entero en su lugar. Se produce una vez por cada uso en una instrucción DDL.|  
 |CREATE_DROP_DEFAULT|Se encontró la sintaxis CREATE DEFAULT o DROP DEFAULT. Vuelva a escribir el comando utilizando la opción DEFAULT de CREATE TABLE o ALTER TABLE. Se produce una vez por cada compilación.|  
 |CREATE_DROP_RULE|Se encontró la sintaxis CREATE RULE. Reescriba el comando utilizando las restricciones. Se produce una vez por cada compilación.|  
-|Data types: text ntext or image|Se encontraron los tipos de datos `text`, `ntext` o `image`. Vuelva a escribir las aplicaciones usen el `varchar(max)` tipo de datos y quitar `text`, `ntext`, y `image` sintaxis del tipo de datos. Se produce una vez por cada consulta.|  
+|Data types: text ntext or image|Se encontraron los tipos de datos `text`, `ntext` o `image`. Reescriba las aplicaciones para usar el `varchar(max)` tipo de datos y quitar `text`, `ntext`, y `image` sintaxis del tipo de datos. Se produce una vez por cada consulta.|  
 |Database compatibility level 80|Número total de veces que una base de datos se cambió al nivel de compatibilidad 80. Planee actualizar la base de datos y la aplicación antes de la versión siguiente. También se produce cuando se inicia una base de datos en el nivel de compatibilidad 80.|  
 |Nivel de compatibilidad de la base de datos 90|Número total de veces que una base de datos se cambió al nivel de compatibilidad 90. Planee actualizar la base de datos y la aplicación en una versión futura. También se produce cuando se inicia una base de datos en el nivel de compatibilidad 90.|  
 |DATABASE_MIRRORING|Se encontraron referencias a la característica de creación de reflejo de la base de datos. Planee la actualización a grupos de disponibilidad AlwaysOn, o si ejecuta una edición de SQL Server que no admite grupos de disponibilidad AlwaysOn, planee la migración al trasvase de registros.|  
@@ -253,10 +253,10 @@ ms.locfileid: "36197950"
 |sysusers|Se encontraron referencias a sysusers. Utilice en su lugar sys.database_principals. Se produce una vez por cada compilación.|  
 |Sugerencia de table sin WITH|Se encontró una instrucción que utilizaba sugerencias de tabla pero no usaba la palabra clave WITH. Modifique las instrucciones para incluir la palabra WITH. Se produce una vez por cada compilación.|  
 |Opción de tabla Text in row|Se encontraron referencias a la opción de tabla 'text in row'. Utilice sp_tableoption 'large value types out of row' en su lugar. Se produce una vez por cada consulta.|  
-|TEXTPTR|Se encontraron referencias a la función TEXTPTR. Vuelva a escribir las aplicaciones usen el `varchar(max)` tipo de datos y quitar `text`, `ntext`, y `image` sintaxis del tipo de datos. Se produce una vez por cada consulta.|  
-|TEXTVALID|Se encontraron referencias a la función TEXTVALID. Vuelva a escribir las aplicaciones usen el `varchar(max)` tipo de datos y quitar `text`, `ntext`, y `image` sintaxis del tipo de datos. Se produce una vez por cada consulta.|  
-|timestamp|Número total de veces que las regiones `timestamp` se ha encontrado el tipo de datos en una instrucción DDL. Utilice el `rowversion` en su lugar, el tipo de datos.|  
-|UPDATETEXT o WRITETEXT|Se encontró la instrucción WRITETEXT o UPDATETEXT. Vuelva a escribir las aplicaciones usen el `varchar(max)` tipo de datos y quitar `text`, `ntext`, y `image` sintaxis del tipo de datos. Se produce una vez por cada consulta.|  
+|TEXTPTR|Se encontraron referencias a la función TEXTPTR. Reescriba las aplicaciones para usar el `varchar(max)` tipo de datos y quitar `text`, `ntext`, y `image` sintaxis del tipo de datos. Se produce una vez por cada consulta.|  
+|TEXTVALID|Se encontraron referencias a la función TEXTVALID. Reescriba las aplicaciones para usar el `varchar(max)` tipo de datos y quitar `text`, `ntext`, y `image` sintaxis del tipo de datos. Se produce una vez por cada consulta.|  
+|timestamp|Número total de veces en desuso `timestamp` se ha encontrado el tipo de datos en una instrucción DDL. Use el `rowversion` del tipo de datos en su lugar.|  
+|UPDATETEXT o WRITETEXT|Se encontró la instrucción WRITETEXT o UPDATETEXT. Reescriba las aplicaciones para usar el `varchar(max)` tipo de datos y quitar `text`, `ntext`, y `image` sintaxis del tipo de datos. Se produce una vez por cada consulta.|  
 |USER_ID|Se encontraron referencias a la función USER_ID. Utilice en su lugar la función DATABASE_PRINCIPAL_ID. Se produce una vez por cada compilación.|  
 |Uso de OLEDB para servidores vinculados||  
 |Formato de almacenamiento vardecimal|El uso de `vardecimal` se encontró el formato de almacenamiento. En su lugar, use la compresión de datos.|  
@@ -272,7 +272,7 @@ ms.locfileid: "36197950"
  [Deprecation Announcement (clase de eventos)](../event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support (clase de eventos)](../event-classes/deprecation-final-support-event-class.md)   
  [Funcionalidad del motor de base de datos no incluida en SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [No incluye características de búsqueda de texto completo en SQL Server 2014](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
+ [Características de búsqueda de texto completo en SQL Server 2014 no incluidas](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
  [Usar objetos de SQL Server](use-sql-server-objects.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Definición y uso de una acción de obtención de detalles | Documentos de Microsoft
+title: Definición y uso de una acción de obtención de detalles | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3498bae6136476a92df3c772263f943b54e7d3a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7737ab3d7631440010be2fdb3047d7d021b275b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263731"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definir y utilizar una acción de obtención de detalles
   El dimensionamiento de datos de hecho mediante una dimensión de hecho sin filtrar correctamente los datos devueltos por la consulta puede producir un rendimiento lento de las consultas. Para evitarlo, puede definir una acción de obtención de detalles que restrinja el número total de filas que se devuelven. Esto mejorará significativamente el rendimiento de las consultas.  
@@ -108,11 +108,11 @@ ms.locfileid: "36203758"
   
     -   ShipDateKey  
   
-6.  Cambiar el **nombre** propiedad para el **Order Date Key** atribuir a `Order Date` , a continuación, haga clic en el botón Examinar para el **nombre de columna** propiedad y en el **Nombre de columna** cuadro de diálogo, seleccione **fecha** como la tabla de origen y seleccione SimpleDate como columna de origen. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Cambio la **nombre** propiedad para el **Order Date Key** atributo `Order Date` , a continuación, haga clic en el botón Examinar para el **nombre de columna** propiedad y en el **Columna nombre** cuadro de diálogo, seleccione **fecha** como la tabla de origen y SimpleDate como la columna de origen. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Cambiar el **nombre** propiedad para la **Due Date Key** atribuir a `Due Date`y, a continuación, mediante el mismo método que el **Order Date Key** atributo del sistema, cambie la  **Columna de nombre** propiedad para este atributo para **Date.SimpleDate (WChar)**.  
+7.  Cambiar el **nombre** propiedad para el **Due Date Key** atributo `Due Date`y, después, usando el mismo método que el **Order Date Key** atributo, cambie el  **Columna de nombre** propiedad de este atributo por **Date.SimpleDate (WChar)**.  
   
-8.  Cambiar el **nombre** propiedad para la **Ship Date Key** atribuir a `Ship Date`y, a continuación, cambie la **nombre de columna** propiedad para este atributo para  **Date.SimpleDate (WChar)**.  
+8.  Cambiar el **nombre** propiedad para el **Ship Date Key** atributo `Ship Date`y, a continuación, cambie el **nombre de columna** propiedad de este atributo por  **Date.SimpleDate (WChar)**.  
   
 9. Cambie a la pestaña **Acciones** del Diseñador de cubos para el cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   

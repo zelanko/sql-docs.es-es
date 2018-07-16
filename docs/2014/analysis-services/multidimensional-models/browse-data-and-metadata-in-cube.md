@@ -1,5 +1,5 @@
 ---
-title: Examinar los datos y metadatos de un cubo | Documentos de Microsoft
+title: Examinar los datos y metadatos en cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 61d455c9de96eed430125a9f543ec7bfc72ab7c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 319b15dec052cdae73c6b1f1a6c0fed1290d447e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288151"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Examinar los datos y metadatos de un cubo
   Use la pestaña **Explorador** del Diseñador de cubos para examinar los datos de un cubo. Puede usar esta vista para examinar la estructura de un cubo y comprobar los datos, el cálculo, el formato y la seguridad de los objetos de la base de datos. Puede examinar rápidamente un cubo tal como lo ven los usuarios finales con las herramientas de elaboración de informes o con otras aplicaciones cliente. Si examina los datos de un cubo, podrá ver las distintas dimensiones, explorar en profundidad los miembros y segmentar las dimensiones.  

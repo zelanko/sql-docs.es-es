@@ -1,5 +1,5 @@
 ---
-title: Destino de emparejamiento de eventos | Documentos de Microsoft
+title: Destino de emparejamiento de eventos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pairing target [SQL Server extended events]
 - event pairing target
 - targets [SQL Server extended events], pairing target
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b2bff842462e0ab77ecd30373df00746260cea5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e67507452104e8bef8d82d86e78c0ebbdf80609
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291341"
 ---
 # <a name="event-pairing-target"></a>Destino de emparejamiento de eventos
   El destino de emparejamiento de eventos asocia dos eventos usando una o varias columnas de datos presentes en cada evento. Muchos eventos vienen en parejas, como por ejemplo, bloqueo y desbloqueo. Una vez emparejada un flujo de eventos, se descartan ambos eventos. El descarte de los conjuntos asociados permite una detección fácil de adquisiciones de bloqueos que no se han liberado.  
@@ -47,7 +47,7 @@ ms.locfileid: "36104316"
   
  Todos los datos asociados a un evento se capturan y almacenan para futuros emparejamientos. Además, se recopilan los datos agregados por las acciones. Los datos de eventos recopilados se almacenan en la memoria y, por lo tanto, tienen un límite finito. Este límite depende de la actividad y capacidad del sistema. En lugar de tomar la cantidad de memoria máxima que se va a utilizar como un parámetro, la memoria utilizada dependerá de los recursos disponibles del sistema. Cuando no hay recursos, se quitarán los eventos no emparejados que se han conservado. Si un evento no se ha emparejado y se quita, el evento asociado aparecerá como un evento no emparejado.  
   
- El destino de emparejamiento serializa los eventos no emparejados a un formato XML. Este formato no sigue ningún esquema. El formato solo contiene dos tipos de elementos. El  **\<emparejados >** elemento es la raíz, seguida de uno. **\<evento >** elemento para cada evento no emparejado que actualmente se está realizando un seguimiento. El  **\<eventos >** elemento contiene un atributo que contiene el nombre del evento no emparejado.  
+ El destino de emparejamiento serializa los eventos no emparejados a un formato XML. Este formato no sigue ningún esquema. El formato solo contiene dos tipos de elementos. El  **\<desemparejados >** elemento es la raíz, seguida de uno. **\<evento >** (elemento) para cada evento no emparejado que actualmente se está realizando un seguimiento. El  **\<evento >** elemento contiene un atributo que contiene el nombre del evento no emparejado.  
   
 ## <a name="adding-the-target-to-a-session"></a>Agregar el destino a una sesión  
  Para agregar el destino de búsqueda del par a una sesión de eventos extendidos, debe incluir la siguiente instrucción al crear o modificar una sesión de eventos:  

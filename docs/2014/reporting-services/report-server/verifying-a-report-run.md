@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - auditing [Reporting Services]
 - verifying report execution
@@ -21,13 +21,13 @@ ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6ed7df4dc1c9bb9af8aa48a8b53506ebeab767ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be05b7ef8ffde732d6bdd85fb17be6aa25683134
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319855"
 ---
 # <a name="verifying-a-report-run"></a>Comprobar la ejecución de un informe
   Para ver información acerca del estado del procesamiento de un informe, puede utilizar los archivos de registro o bien consultar la información de estado que se muestra junto con el informe en el Administrador de informes.  
@@ -44,7 +44,7 @@ ms.locfileid: "36107549"
   
 |Para este tipo de informe|La información de fecha y hora se halla en|Para ver la información, haga lo siguiente|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|Un informe que se ejecuta como una instantánea de informe.|En la página Contenido. Para más información, vea [Contenido &#40;página del Administrador de informes&#41;](../contents-page-report-manager.md).|1) Vaya a la carpeta que contiene el informe.<br />2) Establezca la carpeta en la vista Detalles.<br />(3) 3) anote la fecha y la hora en la **cuando ejecute** columna.|  
+|Un informe que se ejecuta como una instantánea de informe.|En la página Contenido. Para más información, vea [Contenido &#40;página del Administrador de informes&#41;](../contents-page-report-manager.md).|1) Vaya a la carpeta que contiene el informe.<br />2) Establezca la carpeta en la vista Detalles.<br />(3) 3) anote la fecha y hora en la **cuando ejecute** columna.|  
 |Una instantánea del historial del informe.|En la página de propiedades Historial. Para más información, vea [Página de propiedades de opciones de instantánea &#40;Administrador de informes&#41;](../snapshot-options-properties-page-report-manager.md).|1) Abra el informe.<br />2) Haga clic en la página **Propiedades** .<br />3) Haga clic en la pestaña **Historial** .<br />4) Anote la fecha y hora indicadas en la columna **When Run** (Cuándo se ejecuta).|  
 |Un informe en la memoria caché.|En la programación utilizada para crear y actualizar el informe en la memoria caché.|1) Abra el informe.<br />2) Haga clic en la página **Propiedades** .<br />3) Haga clic en la pestaña **Ejecución** .<br />4) Abra la programación.|  
   

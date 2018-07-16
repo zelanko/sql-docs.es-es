@@ -1,5 +1,5 @@
 ---
-title: Explorar el modelo (Tutorial de minería de datos intermedio) de clúster de secuencia | Documentos de Microsoft
+title: Explorar el modelo (Tutorial de minería de datos intermedios) de clúster de secuencia | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 6681bed0736f3927d812dfc0f6beb880aa2fdab3
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 1a17523ea68b8f04de5240011ad426dbe19779e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226625"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Explorar el modelo de agrupación en clústeres de secuencia (Tutorial intermedio de minería de datos)
-  Ahora que ha creado la **Sequence Clustering with Region** modelo, puede explorar mediante el [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de clústeres de secuencia en el **Visor de modelos de minería de datos** pestaña del Diseñador de minería de datos. El [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de clústeres de secuencia contiene cinco pestañas: **diagrama del clúster**, **perfiles del clúster**, **características del clúster**,  **ClusterDiscrimination**, y **transiciones de estado**. Para obtener más información acerca de cómo usar este visor, vea [examinar un modelo usando el Visor de clústeres de secuencia de Microsoft](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
+  Ahora que ha creado el **Sequence Clustering with Region** modelo, puede explorar utilizando el [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de clústeres de secuencia en el **Visor de modelos de minería de datos** ficha del Diseñador de minería de datos. El [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de clústeres de secuencia contiene cinco pestañas: **diagrama del clúster**, **perfiles del clúster**, **características del clúster**,  **ClusterDiscrimination**, y **transiciones de estado**. Para obtener más información sobre cómo usar este visor, vea [examinar un modelo usando el Visor de clústeres de secuencia de Microsoft](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
   
 -   [Pestaña diagrama del clúster](#bkmk_CDiagram)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36313063"
   
 2.  Resalte el nodo más oscuro del gráfico.  
   
-3.  Haga clic en este clúster y seleccione **cambiar el nombre de clúster.**  
+3.  Haga clic en este clúster y seleccione **cambiar nombre de clúster.**  
   
 4.  Escriba el nombre**Pacific Cluster.**  
   
@@ -70,29 +70,29 @@ ms.locfileid: "36313063"
   
 6.  En el gráfico actualizado, busque el clúster más oscuro, que debería ser el clúster más grande. Si a través del sombreado no puede determinar cuál es el clúster más grande, sitúe el mouse sobre cada uno de los clústeres y vea la Información sobre herramientas; a continuación, elija el clúster que contiene mayor número de casos.  
   
-7.  Haga clic en este clúster y seleccione **cambiar el nombre de clúster**. Escriba el nuevo nombre, `Largest Cluster`.  
+7.  Haga clic en este clúster y seleccione **cambiar nombre de clúster**. Escriba el nuevo nombre, `Largest Cluster`.  
   
- Puede explorar en profundidad el nodo que representa el clúster para ver los detalles de los casos que hay en cada clúster. Esto puede resultar útil si desea tomar alguna acción sobre los resultados del análisis, como por ejemplo, enviar un correo electrónico a un cliente. También puede examinar los demás atributos de los casos que incluyó en la estructura y no se usan en el modelo, como Region e IncomeGroup. Para obtener más información sobre la obtención de modelos de minería de datos de los casos subyacentes, vea [consultas de obtención de detalles &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+ Puede explorar en profundidad el nodo que representa el clúster para ver los detalles de los casos que hay en cada clúster. Esto puede resultar útil si desea tomar alguna acción sobre los resultados del análisis, como por ejemplo, enviar un correo electrónico a un cliente. También puede examinar los demás atributos de los casos que incluyó en la estructura y no se usan en el modelo, como Region e IncomeGroup. Para obtener más información sobre la obtención de detalles a través de modelos de minería de datos para los casos subyacentes, vea [consultas de obtención de detalles &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 #### <a name="to-drill-through-to-details-from-the-cluster-diagram"></a>Para explorar en profundidad los detalles del diagrama del clúster  
   
-1.  Haga clic en `Pacific Cluster`, seleccione **obtener detalles**y, a continuación, seleccione **columnas de modelo y estructura**.  
+1.  Haga clic en `Pacific Cluster`, seleccione **Drill Through**y, a continuación, seleccione **columnas de modelo y estructura**.  
   
-     El **obtener detalles** abre el cuadro de diálogo. Las columnas que no se utilizan en el modelo pero que están disponibles para las consultas tienen el prefijo **estructura**.  
+     El **Drill Through** abre el cuadro de diálogo. Las columnas que no se usan en el modelo pero que están disponibles para las consultas tienen el prefijo **estructura**.  
   
      Como puede ver, esta clúster contiene en su mayoría clientes de la región del Pacífico y muy pocos clientes de las demás regiones.  
   
 2.  Haga clic en el signo más de la columna anidada v Assoc Seq Line Items para ver la secuencia de artículos en un orden de clientes determinado.  
   
-3.  Cerrar la **obtener detalles** cuadro de diálogo.  
+3.  Cerrar la **Drill Through** cuadro de diálogo.  
   
     > [!NOTE]  
-    >  El **reproducir** botón le permite consultar los datos; sin embargo, volver a consultar no cambia los datos que se muestran, a menos que el modelo se ha actualizado dinámicamente en segundo plano por otro proceso.  
+    >  El **reproducir** botón le permite consultar los datos; sin embargo, volver a consultar no cambia los datos que se muestran, a menos que el modelo se ha actualizado dinámicamente en segundo plano por algún otro proceso.  
   
  [Volver al principio](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CProfiles"></a> Pestaña perfiles del clúster  
- El **perfiles del clúster** pestaña muestra las secuencias que se encuentran en cada clúster. Los clústeres se muestran en columnas individuales a la derecha de la **estados** columna.  
+ El **perfiles del clúster** ficha muestra las secuencias que se encuentran en cada clúster. Los clústeres se muestran en columnas individuales a la derecha de la **estados** columna.  
   
  En el Visor, la **modelo** fila describe la distribución global de los elementos en un clúster y el **Model.samples** fila contiene secuencias de los elementos. Cada línea de las secuencias de color en cada celda de la **Model.samples** fila representa el comportamiento de un usuario seleccionado aleatoriamente en el clúster.  
   
@@ -102,13 +102,13 @@ ms.locfileid: "36313063"
   
 1.  Haga clic en el **modelo** fila en la columna para el clúster `Largest Cluster`y seleccione **Mostrar leyenda**.  
   
-     El **Color** columna contiene una barra sombreada que indica la frecuencia de los elementos encontrados en secuencias. Cada color representa un elemento diferente. El **significado** columna muestra los nombres de modelo de producto para cada color. El **distribución** columna indica el porcentaje de casos que contenían este elemento de una secuencia.  
+     El **Color** columna contiene una barra sombreada que indica la frecuencia de elementos encontrados en secuencias. Cada color representa un elemento diferente. El **significado** columna muestra los nombres de modelo de producto de cada color. El **distribución** columna indica el porcentaje de casos que contenían este elemento de una secuencia.  
   
 2.  Cerrar la **leyenda de minería de datos**.  
   
 3.  Haga clic en el **Model.samples** fila en la columna con el encabezado, **rellenado,** y seleccione **Mostrar leyenda**.  
   
-4.  Examinar la lista de secuencias en el modelo general`.`  
+4.  Examine la lista de secuencias en el modelo general`.`  
   
      En Leyenda de minería de datos se muestran primero las secuencias más comunes, y, como puede ver, Mountain Tire Tube es el primer artículo de muchas secuencias. Esto significa que es muy probable que un cliente incluya primero el artículo Mountain Tire Tube en la cesta de la compra.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "36313063"
   
 1.  Desplácese hacia abajo en el panel atributo hasta que encuentre la fila correspondiente a la `Region` atributo.  
   
-     La fila contiene un histograma para cada clúster del modelo, además de un histograma adicional para **rellenado**, lo que significa que el conjunto completo de casos que se usan en el modelo. Un histograma es una barra con colores diferentes, donde cada color representa un atributo y el tamaño de la sección coloreada de ese atributo representa el porcentaje de casos en los que aparece ese atributo.  
+     La fila contiene un histograma para cada clúster del modelo, además de un histograma adicional para **rellenado**, lo que significa que todo el conjunto de casos usados en el modelo. Un histograma es una barra con colores diferentes, donde cada color representa un atributo y el tamaño de la sección coloreada de ese atributo representa el porcentaje de casos en los que aparece ese atributo.  
   
 2.  Compare los histogramas de los clústeres que denominó `Pacific Cluster` y `Largest Cluster`. Cada clúster aparece en una columna diferente.  
   
@@ -126,28 +126,28 @@ ms.locfileid: "36313063"
   
      En la Información sobre herramientas se muestran los porcentajes reales de casos de cada región.  
   
-4.  Haga clic en el histograma de colores en el `Region` de fila para `Pacific Cluster`, seleccione **obtener detalles**y, a continuación, seleccione **solo columnas de modelos**.  
+4.  Haga clic en el histograma de colores en el `Region` de fila para `Pacific Cluster`, seleccione **Drill Through**y, a continuación, seleccione **solo columnas de modelos**.  
   
 5.  Mueva la barra de desplazamiento para revisar todos los clientes de este clúster.  
   
      Si vuelve a explorar en profundidad los detalles, podrá ver que la mayoría de los pedidos que contiene el clúster proceden de la región del Pacífico, pero también hay unos pocos de las regiones de Norteamérica y Europa.  
   
-6.  Cerrar la **obtener detalles** cuadro de diálogo.  
+6.  Cerrar la **Drill Through** cuadro de diálogo.  
   
  [Volver al principio](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CChars"></a> Pestaña características del clúster  
- El **características del clúster** ficha resume las transiciones entre los Estados de un clúster mediante barras que representan visualmente la importancia del valor del atributo para el clúster seleccionado. El **Variables** columna indica lo que el modelo consideró importante para el clúster seleccionado o la población: un valor determinado o la relación entre los valores, conocidos como *transición*. El **valores** columna proporciona más detalles sobre el valor o una transición y el **probabilidad** columna representa visualmente el peso de este atributo o transición.  
+ El **características del clúster** ficha resume las transiciones entre Estados en un clúster mediante barras que representan visualmente la importancia del valor del atributo para el clúster seleccionado. El **Variables** columna indica lo que se encuentra el modelo sea importante para el clúster seleccionado o rellenado: un valor determinado o la relación entre los valores, conocidos como *transición*. El **valores** columna proporciona más detalles sobre el valor o una transición y el **probabilidad** columna representa visualmente el peso de este atributo o transición.  
   
 #### <a name="to-view-the-important-attributes-for-a-cluster"></a>Para ver los atributos importantes de un clúster  
   
 1.  En el **clúster** lista desplegable, seleccione `Pacific Cluster`.  
   
-     La lista se actualiza para mostrar las características del clúster que ha cambiado el nombre `Pacific Cluster`. En este clúster, la característica más importante es `Region`.  
+     La lista se actualiza para mostrar las características del clúster que denominó `Pacific Cluster`. En este clúster, la característica más importante es `Region`.  
   
-2.  Sitúe el mouse sobre la barra sombreada en la fila de `Region`.  
+2.  Sitúe el mouse sobre la barra sombreada de la fila de `Region`.  
   
-     La probabilidad de que el valor sea Pacific es muy elevada. Para obtener más información sobre cómo interpretar estos valores, consulte [Microsoft Sequence Clustering Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md).  
+     La probabilidad de que el valor sea Pacific es muy elevada. Para obtener más información sobre cómo interpretar estos valores, vea [Microsoft Sequence Clustering Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md).  
   
 3.  Examine la lista de características del clúster hasta que encuentre la primera fila de transición.  
   
@@ -167,39 +167,39 @@ ms.locfileid: "36313063"
   
      La lista de atributos se actualiza para mostrar las características de todos los pedidos usados para crear el modelo. En este modelo de minería de datos, la característica más importante para distinguir entre clústeres es `Region`, con un valor de **Norteamérica**.  
   
- Después de revisar estas tareas, habrá observado dos cosas. La primera es que necesita una gran cantidad de datos para obtener un número significativo de combinaciones. Por ejemplo, las secuencias con las probabilidades más altas suelen incluir un **[inicio]** o **falta** estado.  
+ Después de revisar estas tareas, habrá observado dos cosas. La primera es que necesita una gran cantidad de datos para obtener un número significativo de combinaciones. Por ejemplo, las secuencias con las probabilidades más puedan que incluyan un **[inicio]** o **falta** estado.  
   
- La segunda es que hay un gran efecto de agrupación en clústeres en atributos para `Region`, lo que resulta más difícil ver los grupos de secuencias. Por tanto, decídase a crear otro modelo que use exclusivamente secuencias y no incluya las columnas de las regiones o los ingresos.  
+ El segundo es que hay un gran efecto de agrupación en clústeres en atributos para `Region`, lo que hace más difícil ver los grupos de secuencias. Por tanto, decídase a crear otro modelo que use exclusivamente secuencias y no incluya las columnas de las regiones o los ingresos.  
   
  [Volver al principio](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CDiscrim2"></a> Pestaña distinción del clúster  
- El **distinción del clúster** ficha le ayuda a comparar dos clústeres, para determinar qué atributos distinguen un clúster determinado desde otro clúster. La pestaña contiene cuatro columnas: **Variables**, **valores**, **clúster 1**, y **clúster 2**.  Puede elegir cualquier clúster para usarlo como **clúster 1** y **clúster 2**.  
+ El **distinción del clúster** pestaña le permite comparar dos clústeres, para determinar qué atributos distinguen un clúster determinado desde otro clúster. La pestaña contiene cuatro columnas: **Variables**, **valores**, **clúster 1**, y **clúster 2**.  Puede elegir cualquier clúster para usarlo como **clúster 1** y **clúster 2**.  
   
- El **Variables** columna indica el nombre del atributo, que puede ser un nombre de columna o combinación de nombre de columna y la palabra **transición**. El **valores** columna muestra el valor exacto del atributo o la transición. Las barras sombreadas de las columnas para **clúster 1** y **clúster 2** indican la fuerza del atributo en los clústeres que se van a comparar. Cuanto mayor sea la barra, mayor será la probabilidad de que incluya casos con ese atributo.  
+ El **Variables** columna indica el nombre del atributo, que puede ser un nombre de columna o combinación de nombre de columna y la palabra **transición**. El **valores** columna muestra el valor exacto del atributo o la transición. Las columnas de las barras sombreadas **clúster 1** y **clúster 2** indican la fuerza del atributo en los clústeres que van a comparar. Cuanto mayor sea la barra, mayor será la probabilidad de que incluya casos con ese atributo.  
   
 #### <a name="to-compare-two-clusters-by-using-the-cluster-discrimination-tab"></a>Para comparar dos clústeres usando la pestaña Distinción del clúster  
   
 1.  En el **distinción del clúster** ficha, para **clúster 1**, seleccione `Pacific Cluster`.  
   
-     De forma predeterminada, la selección de **clúster 2** cambia a **complemento del Pacífico *** clúster**.  
+     De forma predeterminada, la selección de **clúster 2** cambia a **complemento de Pacífico *** clúster**.  
   
      El principal atributo que distingue `Pacific Cluster` de todos los demás casos es la región. Region es un tipo de atributo de agrupación en clústeres que oculta otros atributos. Para evitar este efecto, intente comparar algunos de los clústeres más pequeños entre sí. Al hacerlo, la lista de atributos cambia y se pueden incluir más transiciones entre los modelos.  
   
 2.  Busque una fila de transición y sitúe el mouse sobre la barra sombreada.  
   
-     Los elementos de la **valores** columna puede incluir Estados y transiciones. El sombreado de cada elemento indica la puntuación de la distinción. Para obtener más información sobre el significado de distintas puntuaciones, vea [Mining Model Content para modelos de agrupación en clústeres de secuencia &#40;Analysis Services: minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md).  
+     Los elementos de la **valores** columna puede incluir Estados y transiciones. El sombreado de cada elemento indica la puntuación de la distinción. Para obtener más información sobre el significado de distintas puntuaciones, vea [Mining Model Content para modelos de agrupación en clústeres de secuencia &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md).  
   
  [Volver al principio](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_StateTran"></a> Pestaña transiciones de estado  
- En el **las transiciones de estado** ficha, puede seleccionar un clúster y examinar sus transiciones de estado. Si selecciona **población (todo)** en la lista desplegable de clúster, el diagrama muestra la distribución de Estados para el modelo de minería de datos completa.  
+ En el **las transiciones de estado** ficha, puede seleccionar un clúster y examinar sus transiciones de estado. Si selecciona **población (todo)** en la lista desplegable del clúster, el diagrama muestra la distribución de Estados para el modelo de minería de datos completa.  
   
  Cada nodo del gráfico representa un estado o valor posible de las secuencias que está intentando analizar. El color de fondo de los nodos representa la frecuencia del estado. Las líneas conectan algunos estados, lo que indica una transición entre estados. Puede mover el control deslizante arriba o abajo para cambiar el umbral de probabilidad de las transiciones. Algunos nodos llevan asociados unos números, que indican la probabilidad de ese estado.  
   
 #### <a name="to-explore-the-relationships-in-the-state-transition-tab"></a>Para explorar las relaciones en la pestaña de Transiciones de estado  
   
-1.  En el **las transiciones de estado** ficha del Visor de modelo de minería de datos, seleccione `Pacific Cluster` en la lista de clústeres. Asegúrese de que el **Mostrar etiquetas de bordes** opción está seleccionada.  
+1.  En el **las transiciones de estado** ficha del Visor de modelo de minería de datos, seleccione `Pacific Cluster` en la lista de clústeres. Asegúrese de que el **Mostrar etiquetas de bordes** está seleccionada.  
   
      El gráfico se actualiza para mostrar las transiciones que son más comunes en este clúster.  
   
@@ -209,15 +209,15 @@ ms.locfileid: "36313063"
   
 3.  Generar el control deslizante hasta **todos los vínculos**, para aumentar el número de transiciones que se incluyen en el gráfico.  
   
-4.  Seleccione **población (todo)** de **clúster**.  
+4.  Seleccione **población (todo)** desde **clúster**.  
   
      Tenga en cuenta que al cargar un clúster diferente, se restablece la configuración de presentación predeterminada del gráfico, por lo que el control deslizante se sitúa de nuevo en su posición media.  
   
-5.  Haga clic en el nodo más oscuro en el gráfico, que debería ser **Sport-100**.  
+5.  Haga clic en el nodo más oscuro del gráfico, que debería ser **Sport-100**.  
   
      Fíjese que no hay líneas que conecten este producto con otros.  
   
-6.  Mueva hacia arriba un paso el control deslizante para aumentar el número de transiciones que se incluyen en el gráfico. No vaya hasta **todos los vínculos** todavía.  
+6.  Mueva hacia arriba un paso el control deslizante para aumentar el número de transiciones que se incluyen en el gráfico. No se pasan hasta **todos los vínculos** todavía.  
   
      El gráfico se actualiza y se agregan algunas transiciones más, pero ninguna que incluya el modelo Sport-100.  
   
@@ -232,7 +232,7 @@ ms.locfileid: "36313063"
  [Volver al principio](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_Generic"></a> Visor de árbol de contenido genérico  
- Este visor se puede usar para todos los modelos, sin tener en cuenta el algoritmo o tipo de modelo. El **Visor de árbol de contenido de MicrosoftGeneric** está disponible en la **Visor** lista desplegable.  
+ Este visor se puede usar para todos los modelos, sin tener en cuenta el algoritmo o tipo de modelo. El **Visor de árbol de contenido MicrosoftGeneric** está disponible en el **Visor** lista desplegable.  
   
  Un árbol de contenido es una representación de un modelo de minería de datos como una serie de nodos, donde cada nodo representa el conocimiento adquirido acerca de los datos de entrenamiento. El nodo puede contener un patrón, un conjunto de reglas, un clúster o la definición de un intervalo de fechas que comparten ciertos atributos. El contenido exacto del nodo varía en función del algoritmo y del atributo de predicción, pero la representación general del contenido es la misma.  
   
@@ -240,7 +240,7 @@ ms.locfileid: "36313063"
   
 #### <a name="to-view-details-for-a-sequence-clustering-model-by-using-the-generic-content-tree-viewer"></a>Para ver los detalles de un modelo de agrupación en clústeres de secuencia usando el visor de árbol de contenido genérico  
   
-1.  En el **Visor de modelos de minería de datos** , haga clic en el **Visor** lista y seleccione **Visor de árbol de contenido genérico de Microsoft**.  
+1.  En el **Visor de modelos de minería de datos** pestaña, haga clic en el **Visor** lista y seleccione **Visor de árbol de contenido genérico de Microsoft**.  
   
 2.  En el **título del nodo** panel, haga clic en `Pacific Cluster (1)`.  
   
@@ -252,12 +252,12 @@ ms.locfileid: "36313063"
   
 4.  Continúe expandiendo los nodos y consulte los detalles en el panel del visor HTML.  
   
- Para obtener más información sobre el contenido del modelo de minería de datos y cómo utilizar los detalles en el Visor, vea [contenido del modelo de minería de datos para modelos de agrupación en clústeres de secuencia &#40;Analysis Services: minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md).  
+ Para obtener más información sobre el contenido del modelo de minería de datos y cómo usar los detalles en el Visor, vea [contenido del modelo de minería de datos para modelos de agrupación en clústeres de secuencia &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md).  
   
  [Volver al principio](#bkmk_CDiagram)  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Crear un modelo de agrupación en clústeres de secuencia relacionado &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
+ [Crear un modelo de clúster de secuencia relacionado &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de clústeres de secuencia de Microsoft](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   

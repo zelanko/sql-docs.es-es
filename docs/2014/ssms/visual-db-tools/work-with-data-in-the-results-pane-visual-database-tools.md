@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - queries [Visual Database Tools]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 65172c670d13b1cf38f3017d3477c5a3888014fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 56c05c3d2b67c7e468fbf66930b3321de742c90e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249515"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Trabajar con datos en el panel Resultados (Visual Database Tools)
   Después de ejecutar una consulta o vista, los resultados se muestran en el panel Resultados. A continuación, puede trabajar con esos resultados. Por ejemplo, puede agregar y eliminar filas, especificar o modificar datos y navegar fácilmente entre conjuntos de resultados de gran tamaño.  

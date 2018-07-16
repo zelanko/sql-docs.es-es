@@ -1,5 +1,5 @@
 ---
-title: Página nueva suscripción controlada por datos (Administrador de informes) | Documentos de Microsoft
+title: Página nueva suscripción controlada por datos (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bc1a54e462b3f3219c70aa94caf7fc238942d240
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a43e81feb0cd8e0ecfd134468cd37f3cfac92049
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223230"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Página Crear suscripción controlada por datos (Administrador de informes)
   Use las páginas Crear suscripción controlada por datos para generar o modificar una suscripción que consulte una base de datos de suscriptor cada vez que se ejecuta la suscripción. Las suscripciones controladas por datos usan los resultados de la consulta para determinar los destinatarios de la suscripción, la configuración de entrega y los valores de parámetro de informe. En tiempo de ejecución, el servidor de informes ejecuta una consulta para obtener los valores utilizados para la configuración de la suscripción. Puede usar las páginas Crear suscripción controlada por datos para definir la consulta y asignar los valores de consulta a la configuración de suscripción. Los valores y las opciones que se especifican para una suscripción controlada por datos se reparten entre varias páginas, de manera similar a un asistente. En total, hay siete páginas.  
@@ -51,7 +51,7 @@ ms.locfileid: "36202893"
  **Descripción**  
  Proporcione una descripción para la suscripción. La descripción aparece en la lista de suscripciones de **Mis suscripciones** y en la pestaña **Suscripciones** del informe.  
   
- **Especifique cómo se notificación a los destinatarios**  
+ **Especifique cómo se notifica a los destinatarios**  
  Seleccione la extensión de entrega que se va a utilizar para distribuir el informe. Para cada suscripción solo se puede utilizar una extensión de entrega. Las siguientes opciones están disponibles:  
   
 -   Seleccione **Recurso compartido del Servidor de informes** para entregar informes a un recurso compartido de archivos. El informe se entregará como un archivo estático, desconectado del servidor de informes. Para obtener más información, vea [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "36202893"
   
 -   Seleccione **Proveedor de entrega NULL** para entregar informes a la base de datos del servidor de informes. Esta opción crea instantáneas de informe. Elija esta opción cuando desee cargar previamente en el servidor de informes instantáneas de informe con parámetros o específicas del usuario según una programación determinada. Para más información, vea [Informes almacenados en caché &#40;SSRS&#41;](report-server/caching-reports-ssrs.md).  
   
- **Especifique un origen de datos que contiene información de destinatario**  
+ **Especifique un origen de datos que contiene la información del destinatario**  
  Especifique cómo se define la conexión al origen de datos. Puede elegir un origen de datos compartido si tiene uno que contenga la información de conexión necesaria. También puede especificar la información de conexión directamente en esta suscripción.  
   
  El origen de datos proporciona datos del suscriptor. Estos datos pueden ser nombres de empleados, id. de empleados, direcciones de correo electrónico y preferencias de formatos de exportación (como HTML o PDF). Si va a utilizar la extensión de entrega de correo electrónico del servidor de informes, el origen de datos debe contener direcciones de correo electrónico.  
@@ -74,7 +74,7 @@ ms.locfileid: "36202893"
  **Cadena de conexión**  
  Escriba la cadena de conexión que desea usar para conectar con el origen de datos.  
   
- **Conectar usando**  
+ **Conectar utilizando**  
  Escriba las credenciales que se van a utilizar para la conexión al origen de datos. Las credenciales se almacenan como valores cifrados en la base de datos del servidor de informes.  
   
  Si el origen de datos usa autenticación de Windows, seleccione **Usar como credenciales de Windows** al especificar la conexión.  
@@ -136,7 +136,7 @@ ms.locfileid: "36202893"
 |Seleccione|Para|  
 |-----------------|----------------|  
 |**Especifique un valor estático**|Usar un valor constante para el parámetro si desea utilizar el mismo parámetro para todos los suscriptores. Si el parámetro tiene varios valores, puede elegir un valor en la lista.|  
-|**Usar valor predeterminado**|Algunos informes contienen un valor predeterminado para todos los parámetros o algunos de ellos. Si el parámetro de informe tiene un valor predeterminado, active esta casilla para usarlo.|  
+|**Usar el valor predeterminado**|Algunos informes contienen un valor predeterminado para todos los parámetros o algunos de ellos. Si el parámetro de informe tiene un valor predeterminado, active esta casilla para usarlo.|  
 |**Obtener el valor de la base de datos**|Usar un valor del conjunto de resultados. Las columnas del conjunto de resultados se pueden seleccionar como origen de un valor de datos que se utilizará con cada instancia de la suscripción.|  
   
 ## <a name="specify-a-trigger-page-6"></a>Especificar un desencadenador (página 6)  
@@ -144,18 +144,18 @@ ms.locfileid: "36202893"
   
 |Seleccione|Para|  
 |-----------------|----------------|  
-|**Cuando los datos del informe se actualizan en el servidor de informes**|Si el informe está configurado para ejecutarse como instantánea de ejecución de informes, puede especificar que se ejecute la suscripción cuando se actualice la instantánea.|  
+|**Cuando se actualizan los datos del informe en el servidor de informes**|Si el informe está configurado para ejecutarse como instantánea de ejecución de informes, puede especificar que se ejecute la suscripción cuando se actualice la instantánea.|  
 |**Según una programación creada para esta suscripción**|Ejecutar la suscripción en una fecha y a una hora específicas.|  
-|**En una programación compartida**|Ejecutar la suscripción utilizando la información de programación obtenida a través de una programación compartida.|  
+|**Según una programación compartida**|Ejecutar la suscripción utilizando la información de programación obtenida a través de una programación compartida.|  
   
 ## <a name="schedule-a-subscription-page-7"></a>Programar una suscripción (página 7)  
  Si programa la suscripción, debe especificar la frecuencia con la que se entrega el informe. El primer conjunto de opciones especifica una categoría de frecuencia (horaria, diaria, semanal, etc.). El segundo conjunto de opciones que aparece se basa en la selección inicial.  
   
- **Cada hora**  
+ **Por hora**  
  Defina una programación que se ejecute a intervalos de horas.  
   
  **Diaria**  
- Defina una programación que se ejecute los días seleccionados a una hora específica. Puede especificar los días en las siguientes maneras: cada  *\<día >*, cada día de la semana y cada  *\<número >* día. Al elegir un método se anulan los demás, aunque los demás días aparezcan seleccionados.  
+ Defina una programación que se ejecute los días seleccionados a una hora específica. Puede especificar los días de las siguientes maneras: cada  *\<día >*, todos los días laborables y cada  *\<número >* día. Al elegir un método se anulan los demás, aunque los demás días aparezcan seleccionados.  
   
  **Semanal**  
  Defina una programación que se ejecute en intervalos semanales a una hora específica. El intervalo puede ser una semana completa (por ejemplo, cada dos semanas) o días de una semana.  
@@ -178,6 +178,6 @@ ms.locfileid: "36202893"
  [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

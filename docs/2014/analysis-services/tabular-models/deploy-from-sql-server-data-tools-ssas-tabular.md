@@ -1,5 +1,5 @@
 ---
-title: Implementar desde SQL Server Data Tools (SSAS Tabular) | Documentos de Microsoft
+title: Implementar desde SQL Server Data Tools (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deploystatus.f1
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1b6193c57df6e6fa75f55b27402793fec20ca5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1498798cedeab8dacfe923754b02ba394937aff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265347"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Implementar con SQL Server Data Tools (SSAS tabular)
   Utilice las tareas de este tema para implementar una solución de modelo tabular mediante el comando Implementar en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -58,7 +58,7 @@ ms.locfileid: "36201444"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>Para implementar una solución de modelo tabular  
   
--   En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], en la **generar** menú, haga clic en **implementar \<nombre del proyecto >**.  
+-   En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], en el **compilar** menú, haga clic en **implementar \<nombre del proyecto >**.  
   
      Aparecerá el cuadro de diálogo **Implementar** e indicará el estado de la implementación de los metadatos y del procesamiento (a menos que se haya establecido la propiedad Opción de procesamiento en No procesar) de cada tabla incluida en el modelo. Una vez completado el proceso de implementación, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para conectarse a la instancia de Analysis Services y comprobar que se ha creado el nuevo objeto de base de datos de modelo, o use una aplicación cliente de informes para conectarse al modelo implementado.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36201444"
  Haga clic en esta opción para detener la operación de implementación. Esta opción resulta útil si la operación de implementación tarda demasiado o hay demasiados errores.  
   
 ## <a name="see-also"></a>Vea también  
- [Implementación de la solución de modelo tabular &#40;SSAS Tabular&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
- [Configurar las propiedades de implementación y predeterminadas de modelado de datos &#40;SSAS Tabular&#41;](properties-ssas-tabular.md)  
+ [Implementación de la solución de modelo tabular &#40;Tabular de SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
+ [Configurar las propiedades de implementación y modelado de datos predeterminada &#40;Tabular de SSAS&#41;](properties-ssas-tabular.md)  
   
   

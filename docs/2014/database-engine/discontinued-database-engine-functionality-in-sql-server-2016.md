@@ -1,5 +1,5 @@
 ---
-title: No incluye la funcionalidad del motor de base de datos en SQL Server 2014 | Documentos de Microsoft
+title: No incluye la funcionalidad del motor de base de datos en SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VIA protocol
 - unsupported features [SQL Server]
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - SET DISABLE_DEF_CNST_CHK
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 caps.latest.revision: 93
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 81ceffcd3009906b41316a7a9778a0b38ded7b29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 648ff85c3061bc7d20408eaae7a14748650e5886
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218045"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Funcionalidad del motor de base de datos no incluida en SQL Server 2014
   En este tema se describen las características del [!INCLUDE[ssDE](../includes/ssde-md.md)] que ya no están disponibles en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -59,27 +59,27 @@ ms.locfileid: "36113209"
   
 |Categoría|Característica no incluida|Sustituta|  
 |--------------|--------------------------|-----------------|  
-|Copias de seguridad y restauración|**Copia de seguridad {base de datos &#124; registro} WITH PASSWORD** y **copia de seguridad {base de datos &#124; registro} WITH MEDIAPASSWORD** no se pueden utilizar. **Restaurar {base de datos &#124; registro} con [MEDIA] PASSWORD**sigue en desuso.|None|  
-|Copias de seguridad y restauración|**RESTAURAR {BASE DE DATOS &AMP;#124; REGISTRO}... WITH DBO_ONLY**|**RESTAURAR {BASE DE DATOS &AMP;#124; REGISTRO} … … CON RESTRICTED_USER**|  
+|Copias de seguridad y restauración|**Copia de seguridad {base de datos &#124; LOG} WITH PASSWORD** y **copia de seguridad de {base de datos &#124; LOG} WITH MEDIAPASSWORD** se suspenden. **RESTORE {DATABASE &#124; registro} con [MEDIA] PASSWORD**sigue en desuso.|None|  
+|Copias de seguridad y restauración|**RESTORE {DATABASE &AMP;#124; REGISTRO}... WITH DBO_ONLY**|**RESTORE {DATABASE &AMP;#124; LOG} … … CON RESTRICTED_USER**|  
 |Nivel de compatibilidad|Nivel de compatibilidad 80|Las bases de datos se deben establecer en el nivel de compatibilidad 90 como mínimo.|  
 |Opciones de configuración|`sp_configure 'user instance timeout'` y `'user instances enabled'`|Utilice la característica Local Database. Para obtener más información, consulte [SqlLocalDB (utilidad)](../tools/sqllocaldb-utility.md)|  
 |Protocolos de conexión|Se suspende la compatibilidad para el protocolo VIA.|Utilice TCP en su lugar.|  
 |Objetos de base de datos|Cláusula `WITH APPEND` en desencadenadores|Volver a crear todo desencadenador.|  
 |Opciones de base de datos|`sp_dboption`|`ALTER DATABASE`|  
-|Correo|SQL Mail|Usar Database Mail. Para obtener más información, consulte [correo electrónico de base de datos](../relational-databases/database-mail/database-mail.md) y [Use Database Mail Instead of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
+|Correo|SQL Mail|Usar Database Mail. Para obtener más información, consulte [Database Mail](../relational-databases/database-mail/database-mail.md) y [Use Database Mail Instead of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
 |Administración de la memoria|Compatibilidad para Extensiones de ventana de dirección (AWE) de 32 bits y para agregar memoria sin interrupciones de 32 bits.|Use un sistema operativo de 64 bits.|  
 |Metadatos|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |Programación|Objetos de administración distribuida de SQL Server (SQL-DMO)|Objetos de administración de SQL Server (SMO)|  
 |Sugerencias de consulta|Sugerencia `FASTFIRSTROW`|`OPTION (FAST` *n* `)`.|  
 |Servidores remotos|Ya no se incluye la capacidad para que los usuarios creen nuevos servidores remotos con `sp_addserver`. Solamente sigue estando disponible `sp_addserver` con la opción 'local'. Los servidores remotos conservados durante la actualización o creados por la replicación se pueden utilizar.|Reemplace los servidores remotos con servidores vinculados.|  
-|Seguridad|`sp_dropalias`|Reemplace los alias por una combinación de cuentas de usuario y roles de la base de datos. Utilice `sp_dropalias` para quitar los alias en bases de datos actualizadas.|  
+|Seguridad|`sp_dropalias`|Reemplace los alias por una combinación de cuentas de usuario y roles de la base de datos. Use `sp_dropalias` para quitar los alias en bases de datos actualizadas.|  
 |Seguridad|El parámetro version de **PWDCOMPARE** que representa un valor de un inicio de sesión anterior a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 ya no está disponible.|None|  
-|Programación de Service Broker en SMO|El **Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** ya no es la clase implementa la **Microsoft.SqlServer.Management.Smo.IObjectPermission** interfaz.||  
+|Programación de Service Broker en SMO|El **Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** ya no la clase implementa la **Microsoft.SqlServer.Management.Smo.IObjectPermission** interfaz.||  
 |Opciones de Set|`SET DISABLE_DEF_CNST_CHK`|Ninguno.|  
 |Tablas del sistema|sys.database_principal_aliases|Utilice roles en lugar de alias.|  
 |Transact-SQL|Ya no se incluye `RAISERROR` en el formato `RAISERROR integer 'string'`.|Reescriba la instrucción usando actual **RAISERROR (...)**  sintaxis.|  
-|Sintaxis de Transact-SQL|`COMPUTE / COMPUTE BY`|Uso `ROLLUP`|  
-|Sintaxis de Transact-SQL|El uso de **\* =** y **=\***|Utilice la sintaxis de unión de ANSI. Para obtener más información, vea [desde (Transact-SQL).](http://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|Sintaxis de Transact-SQL|`COMPUTE / COMPUTE BY`|Use `ROLLUP`|  
+|Sintaxis de Transact-SQL|El uso de **\* =** y **=\***|Utilice la sintaxis de unión de ANSI. Para obtener más información, consulte [FROM (Transact-SQL).](http://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Reemplazado por evento de database_file_size_change, database_file_size_change<br /><br /> evento de database_file_size_change<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Cambios adicionales de XEvent**  
@@ -97,6 +97,6 @@ ms.locfileid: "36113209"
 -   Campos agregados: target_kb, pages_kb  
   
 ## <a name="see-also"></a>Vea también  
- [Características del motor de base de datos en desuso en SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)  
+ [Características desusadas del motor de base de datos de SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Definir miembros calculados | Documentos de Microsoft
+title: Definir miembros calculados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: e063de7ce9ea45197c17f4d863c56228d9473e78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49779aa45ad8f0316dafa5fb74b037b5d199f328
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36202823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238365"
 ---
 # <a name="defining-calculated-members"></a>Definir miembros calculados
   Los miembros calculados son miembros de una dimensión o un grupo de medida que se definen según una combinación de datos del cubo, operadores aritméticos, números y funciones. Por ejemplo, puede crear un miembro calculado que calcule la suma de dos medidas físicas en el cubo. Las definiciones de miembros calculados se almacenan en cubos pero sus valores se calculan en el momento de la consulta.  
@@ -44,7 +44,7 @@ ms.locfileid: "36202823"
   
      La siguiente imagen muestra el formulario que aparece en el panel de las **expresiones de cálculo** al hacer clic en **Nuevo miembro calculado**.  
   
-     ![Formulario del panel de expresiones de cálculo](../../2014/tutorials/media/l6-calculatedmembers-02.gif "formulario del panel de expresiones de cálculo")  
+     ![Formulario de panel de expresiones de cálculo](../../2014/tutorials/media/l6-calculatedmembers-02.gif "formulario del panel de expresiones de cálculo")  
   
 3.  En el **nombre** , cambie el nombre de la medida calculada por `[Total Sales Amount]`.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36202823"
   
 5.  Arrastre **Internet Sales-Sales Amount** de la pestaña **Metadatos** del panel **Herramientas de cálculo** al cuadro **Expresión** del panel de las **expresiones de cálculo** .  
   
-6.  En el **expresión** , escriba un signo más (`+`) después de **[Measures]. [ Importe de ventas de ventas por Internet]**.  
+6.  En el **expresión** , escriba un signo más (`+`) después de **[Measures]. [ Internet Sales-Sales Amount]**.  
   
 7.  En la pestaña **Metadatos** del panel **Herramientas de cálculo** , expanda **Venta del distribuidor**y, después, arrastre **Reseller Sales-Sales Amount** al cuadro **Expresión** del panel de las **expresiones de cálculo** después del signo más (+).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36202823"
   
      La siguiente imagen muestra el panel de las **expresiones de cálculo** llenado con la configuración especificada en los pasos anteriores.  
   
-     ![Panel de expresiones de cálculo de Populated](../../2014/tutorials/media/l6-calculatedmembers-03.gif "panel rellena expresiones de cálculo")  
+     ![Panel de expresiones de cálculo Populated](../../2014/tutorials/media/l6-calculatedmembers-03.gif "panel rellena las expresiones de cálculo")  
   
 10. En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Vista de script**y revise el script de cálculo en el panel de las **expresiones de cálculo** .  
   
@@ -87,9 +87,9 @@ ms.locfileid: "36202823"
   
      La siguiente imagen muestra los scripts de cálculo tal como deberían aparecer en el panel de las **expresiones de cálculo** en este punto del tutorial.  
   
-     ![Las secuencias de comandos en el panel de expresiones de cálculo](../../2014/tutorials/media/l6-calculatedmembers-04.gif "Scripts en el panel de expresiones de cálculo")  
+     ![Los scripts en el panel de expresiones de cálculo](../../2014/tutorials/media/l6-calculatedmembers-04.gif "secuencias de comandos en el panel de expresiones de cálculo")  
   
-12. En la barra de herramientas de la **cálculos** , haga clic en **vista de formulario**, compruebe que `[Total Sales Amount]` está seleccionado en el **organizador de Script** panel y, a continuación, haga clic en  **Nuevo miembro calculado**.  
+12. En la barra de herramientas de la **cálculos** , haga clic **vista formulario**, compruebe que `[Total Sales Amount]` está seleccionado en el **organizador de Script** panel y, a continuación, haga clic en  **Nuevo miembro calculado**.  
   
 13. Cambiar el nombre de este nuevo miembro calculado por `[Total Product Cost]`y, a continuación, cree la siguiente expresión en el **expresión** cuadro:  
   
@@ -157,7 +157,7 @@ ms.locfileid: "36202823"
   
 16. En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Vista de script** y revise los tres cálculos que acaba de agregar al script de cálculo.  
   
-17. Agregue una nueva línea al script de cálculo inmediatamente anterior la `[Internet GPM]` cálculo y, a continuación, agregue el siguiente texto al script en su propia línea:  
+17. Agregue una nueva línea al script de cálculo inmediatamente anterior el `[Internet GPM]` cálculo y, a continuación, agregue el siguiente texto al script en su propia línea:  
   
     ```  
     /* Calculations to calculate gross profit margin */  
@@ -240,7 +240,7 @@ ms.locfileid: "36202823"
   
 17. En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Vista de script**y, a continuación, revise los tres cálculos que acaba de agregar al script de cálculo.  
   
-18. Agregue una nueva línea al script de cálculo inmediatamente anterior la `[Internet Sales Ratio to All Products]` cálculo y, a continuación, agregue el siguiente texto al script en su propia línea:  
+18. Agregue una nueva línea al script de cálculo inmediatamente anterior el `[Internet Sales Ratio to All Products]` cálculo y, a continuación, agregue el siguiente texto al script en su propia línea:  
   
     ```  
     /* Calculations to calculate percentage of product to total product sales */  
@@ -276,7 +276,7 @@ ms.locfileid: "36202823"
   
      Observe que el margen de beneficio bruto para la venta del distribuidor es notablemente inferior al de las ventas a través de Internet, como se muestra en la imagen siguiente.  
   
-     ![Panel de datos que muestre las ventas de distribuidor](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "panel de datos que muestre las ventas de distribuidor")  
+     ![Panel de datos que muestra las ventas de distribuidor](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "panel de datos que muestra las ventas de distribuidor")  
   
 9. Agregue las medidas **Total Sales Ratio to All Products**, **Internet Sales Ratio to All Products**y **Reseller Sales Ratio to All Products** al área Valores.  
   

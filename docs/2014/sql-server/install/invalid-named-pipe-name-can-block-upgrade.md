@@ -1,5 +1,5 @@
 ---
-title: Nombre de la canalización con nombre no válido puede bloquear la actualización | Documentos de Microsoft
+title: Nombre de la canalización con nombre no válido puede bloquear la actualización | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - invalid named pipes [SQL Server]
 - named pipes
 ms.assetid: 58c2199c-4fdf-4d43-ac1c-842703344b75
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c94c1eeff18bff698e2a6353e29b72dd33278d03
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d5a0b27ab1362a15730692b7bc41849ba4724bfd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297785"
 ---
 # <a name="invalid-named-pipe-name-can-block-upgrade"></a>Un nombre no válido de la canalización con nombre puede bloquear la actualización
   La actualización no es posible si el protocolo de canalizaciones con nombre no está configurado correctamente.  
@@ -31,7 +31,7 @@ ms.locfileid: "36108029"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descripción  
- Durante la actualización, el programa de instalación inicia el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instancia con compatibilidad con memoria compartida, una canalización con nombre que sólo acepta las conexiones locales. Si el nombre de canalización especificado en el servidor no está en blanco, debe comenzar con la cadena "\\\\. \pipe\\" sea válida. Si el nombre de la canalización no es válido, [!INCLUDE[ssDE](../../includes/ssde-md.md)] no se iniciará y se producirá un error en la instalación.  
+ Durante la actualización, el programa de instalación se inicia el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instancia con la compatibilidad de memoria compartida, una canalización con nombre que solo acepta conexiones locales. Si el nombre de canalización especificado en el servidor no está en blanco, debe comenzar con la cadena "\\\\. \pipe\\" sea válido. Si el nombre de la canalización no es válido, [!INCLUDE[ssDE](../../includes/ssde-md.md)] no se iniciará y se producirá un error en la instalación.  
   
 ## <a name="corrective-action"></a>Acción correctora  
  Use la  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] red utilidad** para proporcionar un nombre de canalización válido y, a continuación, ejecute el programa de instalación.  

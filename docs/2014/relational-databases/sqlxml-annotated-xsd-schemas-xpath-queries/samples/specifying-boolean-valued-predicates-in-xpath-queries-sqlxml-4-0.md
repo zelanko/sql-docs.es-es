@@ -1,5 +1,5 @@
 ---
-title: Especificar predicados con valores booleanos en consultas XPath (SQLXML 4.0) | Documentos de Microsoft
+title: Especificar predicados con valores booleanos en consultas XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - multiple predicates
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22c104784dfda86645a869736927367217ab5ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: b6ab1ec725924479a30f2f8df43e1c0ccd4c6e83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225175"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Especificar los predicados con valores booleanos en las consultas XPath (SQLXML 4.0)
   En los ejemplos siguientes se muestra cómo se especifican los predicados con valores booleanos en las consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "36198414"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (BooleanValuedPredicatesA.xml) y guárdela en el directorio donde esté guardado SampleSchema1.xml.  
   
@@ -94,13 +94,13 @@ ms.locfileid: "36198414"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. Especificar los predicados sucesivos y anidados  
- La consulta siguiente muestra cómo utilizar los predicados sucesivos. La consulta devuelve todos los  **\<cliente >** los elementos secundarios del nodo de contexto que tienen tanto una **SalesPersonID** atributo con un valor de 277 y un **TerritoryID**atributo con un valor de 3:  
+ La consulta siguiente muestra cómo utilizar los predicados sucesivos. La consulta devuelve todos los  **\<cliente >** elementos secundarios del nodo de contexto que tienen tanto una **SalesPersonID** atributo con un valor de 277 y un **TerritoryID**atributo con un valor de 3:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- La consulta devuelve el  **\<cliente >** los elementos que cumplan las condiciones especificadas en los predicados.  
+ La consulta devuelve el  **\<cliente >** los elementos que satisfacen las condiciones especificadas en los predicados.  
   
  Se puede especificar un acceso directo al eje `attribute` (@) y, puesto que el eje `child` es el valor predeterminado, puede omitirse en la consulta:  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36198414"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- La consulta XPath siguiente muestra el uso de los predicados anidados. La consulta devuelve todos los  **\<cliente >** los elementos secundarios del nodo de contexto que incluyen  **\<orden >** los elementos secundarios con al menos una  **\<Orden >** elemento que tiene un **SalesPersonID** valor de atributo de 2.  
+ La consulta XPath siguiente muestra el uso de los predicados anidados. La consulta devuelve todos los  **\<cliente >** elementos secundarios del nodo de contexto que incluyen  **\<orden >** elementos secundarios con al menos una  **\<Orden >** elemento que tiene un **SalesPersonID** valor de atributo de 2.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -116,7 +116,7 @@ ms.locfileid: "36198414"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (nestedSuccessive.xml) y guárdela en el mismo directorio donde esté guardado el archivo SampleSchema1.xml.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36198414"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. Especificar un predicado de nivel superior  
- La siguiente consulta devuelve el  **\<cliente >** nodos de elemento secundarios del nodo de contexto que tienen  **\<orden >** elementos secundarios. La consulta prueba la ruta de acceso de la ubicación como el predicado de nivel superior:  
+ La consulta siguiente devuelve el  **\<cliente >** nodos de elemento secundarios del nodo de contexto que tengan  **\<orden >** elementos secundarios. La consulta prueba la ruta de acceso de la ubicación como el predicado de nivel superior:  
   
 ```  
 /child::Customer[child::Order]  
@@ -185,7 +185,7 @@ ms.locfileid: "36198414"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (TopLevelPredicate.xml) y guárdela en el mismo directorio donde esté guardado el archivo SampleSchema1.xml.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], enabling tables
 - change data capture [SQL Server], enabling databases
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], disabling tables
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e21da034a1566ab4f34592b2b43e3b322bc60281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: e96cb5bb777544b8a3a390eee59a16e0213c857f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309515"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Habilitar y deshabilitar la captura de datos modificados (SQL Server)
   Este tema describe cómo habilitar y deshabilitar la captura de datos modificados para una tabla y una base de datos.  
@@ -32,7 +32,7 @@ ms.locfileid: "36200498"
 ## <a name="enable-change-data-capture-for-a-database"></a>Habilitar la captura de datos modificados en una base de datos  
  Para que pueda crearse una instancia de captura para tablas individuales, es preciso que un miembro del rol fijo de servidor `sysadmin` habilite previamente la base de datos para la captura de datos modificados. Esto se hace ejecutando el procedimiento almacenado [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) en el contexto de la base de datos. Para determinar si una base de datos ya está habilitada, consulte la columna `is_cdc_enabled` en la vista de catálogo `sys.databases`.  
   
- Cuando una base de datos está habilitada para la captura de datos modificados, la `cdc` esquema, `cdc` usuario, tablas de metadatos y otros objetos del sistema se crean para la base de datos. El `cdc` esquema contiene las tablas de metadatos de captura de datos de cambio y, después de las tablas de origen están habilitadas para la captura de datos modificados, las tablas de cambios individuales que sirven como repositorio para los datos modificados. El `cdc` esquema también contiene las funciones de sistema asociadas que se usan para consultar los datos modificados.  
+ Cuando una base de datos está habilitada para la captura de datos modificados, la `cdc` esquema, `cdc` usuario, las tablas de metadatos y otros objetos del sistema se crean para la base de datos. El `cdc` esquema contiene las tablas de metadatos de captura de datos de cambio y, después de las tablas de origen están habilitadas para la captura de datos modificados, las tablas de cambios individuales que sirven como repositorio para los datos modificados. El `cdc` esquema también contiene las funciones de sistema asociadas que se usan para consultar los datos modificados.  
   
  La captura de datos modificados requiere el uso exclusivo del esquema `cdc` y del usuario `cdc`. Si en una base de datos existe un esquema o un usuario de base de datos denominado *cdc* , dicha base de datos no se puede habilitar para la captura de datos modificados hasta que el esquema y/o el usuario se quiten o se cambie su nombre.  
   
@@ -52,7 +52,7 @@ GO
 ```  
   
 ## <a name="disable-change-data-capture-for-a-database"></a>Deshabilitar la captura de datos modificados para una base de datos  
- Un miembro de la `sysadmin` rol fijo de servidor puede ejecutar el procedimiento almacenado [sys.sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) en el contexto de base de datos para deshabilitar la captura de datos modificados para una base de datos. No es necesario deshabilitar tablas individuales antes de deshabilitar la base de datos. Cuando se deshabilita la base de datos quitan todos los metadatos de captura de datos modificados asociados, incluidos los `cdc` trabajos de captura de usuario y esquema y los datos modificados. Sin embargo, los roles de acceso creados por la captura de datos modificados no se quitarán automáticamente y se deben eliminar explícitamente. Para determinar si una base de datos está habilitada, consulte la columna `is_cdc_enabled` en la vista de catálogo sys.databases.  
+ Un miembro de la `sysadmin` rol fijo de servidor puede ejecutar el procedimiento almacenado [sys.sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) en el contexto de base de datos para deshabilitar la captura de datos modificados para una base de datos. No es necesario deshabilitar tablas individuales antes de deshabilitar la base de datos. Cuando se deshabilita la base de datos quitan todos los metadatos de captura de datos modificados asociados, incluidos el `cdc` trabajos de captura de usuario y esquema y los datos modificados. Sin embargo, los roles de acceso creados por la captura de datos modificados no se quitarán automáticamente y se deben eliminar explícitamente. Para determinar si una base de datos está habilitada, consulte la columna `is_cdc_enabled` en la vista de catálogo sys.databases.  
   
  Si se quita una base de datos habilitada para la captura de datos modificados, se quitarán automáticamente los trabajos de captura de datos modificados.  
   
@@ -102,7 +102,7 @@ GO
   
  `A role for controlling access to a change table.`  
   
- La finalidad del rol con nombre es controlar el acceso a los datos de cambios. El rol especificado puede ser un rol fijo de servidor existente o un rol de base de datos. Si el rol especificado aún no existe, se crea automáticamente un rol de base de datos con ese nombre. Los miembros del rol `sysadmin` o `db_owner` tienen acceso total a los datos de las tablas de cambios. Los demás usuarios deben tener el permiso SELECT en todas las columnas capturadas de la tabla de origen. Además, cuando se especifica un rol, los usuarios que no sean miembros de la `sysadmin` o `db_owner` rol también debe ser miembros del rol especificado.  
+ La finalidad del rol con nombre es controlar el acceso a los datos de cambios. El rol especificado puede ser un rol fijo de servidor existente o un rol de base de datos. Si el rol especificado aún no existe, se crea automáticamente un rol de base de datos con ese nombre. Los miembros del rol `sysadmin` o `db_owner` tienen acceso total a los datos de las tablas de cambios. Los demás usuarios deben tener el permiso SELECT en todas las columnas capturadas de la tabla de origen. Además, cuando se especifica un rol, los usuarios que no sean miembros del `sysadmin` o `db_owner` rol también debe ser miembros del rol especificado.  
   
  Si prefiere no usar un rol de acceso, debe establecer explícitamente el valor NULL en el parámetro *@role_name* . Vea la plantilla `Enable a Table Without Using a Gating Role` para obtener un ejemplo de cómo habilitar una tabla sin un rol de acceso.  
   

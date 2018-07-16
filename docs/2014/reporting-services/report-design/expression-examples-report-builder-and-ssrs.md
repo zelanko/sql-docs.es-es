@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - page breaks [Reporting Services], expressions
 - green-bar reports [Reporting Services]
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 caps.latest.revision: 97
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 71b1e580ddb4e56a267fcfaf792858ed3566f2d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 97bfdd80fc183291f21042d11620d0a3e28e0b49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205045"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Ejemplos de expresiones (Generador de informes y SSRS)
   Las expresiones se usan con frecuencia en los informes para controlar el contenido y la apariencia de los mismos. Las expresiones se escriben en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]y pueden usar funciones integradas, código personalizado, variables de informe y de grupo, y variables definidas por el usuario. Las expresiones comienzan con un signo igual (=). Para más información sobre el editor de expresiones y los tipos de referencias que se pueden incluir, vea [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) y [Agregar una expresión &#40;Generador de informes y SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
@@ -58,13 +58,13 @@ ms.locfileid: "36204387"
   
  Para obtener ejemplos de expresiones para usos específicos, vea los siguientes temas:  
   
--   [Ejemplos de expresiones de grupo &#40;el generador de informes SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [Ejemplos de expresiones de grupo &#40;generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [Ejemplos de ecuaciones de filtro &#40;el generador de informes SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Ejemplos de ecuaciones de filtro &#40;generador de informes y SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
--   [Filtros de uso frecuente &#40;el generador de informes SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
+-   [Filtros de uso frecuente &#40;generador de informes y SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
   
--   [Informar y las referencias de las colecciones de Variables de grupo &#40;el generador de informes SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+-   [Informe y de grupo de referencias a las colecciones de Variables &#40;generador de informes y SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
  Para más información sobre las expresiones simples y complejas, dónde se pueden usar las expresiones y los tipos de referencias que se pueden incluir en una expresión, vea los temas en [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md). Para más información sobre el contexto donde se evalúan las expresiones para calcular agregados, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36204387"
   
 #### <a name="math-functions"></a>Funciones matemáticas  
   
--   El `Round` función es útil para redondear los números al entero más próximo. La siguiente expresión redondea el valor1,3 a 1:  
+-   El `Round` función es útil para redondear números al entero más cercano. La siguiente expresión redondea el valor1,3 a 1:  
   
     ```  
     = Round(1.3)  
@@ -113,7 +113,7 @@ ms.locfileid: "36204387"
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
--   El `Year` función muestra el año correspondiente a una fecha determinada. Puede utilizarse para agrupar las fechas o para mostrar el año como etiqueta para un conjunto de fechas. Esta expresión proporciona el año correspondiente a un determinado grupo de fechas de pedidos de venta. El `Month` función y otras funciones también pueden utilizarse para manipular las fechas. Para obtener más información, consulte la documentación de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
+-   El `Year` función muestra el año correspondiente a una fecha determinada. Puede utilizarse para agrupar las fechas o para mostrar el año como etiqueta para un conjunto de fechas. Esta expresión proporciona el año correspondiente a un determinado grupo de fechas de pedidos de venta. El `Month` función y otras funciones también pueden usarse para manipular las fechas. Para obtener más información, consulte la documentación de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
   
     ```  
     =Year(Fields!OrderDate.Value)  
@@ -161,7 +161,7 @@ ms.locfileid: "36204387"
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
--   El `DatePart` función devuelve un valor entero que contiene el componente especificado de un valor de fecha determinado. La siguiente expresión devuelve el año del primer valor de SellStartDate en DataSet1. Se especifica el ámbito del conjunto de datos porque hay varios conjuntos de datos en el informe.  
+-   El `DatePart` función devuelve un valor entero que contiene el componente especificado de un valor Date dado. La siguiente expresión devuelve el año para el primer valor de SellStartDate en DataSet1. Se especifica el ámbito del conjunto de datos porque hay varios conjuntos de datos en el informe.  
   
     ```  
     =Datepart("yyyy", First(Fields!SellStartDate.Value, "DataSet1"))  
@@ -199,9 +199,9 @@ ms.locfileid: "36204387"
     =Format(Parameters!StartDate.Value, "D") & " through " &  Format(Parameters!EndDate.Value, "D")    
     ```  
   
-     Si el cuadro de texto contiene solo una fecha o un número, debe usar la propiedad de formato del cuadro de texto para aplicar formato en lugar de la `Format` función en el cuadro de texto.  
+     Si el cuadro de texto contiene solo una fecha o un número, debe usar la propiedad Format del cuadro de texto para aplicar formato en lugar de la `Format` función en el cuadro de texto.  
   
--   El `Right`, `Len`, y `InStr` funciones son útiles para devolver una subcadena; por ejemplo, para reducir *dominio*\\*nombre de usuario* para el nombre de usuario. La siguiente expresión devuelve la parte de la cadena situada a la derecha de un carácter de barra diagonal inversa (\\) de un parámetro denominado *User*:  
+-   El `Right`, `Len`, y `InStr` funciones son útiles para devolver una subcadena; por ejemplo, reducir *dominio*\\*username* para el nombre de usuario. La siguiente expresión devuelve la parte de la cadena situada a la derecha de un carácter de barra diagonal inversa (\\) de un parámetro denominado *User*:  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -213,7 +213,7 @@ ms.locfileid: "36204387"
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
     ```  
   
--   Muestre los valores seleccionados en un parámetro de varios valores. En el ejemplo siguiente se usa el `Join` función para concatenar los valores seleccionados del parámetro *MySelection* en una sola cadena que se pueden establecer como una expresión para el valor de un cuadro de texto en un elemento de informe:  
+-   Muestre los valores seleccionados en un parámetro de varios valores. En el ejemplo siguiente se usa el `Join` función para concatenar los valores seleccionados del parámetro *MySelection* en una sola cadena que se puede establecer como una expresión para el valor de un cuadro de texto en un elemento de informe:  
   
     ```  
     = Join(Parameters!MySelection.Value)  
@@ -226,7 +226,7 @@ ms.locfileid: "36204387"
   
     ```  
   
--   El `Regex` las funciones de la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> son útiles para cambiar el formato de cadenas existentes, por ejemplo, dar formato a un número de teléfono. La siguiente expresión utiliza el `Replace` función puede cambiar el formato de un número de teléfono de diez dígitos de un campo de "*nnn*-*nnn*-*nnnn* "a" (*nnn*) *nnn*-*nnnn*":  
+-   El `Regex` funciones desde la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> son útiles para cambiar el formato de cadenas existentes, por ejemplo, dar formato a un número de teléfono. La siguiente expresión utiliza el `Replace` función para cambiar el formato de un número de teléfono de diez dígitos de un campo de "*nnn*-*nnn*-*nnnn* "a" (*nnn*) *nnn*-*nnnn*":  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -245,7 +245,7 @@ ms.locfileid: "36204387"
   
 #### <a name="lookupset"></a>LookupSet  
   
--   Al especificar un campo de clave, puede utilizar el `LookupSet` función para recuperar un conjunto de valores de un conjunto de datos para una relación uno a varios. Por ejemplo, una persona puede tener varios números de teléfono. En el siguiente ejemplo, suponga que el conjunto de datos PhoneList contiene un identificador de persona y un número de teléfono en cada fila. `LookupSet` Devuelve una matriz de valores. La siguiente expresión combina los valores devueltos en una sola cadena y muestra la lista de números de teléfono para la persona especificada por ContactID:  
+-   Al especificar un campo de clave, puede usar el `LookupSet` función para recuperar un conjunto de valores de un conjunto de datos para una relación uno a varios. Por ejemplo, una persona puede tener varios números de teléfono. En el siguiente ejemplo, suponga que el conjunto de datos PhoneList contiene un identificador de persona y un número de teléfono en cada fila. `LookupSet` Devuelve una matriz de valores. La siguiente expresión combina los valores devueltos en una sola cadena y muestra la lista de números de teléfono para la persona especificada por ContactID:  
   
     ```  
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
@@ -282,7 +282,7 @@ ms.locfileid: "36204387"
   
      Los valores mayores o iguales que 10 se muestran con un fondo verde, los valores entre 1 y 9 se muestran con un fondo azul, y los valores menores que 1 se muestran con un fondo rojo.  
   
--   Otra forma de obtener la misma funcionalidad con los `Switch` función. La función `Switch` resulta de gran utilidad cuando se necesita probar tres condiciones o más. La función `Switch` devuelve el valor asociado a la primera expresión en una serie que se evalúa como TRUE:  
+-   Otra forma de obtener la misma funcionalidad con el `Switch` función. La función `Switch` resulta de gran utilidad cuando se necesita probar tres condiciones o más. La función `Switch` devuelve el valor asociado a la primera expresión en una serie que se evalúa como TRUE:  
   
     ```  
     =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red",)  
@@ -296,13 +296,13 @@ ms.locfileid: "36204387"
     =IIF(DateDiff("d",Fields!ImportantDate.Value, Now())>7,"Red","Blue")  
     ```  
   
--   Probar el valor de la `PhoneNumber` campo y devuelve "Sin valor" si se `null` (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]); en caso contrario, devuelve el valor del número de teléfono. Esta expresión puede utilizarse para controlar el valor de un cuadro de texto en un elemento de informe.  
+-   Probar el valor de la `PhoneNumber` campo y devuelve "No Value" si es `null` (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]); en caso contrario, devuelve el valor de número de teléfono. Esta expresión puede utilizarse para controlar el valor de un cuadro de texto en un elemento de informe.  
   
     ```  
     =IIF(Fields!PhoneNumber.Value Is Nothing,"No Value",Fields!PhoneNumber.Value)  
     ```  
   
--   Probar el valor de la `Department` campo y devolver un nombre de subinforme o un `null` (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Esta expresión puede utilizarse con subinformes detallados condicionales.  
+-   Probar el valor de la `Department` campo y devuelve un nombre de subinforme o un `null` (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Esta expresión puede utilizarse con subinformes detallados condicionales.  
   
     ```  
     =IIF(Fields!Department.Value = "Development", "EmployeeReport", Nothing)  
@@ -326,7 +326,7 @@ ms.locfileid: "36204387"
   
 #####  <a name="Sum"></a> Sum  
   
--   El `Sum` función puede calcular el total de los valores de un grupo o región de datos. Esta función puede resultar útil en el encabezado o en el pie de página de un grupo. La expresión siguiente muestra la suma de los datos del grupo o de la región de datos Order:  
+-   El `Sum` función puede sumar los valores en un grupo o región de datos. Esta función puede resultar útil en el encabezado o en el pie de página de un grupo. La expresión siguiente muestra la suma de los datos del grupo o de la región de datos Order:  
   
     ```  
     =Sum(Fields!LineTotal.Value, "Order")  
@@ -456,7 +456,7 @@ ms.locfileid: "36204387"
     =IIF(CountRows()>12,false,true)  
     ```  
   
--   La siguiente expresión, cuando se establece en el `Hidden` propiedad de una columna, se muestra la columna solo si el campo existe en el conjunto de datos de informe después de que los datos se recuperan del origen de datos:  
+-   La siguiente expresión, cuando se establece el `Hidden` propiedad de una columna, muestra la columna solo si el campo existe en el conjunto de datos de informe después de que los datos se recuperan del origen de datos:  
   
     ```  
     =IIF(Fields!Column_1.IsMissing, true, false)  
@@ -509,7 +509,7 @@ ms.locfileid: "36204387"
 ### <a name="using-group-variables-for-custom-aggregation"></a>Usar variables de grupo para agregación personalizada  
  Puede inicializar el valor de una variable de grupo local en un ámbito de grupo determinado y, a continuación, incluir una referencia a esa variable en expresiones. Una forma de usar una variable de grupo con código personalizado es implementar un agregado personalizado. Para obtener más información, vea [Usar variables de grupo en Reporting Services 2008 para agregados personalizados (en inglés)](http://go.microsoft.com/fwlink/?LinkId=128714).  
   
- Para obtener más información acerca de las variables, consulte [informes y referencias de colecciones de Variables de grupo &#40;el generador de informes y SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md).  
+ Para obtener más información acerca de las variables, consulte [informes y referencias a colecciones de Variables de grupo &#40;el generador de informes y SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md).  
   
 ## <a name="suppressing-null-or-zero-values-at-run-time"></a>Suprimir valores NULL o valores cero en tiempo de ejecución  
  Algunos valores de una expresión pueden evaluarse como NULL o como indefinidos durante el procesamiento del informe. Esto puede provocar errores en tiempo de ejecución que hacen que en el cuadro de texto se muestre **#Error** en lugar de la expresión evaluada. La función `IIF` es especialmente sensible a este comportamiento porque, a diferencia de lo que ocurre en una instrucción If-Then-Else, se evalúa cada una de las partes de la instrucción `IIF` (incluidas las llamadas a función) antes de que se pasen a la rutina que comprueba si es `true` o `false`. La instrucción `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` genera **#Error** en el informe representado si el valor de `Fields!Sales.Value` es NOTHING.  
@@ -545,10 +545,10 @@ ms.locfileid: "36204387"
      Esto ayuda a evitar excepciones en tiempo de ejecución. Ahora puede utilizar una expresión como `=IIF(Me.Value < 0, "red", "black")` en la propiedad `Color` del cuadro de texto para condicionalmente el texto para mostrar basándose en si los valores son mayores o menores que 0.  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos de ecuaciones de filtro &#40;el generador de informes SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
+ [Ejemplos de ecuaciones de filtro &#40;generador de informes y SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
  [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Expresión que se utiliza en los informes &#40;el generador de informes SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Filtros de uso frecuente &#40;el generador de informes SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
+ [Filtros de uso frecuente &#40;generador de informes y SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
   
   

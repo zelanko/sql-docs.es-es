@@ -1,5 +1,5 @@
 ---
-title: Cambios de comportamiento en la base de datos del motor de características de SQL Server 2014 | Documentos de Microsoft
+title: Características de SQL Server 2014 del motor de base de datos de los cambios de comportamiento | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - behavior changes [SQL Server]
 - Database Engine [SQL Server], what's new
 - Transact-SQL behavior changes
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 caps.latest.revision: 134
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b91a84ac2973ee5569ff9a9f4b3fa54737492068
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d83d502ec6b384a7c3e6a5f4ee2f4e7787ead4da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193965"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Cambios de comportamiento en las características del Motor de base de datos en SQL Server 2014
-  En este tema se describe los cambios de comportamiento en la [!INCLUDE[ssDE](../includes/ssde-md.md)]. Los cambios de comportamiento afectan al modo en que las características de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] funcionan o interactúan en comparación con las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  En este tema se describe los cambios de comportamiento en el [!INCLUDE[ssDE](../includes/ssde-md.md)]. Los cambios de comportamiento afectan al modo en que las características de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] funcionan o interactúan en comparación con las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="behavior-changes-in-includesssql14includessssql14-mdmd"></a>Cambios de comportamiento en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  En las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], las consultas en un documento XML que contiene cadenas por encima de una determinada longitud (más de 4020 caracteres) pueden producir resultados incorrectos. En [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], estas consultas devuelven resultados correctos.  
@@ -34,12 +34,12 @@ ms.locfileid: "36110792"
 ## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>Cambios de comportamiento en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>Detección de metadatos  
- Mejoras en la [!INCLUDE[ssDE](../includes/ssde-md.md)] partir [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] permitir SQLDescribeCol obtener descripciones más precisas de los resultados esperados que los devueltos por SQLDescribeCol en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, consulte [de detección de metadatos](../relational-databases/native-client/features/metadata-discovery.md).  
+ Mejoras en el [!INCLUDE[ssDE](../includes/ssde-md.md)] partir [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] permitir SQLDescribeCol obtener descripciones más precisas de los resultados esperados que los devueltos por SQLDescribeCol en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, consulte [detección de metadatos](../relational-databases/native-client/features/metadata-discovery.md).  
   
- The [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) option for determining the format of a response without actually running the query is replaced with [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), and [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
+ El [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) opción para determinar el formato de una respuesta sin ejecutar realmente la consulta se reemplaza por [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), y [sys.dm_ exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>Cambios de comportamiento de scripting en una tarea del Agente SQL Server  
- En [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], si crea un nuevo trabajo copiando el script desde un trabajo existente, el nuevo trabajo puede afectar inadvertidamente al trabajo existente. Para crear un nuevo empleo usando la secuencia de comandos desde un trabajo existente, elimine manualmente el parámetro *@schedule_uid* que suele ser el último parámetro de la sección que crea la programación de trabajo en el trabajo existente. De esta forma se crea una nueva programación independiente del nuevo trabajo sin que se vean afectados los trabajos existentes.  
+ En [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], si crea un nuevo trabajo copiando el script desde un trabajo existente, el nuevo trabajo puede afectar inadvertidamente al trabajo existente. Para crear un nuevo trabajo con la secuencia de comandos desde un trabajo existente, elimine manualmente el parámetro *@schedule_uid* que normalmente es el último parámetro de la sección que crea la programación de trabajo en el trabajo existente. De esta forma se crea una nueva programación independiente del nuevo trabajo sin que se vean afectados los trabajos existentes.  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>Doblado constante para las funciones y métodos CLR definidos por el usuario  
  En [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], los objetos definidos por el usuario para CLR pueden doblarse ahora:  
@@ -78,7 +78,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  Para determinar si un objeto espacial está vacío, llame a la [STIsEmpty &#40;tipo de datos geometry&#41; ](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type) método.  
   
 ### <a name="log-function-has-new-optional-parameter"></a>La función LOG tiene un nuevo parámetro opcional  
- El `LOG` función ahora tiene una función opcional *base* parámetro. Para obtener más información, consulte [registro &#40;Transact-SQL&#41;](/sql/t-sql/functions/log-transact-sql).  
+ El `LOG` función ahora tiene un elemento opcional *base* parámetro. Para obtener más información, consulte [registro &#40;Transact-SQL&#41;](/sql/t-sql/functions/log-transact-sql).  
   
 ### <a name="statistics-computation-during-partitioned-index-operations-has-changed"></a>El cálculo de estadísticas durante las operaciones de índice con particiones ha cambiado  
  En [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], las estadísticas no se crean mediante el examen de todas las filas de la tabla cuando se crea o se vuelve a compilar un índice con particiones. En su lugar, el optimizador de consultas usa el algoritmo de muestreo predeterminado para generar estadísticas. Después de actualizar una base de datos con índices con particiones, puede observar una diferencia en los datos del histograma para estos índices. Este cambio de comportamiento puede no afectar al rendimiento de las consultas. Para obtener estadísticas sobre índices con particiones examinando todas las filas de la tabla, use CREATE STATISTICS o UPDATE STATISTICS con la cláusula FULLSCAN.  

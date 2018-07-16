@@ -1,5 +1,5 @@
 ---
-title: 'Identificar columnas de clave mediante SQL: key-fields (SQLXML 4.0) | Documentos de Microsoft'
+title: 'Identificar columnas de clave mediante SQL: Key-campos (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8ac5d70b4ab396fe8e2ed8e164a754197f6f8ec0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7ea6dfe8fc312fe26803701838980e93d3bd7544
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184256"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificar columnas de clave mediante sql:key-fields (SQLXML 4.0)
   Cuando se especifica una consulta XPath en un esquema XSD, la información de claves resulta necesaria en la mayoría de los casos para obtener un anidamiento correcto en el resultado. Especificar la anotación `sql:key-fields` es una forma de asegurarse de que se genera la jerarquía correcta.  
@@ -41,7 +41,7 @@ ms.locfileid: "36108299"
   
  El valor de `sql:key-fields` identifica las columnas que identifican de forma única las filas de la relación. Si es necesaria más de una columna para identificar de forma única una fila, los valores de columna se delimitan mediante espacios.  
   
- Debe utilizar el `sql:key-fields` anotación cuando un elemento contiene una  **\<SQL: Relationship >** que se define entre el elemento y un elemento secundario, pero no proporciona la clave principal de la tabla que se especifica en el elemento primario.  
+ Debe usar el `sql:key-fields` anotación cuando un elemento contiene un  **\<SQL: Relationship >** que se define entre el elemento y un elemento secundario, pero no proporciona la clave principal de la tabla que se especifica en el elemento primario.  
   
 ## <a name="examples"></a>Ejemplos  
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
@@ -49,9 +49,9 @@ ms.locfileid: "36108299"
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Crear un anidamiento correcto cuando \<SQL: Relationship > no proporciona suficiente información  
  En este ejemplo se muestra dónde debe especificarse `sql:key-fields`.  
   
- Fíjese en el siguiente esquema. El esquema especifica una jerarquía entre el  **\<orden >** y  **\<cliente >** elementos en los que la  **\<orden >** es el elemento primario y el  **\<cliente >** es un elemento secundario.  
+ Fíjese en el siguiente esquema. El esquema especifica una jerarquía entre el  **\<orden >** y  **\<cliente >** elementos en los que el  **\<orden >** elemento es el elemento primario y el  **\<cliente >** es un elemento secundario.  
   
- El  **\<SQL: Relationship >** etiqueta se utiliza para especificar la relación de elementos primarios y secundarios. Identifica CustomerID en la tabla Sales.SalesOrderHeader como la clave primaria que hace referencia a la clave secundaria CustomerID en la tabla Sales.Customer. La información proporcionada en  **\<SQL: Relationship >** no es suficiente para identificar filas de la tabla primaria (Sales.SalesOrderHeader). Por lo tanto, sin la anotación `sql:key-fields`, la jerarquía que se genera es inexacta.  
+ El  **\<SQL: Relationship >** etiqueta a la que se usa para especificar la relación de elementos primarios y secundarios. Identifica CustomerID en la tabla Sales.SalesOrderHeader como la clave primaria que hace referencia a la clave secundaria CustomerID en la tabla Sales.Customer. La información proporcionada en  **\<SQL: Relationship >** no es suficiente para identificar de forma única las filas de la tabla primaria (Sales.SalesOrderHeader). Por lo tanto, sin la anotación `sql:key-fields`, la jerarquía que se genera es inexacta.  
   
  Con `sql:key-fields` especificado en  **\<orden >**, la anotación identifica de forma única las filas en el elemento primario (tabla Sales.SalesOrderHeader) y sus elementos secundarios aparecen debajo de su elemento primario.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36108299"
   
 1.  Copie el código de esquema anterior y péguelo en un archivo de texto. Guarde el archivo como KeyFields1.xml.  
   
-2.  Copie la plantilla siguiente y péguela en un archivo de texto. Guarde el archivo como KeyFields1T.xml en el mismo directorio donde guardó KeyFields1.xml. La consulta XPath en la plantilla devuelve todos los  **\<orden >** elementos cuyo valor CustomerID es menor que 3.  
+2.  Copie la plantilla siguiente y péguela en un archivo de texto. Guarde el archivo como KeyFields1T.xml en el mismo directorio donde guardó KeyFields1.xml. La consulta XPath en la plantilla devuelve todos los  **\<orden >** elementos con un CustomerID es inferior a 3.  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

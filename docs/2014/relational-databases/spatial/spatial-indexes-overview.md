@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 99c12dce1bcab99ae5e4d65bf3ccc6d637b8154c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e21d0142212541ff41bef6ba76f8e274235b86a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194975"
 ---
 # <a name="spatial-indexes-overview"></a>Información general sobre los índices espaciales
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite datos espaciales e índices espaciales. Un *índice espacial* es un tipo de índice extendido que permite indizar una columna espacial. Una columna espacial es una columna de tabla que contiene datos de un tipo espacial, como `geometry` o `geography`.  
@@ -145,11 +145,11 @@ ms.locfileid: "36203159"
 > [!NOTE]  
 >  Estas coordenadas están especificadas por la cláusula BOUNDING_BOX de la instrucción [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
- El `(` *x-min ***,*** y-min* `)` y `(` *x-max ***,*** y máxima* `)` coordenadas determinan la posición y las dimensiones del cuadro de límite. El espacio exterior del cuadro de límite se trata como una celda única con el número 0.  
+ El `(` *x-min ***,*** y-min* `)` y `(` *x-max ***,*** y-max* `)` coordenadas determinan la posición y las dimensiones del rectángulo. El espacio exterior del cuadro de límite se trata como una celda única con el número 0.  
   
  El índice espacial descompone el espacio que se encuentra dentro del cuadro de límite. La cuadrícula de nivel 1 de la jerarquía de cuadrículas rellena el cuadro de límite. Para colocar un objeto geométrico en la jerarquía de cuadrículas, el índice espacial compara las coordenadas del objeto con las coordenadas del cuadro de límite.  
   
- La ilustración siguiente muestra los puntos definidos por el `(` *x-min ***,*** y-min* `)` y `(` *x-max ***,*** y máxima* `)` coordenadas del cuadro de límite. El nivel superior de la jerarquía de cuadrículas se muestra como una cuadrícula 4x4. Para la ilustración, se omiten los niveles inferiores. Un cero (0) indica el espacio exterior del cuadro de límite. Tenga en cuenta que el objeto 'A' se extiende, en parte, más allá del cuadro y el objeto 'B' permanece por completo fuera del cuadro de la celda 0.  
+ La siguiente ilustración muestra los puntos definidos por el `(` *x-min ***,*** y-min* `)` y `(` *x-max ***,*** y-max* `)` las coordenadas del rectángulo. El nivel superior de la jerarquía de cuadrículas se muestra como una cuadrícula 4x4. Para la ilustración, se omiten los niveles inferiores. Un cero (0) indica el espacio exterior del cuadro de límite. Tenga en cuenta que el objeto 'A' se extiende, en parte, más allá del cuadro y el objeto 'B' permanece por completo fuera del cuadro de la celda 0.  
   
  ![Cuadro de límite que muestra las coordenadas y la celda 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Cuadro de límite que muestra las coordenadas y la celda 0.")  
   

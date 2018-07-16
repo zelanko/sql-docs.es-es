@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d2698cc6ce0bd17b7d9cb079fdc4f4c7c1e70c20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4d131860981e30c6a45d4b7fddbb6d7133d10d6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209175"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lección 2: Conectarse desde otro equipo
   Para mejorar la seguridad, no se puede obtener acceso a [!INCLUDE[ssDE](../includes/ssde-md.md)] de las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express y Evaluation desde otro equipo cuando se instala inicialmente. En esta lección se muestra cómo habilitar los protocolos, configurar los puertos y configurar el Firewall de Windows para conectarse desde otros equipos.  
@@ -77,9 +77,9 @@ ms.locfileid: "36110937"
   
 6.  En el panel izquierdo, haga clic en **Servicios de SQL Server**.  
   
-7.  En el panel derecho, haga clic con el botón derecho en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y, después, haga clic en **Reiniciar**. Cuando el [!INCLUDE[ssDE](../includes/ssde-md.md)] se haya reiniciado, escucha en el puerto `49172`.  
+7.  En el panel derecho, haga clic con el botón derecho en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y, después, haga clic en **Reiniciar**. Cuando el [!INCLUDE[ssDE](../includes/ssde-md.md)] reinicios, escucha en el puerto `49172`.  
   
-##  <a name="firewall"></a> Abrir puertos en el Firewall  
+##  <a name="firewall"></a> Abrir puertos del Firewall  
  Los sistemas de firewall ayudan a evitar el acceso no autorizado a los recursos de los equipos. Para conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde otro equipo cuando el firewall está activo, debe abrir un puerto en el firewall.  
   
 > [!IMPORTANT]  

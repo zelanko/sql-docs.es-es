@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], distribution
 - distribution configuration [SQL Server replication]
 - publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 76502e0e13abd210e7bfc6fd9de1531d53915200
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4b238cb940684ad5a546b0e0dbfefd83c960ed3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301975"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurar la publicación y la distribución
   En este tema se describe cómo configurar la publicación y distribución en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -70,7 +70,7 @@ ms.locfileid: "36112270"
   
 2.  En el distribuidor, que también es el publicador, ejecute [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) y especifique el recurso compartido UNC que se usará como carpeta de instantáneas predeterminada para **@working_directory**.  
   
-3.  En el publicador, ejecute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Especifique la base de datos que se está publicando para **@dbname**, el tipo de replicación para **@optname**y un valor de `true` para **@value**.  
+3.  En el publicador, ejecute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Especifique la base de datos que se publica para **@dbname**, el tipo de replicación para **@optname**y un valor de `true` para **@value**.  
   
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>Para configurar la publicación mediante un distribuidor remoto  
   

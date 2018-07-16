@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 caps.latest.revision: 30
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 36a0b3d3237360ede083ce635375eb2ace716bd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f7c92b097d1b6388fe1e531d27b9965da0ec584
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290971"
 ---
 # <a name="step-1-copying-the-lesson-2-package"></a>Paso 1: Copiar el paquete de la Lección 2
   En esta tarea, creará una copia del paquete que ha creado en la lección 2, denominado Lesson 2.dtsx. También puede agregar al proyecto el paquete completado de la lección 2 que se incluye con el tutorial y, después, copiar dicho paquete. Usará esta nueva copia en toda la lección 3.  
@@ -42,7 +42,7 @@ ms.locfileid: "36201397"
   
 7.  En la ventana Propiedades, actualice el `Name` propiedad `Lesson 3`.  
   
-8.  Haga clic en el cuadro de la **identificador** propiedad y, a continuación, en la lista, haga clic en  **\<generar nuevo Id. >**.  
+8.  Haga clic en el cuadro para la **ID** propiedad y, a continuación, en la lista, haga clic en  **\<generar nuevo Id. >**.  
   
 ### <a name="to-add-the-completed-lesson2-package"></a>Para agregar el paquete de la lección 2 completada  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 230cd7bcbadf9e51ba248ffa34851335977cb0ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 02d7879bab489d92f6c5897406d3dce12b279d96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238245"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Agregar un parámetro a un informe (Generador de informes)
   Agregue un parámetro a un informe para permitir que los usuarios filtren los datos del informe desde el origen de datos o el informe. Los parámetros del informe se crean automáticamente para cada parámetro de la consulta que incluya en una consulta del conjunto de datos. El tipo de datos de parámetro determina cómo aparece en la barra de herramientas de visualización de informe.  
@@ -29,7 +29,7 @@ ms.locfileid: "36199312"
 ##  <a name="BackToTop"></a> Qué aprenderá  
  En este tutorial, aprenderá a realizar las siguientes tareas:  
   
-1.  [Crear un informe de matriz y el conjunto de datos de la tabla o el Asistente para matrices](#Setup)  
+1.  [Crear un informe de matriz y un conjunto de datos de la tabla o el Asistente para matrices](#Setup)  
   
 2.  [Organizar los datos, elegir el diseño y el estilo de la tabla o el Asistente para matrices](#CompleteWizard)  
   
@@ -37,19 +37,19 @@ ms.locfileid: "36199312"
   
 4.  [Cambiar el tipo de datos predeterminado y otras propiedades para un parámetro de informe](#ChangeDefaultProperties)  
   
-    1.  [Agregar un conjunto de datos para proporcionar valores disponibles y nombres para mostrar](#AddDataset)  
+    1.  [Agregar un conjunto de datos para proporcionar valores disponibles y los nombres para mostrar](#AddDataset)  
   
     2.  [Especifique los valores disponibles para crear una lista desplegable de valores](#AvailableValues)  
   
-    3.  [Especificar los valores predeterminados para que el informe se ejecute automáticamente](#DefaultValues)  
+    3.  [Especificar valores predeterminados para que se ejecuta el informe](#DefaultValues)  
   
     4.  [Buscar un valor de un conjunto de datos que tiene pares nombre/valor](#NameValue)  
   
 5.  [Mostrar el valor del parámetro seleccionado en el informe](#Expression)  
   
-6.  [Utilizar el parámetro de informe en un filtro](#Filter)  
+6.  [Use el parámetro de informe en un filtro](#Filter)  
   
-7.  [Cambie el parámetro de informe para que acepte varios valores](#Multivalued)  
+7.  [Cambiar el parámetro de informe para que acepte varios valores](#Multivalued)  
   
 8.  [Agregar un parámetro booleano para obtener visibilidad condicional](#Boolean)  
   
@@ -73,12 +73,12 @@ ms.locfileid: "36199312"
   
 #### <a name="to-create-a-new-matrix-report"></a>Para crear un nuevo informe de matriz  
   
-1.  Haga clic en **iniciar**, seleccione **programas**, seleccione [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
+1.  Haga clic en **iniciar**, apunte a **programas**, apunte a [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
   
      Aparecerá el cuadro de diálogo **Introducción** .  
   
     > [!NOTE]  
-    >  Si el **Introducción** cuadro de diálogo no aparece, desde el **Report Builder** botón, haga clic en **nuevo**.  
+    >  Si el **Introducción** no aparece el cuadro de diálogo, desde el **Report Builder** botón, haga clic en **New**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Informe** .  
   
@@ -197,9 +197,9 @@ ms.locfileid: "36199312"
   
 #### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>Para cambiar el tipo de datos predeterminado para un parámetro de informe  
   
-1.  En el panel de datos de informe en el **parámetros** nodo, haga clic en *@StoreID*y, a continuación, haga clic en **propiedades de parámetro**.  
+1.  En el panel datos de informe en el **parámetros** nodo, haga clic en *@StoreID*y, a continuación, haga clic en **propiedades de parámetro**.  
   
-2.  ¿En el símbolo del sistema, escriba **identificador del almacén?** Este texto aparece en la barra de herramientas del visor de informes al ejecutar el informe.  
+2.  ¿En el símbolo del sistema, escriba **identificador Store?** Este texto aparece en la barra de herramientas del visor de informes al ejecutar el informe.  
   
 3.  En **Tipo de datos**, en la lista desplegable, seleccione **Entero**.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "36199312"
   
 3.  En **Nombre**, escriba **Almacenes**.  
   
-4.  Seleccione el **utilizar un conjunto de datos incrustada en mi informe** opción.  
+4.  Seleccione el **usar un conjunto de datos insertado en el informe** opción.  
   
 5.  En **origen de datos**, en la lista desplegable, elija el origen de datos que creó en el primer procedimiento.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "36199312"
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Para proporcionar los valores disponibles para un parámetro desde un conjunto de datos  
   
-1.  En el panel de datos de informe, haga clic en el parámetro *@StoreID*y, a continuación, haga clic en **propiedades de parámetro**.  
+1.  En el panel datos de informe, haga clic en el parámetro *@StoreID*y, a continuación, haga clic en **propiedades de parámetro**.  
   
 2.  Haga clic en **Valores disponibles**y luego haga clic en **Obtener valores de una consulta**.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "36199312"
   
 6.  Haga clic en **General**.  
   
-7.  ¿En el símbolo del sistema, escriba **nombre de la tienda?**  
+7.  ¿En el símbolo del sistema, escriba **nombre Store?**  
   
      El usuario seleccionará ahora en una lista de nombres de almacén en lugar de entre los identificadores de almacén. Observe que el tipo de datos de parámetro sigue siendo **Entero** , porque el parámetro está basado en el identificador del almacén, no el nombre del almacén.  
   
@@ -291,7 +291,7 @@ ms.locfileid: "36199312"
   
 7.  Obtenga una vista previa del informe.  
   
- Para *@StoreID*, el Visor de informes muestra el valor "Contoso North America Online Store". Este es el primer valor del conjunto de resultados para el conjunto de datos **almacenes**. El informe muestra la cantidad vendida de cámaras digitales para el identificador del almacén **199**.  
+ Para *@StoreID*, el Visor de informes muestra el valor "Contoso North America Online Store". Este es el primer valor desde el conjunto de resultados para el conjunto de datos **almacenes**. El informe muestra la cantidad vendida de cámaras digitales para el identificador del almacén **199**.  
   
 #### <a name="to-specify-a-custom-default-value"></a>Para especificar un valor predeterminado personalizado  
   
@@ -307,7 +307,7 @@ ms.locfileid: "36199312"
   
 6.  Obtenga una vista previa del informe.  
   
- Para *@StoreID*, el Visor de informes muestra el valor "Contoso Catalog Store". Es el nombre para mostrar para el identificador de almacén **200**. El informe muestra la cantidad vendida de accesorios, cámaras de vídeo y cámaras digitales SLR para el identificador de almacén **200**.  
+ Para *@StoreID*, el Visor de informes muestra el valor "Contoso Catalog Store". Este es el nombre para mostrar para el identificador del almacén **200**. El informe muestra la cantidad vendida de accesorios, cámaras de vídeo y cámaras digitales SLR para el identificador de almacén **200**.  
   
 ##  <a name="NameValue"></a> 4d. Buscar un valor de un conjunto de datos que tiene pares de name y valor  
  Un conjunto de datos podría contener el identificador y el campo de nombre correspondiente. Si solo tiene un identificador, puede buscar el nombre correspondiente en un conjunto de datos que haya creado y que tenga pares de nombre/valor.  
@@ -330,7 +330,7 @@ ms.locfileid: "36199312"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     El encabezado de columna del almacén contiene el texto de presentación para una expresión compleja:  **< \<Expr >>**.  
+     El encabezado de columna del almacén contiene el texto para mostrar una expresión compleja:  **< \<Expr >>**.  
   
 8.  Obtenga una vista previa del informe.  
   
@@ -343,7 +343,7 @@ ms.locfileid: "36199312"
   
 1.  Cambie a la vista de diseño.  
   
-2.  Haga clic en el pie de página, seleccione **insertar**y, a continuación, haga clic en **cuadro de texto**. Arrastre el cuadro de texto junto al cuadro de texto que tiene la marca de tiempo. Agarre el controlador lateral del cuadro de texto y expanda el ancho.  
+2.  Haga clic en el pie de página, elija **insertar**y, a continuación, haga clic en **cuadro de texto**. Arrastre el cuadro de texto junto al cuadro de texto que tiene la marca de tiempo. Agarre el controlador lateral del cuadro de texto y expanda el ancho.  
   
 3.  En el panel Datos de informe, arrastre el parámetro *@StoreID* al cuadro de texto. El cuadro de texto presenta `[@StoreID]`.  
   
@@ -370,7 +370,7 @@ ms.locfileid: "36199312"
   
 4.  En **Expresión**, en la lista desplegable, seleccione el StoreId del campo de conjunto de datos. El tipo de datos indica **Entero**. Cuando el valor de expresión es un campo de un conjunto de datos, el tipo de datos se establece automáticamente.  
   
-5.  En **operador**, compruebe que `equals` está seleccionada (=).  
+5.  En **operador**, compruebe que `equals` (=) está seleccionado.  
   
 6.  En **Valor**, escriba `[@StoreID]`. `[@StoreID]` es la sintaxis de expresión simple que representa `=Parameters!StoreID.Value`.  
   
@@ -399,7 +399,7 @@ ms.locfileid: "36199312"
   
 5.  En el panel Datos de informe, expanda la carpeta **Conjuntos de datos** , haga clic con el botón derecho en **DataSet1**y haga clic en **Consulta**.  
   
-6.  Cambio `equals` (=) a `IN` en el [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` cláusula en la última línea en la consulta:  
+6.  Cambio `equals` (=) para `IN` en el [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` cláusula en la última línea en la consulta:  
   
     ```  
     WHERE StoreID IN (@StoreID)  

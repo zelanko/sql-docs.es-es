@@ -1,5 +1,5 @@
 ---
-title: Especificar ejes en consultas XPath (SQLXML 4.0) | Documentos de Microsoft
+title: Especificar ejes en consultas XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 45d10dfcde5726b37be701a3e1862294c9e21e49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: dd45523b14c63def0b7dbe4281097ebf21592267
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242385"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Especificar ejes en consultas XPath (SQLXML 4.0)
   Los ejemplos siguientes muestran cómo se especifican los ejes en las consultas XPath.  
@@ -38,7 +38,7 @@ ms.locfileid: "36108056"
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. Recuperar elementos secundarios del nodo de contexto  
- La consulta XPath siguiente selecciona todos los  **\<póngase en contacto con >** los elementos secundarios del nodo de contexto:  
+ La consulta XPath siguiente selecciona todos los  **\<contacto >** elementos secundarios del nodo de contexto:  
   
 ```  
 /child::Contact  
@@ -54,7 +54,7 @@ ms.locfileid: "36108056"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (XPathAxesSampleA.xml) y guárdela en el mismo directorio en el que esté guardado el archivo SampleSchema1.xml.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36108056"
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Recuperar descendientes del nodo de contexto  
- La consulta XPath siguiente selecciona todos los  **\<orden >** elementos secundarios del elemento la  **\<cliente >** elementos secundarios del nodo de contexto:  
+ La consulta XPath siguiente selecciona todos los  **\<orden >** elementos secundarios del elemento el  **\<cliente >** elementos secundarios del nodo de contexto:  
   
 ```  
 /child::Customer/child::Order  
@@ -105,7 +105,7 @@ ms.locfileid: "36108056"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la plantilla siguiente (XPathAxesSampleB.xml) y guárdela en el directorio donde:  
   
@@ -164,10 +164,10 @@ ms.locfileid: "36108056"
 </ROOT>  
 ```  
   
- Si se especifica la consulta XPath como `Customer/Order/OrderDetail`, de cada nodo que coincide con  **\<cliente >** la consulta navega a su  **\<orden >** elementos. Y para cada nodo que coincide con  **\<orden >**, la consulta agrega los nodos  **\<OrderDetail >** al resultado. Solo  **\<OrderDetail >** se devuelve en el conjunto de resultados.  
+ Si la consulta XPath se especifica como `Customer/Order/OrderDetail`, desde cada nodo que coincide con  **\<cliente >** la consulta navega a su  **\<orden >** elementos. Y para cada nodo que coincide con  **\<orden >**, la consulta agrega los nodos  **\<OrderDetail >** al resultado. Solo  **\<OrderDetail >** se devuelve en el conjunto de resultados.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Usar . para especificar el eje primario  
- La consulta siguiente recupera todos los  **\<orden >** elementos con un elemento primario  **\<cliente >** elemento con un **CustomerID** atributo valor de 1. La consulta utiliza la `child` eje en el predicado para buscar el elemento primario de la  **\<orden >** elemento.  
+ La consulta siguiente recupera todos los  **\<orden >** elementos con un elemento primario  **\<cliente >** elemento con un **CustomerID** atributo valor 1. La consulta utiliza la `child` eje en el predicado para buscar el elemento primario de la  **\<orden >** elemento.  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -186,11 +186,11 @@ ms.locfileid: "36108056"
 ```  
   
 > [!NOTE]  
->  La consulta XPath `/Order[../@CustomerID="1"]` devolverá un error porque no hay ningún elemento primario de  **\<orden >**. Aunque puede haber elementos en el esquema de asignación que contienen  **\<orden >**, la expresión XPath no comenzó en ninguno de ellos; por lo tanto,  **\<orden >** se considera el tipo de elemento de nivel superior en el documento.  
+>  La consulta XPath `/Order[../@CustomerID="1"]` devolverá un error porque no hay ningún elemento primario de  **\<orden >**. Aunque puede haber elementos en el esquema de asignación que contengan  **\<orden >**, la expresión XPath no comenzó en ninguno de ellos; por lo tanto,  **\<orden >** se considera el tipo de elemento de nivel superior en el documento.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la plantilla siguiente (XPathAxesSampleC.xml) y guárdela en el directorio donde:  
   
@@ -251,13 +251,13 @@ ms.locfileid: "36108056"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. Especificar el eje de atributo  
- La consulta XPath siguiente selecciona todos los  **\<cliente >** los elementos secundarios del nodo de contexto con un **CustomerID** valor de atributo de 1:  
+ La consulta XPath siguiente selecciona todos los  **\<cliente >** elementos secundarios del nodo de contexto con un **CustomerID** valor de atributo de 1:  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- En el predicado `attribute::CustomerID`, `attribute` es el eje y `CustomerID` es la prueba de nodo (si `CustomerID` es un atributo de la prueba de nodo es TRUE, porque la  **\<atributo >** nodo es el nodo principal el `attribute` eje).  
+ En el predicado `attribute::CustomerID`, `attribute` es el eje y `CustomerID` es la prueba de nodo (si `CustomerID` es un atributo de la prueba de nodo es TRUE, porque el  **\<atributo >** nodo es el nodo principal para el `attribute` eje).  
   
  Se puede especificar un acceso directo al eje `attribute` (@) y, puesto que el eje `child` es el eje predeterminado, puede omitirse en la consulta:  
   
@@ -267,7 +267,7 @@ ms.locfileid: "36108056"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (XPathAxesSampleD.xml) y guárdela en el mismo directorio en el que esté guardado el archivo SampleSchema1.xml.  
   

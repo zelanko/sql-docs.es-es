@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 4: Configurar reglas de dominio | Documentos de Microsoft'
+title: 'Tarea 4: Configurar reglas de dominio | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,21 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 89e0027b3bf1748fb68a8b6922c45572a7b41bb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8dc51cf8a33c183f3256f7aec089c8e0095918ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275801"
 ---
 # <a name="task-4-setting-domain-rules"></a>Tarea 4: configurar reglas de dominio
-  En esta tarea, crear una regla para la **correo electrónico de contacto** dominio para comprobar si la dirección de correo electrónico termina con **@adventure-works.com**. Vea el tema [Crear una regla de dominio](http://msdn.microsoft.com/library/hh510397.aspx) para obtener más detalles sobre la página.  
+  En esta tarea, creará una regla para el **correo electrónico de contacto** dominio para comprobar si la dirección de correo electrónico termina con **@adventure-works.com**. Vea el tema [Crear una regla de dominio](http://msdn.microsoft.com/library/hh510397.aspx) para obtener más detalles sobre la página.  
   
 1.  Haga clic en **Correo electrónico de contacto** en la lista **Dominio**.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36109123"
   
 5.  En el panel **Generar una regla** , haga clic en la **flecha abajo**y seleccione **El valor termina por**.  
   
-6.  Tipo de **@adventure-works.com** en el cuadro de texto y presione **ficha**. Puede agregar más condiciones si hace clic en el botón **Agregar una nueva condición a la cláusula seleccionada** de la barra de herramientas del panel **Generar una regla** .  
+6.  Tipo **@adventure-works.com** en el cuadro de texto y presione **ficha**. Puede agregar más condiciones si hace clic en el botón **Agregar una nueva condición a la cláusula seleccionada** de la barra de herramientas del panel **Generar una regla** .  
   
      ![Regla de validación de correo electrónico](../../2014/tutorials/media/et-settingdomainrules-02.jpg "regla de validación de correo electrónico")  
   
@@ -50,9 +50,9 @@ ms.locfileid: "36109123"
   
      ![Probar cuadro de diálogo regla de dominio](../../2014/tutorials/media/et-settingdomainrules-04.jpg "Probar cuadro de diálogo regla de dominio")  
   
-9. Tipo de **frank7@adventure-works.com** (un valor válido) en la **correo electrónico de contacto** columna.  
+9. Tipo **frank7@adventure-works.com** (un valor válido) en el **correo electrónico de contacto** columna.  
   
-10. Repita los dos pasos anteriores para agregar **joe2@adventure-work.com** (un valor no válido y no tienen ninguna del ').  
+10. Repita los dos pasos anteriores para agregar **joe2@adventure-work.com** (no un valor no válido de ').  
   
 11. Haga clic en el último botón (**Probar la regla de dominio en todos los términos**) de la barra de herramientas para probar los datos de entrada con la regla.  
   
@@ -65,6 +65,6 @@ ms.locfileid: "36109123"
 13. Haga clic en **Cerrar** para cerrar el cuadro de diálogo **Probar regla de dominio** .  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 5: Configurar basadas en términos relaciones](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [Tarea 5: Configurar relaciones basadas en términos](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   

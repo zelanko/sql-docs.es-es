@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoretlog.options.f1
 - sql12.swb.restoretlog.general.f1
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e688a81d1a555efcad659b6b89ef4f21f116191d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 85c4008e1872a48126c67e47cc8d68ed0867828d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237025"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar una copia de seguridad de registros de transacciones (SQL Server)
   En este tema se describe cómo restaurar una copia de seguridad del registro de transacciones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -152,7 +151,7 @@ ms.locfileid: "36199389"
   
          Esta opción solo está disponible con la **dejar la base de datos lista para su uso revirtiendo las transacciones no confirmadas...**  opción (descrita más adelante), que equivale a restaurar una copia de seguridad con el `RECOVERY` opción.  
   
-         Al activar esta opción equivale a utilizar el `KEEP_REPLICATION` opción en un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
+         Si activa esta opción equivale a utilizar el `KEEP_REPLICATION` opción en un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
   
     -   **Preguntar antes de restaurar cada copia de seguridad**  
   
@@ -166,7 +165,7 @@ ms.locfileid: "36199389"
   
          Hace que la base de datos restaurada esté disponible solo para los miembros de **db_owner**, **dbcreator**o **sysadmin**.  
   
-         Al activar esta opción es lo mismo que usar el `RESTRICTED_USER` opción en un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
+         Si activa esta opción equivale al uso del `RESTRICTED_USER` opción en un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
   
 10. Para las opciones **Estado de recuperación** , especifique el estado de la base de datos después de la operación de restauración.  
   
@@ -178,7 +177,7 @@ ms.locfileid: "36199389"
   
     -   **Dejar la base de datos no operativa y no revertir las transacciones no confirmadas. Pueden restaurarse registros de transacciones adicionales. (RESTORE WITH NORECOVERY)**  
   
-         Deja la base de datos sin recuperar, en el estado `RESTORING`. Esta opción es equivalente a utilizar el `NORECOVERY` opción en un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
+         Deja la base de datos sin recuperar, en el estado `RESTORING`. Esta opción equivale a usar el `NORECOVERY` opción en un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
   
          Si elige esta opción, la opción **Conservar la configuración de replicación** no estará disponible.  
   
@@ -187,7 +186,7 @@ ms.locfileid: "36199389"
   
     -   **Dejar la base de datos en modo de solo lectura. Deshacer las transacciones sin confirmar, pero guardar las acciones de deshacer en un archivo para que los efectos de recuperación puedan invertirse. (RESTORE WITH STANDBY)**  
   
-         Deja la base de datos en estado de espera. Esta opción es equivalente a utilizar el `STANDBY` opción en un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
+         Deja la base de datos en estado de espera. Esta opción equivale a usar el `STANDBY` opción en un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
   
          Si elige esta opción, debe especificar un archivo en espera.  
   

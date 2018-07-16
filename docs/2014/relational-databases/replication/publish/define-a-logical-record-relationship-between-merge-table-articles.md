@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 79de2148e10d4e43ae6560741435b1dcf3f31e90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8975a3c535d627fe41a51b9b4937e204a07326c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298065"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definir una relación de registros lógicos entre artículos de tabla de mezcla
   En este tema se describe cómo definir una relación de registros lógicos entre los artículos de tabla de mezcla en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -106,7 +106,7 @@ ms.locfileid: "36105126"
   
     -   Para detectar y solucionar conflictos que se producen dentro de las filas relacionadas en el registro lógico, especifique un valor de **true** para **@logical_record_level_conflict_detection** y **@logical_record_level_conflict_resolution**.  
   
-    -   Para usar el estándar nivel de fila o columna la detección de conflictos y la resolución, especifique un valor de `false` para **@logical_record_level_conflict_detection** y **@logical_record_level_conflict_resolution**, que es el valor predeterminado.  
+    -   Para usar la resolución y detección de conflictos de estándar de nivel de fila o columna, especifique un valor de `false` para **@logical_record_level_conflict_detection** y **@logical_record_level_conflict_resolution**, que es el valor predeterminado.  
   
 3.  Repita el paso 2 para cada artículo que comprenderá el registro lógico. Debe usar la misma opción de detección y resolución de conflictos para cada artículo del registro lógico. Para más información, consulte [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
@@ -164,7 +164,7 @@ ms.locfileid: "36105126"
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication> , establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para la publicación y establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
   
-3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, significa que las propiedades de la publicación en el paso 2 se definieron incorrectamente o la publicación no existe.  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, las propiedades de publicación en el paso 2 se definieron incorrectamente o no existe la publicación.  
   
 4.  Si la propiedad <xref:Microsoft.SqlServer.Replication.MergePublication.PartitionGroupsOption%2A> está establecida en <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.False>, cámbiela a <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.True>.  
   

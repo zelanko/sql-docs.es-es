@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
@@ -16,13 +16,13 @@ ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2611f683ee02180bc5b90b0b08fe961d049e9aab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bc51edfd6e7ba2aeff58a230ad29ce800fffd79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189832"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurar la autenticación básica en el servidor de informes
   De forma predeterminada, Reporting Services acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si su implementación incluye aplicaciones cliente o exploradores que utilizan la autenticación básica, debe agregar esta autenticación a la lista de tipos admitidos. Además, si desea utilizar el Generador de informes, debe permitir el acceso anónimo a los archivos del Generador de informes.  
@@ -42,9 +42,9 @@ ms.locfileid: "36201089"
   
 1.  Abra RSReportServer.config en un editor de texto.  
   
-     El archivo se encuentra en  *\<unidad >:* \Program SQL Server\MSRS12. MSSQLSERVER\Reporting Services\ReportServer.  
+     El archivo se encuentra en  *\<unidad >:* \Program Files\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\ReportServer.  
   
-2.  Buscar <`Authentication`>.  
+2.  Busque <`Authentication`>.  
   
 3.  De las estructuras XML siguientes, copie la que mejor se ajuste a sus necesidades. La primera estructura XML proporciona marcadores de posición para especificar todos los elementos, que se describen en la sección siguiente:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36201089"
   
 4.  Péguela sobre las entradas existentes para <`Authentication`>.  
   
-     Si está utilizando varios tipos de autenticación, agregue simplemente el `RSWindowsBasic` elemento pero no elimine las entradas de `RSWindowsNegotiate`, `RSWindowsNTLM`, o `RSWindowsKerberos`.  
+     Si usa varios tipos de autenticación, agregue simplemente el `RSWindowsBasic` elemento pero no elimine las entradas de `RSWindowsNegotiate`, `RSWindowsNTLM`, o `RSWindowsKerberos`.  
   
      Para admitir el explorador Safari, no puede configurar el servidor de informes de modo que use varios tipos de autenticación. Sólo se debe especificar `RSWindowsBasic` y eliminar las demás entradas.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36201089"
   
 |Elemento|Obligatorio|Valores válidos|  
 |-------------|--------------|------------------|  
-|LogonMethod|Sí<br /><br /> Si no especifica un valor, se usará 3.|`2` = Red inicio de sesión, diseñado para que servidores de alto rendimiento autenticar las contraseñas de texto sin formato.<br /><br /> `3` Inicio de sesión de texto no cifrado, que conserva las credenciales de inicio de sesión en el paquete de autenticación que se envía con cada solicitud HTTP, permitiendo al servidor suplantar al usuario al conectarse a otros servidores de la red. (Es el valor predeterminado).<br /><br /> Nota: Los valores 0 (para el inicio de sesión interactivo) y 1 (para el inicio de sesión por lotes) no se admiten en [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|LogonMethod|Sí<br /><br /> Si no especifica un valor, se usará 3.|`2` = Inicio de sesión, diseñado para que servidores de alto rendimiento para autenticar las contraseñas de texto sin formato.<br /><br /> `3` : Inicio de sesión, que conserva las credenciales de inicio de sesión en el paquete de autenticación que se envía con cada solicitud HTTP, permitiendo al servidor suplantar al usuario al conectarse a otros servidores en la red. (Es el valor predeterminado).<br /><br /> Nota: Los valores 0 (para el inicio de sesión interactivo) y 1 (para el inicio de sesión por lotes) no se admiten en [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
 |Dominio|Opcional|Especifica una partición de recurso que incluye características de autorización y de autenticación que se utilizan para controlar el acceso a los recursos protegidos de una organización.|  
 |DominioPredeterminado|Opcional|Especifica el dominio que utiliza el servidor para autenticar al usuario. Este valor es opcional, pero si lo omite, el servidor de informes utilizará el nombre de equipo como dominio. Si el equipo es miembro de dominio, ese dominio es el predeterminado. Si instaló el servidor de informes en un controlador de dominio, el dominio que se utilizará será el controlado por el equipo .|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36201089"
   
 -   Agregue el elemento `IsReportBuilderAnonymousAccessEnabled` a RSReportServer.config y establézcalo en `True`. Después de guardar el archivo, el servidor de informes crea un nuevo extremo para el Generador de informes. El extremo se utiliza internamente para tener acceso a los archivos de programa y no tiene ninguna interfaz de programación que se pueda utilizar en el código. Tener un extremo independiente permite al Generador de informes ejecutarse en su propio dominio de aplicación dentro del límite del proceso del servicio del servidor de informes.  
   
--   Opcionalmente, puede especificar una cuenta con privilegios mínimos para procesar las solicitudes en un contexto de seguridad diferente del servidor de informes. Esta cuenta se convierte en la cuenta anónima para tener acceso a los archivos del Generador de informes en un servidor de informes. La cuenta establece la identidad del subproceso en el proceso de trabajo de ASP.NET. Las solicitudes que se ejecutan en ese subproceso se pasan al servidor de informes sin comprobar la autenticación. Esta cuenta es equivalente a la cuenta IUSR_\<máquina > cuenta en Internet Information Services (IIS), que se usa para establecer el contexto de seguridad para el trabajo de ASP.NET procesa cuando se habilitan el acceso anónimo y la suplantación. Para especificar la cuenta, agréguela a un archivo Web.config del Generador de informes.  
+-   Opcionalmente, puede especificar una cuenta con privilegios mínimos para procesar las solicitudes en un contexto de seguridad diferente del servidor de informes. Esta cuenta se convierte en la cuenta anónima para tener acceso a los archivos del Generador de informes en un servidor de informes. La cuenta establece la identidad del subproceso en el proceso de trabajo de ASP.NET. Las solicitudes que se ejecutan en ese subproceso se pasan al servidor de informes sin comprobar la autenticación. Esta cuenta es equivalente a la cuenta IUSR_\<machine > cuenta en Internet Information Services (IIS), que se usa para establecer el contexto de seguridad para el trabajo de ASP.NET procesa cuando se habilitan el acceso anónimo y la suplantación. Para especificar la cuenta, agréguela a un archivo Web.config del Generador de informes.  
   
  El servidor de informes se debe configurar para la autenticación básica si desea habilitar el acceso anónimo a los archivos de programa del Generador de informes. Si el servidor de informes no está configurado para la autenticación básica, obtendrá un error al intentar habilitar el acceso anónimo.  
   
@@ -145,11 +145,11 @@ ms.locfileid: "36201089"
   
     -   Establézcalo en `False` si no desea que ASP.NET lea el token de seguridad. La solicitud se ejecutará en el contexto de seguridad del servicio del servidor de informes.  
   
-    -   Establézcalo en `True` si desea que ASP.NET pueda leer el token de seguridad de la capa de host. Si lo establece en `True`, también debe especificar `userName` y `password` para designar una cuenta anónima. Las credenciales que especifique determinarán el contexto de seguridad bajo el que se emite la solicitud.  
+    -   Establézcalo en `True` si desea que ASP.NET lea el token de seguridad desde el nivel de host. Si lo establece en `True`, también debe especificar `userName` y `password` para designar una cuenta anónima. Las credenciales que especifique determinarán el contexto de seguridad bajo el que se emite la solicitud.  
   
 5.  Guarde el archivo Web.config en la carpeta ReportBuilder\bin.  
   
-6.  Abra el archivo RSReportServer.config, en la sección Servicios, busque `IsReportManagerEnabled` y agregue el siguiente valor por debajo de él:  
+6.  Abra el archivo RSReportServer.config, en la sección Servicios, busque `IsReportManagerEnabled` y agregue el valor siguiente debajo de él:  
   
     ```  
     <IsReportBuilderAnonymousAccessEnabled>True</IsReportBuilderAnonymousAccessEnabled>  
@@ -160,7 +160,7 @@ ms.locfileid: "36201089"
 8.  Reinicie el servidor de informes.  
   
 ## <a name="see-also"></a>Vea también  
- [Dominios de aplicación para aplicaciones de servidor de informes](../report-server/application-domains-for-report-server-applications.md)   
+ [Dominios de aplicación para las aplicaciones de servidor de informes](../report-server/application-domains-for-report-server-applications.md)   
  [Seguridad y protección de Reporting Services](reporting-services-security-and-protection.md)  
   
   

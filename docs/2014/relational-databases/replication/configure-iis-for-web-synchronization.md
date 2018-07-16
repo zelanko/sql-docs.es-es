@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 caps.latest.revision: 86
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6589261f0ad1a800bcf88d11abe2ebe6314a4855
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: eda7d98c6c90cf53f8b788a52717db01bcc8fae9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307595"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para la sincronización web
   Los procedimientos descritos en este tema son el segundo paso para configurar la sincronización web para la replicación de mezcla. Este paso se lleva a cabo después de habilitar una publicación para la sincronización web. Para obtener información general sobre el proceso de configuración, vea [Configurar sincronización web](configure-web-synchronization.md). Una vez terminados los procedimientos de este tema, siga con el tercer paso: configurar una suscripción para usar la sincronización web. El tercer paso se describe en los siguientes temas:  
@@ -72,7 +72,7 @@ ms.locfileid: "36203621"
   
     1.  Haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**.  
   
-    2.  En el **abiertos** , escriba `inetmgr`y, a continuación, haga clic en **Aceptar**.  
+    2.  En el **abierto** , escriba `inetmgr`y, a continuación, haga clic en **Aceptar**.  
   
 3.  Ejecute el Asistente para certificados IIS:  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36203621"
         > [!NOTE]  
         >  De forma predeterminada, el certificado que instala SelfSSL es válido durante siete días.  
   
-    -   Para especificar valores para uno o más parámetros: haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**. En el **abiertos** cuadro, escriba `cmd`y, a continuación, haga clic en **Aceptar**. Localice el directorio de instalación de SelfSSL, escriba `SelfSSL`y después especifique los valores para uno o más parámetros. Para obtener una lista de parámetros, escriba `SelfSSL -?`.  
+    -   Para especificar valores para uno o más parámetros: haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**. En el **abierto** , escriba `cmd`y, a continuación, haga clic en **Aceptar**. Localice el directorio de instalación de SelfSSL, escriba `SelfSSL`y después especifique los valores para uno o más parámetros. Para obtener una lista de parámetros, escriba `SelfSSL -?`.  
   
 ## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>Instalar los componentes de conectividad y SQL Server Management Studio  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36203621"
   
 1.  Inicie sesión como administrador en el equipo en el que se ejecuta IIS.  
   
-2.  Inicie el Asistente para la instalación de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] desde el disco de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre el uso de este asistente, consulte [instalar SQL Server 2014 desde el Asistente para la instalación &#40;el programa de instalación&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
+2.  Inicie el Asistente para la instalación de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] desde el disco de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre cómo usar este asistente, consulte [instalar SQL Server 2014 desde el Asistente para instalación &#40;instalación&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 3.  En la página **Selección de características** , seleccione **Conectividad con las herramientas de cliente**.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "36203621"
   
     1.  Escriba un alias para el directorio virtual en el cuadro **Alias** .  
   
-    2.  Escriba una ruta de acceso al directorio virtual en el cuadro **Ruta de acceso** . Por ejemplo, si escribió `websync1` en el **Alias** cuadro, escriba `C:\Inetpub\wwwroot\websync1` en el **ruta de acceso** cuadro. Haga clic en **Siguiente**.  
+    2.  Escriba una ruta de acceso al directorio virtual en el cuadro **Ruta de acceso** . Por ejemplo, si escribió `websync1` en el **Alias** , escriba `C:\Inetpub\wwwroot\websync1` en el **ruta** cuadro. Haga clic en **Siguiente**.  
   
     3.  Haga clic en **Sí**en los dos cuadros de diálogo. Esto indica que desea crear una carpeta nueva y que desea copiar la DLL de la Interfaz de programación de aplicaciones para servidores de Internet (ISAPI) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . .  
   
@@ -183,11 +183,11 @@ ms.locfileid: "36203621"
   
 11. Si el equipo en el que se ejecuta IIS usa una versión de 64 bits de Windows, es necesario copiar replisapi.dll en el directorio adecuado:  
   
-    1.  Haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**. En el **abiertos** cuadro, escriba `iisreset`y, a continuación, haga clic en **Aceptar**.  
+    1.  Haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**. En el **abierto** , escriba `iisreset`y, a continuación, haga clic en **Aceptar**.  
   
     2.  Después de que IIS se detenga y se reinicie, copie replisapi.dll de [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\replisapi al directorio que se especifica en el paso 6b.  
   
-    3.  Haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**. En el **abiertos** cuadro, escriba `cmd`y, a continuación, haga clic en **Aceptar**.  
+    3.  Haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**. En el **abierto** , escriba `cmd`y, a continuación, haga clic en **Aceptar**.  
   
     4.  En el directorio especificado en el paso 6b, ejecute el siguiente comando:  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36203621"
   
 3.  Registre el archivo replisapi.dll:  
   
-    1.  Haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**. En el **abiertos** cuadro, escriba `cmd`y, a continuación, haga clic en **Aceptar**.  
+    1.  Haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**. En el **abierto** , escriba `cmd`y, a continuación, haga clic en **Aceptar**.  
   
     2.  En el directorio creado en el paso 1, ejecute el siguiente comando:  
   
@@ -280,7 +280,7 @@ ms.locfileid: "36203621"
   
     1.  Haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**.  
   
-    2.  En el **abiertos** , escriba `inetmgr`y, a continuación, haga clic en **Aceptar**.  
+    2.  En el **abierto** , escriba `inetmgr`y, a continuación, haga clic en **Aceptar**.  
   
     3.  En **Administrador de Internet Information Services (IIS)**, expanda el nodo **equipo local** .  
   

@@ -1,5 +1,5 @@
 ---
-title: Asignación explícita de atributos y elementos XSD a tablas y columnas (SQLXML 4.0) | Documentos de Microsoft
+title: Asignación explícita de elementos y atributos a las tablas y columnas (SQLXML 4.0) XSD | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -30,15 +30,15 @@ helpviewer_keywords:
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba2b9df8e9104afe0dc7c1645cc4cc64dd01d2ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1bbc0a7243252a657011e6d9814f9d070fa7ea52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221039"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Asignación explícita de elementos y atributos XSD a tablas y columnas (SQLXML 4.0)
   Cuando se utiliza un esquema XSD para proporcionar una vista XML de la base de datos relacional, los elementos y atributos del esquema se deben asignar a tablas y columnas de la base de datos. Las filas de la tabla o vista de la base de datos se asignarán a elementos del documento XML. Los valores de columna de la base de datos se asignan a atributos o elementos.  
@@ -63,9 +63,9 @@ ms.locfileid: "36109432"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Especificar las anotaciones sql:relation y sql:field  
- En este ejemplo, el esquema XSD consta de un  **\<póngase en contacto con >** elemento de tipo complejo con  **\<FName >** y  **\<LName >** los elementos secundarios y los **ContactID** atributo.  
+ En este ejemplo, el esquema XSD consta de un  **\<contacto >** elemento de tipo complejo con  **\<FName >** y  **\<LName >** elementos secundarios y la **ContactID** atributo.  
   
- El `sql:relation` anotación asigna el  **\<póngase en contacto con >** elemento a la tabla Person.Contact en la base de datos de AdventureWorks. El `sql:field` mapas de anotación la  **\<FName >** elemento a la columna FirstName y  **\<LName >** elemento a la columna LastName.  
+ El `sql:relation` anotación asigna el  **\<póngase en contacto con >** elemento a la tabla Person.Contact en la base de datos AdventureWorks. El `sql:field` anotación asigna el  **\<FName >** elemento a la columna FirstName y el  **\<LName >** elemento a la columna LastName.  
   
  Se especifica ninguna anotación para la **ContactID** atributo. Esto produce una asignación predeterminada del atributo a la columna del mismo nombre.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36109432"
   
 1.  Copie el código de esquema anterior y péguelo en un archivo de texto. Guarde el archivo como MySchema-annotated.xml.  
   
-2.  Copie la plantilla siguiente siguiente y péguelo en un archivo de texto. Guarde el archivo como MySchema-annotatedT.xml en el mismo directorio donde guardó MySchema-annotated.xml.  
+2.  Copie la siguiente plantilla siguiente y péguelo en un archivo de texto. Guarde el archivo como MySchema-annotatedT.xml en el mismo directorio donde guardó MySchema-annotated.xml.  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

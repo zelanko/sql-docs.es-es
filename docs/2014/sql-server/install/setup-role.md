@@ -1,5 +1,5 @@
 ---
-title: Rol de instalación | Documentos de Microsoft
+title: Rol de instalación | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 caps.latest.revision: 14
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: b734e817739d887c6e342aa841e3701f770175a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b37c8749ee82894ee7c28acf6b0fa94bf4ee58f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330985"
 ---
 # <a name="setup-role"></a>Rol de instalación
   Utilice esta página para especificar si utilizar la página Selección de características para seleccionar características individuales o para instalar utilizando un rol de instalación.  
@@ -30,7 +30,7 @@ ms.locfileid: "36108485"
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instalación de características**  
  Elija esta opción para seleccionar características individuales y componentes compartidos. Entre las características de instancia se incluyen Servicios de Motor de base de datos, Analysis Services (modo nativo) y Reporting Services.  
   
- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerPivot para SharePoint**  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Modelo de objetos de informe utilizado por las extensiones de representación.**  
  Elija esta opción para instalar los componentes de servidor de Analysis Services en una granja de SharePoint 2010. Esta opción implementa el servicio de Sistema de PowerPivot y el servidor de Analysis Services en una granja de servidores, lo que habilita el procesamiento de datos y consultas a gran escala para los libros de Excel publicados que contienen datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] incrustados.  
   
  De manera opcional, puede agregar una instancia de motor de base de datos relacional a la instalación en caso que sea necesario hospedar bases de datos en una granja de servidores SharePoint. Si la granja de servidores ya está configurada, puede omitir esta opción.  

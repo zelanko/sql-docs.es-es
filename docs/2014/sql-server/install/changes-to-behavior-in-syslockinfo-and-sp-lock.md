@@ -1,5 +1,5 @@
 ---
-title: Cambios de comportamiento de syslockinfo y sp_lock | Documentos de Microsoft
+title: Los cambios en el comportamiento de syslockinfo y sp_lock | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - syslockinfo
 - sp_lock
 ms.assetid: b9892ae3-ac15-48be-8b52-78dbed6467ed
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 982f31bbffb32726089fa331d105bfc262fc16a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: eb410a4c65d9b626290297fce85ddf2fe20c08d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295865"
 ---
 # <a name="changes-to-behavior-in-syslockinfo-and-splock"></a>Cambios del comportamiento de syslockinfo y sp_lock
   **syslockinfo** y **sp_lock** devolver valores inesperados. También pueden devolver filas adicionales, mientras que las versiones anteriores de **syslockinfo** y **sp_lock** devolvían un máximo de dos filas por recurso de bloqueo.  
@@ -33,9 +33,9 @@ ms.locfileid: "36107531"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descripción  
- En [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], **rsc_objid** y **rsc_indid** columnas en **syslockinfo** y **objid** y **indid**  columnas en **sp_lock** devolver el identificador de objeto de forma coherente e Id. de índice En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], es posible que se devuelva un valor de 0.  
+ En [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], **rsc_objid** y **rsc_indid** columnas en **syslockinfo** y **objid** y **indid**  columnas en **sp_lock** devuelven el identificador de objeto sistemáticamente y el Id. de índice En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], es posible que se devuelva un valor de 0.  
   
- En [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], **syslockinfo** y **sp_lock** devolver un máximo de dos filas para cualquier recurso de bloqueo determinado en una sola transacción. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], cuando está habilitada la partición del bloqueo, pueden devolverse varias filas del mismo recurso que se ejecuta en una sola transacción. Allí pueden hasta N + 1 filas devolver, donde N es el número de CPU. Asimismo, ahora es posible que se muestren solicitudes GRANTED y WAITING para el mismo recurso, lo cual no era posible en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
+ En [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], **syslockinfo** y **sp_lock** devolver un máximo de dos filas para cualquier recurso de bloqueo dado en una sola transacción. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], cuando está habilitada la partición del bloqueo, pueden devolverse varias filas del mismo recurso que se ejecuta en una sola transacción. Allí pueden hasta N + 1 filas devolverse, donde N es el número de CPU. Asimismo, ahora es posible que se muestren solicitudes GRANTED y WAITING para el mismo recurso, lo cual no era posible en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
   
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  

@@ -1,5 +1,5 @@
 ---
-title: Especificar predicados de selección en la ruta de acceso de ubicación (SQLXML 4.0) | Documentos de Microsoft
+title: Especificar predicados de selección en la ruta de acceso de ubicación (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - location path for XPath query
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 80090288026a8b0e2728b1322efe68bea6d960be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 19cb37e252bad6f09640d409e67178690bcdaba0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238675"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Especificar predicados de selección en la ruta de acceso de ubicación (SQLXML 4.0)
   Un predicado filtra un conjunto de nodos con respecto a un eje (similar a una cláusula WHERE en una instrucción SELECT). El predicado se especifica entre corchetes. Para cada nodo del conjunto de nodos que se va a filtrar, la expresión de predicado se evalúa con ese nodo como el nodo de contexto, con el número de nodos del conjunto de nodos como tamaño de contexto. Si la expresión de predicado se evalúa como TRUE para ese nodo, el nodo se incluye en el conjunto de nodos resultante.  
@@ -35,7 +35,7 @@ ms.locfileid: "36106291"
  XPath también permite el filtrado basado en posición. Una expresión de predicado que se evalúa como un número selecciona ese nodo ordinal. Por ejemplo, la ruta de acceso de la ubicación `Customer[3]` devuelve el tercer cliente. No se admiten tales predicados numéricos. Solo se admiten expresiones de predicado que devuelven un resultado Booleano.  
   
 > [!NOTE]  
->  Para obtener información acerca de las limitaciones de esta implementación de XPath y las diferencias entre ella y la especificación W3C, vea [Introducción a las consultas de XPath utilizando &#40;SQLXML 4.0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+>  Para obtener información sobre las limitaciones de esta implementación de XPath y las diferencias entre ella y la especificación de W3C, vea [Introducción a las consultas de XPath utilizando &#40;SQLXML 4.0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="selection-predicate-example-1"></a>Predicado de selección: Ejemplo 1  
  La expresión XPath siguiente (ruta de acceso de ubicación) selecciona del nodo de contexto actual todos los  **\<cliente >** elementos secundarios que tienen el **CustomerID** atributo con el valor de ALFKI:  
@@ -53,7 +53,7 @@ ms.locfileid: "36106291"
 ```  
   
 ## <a name="selection-predicate-example-2"></a>Predicado de selección: Ejemplo 2  
- La expresión XPath siguiente (ruta de acceso de ubicación) selecciona del nodo de contexto actual todos los  **\<orden >** descendientes que tienen el **SalesOrderID** atributo con el valor 1:  
+ La expresión XPath siguiente (ruta de acceso de ubicación) selecciona del nodo de contexto actual todos el  **\<orden >** descendientes que tengan la **SalesOrderID** atributo con el valor 1:  
   
 ```  
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
@@ -87,7 +87,7 @@ Customer[ContactName]
 ```  
   
 ## <a name="selection-predicate-example-4"></a>Predicado de selección: Ejemplo 4  
- La expresión XPath siguiente selecciona  **\<cliente >** elementos secundarios del nodo de contexto que no tiene  **\<ContactName >** elementos secundarios:  
+ La expresión XPath siguiente selecciona  **\<cliente >** elementos secundarios del nodo de contexto que no tienen  **\<ContactName >** elementos secundarios:  
   
 ```  
 child::Customer[not(child::ContactName)]  
@@ -110,7 +110,7 @@ Customer[not(ContactName)]
 child::Customer[attribute::CustomerID]  
 ```  
   
- En este ejemplo, `child` es el eje y `Customer` es la prueba de nodo (TRUE si `Customer` es un \<elemento > nodo). `attribute::CustomerID` es el predicado. En el predicado, `attribute` es el eje y `CustomerID` es el predicado (TRUE si `CustomerID` es un  **\<atributo >** nodo).  
+ En este ejemplo, `child` es el eje y `Customer` es prueba de nodo (TRUE si `Customer` es un \<elemento > nodo). `attribute::CustomerID` es el predicado. En el predicado, `attribute` es el eje y `CustomerID` es el predicado (TRUE si `CustomerID` es un  **\<atributo >** nodo).  
   
  Con la sintaxis abreviada, la consulta XPath también se puede especificar como:  
   
@@ -129,6 +129,6 @@ Customer[Order/@OrderDate=Order/@ShipDate]
   
 ## <a name="see-also"></a>Vea también  
  [Introducción a los esquemas XSD anotados &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
- [Formato XML del lado cliente &#40;SQLXML 4.0&#41;](../../sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
+ [Aplicación de formato XML del lado cliente &#40;SQLXML 4.0&#41;](../../sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   
   

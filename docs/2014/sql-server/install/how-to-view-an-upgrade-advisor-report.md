@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: ver un informe del Asesor de actualizaciones | Documentos de Microsoft'
+title: 'Cómo: ver un informe del Asesor de actualizaciones | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
 - viewing reports
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - reports [Upgrade Advisor], viewing
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b3617edd1d79e258490c0cc44fc3b21e012c4573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: df6d91d700182c7d3828d9e35ac61cfaa0b3959d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303585"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>Cómo ver un informe del Asesor de actualizaciones
   El Asesor de actualizaciones crea informes de cada componente que haya seleccionado para su análisis. En este tema se describe cómo ver un informe del Asesor de actualizaciones desde la página de inicio de este último.  
@@ -35,15 +35,15 @@ ms.locfileid: "36108926"
   
 ### <a name="to-view-a-report"></a>Para ver un informe  
   
-1.  Haga clic en **iniciar**, haga clic en **todos los programas**, haga clic en **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** y, a continuación, haga clic en  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Asesor de actualizaciones**.  
+1.  Haga clic en **iniciar**, haga clic en **todos los programas**, haga clic en **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** y, a continuación, haga clic en  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
   
-2.  En la página de inicio del Asesor de actualizaciones, haga clic en **iniciar el Visor de informes de Asesor de actualizaciones**.  
+2.  En la página de inicio del Asesor de actualizaciones, haga clic en **iniciar Visor de informes de Asesor de actualizaciones**.  
   
 3.  Para seleccionar un informe en la ubicación predeterminada en su equipo:  
   
     1.  En el **Server** lista, seleccione un servidor.  
   
-    2.  En el **instancia o componente** , seleccione una combinación de componente o instancia del componente.  
+    2.  En el **instancia o componente** lista, seleccione una combinación componente/instancia o componente.  
   
      Para seleccionar un informe en otra ubicación:  
   
@@ -67,20 +67,20 @@ ms.locfileid: "36108926"
   
 6.  Para ver los detalles de un elemento en particular, haga clic en dicho elemento. Aparecerá una descripción del problema, junto con una serie de opciones adicionales:  
   
-    -   Para ver los objetos en la que se encontró este problema, haga clic en **mostrar objetos afectados**.  
+    -   Para ver los objetos que se ha detectado este problema, haga clic en **mostrar objetos afectados**.  
   
-    -   Para ver ayuda sobre el problema, haga clic en **más información acerca de este problema y cómo resolverlo**.  
+    -   Para ver la ayuda sobre el problema, haga clic en **más información sobre este problema y cómo resolverlo**.  
   
-    -   Para marcar el problema como resuelto, que oculta el problema al ver el informe de nuevo, seleccione **ha resuelto este problema**.  
+    -   Para marcar el problema como resuelto, que oculta el problema al ver el informe nuevo, seleccione **se ha resuelto este problema**.  
   
 > [!NOTE]  
->  Es posible que el informe contenga elementos correspondientes a problemas indetectables. Se trata de problemas que no se pueden detectar o que generarían demasiados resultados positivos falsos. Haga clic en el **más información acerca de este problema y cómo resolverlo** vínculo para ver una lista de problemas no detectables para el componente.  
+>  Es posible que el informe contenga elementos correspondientes a problemas indetectables. Se trata de problemas que no se pueden detectar o que generarían demasiados resultados positivos falsos. Haga clic en el **más información sobre este problema y cómo resolverlo** vínculo para ver una lista de problemas no detectables para el componente.  
   
 ## <a name="see-also"></a>Vea también  
  [Cómo: exportar informes](../../../2014/sql-server/install/how-to-export-reports.md)   
- [Cómo: ejecutar el Asistente de análisis del Asesor de actualizaciones](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Cómo: ejecutar el Asistente para análisis del Asesor](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Resolver problemas de actualización](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [Temas "Cómo..." asesor de actualización](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
+ [Actualizar temas de procedimientos del Asesor de actualizaciones](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

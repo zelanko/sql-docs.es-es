@@ -1,5 +1,5 @@
 ---
-title: General (Diseñador de la base de datos) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: General (Diseñador de la base de datos) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.dbconfigurationpane.f1
 helpviewer_keywords:
 - Database Designer
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 435817b44643ddf1d3e6703ca2872dd5afe407c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a2af00d2dcdb6d28ab311067172e808e49539a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234275"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>General (Diseñador de bases de datos) (Analysis Services - Datos multidimensionales)
   Use la pestaña **General** para cambiar las propiedades de una base de datos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -81,7 +81,7 @@ ms.locfileid: "36200028"
   
 ## <a name="see-also"></a>Vea también  
  [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Las bases de datos de modelo multidimensional &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
+ [Bases de datos modelo multidimensionales &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
  [Advertencias &#40;Diseñador de la base de datos&#41; &#40;Analysis Services - datos multidimensionales&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
   
   

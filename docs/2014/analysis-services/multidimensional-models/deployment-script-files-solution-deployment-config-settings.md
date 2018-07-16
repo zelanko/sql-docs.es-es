@@ -1,5 +1,5 @@
 ---
-title: Especificar la configuración de implementación de soluciones | Documentos de Microsoft
+title: Especificar la configuración de implementación de soluciones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard, configuration settings
 - input files [Analysis Services]
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - deploying [Analysis Services], configuration settings
 ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c69729aea8ae3fac9cbac17c9da7bde98401ea73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b87007b98d8e67125d6173b47c4936b3087d251
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222255"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>Especificar la configuración para la implementación de soluciones
-  El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente para implementar lee la partición y el rol de opciones de implementación que se utilizan en el script de implementación de la \< *nombre del proyecto*> archivo. configSettings. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crea este archivo cuando se genera el proyecto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa los valores de configuración del proyecto actual para crear el \< *nombre del proyecto*> archivo. configSettings.  
+  El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente para implementación de lee la partición y el rol de las opciones de implementación que usan en el script de implementación de la \< *nombre del proyecto*> archivo configSettings. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crea este archivo cuando se genera el proyecto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa los valores de configuración del proyecto actual para crear el \< *nombre del proyecto*> archivo configSettings.  
   
 ## <a name="reviewing-the-configuration-settings-for-deployment"></a>Revisar los valores de configuración para implementación  
- Los siguientes son los valores de configuración almacenados en la \< *nombre del proyecto*> .configsettings archivo:  
+ Los siguientes son los valores de configuración almacenados en el \< *nombre del proyecto*> archivo configSettings:  
   
 -   **Cadenas de conexión de orígenes de datos** Se trata de las cadenas de conexión para cada origen de datos según los valores especificados en el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . El Id. de usuario y la contraseña siempre se quitan de la cadena de conexión antes de que el resto de la cadena se almacene en este archivo. Sin embargo, si el Asistente para la implementación está implementando directamente en una instancia de Analysis Services, puede agregar la información de Id. de usuario y contraseña correspondiente en el asistente para que el procesamiento de la base de datos de implementación sea correcto. Esta información de conexión no se almacenará en el script de implementación si el Asistente para la implementación guarda  
   
@@ -44,12 +44,12 @@ ms.locfileid: "36109296"
 -   **Servidor de informes** Esta configuración especifica el servidor de informes y la ubicación de carpeta de cada acción de informe definida en cada cubo de la base de datos.  
   
 ## <a name="modifying-the-configuration-settings-for-deployment"></a>Modificar los valores de configuración para la implementación  
- En algunos casos, debe implementar la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto usando una configuración distinta a las almacenadas en el \< *nombre del proyecto*> archivo. configSettings. Por ejemplo, puede que desee cambiar la cadena de conexión a uno o más orígenes de datos, o especificar ubicaciones de almacenamiento para particiones o grupos de medida específicos.  
+ En algunos casos, es posible que necesite implementar el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto usando los valores de configuración diferentes a las almacenadas en el \< *nombre del proyecto*> archivo configSettings. Por ejemplo, puede que desee cambiar la cadena de conexión a uno o más orígenes de datos, o especificar ubicaciones de almacenamiento para particiones o grupos de medida específicos.  
   
- Para modificar la implementación de particiones y roles en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto, debe cambiar esta información dentro de la \< *nombre del proyecto*> .configsettings archivo, como se describe en el siguiente procedimiento. No se puede cambiar la configuración de particiones y roles dentro del proyecto porque el  *\<nombre del proyecto >* **páginas de propiedades** cuadro de diálogo de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] no muestra estas opciones.  
+ Para modificar la implementación de particiones y roles en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto, debe cambiar esta información dentro de la \< *nombre del proyecto*> archivo .configsettings, como se describe en el procedimiento siguiente. No se puede cambiar la configuración de particiones y roles dentro del proyecto porque el  *\<nombre del proyecto >* **las páginas de propiedades** cuadro de diálogo de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] no muestra estas opciones.  
   
 > [!NOTE]  
->  Los valores de configuración se pueden aplicar a todos los objetos o solo a los recientemente creados. Aplique los valores de configuración a los objetos recientemente creados solo si implementa objetos adicionales a una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] anteriormente implementada y no desea sobrescribir objetos existentes. Para especificar si los valores de configuración se aplican a todos los objetos o solo a los recientemente creados, establezca esta opción el \< *nombre del proyecto*>. deploymentoptions. Para obtener más información, vea [Especificar opciones de implementación de roles y particiones](deployment-script-files-partition-and-role-deployment-options.md).  
+>  Los valores de configuración se pueden aplicar a todos los objetos o solo a los recientemente creados. Aplique los valores de configuración a los objetos recientemente creados solo si implementa objetos adicionales a una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] anteriormente implementada y no desea sobrescribir objetos existentes. Para especificar si los valores de configuración se aplican a todos los objetos o solo a los creados recientemente, establezca esta opción en el \< *nombre del proyecto*> .deploymentoptions file. Para obtener más información, vea [Especificar opciones de implementación de roles y particiones](deployment-script-files-partition-and-role-deployment-options.md).  
   
 #### <a name="to-change-configuration-settings-after-the-input-files-have-been-generated"></a>Para cambiar los valores de configuración después de haber generado los archivos de entrada  
   
@@ -61,10 +61,10 @@ ms.locfileid: "36109296"
   
      O bien  
   
--   Modificar el \< *nombre del proyecto*> .configsettings archivo utilizando cualquier editor de texto.  
+-   Modificar el \< *nombre del proyecto*> archivo .configsettings con cualquier editor de texto.  
   
 ## <a name="see-also"></a>Vea también  
- [Especificar el destino de la instalación](deployment-script-files-specifying-the-installation-target.md)   
+ [Especificar el destino de instalación](deployment-script-files-specifying-the-installation-target.md)   
  [Especificar opciones de implementación de roles y particiones](deployment-script-files-partition-and-role-deployment-options.md)   
  [Especificar opciones de procesamiento](deployment-script-files-specifying-processing-options.md)  
   

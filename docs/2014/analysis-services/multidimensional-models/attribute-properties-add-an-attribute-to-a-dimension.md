@@ -1,5 +1,5 @@
 ---
-title: Agregar un atributo a una dimensión | Documentos de Microsoft
+title: Agregar un atributo a una dimensión | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding attributes
 - automatic attribute creation
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - manual attribute creation [Analysis Services]
 ms.assetid: 25826ba1-2b38-4b34-bd3a-7eba116093ae
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7b3f94d20f7f39efffd435793bf3dff808e115df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 25bbd679cd27aafd2fb71986aac1991556b3c890
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237765"
 ---
 # <a name="add-an--attribute-to-a-dimension"></a>Incorporación de un atributo a una dimensión
   Puede agregar un atributo a una dimensión automática o manualmente en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

@@ -1,5 +1,5 @@
 ---
-title: Usar una conexión de modelo semántico de BI en Excel o Reporting Services | Documentos de Microsoft
+title: Usar una conexión de modelo semántico de BI en Excel o Reporting Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 00ee95942a8022ee8d299ab400d36676b51467ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b1ff3dfedd5dce6a4db551cc6fdb180e4d723d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219975"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Usar una conexión de modelo semántico de BI en Excel o Reporting Services
-  Este tema explica cómo utilizar las conexiones de modelo semántico de BI creadas utilizando las instrucciones de otros temas. Si aún no ha creado un modelo semántico de BI, consulte [crear una conexión de modelo semántico de BI a un libro de PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) y [crear una conexión de modelo semántico de BI en una base de datos de modelo Tabular](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+  Este tema explica cómo utilizar las conexiones de modelo semántico de BI creadas utilizando las instrucciones de otros temas. Si aún no ha creado un modelo semántico de BI, consulte [crear una conexión de modelo semántico de BI a un libro PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) y [crear una conexión de modelo semántico de BI a una base de datos de modelo Tabular](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_connect"></a> Conexión de Excel  
  Puede especificar una conexión de modelo semántico de BI como origen de datos en Excel o cualquier otra aplicación empresarial que utilice datos de modelos tabulares de Analysis Services. En esta sección se explican los dos métodos para conectarse a los datos de modelo semántico de BI con Excel.  
@@ -33,7 +33,7 @@ ms.locfileid: "36200818"
   
 -   Haga clic con el botón derecho en una conexión de modelo semántico de BI de una biblioteca y seleccione **Iniciar Excel**.  
   
- ![Comando de inicio rápido de captura de pantalla de BISM](../media/ssas-bism-quicklaunch.gif "comando de inicio rápido de captura de pantalla de BISM")  
+ ![Comando de inicio rápido de la captura de pantalla de BISM](../media/ssas-bism-quicklaunch.gif "comando de inicio rápido de la captura de pantalla de BISM")  
   
  Haga clic en **Habilitar** cuando se le solicite para habilitar las conexiones de datos. Excel abre un libro que contiene una lista de campos de tabla dinámica rellena con los campos del origen de datos subyacente.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "36200818"
   
 5.  En la última página, puede proporcionar un nombre descriptivo y una descripción. Haga clic en **Finalizar**y en **Aceptar** en el cuadro de diálogo Importar datos para importar los datos.  
   
- Para que las conexiones puedan establecerse, debe tener instalado Excel 2010 y el archivo MSOLAP.5.dll en el equipo cliente. Puede obtener el proveedor si instala la versión de PowerPivot para Excel que sea actual para esta versión o bien puede descargar únicamente el proveedor OLE DB de Analysis Services en el [página de descarga de Feature Pack](http://go.microsoft.com/fwlink/?linkid=214066).  
+ Para que las conexiones puedan establecerse, debe tener instalado Excel 2010 y el archivo MSOLAP.5.dll en el equipo cliente. Puede obtener el proveedor si instala la versión de PowerPivot para Excel que sea actual para esta versión o bien puede descargar únicamente el proveedor OLE DB de Analysis Services desde el [página de descarga de Feature Pack](http://go.microsoft.com/fwlink/?linkid=214066).  
   
- Para confirmar que MSOLAP.5.dll es la versión actual, consulte `HKEY_CLASSES_ROOT\MSOLAP` en el registro. `CurVer` debe establecerse en MSOLAP.5.  
+ Para confirmar que MSOLAP.5.dll es la versión actual, consulte `HKEY_CLASSES_ROOT\MSOLAP` en el registro. `CurVer` se debe establecer en MSOLAP.5.  
   
  También debe tener permisos de lectura en el archivo de modelo semántico de BI en SharePoint. Los permisos de lectura incluyen los derechos de descarga. Excel descarga la información de conexión de modelo semántico de BI desde SharePoint y abre una conexión directa a la base de datos mediante `HTTP Get`. Las solicitudes de conexión no pasan por SharePoint una vez que la información de conexión de modelo semántico de BI se almacena localmente.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a0c9cea649ecb0f11bdd75d68ce39d48aad8bb92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 712e454c9bc89fd1df8584789ec9c25796748201
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112636"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294175"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Lección 5: Diseñar el informe secundario usando el Asistente para informes
   Después de crear una conexión de datos y una tabla de datos para el informe secundario, el paso siguiente consiste en diseñar dicho informe usando el Asistente para informes del Diseñador de informes. Para más información sobre el Diseñador de informes, vea [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "36112636"
   
      Así se inicia el Asistente para informes.  
   
-4.  En el **propiedades de conjunto de datos** página, en la **origen de datos** cuadro, haga clic en **DataSet2**.  
+4.  En el **las propiedades del conjunto de datos** página, en el **origen de datos** cuadro, haga clic en **DataSet2**.  
   
      El cuadro **Conjuntos de datos disponibles** se actualiza automáticamente con el elemento DataTable que ha creado.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36112636"
   
     1.  Arrastre **ProductID**, **PurchaseOrderID**, **PurchaseOrderDetailID**, **OrderQty**, **ReceivedQty**, **RejectedQty**y **StockedQty** desde **Campos disponibles** hasta el cuadro **Valores** .  
   
-    2.  Haga clic en la flecha situada junto a **SUM (ProductID)**, **Sum(PurchaseOrderID)**, **Sum(PurchaseOrderDetailID)**, **Sum(OrderQty)**,  **SUM(ReceivedQty)**, **Sum(RejectedQty)**, y **Sum(StockedQty)** y desactive el **suma** selección.  
+    2.  Haga clic en la flecha situada junto a **SUM (ProductID)**, **SUM (purchaseorderid)**, **SUM (purchaseorderdetailid)**, **SUM (OrderQty)**,  **SUM (receivedqty)**, **SUM (rejectedqty)**, y **SUM (stockedqty)** y desactive el **suma** selección.  
   
 7.  Haga clic en **siguiente** dos veces y, a continuación, haga clic en **finalizar** para cerrar el **Asistente para informes**.  
   

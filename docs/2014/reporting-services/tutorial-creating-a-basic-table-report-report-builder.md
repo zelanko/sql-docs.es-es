@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c197e6f13497b82655f8c20872637d8bc8e7ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5a3831372791023edb9f83064aa77878dcf41dfd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186062"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Crear un informe de tabla básico (Generador de informes)
   Este tutorial muestra cómo crear un informe de tabla básico basado en datos de ventas de ejemplo. En la siguiente ilustración se muestra el informe que va a crear.  
@@ -35,15 +35,15 @@ ms.locfileid: "36113969"
   
     2.  [Crear una consulta en el Asistente para tablas](#Query)  
   
-    3.  [Organizar los datos en grupos en el Asistente para tablas](#Groups)  
+    3.  [Organizar datos en grupos en el Asistente para tablas](#Groups)  
   
-    4.  [Agregar filas Subtotal y de Total en el Asistente para tablas](#Subtotals)  
+    4.  [Agregar filas de Subtotal y Total en el Asistente para tablas](#Subtotals)  
   
     5.  [Elegir un estilo en el Asistente para tablas](#Style)  
   
-2.  [Dar formato a datos como moneda](#FormatCurrency)  
+2.  [Formato de datos como moneda](#FormatCurrency)  
   
-3.  [Dar formato a datos como fecha](#FormatDate)  
+3.  [Formato de datos como fecha](#FormatDate)  
   
 4.  [Cambiar el ancho de columna](#Width)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36113969"
      El **Introducción** abre el cuadro de diálogo.  
   
     > [!NOTE]  
-    >  Si el **Introducción** cuadro de diálogo no aparece, desde el **Report Builder** botón, haga clic en **nuevo**.  
+    >  Si el **Introducción** no aparece el cuadro de diálogo, desde el **Report Builder** botón, haga clic en **New**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36113969"
   
 2.  Haga clic en **Nueva**. Se abre el cuadro de diálogo **Propiedades del origen de datos** .  
   
-3.  En **nombre**, tipo **ventas del producto** un nombre para el origen de datos.  
+3.  En **nombre**, tipo **ventas de producto** un nombre para el origen de datos.  
   
 4.  En **Seleccionar un tipo de conexión**, compruebe que está seleccionado **Microsoft SQL Server** .  
   
@@ -167,7 +167,7 @@ ms.locfileid: "36113969"
   
 4.  Haga clic en **Siguiente**.  
   
-##  <a name="Groups"></a> c de 1. Organizar datos en grupos en el Asistente para tablas  
+##  <a name="Groups"></a> 1C. Organizar datos en grupos en el Asistente para tablas  
  Al seleccionar los campos por los que desea agrupar, diseña una tabla que tiene filas y columnas en las que se muestran datos detallados y datos agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar los datos en grupos  
@@ -194,7 +194,7 @@ ms.locfileid: "36113969"
   
 6.  Haga clic en **Siguiente**.  
   
-##  <a name="Subtotals"></a> 1D. Agregar filas de subtotal y de total en el Asistente para tablas  
+##  <a name="Subtotals"></a> 1 día. Agregar filas de subtotal y de total en el Asistente para tablas  
  Después de crear grupos, puede agregar filas y darles formato, para mostrar en ellas los valores agregados de los campos. Puede decidir si mostrar todos los datos o permitir que los usuarios expandan y contraigan de forma interactiva los datos agrupados.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Para agregar subtotales y totales  
@@ -360,7 +360,7 @@ ms.locfileid: "36113969"
 4.  Haga clic en **Guardar**.  
   
 ##  <a name="Export"></a> 7. Exportar el informe  
- Los informes se pueden exportar a diversos formatos, por ejemplo Microsoft Excel y valores separados por comas (CSV). Para obtener más información, consulte [exportar informes &#40;el generador de informes y SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md).  
+ Los informes se pueden exportar a diversos formatos, por ejemplo Microsoft Excel y valores separados por comas (CSV). Para obtener más información, consulte [exportar informes &#40;generador de informes y SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md).  
   
  En este tutorial, exportará el informe a Excel y establecerá una propiedad en el informe para proporcionar un nombre personalizado para la pestaña del libro.  
   
@@ -373,7 +373,7 @@ ms.locfileid: "36113969"
 3.  . En el panel Propiedades, busque la propiedad InitialPageName y escriba **Excel de ventas del producto**.  
   
     > [!NOTE]  
-    >  Si el panel de propiedades no está visible, haga clic en la pestaña de vista en la cinta de opciones y, a continuación, haga clic en **propiedades**.  
+    >  Si no está visible el panel Propiedades, haga clic en la pestaña de vista en la cinta de opciones y, a continuación, haga clic en **propiedades**.  
   
 #### <a name="to-export-a-report-to-excel"></a>Exportar un informe a Excel  
   
@@ -393,7 +393,7 @@ ms.locfileid: "36113969"
   
 #### <a name="to-view-the-report-in-excel"></a>Ver el informe en Excel.  
   
-1.  Abra la **documentos** carpeta y haga doble clic en **ventas del producto.xlsx**.  
+1.  Abra el **documentos** carpeta y haga doble clic en **Excel de ventas del producto.xlsx**.  
   
 2.  Compruebe que el nombre de la pestaña del libro es **Excel de Ventas del producto**.  
   

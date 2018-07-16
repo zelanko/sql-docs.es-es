@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Definir una vista del origen de datos dentro de un análisis Services proyecto | Documentos de Microsoft'
+title: 'Lección 1: Definir una vista del origen de datos dentro de un análisis Services proyecto | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 56b27476650b88a77be4f00b62e76b742fc3774f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f64787a50373e2bb958d0c3851ff3f762a6eb83c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303095"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lección 1: definir una vista del origen de datos en un proyecto de Analysis Services
   Para diseñar una aplicación de Business Intelligence en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , primero debe crear un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. En este proyecto, debe definir todos los elementos de la solución, empezando por una vista del origen de datos.  

@@ -16,13 +16,13 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0264b74acc5d4665dbbbe48678ad75538002d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f6377df95d5cb8ade98e7a83b04b7920fe87a62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209375"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Generar, implementar y depurar objetos personalizados
   Después de haber escrito el código para un objeto personalizado de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], debe generar, implementar e integrar el ensamblado en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] para que esté disponible para su uso en paquetes, y probarlo y depurarlo.  
@@ -83,7 +83,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 -   Generar el ensamblado directamente en la carpeta adecuada.  
   
- Las carpetas de implementación siguientes bajo **C:\Program Files\Microsoft SQL Server\120\DTS** se utilizan para los distintos tipos de objetos personalizados:  
+ Las carpetas de implementación siguientes bajo **C:\Program Files\Microsoft SQL Server\120\DTS** se usan para los distintos tipos de objetos personalizados:  
   
 |Objeto personalizado|Carpeta de implementación|  
 |-------------------|-----------------------|  
@@ -120,7 +120,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ##  <a name="testing"></a> Probar y depurar el código  
  El enfoque más sencillo para depurar los métodos en tiempo de ejecución de un objeto personalizado consiste en iniciar **dtexec.exe** desde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] después de compilar el objeto personalizado y ejecutar un paquete que use el componente.  
   
- Si desea depurar los métodos en tiempo de diseño del componente, como el `Validate` método, abra un paquete que utiliza el componente en una segunda instancia de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]y asociar a su **devenv.exe** proceso.  
+ Si desea depurar los métodos en tiempo de diseño del componente, como el `Validate` método, abra un paquete que utiliza el componente en una segunda instancia de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]y adjuntar a su **devenv.exe** proceso.  
   
  Si también quiere depurar los métodos en tiempo de ejecución del componente cuando un paquete está abierto y ejecutándose en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)], debe forzar una pausa en la ejecución del paquete para poder adjuntarlo también al proceso **DtsDebugHost.exe**.  
   
@@ -128,7 +128,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 1.  Firme e integre el proyecto en la configuración de depuración, impleméntelo e instálelo en la memoria caché de ensamblados global tal y como se describe en este tema.  
   
-2.  En el **depurar** ficha de **propiedades del proyecto**, seleccione **iniciar programa externo** como el **acción de inicio**y busque  **DTExec.exe**, que se instala de forma predeterminada en C:\Program Files\Microsoft SQL Server\120\DTS\Binn.  
+2.  En el **depurar** ficha de **las propiedades del proyecto**, seleccione **iniciar programa externo** como el **acción de inicio**y busque  **DTExec.exe**, que se instala de forma predeterminada en C:\Program Files\Microsoft SQL Server\120\DTS\Binn.  
   
 3.  En el cuadro de texto **Opciones de la línea de comandos**, en **Opciones de inicio**, escriba los argumentos de la línea de comandos necesarios para ejecutar un paquete que usa el componente. A menudo el argumento de la línea de comandos estará compuesto del modificador /F[ILE] seguido de la ruta de acceso y nombre de archivo del archivo .dtsx. Para más información, consulte [dtexec Utility](../packages/dtexec-utility.md).  
   
@@ -156,7 +156,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 3.  Vuelva al paquete en pausa y continúe más allá del punto de interrupción o haga clic en **Aceptar** para descartar el cuadro de mensaje generado por la tarea Script, y continuar con la ejecución y depuración del paquete.  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Desarrollar objetos personalizados para Integration Services](developing-custom-objects-for-integration-services.md)   

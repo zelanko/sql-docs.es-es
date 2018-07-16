@@ -1,5 +1,5 @@
 ---
-title: Modificar la dimensión Date | Documentos de Microsoft
+title: Modificar la dimensión fecha | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: d4141cd5b26af4c44613b32ddc486154096d3fb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03e0f8938c5a35f917c921248d4f3913ae1667f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216095"
 ---
 # <a name="modifying-the-date-dimension"></a>Modificar la dimensión Date
   En las tareas de este tema, debe crear una jerarquía definida por el usuario y cambiar los nombres de miembro que se muestran para los atributos Date, Month, Calendar Quarter y Calendar Semester. También definirá claves compuestas para los atributos, controlará el criterio de ordenación de los miembros de dimensión y definirá las relaciones de atributo.  
@@ -31,9 +31,9 @@ ms.locfileid: "36107759"
   
 1.  Para abrir la vista del origen de datos **Adventure Works DW 2012** , haga doble clic en ella en la carpeta **Vistas del origen de datos** del Explorador de soluciones.  
   
-2.  Cerca de la parte inferior de la **tablas** panel, haga clic en `Date`y, a continuación, haga clic en **nuevo cálculo con nombre**.  
+2.  La parte inferior de la **tablas** panel, haga clic en `Date`y, a continuación, haga clic en **nuevo cálculo con nombre**.  
   
-3.  En el **crear cálculo con nombre** cuadro de diálogo, escriba `SimpleDate` en el **nombre de la columna** cuadro y, a continuación, escriba o copie y pegue el siguiente `DATENAME` instrucción en el **expresión**  cuadro:  
+3.  En el **crear cálculo con nombre** cuadro de diálogo, escriba `SimpleDate` en el **nombre de columna** cuadro y, a continuación, escriba o copie y pegue el siguiente `DATENAME` instrucción en el **expresión**  cuadro:  
   
     ```  
     DATENAME(mm, FullDateAlternateKey) + ' ' +  
@@ -53,7 +53,7 @@ ms.locfileid: "36107759"
   
 7.  Desplácese hacia la derecha para revisar la última columna de la vista **Explorar la tabla Date** .  
   
-     Tenga en cuenta que la `SimpleDate` columna aparece en la vista del origen de datos, concatenando correctamente los datos de varias columnas del origen de datos subyacente, sin modificar el origen de datos original.  
+     Tenga en cuenta que la `SimpleDate` columna aparece en la vista del origen de datos, concatenando correctamente los datos de varias columnas del origen de datos subyacente sin modificar el origen de datos original.  
   
 8.  Cierre la vista **Explorar la tabla Date** .  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36107759"
   
 #### <a name="to-use-the-named-calculation-for-member-names"></a>Para utilizar el cálculo con nombre para los nombres de miembro  
   
-1.  Abra el **Diseñador de dimensiones** para la dimensión Date en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para ello, haga doble clic en el `Date` de dimensión en la **dimensiones** nodo de **el Explorador de soluciones**.  
+1.  Abra el **Diseñador de dimensiones** para la dimensión Date en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para ello, haga doble clic en el `Date` de dimensión en el **dimensiones** nodo de **el Explorador de soluciones**.  
   
 2.  En el panel **Atributos** de la pestaña **Estructura de dimensión** , haga clic en el atributo **Date Key** .  
   
@@ -79,19 +79,19 @@ ms.locfileid: "36107759"
   
 #### <a name="to-create-a-hierarchy"></a>Para crear una jerarquía  
   
-1.  En **estructura de dimensión** ficha del Diseñador de dimensiones para la `Date` de dimensiones, arrastre la **año natural** de atributo de la **atributos** panel en el **Jerarquías** panel.  
+1.  En **estructura de dimensión** ficha del Diseñador de dimensiones para la `Date` de dimensiones, arrastre la **año natural** atributo desde el **atributos** panel en el **Jerarquías** panel.  
   
-2.  Arrastre el **semestre natural** de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en el **jerarquías**panel, debajo del **año natural** nivel.  
+2.  Arrastre el **Calendar Semester** de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en la **jerarquías**panel, debajo del **año natural** nivel.  
   
-3.  Arrastre el **Calendar Quarter** de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en el **jerarquías**panel, debajo del **semestre natural** nivel.  
+3.  Arrastre el **Calendar Quarter** de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en la **jerarquías**panel, debajo del **Calendar Semester** nivel.  
   
-4.  Arrastre el **English Month Name** de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en el **jerarquías**panel, debajo del **Calendar Quarter** nivel.  
+4.  Arrastre el **English Month Name** de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en la **jerarquías**panel, debajo del **Calendar Quarter** nivel.  
   
-5.  Arrastre el **Date Key** de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en el **jerarquías** panel , debajo de la **English Month Name** nivel.  
+5.  Arrastre el **Date Key** de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en la **jerarquías** panel , debajo de la **English Month Name** nivel.  
   
-6.  En el **jerarquías** panel, haga clic en la barra de título de la **jerarquía** jerarquía, haga clic **cambiar el nombre de**y, a continuación, escriba `Calendar Date`.  
+6.  En el **jerarquías** panel, haga clic en la barra de título de la **jerarquía** jerarquía, haga clic en **cambiar el nombre de**y, a continuación, escriba `Calendar Date`.  
   
-7.  Utilizando el menú contextual, en la `Calendar Date` jerarquía, cambiar el nombre de la **English Month Name** nivel al `Calendar Month`y, a continuación, cambiar el nombre de la **Date Key** nivel al `Date`.  
+7.  Utilizando el menú contextual, en el `Calendar Date` jerarquía, cambiar el nombre de la **English Month Name** nivel a `Calendar Month`y, a continuación, cambie el nombre de la **Date Key** nivel a `Date`.  
   
 8.  Elimine el atributo **Full Date Alternate Key** del panel **Atributos** , ya que no lo va a usar. Haga clic en **Aceptar** en la ventana de confirmación **Eliminar objetos** .  
   
@@ -141,7 +141,7 @@ ms.locfileid: "36107759"
   
 2.  En el **tablas** panel, haga clic en `Date`y, a continuación, haga clic en **nuevo cálculo con nombre**.  
   
-3.  En el **crear cálculo con nombre** cuadro de diálogo, escriba `MonthName` en el **nombre de la columna** cuadro y, a continuación, escriba o copie y pegue la siguiente instrucción en el **expresión** cuadro:  
+3.  En el **crear cálculo con nombre** cuadro de diálogo, escriba `MonthName` en el **nombre de columna** cuadro y, a continuación, escriba o copie y pegue la siguiente instrucción en el **expresión** cuadro:  
   
     ```  
     EnglishMonthName+' '+ CONVERT(CHAR (4), CalendarYear)  
@@ -153,7 +153,7 @@ ms.locfileid: "36107759"
   
 5.  En el **tablas** panel, haga clic en `Date`y, a continuación, haga clic en **nuevo cálculo con nombre**.  
   
-6.  En el **crear cálculo con nombre** cuadro de diálogo, escriba `CalendarQuarterDesc` en el **nombre de la columna** cuadro y, a continuación, escriba o copie y pegue el siguiente script SQL en el **expresión** cuadro:  
+6.  En el **crear cálculo con nombre** cuadro de diálogo, escriba `CalendarQuarterDesc` en el **nombre de columna** cuadro y, a continuación, escriba o copie y pegue el siguiente script SQL en el **expresión** cuadro:  
   
     ```  
     'Q' + CONVERT(CHAR (1), CalendarQuarter) +' '+ 'CY ' +  
@@ -166,7 +166,7 @@ ms.locfileid: "36107759"
   
 8.  En el **tablas** panel, haga clic en `Date`y, a continuación, haga clic en **nuevo cálculo con nombre**.  
   
-9. En el **crear cálculo con nombre** cuadro de diálogo, escriba `CalendarSemesterDesc` en el **nombre de la columna** cuadro y, a continuación, escriba o copie y pegue el siguiente script SQL en el **expresión** cuadro:  
+9. En el **crear cálculo con nombre** cuadro de diálogo, escriba `CalendarSemesterDesc` en el **nombre de columna** cuadro y, a continuación, escriba o copie y pegue el siguiente script SQL en el **expresión** cuadro:  
   
     ```  
     CASE  
@@ -202,7 +202,7 @@ ms.locfileid: "36107759"
   
 7.  Para establecer la propiedad **NameColumn** del atributo **EnglishMonthName** , haga clic en el campo **NameColumn** en la ventana Propiedades y, después, haga clic en el botón Examinar (**...**).  
   
-8.  En el **nombre de columna** cuadro de diálogo, en la **columna de origen** lista, seleccione `MonthName`y, a continuación, haga clic en **Aceptar**.  
+8.  En el **nombre de columna** cuadro de diálogo el **columna de origen** lista, seleccione `MonthName`y, a continuación, haga clic en **Aceptar**.  
   
 9. En el menú **Archivo** , haga clic en **Guardar todo**.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "36107759"
   
 5.  Para establecer la propiedad **NameColumn** del atributo **Calendar Quarter** , haga clic en el campo **NameColumn** en la ventana Propiedades y, después, haga clic en el botón Examinar (**...**).  
   
-6.  En el **nombre de columna** cuadro de diálogo, en la **columna de origen** lista, seleccione `CalendarQuarterDesc`y, a continuación, haga clic en **Aceptar**.  
+6.  En el **nombre de columna** cuadro de diálogo el **columna de origen** lista, seleccione `CalendarQuarterDesc`y, a continuación, haga clic en **Aceptar**.  
   
 7.  En el menú **Archivo** , haga clic en **Guardar todo**.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "36107759"
   
 5.  Para establecer la propiedad **NameColumn** del atributo **Calendar Semester** , haga clic en el campo **NameColumn** en la ventana Propiedades y, después, haga clic en el botón Examinar (**...**).  
   
-6.  En el **nombre de columna** cuadro de diálogo, en la **columna de origen** lista, seleccione `CalendarSemesterDesc`y, a continuación, haga clic en **Aceptar**.  
+6.  En el **nombre de columna** cuadro de diálogo el **columna de origen** lista, seleccione `CalendarSemesterDesc`y, a continuación, haga clic en **Aceptar**.  
   
 7.  En el menú **Archivo** , haga clic en **Guardar todo**.  
   
@@ -249,7 +249,7 @@ ms.locfileid: "36107759"
   
 1.  En el menú **Generar** de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], haga clic en **Implementar Tutorial de Analysis Services**.  
   
-2.  Después de haber recibido la **implementación finalizó correctamente** de mensajes, haga clic en el **explorador** ficha de **Diseñador de dimensiones** para el `Date` dimensión, y a continuación, haga clic en el botón volver a conectar en la barra de herramientas del diseñador.  
+2.  Después de haber recibido el **implementación finalizó correctamente** del mensaje, haga clic en el **explorador** ficha de **Diseñador de dimensiones** para el `Date` dimensión, y a continuación, haga clic en el botón volver a conectar en la barra de herramientas del diseñador.  
   
 3.  Seleccione **Calendar Quarter** en la lista **Jerarquía** . Revise los miembros de la jerarquía de atributo **Calendar Quarter** .  
   
@@ -264,7 +264,7 @@ ms.locfileid: "36107759"
   
 #### <a name="to-modify-the-composite-key-member-order"></a>Para modificar el orden de los miembros de clave compuesta  
   
-1.  Abra la **estructura de dimensión** pestaña del Diseñador de dimensiones para la `Date` de dimensión y, a continuación, seleccione **semestre natural** en el **atributos** panel.  
+1.  Abra el **estructura de dimensión** ficha del Diseñador de dimensiones para la `Date` de dimensión y, a continuación, seleccione **Calendar Semester** en el **atributos** panel.  
   
 2.  En la ventana Propiedades, revise el valor de la propiedad **OrderBy** . Dicho valor se establece en **Key**.  
   
@@ -288,7 +288,7 @@ ms.locfileid: "36107759"
   
      Los miembros de la jerarquía de atributo ahora aparecen ordenados primero por año y luego por mes.  
   
-9. En el menú **Generar** de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], haga clic en **Implementar Tutorial de Analysis Services**. Cuando la implementación haya finalizado correctamente, haga clic en el **explorador** ficha en el Diseñador de dimensiones para la `Date` dimensión.  
+9. En el menú **Generar** de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], haga clic en **Implementar Tutorial de Analysis Services**. Cuando la implementación haya finalizado correctamente, haga clic en el **explorador** pestaña Diseñador de dimensiones para la `Date` dimensión.  
   
 10. En la barra de herramientas de la pestaña **Explorador** , haga clic en el botón Volver a conectar.  
   

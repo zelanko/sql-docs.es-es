@@ -1,5 +1,5 @@
 ---
-title: Especificar opciones de implementación de roles y particiones | Documentos de Microsoft
+title: Especificar opciones de implementación de roles y particiones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input files [Analysis Services]
 - partitions [Analysis Services], deployment options
@@ -23,24 +23,24 @@ helpviewer_keywords:
 - modifying partition deployments
 ms.assetid: e9b9ca57-a5cc-4fc0-87b5-305257038d56
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ce6d214b20e2c10775b542fb3d466a305aaddf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28be72efd82f72662bada57062d2e69e558793e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253107"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>Especificar opciones de implementación de roles y particiones
-  El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente para implementación de lee las opciones de implementación de roles y particiones de la \< *nombre del proyecto*>. deploymentoptions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crea este archivo cuando se genera el proyecto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utiliza las opciones de implementación de particiones y roles del actual proyecto cuando el \< *nombre del proyecto*>. deploymentoptions se crean. Para obtener más información acerca de los valores de configuración, vea [Understanding the Input Files Used to Create the Deployment Script](deployment-script-files-input-used-to-create-deployment-script.md).  
+  El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente para implementación de lee las opciones de implementación de particiones y roles en el \< *nombre del proyecto*> .deploymentoptions file. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crea este archivo cuando se genera el proyecto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa las opciones de implementación de roles y particiones del actual proyecto cuando el \< *nombre del proyecto*> .deploymentoptions file se crea. Para obtener más información acerca de los valores de configuración, vea [Understanding the Input Files Used to Create the Deployment Script](deployment-script-files-input-used-to-create-deployment-script.md).  
   
 ## <a name="reviewing-the-partition-and-role-deployment-options"></a>Revisar las opciones de implementación de roles y particiones  
- Las opciones de implementación del \< *nombre del proyecto*> .deploymentoptions file incluyen lo siguiente:  
+ Las opciones de implementación el \< *nombre del proyecto*> .deploymentoptions file incluyen las siguientes:  
   
  **Opciones de implementación de particiones**  
- El \< *nombre del proyecto*> .deploymentoptions especifica si las particiones existentes en la base de datos de destino se conservan o sobrescriben (valor predeterminado). Si las particiones existentes se conservan, solo se implementarán nuevas particiones, y el diseño de las particiones y agregaciones de todos los grupos de medida existentes permanecerán inalterados.  
+ El \< *nombre del proyecto*> .deploymentoptions especifica si se conservan las particiones existentes de la base de datos de destino o sobrescriben (valor predeterminado). Si las particiones existentes se conservan, solo se implementarán nuevas particiones, y el diseño de las particiones y agregaciones de todos los grupos de medida existentes permanecerán inalterados.  
   
 > [!NOTE]  
 >  Si se elimina el grupo de medida en el que existe la partición, la partición se elimina también automáticamente.  
@@ -57,9 +57,9 @@ ms.locfileid: "36107750"
 -   **Nota** Cuando se conservan los roles y los miembros existentes, los permisos asociados con esos roles se restablecen en ninguno. Los permisos de seguridad están incluidos en los objetos que protegen, no en los roles de seguridad a los que están asociados. Para obtener más información acerca de cómo trabajar con este comportamiento mediante el Asistente para la implementación de Analysis Service, consulte el artículo sobre la retención de roles y miembros de Microsoft Knowledge Base.  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>Modificar las opciones de implementación de roles y particiones  
- Puede que tenga que implementar el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto usando las opciones de partición y roles diferentes a las almacenadas en el \< *nombre del proyecto*>. deploymentoptions. Por ejemplo, puede que desee conservar las particiones existentes, roles y los miembros del rol, en lugar de reemplazar todas las particiones existentes, roles y miembros tal como se indica en la \< *nombre del proyecto*>. deploymentoptions.  
+ Es posible que deba implementar el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto usando las opciones de particiones y roles diferentes a las almacenadas en el \< *nombre del proyecto*> .deploymentoptions file. Por ejemplo, es posible que desee conservar las particiones existentes, los roles y los miembros del rol, en lugar de reemplazar todos los miembros, roles y particiones existentes según lo indicado en el \< *nombre del proyecto*> .deploymentoptions file.  
   
- Para modificar la implementación de particiones y roles en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto, no puede cambiar la configuración de particiones y roles dentro del proyecto porque el  *\<nombre del proyecto >* **páginas de propiedades**  cuadro de diálogo de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] no muestra estas opciones. Si desea cambiar las opciones de implementación de roles y particiones, deberá cambiar esta información dentro de la \< *nombre del proyecto*> el propio archivo. deploymentoptions. El siguiente procedimiento describe cómo cambiar las opciones de implementación de particiones y roles dentro de la \< *nombre del proyecto*>. deploymentoptions.  
+ Para modificar la implementación de particiones y roles en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto, no puede cambiar la configuración de particiones y roles dentro del proyecto porque el  *\<nombre del proyecto >* **las páginas de propiedades**  cuadro de diálogo de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] no muestra estas opciones. Si desea cambiar las opciones de implementación para roles y particiones, debe cambiar esta información dentro de la \< *nombre del proyecto*> .deploymentoptions file propio. El siguiente procedimiento describe cómo cambiar las opciones de implementación de particiones y roles dentro de la \< *nombre del proyecto*> .deploymentoptions file.  
   
 #### <a name="to-change-the-deployment-of-partitions-or-roles-after-the-input-files-have-been-generated"></a>Para cambiar la implementación de particiones o roles después de haber generado los archivos de entrada  
   
@@ -71,11 +71,11 @@ ms.locfileid: "36107750"
   
      O bien  
   
--   Abra la \< *nombre del proyecto*> .deploymentoptions en cualquier editor de texto y manualmente cambiar las opciones.  
+-   Abra el \< *nombre del proyecto*> .deploymentoptions en cualquier editor de texto y manualmente cambiar las opciones.  
   
 ## <a name="see-also"></a>Vea también  
- [Especificar el destino de la instalación](deployment-script-files-specifying-the-installation-target.md)   
- [Especificar la configuración de implementación de soluciones](deployment-script-files-solution-deployment-config-settings.md)   
+ [Especificar el destino de instalación](deployment-script-files-specifying-the-installation-target.md)   
+ [Especificar la configuración de implementación de la solución](deployment-script-files-solution-deployment-config-settings.md)   
  [Especificar opciones de procesamiento](deployment-script-files-specifying-processing-options.md)  
   
   

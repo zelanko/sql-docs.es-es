@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b1fec86adc14a786d781e74f023829d81aaaf825
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 395ef1f5189678892433de01f47dd04d08e1d1df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270331"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario
   Después de crear un proyecto de sitio Web nuevo con la plantilla de sitio Web ASP.NET para Visual C#, el paso siguiente consiste en crear una conexión de datos y una tabla de datos para el informe primario. En este tutorial, la conexión de datos se produce con la base de datos AdventureWorks2008. También tiene la opción de conectar con la base de datos AdventureWorks2012.  
@@ -28,7 +28,7 @@ ms.locfileid: "36204350"
   
 1.  En el menú **Sitio web** , seleccione **Agregar nuevo elemento**.  
   
-2.  En el **Agregar nuevo elemento** cuadro de diálogo, seleccione **conjunto de datos** y haga clic en **agregar**. Cuando se le pida debe agregar el elemento a la **App_Code** carpeta haciendo clic en **Sí**.  
+2.  En el **Agregar nuevo elemento** cuadro de diálogo, seleccione **DataSet** y haga clic en **agregar**. Cuando se le pida, debe agregar el elemento a la **App_Code** carpeta haciendo **Sí**.  
   
      De este modo, agrega un nuevo archivo XSD **DataSet1.xsd** al proyecto y abre el Diseñador de DataSet.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36204350"
   
 6.  En el cuadro de diálogo **Agregar conexión** , realice los pasos siguientes:  
   
-    1.  En el **nombre del servidor** cuadro, escriba el servidor donde la **AdventureWorks2008** se encuentra la base de datos.  
+    1.  En el **nombre del servidor** , escriba el servidor donde la **AdventureWorks2008** se encuentra la base de datos.  
   
          La instancia de SQL Server Express predeterminada es **(local)\sqlexpress**.  
   
@@ -56,13 +56,13 @@ ms.locfileid: "36204350"
   
 9. En el **elegir un tipo de comando** página, seleccione **usar instrucciones SQL**y, a continuación, haga clic en **siguiente**.  
   
-10. En el **escriba una instrucción SQL** página, escriba la siguiente consulta de Transact-SQL para recuperar los datos de la **AdventureWorks2008** la base de datos y, a continuación, haga clic en **siguiente**.  
+10. En el **escriba una instrucción SQL** , escriba la siguiente consulta de Transact-SQL para recuperar datos de la **AdventureWorks2008** de base de datos y, a continuación, haga clic en **siguiente**.  
   
     ```  
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-     También puede crear la consulta haciendo clic en **generador de consultas**y, a continuación, compruebe la consulta haciendo clic en **Ejecutar consulta**. Si la consulta no devuelve los datos esperados, puede utilizar una versión anterior de AdventureWorks. Para obtener más información acerca de cómo instalar la **AdventureWorks2008** versión de AdventureWorks, vea [Tutorial: instalar la base de datos de AdventureWorks](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
+     También puede crear la consulta haciendo clic en **generador de consultas**y, a continuación, compruebe la consulta haciendo clic en **Ejecutar consulta**. Si la consulta no devuelve los datos esperados, puede utilizar una versión anterior de AdventureWorks. Para obtener más información acerca de cómo instalar el **AdventureWorks2008** versión de AdventureWorks, vea [Tutorial: instalar la base de datos AdventureWorks](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
   
 11. En el **elija los métodos para generar** página, no olvide desactivar **crear métodos para enviar actualizaciones directamente a la base de datos (GenerateDBDirectMethods)** y, a continuación, haga clic en **finalizar**.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36204350"
   
 12. Guarde el archivo.  
   
-13. Para obtener una vista previa de los datos, haga clic en **vista previa de datos** en el **datos** menú y, a continuación, haga clic en **vista previa**.  
+13. Para obtener una vista previa de los datos, haga clic en **datos de vista previa** en el **datos** menú y, a continuación, haga clic en **Preview**.  
   
 ## <a name="next-task"></a>Tarea siguiente  
  Ha creado correctamente una conexión de datos y una tabla de datos para el informe primario. Después, diseñará el informe primario usando el Asistente para informes.  

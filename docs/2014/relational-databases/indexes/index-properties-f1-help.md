@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.indexproperties.storage.f1
 - sql12.swb.indexproperties.columns.f1
@@ -19,15 +18,15 @@ f1_keywords:
 - sql12.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8ac38a8ac0fbe4e4761e3f2cd9a0524109727c99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 240c72d9facde541e2eefa25fd8ba6d456cb7133
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290951"
 ---
 # <a name="index-properties-f1-help"></a>Propiedades del índice (Ayuda F1)
   Las secciones de este tema hacen referencia a las distintas propiedades de índice disponibles mediante cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -184,7 +183,7 @@ ms.locfileid: "36203184"
 ### <a name="bounding-box"></a>Cuadro de límite  
  El *cuadro de límite* es el perímetro de la cuadrícula de nivel superior de un plano geométrico. Los parámetros de cuadro de límite solo existen en la teselación de cuadrícula de geometría. Estos parámetros no están disponibles si **Esquema de teselación** es **Cuadrícula de geografía**.  
   
- El panel muestra la **(*`X-min`*,*`Y-min`*)** y **(*`X-max`*,*`Y-max`*)** coordenadas del cuadro de límite. No hay valores predeterminados para las coordenadas. Por consiguiente, cuando cree un nuevo índice espacial en una columna de tipo `geometry`, deberá especificar los valores de las coordenadas.  
+ El panel muestra la **(*`X-min`*,*`Y-min`*)** y **(*`X-max`*,*`Y-max`*)** las coordenadas del rectángulo. No hay valores predeterminados para las coordenadas. Por consiguiente, cuando cree un nuevo índice espacial en una columna de tipo `geometry`, deberá especificar los valores de las coordenadas.  
   
  `X-min`  
  La coordenada x de la esquina inferior izquierda del cuadro de límite.  

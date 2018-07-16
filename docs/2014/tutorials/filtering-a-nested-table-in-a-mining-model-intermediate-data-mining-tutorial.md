@@ -1,5 +1,5 @@
 ---
-title: Filtrar una tabla anidada en un modelo de minería de datos (Tutorial de minería de datos intermedios) | Documentos de Microsoft
+title: Filtrar una tabla anidada en un modelo de minería de datos (Tutorial de minería de datos intermedios) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0a3ae0e5-897b-4898-a60d-5455eec3d305
 caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 9b11971c6e6005c7e1d65a1728e8b8aac818b41c
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: d39ec6f60a9d281f6e1a76f26da585b555066dcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273801"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>Filtrar un tabla anidada en un modelo de minería de datos (tutorial intermedio de minería de datos)
   Una vez creado y explorado el modelo, tal vez decida centrarse en un subconjunto de datos del cliente. Por ejemplo, es posible que solo desee analizar las cestas que contienen un producto específico o los datos demográficos de los clientes que no han realizado ninguna compra en un determinado período.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona la capacidad de filtrar los datos que se emplean en un modelo de minería de datos. Esta característica es útil porque no es necesario configurar una nueva vista de origen de datos para usar datos diferentes. En el Tutorial básico de minería de datos aprendió a filtrar datos de una tabla plana aplicando condiciones a la tabla de casos. En esta tarea, creará un filtro que se aplica a una tabla anidada.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona la capacidad de filtrar los datos que se emplean en un modelo de minería de datos. Esta característica es útil porque no es necesario configurar una nueva vista del origen de datos se utilizan datos diferentes. En el Tutorial básico de minería de datos aprendió a filtrar datos de una tabla plana aplicando condiciones a la tabla de casos. En esta tarea, creará un filtro que se aplica a una tabla anidada.  
   
 ## <a name="filters-on-nested-vs-case-tables"></a>Comparación de los filtros en tablas anidadas y en tablas de casos  
  Si la vista del origen de datos contiene una tabla de casos y una tabla anidada, como la vista del origen de datos utilizada en el modelo de asociación, puede filtrar valores de la tabla de casos, comprobar la presencia o ausencia de un valor en la tabla anidada o alguna combinación de ambos.  
@@ -33,17 +33,17 @@ ms.locfileid: "36312323"
   
 #### <a name="to-create-and-modify-a-copy-of-the-association-model"></a>Para crear y modificar una copia del modelo Association  
   
-1.  En el **modelos de minería de datos** ficha de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], haga clic en el `Association` de modelo y seleccione **nuevo modelo de minería de datos**.  
+1.  En el **modelos de minería de datos** ficha de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], haga clic en el `Association` del modelo y seleccione **nuevo modelo de minería de datos**.  
   
-2.  Para **nombre del modelo**, tipo `Association Filtered`. Para **nombre del algoritmo**, seleccione **reglas de asociación de Microsoft**. Haga clic en **Aceptar**.  
+2.  Para **Model Name**, tipo `Association Filtered`. Para **nombre del algoritmo**, seleccione **reglas de asociación de Microsoft**. Haga clic en **Aceptar**.  
   
-3.  En la columna para el modelo de asociación filtrada, haga clic en la fila IncomeGroup y cambie el valor de **omitir** a **entrada**.  
+3.  En la columna para el modelo asociación filtrada, haga clic en la fila IncomeGroup y cambie el valor de **omitir** a **entrada**.  
   
  A continuación, creará un filtro para la tabla de casos en el nuevo modelo de asociación. El filtro pasará al modelo solo los clientes de la región de destino o con el nivel de ingresos de destino. A continuación, agregará un segundo conjunto de condiciones de filtro para especificar que el modelo utilice solo los clientes cuyas cestas de la compra contengan al menos un producto.  
   
 #### <a name="to-add-a-filter-to-a-mining-model"></a>Para agregar un filtro a un modelo de minería de datos  
   
-1.  En el **modelos de minería de datos** pestaña, haga clic en el modelo de asociación filtrada y seleccione **Establecer filtro de modelos**.  
+1.  En el **modelos de minería de datos** pestaña, haga clic en el modelo asociación filtrada y seleccione **Establecer filtro de modelos**.  
   
 2.  En el cuadro de diálogo **Filtro del modelo** , haga clic en la fila superior de la cuadrícula en el cuadro de texto **Columna de la estructura de minería de datos** .  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36312323"
   
      El icono situado en la parte izquierda del cuadro de texto cambia para indicar que el elemento seleccionado es una columna.  
   
-4.  Haga clic en el **operador** cuadro de texto y seleccione la **=** operador de la lista.  
+4.  Haga clic en el **operador** cuadro de texto y seleccione el **=** operador en la lista.  
   
 5.  Haga clic en el **valor** cuadro de texto y escriba `High` en el cuadro.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36312323"
   
      `[IncomeGroup] = 'High' OR [IncomeGroup] = 'Moderate'`  
   
-9. Haga clic en la siguiente fila de la cuadrícula, dejando el operador como el valor predeterminado, **AND**.  
+9. Haga clic en la siguiente fila de la cuadrícula, dejando el operador de forma predeterminada, **AND**.  
   
 10. Para **operador**, deje el valor predeterminado, **Contains**. Haga clic en el **valor** cuadro de texto.  
   
@@ -81,17 +81,17 @@ ms.locfileid: "36312323"
   
 #### <a name="to-enable-drillthrough-and-to-process-the-filtered-model"></a>Para habilitar la obtención de detalles y procesar el modelo filtrado  
   
-1.  En el **modelos de minería de datos** pestaña, haga clic en el `Association Filtered` de modelo y seleccione **propiedades**.  
+1.  En el **modelos de minería de datos** pestaña, haga clic en el `Association Filtered` del modelo y seleccione **propiedades**.  
   
 2.  Cambiar el **AllowDrillThrough** propiedad **True**.  
   
 3.  Haga clic en el `Association Filtered` modelo de minería de datos y seleccione **modelo de proceso**.  
   
-4.  Haga clic en **Sí** en el mensaje de error para implementar el nuevo modelo para el [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de datos.  
+4.  Haga clic en **Sí** en el mensaje de error para implementar el modelo nuevo a la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de datos.  
   
 5.  En el **procesar estructura de minería de datos** cuadro de diálogo, haga clic en **ejecutar**.  
   
-6.  Cuando se completa el procesamiento, haga clic en **cerrar** para salir de la **progreso del proceso** cuadro de diálogo y haga clic en **cerrar** nuevo para salir del **procesar estructura de minería de datos**  cuadro de diálogo.  
+6.  Cuando se completa el procesamiento, haga clic en **cerrar** para salir del **progreso del proceso** cuadro de diálogo y haga clic en **cerrar** nuevo para salir el **procesar estructura de minería de datos**  cuadro de diálogo.  
   
  Mediante el Visor de árbol de contenido genérico de Microsoft y examinando el valor de NODE_SUPPORT, puede comprobar que el modelo filtrado contiene menos casos que el modelo original.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "36312323"
  [Predecir asociaciones &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
- [La sintaxis de filtros y ejemplos de modelos &#40;Analysis Services: minería de datos&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Filtros para modelos de minería de datos de &#40;Analysis Services: minería de datos&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Ejemplos y sintaxis de filtro del modelo &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Filtros para modelos de minería de datos de &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

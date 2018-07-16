@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], dynamic filters
 - merge replication [SQL Server replication], dynamic filters
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 74cb3cd9631e0b709b7eb5cf0cb0856bc3b830af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a66dcf09bc64991be32b9d7bf66e2e1729de6c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225425"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   Los filtros de filas con parámetros permiten enviar diferentes particiones de datos a diferentes suscriptores sin necesidad de crear varias publicaciones (los filtros con parámetros se denominaban filtros dinámicos en versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Una partición es un subconjunto de filas de una tabla; dependiendo de la configuración elegida al crear un filtro de filas con parámetros, cada fila de una tabla publicada puede pertenecer a una sola partición (lo que produce particiones no superpuestas) o a dos o más particiones (lo que produce particiones superpuestas).  
@@ -98,7 +98,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  Por ejemplo, a la empleada Pamela Ansman-Wolfe se le ha asignado el identificador 280. Especifique el valor de identificador de empleado (280 en este ejemplo) como valor de HOST_NAME() al crear una suscripción para esta empleada. Cuando el Agente de mezcla se conecte al publicador, comparará el valor devuelto por HOST_NAME() con los valores de la tabla y descargará únicamente la fila que contiene el valor 280 en la columna **EmployeeID** .  
   
 > [!IMPORTANT]  
->  La función HOST_NAME () devuelve un `nchar` valor, por lo que debe usar CONVERT si la columna en la cláusula de filtro es de un tipo de datos numéricos, como en el ejemplo anterior. Por motivos de rendimiento, se recomienda no aplicar funciones a los nombres de columna en las cláusulas de los filtros de fila con parámetros, como `CONVERT(nchar,EmployeeID) = HOST_NAME()`. En su lugar, se recomienda usar el método que se muestra en el ejemplo: `EmployeeID = CONVERT(int,HOST_NAME())`. Esta cláusula se puede usar para la **@subset_filterclause** parámetro de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), pero normalmente no se puede usar el Asistente para nueva publicación (el asistente ejecuta la cláusula de filtro para validarlo, que se produce un error porque el nombre del equipo no se puede convertir a un `int`). Si usa el Asistente para nueva publicación, se recomienda especificar `CONVERT(nchar,EmployeeID) = HOST_NAME()` en el asistente y, a continuación, usar [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) para cambiar la cláusula a `EmployeeID = CONVERT(int,HOST_NAME())` antes de crear una instantánea de la publicación.  
+>  La función HOST_NAME () devuelve un `nchar` valor, lo que debe usar CONVERT si la columna en la cláusula de filtro es de tipo de datos numérico, como en el ejemplo anterior. Por motivos de rendimiento, se recomienda no aplicar funciones a los nombres de columna en las cláusulas de los filtros de fila con parámetros, como `CONVERT(nchar,EmployeeID) = HOST_NAME()`. En su lugar, se recomienda usar el método que se muestra en el ejemplo: `EmployeeID = CONVERT(int,HOST_NAME())`. Esta cláusula se puede usar para la **@subset_filterclause** parámetro de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), pero normalmente no se puede usar el Asistente para nueva publicación (el asistente ejecuta la cláusula de filtro para validarlo, que se produce un error porque el nombre del equipo no puede convertirse en un `int`). Si usa el Asistente para nueva publicación, se recomienda especificar `CONVERT(nchar,EmployeeID) = HOST_NAME()` en el asistente y, a continuación, usar [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) para cambiar la cláusula a `EmployeeID = CONVERT(int,HOST_NAME())` antes de crear una instantánea de la publicación.  
   
  **Para reemplazar el valor de HOST_NAME()**  
   
@@ -131,8 +131,8 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 |Descripción|Valor en Agregar filtro y Editar filtro|Valor en Propiedades del artículo|Valor en procedimientos almacenados|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |Los datos de las particiones se superponen y el suscriptor puede actualizar las columnas a las que se hace referencia en un filtro con parámetros.|**Una fila de esta tabla irá a varias suscripciones**|**Superpuestas**|**0**|  
-|Los datos de las particiones se superponen y el suscriptor no puede actualizar las columnas a las que se hace referencia en un filtro con parámetros.|N /<sup>1</sup>|**Superpuestas, no permitir cambios de datos fuera de la partición**|**1**|  
-|Los datos de las particiones no se superponen y los datos se comparten entre las suscripciones. El suscriptor no puede actualizar columnas a las que se hace referencia en un filtro con parámetros.|N /<sup>1</sup>|**No superpuestas, compartir entre suscripciones**|**2**|  
+|Los datos de las particiones se superponen y el suscriptor no puede actualizar las columnas a las que se hace referencia en un filtro con parámetros.|N/D<sup>1</sup>|**Superpuestas, no permitir cambios de datos fuera de la partición**|**1**|  
+|Los datos de las particiones no se superponen y los datos se comparten entre las suscripciones. El suscriptor no puede actualizar columnas a las que se hace referencia en un filtro con parámetros.|N/D<sup>1</sup>|**No superpuestas, compartir entre suscripciones**|**2**|  
 |Los datos de las particiones no se superponen y hay una sola suscripción por partición. El suscriptor no puede actualizar las columnas que se hace referencia en un filtro con parámetros. <sup>2</sup>|**Una fila de esta tabla irá a una sola suscripción**|**No superpuestas, una sola suscripción**|**3**|  
   
  <sup>1</sup> si la opción de filtrado subyacente se establece en **0**, o **1**, o **2**, **Agregar filtro** y **editar Filtro** mostrarán cuadros de diálogo **una fila de esta tabla irá a varias suscripciones**.  

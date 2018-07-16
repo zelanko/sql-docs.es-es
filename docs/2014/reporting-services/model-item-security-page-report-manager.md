@@ -1,5 +1,5 @@
 ---
-title: Página de seguridad (Administrador de informes) del elemento de modelo | Documentos de Microsoft
+title: Página de seguridad (Administrador de informes) del elemento de modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0d7f05024178334c11fccfd819aed1a4f4e023d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56cb59be6fd256ee182e7b57a5ecd7b4a103bfec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299805"
 ---
 # <a name="model-item-security-page-report-manager"></a>Página Seguridad de elemento de modelo (Administrador de informes)
   Use esta página para proteger partes de un modelo concediendo o revocando permisos de solo lectura en elementos concretos. La seguridad del elemento de modelo afecta a la exploración de datos ad hoc en tiempo de ejecución y a la capacidad de usar partes de un modelo publicado cuando se crean informes en el Generador de informes. Para usar esta característica, debe tener permisos de Administrador de contenido.  
@@ -68,13 +68,13 @@ ms.locfileid: "36107821"
  **Proteger elementos de modelo individuales independientemente para este modelo**  
  Haga clic en esta casilla para habilitar la seguridad de elemento de modelo.  
   
- **Especificar la seguridad para elementos de modelo individuales en el modo**  
+ **Especifique la seguridad para elementos de modelo individuales en el modo**  
  Muestra todos los elementos de un modelo. Puede navegar por el espacio de nombres del modelo para seleccionar el elemento que desea proteger. Solo puede seleccionar un elemento cada vez. Asegúrese de crear la primera asignación de roles en el nodo raíz antes de continuar con otras entidades y carpetas.  
   
  **Heredar permisos del elemento primario**  
  Haga clic en esta opción para heredar la configuración de seguridad del elemento primario.  
   
- **Asignar el permiso de lectura a los siguientes usuarios y grupos (punto y coma separada)**  
+ **Asignar permiso de lectura a los usuarios y grupos siguientes (separados con puntos y coma)**  
  Haga clic en esta opción para especificar la cuenta de usuario o grupo para la que define el acceso. Si va a utilizar la seguridad predeterminada, las cuentas de usuario y grupo son las cuentas de dominio de Windows. Especifique las cuentas con este formato:  *\<dominio >\\< cuenta\>*.  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: iniciar el Asesor de actualizaciones | Documentos de Microsoft'
+title: 'Cómo: iniciar el Asesor de actualizaciones | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - launching Upgrade Advisor
 - starting Upgrade Advisor
@@ -16,26 +16,26 @@ helpviewer_keywords:
 - Upgrade Advisor [SQL Server], launching
 ms.assetid: 0a067cb0-ed83-4a29-bb14-06b24254f3dd
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6d044ae9f61434a0290ee525af2bc60a895be77d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c853e40a0559dcecd550327ba750ba9cdc2c2e9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236265"
 ---
 # <a name="how-to-launch-upgrade-advisor"></a>Cómo iniciar el Asesor de actualizaciones
   El Asesor de actualizaciones proporciona una consola central que puede utilizar para iniciar el Asistente para análisis del Asesor de actualizaciones y el Visor de informes del Asesor de actualizaciones. En este tema se describe cómo iniciar el Asesor de actualizaciones.  
   
 ### <a name="to-launch-upgrade-advisor"></a>Para iniciar el Asesor de actualizaciones  
   
--   Para iniciar el Asesor de actualizaciones, haga clic en **iniciar**, haga clic en **todos los programas**, haga clic en **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** y, a continuación, haga clic en **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Asesor de actualizaciones**.  
+-   Para iniciar el Asesor de actualizaciones, haga clic en **iniciar**, haga clic en **todos los programas**, haga clic en **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** y, a continuación, haga clic en **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
   
 ## <a name="see-also"></a>Vea también  
- [Ejecutar el Asesor de actualizaciones &#40;interfaz de usuario&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
- [Temas "Cómo..." asesor de actualización](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
+ [Ejecute el Asesor de actualizaciones &#40;interfaz de usuario&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
+ [Actualizar temas de procedimientos del Asesor de actualizaciones](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

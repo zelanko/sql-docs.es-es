@@ -1,28 +1,27 @@
 ---
-title: Mantener una base de datos de publicación AlwaysOn (SQL Server) | Documentos de Microsoft
+title: Mantener una base de datos de publicación AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 caps.latest.revision: 9
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: dd0f464aeefcbd77f2a4f0dee726516a55a60132
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a2e66a3537b62658458357a642a76d6e283abb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200205"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>Mantener una base de datos de publicación AlwaysOn (SQL Server)
   En este tema se describen las consideraciones especiales para mantener una base de datos de publicación cuando se usan grupos de disponibilidad AlwaysOn.  
@@ -36,7 +35,7 @@ ms.locfileid: "36203731"
   
 -   El Monitor de replicación muestra siempre la información de publicación en el publicador original. Sin embargo, esta información se puede ver en el Monitor de replicación de cualquier réplica al agregar el publicador original como servidor.  
   
--   Si se utilizan procedimientos almacenados o Replication Management Objects (RMO) para administrar la replicación en la réplica principal actual, en los casos en que se especifica el nombre del publicador, se debe especificar el nombre de la instancia en la que la base de datos se habilitó para la replicación (el publicador original). Para determinar el nombre correcto, use la función `PUBLISHINGSERVERNAME`. Cuando una base de datos de publicación se une a un grupo de disponibilidad, los metadatos de replicación almacenados en las réplicas de la base de datos secundaria son idénticos a los de la principal. En consecuencia, para las bases de datos de publicación habilitadas para replicación en la entidad principal, el nombre de la instancia del publicador que está almacenado en las tablas del sistema en la entidad secundaria es el nombre de la entidad principal en lugar del nombre de la entidad secundaria. Esto afecta a la configuración y al mantenimiento de la replicación si se produce la conmutación por error de la base de datos de publicación a la entidad secundaria. Por ejemplo, si configura la replicación con procedimientos almacenados en una base de datos secundaria después de la conmutación por error y desea que una suscripción de extracción a una base de datos de publicación que se habilitó en otra réplica, debe especificar el nombre del publicador original en lugar de la publicador actual como el *@publisher* parámetro de `sp_addpullsubscription` o `sp_addmergepulllsubscription`. Sin embargo, si habilita una base de datos de publicación después de la conmutación por error, el nombre de la instancia del publicador almacenado en las tablas del sistema es el nombre del host principal actual. En este caso, usaría el nombre de host de réplica principal actual para el parámetro *@publisher* .  
+-   Si se utilizan procedimientos almacenados o Replication Management Objects (RMO) para administrar la replicación en la réplica principal actual, en los casos en que se especifica el nombre del publicador, se debe especificar el nombre de la instancia en la que la base de datos se habilitó para la replicación (el publicador original). Para determinar el nombre correcto, use la función `PUBLISHINGSERVERNAME`. Cuando una base de datos de publicación se une a un grupo de disponibilidad, los metadatos de replicación almacenados en las réplicas de la base de datos secundaria son idénticos a los de la principal. En consecuencia, para las bases de datos de publicación habilitadas para replicación en la entidad principal, el nombre de la instancia del publicador que está almacenado en las tablas del sistema en la entidad secundaria es el nombre de la entidad principal en lugar del nombre de la entidad secundaria. Esto afecta a la configuración y al mantenimiento de la replicación si se produce la conmutación por error de la base de datos de publicación a la entidad secundaria. Por ejemplo, si configura la replicación con procedimientos almacenados en una entidad secundaria después de la conmutación por error y desea una suscripción de extracción a una base de datos de publicación que se habilitó en otra réplica, debe especificar el nombre del publicador original en lugar de la publicador actual como el *@publisher* parámetro de `sp_addpullsubscription` o `sp_addmergepulllsubscription`. Sin embargo, si habilita una base de datos de publicación después de la conmutación por error, el nombre de la instancia del publicador almacenado en las tablas del sistema es el nombre del host principal actual. En este caso, usaría el nombre de host de réplica principal actual para el parámetro *@publisher* .  
   
     > [!NOTE]  
     >  Para algunos procedimientos, como `sp_addpublication`, *@publisher* parámetro solo se admite para publicadores que no sean instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; en estos casos, no es relevante para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn.  
@@ -116,7 +115,7 @@ ms.locfileid: "36203731"
   
 ## <a name="see-also"></a>Vea también  
  [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Grupos de disponibilidad AlwaysOn: Interoperabilidad (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [Replicación de SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   

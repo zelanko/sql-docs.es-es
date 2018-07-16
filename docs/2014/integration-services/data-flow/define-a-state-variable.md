@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f9eedf55aae8fe87da589d7fccb5e53456d70039
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efe8941ee77c9dbfd8ee335e9e1a2ed2931d1503
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107691"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322685"
 ---
 # <a name="define-a-state-variable"></a>Definir una variable de estado
   Este procedimiento describe cómo definir una variable de paquete donde se almacena el estado CDC.  
@@ -53,10 +53,10 @@ ms.locfileid: "36107691"
 |-----------|-----------------|  
 |(INITIAL)|Este es el estado inicial antes de que se ejecute ningún paquete en el grupo CDC actual. Es también el estado cuando el estado CDC está vacío.|  
 |ILSTART (Carga inicial iniciada)|Es el estado en el que se inicia el paquete de carga inicial, después de que la operación `MarkInitialLoadStart` llame a la tarea Control CDC.|  
-|ILEND (Carga inicial terminada)|Es el estado cuando el paquete de carga inicial finaliza correctamente, después de la `MarkInitialLoadEnd` llamada de operación a la tarea Control CDC.|  
+|ILEND (Carga inicial terminada)|Es el estado cuando finaliza correctamente, el paquete de carga inicial después de que el `MarkInitialLoadEnd` llamada de operación a la tarea Control CDC.|  
 |ILUPDATE (Actualización de carga inicial)|Es el estado en las ejecuciones del paquete de actualización de fuente de generación tras la carga inicial, mientras continúa procesándose el intervalo de procesamiento inicial. Se trata de una vez el `GetProcessingRange` llamada de operación a la tarea Control CDC.<br /><br /> Si se usa la columna __$reprocessing, se establece en 1 para indicar que el paquete puede estar ya volviendo a procesar filas en el destino.|  
 |TFEND (Actualización de fuente de generación terminada)|Es el estado que se espera para las ejecuciones normales de CDC. Indica que la ejecución anterior se completó correctamente y que se puede iniciar una ejecución nueva con un intervalo de procesamiento nuevo.|  
-|TFSTART|Éste es el estado en una ejecución posterior del paquete de actualización de fuente de generación, tras el `GetProcessingRange` llamada de operación a la tarea Control CDC.<br /><br /> Esto indica que se inicia una ejecución de CDC normal pero no ha terminado o no ha terminado, limpiamente (`MarkProcessedRange`).|  
+|TFSTART|Este es el estado en una ejecución posterior del paquete de actualización de fuente de generación, tras el `GetProcessingRange` llamada de operación a la tarea Control CDC.<br /><br /> Esto indica que se inicia una ejecución de CDC normal, pero no ha terminado o ha no ha completado correctamente (`MarkProcessedRange`).|  
 |TFREDO (Reprocesamiento de actualizaciones de fuente de generación)|Es el estado en una `GetProcessingRange` que tiene lugar tras TFSTART. Esto indica que la ejecución anterior no ha finalizado correctamente.<br /><br /> Si se usa la columna __$reprocessing, se establece en 1 para indicar que el paquete puede estar ya volviendo a procesar filas en el destino.|  
 |ERROR|El grupo CDC tiene un estado ERROR.|  
   

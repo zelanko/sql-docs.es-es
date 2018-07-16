@@ -1,5 +1,5 @@
 ---
-title: Agregar modelo a estructura (complementos de minería de datos para Excel de datos) | Documentos de Microsoft
+title: Agregar modelo a estructura (complementos de minería de datos para Excel de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, creating
 ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e13b75081b4c4cd31a4a3de393b480e713c9d909
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71016faaac6126328e1565ef7644fcf0bdf74376
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241765"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Agregar modelo a estructura (Complementos de minería de datos para Excel)
-  ![Agregar modelo a botón estructura](media/dmc-addmodel.gif "Add Model al botón de estructura")  
+  ![Agregar modelo a botón estructura](media/dmc-addmodel.gif "Agregar modelo a botón estructura")  
   
- Al hacer clic en **Agregar modelo a estructura**, inicia un asistente que le ayuda a crea un nuevo modelo de minería de datos para usar con una estructura de minería de datos existente. Esta opción es útil porque permite comparar modelos basados en los mismos datos o crear modelos personalizados.  
+ Al hacer clic en **Agregar modelo a estructura**, se inicia un asistente que le ayuda a crea un nuevo modelo de minería de datos para usar con una estructura de minería de datos existente. Esta opción es útil porque permite comparar modelos basados en los mismos datos o crear modelos personalizados.  
   
  Si la instancia de Analysis Services aún no contiene los datos que necesita, use el [Create Mining Structure &#40;complementos de minería de datos de SQL Server&#41; ](create-mining-structure-sql-server-data-mining-add-ins.md) Asistente para configurar una estructura de minería de datos. O bien, puede iniciar uno de los asistentes de modelado y agregar después un modelo nuevo a la estructura creada por el asistente.  
   
@@ -38,15 +38,15 @@ ms.locfileid: "36196345"
   
 2.  En el **seleccionar estructura** diálogo cuadro, elija la estructura que contiene los datos que desea usar y, a continuación, haga clic en **siguiente**.  
   
-     **Sugerencia**: si no está seguro de qué estructura de minería de datos contiene los datos que necesita, use el **documento modelo** Asistente para ver las columnas y estadísticas básicas sobre los datos.  
+     **Sugerencia**: si no estás seguro de qué estructura de minería de datos contiene los datos que necesita, use el **documentar modelo** Asistente para ver las columnas y estadísticas básicas sobre los datos.  
   
      Si no encuentra una estructura de minería de datos, compruebe la conexión que está usando actualmente. Quizás necesite abrir una conexión a un servidor diferente.  
   
-3.  En el **seleccionar algoritmo de minería de datos** diálogo cuadro, seleccione un algoritmo de minería de datos para utilizarlo en el nuevo modelo de minería de datos.  
+3.  En el **seleccionar algoritmo de minería de datos** cuadro de diálogo, seleccione un algoritmo de minería de datos para usar en el nuevo modelo de minería de datos.  
   
      Observe que el cuadro de diálogo proporciona muchas más opciones que verá en los asistentes. Puede crear un modelo con cualquiera de los algoritmos admitidos en el servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], siempre y cuando los datos sean compatibles.  
   
-4.  Se recomienda que hacer clic en el **parámetros** para abrir el **parámetros de algoritmo** diálogo cuadro y personalizar los parámetros del algoritmo. Esta opción es la manera más fácil de crear modelos de minería de datos personalizados.  
+4.  Se recomienda que hacer clic en el **parámetros** botón para abrir el **parámetros de algoritmo** diálogo cuadro y personalizar los parámetros del algoritmo. Esta opción es la manera más fácil de crear modelos de minería de datos personalizados.  
   
 5.  Haga clic en **Siguiente**.  
   
@@ -56,21 +56,21 @@ ms.locfileid: "36196345"
   
     -   **Entrada y predicción**. Indica que los datos se deben usar como entrada y que también desea predecir estos valores.  
   
-    -   **Predecir solo**. Indica que los datos no se deben usar como entrada para el modelo.  
+    -   **Sólo predicción**. Indica que los datos no se deben usar como entrada para el modelo.  
   
-    -   **Clave**. Cada modelo requiere al menos una clave. Según el tipo de modelo, también tendrá la opción de claves especiales adicionales, como el **SequenceKey** o **TimeKey**.  
+    -   **Clave**. Cada modelo requiere al menos una clave. Según el tipo de modelo, es posible que también tiene la opción de claves especiales adicionales, como el **SequenceKey** o **TimeKey**.  
   
-    -   **No utilice**. Indica que los datos no se deben usar en el modelo, aunque estén presentes en la estructura.  
+    -   **No use**. Indica que los datos no se deben usar en el modelo, aunque estén presentes en la estructura.  
   
-7.  Haga clic en el botón Examinar **(...)**  para abrir el **establecer marcadores de modelo de columna** cuadro de diálogo.  
+7.  Haga clic en el **(...)**  botón para abrir el **establecer marcadores de modelo de columna** cuadro de diálogo.  
   
      Dedique un minuto a comprobar que el uso de cada columna de datos es adecuado para el modelo. Se trata de un paso importante para evitar errores al intentar procesar el modelo.  
   
-     Por ejemplo, si reutiliza una estructura que se creó para los árboles de decisión del modelo y aplican el algoritmo Naïve Bayes, las columnas que tener el tipo de datos `Numeric` y el tipo de contenido `Continuous` deberá agrupar o cambiar las variables discretas.  
+     Por ejemplo, si vuelve a usar una estructura que se creó para los árboles de decisión del modelo y aplican el algoritmo Naïve Bayes a ella, las columnas que tener el tipo de datos `Numeric` y el tipo de contenido `Continuous` deberá se agrupan o se ha cambiado a variables discretas.  
   
-     Si las columnas de la estructura no son aplicables para el nuevo algoritmo, se puede omitir seleccionando **no utilice**.  
+     Si las columnas de la estructura no son aplicables para el nuevo algoritmo, se puede omitir seleccionando **no use**.  
   
-8.  En el **establecer marcadores de modelo de columna** cuadro de diálogo, revise o establezca los marcadores de modelado, si lo hay.  
+8.  En el **establecer marcadores de modelo de columna** cuadro de diálogo, revisar o conjunto de los marcadores de modelado, si existe.  
   
      Los marcadores de modelado permiten controlar cómo se tratan los valores NULL, entre otras cosas. Para obtener más información, vea [Marcas de modelado &#40;Minería de datos&#41;](data-mining/modeling-flags-data-mining.md).  
   
@@ -92,12 +92,12 @@ ms.locfileid: "36196345"
   
 |Opción|Comentarios|  
 |------------|--------------|  
-|**Seleccionar estructura o modelo** cuadro de diálogo|Elija una estructura de minería de datos existente para usarla como base para generar un nuevo modelo.  La estructura que elija debe estar en la conexión actual. Si no es así, cambie las conexiones mediante el [conectarse a los datos de origen &#40;cliente de minería de datos para Excel&#41; ](connect-to-source-data-data-mining-client-for-excel.md) herramienta.|  
+|**Seleccionar estructura o modelo** cuadro de diálogo|Elija una estructura de minería de datos existente para usarla como base para generar un nuevo modelo.  La estructura que elija debe estar en la conexión actual. Si no, cambie las conexiones mediante el [conectarse a los datos de origen &#40;cliente de minería de datos para Excel&#41; ](connect-to-source-data-data-mining-client-for-excel.md) herramienta.|  
 |**Seleccione el algoritmo de minería de datos** cuadro de diálogo|La lista de los algoritmos de minería de datos depende del servidor al que está conectado. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona diferentes algoritmos en las ediciones Standard y Enterprise. El administrador puede haber agregado también algoritmos personalizados.<br /><br /> Si no puede ver los algoritmos, compruebe que está conectado a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |**Parámetros de algoritmo** cuadro de diálogo|En estos valores, puede personalizar cada algoritmo usando parámetros específicos del método analítico. También puede establecer un valor de inicialización para asegurarse de que los resultados del modelo se pueden reproducir en varios pasos de entrenamiento.<br /><br /> Para obtener más información, consulte [parámetros de algoritmo &#40;complementos de minería de datos de SQL Server&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md).|  
-|**Establecer indicadores de modelo de columna** cuadro de diálogo|Los marcadores de modelado pueden mejorar el modelo especificando cómo se deben tratar los datos que faltan. Para obtener más información, vea [Marcas de modelado &#40;Minería de datos&#41;](data-mining/modeling-flags-data-mining.md).|  
+|**Establecer marcadores de modelo de columna** cuadro de diálogo|Los marcadores de modelado pueden mejorar el modelo especificando cómo se deben tratar los datos que faltan. Para obtener más información, vea [Marcas de modelado &#40;Minería de datos&#41;](data-mining/modeling-flags-data-mining.md).|  
   
-###  <a name="Bkmk_mdlcolumn"></a> Establecer el uso de la columna  
+###  <a name="Bkmk_mdlcolumn"></a> Establecer el uso de columna  
  Al agregar un nuevo modelo a una estructura de minería de datos existente, debe especificar la forma en que el modelo usará cada una de las columnas de datos en la estructura de minería de datos. Probablemente observará que las opciones de este asistente son mucho más detalladas que las opciones de la estructura de minería de datos. ¿Por qué?  
   
  El motivo es que cuando crea un modelo y una estructura a la vez con un asistente, muchas de las opciones que controlan cómo usa el algoritmo los datos se establecen automáticamente. Sin embargo, al agregar un modelo nuevo a uno existente, debe ver estas opciones manualmente y especificar si los datos se deben usar para el análisis, si el tipo de datos es correcto, etc.  

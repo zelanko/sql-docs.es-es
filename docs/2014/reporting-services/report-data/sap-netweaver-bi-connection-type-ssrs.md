@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8cd1548cb8fb22a49900cc916dc1fde610993a05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: b05c961fcd9d3a4a64715f6bc96754000969a6ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198130"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216885"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo de conexión de SAP NetWeaver BI (SSRS)
   Para incluir en un informe datos de un origen de datos de SAP NetWeaver® Business Intelligence externo, debe tener un conjunto de datos basado en un origen de datos de informe de tipo [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Este tipo de origen de datos integrado está basado en la extensión de datos del proveedor de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 para [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
   
  Esta extensión de datos permite recuperar datos multidimensionales de InfoCubes, MultiProviders (InfoCubes virtual) y consultas habilitadas para web definidas en un origen de datos [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] externo.  
   
- Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones detalladas, consulte [agregar y comprobar una conexión de datos o un origen de datos &#40;el generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones detalladas, consulte [agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="support"></a> Versiones admitidas  
  El proveedor de datos se ha desarrollado para SAP BW 3.5 y 7.0 y se ha probado en estas soluciones.  
@@ -37,7 +37,7 @@ ms.locfileid: "36198130"
   
 -   Paquete de soporte 20 de SAP Portals 6.40  
   
--   Paquete de soporte de portales 7.0 11 de SAP  
+-   Paquete de compatibilidad de portales 7.0 11 de SAP  
   
 -   SAP Duet 1.0  
   
@@ -57,7 +57,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  Después de publicar el informe, es posible que necesite cambiar las credenciales para el origen de datos de tal forma que, cuando el informe se ejecute en el servidor de informes, los permisos para recuperar los datos sean válidos.  
   
- Para obtener más información, consulte [las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [especificar credenciales en el generador de informes](../specify-credentials-in-report-builder.md).  
+ Para obtener más información, consulte [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [especificar credenciales en Generador de informes](../specify-credentials-in-report-builder.md).  
   
   
   
@@ -78,11 +78,11 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  El origen de datos [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] admite propiedades de campo extendidas. Propiedades de campo extendidas son propiedades además `Value` y `IsMissing` que se definen para un campo de conjunto de datos mediante la extensión de procesamiento de datos. Las propiedades extendidas incluyen propiedades predefinidas y propiedades personalizadas. Las propiedades predefinidas son propiedades comunes para varios orígenes de datos. Las propiedades personalizadas son únicas para cada origen de datos.  
   
 ### <a name="working-with-field-properties"></a>Trabajar con propiedades de campo  
- Las propiedades de campo extendidas no aparecen en el panel Datos de informe como elementos que se puedan arrastrar al diseño del informe. En su lugar, arrastre el campo primario de la propiedad al informe y, a continuación, cambie la propiedad predeterminada de `Value` a la propiedad que desea utilizar. Por ejemplo, si se crease el nombre de campo **Calendar Year/Month Level 01** en un diseñador de consultas MDX colocando un nivel del panel Metadatos en el panel Consulta, se usaría la sintaxis siguiente para hacer referencia a la propiedad extendida personalizada **Nombre largo** en una expresión:  
+ Las propiedades de campo extendidas no aparecen en el panel Datos de informe como elementos que se puedan arrastrar al diseño del informe. En su lugar, arrastre el campo primario de la propiedad al informe y, a continuación, cambie la propiedad predeterminada de `Value` a la propiedad que desea usar. Por ejemplo, si se crease el nombre de campo **Calendar Year/Month Level 01** en un diseñador de consultas MDX colocando un nivel del panel Metadatos en el panel Consulta, se usaría la sintaxis siguiente para hacer referencia a la propiedad extendida personalizada **Nombre largo** en una expresión:  
   
  `=Fields!Calendar_Year_Month_Level_01("Long Name")`  
   
- El nombre de la propiedad de campo extendida aparecerá en la información sobre herramientas al mantener el mouse encima de un campo del panel Metadatos. Para obtener más información acerca de los diseñadores de consultas puede utilizar para explorar los datos subyacentes, vea [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md).  
+ El nombre de la propiedad de campo extendida aparecerá en la información sobre herramientas al mantener el mouse encima de un campo del panel Metadatos. Para obtener más información acerca de los diseñadores de consultas que puede usar para explorar los datos subyacentes, vea [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md).  
   
 > [!NOTE]  
 >  Solo existirán valores para las propiedades de campo extendidas si el origen de datos ofrece estos valores cuando el informe se ejecuta y recupera los datos de sus conjuntos de datos. A continuación, puede hacer referencia a esos `Field` valores de propiedad de cualquier expresión mediante la sintaxis descrita más adelante. No obstante, dado que estos campos son específicos de este proveedor de datos y no son parte del lenguaje RDL (Report Definition Language), los cambios que se realicen en estos valores no se guardarán con la definición de informe.  
@@ -112,7 +112,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |`Key`|`Object`|Devuelve la clave de un nivel.|  
 |`LevelNumber`|`Integer`|En jerarquías de elementos primarios y secundarios, devuelve el número de nivel o dimensión.|  
 |`ParentUniqueName`|`String`|En jerarquías de elementos primarios y secundarios, devuelve el nombre completo del nivel primario.|  
-|`UniqueName`|`String`|Devuelve el nombre completo de un nivel. Por ejemplo, el `UniqueName` el valor de un empleado puede ser *[0D_Company]. [ 10D_Department]. [11]* .|  
+|`UniqueName`|`String`|Devuelve el nombre completo de un nivel. Por ejemplo, el `UniqueName` el valor de un empleado podría ser *[0D_Company]. [ 10D_Department]. [11]* .|  
   
  Para más información sobre el uso de campos y propiedades de campo en una expresión, vea [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -128,7 +128,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="HowTo"></a> Temas de procedimientos  
  Esta sección contiene instrucciones paso a paso para trabajar con conexiones de datos, orígenes de datos y conjuntos de datos.  
   
- [Agregar y comprobar una conexión de datos o un origen de datos &#40;el generador de informes SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -139,7 +139,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="Related"></a> Secciones relacionadas  
  Estas secciones de la documentación proporcionan información conceptual detallada sobre los datos de informe, así como información de procedimientos acerca de cómo definir, personalizar y usar las partes de un informe que están relacionadas con datos.  
   
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-datasets-ssrs.md)  
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)  
  Proporciona información general sobre cómo obtener acceso a los datos del informe.  
   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

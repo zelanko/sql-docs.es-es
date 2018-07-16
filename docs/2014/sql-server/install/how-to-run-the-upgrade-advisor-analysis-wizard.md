@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: ejecutar el Asistente de análisis del Asesor de actualizaciones | Documentos de Microsoft'
+title: 'Cómo: ejecutar el Asistente para análisis del Asesor | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Analysis Wizard
 ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ff92f0bb0cbf15e61895307d799415639a89eab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 29aeaa20d5fed63731c84872ffb193da4bcfce27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282571"
 ---
-# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>Cómo: ejecutar el Asistente de análisis del Asesor de actualizaciones
+# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>Cómo: ejecutar el Asistente para análisis del Asesor
   Puede iniciar el Asistente para análisis del Asesor de actualizaciones desde la página de inicio de este último. En este tema se describe cómo ejecutar el Asistente para análisis del Asesor de actualizaciones.  
   
 > [!IMPORTANT]  
 >  Cuando ejecute el Asistente para análisis del Asesor de actualizaciones, el Asesor de actualizaciones guarda los informes en la carpeta predeterminada para informes. No obstante, el visor de informes solo muestra los cinco últimos informes guardados. La ubicación predeterminada para los informes es Mis documentos\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports.  
   
-### <a name="to-run-the-upgrade-advisor-analysis-wizard"></a>Para ejecutar al Asistente de análisis del Asesor de actualizaciones  
+### <a name="to-run-the-upgrade-advisor-analysis-wizard"></a>Para ejecutar al Asistente para actualización de análisis de Advisor  
   
-1.  En la página de inicio del Asesor de actualizaciones, haga clic en **iniciar el Asistente de análisis de Asesor de actualizaciones**.  
+1.  En la página de inicio del Asesor de actualizaciones, haga clic en **iniciar Asistente de análisis del Asistente para actualizar**.  
   
-2.  En el  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes** página, escriba el nombre del servidor a examinar en el **nombre del servidor** cuadro y, a continuación, haga clic en **detectar**. Siga las instrucciones que se detallan a continuación para especificar el nombre del servidor:  
+2.  En el  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes** , escriba el nombre del servidor para examinar en el **nombre del servidor** cuadro y, a continuación, haga clic en **detectar**. Siga las instrucciones que se detallan a continuación para especificar el nombre del servidor:  
   
     -   Para examinar instancias que no estén en clúster, escriba el nombre del equipo.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "36201077"
     -   Para examinar componentes no clúster instalados en el nodo de un clúster, escriba el nombre del nodo.  
   
     > [!WARNING]  
-    >  El Asesor de actualizaciones no admite la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no configurada para usar el puerto estándar (1433) para las conexiones de clientes. Si desea establecer una conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no usa el puerto estándar (1433), cree un alias mediante la dirección IP y el puerto. Para obtener más información sobre cómo configurar protocolos de cliente y crear un alias para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancias, vea [configurar protocolos de cliente](../../database-engine/configure-windows/configure-client-protocols.md).  
+    >  El Asesor de actualizaciones no admite la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no configurada para usar el puerto estándar (1433) para las conexiones de clientes. Si desea establecer una conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no usa el puerto estándar (1433), cree un alias mediante la dirección IP y el puerto. Para obtener más información sobre cómo configurar protocolos de cliente y crear un alias para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancias, consulte [configurar protocolos de cliente](../../database-engine/configure-windows/configure-client-protocols.md).  
     >   
-    >  Si no tiene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado en el equipo en el que se ejecute el Asesor de actualizaciones, haga clic en **iniciar**y, a continuación, ejecute `cliconfg`. Se abrirá la  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herramienta de red de cliente** cuadro de diálogo. Use la **Alias** tab para crear el alias.  
+    >  Si no tienes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado en el equipo en el que se ejecuta el Asesor de actualizaciones, haga clic en **iniciar**y, a continuación, ejecute `cliconfg`. Se abrirá el  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herramienta de red de cliente** cuadro de diálogo. Use la **Alias** pestaña para crear el alias.  
   
 3.  Revise la lista de componentes detectados, modifique las selecciones según sea necesario y, a continuación, haga clic en **siguiente**.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "36201077"
   
      El nombre de instancia predeterminado es MSSQLSERVER.  
   
-5.  Para los componentes seleccionados, escriba la información solicitada. Para obtener más información acerca de los cuadros de diálogo individuales, consulte [referencia actualizar de la interfaz de usuario de asistente](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md).  
+5.  Para los componentes seleccionados, escriba la información solicitada. Para obtener más información sobre los diferentes cuadros de diálogo, vea [Actualizar referencia de interfaz de usuario del Asistente para](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md).  
   
-6.  En el **Confirmar configuración de Asesor de actualizaciones** página, revise la información que ha especificado. Puede seleccionar **enviar informes a [!INCLUDE[msCoName](../../includes/msconame-md.md)]**  si desea enviar el informe de actualización. También puede revisar la directiva de privacidad.  
+6.  En el **Confirmar configuración del Asistente para actualización** página, revise la información que ha escrito. Puede seleccionar **enviar informes a [!INCLUDE[msCoName](../../includes/msconame-md.md)]**  si desea enviar el informe de actualización. También puede revisar la directiva de privacidad.  
   
 7.  Haga clic en **ejecutar** para analizar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36201077"
   
 ## <a name="see-also"></a>Vea también  
  [Cómo: iniciar el Asesor de actualizaciones](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
- [Ejecutar el Asesor de actualizaciones &#40;interfaz de usuario&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
+ [Ejecute el Asesor de actualizaciones &#40;interfaz de usuario&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

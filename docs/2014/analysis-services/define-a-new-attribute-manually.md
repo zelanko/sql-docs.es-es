@@ -1,5 +1,5 @@
 ---
-title: Definir un nuevo atributo manualmente | Documentos de Microsoft
+title: Definir un nuevo atributo manualmente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Analysis Services], creating
 - manual attribute creation [SQL Server]
 ms.assetid: 554ea10e-b0b0-4987-add8-19113d824787
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a092cb424ac9c4793e9a5e973f0cbaed0777c51b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09c67e1ae406994e1cd8b02d759d5a14492a5b38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191235"
 ---
 # <a name="define-a-new-attribute-manually"></a>Definir un nuevo atributo manualmente
-  Este procedimiento describe cómo crear un nuevo atributo en una dimensión mediante la **atributos** panel en el Diseñador de dimensiones.  
+  Este procedimiento describe cómo crear un nuevo atributo en una dimensión mediante el **atributos** panel en el Diseñador de dimensiones.  
   
 ### <a name="to-create-a-new-attribute-manually"></a>Para crear manualmente un nuevo atributo  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36197868"
   
      Puede aceptar los valores predeterminados para el uso del atributo, como son tipo, columna de clave y columna de nombre, o puede seleccionar nuevos valores en la lista desplegable.  
   
-5.  Haga clic en el atributo y, a continuación, haga clic en **propiedades** para configurar sus otras propiedades.  
+5.  Haga clic en el atributo y, a continuación, haga clic en **propiedades** para configurar las demás propiedades.  
   
 ## <a name="see-also"></a>Vea también  
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)   

@@ -1,5 +1,5 @@
 ---
-title: Introducción a la carga masiva XML (SQLXML 4.0) | Documentos de Microsoft
+title: Introducción a la carga masiva XML (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - streaming XML data
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cd67089959526afd3a983ba652d64e25be1403a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7564c4387ad690d41501acf692a89120234205d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218915"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Introducción a la carga masiva XML (SQLXML 4.0)
   Carga masiva XML es un objeto COM independiente que permite cargar datos XML semiestructurados en Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tablas.  
   
  Puede insertar datos XML en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante una instrucción INSERT y la función OPENXML; sin embargo, la utilidad Carga masiva proporciona mejor rendimiento cuando es necesario insertar grandes cantidades de datos XML.  
   
- El método Execute del modelo de objetos de carga masiva XML toma dos parámetros:  
+ El método Execute del modelo de objetos carga masiva XML toma dos parámetros:  
   
 -   Una definición de esquema XML anotado (XSD) o un esquema reducido de datos XML (XDR). La utilidad Carga masiva XML interpreta este esquema de asignación y las anotaciones que se especifican en el esquema para identificar las tablas de SQL Server donde se insertarán los datos XML.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36196190"
   
  Se supone que está familiarizado con las siguientes características de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
--   Esquemas XSD y XDR anotados. Para obtener más información sobre esquemas XSD anotados, vea [Introducción a los esquemas XSD anotados &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para obtener información acerca de los esquemas XDR anotados, vea [esquemas XDR anotados &#40;desusado en SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+-   Esquemas XSD y XDR anotados. Para obtener más información acerca de los esquemas XSD anotados, vea [Introducción a los esquemas XSD anotados &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para obtener información acerca de los esquemas XDR anotados, vea [esquemas XDR anotados &#40;desusado en SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 -   Los mecanismos de inserción masiva de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], como la instrucción BULK INSERT de [!INCLUDE[tsql](../../../includes/tsql-md.md)] y la utilidad bcp. Para obtener más información, consulte [BULK INSERT &#40;Transact-SQL&#41; ](/sql/t-sql/statements/bulk-insert-transact-sql) y [bcp (utilidad)](../../../tools/bcp-utility.md).  
   
@@ -61,10 +61,10 @@ ms.locfileid: "36196190"
 ...  
 ```  
   
- Cuando la carga masiva XML lee el  **\<cliente >** elemento, genera un registro para el Customertable. Cuando lee el  **\</Customer >** etiqueta, carga masiva XML inserta que registran en la tabla final [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En la misma forma, cuando lee el  **\<orden >** elemento, carga masiva XML genera un registro para el Ordertable y, a continuación, inserta ese registro en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabla al leer el  **\< / Ordenar >** etiqueta de cierre.  
+ Como la carga masiva XML lee el  **\<cliente >** elemento, genera un registro para el Customertable. Cuando lee el  **\</Customer >** etiqueta, carga masiva XML inserta ese registro en la tabla final [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En la misma manera, cuando lee el  **\<orden >** elemento, carga masiva XML genera un registro para el ordertable fue y, a continuación, inserta ese registro en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabla al leer el  **\< / Ordenar >** etiqueta de cierre.  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>Operaciones de Carga masiva XML con y sin transacciones  
- Carga masiva XML puede funcionar tanto en modo con transacciones como en modo sin transacciones. El rendimiento es normalmente óptimo si es que la carga masiva en un modo sin transacciones: es decir, la propiedad de transacción se establece en FALSE) y se cumple alguna de las condiciones siguientes:  
+ Carga masiva XML puede funcionar tanto en modo con transacciones como en modo sin transacciones. El rendimiento es normalmente óptimo si es la carga masiva en un modo sin transacciones: es decir, la propiedad de transacción se establece en FALSE) y se cumple alguna de las condiciones siguientes:  
   
 -   Las tablas donde se realiza la carga masiva de los datos están vacías y no tienen índices.  
   
@@ -73,16 +73,16 @@ ms.locfileid: "36196190"
  El enfoque sin transacciones no garantiza una reversión si se produce algún error en el proceso de carga masiva (si bien se pueden producir reversiones parciales). La carga masiva sin transacciones es adecuada cuando la base de datos está vacía. Por tanto, si algo sale mal, puede limpiar la base de datos e iniciar de nuevo Carga masiva XML.  
   
 > [!NOTE]  
->  En modo sin transacciones, Carga masiva XML utiliza una transacción interna predeterminada y la confirma. Cuando la propiedad de transacción se establece en TRUE, carga masiva XML no ejecuta la confirmación en esta transacción.  
+>  En modo sin transacciones, Carga masiva XML utiliza una transacción interna predeterminada y la confirma. Cuando la propiedad de transacción se establece en TRUE, carga masiva XML no llama a commit en esta transacción.  
   
- Si la propiedad de transacción se establece en TRUE, carga masiva XML crea archivos temporales, uno para cada tabla que se identifica en el esquema de asignación. Carga masiva XML almacena en primer lugar los registros del documento XML de origen en estos archivos temporales. A continuación, la instrucción BULK INSERT de [!INCLUDE[tsql](../../../includes/tsql-md.md)] recupera estos registros de los archivos y los almacena en las tablas correspondientes. Puede especificar la ubicación de estos archivos temporales mediante la propiedad TempFilePath. Debe asegurarse de que la cuenta de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se utiliza con Carga masiva XML tiene acceso a esta ruta. Si no se especifica la propiedad TempFilePath, la ruta de acceso de archivo predeterminado que se especifica en la variable de entorno TEMP se utiliza para crear los archivos temporales.  
+ Si la propiedad de transacción se establece en TRUE, carga masiva XML crea archivos temporales, uno para cada tabla que se identifica en el esquema de asignación. Carga masiva XML almacena en primer lugar los registros del documento XML de origen en estos archivos temporales. A continuación, la instrucción BULK INSERT de [!INCLUDE[tsql](../../../includes/tsql-md.md)] recupera estos registros de los archivos y los almacena en las tablas correspondientes. Puede especificar la ubicación de estos archivos temporales mediante la propiedad TempFilePath. Debe asegurarse de que la cuenta de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se utiliza con Carga masiva XML tiene acceso a esta ruta. Si no se especifica la propiedad TempFilePath, la ruta de acceso de archivo predeterminado que se especifica en la variable de entorno TEMP se usa para crear los archivos temporales.  
   
- Si la propiedad de transacción se establece en FALSE (valor predeterminado), la carga masiva XML utiliza la interfaz IRowsetFastLoad de OLE DB para cargar de forma masiva los datos.  
+ Si la propiedad de transacción se establece en FALSE (valor predeterminado), carga masiva XML utiliza la interfaz IRowsetFastLoad de OLE DB para cargar los datos de forma masiva.  
   
- Si la propiedad ConnectionString establece la cadena de conexión y la propiedad de transacción está establecida en TRUE, carga masiva XML funciona en su propio contexto de transacción. (Por ejemplo, Carga masiva XML inicia su propia transacción y confirma o revierte según corresponda.)  
+ Si la propiedad ConnectionString establece la cadena de conexión y la propiedad de transacción se establece en TRUE, carga masiva XML funciona en su propio contexto de transacción. (Por ejemplo, Carga masiva XML inicia su propia transacción y confirma o revierte según corresponda.)  
   
- Si la propiedad ConnectionCommand establece la conexión con un objeto de conexión existente y la propiedad Transaction está establecida en TRUE, carga masiva XML no emite una instrucción COMMIT o ROLLBACK en el caso de un estado correcto o un error, respectivamente. Si se produce un error, Carga masiva XML devuelve el mensaje de error adecuado. La decisión de emitir una instrucción COMMIT o ROLLBACK queda en manos del cliente que inició la carga masiva. El objeto de conexión que se usa para la carga masiva XML debe ser del tipo ICommand o ser un objeto de comando ADO.  
+ Si establece la propiedad ConnectionCommand la conexión con un objeto de conexión existente y la propiedad Transaction está establecida en TRUE, carga masiva XML no emite una instrucción COMMIT o ROLLBACK en el caso de una operación correcta o incorrecta, respectivamente. Si se produce un error, Carga masiva XML devuelve el mensaje de error adecuado. La decisión de emitir una instrucción COMMIT o ROLLBACK queda en manos del cliente que inició la carga masiva. El objeto de conexión que se usa para la carga masiva XML debe ser del tipo ICommand o ser un objeto de comando ADO.  
   
- En SQLXML 4.0, no se puede usar un ConnectionObject con la propiedad de transacción establecida en FALSE. No se admite el modo sin transacciones con un ConnectionObject porque es imposible abrir más de una interfaz IRowsetFastLoad en una sesión en el pasado.  
+ En SQLXML 4.0, no se puede usar un ConnectionObject con la propiedad de transacción establecida en FALSE. No se admite el modo sin transacciones con un ConnectionObject porque es imposible abrir más de una interfaz IRowsetFastLoad en una sesión pasada.  
   
   

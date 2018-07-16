@@ -1,5 +1,5 @@
 ---
-title: Especificar una ruta de acceso de ubicación (SQLXML 4.0) | Documentos de Microsoft
+title: Especificar una ruta de acceso de ubicación (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4cade66ce5778440a59ddae209ff515670748f3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 86ff805cb06248cb0348d44b137affa3b4563444
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286911"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Especificar una ruta de acceso de ubicación (SQLXML 4.0)
   Las consultas XPath se especifican en forma de expresión. Existen varios tipos de expresiones. Una ruta de acceso de ubicación es una expresión que selecciona un conjunto de nodos relativos al nodo de contexto. El resultado de evaluar una ruta de acceso de ubicación es un conjunto de nodos.  
@@ -56,13 +56,13 @@ ms.locfileid: "36201557"
   
      Una prueba de nodo especifica el tipo de nodo seleccionado por el paso de ubicación. Cada eje (`child`, `parent`, `attribute` y `self`) tiene un tipo de nodo principal. Para el `attribute` eje, el tipo de nodo principal es  **\<atributo >**. Para el `parent`, `child`, y `self` ejes, el tipo de nodo principal es  **\<elemento >**.  
   
-     Por ejemplo, si especifica la ruta de acceso de ubicación **child:: Customer**,  **\<cliente >** se seleccionan los elementos secundarios del nodo de contexto. Dado que la `child` eje tiene  **\<elemento >** como su tipo de nodo principal, la prueba de nodo, Customer, es TRUE si Customer es un  **\<elemento >** nodo.  
+     Por ejemplo, si especifica la ruta de acceso de ubicación **child:: Customer**,  **\<cliente >** se seleccionan los elementos secundarios del nodo de contexto. Dado que el `child` eje tiene  **\<elemento >** como su tipo de nodo principal, la prueba de nodo, Customer, es TRUE si el cliente es un  **\<elemento >** nodo.  
   
 -   **Predicados de selección (cero o más)**  
   
      Un predicado filtra un conjunto de nodos con respecto a un eje. La especificación de predicados de selección en una expresión XPath es similar a especificar una cláusula WHERE en una instrucción SELECT. El predicado se especifica entre corchetes. Al aplicar la prueba especificada en los predicados de selección, se filtran los nodos devueltos por la prueba de nodo. Para cada nodo del conjunto de nodos que se va a filtrar, la expresión de predicado se evalúa con ese nodo como el nodo de contexto, con el número de nodos del conjunto de nodos como tamaño de contexto. Si la expresión de predicado se evalúa como TRUE para ese nodo, el nodo se incluye en el conjunto de nodos resultante.  
   
-     La sintaxis de un paso de ubicación es el nombre de eje y la prueba de nodo separados por dos signos de dos puntos (::), seguidos de cero o más expresiones, cada una de ellas entre corchetes. Por ejemplo, la expresión de XPath (ruta de acceso de ubicación) **child:: Customer [@CustomerID= 'ALFKI']** selecciona todos los  **\<cliente >** elementos secundarios del nodo de contexto. La prueba del predicado se aplica al conjunto de nodos, que sólo devuelve el  **\<cliente >** nodos de elemento con el atributo de valor 'ALFKI' para su **CustomerID** atributo.  
+     La sintaxis de un paso de ubicación es el nombre de eje y la prueba de nodo separados por dos signos de dos puntos (::), seguidos de cero o más expresiones, cada una de ellas entre corchetes. Por ejemplo, la expresión XPath (ruta de acceso de ubicación) **child:: Customer [@CustomerID= 'ALFKI']** selecciona todos los  **\<cliente >** elementos secundarios del nodo de contexto. La prueba del predicado se aplica al conjunto de nodos, que devuelve solo el  **\<cliente >** nodos de elemento con el atributo de valor 'ALFKI' para su **CustomerID** atributo.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Especificar un eje &#40;SQLXML 4.0&#41;](specifying-an-axis-sqlxml-4-0.md)  

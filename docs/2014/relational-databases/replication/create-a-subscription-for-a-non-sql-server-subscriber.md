@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
 - Subscribers [SQL Server replication], non-SQL Server Subscribers
 - non-SQL Server Subscribers, subscriptions
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 65bbe363e6b8148d9a9f3a7f4391eb6bbc5b97ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 40332e5894e444ad8818d04bd738a2a52670c557
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177842"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Crear una suscripción para un suscriptor que no sea de SQL Server
   En este tema se describe cómo crear una suscripción para un suscriptor que no sea de SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La replicación transaccional y la replicación de instantáneas admiten la publicación de datos en suscriptores que no son de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre plataformas de suscriptores admitidos, vea [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
@@ -157,7 +157,7 @@ ms.locfileid: "36108574"
   
 2.  En el publicador de la base de datos de publicaciones, compruebe que la publicación admita suscripciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la ejecución de [sp_helppublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql).  
   
-    -   Si el valor de `enabled_for_het_sub` es 1, no es[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se admiten los suscriptores.  
+    -   Si el valor de `enabled_for_het_sub` es 1, que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se admiten los suscriptores.  
   
     -   Si el valor de `enabled_for_het_sub` es 0, ejecute [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando `enabled_for_het_sub` para **@property** y `true` para  **@value**.  
   

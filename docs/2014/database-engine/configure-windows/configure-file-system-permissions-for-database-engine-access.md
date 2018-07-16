@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file system permissions
 - service account [SQL Server], file system permissions
 - permissions [SQL Server], file system
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02a84ea92555c74c0fed76b4f90b2d9c2337f46f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d16d2580775cde3c1b87c934c1bd69133501d3ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260965"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurar permisos del sistema de archivos para el acceso al motor de base de datos
   En este tema se describe cómo conceder a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]acceso al sistema de archivos de la ubicación donde se almacenan los archivos de base de datos. El servicio [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe tener permiso del sistema de archivos de Windows para obtener acceso a la carpeta de archivos donde se almacenan los archivos de base de datos. El permiso para tener acceso a la ubicación predeterminada se configura durante la instalación. Si coloca los archivos de base de datos en una ubicación diferente, es posible que tenga que seguir estos pasos para conceder a [!INCLUDE[ssDE](../../includes/ssde-md.md)] permisos de control total a dicha ubicación.  
@@ -38,7 +38,7 @@ ms.locfileid: "36204232"
   
 3.  En el cuadro de diálogo **Seleccionar usuarios, equipos, cuentas de servicio o grupos** , haga clic en **Ubicaciones**, seleccione el nombre del equipo en la parte superior de la lista de ubicaciones y, a continuación, haga clic en **Aceptar**.  
   
-4.  En el **escriba los nombres de objeto para seleccionar** , escriba el nombre del SID por servicio aparece en el tema de libros en pantalla de **configurar cuentas de servicio de Windows y permisos**. (Para el [!INCLUDE[ssDE](../../includes/ssde-md.md)] SID por servicio, utilice **NT SERVICE\MSSQLSERVER** para una instancia predeterminada, o **NT SERVICE\MSSQL$ InstanceName** para una instancia con nombre.)  
+4.  En el **escriba los nombres de objeto para seleccionar** , escriba el nombre del SID por servicio aparece en el tema de libros en pantalla de **Configure Windows Service Accounts and Permissions**. (Para el [!INCLUDE[ssDE](../../includes/ssde-md.md)] SID por servicio, utilice **NT SERVICE\MSSQLSERVER** para una instancia predeterminada, o **NT SERVICE\MSSQL$ InstanceName** para una instancia con nombre.)  
   
 5.  Para validar la entrada, haga clic en **Comprobar nombres** . A menudo, se produce un error en la validación, y es posible que aparezca un mensaje indicando que no se encontró el nombre. Al hacer clic en **Aceptar**, aparece un cuadro de diálogo **Se encontraron varios nombres** .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36204232"
   
 7.  Haga clic en **Aceptar** de nuevo para regresar al cuadro de diálogo **Permisos** .  
   
-8.  En el **grupo o usuario** nombres, seleccione el SID por servicio y, a continuación, en la **permisos para** \<nombre > cuadro, seleccione la **permitir** casilla de verificación para  **Control total**.  
+8.  En el **grupo o usuario** nombres, seleccione el SID por servicio y, a continuación, en el **permisos para** \<nombre > cuadro, seleccione el **permitir** casilla de verificación para  **Control total**.  
   
 9. Haga clic en **Aplicar**y, a continuación, haga clic dos veces en **Aceptar** para salir.  
   

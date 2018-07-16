@@ -1,5 +1,5 @@
 ---
-title: Examinar un modelo de pronóstico | Documentos de Microsoft
+title: Examinar un modelo de pronóstico | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - forecasting [data mining]
@@ -17,27 +17,27 @@ helpviewer_keywords:
 - time series [data mining]
 ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7718c83d56b1ab9351ebb59205c04e0dd779ca75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d23900aac442e72e89daea72fc0c2e07df9bd934
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224635"
 ---
 # <a name="browsing-a-forecasting-model"></a>Examinar un modelo de pronóstico
-  Cuando se abre un modelo de predicción utilizando **examinar**, el modelo se muestra en un visor interactivo, similar al Visor de modelos de serie de tiempo en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El visor sirve para explorar las tendencias, comparar series, crear predicciones y obtener información sobre el modelo y los datos subyacentes.  
+  Al abrir un modelo de previsión con **examinar**, el modelo se muestra en un visor interactivo, similar al Visor de modelos de serie de tiempo en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El visor sirve para explorar las tendencias, comparar series, crear predicciones y obtener información sobre el modelo y los datos subyacentes.  
   
 ##  <a name="bkmk_Top"></a> Explorar el modelo  
- El **examinar** Visor de modelos de predicción proporciona una vista de gráfico, que muestra las tendencias con el tiempo y le permite crear predicciones y una vista del modelo, que representa la serie temporal como un árbol de decisión o un árbol de regresión.  
+ El **examinar** Visor de modelos de predicción proporciona una vista de gráfico, que muestra las tendencias a lo largo de tiempo y le permite crear predicciones y una vista de modelo, que representa la serie temporal como un árbol de decisión o un árbol de regresión.  
   
 -   [Vista de gráfico](#bkmk_charts)  
   
 -   [Vista de modelo](#bkmk_Model)  
   
- Para experimentar con un modelo de pronóstico, puede usar los datos de ejemplo en la pestaña predicción del libro de datos de ejemplo y generar un modelo de serie de tiempo utilizando la [Asistente para pronóstico &#40;complementos minería de datos para Excel&#41; ](forecast-wizard-data-mining-add-ins-for-excel.md) en el  **Minería de datos** cinta de opciones, o [previsión &#40;herramientas de análisis de tabla para Excel&#41; ](forecast-table-analysis-tools-for-excel.md) en el **analizar** la cinta de opciones.  
+ Para experimentar con un modelo de pronóstico, puede usar los datos de ejemplo en la pestaña predicción de libro de ejemplo y generar un modelo de serie de tiempo utilizando la [Asistente para pronóstico &#40;complementos minería de datos para Excel&#41; ](forecast-wizard-data-mining-add-ins-for-excel.md) en el  **Minería de datos** cinta de opciones, o [previsión &#40;herramientas de análisis de tabla para Excel&#41; ](forecast-table-analysis-tools-for-excel.md) en el **analizar** cinta de opciones.  
   
 ###  <a name="bkmk_charts"></a> Gráfico  
  El **gráfico** pestaña muestra la tendencia de la serie de datos con el tiempo, junto con los valores de predicción. El eje vertical del gráfico representa los valores de la serie y el eje horizontal representa el tiempo.  
@@ -50,11 +50,11 @@ ms.locfileid: "36199031"
   
      Utilice las casillas para seleccionar la predicción solo para Norteamérica y solo para la cantidad de ventas.  
   
-2.  Haga clic en **pasos de predicción** y escriba un nuevo valor para controlar cuántos temporales futuros valores desea ver en el gráfico.  
+2.  Haga clic en **pasos de predicción** y escriba un nuevo valor para controlar valores de cuántos hora futuros desea ver en el gráfico.  
   
      El valor predeterminado es 5.  
   
-3.  Haga clic en cualquier punto de la línea, histórica o futura, para ver los valores exactos para ese punto en el tiempo, aparece en la **leyenda de minería de datos**.  
+3.  Haga clic en cualquier punto de la línea, histórica o futura, para ver los valores exactos para ese punto en el tiempo, aparece en el **leyenda de minería de datos**.  
   
 4.  El gráfico muestra tanto los datos históricos como los futuros. Observe la línea de puntos con un fondo sombreado. Estos valores son las predicciones futuras, según el modelo.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36199031"
   
 5.  Seleccione el **Mostrar predicciones históricas** opción para hacerse una idea de la estabilidad de la serie temporal.  
   
-     ![previsiones de una sola serie en el modelo](media/dm13-forecast-chart-singleseries.gif "previsiones de una sola serie en el modelo")  
+     ![las previsiones de una sola serie en el modelo](media/dm13-forecast-chart-singleseries.gif "las previsiones de una sola serie en el modelo")  
   
      Las predicciones históricas son los valores previstos en función de las series hasta ese punto, que se comparan con los valores históricos reales. Si la línea de puntos (con los valores previstos) se aparta de la línea continua (los valores reales), significa que la primera parte de la serie quizás no predice con precisión los valores posteriores. Podría necesitar más datos o podría ser simplemente un indicador de la volatilidad en el ciclo.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36199031"
   
 -   Para obtener una copia del gráfico actual, haga clic en **copiar a Excel**, a continuación, haga clic en una hoja de cálculo de Excel. Un gráfico se inserta en la hoja con todas las opciones que hubiera establecido, incluida una leyenda.  
   
-     Sin embargo, este gráfico es estático por lo que no se puede editar la leyenda o ver los datos subyacentes; Si necesita una vista de gráfico más interactiva, use la [visores de Visio](viewing-data-mining-models-in-visio-data-mining-add-ins.md).  
+     Sin embargo, este gráfico es estático para que no se puede editar la leyenda o ver los datos subyacentes; Si tiene una vista más interactiva del gráfico, use el [visores de Visio](viewing-data-mining-models-in-visio-data-mining-add-ins.md).  
   
 -   Haga clic en **Abs** en la barra de menús del Visor para cambiar entre curvas absolutas y relativas.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36199031"
   
      A medida que pausa el mouse sobre un nodo con el mouse, la información sobre herramientas también muestra las mismas estadísticas, así como la fórmula completa que describe el nodo.  
   
-4.  Si desea copiar la información de la **leyenda de minería de datos**, haga clic en el **leyenda de minería de datos**, seleccione **copia**y haga clic dentro de la hoja de cálculo de Excel. El **copiar a Excel** opción copia el gráfico, no las estadísticas.  
+4.  Si desea copiar la información de la **leyenda de minería de datos**, haga clic en el **leyenda de minería de datos**, seleccione **copia**y haga clic en la hoja de cálculo de Excel. El **copiar a Excel** opción copia el gráfico, no las estadísticas.  
   
  [Explorar el modelo](#bkmk_Top)  
   

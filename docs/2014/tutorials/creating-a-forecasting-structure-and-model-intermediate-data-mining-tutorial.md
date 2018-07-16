@@ -1,5 +1,5 @@
 ---
-title: Crear una estructura de previsión y un modelo (Tutorial de minería de datos intermedios) | Documentos de Microsoft
+title: Crear una estructura de previsión y un modelo (Tutorial de minería de datos intermedios) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f55cbf6-0db4-4cb4-a0f5-e27441873d4f
 caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 47d6e75a691c53fe1658fb5f79ee2bde8e9c2d01
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: c73081ff9bb72684192ea17d0247b38bc4f7d64e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308835"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>Crear una estructura de pronóstico y un modelo (tutorial intermedio de minería de datos)
   A continuación utilizará el Asistente para minería de datos con el objeto de crear una nueva estructura de minería de datos y el modelo de minería de datos según la vista del origen de datos recién creada. En esta tarea, especificará que el modelo de minería de datos debería utilizar el algoritmo de serie temporal de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
@@ -30,9 +30,9 @@ ms.locfileid: "36312273"
   
 2.  En la página de inicio del **Asistente para minería de datos** , haga clic en **Siguiente**.  
   
-3.  En el **seleccionar el método de definición** , comprueba que **de almacén de datos o base de datos relacional existente** está seleccionada y, a continuación, haga clic en **siguiente**.  
+3.  En el **seleccionar el método de definición** , comprueba que **desde el almacén de datos o base de datos relacional existente** está seleccionada y, a continuación, haga clic en **siguiente**.  
   
-4.  En el **crear la estructura de minería de datos** página, en **¿qué técnica de minería de datos que desea usar?**, seleccione **serie temporal de Microsoft**y, a continuación, haga clic en  **Siguiente**.  
+4.  En el **crear la estructura de minería de datos** página, en **qué técnica de minería de datos desea utilizar?**, seleccione **serie temporal de Microsoft**y, a continuación, haga clic en  **Siguiente**.  
   
 5.  En el **seleccionar vista del origen de datos** página, en **vistas del origen de datos disponibles**, seleccione **SalesByRegion**.  
   
@@ -46,22 +46,22 @@ ms.locfileid: "36312273"
   
 9. Seleccione las casillas de verificación en la **entrada** y **Predictable** columnas para la cantidad, columna y, a continuación, haga clic en **siguiente**.  
   
-     Si selecciona **Predictable**, que indique que desea crear pronósticos con los datos de esta columna. Sin embargo, dado que desea basar los pronósticos en datos previos, también debe agregar la columna como una entrada.  
+     Seleccionando **Predictable**, indica que desea crear pronósticos con los datos de esta columna. Sin embargo, dado que desea basar los pronósticos en datos previos, también debe agregar la columna como una entrada.  
   
-10. En la página **contenido y el tipo de datos de columnas Especifique**, revise las selecciones.  
+10. En la página **contenido y el tipo de datos de columnas especificar**, revise las selecciones.  
   
      La columna ModelRegion se designa como un **clave** columna y la columna ReportingDate se designa automáticamente como un **Key Time** columna. Puede tener solo una clave de cada tipo.  
   
 11. Haga clic en **Siguiente**.  
   
-12. En el **finalización del Asistente para** página, para **nombre de la estructura de minería de datos**, tipo `Forecasting`.  
+12. En el **completando el Asistente para** página, para **nombre de la estructura de minería de datos**, tipo `Forecasting`.  
   
     > [!NOTE]  
     >  La opción para habilitar la obtención de detalles no está disponible para los modelos de serie temporal.  
   
 13. En **nombre del modelo de minería de datos**, tipo `Forecasting`y, a continuación, haga clic en **finalizar**.  
   
-     Diseñador de minería de datos se abre para mostrar el `Forecasting` estructura de minería de datos que acaba de crear.  
+     Se abre el Diseñador de minería de datos para mostrar el `Forecasting` estructura de minería de datos que acaba de crear.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Modificar la estructura de previsión &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md)  

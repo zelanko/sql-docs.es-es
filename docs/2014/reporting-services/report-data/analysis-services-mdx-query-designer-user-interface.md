@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 - sql12.rtp.rptdesigner.dataview.asquerydesigner.f1
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ce6de26e90d652c238d1b59dc2a288d3e65733df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f322526680b3a91f2fcb7e93e3159f79b79793a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323855"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas MDX de Analysis Services
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] proporciona diseñadores gráficos de consultas para crear consultas de expresiones multidimensionales (MDX) y las consultas de expresiones de minería de datos (DMX) para un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] origen de datos. En este tema se describe el diseñador de consultas MDX. Para obtener más información sobre el Diseñador de consultas DMX, vea [tipo de conexión de Analysis Services para DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md).  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] proporciona diseñadores gráficos de consultas para crear consultas de expresiones multidimensionales (MDX) y consultas de expresiones de minería de datos (DMX) para un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] origen de datos. En este tema se describe el diseñador de consultas MDX. Para obtener más información sobre el Diseñador de consultas DMX, vea [tipo de conexión de Analysis Services para DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md).  
   
  El diseñador gráfico de consultas MDX tiene dos modos: modo de diseño y modo de consulta. Cada modo proporciona un panel de metadatos desde el que puede arrastrar miembros de los cubos seleccionados para crear una consulta MDX; ésta recupera datos al procesarse el informe.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36107571"
 |![Cambiar a la vista de la consulta MDX](../../analysis-services/media/rsqdicon-commandtypemdx.gif "Cambiar a la vista de la consulta MDX")|Cambia al tipo de comando MDX.|  
 |![Cambiar a la vista del lenguaje de consultas DMX](../media/rsqdicon-commandtypedmx.gif "Cambiar a la vista del lenguaje de consultas DMX")|Cambia al tipo de comando DMX.|  
 |![Actualizar datos de resultados](../../analysis-services/media/rsqdicon-refresh.gif "Actualizar datos de resultados")|Actualiza los metadatos desde el origen de datos.|  
-|![Agregar miembro calculado](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado")|Muestra el cuadro de diálogo **Generador de miembros calculados** .|  
+|![Agregar un miembro calculado](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado")|Muestra el cuadro de diálogo **Generador de miembros calculados** .|  
 |![Alternar para mostrar celdas vacías](../../analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías")|Muestra y oculta las celdas vacías del panel Datos. Esto equivale a utilizar la cláusula NON EMPTY en MDX.|  
 |![Ejecutar la consulta automáticamente](../../analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente")|Ejecuta automáticamente la consulta y muestra el resultado cada vez que se realiza un cambio. Los resultados se mostrarán en el panel Datos.|  
 |![Botón Mostrar agregaciones](../../analysis-services/media/rsqdicon-showaggregations.gif "Botón Mostrar agregaciones")|Muestra agregaciones en el panel Datos.|  
@@ -119,7 +119,7 @@ ms.locfileid: "36107571"
 -   **Mostrar agregaciones** (![Botón Mostrar agregaciones](../../analysis-services/media/rsqdicon-showaggregations.gif "Botón Mostrar agregaciones"))  
   
 ## <a name="see-also"></a>Vea también  
- [Definir los parámetros en el Diseñador de consultas MDX para Analysis Services &#40;el generador de informes SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [Definir parámetros en el Diseñador de consultas MDX para Analysis Services &#40;generador de informes y SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Tipo de conexión de Analysis Services para DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
  [Archivo de configuración RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)   

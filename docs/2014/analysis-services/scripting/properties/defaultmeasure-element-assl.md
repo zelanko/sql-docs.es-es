@@ -1,5 +1,5 @@
 ---
-title: Elemento DefaultMeasure (ASSL) | Documentos de Microsoft
+title: Elemento DefaultMeasure (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DefaultMeasure element
 ms.assetid: ceac8b3d-ebae-463f-9e8c-506281d42792
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 72585d3d1bbce32fd3af4bedbf60e660f8b197f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6650ad99a21a4c2628e94e483c4cd2947d240bc8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36108189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314645"
 ---
 # <a name="defaultmeasure-element-assl"></a>Elemento DefaultMeasure (ASSL)
-  Contiene una expresión de expresiones multidimensionales (MDX) que define la medida predeterminada para una [cubo](../objects/cube-element-assl.md) o [perspectiva](../objects/perspective-element-assl.md) elemento.  
+  Contiene una expresión MDX (expresiones multidimensionales) que define la medida predeterminada para un [cubo](../objects/cube-element-assl.md) o [perspectiva](../objects/perspective-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -1,5 +1,5 @@
 ---
-title: Introducción al uso de consultas XPath (SQLXML 4.0) | Documentos de Microsoft
+title: Introducción al uso de las consultas XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], functionality
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 382fd81302cfccb378ef6c1a52cf996857cd2dcb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5b03009502d72fdff5eb27f4cd97165cf0eee451
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292315"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introducción al uso de consultas XPath (SQLXML 4.0)
   Una consulta XPath (Lenguaje de rutas XML) puede especificarse como parte de una dirección URL o dentro de una plantilla. El esquema de asignación determina la estructura de este fragmento resultante y los valores se recuperan de la base de datos. Este proceso es conceptualmente similar a crear vistas utilizando la instrucción CREATE VIEW y escribir consultas SQL en ellas.  
@@ -62,18 +62,18 @@ ms.locfileid: "36112215"
   
      SQLXML 4.0 no admite la consulta raíz (/). Todas las consultas XPath deben comenzar en un nivel superior  **\<ElementType >** en el esquema.  
   
--   **Informar de errores**  
+-   **Informes de errores**  
   
      La especificación XPath de W3C no define ninguna condición de error. Las consultas XPath que no pueden seleccionar ningún nodo devuelven un conjunto de nodos vacío. En SQLXML 4.0, una consulta puede devolver muchos tipos de mensajes de error.  
   
--   **Orden del documento**  
+-   **Orden del documento.**  
   
      En SQLXML 4.0, el orden del documento no siempre viene determinado. Por lo tanto, los predicados numéricos y ejes que usan el orden del documento (como `following`) no se implementan.  
   
      La falta de orden del documento también significa que el valor de cadena de un nodo solamente puede evaluarse cuando ese nodo se asigna a una única columna en una única fila. Un elemento con elementos secundarios o un nodo NMTOKENS o IDREFS no puede convertirse en una cadena.  
   
     > [!NOTE]  
-    >  En algunos casos, la anotación `key-fields` o las claves de la anotación `relationship` pueden dar lugar a un orden del documento determinista. Sin embargo, esto no es el uso principal de estas anotaciones para obtener más información, vea [identificar columnas de clave mediante SQL: de Key-campos &#40;SQLXML 4.0&#41; ](../sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md) y [especificar relaciones mediante sql: relación &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md).  
+    >  En algunos casos, la anotación `key-fields` o las claves de la anotación `relationship` pueden dar lugar a un orden del documento determinista. Sin embargo, esto no es el uso principal de estas anotaciones para obtener más información, vea [Fields identificar columnas de clave mediante-campos &#40;SQLXML 4.0&#41; ](../sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md) y [especificar relaciones mediante sql: relación &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md).  
   
 -   **Tipos de datos**  
   

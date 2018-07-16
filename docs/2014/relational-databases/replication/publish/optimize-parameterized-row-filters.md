@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precomputed partitions [SQL Server replication]
 - filters [SQL Server replication], parameterized
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - parameterized filters [SQL Server replication], optimizing
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 13c5a3ca9324b79c6c8844534ce5eff8b495eeed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 95cd675d8c774b7b0321eb3ffc15e1c15a213f20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242265"
 ---
 # <a name="optimize-parameterized-row-filters"></a>Optimizar los filtros de fila con parámetros
   En este tema se describe cómo optimizar los filtros de fila con parámetros en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -124,7 +124,7 @@ ms.locfileid: "36107859"
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>Para especificar las optimizaciones de filtro de mezcla al crear una nueva publicación  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Especifique **@publication** y un valor de `true` para uno los siguientes parámetros:  
+1.  En la base de datos de publicación del publicador, ejecute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Especificar **@publication** y un valor de `true` uno los siguientes parámetros:  
   
     -   **@use_partition_groups**: la optimización de mayor rendimiento, siempre que los artículos cumplan los requisitos para las particiones precalculadas. Para obtener más información, vea [Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente](../merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   

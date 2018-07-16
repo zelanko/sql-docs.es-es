@@ -1,5 +1,5 @@
 ---
-title: Filtros ISAPI ha detectado en el sitio del servidor de informes (Asesor de actualizaciones) | Documentos de Microsoft
+title: Filtros ISAPI ha detectado en el sitio del servidor de informes (Asesor de actualizaciones) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ISAPI filters
 - report servers [Reporting Services], upgrade issues
@@ -16,13 +16,13 @@ ms.assetid: dd30560d-9e16-47c7-ba68-a9743a657e4e
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 18a9aab0737cb6d5127bbb3357d307c9c8f03aef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 448f334fc5a82dea623a12e2ad143725ec11f711
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268141"
 ---
 # <a name="isapi-filters-detected-on-the-report-server-site-upgrade-advisor"></a>Se han detectado filtros ISAPI en el sitio del servidor de informes (Asesor de actualizaciones)
   El Asesor de actualizaciones ha detectado uno o más filtros ISAPI en el sitio web que hospeda los directorios virtuales del Administrador de informes y del servidor de informes. Filtros ISAPI no se admiten en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

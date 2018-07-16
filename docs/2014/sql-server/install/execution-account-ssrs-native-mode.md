@@ -1,5 +1,5 @@
 ---
-title: Cuenta de ejecución (modo nativo de SSRS) | Documentos de Microsoft
+title: Cuenta de ejecución (modo nativo de SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.executionaccount.F1
 ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 578316ae59b1c8abfbc77a74b48edad4b907a2b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e18c8c37eba48fa2732a07f4906137cdd299fdd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312815"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>Cuenta de ejecución (Modo nativo de SSRS)
   Utilice esta página para configurar una cuenta que se utilizará en el procesamiento en modo desatendido. Esta cuenta se utiliza bajo circunstancias especiales cuando no están disponibles otros orígenes de credenciales:  
@@ -41,7 +41,7 @@ ms.locfileid: "36103248"
 > [!NOTE]  
 >  Si está utilizando [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] con Advanced Services, solo tiene que configurar esta cuenta si va a hacer referencia a las imágenes externas de un informe y se necesita permiso para obtener acceso al archivo de imagen. SQL Server Express no admite la conexión del origen de datos a un servidor remoto. Para una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473).  
   
- Para abrir esta página, inicie la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager y seleccione **cuenta de ejecución** en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir esta página, inicie el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager y seleccione **cuenta de ejecución** en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opciones  
  **Especificar una cuenta de ejecución**  

@@ -1,13 +1,11 @@
 ---
-title: Obtener información acerca de los ensamblados | Documentos de Microsoft
+title: Obtener información acerca de los ensamblados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - metadata [SQL Server], assemblies
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e9940c597e176542fbfcbd7968ce96b496651f88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 592d0e86353179377a73c24da84ed8f21a8e48e7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103328"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349497"
 ---
 # <a name="getting-information-about-assemblies"></a>Obtener información acerca de los ensamblados
   Se pueden realizar consultas de metadatos acerca de ensamblados en las siguientes vistas de catálogo y funciones.  
@@ -51,7 +49,7 @@ ms.locfileid: "36103328"
   
 -   [sys.types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)  
   
- **Para obtener información de ensamblado acerca de common language runtime (CLR) procedimientos almacenados, desencadenadores y funciones**  
+ **Para obtener información de ensamblado acerca de common language runtime (CLR) almacena los procedimientos, desencadenadores y funciones**  
   
 -   [sys.assembly_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-modules-transact-sql)  
   
@@ -60,7 +58,7 @@ ms.locfileid: "36103328"
 -   [sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)  
   
 ## <a name="see-also"></a>Vea también  
- [Ensamblados &#40;motor de base de datos&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Los ensamblados &#40;motor de base de datos&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Diseñar ensamblados](../../relational-databases/clr-integration/assemblies-designing.md)   
  [Implementar ensamblados](assemblies-implementing.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento ServerProperties (ASSL) | Documentos de Microsoft
+title: Elemento ServerProperties (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ServerProperties element
 ms.assetid: 8ccbef3f-1388-4fa3-b0a4-c89b89f09056
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0c0d24c6e74aa88e2ea27582214345ac40671d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 495577822a86549841bcae022164d5669c1e5b22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323095"
 ---
 # <a name="serverproperties-element-assl"></a>Elemento ServerProperties (ASSL)
-  Contiene la colección de [ServerProperty](../objects/serverproperty-element-assl.md) elementos asociados a un [Server](../objects/server-element-assl.md) elemento.  
+  Contiene la colección de [ServerProperty](../objects/serverproperty-element-assl.md) elementos asociados con un [Server](../objects/server-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   

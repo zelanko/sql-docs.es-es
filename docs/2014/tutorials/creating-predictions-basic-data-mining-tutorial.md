@@ -1,5 +1,5 @@
 ---
-title: Crear predicciones (Tutorial de minería de datos básicos) | Documentos de Microsoft
+title: Crear predicciones (Tutorial de minería de datos básicos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,40 +8,40 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a7544951cd66db857d89187f4db65b4661395c0d
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 64045eb4a87794e3d4b870ddb3ede28e48af2ce2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267971"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Crear predicciones (Tutorial básico de minería de datos)
-  Después de haber probado la precisión de los modelos de minería de datos y esté satisfecho con los resultados, a continuación, puede generar predicciones mediante el generador de consultas de predicción en el **predicción de modelo de minería de datos** pestaña en la minería de datos Diseñador.  
+  Después de haber probado la precisión de los modelos de minería de datos y esté satisfecho con los resultados, a continuación, puede generar predicciones con el generador de consultas de predicción en el **predicción de modelo de minería de datos** ficha en la minería de datos Diseñador.  
   
- El Generador de consultas de predicción tiene tres vistas. Con el **diseño** y **consulta** vistas, puede generar y examinar una consulta. A continuación, puede ejecutar la consulta y ver los resultados en la **resultado** vista.  
+ El Generador de consultas de predicción tiene tres vistas. Con el **diseño** y **consulta** vistas, puede generar y examinar una consulta. A continuación, puede ejecutar la consulta y ver los resultados en el **resultado** vista.  
   
- Todas las consultas de predicción utilizan DMX, que es el acrónimo del lenguaje de Extensiones de minería de datos (DMX). DMX tiene una sintaxis similar a la de T-SQL, pero se utiliza con consultas en objetos de minería de datos. Aunque la sintaxis DMX no es complicada, utilizando un generador de consultas como este, o uno de los [SQL Server datos minería complementos para Office](../../2014/analysis-services/data-mining/sql-server-data-mining-add-ins-for-office.md), resulta mucho más fácil selección de entradas y generar expresiones, por lo que se recomienda encarecidamente que aprenda los conceptos básicos.  
+ Todas las consultas de predicción utilizan DMX, que es el acrónimo del lenguaje de Extensiones de minería de datos (DMX). DMX tiene una sintaxis similar a la de T-SQL, pero se utiliza con consultas en objetos de minería de datos. Aunque la sintaxis de DMX no es complicado, con un generador de consultas como este, o en el [SQL Server Data Mining Add-Ins para Office](../../2014/analysis-services/data-mining/sql-server-data-mining-add-ins-for-office.md), resulta mucho más fácil seleccionar entradas y generar expresiones, por lo que se recomienda encarecidamente que aprenda los aspectos básicos.  
   
 ## <a name="creating-the-query"></a>Crear la consulta  
  El primer paso para crear una consulta de predicción consiste en seleccionar un modelo de minería de datos y una tabla de entrada.  
   
 #### <a name="to-select-a-model-and-input-table"></a>Para seleccionar un modelo de minería de datos y una tabla de entrada  
   
-1.  En el **predicción de modelo de minería de datos** pestaña del Diseñador de minería de datos, en la **Mining Model** cuadro, haga clic en **Seleccionar modelo**.  
+1.  En el **predicción de modelo de minería de datos** ficha del Diseñador de minería de datos, en el **Mining Model** cuadro, haga clic en **Seleccionar modelo**.  
   
-2.  En el **Seleccionar modelo de minería de datos** diálogo cuadro, navegar por el árbol hasta la **Targeted Mailing** estructura, expanda la estructura, seleccione `TM_Decision_Tree`y, a continuación, haga clic en **Aceptar**.  
+2.  En el **Seleccionar modelo de minería de datos** diálogo cuadro, vaya a través del árbol a la **Targeted Mailing** estructura, expanda la estructura, seleccione `TM_Decision_Tree`y, a continuación, haga clic en **Aceptar**.  
   
 3.  En el **Seleccionar tabla (s) de entrada** cuadro, haga clic en **Seleccionar tabla de casos**.  
   
-4.  En el **Seleccionar tabla** cuadro de diálogo, en la **origen de datos** , seleccione la vista del origen de datos [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)].  
+4.  En el **Seleccionar tabla** cuadro de diálogo el **origen de datos** lista, seleccione la vista del origen de datos [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)].  
   
-5.  En **nombre de tabla o vista**, seleccione la **ProspectiveBuyer (dbo)** de tabla y, a continuación, haga clic en **Aceptar**.  
+5.  En **nombre de tabla o vista**, seleccione el **ProspectiveBuyer (dbo)** de tabla y, a continuación, haga clic en **Aceptar**.  
   
      El `ProspectiveBuyer` más se parezca la tabla el **vTargetMail** tabla de casos.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "36312343"
   
 #### <a name="to-map-the-inputs-to-the-model"></a>Para asignar las entradas al modelo  
   
-1.  Haga clic en las líneas que conectan el **Mining Model** ventana para el **Seleccionar tabla de entrada** ventana y seleccione **modificar conexiones**.  
+1.  Haga clic en las líneas que conectan el **Mining Model** ventana a la **Seleccionar tabla de entrada** ventana y seleccione **modificar conexiones**.  
   
-     Observe que no todas las columnas están asignadas. Agregaremos asignaciones de varias **columnas de la tabla**. También generaremos una columna de fecha de nacimiento nueva en función de la columna de fecha actual, para que la coincidencia de las columnas sea mejor.  
+     Observe que no todas las columnas están asignadas. Agregaremos asignaciones para varias **columnas de la tabla**. También generaremos una columna de fecha de nacimiento nueva en función de la columna de fecha actual, para que la coincidencia de las columnas sea mejor.  
   
 2.  En **columna de tabla**, haga clic en el `Bike Buyer` de celda y seleccione ProspectiveBuyer.Unknown en la lista desplegable.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36312343"
   
 5.  Haga clic en la tabla ProspectiveBuyer y seleccione **nuevo cálculo con nombre**.  
   
-6.  En el **crear cálculo con nombre** cuadro de diálogo para **nombre de la columna**, tipo `calcAge`.  
+6.  En el **crear cálculo con nombre** cuadro de diálogo para **nombre de columna**, tipo `calcAge`.  
   
 7.  Para **descripción**, tipo **calcular la edad en función de la fecha de nacimiento**.  
   
@@ -75,40 +75,40 @@ ms.locfileid: "36312343"
   
      Dado que la tabla de entrada no tiene ningún **Age** columna correspondiente a la que se muestra en el modelo, puede utilizar esta expresión para calcular la edad del cliente de la columna de fecha de nacimiento de la tabla de entrada. Puesto que **edad** se identificó como más influyentes columna para predecir la compra de bicicletas, debe existir en el modelo y en la tabla de entrada.  
   
-9. En el Diseñador de minería de datos, seleccione la **predicción de modelo de minería de datos** ficha y vuelva a abrir la **modificar conexiones** ventana.  
+9. En el Diseñador de minería de datos, seleccione el **predicción de modelo de minería de datos** pestaña y vuelva a abrir el **modificar conexiones** ventana.  
   
 10. En **columna de tabla**, haga clic en el **Age** de celda y seleccione ProspectiveBuyer.calcAge en la lista desplegable.  
   
     > [!WARNING]  
-    >  Si no ve la columna en la lista, puede que tenga que actualizar la definición de la vista del origen de datos que se ha cargado en el diseñador. Para ello, desde la **archivo** menú, seleccione **guardar todo**y, a continuación, cierre y vuelva a abrir el proyecto en el diseñador.  
+    >  Si no ve la columna en la lista, puede que tenga que actualizar la definición de la vista del origen de datos que se ha cargado en el diseñador. Para ello, desde el **archivo** menú, seleccione **guardar todo**y, a continuación, cierre y vuelva a abrir el proyecto en el diseñador.  
   
 11. Haga clic en **Aceptar**.  
   
 ## <a name="designing-the-prediction-query"></a>Diseñar la consulta de predicción  
   
-1.  El primer botón de la barra de herramientas de la **predicción de modelo de minería de datos** pestaña está la **cambiar al diseño ver / cambiar a vista de resultado / cambiar a la vista de consulta** botón. Haga clic en la flecha abajo en este botón y seleccione **diseño**.  
+1.  El primer botón de la barra de herramientas de la **predicción de modelo de minería de datos** pestaña es la **cambiar al diseño ver / cambiar a vista de resultado / cambiar a vista consulta** botón. Haga clic en la flecha hacia abajo en este botón y seleccione **diseño**.  
   
-2.  En la cuadrícula en el **predicción de modelo de minería de datos** , haga clic en la celda de la primera fila vacía en la **origen** columna y, a continuación, seleccione **función de predicción**.  
+2.  En la cuadrícula en el **predicción de modelo de minería de datos** pestaña, haga clic en la celda de la primera fila vacía en el **origen** columna y, a continuación, seleccione **función de predicción**.  
   
-3.  En el **función de predicción** de fila, en la **campo** columna, seleccione `PredictProbability`.  
+3.  En el **función de predicción** de fila, en el **campo** columna, seleccione `PredictProbability`.  
   
-     En el **Alias** columna de la misma fila, escriba **probabilidad de resultado**.  
+     En el **Alias** columna de la misma fila, tipo **probabilidad del resultado**.  
   
-4.  Desde el **Mining Model** ventana anterior, seleccione y arrastre [Bike Buyer] en el **criterios o argumento** celda.  
+4.  Desde el **Mining Model** ventana anterior, seleccione y arrastre [Bike Buyer] a la **criterios o argumento** celda.  
   
      Cuando suelte, [TM_Decision_Tree]. [Bike Buyer] aparece en el **criterios o argumento** celda.  
   
      De esta forma, se especificará la columna de destino para la función `PredictProbability`. Para obtener más información acerca de las funciones, vea [extensiones de minería de datos &#40;DMX&#41; referencia de funciones](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-5.  Haga clic en la siguiente fila vacía en la **origen** columna y, a continuación, seleccionar modelo de minería de datos de TM_Decision_Tree **.**  
+5.  Haga clic en la siguiente fila vacía en el **origen** columna y el modelo de minería de datos, a continuación, seleccione TM_Decision_Tree **.**  
   
-6.  En el `TM_Decision_Tree` de fila, en la **campo** columna, seleccione `Bike Buyer`.  
+6.  En el `TM_Decision_Tree` de fila, en el **campo** columna, seleccione `Bike Buyer`.  
   
-7.  En el `TM_Decision_Tree` de fila, en la **criterios o argumento** columna, escriba `=1`.  
+7.  En el `TM_Decision_Tree` de fila, en el **criterios o argumento** columna, escriba `=1`.  
   
-8.  Haga clic en la siguiente fila vacía en la **origen** columna y, a continuación, seleccione **tabla ProspectiveBuyer**.  
+8.  Haga clic en la siguiente fila vacía en el **origen** columna y, a continuación, seleccione **tabla ProspectiveBuyer**.  
   
-9. En el `ProspectiveBuyer` de fila, en la **campo** columna, seleccione **ProspectiveBuyerKey**.  
+9. En el `ProspectiveBuyer` de fila, en el **campo** columna, seleccione **ProspectiveBuyerKey**.  
   
      De esta forma, se agregará el identificador único a la consulta de predicción para que pueda identificar quién es más y menos probable que compre una bicicleta.  
   
@@ -142,11 +142,11 @@ ms.locfileid: "36312343"
   
 #### <a name="to-run-the-query-and-view-results"></a>Para ejecutar la consulta y ver los resultados  
   
-1.  En el **predicción de modelo de minería de datos** ficha, seleccione la **resultado** botón.  
+1.  En el **predicción de modelo de minería de datos** ficha, seleccione el **resultado** botón.  
   
 2.  Una vez que la consulta se ejecute y se muestren los resultados, puede revisarlos.  
   
-     El **predicción de modelo de minería de datos** ficha muestra información de contacto para los clientes potenciales que suelen ser compradores de bicicletas. El **probabilidad del resultado de** columna indica la probabilidad de que la predicción sea correcta. Puede utilizar estos resultados para determinar a qué clientes potenciales debe dirigirse en el correo.  
+     El **predicción de modelo de minería de datos** ficha muestra información de contacto de clientes potenciales que suelen ser los compradores de bicicletas. El **probabilidad del resultado** columna indica la probabilidad de que la predicción sea correcta. Puede utilizar estos resultados para determinar a qué clientes potenciales debe dirigirse en el correo.  
   
 3.  En este punto, puede guardar los resultados. Tiene tres opciones:  
   
@@ -160,18 +160,18 @@ ms.locfileid: "36312343"
   
         2.  Escriba un nombre para la tabla que contendrá los resultados de la consulta.  
   
-        3.  Utilice la opción **agregar a vista**, para crear la tabla y agregarla a una vista de origen de datos existente. Esto es útil si desea conservar todas las tablas relacionadas para un modelo, como los datos de entrenamiento, los datos del origen de predicción y los resultados de la consulta, en la misma vista del origen de datos.  
+        3.  Utilice la opción **agregar a DSV**, para crear la tabla y agregarla a una vista del origen de datos existente. Esto es útil si desea conservar todas las tablas relacionadas para un modelo, como los datos de entrenamiento, los datos del origen de predicción y los resultados de la consulta, en la misma vista del origen de datos.  
   
-        4.  Utilice la opción **sobrescribir si existe**para actualizar una tabla existente con los resultados más recientes.  
+        4.  Utilice la opción **sobrescribir si existe**, para actualizar una tabla existente con los resultados más recientes.  
   
              Debe utilizar la opción de sobrescribir la tabla si ha agregado algunas columnas a la consulta de predicción, cambiado los nombres o los tipos de datos de las columnas en la consulta de predicción, o si ha ejecutado alguna instrucción ALTER en la tabla de destino.  
   
              Además, si varias columnas tienen el mismo nombre (por ejemplo, el nombre de columna predeterminado **expresión**) debe crear un alias para las columnas con nombres duplicados, o se producirá un error cuando el diseñador intente guardar los resultados en SQL Servidor. La razón es que SQL Server no permite que varias columnas tengan el mismo nombre.  
   
-             Para obtener más información, consulte [Guardar cuadro de diálogo de datos de minería de datos consulta resultado &#40;vista predicción de modelo de minería de datos&#41;](../../2014/analysis-services/save-data-mining-query-result-dialog-box-mining-model-prediction-view.md).  
+             Para obtener más información, consulte [Data Mining consulta resultado cuadro de diálogo Guardar &#40;vista predicción de modelo de minería de datos&#41;](../../2014/analysis-services/save-data-mining-query-result-dialog-box-mining-model-prediction-view.md).  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Usar la obtención de detalles en datos de estructura &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
+ [Con la obtención de detalles en datos de estructura &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Crear una consulta de predicción con el Generador de consultas de predicción](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  

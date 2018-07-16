@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas MDSCHEMA_DIMENSIONS | Documentos de Microsoft
+title: Conjunto de filas MDSCHEMA_DIMENSIONS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_DIMENSIONS rowset
 ms.assetid: a0fd94bb-359a-4df6-93a6-d60d50223944
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b00b617adf90e1dba8eac94a9872ce07c0773e7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69cb4e0c997d3d786a55a6673327e50d0aac27a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273401"
 ---
 # <a name="mdschemadimensions-rowset"></a>Conjunto de filas MDSCHEMA_DIMENSIONS
   Describe las dimensiones compartidas y privadas dentro de una base de datos.  
@@ -52,12 +52,12 @@ ms.locfileid: "36105496"
 |`IS_READWRITE`|`DBTYPE_BOOL`||Un valor booleano que indica si la dimensión tiene permiso de escritura.<br /><br /> `TRUE` si la dimensión tiene permiso de escritura.|  
 |`DIMENSION_UNIQUE_SETTINGS`|`DBTYPE_I4`||Un mapa de bits que especifica las columnas que contienen valores únicos, si la dimensión solo contiene miembros con nombres únicos. Las siguientes constantes de valor de bits se definen en Msmd.h para este mapa de bits:<br /><br /> -   `MDDIMENSIONS_MEMBER_KEY_UNIQUE`|  
 |`DIMENSION_MASTER_UNIQUE_NAME`|`DBTYPE_WSTR`||Siempre `NULL`.|  
-|`DIMENSION_IS_VISIBLE`|`DBTYPE_BOOL`||Siempre `TRUE`. **Nota:** una dimensión no está visible, a menos que una o más jerarquías en la dimensión están visibles.|  
+|`DIMENSION_IS_VISIBLE`|`DBTYPE_BOOL`||Siempre `TRUE`. **Nota:** una dimensión no está visible, a menos que uno o más jerarquías en la dimensión están visibles.|  
   
  El conjunto de filas se ordena en `CATALOG_NAME`, `SCHEMA_NAME`, `CUBE_NAME`, `DIMENSION_NAME`.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `MDSCHEMA_DIMENSIONS` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `MDSCHEMA_DIMENSIONS` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  
@@ -66,7 +66,7 @@ ms.locfileid: "36105496"
 |`CUBE_NAME`|`DBTYPE_WSTR`|Opcional.|  
 |`DIMENSION_NAME`|`DBTYPE_WSTR`|Opcional.|  
 |`DIMENSION_UNIQUE_NAME`|`DBTYPE_WSTR`|Opcional.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(Opcional) Mapa de bits con uno de los siguientes valores válidos:<br /><br /> -CUBO 1<br />-DIMENSIÓN DE 2<br /><br /> La restricción predeterminada es un valor de 1.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(Opcional) Mapa de bits con uno de los siguientes valores válidos:<br /><br /> -1 CUBO<br />-DIMENSIÓN DE 2<br /><br /> La restricción predeterminada es un valor de 1.|  
 |`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|(Opcional) Mapa de bits con uno de los siguientes valores válidos:<br /><br /> -1 Visible<br />-2 no visible<br /><br /> La restricción predeterminada es un valor de 1.|  
   
 ## <a name="see-also"></a>Vea también  

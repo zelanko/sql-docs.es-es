@@ -1,5 +1,5 @@
 ---
-title: Filtros y separadores de palabras de búsqueda de texto completo ha mejorado significativamente en SQL Server 2005 y SQL Server 2008 | Documentos de Microsoft
+title: Los filtros y separadores de palabras de búsqueda de texto completo mejoraron considerablemente en SQL Server 2005 y SQL Server 2008 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [Full-Text Search]
 - word breakers [Full-Text Search]
 ms.assetid: 8d06bda9-0bbf-4baa-b270-07b1c1f640eb
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d993c20ccd1af008f032b019c40bf673802d2f79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6a28f0ba9c29be0366b34626fd1c28a7f98c404f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315575"
 ---
 # <a name="full-text-search-word-breakers-and-filters-significantly-improved-in-sql-server-2005-and-sql-server-2008"></a>Los separadores y filtros de palabras de la búsqueda de texto completo se han mejorado considerablemente en SQL Server 2005 y en SQL Server 2008
   Los separadores de palabras y los filtros han sufrido cambios significativos. Se han realizado mejoras adicionales a los separadores de palabras, incluyendo una cobertura mejorada del lenguaje y mayor confiabilidad.  

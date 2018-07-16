@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
 - security [Reporting Services], unattended report processing
@@ -21,18 +21,18 @@ ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 063fd32c8b94bc10bc22aea0d117a6d41a0a84fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0cba2bc68d83c2d0b986324e2efa7f882bac6e76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321925"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una cuenta especial que se utiliza para el procesamiento de informes en modo desatendido y para enviar solicitudes de conexión a través de la red. La cuenta se utiliza de las formas siguientes:  
   
--   Envíe las solicitudes de conexión a través de la red para los informes que usen la autenticación de base de datos, o conéctese a los orígenes de datos de informe externos que no requieran ni usen autenticación. Para obtener más información, consulte [especificar credenciales y la información de conexión para orígenes de datos de informe](../../integration-services/connection-manager/data-sources.md) en libros en pantalla de SQL Server.  
+-   Envíe las solicitudes de conexión a través de la red para los informes que usen la autenticación de base de datos, o conéctese a los orígenes de datos de informe externos que no requieran ni usen autenticación. Para obtener más información, consulte [especificar credenciales y la información de conexión de orígenes de datos de informe](../../integration-services/connection-manager/data-sources.md) en libros en pantalla de SQL Server.  
   
 -   Recuperar archivos de imagen externos utilizados en el informe. Si desea utilizar un archivo de imagen y no puede obtener acceso al mismo a través de un acceso anónimo, puede configurar la cuenta de procesamiento de informes en modo desatendido y conceder el permiso de cuenta para obtener acceso al archivo.  
   

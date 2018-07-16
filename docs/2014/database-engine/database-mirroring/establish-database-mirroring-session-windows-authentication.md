@@ -1,27 +1,26 @@
 ---
-title: Establecer una sesión mediante autenticación de Windows (SQL Server Management Studio) de creación de reflejo de la base de datos | Documentos de Microsoft
+title: Establecer una base de datos de la sesión mediante autenticación de Windows (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], sessions
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 caps.latest.revision: 57
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 635177c6ffac113221677ad81510ba595bc78d0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d212f5f1dda7ebe0e596808d56fb2060af467a04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235665"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows (SQL Server Management Studio)
     
@@ -65,7 +64,7 @@ ms.locfileid: "36196522"
     |------------|--------------|-----------------|  
     |**Rendimiento alto (asincrónico)**|Null (si existe, no se usa excepto cuando la sesión requiere un quórum)|Para maximizar el rendimiento, la base de datos reflejada siempre estará algo detrás de la base de datos principal, nunca acercándose demasiado. Sin embargo, el espacio entre las bases de datos suele ser pequeño. La pérdida de un asociado tiene el siguiente efecto:<br /><br /> Si la instancia de servidor reflejado deja de estar disponible, el principal continúa.<br /><br /> Si la instancia del servidor principal pasa a no estar disponible, el reflejado se detiene; pero si la sesión no tiene testigo (como se recomienda) o el testigo está conectado al servidor reflejado, se puede tener acceso a éste como servidor en espera activa; el propietario de la base de datos puede forzar el servicio a la instancia del servidor reflejado (con posible pérdida de datos).<br /><br /> <br /><br /> Para obtener más información, vea [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).|  
     |**Seguridad alta sin conmutación automática por error (sincrónico)**|no|Se garantiza que todas las transacciones confirmadas se escribirán en disco en el servidor reflejado.<br /><br /> La conmutación manual por error es posible siempre que los asociados estén conectados entre ellos y la base de datos esté sincronizada. La pérdida de un asociado tiene el siguiente efecto:<br /><br /> Si la instancia de servidor reflejado deja de estar disponible, el principal continúa.<br /><br /> Si la instancia del servidor principal deja de estar disponible, el reflejado se detiene, pero es accesible como servidor en espera activa; el propietario de la base de datos puede forzar el servicio a la instancia del servidor reflejado (con una posible pérdida de datos).<br /><br /> Para obtener más información, vea [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).|  
-    |**Seguridad alta con conmutación automática por error (sincrónico)**|Sí (obligatorio)|Se garantiza que todas las transacciones confirmadas se escribirán en disco en el servidor reflejado. Máxima disponibilidad al incluir una instancia del servidor testigo para permitir la conmutación automática por error. Tenga en cuenta que solo puede seleccionar la opción **Seguridad alta con conmutación automática por error (sincrónico)** si antes ha especificado una dirección del servidor testigo. La conmutación manual por error es posible siempre que los asociados estén conectados entre ellos y la base de datos esté sincronizada.<br /><br /> En la presencia de un testigo, la pérdida de un asociado tiene el siguiente efecto:<br /><br /> -Si la instancia del servidor principal deja de estar disponible, se produce la conmutación automática por error. La instancia del servidor reflejado cambia al rol de servidor principal y ofrece su base de datos como base de datos principal.<br /><br /> -Si la instancia del servidor reflejado deja de estar disponible, el principal continúa.<br /><br /> Para obtener más información, vea [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> **\*\* Importante \*\*** Si el testigo se desconecta, los asociados deben estar conectados entre ellos para que la base de datos esté disponible. Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).|  
+    |**Seguridad alta con conmutación automática por error (sincrónico)**|Sí (obligatorio)|Se garantiza que todas las transacciones confirmadas se escribirán en disco en el servidor reflejado. Máxima disponibilidad al incluir una instancia del servidor testigo para permitir la conmutación automática por error. Tenga en cuenta que solo puede seleccionar la opción **Seguridad alta con conmutación automática por error (sincrónico)** si antes ha especificado una dirección del servidor testigo. La conmutación manual por error es posible siempre que los asociados estén conectados entre ellos y la base de datos esté sincronizada.<br /><br /> En la presencia de un testigo, la pérdida de un asociado tiene el siguiente efecto:<br /><br /> -Si la instancia del servidor principal deja de estar disponible, se produce la conmutación automática por error. La instancia del servidor reflejado cambia al rol de servidor principal y ofrece su base de datos como base de datos principal.<br /><br /> -Si la instancia del servidor reflejado deja de estar disponible, continúa la entidad de seguridad.<br /><br /> Para obtener más información, vea [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> **\*\* Importante \*\*** Si el testigo se desconecta, los asociados deben estar conectados entre ellos para que la base de datos esté disponible. Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).|  
   
 7.  Cuando se den todas las condiciones siguientes, haga clic en **Iniciar creación de reflejo** para iniciar la creación de reflejo:  
   

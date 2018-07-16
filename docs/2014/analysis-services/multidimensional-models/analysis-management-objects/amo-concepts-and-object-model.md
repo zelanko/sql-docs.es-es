@@ -1,5 +1,5 @@
 ---
-title: Modelo de objetos y conceptos de AMO | Documentos de Microsoft
+title: Modelo de objetos y conceptos de AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 623caca0bf51815328bc24992a8f2d2928b9cab2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f692a0b5d66cc52107b93480bdf9d4541a84603
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310725"
 ---
 # <a name="amo-concepts-and-object-model"></a>Modelo de objetos y conceptos de AMO
-  Este tema proporciona una definición de Analysis Management Objects (AMO), cómo AMO está relacionada con otras herramientas y bibliotecas suministradas en la arquitectura de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]y una explicación conceptual de todos los objetos principales de AMO.  
+  En este tema se proporciona una definición de los objetos de administración de análisis (AMO), cómo AMO está relacionada con otras herramientas y bibliotecas proporcionadas en la arquitectura de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]y una explicación conceptual de todos los objetos principales de AMO.  
   
- AMO es una colección completa de clases de administración de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que se puede usar mediante programación, bajo el espacio de nombres de <xref:Microsoft.AnalysisServices>, en un entorno administrado. Las clases se incluyen en el archivo AnalysisServices.dll, que normalmente se encuentra donde el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el programa de instalación instala los archivos, en la carpeta \100\SDK\Assemblies\\. Para usar clases de AMO, incluya una referencia a este ensamblado en sus proyectos.  
+ AMO es una colección completa de clases de administración de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que se puede usar mediante programación, bajo el espacio de nombres de <xref:Microsoft.AnalysisServices>, en un entorno administrado. Las clases se incluyen en el archivo AnalysisServices.dll, que normalmente se encuentra dónde el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programa de instalación instala los archivos, en la carpeta de \100\SDK\Assemblies\\. Para usar clases de AMO, incluya una referencia a este ensamblado en sus proyectos.  
   
- Mediante AMO puede crear, modificar y eliminar objetos tales como cubos, dimensiones, estructuras de minería de datos, y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las bases de datos; sobre todos estos objetos, se pueden realizar acciones de la aplicación en .NET Framework. Además, puede procesar y actualizar la información almacenada en las bases de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Mediante AMO puede crear, modificar y eliminar objetos tales como cubos, dimensiones, estructuras de minería de datos, y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las bases de datos; sobre todos estos objetos, se pueden realizar acciones desde la aplicación en .NET Framework. Además, puede procesar y actualizar la información almacenada en las bases de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  Con AMO no se pueden consultar datos. Para consultar los datos, use [desarrollar con ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
   
@@ -54,19 +54,19 @@ ms.locfileid: "36112578"
  Por diseño, AMO está pensado únicamente para administrar objetos, no para consultar datos. Si el usuario necesita consulta [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] datos desde una aplicación cliente, debe usar la aplicación cliente [desarrollar con ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
   
 ##  <a name="AMOArchitecture"></a> Arquitectura AMO  
- AMO es una biblioteca completa de clases diseñada para administrar una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] desde una aplicación de cliente en código administrado en la versión 2.0 de .NET Framework.  
+ AMO es una completa biblioteca de clases diseñada para administrar una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] desde una aplicación cliente en código administrado en la versión 2.0 de .NET Framework.  
   
  La biblioteca de clases AMO está diseñada como una jerarquía de clases, donde se deben crear instancias de ciertas clases antes que otras para poder utilizarlas en su código. También se pueden crear en su código instancias de clases auxiliares en cualquier momento, aunque probablemente habrá creado una o más instancias de las clases de jerarquía antes de usar cualquiera de las clases auxiliares.  
   
  La ilustración siguiente es una vista de alto nivel de la jerarquía AMO que incluye las clases principales. La ilustración muestra la posición de las clases entre sus contenedores y sus elementos del mismo nivel. <xref:Microsoft.AnalysisServices.Dimension> pertenece a <xref:Microsoft.AnalysisServices.Database> y <xref:Microsoft.AnalysisServices.Server>, y se puede crear al mismo tiempo como <xref:Microsoft.AnalysisServices.DataSource> y <xref:Microsoft.AnalysisServices.MiningStructure>. Se deben crear instancias de ciertas clases del mismo nivel antes de poder usar otras. Por ejemplo, tiene que crear una instancia de <xref:Microsoft.AnalysisServices.DataSource> antes de agregar un nuevo <xref:Microsoft.AnalysisServices.Dimension> o <xref:Microsoft.AnalysisServices.MiningStructure>.  
   
- ![Vista de alto nivel de las clases AMO](../../../analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "AMO clases de vista de alto nivel")  
+ ![Vista de alto nivel de las clases AMO](../../../analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "vista de alto nivel de las clases AMO")  
   
- A *objeto principal* es una clase que representa un objeto completo como una entidad completa y no como parte de otro objeto. Los objetos principales incluyen <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Dimension> y <xref:Microsoft.AnalysisServices.MiningStructure>, porque éstas son entidades por sí solas. Sin embargo, <xref:Microsoft.AnalysisServices.Level> no es un objeto principal porque es una parte constituyente de <xref:Microsoft.AnalysisServices.Dimension>. Los objetos principales se pueden crear, eliminar, modificar o procesar independientemente de otros objetos. Los objetos secundarios son objetos que únicamente se pueden crear como parte de la creación de un objeto principal primario. Los objetos secundarios normalmente se crean en la creación del objeto principal. Los valores de los objetos secundarios se deberían definir en el momento de su creación, porque no hay ninguna creación predeterminada para objetos secundarios.  
+ Un *objeto principal* es una clase que representa un objeto completo como una entidad completa y no como parte de otro objeto. Los objetos principales incluyen <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Dimension> y <xref:Microsoft.AnalysisServices.MiningStructure>, porque éstas son entidades por sí solas. Sin embargo, <xref:Microsoft.AnalysisServices.Level> no es un objeto principal porque es una parte constituyente de <xref:Microsoft.AnalysisServices.Dimension>. Los objetos principales se pueden crear, eliminar, modificar o procesar independientemente de otros objetos. Los objetos secundarios son objetos que únicamente se pueden crear como parte de la creación de un objeto principal primario. Los objetos secundarios normalmente se crean en la creación del objeto principal. Los valores de los objetos secundarios se deberían definir en el momento de su creación, porque no hay ninguna creación predeterminada para objetos secundarios.  
   
  La ilustración siguiente muestra los objetos principales que contiene un objeto <xref:Microsoft.AnalysisServices.Server>.  
   
- ![Objetos principales de AMO resaltados](../../../analysis-services/dev-guide/media/amo-majorobjects.gif "objetos principales de AMO resaltados")  
+ ![Principales objetos de AMO resaltados](../../../analysis-services/dev-guide/media/amo-majorobjects.gif "principales objetos de AMO resaltados")  
   
  ![Principales objetos de AMO resaltados (2)](../../../analysis-services/dev-guide/media/amo-majorobjects-02.gif "principales objetos de AMO resaltados (2)")  
   

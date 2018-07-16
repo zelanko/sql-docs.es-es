@@ -1,5 +1,5 @@
 ---
-title: Modificar una plantilla de seguimiento (SQL Server Profiler) | Documentos de Microsoft
+title: Modificar una plantilla de seguimiento (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
 - trace templates [SQL Server]
 - modifying traces
 ms.assetid: b81df2a1-e202-43d8-92b0-0beb145f0116
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: afa7876575dca287f492f07cc69d6dd7dfe27222
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8079f4dfa5893915a10ae044045d1cc9eb59baa8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299375"
 ---
 # <a name="modify-a-trace-template-sql-server-profiler"></a>Modificar una plantilla de seguimiento (SQL Server Profiler)
   En este tema se explica cómo modificar una plantilla de seguimiento mediante [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
@@ -45,7 +45,7 @@ ms.locfileid: "36112321"
 4.  Haga clic en **Guardar**o bien en **Guardar As**si desea guardar la plantilla de seguimiento con otro nombre.  
   
 ## <a name="see-also"></a>Vea también  
- [Especificar eventos y columnas de datos para un archivo de seguimiento &#40;analizador de SQL Server&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [Especificar eventos y columnas de datos para un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [Derivar una plantilla a partir de un seguimiento en ejecución &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Derivar una plantilla a partir de un archivo o tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

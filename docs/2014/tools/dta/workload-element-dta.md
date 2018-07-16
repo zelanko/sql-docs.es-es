@@ -1,5 +1,5 @@
 ---
-title: Workload, elemento (DTA) | Documentos de Microsoft
+title: Elemento de Workload (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Workload element
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 71a7bfe2fe4d613117c1b52e83a7767a474a791e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b2ff6e041783707a6c9a7fa5e2f4472fa8cd901a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315015"
 ---
 # <a name="workload-element-dta"></a>Workload (DTA, elemento)
   Especifica la carga de trabajo que se va a utilizar durante una sesión de optimización.  
@@ -56,12 +56,12 @@ ms.locfileid: "36112582"
 ## <a name="remarks"></a>Notas  
  Una carga de trabajo es un conjunto de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecuta en una o varias bases de datos que se desean optimizar. El Asistente para la optimización de motor de base de datos puede utilizar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , archivos de seguimiento y tablas de seguimiento como cargas de trabajo.  
   
- Si se especifica una carga de trabajo en un archivo de entrada XML y una carga de trabajo en la línea de comandos mediante la herramienta **dta** , la carga de trabajo especificada en la línea de comandos se utilizará para la optimización. Todas las opciones de optimización especificadas en la línea de comandos tienen preferencia sobre las especificadas en un archivo de entrada XML. La única excepción se produce cuando se usa una configuración especificada por el usuario en el modo de evaluación del archivo de entrada XML. Por ejemplo, si se especifica una configuración en el `Configuration` elemento del archivo de entrada XML y `EvaluateConfiguration` elemento también se especifica como una de las opciones de optimización, las opciones de optimización especificadas en el archivo de entrada XML anulan las opciones de optimización especificadas en la línea de comandos.  
+ Si se especifica una carga de trabajo en un archivo de entrada XML y una carga de trabajo en la línea de comandos mediante la herramienta **dta** , la carga de trabajo especificada en la línea de comandos se utilizará para la optimización. Todas las opciones de optimización especificadas en la línea de comandos tienen preferencia sobre las especificadas en un archivo de entrada XML. La única excepción se produce cuando se usa una configuración especificada por el usuario en el modo de evaluación del archivo de entrada XML. Por ejemplo, si se especifica una configuración en el `Configuration` elemento del archivo de entrada XML y el `EvaluateConfiguration` elemento también se especifica como una de las opciones de optimización, las opciones de optimización especificadas en el archivo de entrada XML invalidará las opciones de optimización especificadas en la línea de comandos.  
   
  Es necesario especificar una carga de trabajo para cada sesión de optimización.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se especifica la **MyDatabase.MyDBOwner.TuningTable001** tabla de seguimiento para el `Workload` elemento. **TuningTable001** se creó utilizando la plantilla Optimización con SQL Server Profiler y guardando el seguimiento generada como una tabla.  
+ El ejemplo de código siguiente especifica el **MyDatabase.MyDBOwner.TuningTable001** tabla de seguimiento para el `Workload` elemento. **TuningTable001** se creó utilizando la plantilla Optimización con SQL Server Profiler y guardando el seguimiento generada como una tabla.  
   
 ```  
 <DTAXML ...>  

@@ -1,5 +1,5 @@
 ---
-title: Tipos de datos XML (XMLA) | Documentos de Microsoft
+title: Tipos de datos XML (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XML for Analysis, data types
 ms.assetid: 979b5384-90d9-4e09-9286-1d1eafdc4864
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d7a21691474e890ba8614715b18e972d1353b2c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ccba3c69101362d1a384320808a30066ae572b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297095"
 ---
 # <a name="xml-data-types-xmla"></a>Tipos de datos XML (XMLA)
   Además de los tipos estándar primitivo y derivado definidos por la recomendación XML 1.0, el XML para las especificaciones de Analysis (XMLA) 1.1 define los tipos de datos adicionales con el fin de admitir la representación de datos multidimensionales y tabulares.  
@@ -39,7 +39,7 @@ ms.locfileid: "36113873"
 |----------------|-----------------|  
 |Boolean|El tipo de datos XML estándar `boolean`.|  
 |Decimal|El tipo de datos XML estándar `decimal`.|  
-|[EmptyResult](emptyresult-data-type-xmla.md)|Un espacio de nombres en el elemento `root`. Este espacio de nombres se devuelve cuando un comando XMLA no devuelve un resultado debido a que el comando XMLA no devuelve generalmente un resultado o porque se produjo un error en la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia mientras se ejecuta el comando XMLA.|  
+|[EmptyResult](emptyresult-data-type-xmla.md)|Un espacio de nombres en el elemento `root`. Este espacio de nombres se devuelve cuando un comando XMLA no devuelve un resultado porque el comando XMLA no devuelve generalmente un resultado o porque se produjo un error en la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia mientras se ejecuta el comando XMLA.|  
 |[EnumString](enumstring-data-type-xmla.md)|Un conjunto de constantes de cadena con nombre para un enumerador determinado.|  
 |Integer|El tipo de datos XML estándar `int`.|  
 |[MDDataSet](mddataset-data-type-xmla.md)|Datos multidimensionales devueltos por la *resultado* parámetro de la [Execute](../xml-elements-methods-execute.md) método.|  

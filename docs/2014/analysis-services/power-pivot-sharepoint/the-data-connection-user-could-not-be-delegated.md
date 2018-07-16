@@ -1,5 +1,5 @@
 ---
-title: 'La conexión de datos utiliza la autenticación de Windows y las credenciales del usuario no se pudieron delegar. No se pudieron actualizar las siguientes conexiones: datos de PowerPivot | Documentos de Microsoft'
+title: 'La conexión de datos utiliza la autenticación de Windows y las credenciales del usuario no se pudieron delegar. No se pudieron actualizar las siguientes conexiones: datos PowerPivot | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d2006df1-d244-4786-b272-49d8996cc88c
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7598685ddb6cd92ad3bcddd1bd307f976db88f55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b9cdc773ef42536be619d8d8c0edac1d6d1dcb92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319385"
 ---
 # <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>La conexión de datos utiliza la autenticación de Windows y las credenciales del usuario no se pudieron delegar. No se pudieron actualizar las siguientes conexiones: datos PowerPivot
   En los libros de Excel que contienen datos PowerPivot, Excel Services devuelve este error si no puede conectarse a una instancia del servidor PowerPivot en SharePoint.  
@@ -64,6 +64,6 @@ ms.locfileid: "36203752"
     2.  Inicie Notificaciones del servicio de token de Windows, si no se está ejecutando.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar cuentas de servicio PowerPivot](configure-power-pivot-service-accounts.md)  
+ [Configurar las cuentas de servicio PowerPivot](configure-power-pivot-service-accounts.md)  
   
   

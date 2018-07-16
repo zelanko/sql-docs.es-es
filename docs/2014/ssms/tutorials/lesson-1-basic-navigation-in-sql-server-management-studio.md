@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cab5279-86fd-482d-a690-de24bbc25299
-caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7ae7f0bfae887834f0e1cd619f5abe135a3b5a53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5c5fc0c3734f65518715e02a5213fc14c62d2fcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306925"
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Lección 1: Navegación básica en SQL Server Management Studio
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es una herramienta eficaz y flexible. No obstante, los nuevos usuarios de Microsoft Visual Studio a veces tienen dificultades a la hora de encontrar el modo más rápido de llegar a la función adecuada. Esta lección muestra la forma en que las ventanas interaccionan entre sí para presentar una superficie de diseño que haga más fácil su trabajo. Al final de esta lección, habrá aprendido a quitar ventanas no deseadas, abrir con rapidez las ventanas que contienen la información que necesita y configurar la superficie predeterminada para que dé cabida al trabajo que realiza de forma habitual.  

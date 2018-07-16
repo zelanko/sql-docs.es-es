@@ -1,5 +1,5 @@
 ---
-title: Tablas de historial de copia de seguridad o restauración grandes hacen que la actualización aparentemente no responda | Documentos de Microsoft
+title: Tablas de historial de copia de seguridad o restauración grandes hacen que la actualización aparentemente no responda | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup history tables
 - history tables
 ms.assetid: f88d86ec-324b-4518-b6d7-1af7e7265812
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1b7d3f6c5734f743d83a712cea745c3816bcdbc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d01d73f9456d56a8f12698b954213289ab4921d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208505"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>Las tablas de historial de restauración o copia de seguridad de gran tamaño hacen que la actualización aparentemente no responda
   En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], se han agregado nuevas columnas a algunas de las tablas de historial de restauración y copia de seguridad. Al actualizar estas tablas, es necesario modificarlas para agregar las nuevas columnas. Si una o varias de estas tablas contienen un gran número de filas, la actualización se detendrá durante un periodo de tiempo importante cuando se ejecute la instrucción ALTER TABLE que agrega las columnas a esa tabla.  

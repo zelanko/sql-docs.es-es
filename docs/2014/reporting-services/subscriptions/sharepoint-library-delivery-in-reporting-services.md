@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], report delivery
 - delivering reports [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e26aab503c41cbd64f16708c8b420bf3ae93af1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf32579a40b3290e0126b3a1a92665643ae8c3cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264201"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Entrega de la biblioteca de SharePoint en Reporting Services
   Un servidor de informes que se configura para la integración de SharePoint incluye una extensión de entrega que usted puede utilizar para enviar un informe a una biblioteca de SharePoint.  
@@ -75,10 +75,10 @@ ms.locfileid: "36199277"
  Especifique el nombre y la extensión de archivo del informe como desea que aparezca en la biblioteca de destino. Si no especifica ninguna extensión de archivo, el servidor de informes crea una basada en el formato de salida del informe. Este valor es necesario. El nombre de archivo no debe incluir los siguientes caracteres: : \ / * ? " \< > | # { } %  
   
  Title  
- Especifica una función opcional `Title` propiedad para el informe en la biblioteca de destino. Es una propiedad estándar para todos los elementos almacenados en una biblioteca. Los usuarios pueden especificar si se va a mostrar u ocultar esta propiedad al ver el contenido de la biblioteca en un sitio de SharePoint.  
+ Especifica un elemento opcional `Title` propiedad para el informe en la biblioteca de destino. Es una propiedad estándar para todos los elementos almacenados en una biblioteca. Los usuarios pueden especificar si se va a mostrar u ocultar esta propiedad al ver el contenido de la biblioteca en un sitio de SharePoint.  
   
  Ruta de acceso  
- Especifica una dirección URL completa a la biblioteca de SharePoint, incluidos la aplicación web y el sitio de SharePoint. Por ejemplo: http://mySharePointWeb/MySite/MyDocLib; donde "http://mySharePointWeb" indica la aplicación Web, "Misitio" es el sitio de SharePoint y "Mibibliotecadedocumentos" es la biblioteca de SharePoint donde se entregará el informe.  
+ Especifica una dirección URL completa a la biblioteca de SharePoint, incluidos la aplicación web y el sitio de SharePoint. Por ejemplo: http://mySharePointWeb/MySite/MyDocLib; donde "http://mySharePointWeb" indica la aplicación Web, "Misitio" es el sitio de SharePoint, y "Mibibliotecadedocumentos" es la biblioteca de SharePoint donde se entregará el informe.  
   
  No puede especificar una página, un sitio o una lista. El contenedor de destino debe ser una biblioteca en el mismo sitio o conjunto de servidores.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36199277"
  Especifica si un archivo con el mismo nombre y extensión se sustituye por una versión más reciente al procesarse la suscripción. Elija **Sobrescribir** si desea reemplazar un archivo existente por una versión nueva. Elija **Ninguno** si no desea que la suscripción reemplace el archivo. En este caso, no se realiza ninguna entrega si existe un archivo con el nombre y la extensión de destino. Elija **Incremento automático** si desea agregar versiones sucesivas del mismo archivo anexando un número al final del nombre de archivo.  
   
  Copia automática  
- Si va a usar la característica de copia automática para copiar automáticamente la versión más reciente de un archivo en varias ubicaciones, el archivo se copiará al habilitarse **Sobrescribir** . Si ha usado **Autoincrement** o **ninguno**, se producirá un error en la entrega y la `rsDeliveryError` aparecerá un error.  
+ Si va a usar la característica de copia automática para copiar automáticamente la versión más reciente de un archivo en varias ubicaciones, el archivo se copiará al habilitarse **Sobrescribir** . Si ha usado **Autoincrement** o **ninguno**, se producirá un error en la entrega y el `rsDeliveryError` se producirá el error.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear y administrar suscripciones para servidores de informes en modo de SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
 - Windows Event log provider [Integration Services]
@@ -27,13 +27,13 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9611d78d6b94038511b29577aca5aaefb36366d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2656998d20bec2d0133a7158a3695f4163943181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291051"
 ---
 # <a name="integration-services-ssis-logging"></a>Registro de Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye proveedores de registro que se pueden usar para implementar registros en paquetes, contenedores y tareas. Con los registros, se puede capturar información de tiempo de ejecución sobre un paquete, lo que le ayuda a auditar y solucionar los problemas de un paquete cada vez que se ejecuta. Por ejemplo, un registro puede capturar el nombre del operador que ejecutó el paquete y la hora en que el paquete empezó y terminó.  
@@ -56,7 +56,7 @@ ms.locfileid: "36198477"
     > [!NOTE]  
     >  No se puede usar el proveedor de registro de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] en un paquete que se ejecute en modo de 64 bits.  
   
--   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de registro, que escribe entradas de registro en el `sysssislog` tabla un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos.  
+-   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de registro, que escribe entradas de registro en el `sysssislog` de tabla en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos.  
   
 -   El proveedor de registro de eventos de Windows, que escribe entradas en el registro de aplicación del registro de eventos de Windows en el equipo local.  
   
@@ -207,11 +207,11 @@ ms.locfileid: "36198477"
 ## <a name="related-tasks"></a>Related Tasks  
  La lista siguiente contiene vínculos a temas que muestran cómo realizar tareas relacionadas con la característica de registro.  
   
--   [Configurar el cuadro de diálogo registros SSIS](../configure-ssis-logs-dialog-box.md)  
+-   [Configurar el cuadro de diálogo Registros de SSIS](../configure-ssis-logs-dialog-box.md)  
   
 -   [Habilitar el registro de paquetes en SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md)  
   
--   [Habilitar el registro de ejecución del paquete en el servidor SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md)  
+-   [Habilitar el registro para la ejecución de paquetes en el servidor SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md)  
   
 -   [Ver entradas del registro en la ventana Registrar eventos](../view-log-entries-in-the-log-events-window.md)  
   

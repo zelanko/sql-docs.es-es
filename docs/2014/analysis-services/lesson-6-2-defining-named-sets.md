@@ -1,5 +1,5 @@
 ---
-title: Definir conjuntos con nombre | Documentos de Microsoft
+title: Definir conjuntos con nombre | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 5d2988a40cdbf9294a89982396535c7389fb2bea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2f1e53e6dd8aacf6bcf347f2d604ae1e5c1aa6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312695"
 ---
 # <a name="defining-named-sets"></a>Definir conjuntos con nombre
   Un conjunto con nombre es una expresión de Expresiones multidimensionales (MDX) que devuelve un conjunto de miembros de dimensión. Puede definir conjuntos con nombre y guardarlos como parte de la definición del cubo; también puede crear conjuntos con nombre en aplicaciones cliente. Puede crear conjuntos con nombre combinando datos del cubo, operadores aritméticos, números y funciones. Los usuarios pueden usar los conjuntos con nombre en consultas MDX en aplicaciones cliente y también pueden usarse para definir conjuntos en subcubos. Un subcubo es una colección de conjuntos unidos de forma cruzada que restringe el espacio del cubo al subespacio definido para instrucciones posteriores. La definición de un espacio del cubo restringido es un concepto fundamental para el scripting de MDX.  
@@ -79,7 +79,7 @@ ms.locfileid: "36203528"
   
 8.  Abra el Diseñador de dimensiones para la dimensión **Reseller** y, a continuación, haga clic en **Number of Employees** en el panel **Atributos** .  
   
-9. En la ventana Propiedades, cambie la `DiscretizationMethod` propiedad **automática**y, a continuación, cambie la `DiscretizationBucketCount` propiedad `5`. Para más información, vea [Agrupar miembros de atributos &#40;Discretización&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
+9. En la ventana Propiedades, cambie la `DiscretizationMethod` propiedad **automática**y, a continuación, cambie el `DiscretizationBucketCount` propiedad `5`. Para más información, vea [Agrupar miembros de atributos &#40;Discretización&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
 10. En el menú **Generar** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], haga clic en **Implementar Tutorial de Analysis Services**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36203528"
   
      Observe que los miembros de esta jerarquía de atributos están contenidos ahora en cinco grupos, numerados de 0 a 4. Para ver el número de un grupo, pause el puntero sobre ese grupo para ver un recuadro informativo. Para el intervalo `2 -17`, el recuadro informativo debe contener `[Reseller].[Number of Employees].&[0]`.  
   
-     Los miembros de esta jerarquía de atributo están agrupados porque la propiedad DiscretizationBucketCount está establecida en `5` y se establece la propiedad DiscretizationMethod en **automática**.  
+     Los miembros de esta jerarquía de atributo están agrupados porque la propiedad DiscretizationBucketCount está establecida en `5` y la propiedad DiscretizationMethod está establecida en **automática**.  
   
 13. En el cuadro **Expresión** , agregue una coma a la expresión de conjunto Exists después de la función Members y antes del paréntesis de cierre y, luego, arrastre **83 - 100** desde el panel **Metadatos** y colóquelo detrás de la coma.  
   
@@ -121,19 +121,19 @@ ms.locfileid: "36203528"
   
 5.  Expanda la dimensión Product y, a continuación, agregue Category y Subcategory al área de fila, como se muestra en la ilustración siguiente.  
   
-     ![Los miembros del atributo Subcategory](../../2014/tutorials/media/l6-named-set-03.gif "miembros del atributo de subcategoría")  
+     ![Los miembros del atributo Subcategory](../../2014/tutorials/media/l6-named-set-03.gif "miembros del atributo Subcategory")  
   
 6.  En el panel **Metadatos** , en la dimensión **Product** , arrastre **Core Products** el área de filtro.  
   
      Observe que solo el miembro **Bike** del atributo **Category** y los miembros de las subcategorías **Bike** permanecen en el cubo. Esto se debe a que se usa el conjunto con nombre **Core Products** para definir un subcubo. Este subcubo limita los miembros del atributo **Category** en la dimensión **Product** del subcubo a los miembros del conjunto con nombre **Core Products** , tal como se muestra en la ilustración siguiente.  
   
-     ![Conjunto con nombre de los miembros del producto base](../../2014/tutorials/media/l6-named-set-04.gif "conjunto con nombre de los miembros del producto principal")  
+     ![Conjunto con nombre de los miembros del producto principal](../../2014/tutorials/media/l6-named-set-04.gif "conjunto con nombre de los miembros del producto principal")  
   
 7.  En el panel **Metadatos** , expanda **Distribuidor**y agregue **Grandes distribuidores** al área de filtro.  
   
      Observe que la medida Importe de datos del distribuidor del panel Datos solo muestra importes de venta para los grandes distribuidores de bicicletas. Observe también que el panel Filtro muestra ahora los dos conjuntos con nombre que se utilizan para definir este subcubo en particular, tal como muestra la siguiente imagen.  
   
-     ![Panel de filtro que contiene dos denominado establece](../../2014/tutorials/media/l6-named-set-05.gif "establece el panel de filtro que contiene dos denominado")  
+     ![Panel de filtro que contiene dos denominado establece](../../2014/tutorials/media/l6-named-set-05.gif "establece el panel de filtro que contiene dos con nombre")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Lección 7: Definir indicadores clave de rendimiento &#40;KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  

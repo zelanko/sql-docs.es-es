@@ -1,5 +1,5 @@
 ---
-title: Elemento Optimization (XMLA) | Documentos de Microsoft
+title: Elemento Optimization (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Optimization element
 ms.assetid: fb9ff737-59e2-4d8b-9f0e-af392eb25d08
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4de21674678078bd5dc7a83c3cd60e28fba36b91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b20e8875f982f16a3f7ee128552c65fbbfca0f60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261311"
 ---
 # <a name="optimization-element-xmla"></a>Elemento Optimization (XMLA)
   Especifica el número porcentaje de umbral de optimización utilizado por el comando [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) para diseñar agregaciones.  

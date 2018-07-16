@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], prefix length
 - prefix length [SQL Server]
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 338a19bca2f465d6af1b4f409d0563caeb71738f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0924e829729039aec7221a8faeeff37a9e830310
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212905"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Especificar la longitud de prefijo en los archivos de datos mediante bcp (SQL Server)
   Para proporcionar el almacenamiento en archivo más compacto para exportar de forma masiva datos en formato nativo a un archivo de datos, el comando **bcp** precede cada campo con uno o varios caracteres que indican la longitud del campo. Estos caracteres se denominan *caracteres de prefijo de longitud*.  
@@ -40,7 +39,7 @@ ms.locfileid: "36113140"
 >  Después de que se especifiquen de forma interactiva todos los campos de un comando **bcp**, el comando solicita que guarde sus respuestas para cada campo en un archivo que no tenga el formato XML. Para obtener más información sobre los archivos de formato no XML, vea [Archivos de formato no XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ## <a name="overview-of-prefix-length"></a>Información general sobre la longitud de prefijo  
- Para almacenar la longitud de prefijo de un campo, necesita una cantidad de bytes suficiente para representar la longitud máxima del campo. El número de bytes necesario también depende del tipo de almacenamiento de archivo, la nulabilidad de una columna y de si los datos se están almacenando en el archivo de datos en el formato nativo correspondiente o en el formato de caracteres. Por ejemplo, un `text` o `image` tipo de datos requiere cuatro caracteres de prefijo para almacenar la longitud del campo, pero un `varchar` tipo de datos requiere dos caracteres. En el archivo de datos, estos caracteres de prefijo de longitud se almacenan en el formato de datos binario interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para almacenar la longitud de prefijo de un campo, necesita una cantidad de bytes suficiente para representar la longitud máxima del campo. El número de bytes necesario también depende del tipo de almacenamiento de archivo, la nulabilidad de una columna y de si los datos se están almacenando en el archivo de datos en el formato nativo correspondiente o en el formato de caracteres. Por ejemplo, un `text` o `image` tipo de datos requiere cuatro caracteres de prefijo para almacenar la longitud de campo, pero un `varchar` tipo de datos necesita dos caracteres. En el archivo de datos, estos caracteres de prefijo de longitud se almacenan en el formato de datos binario interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  Cuando utilice el formato nativo, use prefijos de longitud en lugar de terminadores de campo. El formato de datos nativo puede entrar en conflicto con los terminadores porque en el formato de datos binario interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se almacena un archivo de datos en formato nativo.  

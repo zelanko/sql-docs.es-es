@@ -1,5 +1,5 @@
 ---
-title: Elemento CubeID (ASSL) | Documentos de Microsoft
+title: Elemento CubeID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CubeID element
 ms.assetid: cea9cd1b-30e6-48b1-afb9-c2c1243cead8
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d470f502eda90ffc95220aeca2bfe9d559752040
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 941e8171a183bcbc66521b4f022be185cac7911a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321125"
 ---
 # <a name="cubeid-element-assl"></a>Elemento CubeID (ASSL)
-  Identifica la [cubo](../objects/cube-element-assl.md) elemento asociado con un [enlace](../data-type/binding-data-type-assl.md) elemento.  
+  Identifica el [cubo](../objects/cube-element-assl.md) elemento asociado con un [enlace](../data-type/binding-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -1,5 +1,5 @@
 ---
-title: Información general (SMO) | Documentos de Microsoft
+title: Información general (SMO) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 caps.latest.revision: 68
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85d8e44514e4d26be4c720e562c4db7ac7b7af12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 28ccb6ff5219277d25d56670cf46f84e8e7726fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315665"
 ---
 # <a name="overview-smo"></a>Información general (SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objetos de administración (SMO) son objetos diseñados para la administración mediante programación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede usar SMO para crear aplicaciones de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizadas. Aunque [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es una aplicación eficaz y completa para administrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], habrá ocasiones en las que resultará más conveniente usar una aplicación SMO.  
@@ -71,7 +71,7 @@ ms.locfileid: "36111540"
   
 -   Desencadenadores DDL para agregar funcionalidad cuando se producen eventos DDL. Para más información, consulte [DDL Triggers](../triggers/ddl-triggers.md).  
   
- El espacio de nombres de SMO es <xref:Microsoft.SqlServer.Management.Smo>. SMO se implementa como un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ensamblado. Esto significa que common language runtime desde la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versión 2.0 debe estar instalada antes de usar los objetos SMO. Los ensamblados SMO se instalan de forma predeterminada en la memoria caché de ensamblados global (GAC) con la opción SDK de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los ensamblados se encuentran en [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Para obtener más información, consulte el [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentación.  
+ El espacio de nombres de SMO es <xref:Microsoft.SqlServer.Management.Smo>. SMO se implementa como un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ensamblado. Esto significa que common language runtime desde el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versión 2.0 debe instalarse antes de usar los objetos SMO. Los ensamblados SMO se instalan de forma predeterminada en la memoria caché de ensamblados global (GAC) con la opción SDK de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los ensamblados se encuentran en [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Para obtener más información, consulte el [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentación.  
   
 ## <a name="smo-classes"></a>Clases SMO  
  Las clases SMO incluyen dos categorías: clases de instancia y clases de utilidad.  
@@ -109,13 +109,13 @@ ms.locfileid: "36111540"
   
  La ejecución de captura permite capturar lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] que, en condiciones normales, se ejecutarían. Esto permite al programador de SMO aplazar el script, almacenarlo para ejecutarlo posteriormente o proporcionar una vista previa al usuario final. Por ejemplo, es posible enviar una instrucción `create database`, `create table` y `create index` en un lote y, a continuación, realizar la ejecución en tres pasos secuenciales. El usuario es quien controla esta funcionalidad utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>.  
   
- **Proveedor WMI**  
+ **Proveedor de WMI**  
   
  SMO encapsula los objetos de proveedor WMI. Esto proporciona al programador de SMO un modelo de objetos simple muy similar a las clases SMO, sin necesidad de que entienda el modelo de programación representado por el espacio de nombres ni los detalles del proveedor WMI de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El proveedor WMI permite configurar servicios, alias y bibliotecas de red de cliente y de servidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Scripting**  
   
- En SMO, se han realizado mejoras en la creación de script, que se ha trasladado a la clase `Scripter`. El `Scripter` (clase) puede detectar las dependencias, entender las relaciones entre objetos y habilitar la manipulación de la jerarquía de dependencias. El principal objeto de creación de script es el objeto `Scripter`. Hay también varios objetos de soporte que administran las dependencias y responden a eventos de progreso o error.  
+ En SMO, se han realizado mejoras en la creación de script, que se ha trasladado a la clase `Scripter`. La `Scripter` clase puede detectar dependencias, entender las relaciones entre objetos y habilitar la manipulación de la jerarquía de dependencias. El principal objeto de creación de script es el objeto `Scripter`. Hay también varios objetos de soporte que administran las dependencias y responden a eventos de progreso o error.  
   
  El objeto `Scripter` admite las siguientes opciones avanzadas de creación de script:  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36111540"
  El URN de un objeto puede recuperarse haciendo referencia a su propiedad URN. El objeto Scripter también usa los URN como parámetros que pasan referencias de objeto al método del objeto `Scripter`. Además, puede especificarse un URN para el **GetSmoObject** método de la `Server` objeto. Se utiliza para crear una instancia del objeto SMO.  
   
 ## <a name="new-sql-server-features-represented-in-smo"></a>Características nuevas de SQL Server representadas en SMO  
- **Tabla de particiones e índices**  
+ **Tabla y particiones de índice**  
   
  Las particiones de tabla e índice permiten administrar la difusión de los datos de tablas e índices a través de grupos de archivos. Esta nueva característica se representa mediante objetos SMO.  
   

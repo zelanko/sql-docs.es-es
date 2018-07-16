@@ -1,13 +1,11 @@
 ---
-title: Requisitos de tipo definido por el usuario | Documentos de Microsoft
+title: Requisitos de tipo definido por el usuario | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,18 +20,18 @@ helpviewer_keywords:
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 14286261d2f157f208fe8d918e4fe1705f58eb97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ff2d8987dee15e39a5f85e4efc01f0bdaef27e06
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198462"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350077"
 ---
 # <a name="user-defined-type-requirements"></a>Requisitos de tipos definidos por el usuario
-  Debe realizar varias decisiones de diseño importantes al crear un tipo definido por el usuario (UDT) que se instalen en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para la mayoría de los UDT, se recomienda la creación del UDT como una estructura, aunque también puede crearse como una clase. La definición del UDT debe cumplir las especificaciones de creación de los UDT a fin de registrarse con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Debe realizar varias decisiones de diseño importante al crear un tipo definido por el usuario (UDT) se instale en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para la mayoría de los UDT, se recomienda la creación del UDT como una estructura, aunque también puede crearse como una clase. La definición del UDT debe cumplir las especificaciones de creación de los UDT a fin de registrarse con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="requirements-for-implementing-udts"></a>Requisitos para implementar un UDT  
  El UDT, para poder ejecutarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe implementar los requisitos siguientes en la definición del UDT:  
@@ -56,7 +54,7 @@ ms.locfileid: "36198462"
   
 -   El UDT debe exponer elementos de datos como procedimientos de propiedad o campos públicos.  
   
--   Los nombres públicos no pueden tener más de 128 caracteres y debe ajustarse a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reglas de nomenclatura para los identificadores como se define en [identificadores de base de datos](../databases/database-identifiers.md).  
+-   Nombres públicos no puede tener más de 128 caracteres y debe cumplir la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reglas de nomenclatura para los identificadores tal como se define en [identificadores de base de datos](../databases/database-identifiers.md).  
   
 -   Las columnas `sql_variant` no pueden contener instancias de un UDT.  
   
@@ -74,7 +72,7 @@ ms.locfileid: "36198462"
 ## <a name="native-serialization"></a>Serialización nativa  
  La elección de los atributos de serialización correctos para su UDT depende del tipo de UDT que está intentando crear. El formato de serialización `Native` usa una estructura muy simple que permite a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacenar en disco una representación nativa eficaz del UDT. Se recomienda el formato `Native` si el UDT es simple y solamente contiene campos de los tipos siguientes:  
   
- **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
+ **BOOL**, **bytes**, **sbyte**, **corto**, **ushort**, **int**, ** uint**, **largo**, **ulong**, **float**, **doble**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, ** SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
  Los tipos de valores compuestos de campos de los tipos anteriores son buenos candidatos para el formato `Native`, como `structs` en Visual C# (o `Structures`, como se conocen en Visual Basic). Por ejemplo, un UDT especificado con el formato de serialización `Native` puede contener un campo de otro UDT también especificado con el formato `Native`. Si la definición UDT es más compleja y contiene tipos de datos que no figuran en la lista anterior, debe especificar en su lugar el formato de serialización `UserDefined`.  
   
@@ -86,7 +84,7 @@ ms.locfileid: "36198462"
   
 -   Debe especificarse `System.Runtime.InteropServices.StructLayoutAttribute` como `StructLayout.LayoutKindSequential` si el UDT se define en una clase y no en una estructura. Este atributo controla el diseño físico de los campos de datos y se usa para imponer a los miembros que se coloquen en el orden en que aparecen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa este atributo para determinar el orden de los campos para los UDT con varios valores.  
   
- Para obtener un ejemplo de un UDT definido con `Native` serialización, vea el UDT Point en [Coding User-Defined tipos](creating-user-defined-types-coding.md).  
+ Para obtener un ejemplo de un UDT definido con `Native` serialización, vea el UDT Point en [codificación de tipos](creating-user-defined-types-coding.md).  
   
 ## <a name="userdefined-serialization"></a>Serialización UserDefined  
  La configuración de formato `UserDefined` del atributo `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` otorga al desarrollador un control total sobre el formato binario. Al especificar la propiedad de atributo `Format` como `UserDefined`, debe hacer lo siguiente en el código:  
@@ -97,7 +95,7 @@ ms.locfileid: "36198462"
   
 -   Escribir código para implementar los métodos `Read` y `Write` del UDT implementando la interfaz `System.Data.Sql.IBinarySerialize`.  
   
- Para obtener un ejemplo de un UDT definido con `UserDefined` serialización, vea el UDT Currency en [Coding User-Defined tipos](creating-user-defined-types-coding.md).  
+ Para obtener un ejemplo de un UDT definido con `UserDefined` serialización, vea el UDT Currency en [codificación de tipos](creating-user-defined-types-coding.md).  
   
 > [!NOTE]  
 >  Los campos UDT deben usar la serialización nativa o conservarse para indizarse.  
@@ -150,10 +148,10 @@ ms.locfileid: "36198462"
 -   Menor o igual que (<=)  
   
 ### <a name="implementing-nullability"></a>Implementar la nulabilidad  
- Además de especificar correctamente los atributos de los ensamblados, la clase también debe admitir la nulabilidad. Se tiene en cuenta el valor NULL de los UDT cargados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero para que el UDT reconozca un valor NULL, es necesario que la clase implemente la interfaz `INullable`. Para obtener más información y un ejemplo de cómo implementar la nulabilidad en un UDT, vea [Coding User-Defined tipos](creating-user-defined-types-coding.md).  
+ Además de especificar correctamente los atributos de los ensamblados, la clase también debe admitir la nulabilidad. Se tiene en cuenta el valor NULL de los UDT cargados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero para que el UDT reconozca un valor NULL, es necesario que la clase implemente la interfaz `INullable`. Para obtener más información y un ejemplo de cómo implementar la nulabilidad en un UDT, vea [codificación de tipos](creating-user-defined-types-coding.md).  
   
 ### <a name="string-conversions"></a>Conversiones de cadenas  
- Para admitir la conversión de cadenas al UDT y desde el UDT, debe proporcionar un método `Parse` y un método `ToString` en la clase. El método `Parse` permite convertir una cadena en un UDT. Debe declararse como `static` (o `Shared` en Visual Basic) y tomar un parámetro de tipo `System.Data.SqlTypes.SqlString`. Para obtener más información y un ejemplo de cómo implementar el `Parse` y `ToString` métodos, vea [Coding User-Defined tipos](creating-user-defined-types-coding.md).  
+ Para admitir la conversión de cadenas al UDT y desde el UDT, debe proporcionar un método `Parse` y un método `ToString` en la clase. El método `Parse` permite convertir una cadena en un UDT. Debe declararse como `static` (o `Shared` en Visual Basic) y tomar un parámetro de tipo `System.Data.SqlTypes.SqlString`. Para obtener más información y un ejemplo de cómo implementar la `Parse` y `ToString` métodos, vea [codificación de tipos](creating-user-defined-types-coding.md).  
   
 ## <a name="xml-serialization"></a>Serialización XML  
  Los UDT deben admitir la conversión al tipo de datos `xml` y desde el mismo, ajustándose al contrato de la serialización XML. El espacio de nombres `System.Xml.Serialization` contiene clases que se usan para serializar objetos en flujos o documentos con formato XML. Puede decidir implementar la serialización `xml` mediante la interfaz `IXmlSerializable`, que proporciona un formato personalizado para la serialización y deserialización XML.  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Database Management event class
 ms.assetid: 3e3de528-c3f8-413f-a6b9-d324ca95ad8e
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: edbc7f2787c7c5ca4f93129edc122303ed6c560d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 01bc877661355d2c0a1f55d877864db8ff3c73ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331745"
 ---
 # <a name="audit-database-management-event-class"></a>Audit Database Management, clase de eventos
   La clase de eventos **Audit Database Management** tiene lugar cuando se crea, modifica o elimina una base de datos.  

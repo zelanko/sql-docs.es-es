@@ -1,5 +1,5 @@
 ---
-title: 'Filtrar valores mediante SQL: limit-campo y SQL: limit-value (SQLXML 4.0) | Documentos de Microsoft'
+title: 'Filtrar valores mediante SQL: limit-campo y SQL: limit-value (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6cc802c42db2f688ee7d4cab0876e64ee9becc28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d2ae0fe5a6bc85a9c2535b65f1989a8d5cd72904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260561"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtras valores mediante sql:limit-field y sql:limit-value (SQLXML 4.0)
   Puede limitar filas devueltas de una consulta de base de datos en base a algún valor de limitación. Las anotaciones `sql:limit-field` y `sql:limit-value` se usan para identificar la columna de base de datos que contiene valores de limitación y para especificar un valor de limitación concreto que se va a usar para filtrar los datos devueltos.  
@@ -58,7 +58,7 @@ ms.locfileid: "36113331"
   
  Un cliente puede tener una dirección de envío y/o una dirección de facturación. Los valores de la columna AddressType son Shipping y Billing.  
   
- Éste es el esquema de asignación en el que el **ShipTo** atributo de esquema se asigna a la columna StreetAddress en la relación de Addresses. Los valores devueltos para este atributo se limitan solo a distribuir direcciones de envío especificando las anotaciones `sql:limit-field` y `sql:limit-value`. De forma similar, el **BillTo** atributo schema devuelve solo la dirección de facturación de un cliente.  
+ Éste es el esquema de asignación en el que el **ShipTo** atributo de esquema se asigna a la columna StreetAddress en la relación de Addresses. Los valores devueltos para este atributo se limitan solo a distribuir direcciones de envío especificando las anotaciones `sql:limit-field` y `sql:limit-value`. De forma similar, el **BillTo** atributo de esquema devuelve solo la dirección de facturación de un cliente.  
   
  Éste es el esquema:  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36113331"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Éste es el esquema de asignación en el que el **OrderID** atributo en los detalles del pedido se asigna a la columna OrderID de la relación de pedidos. Los valores que se devuelven para este atributo se limitan a los que tienen un valor de 2.0000000e-001 (0.2) como se especifica para el **Discount** atributo mediante la `sql:limit-field` y `sql:limit-value` anotaciones.  
+ Éste es el esquema de asignación en el que el **OrderID** atributo en los detalles del pedido se asigna a la columna OrderID de la relación de pedidos. Los valores devueltos para este atributo se limitan a solo aquellos que tienen un valor de 2. 0000000e-001 (0.2) como se especifica para el **descuento** atributo mediante la `sql:limit-field` y `sql:limit-value` anotaciones.  
   
  Éste es el esquema:  
   

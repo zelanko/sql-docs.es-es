@@ -1,5 +1,5 @@
 ---
-title: 'Filtros para los modelos de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Filtros para modelos de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - filter syntax [data mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: feefadeab6d4cde4a202b767223939edac63106f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c92fc27326167977f5fcab323e3b885f9ede635
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312715"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtros para modelos de minería (Analysis Services - Minería de datos)
   El filtrado de modelos basado en datos ayuda a crear modelos de minería de datos que usan subconjuntos de datos en una estructura de minería de datos. El filtrado proporciona flexibilidad a la hora de diseñar orígenes de datos y estructuras de minería de datos propios, porque se puede crear una estructura de minería de datos única basándose en una vista del origen de datos completa. A continuación, puede crear filtros para usar solo una parte de esos datos para aprendizaje y probar una variedad de modelos, en lugar de generar una estructura diferente y un modelo relacionado para cada subconjunto de datos.  
@@ -66,7 +66,7 @@ ms.locfileid: "36109393"
   
  Por ejemplo, si su tabla de casos está relacionada con los clientes y la tabla anidada muestra los productos que ha comprado un cliente, puede crear un filtro para los clientes que han comprado determinados elementos usando la sintaxis siguiente en el filtro de tabla anidada: `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`.  
   
- También puede filtrar por la existencia de un valor determinado en la tabla anidada utilizando el `EXISTS` o `NOT EXISTS` palabras clave y una subconsulta. Esto le permite crear condiciones como `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`. `EXISTS SELECT(<subquery>)` devuelve `true` si la tabla anidada contiene al menos una fila que incluye el valor `Water Bottle`.  
+ También puede filtrar por la existencia de un determinado valor en la tabla anidada utilizando el `EXISTS` o `NOT EXISTS` las palabras clave y una subconsulta. Esto le permite crear condiciones como `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`. `EXISTS SELECT(<subquery>)` devuelve `true` si la tabla anidada contiene al menos una fila que incluye el valor `Water Bottle`.  
   
  Puede combinar condiciones en la tabla de casos con condiciones en la tabla anidada. Por ejemplo, la sintaxis siguiente incluye una condición en la tabla de casos (`Age > 30` ), una subconsulta en la tabla anidada (`EXISTS (SELECT * FROM Products)`) y varias condiciones en la tabla anidada (`WHERE ProductName=’Milk’  AND Quantity>2`)).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36109393"
 ### <a name="how-can-i-tell-whether-a-filter-is-being-used"></a>¿Cómo puedo saber si se está usando un filtro?  
  Hay varias formas de determinar si se está aplicando un filtro a un modelo:  
   
--   En el diseñador, haga clic en el **modelos de minería de datos** ficha abierta **propiedades**y ver el `Filter` propiedad del modelo de minería de datos.  
+-   En el diseñador, haga clic en el **modelos de minería de datos** pestaña abierta **propiedades**y ver el `Filter` propiedad del modelo de minería de datos.  
   
 -   La DMV DMSCHEMA_MINING_MODELS muestra una columna que contiene el texto del filtro. Puede usar la consulta siguiente en una DMV para devolver los nombres de los modelos y sus filtros:  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36109393"
  Para más información sobre cómo usar los filtros de modelo al probar un modelo de minería de datos, vea [Elegir un tipo de gráfico de precisión y establecer las opciones del gráfico](choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
 ## <a name="see-also"></a>Vea también  
- [La sintaxis de filtros y ejemplos de modelos &#40;Analysis Services: minería de datos&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
+ [Ejemplos y sintaxis de filtro del modelo &#40;Analysis Services - minería de datos&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Pruebas y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
   
   

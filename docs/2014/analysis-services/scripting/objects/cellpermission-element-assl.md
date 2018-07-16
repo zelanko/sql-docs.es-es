@@ -1,5 +1,5 @@
 ---
-title: Elemento CellPermission (ASSL) | Documentos de Microsoft
+title: Elemento CellPermission (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CellPermission element
 ms.assetid: 54a6afc0-1fcb-4b24-851a-6d81e1fe0efc
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f8fcf84072db28684b2cdda195bf2f31ccb2d1e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f763ee90f4812ef86cae0cd24e96e5fb02b05087
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293375"
 ---
 # <a name="cellpermission-element-assl"></a>Elemento CellPermission (ASSL)
-  Se describen los permisos que los miembros de un [rol](role-element-assl.md) elemento tienen en celdas individuales dentro de un [cubo](cube-element-assl.md) elemento.  
+  Describe los permisos que los miembros de un [rol](role-element-assl.md) elemento tienen en celdas individuales dentro de un [cubo](cube-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   

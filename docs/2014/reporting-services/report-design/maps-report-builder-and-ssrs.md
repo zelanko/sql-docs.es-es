@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapproperties.general.f1
 - "10508"
@@ -18,15 +18,15 @@ f1_keywords:
 - "10500"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b73b5364e4ccd9cdb86210a25a8ee281dc6ad85c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 801c4ef8ce4c07491d45577224726167c86b0250
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313311"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Generador de informes y SSRS)
   Para visualizar datos comerciales con un fondo geográfico, puede agregar un mapa a un informe. El tipo de mapa que seleccione dependerá de qué información desee comunicar en el informe. Puede agregar un mapa que solo muestre las ubicaciones, un mapa de burbujas que varíe el tamaño de la burbuja en función del número de casas de un área, un mapa de marcadores que varíe el estilo de marcador según el producto más rentable de cada almacén o un mapa de líneas que muestre las rutas entre los almacenes.  
@@ -92,7 +92,7 @@ ms.locfileid: "36112905"
   
      En el conjunto de resultados que ve en el diseñador de consultas, cada fila de datos espaciales se trata como una unidad y se almacena en un único elemento de mapa. Por ejemplo, si hay varios puntos que se definen en una fila en el conjunto de resultados, las propiedades de presentación se aplican a todos los puntos de ese elemento de mapa.  
   
--   **Ubicaciones personalizadas que crea.** Puede agregar manualmente ubicaciones como puntos incrustados a una capa de puntos incrustados. Para obtener más información, consulte [agregar ubicaciones personalizadas a un mapa &#40;el generador de informes y SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
+-   **Ubicaciones personalizadas que crea.** Puede agregar manualmente ubicaciones como puntos incrustados a una capa de puntos incrustados. Para obtener más información, consulte [agregar ubicaciones personalizadas a un mapa &#40;generador de informes y SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
   
 #### <a name="spatial-data-in-design-view"></a>Datos espaciales en la vista de diseño  
  En la vista de diseño, el procesador de informes muestra datos espaciales de ejemplo para ayudarle a diseñar la capa de mapa. Los datos que ve dependen de la disponibilidad de los datos espaciales:  
@@ -175,7 +175,7 @@ ms.locfileid: "36112905"
   
 -   Si utilizar una conexión segura para recuperar los mosaicos del servicio web de Bing Maps.  
   
- Para obtener instrucciones detalladas, consulte [agregar, cambiar o eliminar un mapa o una capa de mapa &#40;el generador de informes y SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Para obtener instrucciones detalladas, consulte [agregar, cambiar o eliminar un mapa o una capa de mapa &#40;generador de informes y SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
  Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](http://go.microsoft.com/fwlink/?linkid=147315). Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](http://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](http://go.microsoft.com/fwlink/?LinkId=151372).  
   
@@ -254,29 +254,29 @@ ms.locfileid: "36112905"
 ##  <a name="HowTo"></a> Temas de procedimientos  
  En esta sección se enumeran procedimientos que muestran, paso a paso, cómo trabajar con mapas y asignar capas de mapa a un informe.  
   
--   [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;el generador de informes SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;generador de informes y SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
--   [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;el generador de informes SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+-   [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;generador de informes y SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [Agregar ubicaciones personalizadas a un mapa &#40;el generador de informes SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [Agregar ubicaciones personalizadas a un mapa &#40;generador de informes y SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
 ##  <a name="Section"></a> En esta sección  
- [Planear un informe de mapa &#40;el generador de informes SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
+ [Planear un informe de mapa &#40;generador de informes y SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
   
  [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40;el generador de informes SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40;generador de informes y SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;el generador de informes SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;generador de informes y SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;el generador de informes SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;generador de informes y SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [Agregar ubicaciones personalizadas a un mapa &#40;el generador de informes SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [Agregar ubicaciones personalizadas a un mapa &#40;generador de informes y SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Solucionar problemas de informes: Informes de mapa &#40;el generador de informes SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de informes: Informes de mapa &#40;generador de informes y SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

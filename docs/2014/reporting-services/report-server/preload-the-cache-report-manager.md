@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
@@ -16,13 +16,13 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b24be62a990b92b522d6bf4d0bb04873b743fa99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef7898589335192022fa83095f19a72ee4549798
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253917"
 ---
 # <a name="preload-the-cache-report-manager"></a>Cargar previamente la memoria caché (Administrador de informes)
   Puede cargar previamente la memoria caché para un conjunto de datos compartido creando un plan de actualización de caché para él.  

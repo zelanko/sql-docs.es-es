@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de propiedades General del origen de datos | Documentos de Microsoft
+title: Cuadro de diálogo de propiedades General del origen de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasourceproperties.general.f1
 - "10120"
 ms.assetid: 44b5edd3-5c11-4d3d-91b8-5871aa0572ed
 caps.latest.revision: 35
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 823604c6116c78f4313d5f1e328d98d7ed35f950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5e5b2f1c1792a2fdbc6b83d94f85dd5883b8954
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206735"
 ---
 # <a name="data-source-properties-dialog-box-general"></a>Propiedades del origen de datos (cuadro de diálogo), General
   Seleccione **General** en el cuadro de diálogo **Propiedades del origen de datos** para mostrar y modificar la información de conexión de un origen de datos del informe.  
@@ -47,9 +47,9 @@ ms.locfileid: "36201331"
  Seleccione esta opción para indicar que los conjuntos de datos que usan este origen de datos deben ejecutarse en una sola transacción en la base de datos. Para incluir transacciones para subinformes que usan el mismo origen de datos, establezca **MergeTransactions** en **True** en la sección de propiedades **Otros** del panel **Propiedades** del subinforme.  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Crear un origen de datos incrustado o compartido &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md)   
- [Las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Cuadro de diálogo de propiedades de origen de datos, credenciales](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)  
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Propiedades del origen de datos (cuadro de diálogo), Credenciales](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 635c108ec76177b90839ebb04d00d13dec7d1099
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: dab153b8d5047f73b337e5647fdb25d3b36d9705
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248075"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Referencias a la colección de campos de conjunto de datos (Generador de informes y SSRS)
   Cada conjunto de datos de un informe contiene una colección Fields. La colección Fields es el conjunto de campos especificados por la consulta de conjunto de datos, más los campos calculados adicionales que se hayan creado. Una vez creado el conjunto de datos, la colección de campos aparece en el panel **Datos de informe** .  
@@ -47,7 +47,7 @@ ms.locfileid: "36198113"
  De manera predeterminada, los elementos de la colección Fields tienen dos propiedades: Value e IsMissing. La propiedad IsMissing indica si un campo que se ha definido para un conjunto de datos en tiempo de diseño se encuentra entre los campos recuperados en tiempo de ejecución. Por ejemplo, la consulta podría llamar a un procedimiento almacenado en el que el conjunto de resultados varía con un parámetro de entrada, o podría ser `SELECT * FROM` *\<tabla>* donde cambió la definición de tabla.  
   
 > [!NOTE]  
->  IsMissing detecta cambios en el esquema de conjunto de datos entre el tiempo de diseño y el de ejecución para cualquier tipo de origen de datos. IsMissing no se puede usar para detectar miembros vacíos de un cubo multidimensional y no está relacionado con los conceptos del lenguaje de consulta MDX de `EMPTY` y `NON EMPTY`.  
+>  IsMissing detecta cambios en el esquema de conjunto de datos entre el tiempo de diseño y el de ejecución para cualquier tipo de origen de datos. IsMissing no se puede usar para detectar miembros vacíos en un cubo multidimensional y no está relacionado con los conceptos del lenguaje de consulta MDX de `EMPTY` y `NON EMPTY`.  
   
  Puede probar la propiedad IsMissing en código personalizado para determinar si un campo se encuentra en el conjunto de resultados. No puede comprobar su presencia usando una expresión con una llamada a una función de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], como `IIF` o `SWITCH`, porque [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] evalúa todos los parámetros en la llamada a la función, lo que produce un error cuando se evalúa la referencia al campo que falta.  
   
@@ -96,6 +96,6 @@ End Function
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](../report-data/report-datasets-ssrs.md)  
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](../report-data/report-datasets-ssrs.md)  
   
   

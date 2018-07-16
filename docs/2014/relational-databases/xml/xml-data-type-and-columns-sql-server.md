@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b6e74d209c89a23ac4fff6ec728bd7e423b5b117
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: fe03ba5bafde60d2a653e49bcfe90b70978a25d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300035"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Tipo de datos XML y columnas (SQL Server)
   En este tema se describe las ventajas y las limitaciones de la `xml` tipo de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y le ayuda a elegir cómo almacenar datos XML.  
@@ -37,7 +37,7 @@ ms.locfileid: "36197104"
   
 -   Desea realizar consultas en los datos o actualizar parte de ellos, basándose en su estructura.  
   
- Si no se cumple ninguna de estas condiciones, debe utilizar el modelo de datos relacional. Por ejemplo, si los datos están en formato XML, pero la aplicación solo utiliza la base de datos para almacenar y recuperar los datos, un `[n]varchar(max)` columna es todo lo que necesite. Almacenar los datos en una columna XML tiene más ventajas. Una de ellas es que se puede hacer que el motor determine si los datos tienen un formato correcto o son válidos, y otra es la posibilidad de realizar consultas y actualizaciones detalladas en los datos XML.  
+ Si no se cumple ninguna de estas condiciones, debe utilizar el modelo de datos relacional. Por ejemplo, si los datos están en formato XML pero la aplicación solo usa la base de datos para almacenar y recuperar los datos, un `[n]varchar(max)` columna es todo lo que necesita. Almacenar los datos en una columna XML tiene más ventajas. Una de ellas es que se puede hacer que el motor determine si los datos tienen un formato correcto o son válidos, y otra es la posibilidad de realizar consultas y actualizaciones detalladas en los datos XML.  
   
 ## <a name="reasons-for-storing-xml-data-in-sql-server"></a>Razones para almacenar datos XML en SQL Server  
  A continuación, se indican algunas de las razones para usar características XML nativas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en lugar de administrar los datos XML en el sistema de archivos:  
@@ -65,7 +65,7 @@ ms.locfileid: "36197104"
   
      Los datos se almacenan en una representación interna que conserva el contenido XML de los mismos. Esta representación interna incluye información sobre la jerarquía de inclusión, el orden de los documentos y los valores de los elementos y los atributos. En concreto, se conserva el contenido InfoSet de los datos XML. Para obtener más información sobre InfoSet, visite [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843). El contenido del InfoSet puede no ser una copia idéntica del texto XML, porque no se retiene la información siguiente: espacios en blanco no significativos, orden de los atributos, prefijos de los espacios de nombres y declaración XML.  
   
-     Para tipos de `xml` tipo de datos, un `xml` tipo de datos enlazados a esquemas XML, la validación de esquema posterior InfoSet (PSVI) agrega información de tipo para el conjunto de información y se codifica en la representación interna. De este modo, se mejora considerablemente la velocidad de análisis. Para obtener más información, vea las especificaciones del esquema XML de W3C en [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) y [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871).  
+     Con tipo `xml` tipo de datos, un `xml` tipo de datos enlazados a esquemas XML, la validación del esquema posterior InfoSet (PSVI) agrega información de tipo a InfoSet y se codifica en la representación interna. De este modo, se mejora considerablemente la velocidad de análisis. Para obtener más información, vea las especificaciones del esquema XML de W3C en [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) y [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Asignar entre almacenamiento XML y relacional  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36197104"
   
      Se almacena una copia idéntica de los datos. Esto resulta útil en el caso de aplicaciones para fines específicos, como documentos legales. La mayoría de las aplicaciones no requieren una copia exacta y les basta con el contenido XML (fidelidad InfoSet).  
   
- En general, es posible que se tenga que usar una combinación de estos enfoques. Por ejemplo, puede que desee almacenar los datos XML en un `xml` datos de columna de tipo y promocionar las propiedades de él en columnas relacionales. O bien, puede que desee usar tecnología de asignaciones para almacenar partes no recursivas en columnas no XML y solo las partes recursivas en `xml` columnas de tipo de datos.  
+ En general, es posible que se tenga que usar una combinación de estos enfoques. Por ejemplo, es posible que desee almacenar los datos XML en un `xml` columna de tipo de datos y promocionar las propiedades de ella en columnas relacionales. O bien, es posible que desee usar tecnología de asignaciones para almacenar partes no recursivas en columnas que no son XML y solo las partes recursivas en `xml` columnas de tipo de datos.  
   
 ### <a name="choice-of-xml-technology"></a>Elección de la tecnología XML  
  La elección de la tecnología XML, XML nativo frente a vista XML, en general depende de los siguientes factores:  
@@ -123,11 +123,11 @@ ms.locfileid: "36197104"
  Un modelo de almacenamiento apropiado para los documentos XML es una columna de tipo de datos `xml`. Así se preserva el contenido InfoSet de los datos XML. La indización de la columna XML favorece el rendimiento de las consultas.  
   
 #### <a name="example-retaining-exact-copies-of-xml-data"></a>Ejemplo: retener copias exactas de datos XML  
- A modo de ilustración, suponga que las normativas del gobierno le exigen que retenga copias textuales exactas de sus documentos XML, como documentos firmados, documentos legales o pedidos de transacciones de almacén. Puede que desee almacenar los documentos en un `[n]varchar(max)` columna.  
+ A modo de ilustración, suponga que las normativas del gobierno le exigen que retenga copias textuales exactas de sus documentos XML, como documentos firmados, documentos legales o pedidos de transacciones de almacén. Es posible que desee almacenar los documentos en un `[n]varchar(max)` columna.  
   
  Para realizar consultas, convierta los datos al tipo de datos `xml` en tiempo de ejecución y ejecute Xquery. La conversión en tiempo de ejecución puede ser larga, especialmente si el documento es grande. Si realiza consultas con frecuencia, puede almacenar repetidamente los documentos en una columna de tipo de datos `xml` e indizarla mientras devuelve copias exactas de los documentos desde la columna `[n]varchar(max)`.  
   
- La columna XML puede ser una columna calculada, tomando como base la `[n]varchar(max)` columna. Sin embargo, no se puede crear un índice XML en una columna XML calculada, ni puede generar un índice XML `[n]varchar(max)` o `varbinary(max)` columnas.  
+ La columna XML puede ser una columna calculada, según la `[n]varchar(max)` columna. Sin embargo, no se puede crear un índice XML en una columna XML calculada, ni puede generar un índice XML `[n]varchar(max)` o `varbinary(max)` columnas.  
   
 ### <a name="xml-view-technology"></a>Tecnología de vistas XML  
  La definición de una asignación entre los esquemas XML y las tablas de una base de datos permite crear una "vista XML" de los datos permanentes. Se puede efectuar una carga masiva de XML para rellenar las tablas subyacentes mediante la vista XML. Puede efectuar una consulta en la vista XML mediante XPath versión 1.0; la consulta se traduce en consultas SQL en las tablas. Del mismo modo, las actualizaciones también se propagan a dichas tablas.  
@@ -150,7 +150,7 @@ ms.locfileid: "36197104"
  A modo de ilustración, suponga que tiene datos relacionales como clientes, pedidos y artículos de línea, que desea tratar como XML. Defina una vista XML utilizando AXSD sobre los datos relacionales. La vista XML permite efectuar una carga masiva de datos XML en las tablas así como consultar y actualizar los datos relacionales utilizando dicha vista. Este modelo es útil si hay que intercambiar datos que contienen marcado XML con otras aplicaciones, mientras las aplicaciones SQL se ejecutan ininterrumpidamente.  
   
 ### <a name="hybrid-model"></a>Modelo híbrido  
- Con frecuencia, una combinación de relacional y `xml` columnas de tipo de datos es adecuado para el modelado de datos. Algunos valores de los datos XML se pueden almacenar en columnas relacionales y, el resto, o el conjunto de valores XML, en una columna XML. De este modo, se puede obtener un mejor rendimiento ya que se tiene más control sobre los índices creados en las columnas relacionales y las características de bloqueo.  
+ Con frecuencia, una combinación de relacional y `xml` las columnas de tipo de datos es adecuado para el modelado de datos. Algunos valores de los datos XML se pueden almacenar en columnas relacionales y, el resto, o el conjunto de valores XML, en una columna XML. De este modo, se puede obtener un mejor rendimiento ya que se tiene más control sobre los índices creados en las columnas relacionales y las características de bloqueo.  
   
  Los valores para almacenar en columnas relacionales dependen de la carga de trabajo. Por ejemplo, si se recuperan todos los valores XML basados en la expresión de ruta de acceso, /Customer/@CustId, promoviendo el valor del atributo **CustId** a una columna relacional e indexándolo, se puede lograr un mejor rendimiento en las consultas. Por otra parte, si los datos XML se distribuyen ampliamente y sin redundancias en columnas relacionales, el costo del reensamblado puede ser importante.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "36197104"
 ## <a name="limitations-of-the-xml-data-type"></a>Limitaciones del tipo de datos xml  
  Tenga en cuenta que el tipo de datos `xml` tiene las limitaciones siguientes:  
   
--   La representación almacenada de `xml` instancias de tipo de datos no pueden superar los 2 GB.  
+-   La representación almacenada de `xml` las instancias del tipo de datos no pueden superar los 2 GB.  
   
 -   No puede usarse como un subtipo de una instancia de **sql_variant** .  
   

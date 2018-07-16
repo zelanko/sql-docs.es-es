@@ -1,5 +1,5 @@
 ---
-title: Determinar el modo de servidor de análisis de un instancia de servicios | Documentos de Microsoft
+title: Determinar el modo de servidor de análisis de un instancia de servicios | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec5ec0ebab56cd5e836385a26fc60a1c5cf1a0d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bca31a21dda5f03b29456f842afb2d4d7504c608
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297435"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Determinar el modo de servidor de una instancia de Analysis Services
   Analysis Services se puede instalar en uno de estos tres modos de servidor: multidimensional y de minería de datos (valor predeterminado), PowerPivot para SharePoint, y tabular. El modo de servidor de una instancia de Analysis Services se determina durante la instalación al elegir las opciones para instalar el servidor.  
@@ -57,8 +57,8 @@ ms.locfileid: "36199016"
  [Instalar Analysis Services en el modo de minería de datos y multidimensional](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [PowerPivot para SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [Conectarse a Analysis Services](connect-to-analysis-services.md)   
- [Soluciones de modelos tabulares &#40;SSAS Tabular&#41;](../tabular-model-solutions-ssas-tabular.md)   
+ [Soluciones de modelos tabulares &#40;Tabular de SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)   
  [Soluciones de modelos multidimensionales &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Modelos de minería de datos &#40;Analysis Services: minería de datos&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [Los modelos de minería de datos &#40;Analysis Services - minería de datos&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

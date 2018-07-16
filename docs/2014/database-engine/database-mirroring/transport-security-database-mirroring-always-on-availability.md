@@ -1,14 +1,13 @@
 ---
-title: Seguridad de transporte para la creación de reflejo de base de datos y grupos de disponibilidad AlwaysOn (SQL Server) | Documentos de Microsoft
+title: Seguridad de transporte para la creación de reflejo de base de datos y grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sessions [SQL Server], database mirroring
 - cryptography [SQL Server], database mirroring
@@ -22,13 +21,13 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: fdcfc0b7d7ce374f65fac8dca13dc7136b129e57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3f2a6d5dfcba21cea89802a29eec7a56a58936c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291411"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn (SQL Server)
   La seguridad en el transporte implica la autenticación y, opcionalmente, el cifrado de los mensajes intercambiados entre las bases de datos. Para la creación de reflejo de la base de datos y [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], la autenticación y el cifrado se configuran en el extremo de creación de reflejo de la base de datos. Para ver una introducción a los puntos de conexión de creación de reflejo de la base de datos, vea [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md).  
@@ -69,7 +68,7 @@ ms.locfileid: "36198976"
   
 |Valor ALGORITHM|Descripción|  
 |---------------------|-----------------|  
-|RC4|Especifica que el extremo debe usar el algoritmo RC4. Ésta es la opción predeterminada.<br /><br /> Nota: El algoritmo RC4 está obsoleto. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Se recomienda utilizar AES.|  
+|RC4|Especifica que el extremo debe usar el algoritmo RC4. Ésta es la opción predeterminada.<br /><br /> Nota: El algoritmo RC4 está en desuso. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Se recomienda utilizar AES.|  
 |AES|Especifica que el extremo debe usar el algoritmo AES.|  
 |AES RC4|Especifica que los dos extremos negociarán un algoritmo de cifrado con este extremo, dando preferencia al algoritmo AES.|  
 |RC4 AES|Especifica que los dos extremos negociarán un algoritmo de cifrado con este extremo, dando preferencia al algoritmo RC4.|  
@@ -104,6 +103,6 @@ ms.locfileid: "36198976"
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)   
  [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)   
  [Solucionar problemas de configuración de creación de reflejo de la base de datos &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Solucionar problemas de configuración de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;eliminado](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)
+ [Solución de problemas de configuración de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;eliminado](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)
   
   

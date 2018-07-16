@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 174cb8564f9f90623e1b7651c2a68037ba5b143c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b54eb6377a0d0816d186d612075b678e8eaadb7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228305"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Monitor de creación de reflejo de la base de datos (página Estado)
   En esta página de solo lectura se muestra el estado más reciente de la creación de reflejo de las instancias del servidor principal y reflejado seleccionadas actualmente en el árbol de navegación. Si la información sobre una instancia no se encuentra disponible, algunas celdas de la cuadrícula **Estado** correspondientes a dicha instancia aparecerán atenuadas y mostrarán **Desconocido**.  
@@ -44,7 +43,7 @@ ms.locfileid: "36198777"
 |-----------------|-----------------|  
 |**Instancia del servidor**|Nombre de la instancia de servidor cuyo estado se muestra en la fila **Estado** .|  
 |**Rol actual**|Rol actual de la instancia del servidor, ya sea **Principal** o **Reflejado**.|  
-|**Estado de creación de reflejo**|El estado de creación de reflejo que proporciona la instancia del servidor y un icono que indica la gravedad del estado. Los estados posibles y sus iconos asociados son los siguientes:<br /><br /> :: Estado **desconocido**. El monitor no está conectado a ningún asociado. La única información disponible es lo que el monitor almacena en caché.<br /><br /> Icono de advertencia: <br />                            Estado **sincronizar**.<br />                          El contenido de la base de datos reflejada está atrasado con respecto al contenido de la base de datos principal. La instancia de servidor principal envía las entradas de registro a la instancia del servidor reflejado, que aplica los cambios en la base de datos reflejada para confirmarla. Al inicio de una sesión de creación de reflejo de la base de datos, las bases de datos principal y reflejada se encuentran en este estado.<br /><br /> Cilindro de base de datos estándar: estado<br />                            **Sincronizada**<br />                          El estado de la base de datos cambia a **Sincronizado**cuando el servidor reflejado está suficientemente al día con respecto al servidor principal. La base de datos permanece en este estado mientras el servidor principal envía cambios al servidor reflejado, y el servidor reflejado aplica los cambios en la base de datos reflejada. En el modo de seguridad alta, son posibles las conmutaciones manual y automática por error sin pérdida de datos. En el modo de rendimiento alto, siempre es posible que se pierdan datos, incluso en el estado **Sincronizado** .<br /><br /> Icono de advertencia: estado<br />                            **Suspende**.<br />                            La base de datos principal está disponible, pero no envía ningún registro al servidor reflejado.<br /><br /> Icono de error: estado <br />                            **Desconectada**<br />                          La instancia del servidor no se puede conectar a su asociado.|  
+|**Estado de creación de reflejo**|El estado de creación de reflejo que proporciona la instancia del servidor y un icono que indica la gravedad del estado. Los estados posibles y sus iconos asociados son los siguientes:<br /><br /> —: Estado **desconocido**. El monitor no está conectado a ningún asociado. La única información disponible es lo que el monitor almacena en caché.<br /><br /> Icono de advertencia: <br />                            Estado **sincronizar**.<br />                          El contenido de la base de datos reflejada está atrasado con respecto al contenido de la base de datos principal. La instancia de servidor principal envía las entradas de registro a la instancia del servidor reflejado, que aplica los cambios en la base de datos reflejada para confirmarla. Al inicio de una sesión de creación de reflejo de la base de datos, las bases de datos principal y reflejada se encuentran en este estado.<br /><br /> Cilindro de base de datos estándar: estado<br />                            **Sincronizada**<br />                          El estado de la base de datos cambia a **Sincronizado**cuando el servidor reflejado está suficientemente al día con respecto al servidor principal. La base de datos permanece en este estado mientras el servidor principal envía cambios al servidor reflejado, y el servidor reflejado aplica los cambios en la base de datos reflejada. En el modo de seguridad alta, son posibles las conmutaciones manual y automática por error sin pérdida de datos. En el modo de rendimiento alto, siempre es posible que se pierdan datos, incluso en el estado **Sincronizado** .<br /><br /> Icono de advertencia: estado<br />                            **Suspende**.<br />                            La base de datos principal está disponible, pero no envía ningún registro al servidor reflejado.<br /><br /> Icono de error: estado <br />                            **Desconectada**<br />                          La instancia del servidor no se puede conectar a su asociado.|  
 |**Conexión del testigo**|El estado de la conexión del testigo, precedida de un icono de estado: **Desconocido**, **Conectado**o **Desconectado**.|  
 |**Historial**|Haga clic en este botón para mostrar el historial de creación de reflejo en la instancia del servidor. Se abrirá el cuadro de diálogo **Historial de creación de reflejo de la base de datos** , que muestra el historial del estado de creación de reflejo y las estadísticas de una base de datos reflejada en una instancia del servidor determinada.<br /><br /> El botón **Historial** se atenúa si el monitor no está conectado a la instancia del servidor.|  
   

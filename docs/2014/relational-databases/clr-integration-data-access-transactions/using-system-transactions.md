@@ -1,13 +1,11 @@
 ---
-title: Utilizar System.Transactions | Documentos de Microsoft
+title: Utilizar System.Transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 44054210ce7bf889bdc6e38f181cf8b16e638215
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: cf0f57f84e4b1838b9fd2da9838891640782266b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112291"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350067"
 ---
 # <a name="using-systemtransactions"></a>Utilizar System.Transactions
   El espacio de nombres `System.Transactions` proporciona un nuevo marco de transacciones totalmente integrado con ADO.NET y la característica de integración con Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La clase `System.Transactions.TransactionScope` crea un bloque de código transaccional dando de alta implícitamente las conexiones en una transacción distribuida. Se debe llamar al método `Complete` al final del bloque de código marcado por `TransactionScope`. Se llama al método `Dispose` cuando la ejecución de programas deja un bloque de código, lo que hace que se interrumpa la transacción si no se llama al método `Complete`. Si se ha producido una excepción que hace que el código deje el ámbito, se considera que la transacción se ha interrumpido.  

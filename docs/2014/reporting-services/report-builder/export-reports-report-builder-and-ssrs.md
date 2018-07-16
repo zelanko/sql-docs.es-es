@@ -1,5 +1,5 @@
 ---
-title: Exportar informes (generador de informes y SSRS) | Documentos de Microsoft
+title: Exportar informes (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 caps.latest.revision: 18
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 54625bc927cd187b40c146b7bfdc4093645711c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f4760d57cec11c6955e1ad87d4278d6c22a55ee7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255807"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>Exportar informes (Generador de informes y SSRS)
   Después de ejecutar un informe, puede exportarlo a otro formato, como Excel o PDF, o exportarlo generando un documento de servicio de Atom, enumerando las fuentes de distribución de datos que cumplen con Atom y están disponibles en informe.  
@@ -40,7 +40,7 @@ ms.locfileid: "36196665"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona muchas extensiones de presentación, admitiendo exportaciones de informes a formatos de archivo comunes. Las extensiones de presentación admiten formatos de archivo con saltos de página automáticos (por ejemplo, Word o Excel), saltos de página duros (por ejemplo, PDF o TIFF) o solo datos (por ejemplo, CSV o XML que admita Atom).  
   
- Para empezar rápidamente a exportar informes y generar fuentes de distribución de datos compatibles con Atom desde informes, consulte [exportar un informe como otro tipo de archivo &#40;el generador de informes y SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md) y [generar fuentes de datos de un Informe &#40;el generador de informes SSRS&#41;](generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
+ Para empezar rápidamente con la exportación de informes y generar fuentes de distribución de datos compatibles con Atom desde los informes, vea [exportar un informe como otro tipo de archivo &#40;generador de informes y SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md) y [generar fuentes de datos de un Informe &#40;generador de informes y SSRS&#41;](generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -68,8 +68,8 @@ ms.locfileid: "36196665"
 |Formato|Tipo de extensión de presentación|Descripción|  
 |------------|------------------------------|-----------------|  
 |CSV|data|La extensión de representación de valores separados por comas (CSV) representa los informes como una representación sin estructura jerárquica de los datos a partir de un informe estándar y sin formato para que resulten fáciles de leer e intercambiar con muchas aplicaciones.<br /><br /> Para obtener más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
-|Excel|Salto de página automático|La extensión de representación en Excel procesa un informe como un documento de Excel que sea compatible con [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007-2010, así como [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 con el paquete de compatibilidad de Microsoft Office para Word, Excel y PowerPoint instalado. El informe se exporta a una hoja de cálculo de Excel, pero pierde algunos elementos de diseño originales. Las propiedades del informe y los grupos del informe se pueden establecer para habilitar la denominación de las pestañas de la hoja de cálculo al exportar a Excel. La extensión de nombre de archivo de los archivos generados por este representador es .xlsx.<br /><br /> Para obtener más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](exporting-to-microsoft-excel-report-builder-and-ssrs.md).<br /><br /> Nota: La Excel 2003 extensión de representación que se representa en el formato nativo de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003, está disponible en algunos escenarios de informes.|  
-|Word|Salto de página automático|La extensión de representación de Word representa un informe como un documento de Word que es compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010, así como [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 con el [!INCLUDE[msCoName](../../includes/msconame-md.md)] paquete de compatibilidad de Office para Word, Excel y PowerPoint instalado. Después de exportar el informe a un documento de Word, puede modificar su contenido y diseñar informes con estilo de documento, como etiquetas postales, pedidos de compra o circulares. La extensión de nombre de archivo de los archivos generados por este representador es .docx.<br /><br /> Para obtener más información, vea [Exportar a Microsoft Word &#40;Generador de informes y SSRS&#41;](exporting-to-microsoft-word-report-builder-and-ssrs.md).<br /><br /> Nota: La Word 2003 extensión de representación que se representa en el formato nativo de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, está disponible en algunos escenarios de informes.|  
+|Excel|Salto de página automático|La extensión de representación en Excel procesa un informe como un documento de Excel que sea compatible con [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007-2010, así como [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 con el paquete de compatibilidad de Microsoft Office para Word, Excel y PowerPoint instalado. El informe se exporta a una hoja de cálculo de Excel, pero pierde algunos elementos de diseño originales. Las propiedades del informe y los grupos del informe se pueden establecer para habilitar la denominación de las pestañas de la hoja de cálculo al exportar a Excel. La extensión de nombre de archivo de los archivos generados por este representador es .xlsx.<br /><br /> Para obtener más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](exporting-to-microsoft-excel-report-builder-and-ssrs.md).<br /><br /> Nota: La Excel 2003 extensión de representación que se representa en el formato nativo de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 está disponible en algunos escenarios de informes.|  
+|Word|Salto de página automático|La extensión de representación de Word representa un informe como un documento de Word es compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010, así como [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 con el [!INCLUDE[msCoName](../../includes/msconame-md.md)] paquete de compatibilidad de Office para Word, Excel y PowerPoint instalado. Después de exportar el informe a un documento de Word, puede modificar su contenido y diseñar informes con estilo de documento, como etiquetas postales, pedidos de compra o circulares. La extensión de nombre de archivo de los archivos generados por este representador es .docx.<br /><br /> Para obtener más información, vea [Exportar a Microsoft Word &#40;Generador de informes y SSRS&#41;](exporting-to-microsoft-word-report-builder-and-ssrs.md).<br /><br /> Nota: La Word 2003 extensión de representación que se representa en el formato nativo de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 está disponible en algunos escenarios de informes.|  
 |Archivo web|Salto de página automático|La extensión de representación en HTML representa un informe en formato HTML. La extensión de representación también puede generar páginas HTML completas o fragmentos de HTML para incrustarlos en otras páginas HTML. Todos los HTML se generan con la codificación UTF-8.<br /><br /> La extensión de presentación en HTML es la predeterminada para los informes que se visualizan en el Generador de informes y en un explorador, lo que incluye también cuando se ejecutan en el Administrador de informes.<br /><br /> Para obtener más información, vea [Rendering to HTML &#40;Report Builder and SSRS&#41;](rendering-to-html-report-builder-and-ssrs.md).|  
 |Archivo PDF de Acrobat|Salto de página duro|La extensión de representación en PDF representa un informe en archivos que se pueden abrir en Adobe Acrobat y en visores de PDF de otros fabricantes que admiten PDF 1.3. Aunque PDF 1.3 es compatible con Adobe Acrobat 4.0 y versiones posteriores, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite Adobe Acrobat 6 o posterior. La extensión de representación no requiere el software Adobe para representar el informe. Sin embargo, se necesitan visores de PDF, como Adobe Acrobat, para ver o imprimir un informe en formato PDF.<br /><br /> Para obtener más información, vea [Exportar a un archivo PDF &#40;Generador de informes y SSRS&#41;](exporting-to-a-pdf-file-report-builder-and-ssrs.md).|  
 |Archivo TIFF|Salto de página duro|La extensión de presentación en imágenes presenta un informe en un mapa de bits o metarchivo. De manera predeterminada, una extensión de representación en imágenes genera un archivo TIFF del informe, que se puede ver en varias páginas. Cuando el cliente recibe la imagen, se puede mostrar en un visor de imágenes y se puede imprimir.<br /><br /> La extensión de presentación en imágenes puede generar archivos en cualquiera de los formatos que admite [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG y TIFF.<br /><br /> Para obtener más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md).|  
@@ -77,7 +77,7 @@ ms.locfileid: "36196665"
 |Atom|data|La extensión de presentación Atom genera fuentes de distribución de datos compatibles con Atom desde los informes. Las fuentes de distribución de datos son legibles y se pueden intercambiar con las aplicaciones que consumen fuentes de distribución de datos compatibles con Atom, como el cliente [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> El resultado es un documento de servicio de Atom que enumera las fuentes de los datos disponibles de un informe. Se crea al menos una fuente de datos para cada región de datos de un informe. Según el tipo de región de datos y los datos que esta muestra, podrían generarse varias fuentes de distribución de datos.<br /><br /> Para obtener más información, vea [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
   
 ##  <a name="ExportingReport"></a> Exportar un informe  
- Para exportar un informe, ejecútelo en el Administrador de informes o el Generador de informes y, a continuación, seleccione un formato en la lista desplegable Exportar. Se le solicita que decida si guardar o abrir el archivo. Si elige **Abrir**, el informe se abre en la aplicación asociada al formato de representación que eligió. Por ejemplo, si selecciona **Excel** , el informe se abre en Excel. Si elige **Guardar**, el informe se guarda. Por ejemplo, si está exportando a Excel, el informe se guarda como archivo .xls. Las asociaciones de archivo definidas para el equipo local determinan la aplicación que se utilizará con cada formato de presentación. Para obtener más información, consulte [exportar un informe como otro tipo de archivo &#40;el generador de informes y SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
+ Para exportar un informe, ejecútelo en el Administrador de informes o el Generador de informes y, a continuación, seleccione un formato en la lista desplegable Exportar. Se le solicita que decida si guardar o abrir el archivo. Si elige **Abrir**, el informe se abre en la aplicación asociada al formato de representación que eligió. Por ejemplo, si selecciona **Excel** , el informe se abre en Excel. Si elige **Guardar**, el informe se guarda. Por ejemplo, si está exportando a Excel, el informe se guarda como archivo .xls. Las asociaciones de archivo definidas para el equipo local determinan la aplicación que se utilizará con cada formato de presentación. Para obtener más información, consulte [exportar un informe como otro tipo de archivo &#40;generador de informes y SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
  El servidor de informes exporta el informe tal como se encuentra en la sesión del usuario actual. Si se publica una versión actualizada de un informe mientras otro usuario lo tiene abierto, o cambian los datos que presenta el informe, el informe exportado no se actualizará.  
   
@@ -105,21 +105,21 @@ ms.locfileid: "36196665"
   
  Los temas acerca de los representadores concretos describen cómo se representan los elementos de informe y las regiones de datos, así como las limitaciones y soluciones de cada procesador.  
   
--   [Exportar a un archivo CSV &#40;el generador de informes SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)  
+-   [Exportar a un archivo CSV &#40;generador de informes y SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)  
   
--   [Exportar a Microsoft Excel &#40;el generador de informes SSRS&#41;](exporting-to-microsoft-excel-report-builder-and-ssrs.md)  
+-   [Exportar a Microsoft Excel &#40;generador de informes y SSRS&#41;](exporting-to-microsoft-excel-report-builder-and-ssrs.md)  
   
--   [Exportar a Microsoft Word &#40;el generador de informes SSRS&#41;](exporting-to-microsoft-word-report-builder-and-ssrs.md)  
+-   [Exportar a Microsoft Word &#40;generador de informes y SSRS&#41;](exporting-to-microsoft-word-report-builder-and-ssrs.md)  
   
--   [Representación en HTML &#40;el generador de informes SSRS&#41;](rendering-to-html-report-builder-and-ssrs.md)  
+-   [Representación en HTML &#40;generador de informes y SSRS&#41;](rendering-to-html-report-builder-and-ssrs.md)  
   
--   [Exportar a un archivo PDF &#40;el generador de informes SSRS&#41;](exporting-to-a-pdf-file-report-builder-and-ssrs.md)  
+-   [Exportar a un archivo PDF &#40;generador de informes y SSRS&#41;](exporting-to-a-pdf-file-report-builder-and-ssrs.md)  
   
--   [Exportar a un archivo de imagen &#40;el generador de informes SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md)  
+-   [Exportar a un archivo de imagen &#40;generador de informes y SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md)  
   
--   [Exportar a XML &#40;el generador de informes SSRS&#41;](exporting-to-xml-report-builder-and-ssrs.md)  
+-   [Exportar a XML &#40;generador de informes y SSRS&#41;](exporting-to-xml-report-builder-and-ssrs.md)  
   
--   [Generar datos de fuentes de distribución de informes &#40;el generador de informes SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
+-   [Generar datos de fuentes de distribución de informes &#40;generador de informes y SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona características adicionales para ayudarle a crear informes que funcionen bien en otros formatos. Los saltos de página en las regiones de datos Tablix (tabla, matriz y lista), los grupos y los rectángulos proporcionan un mayor control sobre la paginación del informe. Las páginas del informe, delimitadas mediante saltos de página, pueden tener nombres de página diferentes y restablecer la numeración de las páginas. Mediante el uso de expresiones, los nombres de página y los números de página se pueden actualizar dinámicamente cuando se ejecuta el informe. Para obtener más información, vea [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
@@ -139,7 +139,7 @@ http://<Server Name>/reportserver?/Sales/YearlySalesSummary&rs:Format=Excel&rs:C
  Para obtener más información, consulte [Export a Report Using URL Access](../export-a-report-using-url-access.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Controlar la página se interrumpe, encabezados, columnas y filas &#40;el generador de informes SSRS&#41;](../report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Controlar saltos de página, encabezados, columnas y filas &#40;generador de informes y SSRS&#41;](../report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Imprimir informes &#40;Generador de informes y SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
  [Guardar informes &#40;generador de informes&#41;](saving-reports-report-builder.md)  

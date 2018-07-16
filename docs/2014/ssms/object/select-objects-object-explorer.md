@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.selectobjects.f1
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2ffeac246442f3ee291975902bcacd12104e77f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cd13264cfe88799c50eec23bab8e06d52feb399f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111070"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265681"
 ---
 # <a name="select-objects-object-explorer"></a>Seleccionar objetos (Explorador de objetos)
   Use el cuadro de diálogo **Seleccionar objetos** para agregar un objeto a una lista de otro cuadro de diálogo. El título del cuadro de diálogo y las opciones disponibles dependerán de como haya se haya abierto. Solo aparecerán las opciones disponibles; por ejemplo, solo los inicios de sesión están disponibles cuando selecciona un propietario para un nuevo objeto.  

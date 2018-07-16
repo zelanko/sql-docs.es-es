@@ -1,5 +1,5 @@
 ---
-title: Reproducir hasta un punto de interrupción (SQL Server Profiler) | Documentos de Microsoft
+title: Reproducir hasta un punto de interrupción (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - breakpoints [SQL Server]
 - traces [SQL Server], replaying
 ms.assetid: 3caf751e-df3b-40c7-b5e8-4490ae178e0c
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22f9c80c8f17adba5bf939db65481a0ccde3a47a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ef7c27eff6efd66d95a61a158a0f788f35757182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289871"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>Reproducir hasta un punto de interrupción (SQL Server Profiler)
   En este tema se describe cómo establecer puntos de interrupción en una tabla o archivo de seguimiento que desee reproducir mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. El establecimiento de puntos de interrupción en un seguimiento o archivo de seguimiento antes de comenzar la reproducción del seguimiento permite poner en pausa la reproducción del seguimiento en determinados eventos. El uso de puntos de interrupción durante la reproducción de un seguimiento permite usar la depuración, ya que la reproducción de scripts de seguimiento largos se puede dividir en segmentos cortos que se pueden analizar de forma incremental.  
@@ -56,7 +56,7 @@ ms.locfileid: "36197873"
 6.  Repita el paso 5 hasta el final del seguimiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Reproducir hasta un Cursor &#40;analizador de SQL Server&#41;](replay-to-a-cursor-sql-server-profiler.md)   
+ [Reproducir hasta un Cursor &#40;SQL Server Profiler&#41;](replay-to-a-cursor-sql-server-profiler.md)   
  [Reproducir seguimientos](replay-traces.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

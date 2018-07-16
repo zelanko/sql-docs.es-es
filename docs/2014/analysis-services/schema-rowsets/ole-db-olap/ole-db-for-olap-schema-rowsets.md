@@ -1,5 +1,5 @@
 ---
-title: OLE DB para OLAP Schema Rowsets | Documentos de Microsoft
+title: OLE DB para OLAP Schema Rowsets | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB for OLAP
 ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 898749e17cb5b85e61a2b2c3a94b7247a7ab219b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 406451b0e8e6edce92d69cde493888f70813f4de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306485"
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>OLE DB para los conjuntos de filas de esquema OLAP
   El proveedor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) admite las siguientes DB OLE para conjuntos de filas de esquema OLAP.  
   
 > [!NOTE]  
->  Para comprobar si un proveedor de origen de datos determinado admite un conjunto de filas, utilice la `DISCOVER_ENUMERATIONS` conjunto de filas con el [Discover](../../xmla/xml-elements-methods-discover.md) método.  
+>  Para comprobar si un proveedor de origen de datos determinado admite un conjunto de filas, use el `DISCOVER_ENUMERATIONS` conjunto de filas con el [Discover](../../xmla/xml-elements-methods-discover.md) método.  
   
  También puede encontrar información detallada acerca de estos conjuntos de filas buscando el tema "OLAP Schema Rowsets", en MSDN Library en este [sitio Web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=15426).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36111913"
 |[Conjunto de filas MDSCHEMA_MEASUREGROUPS](mdschema-measuregroups-rowset.md)|Describe los grupos de medida dentro de una base de datos.|  
 |[Conjunto de filas MDSCHEMA_MEASURES](mdschema-measures-rowset.md)|Describe cada medida dentro de en un cubo.|  
 |[Conjunto de filas MDSCHEMA_MEMBERS](mdschema-members-rowset.md)|Describe los miembros incluidos en una base de datos.|  
-|[Conjunto de filas MDSCHEMA_PROPERTIES](mdschema-properties-rowset.md)|Describe las propiedades de miembros dentro de una base de datos.|  
+|[Conjunto de filas MDSCHEMA_PROPERTIES](mdschema-properties-rowset.md)|Describe las propiedades de los miembros dentro de una base de datos.|  
 |[Conjunto de filas MDSCHEMA_SETS](mdschema-sets-rowset.md)|Describe los conjuntos definidos actualmente en una base de datos, incluidos los conjuntos de ámbito de sesión.|  
   
  <sup>1</sup> todos los conjuntos de filas de esquema enumerados aquí son compatibles con el proveedor de origen de datos MSOLAP para el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] proveedor XMLA.  

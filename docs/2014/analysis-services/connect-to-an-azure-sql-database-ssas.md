@@ -1,5 +1,5 @@
 ---
-title: Conectarse a una base de datos SQL Azure (SSAS) | Documentos de Microsoft
+title: Conectarse a una base de datos SQL Azure (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlazure.f1
 ms.assetid: 4e0344e9-1822-4698-ad22-05f1f341ced7
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1e127b69e30032a31a97f4cc46ae87279de7987d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1caee43f182c92c3a01193a852a067e20c9a579c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214285"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Conexión con una Azure SQL Database (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite conectar con [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
@@ -29,7 +29,7 @@ ms.locfileid: "36113064"
 > [!NOTE]  
 >  Si va a conectarse a un conjunto de datos de Azure DataMarket, vea [Conectarse a un informe o a una fuente de distribución de datos &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md).  
   
- [!INCLUDE[ssSDS](../includes/sssds-md.md)] es una base de datos relacional hospedada con la que se conecta usando la autenticación de SQL Server. Para obtener más información sobre [!INCLUDE[ssSDS](../includes/sssds-md.md)], vea el sitio web [Base de datos SQL](http://go.microsoft.com/fwlink/?LinkID=157856). Para conectarse a un origen de datos, debe tener instalado en el equipo el proveedor adecuado.  
+  [!INCLUDE[ssSDS](../includes/sssds-md.md)] es una base de datos relacional hospedada con la que se conecta usando la autenticación de SQL Server. Para obtener más información sobre [!INCLUDE[ssSDS](../includes/sssds-md.md)], vea el sitio web [Base de datos SQL](http://go.microsoft.com/fwlink/?LinkID=157856). Para conectarse a un origen de datos, debe tener instalado en el equipo el proveedor adecuado.  
   
 > [!NOTE]  
 >  Las credenciales del usuario actual se utilizan al seleccionar una base de datos en esta página. Sin embargo, la importación no se realizará correctamente si el usuario especificado en la página Información de suplantación no tiene privilegios suficientes para leer la base de datos seleccionada.  

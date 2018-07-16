@@ -1,5 +1,5 @@
 ---
-title: Procesar objetos de minería de datos | Documentos de Microsoft
+title: Procesar objetos de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - processing objects [Analysis Services]
 - mining structures [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - mining structures [Analysis Services], processing
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 52caf01ea2f82b2d566b41ba402fa31b81283638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09f62e8f3b9abcde430557641beb92a1f7566f1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257471"
 ---
 # <a name="processing-data-mining-objects"></a>Procesar objetos de minería de datos
   Un objeto de minería de datos solo es un contenedor vacío hasta que se procesa. El*procesamiento* de un modelo de minería de datos también se denomina *entrenamiento*.  
@@ -61,8 +61,8 @@ ms.locfileid: "36111457"
   
 ## <a name="see-also"></a>Vea también  
  [Las consultas de obtención de detalles &#40;minería de datos&#41;](drillthrough-queries-data-mining.md)   
- [Estructuras de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
- [Modelos de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-models-analysis-services-data-mining.md)   
- [Arquitectura lógica &#40;Analysis Services: minería de datos&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Los modelos de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-models-analysis-services-data-mining.md)   
+ [Arquitectura lógica &#40;Analysis Services - minería de datos&#41;](logical-architecture-analysis-services-data-mining.md)  
   
   

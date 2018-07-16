@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: efd8edf59e3faf02ce5833092681f144f820263a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d09b654ccd9a3b73f75aeed3ad5c2651eb11b529
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196645"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Agregar o eliminar un grupo en un gráfico (Generador de informes y SSRS)
   Haga clic en la región de datos del gráfico para mostrar el panel **Datos del gráfico** . Cree grupos arrastrando los campos del conjunto de datos a las áreas **Grupos de categorías** y **Grupos de series** . Para agregar grupos anidados, agregue varios campos al área.  
@@ -60,6 +60,6 @@ ms.locfileid: "36196871"
 2.  Haga clic con el botón derecho en el grupo en las áreas **Grupos de categorías** o **Grupos de series** y, después, haga clic en **Eliminar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Gráficos &#40;el generador de informes SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Los gráficos &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

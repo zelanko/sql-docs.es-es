@@ -1,5 +1,5 @@
 ---
-title: Elemento DataSourceID (XMLA) | Documentos de Microsoft
+title: Elemento DataSourceID (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DataSourceID element
 ms.assetid: 695522c7-acca-420a-a5fb-f01f3fd9a96b
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2adec20f28e51639352dc89c70b6682e4df240fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e96d9386319fa9d850a755519fad7360da8ec3b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231825"
 ---
 # <a name="datasourceid-element-xmla"></a>Elemento DataSourceID (XMLA)
-  Identifica un origen de datos utilizado por un [ubicación](location-element-xmla.md) elemento durante un [copia de seguridad](../xml-elements-commands/backup-element-xmla.md), [restaurar](../xml-elements-commands/restore-element-xmla.md), o [sincronizar](../xml-elements-commands/synchronize-element-xmla.md) comando.  
+  Identifica un origen de datos utilizado por un [ubicación](location-element-xmla.md) elemento durante un [copia de seguridad](../xml-elements-commands/backup-element-xmla.md), [restaurar](../xml-elements-commands/restore-element-xmla.md), o [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36196528"
 ## <a name="remarks"></a>Notas  
  El elemento `DataSourceID` contiene el nombre del origen de datos de la instancia de origen que identifica la instancia remota en cuya partición remota se realizará una copia de seguridad, se restaurará o se sincronizará la información.  
   
- Para obtener más información acerca de la copia de seguridad y restaurar las particiones remotas, consulte [realizar copias de seguridad, restaurar y sincronizar bases de datos &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Para obtener más información acerca de la copia de seguridad y restaurar particiones remotas, consulte [realizar copias de seguridad, restaurar y sincronizar bases de datos &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento ConnectionString &#40;XMLA&#41;](connectionstring-element-xmla.md)   

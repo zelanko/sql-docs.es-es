@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 17
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 06f20a19801b43a25f3622424aa8ce76d2c34df2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a5d6efd6aa45886aa87fdd5db5f51ae3682e45ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273091"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Complemento Master Data Services para Microsoft Excel
-  Con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], se pueden distribuir listas maestras de datos de referencia para todas las personas de su organización que usen Excel. La seguridad determina los datos que los usuarios pueden ver y actualizar.  
+  Con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], se pueden distribuir listas maestras de datos de referencia para todos los usuarios de su organización que usen Excel. La seguridad determina los datos que los usuarios pueden ver y actualizar.  
   
  Puede cargar listas filtradas de datos MDS en Excel, donde puede trabajar con ellos al igual que otros datos cualesquiera. Cuando termine, puede publicar los datos en MDS, donde se almacenan centralmente.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36111379"
  En [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede usar Data Quality Services (DQS) para comparar los datos antes de cargarlos en MDS. Esto ayuda a evitar datos duplicados en MDS.  
   
 > [!IMPORTANT]  
->  Puede seguir usando el [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 versión de Master Data Services Add-para Excel después de actualizar Master Data Services y Data Quality Services para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Sin embargo, las versiones anteriores del complemento de Master Data Services para Excel no funcionarán después de actualizar a SQL Server 2014 CTP2. Puede descargar el [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 versión de Master Data Services Add-para Excel [aquí](http://go.microsoft.com/fwlink/?LinkId=328664).  
+>  Puede seguir usando el [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versión SP1 de Master Data Services complemento para Excel después de actualizar Master Data Services y Data Quality Services para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Sin embargo, las versiones anteriores del complemento de Master Data Services para Excel no funcionarán después de actualizar a SQL Server 2014 CTP2. Puede descargar el [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versión SP1 de Master Data Services complemento para Excel desde [aquí](http://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ## <a name="terms"></a>Términos  
  Al trabajar con el complemento, puede encontrar los siguientes términos.  
@@ -67,7 +67,7 @@ ms.locfileid: "36111379"
   
 -   [Conexiones &#40;complemento MDS para Excel&#41;](connections-mds-add-in-for-excel.md)  
   
--   [Cargar datos &#40;complemento MDS para Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [Cargando datos &#40;complemento MDS para Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [Archivos de consulta de acceso directo &#40;complemento MDS para Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   

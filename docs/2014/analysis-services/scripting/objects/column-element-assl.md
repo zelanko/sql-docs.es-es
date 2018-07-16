@@ -1,5 +1,5 @@
 ---
-title: Column, elemento (ASSL) | Documentos de Microsoft
+title: Elemento Column (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Column element
 ms.assetid: 10dc6d5e-c690-4415-adbb-eaeebaa29cb4
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 54fbcc7c236752d29a30ec89dafe4e7f5dfa491b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 474e094335c22ca1a715b48715e968c7dd13f515
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312435"
 ---
 # <a name="column-element-assl"></a>Column, elemento (ASSL)
   Describe una columna en la colección de columnas asociada al elemento principal.  

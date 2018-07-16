@@ -1,5 +1,5 @@
 ---
-title: Archivo de elemento (XMLA) | Documentos de Microsoft
+title: Archivo de elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - File element
 ms.assetid: 3dfd0e9b-746b-4ce5-8a95-610d2e573739
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 644e08e68ef38338d5b93c5abc7afe211c04c935
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b75a261f4a86d5a227e1018ad96a40d91db7b6c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319225"
 ---
 # <a name="file-element-xmla"></a>Elemento File (XMLA)
   Identifica un archivo que va a usar el elemento primario [copia de seguridad](../xml-elements-commands/backup-element-xmla.md) o [restaurar](../xml-elements-commands/restore-element-xmla.md) comando, o por el elemento primario [ubicación](location-element-xmla.md) elemento.  
@@ -70,7 +70,7 @@ ms.locfileid: "36199746"
   
  Para los comandos `Restore`, el elemento `File` determina el nombre del archivo de copia de seguridad que va a restaurar el comando `Restore`.  
   
- Para los elementos `Location`, el elemento `File` describe un archivo de copia de seguridad remoto para una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que contiene particiones remotas. Para obtener más información acerca de la copia de seguridad y restaurar las particiones remotas, consulte [realizar copias de seguridad, restaurar y sincronizar bases de datos &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Para los elementos `Location`, el elemento `File` describe un archivo de copia de seguridad remoto para una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que contiene particiones remotas. Para obtener más información acerca de la copia de seguridad y restaurar particiones remotas, consulte [realizar copias de seguridad, restaurar y sincronizar bases de datos &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento AllowOverwrite &#40;XMLA&#41;](allowoverwrite-element-xmla.md)   

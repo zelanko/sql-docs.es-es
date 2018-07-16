@@ -1,5 +1,5 @@
 ---
-title: Tipos de datos en Analysis Services | Documentos de Microsoft
+title: Tipos de datos en Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,27 +12,27 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7f5c4b371bfedda50a59fe9c0fa945739a320837
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6554aec8cf2bac0d90276caaf9930f726f9cc3b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326605"
 ---
 # <a name="data-types-in-analysis-services"></a>Tipos de datos en Analysis Services
-  Para todos los <xref:Microsoft.AnalysisServices.DataItem> objetos, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] admite el siguiente subconjunto de `System.Data.OleDb.OleDbType`. Para establecer o leer el tipo de datos, utilice [tipo de datos DataItem &#40;ASSL&#41;](../../scripting/data-type/dataitem-data-type-assl.md).  
+  Para todos los <xref:Microsoft.AnalysisServices.DataItem> objetos, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] admite el subconjunto siguiente de `System.Data.OleDb.OleDbType`. Para establecer o leer el tipo de datos, utilice [tipo de datos DataItem &#40;ASSL&#41;](../../scripting/data-type/dataitem-data-type-assl.md).  
   
 ## <a name="supported-data-types"></a>Tipos de datos admitidos  
   
 |||  
 |-|-|  
-|Bigint|Entero de 64 bits con signo. El *BigInt* tipo de valor representa los enteros con valores comprendidos entre 9.223.372.036.854.775.808 a 9.223.372.036.854.775.807 positivo.|  
+|Bigint|Entero de 64 bits con signo. El *BigInt* tipo de valor representa los enteros con valores comprendidos entre el número 9.223.372.036.854.775.808 negativo al número 9.223.372.036.854.775.807 positivo.|  
 |Binario|Un flujo de datos binarios de **bytes** tipo. **Bytes** es un tipo de valor que representa los enteros sin signo con valores comprendidos entre 0 y 255.|  
 |Boolean|Las instancias de este tipo tienen el valor `true` o `false`.|  
-|Moneda|A *moneda* valor comprendido entre -922.337.203.685.477,5808 y + 922.337.203.685.477,5807 con una precisión de una diezmilésima de unidad de moneda (cuatro lugares decimales).|  
+|Moneda|Un *moneda* valor comprendido entre -922.337.203.685.477,5808 y + 922.337.203.685.477,5807 con una precisión de una diezmilésima de unidad de moneda (cuatro lugares decimales).|  
 |date|Datos de fecha y hora, almacenados como valor double. La parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte decimal es una fracción de un día o de una hora del día.|  
 |Doble|Número de coma flotante de comprendido entre -1,79769313486232E +308 y 1,79769313486232E +308. Un valor Double almacena información numérica con una precisión de hasta 15 dígitos decimales.|  
 |Integer|Entero de 32 bits que representa números enteros con signo con valores que comprendes desde el número 2.147.483.648 negativo hasta el número 2.147.483.647 positivo.|  
@@ -43,7 +43,7 @@ ms.locfileid: "36112565"
 |UnsignedInt|Entero de 32 bits sin signo. El *UnsignedInt* tipo de valor representa los enteros sin signo con valores comprendidos entre 0 y 4.294.967.295.|  
 |UnsignedSmallInt|Entero de 16 bits sin signo. El *UnsignedSmallInt* tipo de valor representa los enteros sin signo con valores comprendidos entre 0 y 65535.|  
 |UnsignedTinyInt|Entero de 8 bits sin signo. El *UnsignedTinyInt* tipo de valor representa los enteros sin signo con valores comprendidos entre 0 y 255.|  
-|WChar|Flujo de caracteres Unicode terminado en NULL. A *WChar* es una colección secuencial de caracteres Unicode que se utiliza para representar texto.|  
+|WChar|Flujo de caracteres Unicode terminado en NULL. Un *WChar* es una colección secuencial de caracteres Unicode que se utiliza para representar texto.|  
   
 ## <a name="amo-validations-on-data-types"></a>Validaciones de AMO en tipos de datos  
  En la siguiente tabla se enumeran las validaciones adicionales que Objetos de administración de análisis (AMO) hace para determinados enlaces:  

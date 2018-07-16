@@ -1,5 +1,5 @@
 ---
-title: Eliminar la Galería de PowerPivot | Documentos de Microsoft
+title: Eliminar galería de PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c203b085f00f59db437fdf2d1ef057c3c42f44c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c62e73c9a47e87b0890dab8832e9d7a05567b1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326565"
 ---
 # <a name="delete-powerpivot-gallery"></a>Eliminar la Galería de PowerPivot
   Al eliminar una Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , también se eliminan todos sus elementos, incluido el historial de la actualización de datos para los libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que está configurada para la actualización de datos programada.  
   
 > [!NOTE]  
->  En este tema se proporcionan instrucciones sobre cómo eliminar una biblioteca de SharePoint. Para obtener instrucciones sobre cómo eliminar documentos individuales en la biblioteca, consulte [utilizar la Galería de PowerPivot](use-power-pivot-gallery.md).  
+>  En este tema se proporcionan instrucciones sobre cómo eliminar una biblioteca de SharePoint. Para obtener instrucciones sobre cómo eliminar los documentos individuales en la biblioteca, consulte [usar la Galería de PowerPivot](use-power-pivot-gallery.md).  
   
  Debe ser propietario de un sitio para eliminar una biblioteca.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "36103635"
 5.  En Permisos y Administración, haga clic en **Eliminar esta biblioteca**.  
   
 ## <a name="see-also"></a>Vea también  
- [Galería de PowerPivot](../../2014-toc/books-online-for-sql-server-2014.md)  
+ [La Galería de PowerPivot](../../2014-toc/books-online-for-sql-server-2014.md)  
   
   

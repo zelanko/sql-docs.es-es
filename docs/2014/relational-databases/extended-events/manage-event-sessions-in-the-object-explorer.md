@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a72a02bf0568a393aa9510b2982c13b02086ead2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d13b3e167d4b8d5d8c099536d85669591658dffe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279711"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Administrar sesiones de eventos en el Explorador de objetos
   En este tema se describen las acciones que se pueden llevar a cabo en el **Explorador de objetos** que afectan a una sesión de eventos extendidos:  
@@ -40,7 +40,7 @@ ms.locfileid: "36105151"
  Para obtener más información acerca de cómo crear una sesión de eventos extendidos, vea [Create an Extended Events Session](../../database-engine/create-an-extended-events-session.md).  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>Iniciar o detener una sesión de eventos extendidos  
- Puede iniciar o detener una sesión de eventos extendidos mediante el **Editor de consultas** mediante la `ALTER EVENT SESSION` (instrucción), o mediante el **Extended Events** nodo de **Explorador de objetos**.  
+ Puede iniciar o detener una sesión de eventos extendidos mediante el **Editor de consultas** mediante el `ALTER EVENT SESSION` instrucción, o mediante el **Extended Events** nodo de **Explorador de objetos**.  
   
  Cuando se detiene una sesión de eventos, la sesión ya no se muestra como una sesión activa en la vista de administración dinámica (DMV) sys.dm_xe_sessions. Sin embargo, la definición de la sesión permanece intacta y se puede reiniciar la sesión. Para quitar completamente la definición de una sesión, se debe eliminar la sesión.  
   
@@ -86,7 +86,7 @@ STATE = STOP
 ## <a name="import-an-extended-events-session-template"></a>Importar una plantilla de sesión de eventos extendidos  
  Mediante el **Explorador de objetos**, puede importar una plantilla para una sesión de eventos extendidos. Por ejemplo, puede que desee realizar esta operación para crear una sesión de una plantilla que se exportó desde otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para importar una sesión de Extended Events, debe tener el necesario `ALTER ANY EVENT SESSION` permisos.  
+ Para importar una sesión de eventos extendidos, debe tener el necesario `ALTER ANY EVENT SESSION` permisos.  
   
  Antes de importar un archivo de plantilla, asegúrese de que el archivo procede de un origen de confianza. Los archivos de plantilla deben guardarse en una ubicación que use el sistema de archivos NTFS y donde el acceso está restringido a los usuarios que estén autorizados para ver la información.  
   

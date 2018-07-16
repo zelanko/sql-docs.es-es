@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], permissions
 - permissions [Master Data Services], members
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e5ac17b8e72209a25c1e8e213d775012e800ca35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 762006e2e5e6292fc17519894d74e6ca8f250472
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111377"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239105"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Permisos de miembros de la jerarquía (Master Data Services)
   Los permisos de miembros de la jerarquía son opcionales y se deberían utilizar solo si se desea que un usuario tenga acceso limitado a miembros concretos. Si no asigna permisos en la pestaña **Miembros de la jerarquía** ,  permisos del usuario solo se basan en los permisos asignados en la pestaña **Modelos** .  
@@ -34,13 +34,13 @@ ms.locfileid: "36111377"
 > [!NOTE]  
 >  Cuando asigna permisos a un nodo de una jerarquía, se deniegan implícitamente a todos los miembros de los demás nodos del mismo nivel o de un nivel superior.  
   
- En el **Explorador**, los permisos de miembro se aplican en todas las ubicaciones donde se muestre el miembro. Por ejemplo, un miembro con **de sólo lectura** permiso es de solo lectura en las entidades, jerarquías y colecciones a las que pertenece.  
+ En el **Explorador**, los permisos de miembro se aplican en todas las ubicaciones donde se muestre el miembro. Por ejemplo, un miembro con **de sólo lectura** permiso es de solo lectura en las entidades, jerarquías y colecciones a la que pertenece.  
   
  Los permisos de miembros de la jerarquía se aplican a la versión del modelo a la que los asigna y a cualquier copia futura de la versión. No se aplican a las versiones anteriores a la que los asigne.  
   
 |Permiso|Descripción|  
 |----------------|-----------------|  
-|**Solo lectura**|Los miembros se muestran, pero el usuario no puede cambiarlos. El usuario tampoco puede mover los miembros en ninguna jerarquía explícita o colección a la que los miembros pertenezcan.<br /><br /> Nota: Si asigna **de sólo lectura** permiso para **raíz**, los miembros de **raíz** son de solo lectura; sin embargo, las jerarquías explícitas y colecciones, el usuario puede mover los miembros del **raíz** y puede agregar nuevos miembros a **raíz**.|  
+|**Solo lectura**|Los miembros se muestran, pero el usuario no puede cambiarlas. El usuario tampoco puede mover los miembros en ninguna jerarquía explícita o colección a la que los miembros pertenezcan.<br /><br /> Nota: Si asigna **de sólo lectura** permiso para **raíz**, los miembros de **raíz** son de solo lectura; sin embargo, en las jerarquías explícitas y colecciones, el usuario puede mover los miembros del **raíz** y puede agregar nuevos miembros a **raíz**.|  
 |**Update**|Se muestran los miembros, pero el usuario no puede cambiarlos. El usuario también puede mover los miembros en cualquier jerarquía explícita o colección a la que los miembros pertenezcan.|  
 |**Denegar**|Los miembros no se muestran.|  
   
@@ -55,12 +55,12 @@ ms.locfileid: "36111377"
 ### <a name="when-a-member-belongs-to-multiple-hierarchies"></a>Cuando un miembro pertenece a varias jerarquías  
  Dos o más jerarquías pueden contener el mismo miembro.  
   
--   Si un nodo de jerarquía tiene asignada **actualización** permiso y otro tiene asignado **de sólo lectura**, los miembros del nodo son **de sólo lectura**.  
+-   Si un nodo de jerarquía tiene asignados **actualización** permiso y otro tiene asignado **de sólo lectura**, los miembros del nodo son **de sólo lectura**.  
   
--   Si un nodo de jerarquía tiene asignada **actualización** o **de sólo lectura** se asigna permiso y el otro nodo **Deny**, a continuación, no se muestran los miembros en el nodo.  
+-   Si un nodo de jerarquía tiene asignados **actualización** o **de solo lectura** permiso y el otro nodo se asigna **Deny**, entonces no se muestran los miembros en el nodo.  
   
 ## <a name="see-also"></a>Vea también  
- [Asignar los permisos de miembro de jerarquía &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [Asignar permisos de miembro de jerarquía &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [¿Cómo se determinan los permisos &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
  [Miembros &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Jerarquías &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)   

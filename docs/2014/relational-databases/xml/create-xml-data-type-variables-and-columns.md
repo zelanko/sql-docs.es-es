@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 62f1bd69d60fb7a0c919b07a8582d28a08e666e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3c7b01d8238c4e82fd66dd7bba85d47ae2bbe83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309395"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Crear variables y columnas del tipo de datos XML
-  El tipo de datos `xml` es un tipo de datos integrado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y es similar a otros tipos integrados como `int` y `varchar`. Como con otros tipos integrados, puede usar el `xml` de tipo de datos como un tipo de columna cuando se crea una tabla como un tipo de variable, tipo de parámetro, un tipo de valor devuelto de función, o en [CAST y CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+  El tipo de datos `xml` es un tipo de datos integrado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y es similar a otros tipos integrados como `int` y `varchar`. Igual que con otros tipos integrados, puede usar el `xml` tipo de datos como un tipo de columna cuando crea una tabla como un tipo de variable, tipo de parámetro, un tipo de devolución de función, o en [CAST y CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 ## <a name="creating-columns-and-variables"></a>Crear columnas y variables  
  Para crear una columna de tipo `xml` como parte de una tabla, utilice una instrucción `CREATE TABLE` , como se muestra en el ejemplo siguiente:  
@@ -95,7 +95,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   RULE  
   
- Una alternativa al uso de restricciones consiste en crear un contenedor, la función definida por el usuario que va a contener el `xml` método de tipo de datos y especificar la función definida por el usuario en la restricción check tal como se muestra en el ejemplo siguiente.  
+ Una alternativa al uso de restricciones consiste en crear un contenedor, la función definida por el usuario para encapsular el `xml` método de tipo de datos y especificar la función definida por el usuario en la restricción check tal como se muestra en el ejemplo siguiente.  
   
  En el siguiente ejemplo, la restricción de `Col2` especifica que cada instancia XML almacenada en esta columna debe tener un elemento `<ProductDescription>` con un atributo `ProductID` . Esta restricción se exige mediante la siguiente función definida por el usuario:  
   
@@ -131,9 +131,9 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>La misma tabla o una tabla diferente  
- Un `xml` columna tipo de datos puede crearse en una tabla que contenga otras columnas relacionales o en una tabla independiente con una relación de clave externa con una tabla principal.  
+ Un `xml` columna tipo de datos se puede crear en una tabla que contiene otras columnas relacionales o en otra tabla con una relación de clave externa con una tabla principal.  
   
- Crear un `xml` columna de tipo de datos en la misma tabla cuando se cumple alguna de las condiciones siguientes:  
+ Crear un `xml` columna de tipo de datos en la misma tabla cuando se cumple una de las condiciones siguientes:  
   
 -   La aplicación efectúa una recuperación de datos en la columna XML y no requiere un índice XML en la columna XML.  
   
@@ -141,7 +141,7 @@ INSERT INTO T values(1,'<Product />')
   
  Crear la `xml` columna de tipo de datos en una tabla independiente si se cumplen las condiciones siguientes:  
   
--   Desea generar un índice XML el `xml` es diferente de su clave de agrupación en clústeres, la columna de tipo de datos, pero la clave principal de la tabla principal o la tabla principal no tiene una clave principal o la tabla principal es un montón (sin clave de agrupación en clústeres). Esto puede ser cierto si la tabla principal ya existe.  
+-   Desea generar un índice XML el `xml` columna de tipo de datos, pero la clave principal de la tabla principal es diferente de su clave de agrupación en clústeres, o la tabla principal no tiene una clave principal o la tabla principal es un montón (sin clave de agrupación en clústeres). Esto puede ser cierto si la tabla principal ya existe.  
   
 -   No desea que se ralenticen los recorridos de las tablas por la presencia de la columna XML en la tabla. Ésta usa espacio independientemente de si está o no almacenada de manera consecutiva.  
   

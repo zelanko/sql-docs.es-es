@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], SOAP
 ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
 caps.latest.revision: 36
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f6f0dc2d099912b9d24c2f72fe6743eb87a92d0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7e05a1656395828181f8622f82a4127107fa8ecc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238325"
 ---
 # <a name="using-secure-web-service-methods"></a>Usar métodos de servicio web seguros
   Ciertos métodos de servicio web del servidor de informes pueden requerir una conexión segura al invocarlos. La opción `SecureConnectionLevel` determina los métodos que requieren una conexión segura en el archivo RSReportServer.config. El valor de esta opción es un número entero comprendido entre 0 y superior. Estos valores se describen en la siguiente tabla.  

@@ -1,5 +1,5 @@
 ---
-title: Seleccionar tablas relacionadas (Asistente para dimensiones) | Documentos de Microsoft
+title: Seleccionar tablas relacionadas (Asistente para dimensiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.selectrelatedtables.f1
 ms.assetid: 82dbd97a-582c-4f60-8d44-fc52dba7b276
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 917f0a874e49376f8055a8c817c13bfb6dd64a5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be23882667a61d0bb93ab208e844fcd4fb072fda
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324935"
 ---
 # <a name="select-related-tables-dimension-wizard"></a>Seleccionar tablas relacionadas (Asistente para dimensiones)
   Use la página **Seleccionar tablas relacionadas** para incluir en la dimensión las tablas relacionadas (tablas con las que están relacionadas las tablas de dimensiones principales en la vista del origen de datos).  
@@ -35,7 +35,7 @@ ms.locfileid: "36203733"
  Seleccione una tabla para incluir la tabla relacionada en la dimensión.  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente de dimensiones (Ayuda F1)](dimension-wizard-f1-help.md)   
+ [Ayuda de F1 del Asistente para dimensiones](dimension-wizard-f1-help.md)   
  [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

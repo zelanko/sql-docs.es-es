@@ -1,5 +1,5 @@
 ---
-title: Tipo de elemento (Action) (ASSL) | Documentos de Microsoft
+title: Type (elemento) (acción) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 534cdf99-1edf-4490-9eaa-61f189a19434
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d71abdd26cea5fa03c8e70f882f893878a70969a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99147acb4b2a1b467913087f4e4df14469de9a03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249090"
 ---
 # <a name="type-element-action-assl"></a>Elemento Type (Action) (ASSL)
   Contiene el tipo de la [acción](../objects/action-element-assl.md) elemento.  
@@ -69,14 +69,14 @@ ms.locfileid: "36111639"
 |*Dirección URL*|Muestra una página variable en un explorador de Internet.|  
 |*HTML*|Ejecuta un script HTML en un explorador de Internet.|  
 |*Instrucción*|Ejecuta un comando de OLE DB.|  
-|*Obtención de detalles*|Recupera un conjunto de filas para obtener detalles.<br /><br /> Este valor es idéntico a *conjunto de filas* e identifica acciones de obtención de detalles. Sólo se puede utilizar en acciones cuyo [TargetType](targettype-element-assl.md) valor se establece en *celdas*.|  
+|*Obtención de detalles*|Recupera un conjunto de filas para obtener detalles.<br /><br /> Este valor es idéntico al *conjunto de filas* e identifica acciones de obtención de detalles. Solo se pueden utilizar en acciones cuyo [TargetType](targettype-element-assl.md) valor se establece en *celdas*.|  
 |*Conjunto de datos*|Recupera un conjunto de datos.|  
 |*Conjunto de filas*|Recupera un conjunto de filas.|  
 |*Línea de comandos*|Ejecuta un comando en un símbolo del sistema.|  
 |*Propietario*|Realiza una operación mediante una interfaz distinta de las descritas previamente en esta tabla.|  
-|*Informe*|Muestra una página variable en un explorador de Internet.<br /><br /> Este valor es idéntico a *Url* e identifica acciones de informe.|  
+|*Informe*|Muestra una página variable en un explorador de Internet.<br /><br /> Este valor es idéntico al *Url* e identifica acciones de informe.|  
   
- El elemento que corresponde al elemento primario de `Type` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Action>.  
+ El elemento que se corresponde con el elemento primario de `Type` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Vea también  
  [Tipo de Drillthroughaction &#40;ASSL&#41;](../data-type/action-data-type-assl.md)   

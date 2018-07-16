@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_XEVENT_TRACE_DEFINITION | Documentos de Microsoft
+title: Conjunto de filas DISCOVER_XEVENT_TRACE_DEFINITION | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e1ce2d2d-f994-4318-801a-ee0385aecd84
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2994ce526ff0f8035d16485bf99b146e2366389e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26bfb6747562f5f0c64d77aaceec1baa4f1bd6d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111045"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237695"
 ---
 # <a name="discoverxeventtracedefinition-rowset"></a>Conjunto de filas DISCOVER_XEVENT_TRACE_DEFINITION
   Proporciona información acerca de los seguimientos XEvent que están activos en el servidor.  
@@ -28,7 +28,7 @@ ms.locfileid: "36111045"
  **Se aplica a:** modelos tabulares, modelos multidimensionales  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DISCOVER_XEVENT_TRACE_DEFINITION` filas contiene las columnas siguientes.  
+ El `DISCOVER_XEVENT_TRACE_DEFINITION` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  

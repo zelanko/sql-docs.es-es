@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
 caps.latest.revision: 6
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 246e613d43cceda5cdd87cdbbb30c9e4ddb74724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ae156babe1859686386274c029b2aa34748f2f1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201368"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327525"
 ---
 # <a name="implementing-an-outer-join"></a>Implementar una combinación externa
   No se admite una combinación externa en los procedimientos almacenados compilados de forma nativa. En el ejemplo siguiente se muestra una forma de implementar la funcionalidad de una combinación externa izquierda en un procedimiento almacenado compilado de forma nativa.  
   
  Los ejemplos usan una variable de tabla para simular un cursor en la parte izquierda de la combinación y una variable de tabla para crear un único conjunto de resultados, que solo es adecuado cuando se procesa un número limitado de filas, ya que ello implica crear una copia adicional de las filas de datos.  
   
- Una variable (@outer) de tipo t1_type se utiliza para recorrer en iteración las filas desde t1, con unos instantes bucle para simular un cursor. La variable @result de tipo t1t2_join_type, a continuación, se utiliza para construir el conjunto de resultados.  
+ Una variable (@outer) de tipo t1_type se utiliza para recorrer en iteración las filas desde t1, con un tiempo bucle para simular un cursor. La variable @result de tipo t1t2_join_type, a continuación, se utiliza para construir el conjunto de resultados.  
   
  Debe probar el rendimiento de esta solución alternativa para asegurarse de que funciona de la manera esperada en la aplicación.  
   

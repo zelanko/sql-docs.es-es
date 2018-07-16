@@ -1,5 +1,5 @@
 ---
-title: Migrar PowerPivot para SharePoint 2013 | Documentos de Microsoft
+title: Migrar PowerPivot para SharePoint 2013 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 caps.latest.revision: 13
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 1d817e1bf9b0e09479a15619eae9f25293d8461e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c975ffc274853aee6bd74ce15079626c6cb17a7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280011"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Migrar PowerPivot a SharePoint 2013
   
@@ -58,7 +58,7 @@ ms.locfileid: "36105024"
   
 3.  Instale una instancia de un servidor de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de SharePoint. Para obtener más información, consulte [PowerPivot para SharePoint 2013 Installation](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-4.  Ejecute el paquete de instalación de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013, **spPowerPivot.msi** , en todos los servidores de la granja de SharePoint. Para obtener más información, consulte [instalar o desinstalar PowerPivot para SharePoint Add- &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+4.  Ejecute el paquete de instalación de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013, **spPowerPivot.msi** , en todos los servidores de la granja de SharePoint. Para obtener más información, consulte [instalar o desinstalar PowerPivot para SharePoint Add-in &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 5.  En Administración central de SharePoint 2013, configure la aplicación de servicio Excel Services para que use el servidor en modo SharePoint de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] creado en el paso anterior. Para obtener más información, vea la sección "Configurar la integración básica de Analysis Services SharePoint" de [PowerPivot para SharePoint 2013 Installation](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36105024"
 5.  **Configurar la base de datos para que sea de lectura y escritura:** establezca **Base de datos de solo lectura** en **False**.  
   
 ##  <a name="bkmk_prepare_mount_databases"></a> 3) Preparar las aplicaciones web y montar bases de datos de contenido  
- Para obtener una explicación más detallada de los procedimientos siguientes, vea [actualizar bases de datos de SharePoint 2010 a SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+ Para obtener una explicación más detallada de los siguientes procedimientos, consulte [actualizar bases de datos de SharePoint 2010 a SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
 1.  **Poner bases de datos sin conexión:**  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36105024"
   
 -   **Montar bases de datos de contenido:**  
   
-     Use cmdlets de PowerShell en el shell de administración de SharePoint 2013 para montar la base de datos de contenido migrada. La base de datos de aplicación de servicio no es necesario montar, solo las bases de datos contenidos: ![contenido relacionado con PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "contenido relacionado con PowerShell")  
+     Use cmdlets de PowerShell en el shell de administración de SharePoint 2013 para montar la base de datos de contenido migrada. La base de datos de aplicación de servicio no necesita ser montado, solo las bases de datos contenidos: ![contenido relacionado con PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "contenido relacionado con PowerShell")  
   
     ```  
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
@@ -112,7 +112,7 @@ ms.locfileid: "36105024"
   
 1.  **Errores de autenticación** : si ve errores relacionados con la autenticación, revise el modo de autenticación que están usando las aplicaciones web de origen. El error puede deberse a una incoherencia en la autenticación entre la aplicación web de SharePoint 2013 y la aplicación web de SharePoint 2010. Vea [1) Preparar la granja de SharePoint 2013](#bkmk_prepare_sharepoint2013) para obtener más información.  
   
-2.  **Que faltan:** si ve errores relacionados con archivos .dll de PowerPivot que faltan los **spPowerPivot.msi** no se ha instalado o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] herramienta de configuración no se ha utilizado para configurar PowerPivot.  
+2.  **Que faltan:** si ve errores relacionados con archivos .dll de PowerPivot que faltan los **spPowerPivot.msi** no se instaló o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] herramienta de configuración no se ha usado para configurar PowerPivot.  
   
 ##  <a name="bkmk_upgrade_powerpivot_schedules"></a> (4) actualizar programaciones de PowerPivot  
  En esta sección se describen los detalles y las opciones para migrar programaciones de PowerPivot. La migración de programaciones es un proceso que consta de dos pasos. Primero debe configurar la aplicación de servicio PowerPivot para que use la base de datos de aplicación de servicio migrada. Después debe elegir una de las dos opciones para la migración de programaciones.  
@@ -133,7 +133,7 @@ ms.locfileid: "36105024"
   
 -   **Opción 1 para migrar programaciones: administrador de granja de SharePoint**  
   
-    1.  En la administración de SharePoint 2013, ejecute el `Set-PowerPivotServiceApplication` cmdlet con el `-StartMigratingRefreshSchedules` conmutador para permitir la migración de la programación de petición automática a ![contenido relacionado con PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell relacionados con contenido"). En el siguiente script de Windows PowerShell se da por supuesto que solo existe una aplicación de servicio PowerPivot.  
+    1.  En la ejecución de administración de SharePoint 2013 el `Set-PowerPivotServiceApplication` cmdlet con el `-StartMigratingRefreshSchedules` conmutador para habilitar automática en la migración de programaciones de demanda ![contenido relacionado con PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "contenidorelacionadoconPowerShell"). En el siguiente script de Windows PowerShell se da por supuesto que solo existe una aplicación de servicio PowerPivot.  
   
         ```  
         $app=Get-PowerPivotServiceApplication  
@@ -177,7 +177,7 @@ ms.locfileid: "36105024"
   
 -   [Información general del proceso de actualización a SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688) (http://go.microsoft.com/fwlink/p/?LinkId=256688).  
   
--   [Limpiar un entorno antes de realizar una actualización a SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Limpiar un entorno antes de una actualización a SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
 -   [Actualizar las bases de datos de SharePoint 2010 a SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   

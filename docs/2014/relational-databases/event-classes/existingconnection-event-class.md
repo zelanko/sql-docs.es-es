@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - ExistingConnection event class
 ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 08b213035641d22aae7a9e4b1c3c2fbcbdf5b876
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 845f94a258b237dc571276001647321f505b3708
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329545"
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection, clase de eventos
   La clase de eventos ExistingConnection indica las propiedades de las conexiones de usuario existentes al iniciar el seguimiento. El servidor genera un evento ExistingConnection para cada conexión de usuario existente.  

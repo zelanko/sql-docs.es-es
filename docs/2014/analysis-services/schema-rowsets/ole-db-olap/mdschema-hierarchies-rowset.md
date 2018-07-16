@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas MDSCHEMA_HIERARCHIES | Documentos de Microsoft
+title: Conjunto de filas MDSCHEMA_HIERARCHIES | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_HIERARCHIES rowset
 ms.assetid: 2e5b2a81-366e-4d5b-af1e-1d372bf596d9
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e8c6fa75c935256235d64ad337500923b5974c68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a38dd03023fc266c5b8505979766d90979d16f05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321225"
 ---
 # <a name="mdschemahierarchies-rowset"></a>Conjunto de filas MDSCHEMA_HIERARCHIES
   Describe cada jerarquía dentro de una dimensión determinada.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `MDSCHEMA_HIERARCHIES` filas contiene las columnas siguientes.  
+ El `MDSCHEMA_HIERARCHIES` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -58,7 +58,7 @@ ms.locfileid: "36113260"
 |`HIERARCHY_ORDINAL`|`DBTYPE_UI4`||El número ordinal de la jerarquía en todas las jerarquías del cubo.|  
 |`DIMENSION_IS_SHARED`|`DBTYPE_BOOL`||Siempre devuelve `TRUE`.|  
 |`HIERARCHY_IS_VISIBLE`|`DBTYPE_BOOL`||Un booleano que indica si la jerarquía está visible.<br /><br /> Devuelve `TRUE` si la jerarquía está visible; en caso contrario, `FALSE`.|  
-|`HIERARCHY_ORIGIN`|`DBTYPE_UI2`||Una máscara de bits que determina el origen de la jerarquía:<br /><br /> -   `MD_USER_DEFINED` identifica las jerarquías definidas por el usuario y tiene un valor de `0x0000001`.<br />-   `MD_SYSTEM_ENABLED` identifica las jerarquías de atributo y tiene un valor de `0x0000002`.<br />-   `MD_SYSTEM_INTERNAL` identifica los atributos con ninguna jerarquía de atributo y tiene un valor de **0x0000004**.<br /><br /> Una jerarquía de atributo de elemento primario/secundario es `MD_USER_DEFINED` y `MD_SYSTEM_ENABLED`.|  
+|`HIERARCHY_ORIGIN`|`DBTYPE_UI2`||Una máscara de bits que determina el origen de la jerarquía:<br /><br /> -   `MD_USER_DEFINED` identifica las jerarquías definidas por el usuario y tiene un valor de `0x0000001`.<br />-   `MD_SYSTEM_ENABLED` identifica las jerarquías de atributo y tiene un valor de `0x0000002`.<br />-   `MD_SYSTEM_INTERNAL` identifica los atributos sin las jerarquías de atributo y tiene un valor de **0x0000004**.<br /><br /> Una jerarquía de atributo de elemento primario/secundario es `MD_USER_DEFINED` y `MD_SYSTEM_ENABLED`.|  
 |`HIERARCHY_DISPLAY_FOLDER`|`DBTYPE_WSTR`||La ruta que se va a utilizar al mostrar la jerarquía en la interfaz de usuario. Un punto y coma (;) separará los nombres de carpeta. Las carpetas anidadas se indican mediante una barra diagonal inversa (\\).|  
 |`INSTANCE_SELECTION`|`DBTYPE_UI2`||Una sugerencia a la aplicación cliente sobre cómo mostrar la jerarquía. Los valores válidos son los siguientes:<br /><br /> -   `MD_INSTANCE_SELECTION_NONE`<br />-   `MD_INSTANCE_SELECTION_DROPDOWN`<br />-   `MD_INSTANCE_SELECTION_LIST`<br />-   `MD_INSTANCE_SELECTION_FILTEREDLIST`<br />-   `MD_INSTANCE_SELECTION_MANDATORYFILTER`|  
 |`GROUPING_BEHAVIOR`|`DBTYPE_I2`||Una enumeración que especifica el comportamiento de agrupación esperado de los clientes de esta jerarquía. A continuación se indican los posibles valores:<br /><br /> -   **EncourageGrouping** (1)<br />-   **DiscourageGrouping** (2)|  
@@ -67,7 +67,7 @@ ms.locfileid: "36113260"
  El conjunto de filas se ordena en `CATALOG_NAME`, `SCHEMA_NAME`, `CUBE_NAME`, `DIMENSION_UNIQUE_NAME`, `HIERARCHY_NAME`.  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `MDSCHEMA_HIERARCHIES` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `MDSCHEMA_HIERARCHIES` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  
@@ -78,7 +78,7 @@ ms.locfileid: "36113260"
 |`HIERARCHY_NAME`|`DBTYPE_WSTR`|Opcional.|  
 |`HIERARCHY_UNIQUE_NAME`|`DBTYPE_WSTR`|Opcional.|  
 |`HIERARCHY_ORIGIN`|`DBTYPE_UI2`|(Opcional) Una restricción predeterminada está en vigor en MD_USER_DEFINED y MD_SYSTEM_ENABLED.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(Opcional) Mapa de bits con uno de los siguientes valores válidos:<br /><br /> -CUBO 1<br />-DIMENSIÓN DE 2<br /><br /> La restricción predeterminada es un valor de 1.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(Opcional) Mapa de bits con uno de los siguientes valores válidos:<br /><br /> -1 CUBO<br />-DIMENSIÓN DE 2<br /><br /> La restricción predeterminada es un valor de 1.|  
 |`HIERARCHY_VISIBILITY`|`DBTYPE_UI2`|(Opcional) Mapa de bits con uno de los siguientes valores válidos:<br /><br /> -1 Visible<br />-2 no visible<br /><br /> La restricción predeterminada es un valor de 1.|  
   
 ## <a name="see-also"></a>Vea también  

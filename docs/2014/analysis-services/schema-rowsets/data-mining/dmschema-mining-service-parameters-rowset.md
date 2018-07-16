@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DMSCHEMA_MINING_SERVICE_PARAMETERS | Documentos de Microsoft
+title: Conjunto de filas DMSCHEMA_MINING_SERVICE_PARAMETERS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_SERVICE_PARAMETERS rowset
 ms.assetid: 5994e66b-84d0-4279-9f50-d92fd829dd83
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9079be52d50da3a400496dc602166c857f2b1691
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7203b2f717ec7605fcc52c1387472779488ae4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198539"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224475"
 ---
 # <a name="dmschemaminingserviceparameters-rowset"></a>Conjunto de filas DMSCHEMA_MINING_SERVICE_PARAMETERS
   Describe los parámetros para los algoritmos en el servidor.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
- El `DMSCHEMA_MINING_SERVICE_PARAMETERS` filas contiene las columnas siguientes.  
+ El `DMSCHEMA_MINING_SERVICE_PARAMETERS` conjunto de filas contiene las siguientes columnas.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "36198539"
 |`PARAMETER_NAME`|`DBTYPE_WSTR`||Nombre del parámetro.|  
 |`PARAMETER_TYPE`|`DBTYPE_WSTR`||Tipo de parámetro.|  
 |`IS_REQUIRED`|`DBTYPE_BOOL`||Valor booleano que devuelve `TRUE` si el parámetro es necesario.|  
-|`PARAMETER_FLAGS`|`DBTYPE_UI4`||Máscara de bits que describe las características del parámetro:<br /><br /> -   `DM_PARAMETER_TRAINING` (`0x0000001`) indica que el parámetro se utiliza para el entrenamiento<br />-   `DM_PARAMETER_PREDICTION` (`0x00000002`) indica que el parámetro se utiliza para la predicción<br />-   `DM_PARAMETER_CONTENT` (`0x00000003`) indica que el parámetro se utiliza para la restricción de contenido.|  
+|`PARAMETER_FLAGS`|`DBTYPE_UI4`||Máscara de bits que describe las características del parámetro:<br /><br /> -   `DM_PARAMETER_TRAINING` (`0x0000001`) indica que el parámetro se usa para el entrenamiento<br />-   `DM_PARAMETER_PREDICTION` (`0x00000002`) indica que el parámetro se usa para la predicción<br />-   `DM_PARAMETER_CONTENT` (`0x00000003`) indica el parámetro se utiliza para la restricción de contenido|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||Descripción del parámetro fácil de comprender.|  
 |`DEFAULT_VALUE`|`DBTYPE_WSTR`||Valor predeterminado del parámetro. Devuelve `NULL` si el valor predeterminado no es un tipo de datos simple.|  
 |`VALUE_ENUMERATION`|`DBTYPE_WSTR`||Enumerador de los valores posibles para el parámetro.|  
@@ -48,7 +48,7 @@ ms.locfileid: "36198539"
 |`HELP_CONTEXT`|`DBTYPE_I4`||Id. del contexto de Ayuda para esta función.|  
   
 ## <a name="restriction-columns"></a>Columnas de restricción  
- El `DMSCHEMA_MINING_SERVICE_PARAMETERS` se puede restringir el conjunto de filas en las columnas enumeradas en la tabla siguiente.  
+ El `DMSCHEMA_MINING_SERVICE_PARAMETERS` conjunto de filas puede tener restricciones en las columnas enumeradas en la tabla siguiente.  
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  

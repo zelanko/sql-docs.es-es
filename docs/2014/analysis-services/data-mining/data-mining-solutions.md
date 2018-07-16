@@ -1,5 +1,5 @@
 ---
-title: Soluciones de minería de datos | Documentos de Microsoft
+title: Soluciones de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 - data mining [Analysis Services], development
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 caps.latest.revision: 62
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 78467c48599e9f97cf856be9963ad2e3e5318472
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57c0dcbc62475cd55b827d9104efe8a8c2db249c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263851"
 ---
 # <a name="data-mining-solutions"></a>Soluciones de minería de datos
   Una solución de minería de datos es una solución de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contiene uno o más proyectos de minería de datos.  
@@ -82,10 +82,10 @@ ms.locfileid: "36199227"
   
 |Tareas|Temas|  
 |-----------|------------|  
-|Pruebe los modelos que cree, valide la calidad de los datos de entrenamiento y cree gráficos que representen la precisión de los modelos de minería de datos.|[Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)|  
+|Pruebe los modelos que cree, valide la calidad de los datos de entrenamiento y cree gráficos que representen la precisión de los modelos de minería de datos.|[Pruebas y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)|  
 |Entrene el modelo rellenando la estructura y los modelos relacionados con datos. Actualice y amplía los modelos con nuevos datos.|[Procesar objetos de minería de datos](processing-data-mining-objects.md)|  
 |Personalice un modelo de minería de datos aplicando filtros a los datos de entrenamiento, eligiendo un algoritmo diferente o estableciendo parámetros avanzados para el algoritmo.|[Personalizar la estructura y los modelos de minería de datos](customize-mining-models-and-structure.md)|  
-|Personalice un modelo de minería de datos aplicando filtros a los datos usados en el entrenamiento del modelo.|[Agregar modelos de minería de datos a una estructura &#40;Analysis Services: minería de datos&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Personalice un modelo de minería de datos aplicando filtros a los datos usados en el entrenamiento del modelo.|[Agregar modelos de minería de datos a una estructura &#40;Analysis Services - minería de datos&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Actualice y administre las soluciones de minería de datos.|Vínculo TBD|  
   
 ## <a name="see-also"></a>Vea también  

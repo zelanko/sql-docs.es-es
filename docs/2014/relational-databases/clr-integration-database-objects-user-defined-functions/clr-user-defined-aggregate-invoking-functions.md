@@ -1,13 +1,11 @@
 ---
-title: Invocar funciones de agregado definidas por el usuario CLR | Documentos de Microsoft
+title: Invocar funciones de agregado definido por el usuario CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 96aaaeda1fd22044c5a4f86c11051966f3d8b341
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b648c81da85be1214dc8b1c7b78235cd23ab525a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102880"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355057"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Invocar funciones de agregado definidas por el usuario de CLR
   En las instrucciones SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)], puede invocar agregados definidos por el usuario de Common Language Runtime (CLR), siguiendo todas las reglas que se aplican a las funciones de agregado del sistema.  
@@ -39,7 +37,7 @@ ms.locfileid: "36102880"
   
 -   Agregados definidos por el usuario se deben invocar utilizando un nombre de dos partes en forma de *nombre_esquema.nombre_agrdu*.  
   
--   El tipo de argumento del agregado definido por el usuario debe coincidir o ser implícitamente convertible a la *input_type* del agregado, tal como se define en el `CREATE AGGREGATE` instrucción.  
+-   El tipo de argumento del agregado definido por el usuario debe coincidir con o ser implícitamente convertible a la *input_type* del agregado, tal como se define en el `CREATE AGGREGATE` instrucción.  
   
 -   El tipo de valor devuelto del agregado definido por el usuario debe coincidir con el *return_type* en el `CREATE AGGREGATE` instrucción.  
   
@@ -201,7 +199,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Una vez compilado el código en **MyAgg.dll**, puede registrar el agregado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como se indica a continuación:  
+ Una vez compilado el código en **MyAgg.dll**, puede registrar el agregado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como sigue:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  

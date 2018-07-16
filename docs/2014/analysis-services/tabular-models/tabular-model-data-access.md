@@ -1,5 +1,5 @@
 ---
-title: Acceso a datos de modelo tabular | Documentos de Microsoft
+title: Acceso a datos de modelo tabular | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 47494073312225884997c2ca89ccfd84ed6968c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e5a92c5f71f670fe8e592087a8826217a0fd6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196546"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316985"
 ---
 # <a name="tabular-model-data-access"></a>Acceso a datos de modelos tabulares
   A las bases de datos modelo tabulares de Analysis Services se puede tener acceso con la mayoría de los clientes, interfaces e idiomas que se usan para recuperar los datos o metadatos de un modelo multidimensional. Para más información, vea [Acceso a datos de modelos multidimensionales &#40;Analysis Services: datos multidimensionales&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -119,7 +119,7 @@ ms.locfileid: "36196546"
   
 -   [Conjunto de filas DISCOVER_XEVENT_TRACE_DEFINITION](../dev-guide/discover-xevent-trace-definition-rowset.md)  
   
-     Nuevo conjunto de filas de esquema para supervisar Eventos extendidos de SQL Server. Para obtener más información, consulte [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
+     Nuevo conjunto de filas de esquema para supervisar Eventos extendidos de SQL Server. Para obtener más información, consulte [Use SQL Server Extended Events &#40;XEvents&#41; para supervisar Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   
 -   [Conjunto de filas DISCOVER_TRACES](../schema-rowsets/xml/discover-traces-rowset.md)  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36196546"
   
 -   [Conjunto de filas MDSCHEMA_HIERARCHIES](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
-     Nueva `STRUCTURE_TYPE` enumeración admite la identificación de jerarquías definidas por el usuario creado en los modelos tabulares. Para más información, vea [Jerarquías &#40;SSAS tabular&#41;](hierarchies-ssas-tabular.md).  
+     Nuevo `STRUCTURE_TYPE` enumeración admite la identificación de las jerarquías definidas por el usuario creado en los modelos tabulares. Para más información, vea [Jerarquías &#40;SSAS tabular&#41;](hierarchies-ssas-tabular.md).  
   
  En esta versión, no hay actualizaciones de OLE DB para los conjuntos de filas de esquema de minería de datos.  
   

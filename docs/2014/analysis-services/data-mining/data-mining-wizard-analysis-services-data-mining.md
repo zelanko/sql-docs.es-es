@@ -1,5 +1,5 @@
 ---
-title: 'Asistente para minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Asistente para minería de datos (Analysis Services - minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
 - OLAP [Analysis Services], mining models
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 caps.latest.revision: 56
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 49b3ecb1f8cc1bb63344b201145f9d6639aace89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 837acee30eb9aa6f6bf2a89c61d598abf52f972b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288421"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Asistente para minería de datos (Analysis Services - Minería de datos)
   El Asistente para minería de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se ejecuta cada vez que se agrega una nueva estructura de minería de datos a un proyecto de minería de datos. El asistente le ayuda a elegir un origen de datos y a configurar una vista del origen de datos que defina los datos que se van a utilizar para el análisis, y luego le ayuda a crear un modelo inicial.  
@@ -74,7 +74,7 @@ ms.locfileid: "36199790"
 ### <a name="choosing-an-algorithm"></a>Elegir un algoritmo  
  A continuación, debe decidir qué algoritmo utilizar en el procesamiento de los datos. Esta decisión puede ser difícil de tomar. Cada algoritmo proporcionado en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tiene características diferentes y produce resultados distintos, de modo que puede experimentar y probar varios modelos antes de determinar cuál es el más adecuado para sus datos y su problema empresarial. Vea el tema siguiente para obtener una explicación de las tareas en las que cada algoritmo es más adecuado:  
   
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
  De nuevo, puede crear varios modelos utilizando algoritmos diferentes o cambiar los parámetros de los algoritmos para crear modelos distintos. No está limitado en su elección de algoritmo y es recomendable crear varios modelos con los mismos datos.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36199790"
 ## <a name="related-content"></a>Contenido relacionado  
  Para obtener más información sobre las decisiones que debe tomar al crear un modelo de minería de datos, vea los vínculos siguientes:  
   
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
  [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "36199790"
   
  [Selección de características &#40;minería de datos&#41;](feature-selection-data-mining.md)  
   
- [Los valores que faltan &#40;Analysis Services: minería de datos&#41;](missing-values-analysis-services-data-mining.md)  
+ [Los valores que faltan &#40;Analysis Services - minería de datos&#41;](missing-values-analysis-services-data-mining.md)  
   
  [Obtención de detalles en modelos de minería de datos](drillthrough-on-mining-models.md)  
   

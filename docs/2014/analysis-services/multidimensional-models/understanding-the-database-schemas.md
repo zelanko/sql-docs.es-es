@@ -1,5 +1,5 @@
 ---
-title: Descripción de los esquemas de base de datos | Documentos de Microsoft
+title: Descripción de los esquemas de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, database schema
 - database schema [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf611a2ae8e2c2275fc59d3abc124d8fa202d388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef75cf2773781f94bd02a26c5c94958b9f4dfe3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282251"
 ---
 # <a name="understanding-the-database-schemas"></a>Descripción de esquemas de base de datos
   El Asistente para generar esquemas genera un esquema relacional sin normalizar para la base de datos del área de asunto basado en las dimensiones y grupos de medida de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El asistente genera una tabla relacional por dimensión para almacenar los datos de dimensión que se denomina tabla de dimensión y una tabla relacional por grupo de medida para almacenar los datos de hechos que se denomina tabla de hechos. Al generar las tablas relacionales, el asistente omite las dimensiones vinculadas, los grupos de medida vinculados y las dimensiones de tiempo de servidor.  
@@ -48,7 +48,7 @@ ms.locfileid: "36111897"
  En cada dimensión, el Asistente para generar esquemas genera una tabla de dimensión que debe incluirse en la base de datos del área de asunto. La estructura de una tabla de dimensión depende de las selecciones realizadas al diseñar la dimensión en la que se basa.  
   
  Columnas  
- El asistente genera una columna para los enlaces asociados a cada atributo en la dimensión en el que se basa la tabla de dimensiones, como los enlaces para la `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn`y `UnaryOperatorColumn`propiedades de cada atributo.  
+ El asistente genera una columna para los enlaces asociados a cada atributo de la dimensión en el que se basa la tabla de dimensiones, como los enlaces para el `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn`y `UnaryOperatorColumn`propiedades de cada atributo.  
   
  Relaciones  
  El asistente genera una relación entre la columna de cada atributo primario y la clave principal de la tabla de dimensión.  
@@ -86,7 +86,7 @@ ms.locfileid: "36111897"
  El asistente genera una tabla independiente para contener los valores traducidos de las propiedades en el grupo de medida que requieran una columna de traducción. El asistente también crea una columna independiente para cada idioma necesario.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversión de tipo de datos y longitudes predeterminadas  
- Asistente para generar esquemas omite los tipos de datos en todos los casos excepto para las columnas que utilizan el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` tipo de datos. El `wchar` tamaño de los datos se traduce directamente a la `nvarchar` tipo de datos. Sin embargo, si la longitud especificada de una columna que utiliza el tamaño `wchar` es superior a 4.000 bytes, el Asistente para generar esquemas registrará un error.  
+ Asistente para generar esquemas omite los tipos de datos en todos los casos excepto las columnas que usan el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` tipo de datos. El `wchar` tamaño de los datos se traduce directamente en el `nvarchar` tipo de datos. Sin embargo, si la longitud especificada de una columna que utiliza el tamaño `wchar` es superior a 4.000 bytes, el Asistente para generar esquemas registrará un error.  
   
  Si un elemento de datos, como el enlace de un atributo, no posee una longitud especificada, se utilizará en la columna la longitud predeterminada que se muestra en la siguiente tabla.  
   

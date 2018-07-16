@@ -1,5 +1,5 @@
 ---
-title: Copiar elementos de proyecto | Documentos de Microsoft
+title: Copiar elementos del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Integration Services], copying
 - packages [Integration Services], copying
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data source views [Integration Services], copying
 ms.assetid: 1606c54d-20f9-49f3-a4ef-caad83a772aa
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 57c3263617b89bfa9ca39f81fb0890b45532a744
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02ddf2965e6bd97d4859cae2ce40a0c96333a74d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36114299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193585"
 ---
 # <a name="copy-project-items"></a>Copiar los elementos de proyectos
   En este tema se describe cómo copiar objetos dentro de un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o entre proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . También puede copiar objetos entre los otros tipos de proyectos de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para copiar entre proyectos, el proyecto debe formar parte de la misma solución de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Para obtener más información, vea [Proyectos de Integration Services &#40;SSIS&#41;](integration-services-ssis-projects-and-solutions.md).  

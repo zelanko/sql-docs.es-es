@@ -1,13 +1,11 @@
 ---
-title: Seguridad de la integración de CLR | Documentos de Microsoft
+title: Seguridad de la integración de CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +15,18 @@ helpviewer_keywords:
 - database objects [CLR integration], security
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 689d425c2f13a442b1d8bbd5515939135f44fa0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 5037f3bb0d77fd25ad17b761f8c7943aef61200c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106776"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349597"
 ---
 # <a name="clr-integration-security"></a>Seguridad de la integración CLR
-  El modelo de seguridad de la [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] common language runtime (CLR) administra y protege el acceso entre diferentes tipos de objetos CLR y no son CLR que se ejecutan dentro de [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] instrucción u otro objeto CLR que se ejecute en el servidor. Las llamadas entre objetos reciben el nombre de vínculos. Los tipos de comprobaciones de seguridad que se realizan en estos objetos dependen de los tipos de vínculos implicados.  
+  El modelo de seguridad de la [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] common language runtime (CLR) administra y protege el acceso entre diferentes tipos de objetos CLR y que no son CLR que se ejecutan en [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] instrucción u otro objeto CLR que se ejecutan en el servidor. Las llamadas entre objetos reciben el nombre de vínculos. Los tipos de comprobaciones de seguridad que se realizan en estos objetos dependen de los tipos de vínculos implicados.  
   
  El modelo de seguridad de la integración CLR tiene estos objetivos:  
   
@@ -40,7 +38,7 @@ ms.locfileid: "36106776"
   
 -   El código definido por el usuario no debería poder obtener un acceso no autorizado a los recursos del sistema por el hecho de ejecutarse en el proceso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con el modelo de seguridad basada en el acceso a código de CLR. Algunas de las ventajas que este enfoque combinado ofrece para la seguridad se describen en esta sección.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con el modelo de seguridad basada en el acceso del código de CLR. Algunas de las ventajas que este enfoque combinado ofrece para la seguridad se describen en esta sección.  
   
  En la siguiente tabla se muestran los temas de esta sección.  
   
@@ -50,16 +48,16 @@ ms.locfileid: "36106776"
  [Atributos de protección del host y programación de la integración CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  Ofrece información sobre los valores del atributo de protección de host (HPA) que no se permiten en los ensamblados SAFE y EXTERNAL_ACCESS.  
   
- [Vínculos de seguridad de la integración de CLR](../../../database-engine/dev-guide/links-in-clr-integration-security.md)  
+ [Vínculos en el ámbito de seguridad de la integración CLR](../../../database-engine/dev-guide/links-in-clr-integration-security.md)  
  Describe la forma en que los fragmentos de código del usuario pueden llamarse entre sí en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Suplantación y seguridad de la integración de CLR](../../../database-engine/dev-guide/impersonation-and-clr-integration-security.md)  
+ [Suplantación y seguridad de la integración CLR](../../../database-engine/dev-guide/impersonation-and-clr-integration-security.md)  
  Explica la forma en que el código administrado obtiene acceso a los recursos externos utilizando la suplantación.  
   
- [Permitir parcialmente llamadores de confianza](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
+ [Permitir llamadores de confianza parcial](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
  Indica los problemas que surgen cuando un método administrado invoca a un método en una clase incluida dentro de otro ensamblado.  
   
- [Dominios de aplicación y seguridad de la integración de CLR](../../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)  
+ [Dominios de aplicación y seguridad de la integración CLR](../../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)  
  Describe la forma en que los ensamblados se cargan en los dominios de aplicación.  
   
 ## <a name="see-also"></a>Vea también  

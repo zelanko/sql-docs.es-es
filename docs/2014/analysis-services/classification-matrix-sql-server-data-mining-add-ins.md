@@ -1,5 +1,5 @@
 ---
-title: Matriz de clasificación (datos de SQL Server a los complementos de minería de datos) | Documentos de Microsoft
+title: Matriz de clasificación (datos de SQL Server a los complementos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
 - classification matrix
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - mining models, testing
 ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1944620e5c83485a01b9bc856cc67e9e6908c769
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d87c2d37ed69e2cc3f3e224ddf1a489b34425b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249645"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Matriz de clasificación (Complementos de minería de datos de SQL Server)
-  ![Botón matriz de clasificación, cinta de opciones de minería de datos](media/dmc-cmatrix.gif "botón matriz de clasificación, cinta de opciones de minería de datos")  
+  ![Botón matriz de clasificación, cinta de opciones minería de datos](media/dmc-cmatrix.gif "botón matriz de clasificación, cinta de opciones minería de datos")  
   
  Puede usar la matriz de clasificación para evaluar la precisión de un modelo para la predicción. Para generar una matriz de clasificación, ejecute un conjunto de datos de prueba en el modelo; la herramienta de matriz de clasificación compara los valores reales del conjunto de pruebas con las predicciones realizadas por el modelo. Examinando la matriz, puede saber de un vistazo la frecuencia con la que el modelo es correcto y la frecuencia con la que hace predicciones incorrectas.  
   
- En estos complementos, use la **matriz de clasificación** Asistente para seleccionar un modelo, especificar los datos de prueba y, a continuación, generar una matriz de resultados.  
+ En estos complementos, use el **matriz de clasificación** Asistente para seleccionar un modelo, especificar los datos de prueba y, a continuación, generar una matriz de resultados.  
   
 ## <a name="how-to-read-a-classification-matrix"></a>Cómo leer una matriz de clasificación  
  Suponga que el objetivo es diseñar un programa de fidelización de clientes y asignar después los clientes a las categorías adecuadas, de forma que pueda proporcionarles el nivel adecuado de incentivos. Ha implementado tres niveles en el programa de recompensas, bronce, plata y oro, y los aplicado a los clientes en una fase experimental. También ha diseñado un modelo que analiza los clientes y predice las categorías correctas. Ahora usará la matriz de clasificación en los datos de ensayo para determinar la calidad del modelo para predecir la oferta correcta de todos los clientes.  
@@ -40,11 +40,11 @@ ms.locfileid: "36105282"
   
 ||Bronce (real)|Oro (real)|Plata (real)|  
 |-|-----------------------|---------------------|-----------------------|  
-|Bronce|**% de 94.45**|15.18%|1,70%|  
-|Oro|% de 2.72|**% de 84.82**|0.00%|  
-|Plata|% de 1.84|0.00%|**% de 93.80**|  
-|*Corregir*|*% de 95.45*|*% de 84.82*|*% de 98.30*|  
-|*Clasifican incorrectamente*|*% de 4.55*|*15.18%*|*1,70%*|  
+|Bronce|**94.45%**|15.18%|1,70%|  
+|Oro|2.72%|**84.82%**|0.00%|  
+|Plata|1.84%|0.00%|**93.80%**|  
+|*Corregir*|*95.45%*|*84.82%*|*98.30%*|  
+|*Incorrectas*|*4.55%*|*15.18%*|*1,70%*|  
   
 -   Cada columna muestra los valores reales del conjunto de datos de prueba.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36105282"
   
 4.  En la página Seleccionar datos de origen, indique si va a usar datos de prueba externos o los datos de prueba guardados con el modelo.  
   
-5.  Si usa datos de prueba externos, debe asignar el modelo a las columnas de entrada en el **especificar relación** página del asistente.  
+5.  Si usa datos de prueba externos, deberá asignar el modelo a las columnas de entrada en el **especificar relación** página del asistente.  
   
      Si usa el conjunto de datos de pruebas incrustado, la asignación se realiza automáticamente.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36105282"
 -   Tanto el modelo de minería de datos como los nuevos datos que esté usando para las pruebas deben contener al menos una columna que se pueda predecir, y las columnas deben contener el mismo tipo de datos.  
   
 ### <a name="known-issues"></a>Problemas conocidos  
- En SQL Server 2012 y SQL Server 2014, la capacidad de asignar el conjunto de datos de pruebas interno al modelo no funciona el **matriz de clasificación** herramienta. Sin embargo, puede especificar un conjunto de datos externos y, a continuación, seleccionar el conjunto de entrenamiento como entrada para determinar si hay algún error en el conjunto de datos original.  
+ En SQL Server 2012 y SQL Server 2014, la capacidad para asignar el conjunto de datos de prueba interna para el modelo no funciona en el **matriz de clasificación** herramienta. Sin embargo, puede especificar un conjunto de datos externos y, a continuación, seleccionar el conjunto de entrenamiento como entrada para determinar si hay algún error en el conjunto de datos original.  
   
 ## <a name="see-also"></a>Vea también  
  [Validar modelos y usar modelos para la predicción &#40;datos complementos de minería de datos para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   

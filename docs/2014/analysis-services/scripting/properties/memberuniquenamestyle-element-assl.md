@@ -1,5 +1,5 @@
 ---
-title: Elemento MemberUniqueNameStyle (ASSL) | Documentos de Microsoft
+title: Elemento MemberUniqueNameStyle (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MemberUniqueNameStyle element
 ms.assetid: f0771c81-0127-4203-9501-ae4f864730fa
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca327bceaddce4c0f7ac1b7a726d321a02cdffc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2448f2f45f76610e9d7298c855086cc74ab0611e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226365"
 ---
 # <a name="memberuniquenamestyle-element-assl"></a>Elemento MemberUniqueNameStyle (ASSL)
-  Determina cómo únicos nombres se generan para los miembros de las jerarquías contenidas en el [CubeDimension](../data-type/dimension-data-type-assl.md) elemento.  
+  Determina los nombres únicos de cómo se generan para los miembros de las jerarquías contenidas en el [CubeDimension](../data-type/dimension-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36200219"
 |*NamePath*|La instancia genera un nombre compuesto formado por cada nivel y el título del miembro.|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `MemberUniqueNameStyle` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.CubeDimension>.  
+ El elemento que se corresponde con el elemento primario de `MemberUniqueNameStyle` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.CubeDimension>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento de cubo &#40;ASSL&#41;](../objects/cube-element-assl.md)   

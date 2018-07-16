@@ -1,14 +1,13 @@
 ---
-title: Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn) | Documentos de Microsoft
+title: Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], failover
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: 71
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: a2bff986de8e70cca18a5dc978ed05db9cc42061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 03cbd2d25c3695cc24438bc2b7f871b7cd5093f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310445"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)
   Dentro del contexto de un grupo de disponibilidad, el rol principal y el rol secundario de las réplicas de disponibilidad suelen ser intercambiables en un proceso denominado *conmutación por error*. Hay tres formas de conmutación por error: conmutación por error automática (sin pérdida de datos), conmutación por error manual planeada (sin pérdida de datos) y conmutación por error manual forzada (con posible pérdida de datos), normalmente denominada *conmutación por error forzada*. Las conmutaciones por error automáticas o manuales planeadas mantienen todos los datos. Un grupo de disponibilidad realiza la conmutación por error en el nivel de la réplica de disponibilidad. Es decir, un grupo de disponibilidad conmuta por error a una de sus réplicas secundarias (el *destino de conmutación por error*actual).  
@@ -72,7 +71,7 @@ ms.locfileid: "36204259"
 |Conmutación por error manual planeada|no|Sí|Sí|  
 |conmutación por error forzada|Sí|Sí|Sí**<sup>*</sup>**|  
   
- **<sup>*</sup>**  Si emite un comando de conmutación por error forzada en una réplica secundaria sincronizada, la réplica secundaria comporta igual que una conmutación por error manual.  
+ **<sup>*</sup>**  Si emite un comando de conmutación por error forzada en una réplica secundaria sincronizada, la réplica secundaria comporta igual que para una conmutación por error manual.  
   
  El período de tiempo que la base de datos no está disponible durante una conmutación por error depende del tipo de conmutación por error y su causa.  
   
@@ -246,7 +245,7 @@ ms.locfileid: "36204259"
 4.  Puede desencadenar una alerta cuando el tiempo de retardo en una base de datos o conjunto de base de datos supere el retardo máximo deseado durante un período de tiempo determinado. Por ejemplo, un trabajo que se ejecute cada minuto en cada base de datos principal puede realizar la consulta. Si la diferencia entre la `last_commit_time` de una base de datos principal y cualquiera de sus bases de datos secundarias ha superado el objetivo de punto de recuperación (RPO) (por ejemplo, 5 minutos) desde la última vez que se ejecutó el trabajo, este puede generar una alerta.  
   
 > [!IMPORTANT]  
->  Cuando el clúster de WSFC no tiene quórum o se ha forzado el quórum, `last_commit_lsn` y `last_commit_time` son NULL. Para obtener información sobre cómo podría evitar la pérdida de datos después de forzar el cuórum, vea "Formas posibles de evitar la pérdida de datos después de forzar el cuórum" en [Realizar una conmutación por error manual forzada de un grupo de disponibilidad &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+>  Cuando el clúster de WSFC carece de quórum o se ha forzado el quórum, `last_commit_lsn` y `last_commit_time` son NULL. Para obtener información sobre cómo podría evitar la pérdida de datos después de forzar el cuórum, vea "Formas posibles de evitar la pérdida de datos después de forzar el cuórum" en [Realizar una conmutación por error manual forzada de un grupo de disponibilidad &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ###  <a name="ForcedFailoverManagingDataLoss"></a> Administrar la potencial pérdida de datos  
  Después de forzar una conmutación por error, se suspenden todas las bases de datos secundarias. Esto incluye las bases de datos principales antiguas, después de que la réplica principal anterior vuelva a estar en línea y detecte que ahora es una réplica secundaria. Debe reanudar manualmente y de forma individual cada una de las bases de datos suspendidas en cada réplica secundaria.  
@@ -313,10 +312,10 @@ ms.locfileid: "36204259"
   
 -   [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog del equipo de AlwaysOn SQL Server: El Blog oficial del SQL Server AlwaysOn equipo](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog del equipo de AlwaysOn SQL Server: Oficial AlwaysOn Team Blog de SQL Server](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](availability-modes-always-on-availability-groups.md)   
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Transacciones entre bases de datos no se admite para la creación de reflejo de base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)   

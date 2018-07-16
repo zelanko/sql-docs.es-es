@@ -1,5 +1,5 @@
 ---
-title: Elemento MoveWithDescendants (XMLA) | Documentos de Microsoft
+title: Elemento MoveWithDescendants (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - MoveWithDescendants element
 ms.assetid: d02285b6-1801-4da9-8e2b-9ab008e25558
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 975044359f2855f8cced46ca2045c2c397e4234b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b75fffd4d923b7593f403ae2268b980a5ab6de6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332575"
 ---
 # <a name="movewithdescendants-element-xmla"></a>Elemento MoveWithDescendants (XMLA)
   Indica si el elemento primario actualiza también los descendientes de miembros del atributo [actualización](../xml-elements-commands/update-element-xmla.md) comando.  
@@ -64,12 +64,12 @@ ms.locfileid: "36113206"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El `MoveWithDescendants` elemento determina si el `Update` comando no debe actualizar solo los miembros de atributo identificados por el [atributos](attributes-element-xmla.md) elemento, si no también los descendientes de dichos miembros de atributo deben estar También se actualizan.  
+ El `MoveWithDescendants` elemento determina si el `Update` comando no debe actualizar solo los miembros de atributo identificados por el [atributos](attributes-element-xmla.md) elemento, sino también que los descendientes de dichos miembros de atributo que se van a ser También se actualiza.  
   
 > [!NOTE]  
 >  Este elemento solamente se aplica a los miembros de atributo de jerarquías de elementos primarios y secundarios.  
   
- Para obtener más información acerca de cómo actualizar los miembros, vea [Insertar, actualizar y quitar miembros &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
+ Para obtener más información acerca de cómo actualizar miembros, vea [Insertar, actualizar y quitar miembros &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;XMLA&#41;](xml-elements-properties.md)  

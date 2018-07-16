@@ -1,5 +1,5 @@
 ---
-title: Elemento ActionID (ASSL) | Documentos de Microsoft
+title: Elemento ActionID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ActionID element
 ms.assetid: 2c9c66b2-a7ea-4874-a0ed-020ce3feab20
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 13e83d3a022416de56cba7bbf6693ea408b51562
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7405b3b6dd7f673b199509388d43164f47dd90eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304555"
 ---
 # <a name="actionid-element-assl"></a>Elemento ActionID (ASSL)
-  Contiene el nombre de un [acción](../objects/action-element-assl.md) elemento definido en un [cubo](../objects/cube-element-assl.md) elemento que esté disponible en un [perspectiva](../objects/perspective-element-assl.md) elemento como un [PerspectiveAction](../data-type/action-data-type-assl.md) elemento.  
+  Contiene el nombre de un [acción](../objects/action-element-assl.md) elemento definido en un [cubo](../objects/cube-element-assl.md) elemento que está disponible en un [perspectiva](../objects/perspective-element-assl.md) elemento como un [PerspectiveAction](../data-type/action-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36111030"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El elemento que corresponde al elemento primario de `ActionID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.PerspectiveAction>.  
+ El elemento que se corresponde con el elemento primario de `ActionID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.PerspectiveAction>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento Actions &#40;ASSL&#41;](../collections/actions-element-assl.md)   

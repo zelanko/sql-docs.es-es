@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 caps.latest.revision: 28
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 762be955372568ad7930611b0216bbb3f1437158
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 25f45f72ddbfc389deb77e6c20588660e599cb19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205685"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisitos de la aplicación web (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] es una aplicación web hospedada por Internet Information Services (IIS). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funciona únicamente en Internet Explorer (IE) 7 o posterior. No se admiten IE 7 ni versiones anteriores, así como tampoco Microsoft Edge ni Chrome.  
@@ -38,7 +38,7 @@ ms.locfileid: "36199706"
 |-------------------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SERVICE PACK 2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 Professional, Enterprise y Ultimate<br /><br /> Windows 8.0 Professional, Enterprise y Ultimate|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SERVICE PACK 2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SERVICE PACK 2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
   
- Para obtener una lista completa de los sistemas operativos de Windows que se admiten para su edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [requisitos de Hardware y Software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Para obtener una lista completa de los sistemas operativos Windows que se admiten para su edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [requisitos de Hardware y Software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
  Para trabajar en la aplicación web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , Silverlight 5 debe estar instalado en el equipo cliente. Si no tiene la versión necesaria de Silverlight, se le pedirá que la instale cuando navegue a un área de la aplicación web que la necesite. Puede instalar Silverlight 5 desde [aquí](http://go.microsoft.com/fwlink/?LinkId=243096).  
@@ -47,7 +47,7 @@ ms.locfileid: "36199706"
  En Windows Server 2008 R2, puede usar el **Administrador del servidor**, que está disponible en Microsoft Management Console (MMC), para instalar el rol **Servidor web (IIS)** y los siguientes servicios de rol necesarios.  
   
 > [!NOTE]  
->  En [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] y sistemas operativos de Windows 7, use **programas y características** en el Panel de Control para habilitar estas opciones en el **las características de Windows** cuadro de diálogo.  
+>  En [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] y los sistemas operativos de Windows 7, use **programas y características** en el Panel de Control para habilitar estas opciones en el **características de Windows** cuadro de diálogo.  
   
 ||  
 |-|  
@@ -64,10 +64,10 @@ ms.locfileid: "36199706"
 |Internet Information Services<br /><br /> Herramientas de administración web<br /><br /> Consola de administración de IIS<br /><br /> Servicios de World Wide Web<br /><br /> Desarrollo de aplicaciones<br /><br /> Extensibilidad de .NET<br /><br /> Extensibilidad de .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensiones ISAPI<br /><br /> Filtros ISAPI<br /><br /> Características HTTP comunes<br /><br /> Documento predeterminado<br /><br /> Examen de directorios<br /><br /> Errores HTTP<br /><br /> Contenido estático<br /><br /> [Nota: no instale Publicación en WebDAV]<br /><br /> Estado y diagnóstico<br /><br /> Registrar HTTP<br /><br /> Monitor de solicitudes<br /><br /> Rendimiento<br /><br /> Compresión de contenido estático<br /><br /> Seguridad<br /><br /> Filtro de solicitudes<br /><br /> Autenticación de Windows|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>Características (sistemas operativos Windows Server 2008 o Windows Server 2008 R2, Windows 7)  
- En [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] o Windows Server 2008 R2, puede usar **el administrador del servidor** instalar las siguientes características necesarias.  
+ En [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] o Windows Server 2008 R2, puede usar **administrador del servidor** para instalar las siguientes características necesarias.  
   
 > [!NOTE]  
->  En [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] y sistemas operativos de Windows 7, use **programas y características** en el Panel de Control para habilitar estas opciones en el **las características de Windows** cuadro de diálogo.  
+>  En [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] y los sistemas operativos de Windows 7, use **programas y características** en el Panel de Control para habilitar estas opciones en el **características de Windows** cuadro de diálogo.  
   
 ||  
 |-|  
@@ -92,7 +92,7 @@ ms.locfileid: "36199706"
   
 ## <a name="see-also"></a>Vea también  
  [Instalar Master Data Services](install-master-data-services.md)   
- [Crear una aplicación Web Master Data Services &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)   
+ [Crear una aplicación Web de Master Data Manager &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)   
  [Página Configuración web &#40;Administrador de configuración de Master Data Services&#41;](../web-configuration-page-master-data-services-configuration-manager.md)  
   
   

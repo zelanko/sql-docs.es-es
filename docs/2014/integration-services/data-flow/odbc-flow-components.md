@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa28260303bc7be87ac166ce3e22aa55c32a2a0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e13fa57378ac9dac263cb89d48da84b94739a2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213675"
 ---
 # <a name="odbc-flow-components"></a>Componentes del flujo de ODBC
   En este tema se describen los conceptos necesarios para crear un flujo de datos ODBC mediante [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
@@ -114,8 +114,8 @@ No hay compatibilidad con los tipos de datos de C extensibles, como se describe 
 |SQL_DOUBLE|DT_R8|  
 |SQL_FLOAT|DT_R8|  
 |SQL_REAL|DT_R4|  
-|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|El tipo de datos numérico se asigna a DT_NUMERIC cuando P es mayor o igual que 38 y S es mayor o igual que 0 y S es menor o igual que P. El tipo de datos numérico se asigna a DT_R8 cuando se cumple al menos uno de los siguientes:<br /><br />La precisión es mayor que 38.<br /><br />La escala es menor que cero<br /><br />La escala es mayor que 38<br /><br />La escala es mayor que la precisión<br /><br /><br /><br />Tenga en cuenta que el tipo de datos numérico se asigna a DT_CY cuando se declara como un tipo de datos money.|  
-|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|El tipo de datos decimal se asigna a DT_NUMERIC cuando P es mayor o igual que 38 y S es mayor o igual que 0 y S es menor o igual que P. El tipo de datos decimal se asigna a DT_R8 cuando se cumple al menos uno de los siguientes:<br /><br />La precisión es mayor que 38.<br /><br />La escala es menor que cero<br /><br />La escala es mayor que 38<br /><br />La escala es mayor que la precisión<br /><br />Tenga en cuenta que el tipo de datos decimal se asigna a DT_CY cuando se declara como un tipo de datos money.|  
+|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|El tipo de datos numérico se asigna a DT_NUMERIC cuando P es mayor o igual que 38 y S es mayor o igual que 0 y S menor o igual que P. El tipo de datos numérico se asigna a DT_R8 cuando se cumple al menos uno de los siguientes:<br /><br />La precisión es mayor que 38.<br /><br />La escala es menor que cero<br /><br />La escala es mayor que 38<br /><br />La escala es mayor que la precisión<br /><br /><br /><br />Tenga en cuenta que el tipo de datos numérico se asigna a DT_CY cuando se declara como un tipo de datos money.|  
+|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|El tipo de datos decimal se asigna a DT_NUMERIC cuando P es mayor o igual que 38 y S es mayor o igual que 0 y S menor o igual que P. El tipo de datos decimal se asigna a DT_R8 cuando se cumple al menos uno de los siguientes:<br /><br />La precisión es mayor que 38.<br /><br />La escala es menor que cero<br /><br />La escala es mayor que 38<br /><br />La escala es mayor que la precisión<br /><br />Tenga en cuenta que el tipo de datos decimal se asigna a DT_CY cuando se declara como un tipo de datos money.|  
 |SQL_DATE<br /><br />SQL_TYPE_DATE|DT_DBDATE|  
 |SQL_TIME<br /><br />SQL_TYPE_TIME|DT_DBTIME|  
 |SQL_TIMESTAMP<br /><br />SQL_TYPE_TIMESTAMP|DT_DBTIMESTAMP<br /><br />DT_DBTIMESTAMP2|Los tipos de datos SQL_TIMESTAMP se asignan a DT_DBTIMESTAMP2 si la escala es mayor que 3. En los demás casos, se asignan a DT_DBTIMESTAMP.|  

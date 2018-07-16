@@ -1,5 +1,5 @@
 ---
-title: Elemento DataAggregation (ASSL) | Documentos de Microsoft
+title: Elemento DataAggregation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DataAggregation element
 ms.assetid: baf6d2c9-54f6-4a6d-95f7-e1e758be458d
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795555e24dbdc30a02b0fd3b286e4122323c00f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eca6c0e89bcc120334e179ad59c1dfce657ab057
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289591"
 ---
 # <a name="dataaggregation-element-assl"></a>Elemento DataAggregation (ASSL)
   Determina si la instancia puede agregar datos persistentes o datos almacenados en caché para el [MeasureGroup](../objects/group-element-assl.md).  
@@ -69,7 +69,7 @@ ms.locfileid: "36104986"
 |*CacheAggregatable*|Los datos almacenados en caché se pueden agregar para este grupo de medida.|  
 |*DataAndCacheAggregatable*|Tanto los datos almacenados como los datos almacenados en caché se pueden agregar para este grupo de medida.|  
   
- El elemento que corresponde al elemento primario de `DataAggregation` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MeasureGroup>.  
+ El elemento que se corresponde con el elemento primario de `DataAggregation` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento de cubo &#40;ASSL&#41;](../objects/cube-element-assl.md)   

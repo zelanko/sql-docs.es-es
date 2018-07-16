@@ -1,5 +1,5 @@
 ---
-title: Objetos (XMLA) | Documentos de Microsoft
+title: Objetos (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - XMLA, objects
 ms.assetid: 768188ef-85d4-432a-9390-be05c835137f
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 98ff50749cc45b5ffe4343acc19668f4dd0db126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3fdaa8cc81b642212c6aa404a8b6d39e3872c743
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205905"
 ---
 # <a name="objects-xmla"></a>Objetos (XMLA)
-  El protocolo XML for Analysis (XMLA) utiliza dos métodos, `Discover` y `Execute`, para proporcionar una manera estándar para las aplicaciones tener acceso a información en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dado que estos métodos se invocan mediante el protocolo de Protocolo Simple de acceso a objetos (SOAP), aceptan la entrada y generan resultados en XML.  
+  El protocolo XML for Analysis (XMLA) utiliza dos métodos, `Discover` y `Execute`, para proporcionar una manera estándar para las aplicaciones tener acceso a información en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dado que estos métodos se invocan mediante el protocolo del Protocolo Simple de acceso a objetos (SOAP), aceptan la entrada y entregar los resultados en XML.  
   
 ## <a name="in-this-section"></a>En esta sección  
  Los temas siguientes describen los objetos XMLA implementados por [!INCLUDE[ssAS](../../includes/ssas-md.md)].  

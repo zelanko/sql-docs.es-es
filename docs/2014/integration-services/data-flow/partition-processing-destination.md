@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partitionprocessingdest.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b01498c14c460fe5566b14203bd8d70002f8f457
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1f77ae8ec3ca4a5964ffedcd8bc533321f7f898a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320705"
 ---
 # <a name="partition-processing-destination"></a>Destino de procesamiento de particiones
   El destino de procesamiento de particiones carga y procesa una partición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre particiones, vea [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "36198247"
   
 -   [Editor de destino de procesamiento de particiones &#40;página asignaciones&#41;](../partition-processing-destination-editor-mappings-page.md)  
   
--   [Editor de destino de procesamiento de particiones &#40;página avanzadas&#41;](../partition-processing-destination-editor-advanced-page.md)  
+-   [Editor de destino de procesamiento de particiones &#40;página Opciones avanzadas&#41;](../partition-processing-destination-editor-advanced-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   

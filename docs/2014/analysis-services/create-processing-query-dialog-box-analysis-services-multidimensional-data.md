@@ -1,5 +1,5 @@
 ---
-title: Crear cuadro de diálogo de consulta (Analysis Services - datos multidimensionales) de procesamiento | Documentos de Microsoft
+title: Crear el cuadro de diálogo de consulta (Analysis Services - datos multidimensionales) procesamiento | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createprocessingquerydialog.f1
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 01633f8b8ce57d3b8953c1694a250cfdb9a64cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0744aae90a9d3995d5803bca2ccdff31012b5eeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244105"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Crear consulta de procesamiento (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Crear consulta de procesamiento** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear una consulta de procesamiento en la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento** . Una consulta de procesamiento es aquella que devuelve un conjunto de filas que contiene los cambios realizados en una tabla asociada a un objeto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] desde la última vez que se sondeó la tabla, con el fin de actualizar incrementalmente la caché OLAP multidimensional (MOLAP) del objeto. Analysis Services utiliza otra consulta, denominada consulta de sondeo, para sondear una tabla asociada a un objeto y determinar si ésta ha cambiado. Las consultas de procesamiento no son necesarias para actualizar completamente la caché MOLAP del objeto.  
@@ -92,7 +92,7 @@ ms.locfileid: "36198561"
 > [!IMPORTANT]  
 >  No es posible cambiar los tipos de consulta en el cuadro de diálogo.  
   
- **Panel Cuadrícula**  
+ **Panel de cuadrícula**  
  Muestra en una cuadrícula los objetos a los que se hace referencia en la consulta. Puede usar este panel para agregar y quitar columnas en la consulta, y para cambiar la configuración de cada columna.  
   
 > [!NOTE]  

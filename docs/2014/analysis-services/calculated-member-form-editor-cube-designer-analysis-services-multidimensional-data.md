@@ -1,5 +1,5 @@
 ---
-title: Calcula el Editor de formulario de miembro (pestaña cálculos, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Calcula el Editor de formulario de miembro (pestaña cálculos, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.calculatedmember.f1
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a697e65ae650726e59a2ddb515746f5ef1ebb63e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b49b060b8c02219e9f1b8448700ce7f9b065bd5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218375"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de miembro calculado (pestaña Cálculos, Diseñador de cubos) (Analysis Services -  Datos multidimensionales)
   Utilice el panel del **Editor de Formulario de miembro calculado** de la pestaña **Cálculos** del Diseñador de cubos para crear o modificar un miembro calculado.  
@@ -32,7 +32,7 @@ ms.locfileid: "36201052"
  **Nombre**  
  Escriba el nombre del miembro calculado.  
   
- **Propiedades del elemento primario**  
+ **Propiedades del miembro primario**  
  Expanda esta opción para ver las opciones **Jerarquía primaria**, **Miembro primario**y **Cambiar** .  
   
  **Jerarquía primaria**  
@@ -69,7 +69,7 @@ ms.locfileid: "36201052"
  Seleccione el nombre de la medida utilizada para resolver las consultas NON EMPTY en MDX para el miembro calculado. Si la propiedad **Comportamiento si no está vacío** está en blanco, es necesario evaluar el miembro calculado repetidamente para determinar si está vacío. Si la propiedad **Comportamiento si no está vacío** contiene el nombre de una medida, el miembro calculado se trata como si estuviera vacío si la medida especificada está vacía.  
   
 > [!WARNING]  
->  Esta propiedad está en desuso. No la active. Vea [en desuso de Analysis Services Features in SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) para obtener más información.  
+>  Esta propiedad está en desuso. No la active. Consulte [en desuso características de Analysis Services en SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) para obtener más información.  
   
  **Expresiones de color**  
  Expanda para ver las opciones **Color en primer plano** y **Color de fondo** .  
@@ -120,7 +120,7 @@ ms.locfileid: "36201052"
  [Barra de herramientas &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Organizador de script &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [Herramientas de cálculo &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulario de conjuntos con nombres &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de secuencia de comandos &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [Denominada Editor de formulario de conjunto &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de script &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

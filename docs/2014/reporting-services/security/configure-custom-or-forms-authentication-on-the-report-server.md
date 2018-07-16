@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b9c600939f5f3fb0a6febd76371d95e3ab91b4fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6308b2b3da495518fb2c377e7a0994a27f14dbcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206515"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurar la autenticación de formularios o personalizada en el servidor de informes
   Reporting Services proporciona una arquitectura extensible que permite conectar módulos de autenticación personalizados o basados en formularios. Podría considerar implementar una extensión de autenticación personalizada si los requisitos de implementación no incluyen la seguridad integrada de Windows o la autenticación básica. El escenario más común para utilizar la autenticación personalizada es admitir el acceso a una extranet o a Internet en una aplicación web. Reemplazar la extensión de autenticación de Windows predeterminada con una extensión de autenticación personalizada le proporciona más control sobre cómo se concede acceso a los usuarios externos al servidor de informes.  
@@ -38,7 +38,7 @@ ms.locfileid: "36106504"
   
 1.  Abra RSReportServer.config en un editor de texto.  
   
-2.  Buscar <`Authentication`>.  
+2.  Busque <`Authentication`>.  
   
 3.  Copie la estructura XML siguiente:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36106504"
   
 6.  Abra el archivo Web.config para el servidor de informes. De forma predeterminada, se encuentra en la carpeta \Archivos de programa\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportServer.  
   
-7.  Buscar `authentication mode` y establézcalo `Forms`.  
+7.  Buscar `authentication mode` y establézcala como `Forms`.  
   
     ```  
     <authentication mode = "Forms" />  
@@ -73,7 +73,7 @@ ms.locfileid: "36106504"
   
 9. Abra el archivo Web.config del Administrador de informes. De forma predeterminada, se encuentra en la carpeta \Archivos de programa\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportManager.  
   
-10. Buscar `authentication mode` y establézcalo `Forms`.  
+10. Buscar `authentication mode` y establézcala como `Forms`.  
   
     ```  
     <authentication mode = "Forms" />  
@@ -85,7 +85,7 @@ ms.locfileid: "36106504"
     <identity impersonate = "false" />  
     ```  
   
-12. Agregar el `PassThroughCookies` estructura de elemento al archivo de configuración. Para obtener más información, vea [Configurar el Administrador de informes para pasar cookies de autenticación personalizada](configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
+12. Agregar el `PassThroughCookies` estructura del elemento al archivo de configuración. Para obtener más información, vea [Configurar el Administrador de informes para pasar cookies de autenticación personalizada](configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
   
 13. Guarde el archivo.  
   

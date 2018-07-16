@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying data source properties
 - shared data sources [Reporting Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 caps.latest.revision: 50
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 18088f24c578ec2ee91e3a33e7cebe48c733d55a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c04c4da84040c97656c956698b4e66bd5a6a5862
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258111"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Crear, modificar y eliminar orígenes de datos compartidos (SSRS)
   Un origen de datos compartido es un conjunto de propiedades de conexión de un origen de datos a las que pueden hacer referencia varios informes, modelos y suscripciones controladas por datos que se ejecutan en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Los orígenes de datos compartidos proporcionan una manera fácil de administrar las propiedades del origen de datos que, a menudo, cambian con el tiempo. Si una cuenta de usuario o una contraseña cambia, o si mueve la base de datos a otro servidor, puede actualizar la información de conexión en un único lugar.  
@@ -41,7 +41,7 @@ ms.locfileid: "36106044"
 |Nombre|Un nombre que identifica el origen dentro de la jerarquía de carpetas del servidor de informes.|  
 |Descripción|Una descripción que aparece con el elemento en el Administrador de informes cuando el usuario ve el contenido de la carpeta.|  
 |Tipo de conexión|La extensión de procesamiento de datos usada con el origen de datos. Solo puede usar extensiones de procesamiento de datos implementadas en el servidor de informes. Para más información sobre las extensiones de procesamiento de datos que se incluyen con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).|  
-|Cadena de conexión|La cadena de conexión para la base de datos. Para obtener más información y ver ejemplos de cadenas de conexión a orígenes de datos usados con frecuencia, consulte [las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).|  
+|Cadena de conexión|La cadena de conexión para la base de datos. Para obtener más información y ver ejemplos de cadenas de conexión a orígenes de datos usados con frecuencia, consulte [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).|  
 |Tipo de credencial|Especifica cómo se obtienen las credenciales para la conexión y si se van a usar una vez establecida la conexión. Para más información, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../integration-services/connection-manager/data-sources.md).|  
   
  El origen de datos compartido no contiene información de consulta utilizada para recuperar datos. La consulta siempre se conserva en la definición de informe.  
@@ -60,7 +60,7 @@ ms.locfileid: "36106044"
  Para más información sobre cómo controlar el acceso a orígenes de datos compartidos en la jerarquía de carpetas del servidor de informes, vea [Proteger elementos de orígenes de datos compartidos](../security/secure-shared-data-source-items.md).  
   
 ## <a name="deleting-a-shared-data-source"></a>Eliminar un origen de datos compartido  
- Puede eliminar un origen de datos compartido de la misma manera que eliminaría cualquier elemento del servidor de informes. En el Administrador de informes, abra la carpeta en la vista de detalles, seleccione el elemento y haga clic en **eliminar**. En una página de aplicación en un sitio de SharePoint, abra la biblioteca de SharePoint, seleccione el elemento y haga clic en **eliminar**.  
+ Puede eliminar un origen de datos compartido de la misma manera que eliminaría cualquier elemento del servidor de informes. En el Administrador de informes abra la carpeta en la vista de detalles, seleccione el elemento y haga clic en **eliminar**. En una página de aplicación en un sitio de SharePoint, abra la biblioteca de SharePoint, seleccione el elemento y haga clic en **eliminar**.  
   
  Si elimina un origen de datos compartido, se desactivarán todos los informes, modelos y suscripciones controladas por datos que lo usan. Sin la información de conexión de un origen de datos, los elementos dejan de ejecutarse. Para activar estos elementos, deberá abrir cada uno de ellos y hacer lo siguiente:  
   
@@ -74,12 +74,12 @@ ms.locfileid: "36106044"
   
 ## <a name="see-also"></a>Vea también  
  [Crear y administrar orígenes de datos compartidos &#40;modo integrado de Reporting Services en SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
- [Las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Administrar los orígenes de datos de informe](manage-report-data-sources.md)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Administrar orígenes de datos de informe](manage-report-data-sources.md)   
  [El Administrador de informes &#40;modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Incrustados y compartidos conexiones de datos u orígenes de datos &#40;el generador de informes SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Incrustados y compartidos de conexiones de datos u orígenes de datos &#40;generador de informes y SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Orígenes de datos &#40;página de propiedades del Administrador de informes&#41;](../data-sources-properties-page-report-manager.md)   
  [Crear, eliminar o modificar un origen de datos compartido &#40;el Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Configurar las propiedades del origen de datos para un informe &#40;el Administrador de informes&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [Configurar propiedades del origen de datos para un informe &#40;el Administrador de informes&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

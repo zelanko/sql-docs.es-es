@@ -1,5 +1,5 @@
 ---
-title: Introducción a la minería de datos (datos complementos de minería de datos para Excel) | Documentos de Microsoft
+title: Introducción a minería de datos (complementos de minería de datos para Excel de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2d82f4569dbdf2c9e6c686c1235300de40bf445
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0faa8178d535fa5cd493f65e002e27e5565059c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303135"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Introducción a la minería de datos (Complementos de minería de datos para Excel)
   La minería de datos es el proceso de detectar patrones significativos en los datos. La minería de datos es un complemento natural al proceso de explorar y entender los datos a través de BI tradicional. Los algoritmos automáticos pueden procesar cantidades de datos muy grandes y detectar patrones y tendencias que, de lo contrario, estarían ocultos.  
   
- Para realizar la minería de datos, recopilar datos que es relevantes para una pregunta específica, como "¿quién son mis clientes?" o "¿qué productos adquirieron?" y, a continuación, aplique un algoritmo para encontrar correlaciones estadísticas en los datos. Los patrones y las tendencias que se detectan en el análisis se almacenan en forma de modelo de minería de datos. Después puede aplicar el modelo de minería de datos a nuevos datos en escenarios empresariales como los siguientes:  
+ Para realizar la minería de datos, recopila datos que es relevantes para una pregunta específica, como "¿quién son mis clientes?" o "¿qué productos adquirieron?" y, a continuación, aplique un algoritmo para encontrar correlaciones estadísticas en los datos. Los patrones y las tendencias que se detectan en el análisis se almacenan en forma de modelo de minería de datos. Después puede aplicar el modelo de minería de datos a nuevos datos en escenarios empresariales como los siguientes:  
   
 -   Usar tendencias anteriores para predecir las ventas del siguiente trimestre, los requisitos de inventario o la satisfacción de los clientes.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36111920"
   
  Una vez completado el modelo, dedique un tiempo a revisar los resultados e identifique maneras de modificar datos u obtener mejores resultados. Es excepcionalmente raro que el primer modelo proporcione todas las respuestas. La minería de datos suele ser un proceso iterativo.  
   
- A medida que intente discretizar los datos de distintas formas, o agregar nuevas columnas, recuerde que debe usar el **documento modelo** Asistente para capturar una instantánea de los metadatos y los resultados de cada modelo. El hecho de tener un registro facilitará el seguimiento del progreso en la exploración.  
+ Cuando intente discretizar los datos de distintas formas, o agregar nuevas columnas, recuerde que debe usar el **documentar modelo** Asistente para capturar una instantánea de los metadatos y los resultados de cada modelo. El hecho de tener un registro facilitará el seguimiento del progreso en la exploración.  
   
  [Exploración y limpieza de datos](exploring-and-cleaning-data.md)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36111920"
   
 -   ¿Está equilibrado el conjunto de datos? La validación cruzada puede probar la representatividad de los datos.  
   
- [Herramientas de análisis de tabla para Excel](table-analysis-tools-for-excel.md)  
+ [Herramientas de análisis de tablas para Excel](table-analysis-tools-for-excel.md)  
   
  [Cliente de minería de datos para Excel &#40;complementos de minería de datos de SQL Server&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   

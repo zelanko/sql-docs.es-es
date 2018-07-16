@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 18858eb2c692be3bfe4c987dd365ae267d097d43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 91dd0d2aefa6128dfdac0a948efe61f0a9334fb4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236365"
 ---
 # <a name="create-xml-indexes"></a>Crear índices XML
   En este tema se describe cómo crear índices XML principales y secundarios.  
@@ -48,7 +48,7 @@ ms.locfileid: "36112642"
   
 -   Los nombres de índice XML principal tienen las mismas restricciones que los nombres de vista.  
   
- No se puede crear un índice XML en una `xml` columna en una vista, de tipo en un **tabla** variable con valores con `xml` columnas de tipo o `xml` variables de tipo.  
+ No se puede crear un índice XML en un `xml` columna en una vista, de tipo en un **tabla** con valores variable con `xml` columnas de tipo o `xml` variables de tipo.  
   
 -   Para cambiar un `xml` XML con tipo de columna de tipo de sin tipo a, o viceversa, mediante la opción ALTER TABLE ALTER COLUMN, no debe incluir ningún índice XML en la columna. Si existe alguno, debe quitarse antes de intentar cambiar el tipo de columna.  
   

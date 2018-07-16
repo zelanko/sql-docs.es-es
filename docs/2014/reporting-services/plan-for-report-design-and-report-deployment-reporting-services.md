@@ -1,5 +1,5 @@
 ---
-title: Plan de diseño y la implementación de informe (Reporting Services 2014) | Documentos de Microsoft
+title: Plan para implementación de informes (Reporting Services 2014) y el diseño de informe | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 42d95afee84fa57c6ad4cb9562be44820b228814
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5bd53bceaae8b1a898aecf94cc05818653498904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194855"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Planear el diseño y la implementación de informes (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona varios enfoques para la creación e implementación de informes. Use este tema como ayuda para planear un entorno de creación de informes y un servidor de informes que operen juntos. En este tema se proporciona información general sobre la compatibilidad de definición de informe por componentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Una definición de informe es un archivo XML que se escribe en lenguaje RDL (Report Definition Language) o RDLC (Report Definition Language for Clients). Cada definición de informe cumple una versión de esquema específica que aparece al comienzo del archivo.  
@@ -30,7 +30,7 @@ ms.locfileid: "36200496"
   
 -   [Versiones de esquema RDL](#bkmk_rdl_schema_versions)  
   
--   [Servidor de informes y la compatibilidad del esquema RDL](#bkmk_report_server_rdl_schema_support)  
+-   [Servidor de informes y compatibilidad con el esquema RDL](#bkmk_report_server_rdl_schema_support)  
   
 -   [Compatibilidad con la implementación y creación de informes](#bkmk_report_authoring_and_deployment)  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36200496"
 -   [Agregar y configurar los controles ReportViewer](http://msdn.microsoft.com/library/ms252104.aspx)  
   
 ## <a name="see-also"></a>Vea también  
- [Informes, elementos de informe y las definiciones de informe &#40;el generador de informes SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Los informes, elementos de informe y definiciones de informe &#40;generador de informes y SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Herramientas de Reporting Services](tools/reporting-services-tools.md)   
  [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)  
   

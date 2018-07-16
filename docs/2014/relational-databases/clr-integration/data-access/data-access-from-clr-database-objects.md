@@ -1,13 +1,11 @@
 ---
-title: Acceso a datos desde objetos de base de datos CLR | Documentos de Microsoft
+title: Acceso a datos desde objetos de base de datos CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,18 +23,18 @@ helpviewer_keywords:
 - in-process data access providers [CLR integration]
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab43297c592258075e9c80ec9808b10c7bd267df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1c49134c931bc9f27e7c4856ce23ccde70364000
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112293"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351147"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Acceso a datos de objetos de base de datos de CLR
-  Una rutina de common language runtime (CLR) puede obtener acceso fácilmente a los datos almacenados en la instancia de [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] en que se ejecuta, así como los datos almacenados en instancias remotas. El contexto del usuario en el que se ejecuta el código, determina los datos concretos a los que la rutina puede tener acceso. Tener acceso a datos desde un objeto de base de datos CLR mediante el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datos de aplicaciones de nivel intermedio y el cliente administrado. Debido a esto, puede aprovechar sus conocimientos de ADO.NET y `SqlClient` en aplicaciones cliente y de nivel medio.  
+  Una rutina de common language runtime (CLR) puede acceder fácilmente a los datos almacenados en la instancia de [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] en que se ejecuta, así como los datos almacenados en instancias remotas. El contexto del usuario en el que se ejecuta el código, determina los datos concretos a los que la rutina puede tener acceso. Acceso a datos desde dentro de un objeto de base de datos CLR mediante el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datos de cliente administrado y las aplicaciones de nivel intermedio. Debido a esto, puede aprovechar sus conocimientos de ADO.NET y `SqlClient` en aplicaciones cliente y de nivel medio.  
   
 > [!NOTE]  
 >  De forma predeterminada, los métodos de tipo definido por el usuario y funciones definidas por el usuario no pueden tener acceso a datos. Debe establecer la propiedad `DataAccess` de `SqlMethodAttribute` o `SqlFunctionAttribute` en `DataAccessKind.Read` para habilitar el acceso a datos de solo lectura desde métodos de tipo definido por el usuario (UDT) o funciones definidas por el usuario. Las operaciones de modificación de datos o las funciones definidas por el usuario no se permiten desde los UDT y, si se intentan producen excepciones en tiempo de ejecución.  
@@ -57,7 +55,7 @@ ms.locfileid: "36112293"
  [Integración CLR y transacciones](../../native-client-ole-db-transactions/transactions.md)  
  Describe cómo se integra el nuevo marco de transacciones que se proporciona en el espacio de nombres System.Transactions con ADO.NET y con la integración CLR de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Serialización XML de objetos de base de datos CLR](../../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md)  
+ [Serialización XML de objetos de base de datos de CLR](../../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md)  
  Explica cómo habilitar escenarios de serialización XML de objetos de base de datos de CLR en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
   

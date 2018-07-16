@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.Security.BUILTIN.administrators
 - sql12.Security.NT_AUTHORITY.SYSTEM
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 caps.latest.revision: 50
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ffccb6ce3fcf80441a953f86fc74ec71aac9ab40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 8c2878ee1142dfb7069febb652dac6a3aceaba97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301905"
 ---
 # <a name="server-level-roles"></a>Roles de nivel de servidor
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona roles de nivel de servidor para ayudarle a administrar los permisos de un servidor. Estos roles son entidades de seguridad que agrupan otras entidades de seguridad. Los roles de nivel de servidor se aplican a todo el servidor en lo que respecta a su ámbito de permisos. (Los*roles* son como los *grupos* del sistema operativo Windows).  
@@ -61,7 +60,7 @@ ms.locfileid: "36105122"
  Cada rol fijo de servidor cuenta con diversos permisos asignados. Para obtener un gráfico de los permisos asignados a los roles del servidor, vea [Database Engine Fixed Server and Fixed Database Roles](http://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
   
 > [!IMPORTANT]  
->  El `CONTROL SERVER` permiso es similar, pero no es idéntica a la `sysadmin` rol fijo de servidor. Los permisos no conllevan la pertenencia a los roles y la pertenencia a los roles no otorga permisos. (Por ejemplo, `CONTROL SERVER` no conlleva la pertenencia al rol fijo de servidor `sysadmin`). Sin embargo, en ocasiones, es posible hacer suplantaciones entre roles y permisos equivalentes. La mayoría de los comandos `DBCC` y muchos procedimientos del sistema necesitan pertenencia al rol fijo de servidor `sysadmin`. Para obtener una lista del sistema 171 procedimientos almacenados que requieren `sysadmin` pertenencia, consulte el blog siguiente de Andreas Wolter sobre [CONTROL SERVER VS. sysadmin/sa: permisos, procedimientos del sistema, DBCC, creación automática de esquemas y privilegios advertencias de escalamiento -](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  El `CONTROL SERVER` permiso es similar pero no idéntica a la `sysadmin` rol fijo de servidor. Los permisos no conllevan la pertenencia a los roles y la pertenencia a los roles no otorga permisos. (Por ejemplo, `CONTROL SERVER` no conlleva la pertenencia al rol fijo de servidor `sysadmin`). Sin embargo, en ocasiones, es posible hacer suplantaciones entre roles y permisos equivalentes. La mayoría de los comandos `DBCC` y muchos procedimientos del sistema necesitan pertenencia al rol fijo de servidor `sysadmin`. Para obtener una lista de sistema de 171 procedimientos almacenados que requieren `sysadmin` pertenencia, consulte el blog siguiente de Andreas Wolter sobre [CONTROL SERVER VS. sysadmin/sa: permisos, procedimientos del sistema, DBCC, creación automática de esquemas y privilegios advertencias de escalamiento -](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
   
 ## <a name="server-level-permissions"></a>Permisos de nivel de servidor  
  Solo se pueden agregar a los roles de servidor definidos por el usuario los permisos de nivel de servidor. Para obtener una lista de los permisos en el nivel de servidor, ejecute la siguiente instrucción: Los permisos en el nivel de servidor son:  

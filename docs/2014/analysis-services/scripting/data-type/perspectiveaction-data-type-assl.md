@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos PerspectiveAction (ASSL) | Documentos de Microsoft
+title: Tipo de datos PerspectiveAction (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveAction data type
 ms.assetid: a0e4a545-688c-4d4e-b05f-0008d3503349
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 70e3e3df8f864c862dd101b97eeeabb63066e051
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8886962d5b2014d3cdaa466861d4693319d21d34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316915"
 ---
 # <a name="perspectiveaction-data-type-assl"></a>Tipo de datos PerspectiveAction (ASSL)
   Define un tipo de datos primitivo que representa información sobre una acción en un [perspectiva](../objects/perspective-element-assl.md) elemento.  

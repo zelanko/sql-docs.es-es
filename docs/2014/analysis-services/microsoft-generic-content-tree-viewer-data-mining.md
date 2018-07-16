@@ -1,5 +1,5 @@
 ---
-title: Visor de árbol de contenido genérico de Microsoft (minería de datos) | Documentos de Microsoft
+title: Visor de árbol de contenido genérico de Microsoft (minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.contentviewer.f1
 ms.assetid: 751b4393-f6fd-48c1-bcef-bdca589ce34c
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb48d0ce455c41f6e684b54af86bb6ff5f8eddfb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85c2cccfe0d5b578c0faa359ca3c276b654aaa21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286181"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Visor de árbol de contenido genérico de Microsoft (Minería de datos)
   El **Visor de árbol de contenido genérico de Microsoft** muestra información detallada sobre el contenido de un modelo de minería de datos en un formato de tabla HTML normalizado. Esta vista es útil porque expone la estructura subyacente del modelo, así como los detalles sobre los coeficientes, la distribución de valores y mucho más.  
@@ -31,7 +31,7 @@ ms.locfileid: "36111448"
  La información que se muestra en el visor usa una estructura común basada en el conjunto de filas de esquema de contenido de los modelos de minería de datos. El conjunto de filas de esquema de contenido es un marco genérico para almacenar los patrones, las estadísticas y otro contenido de un modelo de minería de datos. Para obtener una lista de las columnas del conjunto de filas de esquema de minería de datos de los modelos de minería de datos, vea [Conjunto de filas DMSCHEMA_MINING_MODEL_CONTENT](schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
   
 ## <a name="options"></a>Opciones  
- **Título del nodo (Id. único)**  
+ **Título de nodo (Id. único)**  
  Este panel muestra una lista de todos los nodos del modelo de minería seleccionado. La manera en que se organizan los nodos en el árbol es diferente según el tipo de modelo que se está viendo.  
   
  Puede hacer clic en cada nodo para mostrar información detallada en el panel **Detalles del nodo** .  
@@ -42,7 +42,7 @@ ms.locfileid: "36111448"
  Para obtener más información sobre cómo interpretar la información de nodo de un tipo de modelo específico, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Consultas de minería de datos](data-mining/data-mining-queries.md)  
   

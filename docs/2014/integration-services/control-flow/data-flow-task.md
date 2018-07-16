@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowtask.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21cc9dd846af38bcbe8985f883f75ec537f58573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd0ffa2e898661a6685b9608a5e467312ae027c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320755"
 ---
 # <a name="data-flow-task"></a>tarea Flujo de datos
   La tarea Flujo de datos encapsula el motor de flujo de datos que mueve datos entre orígenes y destinos, y permite al usuario transformar, limpiar y modificar datos a medida que se mueven. Agregar una tarea Flujo de datos a un flujo de control de paquetes permite que el paquete extraiga, transforme y cargue datos.  
@@ -53,9 +53,9 @@ ms.locfileid: "36199949"
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Indica que la tarea Flujo de datos cambió el tamaño del búfer. En la entrada del registro se describen las razones del cambio de tamaño y se indica el nuevo tamaño temporal del búfer.|  
-|`OnPipelinePostEndOfRowset`|Indica que un componente se ha dado su señal de fin del conjunto de filas, que está establecido por la última llamada de la `ProcessInput` método. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
+|`OnPipelinePostEndOfRowset`|Indica que un componente se ha dado la señal de fin del conjunto de filas, que se establece mediante la última llamada de la `ProcessInput` método. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
 |`OnPipelinePostPrimeOutput`|Indica que el componente ha completado su última llamada a la `PrimeOutput` método. En función del flujo de datos, es posible que se escriban varias entradas. Si el componente es un origen, esta entrada del registro significa que el componente ha terminado de procesar filas.|  
-|`OnPipelinePreEndOfRowset`|Indica que un componente está a punto de recibir su señal de fin del conjunto de filas, que está establecido por la última llamada de la `ProcessInput` método. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
+|`OnPipelinePreEndOfRowset`|Indica que un componente está a punto de recibir la señal de fin del conjunto de filas, que se establece mediante la última llamada de la `ProcessInput` método. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
 |`OnPipelinePrePrimeOutput`|Indica que el componente está a punto de recibir su última llamada del método `PrimeOutput`. En función del flujo de datos, es posible que se escriban varias entradas.|  
 |`OnPipelineRowsSent`|Informa del número de filas que se proporciona a una entrada de componentes a través de una llamada al método `ProcessInput`. La entrada del registro incluye el nombre del componente.|  
 |`PipelineBufferLeak`|Proporciona información sobre cualquier componente que mantuvo la conexión de los búferes después de que desapareciera el administrador de búferes. Si se mantiene la conexión de un búfer, no se liberan los recursos de los búferes y podrían ocasionarse pérdidas de memoria. La entrada del registro proporciona el nombre del componente y el Id. del búfer.|  
@@ -96,7 +96,7 @@ ms.locfileid: "36199949"
 |------------|-----------------|-----------|  
 |**PathID**|El valor de la `ID` propiedad de la ruta de acceso entre el origen de OLE DB y la transformación Ordenar.|1185|  
 |**PathName**|El valor de la `Name` propiedad de la ruta de acceso.|Salida de origen de OLE DB|  
-|**ComponentID**|El valor de la `ID` propiedades de la transformación Ordenar.|1180|  
+|**ComponentID**|El valor de la `ID` propiedad de la transformación Ordenar.|1180|  
 |**ComponentName**|Valor de la propiedad `Name` de la transformación Ordenar.|Sort|  
 |**InputID**|Valor de la propiedad `ID` de la entrada de la transformación Ordenar.|1181|  
 |**InputName**|Valor de la propiedad `Name` de la entrada de la transformación Ordenar.|Entrada de ordenación|  

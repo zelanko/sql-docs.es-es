@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos CubeAttribute (ASSL) | Documentos de Microsoft
+title: Tipo de datos CubeAttribute (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubeAttribute data type
 ms.assetid: 114ffb44-460b-4971-b31b-dd844e960b81
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dce594145db99d7edfa991c2e975f62e55d3ef34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1df72c234fe7835d739e2b1835b01041aa9cbe6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319355"
 ---
 # <a name="cubeattribute-data-type-assl"></a>Tipo de datos CubeAttribute (ASSL)
   Define un tipo de datos primitivo que representa un atributo asociado con un [cubo](../objects/cube-element-assl.md) elemento.  
@@ -69,9 +69,9 @@ ms.locfileid: "36111032"
   
  Un atributo no se puede agregar como un nivel de una jerarquía cuando la propiedad, *AtttributeHierarchyEnabled*, se establece en FALSE y la instancia está ejecutando debajo de DeploymentMode 1 o 2 (modo de servidor tabular o SharePoint).  
   
- Atributos de la [CubeDimension](dimension-data-type-assl.md) elemento que no están incluidos explícitamente en el [atributos](../collections/attributes-element-assl.md) parte de la colección se convierten en de la colección con los valores predeterminados asignados. Una vez agregados los atributos a la colección, los atributos pueden ser devueltos por la [Discover](../../xmla/xml-elements-methods-discover.md) método.  
+ Los atributos en el [CubeDimension](dimension-data-type-assl.md) elemento que no están incluidos explícitamente en el [atributos](../collections/attributes-element-assl.md) parte de la colección se convierten en de la colección con los valores predeterminados asignados a ellos. Después de agregan atributos a la colección, los atributos pueden devolver el [Discover](../../xmla/xml-elements-methods-discover.md) método.  
   
- El [AggregationUsage](../properties/aggregationusage-element-assl.md) elemento controla cómo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] diseña automáticamente las agregaciones para el atributo. El elemento `AggregationUsage` no restringe ninguna agregación que se crea manualmente para el cubo.  
+ El [AggregationUsage](../properties/aggregationusage-element-assl.md) elemento controla cómo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] diseña automáticamente las agregaciones del atributo. El elemento `AggregationUsage` no restringe ninguna agregación que se crea manualmente para el cubo.  
   
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.CubeAttribute>.  
   

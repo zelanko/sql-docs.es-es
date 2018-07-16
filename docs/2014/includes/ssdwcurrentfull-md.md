@@ -1,1 +1,1 @@
-Almacenamiento de datos paralelos de SQL Server 2014
+Almacenamiento de datos paralelo de SQL Server 2014

@@ -1,5 +1,5 @@
 ---
-title: Sugerir columnas relacionadas (Asistente para minería de datos) | Documentos de Microsoft
+title: Sugerir columnas relacionadas (Asistente para minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.suggestrelatedcolumns.f1
 ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ccad7814782f69536ff0bfab2244d5ab523e4d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6007ce4d2eef03ad4a1f416c8c8409d13e4a544b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226435"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>Sugerir columnas relacionadas (Asistente para minería de datos)
   Utilice la página **Sugerir columnas relacionadas** para ver las recomendaciones de la característica **Sugerir** que ha seleccionado en la página anterior del asistente. Las columnas de entrada serán seleccionadas previamente en función de su asociación con la columna **Predicción** que ha seleccionado. Si acepta los cambios en este cuadro de diálogo, los cambios se reflejarán en la página **Especificar los datos de entrenamiento** .  
@@ -39,7 +39,7 @@ ms.locfileid: "36113671"
  Seleccione esta opción para incluir esta columna en el cálculo de predicciones.  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda F1 del Asistente para minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Asistente para la Ayuda de F1 de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Especifique los datos de entrenamiento &#40;Asistente para minería de datos&#41;](specify-the-training-data-data-mining-wizard.md)  
   
   

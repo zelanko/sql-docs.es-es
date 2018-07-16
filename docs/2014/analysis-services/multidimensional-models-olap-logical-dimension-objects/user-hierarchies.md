@@ -1,5 +1,5 @@
 ---
-title: Las jerarquías de usuario | Documentos de Microsoft
+title: Jerarquías de usuario | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -27,18 +27,18 @@ helpviewer_keywords:
 - unbalanced hierarchies [Analysis Services]
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0ba2aa7e3941803e9afcbf124a8b02647832814a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a680e531c91d56db0271f373066fb768049f7f8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286161"
 ---
 # <a name="user-hierarchies"></a>Jerarquías de usuario
-  Las jerarquías definidas por el usuario son jerarquías definidas por el usuario de atributos que se usan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar los miembros de una dimensión en las estructuras jerárquicas y proporcionar rutas de navegación de un cubo. Por ejemplo, en la tabla siguiente se define una tabla de dimensiones para una dimensión de tiempo. La tabla de dimensiones admite tres atributos denominados Year, Quarter y Month.  
+  Jerarquías definidas por el usuario son jerarquías definidas por el usuario de atributos que se usan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar los miembros de una dimensión en estructuras jerárquicas y proporcionar rutas de navegación de un cubo. Por ejemplo, en la tabla siguiente se define una tabla de dimensiones para una dimensión de tiempo. La tabla de dimensiones admite tres atributos denominados Year, Quarter y Month.  
   
 |Year|Trimestre|Month|  
 |----------|-------------|-----------|  
@@ -85,7 +85,7 @@ ms.locfileid: "36198075"
  El nivel Province se rellena con miembros asociados a otros miembros en el nivel CountryRegion y los miembros del nivel City se asocian a sus miembros correspondientes en el nivel Province. Sin embargo, puesto que el miembro Vatican City del nivel CountryRegion no tiene miembros asociados en el nivel Province, los miembros se deben asociar desde el nivel City directamente al miembro Vatican City en el nivel CountryRegion. Debido a los cambios, la jerarquía de la dimensión es ahora irregular. El elemento primario de la ciudad Vatican City es el país o región Vatican City, que no se encuentra en el nivel inmediatamente superior al miembro Vatican City del nivel City. Para más información, vea [Jerarquías desiguales](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
   
 ### <a name="parent-child-hierarchies"></a>Jerarquías de elementos primarios y secundarios  
- Las jerarquías de elementos primarios y secundarios para dimensiones se definen mediante un atributo especial, llamado atributo primario, para determinar cómo se relacionan entre sí los miembros. Un atributo primario describe una *relación que hace referencia a sí misma*o una *autocombinación*dentro de una tabla principal de dimensiones. Las jerarquías de elementos primarios y secundarios se construyen a partir de un único atributo primario. A una jerarquía de elementos primarios y secundarios solo se le asigna un nivel, puesto que los niveles presentes en la jerarquía se extraen de las relaciones de elementos primarios y secundarios entre los miembros asociados al atributo primario. El esquema de dimensiones de una jerarquía de elementos primarios y secundarios depende de la relación que hace referencia a sí misma presente en la tabla principal de dimensiones. Por ejemplo, el siguiente diagrama ilustra el **DimOrganization** tabla principal de dimensiones en el [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos de ejemplo.  
+ Las jerarquías de elementos primarios y secundarios para dimensiones se definen mediante un atributo especial, llamado atributo primario, para determinar cómo se relacionan entre sí los miembros. Un atributo primario describe una *relación que hace referencia a sí misma*o una *autocombinación*dentro de una tabla principal de dimensiones. Las jerarquías de elementos primarios y secundarios se construyen a partir de un único atributo primario. A una jerarquía de elementos primarios y secundarios solo se le asigna un nivel, puesto que los niveles presentes en la jerarquía se extraen de las relaciones de elementos primarios y secundarios entre los miembros asociados al atributo primario. El esquema de dimensiones de una jerarquía de elementos primarios y secundarios depende de la relación que hace referencia a sí misma presente en la tabla principal de dimensiones. Por ejemplo, el siguiente diagrama ilustra la **DimOrganization** tabla principal de dimensiones en el [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos de ejemplo.  
   
  ![Referencia a sí misma combinación en la tabla DimOrganization](../../../2014/analysis-services/dev-guide/media/dimorganization.gif "autorreferencia combinación en la tabla DimOrganization")  
   

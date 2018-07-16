@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 caps.latest.revision: 4
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5870596b88527413706c24985a3c0fb584721b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d4dbdcedec7cf61b3de912bab3e3658c0267f134
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323895"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Explorar la flexibilidad de una región de datos Tablix (Generador de informes y SSRS)
   Cuando agrega una región de datos de lista, tabla o matriz desde la pestaña Insertar en la cinta de opciones, empieza por una plantilla inicial para una región de datos Tablix, pero no está limitado por esa plantilla. Puede seguir definiendo cómo se muestran los datos agregando o quitando características de la región de datos Tablix tales como grupos, filas y columnas.  
   
- Al eliminar una grupo de filas o de columnas, tiene la opción de eliminar las filas y columnas que se usan para mostrar los valores de grupo. También puede agregar o quitar filas y columnas de forma manual. Para entender cómo las filas y columnas se utilizan para mostrar datos detallados y de grupo, vea [región de datos Tablix &#40;el generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md).  
+ Al eliminar una grupo de filas o de columnas, tiene la opción de eliminar las filas y columnas que se usan para mostrar los valores de grupo. También puede agregar o quitar filas y columnas de forma manual. Para comprender cómo se usan las filas y columnas para mostrar datos detallados y de grupo, consulte [región de datos Tablix &#40;generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md).  
   
  Una vez modificada la estructura de la región de datos Tablix, puede establecer propiedades para ayudar a controlar la manera en la que el informe representa la región de datos; por ejemplo, puede repetir los encabezados de columna en la parte superior de cada página, o mantener un encabezado de grupo con el grupo. Para más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md).  
   

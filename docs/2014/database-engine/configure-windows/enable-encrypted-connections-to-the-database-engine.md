@@ -1,5 +1,5 @@
 ---
-title: Habilitar conexiones cifradas en el motor de base de datos (Administrador de configuración de SQL Server) | Documentos de Microsoft
+title: Habilitar conexiones cifradas en el motor de base de datos (Administrador de configuración de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], encrypted
 - SSL [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 87550bc2c29485eaa1f4ad10e6ca82b79af19724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6a75c1657624475467df1a367e1830145ac561a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275451"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>Habilitar conexiones cifradas en el motor de base de datos (Administrador de configuración de SQL Server)
   En este tema se describe cómo habilitar conexiones cifradas para una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mediante la especificación de un certificado para el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizando el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El equipo servidor debe tener un certificado y el equipo cliente debe estar configurado para confiar en la entidad de certificación raíz del certificado. La puesta en servicio es el proceso de instalar un certificado mediante su importación en Windows.  
@@ -61,7 +61,7 @@ ms.locfileid: "36111416"
   
 ###  <a name="Provision"></a> Para proporcionar (instalar) un certificado en el servidor  
   
-1.  En el **iniciar** menú, haga clic en **ejecutar**y en el **abiertos** , escriba `MMC` y haga clic en **Aceptar**.  
+1.  En el **iniciar** menú, haga clic en **ejecutar**y en el **abierto** , escriba `MMC` y haga clic en **Aceptar**.  
   
 2.  En el menú **Archivo** de la consola MMC, haga clic en **Agregar o quitar complemento**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36111416"
   
 1.  En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** *\<instancia de servidor>* y, después, seleccione **Propiedades**.  
   
-2.  En el **protocolos de ***\<nombre de instancia >* **propiedades** cuadro de diálogo, en la **certificado** ficha, seleccione el certificado que desee en la lista desplegable para el **certificado** cuadro y, a continuación, haga clic en **Aceptar**.  
+2.  En el **protocolos de ***\<nombre de instancia >* **propiedades** cuadro de diálogo el **certificado** pestaña, seleccione el certificado que desee en la lista desplegable para el **certificado** cuadro y, a continuación, haga clic en **Aceptar**.  
   
 3.  En la pestaña **Marcas** , en el cuadro **ForceEncryption** , seleccione **Sí**y, a continuación, haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   

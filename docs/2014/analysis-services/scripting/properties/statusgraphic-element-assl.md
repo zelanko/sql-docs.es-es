@@ -1,5 +1,5 @@
 ---
-title: Elemento StatusGraphic (ASSL) | Documentos de Microsoft
+title: Elemento StatusGraphic (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StatusGraphic element
 ms.assetid: 14b365bc-924d-4791-ad4a-a38155fec42e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c551e084d833dff17b7d6c1ab46b398cf6f62313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12d175d20c562fd9c0df30941ded999988fed976
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215965"
 ---
 # <a name="statusgraphic-element-assl"></a>Elemento StatusGraphic (ASSL)
   Contiene la representación gráfica recomendada del estado de la [Kpi](../objects/kpi-element-assl.md) elemento.  
@@ -75,7 +75,7 @@ ms.locfileid: "36201447"
 |*Cilindro*|Cilindro|  
 |*Cara sonriente*|Cara|  
   
- El elemento que corresponde al elemento primario de `StatusGraphic` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Kpi>.  
+ El elemento que se corresponde con el elemento primario de `StatusGraphic` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Kpi>.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

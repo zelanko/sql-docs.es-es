@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 conceptos de programación | Documentos de Microsoft
+title: SQLXML 4.0 conceptos de programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2ab9bd2ff6cfddcf96e4844eb9ea14eea414b650
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5d745284f575feb39f488f0667f5ab976144392e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227079"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Conceptos de programación en SQLXML 4.0
   SQLXML 3.0 se proporcionó como una versión web para facilitar funcionalidad XML adicional del lado cliente y mejoras en las características existentes, como esquemas XSD anotados, carga masiva XML, compatibilidad con los servicios web (SOAP) y diagramas de actualización.  
@@ -47,7 +47,7 @@ ms.locfileid: "36113544"
  [Requisitos para ejecutar los ejemplos de SQLXML](requirements-for-running-sqlxml-examples.md)  
  Describe los requisitos para crear ejemplos funcionales a partir de los ejemplos de SQLXML proporcionados.  
   
- [Formato de cliente y servidor &#40;SQLXML 4.0&#41;](formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
+ [Formato del lado cliente y servidor &#40;SQLXML 4.0&#41;](formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
  Proporciona información y comparaciones de formato en el cliente y en el servidor, incluido el comando FOR XML para construir los documentos XML.  
   
  [Esquemas XSD anotados en SQLXML 4.0](annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
@@ -62,10 +62,10 @@ ms.locfileid: "36113544"
  [Realizar la carga masiva de datos XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  Describe cómo hacer una carga masiva de XML en SQLXML 4.0.  
   
- [SQLXML 4.0 Data Access Components](../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
+ [Componentes de acceso a datos de SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
  Documenta el proveedor de SQLXMLOLEDB y proporciona vínculos a otros componentes de acceso a datos de SQLXML 4.0.  
   
- [Compatibilidad SQLXML 4.0 con .NET Framework](../../database-engine/dev-guide/sqlxml-4-0-net-framework-support.md)  
+ [Compatibilidad de SQLXML 4.0 con .NET Framework](../../database-engine/dev-guide/sqlxml-4-0-net-framework-support.md)  
  Describe la compatibilidad de SQLXML 4.0 con .NET Framework.  
   
  [Almacenamiento en caché de plantillas, XSL y esquemas &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  

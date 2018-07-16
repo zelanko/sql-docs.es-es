@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], responses
 - SQL Server Agent jobs, responses
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - responding to jobs
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5365b0210fda978cd4425d4e621d9dcf7aefb928
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ef60a02b437ed6a66a5db0db4e07938d2a70c4e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323715"
 ---
 # <a name="specify-job-responses"></a>Especificar respuestas de trabajos
   Las respuestas de trabajos especifican acciones que realizará el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tras completar un trabajo. Estas respuestas permiten a los administradores de las bases de datos saber cuándo se completan los trabajos y con qué frecuencia se ejecutan. Algunas respuestas de trabajos típicas son:  
@@ -47,7 +47,7 @@ ms.locfileid: "36200840"
 |-|-|  
 |**Descripción**|**Tema**|  
 |Describe cómo notificar a un operador el estado de un trabajo.|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
-|Describe cómo escribir el estado de un trabajo en el registro de aplicación Windows.|[Escribir el estado del trabajo en el registro de aplicación de Windows](../../reporting-services/report-server/windows-application-log.md)|  
+|Describe cómo escribir el estado de un trabajo en el registro de aplicación Windows.|[Escribir el estado de un trabajo en el registro de aplicación de Windows](../../reporting-services/report-server/windows-application-log.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Supervisar y responder a eventos](monitor-and-respond-to-events.md)  

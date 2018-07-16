@@ -1,5 +1,5 @@
 ---
-title: LANGUAGE y FORMAT_STRING en FORMATED_VALUE | Documentos de Microsoft
+title: LANGUAGE y FORMAT_STRING en FORMATED_VALUE | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e68843728ebf28dca0734c7d12953d90b3449e72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de58b31abed2a082964d70ca4036e204767d1f43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319275"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE y FORMAT_STRING en FORMATED_VALUE
   La propiedad FORMATTED_VALUE se basa en las interacciones de las propiedades VALUE, LANGUAGE y FORMAT_STRING de la celda. En este tema se explica cómo interactúan estas propiedades para generar la propiedad FORMATTED_VALUE.  
@@ -37,7 +37,7 @@ ms.locfileid: "36111905"
  Especificación de la configuración regional que se va a aplicar junto a FORMAT_STRING para generar una versión localizada de FORMATTED_VALUE.  
   
 ## <a name="formattedvalue-constructed"></a>Composición de la propiedad FORMATTED_VALUE  
- La propiedad FORMATTED_VALUE se construye utilizando el valor de la propiedad VALUE y aplicando a dicho valor la plantilla de formato especificada en la propiedad FORMAT_STRING. Además, siempre que el valor de formato es un `named formatting literal` la especificación de la propiedad LANGUAGE modifica la salida de FORMAT_STRING para adaptarse al uso del lenguaje del formato con nombre. Todos los literales del formato con nombre están definidos de forma que se pueden localizar. Por ejemplo, `"General Date"` es una especificación que puede adaptarse, a diferencia de la plantilla `"YYYY-MM-DD hh:nn:ss",` , que establece que la fecha debe presentarse tal y como se define en la plantilla con independencia de la especificación del idioma.  
+ La propiedad FORMATTED_VALUE se construye utilizando el valor de la propiedad VALUE y aplicando a dicho valor la plantilla de formato especificada en la propiedad FORMAT_STRING. Además, cada vez que el valor de formato es un `named formatting literal` la especificación de la propiedad LANGUAGE modifica la salida de FORMAT_STRING para adaptarse al uso del lenguaje del formato con nombre. Todos los literales del formato con nombre están definidos de forma que se pueden localizar. Por ejemplo, `"General Date"` es una especificación que puede adaptarse, a diferencia de la plantilla `"YYYY-MM-DD hh:nn:ss",` , que establece que la fecha debe presentarse tal y como se define en la plantilla con independencia de la especificación del idioma.  
   
  Si surge algún conflicto entre la plantilla FORMAT_STRING y la especificación de LANGUAGE, la plantilla FORMAT_STRING invalida la especificación de LANGUAGE. Por ejemplo, si FORMAT_STRING="$ #0", LANGUAGE=1034 (España) y VALUE=123.456, el valor de FORMATTED_VALUE será "$ 123" en lugar de "€ 123", pues dado que el valor de la plantilla de formato invalida el idioma especificado, el formato esperado será en euros.  
   
@@ -147,8 +147,8 @@ ms.locfileid: "36111905"
   
 ## <a name="see-also"></a>Vea también  
  [FORMAT_STRING, contenido &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
- [Uso de propiedades de celda &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
- [Crear y usar los valores de propiedad &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
- [Aspectos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Uso de las propiedades de celda &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
+ [Creación y uso de los valores de propiedad &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
+ [Aspectos básicos de consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

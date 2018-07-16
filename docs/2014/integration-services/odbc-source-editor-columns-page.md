@@ -1,5 +1,5 @@
 ---
-title: Editor de origen ODBC (página columnas) | Documentos de Microsoft
+title: Editor de origen ODBC (página columnas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.columns.f1
 ms.assetid: 565984eb-8318-4be7-bebc-262209cf5065
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c81948bfcb6d0c2c523d563e850e9466ae45679a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b16be16730643cc063b39594c8e01f1321b6a983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36199938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209435"
 ---
 # <a name="odbc-source-editor-columns-page"></a>Editor de origen de ODBC (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de orígenes ODBC** para asignar una columna de salida a cada columna externa (origen).  
@@ -51,7 +51,7 @@ ms.locfileid: "36199938"
  Especifique un nombre único para cada columna de salida. El nombre predeterminado es el nombre de la columna externa (origen) seleccionada; sin embargo, puede elegir un nombre único y descriptivo. El nombre especificado se muestra en el Diseñador de SSIS.  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de origen ODBC &#40;página Administrador de conexiones&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
- [Editor de origen ODBC &#40;página de salida de Error&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
+ [Editor de orígenes ODBC &#40;página Administrador de conexiones&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+ [Editor de orígenes ODBC &#40;página de salida de Error&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

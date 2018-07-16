@@ -1,5 +1,5 @@
 ---
-title: Diseñador de gráficos de precisión (minería de datos) de minería de datos | Documentos de Microsoft
+title: Diseñador gráfico de precisión (minería de datos) de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.overview.f1
 ms.assetid: cbf379d1-0859-414a-a63f-ddc7f789b422
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6fbe39da10dfd1793110148388c1ae0cf0f1ad69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b9df4f4a29a0a6d61422a9b82e2d5f62c16ec29c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301235"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>Diseñador de gráfico de precisión de minería de datos (Minería de datos)
   Utilice la vista **Gráfico de precisión de minería de datos** para comparar el rendimiento de los modelos de minería de datos que se integran en la estructura de minería de datos.  
@@ -46,15 +46,15 @@ ms.locfileid: "36198781"
   
  Las pestañas contienen las herramientas y cuadros de diálogo siguientes:  
   
--   [Seleccione el cuadro de diálogo de estructura de minería de datos &#40;vista Gráfico de precisión de minería de datos&#41;](select-mining-structure-dialog-box-mining-accuracy-chart-view.md)  
+-   [Seleccione el cuadro de diálogo estructura de minería de datos &#40;vista Gráfico de precisión de minería de datos&#41;](select-mining-structure-dialog-box-mining-accuracy-chart-view.md)  
   
 -   [Seleccione la tabla, cuadro de diálogo &#40;vista Gráfico de precisión de minería de datos&#41;](select-table-dialog-box-mining-accuracy-chart-view.md)  
   
--   [Especificar combinación anidada, cuadro de diálogo &#40;vista Gráfico de precisión de minería de datos&#41;](specify-nested-join-dialog-box-mining-accuracy-chart-view.md)  
+-   [Especificar combinación anidada cuadro de diálogo &#40;vista Gráfico de precisión de minería de datos&#41;](specify-nested-join-dialog-box-mining-accuracy-chart-view.md)  
   
 -   [Cuadro de diálogo de configuración de gráfico de beneficios &#40;vista Gráfico de precisión de minería de datos&#41;](profit-chart-settings-dialog-box-mining-accuracy-chart-view.md)  
   
--   [Cuadro de diálogo Modificar asignación &#40;gráfico de precisión de minería de datos&#41;](modify-mapping-dialog-box-mining-accuracy-chart.md)  
+-   [Modificar asignación de cuadro de diálogo &#40;gráfico de precisión de minería de datos&#41;](modify-mapping-dialog-box-mining-accuracy-chart.md)  
   
 -   [Cuadro de diálogo Filtrar &#40;gráfico de precisión de minería de datos&#41;](filter-dialog-box-mining-accuracy-chart.md)  
   

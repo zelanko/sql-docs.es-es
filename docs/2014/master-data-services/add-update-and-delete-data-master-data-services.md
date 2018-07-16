@@ -1,5 +1,5 @@
 ---
-title: Agregar, actualizar y eliminar datos (Master Data Services) | Documentos de Microsoft
+title: Agregar, actualizar y eliminar datos (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 caps.latest.revision: 6
-author: douglaslM
+author: leolimsft
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 665925f4d9298b3bfaf1dcc5841b78993978a94e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd14b50e3b883a92aa611b13553a6ecc5647f32c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311995"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>Agregar, actualizar y eliminar datos (Master Data Services)
   Puede agregar datos y realizar cambios en los datos en un modelo de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], de forma masiva.  
@@ -44,7 +44,7 @@ ms.locfileid: "36109261"
   
     -   Para mover la ubicación de los miembros de jerarquías explícitas, la tabla es stg.\<nombre>_Relationship. Para obtener información sobre los campos obligatorios, consulte [Tabla de almacenamiento provisional de relaciones &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md).  
   
-         Para obtener información general acerca de cómo mover los miembros de jerarquías explícitas, vea [importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
+         Para obtener información general acerca de cómo mover los miembros de jerarquías explícitas, consulte [importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
     -   Use el valor del campo **ImportType** para especificar que está creando nuevos miembros, desactivando o eliminando miembros. Para obtener más información sobre los valores, consulte [Tabla de almacenamiento provisional de miembros hoja &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md) y [Tabla de almacenamiento provisional de miembros consolidados &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36109261"
   
          El proceso de almacenamiento provisional se inicia a intervalos definidos por el valor **Intervalo de lote de almacenamiento provisional** de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
   
-5.  Vea los errores que se produjeron durante el almacenamiento provisional. Para obtener más información, consulte [ver los errores que se producen durante el proceso de almacenamiento provisional &#40;Master Data Services&#41; ](view-errors-that-occur-during-staging-master-data-services.md) y [errores del proceso de almacenamiento provisional &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md).  
+5.  Vea los errores que se produjeron durante el almacenamiento provisional. Para obtener más información, consulte [ver los errores que se producen durante el proceso de almacenamiento provisional &#40;Master Data Services&#41; ](view-errors-that-occur-during-staging-master-data-services.md) y [errores del proceso de ensayo &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md).  
   
 6.  Valide los datos según reglas de negocios.  
   

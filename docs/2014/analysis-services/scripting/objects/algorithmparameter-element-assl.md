@@ -1,5 +1,5 @@
 ---
-title: Elemento AlgorithmParameter (ASSL) | Documentos de Microsoft
+title: Elemento AlgorithmParameter (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AlgorithmParameter element
 ms.assetid: 73211495-065c-43c6-a486-be6044617263
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 70e9e3619eb5f96ff2e64c87855b2bd33063aaf0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd5ee9ceb1c8d2455d7e9c087e12e2f59625b5ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178862"
 ---
 # <a name="algorithmparameter-element-assl"></a>Elemento AlgorithmParameter (ASSL)
-  Define un parámetro para el algoritmo usado por un [MiningModel](miningmodel-element-assl.md) elemento.  
+  Define un parámetro para el algoritmo utilizado por un [MiningModel](miningmodel-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -53,16 +52,16 @@ helpviewer_keywords:
 - HOUR ODBC function
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b17a85709bbb7a60badadabc1f18ff5fd688188d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc12292f373e1028e37050020dfcccff74e90ade
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055632"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783967"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Funciones escalares de ODBC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "33055632"
   
 ### <a name="string-functions"></a>Funciones de cadena  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |BIT_LENGTH( string_exp ) (ODBC 3.0)|Devuelve la longitud en bits de la expresión de cadena.<br /><br /> No funciona únicamente para los tipos de datos de cadena. Por consiguiente, no convertirá implícitamente string_exp en una cadena sino que, en su lugar, devolverá el tamaño (interno) del tipo de datos que se proporcione.|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|Devuelve una cadena de caracteres que es el resultado de concatenar string_exp2 con string_exp1. La cadena resultante es dependiente de DBMS. Por ejemplo, si la columna representada por string_exp1 contenía un valor NULL, DB2 devolvería NULL, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devolvería la cadena distinta de NULL.|  
@@ -85,13 +84,13 @@ ms.locfileid: "33055632"
   
 ### <a name="numeric-function"></a>Función numéricas  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|Devuelve numeric_exp truncado en posiciones de integer_exp a la derecha del separador decimal. Si integer_exp es negativo, numeric_exp se trunca en posiciones de &#124;integer_exp&#124; a la izquierda del separador decimal.|  
   
 ### <a name="time-date-and-interval-functions"></a>Funciones de hora, fecha e intervalo  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|Devuelve la fecha actual.|  
 |CURDATE( ) (ODBC 3.0)|Devuelve la fecha actual.|  

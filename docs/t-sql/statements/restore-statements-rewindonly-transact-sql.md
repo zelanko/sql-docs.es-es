@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5257fc78e43295131685d2fbdededa2f71d2b7de
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 486715799d2fee564c51336bd958eb603cd1b490
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702118"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789702"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>Instrucciones RESTORE: REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,8 +88,6 @@ FROM <backup_device> [ ,...n ]
  Especifica que la cinta se rebobine y se descargue automáticamente cuando termine una operación RESTORE. UNLOAD se establece de forma predeterminada al iniciar una nueva sesión de usuario. Permanece activo hasta que se especifica NOUNLOAD. Esta opción solo se utiliza para dispositivos de cinta. Si se utiliza para la operación de restauración un dispositivo que no es de cinta, esta opción no se tiene en cuenta.  
   
  NOUNLOAD  
- Especifica que la cinta no se descargue automáticamente de la unidad de cinta después de una operación RESTORE. NOUNLOAD permanece establecido hasta que se especifica UNLOAD.  
-  
  Especifica que la cinta no se descargue automáticamente de la unidad de cinta después de una operación RESTORE. NOUNLOAD permanece establecido hasta que se especifica UNLOAD.  
   
 ## <a name="general-remarks"></a>Notas generales  

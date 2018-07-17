@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8e7e4ac8f6bcd7caa3267ee783befd65d0855257
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d24a053e325bda0be8ca5e9f2797922e4d85b2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299075"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Solución de problemas de procesamiento de informes de Reporting Services
 Una vez recuperados los datos del informe, el procesador de informes combina los datos y la información de diseño. Cada propiedad de elemento de informe que tiene una expresión se evalúa en el contexto de los datos y el diseño combinados. Utilice este tema como ayuda para solucionar estos problemas.   
@@ -55,6 +55,6 @@ En la vista previa, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudio
   
   
 ## <a name="see-also"></a>Ver también  
-[Errores y eventos (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
+[Errores y eventos (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
 

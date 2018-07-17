@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -27,15 +26,15 @@ helpviewer_keywords:
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 caps.latest.revision: 67
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 23def6b6c02b49ae953c68a9e927de516582a605
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 50df822ad62216897cbcf13526646782938dc71f
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702918"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790826"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +153,7 @@ CREATE QUEUE <object>
   
  La siguiente tabla contiene las columnas de una cola.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |status|**tinyint**|Estado del mensaje. La instrucción RECEIVE devuelve todos los mensajes que tienen **1** como estado. Si la retención de los mensajes está activada, el estado se establece en 0. Si está desactivada, el mensaje se elimina de la cola. Los mensajes de la cola pueden contener uno de los valores siguientes:<br /><br /> **0**=Mensaje recibido retenido<br /><br /> **1**=Listo para recibir<br /><br /> **2**=Sin completar<br /><br /> **3**=Mensaje enviado retenido|  
 |priority|**tinyint**|Nivel de prioridad asignado a este mensaje.|  

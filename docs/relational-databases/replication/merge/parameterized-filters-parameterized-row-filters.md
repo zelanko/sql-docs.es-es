@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,12 +25,12 @@ caps.latest.revision: 69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf73ea957e5a918618b1172b65a905439831689
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a25fcf08c76a509e71a3bfdefbaf3c683854d07b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32965330"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356367"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtros con parámetros: filtros de fila con parámetros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +130,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>Configurar 'partition options'  
  Al crear un artículo, se especifica un valor para la propiedad **partition options** , en función de cómo van a compartir los suscriptores los datos de la tabla filtrada. Es posible asignar a la propiedad uno de cuatro valores usando [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)y el cuadro de diálogo **Propiedades del artículo** . La propiedad se puede establecer en uno de dos valores en los cuadros de diálogo **Agregar filtro** o **Editar filtro** , disponibles desde el Asistente para nueva publicación y el cuadro de diálogo **Propiedades de la publicación** . La tabla siguiente resume los valores disponibles:  
   
-|Description|Valor en Agregar filtro y Editar filtro|Valor en Propiedades del artículo|Valor en procedimientos almacenados|  
+|Descripción|Valor en Agregar filtro y Editar filtro|Valor en Propiedades del artículo|Valor en procedimientos almacenados|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |Los datos de las particiones se superponen y el suscriptor puede actualizar las columnas a las que se hace referencia en un filtro con parámetros.|**Una fila de esta tabla irá a varias suscripciones**|**Superpuestas**|**0**|  
 |Los datos de las particiones se superponen y el suscriptor no puede actualizar las columnas a las que se hace referencia en un filtro con parámetros.|N/A*|**Superpuestas, no permitir cambios de datos fuera de la partición**|**1**|  

@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c79e19d6cd66cd25796d63d214b0234a659a9dc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc07ddaa29dc999bef0037eeab66f51b65e27ea7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964960"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359317"
 ---
 # <a name="change-publication-and-article-properties"></a>Cambiar las propiedades de la publicación y de los artículos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "32964960"
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Propiedades de la publicación para replicación de instantáneas y replicación transaccional.  
   
-|Description|Procedimiento almacenado|Propiedades|Requisitos|  
+|Descripción|Procedimiento almacenado|Propiedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Cambiar el formato de la instantánea|**sp_changepublication**|**sync_method**|Nueva instantánea.|  
 |Cambiar la ubicación de la instantánea|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Nueva instantánea.|  
@@ -49,7 +48,7 @@ ms.locfileid: "32964960"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>Propiedades de los artículos para replicación de instantáneas y replicación transaccional  
   
-|Description|Procedimiento almacenado|Propiedades|Requisitos|  
+|Descripción|Procedimiento almacenado|Propiedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Quitar un artículo|**sp_droparticle**|Todos los parámetros|Los artículos se pueden quitar antes de crear las suscripciones. Utilizando procedimientos almacenados es posible quitar una suscripción a un artículo; utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], es necesario quitar, volver a crear y sincronizar toda la suscripción. Para más información, vea [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Cambiar un filtro de columna|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
@@ -67,7 +66,7 @@ ms.locfileid: "32964960"
   
 ## <a name="publication-properties-for-merge-replication"></a>Propiedades de la publicación para replicación de mezcla  
   
-|Description|Procedimiento almacenado|Propiedades|Requisitos|  
+|Descripción|Procedimiento almacenado|Propiedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Cambiar el formato de la instantánea|**sp_changemergepublication**|**sync_mode**|Nueva instantánea.|  
 |Cambiar la ubicación de la instantánea|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Nueva instantánea.|  
@@ -86,7 +85,7 @@ ms.locfileid: "32964960"
   
 ## <a name="article-properties-for-merge-replication"></a>Propiedades de los artículos para replicación de mezcla  
   
-|Description|Procedimiento almacenado|Propiedades|Requisitos|  
+|Descripción|Procedimiento almacenado|Propiedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Quitar un artículo que tiene el último filtro con parámetros de la publicación|**sp_dropmergearticle**|Todos los parámetros|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Quitar un artículo que es primario en un filtro de combinación o registro lógico (esto tiene como efecto secundario la desaparición de la combinación)|**sp_dropmergearticle**|Todos los parámetros|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  

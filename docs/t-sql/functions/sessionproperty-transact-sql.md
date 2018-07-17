@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - sessions [SQL Server], SET options settings
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 682ed62332c2fcc2e70c77fa75ac43b7249c3cac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8674d633df2c8e4c2dfc15197a46f2d790b38e59
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33056922"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789846"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ SESSIONPROPERTY (option)
  *Opción*  
  Es la configuración de opción actual para esta sesión. *option* puede ser cualquiera de los siguientes valores.  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |ANSI_NULLS|Especifica si se aplica el comportamiento conforme a ISO de iguales(=) y No iguales a (<>) cuando se utilizan con valores null.<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
 |ANSI_PADDING|Controla el modo en que la columna almacena valores más cortos que el tamaño que tiene definido y cómo almacena valores con espacios en blanco finales en los datos binarios y de caracteres.<br /><br /> 1 = ON <br /><br /> 0 = OFF|  

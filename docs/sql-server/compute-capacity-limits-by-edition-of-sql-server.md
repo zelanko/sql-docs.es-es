@@ -3,12 +3,9 @@ title: Límites de la capacidad de cálculo de cada edición de SQL Server | Mic
 ms.custom: ''
 ms.date: 11/06/2017
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
-caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d197350d9dc209a18f7913ec9c6e27ef91b40a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 392a895cdedfc48cb759471b89e3e95a02699617
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33034552"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36806650"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Límites de la capacidad de cálculo de cada edición de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +31,7 @@ ms.locfileid: "33034552"
   
  En esta tabla se describen las notaciones del diagrama anterior:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0..1|Cero o uno|  
 |1|Exactamente uno|  
@@ -88,7 +84,7 @@ En la siguiente tabla se especifican los límites de la capacidad de cálculo pa
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: licencia basada en núcleo\*|Sistema operativo máximo|Sistema operativo máximo|  
 |Desarrollador|Sistema operativo máximo|Sistema operativo máximo|  
-|Standard|Limitada a menos de 4 sockets o 24 núcleos|Limitada a menos de 4 sockets o 24 núcleos|  
+|Estándar|Limitada a menos de 4 sockets o 24 núcleos|Limitada a menos de 4 sockets o 24 núcleos|  
 |Express|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|  
 
 \*La licencia Enterprise Edition con licencia de servidor y acceso de cliente (CAL) está limitada a 20 núcleos por instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Esta licencia de licencias no está disponible para nuevos contratos. No hay ningún límite en el modelo de licencias de servidor basado en núcleos.  

@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f37984c25fb722245d433e18904b2d48de7707df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2be02312e00441df86c3f9811c3d625fc98d18cf
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957240"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358147"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,7 +171,7 @@ replmerg [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Es el nivel de cifrado de Capa de sockets seguros (SSL) utilizado por el agente de mezcla cuando realiza conexiones.  
   
-|Valor de EncryptionLevel|Description|  
+|Valor de EncryptionLevel|Descripción|  
 |---------------------------|-----------------|  
 |**0**|Especifica que no se utiliza SSL.|  
 |**1**|Especifica que se utiliza SSL, pero el agente no comprueba que un emisor confiable haya firmado el certificado del servidor SSL.|  
@@ -186,7 +185,7 @@ replmerg [-?]
   
  Especifica el tipo de intercambio de datos durante la sincronización, que puede ser uno de los siguientes:  
   
-|Valor ExchangeType|Description|  
+|Valor ExchangeType|Descripción|  
 |------------------------|-----------------|  
 |**1**|El agente debe cargar los cambios de datos del Suscriptor al Publicador.|  
 |**2**|El agente debe descargar los cambios de datos del Publicador al Suscriptor.|  
@@ -205,7 +204,7 @@ replmerg [-?]
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publicador**| **Suscriptor**| **Ambos**)]  
  Especifica el nivel de convergencia que debe utilizar el Agente de mezcla. Puede ser uno de los siguientes:  
   
-|Valor ForceConvergenceLevel|Description|  
+|Valor ForceConvergenceLevel|Descripción|  
 |---------------------------------|-----------------|  
 |**0** (valor predeterminado)|Predeterminado: Realiza una mezcla estándar sin convergencia adicional.|  
 |**1**|Fuerza la convergencia para todas las generaciones.|  
@@ -226,7 +225,7 @@ replmerg [-?]
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  Especifica la cantidad de historial registrado durante una operación de mezcla. Puede minimizar el efecto sobre el rendimiento del registro del historial seleccionando **1**.  
   
-|Valor HistoryVerboseLevel|Description|  
+|Valor HistoryVerboseLevel|Descripción|  
 |-------------------------------|-----------------|  
 |**0**|Registre el mensaje final de estado de agente, los detalles finales de la sesión y cualquier error.|  
 |**1**|Registre la sesión incremental detalla en cada estado de la sesión, incluso el porcentaje completado, además del mensaje de estado final de agente, los detalles finales de la sesión y cualquier error.|  
@@ -331,7 +330,7 @@ replmerg [-?]
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  Especifica si ya existe una base de datos de suscriptor.  
   
-|Valor SubscriberDBAddOption|Description|  
+|Valor SubscriberDBAddOption|Descripción|  
 |---------------------------------|-----------------|  
 |**0**|Utiliza la base de datos existente (valor predeterminado).|  
 |**1**|Crea una base de datos de suscriptor nueva y vacía.|  
@@ -377,7 +376,7 @@ replmerg [-?]
  **-Validate** [**0**|**1**|**2**|**3**]  
  Especifica si la validación se debería hacer al final de la sesión de mezcla, y, en ese caso, qué tipo de validación. **3** es el valor recomendado.  
   
-|Valor de validación|Description|  
+|Valor de validación|Descripción|  
 |--------------------|-----------------|  
 |**0** (valor predeterminado)|Sin validación.|  
 |**1**|Validación solo del recuento de filas|  

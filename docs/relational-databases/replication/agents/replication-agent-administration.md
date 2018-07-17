@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -28,12 +27,12 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2607af48ae1f542ce314a0aebca1ec3463921fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6edd8536c3ebf8b0a312cb8aa71b20ab8a6a92b7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956720"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359887"
 ---
 # <a name="replication-agent-administration"></a>Administración del Agente de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ ms.locfileid: "32956720"
 ## <a name="replication-maintenance-jobs"></a>Trabajos de mantenimiento de replicación  
  La replicación utiliza los siguientes trabajos para realizar el mantenimiento a petición y programado.  
   
-|Trabajo de limpieza|Description|Programación predeterminada|  
+|Trabajo de limpieza|Descripción|Programación predeterminada|  
 |------------------|-----------------|----------------------|  
 |Limpieza de historial del agente: distribución|Quita de la base de datos de distribución el historial del agente de replicación.|Se ejecuta cada diez minutos.|  
 |Limpieza de la distribución: distribución|Quita las transacciones replicadas de la base de datos de distribución. |Se ejecuta cada diez minutos.|  

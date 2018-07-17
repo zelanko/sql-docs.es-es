@@ -3,11 +3,6 @@ title: Asociados de administración de SQL Server | Microsoft Docs
 description: Listas de asociados externos que cuentan con soluciones para supervisar Server.
 services: sql-server
 documentationcenter: NA
-author: MikeRayMSFT
-manager: craigg
-editor: ''
-ms.assetid: ''
-ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -15,21 +10,22 @@ ms.tgt_pltfrm: NA
 ms.custom: ''
 ms.date: 17/09/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 80a7cceee6693b00e2bd61bbdb82229edef5d8d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: MikeRayMSFT
+manager: craigg
+ms.openlocfilehash: 6307fa14838afc49545875d56fed0bc2978b92ae
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031952"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926396"
 ---
 # <a name="sql-server-managing-partners"></a>Asociados de administración de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Para administrar los servicios de SQL Server, elija entre una amplia variedad de herramientas líderes del sector.  En este artículo se destacan las compañías asociadas de Microsoft que cuentan con soluciones de administración compatibles con Microsoft SQL Server.
 
 ## <a name="our-management-partners"></a>Nuestros asociados de administración
-| Asociado | Description | Vínculos |
+| Asociado | Descripción | Vínculos |
 | --- | --- | --- | --- |
 |![idera][1] |**IDERA**<br>SQL Compliance Manager es una solución de auditoría completa que muestra quién hizo qué, cuándo y cómo en servidores SQL Server, para ayudar a garantizar el cumplimiento de los requisitos normativos y de seguridad de datos.<br><br>[Requisitos del sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Sitio web][idera_website]<br>[Twitter][idera_twitter]<br>[Vídeo][idera_youtube] | |
 

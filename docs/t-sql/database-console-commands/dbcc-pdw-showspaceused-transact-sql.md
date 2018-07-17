@@ -7,23 +7,22 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.suite: sql
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-caps.latest.revision: 10
-author: edmacauley
+author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b372a5cb516dbbeaa2732dfbfa676921d63708f3
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 24a2eb0a69a6fcbedf1d5323caa97cdccd180fd5
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33701918"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36915036"
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -54,7 +53,7 @@ Requiere el permiso VIEW SERVER STATE.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 Este es el conjunto de resultados de todas las tablas.
   
-|columna|Tipo de datos|Description|  
+|columna|Tipo de datos|Descripción|  
 |------------|---------------|-----------------|  
 |reserved_space|BIGINT|Espacio total usado para la base de datos, en KB.|  
 |data_space|BIGINT|Espacio usado para los datos, en KB.|  
@@ -64,7 +63,7 @@ Este es el conjunto de resultados de todas las tablas.
   
 Este es el conjunto de resultados de una tabla.
   
-|columna|Tipo de datos|Description|Intervalo|  
+|columna|Tipo de datos|Descripción|Intervalo|  
 |------------|---------------|-----------------|-----------|  
 |rows|BIGINT|Número de filas.||  
 |reserved_space|BIGINT|Espacio total reservado para el objeto, en KB.||  

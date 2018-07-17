@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - CONNECTIONPROPERTY statement
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51685541435f4ab0192792341d2a29210dc9f504
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0638fcbc1559507bffb478c559f53180dface974
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054792"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789386"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ CONNECTIONPROPERTY ( property )
 *property*  
 La propiedad de la conexión. *property* puede ser uno de estos valores:
   
-|Valor|Tipo de datos|Description|  
+|Valor|Tipo de datos|Descripción|  
 |---|---|---|
 |net_transport|**nvarchar(40)**|Devuelve el protocolo de transporte físico utilizado por esta conexión. Este valor no admite valores NULL. Posibles valores devueltos:<br /><br /> **HTTP**<br /> **Canalización con nombre**<br /> **Session**<br /> **Memoria compartida**<br /> **SSL**<br /> **TCP**<br /><br /> y<br /><br /> **VIA**<br /><br /> Nota: Siempre se devuelve **Session** cuando una conexión tiene habilitado tanto el conjunto de resultados activo múltiple (MARS) como la agrupación de conexiones.|  
 |protocol_type|**nvarchar(40)**|Devuelve el tipo de protocolo de la carga. Actualmente, distingue entre TDS (TSQL) y SOAP. Acepta valores NULL.|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,12 +23,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3ad07906a4b64281016da04ee803833e3d17542
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e10e011081d1e692bba4f1c63b024eb83784ae4
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055162"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36255517"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *flags*  
  Indica la asignación que debe utilizarse entre los datos XML y el conjunto de filas relacional, y cómo debe llenarse la columna de desbordamiento; *flags* es un parámetro de entrada opcional y puede tomar uno de los valores siguientes.  
   
-|Valor del byte|Description|  
+|Valor del byte|Descripción|  
 |----------------|-----------------|  
 |**0**|Establece como valor predeterminado la asignación **centrada en atributos**.|  
 |**1**|Usa la asignación **centrada en atributos**. Se puede combinar con XML_ELEMENTS. En ese caso, primero se aplica la asignación **centrada en atributos** y, después, la asignación **centrada en elementos** en todas las columnas que todavía no se han visto afectadas.|  
@@ -90,7 +89,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  En la tabla siguiente se describe la estructura de la tabla **irregular**.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|Es el id. único del nodo del documento.<br /><br /> El elemento raíz tiene un valor de identificador 0. Los valores de identificador negativos están reservados.|  
 |**parentid**|**bigint**|Identifica el elemento primario del nodo. El elemento primario especificado por este identificador no es necesariamente el elemento primario, pero depende del NodeType del nodo cuyo elemento primario indica este identificador. Por ejemplo, si se trata de un nodo de texto, su elemento primario puede ser un nodo de atributo.<br /><br /> Si el nodo está en el nivel superior del documento XML, su **ParentID** es NULL.|  

@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,12 +22,12 @@ caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1cacaad9280c33cb331157386db2f7f919d5bb8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5cecaadee0ece9db93bae59192b4e643a84b3f81
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32959150"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354787"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Ejecutar lógica de negocios durante la sincronización de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ ms.locfileid: "32959150"
      Esto es útil para aplicaciones que deben suplantar operaciones o valores de datos específicos. Por ejemplo, una aplicación podría transformar la eliminación de una fila en una actualización especial que establezca la columna **estado** de la fila en el valor "eliminado" y después realice un seguimiento de la identidad del cliente que lleva a cabo la eliminación. Esto podría ser útil con fines de auditoría o flujo de trabajo.  
   
 ### <a name="custom-conflict-resolution"></a>Resolución personalizada de conflictos  
- La replicación de mezcla permite la detección y resolución de conflictos, y permite al usuario aceptar una estrategia de resolución predeterminada o elegir la resolución personalizada de los conflictos. Para más información, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Se puede invocar el controlador de lógica de negocios durante el procesamiento de cambios de datos que produzcan conflictos y realizar una de estas dos acciones:  
+ La replicación de mezcla permite la detección y resolución de conflictos, y permite al usuario aceptar una estrategia de resolución predeterminada o elegir la resolución personalizada de los conflictos. Para más información, consulte [Detección y resolución de conflictos de replicación de mezcla avanzada](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Se puede invocar el controlador de lógica de negocios durante el procesamiento de cambios de datos que produzcan conflictos y realizar una de estas dos acciones:  
   
 -   Aceptar la resolución predeterminada  
   

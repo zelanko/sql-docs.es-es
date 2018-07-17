@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
 - backing up databases [SQL Server], SQL Server Management Studio
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 89af2b55ab06a6d034ca75d009802f126519ef06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 7d5d52c835ea69914d538138cf189c7171e07a78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36204434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320445"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Crear una copia de seguridad completa de base de datos (SQL Server)
   En este tema se describe cómo crear una copia de seguridad completa de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
@@ -73,7 +72,7 @@ ms.locfileid: "36204434"
 ###  <a name="Security"></a> Seguridad  
  TRUSTWORTHY se establece en OFF en una copia de seguridad de base de datos. Para obtener información sobre cómo establecer TRUSTWORTHY en ON, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
- A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] el `PASSWORD` y `MEDIAPASSWORD` opciones se suspenden para crear copias de seguridad. Todavía puede restaurar las copias de seguridad creadas con contraseñas.  
+ A partir [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] el `PASSWORD` y `MEDIAPASSWORD` se suspenden las opciones para crear copias de seguridad. Todavía puede restaurar las copias de seguridad creadas con contraseñas.  
   
 ####  <a name="Permissions"></a> Permissions  
  De forma predeterminada, los permisos BACKUP DATABASE y BACKUP LOG corresponden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator** .  
@@ -276,7 +275,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
   
-1.  Use la `Backup-SqlDatabase` cmdlet. Para indicar explícitamente que se trata de una copia de seguridad completa de la base de datos, especifique la **- BackupAction** parámetro y su valor predeterminado, `Database`. Este parámetro es opcional para las copias de seguridad de base de datos completas.  
+1.  Use el `Backup-SqlDatabase` cmdlet. Para indicar explícitamente que se trata de una copia de seguridad completa de la base de datos, especifique el **- BackupAction** parámetro con su valor predeterminado, `Database`. Este parámetro es opcional para las copias de seguridad de base de datos completas.  
   
      En el ejemplo siguiente se crea una copia de seguridad completa de la base de datos `MyDB` en la ubicación de copia de seguridad predeterminada de la instancia de servidor `Computer\Instance`. Opcionalmente, en este ejemplo se especifica `-BackupAction Database`.  
   

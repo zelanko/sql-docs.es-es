@@ -1,12 +1,11 @@
 ---
-title: Supervisión y solución de problemas de los objetos de base de datos administran | Documentos de Microsoft
+title: Supervisión y solución de problemas de los objetos de base de datos administran | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
@@ -17,12 +16,12 @@ caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 741a863617109c6193fe45e0fe9da94136890e96
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 895d99a7f693443a11340157be96a68b8d107d16
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702766"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355597"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Supervisar y solucionar problemas de objetos de base de datos administrados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "35702766"
 |[Assembly Load (clase de eventos)](http://msdn.microsoft.com/library/cfb0b69d-4ce0-4067-a3df-d82775e57886)|Se utiliza para supervisar las solicitudes de carga de ensamblados (correctas y no realizadas).|  
 |[Clase de eventos SQL: BatchStarting](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [clase de eventos SQL: BatchCompleted](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Proporciona información sobre los lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se han iniciado o completado.|  
 |[SP: Starting, clase de evento](../../relational-databases/event-classes/sp-starting-event-class.md), [SP: Completed, clase de evento](../../relational-databases/event-classes/sp-completed-event-class.md)|Se utiliza para supervisar la ejecución de procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
-|[Clase de eventos SQL: StmtStarting](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [clase de eventos SQL: StmtCompleted](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Se utiliza para supervisar la ejecución de rutinas de CLR y [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|[Clase de eventos SQL: StmtStarting](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [StmtCompleted clase de eventos](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Se utiliza para supervisar la ejecución de rutinas de CLR y [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## <a name="performance-counters"></a>Performance Counters  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye objetos y contadores que puede utilizar el Monitor de sistema para supervisar la actividad de los equipos en los que se ejecute una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un objeto es cualquier recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como un bloqueo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un proceso de Windows. Cada objeto contiene uno o más contadores que determinan diversos aspectos de los objetos que se van a supervisar. Para obtener más información, vea [Usar objetos de SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  

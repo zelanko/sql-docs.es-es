@@ -1,5 +1,5 @@
 ---
-title: Definir una relación de hechos | Documentos de Microsoft
+title: Definir una relación de hechos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 28beac3f919350de1bf030dd9d4478146c28b2a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0dbd387f5b98f5547487df7d3fdba9724e10d0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330795"
 ---
 # <a name="defining-a-fact-relationship"></a>Definir una relación de hechos
   A veces, los usuarios desean poder dimensionar las medidas según los elementos de datos que se encuentran en la tabla de hechos o realizar consultas en la tabla de hechos sobre determinada información relacionada adicional, como números de factura o números de pedidos de compra relacionados con hechos de venta específicos. Cuando se define una dimensión basada en un elemento de tabla de hechos de este tipo, la dimensión se conoce como *dimensión de hechos*. Las dimensiones de hechos también se denominan dimensiones degeneradas. Las dimensiones de hechos son útiles para agrupar filas de tablas de hechos relacionadas, como todas las filas que están relacionadas con un número de factura determinado. Aunque esta información puede colocarse en una tabla de dimensiones independiente de la base de datos relacional, crear una tabla de dimensiones independiente para la información no supone ninguna ventaja, ya que la tabla de dimensiones crecerá al mismo ritmo que la tabla de hechos, y simplemente crearía datos duplicados y una complejidad innecesaria.  
@@ -67,7 +67,7 @@ ms.locfileid: "36200242"
   
 13. En el menú **Archivo** , haga clic en **Guardar todo**.  
   
-14. En el **atributos** panel del Diseñador de dimensiones para la **Internet Sales Order Details** dimensión, seleccione **Sales Order Number**y, a continuación, cambie la  **Nombre** propiedad en la ventana Propiedades para `Item Description.`  
+14. En el **atributos** panel del Diseñador de dimensiones para la **Internet Sales Order Details** dimensión, seleccione **Sales Order Number**y, a continuación, cambie el  **Nombre** propiedad en la ventana Propiedades para `Item Description.`  
   
 15. En la celda de la propiedad **NameColumn** , haga clic en el botón Examinar **(…)**. En el cuadro de diálogo **Columna de nombre** , seleccione **Product** en la lista **Tabla de origen** , seleccione **EnglishProductName** en **Columna de origen**y, después, haga clic en **Aceptar**.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36200242"
   
 17. Cambiar el **nombre** propiedad del nuevo **Sales Order Number** atribuir a `Order Number`y cambie el **OrderBy** propiedad **clave**.  
   
-18. En el **jerarquías** panel, crear un **Internet Sales Orders** jerarquía de usuario que contiene el `Order Number` y **Item Description** niveles, en ese orden.  
+18. En el **jerarquías** panel, cree un **Internet Sales Orders** jerarquía de usuario que contiene el `Order Number` y **Item Description** niveles, en ese orden.  
   
 19. En el panel **Atributos** , seleccione **Internet Sales Order Details**y luego revise el valor de la propiedad **StorageMode** en la ventana Propiedades.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36200242"
   
      En la imagen siguiente se muestra el resultado de los pasos anteriores.  
   
-     ![El dimensionamiento de importe de ventas de ventas por Internet](../../2014/tutorials/media/l5-factrelationship-3.gif "dimensionamiento de importe de ventas de ventas por Internet")  
+     ![El dimensionamiento de Internet Sales-Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "acotación de Internet Sales-Sales Amount")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Definir una relación de varios a varios](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  

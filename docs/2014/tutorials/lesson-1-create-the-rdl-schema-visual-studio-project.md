@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Crear el proyecto de Visual Studio del esquema RDL | Documentos de Microsoft'
+title: 'Lección 1: Crear el proyecto de Visual Studio del esquema RDL | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f420509c-51aa-4170-8c25-64c2954f4bb9
 caps.latest.revision: 17
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b6c502205f669c48efe1f939ba88e5352205f4de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc69b4bbcc40fa669ca9cf5f889944cb302e4b14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36201279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319815"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Lección 1: Crear el proyecto de Visual Studio de la aplicación Esquema RDL
-  Para este tutorial creará una aplicación de consola sencilla. Este tutorial se da por supuesto que está desarrollando en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
+  Para este tutorial creará una aplicación de consola sencilla. En este tutorial se da por supuesto que está desarrollando en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
   
 > [!NOTE]  
 >  Al tener acceso al servicio web del servidor de informes que se ejecuta en [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] con Advanced Services, debe agregar "?SQLExpress" a la ruta de acceso de "ReportServer". Por ejemplo:  
@@ -51,11 +51,11 @@ ms.locfileid: "36201279"
   
 1.  En el **archivo** menú, elija **New**y, a continuación, haga clic en **proyecto** para abrir el **nuevo proyecto** cuadro de diálogo.  
   
-2.  En el panel izquierdo, bajo **plantillas instaladas**, haga clic en **Visual Basic** o **Visual C#** y seleccione una categoría de proyecto de tipos en la lista expandida.  
+2.  En el panel izquierdo, bajo **plantillas instaladas**, haga clic en **Visual Basic** o **Visual C#** nodo y seleccione una categoría de proyecto de tipos en la lista expandida.  
   
 3.  Elija la **aplicación de consola** tipo de proyecto.  
   
-4.  En el **nombre** cuadro, escriba un nombre para el proyecto. Escriba el nombre `SampleRDLSchema`.  
+4.  En el **nombre** , escriba un nombre para el proyecto. Escriba el nombre `SampleRDLSchema`.  
   
 5.  En el **ubicación** , escriba la ruta de acceso donde desea guardar el proyecto o haga clic en **examinar** para navegar hasta la carpeta.  
   
@@ -63,15 +63,15 @@ ms.locfileid: "36201279"
   
 7.  En el menú **Proyecto** , haga clic en **Agregar elemento existente**.  
   
-8.  Navegue hasta la ubicación por la .cs o .vb archivo que se genera, a continuación, seleccione el archivo y, a continuación, haga clic en **agregar**.  
+8.  Desplácese hasta la ubicación para el .cs o .vb de archivos que ha generado, a continuación, seleccione el archivo y, a continuación, haga clic en **agregar**.  
   
      También necesitará agregar una referencia al espacio de nombres <xref:System.Web.Services> para que su referencia web funcione.  
   
 9. En el menú proyecto, haga clic en **Agregar referencia**.  
   
-     En el **Agregar referencia** cuadro de diálogo, en la **.NET** ficha, seleccione **System.Web.Services**, a continuación, haga clic en **Aceptar**.  
+     En el **Agregar referencia** cuadro de diálogo el **.NET** ficha, seleccione **System.Web.Services**, a continuación, haga clic en **Aceptar**.  
   
-     Para obtener más información acerca de cómo conectar con el servicio Web del servidor de informes, consulte [creación de aplicaciones con el servicio Web y .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
+     Para obtener más información acerca de cómo conectarse al servicio Web del servidor de informes, vea [creación de aplicaciones mediante el servicio Web y .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
 10. Expanda el nodo del proyecto en el Explorador de soluciones. Verá que se ha agregado un archivo de código con el nombre predeterminado Program.cs (Module1.vb para [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) al proyecto.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "36201279"
     ```  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- En la siguiente lección utilizará la herramienta de definición de esquemas XML (Xsd.exe) para generar clases a partir del esquema RDL e incluirlas en el proyecto. Vea [lección 2: generar clases desde el esquema RDL con la herramienta xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
+ En la siguiente lección utilizará la herramienta de definición de esquemas XML (Xsd.exe) para generar clases a partir del esquema RDL e incluirlas en el proyecto. Consulte [lección 2: generar clases del esquema RDL con la herramienta xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Actualizar informes con clases generadas a partir del esquema RDL &#40;Tutorial de SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

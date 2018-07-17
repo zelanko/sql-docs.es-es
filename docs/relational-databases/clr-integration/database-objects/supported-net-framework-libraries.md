@@ -1,12 +1,11 @@
 ---
-title: Admite las bibliotecas de .NET Framework | Documentos de Microsoft
+title: Admite bibliotecas de .NET Framework | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], .NET Framework libraries
@@ -16,19 +15,19 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1ffc396006959ad9b498a1b90a65fb0fe82eac7c
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 06ecb3f19466692698b0d1b56a3c67c50b5c2b2b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702226"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358877"
 ---
 # <a name="supported-net-framework-libraries"></a>Bibliotecas de .NET Framework admitidas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Con Common Language Runtime (CLR) hospedado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puede crear procedimientos almacenados, desencadenadores, funciones definidas por el usuario, tipos definidos por el usuario y agregados definidos por el usuario en código administrado. Con la funcionalidad de las bibliotecas de clases de.NET Framework, tiene acceso a clases pregeneradas que proporcionan funcionalidad para la manipulación de cadenas, operaciones matemáticas avanzadas, acceso a archivos, criptografía, etc. Se puede tener acceso a estas clases desde cualquier procedimiento almacenado administrado, tipo definido por el usuario, desencadenador, función definida por el usuario o agregado definido por el usuario.  
   
 > [!NOTE]  
->  Si mantiene o actualiza ensamblados no compatibles en la caché global de ensamblados (GAC), la aplicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podría dejar de funcionar. Esto se debe a que el mantenimiento o la actualización de bibliotecas en la GAC no actualiza estos ensamblados en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si un ensamblado existe en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y en la GAC, las dos copias del ensamblado deben coincidir exactamente. Si no coinciden, se producirá un error cuando la integración CLR de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] use el ensamblado. Si mantiene o actualiza los ensamblados en la GAC que también se registran en la base de datos, incluidos los ensamblados de .NET Framework no compatibles, asegúrese de que también mantiene o actualiza la copia del ensamblado en su [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bases de datos con la  **ALTER ASSEMBLY** instrucción. Para obtener más información, consulte [el artículo de Knowledge Base 949080](http://support.microsoft.com/kb/949080).  
+>  Si mantiene o actualiza ensamblados no compatibles en la caché global de ensamblados (GAC), la aplicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podría dejar de funcionar. Esto se debe a que el mantenimiento o la actualización de bibliotecas en la GAC no actualiza estos ensamblados en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si un ensamblado existe en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y en la GAC, las dos copias del ensamblado deben coincidir exactamente. Si no coinciden, se producirá un error cuando la integración CLR de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] use el ensamblado. Si mantiene o actualiza los ensamblados en la GAC que también se registran en la base de datos, incluidos los ensamblados de .NET Framework no compatibles, asegúrese de también mantiene o actualiza la copia del ensamblado dentro de su [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bases de datos con el  **ALTER ASSEMBLY** instrucción. Para obtener más información, consulte [artículo 949080 de Knowledge Base](http://support.microsoft.com/kb/949080).  
   
 ## <a name="supported-libraries"></a>Bibliotecas compatibles  
  A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye una lista de bibliotecas de .NET Framework compatibles probadas para garantizar que satisfacen las normas de confiabilidad y seguridad para la interacción con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Las bibliotecas compatibles no necesitan registrarse explícitamente en el servidor antes de utilizarlas en el código; [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] las carga directamente desde la caché de ensamblados global (GAC).  
@@ -68,9 +67,9 @@ ms.locfileid: "35702226"
 -   System.Xml.Linq.dll  
   
 ## <a name="unsupported-libraries"></a>Bibliotecas no compatibles  
- También se puede llamar a bibliotecas no compatibles desde los procedimientos almacenados administrados, desencadenadores, funciones definidas por el usuario, tipos definidos por el usuario y agregados definidos por el usuario. La biblioteca no compatible en primer lugar debe estar registrada en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la base de datos, utilizando la **CREATE ASSEMBLY** instrucción, antes de que se puede utilizar en el código. Las bibliotecas no compatibles que se registren y se ejecuten en el servidor se deben revisar y probar para garantizar la seguridad y la confiabilidad.  
+ También se puede llamar a bibliotecas no compatibles desde los procedimientos almacenados administrados, desencadenadores, funciones definidas por el usuario, tipos definidos por el usuario y agregados definidos por el usuario. La biblioteca no compatible en primer lugar debe estar registrada en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de base de datos, utilizando el **CREATE ASSEMBLY** instrucción antes de que se puede usar en el código. Las bibliotecas no compatibles que se registren y se ejecuten en el servidor se deben revisar y probar para garantizar la seguridad y la confiabilidad.  
   
- Por ejemplo, el **System.DirectoryServices** no se admite el espacio de nombres. Debe registrar el ensamblado System.DirectoryServices.dll con **UNSAFE** permisos antes de que se pueden llamar desde el código. El **UNSAFE** permiso es necesario porque las clases en el **System.DirectoryServices** espacio de nombres no cumplen los requisitos de **seguro** o  **EXTERNAL_ACCESS**. Para obtener más información, consulte [restricciones del modelo de programación de integración de CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) y [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
+ Por ejemplo, el **System.DirectoryServices** no se admite el espacio de nombres. Debe registrar el ensamblado System.DirectoryServices.dll con **UNSAFE** permisos antes de invocarlo desde el código. El **UNSAFE** permiso es necesario porque las clases en el **System.DirectoryServices** espacio de nombres no cumplen los requisitos para **seguro** o  **EXTERNAL_ACCESS**. Para obtener más información, consulte [restricciones del modelo de programación de integración de CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) y [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Creación de un ensamblado](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   

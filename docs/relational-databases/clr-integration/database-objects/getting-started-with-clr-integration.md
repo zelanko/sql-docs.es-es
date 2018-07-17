@@ -1,12 +1,11 @@
 ---
-title: Introducción a la integración CLR | Documentos de Microsoft
+title: Introducción a la integración de CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: get-started-article
 dev_langs:
 - TSQL
@@ -28,16 +27,16 @@ caps.latest.revision: 62
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33904494978b4a85377ef4d3bdb3cee4f176f2f2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e54af4adc976d8a5b8e9990d91155d5178f5ef03
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702376"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349467"
 ---
 # <a name="getting-started-with-clr-integration"></a>Introducción a la integración CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tema proporciona información general sobre los espacios de nombres y bibliotecas necesarios para compilar objetos de base de datos mediante la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integración con common language runtime (CLR) de .NET Framework. En este tema también se muestra cómo escribir, compilar y ejecutar un procedimiento almacenado CLR simple escrito en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
+  Este tema proporciona información general sobre los espacios de nombres y bibliotecas necesarios para compilar objetos de base de datos mediante el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integración con common language runtime (CLR) de .NET Framework. En este tema también se muestra cómo escribir, compilar y ejecutar un procedimiento almacenado CLR simple escrito en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
   
 ## <a name="required-namespaces"></a>Espacios de nombres necesarios  
  Los componentes necesarios para desarrollar objetos de base de datos CLR básicos se instalan con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La funcionalidad de la integración CLR se expone en un ensamblado denominado system.data.dll, que forma parte de .NET Framework. Este ensamblado puede encontrarse en la caché de ensamblados global (GAC) o en el directorio de .NET Framework. Normalmente, se agrega una referencia a este ensamblado mediante las herramientas de la línea de comandos y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, por lo que no es necesario agregarla manualmente.  
@@ -89,9 +88,9 @@ End Class
   
 ```  
   
- Este programa simple contiene un solo método estático en una clase pública. Este método usa dos clases nuevas, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** y  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, para crear administra objetos para generar un texto simple de la base de datos Mensaje. El método también asigna la cadena "Hola a todos!" como el valor de un parámetro de salida. Este método puede declararse como un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, a continuación, ejecutarse del mismo modo que un procedimiento almacenado de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ Este programa simple contiene un solo método estático en una clase pública. Este método usa dos clases nuevas, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** y  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, para crear managed objetos para mostrar un texto simple de la base de datos Mensaje. El método también asigna la cadena "Hola mundo!" como el valor de un parámetro de salida. Este método puede declararse como un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, a continuación, ejecutarse del mismo modo que un procedimiento almacenado de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- Compile este programa como una biblioteca, lo cargaremos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], y lo ejecutaremos como un procedimiento almacenado.  
+ Compila este programa como una biblioteca, lo cargaremos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], y lo ejecutaremos como un procedimiento almacenado.  
   
 ## <a name="compile-the-hello-world-stored-procedure"></a>Compilar el procedimiento de "Hello World" almacenados  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala los archivos de redistribución de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework de forma predeterminada. Estos archivos incluyen csc.exe y vbc.exe, los compiladores de línea de comandos de Visual C# y Visual Basic. Para compilar el ejemplo, debe modificar la variable de ruta de acceso para que apunte al directorio que contiene los archivos csc.exe o vbc.exe. Ésta es la ruta de instalación predeterminada de .NET Framework.  
@@ -106,7 +105,7 @@ C:\Windows\Microsoft.NET\Framework\(version)
 C:\Windows\Microsoft.NET\Framework\v4.6.1  
 ```  
   
- Una vez agregado el directorio .NET Framework a la ruta de acceso, puede compilar el procedimiento almacenado de ejemplo en un ensamblado con el siguiente comando. El **/target** opción le permite compilar en un ensamblado.  
+ Una vez agregado el directorio .NET Framework a la ruta de acceso, puede compilar el procedimiento almacenado de ejemplo en un ensamblado con el siguiente comando. El **/target** opción permite compilarlo en un ensamblado.  
   
  Para los archivos de origen de Visual C#:  
   
@@ -146,7 +145,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
- Una vez creado el procedimiento, podrá ejecutarse como un procedimiento almacenado normal escrito en [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Ejecute el comando siguiente:  
+ Una vez creado el procedimiento, podrá ejecutarse como un procedimiento almacenado normal escrito en [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Ejecute el siguiente comando:  
   
 ```  
 DECLARE @J nchar(25)  

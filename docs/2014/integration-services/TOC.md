@@ -53,6 +53,7 @@
 ### [Finalización del asistente (Asistente para actualización del paquete SSIS)](complete-the-wizard-ssis-package-upgrade-wizard.md)
 ### [Actualizar los paquetes (Asistente para actualización del paquete SSIS)](upgrading-the-packages-ssis-package-upgrade-wizard.md)
 ## [Asistente para importación y exportación de SQL Server +](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
+## [Importar desde Excel o exportar a Excel](load-data-to-from-excel-with-ssis.md)
 ## [Herramientas para solucionar problemas del desarrollo de paquetes +](troubleshooting/troubleshooting-tools-for-package-development.md)
 ## [Eventos registrados por un paquete de Integration Services](performance/events-logged-by-an-integration-services-package.md)
 ## [Ver entradas del registro en la ventana Registrar eventos](view-log-entries-in-the-log-events-window.md)

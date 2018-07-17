@@ -18,13 +18,13 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6201ec5007c3f7e09c2713d45bdd86badb2addfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d2c2c37e0f9c5485b530483b60da08d8da06173
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316825"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Descripción del modelo de objetos del componente de script
   Como se describe en [codificar y depurar el componente de Script] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, el proyecto de componente de Script contiene tres elementos de proyecto:  
@@ -154,11 +154,11 @@ public override void PreExecute()
   
 -   Propiedades de descriptor de acceso con nombre y tipo de solo escritura para cada columna de salida.  
   
--   De solo escritura  **\<columna > _IsNull** propiedad para cada columna de salida seleccionada que puede usar para establecer el valor de columna en `null`.  
+-   Solo escritura  **\<columna > _IsNull** propiedad para cada columna de salida seleccionada que puede usar para establecer el valor de columna en `null`.  
   
 -   Un método `AddRow` para agregar una nueva fila vacía al búfer de salida.  
   
--   Un método `SetEndOfRowset` para permitir que el motor de flujo de datos sepa que no se esperan más búferes de datos. También existe una función `EndOfRowset` para determinar si el búfer actual es el último búfer de datos. Por lo general no necesita estas funciones cuando utiliza el procesamiento de los métodos implementados en una entrada del `UserComponent` clase base.  
+-   Un método `SetEndOfRowset` para permitir que el motor de flujo de datos sepa que no se esperan más búferes de datos. También existe una función `EndOfRowset` para determinar si el búfer actual es el último búfer de datos. Por lo general no necesita estas funciones cuando se usa la entrada de procesamiento de los métodos implementados en el `UserComponent` clase base.  
   
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Qué proporciona el elemento de proyecto ComponentWrapper  
  El elemento de proyecto ComponentWrapper contiene una clase denominada `UserComponent` que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La clase `ScriptMain` donde escribe el código personalizado deriva a su vez de `UserComponent`. La clase `UserComponent` contiene los siguientes métodos:  
@@ -180,7 +180,7 @@ public override void PreExecute()
  Invalide el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A> de la clase base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> cada vez que cuente con procesamiento que se debe realizar solamente una vez después de procesar las filas de datos. Por ejemplo, en un origen, puede cerrar la clase `System.Data.SqlClient.SqlDataReader` que ha utilizado para cargar datos en el flujo de datos.  
   
 > [!IMPORTANT]  
->  La colección de `ReadWriteVariables` solamente está disponible en el método `PostExecute`. Por consiguiente no puede incrementar directamente el valor de una variable de paquete cuando procesa cada fila de datos. En su lugar, aumente el valor de una variable local y establezca el valor de la variable de paquete en el valor de la variable local en el `PostExecute` método después de todos los datos se ha procesado.  
+>  La colección de `ReadWriteVariables` solamente está disponible en el método `PostExecute`. Por consiguiente no puede incrementar directamente el valor de una variable de paquete cuando procesa cada fila de datos. En su lugar, incremente el valor de una variable local y establezca el valor de la variable de paquete en el valor de la variable local en el `PostExecute` método después de todos los datos se ha procesado.  
   
 ## <a name="releaseconnections-method"></a>Método ReleaseConnections  
  Generalmente, los orígenes y destinos deben conectarse a un origen de datos externo. Invalide el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReleaseConnections%2A> de la clase base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> para cerrar y liberar la conexión abierta previamente en el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A>.  
@@ -206,10 +206,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "el icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar el componente de Script en el Editor de componentes de Script] ((configuring-the-script-component-in-the-script-component-editor.md)   
+ [Configurar el componente de Script en el Editor del componente de Script] ((configuring-the-script-component-in-the-script-component-editor.md)   
  [Codificar y depurar el componente de Script] (.. /Extending-Packages-scripting/Data-Flow-script-Component/Coding-and-Debugging-the-Script-Component.MD  
   
   

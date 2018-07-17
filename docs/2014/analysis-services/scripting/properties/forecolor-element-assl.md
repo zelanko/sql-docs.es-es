@@ -1,5 +1,5 @@
 ---
-title: Elemento ForeColor (ASSL) | Documentos de Microsoft
+title: Elemento ForeColor (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ForeColor element
 ms.assetid: 5125520c-3bce-40e6-a722-8d4d47306fed
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d33af314081dda790edee205d12e095b018d00b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efcd4c226743ec313e338eea4af83ba68792b675
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36107310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332835"
 ---
 # <a name="forecolor-element-assl"></a>Elemento ForeColor (ASSL)
   Describe las características de presentación relacionadas con el color de la [CalculationProperty](../objects/calculationproperty-element-assl.md) o [medida](../objects/measure-element-assl.md) elemento primario.  
@@ -62,7 +62,7 @@ ms.locfileid: "36107310"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El `ForeColor` propiedad contiene una expresión de expresiones multidimensionales (MDX) y se aplica a `CalculationProperty` elementos que tienen un [CalculationType](calculationtype-element-assl.md) de *miembro* o *celdas* .  
+ El `ForeColor` propiedad contiene una expresión MDX (expresiones multidimensionales) y se aplica a `CalculationProperty` los elementos que tienen un [CalculationType](calculationtype-element-assl.md) de *miembro* o *celdas* .  
   
  Los elementos que corresponden a los elementos primarios de `ForeColor` en el modelo de objetos de Analysis Management Objects (AMO) son <xref:Microsoft.AnalysisServices.CalculationProperty> y <xref:Microsoft.AnalysisServices.Measure>.  
   

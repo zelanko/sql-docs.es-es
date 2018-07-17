@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de propiedades de acción (generador de informes y SSRS) | Documentos de Microsoft
+title: Cuadro de diálogo Propiedades de acción (generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.action.f1
 - "10413"
@@ -34,15 +34,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4cae7e5c0de408c4a2ed9636e3c941f8e0a32b0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e245d03b32dc48a96b0f1d967cc7c83b684654ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323765"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades de acción (Generador de informes y SSRS)
   El cuadro de diálogo **Acción** se puede usar para habilitar las opciones de hipervínculo para los elementos de gráfico, medidor y mapa que admitan vínculos. Defina una acción para que un usuario pueda hacer clic en el informe y vincularse a una dirección URL, a un informe diferente en el mismo servidor de informes o a un sitio de SharePoint integrado con un servidor de informes, o a una ubicación diferente del mismo informe.  
@@ -54,7 +54,7 @@ ms.locfileid: "36110890"
  **Ninguno**  
  Elija esta opción para indicar que el elemento no tiene ninguna acción.  
   
- **Ir al informe**  
+ **Ir a informe**  
  Elija esta opción para crear un vínculo a un informe detallado que se encuentra en un servidor de informes. Al seleccionar **Ir a informe**, aparecen las siguientes opciones adicionales.  
   
  **Especificar un informe**  
@@ -62,7 +62,7 @@ ms.locfileid: "36110890"
   
  En el caso de un informe publicado en un servidor de informes configurado para el modo nativo, use una ruta de acceso completa o relativa sin la extensión del nombre de archivo. Si el informe se encuentra en la misma carpeta que el actual, use solo el nombre del informe. Si el informe está en una carpeta diferente del mismo servidor de informes, use una ruta de acceso relativa o una ruta de acceso completa. Una ruta de acceso relativa comienza en la carpeta actual y sube por la jerarquía de carpetas, por ejemplo, ../Carpeta2/Informe1. Una ruta de acceso completa se inicia en /, la carpeta Inicio. Por ejemplo, /Informes/Informe1.  
   
- En el caso de un informe publicado en un servidor de informes configurado en el modo integrado de SharePoint, utilice una dirección URL completa, incluida la extensión del nombre de archivo (.rdl). Por ejemplo, http://*\<SharePointservername > /\<sitio >*/Documents/Report1.rdl. No se admiten las rutas de acceso relativas.  
+ En el caso de un informe publicado en un servidor de informes configurado en el modo integrado de SharePoint, utilice una dirección URL completa, incluida la extensión del nombre de archivo (.rdl). Por ejemplo, http://*\<Nombredeservidorsharepoint > /\<sitio >*/Documents/Report1.rdl. No se admiten las rutas de acceso relativas.  
   
  Para obtener más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) en la [la documentación del Generador de informes](http://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
   
@@ -101,14 +101,14 @@ ms.locfileid: "36110890"
  **Ir a dirección URL**  
  Elija esta opción para definir un vínculo a una página web. Escriba o seleccione la dirección URL de una página web o una expresión que se evalúe como la dirección URL de una página web. Haga clic en el botón **Expresión** (*fx*) para modificar la expresión. Esta expresión puede incluir un campo que contenga una dirección URL. Al seleccionar **Ir a dirección URL**, aparece la siguiente opción adicional.  
   
- **Seleccionar dirección URL**  
- Escriba o especifique la dirección URL del elemento. En el caso de un elemento publicado en un servidor de informes configurado para el modo nativo, use una ruta de acceso completa o relativa. Por ejemplo, http://*\<servername >*  /images/image1.jpg. Un elemento publicado en un servidor de informes configurado en modo integrado de SharePoint, use una dirección URL completa (por ejemplo, http://*\<SharePointservername > /\<sitio >*  /documentos/imágenes / Image1.jpg).  
+ **Seleccione la dirección URL**  
+ Escriba o especifique la dirección URL del elemento. En el caso de un elemento publicado en un servidor de informes configurado para el modo nativo, use una ruta de acceso completa o relativa. Por ejemplo, http://*\<servername >*  /images/image1.jpg. Un elemento publicado en un servidor de informes configurado en modo integrado de SharePoint, use una dirección URL completa (por ejemplo, http://*\<Nombredeservidorsharepoint > /\<sitio >*  /documentos/images / Image1.jpg).  
   
 ## <a name="see-also"></a>Vea también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Agregar un subinforme y parámetros &#40;Generador de informes y SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
- [Ordenación interactiva, mapas de documento y vínculos &#40;el generador de informes SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [Ordenación interactiva, mapas de documento y vínculos &#40;generador de informes y SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
   

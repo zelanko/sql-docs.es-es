@@ -1,5 +1,5 @@
 ---
-title: Solucionar problemas de la utilidad de SQL Server | Documentos de Microsoft
+title: Solución de problemas de la utilidad de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0bc94d8644d1a0015829b730d5556b967c6b8c93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 81b35d1af874c97bf2e61e9c1234d7ad7876e229
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36112530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328145"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Solucionar problemas de la Utilidad de SQL Server
   Se pueden citar como ejemplos de solución de problemas de la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la resolución de una operación que no ha podido inscribir una instancia de SQL Server con un UCP, la resolución de un error de recopilación de datos que crea iconos deshabilitados en la vista de lista de instancias administradas de un UCP, la mitigación de cuellos de botella de rendimiento o la resolución de problemas de mantenimiento de recursos. Para obtener más información sobre cómo mitigar problemas de mantenimiento de recursos identificados por un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, vea [solucionar problemas de mantenimiento de recursos de SQL Server &#40;utilidad de SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>Error de una operación de inscripción de una instancia de SQL Server en una Utilidad de SQL Server  
- Si se conecta a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inscribirse mediante [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticación y especificar una cuenta de proxy que pertenece a un dominio de Active Directory que no es el dominio donde está el UCP, validación de instancia es correcta, pero la se produce un error en la operación de inscripción con el siguiente mensaje de error:  
+ Si se conecta a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inscribirse mediante [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticación y especificar una cuenta de proxy que pertenece a un dominio de Active Directory diferente que el dominio donde está el UCP, validación de instancia es correcta, pero el se produce un error en la operación de inscripción con el mensaje de error siguiente:  
   
  Se ha producido una excepción al ejecutar una instrucción o lote Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36112530"
  La solución para este problema, usando el ejemplo anterior, es conectar a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para inscribirse en la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando "sa" y proporcionar una cuenta de proxy de "Domain_1."  
   
 ## <a name="failed-wmi-validation"></a>Error de validación de WMI  
- Si WMI no se configura correctamente en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], las operaciones de creación de UCP y de inscripción de instancia administrada muestran una advertencia, pero no se bloquea la operación. Además, si cambia la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configuración de la cuenta de agente para que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agente no tiene permiso para las clases WMI necesarias, recopilación de datos en la instancia administrada afectada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no puede cargarse en el UCP. Esto genera iconos deshabilitados en el UCP.  
+ Si WMI no se configura correctamente en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], las operaciones de creación de UCP y de inscripción de instancia administrada muestran una advertencia, pero no se bloquea la operación. Además, si cambia el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configuración de la cuenta de agente para que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agente no tiene permiso para las clases WMI necesarias, recopilación de datos en la instancia administrada afectada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no se puede cargar en el UCP. Esto genera iconos deshabilitados en el UCP.  
   
  Un error de recopilación de datos genera iconos de estado deshabilitados en la vista de lista del UCP para las instancias administradas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] afectadas. El historial de trabajos en la instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] muestra que sysutility_mi_collect_and_upload produce un error en el paso 2 (almacenaje temporal de los datos recopilados del script de PowerShell).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36112530"
   
  La ejecución del comando se detuvo porque la variable del shell "ErrorActionPreference" esa establecida en Stop: Access denied.  
   
- ERROR: \<fecha y hora (MM/DD/AAAA HH) >: excepción al recopilar propiedades de la cpu.  Se podría haber producido un error en una consulta WMI.  ADVERTENCIA.  
+ ERROR: \<fecha y hora (MM/DD/AAAA HH: mm:) >: excepción al recopilar propiedades de la cpu.  Se podría haber producido un error en una consulta WMI.  ADVERTENCIA.  
   
  Para resolver este problema, compruebe la configuración siguiente:  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36112530"
   
 -   El repositorio WMI podría estar dañado en la instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   La biblioteca de rendimiento podría ser falta o está dañado en la instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   La biblioteca de rendimiento podría ser ausentes o dañados en la instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Para comprobar que la instancia especificada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está configurada correctamente para notificar datos al UCP, compruebe que las siguientes clases están disponibles en la instancia especificada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y que son accesibles para la cuenta del servicio Agente SQL Server:  
   
@@ -94,15 +94,15 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
  Para obtener más información sobre la solución de problemas de WMI, vea [Solucionar problemas de WMI](http://go.microsoft.com/fwlink/?LinkId=178250). Observe que las consultas de estas operaciones de la Utilidad de SQL Server se ejecutan localmente, de modo que el DCOM y el contenido de la solución de problemas remota no se deben tener en cuenta.  
   
 ## <a name="failed-data-collection"></a>Error en la recopilación de datos  
- Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eventos de recopilación de datos de utilidad producirá un error, tenga en cuenta las posibilidades siguientes:  
+ Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eventos de recopilación de datos de utilidad producirá un error, tenga en cuenta las siguientes posibilidades:  
   
 -   No cambie las propiedades del conjunto de recopilación "Información de la utilidad" en una instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y no active ni desactive manualmente la recopilación de datos, ya que la recopilación de datos la controla un trabajo del agente de la Utilidad.  
   
 -   Error de validación de WMI o validación de WMI no compatible. Para obtener más información, vea la sección sobre error de validación de WMI de este tema.  
   
--   Actualice los datos en la vista de lista de instancias administradas, como datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puntos de vista de utilidad no se actualizan automáticamente. Para actualizar los datos, haga clic en el **instancias administradas** nodo en el **navegación del explorador de utilidad** panel, a continuación, seleccione **actualizar**, o haga doble clic en el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nombre de la vista de lista de la instancia, a continuación, seleccione **actualizar**. Tenga en cuenta que una vez se haya inscrito una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con un UCP, pueden transcurrir hasta 30 minutos hasta que los datos aparezcan por vez primera en el panel y puntos de vista en el panel de contenido del explorador de la utilidad.  
+-   Actualizar datos en la vista de lista de instancias administradas, como datos en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilidad no se actualizan automáticamente. Para actualizar los datos, haga clic en el **instancias administradas** nodo en el **navegación del explorador de utilidad** panel, a continuación, seleccione **actualizar**, o haga doble clic en el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nombre de la vista de lista de la instancia y, después, seleccione **actualizar**. Tenga en cuenta que una vez se haya inscrito una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con un UCP, pueden transcurrir hasta 30 minutos hasta que los datos aparezcan por vez primera en el panel y puntos de vista en el panel de contenido del explorador de la utilidad.  
   
--   Use el Administrador de configuración de SQL Server para comprobar que la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está ejecutando.  
+-   Use el Administrador de configuración de SQL Server para comprobar que la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se está ejecutando.  
   
 -   Si se produjo un error de recopilación de datos o de carga de datos debido a problemas de tiempo de espera, actualice la función dbo.fn_sysutility_mi_get_collect_script() de la base de datos MSDB. Especialmente, en la función "Invoke-BulkCopyCommand()" agregue una línea:  
   
@@ -124,7 +124,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     4.  Haga clic en **Aceptar** para confirmar el cambio.  
   
--   TCP/IP debe estar habilitado en el UCP y en la instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Habilite TCP/IP a través de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de Configuration Manager.  
+-   TCP/IP debe estar habilitado en el UCP y en la instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Habilite TCP/IP a través de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.  
   
 -   Se debería iniciar el servicio SQL Server Browser en el UCP y se debería configurar para que se iniciara automáticamente. Si su organización impide el uso del servicio SQL Server Browser, siga los siguientes pasos para permitir que a una instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se conecte al UCP:  
   
@@ -156,7 +156,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   Si hay bases de datos con el mismo nombre pero con una configuración de distinción entre mayúsculas y minúsculas diferente en una instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puede que la identificación entre la base de datos y sus puntos de vista sea incorrecta, y se produzca un error de recopilación de datos. Por ejemplo, es posible que una base de datos denominada "MYDATABASE" muestre estados de mantenimiento para una base de datos con el nombre "MyDatabase". En esta situación no se producirán errores. Un error de recopilación de datos también puede ser consecuencia de la disparidad entre mayúsculas y minúsculas en otros objetos mostrados en el UCP, como el archivo de base de datos y los nombres de grupos de archivos.  
   
--   Si una instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se hospeda en un equipo con Windows Server 2003, es preciso que la cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pertenezca al grupo Usuarios del monitor del sistema o al grupo local Administradores. De lo contrario, se producirá un error en la recopilación de datos con un error de denegación del acceso. Para agregar una [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cuenta de servicio del agente al grupo de seguridad usuarios del Monitor de rendimiento, siga estos pasos:  
+-   Si una instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se hospeda en un equipo con Windows Server 2003, es preciso que la cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pertenezca al grupo Usuarios del monitor del sistema o al grupo local Administradores. De lo contrario, se producirá un error en la recopilación de datos con un error de denegación del acceso. Para agregar un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cuenta de servicio del agente al grupo de seguridad usuarios del Monitor de rendimiento, siga estos pasos:  
   
     1.  Abra **Administración de equipos**, expanda **Usuarios y grupos locales**y haga clic en **Grupos**.  
   

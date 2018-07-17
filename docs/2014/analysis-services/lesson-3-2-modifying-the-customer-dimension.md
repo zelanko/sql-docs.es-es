@@ -1,5 +1,5 @@
 ---
-title: Modificar la dimensión Customer | Documentos de Microsoft
+title: Modificar la dimensión Customer | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fef2880a71981b360d5ce124d6b5e2f0d8b24859
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 556ce1a91985c0e153161a90413695edd2bc4cca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36197274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310805"
 ---
 # <a name="modifying-the-customer-dimension"></a>Modificar la dimensión Customer
   Existen varios métodos para hacer que las dimensiones de un cubo sean más fáciles de usar y tengan más funciones. En las tareas de este tema, debe modificar la dimensión Customer.  
@@ -48,13 +48,13 @@ ms.locfileid: "36197274"
   
 #### <a name="to-create-a-hierarchy"></a>Para crear una jerarquía  
   
-1.  Arrastre el `Country-Region` de atributo de la **atributos** panel en el **jerarquías** panel.  
+1.  Arrastre el `Country-Region` atributo desde el **atributos** panel en el **jerarquías** panel.  
   
-2.  Arrastre el `State-Province` de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en el **jerarquías** panel, bajo el `Country-Region` nivel.  
+2.  Arrastre el `State-Province` de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en la **jerarquías** panel debajo el `Country-Region` nivel.  
   
-3.  Arrastre el **City** de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en el **jerarquías** panel, debajo de la `State-Province` nivel.  
+3.  Arrastre el **Ciudad** de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en la **jerarquías** panel, debajo de la `State-Province` nivel.  
   
-4.  En el **jerarquías** panel de la **estructura de dimensión** pestaña, haga clic en la barra de título de la **jerarquía** jerarquía, seleccione **cambiar el nombre de**y, a continuación, escriba `Customer Geography`.  
+4.  En el **jerarquías** panel de la **estructura de dimensión** pestaña, haga clic en la barra de título de la **jerarquía** jerarquía, seleccione **cambiar el nombre**y, a continuación, escriba `Customer Geography`.  
   
      El nombre de la jerarquía es ahora `Customer Geography`.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36197274"
   
 2.  En el panel **Tablas** , haga clic con el botón derecho en **Customer**y, después, haga clic en **Nuevo cálculo con nombre**.  
   
-3.  En el **crear cálculo con nombre** cuadro de diálogo, escriba `FullName` en el **nombre de la columna** cuadro y, a continuación, escriba o copie y pegue el siguiente `CASE` instrucción en el **expresión**  cuadro:  
+3.  En el **crear cálculo con nombre** cuadro de diálogo, escriba `FullName` en el **nombre de columna** cuadro y, a continuación, escriba o copie y pegue el siguiente `CASE` instrucción en el **expresión**  cuadro:  
   
     ```  
     CASE  
@@ -80,7 +80,7 @@ ms.locfileid: "36197274"
     END  
     ```  
   
-     El `CASE` instrucción concatena el **FirstName**, **MiddleName**, y **LastName** columnas en una sola columna que va a utilizar en el cliente de dimensión como el nombre para mostrar para la **cliente** atributo.  
+     El `CASE` instrucción concatena el **FirstName**, **MiddleName**, y **LastName** columnas en una sola columna que va a utilizar en el cliente de dimensión como el nombre mostrado para el **cliente** atributo.  
   
 4.  Haga clic en **Aceptar**y expanda **Customer** en el panel **Tablas** .  
   
@@ -107,13 +107,13 @@ ms.locfileid: "36197274"
   
 3.  Abra la ventana Propiedades y haga clic en el botón **Ocultar automáticamente** de la barra de título para que permanezca abierta.  
   
-4.  En el **nombre** campo de propiedad, escriba `Full Name`.  
+4.  En el **nombre** propiedad, escriba `Full Name`.  
   
 5.  Haga clic en el campo de la propiedad **NameColumn** situado en la parte inferior y, después, haga clic en el botón Examinar (**…**) para abrir el cuadro de diálogo **Columna de nombre** .  
   
 6.  Seleccione `FullName` en la parte inferior de la **columna de origen** lista y, a continuación, haga clic en **Aceptar**.  
   
-7.  En la pestaña estructura de dimensiones, arrastre la `Full Name` de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en el **jerarquías** panel, debajo del **City** nivel.  
+7.  En la pestaña estructura de dimensiones, arrastre la `Full Name` de atributo de la **atributos** panel en el  **\<nuevo nivel >** de celda en la **jerarquías** panel, debajo del **Ciudad** nivel.  
   
 8.  En el menú **Archivo** , haga clic en **Guardar todo**.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "36197274"
   
     -   `State-Province`  
   
-3.  En la ventana Propiedades, haga clic en el **AttributeHierarchyDisplayFolder** campo de propiedad en la parte superior (posible que deba dirigir a él para ver el nombre completo) y, a continuación, escriba `Location`.  
+3.  En la ventana Propiedades, haga clic en el **AttributeHierarchyDisplayFolder** campo de propiedad en la parte superior (es posible que necesite para que apunte a ella para ver el nombre completo) y, a continuación, escriba `Location`.  
   
 4.  En el **jerarquías** panel, haga clic en `Customer Geography`y, a continuación, en la ventana Propiedades de la derecha, seleccione `Location` como el valor de la **DisplayFolder** propiedad.  
   
@@ -168,12 +168,12 @@ ms.locfileid: "36197274"
   
     -   **Teléfono**  
   
-8.  En la ventana Propiedades, haga clic en el **AttributeHierarchyDisplayFolder** campo de propiedad y el tipo `Contacts`.  
+8.  En la ventana Propiedades, haga clic en el **AttributeHierarchyDisplayFolder** campo de propiedad y tipo `Contacts`.  
   
 9. En el menú **Archivo** , haga clic en **Guardar todo**.  
   
 ## <a name="defining-composite-keycolumns"></a>Definir KeyColumns compuestas  
- La propiedad **KeyColumns** contiene la columna o columnas que representan la clave para el atributo. En esta lección, creará una clave compuesta para la **City** y `State-Province` atributos. Las claves compuestas pueden resultar de utilidad cuando necesite identificar un atributo de forma inequívoca. Por ejemplo, al definir las relaciones de atributo más adelante en este tutorial, un **City** atributo debe identificar de forma exclusiva un `State-Province` atributo. Sin embargo, podrían existir varias ciudades con el mismo nombre en estados diferentes. Por este motivo, deberá crear una clave compuesta formada por las columnas **StateProvinceName** y **City** para el atributo **City** . Para más información, vea [Modificar la propiedad KeyColumns de un atributo](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
+ La propiedad **KeyColumns** contiene la columna o columnas que representan la clave para el atributo. En esta lección, creará una clave compuesta para la **Ciudad** y `State-Province` atributos. Las claves compuestas pueden resultar de utilidad cuando necesite identificar un atributo de forma inequívoca. Por ejemplo, al definir las relaciones de atributo más adelante en este tutorial, un **Ciudad** atributo debe identificar exclusivamente un `State-Province` atributo. Sin embargo, podrían existir varias ciudades con el mismo nombre en estados diferentes. Por este motivo, deberá crear una clave compuesta formada por las columnas **StateProvinceName** y **City** para el atributo **City** . Para más información, vea [Modificar la propiedad KeyColumns de un atributo](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
 #### <a name="to-define-composite-keycolumns-for-the-city-attribute"></a>Para definir KeyColumns compuestas para el atributo City  
   
@@ -209,7 +209,7 @@ ms.locfileid: "36197274"
   
 5.  Haga clic en **Aceptar**.  
   
-6.  Para establecer el **NameColumn** propiedad de la `State-Province` atributo, haga clic en el **NameColumn** campo en la ventana Propiedades y, a continuación, haga clic en el botón Examinar (**...** ) botón.  
+6.  Para establecer el **NameColumn** propiedad de la `State-Province` atributo, haga clic en el **NameColumn** en la ventana Propiedades de campo y, a continuación, haga clic en el (**...** ) botón.  
   
 7.  En el cuadro de diálogo **Columna de nombre** , en la lista **Columna de origen** , seleccione **StateProvinceName**y, después, haga clic en **Aceptar**.  
   
@@ -232,7 +232,7 @@ ms.locfileid: "36197274"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  En el diagrama, haga clic en el `State-Province` de atributo y, a continuación, seleccione **nueva relación de atributo**.  
+6.  En el diagrama, haga clic en el `State-Province` atributo y, a continuación, seleccione **nueva relación de atributo**.  
   
 7.  En el **Crear relación de atributo** cuadro de diálogo, el **atributo de origen** es `State-Province`. Establecer el **atributo relacionado** a `Country-Region`.  
   
@@ -251,7 +251,7 @@ ms.locfileid: "36197274"
   
 2.  Después de que aparezca el mensaje **La implementación finalizó correctamente** , haga clic en la pestaña **Explorador** del Diseñador de dimensiones para la dimensión Customer y, después, haga clic en el botón Volver a conectar en el lado izquierdo de la barra de herramientas del diseñador.  
   
-3.  Compruebe que `Customer Geography` está seleccionado en el **jerarquía** lista y, a continuación, en el panel Explorador, expanda **todos los**, expanda **Australia**, expanda **sur nueva Gales**y, a continuación, expanda **Coffs Harbour**.  
+3.  Compruebe que `Customer Geography` está seleccionado en el **jerarquía** lista y, a continuación, en el panel del explorador, expanda **todas**, expanda **Australia**, expanda **sur nuevo Wales**y, a continuación, expanda **Coffs Harbour**.  
   
      El explorador muestra los clientes de la ciudad.  
   

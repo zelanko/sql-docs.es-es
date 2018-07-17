@@ -25,7 +25,6 @@
 ## [Usar el Asistente para copiar bases de datos](use-the-copy-database-wizard.md)  
 ## [Copiar bases de datos con Copias de seguridad y restauración](copy-databases-with-backup-and-restore.md)  
 ## [Publicar una base de datos (SQL Server Management Studio)](publish-a-database-sql-server-management-studio.md)  
-## [Implementar una base de datos de SQL Server en una máquina virtual de Microsoft Azure](deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  
 # [Adjuntar y separar bases de datos](database-detach-and-attach-sql-server.md)  
 ## [Mover una base de datos mediante Separar y Adjuntar (Transact-SQL)](move-a-database-using-detach-and-attach-transact-sql.md)  
 ## [Actualizar una base de datos mediante Separar y Adjuntar (Transact-SQL)](upgrade-a-database-using-detach-and-attach-transact-sql.md)  

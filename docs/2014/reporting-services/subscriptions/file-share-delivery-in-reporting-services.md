@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3bcb077bc785005557f20b96722f5aeb94c58234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4123ae77852bf0ccde4229644393f8160ffb391
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331215"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega a recursos compartidos de archivos en Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incorpora una extensión de entrega a recursos compartidos de archivos que permite entregar un informe a una carpeta. Esta extensión está disponible de forma predeterminada y no requiere configuración adicional. Para que la entrega de archivos sea satisfactoria, debe establecer permisos de escritura en la carpeta compartida. Además, los usuarios que necesitan acceso a los informes deben tener permisos de lectura en la carpeta compartida.  
@@ -71,7 +71,7 @@ ms.locfileid: "36106300"
   
  Se pueden especificar opciones de sobrescritura a fin de volver a utilizar el mismo nombre de archivo para cada entrega de informe o para crear un archivo nuevo. Para sobrescribir el archivo, debe utilizar el mismo nombre de archivo y la misma extensión.  
   
- Un método alternativo para crear archivos exclusivos para cada entrega consiste en incluir una marca de tiempo en el nombre del archivo. Para ello, agregue el `@timestamp` variable con el nombre de archivo (por ejemplo, *CompanySales@timestamp*). De este modo, el nombre del archivo será exclusivo por definición, por lo que no se sobrescribirá nunca.  
+ Un método alternativo para crear archivos exclusivos para cada entrega consiste en incluir una marca de tiempo en el nombre del archivo. Para ello, agregue el `@timestamp` variable para el nombre de archivo (por ejemplo, *CompanySales@timestamp*). De este modo, el nombre del archivo será exclusivo por definición, por lo que no se sobrescribirá nunca.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear, modificar y eliminar suscripciones estándares &#40;Reporting Services en modo nativo&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  

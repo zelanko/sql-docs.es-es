@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 12: Detectar conocimiento (detección de conocimiento) | Documentos de Microsoft'
+title: 'Tarea 12: Detectar conocimiento (detección de conocimiento) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,45 +10,45 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b608a384e5281134ae951fdfeca0e89234c4a32a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 04508f02f6e7bf2daa19117406cace4944a32d36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36113269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317425"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tarea 12: detectar conocimiento (detección de conocimiento)
   En esta tarea, realizará la **Knowledgediscovery** actividad en **Id. de proveedor** y **Supplier Name** dominios. En este escenario, el proceso de detección de conocimiento importa principalmente valores de estos dos dominios.  
   
- En este tutorial, empezó a crear la base de conocimiento desde el principio. También puede empezar a crear una base de conocimiento realizando una actividad de detección de conocimiento. Al hacer clic en **crear una Base de conocimiento** en la página principal, el cliente DQS le lleva a una página con **Domain Management** actividad seleccionada para la actividad. Puede cambiar la **actividad** a **Knowledgediscovery** y, a continuación, en la página siguiente puede crear dominios como parte del proceso de detección de conocimiento. Vea [Perform Knowledge Discovery](http://msdn.microsoft.com/library/hh510398.aspx) para obtener más detalles.  
+ En este tutorial, empezó a crear la base de conocimiento desde el principio. También puede empezar a crear una base de conocimiento realizando una actividad de detección de conocimiento. Al hacer clic en **crear una Base de conocimiento** en la página principal, el cliente DQS le lleva a una página con **Domain Management** actividad seleccionada para la actividad. Puede cambiar el **actividad** a **Knowledgediscovery** y, a continuación, en la página siguiente puede crear dominios como parte del proceso de detección de conocimiento. Consulte [Perform Knowledge Discovery](http://msdn.microsoft.com/library/hh510398.aspx) para obtener más detalles.  
   
-1.  En la página principal del cliente de DQS, en la **Base de conocimiento reciente** sección, haga clic en **flecha derecha** junto a la **proveedores** base de conocimiento y haga clic en **conocimiento Detección de**. Como alternativa, puede hacer clic en **abrir Base de conocimiento**, seleccione **proveedores** desde el **lista de bases de conocimiento**, seleccione **Knowledgediscovery**como **actividad** y haga clic en **siguiente**.  
+1.  En la página principal del cliente de DQS, en el **Base de conocimiento reciente** sección, haga clic en **flecha derecha** junto a la **proveedores** knowledge base y haga clic en **conocimiento Detección**. Como alternativa, puede hacer clic en **abrir Base de conocimiento**, seleccione **proveedores** desde el **lista de bases de conocimiento**, seleccione **Knowledgediscovery**como **actividad** y haga clic en **siguiente**.  
   
-     ![Menú de detección de conocimiento en Main página](../../2014/tutorials/media/et-discoveringknowledge-01.jpg "menú de detección de conocimiento en Main página")  
+     ![Menú de la detección de conocimiento en Main página](../../2014/tutorials/media/et-discoveringknowledge-01.jpg "menú de detección de conocimiento en Main página")  
   
-2.  Seleccione **un archivo de Excel** para **origen de datos**.  
+2.  Seleccione **el archivo de Excel** para **origen de datos**.  
   
-3.  Haga clic en **examinar**, desplácese y seleccione **Suppliers.xls**y haga clic en **abiertos**.  
+3.  Haga clic en **examinar**, desplácese y seleccione **Suppliers.xls**y haga clic en **abierto**.  
   
-4.  Seleccione **proveedores para la detección** para **hoja de cálculo**.  
+4.  Seleccione **Suppliers for Discovery** para **hoja de cálculo**.  
   
-5.  En el **asignaciones** sección, asigne **SupplierID** columna desde la **Excel** del archivo a la **Id. de proveedor** dominio y  **Nombre de proveedor** columna a la **Supplier Name** dominio mediante el uso de **listas desplegables**. El archivo de Excel incluye datos de ejemplo para la **Id. de proveedor** y **Supplier Name** dominios. En el proceso de detección, puede seleccionar los dominios para los que desea detectar valores. Puede crear dominios en esta página y asignar las columnas de origen a esos dominios. No es infrecuente crear dominios durante la actividad de detección de conocimiento en lugar de crear dominios durante la actividad de administración de dominios.  
+5.  En el **asignaciones** sección, asigne **SupplierID** columna desde la **Excel** del archivo a la **Id. de proveedor** dominio y  **Nombre de proveedor** columna a la **Supplier Name** dominio mediante el uso de **listas desplegables**. El archivo de Excel incluye datos de ejemplo para el **Id. de proveedor** y **Supplier Name** dominios. En el proceso de detección, puede seleccionar los dominios para los que desea detectar valores. Puede crear dominios en esta página y asignar las columnas de origen a esos dominios. No es infrecuente crear dominios durante la actividad de detección de conocimiento en lugar de crear dominios durante la actividad de administración de dominios.  
   
      ![Asignar la página del proceso de detección](../../2014/tutorials/media/et-discoveringknowledge-02.jpg "asignar la página del proceso de detección")  
   
 6.  Haga clic en **siguiente** para cambiar a la **Discover** página.  
   
-7.  En el **Discover** página, haga clic en **iniciar** para iniciar el proceso de detección. La detección se realiza en las columnas **SupplierID** y **Supplier Name** en el **Suppliers.xls** archivo. El **Id. de proveedor** y **Supplier Name** dominios se deben rellenar con el conocimiento extraído de la detección.  
+7.  En el **Discover** página, haga clic en **iniciar** para iniciar el proceso de detección. La detección se realiza en las columnas **SupplierID** y **Supplier Name** en el **Suppliers.xls** archivo. El **Id. de proveedor** y **Supplier Name** dominios deben rellenarse con el conocimiento extraído de la detección.  
   
-     ![Detección de página del proceso de detección de](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "descubrir página de proceso de detección")  
+     ![Descubrir página de proceso de detección](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "descubrir página de proceso de detección")  
   
-8.  Una vez completado el análisis, revise el **estadísticas de origen** en el **pestaña generador de perfiles** en la parte inferior de la página. Observe que 10 nuevos registros con 20 valores en total (**SupplierID** y **Supplier Name** los valores de la **hoja de cálculo de Excel**) detectados. También verá el número de valores que son nuevos, únicos, nuevos y únicos, y válidos. En el cuadro de lista de la derecha, puede ver más detalles sobre cada dominio implicado en el proceso de detección. Si mantiene el mouse sobre la barra de estado en la columna Integridad, puede ver si faltan valores en las columnas del origen.  
+8.  Una vez completado el análisis, revise el **estadísticas de origen** en el **ficha Profiler** en la parte inferior de la página. Tenga en cuenta que 10 nuevos registros con 20 valores en total (**SupplierID** y **Supplier Name** los valores de la **hoja de cálculo de Excel**) detectados. También verá el número de valores que son nuevos, únicos, nuevos y únicos, y válidos. En el cuadro de lista de la derecha, puede ver más detalles sobre cada dominio implicado en el proceso de detección. Si mantiene el mouse sobre la barra de estado en la columna Integridad, puede ver si faltan valores en las columnas del origen.  
   
      ![Resultados de la detección de conocimiento](../../2014/tutorials/media/et-discoveringknowledge-04.jpg "resultados de la detección de conocimiento")  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36113269"
   
 11. En el panel derecho, haga clic en **Lazy Country Storex** (Observe la 'x' al final) y seleccione **Lazy Country Store**. DQS sugiere este cambio después de ejecutar el corrector ortográfico en el dominio. De forma predeterminada, el corrector ortográfico está habilitado en los dominios que crea.  
   
-     ![Corrija el nombre de proveedor - Lazy Country Store](../../2014/tutorials/media/et-discoveringknowledge-05.jpg "corregir el nombre de proveedor - Lazy Country Store")  
+     ![Corrija el nombre de proveedor - Lazy Store del país](../../2014/tutorials/media/et-discoveringknowledge-05.jpg "corrija el nombre de proveedor - Lazy Store del país")  
   
 12. En la lista de valores de dominio, confirme que el valor **Lazy Country Storex** se establece como un error (rojo **X** marcar) con **Lazy Country Store** como la corrección y también el **Lazy Country Store** también se agrega como un valor válido.  
   
@@ -68,11 +68,11 @@ ms.locfileid: "36113269"
   
 14. En **SQL Server Data Quality Services** cuadro de diálogo, haga clic en **publicar**.  
   
-15. Haga clic en **Aceptar** en el cuadro de mensaje de confirmación.  
+15. Haga clic en **Aceptar** en el cuadro de mensaje de éxito.  
   
      Ha completado la primera lección del tutorial.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Lección 2: Limpiar datos de proveedor con la Base de conocimiento proveedores](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
+ [Lección 2: Limpiar datos de proveedor con la base de conocimiento Proveedores](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
   
   

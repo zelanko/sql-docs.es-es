@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 10: Agregar la transformación Agrupación aproximada para identificar duplicados | Documentos de Microsoft'
+title: 'Tarea 10: Agregar la transformación Agrupación aproximada para identificar duplicados | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,25 +10,25 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 90b2b323-babd-464a-8914-9dc5e66aca74
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cf9ad3dff4737d7308e7ec3434985b18015f29d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 843d79da1d5e9aba58a80ea93ee36a68cd689916
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36111932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312755"
 ---
 # <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Tarea 10: agregar la transformación Agrupación aproximada para identificar duplicados
-  En esta tarea, agregará una transformación Agrupación aproximada al flujo de datos. La transformación Agrupación aproximada puede ayudar a identificar duplicados en los datos de origen. Vea [la transformación Agrupación aproximada](http://msdn.microsoft.com/library/ms141764.aspx) para obtener más detalles.  
+  En esta tarea, agregará una transformación Agrupación aproximada al flujo de datos. La transformación Agrupación aproximada puede ayudar a identificar duplicados en los datos de origen. Consulte [la transformación Agrupación aproximada](http://msdn.microsoft.com/library/ms141764.aspx) para obtener más detalles.  
   
-1.  Arrastrar y colocar **agrupación aproximada** transformar en **otras transformaciones** en el **cuadro de herramientas de SSIS** a la **de flujo de datos** en la ficha  **Combinar registros correctos y corregidos**.  
+1.  Arrastrar y colocar **agrupación aproximada** transformar en **otras transformaciones** en el **cuadro de herramientas de SSIS** a la **de flujo de datos** pestaña  **Combinar registros correctos y corregidos**.  
   
-2.  Haga clic en **agrupación aproximada** transformar en el **de flujo de datos** ficha y haga clic en **cambiar el nombre de**. Tipo de **agrupar proveedores con Id. coincidentes** y presione **ENTRAR**.  
+2.  Haga clic en **agrupación aproximada** transformar en el **de flujo de datos** ficha y haga clic en **cambiar el nombre**. Tipo **agrupar proveedores con Id. coincidentes** y presione **ENTRAR**.  
   
 3.  Conectar **combinar registros correctos y corregidos** a **agrupar proveedores con Id. coincidentes** mediante el conector azul.  
   
@@ -36,13 +36,13 @@ ms.locfileid: "36111932"
   
 4.  Haga doble clic en **agrupar proveedores con Id. coincidentes**.  
   
-5.  En el **Editor de transformación Agrupación aproximada**, haga clic en **New** junto a **lista desplegable de OLE DB Connection Manager** para iniciar **configurar conexiones OLE DB Administrador de** cuadro de diálogo.  
+5.  En el **Editor de transformación Agrupación aproximada**, haga clic en **New** junto a **lista desplegable de administrador de conexiones OLE DB** para iniciar **configurar conexiones OLE DB Administrador de** cuadro de diálogo.  
   
 6.  En el cuadro de diálogo, haga clic en **New** para iniciar **Connection Manager** cuadro de diálogo.  
   
-7.  Tipo de **(local)** o **período** (.) para el nombre del servidor.  
+7.  Tipo **(local)** o **período** (.) para el nombre del servidor.  
   
-8.  Seleccione **MDS** para **seleccione o escriba un nombre de base de datos** campo. Va a usar la base de datos MDS como almacenamiento temporal para la **transformación Agrupación aproximada**. El **agrupación aproximada** transformación requiere una conexión a una instancia de SQL Server para crear las tablas temporales de SQL Server que necesita el algoritmo de transformación para realizar su trabajo. Puede crear una base de datos o usar otra base de datos existente con este fin.  
+8.  Seleccione **MDS** para **seleccione o escriba un nombre de base de datos** campo. Usará la base de datos MDS como almacenamiento temporal para el **transformación Agrupación aproximada**. El **agrupación aproximada** transformación requiere una conexión a una instancia de SQL Server para crear las tablas temporales de SQL Server que necesita el algoritmo de transformación para realizar su trabajo. Puede crear una base de datos o usar otra base de datos existente con este fin.  
   
 9. Haga clic en **Probar conexión** para probar la conexión y haga clic en **Aceptar** en el cuadro de mensaje.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36111932"
   
 11. Seleccione **(local). MDS** (o **localhost. MDS**) desde el **lista de conexiones de datos** y haga clic en **Aceptar**.  
   
-12. En el **Editor de transformación Agrupación aproximada**, confirme que **(local). MDS** o **localhost. MDS** está seleccionada para la **OLE DB Connection Manager**.  
+12. En el **Editor de transformación Agrupación aproximada**, confirme que **(local). MDS** o **localhost. MDS** está seleccionada para la **Administrador de conexiones OLE DB**.  
   
 13. Cambie a la **columnas** ficha.  
   

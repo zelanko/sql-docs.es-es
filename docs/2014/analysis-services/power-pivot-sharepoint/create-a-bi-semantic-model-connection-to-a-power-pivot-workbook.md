@@ -1,5 +1,5 @@
 ---
-title: Crear una conexión de modelo semántico de BI a un libro de PowerPivot | Documentos de Microsoft
+title: Crear una conexión de modelo semántico de BI a un libro PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34e81c0f6023b6dee0c9770fdfde89a92eb2afc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab47a88ef1bda109cca1abbe27a975d9df9290ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36196750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328485"
 ---
-# <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Crear una conexión de modelo semántico de BI a un libro de PowerPivot
+# <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Crear una conexión de modelo semántico de BI a un libro PowerPivot
   Utilice la información de este tema para configurar una conexión de modelo semántico de BI que redirija a un libro PowerPivot de la misma granja.  
   
  Después de crear una conexión de modelo semántico de BI y configurar los permisos de SharePoint, puede utilizarla como origen de datos para Excel o informes de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
@@ -41,7 +41,7 @@ ms.locfileid: "36196750"
 ##  <a name="bkmk_prereq"></a> Requisitos previos de revisión  
  Debe tener permisos de contribución o superiores para poder crear un archivo de conexión de modelo semántico de BI.  
   
- Debe tener una biblioteca que admita el tipo de contenido de la conexión de modelo semántico de BI. Para obtener más información, consulte [agregar un BI semántica modelo de conexión de tipo de contenido a una biblioteca &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
+ Debe tener una biblioteca que admita el tipo de contenido de la conexión de modelo semántico de BI. Para obtener más información, consulte [agregar BI semántica modelo de conexión de tipo de contenido en una biblioteca de &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
  Debe conocer la dirección URL del libro de PowerPivot para el que está configurando una conexión de modelo semántico de BI (por ejemplo, http://adventure-works/shared compartidos/milibro.xlsx). El libro debe estar en la misma granja.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36196750"
   
 2.  Establecer el **Server** propiedad a la dirección URL de SharePoint del libro PowerPivot (por ejemplo,  **http://mysharepoint/shared compartidos/milibro.xlsx**. En una implementación de PowerPivot para SharePoint, los datos se pueden cargar en cualquier servidor de la granja. Por este motivo, las conexiones de origen de datos a datos PowerPivot especifican solo la ruta de acceso al libro. El Servicio de sistema de PowerPivot determina qué servidor carga los datos.  
   
-     No utilice la **base de datos** propiedad; no se utiliza al especificar la ubicación de un libro de PowerPivot.  
+     No utilice el **base de datos** propiedad; no se utiliza al especificar la ubicación de un libro PowerPivot.  
   
      El aspecto de su página deberá ser parecido al de la ilustración siguiente.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36196750"
   
 ## <a name="see-also"></a>Vea también  
  [Conexión de modelo semántico de BI PowerPivot &#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
- [Utilizar una conexión de modelo semántico de BI en Excel o Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [Usar una conexión de modelo semántico de BI en Excel o Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [Crear una conexión de modelo semántico de BI a una base de datos de modelo tabular](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

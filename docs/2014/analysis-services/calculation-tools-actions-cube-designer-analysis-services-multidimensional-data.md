@@ -1,5 +1,5 @@
 ---
-title: Herramientas de cálculo (pestaña acciones, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Herramientas de cálculo (pestaña acciones, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionsview.calculationtoolspane.f1
 ms.assetid: a3370370-43cd-4cc2-bb9f-c0d988b96f05
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a0fe659397a801fa69c2bb4ce2e26d7e087f9b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0613734c2ba4c2a8618d46854f2a3a7554068c71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328835"
 ---
 # <a name="calculation-tools-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Herramientas de cálculo (pestaña Acciones, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Herramientas de cálculo** en la pestaña **Acciones** del Diseñador de cubos para explorar metadatos, funciones y plantillas disponibles para utilizarlas en acciones, acciones de obtención de detalles y acciones de informe.  
@@ -50,8 +50,8 @@ ms.locfileid: "36200033"
   
 |Opción|Definición|  
 |------------|----------------|  
-|**Copiar**|Seleccione esta opción para copiar el elemento seleccionado en **Metadatos** o **Funciones** en el Portapapeles.<br /><br /> Tenga en cuenta que esta opción no aparece si **plantillas** está seleccionada. Tenga en cuenta que esta opción está deshabilitada si no se puede copiar el miembro seleccionado, como el **conjuntos de** carpeta de una dimensión mostrada en **metadatos** o la carpeta de grupo de función para una función mostrada en  **Funciones**.|  
-|**Filtrar miembros**|Seleccione esta opción para mostrar el cuadro de diálogo **Filtrar miembros** y filtrar los miembros del elemento seleccionado en **Metadatos**. Para más información sobre el cuadro de diálogo **Filtrar miembros**, vea [Cuadro de diálogo Filtrar miembros &#40;Analysis Services - Datos multidimensionales&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Tenga en cuenta que esta opción solo se muestra si **metadatos** está seleccionada. Tenga en cuenta que esta opción está habilitada sólo si se selecciona un nivel de un atributo en **metadatos**.|  
+|**Copiar**|Seleccione esta opción para copiar el elemento seleccionado en **Metadatos** o **Funciones** en el Portapapeles.<br /><br /> Tenga en cuenta que esta opción no aparece si **plantillas** está seleccionada. Tenga en cuenta que esta opción está deshabilitada si no se puede copiar el miembro seleccionado, como el **conjuntos** carpeta de una dimensión mostrada en **metadatos** o la carpeta del grupo de función para una función mostrada en  **Funciones**.|  
+|**Filtrar miembros**|Seleccione esta opción para mostrar el cuadro de diálogo **Filtrar miembros** y filtrar los miembros del elemento seleccionado en **Metadatos**. Para más información sobre el cuadro de diálogo **Filtrar miembros**, vea [Cuadro de diálogo Filtrar miembros &#40;Analysis Services - Datos multidimensionales&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Tenga en cuenta que esta opción aparece sólo si **metadatos** está seleccionada. Tenga en cuenta que esta opción está habilitada sólo si se selecciona un nivel para un atributo en **metadatos**.|  
 |**Agregar plantilla**|Seleccione esta opción para agregar al cubo una nueva acción, una acción de obtención de detalles o una acción de informe según la plantilla seleccionada y para mostrar, respectivamente, el **Editor de Formulario de acción estándar**, el **Editor de Formulario de acción de obtención de detalles**o el **Editor de Formulario de acción de informe**.<br /><br /> Nota: Esta opción aparece sólo si **metadatos** está seleccionada.|  
   
 ## <a name="see-also"></a>Vea también  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 795ff8c9d1ebc751bdf0a2acfd57b158ed64c956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a13bd70e82e219a3935f0076481df9de7b683e23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318335"
 ---
 # <a name="reinitialize-a-subscription"></a>Reinicializar una suscripción
   En este tema se describe cómo reinicializar una suscripción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO). Las suscripciones individuales se pueden marcar para reinicialización de manera que se aplique una nueva instantánea durante la siguiente sincronización.  
@@ -177,7 +177,7 @@ ms.locfileid: "36106321"
 3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto.  
   
     > [!NOTE]  
-    >  Si este método devuelve `false`, significa que las propiedades de suscripción en el paso 2 se definieron incorrectamente o no existe la suscripción de extracción.  
+    >  Si este método devuelve `false`, las propiedades de suscripción en el paso 2 se definieron incorrectamente o la suscripción de extracción no existe.  
   
 4.  Llame al método <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> . Este método marca la suscripción para la reinicialización.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "36106321"
 3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto.  
   
     > [!NOTE]  
-    >  Si este método devuelve `false`, significa que las propiedades de suscripción en el paso 2 se definieron incorrectamente o no existe la suscripción de inserción.  
+    >  Si este método devuelve `false`, las propiedades de suscripción en el paso 2 se definieron incorrectamente o la suscripción de inserción no existe.  
   
 4.  Llame al método <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> . Este método marca la suscripción para la reinicialización.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36106321"
 3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto.  
   
     > [!NOTE]  
-    >  Si este método devuelve `false`, significa que las propiedades de suscripción en el paso 2 se definieron incorrectamente o no existe la suscripción de extracción.  
+    >  Si este método devuelve `false`, las propiedades de suscripción en el paso 2 se definieron incorrectamente o la suscripción de extracción no existe.  
   
 4.  Llame al método <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> . Pase un valor de `true` para cargar cambios en el Suscriptor antes de la reinicialización o un valor de `false` para reinicializar y perder cualquier cambio pendiente en el Suscriptor. Este método marca la suscripción para la reinicialización.  
   
@@ -225,7 +225,7 @@ ms.locfileid: "36106321"
 3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto.  
   
     > [!NOTE]  
-    >  Si este método devuelve `false`, significa que las propiedades de suscripción en el paso 2 se definieron incorrectamente o no existe la suscripción de inserción.  
+    >  Si este método devuelve `false`, las propiedades de suscripción en el paso 2 se definieron incorrectamente o la suscripción de inserción no existe.  
   
 4.  Llame al método <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> . Pase un valor de `true` para cargar cambios en el Suscriptor antes de la reinicialización o un valor de `false` para reinicializar y perder cualquier cambio pendiente en el Suscriptor. Este método marca la suscripción para la reinicialización.  
   

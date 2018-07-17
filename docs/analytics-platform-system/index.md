@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 26c59dc36d0ba3714dca4dbca10e8ec7b09b9235
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 3fc2230d22131da80ee1250c08b19fc16e4aa651
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31544977"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909746"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 Microsoft Analytics Platform System (APS), una plataforma de datos diseñada para almacenamiento de datos y análisis de macrodatos, ofrece integración profunda de datos, procesamiento de consultas de alta velocidad, almacenamiento altamente escalable y mantenimiento sencillo de las soluciones de inteligencia empresarial de un extremo a otro.  
@@ -23,9 +23,9 @@ Microsoft Analytics Platform System (APS), una plataforma de datos diseñada par
   
 Analytics Platform System hospeda Almacenamiento de datos paralelo (PDW) de SQL Server, que es el software que ejecuta el almacenamiento de datos de procesamiento paralelo masivo (MPP).  
   
-La tecnología PolyBase combina datos relacionales de PDW con datos de Hadoop de varios orígenes, como Hortonworks en Windows Server, Hortonworks en Linux, Cloudera en Linux, Azure Blob Storage de HDInsight y HDInsight en Analytics Platform System. Estas capacidades avanzadas de integración de datos, más una profunda integración con herramientas de inteligencia empresarial, permiten que Analytics Platform System realice análisis integrados que facilitan que en su empresa se tomen decisiones más precisas y fundamentadas.  
+La tecnología PolyBase combina datos relacionales de PDW con datos de Hadoop de varios orígenes, como Hortonworks en Windows Server, Hortonworks en Linux, Cloudera en Linux y Azure Blob Storage de HDInsight. Estas capacidades avanzadas de integración de datos, más una profunda integración con herramientas de inteligencia empresarial, permiten que Analytics Platform System realice análisis integrados que facilitan que en su empresa se tomen decisiones más precisas y fundamentadas.  
   
-Analytics Platform System se distribuye para su centro de datos como un dispositivo de hardware y software previamente instalados y configurados para ejecutar varias cargas de trabajo. Al comprar Analytics Platform System, adquiere nodos Compute para PDW y, opcionalmente, nodos adicionales para HDInsight según sus requisitos empresariales.  
+Analytics Platform System se distribuye para su centro de datos como un dispositivo de hardware y software previamente instalados y configurados para ejecutar varias cargas de trabajo. Al comprar Analytics Platform System, adquiere nodos Compute para PDW según sus requisitos empresariales.  
   
 Analytics Platform System no solo es rápido y escalable, sino que se ha diseñado con alta redundancia y disponibilidad para ser una plataforma confiable para la mayoría de sus datos empresariales críticos. El diseño de Analytics Platform System es simple para que sea sencillo utilizarlo y administrarlo. La tecnología PolyBase de PDW para analizar los datos de Hadoop y su profunda integración con herramientas de inteligencia empresarial lo convierten en una plataforma completa para crear soluciones de un extremo a otro.  
   

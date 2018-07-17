@@ -1,13 +1,11 @@
 ---
-title: Depurar objetos de base de datos CLR | Documentos de Microsoft
+title: Depurar objetos de base de datos CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,23 +16,23 @@ helpviewer_keywords:
 - common language runtime [SQL Server], debugging
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b25672deb988b6bf1940c242c5ae91e31264bea2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 3876977fec397d9f053b750c4cfdae39ef5a50ec
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36198704"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354367"
 ---
 # <a name="debugging-clr-database-objects"></a>Depurar objetos de bases de datos CLR
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona compatibilidad con la depuración de objetos de [!INCLUDE[tsql](../../../includes/tsql-md.md)] y Common Language Runtime (CLR) en la base de datos. Los aspectos clave de la depuración en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] son la facilidad de configuración y uso, y la integración del depurador de SQL Server con el depurador de Microsoft Visual Studio. Además, la depuración se produce en todos los lenguajes. Los usuarios pueden pasar sin problemas a objetos de CLR desde [!INCLUDE[tsql](../../../includes/tsql-md.md)] y viceversa. El depurador de Transact-SQL en SQL Server Management Studio no se puede utilizar para depurar objetos de base de datos administrados, pero se pueden depurar los objetos utilizando los depuradores de Visual Studio. La depuración de objetos de base de datos administrados en Visual Studio admite todas las funciones habituales de depuración, como las instrucciones "ir a" y "paso a paso por procedimientos" dentro de rutinas que se ejecutan en el servidor. Los depuradores pueden establecer puntos de interrupción, inspeccionar la pila de llamadas, inspeccionar variables y modificar valores de variables durante la depuración. Tenga en cuenta que Visual Studio .NET 2003 no puede utilizarse para programar o depurar la integración CLR. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye .NET Framework preinstalado y Visual Studio .NET 2003 no puede utilizar los ensamblados de .NET Framework 2.0.  
   
- Para obtener más información sobre la depuración de código administrado con Visual Studio, vea el "[depurar código administrado](http://go.microsoft.com/fwlink/?LinkId=120377)" tema en la documentación de Visual Studio.  
+ Para obtener más información sobre cómo depurar código administrado con Visual Studio, consulte el "[Debugging Managed Code](http://go.microsoft.com/fwlink/?LinkId=120377)" tema en la documentación de Visual Studio.  
   
 ## <a name="debugging-permissions-and-restrictions"></a>Permisos y restricciones de depuración  
- La depuración es una operación con privilegios elevados y, por tanto, sólo los miembros de la **sysadmin** rol fijo de servidor pueden hacer esto en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ La depuración es una operación con privilegios elevados y, por tanto, solo los miembros de la **sysadmin** fijo de servidor tienen permiso para ello, en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Las restricciones siguientes se aplican durante la depuración:  
   
@@ -59,13 +57,13 @@ ms.locfileid: "36198704"
   
 3.  Agregue código para el nuevo tipo al editor de texto. En la sección que figura más adelante en este tema, puede ver el código de ejemplo de un procedimiento almacenado de ejemplo.  
   
-4.  Agregue un script que pruebe el tipo. En **el Explorador de soluciones**, expanda la **TestScripts** directory haga doble clic en **Test.sql** para abrir el archivo de origen del script de prueba predeterminado. Agregue al editor de texto el script de prueba, uno que llame al código que se va a depurar. Vea más adelante un script de ejemplo.  
+4.  Agregue un script que pruebe el tipo. En **el Explorador de soluciones**, expanda el **TestScripts** directory haga doble clic en **Test.sql** para abrir el archivo de origen del script de prueba predeterminado. Agregue al editor de texto el script de prueba, uno que llame al código que se va a depurar. Vea más adelante un script de ejemplo.  
   
-5.  Coloque uno o más puntos de interrupción en el código fuente. Haga doble clic en una línea de código en el editor de texto, dentro de la función o rutina que desea depurar, y seleccione **punto de interrupción** y **Insertar punto de interrupción**. Se agrega el punto de interrupción, resaltando la línea de código en rojo.  
+5.  Coloque uno o más puntos de interrupción en el código fuente. Haga doble clic en una línea de código en el editor de texto dentro de la función o rutina que desea depurar, y seleccione **punto de interrupción** y **Insertar punto de interrupción**. Se agrega el punto de interrupción, resaltando la línea de código en rojo.  
   
 6.  En el **depurar** menú, seleccione **Iniciar depuración** para compilar, implementar y probar el proyecto. Se ejecutará el script de prueba de Test.sql y se llamará al objeto de base de datos administrado.  
   
-7.  Cuando la flecha amarilla que designa el puntero de instrucción aparece en el punto de interrupción, la ejecución del código se detiene y se puede empezar a depurar el objeto de base de datos administrado. También puede **paso a paso por** desde el **depurar** menú para avanzar el puntero de instrucción a la siguiente línea de código. El **locales** ventana se utiliza para observar el estado de los objetos actualmente resaltado por el puntero de instrucción. Las variables pueden agregarse a la **inspección** ventana. El estado de las variables inspeccionadas se puede observar en toda la sesión de depuración, no solo cuando la variable está en la línea de código resaltada actualmente por el puntero de instrucción. Seleccione Continuar en el menú Depurar para hacer avanzar el puntero de instrucción hasta el siguiente punto de interrupción o para completar la ejecución de la rutina si no hay más puntos de interrupción.  
+7.  Cuando la flecha amarilla que designa el puntero de instrucción aparece en el punto de interrupción, la ejecución del código se detiene y se puede empezar a depurar el objeto de base de datos administrado. También puede **saltar** desde el **depurar** menú para avanzar el puntero de instrucción a la siguiente línea de código. El **variables locales** ventana se utiliza para observar el estado de los objetos actualmente resaltado por el puntero de instrucción. Las variables se pueden agregar a la **inspección** ventana. El estado de las variables inspeccionadas se puede observar en toda la sesión de depuración, no solo cuando la variable está en la línea de código resaltada actualmente por el puntero de instrucción. Seleccione Continuar en el menú Depurar para hacer avanzar el puntero de instrucción hasta el siguiente punto de interrupción o para completar la ejecución de la rutina si no hay más puntos de interrupción.  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se devuelve la versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al autor de la llamada.  

@@ -1,11 +1,11 @@
 ---
-title: Las funciones con valores escalares CLR | Documentos de Microsoft
+title: Las funciones con valores escalares CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,19 +20,19 @@ caps.latest.revision: 81
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c15ca3b97b63d3f472705c5c7de0e9fe6d59779
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 6de41e4ceecc281515250812dd85ec439afaf2b8
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703186"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353527"
 ---
 # <a name="clr-scalar-valued-functions"></a>Funciones escalares de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Una función escalar (SVF) devuelve un único valor, como un valor de cadena, entero o de bit. Puede crear funciones escalares definidas por el usuario en código administrado mediante cualquier lenguaje de programación de .NET Framework. Estas funciones son accesibles para [!INCLUDE[tsql](../../includes/tsql-md.md)] u otro código administrado. Para obtener información acerca de las ventajas de la integración de CLR y elegir entre código administrado y [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [información general de la integración CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Requisitos de las funciones escalares de CLR  
- Las SVF de .NET Framework se implementan como métodos en una clase de un ensamblado de .NET Framework. Los parámetros de entrada y el tipo devuelto de una SVF pueden ser cualquiera de los tipos de datos escalares admitidos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], excepto **varchar**, **char**, **rowversion**, **texto**, **ntext**, **imagen**, **timestamp**, **tabla**, o **cursor** . Las SVF deben asegurar una coincidencia entre el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el tipo de datos de retorno del método de implementación. Para obtener más información acerca de las conversiones de tipo, consulte [asignación de datos de parámetro de CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Las SVF de .NET Framework se implementan como métodos en una clase de un ensamblado de .NET Framework. Los parámetros de entrada y el tipo devuelto de una SVF pueden ser cualquiera de los tipos de datos escalares admitidos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], excepto **varchar**, **char**, **rowversion**, **texto**, **ntext**, **imagen**, **timestamp**, **tabla**, o **cursor** . Las SVF deben asegurar una coincidencia entre el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el tipo de datos de retorno del método de implementación. Para obtener más información sobre las conversiones de tipos, vea [asignación de datos de parámetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
  Al implementar una SVF de .NET Framework SVF en un lenguaje .NET Framework, el atributo personalizado **SqlFunction** se puede especificar para incluir la información adicional de la función. El atributo **SqlFunction** indica tanto si la función obtiene acceso o modifica los datos como si no, si es determinista y si la función implica las operaciones de coma flotante.  
   
@@ -88,7 +88,7 @@ End Class
   
  Después, la función recibe el atributo personalizado **SqlFunction** , que se encuentra en el espacio de nombres **Microsoft.SqlServer.Server** . El atributo personalizado indica si la función definida por el usuario (UDF) utiliza o no el proveedor en proceso para leer los datos en el servidor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite a las UDF actualizar, insertar o eliminar datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede optimizar la ejecución de una UDF que no usa el proveedor en proceso. Esto se indica estableciendo **DataAccessKind** en **DataAccessKind.None**. En la línea siguiente, el método de destino es una estática pública (se comparte en Visual Basic .NET).  
   
- El **SqlContext** (clase), ubicado en el **Microsoft.SqlServer.Server** espacio de nombres, a continuación, puede tener acceso a un **SqlCommand** objeto con una conexión a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia que ya está configurado. Aunque no se usa aquí, el contexto de transacción actual también está disponible a través de la interfaz de programación de aplicaciones (API) **System.Transactions** .  
+ El **SqlContext** (clase), ubicado en el **Microsoft.SqlServer.Server** espacio de nombres, a continuación, puede tener acceso a un **SqlCommand** objeto con una conexión a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia que ya se ha configurado. Aunque no se usa aquí, el contexto de transacción actual también está disponible a través de la interfaz de programación de aplicaciones (API) **System.Transactions** .  
   
  Los desarrolladores que han escrito las aplicaciones cliente que usan los tipos situados en el espacio de nombres **System.Data.SqlClient** , deberían estar familiarizados con la mayoría de las líneas de código en el cuerpo de la función.  
   
@@ -135,7 +135,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 >  `/t:library` indica que se debe generar una biblioteca, en lugar de un ejecutable. Los ejecutables no se pueden registrar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Objetos de base de datos de Visual C++ compilan con **/CLR: pure** no se admiten para la ejecución en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por ejemplo, esos objetos de base de datos incluyen funciones escalares.  
+>  Objetos de base de datos de Visual C++ compilados con **/CLR: pure** no se admiten para su ejecución en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por ejemplo, esos objetos de base de datos incluyen funciones escalares.  
   
  La consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] y una invocación de ejemplo para registrar el ensamblado y una UDF son:  
   
@@ -155,7 +155,7 @@ GO
  Observe que el nombre de función expuesto en [!INCLUDE[tsql](../../includes/tsql-md.md)] no necesita coincidir con el nombre del método estático público de destino.  
   
 ## <a name="see-also"></a>Vea también  
- [La asignación de datos de parámetro CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
+ [Asignar datos de parámetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
  [Información general de atributos personalizados de integración de CLR](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
  [Funciones definidas por el usuario](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  [Acceso a datos de objetos de base de datos de CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  

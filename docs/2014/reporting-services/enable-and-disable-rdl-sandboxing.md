@@ -1,5 +1,5 @@
 ---
-title: Habilitar y deshabilitar el espacio aislado de RDL | Documentos de Microsoft
+title: Habilitar y deshabilitar el espacio aislado de RDL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0fefbebb9c56df87c83bb3b41ee508550a5f2113
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 519d65684224496608ce8ffbaf8130b3f7884967
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36200076"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311355"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Habilitar y deshabilitar el espacio seguro para RDL
   La característica de espacio aislado del lenguaje RDL (Report Definition Language) permite detectar y restringir el uso de tipos específicos de uso de recursos por parte de inquilinos individuales en un entorno donde varios inquilinos usan una única granja web de servidores de informes. Un ejemplo de esto es un escenario de servicios de hospedaje en el que podría mantener una única granja web de servidores de informes que utilicen varios inquilinos, y quizás compañías diferentes. Como administrador del servidor de informes, puede habilitar esta característica para alcanzar los siguientes objetivos:  
@@ -41,7 +41,7 @@ ms.locfileid: "36200076"
  En este tema se describe cada elemento en el <`RDLSandboxing`> elemento en el archivo RSReportServer.Config. Para más información sobre cómo modificar este archivo, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Un registro de seguimiento del servidor guarda la actividad relacionada con la característica de espacio aislado de RDL. Para obtener más información acerca de los registros de seguimiento, vea [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).  
   
 ## <a name="example-configuration"></a>Ejemplo de configuración  
- En el ejemplo siguiente se muestra la configuración y los valores de ejemplo para el <`RDLSandboxing`> elemento en el archivo RSReportServer.Config.  
+ El ejemplo siguiente muestra la configuración y los valores de ejemplo para el <`RDLSandboxing`> elemento en el archivo RSReportServer.Config.  
   
 ```  
 <RDLSandboxing>  
@@ -72,7 +72,7 @@ ms.locfileid: "36200076"
 |**Tipos**|Lista de los miembros que se permitirán en las expresiones RDL.|  
 |**Allow**|Tipo o conjunto de tipos que se permitirán en las expresiones RDL.|  
 |**Espacio de nombres**|Atributo de **Allow** que es el espacio de nombres que contiene uno o varios tipos que se aplican a Value. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
-|`AllowNew`|Atributo booleano de **Allow** que controla si se permite que las nuevas instancias del tipo se creen en expresiones RDL o en un elemento **\<Class>** de RDL.<br /><br /> Nota: Cuando `RDLSandboxing` está habilitada, no se puede crear nuevas matrices en expresiones RDL, independientemente de la configuración de `AllowNew`.|  
+|`AllowNew`|Atributo booleano de **Allow** que controla si se permite que las nuevas instancias del tipo se creen en expresiones RDL o en un elemento **\<Class>** de RDL.<br /><br /> Nota: Cuando `RDLSandboxing` está habilitada, no se pueden crear nuevas matrices en expresiones RDL, independientemente de la configuración `AllowNew`.|  
 |**Value**|Valor de **Allow** que es el nombre del tipo que se permitirá en las expresiones RDL. El valor **\*** indica que se permiten todos los tipos del espacio de nombres. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
 |**Miembros**|Para la lista de tipos que se incluyen en el elemento **\<Types>**, la lista de nombres de miembro que no se permiten en las expresiones RDL.|  
 |**Denegar**|Nombre de un miembro que no se permite en expresiones RDL. Esta propiedad no distingue entre mayúsculas y minúsculas.<br /><br /> Nota: Cuando se especifica **Deny** para un miembro, no se permite ningún miembro con este nombre para todos los tipos.|  
@@ -138,7 +138,7 @@ ms.locfileid: "36200076"
   
  Al agregar un tipo de un ensamblado personalizado a la lista de permitidos no se concede permiso de ejecución de forma explícita en el ensamblado. Debe modificar de forma específica el archivo de seguridad de acceso del código y proporcionar el permiso de ejecución en el ensamblado. Para más información, consulte [Code Access Security in Reporting Services](extensions/secure-development/code-access-security-in-reporting-services.md).  
   
-#### <a name="maintaining-the-deny-list-of-members"></a>Mantener la \<denegar > lista de miembros  
+#### <a name="maintaining-the-deny-list-of-members"></a>Mantener la \<Deny > lista de miembros  
  Al agregar un nuevo tipo a la lista de permitidos, use la siguiente lista para determinar cuándo tendrá que actualizar la lista de miembros bloqueados:  
   
 -   Al actualizar un ensamblado personalizado con una versión que introduce nuevos tipos.  
@@ -152,7 +152,7 @@ ms.locfileid: "36200076"
 -   Al actualizar un servidor de informes para administrar un esquema RDL posterior, porque se pueden haber agregado nuevos miembros a los tipos RDL.  
   
 ### <a name="working-with-operators-and-new"></a>Trabajar con operadores y New  
- De forma predeterminada, los operadores del lenguaje [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework siempre están permitidos, excepto para `New`. El `New` operador se controla mediante la `AllowNew` del atributo en el  **\<permitir >** elemento. Otros operadores de lenguaje, como el operador de descriptor de acceso de colección predeterminada `!` y [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework como macros de conversión `CInt`, siempre están permitidos.  
+ De forma predeterminada, los operadores del lenguaje [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework siempre están permitidos, excepto para `New`. El `New` operador se controla mediante el `AllowNew` atributo el  **\<permitir >** elemento. Otros operadores de lenguaje, como el operador de descriptor de acceso de colección predeterminado `!` y [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework, como las macros de conversión `CInt`, siempre están permitidos.  
   
  No se admite la adición de operadores a la lista de bloqueados, incluidos los operadores personalizados. Para excluir los operadores de un tipo, debe realizar las siguientes operaciones:  
   

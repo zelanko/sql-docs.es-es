@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
 - FTP snapshots [SQL Server replication]
 - snapshot replication [SQL Server], FTP
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 76f70c85774a84a1d6b7be8de3348c2f6162431b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4396b84840deb4a0973e3aae73183a551d54fce3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331535"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Entregar una instantánea mediante FTP
   En este tema se describe cómo entregar una instantánea a través de FTP en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -93,7 +93,7 @@ ms.locfileid: "36105350"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>Para habilitar la entrega de instantáneas a través de FTP para una publicación transaccional o de instantáneas  
   
-1.  En la base de datos de publicación del Publicador, ejecute [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique **@publication**, un valor de `true` para **@enabled_for_internet**y los valores adecuados para los parámetros siguientes:  
+1.  En la base de datos de publicación del Publicador, ejecute [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especificar **@publication**, un valor de `true` para **@enabled_for_internet**y los valores adecuados para los parámetros siguientes:  
   
     -   **@ftp_address** : la dirección del servidor FTP usada para entregar la instantánea  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36105350"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>Para habilitar la entrega de instantáneas a través de FTP para una publicación de combinación  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Especifique **@publication**, un valor de `true` para **@enabled_for_internet** y los valores adecuados para los parámetros siguientes:  
+1.  En la base de datos de publicación del publicador, ejecute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Especificar **@publication**, un valor de `true` para **@enabled_for_internet** y los valores adecuados para los parámetros siguientes:  
   
     -   **@ftp_address** : la dirección del servidor FTP usada para entregar la instantánea  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36105350"
   
 1.  En el publicador de la base de datos de suscripciones, ejecute [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Especifique **@publisher** y **@publication**.  
   
-    -   En el suscriptor de la base de datos de suscripciones, ejecute [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Especifique **@publisher**, **@publisher_db**, **@publication**, el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] las credenciales de Windows en la que el agente de distribución en el Suscriptor que se ejecuta durante **@job_login** y **@job_password**y un valor de `true` para **@use_ftp**.  
+    -   En el suscriptor de la base de datos de suscripciones, ejecute [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Especificar **@publisher**, **@publisher_db**, **@publication**, el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] credenciales de Windows con las que el agente de distribución en el Suscriptor que se ejecuta para **@job_login** y **@job_password**y un valor de `true` para **@use_ftp**.  
   
 2.  En la base de datos de publicación del publicador, ejecute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) para registrar la suscripción de extracción. Para obtener más información, consulte [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36105350"
   
 1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Especifique **@publisher** y **@publication**.  
   
-2.  En el suscriptor de la base de datos de suscripciones, ejecute [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql). Especifique **@publisher**, **@publisher_db**, **@publication**, las credenciales de Windows en la que se ejecuta el agente de distribución en el suscriptor para **@job_login** y **@job_password**y un valor de `true` para **@use_ftp**.  
+2.  En el suscriptor de la base de datos de suscripciones, ejecute [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql). Especificar **@publisher**, **@publisher_db**, **@publication**, las credenciales de Windows bajo la que se ejecuta el agente de distribución en el suscriptor para **@job_login** y **@job_password**y un valor de `true` para **@use_ftp**.  
   
 3.  En la base de datos de publicación del publicador, ejecute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) para registrar la suscripción de extracción. Para obtener más información, consulte [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
@@ -145,7 +145,7 @@ ms.locfileid: "36105350"
   
     -   `ftp_address` -la dirección del servidor FTP usada para entregar la instantánea.  
   
-    -   `ftp_port` -el puerto utilizado por el servidor FTP.  
+    -   `ftp_port` -el puerto usado por el servidor FTP.  
   
     -   `ftp_subdirectory` -el subdirectorio del directorio FTP predeterminado usado para la instantánea FTP.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36105350"
   
     -   `ftp_address` -la dirección del servidor FTP usada para entregar la instantánea.  
   
-    -   `ftp_port` -el puerto utilizado por el servidor FTP.  
+    -   `ftp_port` -el puerto usado por el servidor FTP.  
   
     -   `ftp_subdirectory` -el subdirectorio del directorio FTP predeterminado usado para la instantánea FTP.  
   

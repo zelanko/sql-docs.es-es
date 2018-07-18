@@ -1,5 +1,5 @@
 ---
-title: El modo DirectQuery | Documentos de Microsoft
+title: El modo DirectQuery | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e0c462c8ae4183889b9c75f5fe30203042a02a0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 14c5f32981b6109c0159018ab9c1ebf09ae2f1fa
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045459"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982487"
 ---
 # <a name="directquery-mode"></a>Modo DirectQuery
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Este artículo se describen *directquerymode* para los modelos tabulares de Analysis Services en los niveles de compatibilidad 1200 y versiones posteriores. El modo DirectQuery se puede activar para modelos que diseñe en SSDT, o bien para modelos tabulares que ya se hayan implementado, puede cambiar al modo DirectQuery en SSMS. Antes de elegir el modo DirectQuery, es importante comprender las ventajas y las limitaciones.
+  Este artículo se describe *el modo DirectQuery* para modelos tabulares de Analysis Services en los niveles de compatibilidad 1200 y superior. El modo DirectQuery se puede activar para modelos que diseñe en SSDT, o bien para modelos tabulares que ya se hayan implementado, puede cambiar al modo DirectQuery en SSMS. Antes de elegir el modo DirectQuery, es importante comprender las ventajas y las limitaciones.
   
 ##  <a name="bkmk_Benefits"></a> Ventajas
  De forma predeterminada, los modelos tabulares utilizan una caché en memoria para almacenar los datos y realizar consultas en ellos. Cuando los datos de consultas de modelos tabulares residen en memoria, incluso las consultas complejas se pueden ejecutar con increíble rapidez. Pero hay algunas limitaciones para el uso de datos en caché. Es decir, los conjuntos de datos de gran tamaño pueden superar la cantidad de memoria disponible y los requisitos de actualización de datos pueden ser difíciles (por no decir imposibles) de cumplir en una programación de procesamiento normal.  
@@ -29,7 +29,7 @@ ms.locfileid: "34045459"
   
 -   Los conjuntos de datos pueden superar la capacidad de memoria de un servidor de Analysis Services.  
   
--   DirectQuery puede beneficiarse de la aceleración de consultas del proveedor, como la proporcionada por los índices de columna con optimización para memoria.  
+-   DirectQuery puede beneficiarse de la aceleración de consultas del proveedor, como la proporcionada por los índices de columnas con optimización para memoria.  
   
 -   La seguridad se puede exigir en la base de datos back-end con características de seguridad de nivel de fila de la base de datos (como alternativa, puede usar la seguridad de nivel de fila en el modelo a través de DAX).  
   
@@ -50,18 +50,18 @@ Los modelos tabulares en el modo DirectQuery tienen algunas restricciones. Antes
 |**Tablas calculadas**|Las tablas calculadas no se admiten en los modelos DirectQuery, pero las columnas calculadas, sí. Si se trata de convertir un modelo tabular que contenga una columna calculada, se producirá un error que le indicará que el modelo no puede contener los datos pegados.|  
 |**Límites de consulta**|El límite de filas predeterminado es un millón de filas, que se puede aumentar si especifica **MaxIntermediateRowSize** en el archivo msmdsrv.ini. Vea [Propiedades de DAX](../../analysis-services/server-properties/dax-properties.md) para más información.
 |**Fórmulas DAX**|Al realizar consultas en un modelo tabular con el modo DirectQuery, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] convierte las fórmulas DAX y las definiciones de medida en instrucciones SQL. Las fórmulas DAX que contengan elementos que no se pueden convertir a sintaxis SQL devolverán errores de validación en el modelo.<br /><br /> Esta restricción está en su mayoría limitada a determinadas funciones de DAX. En lo que respecta a las medidas, las fórmulas DAX se convierten en operaciones basadas en conjuntos en el almacén de datos relacionales. Es decir, se admiten todas las medidas creadas de forma implícita. <br /><br /> Cuando se produzca un error de validación, tendrá que volver a escribir la fórmula (cambiarla por una función distinta) o usar columnas derivadas en el origen de datos como solución alternativa.  Si en un modelo tabular se incluyen fórmulas que contienen funciones no compatibles, se informará de estas fórmulas al cambiar al modo DirectQuery en el diseñador. <br /><br />**Nota:**  Algunas fórmulas del modelo pueden validarse al cambiar el modelo al modo DirectQuery, pero devolverán resultados diferentes cuando se ejecuten en la memoria caché, en comparación con el almacén de datos relacional. Esto se debe a que los cálculos en la memoria caché usan la semántica del motor de análisis en memoria, que contiene características diseñadas para emular el comportamiento de Excel, mientras que las consultas en los datos almacenados en el origen de datos relacional usan la semántica de SQL Server.<br /><br /> SQL almacenado  <br /><br /> Para obtener más información, consulte [compatibilidad de las fórmulas DAX en el modo DirectQuery](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md).|  
-|**Coherencia de fórmula**|En algunos casos, la misma fórmula puede devolver resultados distintos en un modelo almacenado en caché, en comparación con un modelo DirectQuery que solo use el almacén de datos relacional. Estas diferencias son consecuencia de las diferencias semánticas entre el motor de análisis en memoria y SQL Server.<br /><br /> Para obtener una lista completa de los problemas de compatibilidad, incluidas las funciones que podrían devolver resultados diferentes cuando se implementa el modelo en tiempo real, consulte [compatibilidad de las fórmulas DAX en el modo DirectQuery (SQL Server Analysis Services)](http://msdn.microsoft.com/en-us/981b6a68-434d-4db6-964e-d92f8eb3ee3e).|  
+|**Coherencia de fórmula**|En algunos casos, la misma fórmula puede devolver resultados distintos en un modelo almacenado en caché, en comparación con un modelo DirectQuery que solo use el almacén de datos relacional. Estas diferencias son consecuencia de las diferencias semánticas entre el motor de análisis en memoria y SQL Server.<br /><br /> Para obtener una lista completa de problemas de compatibilidad, incluidas las funciones que podrían devolver resultados diferentes cuando se implementa el modelo en tiempo real, consulte [compatibilidad de las fórmulas DAX en el modo DirectQuery (SQL Server Analysis Services)](http://msdn.microsoft.com/981b6a68-434d-4db6-964e-d92f8eb3ee3e).|  
 |**Limitaciones de MDX**|No hay ningún nombre de objeto relativo. Todos los nombres de objetos deben ser completos.<br /><br /> Las instrucciones MDX sin ámbito de sesión (conjuntos con nombre, miembros calculados, celdas calculadas, totales visuales, miembros predeterminados, etc.), pero puede usar construcciones de ámbito de consulta, como la cláusula 'WITH'.<br /><br /> No hay tuplas con miembros de diferentes niveles en las cláusulas de subselección de MDX.<br /><br /> No hay jerarquías definidas por el usuario.<br /><br /> No hay ninguna consulta SQL nativa (normalmente, Analysis Services admite un subconjunto de T-SQL, pero no para los modelos de DirectQuery).|  
 
 ## <a name="data-sources-supported-for-directquery"></a>Orígenes de datos compatibles con DirectQuery
-Los modelos tabulares DirectQuery en el nivel de compatibilidad 1200 y versiones posterior son compatibles con los siguientes orígenes de datos y proveedores:
+Los modelos tabulares de DirectQuery en el nivel de compatibilidad 1200 y versiones posterior son compatibles con los siguientes orígenes de datos y proveedores:
 
 Origen de datos   |Versiones  |Proveedores
 ---------|---------|---------
 Microsoft SQL Server    |  2008 y versiones posteriores      |       Proveedor OLE DB para SQL Server, Proveedor OLE DB de SQL Server Native Client, Proveedor de datos .NET Framework para el cliente SQL  
-Base de datos SQL de Microsoft Azure    |   Todos      |  Proveedor OLE DB para SQL Server, Proveedor OLE DB de SQL Server Native Client, Proveedor de datos .NET Framework para el cliente SQL            
-Almacenamiento de datos de Microsoft Azure SQL     |   Todos     |  Proveedor de datos de .NET Framework para SQL Client       
-Microsoft SQL Analytics Platform System (APS)     |   Todos      |  Proveedor OLE DB para SQL Server, Proveedor OLE DB de SQL Server Native Client, Proveedor de datos .NET Framework para el cliente SQL       
+Base de datos SQL de Microsoft Azure    |   All      |  Proveedor OLE DB para SQL Server, Proveedor OLE DB de SQL Server Native Client, Proveedor de datos .NET Framework para el cliente SQL            
+Almacenamiento de datos de Microsoft Azure SQL     |   All     |  Proveedor de datos de .NET Framework para SQL Client       
+Microsoft SQL Analytics Platform System (APS)     |   All      |  Proveedor OLE DB para SQL Server, Proveedor OLE DB de SQL Server Native Client, Proveedor de datos .NET Framework para el cliente SQL       
 Bases de datos relacionales de Oracle     |  Oracle 9i y versiones posteriores       |  Proveedor OLE DB de Oracle       
 Bases de datos relacionales de Teradata    |  Teradata V2R6 y versiones posteriores     | Proveedor de datos .NET para Teradata        
 

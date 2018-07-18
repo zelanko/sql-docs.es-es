@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_keymappings (Transact-SQL) | Documentos de Microsoft
+title: sp_fulltext_keymappings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e55e2b1494a8b575e240340969ce127a63b5f2e9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259155"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969747"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -48,12 +48,12 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 #### <a name="parameters"></a>Parámetros  
  *table_id*  
- Identificador de objeto de la tabla con índice de texto completo. Si especifica un válido *table_id*, se devuelve un error. Para obtener información acerca de cómo obtener el identificador de objeto de una tabla, vea [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).  
+ Identificador de objeto de la tabla con índice de texto completo. Si se especifica no es válido *table_id*, se devuelve un error. Para obtener información acerca de cómo obtener el identificador de objeto de una tabla, vea [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).  
   
  *docid*  
  Identificador de documento interno (DocId) que corresponde al valor de clave. Un valor de *docid* no válido no devuelve ningún resultado.  
   
- *clave*  
+ *Clave*  
  Valor de clave de texto completo de la tabla especificada. Un valor de *key* no válido no devuelve ningún resultado. Para obtener información acerca de los valores de clave de texto completo, vea [administrar índices de texto completo](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 > [!IMPORTANT]  
@@ -64,24 +64,24 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|Una columna de identificador de documento interno (DocId) que se corresponde con el valor de clave.|  
 |Key|*|Valor de clave de texto completo de la tabla especificada.<br /><br /> Si no hay ninguna clave de texto completo en la tabla de asignación, se devuelve un conjunto de filas vacío.|  
   
  <sup>*</sup> El tipo de datos para la clave es igual que el tipo de datos de la columna de clave de texto completo en la tabla base.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Esta función es pública y no requiere permisos especiales.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En la tabla siguiente, se describe el efecto de usar uno, dos o tres parámetros.  
   
 |Esta lista de parámetros…|Tiene este resultado…|  
 |--------------------------|----------------------|  
-|*table_id*|Cuando se invoca con el *table_id* , sp_fulltext_keymappings devuelve todos los valores de clave de texto completo (Key) de la tabla base especificada, junto con el DocId que corresponde a cada clave. Esto incluye las claves pendientes de eliminación.<br /><br /> Esta función resulta útil para solucionar problemas de diversa índole. Es especialmente útil para ver el contenido del índice de texto completo cuando el tipo de datos de la clave de texto completo seleccionada no es Integer. Esto implica combinar los resultados de sp_fulltext_keymappings con los resultados de **sys.dm_fts_index_keywords_by_document**. Para obtener más información, consulte [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> Sin embargo, le recomendamos que, siempre que sea posible, ejecute sp_fulltext_keymappings con parámetros que especifiquen una clave de texto completo o un DocId específico. Esto es mucho más eficaz que devolver un mapa de claves completo, sobre todo si se trata de una tabla muy grande para la cual el costo por rendimiento de devolver el mapa de claves completo puede ser elevado.|  
+|*table_id*|Cuando se invoca con solo el *table_id* , sp_fulltext_keymappings devuelve todos los valores de clave de texto completo (Key) de la tabla base especificada, junto con el DocId que corresponde a cada clave. Esto incluye las claves pendientes de eliminación.<br /><br /> Esta función resulta útil para solucionar problemas de diversa índole. Es especialmente útil para ver el contenido del índice de texto completo cuando el tipo de datos de la clave de texto completo seleccionada no es Integer. Esto implica combinar los resultados de sp_fulltext_keymappings con los resultados de **sys.dm_fts_index_keywords_by_document**. Para obtener más información, consulte [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> Sin embargo, le recomendamos que, siempre que sea posible, ejecute sp_fulltext_keymappings con parámetros que especifiquen una clave de texto completo o un DocId específico. Esto es mucho más eficaz que devolver un mapa de claves completo, sobre todo si se trata de una tabla muy grande para la cual el costo por rendimiento de devolver el mapa de claves completo puede ser elevado.|  
 |*table_id*, *docid*|Si solo el *table_id* y *docid* se especifican, *docid* debe ser nonNULL y especificar un DocId válido en la tabla especificada. Esta función resulta útil para aislar la clave de texto completo personalizada de la tabla base que corresponde al DocId de un determinado índice de texto completo.|  
-|*table_id*, NULL, *clave*|Si hay tres parámetros, el segundo parámetro debe ser NULL, y *clave* debe ser nonNULL y especificar un valor de clave de texto completo válido de la tabla especificada. Esta función resulta útil para aislar el DocId que corresponde a una determinada clave de texto completo de la tabla base.|  
+|*table_id*, NULL, *clave*|Si hay tres parámetros, el segundo parámetro debe ser NULL, y *clave* debe ser nonNULL y especificar un valor válido de clave de texto completo de la tabla especificada. Esta función resulta útil para aislar el DocId que corresponde a una determinada clave de texto completo de la tabla base.|  
   
  Se devolverá un error en cualquiera de las condiciones siguientes:  
   
@@ -94,13 +94,13 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="examples"></a>Ejemplos  
   
 > [!NOTE]  
->  Los ejemplos de esta sección se usa la `Production.ProductReview` tabla de la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos de ejemplo. Puede crear este índice ejecutando el ejemplo proporcionado para el `ProductReview` tabla [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  Los ejemplos de esta sección se usa el `Production.ProductReview` tabla de la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos de ejemplo. Puede crear este índice ejecutando el ejemplo proporcionado para el `ProductReview` tabla [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
 ### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. Obtener todos los valores Key y DocId  
  En el ejemplo siguiente se usa un [DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md) instrucción para crear una variable local, `@table_id` y asignar el identificador de la `ProductReview` tabla como su valor. El ejemplo se ejecuta **sp_fulltext_keymappings** especificar `@table_id` para el *table_id* parámetro.  
   
 > [!NOTE]  
->  Usar **sp_fulltext_keymappings** solamente con el *table_id* parámetro es apropiado para tablas pequeñas.  
+>  Uso de **sp_fulltext_keymappings** solamente con la *table_id* parámetro es apropiado para tablas pequeñas.  
   
 ```  
 USE AdventureWorks2012;  
@@ -122,10 +122,10 @@ GO
 |`4`|`4`|`4`|  
   
 ### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>B. Obtener el valor DocId para un valor Key específico  
- En el ejemplo siguiente se usa una instrucción DECLARE para crear una variable local, `@table_id`, y asignar el identificador de la tabla `ProductReview` como su valor. El ejemplo se ejecuta **sp_fulltext_keymappings** especificar `@table_id` para el *table_id* parámetro, NULL para la *docid* parámetro y 4 para el *clave* parámetro.  
+ En el ejemplo siguiente se usa una instrucción DECLARE para crear una variable local, `@table_id`, y asignar el identificador de la tabla `ProductReview` como su valor. El ejemplo se ejecuta **sp_fulltext_keymappings** especificar `@table_id` para el *table_id* parámetro, es NULL para el *docid* parámetro y 4 para el *clave* parámetro.  
   
 > [!NOTE]  
->  Usar **sp_fulltext_keymappings** solamente con el *table_id* parámetro apropiado para tablas pequeñas.  
+>  Uso de **sp_fulltext_keymappings** solamente con la *table_id* es apropiado para tablas pequeñas.  
   
 ```  
 USE AdventureWorks2012;  

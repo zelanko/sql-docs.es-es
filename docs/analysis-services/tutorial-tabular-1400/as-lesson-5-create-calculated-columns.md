@@ -1,5 +1,5 @@
 ---
-title: 'Lección de Analysis Services tutorial 5: crear columnas calculadas | Documentos de Microsoft'
+title: 'Lección del tutorial de Analysis Services 5: crear columnas calculadas | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,33 +10,33 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 476eca07ed1367141372586ca13bd2a93d9d8105
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044029"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973055"
 ---
 # <a name="create-calculated-columns"></a>Crear columnas calculadas
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-En esta lección, creará datos en el modelo agregando columnas calculadas. Puede crear columnas calculadas (como columnas personalizadas) cuando se usa obtener datos, mediante el Editor de consultas o más adelante en el tipo de diseñador de modelo hace aquí. Para obtener más información, consulte [columnas calculadas](../tabular-models/ssas-calculated-columns.md).
+En esta lección, crear los datos en el modelo agregando columnas calculadas. Puede crear columnas calculadas (como columnas personalizadas) cuando se usa obtener datos, mediante el Editor de consultas, o más adelante en el tipo de diseñador modelo hace aquí. Para obtener más información, consulte [columnas calculadas](../tabular-models/ssas-calculated-columns.md).
   
-Crear cinco nuevas columnas calculadas en tres tablas diferentes. Los pasos son ligeramente diferentes para cada tarea que muestra varias maneras para crear las columnas, cambiarles el nombre y colocarlos en varias ubicaciones en una tabla.  
+Creará cinco columnas calculadas en tres tablas diferentes. Los pasos son ligeramente diferentes para cada tarea que muestra varias maneras para crear columnas, cambiarles el nombre y colocarlas en ubicaciones diferentes en una tabla.  
 
-En esta lección también es donde se utilizar expresiones de análisis de datos (DAX). DAX es un lenguaje especial para crear expresiones de fórmula altamente personalizables para los modelos tabulares. En este tutorial, DAX se usa para crear columnas calculadas, medidas y filtros de rol. Para obtener más información, consulte [DAX en modelos tabulares](../tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md). 
+En esta lección también es donde se utilizar expresiones de análisis de datos (DAX). DAX es un lenguaje especial para crear expresiones de fórmula altamente personalizables para los modelos tabulares. En este tutorial, usará DAX para crear columnas calculadas, medidas y filtros de rol. Para obtener más información, consulte [DAX en modelos tabulares](../tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md). 
   
 Tiempo estimado para completar esta lección: **15 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
 
-Este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 4: crear relaciones](../tutorial-tabular-1400/as-lesson-4-create-relationships.md). 
+En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 4: crear relaciones](../tutorial-tabular-1400/as-lesson-4-create-relationships.md). 
   
 ## <a name="create-calculated-columns"></a>Crear columnas calculadas  
   
 #### <a name="create-a-monthcalendar-calculated-column-in-the-dimdate-table"></a>Crear una columna calculada MonthCalendar en la tabla DimDate  
   
-1.  Haga clic en el **modelo** menú > **vista de modelo** > **vista de datos**.  
+1.  Haga clic en el **modelo** menú > **vista de modelo** > **vista datos**.  
   
     Las columnas calculadas solo se pueden crear mediante el diseñador de modelos en la Vista de datos.  
   
@@ -46,23 +46,23 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
   
     Una nueva columna denominada **Columna calculada 1** se inserta a la izquierda de la columna **Calendar Quarter** .  
   
-4.  En la barra de fórmulas situada encima de la tabla, escriba la siguiente fórmula DAX: Autocompletar le ayuda a escribir los nombres completos de columnas y tablas y enumera las funciones que están disponibles.  
+4.  En la barra de fórmulas situada encima de la tabla, escriba la siguiente fórmula DAX: Autocompletar le ayuda a escribir el nombres completos de columnas y tablas y enumera las funciones que están disponibles.  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
     ``` 
   
-    Después, los valores se rellenan para todas las filas de la columna calculada. Si se desplaza hacia abajo por la tabla, verá las filas pueden tener valores diferentes para esta columna se basa en los datos de cada fila.    
+    Después, los valores se rellenan para todas las filas de la columna calculada. Si desplaza hacia abajo por la tabla, verá las filas pueden tener valores diferentes para esta columna, en función de los datos de cada fila.    
   
-5.  Cambiar el nombre de esta columna para **MonthCalendar**. 
+5.  Cambiar el nombre de esta columna a **MonthCalendar**. 
 
-    ![nuevacolumna como lesson5](../tutorial-tabular-1400/media/as-lesson5-newcolumn.png) 
+    ![newcolumn como lesson5](../tutorial-tabular-1400/media/as-lesson5-newcolumn.png) 
   
-MonthCalendar calcula la columna proporciona un nombre que se puede ordenar por mes.  
+La columna calculada MonthCalendar proporciona un nombre ordenable del mes.  
   
 #### <a name="create-a-dayofweek-calculated-column-in-the-dimdate-table"></a>Crear una columna calculada DayOfWeek en la tabla DimDate  
   
-1.  Con el **DimDate** tabla sigue activa, haga clic el **columna** menú y, a continuación, haga clic en **Agregar columna**.  
+1.  Con el **DimDate** tabla sigue activa, haga clic la **columna** menú y, a continuación, haga clic en **Agregar columna**.  
   
 2.  En la barra de fórmulas, escriba la fórmula siguiente:  
     
@@ -74,12 +74,12 @@ MonthCalendar calcula la columna proporciona un nombre que se puede ordenar por 
   
 3.  Cambiar el nombre de la columna a **DayOfWeek**.  
   
-4.  Haga clic en el encabezado de columna y, a continuación, arrastre la columna entre la **EnglishDayNameOfWeek** columna y la **DayNumberOfMonth** columna.  
+4.  Haga clic en el encabezado de columna y, a continuación, arrastre la columna entre la **EnglishDayNameOfWeek** columna y el **DayNumberOfMonth** columna.  
   
     > [!TIP]  
     > El movimiento de columnas en la tabla simplifica la navegación.  
   
-El DayOfWeek calcula la columna proporciona un nombre ordenable del día de la semana.  
+La columna calculada DayOfWeek proporciona un nombre ordenable del día de semana.  
   
 #### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>Crear una columna calculada ProductSubcategoryName en la tabla DimProduct  
   
@@ -94,11 +94,11 @@ El DayOfWeek calcula la columna proporciona un nombre ordenable del día de la s
   
 3.  Cambiar el nombre de la columna a **ProductSubcategoryName**.  
   
-La columna calculada ProductSubcategoryName se utiliza para crear una jerarquía en la tabla DimProduct, que incluye datos de la columna EnglishProductSubcategoryName en la tabla DimProductSubcategory. Las jerarquías no pueden abarcar más de una tabla. Crear jerarquías más adelante en la lección 9.  
+La columna calculada ProductSubcategoryName se usa para crear una jerarquía en la tabla DimProduct que incluye datos de la columna EnglishProductSubcategoryName en la tabla DimProductSubcategory. Las jerarquías no pueden abarcar más de una tabla. Crear jerarquías más adelante en la lección 9.  
   
 #### <a name="create-a-productcategoryname-calculated-column-in-the-dimproduct-table"></a>Crear una columna calculada ProductCategoryName en la tabla DimProduct  
   
-1.  Con el **DimProduct** tabla sigue activa, haga clic el **columna** menú y, a continuación, haga clic en **Agregar columna**.  
+1.  Con el **DimProduct** tabla sigue activa, haga clic la **columna** menú y, a continuación, haga clic en **Agregar columna**.  
   
 2.  En la barra de fórmulas, escriba la fórmula siguiente:  
   
@@ -108,13 +108,13 @@ La columna calculada ProductSubcategoryName se utiliza para crear una jerarquía
     
 3.  Cambiar el nombre de la columna a **ProductCategoryName**.  
   
-La columna calculada ProductCategoryName se utiliza para crear una jerarquía en la tabla DimProduct, que incluye datos de la columna EnglishProductCategoryName en la tabla DimProductCategory. Las jerarquías no pueden abarcar más de una tabla.  
+La columna calculada ProductCategoryName se usa para crear una jerarquía en la tabla DimProduct que incluye datos de la columna EnglishProductCategoryName en la tabla DimProductCategory. Las jerarquías no pueden abarcar más de una tabla.  
   
 #### <a name="create-a-margin-calculated-column-in-the-factinternetsales-table"></a>Crear una columna calculada margen en la tabla FactInternetSales  
   
 1.  En el Diseñador de modelos, seleccione la **FactInternetSales** tabla.  
   
-2.  Crear una nueva columna calculada entre el **SalesAmount** columna y la **TaxAmt** columna.  
+2.  Crear una nueva columna calculada entre la **SalesAmount** columna y el **TaxAmt** columna.  
   
 3.  En la barra de fórmulas, escriba la fórmula siguiente:  
   

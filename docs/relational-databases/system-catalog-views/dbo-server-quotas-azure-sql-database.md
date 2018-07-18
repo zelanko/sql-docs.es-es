@@ -1,5 +1,5 @@
 ---
-title: dbo.server_quotas (base de datos de SQL Azure) | Documentos de Microsoft
+title: dbo.server_quotas (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: ''
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: ada6f943e451e6c468adaed27bfe4618407d2dc7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177198"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029673"
 ---
 # <a name="dboserverquotas-azure-sql-database"></a>dbo.server_quotas (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "33177198"
   
  Devuelve los tipos de cuota de base de datos disponibles en el servidor.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |quota_name|**nvarchar**|El tipo de cuota del servidor. El tipo **Premium_database** es equivalente a las bases de datos con una reserva de recursos.|  
 |quota_value|**int**|El número de tipo de cuota permitido en el servidor.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Esta vista está disponible para todos los roles de usuario con permisos para conectarse a virtual **maestro** base de datos.  
   
 ## <a name="see-also"></a>Vea también  

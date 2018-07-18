@@ -1,5 +1,5 @@
 ---
-title: Proveedores de servicios y componentes | Documentos de Microsoft
+title: Proveedores de servicios y componentes | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,18 +18,18 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc5f0b18568e7056d4456ed8209fc931f7233fcd
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 085e0caa494baf624468ccb4f4c4bd99020c588b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272564"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984317"
 ---
 # <a name="service-providers-and-components"></a>Proveedores de servicios y componentes
-Proveedores de servicios son componentes que extienden la funcionalidad de los proveedores de datos mediante la implementación de interfaces extendidas que no son compatibles de forma nativa con el almacén de datos.  
+Los proveedores de servicios son componentes que extienden la funcionalidad de los proveedores de datos mediante la implementación de interfaces extendidas que no son compatibles de forma nativa con el almacén de datos.  
   
- Proporciona acceso universal a los datos de un *arquitectura de componentes* que permite que los componentes individuales y especializados implementar conjuntos discretos de funcionalidad de base de datos, o "servicios", en almacenes con menos funcionalidades. Por lo tanto, en lugar de forzar cada almacén de datos para proporcionar su propia implementación de la funcionalidad ampliada o forzar aplicaciones genéricas para implementar la funcionalidad de la base de datos internamente, los componentes de servicios proporcionan una implementación común que cualquier aplicación puede usar al obtener acceso a cualquier almacén de datos. El hecho de que se implementa alguna funcionalidad de forma nativa por el almacén de datos y la otra mediante componentes genéricos es transparente para la aplicación.  
+ Proporciona acceso universal a datos un *arquitectura del componente* que permite a los componentes individuales y especializados implementar conjuntos discretos de la funcionalidad de la base de datos o "servicios", encima de los almacenes de menor capacidad. Por lo tanto, en lugar de forzar cada almacén de datos para proporcionar su propia implementación de la funcionalidad ampliada o forzar aplicaciones genéricas para implementar la funcionalidad de la base de datos internamente, los componentes de servicio proporcionan una implementación común que cualquier aplicación puede Utilice al tener acceso a cualquier almacén de datos. El hecho de que alguna funcionalidad se implementa de forma nativa por el almacén de datos y otros a través de componentes genéricos es transparente para la aplicación.  
   
- Por ejemplo, un cursor motor, como [el servicio de Cursor para OLE DB](http://msdn.microsoft.com/en-us/57638feb-4ecd-4051-becb-8f828d21cf44), es un componente de servicio que puede consumir datos desde un almacén de datos secuencial, de sólo avance para generar datos desplazables. Otros proveedores de servicio suele usadas ADO son el [proveedor Microsoft OLE DB persistencia (proveedor de servicios ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (para guardar datos en un archivo), el [servicio de forma de datos de Microsoft para OLE DB (proveedor de servicios ADO) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (para jerárquica **conjuntos de registros**) y el [proveedor Microsoft OLE DB Remoting (proveedor de servicios ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (para llamar a proveedores de datos en un equipo remoto).  
+ Por ejemplo, un cursor de motor, como [el servicio de cursores para OLE DB](http://msdn.microsoft.com/57638feb-4ecd-4051-becb-8f828d21cf44), es un componente de servicio que puede consumir datos desde un almacén de datos secuencial, de solo avance para generar datos desplazables. Otros proveedores de servicio suele usadas ADO son el [proveedor Microsoft OLE DB persistencia (proveedor de servicios de ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (para guardar datos en un archivo), el [servicio de forma de datos de Microsoft para OLE DB (proveedor de servicios de ADO) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (para jerárquica **conjuntos de registros**) y el [proveedor Microsoft OLE DB comunicación remota (proveedor de servicios de ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (para llamar a los proveedores de datos en un equipo remoto).  
   
  Para obtener más información acerca de los proveedores de servicio y los datos, vea [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md).

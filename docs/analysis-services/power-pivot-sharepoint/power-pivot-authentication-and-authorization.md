@@ -1,5 +1,5 @@
 ---
-title: Power Pivot Authentication and Authorization | Documentos de Microsoft
+title: Power Pivot Authentication and Authorization | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ebb63d1ad381982ab4313ee6d980c5a919d6122
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1a114fbb79ff3c6df57991f0db695f357d743adc
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026792"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983470"
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Autenticación y autorización de PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "34026792"
   
 -   La carga de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de la memoria caché o de una biblioteca, si los datos no están disponibles de otra forma. Si se realiza una solicitud de conexión de datos para datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que aún no está cargados en el sistema, la instancia de [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] usará la identidad del usuario de SharePoint para recuperar el origen de datos de una biblioteca de contenido y cargarlo en la memoria.  
   
--   Las operaciones de actualización de datos que guardan una copia actualizada del origen de datos al libro en una biblioteca de contenido. En este caso, se realiza un registro real de la operación utilizando el nombre de usuario y la contraseña que se recuperan de una aplicación de destino en el Servicio de almacenamiento seguro. Las credenciales pueden ser la cuenta de actualización de datos desatendida de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o las credenciales que se almacenaron con la programación de actualización de datos al crearse. Para obtener más información, consulte [Configurar las credenciales almacenadas para la actualización de datos PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75) y [Configurar la cuenta de actualización de datos desatendida de PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493).  
+-   Las operaciones de actualización de datos que guardan una copia actualizada del origen de datos al libro en una biblioteca de contenido. En este caso, se realiza un registro real de la operación utilizando el nombre de usuario y la contraseña que se recuperan de una aplicación de destino en el Servicio de almacenamiento seguro. Las credenciales pueden ser la cuenta de actualización de datos desatendida de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o las credenciales que se almacenaron con la programación de actualización de datos al crearse. Para obtener más información, consulte [Configurar las credenciales almacenadas para la actualización de datos PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75) y [Configurar la cuenta de actualización de datos desatendida de PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493).  
   
 ##  <a name="Permissions"></a> Permisos de SharePoint para el acceso a datos PowerPivot  
  La publicación, administración y protección de un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] únicamente se admite a través de la integración de SharePoint. Los servidores de SharePoint proporcionan subsistemas de autenticación y autorización que se aseguran de que se produce un acceso legítimo a los datos. No hay ningún escenario admitido para implementar de forma segura un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] fuera de una granja de SharePoint.  
@@ -95,24 +95,24 @@ ms.locfileid: "34026792"
   
  Cuando un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se abre en un sitio de SharePoint, Excel Services lee las cadenas de conexión de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] incrustadas y reenvía la solicitud al proveedor OLE DB de Analysis Services de SQL Server local. Después, el proveedor pasa la información de conexión a un servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en la granja. Para que la solicitud fluya uniformemente entre los dos servidores, Excel Services se debe configurar para usar valores que son requeridos por [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint.  
   
- En Excel Services, la configuración relativa a la seguridad se especifica en las ubicaciones confiables, proveedores de datos confiables y bibliotecas de conexiones de datos confiables. En la siguiente tabla se describen los valores que habilitan o mejoran el acceso a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si no aparece aquí un valor, no tiene ningún efecto en las conexiones con el servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obtener instrucciones sobre cómo especificar estos valores paso a paso, consulte la sección "Paso 4: Habilitar Excel Services" en [Configuración inicial (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
+ En Excel Services, la configuración relativa a la seguridad se especifica en las ubicaciones confiables, proveedores de datos confiables y bibliotecas de conexiones de datos confiables. En la siguiente tabla se describen los valores que habilitan o mejoran el acceso a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si no aparece aquí un valor, no tiene ningún efecto en las conexiones con el servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obtener instrucciones sobre cómo especificar estos valores paso a paso, consulte la sección "Paso 4: Habilitar Excel Services" en [Configuración inicial (PowerPivot para SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
   
 > [!NOTE]  
 >  La mayoría de la configuración relacionada con la seguridad se aplica a las ubicaciones confiables. Si desea conservar los valores predeterminados o usar valores diferentes para sitios distintos, puede crear una ubicación confiable adicional para sitios que contienen datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y, después, configurar los siguientes valores solo para ese sitio. Para más información, vea [Crear una ubicación de confianza para los sitios PowerPivot en Administración central](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
-|Área|Configuración|Description|  
+|Área|Parámetro|Descripción|  
 |----------|-------------|-----------------|  
 |Aplicación web|Proveedor de autenticación de Windows|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] convierte un token de notificación que obtiene de Excel Services en una identidad de usuario de Windows. Cualquier aplicación web que use Excel Services como un recurso se debe configurar para usar el proveedor de autenticación de Windows.|  
 |Ubicación confiable|Tipo de ubicación|Este valor debe estar establecido en **Microsoft SharePoint Foundation**. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] recuperan una copia del archivo .xlsx y la cargan en un servidor de Analysis Services en la granja. El servidor solo puede recuperar archivos .xlsx de una biblioteca de contenidos.|  
 ||Permitir datos externos|Este valor debe estar establecido en **Bibliotecas de conexiones de datos de confianza e incrustadas**. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] contienen conexiones de datos incrustadas. Si deniega las conexiones incrustadas, los usuarios pueden ver la memoria caché de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , pero no podrán utilizar los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 ||Avisar al actualizar|Este valor debería estar deshabilitado si está usando la galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para almacenar libros e informes. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] incluye una característica de vista previa de documentos que funciona mejor si están desactivadas las opciones de actualizar al abrir y avisar al actualizar.|  
-|Proveedores de datos confiables|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4 está incluido de forma predeterminada, pero el acceso a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] requiere que el proveedor de MSOLAP.4 sea la versión SQL Server 2008 R2.<br /><br /> MSOLAP.5 se instala con la versión [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint.<br /><br /> No quite estos proveedores de la lista de proveedores de datos confiables. En algunos casos, es posible que tenga que instalar copias adicionales de este proveedor en otros servidores de SharePoint de la granja. Para obtener más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).|  
+|Proveedores de datos confiables|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4 está incluido de forma predeterminada, pero el acceso a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] requiere que el proveedor de MSOLAP.4 sea la versión SQL Server 2008 R2.<br /><br /> MSOLAP.5 se instala con la versión [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint.<br /><br /> No quite estos proveedores de la lista de proveedores de datos confiables. En algunos casos, es posible que tenga que instalar copias adicionales de este proveedor en otros servidores de SharePoint de la granja. Para obtener más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).|  
 |Bibliotecas de conexiones de datos confiables|Opcional.|Puede usar archivos de conexión de datos de Office (.odc) en libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si utiliza archivos .odc para proporcionar información de conexión a libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] locales, puede agregar los mismos archivos .odc a esta biblioteca.|  
 |Ensamblados de funciones definidas por el usuario|No aplicable.|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint omite los ensamblados de funciones definidas por el usuario que implemente para Excel Services. Si confía en los ensamblados definidos por el usuario para conseguir un comportamiento determinado, tenga en cuenta que el procesamiento de consultas de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no usará las funciones definidas por el usuario que ha creado.|  
   
 ## <a name="see-also"></a>Vea también  
  [Configurar las cuentas de servicio Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
- [Configuración de Power Pivot (Power Pivot para SharePoint) de la cuenta de actualización de datos desatendida](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)   
+ [Configuración de la combinación de PowerPivot (PowerPivot para SharePoint) de la cuenta de actualización de datos desatendida](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
  [Crear una ubicación de confianza para los sitios PowerPivot en Administración central](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Arquitectura de seguridad de Power Pivot](http://go.microsoft.com/fwlink/?linkID=220970)  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_drop_trusted_assembly (Transact-SQL) | Documentos de Microsoft
+title: Sys.sp_drop_trusted_assembly (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2ffdc0c87a798b23ce25e544b26ea63132495b53
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255338"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971857"
 ---
 # <a name="sysspdroptrustedassembly-transact-sql"></a>Sys.sp_drop_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -49,19 +49,19 @@ sp_drop_trusted_assembly
 ## <a name="arguments"></a>Argumentos
 
 [ @hash =] '*valor*'  
-El valor de hash SHA2_512 del ensamblado que se va a quitar de la lista de ensamblados de confianza para el servidor. Cuando se habilita la seguridad estricta de clr, incluso si el ensamblado está firmado o la base de datos no está marcado como de confianza, pueden cargar ensamblados de confianza.
+El valor de hash SHA2_512 del ensamblado que se va a quitar de la lista de ensamblados de confianza para el servidor. Cuando se habilita la seguridad estricta de clr, incluso si el ensamblado está firmado o la base de datos no está marcada como de confianza, pueden cargar los ensamblados de confianza.
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 
-Este procedimiento quita un ensamblado de [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
+Este procedimiento quita un ensamblado desde [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Permisos
 
 Debe pertenecer a la `sysadmin` rol fijo de servidor o `CONTROL SERVER` permiso.
 
 ## <a name="examples"></a>Ejemplos  
 
-En el ejemplo siguiente se quita un hash de ensamblado de la lista de ensamblados de confianza para el servidor.  
+El siguiente ejemplo quita un hash del ensamblado en la lista de ensamblados de confianza para el servidor.  
 
 ```  
 EXEC sp_drop_trusted_assembly 

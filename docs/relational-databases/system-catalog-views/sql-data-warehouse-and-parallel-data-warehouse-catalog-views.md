@@ -1,5 +1,5 @@
 ---
-title: Vistas de catálogo del almacenamiento de datos en paralelo y almacenamiento de datos SQL | Documentos de Microsoft
+title: Vistas de catálogo de almacenamiento de datos en paralelo y SQL Data Warehouse | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: ''
@@ -19,18 +19,18 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f82ec61d5f78b2590f463cade01b044aae459dbc
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33698608"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029730"
 ---
-# <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>Almacenamiento de datos SQL y vistas de catálogo del almacén de datos en paralelo
+# <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse y vistas de catálogo del almacén de datos en paralelo
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Este tema se enumeran los [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vistas de catálogo.  
   
- Todos los [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vistas de catálogo comienzan por **sys.pdw**.  
+ Todos los [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vistas de catálogo comienzan con **sys.pdw**.  
   
 ## <a name="includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vistas de catálogo  
  Las vistas de catálogo siguientes se aplican a ambos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  

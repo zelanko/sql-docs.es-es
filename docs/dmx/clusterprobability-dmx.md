@@ -1,5 +1,5 @@
 ---
-title: ClusterProbability (DMX) | Documentos de Microsoft
+title: ClusterProbability (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4d8ce16bb07af07bd2bfd651cf5fc1ae15b7e08
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841688"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030281"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ SELECT NODE_CAPTION FROM <model>.CONTENT
   
  Para obtener más información sobre el uso de esta sintaxis, vea [SELECT FROM &#60;modelo&#62;. CONTENIDO &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md). Para obtener más información sobre el conjunto de filas de esquema de contenido de modelo de minería de datos, vea [de filas DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
   
- Si un \<título del nodo > no se especifica, la función devuelve la probabilidad de que los casos de entrada pertenezcan al clúster más probable. Use la **clúster** función para devolver el clúster más probable.  
+ Si un \<título del nodo > no se especifica, la función devuelve la probabilidad de que los casos de entrada pertenecen al clúster más probable. Use la **clúster** función para devolver el clúster más probable.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve la probabilidad de que el caso especificado exista en el clúster que presenta la etiqueta Cluster 2.  
@@ -63,7 +63,7 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Vea también  
  [Clúster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

@@ -20,11 +20,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c0cd40177729800f0fc307f0e9ebce99a64efbee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234205"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970517"
 ---
 # <a name="system-functions-for-transact-sql"></a>Funciones del sistema de Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,8 @@ ms.locfileid: "33234205"
  [sys.fn_validate_plan_guide](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)  
  [sys.fn_xe_file_target_read_file](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)  
  [sys.fn_backup_file_snapshots](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
- [Funciones de búsqueda de texto completo semántica](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)  
+ [Funciones de búsqueda semántica de texto completo](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)  
  [Funciones de metadatos del sistema](../../relational-databases/system-functions/system-metadata-functions.md)  
  [Funciones de seguridad del sistema](../../relational-databases/system-functions/system-security-functions.md)  
- [Funciones de seguimiento de sistema](../../relational-databases/system-functions/system-trace-functions.md)  
+ [Funciones de seguimiento del sistema](../../relational-databases/system-functions/system-trace-functions.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_system_components (Transact-SQL) | Documentos de Microsoft
+title: sp_help_fulltext_system_components (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 849f2bbd004c47992c6b6faecf06b5abe5bcc9ea
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260621"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019993"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -72,26 +72,26 @@ sp_help_fulltext_system_components
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Para los componentes del sistema, se devuelve el siguiente conjunto de resultados.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**componentType**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
-|**componentname**|**sysname**|Nombre del componente.|  
+|**nombre de componente**|**sysname**|Nombre del componente.|  
 |**CLSID**|**uniqueidentifier**|Identificador de clase del componente.|  
-|**FullPath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el llamador no es miembro del **serveradmin** rol fijo de servidor.|  
+|**FullPath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el llamador no es un miembro de **serveradmin** rol fijo de servidor.|  
 |**version**|**nvarchar(30)**|Versión del componente.|  
-|**fabricante**|**sysname**|Nombre del fabricante del componente.|  
+|**Fabricante**|**sysname**|Nombre del fabricante del componente.|  
   
- El siguiente conjunto de resultados se devuelve sólo si uno o más de un catálogo de texto completo existe siempre que use *component_type*.  
+ El siguiente conjunto de resultados se devuelve si uno o más de un catálogo de texto existe que usa *component_type*.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**int**|Identificador de la base de datos.|  
 |**ftcatid**|**int**|Id. del catálogo de texto completo.|  
   
-## <a name="permissions"></a>Permissions  
- Debe pertenecer a la **público** rol; sin embargo, los usuarios solo pueden ver información sobre los catálogos de texto completo para el que tengan el permiso VIEW DEFINITION. Solo los miembros del rol fijo de servidor **serveradmin** pueden ver los valores de la columna **fullpath** .  
+## <a name="permissions"></a>Permisos  
+ Debe pertenecer a la **pública** rol; sin embargo, los usuarios solo pueden ver información sobre los catálogos de texto completo para los que tienen el permiso VIEW DEFINITION. Solo los miembros del rol fijo de servidor **serveradmin** pueden ver los valores de la columna **fullpath** .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método es de particular importancia cuando se prepara una actualización. Ejecute el procedimiento almacenado en una base de datos determinada y utilice la salida para determinar si un catálogo concreto se verá afectado por la actualización.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. Determinar si un separador de palabras concreto está registrado  
- El ejemplo siguiente mostrará el separador de palabras del idioma turco (LCID = 1055) si se ha instalado en el sistema y si está registrado en la instancia del servicio. Este ejemplo especifica los nombres de parámetro, **@component_type** y **@param**.  
+ El ejemplo siguiente mostrará el separador de palabras del idioma turco (LCID = 1055) si se ha instalado en el sistema y si está registrado en la instancia del servicio. En este ejemplo especifica los nombres de parámetro, **@component_type** y **@param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -143,7 +143,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Ver o cambiar los filtros y separadores de palabras](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
+ [Ver o cambiar de los filtros y separadores de palabras registrados](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [Procedimientos almacenan de búsqueda de texto completo y la búsqueda semántica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  

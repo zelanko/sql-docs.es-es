@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_backup_instance_config (Transact-SQL) | Documentos de Microsoft
+title: managed_backup.fn_backup_instance_config (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4dae80911e6508a1a398cf208300bf4145faeecc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230000"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970507"
 ---
 # <a name="managedbackupfnbackupinstanceconfig-transact-sql"></a>managed_backup.fn_backup_instance_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ managed_backup.fn_backup_db_config ()
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |is_smart_backup_enabled|INT|Muestra 1 cuando [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitada y 0 cuando [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está deshabilitada.|  
 |credential_name|SYSNAME|La Credencial SQL predeterminada que se usa para autenticarse en el almacenamiento.|  
@@ -65,8 +65,8 @@ managed_backup.fn_backup_db_config ()
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
- Debe pertenecer a la **db_backupoperator** rol de base de datos con **ALTER ANY CREDENTIAL** permisos. El usuario no se debe denegar **VIEW ANY DEFINITION** permisos.  
+### <a name="permissions"></a>Permisos  
+ Debe pertenecer a la **db_backupoperator** rol de base de datos con **ALTER ANY CREDENTIAL** permisos. El usuario no debe denegarse **VIEW ANY DEFINITION** permisos.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve la configuración predeterminada de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la instancia en la que se ejecuta:  

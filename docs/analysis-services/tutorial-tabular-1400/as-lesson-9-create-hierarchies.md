@@ -1,5 +1,5 @@
 ---
-title: 'Lección tutorial de Analysis Services 9: crear jerarquías | Documentos de Microsoft'
+title: 'Lección del tutorial de Analysis Services 9: crear jerarquías | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
 ms.openlocfilehash: df99d05373d4d3087ef1d5fa5324ec645bf000b6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042979"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973024"
 ---
 # <a name="create-hierarchies"></a>Crear jerarquías
 
@@ -28,22 +28,22 @@ Tiempo estimado para completar esta lección: **20 minutos**
   
 ## <a name="prerequisites"></a>Requisitos previos  
 
-Este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 8: crear perspectivas](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).  
+En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 8: crear perspectivas](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Crear jerarquías  
   
-#### <a name="to-create-a-category-hierarchy-in-the-dimproduct-table"></a>Para crear una jerarquía de categorías de la tabla DimProduct  
+#### <a name="to-create-a-category-hierarchy-in-the-dimproduct-table"></a>Para crear una jerarquía de categorías en la tabla DimProduct  
   
 1.  En el Diseñador de modelos (vista de diagrama), haga clic en el **DimProduct** tabla > **crear jerarquía**. Aparece una nueva jerarquía en la parte inferior de la ventana de tabla. Cambiar el nombre de la jerarquía **categoría**.  
   
-2.  Haga clic y arrastre la **ProductCategoryName** columna a la nueva **categoría** jerarquía.  
+2.  Haga clic y arrastre el **ProductCategoryName** columna a la nueva **categoría** jerarquía.  
   
 3.  En el **categoría** jerarquía, haga clic en **ProductCategoryName** > **cambiar el nombre de**y, a continuación, escriba **categoría**.  
   
     > [!NOTE]  
     > Al cambiar el nombre de una columna de la jerarquía no se cambia el nombre de esa columna en la tabla. Una columna de una jerarquía es simplemente una representación de la columna de la tabla.  
   
-4.  Haga clic y arrastre la **ProductSubcategoryName** columna a la **categoría** jerarquía. Cámbiele el nombre **subcategoría**. 
+4.  Haga clic y arrastre el **ProductSubcategoryName** columna a la **categoría** jerarquía. Cámbiele el nombre **subcategoría**. 
   
 5.  Haga clic en el **ModelName** columna > **agregar a jerarquía**y, a continuación, seleccione **categoría**. Cámbiele el nombre **modelo**.
 
@@ -55,7 +55,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
   
 1.  En el **DimDate** de tabla, cree una jerarquía denominada **calendario**.  
   
-3.  Agregue el columnas siguientes en el orden:
+3.  Agregue las columnas siguientes en el orden:
 
     *  CalendarYear
     *  CalendarSemester
@@ -63,7 +63,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
     *  MonthCalendar
     *  DayNumberOfMonth
     
-4.  En el **DimDate** de tabla, cree un **Fiscal** jerarquía. Incluir el columnas siguientes en el orden:  
+4.  En el **DimDate** de tabla, cree un **Fiscal** jerarquía. Incluir las columnas siguientes en el orden:  
   
     *  FiscalYear
     *  FiscalSemester
@@ -71,13 +71,13 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
     *  MonthCalendar
     *  DayNumberOfMonth
   
-5.  Por último, en la **DimDate** de tabla, cree un **ProductionCalendar** jerarquía. Incluir el columnas siguientes en el orden:  
+5.  Por último, en el **DimDate** de tabla, cree un **ProductionCalendar** jerarquía. Incluir las columnas siguientes en el orden:  
     *  CalendarYear
     *  WeekNumberOfYear
     *  DayNumberOfWeek
   
  ## <a name="whats-next"></a>¿Qué sigue?
 
-[Lección 10: Crear particiones](../tutorial-tabular-1400/as-lesson-10-create-partitions.md). 
+[Lección 10: Creación de particiones](../tutorial-tabular-1400/as-lesson-10-create-partitions.md). 
   
   

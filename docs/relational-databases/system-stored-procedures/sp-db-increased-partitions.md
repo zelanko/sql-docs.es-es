@@ -1,5 +1,5 @@
 ---
-title: sp_db_increased_partitions | Documentos de Microsoft
+title: sp_db_increased_partitions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b63255e4f15505dc75dfdf92f550a1d6d4149028
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237693"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970417"
 ---
 # <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +50,15 @@ sp_dp_increased_partitions
   
 ## <a name="arguments"></a>Argumentos  
  [ @dbname=] '*database_name*'  
- Es el nombre de la base de datos. *dbname* es **sysname** con un valor predeterminado es NULL. Si *dbname* no se especifica, se utiliza la base de datos actual.  
+ Es el nombre de la base de datos. *dbname* es **sysname** con un valor predeterminado es null. Si *dbname* no se especifica, se usa la base de datos actual.  
   
  [ @increased_partitions=] '*increased_partitions*'  
- Habilita o deshabilita la compatibilidad con 15.000 particiones en la base de datos especificada. *increased_partitions* es **varchar(6)** con un valor predeterminado es NULL. Los valores aceptados son 'ON' o 'TRUE' para habilitar la compatibilidad y 'OFF' o 'FALSE' para deshabilitarla. Si *increased_partitions* no se especifica, el procedimiento devuelve 1 para indicar compatibilidad está habilitada para la base de datos especificada o 0 para indicar la compatibilidad está deshabilitada.  
+ Habilita o deshabilita la compatibilidad con 15.000 particiones en la base de datos especificada. *increased_partitions* es **varchar(6)** con el valor predeterminado es NULL. Los valores aceptados son 'ON' o 'TRUE' para habilitar la compatibilidad y 'OFF' o 'FALSE' para deshabilitarla. Si *increased_partitions* no se especifica, el procedimiento devuelve 1 para indicar la compatibilidad está habilitada para la base de datos especificada o 0 para indicar la compatibilidad está deshabilitada.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita el permiso ALTER DATABASE en la base de datos especificada.  
   
   

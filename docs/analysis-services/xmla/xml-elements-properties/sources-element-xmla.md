@@ -1,5 +1,5 @@
 ---
-title: Orígenes de elemento (XMLA) | Documentos de Microsoft
+title: Orígenes de elemento (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5466ee4ed04b7890718e5d613cbade3f37cd6929
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576417"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019803"
 ---
 # <a name="sources-element-xmla"></a>Elemento Sources (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contiene una colección de [origen](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) elementos para el elemento primario [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) elemento.  
+  Contiene una colección de [origen](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) para los elementos primarios [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34576417"
 |Valor predeterminado|None|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  

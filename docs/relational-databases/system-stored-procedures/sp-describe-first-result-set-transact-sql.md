@@ -1,5 +1,5 @@
 ---
-title: sp_describe_first_result_set (Transact-SQL) | Documentos de Microsoft
+title: sp_describe_first_result_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2018
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 12890dc6282f879259730530b3ff8f03fc6de8b9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262665"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970721"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Devuelve los metadatos para el primer posible conjunto de resultados de la [!INCLUDE[tsql](../../includes/tsql-md.md)] por lotes. Devuelve un conjunto de resultados vacío si el lote no devuelve resultados. Genera un error si la [!INCLUDE[ssDE](../../includes/ssde-md.md)] no se puede determinar los metadatos de la primera consulta que se ejecutará mediante la realización de un análisis estático. La vista de administración dinámica [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) devuelve la misma información.  
+  Devuelve los metadatos para el primer posible conjunto de resultados de la [!INCLUDE[tsql](../../includes/tsql-md.md)] por lotes. Devuelve un conjunto de resultados vacío si el lote no devuelve resultados. Genera un error si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] no se puede determinar los metadatos de la primera consulta que se ejecutará al realizar un análisis estático. La vista de administración dinámica [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) devuelve la misma información.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,20 +65,20 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 -   Si se establece en 2, cada consulta se analiza como si se fuera a usar en la preparación o ejecución de un cursor. Esto devolverá los nombres de vista como información de la columna de origen.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- **sp_describe_first_result_set** siempre devuelve un estado de cero si se ejecuta correctamente. Si el procedimiento produce un error y se llama al procedimiento como una RPC, el estado de retorno se rellena con el tipo de error descrito en la columna error_type de sys.dm_exec_describe_first_result_set. Si se llama al procedimiento desde [!INCLUDE[tsql](../../includes/tsql-md.md)], el valor devuelto siempre es cero, incluso cuando se produce un error.  
+ **sp_describe_first_result_set** siempre devuelve un estado de cero si se ejecuta correctamente. Si el procedimiento produce un error y se llama al procedimiento como un RPC, estado de retorno se rellena con el tipo de error que se describe en la columna error_type de sys.dm_exec_describe_first_result_set. Si se llama al procedimiento desde [!INCLUDE[tsql](../../includes/tsql-md.md)], el valor devuelto siempre es cero, incluso cuando se produce un error.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Estos metadatos comunes se devuelven como un conjunto de resultados con una única fila por cada columna de los metadatos de los resultados. Cada fila describe el tipo y la nulabilidad de la columna en el formato descrito en la siguiente sección. Si la primera instrucción no existe en cada una de las rutas de acceso de control, se devuelve un conjunto de resultados con cero filas.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**is_hidden**|**bits no NULL**|Indica que la columna es una columna adicional agregada para examinar el propósito de la información y que no aparece realmente en el conjunto de resultados.|  
-|**column_ordinal**|**int NOT NULL**|Contiene la posición ordinal de la columna en el conjunto de resultados. La posición de la primera columna se especificará como 1.|  
+|**is_hidden**|**bit NOT NULL**|Indica que la columna es una columna adicional agregada para examinar el propósito de la información y que no aparece realmente en el conjunto de resultados.|  
+|**column_ordinal**|**int no NULL**|Contiene la posición ordinal de la columna en el conjunto de resultados. La posición de la primera columna se especificará como 1.|  
 |**Nombre**|**sysname es NULL**|Contiene el nombre de la columna si se puede determinar uno. De lo contrario, contendrá NULL.|  
-|**is_nullable**|**bits no NULL**|Contiene el valor 1 si la columna permite valores NULL, 0 si la columna no permite valores NULL y 1 si no se puede determinar si la columna permite valores NULL.|  
-|**system_type_id**|**int NOT NULL**|Contiene el system_type_id del tipo de datos de la columna tal como se especifica en sys.types. En el caso de los tipos de CLR, aunque la columna system_type_name devuelva NULL, esta columna devolverá el valor 240.|  
+|**is_nullable**|**bit NOT NULL**|Contiene el valor 1 si la columna permite valores NULL, 0 si la columna no permite valores NULL y 1 si no se puede determinar si la columna permite valores NULL.|  
+|**system_type_id**|**int no NULL**|Contiene el system_type_id del tipo de datos de la columna tal como se especifica en sys.types. En el caso de los tipos de CLR, aunque la columna system_type_name devuelva NULL, esta columna devolverá el valor 240.|  
 |**system_type_name**|**nvarchar (256) NULL**|Contiene el nombre y los argumentos (como length, precision y scale) especificados para el tipo de datos de la columna. Si el tipo de datos es un tipo de alias definido por el usuario, el tipo de sistema subyacente se especifica aquí. Si es un tipo definido por el usuario de CLR, NULL se devuelve en esta columna.|  
-|**max_length**|**Smallint no NULL**|Longitud máxima de la columna, en bytes.<br /><br /> -1 = la columna es de tipo de datos **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**.<br /><br /> Para **texto** columnas, el **max_length** valor será 16 o el valor establecido por **sp_tableoption 'text in row'**.|  
+|**max_length**|**smallint no NULL**|Longitud máxima de la columna, en bytes.<br /><br /> -1 = la columna es de tipo de datos **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**.<br /><br /> Para **texto** columnas, el **max_length** valor será 16 o el valor establecido por **sp_tableoption 'text in row'**.|  
 |**precisión**|**tinyint no NULL**|Precisión de la columna, si está basada en números. De lo contrario, devuelve 0.|  
 |**escala**|**tinyint no NULL**|La escala de la columna se basa en valores numéricos. De lo contrario, devuelve 0.|  
 |**collation_name**|**sysname es NULL**|Nombre de la intercalación de la columna, si está basada en caracteres. En caso contrario, devuelve NULL.|  
@@ -91,31 +91,31 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**xml_collection_database**|**sysname es NULL**|Contiene la base de datos en la que se define la colección de esquema XML asociado a este tipo. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
 |**xml_collection_schema**|**sysname es NULL**|Contiene el esquema en el que se define la colección de esquema XML asociado a este tipo. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
 |**xml_collection_name**|**sysname es NULL**|Contiene el nombre de la colección de esquema XML asociado a este tipo. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
-|**is_xml_document**|**bits no NULL**|Devuelve 1 si el tipo de datos devuelto es XML y se garantiza que ese tipo es un documento XML completo (incluido un nodo raíz), en lugar de un fragmento XML. De lo contrario, devuelve 0.|  
-|**is_case_sensitive**|**bits no NULL**|Devuelve 1 si la columna es un tipo de cadena que distingue entre mayúsculas y minúsculas, y 0 si no lo es.|  
-|**is_fixed_length_clr_type**|**bits no NULL**|Devuelve 1 si la columna es de un tipo CLR de longitud fija y 0 de lo contrario.|  
-|**source_server**|**sysname**|Nombre del servidor de origen que devuelve la columna en este resultado (si se origina desde un servidor remoto). Se asigna el nombre tal y como aparece en sys.servers. Devuelve NULL si la columna se origina en el servidor local o si no se puede determinar en qué servidor se origina. Solo se rellena si se solicita buscar información.|  
+|**is_xml_document**|**bit NOT NULL**|Devuelve 1 si el tipo de datos devuelto es XML y se garantiza que ese tipo es un documento XML completo (incluido un nodo raíz), en lugar de un fragmento XML. De lo contrario, devuelve 0.|  
+|**is_case_sensitive**|**bit NOT NULL**|Devuelve 1 si la columna es un tipo de cadena que distingue entre mayúsculas y minúsculas, y 0 si no lo es.|  
+|**is_fixed_length_clr_type**|**bit NOT NULL**|Devuelve 1 si la columna es de un tipo CLR de longitud fija y 0 de lo contrario.|  
+|**source_server**|**sysname**|Nombre del servidor de origen que devuelve la columna en este resultado (si se origina desde un servidor remoto). Se asigna el nombre tal como aparece en sys.servers. Devuelve NULL si la columna se origina en el servidor local o si no se puede determinar en qué servidor se origina. Solo se rellena si se solicita buscar información.|  
 |**source_database**|**sysname**|Nombre de la base de datos de origen que devuelve la columna en este resultado. Devuelve NULL si no se puede determinar la base de datos. Solo se rellena si se solicita buscar información.|  
 |**source_schema**|**sysname**|Nombre del esquema de origen que devuelve la columna en este resultado. Devuelve NULL si no se puede determinar el esquema. Solo se rellena si se solicita buscar información.|  
 |**source_table**|**sysname**|Nombre de la tabla de origen que devuelve la columna en este resultado. Devuelve NULL si no se puede determinar la tabla. Solo se rellena si se solicita buscar información.|  
 |**source_column**|**sysname**|Nombre de la columna de origen que devuelve la columna de resultado. Devuelve NULL si no se puede determinar la columna. Solo se rellena si se solicita buscar información.|  
-|**is_identity_column**|**bits NULL**|Devuelve 1 si la columna es una columna de identidad y 0 de lo contrario. Devuelve NULL si no se puede determinar que la columna es una columna de identidad.|  
-|**is_part_of_unique_key**|**bits NULL**|Devuelve 1 si la columna forma parte de un índice único (que incluye una restricción única y principal) y 0 de lo contrario. Devuelve NULL si no se puede determinar que la columna forma parte de un índice único. Solo se rellena si se solicita buscar información.|  
-|**is_updateable**|**bits NULL**|Devuelve 1 si la columna es actualizable y 0 de lo contrario. Devuelve NULL si no se puede determinar que la columna se puede actualizar.|  
-|**is_computed_column**|**bits NULL**|Devuelve 1 si la columna es una columna calculada y 0 de lo contrario. Devuelve NULL si no se puede determinar que la columna es una columna calculada.|  
-|**is_sparse_column_set**|**bits NULL**|Devuelve 1 si la columna es una columna dispersa y 0 si no lo es. Devuelve NULL si no se puede determinar que la columna forma parte de un conjunto de columnas dispersas.|  
-|**ordinal_in_order_by_list**|**smallint NULL**|Posición de esta columna en la lista ORDER BY. Devuelve NULL si la columna no aparece en la lista ORDER BY o si la lista ORDER BY no se puede determinar de forma exclusiva.|  
+|**is_identity_column**|**bit NULL**|Devuelve 1 si la columna es una columna de identidad y 0 de lo contrario. Devuelve NULL si no se puede determinar que la columna es una columna de identidad.|  
+|**is_part_of_unique_key**|**bit NULL**|Devuelve 1 si la columna forma parte de un índice único (que incluye una restricción única y principal) y 0 de lo contrario. Devuelve NULL si no se puede determinar que la columna forma parte de un índice único. Solo se rellena si se solicita buscar información.|  
+|**is_updateable**|**bit NULL**|Devuelve 1 si la columna es actualizable y 0 de lo contrario. Devuelve NULL si no se puede determinar que la columna se puede actualizar.|  
+|**is_computed_column**|**bit NULL**|Devuelve 1 si la columna es una columna calculada y 0 de lo contrario. Devuelve NULL si no se puede determinar que la columna es una columna calculada.|  
+|**is_sparse_column_set**|**bit NULL**|Devuelve 1 si la columna es una columna dispersa y 0 si no lo es. Devuelve NULL si no se puede determinar que la columna forma parte de un conjunto de columnas dispersas.|  
+|**ordinal_in_order_by_list**|**smallint NULL**|Posición de esta columna en la lista ORDER BY. Devuelve NULL si la columna no aparece en la lista ORDER BY o si la lista ORDER BY no puede determinarse de forma exclusiva.|  
 |**order_by_list_length**|**smallint NULL**|Longitud de la lista ORDER BY. Devuelve NULL si no hay ninguna lista ORDER BY o si no se puede determinar la lista ORDER BY singularmente. Tenga en cuenta que este valor será el mismo para todas las filas devueltas por **sp_describe_first_result_set.**|  
 |**order_by_is_descending**|**smallint NULL**|Si ordinal_in_order_by_list no es NULL, el **order_by_is_descending** columna notifica la dirección de la cláusula ORDER BY para esta columna. De lo contrario, notifica NULL.|  
-|**tds_type_id**|**int NOT NULL**|Para uso interno.|  
-|**tds_length**|**int NOT NULL**|Para uso interno.|  
+|**tds_type_id**|**int no NULL**|Para uso interno.|  
+|**tds_length**|**int no NULL**|Para uso interno.|  
 |**tds_collation_id**|**int NULL**|Para uso interno.|  
 |**tds_collation_sort_id**|**tinyint NULL**|Para uso interno.|  
   
-## <a name="remarks"></a>Comentarios  
- **sp_describe_first_result_set** garantiza que si el procedimiento devuelve los metadatos del primer conjunto de resultados para (un hipotético) un proceso por lotes y si ese lote (A) posteriormente ejecutan, a continuación, el lote le (1) produce un error en tiempo de optimización, (2) genera un error en tiempo de ejecución, (3) no devuelve ningún resultado establecido o (4) devuelve un primer conjunto de resultados con los mismos metadatos descritos por **sp_describe_first_result_set**.  
+## <a name="remarks"></a>Notas  
+ **sp_describe_first_result_set** garantiza que si el procedimiento devuelve los metadatos del primer conjunto de resultados para (un hipotético) un proceso por lotes y si ese lote (A) posteriormente ejecutan, a continuación, el lote le (1) genera un error de tiempo de optimización, (2) genera un error en tiempo de ejecución, (3) no devuelve ningún resultado establecido o (4) devuelve un primer conjunto de resultados con los mismos metadatos descritos por **sp_describe_first_result_set**.  
   
- El nombre, la nulabilidad y el tipo de datos pueden diferir. Si **sp_describe_first_result_set** devuelve un conjunto de resultados vacío, la garantía es que la ejecución del lote devolverán los conjuntos de resultados no.  
+ El nombre, la nulabilidad y el tipo de datos pueden diferir. Si **sp_describe_first_result_set** devuelve un conjunto de resultados vacío, la garantía es que la ejecución de lotes devolverá conjuntos de resultados de no.  
   
  Esta garantía presupone que no hay cambios de esquema importantes en el servidor. Cambios de esquema correspondiente en el servidor no incluyen la creación de tablas temporales o variables en el lote A entre el momento de la tabla que **sp_describe_first_result_set** se llama y el momento en que se devuelve el conjunto de resultados durante ejecución, incluidos los cambios de esquema realizados en el lote B.  
   
@@ -131,9 +131,9 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 -   La consulta incluye la creación de una tabla permanente que se consulta.  
   
- Si todas las demás comprobaciones se realizan correctamente, se tienen en cuenta todas las rutas de flujo de control posibles incluidas en el lote de entrada. Todos los control de cuentas de esta forma en instrucciones de flujo (GOTO, IF/ELSE, WHILE, y [!INCLUDE[tsql](../../includes/tsql-md.md)] Bloques TRY/CATCH), así como los procedimientos, dinámicos [!INCLUDE[tsql](../../includes/tsql-md.md)] invocados desde el lote de entrada por una instrucción EXEC, una instrucción DDL que hace que los desencadenadores o lotes Que se activen los desencadenadores DDL o una instrucción DML que hace que se activen desencadenadores en una tabla de destino o en una tabla que se ha modificado debido a la acción en cascada en una restricción foreign key. En el caso de que haya numerosas rutas de acceso de control posibles, los algoritmos se detienen en algún punto.  
+ Si todas las demás comprobaciones se realizan correctamente, se tienen en cuenta todas las rutas de flujo de control posibles incluidas en el lote de entrada. Este tenga en cuenta el control de todas las instrucciones de flujo (GOTO, IF/ELSE, WHILE y [!INCLUDE[tsql](../../includes/tsql-md.md)] Bloques TRY/CATCH), así como los procedimientos, dinámicos [!INCLUDE[tsql](../../includes/tsql-md.md)] lotes o desencadenadores que se invoca desde el lote de entrada por una instrucción EXEC, una instrucción DDL que hace que Que se activen los desencadenadores DDL o una instrucción DML que hace que se activen los desencadenadores en una tabla de destino o en una tabla que se ha modificado debido a la acción en cascada en una restricción foreign key. En el caso de que haya numerosas rutas de acceso de control posibles, los algoritmos se detienen en algún punto.  
   
- Para cada ruta de acceso del flujo de control, la primera instrucción (si existe) que devuelve un conjunto de resultados se determina por **sp_describe_first_result_set**.  
+ Para cada ruta de flujo de control, la primera instrucción (si existe) que devuelve un conjunto de resultados viene determinada por **sp_describe_first_result_set**.  
   
  Cuando en el lote se encuentran varias instrucciones que podrían ser las primeras, sus resultados pueden diferir en el número de columnas, el nombre de las columnas, la nulabilidad y el tipo de datos. A continuación se describe con más detalle cómo se administrar estas diferencias:  
   
@@ -157,9 +157,9 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
     -   **varbinary(a)** a **varbinary (max)**  
   
- **sp_describe_first_result_set** no se admite la recursión indirecta.  
+ **sp_describe_first_result_set** no admite la recursión indirecta.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso para ejecutar el @tsql argumento.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -198,7 +198,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
@@ -211,7 +211,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
@@ -224,7 +224,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  
@@ -294,7 +294,7 @@ ELSE
  Resultado: b **varchar (20) NULL**  
   
 #### <a name="error-because-column-types-cannot-be-matched"></a>Error porque los tipos de columna no coinciden  
- Los tipos de columnas difieren en posibles primeros conjuntos de resultados.  
+ Los tipos de columnas son distintos en diferentes posible primeros conjuntos de resultados.  
   
 ```  
 sp_describe_first_result_set @tsql =   
@@ -377,10 +377,10 @@ EXEC(@SQL)
     ); '  
 ```  
   
- Resultado: Column1 **bigint NOT NULL**  
+ Resultado: Column1 **bigint no NULL**  
   
 #### <a name="error-caused-by-a-ambiguous-result-set"></a>Error generado por un conjunto de resultados ambiguo  
- En este ejemplo se supone que otro usuario denominado Usuario1 tiene una tabla denominada t1 en el esquema predeterminado s1 con columnas (una **int NOT NULL**).  
+ En este ejemplo se supone que otro usuario denominado Usuario1 tiene una tabla denominada t1 en el esquema predeterminado s1 con columnas (una **int no NULL**).  
   
 ```  
 sp_describe_first_result_set @tsql =   

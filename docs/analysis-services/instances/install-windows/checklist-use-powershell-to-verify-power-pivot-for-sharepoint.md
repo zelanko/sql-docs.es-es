@@ -1,5 +1,5 @@
 ---
-title: 'Lista de comprobación: Usar PowerShell para comprobar PowerPivot para SharePoint | Documentos de Microsoft'
+title: 'Lista de comprobación: Usar PowerShell para comprobar PowerPivot para SharePoint | Microsoft Docs'
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bf217aee4222aec601c1dde08ffcb2e264eb31f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ce55062f33739f4f27769e4c3851cede820f6423
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019442"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985417"
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Lista de comprobación: Usar PowerShell para comprobar PowerPivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
   
 |||  
 |-|-|  
-|![PowerPivot en conjunto general de aplicaciones de sharepoint](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot en conjunto general de aplicaciones de sharepoint")|Si lo desea, puede comprobar la mayoría de los componentes en Administración central, con el panel de administración de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Para abrir el panel en Administración central, haga clic en **Configuración de aplicación general**y luego haga clic en **Panel de administración** en **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**. Para obtener más información sobre el panel, vea [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
+|![PowerPivot en el conjunto de aplicaciones generales de sharepoint](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot en el conjunto de aplicaciones generales de sharepoint")|Si lo desea, puede comprobar la mayoría de los componentes en Administración central, con el panel de administración de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Para abrir el panel en Administración central, haga clic en **Configuración de aplicación general**y luego haga clic en **Panel de administración** en **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**. Para obtener más información sobre el panel, vea [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
   
 ##  <a name="bkmk_symptoms"></a> Síntomas y acciones recomendadas  
  En la tabla siguiente se muestra una lista de síntomas o problemas y la sección sugerida de este tema que puede consultar para resolver el problema.  
@@ -57,7 +57,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
 |-------------|-----------------|  
 |La actualización de datos no está en ejecución|Vea la sección [Trabajos del temporizador](#bkmk_timer_jobs) y compruebe que el **En línea [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Online** está en línea.|  
 |Los datos del panel de administración son antiguos|Vea la sección [Trabajos del temporizador](#bkmk_timer_jobs) y compruebe que el **Trabajo de temporizador de procesamiento del panel de administración** está en línea.|  
-|Algunas partes del panel de administración|Si instala [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint en una granja que tiene la topología de Administración central, sin Excel Services o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint, debe descargar e instalar la biblioteca de cliente de Microsoft ADOMD.NET si quiere obtener acceso total a los informes integrados en el panel de administración de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Algunos informes del panel usan ADOMD.NET para tener acceso a los datos internos que proporcionan los datos de errores en el procesamiento de las consultas de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] y el estado del servidor en la granja. Vea la sección [Biblioteca de cliente de ADOMD.NET](#bkmk_adomd) y el tema [Instalar ADOMD.NET en servidores front-end web ejecutando Administración central](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).|  
+|Algunas partes del panel de administración|Si instala [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint en una granja que tiene la topología de Administración central, sin Excel Services o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint, debe descargar e instalar la biblioteca de cliente de Microsoft ADOMD.NET si quiere obtener acceso total a los informes integrados en el panel de administración de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Algunos informes del panel usan ADOMD.NET para tener acceso a los datos internos que proporcionan los datos de errores en el procesamiento de las consultas de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] y el estado del servidor en la granja. Vea la sección [Biblioteca de cliente de ADOMD.NET](#bkmk_adomd) y el tema [Instalar ADOMD.NET en servidores front-end web ejecutando Administración central](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e).|  
   
 ##  <a name="bkmk_windows_service"></a> Servicio Windows de Analysis Services  
  El script de esta sección comprueba la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de SharePoint. Compruebe que el servicio está **en ejecución**.  
@@ -167,7 +167,7 @@ Name                           Status ProcessAccountName Id
 SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a-2cec4b8b73ea  
 ```  
   
- ![Tenga en cuenta](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Nota")también se puede comprobar el grupo de aplicaciones en la página de Administración Central **administrar aplicaciones de servicio**. Haga clic el nombre de la aplicación de servicio y, a continuación, haga clic en **Propiedades** en la cinta de opciones.  
+ ![Tenga en cuenta](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Nota")también se puede comprobar el grupo de aplicaciones en la página Administración Central **Manage Service Applications**. Haga clic el nombre de la aplicación de servicio y, a continuación, haga clic en **Propiedades** en la cinta de opciones.  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] y servidores proxy de aplicaciones de servicio de Excel**  
   
@@ -271,7 +271,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Registros de Windows y ULS  
  **Registro de eventos de Windows**  
   
- El comando siguiente buscará en el registro de eventos de Windows los eventos relacionados con la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de SharePoint. Para obtener información sobre cómo deshabilitar eventos o cambiar el nivel de eventos, vea [configurar y ver archivos de registro de SharePoint y el registro de diagnósticos &#40;PowerPivot para SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
+ El comando siguiente buscará en el registro de eventos de Windows los eventos relacionados con la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de SharePoint. Para obtener información sobre cómo deshabilitar eventos o cambiar el nivel de eventos, vea [configurar y ver archivos de registro de SharePoint y el registro de diagnóstico &#40;Power Pivot para SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
  
  **Nombre de servicio:** MSOLAP$POWERPIVOT  
   
@@ -350,7 +350,7 @@ MSOLAP.4   Oledb        Microsoft OLE DB Provider for OLAP Services 10.0
 MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0  
 ```  
   
- Para más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) y [Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+ Para más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859) y [Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
 ##  <a name="bkmk_adomd"></a> Biblioteca cliente ADOMD.Net  
   
@@ -367,7 +367,7 @@ Microsoft SQL Server 2008 Analysis Services ADOMD.NET 10.1.2531.0  Microsoft Cor
 Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Corporation  
 ```  
   
- Para obtener más información, vea [Instalar ADOMD.NET en servidores front-end web ejecutando Administración central](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).  
+ Para obtener más información, vea [Instalar ADOMD.NET en servidores front-end web ejecutando Administración central](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e).  
   
 ##  <a name="bkmk_health_collection"></a> Reglas de recopilación de datos de mantenimiento  
  Compruebe que el **Estado** está en línea y que **Habilitado** es True.  

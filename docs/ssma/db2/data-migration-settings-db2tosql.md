@@ -1,5 +1,5 @@
 ---
-title: Configuración de la migración de datos (DB2ToSQL) | Documentos de Microsoft
+title: Configuración de migración de datos (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,48 +16,48 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9b5d6ad21b98229d79ebcedddfe16c98cbc2d706
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 69d703b7e00efdd8c10c5f160a5ff3e29b80b57c
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774981"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985677"
 ---
-# <a name="data-migration-settings-db2tosql"></a>Configuración de la migración de datos (DB2ToSQL)
+# <a name="data-migration-settings-db2tosql"></a>Configuración de migración de datos (DB2ToSQL)
   
 ## <a name="data-migration-settings"></a>Configuración de la migración de datos  
 **Configuración de la migración de datos** permite al usuario escribir consultas personalizadas para la migración de datos.  
   
--   Esta pestaña está disponible cuando **opciones de migración de datos ampliado** está establecido en **mostrar** y se oculta cuando el valor está establecido en **ocultar** en configuración del proyecto. Para obtener más información acerca de la configuración del proyecto de migración, consulte [configuración del proyecto (migración)](http://msdn.microsoft.com/en-us/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) .  
+-   Esta pestaña está disponible cuando **opciones de migración de datos ampliado** está establecido en **mostrar** y se oculta cuando el valor se establece en **ocultar** en configuración del proyecto. Para obtener más información acerca de la configuración del proyecto de migración, consulte [configuración del proyecto (migración)](http://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) .  
   
--   Análisis de instrucciones SQL personalizada que se implementará en **configuración de la migración de datos** ficha del nodo de la tabla.  
+-   Análisis de instrucciones SQL personalizada que se implementará en **configuración de migración de datos** ficha del nodo de la tabla.  
   
--   Siguientes son las dos casillas de verificación disponibles en la **configuración de la migración de datos** especialmente.:  
+-   Estos son las dos casillas de verificación disponibles en el **configuración de migración de datos** viz.:  
   
-    1.  Puede truncar la tabla de SQL Server  
+    1.  Truncar la tabla de SQL Server  
   
     2.  Seleccione uso personalizado  
   
 1.  **Puede truncar la tabla de SQL Server:**  
-     Esta opción permite al usuario tener una visión clara de los datos migrados en la base de datos de destino.  
+     Esta opción permite al usuario que tiene una visión clara de los datos migrados en la base de datos de destino.  
   
     -   De forma predeterminada, este cuadro de texto está activada.  
   
-    -   Si este cuadro de texto no está activada, los datos que se migren se agregará a los datos existentes en la base de datos de destino.  
+    -   Si este cuadro de texto está desactivada, se agregarán los datos que se migren a los datos existentes en la base de datos de destino.  
   
 2.  **Seleccione uso personalizado:**  
-     Esta opción permite al usuario modificar el **seleccione** instrucción presente (**seleccione** instrucción permite a los usuarios seleccionar los datos que se mostrará en la base de datos de destino).  
+     Esta opción permite al usuario modificar el **seleccione** instrucción presente (**seleccione** instrucción permite a los usuarios seleccionar los datos que se muestra en la base de datos de destino).  
   
     1.  De forma predeterminada, este cuadro de texto está desactivada.  
   
-    2.  Si se activa este cuadro de texto, que permite a los usuarios modificar la **seleccione** instrucción está presente.  
+    2.  Si este cuadro de texto está activada, permite a los usuarios modificar la **seleccione** instrucción presente.  
   
-Hay dos botones presentes lleve.:  
+Hay dos botones que presentes viz.:  
   
--   **Aplicar:** haga clic en **aplicar** para aplicar la configuración que se han cambiado.  
+-   **Aplicar:** haga clic en **aplicar** para aplicar la configuración que han cambiado.  
   
--   **Cancelar:** haga clic en **cancelar** para restaurar la configuración está presente antes de que se realizaron los cambios.  
+-   **Cancelar:** haga clic en **cancelar** para restaurar los valores de configuración antes de que se realizan los cambios.  
   
 ## <a name="see-also"></a>Vea también  
-[Migrar datos de DB2 a SQL Server](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
+[Migrar datos de DB2 a SQL Server](http://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
   

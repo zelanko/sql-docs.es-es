@@ -1,5 +1,5 @@
 ---
-title: Sys.trace_subclass_values (Transact-SQL) | Documentos de Microsoft
+title: Sys.trace_subclass_values (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 070327b43854e9b78f927e68ebfb1f20d607f5d9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220946"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969638"
 ---
 # <a name="systracesubclassvalues-transact-sql"></a>sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "33220946"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use vistas de catálogo de eventos extendidos en su lugar.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**trace_event_id**|**smallint**|Id. del evento de seguimiento. Este parámetro también está disponible en la **sys.trace_events** vista de catálogo.|  
-|**trace_column_id**|**smallint**|Id. de la columna de seguimiento utilizado para la enumeración. Este parámetro también está disponible en la **sys.trace_columns** vista de catálogo.|  
+|**trace_event_id**|**smallint**|Id. del evento de seguimiento. Este parámetro también está disponible en el **sys.trace_events** vista de catálogo.|  
+|**trace_column_id**|**smallint**|Id. de la columna de seguimiento utilizado para la enumeración. Este parámetro también está disponible en el **sys.trace_columns** vista de catálogo.|  
 |**subclass_name**|**nvarchar(128)**|Significado del valor de la columna.|  
 |**subclass_value**|**smallint**|Valor de la columna.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

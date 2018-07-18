@@ -1,5 +1,5 @@
 ---
-title: sp_droptype (Transact-SQL) | Documentos de Microsoft
+title: sp_droptype (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 6f898820839afe4057805d9d6ed8bc4e53341065
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242568"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970317"
 ---
 # <a name="spdroptype-transact-sql"></a>sp_droptype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_droptype [ @typename = ] 'type'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@typename=**] **'***tipo***'**  
- Nombre de un tipo de datos de alias perteneciente al usuario. *tipo de* es **sysname**, no tiene ningún valor predeterminado.  
+ Nombre de un tipo de datos de alias perteneciente al usuario. *tipo* es **sysname**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-type"></a>Tipo de código de retorno  
  0 (correcto) o 1 (error)  
@@ -53,14 +53,14 @@ sp_droptype [ @typename = ] 'type'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- El **tipo** alias el tipo de datos no se puede quitar si tablas u otros objetos de base de datos hacen referencia a él.  
+## <a name="remarks"></a>Notas  
+ El **tipo** alias no se puede quitar el tipo de datos si las tablas u otros objetos de base de datos hacen referencia a él.  
   
 > [!NOTE]  
 >  Un tipo de datos de alias no puede quitarse si se utiliza en una definición de tabla, o si una regla o valor predeterminado está enlazado a él.  
   
-## <a name="permissions"></a>Permissions  
- Debe pertenecer a la **db_owner** rol fijo de base de datos o la **db_ddladmin** rol fijo de base de datos.  
+## <a name="permissions"></a>Permisos  
+ Debe pertenecer a la **db_owner** rol fijo de base de datos o el **db_ddladmin** rol fijo de base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se quita el tipo de datos de alias `birthday`.  

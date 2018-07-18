@@ -1,5 +1,5 @@
 ---
-title: Tipo de elemento (DimensionAttribute) (ASSL) | Documentos de Microsoft
+title: Type (elemento) (DimensionAttribute) (ASSL) | Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f1b0a959e57d4df5db8fa4616cf8a31536cf1689
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045689"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971457"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Elemento Type (DimensionAttribute) (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -31,29 +31,29 @@ ms.locfileid: "34045689"
 </DimensionAttribute>  
 ```  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String (enumeración)|  
 |Valor predeterminado|*Regular*|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elemento primario|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*Cuenta*|El atributo representa el nombre de una cuenta.|  
 |*AccountNumber*|El atributo representa el número de una cuenta.|  
-|*AccountType*|El atributo representa el tipo de una cuenta.|  
+|*Tipo de cuenta*|El atributo representa el tipo de una cuenta.|  
 |*Dirección*|El atributo representa una dirección.|  
 |*AddressBuilding*|El atributo representa un identificador de edificio para una dirección.|  
 |*AddressCity*|El atributo representa una ciudad para una dirección.|  
@@ -68,7 +68,7 @@ ms.locfileid: "34045689"
 |*AddressStreet*|El atributo representa una calle para una dirección.|  
 |*AddressZip*|El atributo representa un código postal para una dirección.|  
 |*BOMResource*|El atributo representa un recurso para una lista de materiales (BOM).|  
-|*Caption*|El atributo representa un título.|  
+|*Título*|El atributo representa un título.|  
 |*CaptionAbbreviation*|El atributo representa una abreviatura.|  
 |*CaptionDescription*|El atributo representa una descripción.|  
 |*Canal*|El atributo representa un canal.|  
@@ -185,7 +185,7 @@ ms.locfileid: "34045689"
 |*MonthOfTrimester*|El atributo representa el ordinal del mes de un cuatrimestre.|  
 |*MonthOfYear*|El atributo representa el ordinal del mes de un año.|  
 |*Meses*|El atributo representa los meses.|  
-|*organizationalUnit*|El atributo representa una unidad organizativa.|  
+|*OrganizationalUnit*|El atributo representa una unidad organizativa.|  
 |*OrgTitle*|El atributo representa un título organizativo.|  
 |*PercentOwnership*|El atributo representa un porcentaje de propiedad.|  
 |*PercentVoteRight*|El atributo representa un porcentaje de derechos de voto.|  
@@ -205,7 +205,7 @@ ms.locfileid: "34045689"
 |*PhysicalWeight*|El atributo representa el peso.|  
 |*PhysicalWidth*|El atributo representa el ancho.|  
 |*Point*|El atributo representa un punto.|  
-|*PostalCode*|El atributo representa un código postal.|  
+|*Código postal*|El atributo representa un código postal.|  
 |*Product*|El atributo representa un producto.|  
 |*ProductBrand*|El atributo representa una marca de producto.|  
 |*ProductCategory*|El atributo representa una categoría de producto.|  
@@ -214,16 +214,16 @@ ms.locfileid: "34045689"
 |*ProjectCode*|El atributo representa un código de proyecto.|  
 |*Projectcompletion*|El atributo representa el estado de finalización de un proyecto.|  
 |*ProjectEnddate*|El atributo representa una fecha de fin de proyecto.|  
-|*Nombre de proyecto*|El atributo representa un nombre de proyecto.|  
+|*ProjectName*|El atributo representa un nombre de proyecto.|  
 |*ProjectStartDate*|El atributo representa una fecha de inicio de proyecto.|  
 |*Promoción*|El atributo representa una promoción.|  
 |*QtyRangeHigh*|El atributo representa el valor más alto de un intervalo de cantidades.|  
 |*QtyRangeLow*|El atributo representa el valor más bajo de un intervalo de cantidades.|  
-|*Cuantitativo*|El atributo representa un atributo cuantitativo.|  
+|*Cuantitativa*|El atributo representa un atributo cuantitativo.|  
 |*QuarterOfHalfYear*|El atributo representa el ordinal del trimestre de un semestre.|  
 |*QuarterOfYear*|El atributo representa el ordinal del trimestre de un año.|  
 |*Trimestres*|El atributo representa los trimestres.|  
-|*Velocidad*|El atributo representa una tarifa.|  
+|*Velocidad de*|El atributo representa una tarifa.|  
 |*RateType*|El atributo representa un tipo de tarifa.|  
 |*Region*|El atributo representa una región definida por el cliente.|  
 |*Regular*|El atributo representa un atributo normal.|  
@@ -285,11 +285,11 @@ ms.locfileid: "34045689"
   
  La enumeración que corresponde a los valores permitidos para **tipo** en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.AttributeType>.  
   
- El elemento que corresponde al elemento primario de **tipo** en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ El elemento que se corresponde con el elemento primario de **tipo** en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vea también  
  [Atributos de elemento &#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [Dimension, elemento & #40; ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [Propiedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Elemento de dimensión &#40;ASSL&#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [Propiedades &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

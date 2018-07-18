@@ -1,5 +1,5 @@
 ---
-title: Cargar convertido la base de datos objetos en SQL Server (DB2ToSQL) | Documentos de Microsoft
+title: Cargando convertido la base de datos objetos en SQL Server (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,102 +16,102 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 915456e1dd679b62c42fb0bd29feeb0c861a85c2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9298d8148c375c47b2db52e11685dcae0dd917e2
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775121"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984947"
 ---
-# <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Cargar convertido la base de datos objetos en SQL Server (DB2ToSQL)
-Después de haber convertido esquemas de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], puede cargar los objetos de base de datos resultante en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Se puede tener SSMA crear los objetos, o puede incluir los objetos y ejecutar las secuencias de comandos por sí mismo. Además, SSMA permite actualizar los metadatos de destino con el contenido real de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos.  
+# <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Cargando convertido la base de datos objetos en SQL Server (DB2ToSQL)
+Después de convertir los esquemas de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], puede cargar los objetos de base de datos resultantes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Se puede tener SSMA crear los objetos, o puede incluir los objetos y ejecutar las secuencias de comandos usted mismo. Además, SSMA permite actualizar los metadatos de destino con el contenido real de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos.  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>Elegir entre sincronización y las secuencias de comandos  
-Si desea cargar los objetos de base de datos convertida en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sin modificación, puede tener SSMA crear o volver a crear los objetos de base de datos directamente. Ese método es rápido y sencillo, pero no permiten la personalización de la [!INCLUDE[tsql](../../includes/tsql_md.md)] código que define la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos, distintos de los procedimientos almacenados.  
+Si desea cargar los objetos de base de datos convertida en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sin modificación, puede tener SSMA crear o volver a crear los objetos de base de datos directamente. Ese método es rápido y sencillo, pero no permiten la personalización de la [!INCLUDE[tsql](../../includes/tsql_md.md)] código que define el [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos de procedimientos almacenados.  
   
-Si desea modificar el [!INCLUDE[tsql](../../includes/tsql_md.md)] que se utiliza para crear objetos, o si desea tener mayor control sobre la creación de objetos, use SSMA para crear secuencias de comandos. Puede, a continuación, modificar los scripts, crear de forma individual cada objeto e incluso [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] agente para programar la creación de esos objetos.  
+Si desea modificar el [!INCLUDE[tsql](../../includes/tsql_md.md)] que se utiliza para crear objetos, o si desea más control sobre la creación de objetos, utilice SSMA para crear secuencias de comandos. Puede, a continuación, modificar los scripts, crear cada objeto individualmente e incluso usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] agente para programar la creación de esos objetos.  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>Uso de SSMA para sincronizar objetos con SQL Server  
-Usar SSMA para crear [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos de base de datos, seleccione los objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] el Explorador de metadatos y, a continuación, sincronizar los objetos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], tal y como se muestra en el siguiente procedimiento. De forma predeterminada, si los objetos que ya existen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], y si los metadatos SSMA están más reciente que el objeto en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA modificará las definiciones de objeto en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Puede cambiar el comportamiento predeterminado mediante la edición de **configuración del proyecto**.  
+Uso de SSMA para crear [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos de base de datos, seleccione los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] el Explorador de metadatos y, a continuación, sincronizar los objetos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], tal y como se muestra en el siguiente procedimiento. De forma predeterminada, si los objetos que ya existen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], y si están más reciente que el objeto en los metadatos SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], afectará a las definiciones de objeto en SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Puede cambiar el comportamiento predeterminado mediante la edición **configuración del proyecto**.  
   
 > [!NOTE]  
-> Puede seleccionar existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos de objetos que no se han convertido de bases de datos DB2. Sin embargo, no se volverá a crearse ni modificar SSMA esos objetos.  
+> Puede seleccionar existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos de objetos que no se han convertido en bases de datos DB2. Sin embargo, esos objetos no se vuelven a crear o modificar SSMA.  
   
 **Para sincronizar objetos con SQL Server**  
   
 1.  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] el Explorador de metadatos, expanda la parte superior [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nodo y, a continuación, expanda **bases de datos**.  
   
-2.  Seleccione los objetos para su procesamiento:  
+2.  Seleccione los objetos que se va a procesar:  
   
-    -   Para sincronizar una base de datos completa, active la casilla de verificación situada junto al nombre de la base de datos.  
+    -   Para sincronizar una base de datos completa, active la casilla situada junto al nombre de la base de datos.  
   
-    -   Para sincronizar u omitir los objetos individuales o las categorías de objetos, active o desactive la casilla de verificación situada junto a la carpeta o el objeto.  
+    -   Para sincronizar u omitir los objetos individuales o categorías de objetos, active o desactive la casilla de verificación situada junto al objeto o la carpeta.  
   
-3.  Después de seleccionar los objetos para procesar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] el Explorador de metadatos, haga clic en **bases de datos**y, a continuación, haga clic en **sincronizar con la base de datos**.  
+3.  Una vez haya seleccionado los objetos que se va a procesar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] el Explorador de metadatos, haga clic en **bases de datos**y, a continuación, haga clic en **sincronizar con base de datos**.  
   
-    También puede sincronizar objetos individuales o categorías de objetos con el botón secundario en el objeto o su carpeta principal y, a continuación, haga clic en **sincronizar con la base de datos**.  
+    También puede sincronizar objetos individuales o categorías de objetos haciendo clic en el objeto o su carpeta principal y, a continuación, haga clic en **sincronizar con base de datos**.  
   
-    Después de eso, se mostrará SSMA el **sincronizar con la base de datos** cuadro de diálogo, donde puede ver dos grupos de elementos. En el lado izquierdo, SSMA muestra representados en un árbol de objetos de base de datos seleccionada. En el lado derecho, puede ver un árbol que representa los mismos objetos en los metadatos SSMA. Puede expandir el árbol, haga clic en la izquierda o derecha botón "+". La dirección de la sincronización se muestra en la columna de acción que se encuentra entre los dos árboles.  
+    Después de eso, SSMA mostrará el **sincronizar con base de datos** cuadro de diálogo, donde puede ver dos grupos de elementos. En el lado izquierdo, SSMA muestra representados en un árbol de objetos de base de datos seleccionada. En el lado derecho, puede ver un árbol que representa los mismos objetos en los metadatos SSMA. Puede expandir el árbol, haga clic en la izquierda o derecha ' +' botón. La dirección de la sincronización se muestra en la columna de acción que se encuentra entre los dos árboles.  
   
-    Puede ser un inicio de sesión de acción en tres estados:  
+    Puede ser un inicio de sesión de la acción en tres estados:  
   
-    -   Una flecha izquierda significa que el contenido de los metadatos se guardará en la base de datos (el valor predeterminado).  
+    -   Una flecha izquierda, significa que el contenido de los metadatos se guardarán en la base de datos (el valor predeterminado).  
   
-    -   Una flecha derecha significa el contenido de la base de datos, sobrescribirá los metadatos SSMA.  
+    -   Una flecha derecha significa que el contenido de la base de datos, sobrescribirá los metadatos SSMA.  
   
-    -   Un signo de cruz significa que no se van a realizar ninguna acción.  
+    -   Una cruz significa que no se realizará ninguna acción.  
   
-Haga clic en el signo de acción para cambiar el estado. Sincronización real se realizará al hacer clic en **Aceptar** botón de la **sincronizar con la base de datos** cuadro de diálogo.  
+Haga clic en el signo de acción para cambiar el estado. Sincronización real se realizará al hacer clic en **Aceptar** botón de la **sincronizar con base de datos** cuadro de diálogo.  
   
 ## <a name="scripting-objects"></a>Objetos de scripting  
-Para guardar [!INCLUDE[tsql](../../includes/tsql_md.md)] las definiciones de los objetos de base de datos convertida, o para cambiar las definiciones de objeto y ejecutar secuencias de comandos por sí mismo, puede guardar la base de datos convertida a las definiciones de objeto [!INCLUDE[tsql](../../includes/tsql_md.md)] secuencias de comandos.  
+Para guardar [!INCLUDE[tsql](../../includes/tsql_md.md)] las definiciones de los objetos de base de datos convertida, o para modificar las definiciones de objeto y ejecutar scripts usted mismo, puede guardar la base de datos convertida a las definiciones de objeto [!INCLUDE[tsql](../../includes/tsql_md.md)] secuencias de comandos.  
   
 **Para guardar los objetos como secuencias de comandos**  
   
-1.  Después de seleccionar los objetos que se va a guardar en una secuencia de comandos, haga clic en **bases de datos**y, a continuación, haga clic en **Guardar como secuencia de comandos**.  
+1.  Una vez haya seleccionado los objetos que se va a guardar en una secuencia de comandos, haga clic en **bases de datos**y, a continuación, haga clic en **Guardar como Script**.  
   
-    También se pueden incluir objetos individuales o categorías de objetos con el botón secundario en el objeto o su carpeta principal y, a continuación, haga clic en **Guardar como secuencia de comandos**.  
+    También puede incluir objetos individuales o categorías de objetos haciendo clic en el objeto o su carpeta principal y, a continuación, haga clic en **Guardar como Script**.  
   
-2.  En el **Guardar como** diálogo cuadro, busque la carpeta donde desea guardar la secuencia de comandos, escriba un nombre de archivo en el **nombre de archivo** (cuadro) y, a continuación, [!INCLUDE[clickOK](../../includes/clickok_md.md)]. SSMA anexará la extensión de nombre de archivo. SQL.  
+2.  En el **Guardar como** diálogo cuadro, busque la carpeta donde desea guardar el script, escriba un nombre de archivo en el **nombre de archivo** cuadro y, a continuación, [!INCLUDE[clickOK](../../includes/clickok_md.md)]. SSMA anexará la extensión de nombre de archivo. SQL.  
   
-### <a name="modifying-scripts"></a>Modificar Scripts  
-Después de haber guardado la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] definiciones de objetos como uno o más scripts, puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] para ver y modificar las secuencias de comandos.  
+### <a name="modifying-scripts"></a>Modificación de las secuencias de comandos  
+Después de haber guardado el [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] definiciones de objetos como uno o varios scripts, puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] para ver y modificar los scripts.  
   
 **Para modificar una secuencia de comandos**  
   
-1.  En el [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **archivo** menú, elija **abiertos**y, a continuación, haga clic en **archivo**.  
+1.  En el [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **archivo** menú, elija **abierto**y, a continuación, haga clic en **archivo**.  
   
-2.  En el **abiertos** cuadro de diálogo, seleccione el archivo de script y, a continuación, haga clic en Aceptar.
+2.  En el **abierto** cuadro de diálogo, seleccione el archivo de script y, a continuación, haga clic en Aceptar.
   
 3.  Editar el archivo de script mediante el editor de consultas.  
   
-    Para obtener más información sobre el editor de consultas, vea "Comodidad comandos y características del Editor" en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] libros en pantalla.  
+    Para obtener más información sobre el editor de consultas, vea "Editor comodidad comandos y características" en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] libros en pantalla.  
   
-4.  Para guardar la secuencia de comandos, en el menú, en archivo **guardar**.  
+4.  Para guardar el script, haga clic en menú archivo **guardar**.  
   
-### <a name="running-scripts"></a>Ejecutar secuencias de comandos  
+### <a name="running-scripts"></a>Ejecución de Scripts  
 Puede ejecutar una secuencia de comandos o instrucciones individuales, en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
-**Para ejecutar una secuencia de comandos**  
+**Para ejecutar un script**  
   
-1.  En el [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **archivo** menú, elija **abiertos**y, a continuación, haga clic en **archivo**.  
+1.  En el [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **archivo** menú, elija **abierto**y, a continuación, haga clic en **archivo**.  
   
-2.  En el **abiertos** cuadro de diálogo, seleccione el archivo de script y, a continuación, [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+2.  En el **abierto** cuadro de diálogo, seleccione el archivo de script y, a continuación, [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 3.  Para ejecutar el script completo, presione el **F5** clave.  
   
-4.  Para ejecutar un conjunto de instrucciones, seleccione las instrucciones en la ventana del editor de consultas y, a continuación, presione la **F5** clave.  
+4.  Para ejecutar un conjunto de instrucciones, las instrucciones select en la ventana del editor de consultas y, a continuación, presione el **F5** clave.  
   
-Para obtener más información acerca de cómo usar el editor de consultas para ejecutar las secuencias de comandos, vea "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] [!INCLUDE[tsql](../../includes/tsql_md.md)] consulta" en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] libros en pantalla.  
+Para obtener más información acerca de cómo usar el editor de consultas para ejecutar scripts, vea "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] [!INCLUDE[tsql](../../includes/tsql_md.md)] consulta" en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] libros en pantalla.  
   
-También puede ejecutar las secuencias de comandos desde la línea de comandos mediante la **sqlcmd** utilidad y desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] agente. Para obtener más información acerca de **sqlcmd**, vea "utilidad sqlcmd" en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] libros en pantalla. Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] agente, vea "automatizar las tareas administrativas ([!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] agente)" en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] libros en pantalla.  
+También puede ejecutar scripts desde la línea de comandos mediante la **sqlcmd** utilidad y desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] agente. Para obtener más información acerca de **sqlcmd**, vea "utilidad sqlcmd" en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] libros en pantalla. Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] agente, vea "automatizar las tareas administrativas ([!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] agente)" en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] libros en pantalla.  
   
-## <a name="securing-objects-in-sql-server"></a>Proteger los objetos de SQL Server  
-Después de haber cargado los objetos de base de datos convertida en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], puede conceder y denegar permisos en esos objetos. Es una buena idea hacerlo antes de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Para obtener información acerca de cómo ayudar a proteger los objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vea "Consideraciones para las bases de datos y base de datos de aplicaciones de seguridad" en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] libros en pantalla.  
+## <a name="securing-objects-in-sql-server"></a>Seguridad de los objetos en SQL Server  
+Después de haber cargado los objetos de base de datos convertida en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], puede otorgar y denegar permisos en esos objetos. Es una buena idea hacerlo antes de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Para obtener información acerca de cómo ayudar a proteger objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vea "Consideraciones para las bases de datos y base de datos de aplicaciones de seguridad" en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] libros en pantalla.  
   
 ## <a name="next-step"></a>Paso siguiente  
-El siguiente paso del proceso de migración consiste en [migrar datos de DB2 en SQL Server](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
+El siguiente paso del proceso de migración es [migrar datos de DB2 a SQL Server](http://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
   
 ## <a name="see-also"></a>Vea también  
-[Migrar datos de DB2 en SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[Migración de datos de DB2 en SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

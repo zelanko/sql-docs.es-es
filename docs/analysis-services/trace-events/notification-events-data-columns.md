@@ -1,5 +1,5 @@
 ---
-title: Columnas de datos de eventos de notificación | Documentos de Microsoft
+title: Columnas de datos de eventos de notificación | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bf7695ec7dbbe7361641fb939718724f611e6c1e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045719"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017768"
 ---
 # <a name="notification-events-data-columns"></a>Columnas de datos de eventos de notificación
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34045719"
 |CurrentTime|2|5|Contiene la hora actual del evento de notificación, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene la hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene la hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Contiene el tiempo (en milisegundos) que duró el evento.|  
+|Duration|5|2|Contiene el tiempo (en milisegundos) que duró el evento.|  
 |IntegerData|10|1|Contiene los datos enteros asociados al evento de notificación. Cuando la columna EventSubclass es 8, los valores son:<br /><br /> 1 = Creado<br /><br /> 2 = Eliminado<br /><br /> 3 = Propiedades del objeto cambiadas<br /><br /> 4 = Propiedades cambiadas de los elementos secundarios del objeto<br /><br /> 6 = Elementos secundarios agregados<br /><br /> 7 = Elementos secundarios eliminados<br /><br /> 8 = Objeto totalmente procesado<br /><br /> 9 = Objeto parcialmente procesado<br /><br /> 10 = Objeto no procesado<br /><br /> 11 = Objeto totalmente optimizado<br /><br /> 12 = Objeto parcialmente optimizado<br /><br /> 13 = Objeto no optimizado|  
 |ObjectID|11|8|Contiene el identificador de objeto (valor de cadena) para el cual se ha emitido esta notificación.|  
 |ObjectType|12|1|Contiene el tipo de objeto asociado al evento de notificación.|  
@@ -75,6 +75,6 @@ ms.locfileid: "34045719"
 |ServerName|43|8|Contiene el nombre de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se ha producido el evento de notificación.|  
   
 ## <a name="see-also"></a>Vea también  
- [Categoría de eventos de eventos de notificación](../../analysis-services/trace-events/notification-events-event-category.md)  
+ [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

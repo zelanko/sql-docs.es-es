@@ -1,5 +1,5 @@
 ---
-title: Sys.trace_events (Transact-SQL) | Documentos de Microsoft
+title: Sys.trace_events (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2d564d08dce5dbc89c0071625aefc2cfef80ec36
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220656"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969627"
 ---
 # <a name="systraceevents-transact-sql"></a>sys.trace_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "33220656"
  Para obtener más información acerca de estos eventos de seguimiento, vea [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**trace_event_id**|**smallint**|Id. único del evento. Esta columna también está disponible en la **sys.trace_event_bindings** y **sys.trace_subclass_values** vistas de catálogo.|  
-|**category_id**|**smallint**|Id. de categoría del evento. Esta columna también está disponible en la **sys.trace_categories** vista de catálogo.|  
+|**trace_event_id**|**smallint**|Id. único del evento. Esta columna también está disponible en el **sys.trace_event_bindings** y **sys.trace_subclass_values** vistas de catálogo.|  
+|**category_id**|**smallint**|Id. de categoría del evento. Esta columna también está disponible en el **sys.trace_categories** vista de catálogo.|  
 |**Nombre**|**nvarchar(128)**|Nombre único de este evento. Este parámetro no se traduce.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

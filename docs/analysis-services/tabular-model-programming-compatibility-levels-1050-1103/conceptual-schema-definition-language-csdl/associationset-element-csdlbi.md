@@ -1,5 +1,5 @@
 ---
-title: AssociationSet, elemento (CSDLBI) | Documentos de Microsoft
+title: AssociationSet, elemento (CSDLBI) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2ae4f565a2383284421bb433ed5cc98371196d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039219"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968987"
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet, elemento (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34039219"
 |Nombre|Es obligatorio|Descripción|  
 |----------|-----------------|-----------------|  
 |State|Sí|Cadena que indica si la asociación está activa o no. El valor lo define el elemento State.|  
-|Oculto|No|Valor booleano que indica si la relación está visible. De forma predeterminada, el valor de Hidden es **false**, lo que significa que todas las relaciones están visibles en el modelo.|  
+|Hidden|no|Valor booleano que indica si la relación está visible. De forma predeterminada, el valor de Hidden es **false**, lo que significa que todas las relaciones están visibles en el modelo.|  
   
 ## <a name="state-element"></a>Elemento State  
  El elemento **State** es un tipo simple que indica si una asociación está activa y debe usarse en los cálculos, o si está inactiva y se debe hacer referencia explícita a ella en los cálculos.  
@@ -37,7 +37,7 @@ ms.locfileid: "34039219"
   
  En la tabla siguiente se enumeran los valores del elemento **State** .  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |Activo|La asociación está activa.|  
 |Inactivo|La asociación está activa.|  
@@ -59,7 +59,7 @@ ms.locfileid: "34039219"
 ```  
   
 ## <a name="example"></a>Ejemplo  
- **Multidimensionales**  
+ **Multidimensional**  
   
  En el ejemplo siguiente se muestra la relación definida entre las tablas Sales y Currency, en el cubo de operaciones de Contoso.  
   
@@ -74,6 +74,6 @@ ms.locfileid: "34039219"
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia técnica de anotaciones de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Referencia técnica para las anotaciones de Business Intelligence en CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

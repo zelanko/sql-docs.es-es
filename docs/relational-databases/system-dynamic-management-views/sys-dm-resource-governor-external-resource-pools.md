@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/02/2018
 ms.suite: sql
@@ -22,11 +22,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 9e28e848c7a95e8c29558cb6ee77056d47a955e7
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466451"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38028843"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>Sys.dm_resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,10 @@ Devuelve información sobre el estado actual del grupo de recursos externos, la 
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-|Nombre de Colmn      |Tipo de datos      |Description|  
+|Nombre de Colmn      |Tipo de datos      |Descripción|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|Identificador del grupo de recursos. No admite valores NULL. |
-| name|**sysname**|El nombre del grupo de recursos. No admite valores NULL. 
+| NAME|**sysname**|El nombre del grupo de recursos. No admite valores NULL. 
 | pool_version|**int**|número de versión interna.|
 | max_cpu_percent|**int**|La configuración actual del ancho banda de la CPU promedio máximo permitido para todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU. No admite valores NULL. |
 | max_processes|**int**|Número máximo de procesos externos simultáneos. El valor predeterminado, 0, especifica que no hay límite. No admite valores NULL.|
@@ -47,12 +47,12 @@ Devuelve información sobre el estado actual del grupo de recursos externos, la 
 | peak_memory_kb|**bigint**|cantidad de memoria máxima utilizada, en kilobytes, del grupo de recursos. No admite valores NULL. |
 | write_io_count|**int**|El total de operaciones de E/S de escritura emitidas desde que se restablecieron las estadísticas del regulador de recursos. No admite valores NULL. |
 | read_io_count|**int**|El total de operaciones de E/S de lectura emitidas desde que se restablecieron las estadísticas del regulador de recursos. No admite valores NULL. |
-| total_cpu_kernel_ms|**bigint**|El tiempo de usuario de CPU acumulado en milisegundos desde que se restablecieron las estadísticas del regulador de recursos. No admite valores NULL. |
-| total_cpu_user_ms|**bigint**|El tiempo de usuario de CPU acumulado en milisegundos desde que se restablecieron las estadísticas del regulador de recursos. No admite valores NULL. |
+| total_cpu_kernel_ms|**bigint**|El tiempo acumulado usuario de la CPU en milisegundos desde que se restablecieron las estadísticas del regulador de recursos. No admite valores NULL. |
+| total_cpu_user_ms|**bigint**|El tiempo acumulado usuario de la CPU en milisegundos desde que se restablecieron las estadísticas del regulador de recursos. No admite valores NULL. |
 | active_processes_count|**int**|El número de procesos externos que se ejecutan en el momento de la solicitud. No admite valores NULL. |
 
  
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Permisos
 
 Requiere el permiso `VIEW SERVER STATE`.
 

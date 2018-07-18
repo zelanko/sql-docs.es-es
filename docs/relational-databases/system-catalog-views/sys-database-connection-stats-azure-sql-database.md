@@ -1,5 +1,5 @@
 ---
-title: Sys.database_connection_stats (base de datos de SQL Azure) | Documentos de Microsoft
+title: Sys.database_connection_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: ''
@@ -28,18 +28,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 2de813bc474d59deb417b5aec1e1d02b5e9f5967
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181531"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029518"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Contiene las estadísticas de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] base de datos **conectividad** eventos, que proporcionan una visión general de aciertos de la conexión de base de datos y con errores. Para obtener más información acerca de los eventos de conectividad, vea tipos de eventos en [sys.event_log &#40;base de datos de SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  Contiene las estadísticas de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] base de datos **conectividad** eventos, que proporcionan una visión general de aciertos de conexión de base de datos y errores. Para obtener más información acerca de los eventos de conectividad, consulte tipos de eventos en [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Estadística|Tipo|Description|  
+|Estadística|Tipo|Descripción|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Nombre de la base de datos.|  
 |**start_time**|**datetime2**|Fecha y hora UTC del inicio del intervalo de agregación. La hora es siempre un múltiplo de 5 minutos. Por ejemplo:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -47,10 +47,10 @@ ms.locfileid: "33181531"
 |**success_count**|**int**|Número de conexiones correctas.|  
 |**total_failure_count**|**int**|Número total de conexiones con error. Esta es la suma de **connection_failure_count**, **terminated_connection_count**, y **throttled_connection_count**y no incluye los eventos de interbloqueo.|  
 |**connection_failure_count**|**int**|Número total de errores de inicio de sesión.|  
-|**terminated_connection_count**|**int**|***Solo se aplica para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Número de conexiones terminadas.|  
-|**throttled_connection_count**|**int**|***Solo se aplica para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Número máximo de conexiones aceleradas.|  
+|**terminated_connection_count**|**int**|***Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Número de conexiones terminadas.|  
+|**throttled_connection_count**|**int**|***Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Número máximo de conexiones aceleradas.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ### <a name="event-aggregation"></a>Agregación de eventos  
  La información de eventos de esta vista se recopila y se agrega a intervalos de 5 minutos. Las columnas de recuento representan el número de veces que se produjo un evento de conectividad determinado para una base de datos específica en un intervalo de tiempo dado.  
@@ -80,17 +80,17 @@ start_time                    end_time
 ### <a name="errors-not-included"></a>Errores no incluidos  
  Esta vista puede no incluir toda la información de conexión y de error:  
   
--   Esta vista no incluye todos los [!INCLUDE[ssSDS](../../includes/sssds-md.md)] errores que pueden producirse, solo los especificados en tipos de evento en la base de datos [sys.event_log &#40;base de datos de SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+-   Esta vista no incluye todos los [!INCLUDE[ssSDS](../../includes/sssds-md.md)] errores que pueden producirse, solo los especificados en los tipos de eventos en la base de datos [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 -   Si se produce un fallo en el equipo del centro de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], es posible que se pierda una pequeña cantidad de datos del servidor lógico de la tabla de eventos.  
   
 -   Si se ha bloqueado una dirección IP a través de DoSGuard, los eventos de intento de conexión de esa dirección IP no pueden recopilarse y no aparecerán en esta vista.  
   
-## <a name="permissions"></a>Permissions  
- Los usuarios con permiso para tener acceso a la **maestro** base de datos tienen acceso de sólo lectura a esta vista.  
+## <a name="permissions"></a>Permisos  
+ Los usuarios con permiso para tener acceso a la **maestro** base de datos tiene acceso de solo lectura a esta vista.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra una consulta de **sys.database_connection_stats** para devolver un resumen de las conexiones de base de datos que se produjeron entre el mediodía del 25/9/2011 y el mediodía del 28/9/2011 (UTC). De forma predeterminada, los resultados de la consulta se ordenan por **start_time** (en orden ascendente).  
+ El ejemplo siguiente muestra una consulta de **sys.database_connection_stats** para devolver un resumen de las conexiones de base de datos que se produjeron entre el mediodía del 25/9/2011 y el mediodía del 28/9/2011 (UTC). De forma predeterminada, los resultados de la consulta se ordenan por **start_time** (orden ascendente).  
   
 ```  
 SELECT *  
@@ -99,6 +99,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Solución de problemas de base de datos SQL Azure de Windows](http://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
+ [Solución de problemas de Microsoft Azure SQL Database](http://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
   
   

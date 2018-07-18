@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fdb15a0c64b11eb0fc57772ccaf37adcc1cc599e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465231"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969777"
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -47,27 +47,27 @@ Las longitudes de cadena largas pueden afectar significativamente al rendimiento
 > [!WARNING]
 > **Sys.dm_db_xtp_hash_index_stats** examina la tabla completa. Por lo tanto, si hay tablas grandes en la base de datos **sys.dm_db_xtp_hash_index_stats** puede tardar mucho tiempo ejecución.  
   
-Para obtener más información, consulte [índices de Hash para las tablas con optimización para memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
+Para obtener más información, consulte [los índices de Hash para tablas optimizadas para memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
-|Nombre de columna|Tipo|Description|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|Identificador del objeto de la tabla primaria.|  
-|xtp_object_id|**bigint**|Id. de la tabla optimizada en memoria.|  
+|xtp_object_id|**bigint**|Identificador de la tabla optimizada para memoria.|  
 |index_id|**int**|El identificador de índice.|  
 |total_bucket_count|**bigint**|El número total de cubos de hash del índice.|  
 |empty_bucket_count|**bigint**|El número de cubos de hash vacíos del índice.|  
 |avg_chain_length|**bigint**|La longitud promedio de las cadenas de filas sobre todos los cubos de hash del índice.|  
 |max_chain_length|**bigint**|La longitud máxima de las cadenas de filas de los cubos de hash.|  
-|xtp_object_id|**bigint**|El identificador de objeto OLTP en memoria que corresponde a la tabla optimizada en memoria.|  
+|xtp_object_id|**bigint**|El identificador de objeto OLTP en memoria que corresponde a la tabla optimizada para memoria.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW DATABASE STATE en el servidor.  
 
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-troubleshooting-hash-index-bucket-count"></a>A. Solución de problemas de número de cubos de índice de hash
 
-La siguiente consulta se puede utilizar para solucionar el número de depósitos de índice de hash de una tabla existente. La consulta devuelve estadísticas sobre el porcentaje de depósitos vacíos y longitud de cadena para todos los índices de hash en tablas de usuario.
+La consulta siguiente puede utilizarse para solucionar el número de cubos de índice de hash de una tabla existente. La consulta devuelve estadísticas sobre el porcentaje de depósitos vacíos y la longitud de cadena para todos los índices de hash en tablas de usuario.
 
 ```sql
   SELECT  
@@ -91,11 +91,11 @@ La siguiente consulta se puede utilizar para solucionar el número de depósitos
   ORDER BY [table], [index];  
 ``` 
 
-Para obtener más información acerca de cómo interpretar los resultados de esta consulta, vea [solución de problemas de los índices de Hash para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
+Para obtener más información sobre cómo interpretar los resultados de esta consulta, vea [solución de problemas de los índices de Hash para tablas optimizadas para memoria](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. Estadísticas de índice de hash para las tablas internas
 
-Ciertas funciones usan las tablas internas que aprovechan los índices de hash, por ejemplo los índices de almacén de columnas en tablas optimizadas en memoria. La consulta siguiente devuelve estadísticas para los índices hash en tablas internas que están vinculadas a tablas de usuario.
+Ciertas funciones usan las tablas internas que aprovechan los índices de hash, por ejemplo los índices de almacén de columnas en tablas optimizadas para memoria. La consulta siguiente devuelve estadísticas para índices de hash en las tablas internas que están vinculadas a tablas de usuario.
 
 ```sql
   SELECT  
@@ -116,9 +116,9 @@ Ciertas funciones usan las tablas internas que aprovechan los índices de hash, 
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-Tenga en cuenta que no se puede cambiar el número de depósitos de índice en las tablas internas, lo que el resultado de esta consulta debe considerarse informativo únicamente. No se requiere ninguna acción.  
+Tenga en cuenta que no se puede cambiar el número de depósitos del índice en las tablas internas, por lo tanto el resultado de esta consulta debe considerarse informativo únicamente. No se requiere ninguna acción.  
 
-No se espera que esta consulta devuelva todas las filas a menos que se utilice una característica que aprovecha los índices hash en las tablas internas. La siguiente tabla con optimización para memoria contiene un índice de almacén de columnas. Después de crear esta tabla, verá los índices hash en las tablas internas.
+No se espera esta consulta devuelva alguna fila, a menos que se va a usar una característica que aprovecha los índices de hash en las tablas internas. La siguiente tabla optimizada para memoria contiene un índice de almacén de columnas. Después de crear esta tabla, verá los índices hash en las tablas internas.
 
 ```sql
   CREATE TABLE dbo.table_columnstore
@@ -129,6 +129,6 @@ No se espera que esta consulta devuelva todas las filas a menos que se utilice u
 ```
 
 ## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de tablas optimizadas en memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica de tabla optimizado para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

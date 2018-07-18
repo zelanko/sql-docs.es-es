@@ -1,7 +1,7 @@
 ---
 title: Requisitos previos, restricciones y recomendaciones - Grupos de disponibilidad AlwaysOn | Microsoft Docs
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 06/05/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 151
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d5b1b75df79f8422320089fe1a1a75fc890cfc8
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 42f970d275a4dc6a03ddfb2292ce587540d4fe6b
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769741"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934907"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Requisitos previos, restricciones y recomendaciones - Grupos de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,8 @@ ms.locfileid: "34769741"
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Asegúrese de que el sistema no es un controlador de dominio.|No se admiten grupos de disponibilidad en los controladores de dominio.|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Procure que cada equipo ejecute Windows Server 2012 o una versión posterior.|[Requisitos de hardware y software para instalar SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Asegúrese de que cada equipo es un nodo en un WSFC.|[Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
-|![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Asegúrese de que el WSFC contiene los nodos suficientes para admitir las configuraciones de grupo de disponibilidad.|Un nodo de clúster solo puede hospedar una única réplica de disponibilidad para un determinado grupo de disponibilidad. En un solo nodo de clúster, una o más instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden hospedar las réplicas de disponibilidad de muchos grupos de disponibilidad.<br /><br /> Pregunte a los administradores de bases de datos cuántos nodos de clúster se requieren para admitir las réplicas de disponibilidad de los grupos de disponibilidad planeados.<br /><br /> [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+|![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Asegúrese de que el WSFC contiene los nodos suficientes para admitir las configuraciones de grupo de disponibilidad.|Un nodo de clúster puede hospedar una réplica para un grupo de disponibilidad. El mismo nodo no puede hospedar dos réplicas del mismo grupo de disponibilidad. El nodo del clúster puede participar en varios grupos de disponibilidad, con una réplica de cada grupo. <br /><br /> Pregunte a los administradores de bases de datos cuántos nodos de clúster se requieren para admitir las réplicas de disponibilidad de los grupos de disponibilidad planeados.<br /><br /> [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+
   
 > [!IMPORTANT]  
 >  Asegúrese también de que el entorno esté configurado correctamente para conectarse a un grupo de disponibilidad. Para obtener más información, vea [Conectividad de cliente de AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
@@ -170,8 +171,10 @@ ms.locfileid: "34769741"
   
     -   Si un subproceso determinado está inactivo durante un tiempo, se libera de nuevo en el grupo de subprocesos general de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Normalmente, un subproceso inactivo se libera después de unos 15 segundos de inactividad. Sin embargo, dependiendo de la última actividad, un subproceso inactivo se puede conservar más tiempo.  
 
-    - Una instancia de SQL Server utiliza hasta 100 subprocesos para puesta al día en paralelo para las réplicas secundarias. Cada base de datos utiliza hasta la mitad del número total de núcleos de CPU, pero no más de 16 subprocesos por base de datos. Si el número total de subprocesos necesarios para una única instancia supera los 100, SQL Server utiliza un solo subproceso de puesta al día para cada base de datos restante. Los subprocesos de rehacer se liberan después de unos 15 segundos de inactividad. 
-
+    -   Una instancia de SQL Server utiliza hasta 100 subprocesos para puesta al día en paralelo para las réplicas secundarias. Cada base de datos utiliza hasta la mitad del número total de núcleos de CPU, pero no más de 16 subprocesos por base de datos. Si el número total de subprocesos necesarios para una única instancia supera los 100, SQL Server utiliza un solo subproceso de puesta al día para cada base de datos restante. Los subprocesos de rehacer en serie se liberan después de unos 15 segundos de inactividad. 
+    
+    > [!NOTE]
+    > Las bases de datos se eligen para un único subproceso en función de su identificador de base de datos ascendente. Como tal, el orden de creación de la base de datos se debe considerar para las instancias de SQL Server que hospedan más bases de datos de grupos de disponibilidad que los subprocesos de trabajo disponibles. Por ejemplo, en un sistema con 32 o más núcleos de CPU, todas las bases de datos a partir de la 7ª que se unieron a un grupo de disponibilidad estarán en modo de rehacer en serie con independencia de la carga de trabajo de rehacer real para cada base de datos. Las bases de datos que requieren rehacer en paralelo deben agregarse primero al grupo de disponibilidad.    
   
 -   Además, los grupos de disponibilidad usan subprocesos no compartidos, de la manera siguiente:  
   

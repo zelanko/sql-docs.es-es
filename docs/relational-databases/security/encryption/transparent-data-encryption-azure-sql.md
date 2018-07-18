@@ -12,20 +12,22 @@ ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 05/08/2018
-ms.author: rebeccaz
+ms.date: 07/09/2018
+ms.author: aliceku
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1f545dcc5ea5ef018a6e2aaa750305245c211e69
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 49a3745e67a51ee8f5eb9625d518328f61593514
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695536"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934857"
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Cifrado de datos transparente para SQL Database y Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-El cifrado de datos transparente (TDE) ayuda a proteger Azure SQL Database y Azure Data Warehouse ante la amenaza de actividad maliciosa. Permite cifrar y descifrar la base de datos en tiempo real, las copias de seguridad asociadas y los archivos de registro de transacciones en reposo sin necesidad de efectuar cambios en la aplicación. De forma predeterminada, TDE está habilitado para todas las bases de datos de Azure SQL Database recién implementadas, pero es posible que se tenga que habilitar manualmente para las bases de datos más antiguas.  
+El cifrado de datos transparente (TDE) ayuda a proteger Azure SQL Database y Azure Data Warehouse ante la amenaza de actividad maliciosa. Permite cifrar y descifrar la base de datos en tiempo real, las copias de seguridad asociadas y los archivos de registro de transacciones en reposo sin necesidad de efectuar cambios en la aplicación. De manera predeterminada, TDE está habilitado para todas las instancias de Azure SQL Database recién implementadas. TDE no se puede usar para cifrar la base de datos **maestra** lógica en SQL Database.  La base de datos **maestra** contiene objetos que se necesitan para realizar las operaciones de TDE en las bases de datos de los usuarios.
+
+TDE tendrá que habilitarse manualmente para las bases de datos anteriores o Azure SQL Data Warehouse.  
 
 El cifrado de datos transparente cifra el almacenamiento de una base de datos completa usando una clave simétrica denominada clave de cifrado de base de datos. El protector del cifrado de datos transparente es el encargado de proteger la clave de cifrado de la base de datos. El protector puede ser tanto un certificado administrado por un servicio (cifrado de datos transparente administrado por un servicio) o una clave asimétrica almacenada en Azure Key Vault (Bring Your Own Key). Puede establecer el protector del cifrado de datos transparente en el nivel de servidor. 
 

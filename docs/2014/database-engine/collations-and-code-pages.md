@@ -1,5 +1,5 @@
 ---
-title: Intercalaciones y páginas de códigos | Documentos de Microsoft
+title: Las intercalaciones y páginas de códigos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: da33b883499f9119c7c23f3c203aca6add6c4d3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 0632bb70a18930e71319554bba99b0660e986483
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182907"
 ---
 # <a name="collations-and-code-pages"></a>Intercalaciones y páginas de códigos
-  
-            [!INCLUDE[hek_2](../includes/hek-2-md.md)] tiene restricciones en cuanto a las páginas de códigos compatibles para las columnas (var)char en las tablas optimizadas para memoria y las intercalaciones compatibles empleadas en índices y procedimientos almacenados compilados de forma nativa.  
+  [!INCLUDE[hek_2](../includes/hek-2-md.md)] tiene restricciones en cuanto a las páginas de códigos compatibles para las columnas (var)char en las tablas optimizadas para memoria y las intercalaciones compatibles empleadas en índices y procedimientos almacenados compilados de forma nativa.  
   
  La página de códigos para un valor (var)char determina la asignación entre los caracteres y la representación de bytes que se almacena en la tabla. Por ejemplo, con la página de códigos del alfabeto Latin 1 de Windows (1252; el valor predeterminado de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), el carácter 'a' corresponde al byte 0x61.  
   
@@ -87,7 +86,7 @@ GO
   
 -   Todas las expresiones y operaciones de ordenación dentro de procedimientos almacenados compilados de forma nativa deben utilizar intercalaciones BIN2. La implicación es que todas las comparaciones y las operaciones de ordenación están basadas en los puntos de código Unicode de los caracteres (representaciones binarias). Por ejemplo, toda la clasificación distingue entre mayúsculas y minúsculas (la “Z” va antes de la “a”). Si fuera necesario, utilice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado para la ordenación sin distinción entre mayúsculas y minúsculas y la comparación.  
   
--   El truncamiento de los datos UTF-16 no se admite dentro de procedimientos almacenados compilados de forma nativa. Esto significa que char n (var) (*n*) valores no se puede convertir al tipo n (var) char (*i*), si *i* < *n*, si el intercalación tiene la propiedad _SC. Por ejemplo, la siguiente vista no se admite:  
+-   El truncamiento de los datos UTF-16 no se admite dentro de procedimientos almacenados compilados de forma nativa. Esto significa que char n (var) (*n*) los valores no se puede convertir al tipo n (var) char (*i*), si *i* < *n*, si el intercalación tiene la propiedad _SC. Por ejemplo, la siguiente vista no se admite:  
   
     ```tsql  
     -- column definition using an _SC collation  
@@ -101,7 +100,7 @@ GO
   
      Declare las variables con tipos lo suficientemente grandes para evitar el truncamiento.  
   
- El ejemplo siguiente muestra algunas de las implicaciones y las soluciones alternativas para las limitaciones de la intercalación en OLTP en memoria. El ejemplo utiliza la tabla employees especificada anteriormente. Este ejemplo muestra todos los empleados. Observe que, para LastName, debido a la intercalación binaria, los nombres en mayúsculas se clasifican antes que los nombres en minúsculas. Por consiguiente, 'Thomas' viene antes de 'nolan' porque los caracteres en mayúsculas tienen puntos de código inferiores. FirstName tiene una intercalación sin distinción entre mayúsculas y minúsculas. Así, la clasificación se realiza según la letra del alfabeto, no por el punto de código de los caracteres.  
+ El ejemplo siguiente muestra algunas de las implicaciones y las soluciones alternativas para las limitaciones de la intercalación en OLTP en memoria. El ejemplo utiliza la tabla employees especificada anteriormente. En este ejemplo se enumeran todos los empleados. Observe que, para LastName, debido a la intercalación binaria, los nombres en mayúsculas se clasifican antes que los nombres en minúsculas. Por consiguiente, 'Thomas' viene antes de 'nolan' porque los caracteres en mayúsculas tienen puntos de código inferiores. FirstName tiene una intercalación sin distinción entre mayúsculas y minúsculas. Así, la clasificación se realiza según la letra del alfabeto, no por el punto de código de los caracteres.  
   
 ```tsql  
 -- insert a number of values  

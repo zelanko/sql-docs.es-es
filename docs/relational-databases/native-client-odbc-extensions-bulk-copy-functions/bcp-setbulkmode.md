@@ -1,12 +1,12 @@
 ---
-title: bcp_setbulkmode | Documentos de Microsoft
+title: bcp_setbulkmode | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc5e54ef357214a3121c1a7ed964c9ee9bf5955b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: f60428506e4581cbb04bee8522748aba38d2716b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703586"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432714"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,26 +67,26 @@ RETCODE bcp_setbulkmode (
  SUCCEED o FAIL  
   
 ## <a name="remarks"></a>Notas  
- bcp_setbulkmode puede utilizarse para la copia masiva de una consulta o una tabla. Cuando bcp_setbulkmode se utiliza para realizar la copia una instrucción de consulta masiva, debe llamarse antes de llamar a bcp_control con BCP_HINT.  
+ bcp_setbulkmode puede utilizarse para la copia masiva de una consulta o una tabla. Cuando se usa bcp_setbulkmode para una instrucción de consulta de copia de forma masiva, se debe llamar antes de llamar a bcp_control con BCP_HINT.  
   
- bcp_setbulkmode es una alternativa al uso de [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) y [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md), que solo le permite especificar el formato de una columna por llamada de función.  
+ bcp_setbulkmode es una alternativa al uso [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) y [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md), que solo le permite especificar el formato de una columna por llamada de función.  
   
  En la lista siguiente se enumeran las constantes del parámetro *property* .  
   
 |property|Descripción|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Especifica el modo de salida de caracteres.<br /><br /> Corresponde a la opción – c de BCP. EXE y bcp_setcolfmt con **BCP_FMT_TYPE** propiedad establecida en **SQLCHARACTER**.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Especifica el modo de salida de Unicode.<br /><br /> Corresponde a la opción – w de BCP. EXE y bcp_setcolfmt con **BCP_FMT_TYPE** propiedad establecida en **SQLNCHAR**.|  
+|BCP_OUT_CHARACTER_MODE|Especifica el modo de salida de caracteres.<br /><br /> Corresponde a la opción – c de BCP. EXE y a bcp_setcolfmt con **BCP_FMT_TYPE** propiedad establecida en **SQLCHARACTER**.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Especifica el modo de salida de Unicode.<br /><br /> Se corresponde con la opción – w de BCP. EXE y bcp_setcolfmt con **BCP_FMT_TYPE** propiedad establecida en **SQLNCHAR**.|  
 |BCP_OUT_NATIVE_TEXT_MODE|Especifica los tipos nativos para los tipos no de caracteres y Unicode para los tipos de caracteres.<br /><br /> Se corresponde con la opción – N de BCP. EXE y bcp_setcolfmt con **BCP_FMT_TYPE** propiedad establecida en **SQLNCHAR** si el tipo de columna es una cadena (valor predeterminado si no es una cadena).|  
 |BCP_OUT_NATIVE_MODE|Especifica los tipos de base de datos nativos.<br /><br /> Se corresponde con la opción – n de BCP. EXE y bcp_setcolfmt con **BCP_FMT_TYPE** propiedad establecida en el valor predeterminado.|  
   
- No se debe usar bcp_setbulkmode con una secuencia de llamadas de función que incluye bcp_setcolfmt, bcp_control y bcp_readfmt. Por ejemplo, no se deben llamar bcp_control(BCPTEXTFILE) y bcp_setbulkmode.  
+ No se debe usar bcp_setbulkmode con una secuencia de llamadas de función que incluye bcp_setcolfmt bcp_control y bcp_readfmt. Por ejemplo, no debe llamar bcp_control(BCPTEXTFILE) y bcp_setbulkmode.  
   
- Puede llamar a bcp_control y bcp_setbulkmode para las opciones de bcp_control que no entren en conflicto con bcp_setbulkmode. Por ejemplo, puede llamar a bcp_control(BCPFIRST) y bcp_setbulkmode.  
+ Puede llamar a bcp_control y bcp_setbulkmode para bcp_control opciones que no entren en conflicto con bcp_setbulkmode. Por ejemplo, puede llamar a bcp_control(BCPFIRST) y bcp_setbulkmode.  
   
- Si intenta llamar a bcp_setbulkmode con una secuencia de llamadas de función que incluye bcp_setcolfmt, bcp_control y bcp_readfmt, una de las llamadas de función devolverá un error de secuencia. Si elige corregir el error, llame a bcp_init para restablecer todos los valores y volver a empezar.  
+ Si intenta llamar a bcp_setbulkmode con una secuencia de llamadas de función que incluye bcp_setcolfmt bcp_control y bcp_readfmt, una de las llamadas de función devolverá un error de secuencia. Si elige corregir el error, llame a bcp_init para restablecer todos los valores y volver a empezar.  
   
- A continuación se muestran algunos ejemplos de llamadas de función que producen un error de secuencia de función:  
+ A continuación se muestran algunos ejemplos de llamadas de función que se producirá un error de secuencia de función:  
   
 ```  
 bcp_init(“table”, DB_IN);  

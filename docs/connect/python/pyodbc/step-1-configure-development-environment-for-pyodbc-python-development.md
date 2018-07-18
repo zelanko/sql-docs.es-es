@@ -1,7 +1,7 @@
 ---
-title: 'Paso 1: Configurar el entorno de desarrollo de Python pyodbc | Documentos de Microsoft'
+title: 'Paso 1: Configurar el entorno de desarrollo de Python pyodbc | Microsoft Docs'
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,54 +14,42 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1491e68ea318f8a37f0f959f9432d410e0179a18
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: d591227354a950b36e085b350e207c4a8e89ff25
+ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309854"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37890986"
 ---
-# <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>Paso 1: Configurar el entorno de desarrollo para pyodbc desarrollo Python
+# <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>Paso 1: Configurar el entorno de desarrollo para el desarrollo de Python pyodbc
 
 ## <a name="windows"></a>Windows  
-Conectarse a la base de datos SQL mediante el uso de Python - pyodbc en Windows:
+Conexión a SQL Database mediante Python - pyodbc en Windows:
   
-1. **Descargue el instalador de Python**  
-  Si su equipo no tiene Python debe instalarlo. Vaya el [página de descarga de Python](https://www.python.org/downloads/windows/) y descargue los instaladores adecuados. Por ejemplo, si se encuentra en un equipo de 64 bits, descargar el instalador de Python 2.7 o 3.5 (x 64).  
+1. **Descargue el instalador de Python**.  
+  Si el equipo no tiene Python, instálelo. Vaya a la [página de descarga de Python](https://www.python.org/downloads/windows/) y descargue los instaladores adecuados. Por ejemplo, si se encuentra en un equipo de 64 bits, descargue al instalador de Python 2.7 o 3.7 (x 64).  
   
-2. **Instalar Python** una vez descargado el programa de instalación, haga lo siguiente: una. Haga doble clic en el archivo para iniciar el programa de instalación. B. Seleccione su idioma y acepte los términos. c. Siga las instrucciones que aparecen en la pantalla y Python debe instalarse en el equipo. d. Puede comprobar que es Python está instalado, vaya a C:\Python27 o C:\Python35 y ejecutar python - v o copiar - v (de 3.x) 
+2. **Instale Python**.  Una vez descargado el instalador, realice los pasos siguientes: una. Haga doble clic en el archivo para iniciar al instalador. B. Seleccione su idioma y acepte los términos. c. Siga las instrucciones en pantalla y Python debe instalarse en el equipo. d. Puede comprobar que está instalado Python, vaya a `C:\Python27` o `C:\Python37` y ejecute `python -v` o `py -v` (para 3.x) 
       
-3. [**Instalar al controlador ODBC de Microsoft**](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+3. [**Instale Microsoft ODBC Driver for SQL Server en Windows**](../../odbc/windows/system-requirements-installation-and-driver-files.md#installing-microsoft-odbc-driver-for-sql-server)
   
 4. **Abra cmd.exe como administrador**     
 
-5. **Instalar pyodbc con pip: el Administrador de paquetes de Python**
+5. **Instale pyodbc con pip - Administrador de paquetes de Python** (reemplace `C:\Python27\Scripts` con la ruta de acceso de Python instalada)
 ```  
-> cd C:\Python27\Scripts>  
+> cd C:\Python27\Scripts  
 > pip install pyodbc  
 ```  
 
   
 ## <a name="linux"></a>Linux 
-Conectarse a la base de datos SQL mediante el uso de Python - pyodbc en Ubuntu y RedHat:
+Conexión a SQL Database mediante Python - pyodbc:
   
-1. **Abra terminal**  
+1. **Abrir terminal**  
 
-2. **Instale Microsoft ODBC Driver 13 para Linux** para Ubuntu 15.04 + 
-``` 
-> sudo su  
-> wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-Ubuntu-b87369f0/file/154097/2/installodbc.sh  
-> sh installodbc.sh  
-```   
+2. [**Instale Microsoft ODBC Driver for SQL Server en Linux**](../../odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
-  Para RedHat 6,7 
-``` 
-> sudo su 
-> wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-SQL-8d067754/file/153653/4/install.sh 
-> sh install.sh 
-```  
-  
-3.  **Instalar pyodbc**  
+3.  **Instale pyodbc**  
 ```  
 > sudo -H pip install pyodbc
 ```

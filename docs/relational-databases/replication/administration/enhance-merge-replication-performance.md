@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,11 +24,12 @@ caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c930ccd4c4fded101f7248f8dadaeff570efd9db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0e389b424937ad0e7cbaa4b4e1b2b94c914f258
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358277"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aumentar el rendimiento de la replicación de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Establezca programaciones para sincronizar las suscripciones.  
   
-     Si un gran número de suscriptores se sincronizan con un publicador, considere la posibilidad de escalonar las programaciones con el fin de que el Agente de mezcla se ejecute en distintos momentos. Para más información, consulte [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md).  
+     Si un gran número de suscriptores se sincronizan con un publicador, considere la posibilidad de escalonar las programaciones con el fin de que el Agente de mezcla se ejecute en distintos momentos. Para obtener más información, consulte [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md).  
   
 ## <a name="merge-agent-parameters"></a>Parámetros del Agente de mezcla  
  Para obtener información sobre el Agente de mezcla y sus parámetros, vea [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md).  

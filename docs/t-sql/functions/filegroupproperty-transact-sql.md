@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,15 +21,15 @@ helpviewer_keywords:
 - displaying filegroup properties
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c7e3b446216f521bbb0d885784db017edf2bcd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: afc112a5e07197ed8b0056a7daeddb55c0c418c9
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054302"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790158"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ FILEGROUPPROPERTY ( filegroup_name , property )
  *property*  
  Es una expresión de tipo **varchar(128)** que contiene el nombre de la propiedad del grupo de archivos que se va a devolver. *property* puede ser uno de estos valores.  
   
-|Valor|Description|Valor devuelto|  
+|Valor|Descripción|Valor devuelto|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|El grupo de archivos es de solo lectura.|1 = True<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
 |**IsUserDefinedFG**|El grupo de archivos es un grupo de archivos definido por el usuario.|1 = True<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  

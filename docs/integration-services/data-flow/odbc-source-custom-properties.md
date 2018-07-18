@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87ed7a12ae763b0ad40fb0750506ca1ee2be30fe
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b15b88320c48a711539c952ea749c21d85ab6e15
+ms.sourcegitcommit: 5152caf8f4346f8b565742bc1df4e454551d63eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408357"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042595"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
   En la tabla siguiente se describen las propiedades personalizadas del origen ODBC. Todas las propiedades se pueden establecer a partir de expresiones SSIS.  
@@ -35,7 +35,7 @@ ms.locfileid: "35408357"
 |ExposeCharColumnsAsUnicode|Boolean|Esta propiedad determina el modo en que el componente expone las columnas CHAR. El valor predeterminado es False, que indica que las columnas CHAR se exponen como cadenas de varios bytes (DT_STR). Si es True, las columnas CHAR se exponen como cadenas anchas (DT_WSTR).<br /><br /> **Nota**: la propiedad no está disponible en el **Editor de origen de ODBC**, pero se puede establecer con el **Editor avanzado**.|  
 |FetchMethod|Integer (enumeración)|Método usado para obtener los datos. Las opciones posibles son fila por fila (0) y lote (1). El valor predeterminado es lote (1).<br /><br /> Para obtener más información acerca de estas opciones, consulte [ODBC Source](../../integration-services/data-flow/odbc-source.md).<br /><br /> **Nota**: la propiedad no está disponible en el **Editor de origen de ODBC**, pero se puede establecer con el **Editor avanzado**.|  
 |SqlCommand|String|Comando SQL que se va a ejecutar cuando AccessMode se establece en SQL Command.|  
-|StatementTimeout|Integer|Número de segundos que se esperará a que una instrucción SQL se ejecute antes de volver, con un error, a la aplicación. El valor predeterminado es 120. El valor 0 indica que el sistema no agota el tiempo de espera.|  
+|StatementTimeout|Integer|Número de segundos que se esperará a que una instrucción SQL se ejecute antes de volver, con un error, a la aplicación. El valor predeterminado es 0. El valor 0 indica que el sistema no agota el tiempo de espera.|  
 |TableName|String|Nombre de la tabla con los datos que se usan cuando AccessMode se establece en el nombre de tabla.|  
 |LobChunckSize|Integer|Asignación de tamaño del fragmento para las columnas LOB.|  
 ||||  

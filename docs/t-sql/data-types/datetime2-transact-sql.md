@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - datetime2 data type [SQL Server]
 ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 caps.latest.revision: 58
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4288b84c0ee47af3be54a71bb69e66f6c4ae552
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: feaca5b69a76fb7e3bffc67d58998de1bbd8b97e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055442"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417494"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +68,7 @@ En las siguientes tablas se enumeran los formatos de literales de cadena ISO 860
 |---|---|
 |AAAA-MM-DDThh:mm:ss[.nnnnnnn]<br /><br /> AAAA-MM-DDThh:mm:ss[.nnnnnnn]|Este formato no se ve afectado por la configuración regional de sesión de SET LANGUAGE y SET DATEFORMAT. La letra **T**, los dos puntos (:) y el punto (.) se incluyen en el literal de cadena, por ejemplo, "2007-05-02T19:58:47.1234567".|  
   
-|ODBC|Description|  
+|ODBC|Descripción|  
 |---|---|
 |{ ts 'aaaa-mm-dd hh:mm:ss[.fracciones de segundo]' }|Específico de ODBC API:<br /><br /> El número de dígitos a la derecha del separador decimal, que representa las fracciones de segundo, se puede especificar de 0 a 7 (100 nanosegundos).|  
   

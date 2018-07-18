@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 792774360e368f0cf950cacfd97a8c2d5355e8e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f7f20eda403c6f3fabea20e77a0c87b29a5f8dfb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055222"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415444"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,11 +61,11 @@ Define una fecha en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 ## <a name="supported-string-literal-formats-for-date"></a>Formatos de literales de cadena compatibles para date
 En las tablas siguientes se muestran los formatos de literales de cadena válidos para el tipo de datos **date**.
   
-|Numérico|Description|  
+|Numérico|Descripción|  
 |-------------|-----------------|  
 |mdy<br /><br /> [m]m/dd/[aa]aa<br /><br /> [m]m-dd-[aa]aa<br /><br /> [m]m.dd.[aa]aa<br /><br /> mad<br /><br /> mm/[aa]aa/dd<br /><br /> mm-[aa]aa/dd<br /><br /> [m]m.[aa]aa.dd<br /><br /> dma<br /><br /> dd/[m]m/[aa]aa<br /><br /> dd-[m]m-[aa]aa<br /><br /> dd.[m]m.[aa]aa<br /><br /> dam<br /><br /> dd/[aa]aa/[m]m<br /><br /> dd-[aa]aa-[m]m<br /><br /> dd.[aa]aa.[m]m<br /><br /> amd<br /><br /> [aa]aa/[m]m/dd<br /><br /> [aa]aa-[m]m-dd<br /><br /> [aa]aa-[m]m-dd|[m]m, dd, y [aa]aa representa el mes, el día y el año en una cadena con marcas de barras diagonales (/), guiones (-) o puntos (.) como separadores.<br /><br /> Solo se admiten los años de dos o cuatro dígitos. Siempre que sea posible utilice los años de cuatro dígitos. Use la opción Fecha límite de año de dos dígitos (vea [Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)) para especificar un número entero entre 0001 y 9999 que represente el año límite para interpretar años de dos dígitos como años de cuatro dígitos.<br /><br /> **Nota:** Para Informatica, YYYY se limita al intervalo entre 1582 y 9999.<br /><br /> Un año de dos dígitos menor o igual que los últimos dos dígitos del año límite pertenece al mismo siglo que el año límite. En cambio, un año de dos dígitos mayor que los últimos dos dígitos del año límite pertenece al siglo anterior al año límite. Por ejemplo, si el valor del año límite de dos dígitos es 2049 (el valor predeterminado), el año de dos dígitos 49 se interpreta como 2049 y el año de dos dígitos 50 se interpreta como 1950.<br /><br /> La configuración de idioma actual está determinada por el formato de fecha predeterminado. Para cambiar el formato de fecha, use las instrucciones [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) y [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> No se admite el formato **adm** para **date**.|  
   
-|Alfabético|Description|  
+|Alfabético|Descripción|  
 |------------------|-----------------|  
 |mes [dd][,] aaaa<br /><br /> mes dd[,] [aa]aa<br /><br /> mes aaaa [dd]<br /><br /> [dd] mes[,] aaaa<br /><br /> dd mes[,][aa]aa<br /><br /> dd [aa]aa mes<br /><br /> [dd] aaaa mes<br /><br /> aaaa mes [dd]<br /><br /> aaaa [dd] mes|**mes** representa el nombre completo del mes o la abreviatura del mes en el idioma actual. Las comas son opcionales y se omite el uso de mayúsculas.<br /><br /> Para evitar ambigüedades, use años de cuatro dígitos.<br /><br /> Si falta el día, se usará el primer día del mes.|  
   
@@ -74,15 +73,15 @@ En las tablas siguientes se muestran los formatos de literales de cadena válido
 |--------------|----------------|  
 |YYYY-MM-DD<br /><br /> YYYYMMDD|Igual que el estándar SQL. Éste es el único formato que se define como una norma internacional.|  
   
-|Sin separación|Description|  
+|Sin separación|Descripción|  
 |-----------------|-----------------|  
 |[aa]aammdd<br /><br /> aaaa[mm][dd]|Los datos de tipo **date** se pueden especificar con cuatro, seis u ocho dígitos. Una cadena de seis u ocho dígitos se interpreta siempre como **amd**. El mes y el día deben ser siempre de dos dígitos. Una cadena de cuatro dígitos se interpreta como el año.|  
   
-|ODBC|Description|  
+|ODBC|Descripción|  
 |----------|-----------------|  
 |{ d 'aaaa-mm-dd' }|Específico de la API de ODBC.|  
   
-|Formato W3C XML|Description|  
+|Formato W3C XML|Descripción|  
 |--------------------|-----------------|  
 |aaaa-mm-ddTZD|Específicamente admitido para uso de XML/SOAP.<br /><br /> DZH es el designador de zona horaria (Z o + hh: mm o -hh:mm).<br /><br /> -   hh:mm representa el desplazamiento de zona horaria. hh es una cifra de dos dígitos, de 0 a 14, que representa el número de horas del ajuste de zona horaria.<br />-   MM es una cifra de dos dígitos, de 0 a 59, que representa el número de minutos adicionales en el desplazamiento de zona horaria.<br />-   + (más) o – (menos) es el signo que se usa obligatoriamente para indicar el desplazamiento de zona horaria. Indica si el ajuste de zona horaria se suma o resta de la hora universal coordinada (UTC) para obtener la hora local. El intervalo válido de ajuste de zona horaria es de -14: 00 a +14: 00.|  
   

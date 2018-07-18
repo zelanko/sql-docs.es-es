@@ -18,12 +18,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 249a604407c1a11b5046ab3e9484c684ed80a2c2
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1589f037fd8c44e3daba9116dbc576353a0fed59
+ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404977"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37872825"
 ---
 # <a name="ssis-catalog"></a>Catálogo de SSIS
   El catálogo de **SSISDB** es el eje central cuando se trabaja con proyectos de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que ha implementado en el servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por ejemplo, establece los parámetros del proyecto y del paquete, configura entornos para especificar los valores en tiempo de ejecución para los paquetes, ejecuta paquetes y soluciona los problemas de los mismos, y administra las operaciones del servidor de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -225,7 +225,7 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
   
 -   [catalog.get_project &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md)  
   
--   [catalog.move_project &#40;&#40;base de datos de SSISDB&#41;](../Topic/catalog.move_project%20\(\(SSISDB%20Database\).md)  
+-   [catalog.move_project &#40;&#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md)  
   
 -   [catalog.restore_project &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md)  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,12 +21,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 01c6a268d0a4e7a833f4a121abc46cc396de2bed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f1b4ec74c21ab999530e25c08e03f1c0c0758026
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33058352"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782336"
 ---
 # <a name="operator-precedence-transact-sql"></a>Prioridad de operador (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "33058352"
   
  Cuando en una expresión dos operadores tengan el mismo nivel de prioridad de operador, se evalúan de izquierda a derecha en función de su posición dentro de la expresión. Por ejemplo, en la expresión utilizada en la siguiente instrucción `SET`, el operador de resta se evalúa antes que el operador de suma.  
   
-```  
+```sql  
 DECLARE @MyNumber int;  
 SET @MyNumber = 4 - 2 + 27;  
 -- Evaluates to 2 + 27 which yields an expression result of 29.  
@@ -60,7 +59,7 @@ SELECT @MyNumber;
   
  Por ejemplo, en la expresión utilizada en la siguiente instrucción `SET`, el operador de multiplicación tiene una prioridad mayor que el operador de suma. Por lo tanto, se evalúa antes; el resultado de la expresión es `13`.  
   
-```  
+```sql  
 DECLARE @MyNumber int;  
 SET @MyNumber = 2 * 4 + 5;  
 -- Evaluates to 8 + 5 which yields an expression result of 13.  
@@ -69,7 +68,7 @@ SELECT @MyNumber;
   
  En la expresión utilizada en la siguiente instrucción `SET`, el paréntesis hace que primero se lleve a cabo la suma. El resultado de la expresión es `18`.  
   
-```  
+```sql  
 DECLARE @MyNumber int;  
 SET @MyNumber = 2 * (4 + 5);  
 -- Evaluates to 2 * 9 which yields an expression result of 18.  
@@ -78,7 +77,7 @@ SELECT @MyNumber;
   
  Si una expresión tiene paréntesis anidados, se evalúa primero la expresión más anidada. El siguiente ejemplo contiene paréntesis anidados, con la expresión `5 - 3` en el conjunto de paréntesis más anidado. Esta expresión produce un valor de `2`. Entonces, el operador de suma (`+`) suma este resultado a `4`. Esto produce un valor de `6`. Finalmente, `6` se multiplica por `2` para producir un resultado de expresión de `12`.  
   
-```  
+```sql  
 DECLARE @MyNumber int;  
 SET @MyNumber = 2 * (4 + (5 - 3) );  
 -- Evaluates to 2 * (4 + 2) which then evaluates to 2 * 6, and   

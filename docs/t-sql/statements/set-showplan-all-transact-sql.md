@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,15 +27,15 @@ helpviewer_keywords:
 - estimated execution information [SQL Server]
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 68a42e92c546b2a2c28c6560ba59601a26c521f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dfd6611e13e45c1e3fa969111c68d3bd74d63249
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075032"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783636"
 ---
 # <a name="set-showplanall-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  SET SHOWPLAN_ALL devuelve la información como un conjunto de filas en forma de árbol jerárquico que representa los pasos que sigue el procesador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al ejecutar cada instrucción. Cada instrucción reflejada en la salida contiene una fila con el texto de la instrucción, seguida de varias filas con los detalles de los pasos de su ejecución. La tabla muestra las columnas que contiene la salida.  
   
-|Nombre de columna|Description|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |**StmtText**|En las filas que no sean de tipo PLAN_ROW, esta columna contiene el texto de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]. En las filas de tipo PLAN_ROW, esta columna contiene una descripción de la operación. Esta columna contiene el operador físico y, opcionalmente, puede contener también el operador lógico. También puede ir seguida de una descripción determinada por el operador físico. Para más información, vea [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md).|  
 |**StmtId**|Número de la instrucción en el lote actual.|  

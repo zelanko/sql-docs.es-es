@@ -1,23 +1,23 @@
 ---
 title: Cargar datos de SQL Server en Azure SQL Data Warehouse (SSIS) | Microsoft Docs
 description: Muestra cómo crear un paquete de SQL Server Integration Services (SSIS) para mover datos desde una gran variedad de orígenes de datos a SQL Data Warehouse.
-services: sql-data-warehouse
 documentationcenter: NA
-author: douglaslMS
-manager: craigg-msft
 ms.service: sql-data-warehouse
+ms.component: data-movement
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.custom: loading
 ms.date: 04/04/2018
 ms.author: douglasl
-ms.openlocfilehash: e5b34e72447d74875e67a0f1a71fb749a8c3d416
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+author: douglaslMS
+manager: craigg-msft
+ms.openlocfilehash: 84295d9d1e43a9d10724ab8381aa4308f50c8513
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402537"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36887411"
 ---
 # <a name="load-data-from-sql-server-to-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Cargar datos de SQL Server en Azure SQL Data Warehouse con SQL Server Integration Services (SSIS)
 

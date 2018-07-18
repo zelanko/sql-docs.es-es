@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -12,16 +11,16 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed7e6aeb0630a20ee39d512fc17dfe24040737f2
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 0fb3c753e4bde29eb9b5cbb5f287fc18d03a117a
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702519"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782436"
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>RESTORE DATABASE (Almacenamiento de datos paralelos)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -132,7 +131,7 @@ Restaurar una copia de seguridad en un dispositivo con un gran número de nodos 
   
 Por ejemplo, al restaurar una base de datos de 60 GB desde un dispositivo con 2 nodos (30 GB por nodo) a un equipo con 6 nodos, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] crea una base de datos de 180 GB (6 nodos con 30 GB cada uno) en el dispositivo de 6 nodos. En principio, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] restaura la base de datos a 2 nodos para que coincida con la configuración de origen y, seguidamente, redistribuye los datos a los 6 nodos.  
   
- Después de la redistribución, cada nodo de ejecución contendrá menos datos reales y más espacio libre que cada nodo de ejecución en el dispositivo de origen (más pequeño). Use el espacio extra para agregar más datos a la base de datos. Si el tamaño de la base de datos restaurada es superior al necesario, puede usar [ALTER DATABASE &#40;Almacenamiento de datos paralelos&#41; ](../../t-sql/statements/alter-database-parallel-data-warehouse.md) para reducir el tamaño de los archivos de la base de datos.  
+ Después de la redistribución, cada nodo de ejecución contendrá menos datos reales y más espacio libre que cada nodo de ejecución en el dispositivo de origen (más pequeño). Use el espacio extra para agregar más datos a la base de datos. Si el tamaño de la base de datos restaurada es superior al necesario, puede usar [ALTER DATABASE &#40;Almacenamiento de datos paralelos&#41; ](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw) para reducir el tamaño de los archivos de la base de datos.  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  En estas limitaciones y restricciones, el dispositivo de origen es el dispositivo desde el que se creó la copia de seguridad de la base de datos y el dispositivo de destino, el dispositivo en el que se va a restaurar esa base de datos.  

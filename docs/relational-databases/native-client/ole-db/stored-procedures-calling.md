@@ -1,5 +1,5 @@
 ---
-title: Llamar a un procedimiento almacenado (OLE DB) | Documentos de Microsoft
+title: Llamar a un procedimiento almacenado (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-ole-db
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,33 +24,33 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e853d37f3ada75ef5259fbc8fedabfb3e48d8c9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3a9be038053825a62153babc5480db8d4d451716
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32954920"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408674"
 ---
-# <a name="stored-procedures---calling"></a>Procedimientos almacenados - llamada
+# <a name="stored-procedures---calling"></a>Procedimientos almacenados: llamada
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Un procedimiento almacenado puede tener cero o más parámetros. También puede devolver un valor. Cuando se usa el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client, se pueden pasar parámetros a un procedimiento almacenado por:  
+  Un procedimiento almacenado puede tener cero o más parámetros. También puede devolver un valor. Cuando se usa el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB, se pueden pasar parámetros a un procedimiento almacenado por:  
   
 -   Codificando de forma rígida el valor de datos.  
   
 -   Utilizando un marcador de parámetro (?) para especificar parámetros, enlazar una variable de programa al marcador de parámetro y, a continuación, colocar el valor de datos en la variable de programa.  
   
 > [!NOTE]  
->  Cuando se llama a procedimientos almacenados de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizando parámetros con nombre con OLE DB, los nombres de parámetro deben empezar con el carácter '@'. Se trata de una restricción específica de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client aplica esta restricción de forma más estricta que MDAC.  
+>  Cuando se llama a procedimientos almacenados de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizando parámetros con nombre con OLE DB, los nombres de parámetro deben empezar con el carácter '\@'. Se trata de una restricción específica de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client aplica esta restricción de forma más estricta que MDAC.  
   
- Para admitir los parámetros, el **ICommandWithParameters** interfaz se expone en el objeto de comando. Para utilizar parámetros, el consumidor describe primero los parámetros al proveedor mediante una llamada a la **ICommandWithParameters:: SetParameterInfo** método (u opcionalmente prepara una instrucción de llamada que llama el **GetParameterInfo** método). A continuación, el consumidor crea un descriptor de acceso que especifica la estructura de un búfer y coloca los valores de parámetro en este búfer. Por último, pasa el identificador de descriptor de acceso y un puntero al búfer para **Execute**. En las llamadas posteriores a **Execute**, el consumidor coloca nuevos valores de parámetro en el búfer y llama **Execute** con el puntero de búfer y de identificador de descriptor de acceso.  
+ Para admitir parámetros, el **ICommandWithParameters** interfaz se expone en el objeto de comando. Para usar parámetros, el consumidor describe primero los parámetros al proveedor mediante una llamada a la **ICommandWithParameters:: SetParameterInfo** método (u opcionalmente prepara una instrucción de llamada que llama a la  **GetParameterInfo** método). A continuación, el consumidor crea un descriptor de acceso que especifica la estructura de un búfer y coloca los valores de parámetro en este búfer. Por último, pasa el identificador del descriptor de acceso y un puntero al búfer para **Execute**. En las llamadas posteriores a **Execute**, el consumidor coloca nuevos valores de parámetro en el búfer y llama a **Execute** con el puntero de búfer y el identificador de descriptor de acceso.  
   
- En primer lugar debe llamar un comando que llama a un procedimiento almacenado temporal utilizando parámetros **ICommandWithParameters:: SetParameterInfo** para definir la información de parámetros, antes de que el comando se puede preparar correctamente. Esto se debe a que el nombre interno para un procedimiento almacenado temporal difiere del nombre externo utilizado por un cliente y SQLOLEDB no puede consultar las tablas del sistema para determinar la información de parámetros para un procedimiento almacenado temporal.  
+ En primer lugar debe llamar un comando que llama a un procedimiento almacenado temporal utilizando parámetros **ICommandWithParameters:: SetParameterInfo** para definir la información de parámetros, antes de que se puede preparar correctamente el comando. Esto se debe a que el nombre interno para un procedimiento almacenado temporal difiere del nombre externo utilizado por un cliente y SQLOLEDB no puede consultar las tablas del sistema para determinar la información de parámetros para un procedimiento almacenado temporal.  
   
  Estos son los pasos en el proceso de enlace de parámetro:  
   
-1.  Rellene la información de parámetros en una matriz de estructuras DBPARAMBINDINFO; es decir, el nombre del parámetro, el nombre específico del proveedor para el tipo de datos del parámetro o un nombre del tipo de datos estándar, etc. Cada estructura de la matriz describe un parámetro. Esta matriz, a continuación, se pasa a la **SetParameterInfo** método.  
+1.  Rellene la información de parámetros en una matriz de estructuras DBPARAMBINDINFO; es decir, el nombre del parámetro, el nombre específico del proveedor para el tipo de datos del parámetro o un nombre del tipo de datos estándar, etc. Cada estructura de la matriz describe un parámetro. Esta matriz se pasa a la **SetParameterInfo** método.  
   
 2.  Llame a la **ICommandWithParameters:: SetParameterInfo** método para describir los parámetros al proveedor. **SetParameterInfo** especifica el tipo de datos nativos de cada parámetro. **SetParameterInfo** argumentos son:  
   
@@ -70,11 +70,11 @@ ms.locfileid: "32954920"
   
     -   La longitud y el tipo del valor de datos tal y como está en el búfer del consumidor.  
   
-     Un descriptor de acceso queda identificado por su identificador, que es de tipo HACCESSOR. Este identificador es devuelto por la **CreateAccessor** método. Cada vez que el consumidor termina de utilizar un descriptor de acceso, el consumidor debe llamar a la **ReleaseAccessor** método para liberar la memoria que utiliza.  
+     Un descriptor de acceso queda identificado por su identificador, que es de tipo HACCESSOR. Este identificador devuelto por la **CreateAccessor** método. Cada vez que el consumidor termina de utilizar un descriptor de acceso, el consumidor debe llamar a la **ReleaseAccessor** método para liberar la memoria contiene.  
   
-     Cuando el consumidor llama a un método, como **ICommand:: Execute**, pasa el identificador a un descriptor de acceso y un puntero al propio búfer. El proveedor utiliza este descriptor de acceso para determinar cómo transferir los datos incluidos en el búfer.  
+     Cuando el consumidor llama a un método, como **ICommand:: Execute**, pasa el identificador a un descriptor de acceso y un puntero a un búfer en Sí. El proveedor utiliza este descriptor de acceso para determinar cómo transferir los datos incluidos en el búfer.  
   
-4.  Rellene la estructura DBPARAMS. Las variables de consumidor de qué parámetro de entrada se toman los valores y en qué parámetro de salida se escriben los valores se pasan en tiempo de ejecución para **ICommand:: Execute** en la estructura DBPARAMS. La estructura DBPARAMS incluye tres elementos:  
+4.  Rellene la estructura DBPARAMS. Las variables de consumidores de qué parámetro de entrada los valores se toman y a qué parámetro de salida se escriben los valores se pasan en tiempo de ejecución a **ICommand:: Execute** en la estructura DBPARAMS. La estructura DBPARAMS incluye tres elementos:  
   
     -   Un puntero al búfer del que el proveedor recupera los datos de parámetro de entrada y al que devuelve los datos de parámetro de salida, de acuerdo con los enlaces especificados por el identificador de descriptor de acceso.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "32954920"
 5.  Ejecute el comando mediante el uso de **ICommand:: Execute**.  
   
 ## <a name="methods-of-calling-a-stored-procedure"></a>Métodos para llamar a un procedimiento almacenado  
- Al ejecutar un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite el proveedor OLE DB de Native Client el:  
+ Al ejecutar un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite el:  
   
 -   Secuencia de escape ODBC CALL.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "32954920"
 ### <a name="rpc-escape-sequence"></a>Secuencia de escape RPC  
  La secuencia de escape RPC es similar a la sintaxis ODBC CALL para llamar a un procedimiento almacenado. Si va a llamar al procedimiento varias veces, la secuencia de escape RPC es la que proporciona el rendimiento óptimo de entre los tres métodos existentes para llamar a un procedimiento almacenado.  
   
- Cuando se utiliza la secuencia de escape RPC para ejecutar un procedimiento almacenado, el proveedor no llama a ninguna función auxiliar para determinar la información de parámetros (como hace en el caso de la sintaxis ODBC CALL). La sintaxis RPC es más sencilla que la sintaxis ODBC CALL, por lo que el comando se analiza con mayor rapidez y se mejora el rendimiento. En este caso, debe proporcionar la información de parámetros mediante la ejecución de **ICommandWithParameters:: SetParameterInfo**.  
+ Cuando se utiliza la secuencia de escape RPC para ejecutar un procedimiento almacenado, el proveedor no llama a ninguna función auxiliar para determinar la información de parámetros (como hace en el caso de la sintaxis ODBC CALL). La sintaxis RPC es más sencilla que la sintaxis ODBC CALL, por lo que el comando se analiza con mayor rapidez y se mejora el rendimiento. En este caso, deberá proporcionar la información de parámetros mediante la ejecución de **ICommandWithParameters:: SetParameterInfo**.  
   
  La secuencia de escape RPC exige que tenga un valor devuelto. Si el procedimiento almacenado no devuelve un valor, el servidor devuelve de forma predeterminada un 0. Además, no puede abrir un cursor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el procedimiento almacenado. El procedimiento almacenado se prepara implícitamente y la llamada a **ICommandPrepare:: Prepare** se producirá un error. Debido a la incapacidad para preparar una llamada RPC, no puede consultar los metadatos de columna; IColumnsInfo:: GetColumnInfo e IColumnsRowset:: GetColumnsRowset devolverán DB_E_NOTPREPARED.  
   
@@ -123,10 +123,10 @@ ms.locfileid: "32954920"
 {rpc SalesByCategory}  
 ```  
   
- Para una aplicación de ejemplo que muestra una secuencia de escape RPC, vea [ejecutar un procedimiento almacenado & #40; Mediante la sintaxis RPC & #41; y procesar devuelto códigos y parámetros de salida & #40; OLE DB & #41; ](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Para una aplicación de ejemplo que muestra una secuencia de escape RPC, vea [ejecutar un procedimiento almacenado &#40;mediante la sintaxis RPC&#41; y proceso de códigos de retorno y parámetros de salida &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Instrucción EXECUTE de Transact-SQL:  
- La secuencia de escape ODBC CALL y la secuencia de escape RPC son los métodos preferidos para llamar a un procedimiento almacenado en lugar de la [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) instrucción. El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB utiliza el mecanismo RPC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para optimizar el procesamiento de comandos. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
+ La secuencia de escape ODBC CALL y la secuencia de escape RPC son los métodos preferidos para llamar a un procedimiento almacenado en lugar de [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) instrucción. El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client utiliza el mecanismo RPC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para optimizar el procesamiento de comandos. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
   
  Este es un ejemplo de la [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE** instrucción:  
   

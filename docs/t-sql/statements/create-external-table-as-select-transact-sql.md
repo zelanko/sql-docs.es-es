@@ -2,13 +2,11 @@
 title: CREATE EXTERNAL TABLE AS SELECT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - External, table create as select
 - PolyBase, create table as select
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d61d87f1e19088d7f667029bdaaf935d150dc88
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 74dc570a61b33aa6b6a2718bde3c927e6eabb1a7
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34046736"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36833357"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -182,7 +179,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  La base de datos no garantiza la coherencia de los datos entre la base de datos y los datos externos. Usted, como cliente, es el único responsable de mantener la coherencia entre los datos externos y la base de datos.  
   
- No se admiten operaciones de lenguaje de manipulación de datos (DML) en las tablas externas. Por ejemplo, no se pueden usar las instrucciones de actualización, inserción o eliminación de [!INCLUDE[tsql](../../includes/tsql-md.md)] para modificar los datos externos.  
+ No se admiten operaciones de lenguaje de manipulación de datos (DML) en las tablas externas. Por ejemplo, no se pueden usar las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] actualización, inserción o eliminación de [!INCLUDE[tsql](../../includes/tsql-md.md)] para modificar los datos externos.  
   
  CREATE TABLE, DROP TABLE, CREATE STATISTICS, DROP STATISTICS, CREATE VIEW y DROP VIEW son las únicas operaciones de lenguaje de manipulación de datos (DDL) que se permiten en las tablas externas.  
   

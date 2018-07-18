@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - COLUMNPROPERTY function
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 608c00d948a619d99ef23e62c8c9ba13dbe2fd7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a2c7f7713bf003837b5808d10e52a9a6c251f2e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054452"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782596"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ Una expresión que contiene el nombre de la columna o del parámetro.
 *property*  
 Para el argumento *id*, el argumento *propiedad* especifica el tipo de información que devolverá la función `COLUMNPROPERTY`. El argumento *propiedad* puede tener uno de estos valores:
   
-|Valor|Description|Valor devuelto|  
+|Valor|Descripción|Valor devuelto|  
 |---|---|---|
 |**AllowsNull**|Permite valores NULL.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**ColumnId**|Valor del Id. de columna correspondiente a **sys.columns.column_id**.|Identificador de columna<br /><br /> **Nota:** Cuando se consultan varias columnas, pueden aparecer espacios en la secuencia de valores de los Id. de columna.|  

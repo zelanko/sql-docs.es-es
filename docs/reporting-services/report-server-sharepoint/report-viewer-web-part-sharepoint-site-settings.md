@@ -12,12 +12,12 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: jt000
 ms.author: jasontre
-ms.openlocfilehash: 57e0e7ca8aa76570f70ae2279964d47f50da31aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc85547d213367d3a754e40764fa4335a45c5ce7
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024602"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926326"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>Configuración del sitio de SharePoint para el elemento web Visor de informes: Reporting Services | Microsoft Docs
 
@@ -42,5 +42,5 @@ Para acceder a la configuración del sitio:
 
 |Configuración|Comentarios|  
 |-------------|--------------|  
-|Recopilar los datos de uso|Habilita el envío de información de errores y uso a Microsoft para ayudar a mejorar nuestros productos. Para obtener información acerca de la directiva de recopilación de datos de informes de error, consulte la [Declaración de privacidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=860782&clcid=0x409).|  
+|Recopilar los datos de uso|Habilita el envío de información de errores y uso a Microsoft para ayudar a mejorar nuestros productos. Para obtener información acerca de la directiva de recopilación de datos de informes de error, consulte la [Declaración de privacidad de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=868444).|  
 |Habilitar los metadatos de accesibilidad para los informes|Define la información del dispositivo [ `AccessibleTablix`](../html-device-information-settings.md) para los informes representados.| 

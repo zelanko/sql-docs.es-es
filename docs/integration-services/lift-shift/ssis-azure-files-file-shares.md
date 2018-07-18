@@ -1,26 +1,24 @@
 ---
 title: Abrir y guardar archivos con paquetes SSIS implementados en Azure | Microsoft Docs
 description: Obtenga información sobre cómo abrir y guardar archivos de forma local y en Azure al aplicar lift-and-shift a los paquetes SSIS que usan los sistemas de archivos locales en SSIS en Azure.
-ms.date: 11/27/2017
+ms.date: 06/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: c4f9d5e91db382d59dc156ed919c1af06cc56b77
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c77d072067799df660ab1c0989eda410480de816
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410477"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37065995"
 ---
 # <a name="open-and-save-files-on-premises-and-in-azure-with-ssis-packages-deployed-in-azure"></a>Abrir y guardar archivos de forma local y en Azure con paquetes SSIS implementados en Azure
 
 En este artículo se describe cómo abrir y guardar archivos de forma local y en Azure al aplicar lift-and-shift a los paquetes SSIS que usan los sistemas de archivos locales en SSIS en Azure.
-
-> [!IMPORTANT]
-> Actualmente, el catálogo de SSIS (SSISDB) solo admite un único conjunto de credenciales de acceso. Como resultado, no se pueden usar otros conjuntos de credenciales para conectarse a varios recursos compartidos de archivos de forma local y a recursos compartidos de Azure Files.
 
 ## <a name="save-temporary-files"></a>Guardar los archivos temporales
 Si necesita almacenar y procesar archivos temporales durante la ejecución de un paquete único, los paquetes pueden usar la carpeta de trabajo actual (`.`) o la carpeta temporal (`%TEMP%`) de los nodos de Integration Runtime de SSIS de Azure.

@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_column (Transact-SQL) | Documentos de Microsoft
+title: sp_fulltext_column (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6c1a53e05eef89584526846c3f3d3c6324164a94
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259585"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018409"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  Se trata de un nombre de tabla con una o dos partes. La tabla debe existir en la base de datos actual. La tabla debe tener un índice de texto completo. *qualified_table_name* es **nvarchar (517)**, sin valor predeterminado.  
   
  [  **@colname=** ] **'***column_name***'**  
- Es el nombre de una columna en *qualified_table_name*. La columna debe ser un carácter, **varbinary (max)** o **imagen** columna y no puede ser una columna calculada. *column_name* es **sysname**, no tiene ningún valor predeterminado.  
+ Es el nombre de una columna de *qualified_table_name*. La columna debe ser un carácter, **varbinary (max)** o **imagen** columna y no puede ser una columna calculada. *column_name* es **sysname**, no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede crear índices de texto completo de datos de texto almacenados en las columnas de **varbinary (max)** o **imagen** tipo de datos. Las imágenes no se indizan.  
@@ -64,10 +64,10 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  [  **@action=** ] **'***acción***'**  
  Se trata de la acción que se va a realizar. *acción* es **varchar (20)**, no tiene ningún valor predeterminado y puede ser uno de los siguientes valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Agregar**|Agrega *column_name* de *qualified_table_name* al índice de texto completo inactivo de la tabla. Esta acción habilita el indizado de texto completo de la columna.|  
-|**quitar**|Quita *column_name* de *qualified_table_name* de índice de texto completo inactivo de la tabla.|  
+|**DROP**|Quita *column_name* de *qualified_table_name* de índice de texto completo inactivo de la tabla.|  
   
  [  **@language=** ] **'***language_term***'**  
  Se trata del idioma de los datos almacenados en la columna. Para obtener una lista de los idiomas incluidos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
@@ -76,7 +76,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 >  Use 'Neutral' cuando una columna contiene datos en varios idiomas o en un idioma no admitido. El valor predeterminado se especifica en la opción de configuración 'default full-text language'.  
   
  [  **@type_colname =** ] **'***type_column_name***'**  
- Es el nombre de una columna en *qualified_table_name* que contiene el tipo de documento de *column_name*. Esta columna debe ser **char**, **nchar**, **varchar**, o **nvarchar**. Solo se usa cuando el tipo de datos de *column_name* es de tipo **varbinary (max)** o **imagen**. *type_column_name* es **sysname**, no tiene ningún valor predeterminado.  
+ Es el nombre de una columna de *qualified_table_name* que contiene el tipo de documento de *column_name*. Esta columna debe ser **char**, **nchar**, **varchar**, o **nvarchar**. Solo se usa cuando el tipo de datos de *column_name* es de tipo **varbinary (max)** o **imagen**. *type_column_name* es **sysname**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -84,12 +84,12 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si el índice de texto completo está activo, se detiene cualquier llenado en proceso. Además, si una tabla con un índice de texto completo activo tiene habilitado el seguimiento de cambios, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantiza que el índice está actualizado. Por ejemplo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detiene cualquier llenado actual de la tabla, quita el índice existente e inicia un nuevo llenado.  
   
  Si está activado el seguimiento de cambios y es necesario agregar o quitar columnas del índice de texto completo sin eliminar éste, la tabla se tiene que desactivar y las columnas apropiadas se tienen que agregar o quitar. Estas acciones bloquean el índice. Se puede activar la tabla más adelante, cuando sea más práctico iniciar un llenado.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Usuario debe ser un miembro de la **db_ddladmin** rol fijo de base de datos o un miembro de la **db_owner** rol fijo de base de datos o el propietario de la tabla.  
   
 ## <a name="examples"></a>Ejemplos  

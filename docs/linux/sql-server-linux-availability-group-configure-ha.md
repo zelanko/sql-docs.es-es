@@ -1,5 +1,5 @@
 ---
-title: Configurar SQL Server grupo de disponibilidad AlwaysOn de alta disponibilidad en Linux | Documentos de Microsoft
+title: Configurar SQL Server grupo de disponibilidad AlwaysOn para alta disponibilidad en Linux | Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,92 +12,92 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 495646f4394d9639493a6e15846c80116a8bcee8
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.openlocfilehash: f392ccee932e27d35201426553bce26468d325e6
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323506"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981437"
 ---
-# <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurar SQL Server grupo de disponibilidad AlwaysOn de alta disponibilidad en Linux
+# <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurar SQL Server grupo de disponibilidad AlwaysOn para alta disponibilidad en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En este artículo se describe cómo crear un SQL Server siempre en disponibilidad grupo (AG) de alta disponibilidad en Linux. Hay dos tipos de configuración de grupos de disponibilidad. A *alta disponibilidad* configuración utiliza un administrador de clúster para proporcionar continuidad del negocio. Esta configuración puede incluir también las réplicas de la escala de lectura. Este documento explica cómo crear el AG para lograr alta disponibilidad.
+En este artículo se describe cómo crear un SQL Server siempre en grupo de disponibilidad (AG) de alta disponibilidad en Linux. Hay dos tipos de configuración para grupos de disponibilidad. Un *alta disponibilidad* configuración utiliza un administrador de clústeres para proporcionar continuidad del negocio. Esta configuración también puede incluir las réplicas de escalado de lectura. Este documento explica cómo crear el grupo de disponibilidad para alta disponibilidad.
 
-También puede crear un AG sin un clúster de administrador para *lectura escala*. Disponibilidad de escala de lectura solo proporciona réplicas de solo lectura para el rendimiento escalado. No proporciona alta disponibilidad. Para crear un AG de escala de lectura, consulte [configurar un grupo de disponibilidad de SQL Server para la escala de lectura en Linux](sql-server-linux-availability-group-configure-rs.md).
+También puede crear un grupo de disponibilidad sin un clúster de administrador para *escalado de lectura*. Solo el grupo de disponibilidad de escalado de lectura proporciona réplicas de solo lectura para el rendimiento escalado horizontal. No proporciona alta disponibilidad. Para crear un grupo de disponibilidad de escalado de lectura, consulte [configurar un grupo de disponibilidad de SQL Server para el escalado de lectura en Linux](sql-server-linux-availability-group-configure-rs.md).
 
-Las configuraciones que garantizan alta disponibilidad y protección de datos que requieren réplicas de confirmación de dos o tres sincrónico. Con tres réplicas sincrónicas, puede recuperar automáticamente la AG incluso si un servidor no está disponible. Para obtener más información, consulte [alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](sql-server-linux-availability-group-ha.md). 
+Las configuraciones que garantizan la alta disponibilidad y protección de datos que requieren las réplicas de confirmación de dos o tres sincrónica. Con tres réplicas sincrónicas, puede recuperar automáticamente el grupo de disponibilidad incluso si un servidor no está disponible. Para obtener más información, consulte [alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](sql-server-linux-availability-group-ha.md). 
 
-Todos los servidores deben ser físicos o virtuales y servidores virtuales deben estar en la misma plataforma de virtualización. Este requisito es porque los agentes de barrera son específicas de la plataforma. Vea [directivas para clústeres invitados](https://access.redhat.com/articles/29440#guest_policies).
+Deben ser todos los servidores físicos o virtuales y servidores virtuales deben estar en la misma plataforma de virtualización. Este requisito es porque los agentes de vallado son específicas de la plataforma. Consulte [directivas para los clústeres invitados](https://access.redhat.com/articles/29440#guest_policies).
 
-## <a name="roadmap"></a>Guía básica
+## <a name="roadmap"></a>Mapa de ruta
 
-Los pasos para crear un AG en servidores Linux para lograr alta disponibilidad son diferentes de los pasos en un clúster de conmutación por error de Windows Server. En la lista siguiente describe los pasos generales: 
+Los pasos para crear un grupo de disponibilidad en los servidores de Linux para lograr alta disponibilidad son diferentes de los pasos en un clúster de conmutación por error de Windows Server. En la lista siguiente se describe los pasos de alto nivel: 
 
 1. [Configurar SQL Server en tres servidores de clúster](sql-server-linux-setup.md).
 
    >[!IMPORTANT]
-   >Los tres servidores en el AG deben estar en la misma plataforma - física o virtual - porque Linux alta disponibilidad usa a agentes de barrera para aislar los recursos en los servidores. Los agentes de barrera son específicos para cada plataforma.
+   >Los tres servidores en el grupo de disponibilidad deben estar en la misma plataforma - física o virtual - porque la alta disponibilidad de Linux usa a los agentes de barrera para aislar los recursos en los servidores. Los agentes de vallado son específicos para cada plataforma.
 
-2. Cree el AG. Este paso se describe en este artículo actual. 
+2. Cree el grupo de disponibilidad (AG). Este paso se trata en este artículo actual. 
 
-3. Configurar un administrador de recursos de clúster, como marcapasos.
+3. Configurar un administrador de recursos de clúster, como Pacemaker.
    
-   La manera de configurar un administrador de recursos de clúster depende de la distribución de Linux específica. Vea los siguientes vínculos para obtener instrucciones específicas de distribución: 
+   La manera de configurar un administrador de recursos del clúster depende de la distribución de Linux específica. Vea los siguientes vínculos para obtener instrucciones específicas de distribución: 
 
    * [RHEL](sql-server-linux-availability-group-cluster-rhel.md)
    * [SUSE](sql-server-linux-availability-group-cluster-sles.md)
    * [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 
    >[!IMPORTANT]
-   >Los entornos de producción requieren a un agente de barrera, como STONITH para lograr alta disponibilidad. Las demostraciones en esta documentación no utiliza a agentes de barrera. Las demostraciones son para pruebas y la validación solo. 
+   >Entornos de producción requieren a un agente de vallado, como STONITH para lograr alta disponibilidad. Las demostraciones en esta documentación no utiliza a agentes de vallado. Las demostraciones son para pruebas y validación solo. 
    
-   >Un clúster de Linux usa barrera para devolver el clúster a un estado conocido. La manera de configurar la barrera depende de la distribución y el entorno. Actualmente, la barrera no está disponible en algunos entornos de nube. Para obtener más información, consulte [directivas de soporte técnico para alta disponibilidad RHEL clústeres: plataformas de virtualización](https://access.redhat.com/articles/29440).
+   >Un clúster de Linux usa vallado para devolver el clúster a un estado conocido. La manera de configurar vallado depende de la distribución y el entorno. Actualmente, la barrera no está disponible en algunos entornos de nube. Para obtener más información, consulte [directivas de soporte técnico para alta disponibilidad RHEL clústeres: plataformas de virtualización](https://access.redhat.com/articles/29440).
    
    >Para SLES, consulte [extensión de alta disponibilidad de SUSE Linux Enterprise](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
 
-5. Agregue el AG como un recurso en el clúster.  
+5. Agregue el grupo de disponibilidad como un recurso en el clúster.  
 
-   La forma de agregar el AG como un recurso del clúster depende de la distribución de Linux. Vea los siguientes vínculos para obtener instrucciones específicas de distribución: 
+   La manera de agregar el grupo de disponibilidad como un recurso del clúster depende de la distribución de Linux. Vea los siguientes vínculos para obtener instrucciones específicas de distribución: 
 
    * [RHEL](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)
-   * [SLES GRANDE](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)
+   * [SLES](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)
    * [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource)
 
 [!INCLUDE [Create Prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
-## <a name="create-the-ag"></a>Crear el grupo de disponibilidad.
+## <a name="create-the-ag"></a>Crear el grupo de disponibilidad
 
-Para una configuración de alta disponibilidad que garantiza la conmutación automática por error, el AG requiere al menos tres réplicas. Cualquiera de las siguientes configuraciones puede admitir alta disponibilidad:
+Para una configuración de alta disponibilidad que garantiza la conmutación automática por error, el grupo de disponibilidad requiere al menos tres réplicas. Cualquiera de las siguientes configuraciones pueda admitir alta disponibilidad:
 
 - [Tres réplicas sincrónicas.](sql-server-linux-availability-group-ha.md#threeSynch)
 
-- [Una réplica de la configuración más de dos réplicas sincrónicas.](sql-server-linux-availability-group-ha.md#twoSynch)
+- [Una réplica de la configuración más de dos réplicas sincrónicas](sql-server-linux-availability-group-ha.md#twoSynch)
 
 Para obtener información, consulte [alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](sql-server-linux-availability-group-ha.md).
 
 >[!NOTE]
->Los grupos de disponibilidad pueden incluir réplicas sincrónicas o asincrónicas adicionales. 
+>Los grupos de disponibilidad pueden incluir más réplicas sincrónicas o asincrónicas. 
 
-Cree el AG para lograr alta disponibilidad en Linux. Use la [crear grupo de disponibilidad](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-availability-group-transact-sql) con `CLUSTER_TYPE = EXTERNAL`. 
+Cree el grupo de disponibilidad para alta disponibilidad en Linux. Use la [crear grupo de disponibilidad](https://docs.microsoft.com/sql/t-sql/statements/create-availability-group-transact-sql) con `CLUSTER_TYPE = EXTERNAL`. 
 
-* Grupo de disponibilidad: `CLUSTER_TYPE = EXTERNAL` especifica que una entidad externa clúster administra la disponibilidad. Marcapasos es un ejemplo de una entidad externa del clúster. Cuando el tipo de clúster de AG es externo, 
+* Grupo de disponibilidad: `CLUSTER_TYPE = EXTERNAL` especifica que una entidad de clúster externo administra el grupo de disponibilidad. Pacemaker es un ejemplo de una entidad de clúster externo. Cuando es externo, el tipo de clúster del grupo de disponibilidad 
 
 * Conjunto de réplicas principales y secundarias `FAILOVER_MODE = EXTERNAL`. 
-   Especifica que la réplica se interactúa con un administrador de clúster externo, como marcapasos. 
+   Especifica que la réplica se interactúa con un administrador de clúster externo, como Pacemaker. 
 
-Los scripts de Transact-SQL siguientes crean un AG para lograr alta disponibilidad con el nombre `ag1`. La secuencia de comandos configura las réplicas AG con `SEEDING_MODE = AUTOMATIC`. Esta configuración hace que SQL Server crear automáticamente la base de datos en cada servidor secundario. Actualice el siguiente script para su entorno. Reemplace el `<node1>`, `<node2>`, o `<node3>` valores con los nombres de las instancias de SQL Server que hospedan las réplicas. Reemplace el `<5022>` con el puerto se configura para el extremo de reflejo de datos. Para crear el AG, ejecute el código Transact-SQL siguiente en la instancia de SQL Server que hospeda la réplica principal.
+Los scripts de Transact-SQL siguientes crean un grupo de disponibilidad para alta disponibilidad denominado `ag1`. El script configura las réplicas de grupo de disponibilidad con `SEEDING_MODE = AUTOMATIC`. Esta configuración hace que SQL Server crear automáticamente la base de datos en cada servidor secundario. Actualice el script siguiente para su entorno. Reemplace el `<node1>`, `<node2>`, o `<node3>` valores con los nombres de las instancias de SQL Server que hospedan las réplicas. Reemplace el `<5022>` con el puerto se establecen para el extremo de reflejo de datos. Para crear el grupo de disponibilidad, ejecute el siguiente Transact-SQL en la instancia de SQL Server que hospeda la réplica principal.
 
-Ejecutar **sola** de las secuencias de comandos siguientes: 
+Ejecute **sola** de los siguientes scripts: 
 
 - [Crear grupo de disponibilidad con tres réplicas sincrónicas](#threeSynch).
-- [Crear grupo de disponibilidad con dos réplicas sincrónicas y una réplica de configuración](#configOnly)
+- [Crear grupo de disponibilidad con dos réplicas sincrónicas y una réplica de la configuración](#configOnly)
 - [Crear grupo de disponibilidad con dos réplicas sincrónicas](#readScale).
 
 <a name="threeSynch"></a>
 
-- Crear AG con tres réplicas sincrónicas
+- Crear grupo de disponibilidad con tres réplicas sincrónicas
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1]
@@ -129,12 +129,12 @@ Ejecutar **sola** de las secuencias de comandos siguientes:
    ```
 
    >[!IMPORTANT]
-   >Después de ejecutar el script anterior para crear un AG con tres réplicas sincrónicas, no ejecute el script siguiente:
+   >Después de ejecutar el script anterior para crear un grupo de disponibilidad con tres réplicas sincrónicas, no ejecute el siguiente script:
 
-- Crear AG con dos réplicas sincrónicas y una réplica de configuración:
+- Crear grupo de disponibilidad con dos réplicas sincrónicas y una réplica de la configuración:
 
    >[!IMPORTANT]
-   >Esta arquitectura permite que cualquier edición de SQL Server para hospedar la réplica terceros. Por ejemplo, la tercera réplica se puede hospedar en SQL Server Enterprise Edition. En Enterprise Edition, es el tipo de extremo solo es válido `WITNESS`. 
+   >Esta arquitectura permite que cualquier edición de SQL Server para hospedar la réplica terceros. Por ejemplo, la tercera réplica puede hospedarse en SQL Server Enterprise Edition. En Enterprise Edition, es el tipo de punto de conexión válido sólo `WITNESS`. 
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1] 
@@ -160,12 +160,12 @@ Ejecutar **sola** de las secuencias de comandos siguientes:
    ```
 <a name="readScale"></a>
 
-- Crear AG con dos réplicas sincrónicas.
+- Crear grupo de disponibilidad con dos réplicas sincrónicas
 
-   Incluya dos réplicas con el modo sincrónico de disponibilidad. Por ejemplo, el script siguiente crea un AG denominado `ag1`. `node1` y `node2` hospedan las réplicas en modo sincrónico, con conmutación automática por error y la propagación automática.
+   Incluya las dos réplicas con el modo de disponibilidad sincrónica. Por ejemplo, el script siguiente crea un grupo de disponibilidad denominado `ag1`. `node1` y `node2` hospedan las réplicas en modo sincrónico con conmutación automática por error y la propagación automática.
 
    >[!IMPORTANT]
-   >Solo se ejecute el siguiente script para crear un AG con dos réplicas sincrónicas. No se ejecute el siguiente script si ha ejecutado un script anterior. 
+   >Solo se ejecute el siguiente script para crear un grupo de disponibilidad con dos réplicas sincrónicas. No se ejecute el siguiente script si se ha ejecutado un script anterior. 
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1]
@@ -188,11 +188,11 @@ Ejecutar **sola** de las secuencias de comandos siguientes:
    ```
 
 
-También puede configurar un AG con `CLUSTER_TYPE=EXTERNAL` con SQL Server Management Studio o PowerShell. 
+También puede configurar un grupo de disponibilidad con `CLUSTER_TYPE=EXTERNAL` mediante SQL Server Management Studio o PowerShell. 
 
-### <a name="join-secondary-replicas-to-the-ag"></a>Une las réplicas secundarias para el grupo de disponibilidad.
+### <a name="join-secondary-replicas-to-the-ag"></a>Une las réplicas secundarias al grupo de disponibilidad
 
-El siguiente script de Transact-SQL une a una instancia de SQL Server en un AG denominado `ag1`. Actualizar la secuencia de comandos para su entorno. En cada instancia de SQL Server que hospeda una réplica secundaria, ejecute el siguiente Transact-SQL para unirse a la disponibilidad.
+El siguiente script de Transact-SQL une a una instancia de SQL Server a un grupo de disponibilidad denominado `ag1`. Actualice el script para su entorno. En cada instancia de SQL Server que hospeda una réplica secundaria, ejecute el siguiente Transact-SQL para unir el grupo de disponibilidad.
 
 ```Transact-SQL
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -203,23 +203,23 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->Después de crear el AG, debe configurar la integración con una tecnología de clúster como marcapasos para alta disponibilidad. Para una configuración de escalado de lectura mediante grupos de disponibilidad, a partir de [!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)], no es necesario configurar un clúster.
+>Después de crear el grupo de disponibilidad, debe configurar la integración con una tecnología de clúster como Pacemaker para lograr alta disponibilidad. Para una configuración de escalado de lectura con AG, empezando por [!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)], no es necesario configurar un clúster.
 
-Si ha seguido los pasos descritos en este documento, tendrá un AG que no está en clúster. El siguiente paso es agregar el clúster. Esta configuración es válida para los escenarios de equilibrio de carga de escala de lectura, no está completo para lograr alta disponibilidad. Para lograr alta disponibilidad, debe agregar el AG como un recurso de clúster. Vea [pasos siguientes](#next-steps) para obtener instrucciones. 
+Si ha seguido los pasos descritos en este documento, tiene un grupo de disponibilidad que no está en clúster. El siguiente paso es agregar el clúster. Esta configuración es válida para los escenarios de equilibrio de carga o escalado de lectura, no está completo para la alta disponibilidad. Para lograr alta disponibilidad, deberá agregar el grupo de disponibilidad como un recurso de clúster. Consulte [pasos siguientes](#next-steps) para obtener instrucciones. 
 
 ## <a name="notes"></a>Notas
 
 >[!IMPORTANT]
->Después de configurar el clúster y agregar el AG como un recurso de clúster, no puede usar Transact-SQL para conmutar los recursos AG. Recursos de clúster de SQL Server en Linux no se acoplan estrechamente como con el sistema operativo tal como están en un clúster de conmutación por error de Windows Server (WSFC). Servicio SQL Server no es consciente de la presencia del clúster. Todas las orquestaciones se realiza a través de las herramientas de administración de clúster. En RHEL o Ubuntu usar `pcs`. En SLES usar `crm`. 
+>Después de configurar el clúster y agregar el grupo de disponibilidad como un recurso de clúster, no puede utilizar Transact-SQL para conmutar los recursos del grupo de disponibilidad. Recursos de clúster de SQL Server en Linux no se acoplan estrechamente como con el sistema operativo tal como están en un clúster de conmutación por error de Windows Server (WSFC). Servicio de SQL Server no es consciente de la presencia del clúster. Todas las orquestaciones se realiza a través de las herramientas de administración de clúster. En RHEL o Ubuntu usar `pcs`. En SLES usar `crm`. 
 
 >[!IMPORTANT]
->Si el AG es un recurso de clúster, hay un problema conocido en la versión actual, donde la conmutación por error forzada con pérdida de datos a una réplica asincrónica no funciona. Este problema se solucionará en la próxima versión. Se realiza correctamente la conmutación por error de manual o automática a una réplica sincrónica. 
+>Si el grupo de disponibilidad es un recurso de clúster, hay un problema conocido en la versión actual, donde la conmutación por error forzada con pérdida de datos a una réplica asincrónica no funciona. Esto se corregirá en la próxima versión. Se realiza correctamente la conmutación por error de manual o automática a una réplica sincrónica. 
 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Configurar Red Hat Enterprise Linux clúster de recursos de clúster del grupo de disponibilidad de SQL Server](sql-server-linux-availability-group-cluster-rhel.md)
+[Configurar el clúster de Red Hat Enterprise Linux para recursos de clúster del grupo de disponibilidad de SQL Server](sql-server-linux-availability-group-cluster-rhel.md)
 
-[Configurar el clúster SUSE Linux Enterprise Server para los recursos de clúster del grupo de disponibilidad de SQL Server](sql-server-linux-availability-group-cluster-sles.md)
+[Configuración de clúster SUSE Linux Enterprise Server para los recursos de clúster del grupo de disponibilidad de SQL Server](sql-server-linux-availability-group-cluster-sles.md)
 
-[Configurar recursos de clúster del grupo de disponibilidad de SQL Server del clúster Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
+[Configurar el clúster de Ubuntu para recursos de clúster del grupo de disponibilidad de SQL Server](sql-server-linux-availability-group-cluster-ubuntu.md)

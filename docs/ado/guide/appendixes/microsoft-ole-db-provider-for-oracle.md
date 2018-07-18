@@ -1,5 +1,5 @@
 ---
-title: Proveedor Microsoft OLE DB para Oracle | Documentos de Microsoft
+title: Proveedor Microsoft OLE DB para Oracle | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,12 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 241a3ac024ef2a15bfe403e49ea9778939d22bc8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 66e2994479c222c5f050ce13e19eb3a9ed5c01e8
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271104"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979217"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Proveedor Microsoft OLE DB para Oracle Introducción
 > [!IMPORTANT]
@@ -38,7 +38,7 @@ ms.locfileid: "35271104"
 MSDAORA
 ```
 
- Leer la [proveedor](../../../ado/reference/ado-api/provider-property-ado.md) propiedad devolverá también esta cadena.
+ Leer el [proveedor](../../../ado/reference/ado-api/provider-property-ado.md) propiedad devolverá también esta cadena.
 
  Si se ejecuta una consulta de combinación con un cursor keyset o dynamic en una base de datos de Oracle, se produce un error. Oracle sólo admite un cursor estático de solo lectura.
 
@@ -59,20 +59,20 @@ MSDAORA
 |**Contraseña**|Especifica la contraseña del usuario.|
 
 > [!NOTE]
->  Si se conecta a un proveedor de origen de datos que admita la autenticación de Windows, debe especificar **Trusted_Connection = yes** o **Integrated Security = SSPI** en lugar de Id. de usuario y contraseña información de la cadena de conexión.
+>  Si se conecta a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar **Trusted_Connection = yes** o **Integrated Security = SSPI** en lugar de Id. de usuario y contraseña información de la cadena de conexión.
 
 ## <a name="provider-specific-connection-parameters"></a>Parámetros de conexión específica del proveedor
- El proveedor admite varios parámetros de conexión específica del proveedor además de los definidos por ADO. Como con las propiedades de conexión ADO, estas propiedades específicas del proveedor se pueden establecer a través de la [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección de un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) o como parte de la **ConnectionString**.
+ El proveedor admite varios parámetros de conexión específica del proveedor además de los definidos por ADO. Como con las propiedades de conexión ADO, se pueden establecer estas propiedades específicas del proveedor a través de la [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección de un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) o como parte de la **ConnectionString**.
 
- Estos parámetros se describen detalladamente en la [referencia del programador de OLE DB](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). El [índice de propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) proporciona una referencia cruzada entre estos nombres de parámetro y las propiedades de OLE DB correspondientes.
+ Estos parámetros se describe detalladamente en la [referencia del programador de OLE DB](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). El [índice de propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) proporciona una referencia cruzada entre estos nombres de parámetro y las propiedades de OLE DB correspondientes.
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|**Identificador de ventana**|Indica el identificador de ventana que se usará para solicitar información adicional.|
-|**Identificador de configuración regional**|Indica un único número de 32 bits (por ejemplo, 1033) que especifica las preferencias relacionadas con el idioma del usuario. Estas preferencias indican cómo se da formato a fechas y horas, los elementos se ordenan alfabéticamente, se comparan las cadenas y así sucesivamente.|
-|**Servicios OLE DB**|Indica una máscara de bits que especifica los servicios OLE DB para habilitar o deshabilitar.|
-|**símbolo del sistema**|Indica si se debe preguntar al usuario mientras se está estableciendo una conexión.|
+|**Identificador de ventana**|Indica el identificador de ventana se utiliza para solicitar información adicional.|
+|**Identificador de configuración regional**|Indica un número único de 32 bits (por ejemplo, 1033) que especifica las preferencias relacionadas con el idioma del usuario. Estas preferencias indican cómo se da formato a fechas y horas, los elementos se ordenan alfabéticamente, se comparan cadenas y así sucesivamente.|
+|**Servicios OLE DB**|Indica una máscara de bits que especifica los servicios de OLE DB para habilitar o deshabilitar.|
+|**Símbolo del sistema**|Indica si se debe preguntar al usuario mientras se está estableciendo una conexión.|
 |**Propiedades extendidas**|Una cadena que contiene información de conexión ampliada específica del proveedor. Utilice esta propiedad solo para obtener información de conexión específica del proveedor que no se puede describir mediante un mecanismo de propiedad.|
 
 ## <a name="see-also"></a>Vea también
- [Propiedad ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [(ADO) de la propiedad de proveedor](../../../ado/reference/ado-api/provider-property-ado.md) [objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Propiedad ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [proveedor (propiedad, ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [el objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

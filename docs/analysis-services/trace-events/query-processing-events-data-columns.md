@@ -1,5 +1,5 @@
 ---
-title: Columnas de datos de eventos de procesamiento de consultas | Documentos de Microsoft
+title: Columnas de datos de eventos de procesamiento de consultas | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8c0222c19d1f21e130f342f689ebb72cc8c0fda7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045539"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017602"
 ---
 # <a name="query-processing-events-data-columns"></a>Columnas de datos de los eventos de procesamiento de consultas
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "34045539"
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ProgressTotal|9|1|Total del progreso.|  
 |IntegerData|10|1|Datos enteros.|  
@@ -77,7 +77,7 @@ ms.locfileid: "34045539"
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ProgressTotal|9|1|Total del progreso.|  
 |IntegerData|10|1|Datos enteros.|  
@@ -98,7 +98,7 @@ ms.locfileid: "34045539"
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ProgressTotal|9|1|Total del progreso.|  
 |IntegerData|10|1|Datos enteros.|  
@@ -121,7 +121,7 @@ ms.locfileid: "34045539"
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ProgressTotal|9|1|Total del progreso.|  
 |IntegerData|10|1|Datos enteros.|  
@@ -142,7 +142,7 @@ ms.locfileid: "34045539"
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ProgressTotal|9|1|Total del progreso.|  
 |IntegerData|10|1|Datos enteros.|  
@@ -163,7 +163,7 @@ ms.locfileid: "34045539"
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ProgressTotal|9|1|Total del progreso.|  
 |IntegerData|10|1|Datos enteros.|  
@@ -185,7 +185,7 @@ ms.locfileid: "34045539"
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ProgressTotal|9|1|Total del progreso.|  
 |IntegerData|10|1|Datos enteros.|  
@@ -206,7 +206,7 @@ ms.locfileid: "34045539"
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ProgressTotal|9|1|Total del progreso.|  
 |IntegerData|10|1|Datos enteros.|  
@@ -224,11 +224,11 @@ ms.locfileid: "34045539"
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|EventClass se usa para clasificar los eventos.|  
-|EventSubclass|1|1|Event Subclass proporciona información adicional sobre cada clase de evento:<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
+|EventSubclass|1|1|EventSubclass proporciona información adicional sobre cada clase de eventos.<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ProgressTotal|9|1|Total del progreso.|  
 |IntegerData|10|1|Datos enteros.|  
@@ -249,7 +249,7 @@ ms.locfileid: "34045539"
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ProgressTotal|9|1|Total del progreso.|  
 |IntegerData|10|1|Datos enteros.|  
@@ -267,11 +267,11 @@ ms.locfileid: "34045539"
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|EventClass se usa para clasificar los eventos.|  
-|EventSubclass|1|1|Event Subclass proporciona información adicional sobre cada clase de evento:<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
+|EventSubclass|1|1|EventSubclass proporciona información adicional sobre cada clase de eventos.<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ProgressTotal|9|1|Total del progreso.|  
 |IntegerData|10|1|Datos enteros.|  
@@ -293,7 +293,7 @@ ms.locfileid: "34045539"
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ProgressTotal|9|1|Total del progreso.|  
 |IntegerData|10|1|Datos enteros.|  
@@ -315,7 +315,7 @@ ms.locfileid: "34045539"
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ObjectPath|14|8|Ruta del objeto. Lista separada por comas de elementos primarios, empezando por el elemento primario del objeto.|  
 |ConnectionID|25|1|Identificador único de la conexión.|  
@@ -331,11 +331,11 @@ ms.locfileid: "34045539"
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|EventClass se usa para clasificar los eventos.|  
-|EventSubclass|1|1|Event Subclass proporciona información adicional sobre cada clase de evento:<br /><br /> 21: Cache data<br /><br /> 22: Non-cache data<br /><br /> 23: Internal data<br /><br /> 24: SQL data|  
+|EventSubclass|1|1|EventSubclass proporciona información adicional sobre cada clase de eventos.<br /><br /> 21: Cache data<br /><br /> 22: Non-cache data<br /><br /> 23: Internal data<br /><br /> 24: SQL data|  
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ObjectPath|14|8|Ruta del objeto. Lista separada por comas de elementos primarios, empezando por el elemento primario del objeto.|  
 |ConnectionID|25|1|Identificador único de la conexión.|  
@@ -354,7 +354,7 @@ ms.locfileid: "34045539"
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ObjectPath|14|8|Ruta del objeto. Lista separada por comas de elementos primarios, empezando por el elemento primario del objeto.|  
 |ConnectionID|25|1|Identificador único de la conexión.|  
@@ -374,7 +374,7 @@ ms.locfileid: "34045539"
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ObjectPath|14|8|Ruta del objeto. Lista separada por comas de elementos primarios, empezando por el elemento primario del objeto.|  
 |ConnectionID|25|1|Identificador único de la conexión.|  
@@ -390,7 +390,7 @@ ms.locfileid: "34045539"
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|EventClass se usa para clasificar los eventos.|  
-|EventSubclass|1|1|Event Subclass proporciona información adicional sobre cada clase de evento:<br /><br /> 0: VertiPaq Scan<br /><br /> 1: Tabular Query<br /><br /> 2: User Hierarchy Processing Query<br /><br /> 10: VertiPaq Scan internal<br /><br /> 11: Tabular Query internal<br /><br /> 12: User Hierarchy Processing Query internal|  
+|EventSubclass|1|1|EventSubclass proporciona información adicional sobre cada clase de eventos.<br /><br /> 0: VertiPaq Scan<br /><br /> 1: Tabular Query<br /><br /> 2: User Hierarchy Processing Query<br /><br /> 10: VertiPaq Scan internal<br /><br /> 11: Tabular Query internal<br /><br /> 12: User Hierarchy Processing Query internal|  
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |JobID|7|1|Identificador del trabajo para el progreso.|  
@@ -419,7 +419,7 @@ ms.locfileid: "34045539"
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |JobID|7|1|Identificador del trabajo para el progreso.|  
 |SessionType|8|8|Tipo de la sesión (qué entidad desencadenó la operación).|  
@@ -466,7 +466,7 @@ ms.locfileid: "34045539"
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|EventClass se usa para clasificar los eventos.|  
-|EventSubclass|1|1|Event Subclass proporciona información adicional sobre cada clase de evento:<br /><br /> 0: VertiPaq Cache exact match|  
+|EventSubclass|1|1|EventSubclass proporciona información adicional sobre cada clase de eventos.<br /><br /> 0: VertiPaq Cache exact match|  
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |JobID|7|1|Identificador del trabajo para el progreso.|  
 |SessionType|8|8|Tipo de la sesión (qué entidad desencadenó la operación).|  
@@ -493,7 +493,7 @@ ms.locfileid: "34045539"
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |JobID|7|1|Identificador del trabajo para el progreso.|  
 |SessionType|8|8|Tipo de la sesión (qué entidad desencadenó la operación).|  
@@ -521,7 +521,7 @@ ms.locfileid: "34045539"
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |JobID|7|1|Identificador del trabajo para el progreso.|  
 |SessionType|8|8|Tipo de la sesión (qué entidad desencadenó la operación).|  
@@ -542,6 +542,6 @@ ms.locfileid: "34045539"
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
 ## <a name="see-also"></a>Vea también  
- [Categoría de eventos de procesamiento de consulta](../../analysis-services/trace-events/query-processing-events-category.md)  
+ [Procesamiento de consultas (categoría de eventos)](../../analysis-services/trace-events/query-processing-events-category.md)  
   
   

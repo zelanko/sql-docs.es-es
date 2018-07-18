@@ -1,5 +1,5 @@
 ---
-title: Power Pivot disponibilidad y recuperación ante desastres | Documentos de Microsoft
+title: Power Pivot disponibilidad y recuperación ante desastres | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b2b5a16ac487b52f3592743481e0013b4bf44856
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9ed5a7d272f5f21b720df33ef71c0c562f8d699a
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026542"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979587"
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Alta disponibilidad y recuperación ante desastres en Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "34026542"
   
  ![disponibilidad de PowerPivot en sharepoint 2010](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2010.png "disponibilidad de powerpivot en sharepoint 2010")  
   
--   **(1)** Los servidores front-end web. Instale los proveedores de datos en cada servidor. Para más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+-   **(1)** Los servidores front-end web. Instale los proveedores de datos en cada servidor. Para obtener más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
 -   **(2)** Los dos servicios compartidos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y **(4)** el servicio de Windows **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** se instalan en los servidores de aplicaciones de SharePoint.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "34026542"
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] y [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] en una granja de servidores para disponibilidad.|Compatible pero no se recomienda. La recomendación es usar AlwaysOn en modo de confirmación sincrónica.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en modo de confirmación sincrónica.|Compatible y se recomienda.|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Creación de reflejo asincrónico o trasvase de registros a otra granja de servidores para la recuperación ante desastres.|Compatible.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] con confirmación asincrónica para recuperación ante desastres.|Compatible|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] con confirmación asincrónica para recuperación ante desastres.|Admitida|  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   

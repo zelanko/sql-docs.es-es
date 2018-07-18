@@ -1,5 +1,5 @@
 ---
-title: SQL:variable() (función de XQuery) | Documentos de Microsoft
+title: SQL:variable() (función de XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 66e71e9748d143eb338d612046f97c50db014107
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076970"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018206"
 ---
-# <a name="xquery-extension-functions---sqlvariable"></a>Funciones de XQuery extensión - SQL:variable()
+# <a name="xquery-extension-functions---sqlvariable"></a>Funciones de XQuery extensión: SQL:variable()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Expone una variable que contiene un valor relacional SQL dentro de una expresión XQuery.  
@@ -42,14 +42,14 @@ ms.locfileid: "33076970"
 sql:variable("variableName") as xdt:anyAtomicType?  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Como se describe en el tema [enlazar datos relacionales dentro de XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), puede utilizar esta función cuando se usa [métodos del tipo de datos XML](../t-sql/xml/xml-data-type-methods.md) para exponer un valor relacional dentro de XQuery.  
+## <a name="remarks"></a>Notas  
+ Como se describe en el tema [enlazar datos relacionales dentro de XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), puede usar esta función cuando se usa [métodos del tipo de datos XML](../t-sql/xml/xml-data-type-methods.md) para exponer un valor relacional dentro de XQuery.  
   
- Por ejemplo, el [método query()](../t-sql/xml/query-method-xml-data-type.md) se utiliza para especificar una consulta en una instancia XML que se almacena en un **xml** variable o columna de tipo de datos. En ocasiones, es posible que también se desee que la consulta utilice valores de una variable [!INCLUDE[tsql](../includes/tsql-md.md)], o un parámetro, para combinar los datos relacionales y XML. Para ello, use la **SQL: variable** función.  
+ Por ejemplo, el [método query()](../t-sql/xml/query-method-xml-data-type.md) se usa para especificar una consulta en una instancia XML que se almacena en un **xml** variable o columna de tipo de datos. En ocasiones, es posible que también se desee que la consulta utilice valores de una variable [!INCLUDE[tsql](../includes/tsql-md.md)], o un parámetro, para combinar los datos relacionales y XML. Para ello, usa el **SQL: variable** función.  
   
- El valor SQL se asignará a un valor de XQuery correspondiente y su tipo será un tipo base XQuery equivalente al tipo SQL correspondiente.  
+ El valor de SQL se asignará a un valor XQuery correspondiente y su tipo será un tipo base XQuery equivalente al tipo SQL correspondiente.  
   
- Solo puede hacer referencia a un **xml** instrucción de inserción de la instancia en el contexto de la expresión de origen de un XML-DML; de lo contrario, no puede hacer referencia a los valores que son del tipo **xml** o un common language runtime (CLR) tipo definido por el usuario.  
+ Solo puede hacer referencia a un **xml** instrucción insert de la instancia en el contexto de la expresión de origen de un XML-DML; de lo contrario no puede hacer referencia a los valores que son del tipo **xml** o un common language runtime (CLR) tipo definido por el usuario.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -90,7 +90,7 @@ WHERE ProductID=771
   
 -   La función XQuery incluida en el método `query()` construye el XML.  
   
--   El `namespace` palabra clave se utiliza para definir un prefijo de espacio de nombres en el [prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md). Esto se hace porque el valor del atributo `ProductModelName` se recupera de la columna de tipo `CatalogDescription xml`, que tiene un esquema asociado a ella.  
+-   El `namespace` palabra clave se usa para definir un prefijo de espacio de nombres en el [prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md). Esto se hace porque el valor del atributo `ProductModelName` se recupera de la columna de tipo `CatalogDescription xml`, que tiene un esquema asociado a ella.  
   
  El resultado es el siguiente:  
   
@@ -101,11 +101,11 @@ WHERE ProductID=771
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones de extensión de XQuery SQL Server](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [Funciones de extensión de SQL Server XQuery](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [Comparar XML con tipo y XML sin tipo](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Datos XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Crear instancias de datos XML](../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipo de datos xml](../t-sql/xml/xml-data-type-methods.md)   
+ [métodos del tipo de datos xml](../t-sql/xml/xml-data-type-methods.md)   
  [Lenguaje de manipulación de datos XML &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

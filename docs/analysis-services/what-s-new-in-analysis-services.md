@@ -1,5 +1,5 @@
 ---
-title: ¿Qué&#39;s nuevos en Analysis Services | Documentos de Microsoft
+title: ¿Qué&#39;s de Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,19 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 859214876b5c62078ccdfee72bf23caf3904df07
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045599"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38016092"
 ---
-# <a name="what39s-new-in-analysis-services"></a>¿Qué&#39;s nuevos en Analysis Services
+# <a name="what39s-new-in-analysis-services"></a>¿Qué&#39;s de Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
 
-SQL Server 2016 Analysis Services incluye muchas mejoras nuevas que proporciona un mejor rendimiento, creación de solución más fácil, administración automatizada de la base de datos, procesamiento de particiones, en paralelo relaciones mejoradas con bidireccional entre el filtrado, y mucho más. En el centro de la mayoría de las mejoras de esta versión se encuentra el nuevo nivel de compatibilidad 1200 para bases de datos de modelo tabular.     
+SQL Server 2016 Analysis Services incluye muchas mejoras que proporcionan un mejor rendimiento, creación de soluciones sea más fácil, administración automatizada de la base de datos, relaciones mejoradas con bidireccional entre el filtrado, procesamiento de particiones en paralelo y y mucho más. En el centro de la mayoría de las mejoras de esta versión se encuentra el nuevo nivel de compatibilidad 1200 para bases de datos de modelo tabular.     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
-Anunciado en la conferencia de SQL PASS de 2016, Analysis Services está ahora disponible en la nube como un servicio de Azure. **Azure Analysis Services** es compatible con los modelos tabulares en los niveles de compatibilidad 1200 y versiones posteriores. Se admiten todas las traducciones, particiones, seguridad de nivel de fila, relaciones bidireccionales y DirectQuery. Para obtener más información y probar esta función de forma gratuita, consulte [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
+Anunciado en la conferencia de SQL PASS de 2016, Analysis Services está ahora disponible en la nube como un servicio de Azure. **Azure Analysis Services** admite modelos tabulares en los niveles de compatibilidad 1200 y superior. Se admiten todas las traducciones, particiones, seguridad de nivel de fila, relaciones bidireccionales y DirectQuery. Para obtener más información y probar esta función de forma gratuita, consulte [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
 
 ## <a name="whats-new-in-sql-server-2016-service-pack-1-sp1-analysis-services"></a>Novedades de SQL Server 2016 Service Pack 1 (SP1) Analysis Services
 
@@ -44,7 +44,7 @@ Las pruebas de rendimiento y de escalabilidad muestran unas mejoras considerable
 Aunque la mayoría de las mejoras de esta versión son específicas de los modelos tabulares, también se han realizado varias mejoras en los modelos multidimensionales, como la optimización ROLAP de recuento distintivo para orígenes de datos como DB2 y Oracle, la compatibilidad de selección múltiple detallada con Excel 2016 y las optimizaciones de consultas de Excel.    
 
 #### <a name="get-the-latest-tools"></a>Obtenga las herramientas más recientes
-Para aprovechar al máximo de todas las mejoras en esta versión, asegúrese de instalar las versiones más recientes de SSDT y SSMS.    
+Con el fin de aprovechar al máximo todas las mejoras incluidas en esta versión, asegúrese de instalar las versiones más recientes de SSDT y SSMS.    
 - [Descargar SQL Server Data Tools (SSDT)](http://msdn.microsoft.com/library/mt204009.aspx)    
 - [Descargar SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)   
 
@@ -63,14 +63,14 @@ Con esta versión, ya no necesita dos versiones de SSDT para generar proyectos B
 Ahora hay disponibles carpetas para mostrar para los modelos tabulares 1200. Definidas en SQL Server Data Tools y representadas en aplicaciones cliente como Excel o Power BI Desktop, las carpetas de visualización ayudan organizar grandes cantidades de medidas en carpetas individuales y agregan una jerarquía visual para explorar más fácilmente las listas de campos.
 ### <a name="bi-directional-cross-filtering"></a>Filtrado cruzado bidireccional
 Como novedad de esta versión se ha introducido un enfoque integrado para permitir los filtros cruzados bidireccionales en los modelos tabulares, lo que elimina la necesidad de usar soluciones DAX manuales para propagar el contexto de filtro en las relaciones entre tablas. Los filtros solo se generan automáticamente cuando la dirección se puede establecer con un alto grado de certeza. Si hay ambigüedad en el formulario de varias rutas de consultas en relaciones de tabla, no se creará automáticamente un filtro. Vea [Filtros cruzados bidireccionales para modelos tabulares en SQL Server 2016 Analysis Services](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) para obtener más información.
- ### <a name="translations"></a>Traducciones    
+ ### <a name="translations"></a>Translations    
  Ahora puede almacenar metadatos traducidos en un modelo tabular 1200. Los metadatos del modelo incluyen campos para **Culture**, títulos traducidos y descripciones traducidas. Para agregar traducciones, use el comando **Modelo** > **Traducciones** en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Vea [Traducciones en modelos tabulares &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md) para obtener más información.    
  ### <a name="pasted-tables"></a>Tablas pegadas    
  Ahora es posible actualizar un modelo tabular 1100 o 1103 a 1200 cuando el modelo contiene tablas pegadas. Recomendamos para ello usar [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. En SSDT, establezca **CompatibilityLevel** en 1200 y, a continuación, realice la implementación en una instancia [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para obtener información detallada, vea [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) .    
  ### <a name="calculated-tables-in-ssdt"></a>Tablas calculadas en SSDT    
 Una *tabla calculada* es una construcción de solo modelo basada en una consulta o una expresión de DAX en SSDT. Cuando se implementa en una base de datos, una tabla calculada no se distingue de las tablas normales.    
 
- Existen varios usos para las tablas calculadas, incluida la creación de nuevas tablas para exponer una tabla existente en un rol específico. El ejemplo clásico es una tabla de fechas que funciona en varios contextos (fecha de pedido, fecha de envío etc.). Mediante la creación de una tabla calculada para un rol determinado, ahora puede activar una relación de tabla para facilitar la interacción de datos o consultas con la tabla calculada. Otro uso de las tablas calculadas es combinar partes de las tablas existentes en una tabla completamente nueva que solo existe en el modelo.  Vea [crear una tabla calculada](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) para obtener más información.    
+ Existen varios usos para las tablas calculadas, incluida la creación de nuevas tablas para exponer una tabla existente en un rol específico. El ejemplo clásico es una tabla de fechas que funciona en varios contextos (fecha de pedido, fecha de envío etc.). Mediante la creación de una tabla calculada para un rol determinado, ahora puede activar una relación de tabla para facilitar la interacción de datos o consultas con la tabla calculada. Otro uso de las tablas calculadas es combinar partes de las tablas existentes en una tabla completamente nueva que solo existe en el modelo.  Consulte [crear una tabla calculada](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) para obtener más información.    
  ### <a name="formula-fixup"></a>Corrección de fórmula    
  Con la corrección de fórmula en un modelo tabular 1200, SSDT actualizará automáticamente cualquier medida que haga referencia a una columna o tabla cuyo nombre haya cambiado.    
  ### <a name="support-for-visual-studio-configuration-manager"></a>Compatibilidad con el administrador de configuración de Visual Studio    
@@ -80,7 +80,7 @@ Una *tabla calculada* es una construcción de solo modelo basada en una consulta
  ### <a name="administer-tabular-1200-models-in-ssms"></a>Administración de modelos tabulares 1200 en SSMS    
  En esta versión, una instancia de Analysis Services en el modo de servidor tabular puede ejecutar modelos tabulares en cualquier nivel de compatibilidad (1100, 1103 y 1200). La última versión de [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) se ha actualizado para mostrar las propiedades y proporcionar la administración del modelo de base de datos para los modelos tabulares en el nivel de compatibilidad 1200.    
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Procesamiento en paralelo para varias particiones de tabla en los modelos tabulares    
- Esta versión incluye una nueva funcionalidad para el procesamiento en paralelo de las tablas con dos o más particiones, lo que aumenta el rendimiento del procesamiento. No hay valores de configuración para esta característica. Para obtener más información sobre cómo configurar particiones y tablas de procesamiento, vea [particiones de modelos tabulares](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
+ Esta versión incluye una nueva funcionalidad para el procesamiento en paralelo de las tablas con dos o más particiones, lo que aumenta el rendimiento del procesamiento. No hay valores de configuración para esta característica. Para obtener más información sobre cómo configurar particiones y procesamiento de tablas, consulte [particiones de modelos tabulares](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Adición de cuentas de equipo como administradores en SSMS    
  Los administradores de[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ahora pueden usar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para configurar las cuentas de equipo para que sean miembros del grupo de administradores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . En el cuadro de diálogo **Seleccionar usuarios o grupos** , establezca **Ubicaciones** para el dominio de equipos y, a continuación, agregue el tipo de objeto **Equipos** . Para obtener más información, vea [Conceder permisos de administrador de servidor (Analysis Services)](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC para Analysis Services.    
@@ -125,7 +125,7 @@ La carga es un documento JSON que puede ser mínimo, como en el ejemplo anterior
 
 En el nivel de base de datos, los comandos CREATE, ALTER y DELETE darán como resultado un script de TMSL en la ventana de XMLA familiar.  Otros comandos, como PROCESS, también pueden incluirse en scripts en esta versión. En una versión futura podría agregarse compatibilidad con scripts para muchas otras acciones.    
 
-**Comandos con scripts** | **Description**
+**Comandos con scripts** | **Descripción**
 --------------- | ----------------
 crear|Permite agregar una base de datos, conexión o partición. El equivalente de ASSL es CREATE.
 createOrReplace|Permite actualizar una definición de objeto existente (base de datos, conexión o partición) sobrescribiendo una versión anterior. El equivalente de ASSL es ALTER con AllowOverwrite establecido en true y ObjectDefinition en ExpandFull.
@@ -159,7 +159,7 @@ Ahora puede guardar las medidas DAX incompletas directamente en un proyecto del 
     
  Las aplicaciones existentes no se ven afectadas por los nuevos ensamblados. Sin embargo, si decide volver a generar aplicaciones con el nuevo ensamblado AMO por cualquier motivo, asegúrese de agregar una referencia a Microsoft.AnalysisServices.Core.    
     
- De forma similar, los scripts de PowerShell que cargan y llaman a AMO deben cargar ahora Microsoft.AnalysisServices.Core.dll. Asegúrese de actualizar los scripts.  
+ De forma similar, los scripts de PowerShell que cargan y llaman a AMO deben cargar ahora Microsoft.AnalysisServices.Core.dll. No olvide actualizar los scripts.  
 
 ### <a name="json-editor-for-bim-files"></a>Editor JSON para archivos BIM
 La vista Código en Visual Studio 2015 ahora representa el archivo BIM en formato JSON para los modelos tabulares 1200. La versión de Visual Studio determina si el archivo BIM se representa en JSON a través del editor JSON integrado o como texto simple.
@@ -199,7 +199,7 @@ En esta versión se incluyen mejoras considerables en DirectQuery para los model
 ### <a name="new-data-sources-for-directquery-mode"></a>Nuevos orígenes de datos para el modo DirectQuery    
  Orígenes de datos admitidos para los modelos tabulares 1200 en el modo DirectQuery ahora incluyen Oracle, Teradata y Microsoft Analytics Platform (anteriormente conocido como almacenamiento de datos paralelos).    
     
-Para obtener más información, consulte [Directquerymode](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
+Para obtener más información, consulte [el modo DirectQuery](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
 
 ## <a name="see-also"></a>Vea también
 [Blog del equipo de Analysis Services](http://blogs.msdn.microsoft.com/analysisservices/)    

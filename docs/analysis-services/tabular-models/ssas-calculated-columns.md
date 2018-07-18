@@ -1,5 +1,5 @@
 ---
-title: Columnas calculadas | Documentos de Microsoft
+title: Columnas calculadas | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3a79910d324a1e0c157a638745ad96a4bfff800e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e27c545e960c8c57178f099bfa99a7187795d959
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043269"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982527"
 ---
 # <a name="calculated-columns"></a>Columnas calculadas
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Las columnas calculadas, en los modelos tabulares, permiten agregar nuevos datos al modelo. En lugar de pegar o importar los valores en la columna, se crea una fórmula DAX que define los valores de nivel de fila de la columna. A continuación, la columna calculada se puede utilizar en un informe, una tabla dinámica o un gráfico dinámico como cualquier otra columna.  
+  Las columnas calculadas, en los modelos tabulares, podrá agregar nuevos datos al modelo. En lugar de pegar o importar los valores en la columna, se crea una fórmula DAX que define los valores de nivel de fila de la columna. A continuación, la columna calculada se puede utilizar en un informe, una tabla dinámica o un gráfico dinámico como cualquier otra columna.  
  
   
   
@@ -49,7 +49,7 @@ ms.locfileid: "34043269"
   
 -   Al cambiar el nombre de una columna calculada, se deben actualizar manualmente las fórmulas que se basan en dicha columna. A menos que esté en modo de actualización manual, la actualización de los resultados de las fórmulas tiene lugar automáticamente. Sin embargo, esta operación podría tardar algún tiempo.  
   
--   Algunos caracteres no se pueden usar en los nombres de columnas. Para más información, consulte los requisitos de nomenclatura en [DAX Syntax Reference](http://msdn.microsoft.com/en-us/098630f4-7d1d-467e-976c-99b2279430d5)(Referencia de sintaxis de DAX).  
+-   Algunos caracteres no se pueden usar en los nombres de columnas. Para más información, consulte los requisitos de nomenclatura en [DAX Syntax Reference](http://msdn.microsoft.com/098630f4-7d1d-467e-976c-99b2279430d5)(Referencia de sintaxis de DAX).  
   
 ##  <a name="bkmk_perf"></a> Performance of calculated columns  
  La fórmula para una columna calculada puede consumir más recursos que la fórmula para una medida. Uno de los motivos para ello es que el resultado de una columna calculada siempre se calcula para cada fila de una tabla, mientras que una medida solo se calcula para las celdas definidas por el filtro utilizado en un informe, una tabla dinámica o un gráfico dinámico. Por ejemplo, una tabla con un millón de filas siempre tendrá una columna calculada con un millón de resultados y un efecto correspondiente en el rendimiento. Sin embargo, una tabla dinámica generalmente filtra los datos aplicando encabezados de columnas y de filas; por consiguiente, una medida solo se calcula para el subconjunto de datos en cada celda de la tabla dinámica.  
@@ -68,7 +68,7 @@ ms.locfileid: "34043269"
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Crear una columna calculada](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|En las tareas de este tema se describe cómo agregar una nueva columna calculada a una tabla.|  
   

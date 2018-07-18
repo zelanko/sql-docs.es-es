@@ -1,5 +1,5 @@
 ---
-title: Roles | Documentos de Microsoft
+title: Roles | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,36 +9,36 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e73af245aaddbeb321acd60aeabd8a1617f3972f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3ebefae10d3c1cd4791cc38fd5b9d30e5e29838a
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045329"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981537"
 ---
 # <a name="roles"></a>Roles
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Los roles, en los modelos tabulares, definen los permisos de los miembros para un modelo. Los miembros del rol pueden realizar en el modelo las acciones definidas por el permiso de rol. Los roles que se han definido con permisos de lectura también pueden proporcionar seguridad adicional en el nivel de fila mediante filtros de fila. 
   
- Para SQL Server Analysis Services, roles contienen a miembros de usuario por nombre de usuario o grupo de Windows y permisos (lectura, process, administrador). Para los servicios de análisis de Azure, los usuarios deben estar en su Azure Active Directory y los nombres de usuario y grupos especificados deben ser por una dirección de correo electrónico profesional o UPN. 
+ Para SQL Server Analysis Services, los roles contienen a miembros de usuario por nombre de usuario de Windows o por grupo de Windows y permisos (lectura, proceso, administrador). Azure Analysis Services, los usuarios deben estar en su Azure Active Directory y los nombres de usuario y grupos especificados deben ser por dirección de correo electrónico profesional o UPN. 
   
 > [!IMPORTANT]  
->  Para que los usuarios se conecten a un modelo implementado mediante el uso de una aplicación de cliente de informes, debe crear al menos un rol con al menos el permiso para que los usuarios son miembros de lectura.  
+>  Para que los usuarios se conecten a un modelo implementado mediante el uso de una aplicación cliente de informes, debe crear al menos un rol con al menos a la que los usuarios son miembros de permiso de lectura.  
   
- Información de este tema está destinado a los autores de modelos tabulares que definen los roles mediante el cuadro de diálogo Administrador de roles en SSDT. Los roles definidos durante la creación del modelo se aplican a la base de datos del área de trabajo del modelo. Una vez implementada una base de datos de modelo, pueden administrar los administradores de base de datos de modelo (agregar, editar y eliminar) los miembros del rol mediante SSMS. Para obtener información acerca de cómo administrar los miembros de roles en una base de datos implementada, vea [Roles de modelos tabulares](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Información de este tema está pensada para los autores de modelos tabulares que definen los roles mediante el cuadro de diálogo Administrador de roles en SSDT. Los roles definidos durante la creación del modelo se aplican a la base de datos del área de trabajo del modelo. Una vez implementada una base de datos de modelo, pueden administrar los administradores de base de datos de modelo (agregar, editar, eliminar) los miembros del rol con SSMS. Para obtener información acerca de cómo administrar miembros de roles en una base de datos implementada, vea [Roles de modelos tabulares](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_underst"></a> Understanding roles  
- Las funciones se usan en Analysis Services para administrar el acceso de datos de modelo. Hay dos tipos de roles:  
+ Las funciones se utilizan en Analysis Services para administrar el acceso de datos de modelo. Hay dos tipos de roles:  
   
--   El rol de servidor, un rol fijo que proporciona acceso de administrador a una instancia de servidor de Analysis Services.  
+-   El rol de servidor, una función fija que proporciona acceso de administrador a una instancia de servidor de Analysis Services.  
   
 -   Los roles de base de datos, que son roles definidos por los autores del modelo para controlar el acceso de los usuarios que no son administradores a una base de datos de modelo y a los datos.  
   
- Los roles definidos para un modelo tabular son roles de base de datos. Es decir, los roles contienen a miembros que consta de los usuarios o grupos que tengan permisos específicos que definen las acciones que esos miembros pueden realizar en la base de datos de modelo. Un rol de base de datos se crea como objeto independiente en la base de datos y solo se aplica a la base de datos en la que se crea el rol. Usuarios y grupos que se incluyen en el rol por el autor del modelo, que, de forma predeterminada, tiene permisos de administrador en el servidor de base de datos del área de trabajo; para un modelo implementado por un administrador.  
+ Los roles definidos para un modelo tabular son roles de base de datos. Es decir, los roles contienen a miembros que consta de los usuarios o grupos que tienen permisos específicos que definen la acción que esos miembros pueden realizar en la base de datos de modelo. Un rol de base de datos se crea como objeto independiente en la base de datos y solo se aplica a la base de datos en la que se crea el rol. Los usuarios y grupos que se incluyen en el rol por el autor del modelo, que, de forma predeterminada, tiene permisos de administrador en el servidor de base de datos del área de trabajo; para un modelo implementado por un administrador.  
   
  Use los filtros de fila para definir de forma más exhaustiva los roles en los modelos tabulares. Los filtros de fila usan expresiones DAX para definir las filas de una tabla, así como las filas relacionadas en las distintas direcciones, que los usuarios pueden consultar. Los filtros de fila que usen expresiones de DAX solo se pueden definir para los permisos de lectura y de lectura y procesamiento. Para obtener más información, consulte [filtros de fila](#bkmk_rowfliters) más adelante en este tema.  
   
- De forma predeterminada, cuando se crea un proyecto de modelos tabulares, el proyecto no tiene ningún rol. Las funciones pueden definirse mediante el cuadro de diálogo Administrador de roles en SSDT. Si los roles se definen durante la creación del modelo, se aplican a la base de datos del área de trabajo del modelo. Cuando se implementa el modelo, se le aplican los mismos roles. Después de que se ha implementado un modelo, los miembros del rol de servidor ([Administrador de Analysis Services) y los administradores de base de datos pueden administrar los roles asociados con el modelo y los miembros asociados a cada rol mediante SSMS.  
+ De forma predeterminada, cuando se crea un proyecto de modelos tabulares, el proyecto no tiene ningún rol. Los roles se pueden definir mediante el cuadro de diálogo Administrador de roles en SSDT. Si los roles se definen durante la creación del modelo, se aplican a la base de datos del área de trabajo del modelo. Cuando se implementa el modelo, se le aplican los mismos roles. Una vez implementado un modelo, los miembros del rol de servidor ([Administrador de Analysis Services) y los administradores de base de datos pueden administrar los roles asociados con el modelo y los miembros asociados a cada rol con SSMS.  
   
 ##  <a name="bkmk_permissions"></a> Permisos  
  Cada rol tiene un único permiso de base de datos definido (excepto en el caso del permiso de lectura y procesamiento combinado). De forma predeterminada, los roles tienen el permiso Ninguno. Es decir, una vez que se agreguen los miembros al rol con el permiso Ninguno, estos no podrán modificar la base de datos, ejecutar una operación de proceso, consultar los datos ni ver la base de datos a menos que se conceda un permiso diferente.  
@@ -47,13 +47,13 @@ ms.locfileid: "34045329"
   
  Cada rol puede tener uno de los permisos siguientes definidos:  
   
-|Permissions|Description|Filtros de filas con DAX|  
+|Permisos|Descripción|Filtros de filas con DAX|  
 |-----------------|-----------------|----------------------------|  
 |None|Los miembros no pueden realizar ninguna modificación en el esquema de la base de datos modelo y no pueden consultar los datos.|No se pueden aplicar filtros de fila. No hay datos visibles para los usuarios de este rol|  
 |Lectura|Los miembros pueden consultar los datos (según los filtros de fila) pero no pueden ver la base de datos modelo en SSMS, no pueden realizar cambios en el esquema de la base de datos modelo y el usuario no puede procesar el modelo.|Se pueden aplicar filtros de fila. Solamente están visibles para los usuarios los datos especificados en la fórmula DAX del filtro de fila.|  
 |Leer y actualizar|Los miembros pueden consultar los datos (según los filtros de fila) y ejecutar operaciones de proceso mediante la ejecución de un script o un paquete que contenga un comando de proceso, pero no pueden realizar ningún cambio en la base de datos. No se puede ver la base de datos de modelo en SSMS.|Se pueden aplicar filtros de fila. Solo se pueden consultar los datos especificados en la fórmula DAX del filtro de filas.|  
 |Procesar|Los miembros pueden ejecutar operaciones de proceso mediante la ejecución de un script o un paquete que contenga un comando de proceso. No se puede modificar el esquema de la base de datos de modelo. No se pueden consultar los datos. No se puede consultar la base de datos de modelo en SSMS.|No se pueden aplicar filtros de fila. No se pueden consultar datos en este rol|  
-|Administrador|Los miembros pueden realizar modificaciones en el esquema del modelo y pueden consultar todos los datos en el Diseñador de modelos, el cliente de informes y el SSMS.|No se pueden aplicar filtros de fila. Todos los datos se pueden consultar datos en este rol.|  
+|Administrador|Los miembros pueden realizar modificaciones en el esquema de modelo y pueden consultar todos los datos en el Diseñador de modelos, el cliente de informes y el SSMS.|No se pueden aplicar filtros de fila. Todos los datos se pueden consultar datos en este rol.|  
   
 ##  <a name="bkmk_rowfliters"></a> Row filters  
  Los filtros de fila definen las filas de una tabla que pueden ser consultadas por un rol determinado. Los filtros de fila se definen para cada tabla de un modelo mediante fórmulas de DAX.  
@@ -79,10 +79,10 @@ ms.locfileid: "34045329"
   
  Para implementar seguridad dinámica, puede utilizar las siguientes funciones como parte de una fórmula DAX para devolver el nombre del usuario que ha iniciado sesión actualmente, o la propiedad CustomData en una cadena de conexión:  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
-|[Función USERNAME (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)|Devuelve el dominio\nombredeusuario del usuario que ha iniciado sesión actualmente.|  
-|[Función CUSTOMDATA (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|Devuelve la propiedad CustomData en una cadena de conexión.|  
+|[Función USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)|Devuelve el dominio\nombredeusuario del usuario que ha iniciado sesión actualmente.|  
+|[Función CUSTOMDATA (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|Devuelve la propiedad CustomData en una cadena de conexión.|  
   
  Puede utilizar la función LOOKUPVALUE para devolver valores para una columna en la que el nombre de usuario de Windows sea el mismo que el nombre de usuario devuelto por la función USERNAME o una cadena devuelta por la función CustomData. Las consultas se pueden restringir a los casos en que los valores devueltos por LOOKUPVALUE coincidan con los valores en la misma tabla o en una tabla relacionada.  
   
@@ -118,15 +118,15 @@ ms.locfileid: "34045329"
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Crear y administrar roles](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)|Las tareas de este tema explican cómo crear y administrar roles mediante el cuadro de diálogo **Administrador de roles** del diseñador de modelos.|  
   
 ## <a name="see-also"></a>Vea también  
  [Perspectivas](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Analizar en Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [Función USERNAME (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [Función LOOKUPVALUE (DAX)](http://msdn.microsoft.com/en-us/73a51c4d-131c-4c33-a139-b1342d10caab)   
- [Función CUSTOMDATA (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [Función USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
+ [Función LOOKUPVALUE (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)   
+ [Función CUSTOMDATA (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: No se puede actualizar los datos de una conexión de datos en el libro | Documentos de Microsoft
+title: No se puede actualizar los datos de una conexión de datos en el libro | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d1fabd45d3b9858114e48e3bdde258ed6ccc8362
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 211aecdb0158cff593c7f3f9ef241244db6ca051
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037429"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981717"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>No se pueden actualizar los datos para la conexión de datos del libro
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,17 +40,17 @@ ms.locfileid: "34037429"
   
  El libro que intenta abrir podría haberse creado en la versión SQL Server 2008 R2 de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel. Probablemente, el proveedor de datos de Analysis Services que se especifica en la cadena de conexión de datos no está presente en el equipo que controla la solicitud.  
   
- Si este es el caso, encontrará este mensaje en el registro de ULS: "Error al actualizar '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]datos t' en el libro '\<dirección URL al libro >'", seguido de "No se puede establecer una conexión".  
+ Si este es el caso, encontrará este mensaje en el registro de ULS: "Error al actualizar '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]datos t' en el libro '\<dirección URL al libro >'", seguido de "No se puede obtener una conexión".  
   
  Para determinar la versión del libro, ábralo en Excel y compruebe qué proveedor de datos se especifica en la cadena de conexión. Un libro de SQL Server 2008 R2 usa MSOLAP.4 como su proveedor de datos.  
   
- Para evitar este problema, puede actualizar el libro. Como alternativa, puede instalar bibliotecas de cliente de la versión SQL Server 2008 R2 de Analysis Services en los equipos físicos mediante la ejecución de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint o Excel Services: [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+ Para evitar este problema, puede actualizar el libro. Como alternativa, puede instalar bibliotecas de cliente de la versión SQL Server 2008 R2 de Analysis Services en los equipos físicos mediante la ejecución de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint o Excel Services: [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
  **Escenario 2b: Excel Services se ejecuta en un servidor de aplicaciones que tiene una versión incorrecta de las bibliotecas de cliente**  
   
  De forma predeterminada, SharePoint Server 2010 instala la versión SQL Server 2008 del proveedor OLE DB de Analysis Services en los servidores de aplicaciones que ejecutan Excel Services. En una granja de servidores que admite el acceso a datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , todos los servidores físicos que ejecutan aplicaciones que solicitan datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , por ejemplo, Excel Services y [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, deben usar una versión posterior del proveedor de datos.  
   
- Los servidores que ejecutan [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint obtienen el proveedor de datos OLE DB actualizado automáticamente. Otros servidores, como los que ejecutan una instancia independiente de Excel Services sin [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint en el mismo equipo, deben aplicar una revisión para usar las bibliotecas de cliente más recientes. Para más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+ Los servidores que ejecutan [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint obtienen el proveedor de datos OLE DB actualizado automáticamente. Otros servidores, como los que ejecutan una instancia independiente de Excel Services sin [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint en el mismo equipo, deben aplicar una revisión para usar las bibliotecas de cliente más recientes. Para obtener más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
  **Escenario 3: el controlador de dominio no está disponible**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34037429"
   
  Para evitar este problema, una el equipo al mismo dominio del servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o instale un controlador de dominio en el equipo local. La segunda solución, instalar el controlador de dominio, le exigirá que cree cuentas de dominio locales para todos los servicios y usuarios. Tendrá que configurar cuentas de servicio y permisos de SharePoint para las cuentas que defina.  
   
- La instalación de un controlador de dominio en el equipo resulta útil si desea utilizar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint en un estado sin conexión. Para obtener instrucciones detalladas sobre cómo usar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sin conexión, vea la entrada del blog "toma la [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servidor fuera de la red" en [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
+ La instalación de un controlador de dominio en el equipo resulta útil si desea utilizar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint en un estado sin conexión. Para obtener instrucciones detalladas sobre cómo usar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sin conexión, vea la entrada de blog "teniendo su [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server fuera de la red" en [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
   
  **Escenario 4: servidor inestable**  
   

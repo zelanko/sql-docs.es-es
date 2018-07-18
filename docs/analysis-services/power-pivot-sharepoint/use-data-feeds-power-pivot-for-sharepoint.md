@@ -1,5 +1,5 @@
 ---
-title: Usar fuentes de distribución de datos (PowerPivot para SharePoint) | Documentos de Microsoft
+title: Usar fuentes de distribución de datos (PowerPivot para SharePoint) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ac7d32ccb99776a85d82c3bc310bc29cdd82954b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 509d4a5293aef836f8ae9439ad7c8d315bbc790d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027755"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979873"
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Uso de fuentes de distribución de datos (PowerPivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34027755"
   
  Debe tener un servicio web o un servicio de datos que proporcione los datos en el formato de Atom 1.0. Tanto [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] como SharePoint 2010 pueden proporcionar los datos en este formato.  
   
- Antes de poder exportar una lista de SharePoint como una fuente de distribución de datos, debe instalar ADO.NET Data Services en el servidor de SharePoint. Para obtener más información, vea [Instalar ADO.NET Data Services para admitir las exportaciones de fuentes de distribución de datos de las listas de SharePoint](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
+ Antes de poder exportar una lista de SharePoint como una fuente de distribución de datos, debe instalar ADO.NET Data Services en el servidor de SharePoint. Para obtener más información, vea [Instalar ADO.NET Data Services para admitir las exportaciones de fuentes de distribución de datos de las listas de SharePoint](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
   
 ##  <a name="sharepointlist"></a> Crear una fuente de distribución de datos a partir de una lista de SharePoint  
  En una granja de SharePoint 2010, una lista de SharePoint tiene un botón Exportar como fuente de distribución de datos en la cinta de opciones Lista. Puede hacer clic en este botón para exportar la lista como una fuente. Para obtener los mejores resultados, debería tener Excel 2010 con la aplicación cliente de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en la estación de trabajo. La aplicación cliente de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se iniciará en respuesta a la exportación de la fuente de distribución de datos y creará una nueva tabla de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que contenga la lista.  
@@ -57,7 +57,7 @@ ms.locfileid: "34027755"
   
 5.  Si elige **Abrir**, use el Asistente para la importación de tablas a fin de importar la fuente de distribución de datos en una hoja de cálculo. La fuente de distribución de datos se agregará como una nueva tabla en la ventana de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
- Se producirá un error si ADO.NET Data Services 3.5.1 no está instalado en el servidor de SharePoint. Para obtener más información sobre el error y cómo resolverlo, consulte [Instalar ADO.NET Data Services para admitir las exportaciones de fuentes de distribución de datos de las listas de SharePoint](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
+ Se producirá un error si ADO.NET Data Services 3.5.1 no está instalado en el servidor de SharePoint. Para obtener más información sobre el error y cómo resolverlo, consulte [Instalar ADO.NET Data Services para admitir las exportaciones de fuentes de distribución de datos de las listas de SharePoint](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
   
 ##  <a name="rsreport"></a> Crear una fuente de distribución de datos a partir de un informe de Reporting Services  
  Si tiene una implementación de Reporting Services de SQL Server 2008 R2, puede usar la nueva extensión de representación de Atom para generar una fuente de distribución de datos a partir de un informe existente. Para obtener unos mejores resultados, debería tener Excel 2010 con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel en la estación de trabajo. La aplicación cliente de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se iniciará en respuesta a la exportación de la fuente de distribución de datos, y agregará y relacionará las tablas y columnas automáticamente a medida que se transmitan.  

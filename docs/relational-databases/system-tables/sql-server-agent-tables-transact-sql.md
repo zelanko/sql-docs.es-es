@@ -1,5 +1,5 @@
 ---
-title: Tablas del Agente SQL Server (Transact-SQL) | Documentos de Microsoft
+title: Tablas del Agente SQL Server (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f45847235f549eb80404236633111f5678f53825
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263533"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018436"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>Tablas de Agente SQL Server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "33263533"
  Almacena la información de cada trabajo programado que debe ejecutar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [dbo.sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
- Contiene información de programación para trabajos que va a ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente  
+ Contiene información de programación de trabajos ser ejecutado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente  
   
  [dbo.sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
  Almacena la asociación o relación de un trabajo determinado con uno o más servidores de destino.  

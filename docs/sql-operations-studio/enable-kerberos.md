@@ -1,6 +1,6 @@
 ---
-title: Utilizar autenticación de Active Directory (Kerberos) cuando se conecta con las operaciones de SQL Studio (versión preliminar) | Documentos de Microsoft
-description: Obtenga información acerca de cómo habilitar Kerberos para usar autenticación de Active Directory para las operaciones de SQL Studio (versión preliminar)
+title: Utilizar autenticación de Active Directory (Kerberos) al conectarse con SQL Operations Studio (versión preliminar) | Microsoft Docs
+description: Obtenga información sobre cómo habilitar Kerberos usar autenticación de Active Directory para SQL Operations Studio (versión preliminar)
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql
@@ -13,34 +13,34 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.openlocfilehash: 847638bc0693d83ba38dec6c8fec5e4ca030e01f
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 30ca6a2286102933243542b5bebcbd82030b952c
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34306474"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981377"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Conectar [!INCLUDE[name-sos](../includes/name-sos-short.md)] a SQL Server mediante la autenticación de Windows - Kerberos 
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] admite la conexión a SQL Server mediante Kerberos.
 
-Para poder utilizar la autenticación integrada (autenticación de Windows) en Mac OS o Linux, debe configurar un **vale de Kerberos** vincular el usuario actual a una cuenta de dominio de Windows. 
+Para usar la autenticación integrada (autenticación de Windows) en macOS o Linux, deberá configurar un **vale de Kerberos** vincular el usuario actual a una cuenta de dominio de Windows. 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Acceso a un equipo unido a un dominio de Windows para consultar el controlador de dominio Kerberos.
-- SQL Server debe configurarse para permitir la autenticación Kerberos. En el controlador de cliente que se ejecutan en Unix, la autenticación integrada solamente se admite con Kerberos. Puede encontrar más información sobre cómo configurar Sql Server para autenticar con Kerberos [aquí](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). Debería haber SPN registrados para cada instancia de Sql Server está intentando conectarse. Se muestran detalles acerca del formato de SPN de SQL Server [aquí](https://technet.microsoft.com/en-us/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- Acceso a un equipo unido al dominio de Windows con el fin de consultar el controlador de dominio Kerberos.
+- SQL Server debe configurarse para permitir la autenticación Kerberos. Para el controlador de cliente que se ejecutan en Unix, es sólo admite la autenticación integrada con Kerberos. Puede encontrar más información sobre cómo configurar Sql Server para autenticar con Kerberos [aquí](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). Debe haber un SPN registrados para cada instancia de Sql Server está intentando conectarse a. Se incluye información detallada sobre el formato del SPN de SQL Server [aquí](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Comprobando si Sql Server tiene la configuración de Kerberos
 
-Inicie sesión en el equipo host de Sql Server. Línea de comandos de Windows, use la `setspn -L %COMPUTERNAME%` para enumerar todos los nombres de entidad de servicio para el host. Debería ver las entradas que comienzan por MSSQLSvc/HostName.Domain.com lo que significa que Sql Server se ha registrado un SPN y está listo para aceptar la autenticación Kerberos. 
-- Si no tiene acceso al Host de Sql Server, desde cualquier otro sistema operativo Windows unido a Active Directory mismo, puede utilizar el comando `setspn -L <SQLSERVER_NETBIOS>` donde < SQLSERVER_NETBIOS > es el nombre de equipo del host de Sql Server.
+Inicie sesión en el equipo host de Sql Server. Línea de comandos de Windows, utilice el `setspn -L %COMPUTERNAME%` para enumerar todos los nombres de entidad de servicio para el host. Debería ver las entradas que comienzan por MSSQLSvc/HostName.Domain.com lo que significa que Sql Server ha registrado un SPN y está listo para aceptar la autenticación Kerberos. 
+- Si no tiene acceso al Host de Sql Server y, después, desde cualquier otro SO de Windows unido al mismo Active Directory, puede utilizar el comando `setspn -L <SQLSERVER_NETBIOS>` donde < SQLSERVER_NETBIOS > es el nombre de equipo del host de Sql Server.
 
 
 ## <a name="get-the-kerberos-key-distribution-center"></a>Obtener el centro de distribución de claves de Kerberos
 
-Busque el valor de configuración de Kerberos KDC (Key Distribution Center). Ejecute el siguiente comando en un equipo de Windows que se ha unido al dominio de Active Directory: 
+Busque el valor de configuración de KDC de Kerberos (Key Distribution Center). Ejecute el siguiente comando en un equipo de Windows que se une a su dominio de Active Directory: 
 
 Iniciar `cmd.exe` y ejecute `nltest`.
 
@@ -55,14 +55,14 @@ The command completed successfully
 ```
 Copie el nombre de controlador de dominio que es el valor de configuración de KDC necesario, en este caso dc-33.domain.company.com
 
-## <a name="join-your-os-to-the-active-directory-domain-controller"></a>Unirse a su sistema operativo para el controlador de dominio de Active Directory
+## <a name="join-your-os-to-the-active-directory-domain-controller"></a>Únase a su sistema operativo para el controlador de dominio de Active Directory
 
 ### <a name="ubuntu"></a>Ubuntu
 ```bash
 sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```
 
-Editar la `/etc/network/interfaces` de archivos para que la dirección IP del controlador de dominio AD aparece como un servidor de nombres dns. Por ejemplo: 
+Editar el `/etc/network/interfaces` archivo para que la dirección IP del controlador de dominio AD aparece como un servidor de nombres de dns. Por ejemplo: 
 
 ```/etc/network/interfaces
 <...>
@@ -74,7 +74,7 @@ dns-search **<AD domain name>**
 ```
 
 > [!NOTE]
-> La interfaz de red (eth0) podría ser diferente en distintos equipos. Para averiguar cuál está utilizando, ejecute ifconfig y copie la interfaz que tiene una dirección IP y los bytes transmitidos y recibidos.
+> La interfaz de red (eth0) podría diferir para distintas máquinas. Para averiguar cuál de ellos usa, ejecute ifconfig y copie la interfaz que tiene una dirección IP y los bytes transmitidos y recibidos.
 
 Después de editar este archivo, reinicie el servicio de red:
 
@@ -82,7 +82,7 @@ Después de editar este archivo, reinicie el servicio de red:
 sudo ifdown eth0 && sudo ifup eth0
 ```
 
-Ahora, compruebe que su `/etc/resolv.conf` archivo contiene una línea similar al siguiente:  
+Ahora compruebe que su `/etc/resolv.conf` archivo contiene una línea similar al siguiente:  
 
 ```Code
 nameserver **<AD domain controller IP address>**
@@ -94,12 +94,12 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 * Success
 ```
    
-### <a name="redhat-enterprise-linux"></a>Enterprise RedHat Linux
+### <a name="redhat-enterprise-linux"></a>Red Hat Enterprise Linux
 ```bash
 sudo yum install realmd krb5-workstation
 ```
 
-Editar el `/etc/sysconfig/network-scripts/ifcfg-eth0` archivo (o en otro config de la interfaz de archivos según corresponda) para que la dirección IP del controlador de dominio AD aparece como un servidor DNS:
+Editar el `/etc/sysconfig/network-scripts/ifcfg-eth0` archivo (o en otra configuración de interfaz de archivos según corresponda) para que la dirección IP del controlador de dominio AD aparece como un servidor DNS:
 
 ```/etc/sysconfig/network-scripts/ifcfg-eth0
 <...>
@@ -113,7 +113,7 @@ Después de editar este archivo, reinicie el servicio de red:
 sudo systemctl restart network
 ```
 
-Ahora, compruebe que su `/etc/resolv.conf` archivo contiene una línea similar al siguiente:  
+Ahora compruebe que su `/etc/resolv.conf` archivo contiene una línea similar al siguiente:  
 
 ```Code
 nameserver **<AD domain controller IP address>**
@@ -126,15 +126,15 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    
 ```
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 
-- Combine el macOS con el controlador de dominio de Active Directory [siguiendo estos pasos] (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
+- Combinar su macOS con el controlador de dominio de Active Directory siguiendo [estos pasos] (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
 
 
 
 ## <a name="configure-kdc-in-krb5conf"></a>Configura el KDC en krb5.conf
 
-Editar el `/etc/krb5.conf` en un editor de su elección. Configura las siguientes claves
+Editar el `/etc/krb5.conf` en un editor que prefiera. Configurar las siguientes claves
 
 ```bash
 sudo vi /etc/krb5.conf
@@ -156,13 +156,13 @@ A continuación, guarde el archivo krb5.conf y salir
 
 ## <a name="test-the-ticket-granting-ticket-retrieval"></a>Probar la recuperación de vale de concesión de vales
 
-Obtener un vale de concesión de vales (TGT) de KDC.
+Obtenga un vale de concesión de vales (TGT) de KDC.
 
 ```bash
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-Ver los vales disponibles mediante kinit. Si el kinit fue correcta, debería ver un vale. 
+Ver los vales disponibles mediante kinit. Si el kinit se realizó correctamente, debería ver un vale. 
 
 ```bash
 klist
@@ -170,12 +170,12 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>Conectar usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>Conectar utilizando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 * Crear un nuevo perfil de conexión
 
-* Elija **autenticación de Windows** como el tipo de autenticación
+* Elija **Windows autenticación** como el tipo de autenticación
 
-* Complete el perfil de conexión, haga clic en **conectar**
+* Complete el perfil de conexión, haga clic en **Connect**
 
-Después de conectarse correctamente, el servidor aparece en el *servidores* sidebar.
+Después de conectarse correctamente, el servidor aparece en el *servidores* barra lateral.

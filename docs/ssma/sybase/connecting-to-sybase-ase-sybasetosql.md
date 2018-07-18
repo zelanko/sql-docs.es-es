@@ -1,5 +1,5 @@
 ---
-title: Conectarse a Sybase ASE (SybaseToSQL) | Documentos de Microsoft
+title: Conexión a Sybase ASE (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,22 +18,22 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2fb1bb6047dca0965d71e80b1042d9fe1d8bca97
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0fe501e639b5896eb0f83391e6be40b8f8961ba9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778461"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980097"
 ---
-# <a name="connecting-to-sybase-ase-sybasetosql"></a>Conectarse a Sybase ASE (SybaseToSQL)
-Migrar bases de datos de Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, debe conectarse al servidor adaptable que contiene las bases de datos que se van a migrar. Cuando se conecta, SSMA obtiene metadatos acerca de todas las bases de datos en el servidor adaptable y muestra los metadatos de la base de datos en el panel Explorador de metadatos de Sybase. SSMA almacena información sobre el servidor de base de datos, pero no almacena las contraseñas.  
+# <a name="connecting-to-sybase-ase-sybasetosql"></a>Conexión a Sybase ASE (SybaseToSQL)
+Para migrar bases de datos de Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, debe conectarse al servidor adaptable que contiene las bases de datos que desea migrar. Cuando se conecta, SSMA obtiene metadatos sobre todas las bases de datos en el servidor adaptable y muestra los metadatos de la base de datos en el panel Explorador de metadatos de Sybase. SSMA almacena información sobre el servidor de base de datos, pero no almacena las contraseñas.  
   
-La conexión a ASE permanece activa hasta que se cierra el proyecto. Cuando vuelva a abrir el proyecto, debe volver a conectarse a ASE si desea que una conexión activa con el servidor.  
+La conexión al ASE permanece activa hasta que cierre el proyecto. Cuando vuelva a abrir el proyecto, debe volver a conectar al ASE si desea que una conexión activa con el servidor.  
   
-Metadatos acerca del servidor adaptable no se actualizan automáticamente. En su lugar, si desea actualizar los metadatos en el Explorador de metadatos de Sybase, debe actualizar manualmente los metadatos, como se describe en la sección "Actualizar los metadatos de Sybase ASE" más adelante en este tema.  
+Los metadatos del servidor adaptable no se actualizan automáticamente. En su lugar, si desea actualizar los metadatos en el Explorador de metadatos de Sybase, debe actualizar manualmente los metadatos, como se describe en la sección "Actualizar los metadatos de Sybase ASE" más adelante en este tema.  
   
-## <a name="required-ase-permissions"></a>Permisos necesarios ASE  
-La cuenta que se usa para conectarse a ASE debe tener al menos **público** acceso a la base de datos maestra y a las bases de datos de origen para migrarlos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Además, para seleccionar los permisos en las tablas que se van a migrar, el usuario debe tener permisos SELECT en las tablas del sistema siguientes:  
+## <a name="required-ase-permissions"></a>Permisos necesarios de ASE  
+La cuenta que se usa para conectarse a la instancia de ASE debe tener al menos **pública** acceso a la base de datos maestra y a las bases de datos de origen para migrarlos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Además, para seleccionar los permisos en las tablas que se van a migrar, el usuario debe tener permisos SELECT en las tablas del sistema siguientes:  
   
 -   .dbo.sysobjects [source_db]  
   
@@ -53,33 +53,33 @@ La cuenta que se usa para conectarse a ASE debe tener al menos **público** acce
   
 -   master.dbo.sysdatabases  
   
-## <a name="establishing-a-connection-to-ase"></a>Establecer una conexión con ASE  
-Cuando se conecta a un servidor adaptable, SSMA lee los metadatos de la base de datos en el servidor de base de datos y, a continuación, agrega estos metadatos para el archivo de proyecto. SSMA utiliza estos metadatos cuando convierte los objetos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o la sintaxis de SQL Azure, y cuando migra los datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Puede examinar estos metadatos en el panel del explorador de metadatos de Sybase y revise las propiedades de objetos de base de datos individuales.  
+## <a name="establishing-a-connection-to-ase"></a>Establecer una conexión a la instancia de ASE  
+Cuando se conecta a un servidor adaptable, SSMA lee los metadatos de la base de datos en el servidor de base de datos y, a continuación, agrega estos metadatos al archivo de proyecto. SSMA utiliza estos metadatos al que convierte los objetos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o sintaxis de SQL Azure, y cuando migra los datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Puede examinar estos metadatos en el panel Explorador de metadatos de Sybase y revisar las propiedades de objetos de base de datos individual.  
   
 > [!IMPORTANT]  
-> Antes de intentar conectarse al servidor de base de datos, asegúrese de el servidor de base de datos se está ejecutando y puede aceptar conexiones.  
+> Antes de intentar conectarse al servidor de base de datos, asegúrese de que el servidor de base de datos se está ejecutando y puede aceptar conexiones.  
   
 **Para conectarse a Sybase ASE**  
   
-1.  En el **archivo** menú, seleccione **conectar para Sybase**.  
+1.  En el **archivo** menú, seleccione **conectarse a Sybase**.  
   
-    Si se ha conectado anteriormente a Sybase, será el nombre del comando **conectarse de nuevo a Sybase**.  
+    Si se ha conectado anteriormente a Sybase, será el nombre del comando **volver a conectar a Sybase**.  
   
 2.  En el **proveedor** , seleccione cualquiera de los proveedores instalados en el equipo para conectarse al servidor de Sybase.  
   
 3.  En el **modo** , seleccione **modo estándar** o **modo avanzado**.  
   
-    Utilice el modo estándar para especificar el nombre del servidor, el puerto, el nombre de usuario y la contraseña. Usar modo avanzado para proporcionar una cadena de conexión. Este modo es normalmente sólo se utiliza para solucionar problemas o para trabajar con el soporte técnico.  
+    Utilice el modo estándar para especificar el nombre del servidor, puerto, nombre de usuario y contraseña. Use el modo avanzado para proporcionar una cadena de conexión. Este modo es normalmente solo se usa para solucionar problemas o para trabajar con el soporte técnico.  
   
 4.  Si selecciona **modo estándar**, proporcione los valores siguientes:  
   
     1.  En el **nombre del servidor** cuadro, escriba o seleccione el nombre o dirección IP del servidor de base de datos.  
   
-    2.  Si el servidor de base de datos no está configurado para aceptar conexiones en el valor predeterminado (5000) de puerto, escriba el número de puerto que se utiliza para las conexiones de Sybase en el **puerto del servidor** cuadro.  
+    2.  Si el servidor de base de datos no está configurado para aceptar conexiones en el valor predeterminado de puerto (5000), escriba el número de puerto que se usa para las conexiones de Sybase en el **puerto del servidor** cuadro.  
   
-    3.  En el **nombre de usuario** cuadro, escriba una cuenta de Sybase que tenga los permisos necesarios.  
+    3.  En el **nombre de usuario** , escriba una cuenta de Sybase que tenga los permisos necesarios.  
   
-    4.  En el **contraseña** cuadro, escriba la contraseña para el nombre de usuario especificado.  
+    4.  En el **contraseña** , escriba la contraseña del nombre de usuario especificado.  
   
 5.  Si selecciona **modo avanzado**, proporcionar una cadena de conexión en el **cadena de conexión** cuadro.  
   
@@ -87,15 +87,15 @@ Cuando se conecta a un servidor adaptable, SSMA lee los metadatos de la base de 
   
     1.  **Cadenas de conexión para el proveedor OLE DB de Sybase:**  
   
-        Para Sybase ASE OLE DB 12,5, una cadena de conexión de ejemplo es la siguiente:  
+        Para Sybase ASE OLE DB 12,5, una cadena de conexión de ejemplo es el siguiente:  
   
         `Server Name=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider=Sybase.ASEOLEDBProvider;`  
   
-        Para Sybase ASE OLE DB 15, una cadena de conexión de ejemplo es la siguiente:  
+        Para Sybase ASE OLE DB 15, una cadena de conexión de ejemplo es el siguiente:  
   
         `Server=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider= ASEOLEDB;Port=5000;`  
   
-    2.  **Cadena de conexión para el proveedor de Sybase ODBC:**  
+    2.  **Cadena de conexión para el proveedor ODBC de Sybase:**  
   
         `Driver=Adaptive Server Enterprise;Server=sybserver;uid=MyUserID;pwd=MyP@$$word;Port=5000;`  
   
@@ -103,28 +103,28 @@ Cuando se conecta a un servidor adaptable, SSMA lee los metadatos de la base de 
   
         `Server=sybserver;Port=5000;uid=MyUserID;pwd=MyP@$$word;`  
   
-    Para obtener más información, consulte [conectar para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md).  
+    Para obtener más información, consulte [conectarse a Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md).  
   
-## <a name="reconnecting-to-sybase-ase"></a>Volver a conectarse para Sybase ASE  
-La conexión con el servidor de base de datos permanece activa hasta que se cierra el proyecto. Cuando vuelva a abrir el proyecto, debe volver a conectarse si desea que una conexión activa con el servidor adaptable. Puede trabajar sin conexión hasta que desee actualizar los metadatos, cargar los objetos de base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, y migrar los datos.  
+## <a name="reconnecting-to-sybase-ase"></a>Volver a conectarse a Sybase ASE  
+La conexión al servidor de base de datos permanece activa hasta que cierre el proyecto. Cuando vuelva a abrir el proyecto, debe volver a conectarse si desea que una conexión activa con el servidor adaptable. Puede trabajar sin conexión hasta que desee actualizar los metadatos, cargar los objetos de base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, y migrar los datos.  
   
-## <a name="refreshing-sybase-ase-metadata"></a>Actualizar los metadatos de Sybase ASE  
-No se actualizan automáticamente los metadatos acerca de las bases de datos de ASE. Los metadatos en el Explorador de metadatos de Sybase están una instantánea de los metadatos cuando se conectó por primera vez al servidor adaptable o la última vez que actualiza manualmente los metadatos. Puede actualizar manualmente los metadatos para una sola base de datos, un esquema de base de datos individual o todas las bases de datos.  
+## <a name="refreshing-sybase-ase-metadata"></a>Actualizar metadatos de Sybase ASE  
+Metadatos acerca de las bases de datos de ASE no se actualizan automáticamente. Los metadatos en el Explorador de metadatos de Sybase están una instantánea de los metadatos cuando se conectó en primer lugar en el servidor adaptable, o la última vez que actualiza manualmente los metadatos. Puede actualizar manualmente los metadatos de una sola base de datos, un esquema de base de datos única o todas las bases de datos.  
   
 **Para actualizar los metadatos**  
   
 1.  Asegúrese de que está conectado al servidor adaptable.  
   
-2.  En el Explorador de metadatos de Sybase, active la casilla de verificación junto a la base de datos o el esquema de base de datos que desea actualizar.  
+2.  En el Explorador de metadatos de Sybase, active la casilla de verificación junto a la base de datos o esquema de base de datos que desea actualizar.  
   
-3.  Haga clic en las bases de datos o la base de datos individual o el esquema de base de datos y, a continuación, seleccione **actualizar desde la base de datos**.  
+3.  Haga clic en bases de datos o la base de datos individual o el esquema de base de datos y, a continuación, seleccione **actualizar desde la base de datos**.  
   
-4.  Si le solicita que compruebe el objeto actual, haga clic en **Sí**.  
+4.  Si se le pide que compruebe el objeto actual, haga clic en **Sí**.  
   
 ## <a name="next-step"></a>Paso siguiente  
   
--   El siguiente paso del proceso de migración consiste en [conecta a una instancia de SQL Server](http://msdn.microsoft.com/en-us/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) / [conectarse a una instancia de SQL Azure](http://msdn.microsoft.com/en-us/9e77e4b0-40c0-455c-8431-ca5d43849aa7)  
+-   El siguiente paso del proceso de migración es [conecta a una instancia de SQL Server](http://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) / [conectarse a una instancia de SQL Azure](http://msdn.microsoft.com/9e77e4b0-40c0-455c-8431-ca5d43849aa7)  
   
 ## <a name="see-also"></a>Vea también  
-[Migrar bases de datos de Sybase ASE a SQL Server: base de datos de SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrar bases de datos de Sybase ASE a SQL Server: base de datos SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

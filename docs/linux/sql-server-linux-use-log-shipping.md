@@ -1,6 +1,6 @@
 ---
-title: Configurar el trasvase de registros para SQL Server en Linux | Documentos de Microsoft
-description: Este tutorial muestra un ejemplo básico de cómo replicar una instancia de SQL Server en Linux a una instancia secundaria mediante el trasvase de registros.
+title: Configurar el trasvase de registros de SQL Server en Linux | Microsoft Docs
+description: Este tutorial muestra un ejemplo básico de cómo replicar una instancia de SQL Server en Linux en una instancia secundaria de trasvase de registros de uso.
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
@@ -12,35 +12,35 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 2d2057779b13141c6b1fee49fa1b3d299a660862
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.openlocfilehash: 8371660357848226ef00a9c843177ebae38c8790
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323656"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982037"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Empezar a trabajar con el trasvase de registros en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Trasvase de registros de SQL Server es una configuración de alta disponibilidad en una base de datos desde un servidor principal se replica en uno o más servidores secundarios. En pocas palabras, se restaura una copia de seguridad de la base de datos de origen en el servidor secundario. A continuación, el servidor principal crea copias de seguridad de registro de transacciones periódicamente, y los servidores secundarios restauración al completo, actualizar la copia secundaria de la base de datos. 
+El trasvase de registros de SQL Server es una configuración de alta disponibilidad en una base de datos desde un servidor principal se replica en uno o más servidores secundarios. En pocas palabras, se restaura una copia de seguridad de la base de datos de origen en el servidor secundario. A continuación, el servidor principal crea copias de seguridad de registro de transacciones periódicamente y los servidores secundarios, restaurar la copia secundaria de la base de datos de la actualización. 
 
   ![Trasvase de registros](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
 Como se describe en esta imagen, una sesión de trasvase de registros implica los pasos siguientes:
 
-- Realizar una copia de seguridad del archivo de registro de transacciones en la instancia principal de SQL Server
-- Copiar el archivo de copia de seguridad de registro de transacciones a través de la red a una o más instancias de SQL Server secundarias
-- Restaurar el archivo de copia de seguridad del registro de transacciones en las instancias secundarias de SQL Server
+- Copia el archivo de registro de transacciones en la instancia principal de SQL Server
+- Copiar el archivo de copia de seguridad del registro de transacciones a través de la red a una o varias instancias de SQL Server secundarias
+- Restaurar el archivo de copia de seguridad del registro de transacciones en las instancias de SQL Server secundarios
 
 ## <a name="prerequisites"></a>Requisitos previos
-- [Instalar el Agente SQL Server en Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-sql-agent)
+- [Instalación del Agente SQL Server en Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Programa de instalación de un recurso compartido de red para el trasvase de registros mediante CIFS 
 
 > [!NOTE] 
-> Este tutorial usa CIFS + Samba para configurar el recurso compartido de red. Si desea usar NFS, deje un comentario y agregará el documento.       
+> Este tutorial usa CIFS + Samba para configurar el recurso compartido de red. Si desea utilizar NFS, deje un comentario y agregará el documento.       
 
 ### <a name="configure-primary-server"></a>Configurar el servidor principal
 -   Ejecute lo siguiente para instalar Samba
@@ -49,7 +49,7 @@ Como se describe en esta imagen, una sesión de trasvase de registros implica lo
     sudo apt-get install samba #For Ubuntu
     sudo yum -y install samba #For RHEL/CentOS
     ```
--   Cree un directorio para almacenar los registros de trasvase de registros y asignar los permisos necesarios a mssql
+-   Cree un directorio para almacenar los registros de trasvase de registros y conceder los permisos necesarios de mssql
 
     ```bash
     mkdir /var/opt/mssql/tlogs
@@ -57,7 +57,7 @@ Como se describe en esta imagen, una sesión de trasvase de registros implica lo
     chmod 0700 /var/opt/mssql/tlogs
     ```
 
--   Edite el archivo /etc/samba/smb.conf (necesita permisos de raíz para que) y agregue la siguiente sección:
+-   Edite el archivo /etc/samba/smb.conf (necesita permisos de raíz para eso) y agregue la siguiente sección:
 
     ```bash
     [tlogs]
@@ -69,7 +69,7 @@ Como se describe en esta imagen, una sesión de trasvase de registros implica lo
     writable=no
     ```
 
--   Cree un usuario mssql para Samba
+-   Cree un usuario de mssql para Samba
 
     ```bash
     sudo smbpasswd -a mssql
@@ -88,7 +88,7 @@ Como se describe en esta imagen, una sesión de trasvase de registros implica lo
     sudo yum -y install cifs-utils #For RHEL/CentOS
     ```
 
--   Crear un archivo para almacenar sus credenciales. Usar la contraseña que recientemente establecidos para la cuenta de Samba mssql 
+-   Cree un archivo para almacenar sus credenciales. Utilice la contraseña que configuró recientemente para su cuenta de Samba mssql 
 
         vim /var/opt/mssql/.tlogcreds
         #Paste the following in .tlogcreds
@@ -105,7 +105,7 @@ Como se describe en esta imagen, una sesión de trasvase de registros implica lo
     sudo chmod 0660 /var/opt/mssql/.tlogcreds
     ```
 
--   Agregue la línea al etcetera/fstab para conservar el recurso compartido 
+-   Agregue la línea a etcetera/fstab para conservar el recurso compartido 
 
         //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
         
@@ -114,7 +114,7 @@ Como se describe en esta imagen, una sesión de trasvase de registros implica lo
     sudo mount -a
     ```
        
-## <a name="setup-log-shipping-via-t-sql"></a>El programa de instalación a través de código T-SQL de trasvase de registros
+## <a name="setup-log-shipping-via-t-sql"></a>Configurar el trasvase de registros a través de Transact-SQL
 
 - Ejecute este script desde el servidor principal
 
@@ -288,9 +288,9 @@ Como se describe en esta imagen, una sesión de trasvase de registros implica lo
     END 
     ```
 
-## <a name="verify-log-shipping-works"></a>Compruebe que el trasvase de registros funciona
+## <a name="verify-log-shipping-works"></a>Compruebe que funciona del trasvase de registros
 
-- Compruebe que el trasvase de registros funciona iniciando el trabajo siguiente en el servidor principal
+- Compruebe que la del trasvase de registros funciona iniciando el trabajo siguiente en el servidor principal
 
     ```tsql
     USE msdb ;  
@@ -300,7 +300,7 @@ Como se describe en esta imagen, una sesión de trasvase de registros implica lo
     GO  
     ```
 
-- Compruebe que el trasvase de registros funciona iniciando el trabajo siguiente en el servidor secundario
+- Compruebe que la del trasvase de registros funciona iniciando el trabajo siguiente en el servidor secundario
  
     ```tsql
     USE msdb ;  

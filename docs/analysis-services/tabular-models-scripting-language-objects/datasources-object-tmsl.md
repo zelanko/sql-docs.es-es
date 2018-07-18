@@ -1,5 +1,5 @@
 ---
-title: Objeto de orígenes de datos (TMSL) | Documentos de Microsoft
+title: Objeto DataSources (TMSL) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1dd73918ca2d52cf38dba74455cf225a8c15ac3e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7beabaaf63194cc699c3711a87dd1e59d244c068
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045379"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981337"
 ---
-# <a name="datasources-object-tmsl"></a>Objeto de orígenes de datos (TMSL)
+# <a name="datasources-object-tmsl"></a>Objeto DataSources (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Define una conexión a un origen de datos utilizado por el modelo durante la importación para agregar datos al modelo o de paso a través de las consultas mediante el modo DirectQuery.  Los modelos en el modo DirectQuery sólo pueden tener una **DataSource** objeto.  
+  Define una conexión a un origen de datos utilizado por el modelo, ya sea durante la importación para agregar datos al modelo, o en el paso a través de consultas mediante el modo DirectQuery.  Solo pueden tener modelos en el modo DirectQuery **DataSource** objeto.  
   
  A menos que se va a crear, reemplazar, o modificar el propio objeto de origen de datos, cualquier origen de datos al que hace referencia en la secuencia de comandos (como en la secuencia de comandos de partición) debe ser una existente **DataSource** objeto en el modelo.  
   
@@ -29,50 +29,50 @@ ms.locfileid: "34045379"
  El tipo de objeto DataSource. En la actualidad, el único valor válido es proveedor (1) - cadena de conexión Normal.  
   
  connectionString  
- La cadena de conexión que como mínimo, especifica el servidor y la base de datos, pero también puede incluir otras propiedades compatibles con el RDBMS externo, como una cuenta de usuario o el proveedor de datos. Este valor es necesario. Vea [clase SqlConnectionStringBuilder](https://msdn.microsoft.com/en-us/library/ms254500\(v=vs.110\).aspx) propiedades de la cadena de conexión de base de datos de para obtener más información acerca de SQL Server.  
+ La cadena de conexión que especifica el servidor y base de datos como mínimo, pero también puede incluir otras propiedades admitidas por el RDBMS externo, como una cuenta de usuario o el proveedor de datos. Este valor es necesario. Consulte [clase SqlConnectionStringBuilder](https://msdn.microsoft.com/library/ms254500\(v=vs.110\).aspx) para obtener más información acerca de SQL Server las propiedades de la cadena de conexión de base de datos.  
   
  elemento impersonationMode  
  Especifica si Analysis Services debe suplantar la identidad del usuario que solicita la consulta. Esta propiedad es un valor numérico que especifica las credenciales que se usarán para la suplantación. Los valores de enumeración son los siguientes:  
   
--   Predeterminado (1): el servidor usa el método de suplantación que lo considera apropiado para el contexto en el que se usa la suplantación.  
+-   Predeterminado (1): el servidor usa el método de suplantación que lo considera apropiado para el contexto en el que se utiliza la suplantación.  
   
--   ImpersonateAccount (2): el servidor utiliza la cuenta de usuario especificada.  
+-   ImpersonateAccount (2): el servidor usa la cuenta de usuario especificado.  
   
--   ImpersonateAnonymous (3): el servidor utiliza la cuenta de usuario anónimo.  Esta opción no se recomienda, pero a veces se utiliza en escenarios de acceso HTTP en aplicaciones personalizadas que administran la autenticación.  
+-   ImpersonateAnonymous (3): el servidor usa la cuenta de usuario anónimo.  Esta opción no se recomienda, pero a veces se usa en escenarios de acceso HTTP en aplicaciones personalizadas que controlan la autenticación.  
   
--   ImpersonateCurrentUser (4) - el servidor utiliza la cuenta de usuario que se está conectando el cliente como.  
+-   ImpersonateCurrentUser (4): el servidor utiliza la cuenta de usuario que se está conectando el cliente como.  
   
--   ImpersonateServiceAccount (5): el servidor utiliza la cuenta de usuario que el servidor se ejecuta como.  
+-   ImpersonateServiceAccount (5): el servidor utiliza la cuenta de usuario que el servidor se está ejecutando como.  
   
--   ImpersonateUnattendedAccount (6): el servidor usa una cuenta de usuario desatendida. Esto se utiliza para modelos de PowerPivot o Tabular que se ejecutan en un entorno de SharePoint.  
+-   ImpersonateUnattendedAccount (6): el servidor utiliza una cuenta de usuario desatendido. Esto se utiliza para modelos de PowerPivot o Tabular que se ejecutan en un entorno de SharePoint.  
   
- El modo DirectQuery puede usar impersonateCurrentuser si Analysis Services está configurado para delegación de confianza, o  
-                      impersonateServiceAccount si la solicitud de consulta se realiza en el contexto de seguridad de la cuenta de servicio de Analysis Services. Vea [la delegación limitada de configurar Analysis Services for Kerberos](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md).  
+ El modo DirectQuery puede usar impersonateCurrentuser si Analysis Services está configurada para delegación de confianza, o  
+                      impersonateServiceAccount si se realiza la solicitud de consulta en el contexto de seguridad de la cuenta de servicio de Analysis Services. Consulte [delegación limitada de configurar Analysis Services for Kerberos](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md).  
   
  account   
- Utilizar para la suplantación. Una cuenta de Windows o la base de datos que tenga un inicio de sesión válido con permisos de lectura en la base de datos externo.  
+ Se usa para la suplantación. Una cuenta de Windows o la base de datos que tenga un inicio de sesión válido con permisos de lectura en la base de datos externo.  
   
  password  
- Una cadena cifrada proporcionar la contraseña de la cuenta.  
+ Una cadena cifrada proporcionando la contraseña de la cuenta.  
   
  maxConnections  
  El número máximo de conexiones que se abrirán simultáneamente en el origen de datos.  
   
  isolation  
- El tipo de aislamiento que se usa durante la ejecución de comandos en el origen de datos. Los valores válidos son ReadCommitted (1) o Snapshot (2).  
+ El tipo de aislamiento que se utiliza al ejecutar comandos contra el origen de datos. Los valores válidos son ReadCommitted (1) o una instantánea (2).  
   
  timeout  
- Un entero que especifica el tiempo de espera en segundos para los comandos que se ejecuta en el origen de datos.  
+ Un entero que especifica el tiempo de espera en segundos para los comandos ejecutados en el origen de datos.  
   
  proveedor  
- Una cadena opcional que identifica el nombre del proveedor de datos administrado utilizado en la conexión a la base de datos relacional, si no se especifica lo contrario en la cadena de conexión.  
+ Una cadena opcional que identifica el nombre del proveedor de datos administrado utilizado en la conexión a la base de datos relacional, si no se especifica en la cadena de conexión.  
   
 ## <a name="usage"></a>Uso  
- **Origen de datos** objetos se utilizan en [Alter, comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [crear comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [comando CreateOrReplace &#40; TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [comando Delete &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [comando Refresh &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), y [MergePartitions, comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ **Origen de datos** objetos se usan en [comando Alter &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [crear comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [comando CreateOrReplace &#40; TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [comando Delete &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [comando Refresh &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), y [comando MergePartitions &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
- A **DataSource** es una propiedad de un modelo de objeto, pero también se puede especificar como una propiedad de un objeto de base de datos según la asignación uno a uno entre el modelo y la base de datos.  Las particiones basadas en consultas SQL también especifican un **DataSource**, solo con un conjunto reducido de propiedades.  
+ Un **DataSource** es una propiedad de un modelo de objeto, pero también se puede especificar como una propiedad de un objeto de base de datos según la asignación uno a uno entre el modelo y la base de datos.  Las particiones basadas en consultas SQL también especifican una **DataSource**, solo con un conjunto reducido de propiedades.  
   
- Al crear, reemplazar o modificar un objeto de origen de datos, especifique todas las propiedades de lectura y escritura de la definición del objeto. Omisión de una propiedad de lectura y escritura se considera una operación de eliminación.  
+ Al crear, reemplazar o modificar un objeto de origen de datos, especifique todas las propiedades de lectura y escritura de la definición del objeto. Omisión de una propiedad de lectura y escritura se considera una eliminación.  
   
 ## <a name="examples"></a>Ejemplos  
  **Ejemplo 1** -una conexión a un *FoodMart* base de datos en un instancia con nombre de control remoto *ventas* en un servidor de red denominado *Server01*.  
@@ -88,7 +88,7 @@ ms.locfileid: "34045379"
 ```  
   
 ## <a name="full-syntax"></a>Sintaxis completa  
- A continuación se muestra la representación de esquema de un objeto de origen de datos de un modelo.  
+ A continuación es la representación de esquema de un objeto de origen de datos de un modelo.  
   
 ```  
 "dataSources": {  
@@ -182,6 +182,6 @@ ms.locfileid: "34045379"
 ## <a name="see-also"></a>Vea también  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Referencia de Tabular Model Scripting Language [TMSL])](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Modo DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Configurar el acceso HTTP a Analysis Services de servicios de Internet Information Server & #40; IIS & #41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Instrucciones de manipulación de datos (DMX) de extensiones de minería de datos | Documentos de Microsoft
+title: Instrucciones de manipulación de datos (DMX) de las extensiones de minería de datos | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e1d6e375a43592faeceab8da6bccfc8902c63bd
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842018"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968187"
 ---
-# <a name="dmx-statements---data-manipulation"></a>Instrucciones de DMX - manipulación de datos
+# <a name="dmx-statements---data-manipulation"></a>Instrucciones de DMX: manipulación de datos
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   En la siguiente tabla se muestran las instrucciones que forman parte del lenguaje de manipulación de datos (DML) de minería de datos en Extensiones de minería de datos (DMX).  
@@ -30,7 +30,7 @@ ms.locfileid: "34842018"
 |[ACTUALIZACIÓN &AMP;#40;DMX&AMP;#41;](../dmx/update-dmx.md)|Cambia el contenido del modelo de minería de datos.|  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

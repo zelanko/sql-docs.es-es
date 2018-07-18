@@ -1,5 +1,5 @@
 ---
-title: Buscar el Asistente de bases de datos (seleccionados ubicaciones) (AccessToSQL) | Documentos de Microsoft
+title: Asistente de las bases de datos (Seleccionar ubicaciones) Buscar (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,17 +18,17 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 146979dbbd54d0d79c357dc02e432ba535d6accc
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 075c46589600ea31dc03bd4e4f5503ddb6fd1987
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773661"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979487"
 ---
-# <a name="find-databases-wizard-select-locations-accesstosql"></a>Buscar el Asistente de bases de datos (seleccionados ubicaciones) (AccessToSQL)
-En la página Seleccionar ubicaciones del Asistente para buscar las bases de datos, escriba los parámetros búsqueda para buscar las bases de datos de Access.  
+# <a name="find-databases-wizard-select-locations-accesstosql"></a>Asistente de las bases de datos (Seleccionar ubicaciones) Buscar (AccessToSQL)
+En la página Seleccionar ubicaciones del Asistente para encontrar las bases de datos, se escribe los parámetros de búsqueda para buscar las bases de datos de Access.  
   
-Para abrir el Asistente para buscar las bases de datos, en la **archivo** menú, haga clic en **buscar bases de datos**. Para obtener más información sobre cómo usar este cuadro de diálogo, vea [agregar y quitar archivos de base de datos de Access](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+Para abrir el Asistente para buscar las bases de datos, en el **archivo** menú, haga clic en **buscar bases de datos**. Para obtener más información sobre cómo usar este cuadro de diálogo, vea [agregar y quitar archivos de base de datos de Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
   
 ## <a name="options"></a>Opciones  
 **Examinar**  
@@ -44,27 +44,27 @@ Enumera las ubicaciones que se examinará SSMA. Al hacer clic en el **agregar** 
 Agrega la ubicación en el cuadro de texto de la ruta de acceso a la lista de ubicaciones.  
   
 **Reemplazar**  
-Si se selecciona un elemento en la lista de ubicaciones, el elemento en el cuadro de texto de la ruta de acceso reemplaza el elemento seleccionado.  
+Si se selecciona un elemento de la lista de ubicaciones, el elemento en el cuadro de texto ruta reemplaza el elemento seleccionado.  
   
 **Quitar**  
-Quita el elemento seleccionado de la lista de ubicaciones de búsqueda.  
+Quita el elemento seleccionado en la lista de ubicaciones de búsqueda.  
   
 **Todo o parte del nombre de archivo**  
-Para buscar las bases de datos que tienen nombres que contengan una cadena específica, escriba la cadena. No utilice caracteres comodín.  
+Para buscar las bases de datos que tienen nombres que contengan una cadena específica, escriba la cadena. No use caracteres comodín.  
   
 **Fecha de creación**  
-Para encontrar las bases de datos que se crearon dentro de un intervalo de fechas específico, escriba la fecha de inicio en el **de** cuadro y la fecha final en el **a** cuadro.  
+Para buscar las bases de datos que se crearon dentro de un intervalo de fechas específico, escriba la fecha de inicio en el **desde** cuadro y la fecha final en el **a** cuadro.  
   
-**Última fecha actualizada**  
-Para encontrar las bases de datos que se actualizaron por última vez dentro de un intervalo de fechas específico, escriba la fecha de inicio en el **de** cuadro y la fecha final en el **a** cuadro.  
+**Fecha de última actualización**  
+Para buscar las bases de datos que se actualizaron por última vez dentro de un intervalo de fechas específico, escriba la fecha de inicio en el **desde** cuadro y la fecha final en el **a** cuadro.  
   
 **Tamaño**  
-Para buscar las bases de datos que coinciden con un criterio de tamaño, seleccione un carácter de comparación en el primer cuadro, escriba un número para el tamaño y, a continuación, seleccione bytes, kilobytes o megabytes en el tercer cuadro.  
+Para buscar las bases de datos que cumplen un criterio de tamaño, seleccione un carácter de comparación en el primer cuadro, escriba un número para el tamaño y, a continuación, seleccione bytes kilobytes y megabytes en el tercer cuadro.  
   
 **Propietario**  
-Escriba el nombre de usuario de Windows completo del propietario. Esto podría tener el formato *dominio*\\*usuario*.  
+Escriba el nombre de usuario de Windows completo del propietario. Esto podría ser el formato *dominio*\\*usuario*.  
   
 ## <a name="see-also"></a>Vea también  
-[Agregar y quitar archivos de base de datos de Access](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
-[Reference(Access) de interfaz de usuario](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Agregar y quitar archivos de base de datos de Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[Reference(Access) de interfaz de usuario](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

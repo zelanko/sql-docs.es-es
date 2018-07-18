@@ -44,7 +44,7 @@ ADO para Windows Foundation Classes (ADO/WFC) se basa en el modelo de eventos de
   
      El primer argumento de la **ConnectionEventHandler** constructor es una referencia a la clase que contiene el controlador de eventos que se menciona en el segundo argumento.  
   
-3.  Agregue el controlador de eventos a una lista de controladores designados para procesar un tipo determinado de evento. Utilice el método con un nombre como **addOn *** EventName*(*controlador*).  
+3.  Agregue el controlador de eventos a una lista de controladores designados para procesar un tipo determinado de evento. Utilice el método con un nombre como **addOn** *EventName*(*controlador*).  
   
 4.  ADO/WFC implementa internamente todos los controladores de eventos de ADO. Por lo tanto, un evento provocado por un **conexión** o **Recordset** operación intercepta un controlador de eventos de ADO/WFC.  
   
@@ -62,7 +62,7 @@ ADO para Windows Foundation Classes (ADO/WFC) se basa en el modelo de eventos de
   
 6.  Devolver desde el controlador de eventos para el controlador ADO/WFC para el evento de ADO. ADO/WFC copia los miembros de datos de eventos de ADO/WFC pertinentes a los parámetros de eventos de ADO y, a continuación, se devuelve el controlador de eventos de ADO.  
   
-7.  Cuando haya terminado de procesar, quite el controlador de la lista de controladores de eventos de ADO/WFC. Utilice el método con un nombre como **removeOn *** EventName*(*controlador*).  
+7.  Cuando haya terminado de procesar, quite el controlador de la lista de controladores de eventos de ADO/WFC. Utilice el método con un nombre como **removeOn** *EventName*(*controlador*).  
   
 ## <a name="see-also"></a>Vea también  
  [Resumen del controlador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)   

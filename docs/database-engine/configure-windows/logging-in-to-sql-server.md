@@ -25,12 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 769bb9418b3d631648f6f493aeb084b5fea0a619
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867720"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324439"
 ---
 # <a name="logging-in-to-sql-server"></a>Iniciar una sesión en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "32867720"
 |Conexión a una instancia predeterminada que no escucha en el puerto TCP, mediante la especificación del puerto que se está usando, en este caso 2828. (Esto no es necesario si [!INCLUDE[ssDE](../../includes/ssde-md.md)] escucha en el puerto predeterminado (1433)).|APPHOST,2828|  
 |Conexión a una instancia con nombre en un puerto TCP designado, en este caso 2828. (Esto suele ser necesario si el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser no se está ejecutando en el equipo host.)|APPHOST,2828|  
 |Conexión a una instancia predeterminada que no escucha en el puerto TCP, mediante la especificación tanto de la dirección IP como del puerto TCP que se está usando, en este caso 2828.|192.168.17.28,2828|  
-|Conexión a una instancia con nombre mediante la especificación tanto de la dirección IP como del puerto TCP que se está usando, en este caso 2828.|192.168.17.28,2828|  
+|Conexión a una instancia con nombre mediante la especificación tanto de la dirección IP como del puerto TCP que se está usando, en este caso 2828.|192.168.17.28\SQLEXPRESS,2828|  
 |Conexión a una instancia predeterminada por nombre, lo que fuerza una conexión TCP.|tcp:APPHOST|  
 |Conexión a una instancia con nombre por nombre, lo que fuerza una conexión TCP.|tcp:APPHOST\SQLEXPRESS|  
 |Conexión a una instancia predeterminada mediante la especificación de un nombre de canalización con nombre.|\\\APPHOST\pipe\unit\app|  

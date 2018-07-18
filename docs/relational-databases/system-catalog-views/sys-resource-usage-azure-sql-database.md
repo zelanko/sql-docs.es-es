@@ -1,5 +1,5 @@
 ---
-title: Sys.resource_usage (base de datos de SQL Azure) | Documentos de Microsoft
+title: Sys.resource_usage (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: cc8f9c68bd6074439203c384c99b407022f90997
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221496"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985057"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -46,19 +46,19 @@ ms.locfileid: "33221496"
 >  -   Si está activada, la DMV devuelve los datos actuales tal como están agregados.  
 > -   Si está desactivada, la DMV devuelve datos históricos, que podrían estar desusados.  
   
- Proporciona un resumen por horas de los datos de uso de recursos de las bases de datos de usuario del servidor actual. Los datos históricos se conservan durante 90 días.  
+ Proporciona un resumen por horas de los datos de uso de recursos de las bases de datos de usuario del servidor actual. Datos históricos se conservan durante 90 días.  
   
  Para cada base de datos de usuario, existe una fila para cada hora de forma continua. Aparece una fila incluso si la base de datos está inactiva durante esa hora, y el valor de usage_in_seconds para esa base de datos será 0. El uso del almacenamiento y la información de SKU se acumulan durante esa hora de forma apropiada.  
   
-|Columnas|Tipo de datos|Description|  
+|Columnas|Tipo de datos|Descripción|  
 |-------------|---------------|-----------------|  
 |time|**datetime**|Hora (UTC) en incrementos de una hora.|  
 |database_name|**nvarchar**|Nombre de la base de datos de usuario.|  
-|sku|**nvarchar**|Nombre de la SKU. Los posibles valores son los siguientes:<br /><br /> Web<br /><br /> Negocio<br /><br /> Básico<br /><br /> Standard<br /><br /> Premium|  
-|usage_in_seconds|**int**|Suma del tiempo de CPU utilizado durante esa hora.<br /><br /> Nota: Esta columna está en desuso por V11 y no se aplica a V12. **Valor siempre se establece en 0.**|  
+|sku|**nvarchar**|Nombre de la SKU. Los posibles valores son los siguientes:<br /><br /> Web<br /><br /> Negocio<br /><br /> Básico<br /><br /> Estándar<br /><br /> Premium|  
+|usage_in_seconds|**int**|Suma del tiempo de CPU utilizado durante esa hora.<br /><br /> Nota: Esta columna está en desuso para V11 y no se aplica a V12. **Valor siempre se establece en 0.**|  
 |storage_in_megabytes|**decimal**|Tamaño de almacenamiento máximo para la hora, incluidos los datos, los índices, los procedimientos almacenados y los metadatos de la base de datos.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Esta vista está disponible para todos los roles de usuario con permisos para conectarse a virtual **maestro** base de datos.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.time_zone_info (Transact-SQL) | Documentos de Microsoft
+title: Sys.time_zone_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2018
 ms.prod: sql
@@ -28,11 +28,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 252def1ce861b926a6c8a990a3cbf10b22eb83f6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222420"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984927"
 ---
 # <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "33222420"
   Devuelve información sobre zonas horarias compatibles. Todas las zonas horarias instaladas en el equipo se almacenan en el subárbol del registro siguiente:  
 `KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre de la zona horaria en el formato estándar de Windows. Por ejemplo, **CEN. Hora estándar de Australia** o **hora estándar centroeuropea**.|  
 |**current_utc_offset**|**tipo (12)**|Desplazamiento a la hora UTC actual. Por ejemplo, **+ 01:00** o **-07:00**.|  
-|**is_currently_dst**|**bit**|Es True si actualmente observa el horario de verano.|  
+|**is_currently_dst**|**bit**|True si actualmente observa el horario de verano.|  
   
 ## <a name="see-also"></a>Vea también  
  [GETUTCDATE &#40;Transact-SQL&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   

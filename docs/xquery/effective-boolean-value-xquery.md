@@ -1,5 +1,5 @@
 ---
-title: Valor booleano efectivo (XQuery) | Documentos de Microsoft
+title: Valor booleano efectivo (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4ab470f5643335cd1ed26edd07aa93284bab1d47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077522"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987437"
 ---
 # <a name="effective-boolean-value-xquery"></a>Valor booleano efectivo (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ ms.locfileid: "33077522"
   
 -   Expresiones lógicas  
   
--   El [no funcionen](../xquery/functions-on-boolean-values-not-function.md)  
+-   El [no funcione](../xquery/functions-on-boolean-values-not-function.md)  
   
 -   La cláusula WHERE de una expresión FLWOR  
   
 -   [Expresiones condicionales](../xquery/conditional-expressions-xquery.md)  
   
--   [Expresiones cuantificadas](../xquery/quantified-expressions-xquery.md)  
+-   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
  A continuación se muestra un ejemplo de un valor booleano efectivo. Cuando el **si** se procesa la expresión, se determina el valor booleano efectivo de la condición. Como `/a[1]` devuelve una secuencia vacía, el valor booleano efectivo es false. El resultado se devuelve como XML con un nodo de texto (false).  
   
@@ -72,7 +72,7 @@ SELECT @x.query('if (/a[1]) then "true" else "false"')
 go  
 ```  
   
- Al consultar escrito **xml** columnas o variables, puede tener nodos de tipo booleano. El **data()** en este caso, devuelve un valor booleano. Si la expresión de consulta devuelve un valor booleano true, el valor booleano efectivo será true, tal y como se muestra en el siguiente ejemplo. En el ejemplo también se ilustra lo siguiente:  
+ Cuando se escribe la consulta **xml** columnas o variables, puede tener nodos de tipo booleano. El **data()** en este caso, devuelve un valor booleano. Si la expresión de consulta devuelve un valor booleano true, el valor booleano efectivo será true, tal y como se muestra en el siguiente ejemplo. En el ejemplo también se ilustra lo siguiente:  
   
 -   Se crea una colección de esquemas XML. El elemento \<b > de la colección es de tipo booleano.  
   
@@ -98,6 +98,6 @@ go
   
 ## <a name="see-also"></a>Vea también  
  [Conceptos básicos de XQuery](../xquery/xquery-basics.md)   
- [Instrucción FLWOR e iteración &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
+ [FLWOR instrucción e iteración &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
   
   

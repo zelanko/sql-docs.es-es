@@ -1,5 +1,5 @@
 ---
-title: ClusterDistance (DMX) | Documentos de Microsoft
+title: ClusterDistance (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d8eb879d23a344e5de6bad3c9fb6042fdadb3e7
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841518"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985401"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  El **ClusterDistance** función devuelve la distancia del caso de entrada del clúster especificado, o si no se ha especificado, la distancia del caso de entrada desde el clúster más probable.  
+  El **ClusterDistance** función devuelve la distancia del caso de entrada desde el clúster especificado, o si no se especifica ningún clúster, la distancia del caso de entrada desde el clúster más probable.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,11 +35,11 @@ ClusterDistance([<ClusterID expression>])
  Un valor escalar.  
   
 ## <a name="remarks"></a>Notas  
- El **ClusterDistance** función devuelve la distancia entre el caso de entrada y el clúster que tiene la mayor probabilidad para ese caso de entrada.  
+ El **ClusterDistance** función devuelve la distancia entre el caso de entrada y el clúster que tiene la mayor probabilidad de que el caso de entrada.  
   
  En el caso de la agrupación en clústeres mediana-K, dado que cualquier caso puede pertenecer a un único clúster, con un peso de pertenencia de 1.0, la distancia del clúster siempre es 0. Sin embargo, se supone que con mediana-K, cada clúster tiene un centroide. Puede obtener el valor del centroide consultando o examinando la tabla anidada NODE_DISTRIBUTION en el contenido del modelo de minería de datos. Para obtener más información, vea [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
- En el caso del método de agrupación en clústeres EM predeterminado, todos los puntos dentro del clúster se consideran igualmente probables; por consiguiente, por diseño no hay centroide para el clúster. El valor de **ClusterDistance** entre un caso en particular y un clúster determinado *N* se calcula como sigue:  
+ En el caso del método de agrupación en clústeres EM predeterminado, todos los puntos dentro del clúster se consideran igualmente probables; por consiguiente, por diseño no hay centroide para el clúster. El valor de **ClusterDistance** entre un caso determinado y un clúster determinado *N* se calcula como sigue:  
   
  ClusterDistance(N) =1–(membershipWeight(N))  
   
@@ -54,9 +54,9 @@ ClusterDistance([<ClusterID expression>])
   
 -   Use la [ClusterProbability &#40;DMX&#41; ](../dmx/clusterprobability-dmx.md) función para obtener la probabilidad de que un caso pertenezca a un clúster determinado. Este valor actúa como la inversa de la distancia del clúster.  
   
--   Use la [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) función devuelva un histograma de la probabilidad de que el caso de entrada existente en cada uno de los clústeres del modelo.  
+-   Use la [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) función para devolver un histograma de la probabilidad de que la entrada existente case en cada uno de los clústeres del modelo.  
   
--   Use la [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md) función para devolver una medida de 0 a 1 que indica la probabilidad de que un caso de entrada es existe teniendo en cuenta el modelo aprendido por el algoritmo.  
+-   Use la [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md) función para devolver una medida de 0 a 1 que indica la probabilidad de que un caso de entrada es que exista teniendo en cuenta el modelo aprendido por el algoritmo.  
   
 ## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Ejemplo 1: obtener la distancia de clúster para el clúster más probable  
  En el ejemplo siguiente se devuelve la distancia del caso especificado para el clúster al que es más probable que el caso pertenezca.  
@@ -89,7 +89,7 @@ NATURAL PREDICTION JOIN
 |Clúster 6|  
   
 ## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Ejemplo 2: obtener la distancia a un clúster especificado  
- La siguiente sintaxis usa el conjunto de filas de esquema del contenido del modelo de minería de datos para devolver la lista de identificadores de nodo y títulos de nodo para los clústeres que existen en el modelo de minería de datos. A continuación, puede usar el título del nodo como el argumento de identificador de clúster en el **ClusterDistance** (función).  
+ La siguiente sintaxis usa el conjunto de filas de esquema del contenido del modelo de minería de datos para devolver la lista de identificadores de nodo y títulos de nodo para los clústeres que existen en el modelo de minería de datos. A continuación, puede usar la leyenda del nodo como el argumento de identificador de clúster en el **ClusterDistance** función.  
   
 ```  
 SELECT NODE_UNIQUE_NAME, NODE_CAPTION   
@@ -127,8 +127,8 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Vea también  
  [Clúster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Contenido del modelo de minería de datos para los modelos de clústeres &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos para los modelos de clústeres &#40;Analysis Services - minería de datos&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

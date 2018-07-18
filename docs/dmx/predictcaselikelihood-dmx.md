@@ -1,5 +1,5 @@
 ---
-title: PredictCaseLikelihood (DMX) | Documentos de Microsoft
+title: PredictCaseLikelihood (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8159af8ac4b3c9bf21dcdc68a0cfb30c46e33e5
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841786"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040313"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  El valor devuelto contiene la probabilidad sin procesar del caso, que es el producto de las probabilidades de los atributos del caso.  
   
 ## <a name="applies-to"></a>Se aplica a  
- Los modelos generados mediante la [!INCLUDE[msCoName](../includes/msconame-md.md)] clústeres y [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de clústeres de secuencia.  
+ Los modelos generados mediante el uso de la [!INCLUDE[msCoName](../includes/msconame-md.md)] agrupación en clústeres y [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de clústeres de secuencia.  
   
 ## <a name="return-type"></a>Tipo devuelto  
  Número de punto flotante de doble precisión entre 0 y 1. Un número más cercano a 1 indica que el caso tiene mayor probabilidad de producirse en este modelo. Un número más cercano a 0 indica que es menos probable que se produzca el caso en este modelo.  
@@ -78,11 +78,11 @@ NATURAL PREDICTION JOIN
 |-------------------------|----------------------------|---------------------|  
 |6,30672792729321E-08|6,30672792729321E-08|9,5824454056846E-48|  
   
- La diferencia entre estos resultados demuestra el efecto de la normalización. El valor sin formato de **CaseLikelihood** sugiere que la probabilidad del caso es aproximadamente un 20 por ciento; sin embargo, al normalizar los resultados, es evidente que la probabilidad del caso es muy baja.  
+ La diferencia entre estos resultados demuestra el efecto de la normalización. El valor sin formato para **CaseLikelihood** sugiere que la probabilidad del caso es aproximadamente el 20 por ciento; sin embargo, al normalizar los resultados, se vuelve evidente que la probabilidad del caso es muy baja.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

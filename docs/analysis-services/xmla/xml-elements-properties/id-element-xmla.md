@@ -1,5 +1,5 @@
 ---
-title: Id. de elemento (XMLA) | Documentos de Microsoft
+title: Elemento ID (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18c0a9e1db03ef30b54b788d16223e70bc9e9059
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575507"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037033"
 ---
 # <a name="id-element-xmla"></a>Elemento ID (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34575507"
 |Valor predeterminado|None|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34575507"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El **identificador** elemento contiene un identificador único global (GUID) que se usa para identificar un bloqueo.  
+ El **ID** elemento contiene un identificador único global (GUID) utilizado para identificar un bloqueo.  
   
 ## <a name="see-also"></a>Vea también
  [Elemento de objeto &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   

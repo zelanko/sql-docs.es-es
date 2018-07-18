@@ -1,5 +1,5 @@
 ---
-title: sp_attach_single_file_db (Transact-SQL) | Documentos de Microsoft
+title: sp_attach_single_file_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae97ca9a273b7467bd5ec6e35f68602ec1c7c101
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238805"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981877"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  Es el nombre de la base de datos que se va a adjuntar al servidor. El nombre debe ser único. *dbname* es **sysname**, su valor predeterminado es null.  
   
  [  **@physname=** ] **'***physical_name***'**  
- Es el nombre físico, incluida la ruta de acceso, del archivo de base de datos. *el argumento physical_name* es **nvarchar (260)**, su valor predeterminado es null.  
+ Es el nombre físico, incluida la ruta de acceso, del archivo de base de datos. *physical_name* es **nvarchar (260)**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  Este argumento se asigna al parámetro FILENAME de la instrucción CREATE DATABASE. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -68,17 +68,17 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- Use **sp_attach_single_file_db** sólo en bases de datos que se hayan separado previamente del servidor mediante el uso explícito **sp_detach_db** operación o en bases de datos copiadas.  
+## <a name="remarks"></a>Notas  
+ Use **sp_attach_single_file_db** sólo en bases de datos que se hayan separado previamente del servidor mediante el uso de explícita **sp_detach_db** operación o en bases de datos copiadas.  
   
- **sp_attach_single_file_db** funciona únicamente en las bases de datos que tienen un único archivo de registro. Cuando **sp_attach_single_file_db** adjunta la base de datos al servidor, crea un nuevo archivo de registro. Si la base de datos es de solo lectura, el archivo de registro se crea en su ubicación anterior.  
+ **sp_attach_single_file_db** solo funciona en las bases de datos que tienen un único archivo de registro. Cuando **sp_attach_single_file_db** adjunta la base de datos al servidor, crea un nuevo archivo de registro. Si la base de datos es de solo lectura, el archivo de registro se crea en su ubicación anterior.  
   
 > [!NOTE]  
 >  No puede separar ni adjuntar una instantánea de base de datos.  
   
  No utilice este procedimiento en una base de datos replicada.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para obtener información acerca de cómo se administran los permisos cuando se adjunta una base de datos, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,5 +1,5 @@
 ---
-title: última función (XQuery) | Documentos de Microsoft
+title: Last (función de XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 33b7afe5bdef612fe48938d8118c17d5d6e7a512
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076704"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038443"
 ---
-# <a name="context-functions---last-xquery"></a>Funciones de contexto - última (XQuery)
+# <a name="context-functions---last-xquery"></a>Funciones de contexto: last (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Devuelve el número de elementos de la secuencia que se está procesando. En concreto, devuelve el índice entero del último elemento de la secuencia. El primer elemento de la secuencia tiene un valor de índice de 1.  
@@ -42,14 +42,14 @@ ms.locfileid: "33076704"
 fn:last() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- En SQL Server, **fn:Last()** solo pueden usarse en el contexto de un predicado dependiente del contexto. En concreto, solo se puede utilizar entre corchetes (`[ ]`).  
+## <a name="remarks"></a>Notas  
+ En SQL Server, **fn:Last()** sólo puede utilizarse en el contexto de un predicado dependiente del contexto. En concreto, solo se puede utilizar entre corchetes (`[ ]`).  
   
 ## <a name="examples"></a>Ejemplos  
- Este tema ofrecen ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos de AdventureWorks.  
+ En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. Usar la función last() de XQuery para recuperar los dos últimos pasos de fabricación  
- La consulta siguiente recupera los dos últimos pasos de fabricación de un modelo de producto determinado. El valor, el número de pasos de fabricación, devuelto por la **last()** función se utiliza en esta consulta para recuperar los dos últimos pasos de fabricación.  
+ La consulta siguiente recupera los dos últimos pasos de fabricación de un modelo de producto determinado. El valor, el número de pasos de fabricación, devuelto por la **last()** función se usa en esta consulta para recuperar los dos últimos pasos de fabricación.  
   
 ```  
 SELECT ProductModelID, Instructions.query('   
@@ -67,7 +67,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- En la consulta anterior, la **last()** funcionando en /`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` devuelve el número de pasos de fabricación. Este valor se utiliza para recuperar el último paso de fabricación de la ubicación de centro de trabajo.  
+ En la consulta anterior, el **last()** funcionando en /`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` devuelve el número de pasos de fabricación. Este valor se utiliza para recuperar el último paso de fabricación de la ubicación de centro de trabajo.  
   
  El resultado es el siguiente:  
   

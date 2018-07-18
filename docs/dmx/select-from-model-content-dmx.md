@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;modelo&gt;. CONTENIDO (DMX) | Documentos de Microsoft
+title: SELECT FROM &lt;modelo&gt;. CONTENIDO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842668"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040353"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modelo&gt;. CONTENIDO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,25 +40,25 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *model*  
  Identificador de modelo.  
   
- *Expresión de condición*  
+ *expresión de condición*  
  Opcional. Condición para restringir los valores que devuelve la lista de columnas.  
   
  *expression*  
  Opcional. Expresión que devuelve un valor escalar.  
   
 ## <a name="remarks"></a>Notas  
- El **SELECT FROM**  *\<modelo > ***. CONTENIDO** instrucción devuelve contenido específico para cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar un **SELECT FROM \<modelo >. CONTENIDO** instrucción para devolver valores de la columna NODE_RULE del modelo.  
+ El **SELECT FROM**  *\<modelo > ***. CONTENIDO** instrucción devuelve contenido específico para cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar un **SELECT FROM \<modelo >. CONTENIDO** instrucción para devolver valores en la columna NODE_RULE del modelo.  
   
  En la tabla siguiente se enumeran las columnas que están incluidas en el contenido del modelo de minería de datos.  
   
 > [!NOTE]  
->  Los algoritmos podrían interpretar las columnas de forma distinta para poder representar el contenido correctamente. Para obtener una descripción del modelo de minería de datos contenido para cada algoritmo y sugerencias sobre cómo interpretar y consultar el contenido de cada tipo de modelo del modelo de minería de datos, vea [contenido del modelo de minería de datos &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  Los algoritmos podrían interpretar las columnas de forma distinta para poder representar el contenido correctamente. Para obtener una descripción del contenido para cada algoritmo y sugerencias sobre cómo interpretar y consultar el contenido para cada tipo de modelo del modelo de minería de datos del modelo de minería de datos, vea [contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 |Columna de conjunto de filas CONTENT|Descripción|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|Un nombre de catálogo. Su valor es NULL si el proveedor no admite catálogos.|  
 |MODEL_SCHEMA|Nombre del esquema no completo. Su valor es NULL si el proveedor no admite esquemas.|  
-|MODEL_NAME|Nombre de un modelo. Esta columna no puede contener valores NULL.|  
+|MODEL_NAME|Un nombre de modelo. Esta columna no puede contener valores NULL.|  
 |ATTRIBUTE_NAME|Nombre del atributo que corresponde al nodo.|  
 |NODE_NAME|Nombre del nodo.|  
 |NODE_UNIQUE_NAME|Nombre único del nodo dentro del modelo.|  
@@ -89,7 +89,7 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- La consulta siguiente utiliza la **IsDescendant** función para devolver los elementos secundarios inmediatos del nodo que se devolvió en la consulta anterior.  
+ La consulta siguiente utiliza el **IsDescendant** función para devolver los elementos secundarios inmediatos del nodo que se devolvió en la consulta anterior.  
   
 > [!NOTE]  
 >  Dado que el valor de NODE_NAME es una cadena, no puede usar una instrucción Sub-select para devolver NODE_ID como argumento a la **IsDescendant** función.  

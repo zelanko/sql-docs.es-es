@@ -1,5 +1,5 @@
 ---
-title: sp_attach_db (Transact-SQL) | Documentos de Microsoft
+title: sp_attach_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c275128a8e3c2bbce6165486e256fc5b34d402d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240485"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037203"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "33240485"
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se recomienda usar CREATE DATABASE *database_name* FOR ATTACH en su lugar. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 > [!NOTE]  
->  Para volver a crear varios archivos de registro cuando uno o más tienen una ubicación nueva, utilice CREATE DATABASE *database_name* FOR ATTACH_REBUILD_LOG.  
+>  Para volver a generar varios archivos de registro cuando uno o más tienen una nueva ubicación, utilice CREATE DATABASE *database_name* FOR ATTACH_REBUILD_LOG.  
   
 > [!IMPORTANT]  
 >  Se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Para usar una base de datos desde un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) en la base de datos de un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
@@ -69,8 +69,8 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- El **sp_attach_db** solo se debe ejecutar el procedimiento almacenado en bases de datos que se hayan separado previamente del servidor de base de datos mediante el uso explícito **sp_detach_db** operación o en bases de datos copiadas. Si tiene que especificar más de 16 archivos, utilice CREATE DATABASE *database_name* FOR ATTACH o CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+## <a name="remarks"></a>Notas  
+ El **sp_attach_db** sólo se debe ejecutar el procedimiento almacenado en bases de datos que se hayan separado previamente del servidor de base de datos mediante el uso de explícita **sp_detach_db** operación o en bases de datos copiadas. Si tiene que especificar más de 16 archivos, utilice CREATE DATABASE *database_name* FOR ATTACH o CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
  Se da por supuesto que cualquier archivo que no se especifique se encuentra en su última ubicación conocida. Para utilizar un archivo que se encuentra en una ubicación diferente, debe especificar la nueva ubicación.  
   
@@ -89,7 +89,7 @@ sp_attach_db [ @dbname= ] 'dbname'
   
  La primera vez que se adjunta una base de datos o se restaura en una instancia nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aún no se ha almacenado una copia de la clave maestra de la base de datos (cifrada por la clave maestra de servicio) en el servidor. Debe usar la instrucción **OPEN MASTER KEY** para descifrar la clave maestra de la base de datos (DMK). Una vez que se ha descifrado la clave maestra de la base de datos, tiene la posibilidad de habilitar el descifrado automático en el futuro usando la instrucción **ALTER MASTER KEY REGENERATE** para proporcionar al servidor una copia de la clave maestra de la base de datos cifrada con la clave maestra de servicio (SMK). Cuando una base de datos se haya actualizado desde una versión anterior, se debe volver a generar la DMK para usar el algoritmo AES más reciente. Para obtener más información sobre cómo volver a generar la DMK, vea [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). El tiempo necesario para volver a generar la DMK con el fin de actualizarse a AES depende del número de objetos protegidos por la DMK. Solo es necesario volver a generar la DMK una vez y no tiene ningún efecto sobre las nuevas generaciones futuras como parte de una estrategia de rotación de claves.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para obtener información acerca de cómo se administran los permisos cuando se adjunta una base de datos, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  

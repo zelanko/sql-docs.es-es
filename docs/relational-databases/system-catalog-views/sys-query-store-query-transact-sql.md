@@ -1,5 +1,5 @@
 ---
-title: Sys.query_store_query (Transact-SQL) | Documentos de Microsoft
+title: Sys.query_store_query (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,34 +27,34 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d9d53bc6cd0219502698ba8a02b6ba19eaf5f34f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182211"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985191"
 ---
 # <a name="sysquerystorequery-transact-sql"></a>Sys.query_store_query (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Contiene información acerca de la consulta y sus estadísticas de ejecución de asociado en tiempo agregado total.  
+  Contiene información acerca de la consulta y sus estadísticas de ejecución en tiempo de ejecución agregados asociados total.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**query_id**|**bigint**|Clave principal.|  
-|**query_text_id**|**bigint**|Clave externa. Se combina con [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
-|**context_settings_id**|**bigint**|Clave externa. Se combina con [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).|  
-|**object_id**|**bigint**|Identificador del objeto de base de datos que forma parte de la consulta (procedimiento almacenado, desencadenador, UDF de CLR/UDAgg, etcetera.). 0 si la consulta no se ejecuta como parte de un objeto de base de datos (consulta ad hoc).|  
-|**batch_sql_handle**|**varbinary(64)**|Id. del lote de instrucciones de la consulta forma parte de. Llenan solo si la consulta hace referencia a tablas temporales o variables de tabla.|  
-|**query_hash**|**binary (8)**|Hash MD5 de la consulta individual, tomando como base el árbol lógico de consulta. Incluye sugerencias del optimizador.|  
-|**is_internal_query**|**bit**|La consulta era generada internamente.|  
-|**query_parameterization_type**|**tinyint**|Tipo de parametrización:<br /><br /> 0: ninguno<br /><br /> 1 – usuario<br /><br /> 2-simple<br /><br /> 3 – forzada|  
-|**query_parameterization_type_desc**|**nvarchar(60)**|Texto descriptivo para el tipo de la parametrización.|  
-|**initial_compile_start_time**|**datetimeoffset**|Tiempo de inicio de la compilación.|  
-|**last_compile_start_time**|**datetimeoffset**|Tiempo de inicio de la compilación.|  
-|**last_execution_time**|**datetimeoffset**|Último tiempo de ejecución se refiere a la última hora de finalización del plan de consulta.|  
-|**last_compile_batch_sql_handle**|**varbinary(64)**|Identificador del último lote SQL en el que consulta usó la última vez. Se puede proporcionar como entrada para [sys.dm_exec_sql_text &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) para obtener el texto del lote completo.|  
-|**last_compile_batch_offset_start**|**bigint**|Información que pueda proporcionarse a sys.dm_exec_sql_text junto con last_compile_batch_sql_handle.|  
-|**last_compile_batch_offset_end**|**bigint**|Información que pueda proporcionarse a sys.dm_exec_sql_text junto con last_compile_batch_sql_handle.|  
+|**query_text_id**|**bigint**|Clave externa. Se une a [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
+|**context_settings_id**|**bigint**|Clave externa. Se une a [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).|  
+|**object_id**|**bigint**|Identificador del objeto de base de datos que forma parte de la consulta (procedimiento almacenado, desencadenador, UDF de CLR/UDAgg, etcetera.). 0 si no se ejecuta la consulta como parte de un objeto de base de datos (consulta ad hoc).|  
+|**batch_sql_handle**|**varbinary (64)**|Id. del lote de instrucciones de la consulta forma parte de. Rellena solo si la consulta hace referencia a tablas temporales o variables de tabla.|  
+|**query_hash**|**binary (8)**|Hash MD5 de la consulta individual, basándose en el árbol de consulta lógica. Incluye las sugerencias del optimizador.|  
+|**is_internal_query**|**bit**|La consulta se ha generado internamente.|  
+|**query_parameterization_type**|**tinyint**|Tipo de parametrización:<br /><br /> 0: ninguno<br /><br /> 1: usuario<br /><br /> 2 – simple<br /><br /> 3 – forzada|  
+|**query_parameterization_type_desc**|**nvarchar(60)**|Descripción textual del tipo de parametrización.|  
+|**initial_compile_start_time**|**datetimeoffset**|Compile la hora de inicio.|  
+|**last_compile_start_time**|**datetimeoffset**|Compile la hora de inicio.|  
+|**last_execution_time**|**datetimeoffset**|Último tiempo de ejecución hace referencia a la última hora de finalización del plan de consulta.|  
+|**last_compile_batch_sql_handle**|**varbinary (64)**|Identificador del último lote SQL en el que consulta se usó la última vez. Se puede proporcionar como entrada para [sys.dm_exec_sql_text &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) para obtener el texto del lote completo.|  
+|**last_compile_batch_offset_start**|**bigint**|Información que puede proporcionarse a sys.dm_exec_sql_text junto con last_compile_batch_sql_handle.|  
+|**last_compile_batch_offset_end**|**bigint**|Información que puede proporcionarse a sys.dm_exec_sql_text junto con last_compile_batch_sql_handle.|  
 |**count_compiles**|**bigint**|Estadísticas de compilación.|  
 |**avg_compile_duration**|**float**|Estadísticas de compilación en microsegundos.|  
 |**last_compile_duration**|**bigint**|Estadísticas de compilación en microsegundos.|  
@@ -69,10 +69,10 @@ ms.locfileid: "33182211"
 |**avg_compile_memory_kb**|**float**|Recopilar estadísticas de memoria.|  
 |**last_compile_memory_kb**|**bigint**|Recopilar estadísticas de memoria.|  
 |**max_compile_memory_kb**|**bigint**|Recopilar estadísticas de memoria.|  
-|**is_clouddb_internal_query**|**bit**|Siempre es 0 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] local.|  
+|**is_clouddb_internal_query**|**bit**|Siempre es 0 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el entorno local.|  
   
-## <a name="permissions"></a>Permissions  
- Requiere la **VIEW DATABASE STATE** permiso.  
+## <a name="permissions"></a>Permisos  
+ Requiere el **VIEW DATABASE STATE** permiso.  
   
 ## <a name="see-also"></a>Vea también  
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
@@ -84,7 +84,7 @@ ms.locfileid: "33182211"
  [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del Almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

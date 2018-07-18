@@ -1,5 +1,5 @@
 ---
-title: Propiedades DAX | Documentos de Microsoft
+title: Propiedades DAX | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9150eb13b6c39f74f1e65743b6a79aca0a07676a
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238845"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033535"
 ---
 # <a name="dax-properties"></a>Propiedades de DAX
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -43,7 +43,7 @@ Para aumentar el límite superior, especifique la configuración **MaxIntermedia
 
 ## <a name="property-descriptions"></a>Descripciones de las propiedades
 
-Configuración |Valor |Descripción
+Parámetro |Valor |Descripción
 --------|-------|-----------
 MaxIntermediateRowsetSize | 1000000 | Número máximo de filas devueltas en una consulta DAX. Agregue esta entrada manualmente al archivo msmdsrv.ini y aumente el valor predeterminado si este es demasiado bajo.
 PredicateCheckSpoolCardinalityThreshold| 5000 | Propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de Microsoft.

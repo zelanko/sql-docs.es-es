@@ -1,5 +1,5 @@
 ---
-title: sp_addsubscription (Transact-SQL) | Documentos de Microsoft
+title: sp_addsubscription (Transact-SQL) | Microsoft Docs
 ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 08f0e46bde340eb1b64f8c7ad9ba2d1f8ec63d9f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993742"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989337"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,17 +91,17 @@ sp_addsubscription [ @publication = ] 'publication'
  Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es null.  
   
  [ @destination_db=] '*destination_db*'  
- Es el nombre de la base de datos de destino en la que se colocan los datos replicados. *destination_db* es **sysname**, su valor predeterminado es null. Si es NULL, *destination_db* se establece en el nombre de la base de datos de publicación. Para los publicadores de Oracle, *destination_db* debe especificarse. Para un suscriptor no SQL Server, especifique un valor de (destino predeterminado) para *destination_db*.  
+ Es el nombre de la base de datos de destino en la que se colocan los datos replicados. *destination_db* es **sysname**, su valor predeterminado es null. Cuando es NULL, *destination_db* se establece en el nombre de la base de datos de publicación. Para los publicadores de Oracle, *destination_db* debe especificarse. Para un suscriptor no SQL Server, especifique un valor de (destino predeterminado) para *destination_db*.  
   
  [ @sync_type=] '*sync_type*'  
  Es el tipo de sincronización de suscripción. *sync_type* es **nvarchar (255)**, y puede tener uno de los siguientes valores:  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|none|El suscriptor tiene ya el esquema y los datos iniciales de las tablas publicadas.<br /><br /> Nota: Esta opción está en desuso. En su lugar, utilice replication support only.|  
+|none|El suscriptor tiene ya el esquema y los datos iniciales de las tablas publicadas.<br /><br /> Nota: Esta opción en desuso. En su lugar, utilice replication support only.|  
 |automatic (predeterminado)|El esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor.|  
-|replication support only|Proporciona la generación automática en el suscriptor de los desencadenadores y procedimientos almacenados personalizados de artículos que admiten las suscripciones de actualización, si es apropiado. Supone que el suscriptor tiene ya el esquema y los datos iniciales de las tablas publicadas. Al configurar una topología de replicación transaccional punto a punto, asegúrese de que los datos de todos los nodos de la topología son idénticos. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *No se admite para las suscripciones a publicaciones que no sea SQL Server.*|  
-|initialize with backup|El esquema y los datos iniciales de las tablas publicadas se obtienen de una copia de seguridad de la base de datos de publicaciones. Se da por supuesto que el suscriptor tiene acceso a una copia de seguridad de la base de datos de publicaciones. La ubicación de la copia de seguridad y tipo de medio para la copia de seguridad se especifica mediante *backupdevicename* y *backupdevicetype*. Cuando se utiliza esta opción, la topología de replicación transaccional punto a punto no debe detenerse durante la configuración.<br /><br /> *No se admite para las suscripciones a publicaciones que no sea SQL Server.*|  
+|replication support only|Proporciona la generación automática en el suscriptor de los desencadenadores y procedimientos almacenados personalizados de artículos que admiten las suscripciones de actualización, si es apropiado. Supone que el suscriptor tiene ya el esquema y los datos iniciales de las tablas publicadas. Al configurar una topología de replicación transaccional punto a punto, asegúrese de que los datos de todos los nodos de la topología son idénticos. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *No se admite para las suscripciones a publicaciones que no sean de SQL Server.*|  
+|initialize with backup|El esquema y los datos iniciales de las tablas publicadas se obtienen de una copia de seguridad de la base de datos de publicaciones. Se da por supuesto que el suscriptor tiene acceso a una copia de seguridad de la base de datos de publicaciones. Especifica la ubicación de la copia de seguridad y tipo de medio para la copia de seguridad *backupdevicename* y *backupdevicetype*. Cuando se utiliza esta opción, la topología de replicación transaccional punto a punto no debe detenerse durante la configuración.<br /><br /> *No se admite para las suscripciones a publicaciones que no sean de SQL Server.*|  
 |initialize from lsn|Se utiliza cuando se agrega un nodo a una topología de replicación transaccional punto a punto. Se usa con @subscriptionlsn para asegurarse de que todas las transacciones pertinentes se repliquen en el nuevo nodo. Supone que el suscriptor tiene ya el esquema y los datos iniciales de las tablas publicadas. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
   
 > [!NOTE]  
@@ -110,13 +110,13 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @status=] '*estado*'  
  Es el estado de la suscripción. *estado* es **sysname**, su valor predeterminado es null. Si este parámetro no se establece de forma explícita, la replicación lo establece automáticamente en uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|active|La suscripción está inicializada y lista para aceptar cambios. Esta opción se establece cuando el valor de *sync_type* es, inicialización con una copia de seguridad o solo compatibilidad con replicación.|  
-|subscribed|La suscripción debe inicializarse. Esta opción se establece cuando el valor de *sync_type* es automático.|  
+|active|La suscripción está inicializada y lista para aceptar cambios. Esta opción se establece cuando el valor de *sync_type* es, inicialización con copia de seguridad o solo compatibilidad con la replicación.|  
+|subscribed|La suscripción debe inicializarse. Esta opción se establece cuando el valor de *sync_type* es automática.|  
   
  [ @subscription_type=] '*subscription_type*'  
- Es el tipo de suscripción. *subscription_type* es **nvarchar (4)**, con un valor predeterminado es push. Puede ser de inserción o de extracción. Los agentes de distribución de suscripciones de inserción residen en el distribuidor y los agentes de distribución de suscripciones de extracción residen en el suscriptor. *subscription_type* puede ser de extracción para crear una suscripción de extracción con nombre conocida para el publicador. Para obtener más información, vea [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md).  
+ Es el tipo de suscripción. *subscription_type* es **nvarchar (4)**, con el valor predeterminado es push. Puede ser de inserción o de extracción. Los agentes de distribución de suscripciones de inserción residen en el distribuidor y los agentes de distribución de suscripciones de extracción residen en el suscriptor. *subscription_type* puede ser de extracción para crear una suscripción de extracción con nombre conocida para el publicador. Para obtener más información, vea [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md).  
   
 > [!NOTE]  
 >  Las suscripciones anónimas no necesitan utilizar este procedimiento almacenado.  
@@ -124,7 +124,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode=] '*update_mode*'  
  Es el tipo de actualización. *update_mode* es **nvarchar (30)**, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |read only (predeterminado)|La suscripción es de solo lectura. Los cambios en el suscriptor no se envían al publicador.|  
 |sync tran|Habilita la compatibilidad con las suscripciones de actualización inmediata. No es compatible con publicadores de Oracle.|  
@@ -137,16 +137,16 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection=] '*el argumento loopback_detection*'  
  Especifica si el agente de distribución envía transacciones originadas en el suscriptor al mismo suscriptor. *el argumento loopback_detection* es **nvarchar (5)**, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|true|El Agente de distribución no envía las transacciones originadas en el suscriptor al mismo suscriptor. Se utilizan con replicación transaccional bidireccional. Para más información, consulte [Replicación transaccional bidireccional](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|true|El Agente de distribución no envía las transacciones originadas en el suscriptor al mismo suscriptor. Se utilizan con replicación transaccional bidireccional. Para más información, consulte [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |false|El Agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor.|  
 |NULL (predeterminado)|Se establece automáticamente en true para un suscriptor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en false para un suscriptor que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  [ @frequency_type=] *frequency_type*  
- Es la frecuencia con que se programa la tarea de distribución. *frequency_type* es de tipo int y puede tener uno de estos valores.  
+ Es la frecuencia con que se programa la tarea de distribución. *frequency_type* es de tipo int y puede ser uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |1|Una vez|  
 |2|A petición|  
@@ -163,7 +163,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval=] *frequency_relative_interval*  
  Es la fecha del Agente de distribución. Este parámetro se utiliza cuando *frequency_type* está establecido en 32 (relativo mensual). *frequency_relative_interval* es **int**, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |1|Primero|  
 |2|Second|  
@@ -178,7 +178,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday=] *frequency_subday*  
  Indica la frecuencia, en minutos, con que se reprograma durante el período definido. *frequency_subday* es **int**, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |1|Una vez|  
 |2|Second|  
@@ -208,10 +208,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
- Indica si se puede sincronizar la suscripción a través de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Administrador de sincronización de Windows. *enabled_for_syncmgr* es **nvarchar (5)**, con un valor predeterminado es FALSE. Si el valor es false, la suscripción no se registra con el Administrador de sincronización de Windows. Si el valor es true, la suscripción se registra con el Administrador de sincronización de Windows y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. No es compatible con publicadores de Oracle.  
+ Indica si se puede sincronizar la suscripción a través de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Administrador de sincronización de Windows. *enabled_for_syncmgr* es **nvarchar (5)**, su valor predeterminado es False. Si el valor es false, la suscripción no se registra con el Administrador de sincronización de Windows. Si el valor es true, la suscripción se registra con el Administrador de sincronización de Windows y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. No es compatible con publicadores de Oracle.  
   
  [ @offloadagent=] '*remote_agent_activation*'  
- Especifica que el agente puede activarse de manera remota. *remote_agent_activation* es **bits** con un valor predeterminado es 0.  
+ Especifica que el agente puede activarse de manera remota. *remote_agent_activation* es **bit** con el valor predeterminado es 0.  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solamente se mantiene por compatibilidad con versiones anteriores de scripts.  
@@ -220,30 +220,30 @@ sp_addsubscription [ @publication = ] 'publication'
  Especifica el nombre de red del servidor que se utilizará en la activación remota. *remote_agent_server_name*es **sysname**, su valor predeterminado es null.  
   
  [ @dts_package_name=] '*dts_package_name*'  
- Especifica el nombre del paquete de Servicios de transformación de datos (DTS). *dts_package_name* es un **sysname** con un valor predeterminado es NULL. Por ejemplo, para especificar un paquete DTSPub_Package, el parámetro sería `@dts_package_name = N'DTSPub_Package'`. Este parámetro está disponible para suscripciones de inserción. Paga agregar información de un paquete DTS a una suscripción de extracción, utilice sp_addpullsubscription_agent.  
+ Especifica el nombre del paquete de Servicios de transformación de datos (DTS). *dts_package_name* es un **sysname** con el valor predeterminado es NULL. Por ejemplo, para especificar un paquete DTSPub_Package, el parámetro sería `@dts_package_name = N'DTSPub_Package'`. Este parámetro está disponible para suscripciones de inserción. Paga agregar información de un paquete DTS a una suscripción de extracción, utilice sp_addpullsubscription_agent.  
   
  [ @dts_package_password=] '*dts_package_password*'  
- Especifica la contraseña del paquete, si procede. *dts_package_password* es **sysname** con un valor predeterminado es NULL.  
+ Especifica la contraseña del paquete, si procede. *dts_package_password* es **sysname** con el valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Debe especificar una contraseña si *dts_package_name* se especifica.  
   
  [ @dts_package_location= ] '*dts_package_location*'  
- Especifica la ubicación del paquete. *dts_package_location* es un **tipo (12)**, su valor predeterminado del distribuidor. La ubicación del paquete puede ser distributor o subscriber.  
+ Especifica la ubicación del paquete. *dts_package_location* es un **tipo (12)**, con el valor predeterminado es DISTRIBUTOR. La ubicación del paquete puede ser distributor o subscriber.  
   
  [ @distribution_job_name=] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @publisher=] '*publisher*'  
- Especifica un no[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *Publisher* es **sysname**, su valor predeterminado es null.  
+ Especifica que no es[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  *Publisher* no se debe especificar para una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+>  *publicador* no se debe especificar para una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
  [ @backupdevicetype=] '*backupdevicetype*'  
  Especifica el tipo de dispositivo de copia de seguridad utilizado al inicializar un suscriptor a partir una copia de seguridad. *backupdevicetype* es **nvarchar (20)**, y puede tener uno de estos valores:  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |logical (predeterminado)|El dispositivo de copia de seguridad es un dispositivo lógico.|  
 |disk|El dispositivo de copia de seguridad es una unidad de disco.|  
@@ -267,10 +267,10 @@ sp_addsubscription [ @publication = ] 'publication'
  Identifica un valor ordinal del conjunto de copia de seguridad que se va a restaurar. *fileidhint* es **int**, su valor predeterminado es null.  
   
  [ @unload= ] *unload*  
- Especifica si un dispositivo de copia de seguridad en cinta se debe descargar una vez completada la inicialización a partir de la copia de seguridad. *descargar* es **bits**, con un valor predeterminado de 1. 1 especifica que la cinta debe descargarse. *descargar* solamente se utiliza cuando *backupdevicetype* es una cinta.  
+ Especifica si un dispositivo de copia de seguridad en cinta se debe descargar una vez completada la inicialización a partir de la copia de seguridad. *descargar* es **bit**, con un valor predeterminado de 1. 1 especifica que la cinta debe descargarse. *descargar* solamente se utiliza cuando *backupdevicetype* es una cinta.  
   
  [ @subscriptionlsn= ] *subscriptionlsn*  
- Especifica el número de flujo de registro (LSN) en el que una suscripción debería empezar a entregar cambios a un nodo en una topología de replicación transaccional punto a punto. Usar con un @sync_type valor de initialize from lsn para asegurarse de que todas las transacciones pertinentes se replican en un nuevo nodo. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
+ Especifica el número de flujo de registro (LSN) en el que una suscripción debería empezar a entregar cambios a un nodo en una topología de replicación transaccional punto a punto. Puede usar con un @sync_type valor de initialize from lsn para asegurarse de que todas las transacciones pertinentes se replican en un nuevo nodo. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  [ @subscriptionstreams= ] *subscriptionstreams*  
  Es el número de conexiones permitidas por el agente de distribución para aplicar lotes de cambios en paralelo a un suscriptor, aunque manteniendo muchas de las características transaccionales presentes al utilizar un único subproceso. *subscriptionstreams* es **tinyint**, su valor predeterminado es null. Se admite un intervalo de valores de 1 a 64. Este parámetro no se admite para los suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los publicadores de Oracle ni las suscripciones punto a punto. Cada vez que se usan flujos de suscripción, se agregan filas adicionales en la tabla msreplication_subscriptions (una por cada flujo) con un agent_id establecido en NULL.  
@@ -281,7 +281,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type=] *subscriber_type*  
  Es el tipo de suscriptor. *propiedad subscriber_type* es **tinyint**, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0 (predeterminado)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Suscriptor|  
 |1|Servidor del origen de datos ODBC|  
@@ -289,33 +289,33 @@ sp_addsubscription [ @publication = ] 'publication'
 |3|Proveedor OLE DB|  
   
  [ @memory_optimized=] *memory_optimized*  
- Indica que la suscripción admite tablas optimizadas en memoria. *memory_optimized* es **bits**, donde 1 es igual a true (la suscripción es compatible con tablas optimizadas en memoria).  
+ Indica que la suscripción admite tablas optimizadas para memoria. *memory_optimized* es **bit**, donde 1 es igual a true (la suscripción es compatible con tablas optimizadas para memoria).  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  sp_addsubscription se utiliza en la replicación de instantáneas y transaccional.  
   
- Cuando un miembro del rol fijo de servidor sysadmin ejecuta sp_addsubscription para crear una suscripción de inserción, se crea implícitamente el trabajo del Agente de distribución y se ejecuta en la cuenta de servicio del Agente SQL Server. Se recomienda ejecutar [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) y especifique las credenciales de una cuenta de Windows diferente, específica del agente para @job_login y @job_password. Para más información, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Cuando un miembro del rol fijo de servidor sysadmin ejecuta sp_addsubscription para crear una suscripción de inserción, se crea implícitamente el trabajo del Agente de distribución y se ejecuta en la cuenta de servicio del Agente SQL Server. Se recomienda que ejecute [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) y especifique las credenciales de una cuenta de Windows diferente y específica del agente para @job_login y @job_password. Para más información, consulte [Modelo de seguridad del agente de replicación](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  sp_addsubscription impide que los suscriptores ODBC y OLE DB tengan acceso a publicaciones que:  
   
 -   Se crearon con nativo *sync_method* en la llamada a [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md).  
   
--   Contengan artículos que se han agregado a la publicación mediante el [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) procedimiento almacenado que tenía un *pre_creation_cmd* valor del parámetro de 3 (truncar).  
+-   Contengan artículos que se han agregado a la publicación con el [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) el procedimiento almacenado que tenía un *pre_creation_cmd* valor del parámetro de 3 (truncar).  
   
--   Se intentó establecer *update_mode* para sincronizar tran.  
+-   Intenta establecer *update_mode* para sincronizar tran.  
   
 -   Tengan un artículo configurado para utilizar instrucciones con parámetros.  
   
- Además, si una publicación tiene la *allow_queued_tran* opción establecida en true (que permite poner en cola cambios en el suscriptor hasta que se pueden aplicar en el publicador), la columna de marca de tiempo en un artículo se automatizará como **marca de tiempo**, y los cambios de esa columna se envían al suscriptor. El suscriptor genera y actualiza el valor de la columna timestamp. Para un suscriptor ODBC u OLE DB, sp_addsubscription dará error si se realiza un intento para suscribirse a una publicación que tiene *allow_queued_tran* establecida en true y artículos con columnas timestamp.  
+ Además, si una publicación tiene el *allow_queued_tran* opción establecido en true (que permite poner en cola los cambios del suscriptor hasta que se pueden aplicar en el publicador), la columna de marca de tiempo en un artículo se automatizará como **marca de tiempo**, y los cambios en esa columna se envían al suscriptor. El suscriptor genera y actualiza el valor de la columna timestamp. Para un suscriptor ODBC u OLE DB, sp_addsubscription dará error si se realiza un intento para suscribirse a una publicación que tiene *allow_queued_tran* establecida en true y artículos con columnas timestamp.  
   
- Si una suscripción no utiliza un paquete DTS, no es posible suscribirse a una publicación que se establece en *allow_transformable_subscriptions*. Si la tabla de la publicación debe replicarse en una suscripción DTS y una suscripción no DTS, deben crearse dos publicaciones independientes: una para cada tipo de suscripción.  
+ Si una suscripción no utiliza un paquete DTS, no puede suscribirse a una publicación que se establece en *allow_transformable_subscriptions*. Si la tabla de la publicación debe replicarse en una suscripción DTS y una suscripción no DTS, deben crearse dos publicaciones independientes: una para cada tipo de suscripción.  
   
  Al seleccionar las opciones **replication support only** , *initialize with backup*o *initialize from lsn*de *sync_type*, el agente de registro del LOG se debe ejecutar después de ejecutar **sp_addsubscription**, de modo que los scripts de instalación se escriban en la base de datos de distribución. El agente de registro del LOG se debe ejecutar con una cuenta que sea miembro del rol fijo de servidor **sysadmin** . Cuando la opción **sync_type** se establece en *Automatic*, no se requiere ninguna acción especial del agente de registro del LOG.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor sysadmin o del rol fijo de base de datos db_owner pueden ejecutar sp_addsubscription. En las suscripciones de extracción, los usuarios que tengan inicios de sesión en la lista de acceso de la publicación pueden ejecutar  sp_addsubscription.  
   
 ## <a name="example"></a>Ejemplo  
@@ -324,7 +324,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="see-also"></a>Vea también  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Crear una suscripción para un suscriptor que no sea de SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

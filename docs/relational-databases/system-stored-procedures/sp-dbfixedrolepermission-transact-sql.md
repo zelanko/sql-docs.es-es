@@ -1,5 +1,5 @@
 ---
-title: sp_dbfixedrolepermission (Transact-SQL) | Documentos de Microsoft
+title: sp_dbfixedrolepermission (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 32ca47ff848d735c9310d894eff46c94b0c8da92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239685"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037813"
 ---
 # <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,22 +48,22 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@rolename =** ] **'***rol***'**  
- Es el nombre de un rol fijo de base de datos válida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *rol* es **sysname**, su valor predeterminado es null. Si *rol* no se especifica, se muestran los permisos para todos los roles de base de datos fija.  
+ Es el nombre de un rol fijo de base de datos válida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *rol* es **sysname**, su valor predeterminado es null. Si *rol* no se especifica, se muestran los permisos para todos los roles fijos de base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**DbFixedRole.**|**sysname**|Nombre del rol fijo de base de datos|  
-|**Permiso**|**nvarchar (70)**|Permisos asociados a **DbFixedRole.**|  
+|**DbFixedRole**|**sysname**|Nombre del rol fijo de base de datos|  
+|**Permiso**|**nvarchar (70)**|Los permisos asociados con **DbFixedRole**|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para mostrar una lista de los roles fijos de base de datos, ejecute **sp_helpdbfixedrole**. En la tabla siguiente se muestran los roles fijos de base de datos.  
   
-|Rol fijo de base de datos|Description|  
+|Rol fijo de base de datos|Descripción|  
 |-------------------------|-----------------|  
 |**db_owner**|Propietarios de base de datos|  
 |**db_accessadmin**|Administradores de acceso a la base de datos|  
@@ -75,11 +75,11 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**db_denydatareader**|Lectores de datos denegados de la base de datos|  
 |**db_denydatawriter**|Escritores de datos denegados de la base de datos|  
   
- Los miembros de la **db_owner** rol fijo de base de datos tiene los permisos de todos los demás roles de base de datos fija. Para mostrar los permisos para los roles fijos de servidor, ejecute **sp_srvrolepermission**.  
+ Los miembros de la **db_owner** rol fijo de base de datos tiene los permisos de todos los roles fijos de base de datos. Para mostrar los permisos para los roles fijos de servidor, ejecute **sp_srvrolepermission**.  
   
  El conjunto de resultados contiene las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se pueden ejecutar y otras actividades especiales que pueden realizar los miembros del rol de base de datos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  
@@ -93,7 +93,7 @@ GO
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
  [sp_srvrolepermission &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

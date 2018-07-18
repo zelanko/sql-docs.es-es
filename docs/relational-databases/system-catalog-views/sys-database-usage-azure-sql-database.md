@@ -1,5 +1,5 @@
 ---
-title: Sys.database_usage (base de datos de SQL Azure) | Documentos de Microsoft
+title: Sys.database_usage (base de datos de SQL Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -28,35 +28,35 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: affdc08bb7ae507ca30edfa986cd68a81ba564f2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177458"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038823"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **Nota: Esto se aplica solo a V11 de base de datos de SQL Azure.**  
+  **Nota: Esto se aplica solo a Azure SQL Database V11.**  
   
- Muestra el número, el tipo y la duración de las bases de datos en el [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server.  
+ Muestra el número, tipo y la duración de las bases de datos en el [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server.  
   
- El **sys.database_usage** vista contiene las columnas siguientes.  
+ El **sys.database_usage** vista contiene las siguientes columnas.  
   
-|Nombre de la columna|Description|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |time|Fecha en que se produjeron los eventos de uso.|  
-|sku|El tipo de nivel de servicio de la base de datos: **Web**, **Business**, **básica**, **estándar**, **Premium**|  
+|sku|El tipo de nivel de servicio para la base de datos: **Web**, **Business**, **básica**, **estándar**, **Premium**|  
 |quantity|El número máximo de bases de datos de un tipo SKU que existía durante ese día.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Acceso de solo lectura a esta vista está disponible para todos los usuarios con permisos para conectarse a la **maestro** base de datos.  
   
-## <a name="remarks"></a>Comentarios  
- El **sys.database_usage** vista devuelve una fila para cada día de la suscripción.  
+## <a name="remarks"></a>Notas  
+ El **sys.database_usage** vista devuelve una fila por cada día de la suscripción.  
   
 ## <a name="see-also"></a>Vea también  
- [Detalles de precios de base de datos SQL](http://go.microsoft.com/fwlink/?LinkID=394978)   
- [Cuentas y facturación en base de datos SQL Azure de Windows](http://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+ [Detalles de precios de SQL Database](http://go.microsoft.com/fwlink/?LinkID=394978)   
+ [Cuentas y facturación en Microsoft Azure SQL Database](http://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

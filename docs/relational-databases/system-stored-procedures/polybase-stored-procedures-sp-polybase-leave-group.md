@@ -1,5 +1,5 @@
 ---
-title: sp_polybase_leave_group (Transact-SQL) | Documentos de Microsoft
+title: sp_polybase_leave_group (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8ad3a202ff910d19ea70192eb9cc5e114a8a4cb9
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34333726"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984214"
 ---
 # <a name="sppolybaseleavegroup-transact-sql"></a>sp_polybase_leave_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Quita una instancia de SQL Server de un grupo de PolyBase para el cálculo de escalabilidad horizontal. 
  
- La instancia de SQL Server debe tener la [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md) característica instalada.  PolyBase permite la integración de orígenes de datos no es de SQL Server, como almacenamiento de blobs de Hadoop y Azure. Vea también [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
+ La instancia de SQL Server debe tener la [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md) característica instalada.  PolyBase permite la integración de orígenes de datos que no son de SQL Server, como Hadoop y Azure storage blob. Vea también [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,13 +45,13 @@ sp_polybase_leave_group;
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL SERVER.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Solo puede quitar un nodo de proceso de un grupo.  
   
- Después de ejecutar el procedimiento almacenado, reinicie el motor y el servicio de movimiento de datos de PolyBase en el equipo. Para comprobar ejecute la DMV siguiente en el nodo principal: **sys.dm_exec_compute_nodes**.  
+ Después de ejecutar el procedimiento almacenado, reinicie el motor de PolyBase y el servicio de movimiento de datos de PolyBase en el equipo. Para comprobar la ejecute la DMV siguiente en el nodo principal: **sys.dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo se quita la máquina actual de un grupo de PolyBase.  

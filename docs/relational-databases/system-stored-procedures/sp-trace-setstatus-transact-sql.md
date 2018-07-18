@@ -1,5 +1,5 @@
 ---
-title: sp_trace_setstatus (Transact-SQL) | Documentos de Microsoft
+title: sp_trace_setstatus (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8e3a2234d4213b78cbc828e71c602602e7a2481
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261934"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038323"
 ---
 # <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
  En la tabla siguiente se muestra una lista de los estados que podrían especificarse.  
   
-|Estado|Description|  
+|Estado|Descripción|  
 |------------|-----------------|  
 |**0**|Detiene el seguimiento especificado.|  
 |**1**|Inicia el seguimiento especificado.|  
@@ -67,7 +67,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ## <a name="return-code-values"></a>Valores de código de retorno  
  En la tabla siguiente se describen los valores del código que los usuarios pueden obtener después de completar el procedimiento almacenado.  
   
-|Código de retorno|Description|  
+|Código de retorno|Descripción|  
 |-----------------|-----------------|  
 |**0**|Ningún error.|  
 |**1**|Error desconocido.|  
@@ -77,12 +77,12 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
  Si el seguimiento ya está en el estado especificado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devolverá **0**.  
   
-## <a name="remarks"></a>Comentarios  
- Parámetros de seguimiento de SQL todos los procedimientos almacenados (**sp_trace_xx**) deben escribirse. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devolverá un error.  
+## <a name="remarks"></a>Notas  
+ Los parámetros de seguimiento de SQL de todos los procedimientos almacenados (**sp_trace_xx**) deben escribirse. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devolverá un error.  
   
  Para obtener un ejemplo de cómo usar los procedimientos almacenados de seguimiento, vea [Crear un seguimiento &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  El usuario debe tener permiso ALTER TRACE.  
   
 ## <a name="see-also"></a>Vea también  

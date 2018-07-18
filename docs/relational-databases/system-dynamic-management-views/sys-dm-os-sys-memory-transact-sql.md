@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_sys_memory (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_os_sys_memory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 173cef2bb02399e8145df1b5ff2a9d038eb6e03f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468321"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987407"
 ---
 # <a name="sysdmossysmemory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "34468321"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está limitado por y responde a las condiciones de memoria externa en el nivel de sistema operativo y los límites físicos del hardware subyacente. Determinar el estado general del sistema es una parte importante de la evaluación del uso de la memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Para llamar a esta desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_sys_memory**.  
+>  Al llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_sys_memory**.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**total_physical_memory_kb**|**bigint**|Tamaño total de la memoria física disponible para el sistema operativo, en kilobytes (KB).|  
 |**available_physical_memory_kb**|**bigint**|Tamaño de la memoria física disponible, en KB.|  
@@ -53,16 +53,16 @@ ms.locfileid: "34468321"
 |**system_high_memory_signal_state**|**bit**|Estado de la notificación de recursos de memoria alta del sistema. Un valor de 1 indica que Windows ha establecido la señal de memoria alta. Para obtener más información, consulte [CreateMemoryResourceNotification](http://go.microsoft.com/fwlink/?LinkId=82427) en MSDN library.|  
 |**system_low_memory_signal_state**|**bit**|Estado de la notificación de recursos de memoria baja del sistema. Un valor de 1 indica que Windows ha establecido la señal de memoria baja. Para obtener más información, consulte [CreateMemoryResourceNotification](http://go.microsoft.com/fwlink/?LinkId=82427) en MSDN library.|  
 |**system_memory_state_desc**|**nvarchar(256)**|Descripción del estado de la memoria. Vea la tabla siguiente.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   
-|Condición|Value|  
+|Condición|Valor|  
 |---------------|-----------|  
 |system_high_memory_signal_state = 1<br /><br /> y<br /><br /> system_low_memory_signal_state = 0|La memoria física disponible es alta.|  
 |system_high_memory_signal_state = 0<br /><br /> y<br /><br /> system_low_memory_signal_state = 1|La memoria física disponible es baja.|  
 |system_high_memory_signal_state = 0<br /><br /> y<br /><br /> system_low_memory_signal_state = 0|El uso de la memoria física es continuo|  
 |system_high_memory_signal_state = 1<br /><br /> y<br /><br /> system_low_memory_signal_state = 1|El estado de la memoria física está cambiando<br /><br /> Las señales alta y baja nunca deben estar activas de manera simultánea. Sin embargo, los cambios rápidos que se realizan en el sistema operativo pueden hacer que ambos valores parezcan estar activos en una aplicación de modo usuario. El que ambas señales aparezcan activas se interpretará como un estado de transición.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="see-also"></a>Vea también  

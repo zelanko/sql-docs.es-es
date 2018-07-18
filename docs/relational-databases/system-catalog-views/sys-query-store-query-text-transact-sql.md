@@ -1,5 +1,5 @@
 ---
-title: Sys.query_store_query_text (Transact-SQL) | Documentos de Microsoft
+title: Sys.query_store_query_text (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,27 +27,27 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2f619900c47a3797a033c4eb7c48dd7c423a8c53
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181441"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985121"
 ---
 # <a name="sysquerystorequerytext-transact-sql"></a>Sys.query_store_query_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Contiene el [!INCLUDE[tsql](../../includes/tsql-md.md)] texto y el identificador SQL de la consulta.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**query_text_id**|**bigint**|Clave principal.|  
-|**query_sql_text**|**nvarchar(max)**|Texto SQL de la consulta, como la proporcionada por el usuario. Incluye espacios en blanco, sugerencias y comentarios.|  
+|**query_sql_text**|**nvarchar(max)**|Texto SQL de la consulta, según lo proporcionado por el usuario. Incluye espacios en blanco, sugerencias y comentarios.|  
 |**statement_sql_handle**|**vabinary(64)**|Identificador SQL de la consulta individual.|  
 |**is_part_of_encrypted_module**|**bit**|Texto de la consulta es una parte de un módulo de cifrado.|  
-|**has_restricted_text**|**bit**|Texto de la consulta contiene una contraseña ni otras palabras unmentionable.|  
+|**has_restricted_text**|**bit**|Texto de la consulta contiene una contraseña u otras palabras unmentionable.|  
   
-## <a name="permissions"></a>Permissions  
- Requiere la **VIEW DATABASE STATE** permiso.  
+## <a name="permissions"></a>Permisos  
+ Requiere el **VIEW DATABASE STATE** permiso.  
   
 ## <a name="see-also"></a>Vea también  
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
@@ -59,7 +59,7 @@ ms.locfileid: "33181441"
  [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del Almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

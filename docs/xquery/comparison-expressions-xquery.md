@@ -1,5 +1,5 @@
 ---
-title: Expresiones de comparación (XQuery) | Documentos de Microsoft
+title: Expresiones de comparación (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f80838771b36f59f58203dfc687957ea2f208522
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077452"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984357"
 ---
 # <a name="comparison-expressions-xquery"></a>Expresiones de comparación (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33077452"
   
 -   Operadores de comparación de valor  
   
--   Operadores de comparación de nodo  
+-   Operadores de comparación de nodos  
   
 -   Operadores de comparación de nodo  
   
@@ -50,7 +50,7 @@ ms.locfileid: "33077452"
   
  Los operadores generales se definen en la tabla siguiente.  
   
-|Operador|Description|  
+|Operador|Descripción|  
 |--------------|-----------------|  
 |=|Igual|  
 |!=|No igual|  
@@ -145,7 +145,7 @@ WHERE ContactID=1
   
  Los operadores de comparación de valores se definen en la tabla siguiente.  
   
-|Operador|Description|  
+|Operador|Descripción|  
 |--------------|-----------------|  
 |eq|Igual|  
 |ne|No igual|  
@@ -158,7 +158,7 @@ WHERE ContactID=1
   
  Estos operadores solo funcionan en valores atómicos singleton. Es decir, no se puede especificar una secuencia como uno de los operandos.  
   
- Por ejemplo, la consulta siguiente recupera \<imagen > elementos para un modelo de producto donde el tamaño de imagen es "pequeño:  
+ Por ejemplo, la siguiente consulta recupera \<imagen > elementos para un modelo de producto donde el tamaño de imagen es "pequeño:  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -175,9 +175,9 @@ WHERE ProductModelID=19
   
 -   `declare namespace` define el prefijo de espacio de nombres que se utilizará posteriormente en la consulta.  
   
--   El \<tamaño > valor de elemento se compara con el valor atómico especificado, "small".  
+-   El \<tamaño > valor del elemento se compara con el valor atómico especificado, "small".  
   
--   Tenga en cuenta que, dado que los operadores de valores solo funcionan en valores atómicos, la **data()** función implícitamente se utiliza para recuperar el valor del nodo. Es decir, `data($P/PD:Size) eq "small"` obtiene el mismo resultado.  
+-   Tenga en cuenta que dado que los operadores de valores solo funcionan en valores atómicos, la **data()** función implícitamente se usa para recuperar el valor del nodo. Es decir, `data($P/PD:Size) eq "small"` obtiene el mismo resultado.  
   
  El resultado es el siguiente:  
   
@@ -193,7 +193,7 @@ WHERE ProductModelID=19
  Tenga en cuenta que las reglas de promoción de tipos para comparaciones de valores son las mismas que para las comparaciones generales. Además, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza las mismas reglas de conversión para los valores sin tipo durante las comparaciones de valores, al igual que durante las comparaciones generales. En cambio, las reglas de la especificación XQuery siempre convierten el valor sin tipo a xs:string durante las comparaciones de valores.  
   
 ## <a name="node-comparison-operator"></a>Operadores de comparación de nodos  
- El operador de comparación de nodo, **es**, se aplica únicamente a los tipos de nodo. El resultado que devuelve indica si dos nodos pasados como operandos representan al mismo nodo en el documento de origen. Este operador devuelve True si los dos operandos son el mismo nodo. De lo contrario, devuelve False.  
+ El operador de comparación de nodo, **es**, solo se aplica a tipos de nodo. El resultado que devuelve indica si dos nodos pasados como operandos representan al mismo nodo en el documento de origen. Este operador devuelve True si los dos operandos son el mismo nodo. De lo contrario, devuelve False.  
   
  La consulta siguiente comprueba si la ubicación de centro de trabajo 10 es la primera en el proceso de fabricación de un modelo de producto determinado.  
   
@@ -226,11 +226,11 @@ ProductModelID       Result
   
  A continuación se exponen las comparaciones que se realizan en función del orden en el documento:  
   
--   `<<` : **Operando 1** preceden **operando 2** en el orden del documento.  
+-   `<<` : No **operando 1** preceder **operando 2** en el orden del documento.  
   
--   `>>` : **Operando 1** siga **operando 2** en el orden del documento.  
+-   `>>` : No **operando 1** siga **operando 2** en el orden del documento.  
   
- La consulta siguiente devuelve True si la descripción del catálogo de producto tiene la \<garantía > elemento que aparezcan antes que la \<Mantenimiento > elemento en el orden del documento para un producto determinado.  
+ La consulta siguiente devuelve True si la descripción del catálogo de productos el \<garantía > elemento que aparezcan antes que la \<Mantenimiento > elemento en el orden del documento de un determinado producto.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -246,7 +246,7 @@ where ProductModelID=19
   
  Observe lo siguiente en la consulta anterior:  
   
--   El **value()** método de la **xml**tipo de datos se utiliza en la consulta.  
+-   El **value()** método de la **xml**se usa el tipo de datos en la consulta.  
   
 -   El resultado booleano de la consulta se convierte en **nvarchar (10)** y se devuelven.  
   

@@ -1,5 +1,5 @@
 ---
-title: SELECT DISTINCT FROM &lt;modelo &gt; (DMX) | Documentos de Microsoft
+title: SELECT DISTINCT FROM &lt;modelo &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 912d4bfee171c795518e794d4afbcb302e96ee33
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842718"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985330"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;modelo &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |Continuous|Punto medio de los valores de la columna.|  
   
 ## <a name="discrete-column-example"></a>Ejemplo de columna discreta  
- El ejemplo de código siguiente se basa en el `[TM Decision Tree]` modelo que se crea en el [Tutorial básico de minería de datos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta devuelve los valores únicos que existen en la columna discreta `Gender`.  
+ Ejemplo de código siguiente se basa en el `[TM Decision Tree]` modelo creado en el [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta devuelve los valores únicos que existen en la columna discreta `Gender`.  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -100,7 +100,7 @@ FROM [TM Decision Tree]
  La consulta también devuelve una fila de valores nulos para representar los valores ausentes.  
   
 ## <a name="discretized-column-example"></a>Ejemplo de columnas de datos discretos  
- El ejemplo de código siguiente devuelve el punto medio y los valores máximo y mínimo de cada depósito creado por el algoritmo para la columna [`Yearly Income]`. Para reproducir los resultados de este ejemplo, debe crear una nueva estructura de minería de datos que sea igual que `[Targeted Mailing]`. En el asistente, cambie el tipo de contenido de la `Yearly Income` columna de **Continuous** a **Discretized**.  
+ El ejemplo de código siguiente devuelve el punto medio y los valores máximo y mínimo de cada depósito creado por el algoritmo para la columna [`Yearly Income]`. Para reproducir los resultados de este ejemplo, debe crear una nueva estructura de minería de datos que sea igual que `[Targeted Mailing]`. En el asistente, cambie el tipo de contenido de la `Yearly Income` columna desde **Continuous** a **Discretized**.  
   
 > [!NOTE]  
 >  También puede cambiar el modelo de minería datos creado en el Tutorial básico de minería de datos para discretizar la columna de estructura de minería de datos [`Yearly Income]`. Para obtener información acerca de cómo hacerlo, consulte [cambiar la discretización de una columna en un modelo de minería de datos](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md). Sin embargo, al cambiar la discretización de la columna, se volverá a procesar la estructura de minería de datos, lo que cambiará los resultados de otros modelos generados usando esa estructura.  

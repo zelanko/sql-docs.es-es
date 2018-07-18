@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_diag_events (Transact-SQL) | Documentos de Microsoft
+title: Sys.pdw_diag_events (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,24 +19,24 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 3c7cb2aaf1fac585514c4d7e540c35c1f44fad1b
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696368"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987228"
 ---
 # <a name="syspdwdiagevents-transact-sql"></a>Sys.pdw_diag_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Contiene información sobre los eventos que pueden incluirse en las sesiones de diagnóstico en el sistema.  
   
-|Nombre de la columna|Tipo de datos|Description|Intervalo|  
+|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|**Nombre**|**nvarchar(255)**|Nombre del evento diagnósticos específicos.||  
+|**Nombre**|**nvarchar(255)**|Nombre del evento de diagnóstico específicos.||  
 |**origen**|**nvarchar(255)**|Origen del evento (motor, general, dms, etcetera.)||  
-|**is_enabled**|**bit**|Si se publica el evento.||  
+|**is_enabled**|**bit**|Si se está publicando el evento.||  
   
 ## <a name="see-also"></a>Vea también  
- [Almacenamiento de datos SQL y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

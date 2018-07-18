@@ -1,5 +1,5 @@
 ---
-title: Funcionar clúster compartido de Red Hat Enterprise Linux para SQL Server | Documentos de Microsoft
+title: Operar clúster compartido de Red Hat Enterprise Linux para SQL Server | Microsoft Docs
 description: Implementar la alta disponibilidad mediante la configuración de clúster de disco compartido de Red Hat Enterprise Linux para SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,13 +13,13 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 71fef5396f5be6fa615de190a9374c646f467e7e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323448"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981867"
 ---
-# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Funcionar el clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
+# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Operar el clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -33,24 +33,24 @@ Este documento describe cómo realizar las tareas siguientes para SQL Server en 
 
 ## <a name="architecture-description"></a>Descripción de la arquitectura
 
-El nivel de agrupación en clústeres se basa en los servicios de Red Hat Enterprise Linux (RHEL) [complemento HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) construidos sobre [marcapasos](http://clusterlabs.org/). Corosync y marcapasos coordinan las comunicaciones del clúster y administración de recursos. La instancia de SQL Server está activa en un nodo o la otra.
+El nivel de agrupación en clústeres se basa en Red Hat Enterprise Linux (RHEL) [complemento de alta disponibilidad](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) construidos sobre [Pacemaker](http://clusterlabs.org/). Corosync y Pacemaker coordinan las comunicaciones del clúster y la administración de recursos. La instancia de SQL Server está activa en un nodo o la otra.
 
-El siguiente diagrama ilustra los componentes en un clúster de Linux con SQL Server. 
+El siguiente diagrama ilustra los componentes de un clúster de Linux con SQL Server. 
 
-![Red Hat Enterprise Linux 7 compartido de clúster de disco de SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
+![Red Hat Enterprise Linux 7 compartidos de clúster de disco de SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Para obtener más información sobre la configuración del clúster y opciones de agentes de recursos, administración, visite [documentación de referencia RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Para obtener más información sobre la configuración del clúster, las opciones de los agentes de recursos y administración, visite [documentación de referencia RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 ## <a name = "failManual"></a>Clúster de conmutación por error manualmente
 
-El `resource move` comando crea una restricción de forzar el recurso que se va a iniciar en el nodo de destino.  Después de ejecutar el `move` comando, ejecutando el recurso `clear` quitará la restricción de modo que es posible mover el recurso nuevo o hacer que el recurso de conmutar por error automáticamente. 
+El `resource move` comando crea una restricción de forzar el recurso para iniciarse en el nodo de destino.  Después de ejecutar el `move` comando, ejecutando el recurso `clear` quitará la restricción, por lo que es posible mover el recurso nuevo o que el recurso se conmutarán por error automáticamente. 
 
 ```bash
 sudo pcs resource move <sqlResourceName> <targetNodeName>  
 sudo pcs resource clear <sqlResourceName> 
 ```
 
-En el ejemplo siguiente se mueve la **mssqlha** recursos a un nodo denominado **sqlfcivm2**y, a continuación, quita la restricción para que el recurso puede pasar a otro nodo más adelante.  
+En el ejemplo siguiente se mueve el **mssqlha** recursos a un nodo denominado **sqlfcivm2**y, a continuación, quita la restricción para que el recurso puede mover a otro nodo más adelante.  
 
 ```bash
 sudo pcs resource move mssqlha sqlfcivm2 
@@ -71,7 +71,7 @@ Ver el estado activo del clúster y recursos:
 sudo crm_mon 
 ```
 
-Ver los registros de recursos de agente en `/var/log/cluster/corosync.log`
+Ver los registros del agente de recursos en `/var/log/cluster/corosync.log`
 
 ## <a name="add-a-node-to-a-cluster"></a>Agregar un nodo a un clúster
 
@@ -81,13 +81,13 @@ Ver los registros de recursos de agente en `/var/log/cluster/corosync.log`
    ip addr show
    ```
 
-3. El nuevo nodo tiene un nombre único que es de 15 caracteres o menos. De forma predeterminada en Red Hat Linux es el nombre del equipo `localhost.localdomain`. Este nombre predeterminado puede no ser único y es demasiado largo. Establezca el nombre del equipo del nuevo nodo. Establece el nombre del equipo mediante la adición a `/etc/hosts`. El siguiente script le permite editar `/etc/hosts` con `vi`. 
+3. El nuevo nodo necesita un nombre único que es de 15 caracteres o menos. De forma predeterminada en Red Hat Linux es el nombre del equipo `localhost.localdomain`. Este nombre predeterminado puede no ser única y es demasiado largo. Establezca el nombre de equipo del nuevo nodo. Establece el nombre del equipo mediante la adición a `/etc/hosts`. El siguiente script le permite editar `/etc/hosts` con `vi`. 
 
    ```bash
    sudo vi /etc/hosts
    ```
 
-   El ejemplo siguiente muestra `/etc/hosts` con las adiciones de tres nodos con el nombre `sqlfcivm1`, `sqlfcivm2`, y`sqlfcivm3`.
+   El ejemplo siguiente muestra `/etc/hosts` con adiciones de tres nodos denominados `sqlfcivm1`, `sqlfcivm2`, y`sqlfcivm3`.
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -101,7 +101,7 @@ Ver los registros de recursos de agente en `/var/log/cluster/corosync.log`
 
 1. Detenga el servicio de SQL Server en el nuevo nodo.
 
-1. Siga las instrucciones para montar el directorio del archivo de base de datos a la ubicación compartida:
+1. Siga las instrucciones para montar el directorio de archivos de base de datos a la ubicación compartida:
 
    Desde el servidor NFS, instalar `nfs-utils`
 
@@ -109,7 +109,7 @@ Ver los registros de recursos de agente en `/var/log/cluster/corosync.log`
    sudo yum -y install nfs-utils 
    ``` 
 
-   Abra el firewall en los clientes y servidor NFS 
+   Abra el firewall de los clientes y el servidor NFS 
 
    ```bash
    sudo firewall-cmd --permanent --add-service=nfs
@@ -126,7 +126,7 @@ Ver los registros de recursos de agente en `/var/log/cluster/corosync.log`
 
    Ejecute `mount -a` para que los cambios surtan efecto.
    
-1. En el nuevo nodo, cree un archivo para almacenar el nombre de usuario de SQL Server y la contraseña para el inicio de sesión marcapasos. Con el siguiente comando se crea y rellena este archivo:
+1. En el nodo nuevo, cree un archivo para almacenar el nombre de usuario de SQL Server y la contraseña para el inicio de sesión de Pacemaker. Con el siguiente comando se crea y rellena este archivo:
 
    ```bash
    sudo touch /var/opt/mssql/passwd
@@ -136,7 +136,7 @@ Ver los registros de recursos de agente en `/var/log/cluster/corosync.log`
    sudo chmod 600 /var/opt/mssql/passwd
    ```
 
-3. En el nuevo nodo, abra los puertos de firewall marcapasos. Para abrir estos puertos con `firewalld`, ejecute el comando siguiente:
+3. En el nuevo nodo, abra los puertos de firewall de Pacemaker. Para abrir estos puertos con `firewalld`, ejecute el comando siguiente:
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -149,19 +149,19 @@ Ver los registros de recursos de agente en `/var/log/cluster/corosync.log`
    > * TCP: puertos 2224, 3121, 21064
    > * UDP: puerto 5405
 
-1. Instalar paquetes de marcapasos en el nuevo nodo.
+1. Instale los paquetes de Pacemaker en el nuevo nodo.
 
    ```bash
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
  
-2. Establezca la contraseña para el usuario predeterminado que se crea al instalar paquetes de Pacemaker y Corosync. Utilice la misma contraseña que los nodos existentes. 
+2. Establezca la contraseña para el usuario predeterminado que se crea al instalar paquetes de Pacemaker y Corosync. Usar la misma contraseña que los nodos existentes. 
 
    ```bash
    sudo passwd hacluster
    ```
  
-3. Habilite e inicie el servicio `pcsd` y Pacemaker. Esto permitirá que el nuevo nodo a unirse al clúster después del reinicio. Ejecute el siguiente comando en el nuevo nodo.
+3. Habilite e inicie el servicio `pcsd` y Pacemaker. Esto permitirá que el nuevo nodo se unan al clúster después del reinicio. Ejecute el siguiente comando en el nuevo nodo.
 
    ```bash
    sudo systemctl enable pcsd
@@ -169,13 +169,13 @@ Ver los registros de recursos de agente en `/var/log/cluster/corosync.log`
    sudo systemctl enable pacemaker
    ```
 
-4. Instale el agente de recursos de FCI para SQL Server. Ejecute los siguientes comandos en el nuevo nodo. 
+4. Instale el agente de recursos de FCI para SQL Server. Ejecute los comandos siguientes en el nuevo nodo. 
 
    ```bash
    sudo yum install mssql-server-ha
    ```
 
-1. En un nodo existente del clúster, autenticar el nuevo nodo y agregarlo al clúster:
+1. En un nodo existente desde el clúster, autenticar el nuevo nodo y agregarlo al clúster:
 
     ```bash
     sudo pcs    cluster auth <nodeName3> -u hacluster 
@@ -203,28 +203,28 @@ sudo pcs    cluster node remove <nodeName>
 sudo pcs    resource op monitor interval=<interval>s <sqlResourceName> 
 ```
 
-En el ejemplo siguiente se establece el intervalo de supervisión en 2 segundos para el recurso mssql:
+El ejemplo siguiente establece el intervalo de supervisión a 2 segundos para el recurso mssql:
 
 ```bash
 sudo pcs    resource op monitor interval=2s mssqlha 
 ```
-## <a name="troubleshoot-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Solucionar problemas de clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
+## <a name="troubleshoot-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Solución de problemas de clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
 
-En el clúster de solución de problemas puede ayudar a comprender cómo los tres demonios funcionan conjuntamente para administrar recursos de clúster. 
+Para solucionar problemas del clúster puede ser útil para comprender cómo funcionan conjuntamente los demonios de tres para administrar recursos de clúster. 
 
-| Demonio | Description 
+| Demonio | Descripción 
 | ----- | -----
-| Corosync | Proporciona la pertenencia de quórum y mensajería entre nodos del clúster.
-| Marcapasos | Se encuentra en la parte superior Corosync y proporciona a las máquinas de estado para los recursos. 
-| PCSD | Administra marcapasos y Corosync a través de la `pcs` herramientas
+| Corosync | Proporciona pertenencia de quórum y mensajería entre los nodos del clúster.
+| Pacemaker | Reside en la parte superior Corosync y proporciona a las máquinas de estado para los recursos. 
+| PCSD | Administra Pacemaker y Corosync a través de la `pcs` herramientas
 
-PCSD debe estar en ejecución para poder usar `pcs` herramientas. 
+Debe ejecutar PCSD para poder usar `pcs` herramientas. 
 
 ### <a name="current-cluster-status"></a>Estado actual del clúster 
 
-`sudo pcs status` Devuelve información básica sobre el estado de clúster, quórum, nodos, recursos y el demonio para cada nodo. 
+`sudo pcs status` Devuelve información básica sobre el estado del clúster, quórum, nodos, recursos y el demonio para cada nodo. 
 
-Un ejemplo de una salida de quórum marcapasos correcto sería:
+Un ejemplo de una salida de quórum en buen estado pacemaker sería:
 
 ```
 Cluster name: MyAppSQL 
@@ -249,23 +249,23 @@ corosync: active/disabled
 pacemaker: active/enabled 
 ```
 
-En el ejemplo, `partition with quorum` significa que un quórum de mayoría de nodos está en línea. Si el clúster pierde un quórum de mayoría de nodos, `pcs status` devolverá `partition WITHOUT quorum` y todos los recursos que se van a detener. 
+En el ejemplo, `partition with quorum` significa que un quórum de mayoría de nodos está en línea. Si el clúster pierde un quórum de mayoría de nodos, `pcs status` devolverá `partition WITHOUT quorum` y se detendrán todos los recursos. 
 
 `online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` Devuelve el nombre de todos los nodos que participan actualmente en el clúster. Si todos los nodos no están participando, `pcs status` devuelve `OFFLINE: [<nodename>]`.
 
 `PCSD Status` Muestra el estado del clúster para cada nodo.
 
-### <a name="reasons-why-a-node-may-be-offline"></a>Motivos por qué un nodo puede estar sin conexión
+### <a name="reasons-why-a-node-may-be-offline"></a>Motivos de por qué un nodo puede estar sin conexión
 
 Compruebe los siguientes elementos cuando un nodo está sin conexión.
 
 - **Firewall de**
 
-    Hay los siguientes puertos estén abiertos en todos los nodos para marcapasos puedan comunicarse.
+    Necesitan los siguientes puertos estén abiertos en todos los nodos para que Pacemaker pueda comunicarse.
     
     - ** TCP: 2224, 3121, 21064
 
-- **Marcapasos o Corosync servicios que se ejecutan**
+- **Pacemaker o servicios Corosync en ejecución**
 
 - **Comunicación de nodo**
 
@@ -273,7 +273,7 @@ Compruebe los siguientes elementos cuando un nodo está sin conexión.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-* [Clúster desde el principio](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Guía de marcapasos
+* [Desde el principio del clúster](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Guía de Pacemaker
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -1,5 +1,5 @@
 ---
-title: Sys.numbered_procedures (Transact-SQL) | Documentos de Microsoft
+title: Sys.numbered_procedures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d16757a007b423ab6c4ed8ff8a002a73c9c583dd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33178761"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987447"
 ---
 # <a name="sysnumberedprocedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Contiene una fila para cada procedimiento almacenado de SQL Server creado como procedimiento numerado. No se muestra una fila para el procedimiento almacenado base (número = 1). Las entradas para los procedimientos almacenados base se pueden encontrar en vistas como **sys.objects** y **sys.procedures**.  
+  Contiene una fila para cada procedimiento almacenado de SQL Server creado como procedimiento numerado. No se muestra una fila para el procedimiento almacenado base (número = 1). Las entradas para los procedimientos almacenados bases pueden encontrarse en las vistas como **sys.objects** y **sys.procedures**.  
   
 > [!IMPORTANT]  
 >  Los procedimientos numerados son desusados. Por tanto, se desaconseja su uso. Se desencadena un evento DEPRECATION_ANNOUNCEMENT cuando se compila una consulta que utiliza esta vista de catálogo.  

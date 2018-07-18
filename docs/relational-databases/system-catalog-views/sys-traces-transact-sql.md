@@ -1,5 +1,5 @@
 ---
-title: Sys.Traces (Transact-SQL) | Documentos de Microsoft
+title: Sys.Traces (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,23 +25,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8cabef6e979c613c977d7e5636f46a10b447fbbe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221580"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981531"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **sys.traces** vista de catálogo contiene las trazas de ejecución actuales en el sistema. Esta vista se ha diseñado como un reemplazo para el **fn_trace_getinfo** función.  
+  El **sys.traces** vista de catálogo contiene las trazas de ejecución actuales en el sistema. Esta vista está pensada como un reemplazo para el **fn_trace_getinfo** función.  
   
  Para obtener una lista completa de los eventos de seguimiento compatibles, consulte [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use vistas de catálogo de eventos extendidos en su lugar.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. de seguimiento.|  
 |**status**|**int**|Estado de la seguimiento:<br /><br /> 0 = detenida<br /><br /> 1 = en ejecución|  
@@ -62,7 +62,7 @@ ms.locfileid: "33221580"
 |**event_count**|**bigint**|Número total de eventos que se han producido.|  
 |**dropped_event_count**|**int**|Número total de eventos que se han quitado.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

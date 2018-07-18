@@ -1,5 +1,5 @@
 ---
-title: Sys.external_tables (Transact-SQL) | Documentos de Microsoft
+title: Sys.external_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 06f71aedda72735652da9ee353dcd62e5c24b48c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33181321"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037273"
 ---
 # <a name="sysexternaltables-transact-sql"></a>Sys.external_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -33,19 +33,19 @@ ms.locfileid: "33181321"
 |Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |\<hereda columnas >||Para obtener una lista de columnas que hereda esta vista, consulte [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).||  
-|max_column_id_used|**int**|Id. de columna máximo utilizado alguna vez para esta tabla.||  
+|max_column_id_used|**int**|Id. de columna máximo usado jamás para esta tabla.||  
 |uses_ansi_nulls|**bit**|La tabla se creó con la opción de base de datos SET ANSI_NULLS establecida en ON.||  
-|data_source_id|**int**|Identificador de objeto de origen de datos externo.||  
+|data_source_id|**int**|Id. de objeto para el origen de datos externo.||  
 |file_format_id|**int**|Para las tablas externas a través de un origen de datos externo de HADOOP, es el identificador de objeto para el formato de archivo externo.||  
-|ubicación|**nvarchar(4000)**|Para las tablas externas a través de un origen de datos externo de HADOOP, se trata de la ruta de acceso de los datos externos en HDFS.||  
-|reject_type|**tinyint**|Para las tablas externas a través de un origen de datos externo de HADOOP, esta es la manera en que se cuentan las filas rechazados al consultar datos externos.|VALOR: el número de filas rechazados.<br /><br /> PORCENTAJE: el porcentaje de filas rechazados.|  
-|reject_value|**float**|Para las tablas externas a través de un origen de datos externo de HADOOP:<br /><br /> Para *reject_type =* valor, se trata del número de rechazos de fila para permitir antes de cancelar la consulta.<br /><br /> Para *reject_type* = porcentaje, éste es el porcentaje de rechazos de fila para permitir antes de cancelar la consulta.||  
-|reject_sample_value|**int**|Para *reject_type* = porcentaje, este es el número de filas que se va a cargar, ya sea correcta o incorrectamente, antes de calcular el porcentaje de filas rechazados.|NULL si reject_type = valor.|  
-|distribution_type|**int**|Para las tablas externas a través de un origen de datos externo SHARD_MAP_MANAGER, es la distribución de datos de las filas de las tablas base subyacentes.|0 – Sharded<br /><br /> 1 – replicado<br /><br /> 2 – Round robin|  
-|distribution_desc|**nvarchar(120)**|Para las tablas externas a través de un origen de datos externo SHARD_MAP_MANAGER, este es el tipo de distribución que se muestra como una cadena.||  
-|sharding_column_id|**int**|Para las tablas externas a través de un origen de datos externo de SHARD_MAP_MANAGER y una distribución particionada, es el identificador de columna de la columna que contiene los valores de clave de particionamiento.||  
-|remote_schema_name|**sysname**|Para las tablas externas a través de un origen de datos externo SHARD_MAP_MANAGER, éste es el esquema donde se encuentra la tabla base en las bases de datos remotos (si difiere del esquema donde se define la tabla externa).||  
-|remote_object_name|**sysname**|Para las tablas externas a través de un origen de datos externo SHARD_MAP_MANAGER, este es el nombre de la tabla base en las bases de datos remotos (si es diferente del nombre de la tabla externa).||  
+|ubicación|**nvarchar(4000)**|Para las tablas externas a través de un origen de datos externo de HADOOP, esto es la ruta de acceso de los datos externos en HDFS.||  
+|reject_type|**tinyint**|Para las tablas externas a través de un origen de datos externo de HADOOP, esta es la manera en que se cuentan las filas rechazadas al consultar datos externos.|VALOR: el número de filas rechazadas.<br /><br /> PORCENTAJE: el porcentaje de filas rechazadas.|  
+|reject_value|**float**|Para las tablas externas a través de un origen de datos externo de HADOOP:<br /><br /> Para *reject_type =* valor, este es el número de rechazos de fila que se permiten antes de establecer la consulta.<br /><br /> Para *reject_type* = porcentaje, este es el porcentaje de rechazos de fila que se permiten antes de establecer la consulta.||  
+|reject_sample_value|**int**|Para *reject_type* = porcentaje, este es el número de filas que se va a cargar, ya sea correcta o incorrectamente, antes de calcular el porcentaje de filas rechazadas.|NULL si reject_type = VALUE.|  
+|distribution_type|**int**|Para las tablas externas a través de un origen de datos externos SHARD_MAP_MANAGER, esta es la distribución de datos de las filas entre las tablas base subyacentes.|0 – Sharded<br /><br /> 1: replicación<br /><br /> 2 – Round robin|  
+|distribution_desc|**nvarchar(120)**|Para las tablas externas a través de un origen de datos externos SHARD_MAP_MANAGER, este es el tipo de distribución que se muestra como una cadena.||  
+|sharding_column_id|**int**|Para las tablas externas a través de un origen de datos externos SHARD_MAP_MANAGER y una distribución con particiones, se trata del Id. de columna de la columna que contiene los valores de clave de particionamiento.||  
+|remote_schema_name|**sysname**|Para las tablas externas a través de un origen de datos externos SHARD_MAP_MANAGER, éste es el esquema donde se encuentra la tabla base en las bases de datos remotos (si difiere del esquema donde se define la tabla externa).||  
+|remote_object_name|**sysname**|Para las tablas externas a través de un origen de datos externos SHARD_MAP_MANAGER, este es el nombre de la tabla base en las bases de datos remotos (si es diferente del nombre de la tabla externa).||  
   
 ## <a name="permissions"></a>Permisos  
  La visibilidad de los metadatos en las vistas de catálogo se limita a los elementos protegibles y que son propiedad de un usuario o sobre los que el usuario tiene algún permiso. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

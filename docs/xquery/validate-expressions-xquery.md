@@ -1,5 +1,5 @@
 ---
-title: Validar expresiones (XQuery) | Documentos de Microsoft
+title: Expresiones de validación (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,19 +22,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc8f8006679709e7ea8f9d73aed1f3757072ad53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076288"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036703"
 ---
 # <a name="validate-expressions-xquery"></a>Expresiones de validación (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  En esta implementación, el **validar** no se admite la expresión. El resultado de las expresiones de construcción XQuery es siempre sin tipo. Si el resultado de una expresión XQuery debe escribirse, utilice la expresión SQL CAST para convertir el resultado en un **xml** tipo de datos con la colección de esquemas que prefiera.  
+  En esta implementación, el **validar** no se admite la expresión. El resultado de las expresiones de construcción XQuery es siempre sin tipo. Si debe escribirse el resultado de una expresión XQuery, utilice la expresión SQL CAST para convertir el resultado en un **xml** tipo de datos con la colección de esquemas que prefiera.  
   
 ## <a name="see-also"></a>Vea también  
- [Expresiones de ruta de acceso &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)   
+ [Expresiones de ruta &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)   
  [Expresiones XQuery](../xquery/xquery-expressions.md)  
   
   

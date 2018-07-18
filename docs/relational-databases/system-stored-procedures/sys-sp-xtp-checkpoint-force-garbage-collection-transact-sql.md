@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL) | Documentos de Microsoft
+title: Sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4f5968d9a68bef9b9bb6b107d0710d88c7fe5e5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254491"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037709"
 ---
 # <a name="sysspxtpcheckpointforcegarbagecollection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 ## <a name="result-set"></a>Conjunto de resultados  
  Una fila devuelta contiene la siguiente información:  
   
-|Columna|Description|  
+|columna|Descripción|  
 |------------|-----------------|  
 |num_collected_items|Indica el número de archivos que se han movido a la recolección de elementos no utilizados FILESTREAM. Estos son los archivos cuyo número de secuencia de registro (LSN) es menor que el LSN del punto de truncamiento del registro|  
 |num_marked_for_collection_items|Indica el número de archivos delta o de datos cuyo LSN se ha actualizado con el blockID de registro del LSN de fin de registro.|  
 |last_collected_xact_seqno|Devuelve el último LSN correspondiente hasta el que los archivos se han movido para la recolección de elementos no utilizados FILESTREAM.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita el permiso de propietario de la base de datos.  
   
 ## <a name="sample"></a>Ejemplo  

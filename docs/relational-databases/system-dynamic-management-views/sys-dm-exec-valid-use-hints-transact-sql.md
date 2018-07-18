@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_valid_use_hints (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_exec_valid_use_hints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2016
 ms.prod: sql
@@ -23,24 +23,24 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: d1fb0ffed04c77e280d02378429cf769107bdfbc
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463601"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987147"
 ---
 # <a name="sysdmexecvalidusehints-transact-sql"></a>Sys.dm_exec_valid_use_hints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Devuelve [sugerencia USE](../../t-sql/queries/hints-transact-sql-query.md) admite nombres de sugerencia. Muestra un nombre de sugerencia por fila.  
+Devuelve [USE HINT](../../t-sql/queries/hints-transact-sql-query.md) admite nombres de sugerencia. Muestra un nombre de sugerencia por fila.  
   
-Use esta DMV para ver la lista de todas las sugerencias admitidas en la notación de sugerencia de USE.  
+Utilice esta DMV para ver la lista de todas las sugerencias de admitidos en la notación de USE HINT.  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|El nombre de la sugerencia.|
+|NAME|**sysname**|El nombre de la sugerencia.|
 
-Vea [sugerencias de consulta](../../t-sql/queries/hints-transact-sql-query.md) para obtener descripciones de cada sugerencia.
+Consulte [sugerencias de consulta](../../t-sql/queries/hints-transact-sql-query.md) para obtener descripciones de cada sugerencia.
 
 Introducido en [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1.
   

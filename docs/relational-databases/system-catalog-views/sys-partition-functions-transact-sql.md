@@ -1,5 +1,5 @@
 ---
-title: Sys.partition_functions (Transact-SQL) | Documentos de Microsoft
+title: Sys.partition_functions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,30 +26,30 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2a537bc6906576c7eacd8f06d555ab4a3dc69a1d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180431"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987427"
 ---
 # <a name="syspartitionfunctions-transact-sql"></a>sys.partition_functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Contiene una fila por cada función de partición en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre de la función de partición. Es único en la base de datos.|  
 |**function_id**|**int**|Identificador de función de partición Es único en la base de datos.|  
 |**Tipo**|**char(2)**|Tipo de función.<br /><br /> R = Intervalo|  
 |**type_desc**|**nvarchar(60)**|Tipo de función.<br /><br /> RANGE|  
-|**nodos secundarios**|**int**|Número de particiones creadas por la función.|  
+|**distribución ramificada**|**int**|Número de particiones creadas por la función.|  
 |**boundary_value_on_right**|**bit**|Para la creación de particiones por intervalos.<br /><br /> 1 = El valor de límite está incluido en el intervalo RIGHT del límite.<br /><br /> 0 = LEFT.|  
 |**is_system**||**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = El objeto se usa para los fragmentos de índice de texto completo.<br /><br /> 0 = El objeto no se usa para los fragmentos de índice de texto completo.|  
 |**create_date**|**datetime**|Fecha de creación de la función.|  
 |**modify_date**|**datetime**|Fecha de la última modificación de la función mediante una instrucción ALTER.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** . Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

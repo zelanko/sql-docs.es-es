@@ -1,5 +1,5 @@
 ---
-title: Configurar propiedades de informes para informes de Power View | Documentos de Microsoft
+title: Configurar propiedades de informes para informes de Power View | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27698f0431a11b73c1ebacd532769269458f1225
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045669"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033434"
 ---
-# <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Complementario de lecciones: configurar propiedades de informes para informes de Power View
+# <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Complementario lección: configurar propiedades de informes para informes de Power View
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-En esta lección complementaria, establecerá propiedades para el proyecto AW Internet Sales de informes. Las propiedades de informe facilitan a los usuarios finales la selección y presentación de datos del modelo en Power View. También establecerá las propiedades para ocultar ciertas columnas y tablas, y creará nuevos datos para usar en gráficos.   
+En esta lección complementaria, establecerá las propiedades del proyecto AW Internet Sales de informes. Las propiedades de informe facilitan a los usuarios finales la selección y presentación de datos del modelo en Power View. También establecerá las propiedades para ocultar ciertas columnas y tablas, y creará nuevos datos para usar en gráficos.   
   
 Tiempo estimado para completar esta lección: **30 minutos**  
   
@@ -106,7 +106,7 @@ Para obtener información detallada sobre el conjunto de campos predeterminado, 
 ## <a name="table-behavior"></a>Comportamiento de tabla  
 Con las propiedades de Comportamiento de tabla, puede cambiar el comportamiento predeterminado de los diferentes tipos de visualización y el comportamiento de agrupación para las tablas usadas en los informes de Power View. Esto permite una ubicación predeterminada más eficaz de la información de identificación como los nombres, imágenes o títulos en los diseños de mosaico, tarjeta y gráfico.  
   
-Para obtener información detallada acerca de las propiedades de comportamiento de la tabla, vea [configurar propiedades de comportamiento de tabla para informes de Power View](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) en libros en pantalla de SQL Server.  
+Para obtener información detallada acerca de las propiedades de comportamiento de la tabla, vea [configurar las propiedades de comportamiento de tablas para informes de Power View](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) en libros en pantalla de SQL Server.  
   
 #### <a name="to-set-table-behavior"></a>Para establecer el comportamiento de la tabla 
   
@@ -147,57 +147,57 @@ Solo establecerá algunas propiedades de columna distintas aquí, pero hay mucha
   
     **Customer**  
   
-    |Columna|Propiedad|Value|  
+    |columna|Property|Valor|  
     |----------|------------|---------|  
-    |Geography Id|Oculto|True|  
+    |Geography Id|Hidden|True|  
     |Birth Date|Formato de datos|Short Date|  
   
     **Date**  
   
     > [!NOTE]  
-    > Dado que la tabla Date se seleccionó como la tabla de fechas de modelos con la opción Marcar como tabla de fechas, en la lección 7, Marcar como tabla de fechas, y la columna Date de la tabla Date como la columna que se usa como identificador único, la propiedad Identificador de fila de la columna Date se establecerá automáticamente en True y no se puede cambiar. Cuando se usan funciones de inteligencia temporal en fórmulas DAX, debe especificar una tabla de fechas. En este modelo, creó una serie de medidas con las funciones de inteligencia temporal para calcular los datos de ventas para varios periodos como los trimestres anteriores y actuales y también para usarse en KPI. Para obtener más información acerca de cómo especificar una tabla de fechas, vea [especificar marcar como tabla de fechas para su uso con inteligencia de tiempo](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) en libros en pantalla de SQL Server.  
+    > Dado que la tabla Date se seleccionó como la tabla de fechas de modelos con la opción Marcar como tabla de fechas, en la lección 7, Marcar como tabla de fechas, y la columna Date de la tabla Date como la columna que se usa como identificador único, la propiedad Identificador de fila de la columna Date se establecerá automáticamente en True y no se puede cambiar. Cuando se usan funciones de inteligencia temporal en fórmulas DAX, debe especificar una tabla de fechas. En este modelo, creó una serie de medidas con las funciones de inteligencia temporal para calcular los datos de ventas para varios periodos como los trimestres anteriores y actuales y también para usarse en KPI. Para obtener más información acerca de cómo especificar una tabla de fechas, vea [especificar marcar como tabla de fechas con inteligencia de tiempo](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) en libros en pantalla de SQL Server.  
   
-    |Columna|Propiedad|Value|  
+    |columna|Property|Valor|  
     |----------|------------|---------|  
-    |Date|Formato de datos|Short Date|  
-    |Día de la semana|Oculto|True|  
+    |date|Formato de datos|Short Date|  
+    |Día de la semana|Hidden|True|  
     |Nombre del día|Sort By Column|Día de la semana|  
-    |Día de la semana|Oculto|True|  
-    |Día del mes|Oculto|True|  
-    |Día del año|Oculto|True|  
+    |Día de la semana|Hidden|True|  
+    |Día del mes|Hidden|True|  
+    |Día del año|Hidden|True|  
     |Nombre del mes|Sort By Column|Month|  
-    |Month|Oculto|True|  
-    |Month Calendar|Oculto|True|  
-    |Trimestre fiscal|Oculto|True|  
-    |Año fiscal|Oculto|True|  
+    |Month|Hidden|True|  
+    |Month Calendar|Hidden|True|  
+    |Trimestre fiscal|Hidden|True|  
+    |Año fiscal|Hidden|True|  
     |Semestre fiscal|Hidden|True|  
   
     **Geography**  
   
-    |Columna|Propiedad|Value|  
+    |columna|Property|Valor|  
     |----------|------------|---------|  
-    |Geography Id|Oculto|True|  
-    |Sales Territory Id|Oculto|True|  
+    |Geography Id|Hidden|True|  
+    |Sales Territory Id|Hidden|True|  
   
     **Product**  
   
-    |Columna|Propiedad|Value|  
+    |columna|Property|Valor|  
     |----------|------------|---------|  
-    |Product Id|Oculto|True|  
+    |Product Id|Hidden|True|  
     |Product Alternate Id|Etiqueta predeterminada|True|  
-    |Id. de subcategoría del producto|Oculto|True|  
+    |Id. de subcategoría del producto|Hidden|True|  
     |Fecha de inicio del producto|Formato de datos|Short Date|  
     |Fecha de finalización del producto|Formato de datos|Short Date|  
   
     **Internet Sales**  
   
-    |Columna|Propiedad|Value|  
+    |columna|Property|Valor|  
     |----------|------------|---------|  
-    |Product Id|Oculto|True|  
-    |Customer Id|Oculto|True|  
-    |Id. de promoción|Oculto|True|  
-    |Id. de moneda|Oculto|True|  
-    |Sales Territory Id|Oculto|True|  
+    |Product Id|Hidden|True|  
+    |Customer Id|Hidden|True|  
+    |Id. de promoción|Hidden|True|  
+    |Id. de moneda|Hidden|True|  
+    |Sales Territory Id|Hidden|True|  
     |Cantidad del pedido|Tipo de datos<br /><br />Formato de datos<br /><br />Posiciones decimales|Decimal Number<br /><br />Decimal Number<br /><br />0|  
     |Order Date|Formato de datos|Short Date|  
     |Due Date|Formato de datos|Short Date|  
@@ -208,7 +208,7 @@ Dado que ha cambiado el modelo, debe volver a implementarlo.
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>Para volver a implementar el modelo tabular Ventas por Internet de Adventure Works  
   
--   En SSDT, haga clic en el **generar** menú y, a continuación, haga clic en **implementar Adventure Works Internet Sales Model**.  
+-   En SSDT, haga clic en el **compilar** menú y, a continuación, haga clic en **implementar Adventure Works Internet Sales Model**.  
   
     Aparece el cuadro de diálogo **Implementar** en el que se muestra el estado de implementación de los metadatos y de las tablas incluidas en el modelo.  
   

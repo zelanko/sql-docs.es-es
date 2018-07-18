@@ -1,5 +1,5 @@
 ---
-title: Sys.resource_governor_external_resource_pools (Transact-SQL) | Documentos de Microsoft
+title: Sys.resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b5681bfb81bfc4b18a0052f5ce397973ae90688f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181291"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985158"
 ---
 # <a name="sysresourcegovernorexternalresourcepools-transact-sql"></a>Sys.resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -36,16 +36,16 @@ ms.locfileid: "33181291"
 
 Devuelve la configuración del grupo de recursos externos almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada fila de la vista determina la configuración de un grupo.
   
-|Nombre de columna|Tipo de datos|Description|
+|Nombre de columna|Tipo de datos|Descripción|
 |-----------------|---------------|-----------------|
 |pool_id|**int**|Identificador único del grupo de recursos de servidor. No admite valores NULL.<br /><br /> **Nota:** puede cambiarse en el futuro.|
-|name|**sysname**|Nombre del grupo de recursos de servidor. No admite valores NULL.|
+|NAME|**sysname**|Nombre del grupo de recursos de servidor. No admite valores NULL.|
 |max_cpu_percent|**int**|Ancho banda de la CPU promedio máximo permitido para todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU. No admite valores NULL.|
 |max_memory_percent|**int**|Porcentaje de la memoria total del servidor que puede utilizarse en las solicitudes en este grupo de recursos de servidor. No admite valores NULL. El máximo efectivo depende de los mínimos del grupo. Por ejemplo, max_memory_percent puede estar establecido en 100, pero el máximo efectivo es menor.|
 |max_processes|**int**|Número máximo de procesos externos simultáneos. El valor predeterminado, 0, especifica que no hay límite. No admite valores NULL.|
-|version|**bigint**|Número de versión interna.|
+|version|**bigint**|Número de versión interno.|
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Permisos
 
 Requiere el permiso VIEW SERVER STATE.
 

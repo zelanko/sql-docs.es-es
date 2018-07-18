@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_available_backups (Transact-SQL) | Documentos de Microsoft
+title: managed_backup.fn_available_backups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7899bdcc0ef397534a723abae15d7263d371d5ee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230860"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040363"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 Si se quita y se vuelve a crear una base de datos, se devuelven los conjuntos de copia de seguridad de todas las bases de datos. La salida se ordena por el database_guid, que identifica de forma única cada base de datos.   
 Si faltan datos en LSN que indican que hay una interrupción en la cadena de registros, la tabla contendrá una fila especial para cada segmento de LSN que falte.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|La dirección URL del archivo de copia de seguridad.|  
 |backup_type|NVARCHAR(6)|‘DB’ de copia de seguridad de base de datos ‘LOG’ de copia de seguridad de registros|  
@@ -68,14 +68,14 @@ Si faltan datos en LSN que indican que hay una interrupción en la cadena de reg
 |last_recovery_fork_id|UNIQUEIDENTIFIER|Número de identificación de la bifurcación de recuperación final.|  
 |first_recovery_fork_id|UNIQUEIDENTIFIER|Id. de la bifurcación de recuperación inicial. Para las copias de seguridad de datos, first_recovery_fork_guid es igual a last_recovery_fork_guid.|  
 |fork_point_lsn|NUMERIC(25, 0)|Si first_recovery_fork_id no es igual que last_recovery_fork_id, este es el número de secuencia de registro del punto de bifurcación. De lo contrario, este valor es NULL.|  
-|availability_group_guid|UNIQUEIDENTIFIER|Si una base de datos es una base de datos de AlwaysOn, este es el GUID del grupo de disponibilidad. En caso contrario, este valor es NULL.|  
+|availability_group_guid|UNIQUEIDENTIFIER|Si una base de datos es una base de datos Always On, este es el GUID del grupo de disponibilidad. En caso contrario, este valor es NULL.|  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto) o 1 (error).  
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Permisos  
  Requiere **seleccione** permisos en esta función.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -88,7 +88,7 @@ FROM managed_backup.fn_available_backups ('MyDB')
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [SQL Server administrado Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
+ [Seguridad administrada de SQL Server para Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
  [Restaurar a partir de copias de seguridad archivadas en Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
   
   

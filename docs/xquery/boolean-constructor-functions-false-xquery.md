@@ -1,5 +1,5 @@
 ---
-title: Función false (XQuery) | Documentos de Microsoft
+title: Función false (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1e39e7774961cdf141bb3495dba067e6b3c26c40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076572"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037393"
 ---
-# <a name="boolean-constructor-functions---false-xquery"></a>Funciones de Constructor booleanas - false (XQuery)
+# <a name="boolean-constructor-functions---false-xquery"></a>Funciones de Constructor booleano: false (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Devuelve el valor xs:boolean False. Es equivalente a `xs:boolean("0")`.  
@@ -42,10 +42,10 @@ fn:false() as xs:boolean
 ```  
   
 ## <a name="examples"></a>Ejemplos  
- Este tema ofrecen ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos de AdventureWorks.  
+ En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-false-xquery-boolean-function"></a>A. Usar la función booleana false() de XQuery  
- Para obtener un ejemplo funcional, vea [true función &#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md).  
+ Para obtener un ejemplo funcional, consulte [true función &#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones de Constructor booleano &#40;XQuery&#41;](http://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  

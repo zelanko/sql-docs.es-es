@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;estructura&gt;. CASOS | Documentos de Microsoft
+title: SELECT FROM &lt;estructura&gt;. CASOS | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f473cb42230aec0b5e40fb59fe10b2f34013ba2f
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842108"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985267"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;estructura&gt;. CASOS
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,9 +23,9 @@ ms.locfileid: "34842108"
   
  Si la obtención de detalles no está habilitada en la estructura, se produce un error en la instrucción. También se producirá un error en la instrucción si el usuario no tiene permisos de obtención de detalles en la estructura de minería de datos.  
   
- En [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], obtención de detalles en nuevas estructuras de minería de datos está habilitada de forma predeterminada. Para comprobar si la obtención de detalles está habilitada para una estructura determinada, compruebe si el valor de la **CacheMode** propiedad está establecida en **KeepTrainingCases**.  
+ En [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], obtención de detalles en estructuras de minería de datos nuevas está habilitada de forma predeterminada. Para comprobar si está habilitada la obtención de detalles para una estructura determinada, compruebe si el valor de la **CacheMode** propiedad está establecida en **KeepTrainingCases**.  
   
- Si el valor de **CacheMode** se cambia a **ClearAfterProcessing**, los casos de estructura se borran de la memoria caché y no se puede utilizar la obtención de detalles.  
+ Si el valor de **CacheMode** cambia a **ClearAfterProcessing**, los casos de estructura se borran de la memoria caché y no se puede usar la obtención de detalles.  
   
 > [!NOTE]  
 >  No puede habilitar o deshabilitar la obtención de detalles en la estructura de minería de datos utilizando Extensiones de minería de datos (DMX).  
@@ -50,7 +50,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  *estructura*  
  Nombre de la estructura.  
   
- *Expresión de condición*  
+ *expresión de condición*  
  Condición para restringir los valores que devuelve la lista de columnas.  
   
  *expression*  
@@ -63,10 +63,10 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
 SELECT StructureColumn('<column name>') FROM <model>.CASES  
 ```  
   
- Por lo tanto, para proteger datos confidenciales o personales, debería crear la vista del origen de datos para enmascarar la información personal y conceder **AllowDrillthrough** permiso en una estructura de minería de datos o el modelo de minería de datos solo cuando sea necesario.  
+ Por lo tanto, para proteger datos confidenciales o información personal, debería crear la vista del origen de datos para enmascarar los datos personales y conceder **AllowDrillthrough** permiso en una estructura de minería de datos o modelo de minería de datos solo cuando es necesario.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos siguientes se basan en la estructura de minería de datos Targeted Mailing, que se basa en el [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] base de datos y los modelos de minería de datos asociados. Para obtener más información, consulte [Tutorial básico de minería de datos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Los ejemplos siguientes se basan en la estructura de minería de datos Targeted Mailing, que se basa en el [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] base de datos y los modelos de minería de datos asociados. Para obtener más información, consulte [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>Ejemplo 1: obtener detalles de los casos de estructura  
  El ejemplo siguiente devuelve una lista de los 500 clientes más antiguos de la estructura de minería de datos Targeted Mailing. La consulta devuelve todas las columnas del modelo de minería de datos, pero restringe las filas a aquéllos que compraron una bicicleta y los ordena por edades. También puede editar la lista de expresiones para devolver únicamente las columnas que necesite.  
@@ -91,7 +91,7 @@ WHERE IsTestCase();
   
 ## <a name="see-also"></a>Vea también  
  [SELECCIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
- [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

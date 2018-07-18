@@ -1,5 +1,5 @@
 ---
-title: Insertar datos con diagramas de actualización XML (SQLXML 4.0) | Documentos de Microsoft
+title: Insertar datos con diagramas de actualización XML (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -40,15 +40,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 563a79b68a39a886d70234f2e9f6eaae118d11ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973500"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046153"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Insertar datos con diagramas de actualización XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Un diagrama de actualización indica una operación de inserción cuando una instancia de registro aparece en el  **\<después >** bloque, pero no en la correspondiente  **\<antes >** bloque. En este caso, el diagrama de actualización inserta el registro en el  **\<después >** bloque en la base de datos.  
+  Un diagrama de actualización indica una operación de inserción cuando una instancia de registro aparece en el  **\<después >** bloque pero no en las correspondientes  **\<antes >** bloque. En este caso, el diagrama de actualización inserta el registro en el  **\<después >** bloque en la base de datos.  
   
  Éste es el formato del diagrama de actualización para una operación de inserción:  
   
@@ -72,28 +72,28 @@ ms.locfileid: "32973500"
 ```  
   
 ## <a name="before-block"></a>\<antes de > bloque  
- El  **\<antes >** bloque puede omitirse en una operación de inserción. Si la parte opcional **esquema de asignación** atributo no se especifica, el  **\<ElementName >** que se especifica en el diagrama de actualización se asigna a una tabla de base de datos y los elementos secundarios o atributos se asignan a columnas de la tabla.  
+ El  **\<antes >** bloque puede omitirse en una operación de inserción. Si el elemento opcional **esquema de asignación** atributo no se especifica, el  **\<ElementName >** que se especifica en el diagrama de actualización se asigna a una tabla de base de datos y los elementos secundarios o atributos se asignan a columnas de la tabla.  
   
 ## <a name="after-block"></a>\<una vez > bloque  
- Puede especificar uno o más registros en la  **\<después >** bloque.  
+ Puede especificar uno o más registros en el  **\<después >** bloque.  
   
- Si el  **\<después >** bloque no proporciona un valor para una columna en particular, el diagrama de actualización usa el valor predeterminado que se especifica en el esquema anotado (si se ha especificado un esquema). Si el esquema no especifica un valor predeterminado para la columna, el diagrama de actualización no especifica ningún valor explícito para esta columna y, en su lugar, se asigna el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valor de predeterminado (si se especifica) a esta columna. Si no hay ningún valor predeterminado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y la columna acepta un valor NULL, el diagrama de actualización establece el valor de columna en NULL. Si la columna no tiene un valor predeterminado ni acepta un valor NULL, se produce un error en el comando y el diagrama de actualización devuelve un error. Opcional **updg:returnid** atributo se utiliza para devolver el valor de identidad generado por el sistema cuando se agrega un registro en una tabla con una columna de tipo IDENTITY.  
+ Si el  **\<después >** bloque no proporciona un valor para una columna en particular, el diagrama de actualización usa el valor predeterminado que se especifica en el esquema anotado (si se ha especificado un esquema). Si el esquema no especifica un valor predeterminado para la columna, el diagrama de actualización no especifica ningún valor explícito para esta columna y, en su lugar, se asigna el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valor de predeterminado (si se especifica) a esta columna. Si no hay ningún valor predeterminado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y la columna acepta un valor NULL, el diagrama de actualización establece el valor de columna en NULL. Si la columna no tiene un valor predeterminado ni acepta un valor NULL, se produce un error en el comando y el diagrama de actualización devuelve un error. El elemento opcional **updg:returnid** atributo se usa para devolver el valor de identidad generado por el sistema cuando se agrega un registro en una tabla con una columna de tipo IDENTITY.  
   
 ## <a name="updgid-attribute"></a>Atributo updg:id  
  Si el diagrama de actualización inserta solamente registros, el diagrama de actualización no requiere la **updg: ID** atributo. Para obtener más información acerca de **updg: ID**, consulte [Updategrams de actualización de datos utilizando XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 ## <a name="updgat-identity-attribute"></a>Atributo updg:at-identity  
- Si un diagrama de actualización inserta un registro en una tabla que tiene una columna de tipo de identidad, el diagrama de actualización puede capturar el valor asignado por el sistema mediante el parámetro opcional **updg: en la identidad** atributo. El diagrama de actualización puede utilizar este valor en operaciones posteriores. Tras la ejecución del diagrama de actualización, puede devolver el valor de identidad que se genera mediante la especificación de la **updg:returnid** atributo.  
+ Cuando un diagrama de actualización inserta un registro en una tabla que tiene una columna de tipo de identidad, el diagrama de actualización puede capturar el valor asignado por el sistema mediante el uso opcional **updg: en identidad** atributo. El diagrama de actualización puede utilizar este valor en operaciones posteriores. Al ejecutar el diagrama de actualización, puede devolver el valor de identidad que se genera mediante la especificación de la **updg:returnid** atributo.  
   
 ## <a name="updgguid-attribute"></a>Atributo updg:guid  
- El **updg: GUID** es un atributo opcional que genera un identificador único global. Este valor permanece en el ámbito de todo el  **\<sincronización >** bloque en el que se especifica. Puede usar este valor en cualquier lugar en el  **\<sincronización >** bloque. El atributo llama el **::NewGuid()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] función puede generar el identificador único.  
+ El **updg: GUID** es un atributo opcional que genera un identificador único global. Este valor permanece en el ámbito de todo el  **\<sincronización >** bloque en el que se especifica. Puede usar este valor en cualquier lugar en el  **\<sincronización >** bloque. El atributo llama a la **::NewGuid()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] función para generar el identificador único.  
   
 ## <a name="examples"></a>Ejemplos  
  Para crear ejemplos funcionales mediante los siguientes ejemplos, debe cumplir los requisitos especificados en [requisitos para ejecutar los ejemplos de SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
  Antes de usar los ejemplos del diagrama de actualización, tenga en cuenta lo siguiente:  
   
--   En la mayoría de los ejemplos se usa una asignación predeterminada (es decir, no se especifica ningún esquema de asignación en el diagrama de actualización). Para obtener más ejemplos de los diagramas de actualización que utilizan los esquemas de asignación, consulte [especificar un esquema de asignación anotados en un diagrama de actualización &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   En la mayoría de los ejemplos se usa una asignación predeterminada (es decir, no se especifica ningún esquema de asignación en el diagrama de actualización). Para obtener más ejemplos de diagramas de actualización que utilizan los esquemas de asignación, consulte [especificar un esquema de asignación anotados en un diagrama de actualización &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 -   La mayoría de los ejemplos usan la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]. Todas las actualizaciones se aplican a las tablas de esta base de datos.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "32973500"
 ```  
   
 ### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. Insertar varios registros utilizando un diagrama de actualización  
- Este diagrama de actualización agrega dos nuevos registros de turno a la tabla HumanResources.Shift. El diagrama de actualización no especifica la parte opcional  **\<antes >** bloque.  
+ Este diagrama de actualización agrega dos nuevos registros de turno a la tabla HumanResources.Shift. El diagrama de actualización no especifica opcional  **\<antes >** bloque.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -191,7 +191,7 @@ ms.locfileid: "32973500"
   
      Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Otra versión de este ejemplo es un diagrama de actualización que utiliza dos  **\<después >** bloques en lugar de un bloque para insertar dos empleados. Esta versión es válida y puede codificarse del siguiente modo:  
+ Otra versión de este ejemplo es un diagrama de actualización que utiliza dos  **\<después >** bloques en lugar de un bloque para insertar los dos empleados. Esta versión es válida y puede codificarse del siguiente modo:  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -215,12 +215,12 @@ ms.locfileid: "32973500"
 ```  
   
 ### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C. Trabajar con caracteres de SQL Server válidos que no son válidos en XML  
- En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], los nombres de tabla pueden incluir un espacio, como la tabla Order Details de la base de datos Northwind. Sin embargo, esto no es válido en los caracteres XML válidos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificadores pero no identificadores XML válidos pueden codificarse utilizando ' __xHHHH\_\_' como valor de codificación, donde HHHH representa el código UCS-2 hexadecimal de cuatro dígitos el carácter en el primer bit más significativo.  
+ En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], los nombres de tabla pueden incluir un espacio, como la tabla Order Details de la base de datos Northwind. Sin embargo, esto no es válido en los caracteres XML válidos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificadores, pero no identificadores XML válidos pueden codificarse utilizando ' __xHHHH\_\_' como valor de codificación, donde HHHH representa el código UCS-2 hexadecimal de cuatro dígitos de el carácter en el orden de primero bit más significativo.  
   
 > [!NOTE]  
->  Este ejemplo usa la base de datos de ejemplo Northwind. Puede instalar la base de datos Northwind mediante el uso de un script SQL disponible para su descarga desde este [sitio Web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=30196).  
+>  Este ejemplo usa la base de datos de ejemplo Northwind. Puede instalar la base de datos Northwind mediante el uso de un script SQL disponible para su descarga desde esta [sitio Web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=30196).  
   
- Además, el nombre del elemento se debe incluir entre corchetes ([]). Dado que los caracteres [y] no son válidos en XML, debe codificarlos como _x005B\_ y _x005D\_, respectivamente. (Si utiliza un esquema de asignación, puede especificar nombres de elemento que no contengan caracteres no válidos, como espacios en blanco. El esquema de asignación realiza la asignación necesaria; por lo tanto, no necesita codificar estos caracteres.)  
+ Además, el nombre del elemento debe incluirse entre corchetes ([]). Dado que los caracteres [y] no son válidos en XML, debe codificarlos como _x005B\_ y _x005D\_, respectivamente. (Si utiliza un esquema de asignación, puede especificar nombres de elemento que no contengan caracteres no válidos, como espacios en blanco. El esquema de asignación realiza la asignación necesaria; por lo tanto, no necesita codificar estos caracteres.)  
   
  Este diagrama de actualización agrega un registro a la tabla Order Details de la base de datos Northwind:  
   
@@ -240,9 +240,9 @@ ms.locfileid: "32973500"
 </ROOT>  
 ```  
   
- Es la columna UnitPrice de la tabla Order Details de la **dinero** tipo. Para aplicar la conversión de tipos adecuada (de un **cadena** tipo a un **dinero** tipo), se debe agregar el carácter de signo de dólar ($) como parte del valor. Si el diagrama de actualización no especifica un esquema de asignación, el primer carácter de la **cadena** se evalúa el valor. Si el primer carácter es un signo de dólar ($), se aplica la conversión adecuada.  
+ La columna UnitPrice en la tabla Order Details es de la **dinero** tipo. Para aplicar la conversión de tipos adecuada (desde un **cadena** tipo a un **dinero** tipo), se debe agregar el carácter de signo de dólar ($) como parte del valor. Si el diagrama de actualización no especifica un esquema de asignación, el primer carácter de la **cadena** se evalúa el valor. Si el primer carácter es un signo de dólar ($), se aplica la conversión adecuada.  
   
- Si el diagrama de actualización se especifica en un esquema de asignación donde la columna está correctamente marcada como **dt:type="fixed.14.4"** o **SQL: DataType = "money"**, el signo de dólar ($) no es necesario y la la asignación controla la conversión. Ésta es la forma recomendada de asegurarse de que se realice la conversión de tipos adecuada.  
+ Si el diagrama de actualización no se especifica en un esquema de asignación donde la columna está correctamente marcada como **dt:type="fixed.14.4"** o **SQL: DataType = "money"**, no se requiere el signo de dólar ($) y el la asignación controla la conversión. Ésta es la forma recomendada de asegurarse de que se realice la conversión de tipos adecuada.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta de XPath de ejemplo con respecto al esquema  
   
@@ -255,7 +255,7 @@ ms.locfileid: "32973500"
 ### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D. Utilizar el atributo at-identity para recuperar el valor insertado en la columna de tipo IDENTITY  
  El siguiente diagrama de actualización inserta dos registros: uno en la tabla Sales.SalesOrderHeader y otra en la tabla Sales.SalesOrderDetail.  
   
- En primer lugar, el diagrama de actualización agrega un registro a la tabla Sales.SalesOrderHeader. En esta tabla, la columna SalesOrderID es una columna de tipo IDENTITY. Por lo tanto, al agregar este registro a la tabla, el diagrama de actualización usa el **en identidad** atributo para capturar el valor de SalesOrderID asignado como "x" (un valor de marcador de posición). A continuación, el diagrama de actualización especifica esto **en identidad** variable como el valor del atributo SalesOrderID en el \<Sales.SalesOrderDetail > elemento.  
+ En primer lugar, el diagrama de actualización agrega un registro a la tabla Sales.SalesOrderHeader. En esta tabla, la columna SalesOrderID es una columna de tipo IDENTITY. Por lo tanto, al agregar este registro a la tabla, el diagrama de actualización usa la **en identidad** atributo para capturar el valor de SalesOrderID asignado como "x" (un valor de marcador de posición). A continuación, el diagrama de actualización especifica esto **en identidad** variable como el valor del atributo SalesOrderID en el \<Sales.SalesOrderDetail > elemento.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -292,7 +292,7 @@ ms.locfileid: "32973500"
 </ROOT>  
 ```  
   
- Si desea devolver el valor de identidad generado por la **updg: en la identidad de** los atributos, puede utilizar el **updg:returnid** atributo. A continuación se muestra un diagrama de actualización revisado que devuelve este valor de identidad. (Este diagrama de actualización agrega dos registros de pedido y dos registros de detalles del pedido, simplemente para complicar un poco el ejemplo.)  
+ Si desea devolver el valor de identidad generado por el **updg: en identidad** atributo, puede usar el **updg:returnid** atributo. A continuación se muestra un diagrama de actualización revisado que devuelve este valor de identidad. (Este diagrama de actualización agrega dos registros de pedido y dos registros de detalles del pedido, simplemente para complicar un poco el ejemplo.)  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -389,7 +389,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
  En este diagrama de actualización se especifica un esquema XSD (es decir, no existe ninguna asignación predeterminada de elementos y atributos del diagrama de actualización). El esquema proporciona la asignación necesaria de elementos y atributos a las tablas y columnas de la base de datos.  
   
- El esquema siguiente (CustOrderSchema.xml) describe un  **\<CustOrder >** elemento que consta de la **OrderID** y **EmployeeID** atributos. Para hacer más interesante el esquema, se asigna un valor predeterminado para la **EmployeeID** atributo. Un diagrama de actualización utiliza el valor predeterminado de un atributo solamente para las operaciones de inserción y solamente si el diagrama de actualización no especifica dicho atributo.  
+ El esquema siguiente (CustOrderSchema.xml) describe un  **\<CustOrder >** elemento que consta de los **OrderID** y **EmployeeID** atributos. Para hacer que el esquema más interesante, el valor predeterminado se asigna a la **EmployeeID** atributo. Un diagrama de actualización utiliza el valor predeterminado de un atributo solamente para las operaciones de inserción y solamente si el diagrama de actualización no especifica dicho atributo.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -456,7 +456,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ```  
   
 ### <a name="g-using-the-xsinil-attribute-to-insert-null-values-in-a-column"></a>G. Usar el atributo xsi:nil para insertar valores NULL en una columna  
- Si desea insertar un valor null en la columna correspondiente en la tabla, puede especificar el **xsi: nil** atributo en un elemento en un diagrama de actualización. En el esquema XSD correspondiente, el esquema XSD **nillable** atributo también debe especificarse.  
+ Si desea insertar un valor null en la columna correspondiente en la tabla, puede especificar el **xsi: nil** atributo en un elemento en un diagrama de actualización. En el esquema XSD correspondiente, el esquema XSD **nillable** atributo también se debe especificar.  
   
  Por ejemplo, fíjese en este esquema XSD:  
   
@@ -617,13 +617,13 @@ CustOrder(OrderID, EmployeeID, OrderType)
      Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="i-inserting-data-into-an-xml-data-type-column"></a>I. Insertar datos en una columna de tipo de datos XML  
- El **xml** tipo de datos se introdujo en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Puede utilizar los diagramas de actualización para insertar y actualizar datos almacenados en **xml** columnas con las siguientes normas de tipos de datos:  
+ El **xml** tipo de datos se introdujo en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Puede utilizar los diagramas de actualización para insertar y actualizar datos almacenados en **xml** tipo de datos de las columnas con las disposiciones siguientes:  
   
--   El **xml** columna no puede utilizarse para identificar una fila existente. Por lo tanto, no puede incluirse en la **updg: antes de** sección de un diagrama de actualización.  
+-   El **xml** columna no se puede usar para identificar una fila existente. Por lo tanto, no puede incluirse en el **updg: antes de** sección de un diagrama de actualización.  
   
--   Espacios de nombres que están en el ámbito del fragmento XML insertado en el **xml** columna se conservarán y sus declaraciones de espacios de nombres se agregan al elemento superior del fragmento insertado.  
+-   Espacios de nombres que están en el ámbito del fragmento XML insertado en el **xml** se conservará la columna y sus declaraciones de espacio de nombres se agregan al elemento superior del fragmento insertado.  
   
- Por ejemplo, en el siguiente diagrama de actualización (SampleUpdateGram.xml), el  **\<Desc >** elemento actualiza la columna ProductDescription de la producción > tabla productModel en la [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] base de datos de ejemplo. El resultado de este diagrama de actualización es que el contenido XML de la columna ProductDescription es la actualización con el contenido XML de la  **\<Desc >** elemento.  
+ Por ejemplo, en el siguiente diagrama de actualización (SampleUpdateGram.xml), el  **\<Desc >** elemento actualiza la columna ProductDescription de la producción > tabla productModel en la [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] base de datos de ejemplo. El resultado de este diagrama de actualización es que el contenido XML de la columna ProductDescription se update con el contenido XML de la  **\<Desc >** elemento.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

@@ -1,5 +1,5 @@
 ---
-title: Tareas específicas de programación | Documentos de Microsoft
+title: Tareas específicas de programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,25 +25,25 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6878e0e429bf826d4dc3f6b57f8df42645f22dd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971700"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998128"
 ---
 # <a name="programming-specific-tasks"></a>Tareas específicas de programación
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   La programación de tareas específicas con objetos SMO incluye temas complejos que solo son necesarios en programas con una función concreta, como copia de seguridad, supervisión de estadísticas, replicación, administración de objetos de instancia y establecimiento de opciones de configuración.  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Utilizar servidores vinculados en SMO](../../../relational-databases/server-management-objects-smo/tasks/using-linked-servers-in-smo.md)|Describe cómo SMO utiliza el objeto <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> para vincular servidores OLE-DB.|  
 |[Configurar SQL Server en SMO](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|Describe cómo ver y modificar la configuración de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en SMO.|  
 |[Usar particiones de tabla e índice](../../../relational-databases/server-management-objects-smo/tasks/using-table-and-index-partitioning.md)|Describe cómo utilizar particiones de índice y tabla en SMO.|  
 |[Usar grupos de archivos y archivos para almacenar datos](../../../relational-databases/server-management-objects-smo/tasks/using-filegroups-and-files-to-store-data.md)|Describe cómo utilizar grupos de archivos en SMO.|  
 |[Administrar servicios y configuración de red mediante el proveedor WMI](../../../relational-databases/server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)|Describe varias maneras de realizar el seguimiento de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante el objeto <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> que representa el proveedor WMI de administración de configuración.|  
-|[Trabajar con objetos de base de datos](../../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-database-objects.md)|Describe cómo crear clases de instancia que representan objetos de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|[Trabajar con objetos de bases de datos](../../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-database-objects.md)|Describe cómo crear clases de instancia que representan objetos de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[Administrar usuarios, roles e inicios de sesión](../../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)|Describe cómo utilizar los roles de seguridad en SMO.|  
 |[Conceder, revocar y denegar permisos](../../../relational-databases/server-management-objects-smo/tasks/granting-revoking-and-denying-permissions.md)|Describe cómo utilizar SMO para conceder, revocar y denegar permisos a usuarios o miembros de un rol.|  
 |[Utilizar el cifrado](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)|Describe cómo proteger los datos mediante el cifrado en SMO.|  

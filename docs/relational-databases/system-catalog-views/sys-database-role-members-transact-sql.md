@@ -1,5 +1,5 @@
 ---
-title: Sys.database_role_members (Transact-SQL) | Documentos de Microsoft
+title: Sys.database_role_members (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -26,29 +26,29 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: ac347dbb4748c575b8f4388952a45315f28a5b01
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179241"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001297"
 ---
 # <a name="sysdatabaserolemembers-transact-sql"></a>sys.database_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve una fila por cada miembro de cada rol de base de datos.  Los usuarios de base de datos, roles de aplicación y otras funciones de base de datos pueden ser miembros de un rol de base de datos. Para agregar miembros a un rol, use la [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) instrucción con el `ADD MEMBER` opción. Combinar con [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) para devolver los nombres de los `principal_id` valores.
+  Devuelve una fila por cada miembro de cada rol de base de datos.  Los usuarios de base de datos, roles de aplicación y otros roles de base de datos pueden ser miembros de un rol de base de datos. Para agregar miembros a un rol, use la [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) instrucción con el `ADD MEMBER` opción. Combinar con [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) para devolver los nombres de los `principal_id` valores.
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**role_principal_id**|**int**|Identificador de entidad de seguridad de base de datos de la función.|  
+|**role_principal_id**|**int**|Identificador de entidad de seguridad de base de datos del rol.|  
 |**member_principal_id**|**int**|Identificador de entidad de seguridad de base de datos del miembro.|  
   
-## <a name="permissions"></a>Permissions  
- Cualquier usuario puede ver su propia pertenencia a roles. Para ver otro rol pertenencias requiere la pertenencia a la `db_securityadmin` rol fijo de base de datos o `VIEW DEFINITION` en la base de datos.  
+## <a name="permissions"></a>Permisos  
+ Cualquier usuario puede ver su propia pertenencia a roles. Para ver otro rol requiere la pertenencia a las pertenencias a la `db_securityadmin` rol fijo de base de datos o `VIEW DEFINITION` en la base de datos.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="example"></a>Ejemplo  
- La consulta siguiente devuelve a los miembros de los roles de base de datos.  
+ La siguiente consulta devuelve a los miembros de los roles de base de datos.  
   
 ```  
 SELECT DP1.name AS DatabaseRoleName,   

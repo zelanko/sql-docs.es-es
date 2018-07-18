@@ -1,5 +1,5 @@
 ---
-title: sp_helpdevice (Transact-SQL) | Documentos de Microsoft
+title: sp_helpdevice (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 041cd12fe621a8f74b60b81d7a8964752caa4fde
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242803"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049303"
 ---
 # <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33242803"
   Proporciona información acerca de los dispositivos de copia de seguridad de Microsoft® SQL Server™.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se recomienda que realice la [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) en su lugar de la vista de catálogo  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se recomienda que use el [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) vista de catálogo en su lugar  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,28 +48,28 @@ sp_helpdevice [ [ @devname = ] 'name' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@devname =** ] **'***nombre***'**  
- Es el nombre del dispositivo de copia de seguridad para el que se proporciona información. El valor de *nombre* siempre es **sysname**.  
+ Es el nombre del dispositivo de copia de seguridad para el que se proporciona información. El valor de *nombre* siempre **sysname**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|Nombre del dispositivo lógico.|  
-|**argumento physical_name**|**nvarchar(260)**|Nombre de archivo físico.|  
+|**physical_name**|**nvarchar(260)**|Nombre de archivo físico.|  
 |**Descripción**|**nvarchar(255)**|Descripción del dispositivo.|  
 |**status**|**int**|Un número que corresponde a la descripción del estado de la **descripción** columna.|  
 |**CntrlType**|**smallint**|Tipo de controlador del dispositivo:<br /><br /> 2 = Dispositivo de disco<br /><br /> 5 = Dispositivo de cinta|  
 |**size**|**int**|Tamaño del dispositivo en páginas de 2 KB.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si *nombre* se especifica, **sp_helpdevice** muestra información sobre el dispositivo de volcado de memoria especificado. Si *nombre* no se especifica, **sp_helpdevice** muestra información acerca de todos los dispositivos de volcado de memoria en el **sys.backup_devices** vista de catálogo.  
   
  Dispositivos de volcado se agregan al sistema mediante **sp_addumpdevice**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  

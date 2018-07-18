@@ -1,5 +1,5 @@
 ---
-title: Elemento UnaryOperator (XMLA) | Documentos de Microsoft
+title: Elemento UnaryOperator (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 062cf977e04eabfc09e6598167bc7530f1254436
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576727"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051583"
 ---
 # <a name="unaryoperator-element-xmla"></a>Elemento UnaryOperator (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34576727"
 |Valor predeterminado|None|  
 |Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "34576727"
 ## <a name="remarks"></a>Notas  
  El elemento **UnaryOperator** contiene una expresión de Expresiones multidimensionales (MDX) que define el operador unario del miembro de atributo definido por el elemento primario **Attribute** .  
   
- Para obtener más información acerca de las expresiones de MDX, vea [expresiones &#40;MDX&#41;](../../../mdx/expressions-mdx.md).  
+ Para obtener más información sobre las expresiones MDX, vea [expresiones &#40;MDX&#41;](../../../mdx/expressions-mdx.md).  
   
 ## <a name="see-also"></a>Vea también
  [Insertar elemento &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   

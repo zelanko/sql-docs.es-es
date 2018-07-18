@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de consultas XPath (SQLXML 4.0) | Documentos de Microsoft
+title: Consultas XPath (SQLXML 4.0) de ejemplo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 582dcc59060c2be97fb760c6367a4690981855b4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708443"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050043"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>Consultas XPath de ejemplo (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: + (Agregar) (DMX) | Documentos de Microsoft
+title: + (Agregar) (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1cbb2714e9bc4f5d4944494c3b900bab737fe705
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841318"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998807"
 ---
 # <a name="-add-dmx"></a>+ (Sumar) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

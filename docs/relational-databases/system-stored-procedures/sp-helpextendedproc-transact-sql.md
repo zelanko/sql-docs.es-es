@@ -1,5 +1,5 @@
 ---
-title: sp_helpextendedproc (Transact-SQL) | Documentos de Microsoft
+title: sp_helpextendedproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a7e9cc50f543232dea6b5ce39153eee2292284ac
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248059"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052253"
 ---
 # <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,16 +55,16 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre del procedimiento almacenado extendido.|  
 |**archivo DLL**|**nvarchar(255)**|Nombre de la DLL.|  
   
-## <a name="remarks"></a>Comentarios  
- Cuando *procedimiento* se especifica, **sp_helpextendedproc** informes en las clases de procedimiento almacenado extendido. Si no se proporciona este parámetro, **sp_helpextendedproc** pertenece devuelve todos los extendidos, nombres de procedimientos almacenados y los nombres de archivo DLL para que cada procedimiento almacenado extendido.  
+## <a name="remarks"></a>Notas  
+ Cuando *procedimiento* se especifica, **sp_helpextendedproc** informes en el procedimiento almacenado extendido. Si no se proporciona este parámetro, **sp_helpextendedproc** pertenece devuelve todos los extendidos nombres de procedimientos almacenados y los nombres de archivo DLL para que cada procedimiento almacenado extendido.  
   
-## <a name="permissions"></a>Permissions  
- Permiso para ejecutar **sp_helpextendedproc** se concede a **público**.  
+## <a name="permissions"></a>Permisos  
+ Permiso para ejecutar **sp_helpextendedproc** se concede a **pública**.  
   
 ## <a name="examples"></a>Ejemplos  
   

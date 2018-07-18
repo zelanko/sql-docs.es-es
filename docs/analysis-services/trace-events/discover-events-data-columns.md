@@ -1,5 +1,5 @@
 ---
-title: Columnas de datos de eventos de detección | Documentos de Microsoft
+title: Columnas de datos de eventos de detección | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 064bfcc90845082ad47caea23fa671152af486a2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044968"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042553"
 ---
 # <a name="discover-events-data-columns"></a>Columnas de datos de eventos de detección
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "34044968"
 |CurrentTime|2|5|Contiene la hora actual del evento de detección, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene la hora (si está disponible) a la que se ha iniciado el evento final de detección. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene la hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Contiene el tiempo aproximado (en milisegundos) usado por el evento de detección.|  
+|Duration|5|2|Contiene el tiempo aproximado (en milisegundos) usado por el evento de detección.|  
 |CPUTime|6|2|Contiene la cantidad de tiempo de CPU (en milisegundos) usada por el evento.|  
 |Severity|22|1|Contiene el nivel de gravedad de una excepción.|  
 |Correcto|23|1|Contiene el éxito o el fracaso de un evento de detección. Los valores son:<br /><br /> 0 = Error<br /><br /> 1 = Correcto|  
@@ -77,6 +77,6 @@ ms.locfileid: "34044968"
 |RequestProperties|45|9|Contiene las propiedades de la solicitud de XMLA.|  
   
 ## <a name="see-also"></a>Vea también  
- [Detectar la categoría de eventos](../../analysis-services/trace-events/discover-events-event-category.md)  
+ [Discover Events Event Category](../../analysis-services/trace-events/discover-events-event-category.md)  
   
   

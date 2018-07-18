@@ -1,5 +1,5 @@
 ---
-title: Función local-name (XQuery) | Documentos de Microsoft
+title: Función local-name (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a5cdd64e6c283a41a4a51f71f84381b584d03f4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078102"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997137"
 ---
-# <a name="functions-on-nodes---local-name"></a>Funciones en nodos - local-name
+# <a name="functions-on-nodes---local-name"></a>Funciones usadas en nodos: local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve la parte local del nombre de *$arg* como xs: String que será la cadena de longitud cero o va a tener la forma léxica de un xs: NCName. Si no se proporciona el argumento, el valor predeterminado será el nodo de contexto.  
+  Devuelve la parte local del nombre de *$arg* como xs: String que será la cadena de longitud cero o tendrá la forma léxica de un xs: NCName. Si no se proporciona el argumento, el valor predeterminado será el nodo de contexto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,7 +46,7 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  Nombre del nodo cuya parte de nombre local se recuperará.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 -   En SQL Server, **fn:local-name()** sin un argumento solo se puede utilizar en el contexto de un predicado dependiente del contexto. En concreto, solo se puede utilizar entre corchetes (`[ ]`).  
   
@@ -55,7 +55,7 @@ fn:local-name($arg as node()?) as xs:string
 -   Si el nodo de destino no tiene nombre porque es un nodo de documento, un comentario o un nodo de texto, la función devolverá la cadena de longitud cero.  
   
 ## <a name="examples"></a>Ejemplos  
- Este tema ofrecen ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos de AdventureWorks.  
+ En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
   
 ### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Recuperar el nombre local de un nodo específico  
  La consulta siguiente se especifica en una instancia XML sin tipo. La expresión de consulta, `local-name(/ROOT[1])`, recupera la parte de nombre local del nodo especificado.  
@@ -79,7 +79,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. Usar local-name sin argumento en un predicado  
- La siguiente consulta se especifica en la columna Instructions, escrita **xml** columna de la tabla ProductModel. La expresión devuelve todos los elementos secundarios del elemento <`root`> cuya parte de nombre local de QName es "Location". El **local-name()** función está especificado en el predicado y no tiene argumentos al nodo de contexto se utiliza la función.  
+ La siguiente consulta se especifica en la columna Instructions, escribió **xml** columna de la tabla ProductModel. La expresión devuelve todos los elementos secundarios del elemento <`root`> cuya parte de nombre local de QName es "Location". El **local-name()** función se especifica en el predicado y no tiene ningún argumento de la función usa el nodo de contexto.  
   
 ```  
 SELECT Instructions.query('  
@@ -92,7 +92,7 @@ WHERE ProductModelID=7
  La consulta devuelve todos los elementos secundarios <`Location`> del elemento <`root`>.  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones en nodos](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [Funciones usadas en nodos](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [Función namespace-uri &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
   
   

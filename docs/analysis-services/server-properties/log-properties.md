@@ -9,11 +9,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238905"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999347"
 ---
 # <a name="log-properties"></a>Propiedades de registro
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -21,7 +21,7 @@ ms.locfileid: "35238905"
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor de registro descritas en las siguientes tablas. Para obtener más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
 
 > [!NOTE]
-> No todas las propiedades se aplican a los servicios de análisis de Azure.
+> No todas las propiedades se aplican a Azure Analysis Services.
   
 ## <a name="general"></a>General  
  **Archivo**  
@@ -36,7 +36,7 @@ ms.locfileid: "35238905"
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="error-log"></a>Registro de errores  
- Puede establecer estas propiedades en la instancia de servidor level para modificar los valores predeterminados de Configuración de errores que aparecen en otras herramientas y diseñadores. Vea [configuración de errores de cubos, particiones y procesamiento de dimensiones &#40;SSAS - multidimensionales&#41; ](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) y <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> para obtener más información.  
+ Puede establecer estas propiedades en la instancia de servidor level para modificar los valores predeterminados de Configuración de errores que aparecen en otras herramientas y diseñadores. Consulte [configuración de errores de procesamiento de dimensiones, particiones y cubos &#40;SSAS - multidimensionales&#41; ](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) y <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> para obtener más información.  
   
  **ErrorLog\ErrorLogFileName**  
  Una propiedad utilizada como valor predeterminado durante la operación de procesamiento realizada por el servidor.  

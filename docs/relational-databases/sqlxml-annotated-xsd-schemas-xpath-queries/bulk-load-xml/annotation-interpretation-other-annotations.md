@@ -1,5 +1,5 @@
 ---
-title: Otras anotaciones (SQLXML 4.0) | Documentos de Microsoft
+title: Otras anotaciones (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,13 +28,13 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6f3941965ceadbc98f4215d646dda4e87fea752b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967120"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053980"
 ---
-# <a name="annotation-interpretation---other-annotations"></a>Interpretación de anotaciones - otras anotaciones
+# <a name="annotation-interpretation---other-annotations"></a>Interpretación de anotaciones: otras anotaciones
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Además de las anotaciones descritas en los temas anteriores de esta sección, la carga masiva de XML interpreta estas otras anotaciones del modo siguiente:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "32967120"
  **SQL: use-cdata**  
  La carga masiva de XML lee el texto que está almacenado en las secciones CDATA y lo envía a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- **SQL-codificar**  
+ **SQL: url-encode**  
  La carga masiva de XML no admite esta anotación. Por ejemplo, no puede especificar una dirección URL en la entrada de datos XML y esperar que la carga masiva de XML lea los datos de esa ubicación para almacenarlos en la base de datos.  
   
  **SQL: is-mapping-schema**  
@@ -57,6 +57,6 @@ ms.locfileid: "32967120"
  La carga masiva de XML omite siempre esta anotación.  
   
 ## <a name="see-also"></a>Vea también  
- [Interpretación de anotaciones & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
+ [Interpretación de anotaciones &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
   
   

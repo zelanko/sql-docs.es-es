@@ -1,5 +1,5 @@
 ---
-title: Ejecutar un diagrama de actualización mediante ADO (SQLXML 4.0) | Documentos de Microsoft
+title: Ejecutar un diagrama de actualización mediante ADO (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 95272db4677cafad6f1e3c84f14b5705dd5f4718
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971980"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051463"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Ejecutar un diagrama de actualización mediante ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "32971980"
   
  En esta aplicación de ejemplo:  
   
--   El **conn** objeto (**ADODB. Conexión**) establece una conexión con una instancia en ejecución de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un equipo de servidor específico.  
+-   El **conn** objeto (**ADODB. Conexión**) establece una conexión a una instancia de ejecución [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un equipo servidor concreto.  
   
 -   El **cmd** objeto (**ADODB.Command**) se ejecuta en la conexión establecida.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "32971980"
   
 -   El diagrama de actualización se copia en la secuencia de comandos (**strmIn**).  
   
--   Flujo de salida del comando se establece en el **StrmOut** objeto (**ADODB. Transmitir**) recibir cualquier devolvió datos.  
+-   Flujo de salida del comando se establece en el **StrmOut** objeto (**ADODB. Stream**) a reciba cualquiera de los datos devueltos.  
   
 -   Finalmente se ejecuta el comando (diagrama de actualización).  
   
@@ -189,7 +189,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>Pasar parámetros  
- En las aplicaciones Visual Basic proporcionadas anteriormente, los parámetros no se pasan. En esta aplicación, el **ContactID** y **MiddleName** valores se pasan como entrada parametrizada al diagrama de actualización.  
+ En las aplicaciones Visual Basic proporcionadas anteriormente, los parámetros no se pasan. En esta aplicación, el **ContactID** y **MiddleName** valores se pasan como entrada parametrizada en el diagrama de actualización.  
   
 ```vb  
 Private Sub Form_Load()  

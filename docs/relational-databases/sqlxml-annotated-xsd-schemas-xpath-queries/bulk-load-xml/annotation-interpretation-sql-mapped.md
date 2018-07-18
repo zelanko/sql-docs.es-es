@@ -1,5 +1,5 @@
 ---
-title: 'SQL: mapped (SQLXML 4.0) | Documentos de Microsoft'
+title: 'SQL: mapped (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,17 +24,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f0a9a8eead8e79c9314b2158dad0be84d0235604
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968480"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050153"
 ---
-# <a name="annotation-interpretation---sqlmapped"></a>Interpretación de anotaciones - sql: asignado
+# <a name="annotation-interpretation---sqlmapped"></a>Interpretación de anotaciones: sql: asignar
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Carga masiva XML procesa la **sql: asignado** anotación en el esquema XSD según lo previsto, es decir, si especifica el esquema de asignación **sql: asignado = "false"** para cualquier elemento o atributo, la carga masiva XML no intento de almacenar los datos asociados en la columna correspondiente.  
+  Carga masiva XML procesa la **sql: asigna** anotación en el esquema XSD según lo previsto, es decir, si especifica el esquema de asignación **sql: asignado = "false"** para cualquier elemento o atributo, la carga masiva XML no se intenta almacenar los datos asociados en la columna correspondiente.  
   
- Carga masiva XML omite los elementos y atributos que no están asignados (dado que no se describen en el esquema o porque se anotan en el esquema XSD con **sql: asignado = "false"**). Todos los datos no asignados entra en la columna de desbordamiento si este tipo de columna se especifica mediante el uso de **SQL: overflow-campo**.  
+ Carga masiva XML omite los elementos y atributos que no están asignados (dado que no se describen en el esquema o porque se anotan en el esquema XSD con **sql: asignada = "false"**). Todos los datos sin asignar entra en la columna de desbordamiento, si se especifica este tipo de columna mediante el uso de **Overflow-campo**.  
   
  Por ejemplo, fíjese en este esquema XSD:  
   
@@ -60,7 +60,7 @@ ms.locfileid: "32968480"
 </xsd:schema>  
 ```  
   
- Dado que la **HomePhone** atributo especifica **sql: asignado = "false"**, carga masiva XML no se asigna este atributo a la columna correspondiente. El esquema XSD identifica una columna de desbordamiento (**OverflowColumn**) en la que la carga masiva XML almacena estos datos no consumidos.  
+ Dado que el **HomePhone** atributo especifica **sql: asignada = "false"**, carga masiva XML no se asigna este atributo a la columna correspondiente. El esquema XSD identifica una columna de desbordamiento (**OverflowColumn**) en el que la carga masiva XML almacena estos datos no consumidos.  
   
 ### <a name="to-test-a-working-sample"></a>Para probar un ejemplo funcional  
   

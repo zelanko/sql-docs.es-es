@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_remove_plan (Transct-SQL) | Documentos de Microsoft
+title: sp_query_store_remove_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,13 +27,13 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f3efe5d6bac67d639877a2434fd3b97bec84d5da
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250185"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993624"
 ---
-# <a name="spquerystoreremoveplan-transct-sql"></a>sp_query_store_remove_plan (Transct-SQL)
+# <a name="spquerystoreremoveplan-transct-sql"></a>sp_query_store_remove_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Quita un plan único desde el almacén de consultas.  
@@ -54,13 +54,13 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-## <a name="permissions"></a>Permissions  
- Requiere la **EXECUTE** permiso en la base de datos y **eliminar** permiso en las vistas de catálogo del almacén de consultas.  
+## <a name="permissions"></a>Permisos  
+ Requiere el **EXECUTE** permiso en la base de datos y **eliminar** permiso en las vistas de catálogo del almacén de consultas.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se devuelve información acerca de las consultas en el almacén de consultas.  
+ El ejemplo siguiente devuelve información acerca de las consultas en el almacén de consultas.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -71,7 +71,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Después de identificar la plan_id que desea eliminar, utilice el siguiente ejemplo para eliminar un plan de consulta.  
+ Después de identificar el plan_id que desea eliminar, use el ejemplo siguiente para eliminar un plan de consulta.  
   
 ```  
 EXEC sp_query_store_remove_plan 3;  

@@ -1,5 +1,5 @@
 ---
-title: Tipo de elemento (ClrAssemblyFile) (ASSL) | Documentos de Microsoft
+title: Type (elemento) (ClrAssemblyFile) (ASSL) | Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a4cf5d0a1ef4fd627dd10d0b73ca1520980484fe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34038261"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990307"
 ---
 # <a name="type-element-clrassemblyfile-assl"></a>Elemento Type (ClrAssemblyFile) (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -31,12 +31,12 @@ ms.locfileid: "34038261"
 </ClrAssemblyFile>  
 ```  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String (enumeración)|  
-|Valor predeterminado|Ninguno|  
+|Valor predeterminado|None|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -44,12 +44,12 @@ ms.locfileid: "34038261"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elemento primario|[ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El valor de este elemento se limita a una de las cadenas siguientes:  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*Main*|El archivo especificado es el archivo principal del ensamblado.|  
 |*Dependientes*|El archivo especificado es un archivo dependiente del ensamblado.|  
@@ -57,14 +57,14 @@ ms.locfileid: "34038261"
   
  La enumeración que corresponde a los valores permitidos para **tipo** en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ClrAssemblyFileType>.  
   
- El elemento que corresponde al elemento primario de **tipo** en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+ El elemento que se corresponde con el elemento primario de **tipo** en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>Vea también  
- [Elemento File & #40; ASSL & #41;](../../../analysis-services/scripting/objects/file-element-assl.md)   
+ [Elemento file &#40;ASSL&#41;](../../../analysis-services/scripting/objects/file-element-assl.md)   
  [Archivos elemento &#40;ASSL&#41;](../../../analysis-services/scripting/collections/files-element-assl.md)   
  [Tipo de datos ClrAssembly &#40;ASSL&#41;](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)   
- [Assembly (elemento) & #40; ASSL & #41;](../../../analysis-services/scripting/objects/assembly-element-assl.md)   
+ [Elemento Assembly &#40;ASSL&#41;](../../../analysis-services/scripting/objects/assembly-element-assl.md)   
  [Elemento Assemblies &#40;ASSL&#41;](../../../analysis-services/scripting/collections/assemblies-element-assl.md)   
- [Propiedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Propiedades &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

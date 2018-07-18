@@ -1,5 +1,5 @@
 ---
-title: Atomización (XQuery) | Documentos de Microsoft
+title: Atomización (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a704ccc0b5be37a668984ce4d8d543984f360b54
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077802"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053983"
 ---
 # <a name="atomization-xquery"></a>Atomización (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ where ProductModelID=7
   
  La atomización da lugar a una instancia de tipo simple, un conjunto vacío o un error de tipo estático.  
   
- La atomización también se produce en parámetros de la expresión de comparación pasados a funciones, valores devueltos por funciones, **cast()** expresiones y expresiones de orden pasadas en el orden por cláusula.  
+ Atomización también se produce en parámetros de la expresión de comparación pasados a funciones, valores devueltos por las funciones, **cast()** expresiones y expresiones de orden pasadas en el orden por cláusula.  
   
 ## <a name="see-also"></a>Vea también  
  [Conceptos básicos de XQuery](../xquery/xquery-basics.md)   

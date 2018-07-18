@@ -1,5 +1,5 @@
 ---
-title: Sys.database_scoped_credentials (Transact-SQL) | Documentos de Microsoft
+title: Sys.database_scoped_credentials (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: sql
@@ -24,28 +24,28 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a559b19863da9e6cc2a1ee3ccf8323d4a245af10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181021"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989387"
 ---
 # <a name="sysdatabasescopedcredentials-transact-sql"></a>Sys.database_scoped_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Devuelve una fila por cada base de datos con ámbito de credencial en la base de datos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|credential_id|**int**|Id. de la credencial de ámbito de la base de datos. Es único en la base de datos.|  
-|name|**sysname**|Credencial con ámbito de nombre de la base de datos. Es único en la base de datos.|  
+|credential_id|**int**|Credencial de ámbito de Id. de la base de datos. Es único en la base de datos.|  
+|NAME|**sysname**|Credencial de ámbito de nombre de la base de datos. Es único en la base de datos.|  
 |credential_identity|**nvarchar(4000)**|Nombre de la identidad que se va a utilizar. Suele ser un usuario de Windows. No tiene que ser único.|  
-|create_date|**datetime**|Hora en que se creó la credencial de ámbito de la base de datos.|  
-|modify_date|**datetime**|Hora a la que se modificó por última vez la credencial de ámbito de la base de datos.|  
-|target_type|**nvarchar (100)**|Credencial de ámbito del tipo de base de datos. Devuelve `NULL` para la base de datos de credenciales con ámbito.|  
-|target_id|**int**|Id. del objeto que está asignada la credencial de ámbito de la base de datos a. Credenciales con ámbito devuelve 0 para la base de datos|  
+|create_date|**datetime**|Hora en que se creó la credencial con ámbito de base de datos.|  
+|modify_date|**datetime**|Hora a la que se modificó por última vez la credencial con ámbito de base de datos.|  
+|target_type|**Nvarchar (100)**|Credencial de ámbito del tipo de base de datos. Devuelve `NULL` para la base de datos de credenciales con ámbito.|  
+|target_id|**int**|Identificador del objeto asignado a la credencial con ámbito de base de datos. Credenciales con ámbito devuelve 0 para la base de datos|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe tener el permiso `CONTROL` para la base de datos.  
   
 ## <a name="see-also"></a>Vea también  

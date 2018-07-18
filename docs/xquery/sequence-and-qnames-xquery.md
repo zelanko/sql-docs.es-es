@@ -1,5 +1,5 @@
 ---
-title: Secuencia y QName (XQuery) | Documentos de Microsoft
+title: Secuencia y QName (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 30d463050f129bbc232c0261f1d6af481744ef93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078002"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990014"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Secuencia y QName (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ WHERE ProductModelID=7;
  Cada base de datos se crea tiene la **sys** colección de esquemas XML. Estos esquemas se reservan para que estén accesibles desde cualquier otra colección de esquemas XML creada por el usuario.  
   
 > [!NOTE]  
->  Esta implementación no admite la `local` prefijo tal como se describe en la especificación de XQuery en http://www.w3.org/2004/07/xquery-local-functions.  
+>  Esta implementación no admite la `local` prefijo como se describe en la especificación de XQuery en http://www.w3.org/2004/07/xquery-local-functions.  
   
 ## <a name="see-also"></a>Vea también  
  [Conceptos básicos de XQuery](../xquery/xquery-basics.md)  

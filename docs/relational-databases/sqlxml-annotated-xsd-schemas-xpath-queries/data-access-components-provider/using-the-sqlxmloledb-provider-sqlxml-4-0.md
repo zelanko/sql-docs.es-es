@@ -1,5 +1,5 @@
 ---
-title: Mediante el proveedor SQLXMLOLEDB (SQLXML 4.0) | Documentos de Microsoft
+title: Usar el proveedor SQLXMLOLEDB (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e2c9d60c84cde37eeef80dd5c916544a0ca83e6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968780"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053813"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Usar el proveedor SQLXMLOLEDB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,32 +38,32 @@ ms.locfileid: "32968780"
   
     -   Biblioteca de Microsoft ActiveX Data Objects 2.6  
   
-    -   Biblioteca 2.7 de Microsoft ActiveX Data Objects  
+    -   Microsoft ActiveX Data Objects Library 2.7  
   
     -   Biblioteca Microsoft ActiveX Data Objects 2.8  
   
 2.  Implemente e instale SQLXML 4.0 y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client  
   
-     Para obtener más información, consulte en [conceptos de programación en SQLXML 4.0](../../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) y [instalar SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+     Para obtener más información, consulte en [conceptos de programación de SQLXML 4.0](../../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) y [instalar SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Ejecutar consultas SQL &#40;proveedor SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)  
  Muestra el uso de las propiedades de raíz ClientSideXML y xml para ejecutar consultas SQL.  
   
  [Ejecutar plantillas que contienen consultas SQL &#40;proveedor SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
- Muestra el uso de clientsidexml, propiedad.  
+ Muestra el uso de la clientsidexml, propiedad.  
   
  [Ejecutar consultas XPath &#40;proveedor SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)  
- Muestra el uso de las propiedades ClientSideXML, la ruta de acceso de Base y el esquema de asignación.  
+ Muestra el uso de las propiedades ClientSideXML, ruta de acceso Base y esquema de asignación.  
   
  [Ejecutar consultas XPath con espacios de nombres &#40;proveedor SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)  
  Muestra cómo realizar consultas contra esquemas certificados por espacio de nombres.  
   
  [Ejecutar plantillas que contienen consultas XPath &#40;proveedor SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)  
- Muestra cómo ejecutar plantillas con consultas SQL utilizando las propiedades ClientSideXML, la ruta de acceso de Base y el esquema de asignación.  
+ Se muestra cómo ejecutar plantillas con consultas SQL con las propiedades ClientSideXML, ruta de acceso Base y esquema de asignación.  
   
  [Aplicar una transformación XSL &#40;proveedor SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider.md)  
- Muestra el uso de las propiedades ClientSideXML y xsl de aplicar una transformación XSL.  
+ Muestra el uso de las propiedades ClientSideXML y xsl en aplicar una transformación XSL.  
   
 ## <a name="see-also"></a>Vea también  
  [Requisitos del sistema para SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)  

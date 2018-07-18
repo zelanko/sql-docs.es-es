@@ -1,5 +1,5 @@
 ---
-title: Medidas | Documentos de Microsoft
+title: Las medidas | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbd53d9d49c937967e88cefa95750dca41631876
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043989"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045333"
 ---
-# <a name="measures"></a>Medidas
+# <a name="measures"></a>medidas
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   En los modelos tabulares, una medida es un cálculo creado usando una fórmula DAX para usarla en un cliente de informes. Las medidas se evalúan según los campos, filtros y segmentaciones de datos que los usuarios seleccionan en la aplicación cliente de informes.  
   
@@ -70,9 +70,9 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_properties"></a> Propiedades de medidas  
  Cada medida tiene propiedades que la definen. Las propiedades de las medidas, junto con las propiedades de las columnas asociadas, se pueden modificar en la ventana Propiedades. Las medidas tienen las propiedades siguientes:  
   
-|Propiedad|Valor predeterminado|Description|  
+|Property|Valor predeterminado|Descripción|  
 |--------------|---------------------|-----------------|  
-|**Description**|En blanco|Descripción de la medida. La descripción no aparecerá con la medida en un cliente de informes.|  
+|**Descripción**|En blanco|Descripción de la medida. La descripción no aparecerá con la medida en un cliente de informes.|  
 |**Formato**|Se determina automáticamente a partir del tipo de datos de la columna a la que se hace referencia en la expresión de la fórmula.|El formato de la medida. Por ejemplo, moneda o porcentaje.|  
 |**Fórmula**|La fórmula especificada en la barra de fórmulas al crear la medida.|La fórmula de la medida.|  
 |**Nombre de medida**|Si se usa la autosuma, el nombre de la medida estará precedido por el nombre de la columna seguido de un signo de dos puntos. Si se especifica una fórmula personalizada, escriba un nombre seguido de un signo de dos puntos y, a continuación, la fórmula.|El nombre de la medida tal como se muestra en la lista de campos de un cliente de informes.|  
@@ -84,7 +84,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Crear y administrar medidas](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|Describe cómo crear y administrar medidas mediante la cuadrícula de medidas del diseñador de modelos.|  
   

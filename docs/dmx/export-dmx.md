@@ -1,5 +1,5 @@
 ---
-title: EXPORTACIÓN (DMX) | Documentos de Microsoft
+title: EXPORTACIÓN (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bb777a0de00596c99e22e514986cf3ec930ba0fd
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841968"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991066"
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,10 +29,10 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Tipo de objeto*  
- Opcional el tipo de objeto que se va a exportar (modelo de minería de datos o la estructura de minería de datos).  
+ *tipo de objeto*  
+ Tipo opcional de objeto que se va a exportar (modelo de minería de datos o estructura de minería de datos).  
   
- *Nombre de objeto*  
+ *nombre de objeto*  
  Opcional. Nombre del objeto que se va a exportar.  
   
  *nombre de archivo*  
@@ -44,24 +44,24 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  Debe ser una base de datos o el administrador del servidor para exportar o importar objetos desde una [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de datos.  
   
 ## <a name="export-mining-structure-example"></a>Ejemplo de exportación de estructura de minería de datos  
- En el siguiente ejemplo se exportan las estructuras de minería de datos Targeted Mailing y Forecasting, y el modelo de minería de datos Association a una ubicación de archivos específica. Puesto que el modelo Association forma parte de la estructura de minería de datos Market Basket, también se exporta la estructura Market Basket. Otros modelos de minería de datos que existan como parte de la estructura de minería de datos de la cesta no se exportarán porque el modelo de asociación se exportó utilizando **modelo de minería de datos**, no **estructura de minería de datos**.  
+ En el siguiente ejemplo se exportan las estructuras de minería de datos Targeted Mailing y Forecasting, y el modelo de minería de datos Association a una ubicación de archivos específica. Puesto que el modelo Association forma parte de la estructura de minería de datos Market Basket, también se exporta la estructura Market Basket. Otros modelos de minería de datos que puedan existir como parte de la estructura de minería de datos Market Basket no se exportarán porque el modelo Association se exportó con **modelo de minería de datos**, no **estructura de minería de datos**.  
   
 ```  
 EXPORT MINING STRUCTURE [Targeted Mailing], [Forecasting] MINING MODEL Association TO 'C:\TM_NEW.abf'  
 ```  
   
 ## <a name="export-mining-model-example"></a>Ejemplo de exportación de modelo de minería de datos  
- En el siguiente ejemplo se exporta el modelo de minería de datos Association a una ubicación de archivos especificada. Dado que la instrucción especifica **WITH DEPENDENCIES**, el origen de datos y objetos de vista de origen de datos también se incluyen en el archivo abf.  
+ En el siguiente ejemplo se exporta el modelo de minería de datos Association a una ubicación de archivos especificada. Puesto que la instrucción especifica **WITH DEPENDENCIES**, el origen de datos y objetos de vista del origen de datos también se incluyen en el archivo abf.  
   
 ```  
 EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES  
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
- [IMPORTAR &AMP;#40;DMX&AMP;#41;](../dmx/import-dmx.md)   
+ [IMPORTACIÓN &AMP;#40;DMX&AMP;#41;](../dmx/import-dmx.md)   
  [Exportar e importar objetos de minería de datos](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
   

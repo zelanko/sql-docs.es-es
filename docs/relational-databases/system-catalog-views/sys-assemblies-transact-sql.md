@@ -1,5 +1,5 @@
 ---
-title: Sys.Assemblies (Transact-SQL) | Documentos de Microsoft
+title: Sys.Assemblies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,18 +26,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 22a200cee9b07332440076feb0981c1610682089
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179121"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000877"
 ---
 # <a name="sysassemblies-transact-sql"></a>sys.assemblies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Devuelve una fila para cada ensamblado.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre del ensamblado. Es único en la base de datos.|  
 |**principal_id**|**int**|Id. de la entidad de seguridad propietaria de este ensamblado.|  
@@ -50,7 +50,7 @@ ms.locfileid: "33179121"
 |**modify_date**|**datetime**|Fecha en que se modificó el ensamblado.|  
 |**is_user_defined**|**bit**|Indica el origen del ensamblado.<br /><br /> 0 = ensamblados definidos por el sistema (como Microsoft.SqlServer.Types para el **hierarchyid** tipo de datos)<br /><br /> 1 = Ensamblados definidos por el usuario.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

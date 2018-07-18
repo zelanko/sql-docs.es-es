@@ -1,5 +1,5 @@
 ---
-title: Conceder, revocar y denegar permisos | Documentos de Microsoft
+title: Conceder, revocar y denegar permisos | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 77c9bb9b74b4d0b7dee5ec09724db144852dc73b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969520"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990648"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Conceder, revocar y denegar permisos
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32969520"
  Los permisos de bases de datos y permisos de objetos de bases de datos pueden asignarse de igual forma utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> y el objeto <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet>.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Conceder permisos de servidor en Visual Basic  
  En este ejemplo de código se conceden los permisos Crear extremo y Modificar cualquier extremo al inicio de sesión especificado y, a continuación, se enumeran y se muestran los permisos. Se revoca uno de los permisos y se enumeran los permisos de nuevo a continuación. En este ejemplo se supone que el inicio de sesión especificado tiene los permisos especificados para comenzar.  

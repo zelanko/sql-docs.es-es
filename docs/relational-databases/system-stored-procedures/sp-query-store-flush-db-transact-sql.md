@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_flush_db (Transact-SQL) | Documentos de Microsoft
+title: sp_query_store_flush_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: sql
@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0dca89f1d5876d437ccce2009db77614ba04ce4c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247041"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993635"
 ---
 # <a name="spquerystoreflushdb-transact-sql"></a>sp_query_store_flush_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Vacía la parte de memoria de los datos de almacén de consultas en el disco.  
+  Vacía la parte en memoria de los datos de la consulta Store en el disco.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,13 +50,13 @@ sp_query_store_flush_db [;]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-## <a name="permissions"></a>Permissions  
- Requiere la **EXECUTE** permiso en la base de datos y **eliminar** permiso en las vistas de catálogo del almacén de consultas.  
+## <a name="permissions"></a>Permisos  
+ Requiere el **EXECUTE** permiso en la base de datos y **eliminar** permiso en las vistas de catálogo del almacén de consultas.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se vacía la parte de memoria de los datos de almacén de consultas en el disco.  
+ El ejemplo siguiente vacía la parte en memoria de los datos de la consulta Store en el disco.  
   
 ```  
 EXEC sp_query_store_flush_db;  

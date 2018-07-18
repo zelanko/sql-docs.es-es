@@ -1,5 +1,5 @@
 ---
-title: Procesar una estructura de minería de datos | Documentos de Microsoft
+title: Procesar una estructura de minería de datos | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9cb977ace8ccd1856d9a08c8eeaa2cf698637e68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017132"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999737"
 ---
 # <a name="process-a-mining-structure"></a>Procesar una estructura de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,15 +36,15 @@ ms.locfileid: "34017132"
   
      Si ha realizado cambios en la estructura, se le pedirá que vuelva a implementar la estructure antes de procesar los modelos. Haga clic en **Sí**.  
   
-2.  Haga clic en **ejecutar** en el **procesar estructura de minería de datos - \<estructura >** cuadro de diálogo.  
+2.  Haga clic en **ejecutar** en el **procesando estructura de minería de datos - \<estructura >** cuadro de diálogo.  
   
      Se abre el cuadro de diálogo **Progreso del proceso** para mostrar los detalles del procesamiento del modelo.  
   
 3.  Haga clic en **Cerrar** en el cuadro de diálogo **Progreso del proceso** cuando el procesamiento de los modelos se haya completado.  
   
-4.  Haga clic en **cerrar** en el **procesar estructura de minería de datos - \<estructura >** cuadro de diálogo.  
+4.  Haga clic en **cerrar** en el **procesando estructura de minería de datos - \<estructura >** cuadro de diálogo.  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas de estructura de minería de datos y procedimientos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Tareas y procedimientos de las estructuras de minería de datos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

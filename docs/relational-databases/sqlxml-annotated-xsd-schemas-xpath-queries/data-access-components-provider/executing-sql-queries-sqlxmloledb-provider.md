@@ -1,5 +1,5 @@
 ---
-title: Ejecutar consultas SQL (proveedor SQLXMLOLEDB) | Documentos de Microsoft
+title: Ejecutar consultas SQL (proveedor SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4b14c8101d7d7ef5266f63cf8a278f82ff985d40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968040"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050033"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>Ejecutar consultas SQL (proveedor SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32968040"
   
 -   xml root  
   
- En esta aplicación de ejemplo ADO del lado cliente, se ejecuta una consulta SQL simple en el cliente. Porque clientsidexml, propiedad está establecida en True, la instrucción SELECT sin la cláusula FOR XML se envía al servidor. El servidor ejecuta la consulta y devuelve un conjunto de filas al cliente. A continuación, el cliente aplica la transformación FOR XML al conjunto de filas y genera un documento XML.  
+ En esta aplicación de ejemplo ADO del lado cliente, se ejecuta una consulta SQL simple en el cliente. Dado que el clientsidexml, propiedad se establece en True, la instrucción SELECT sin la cláusula FOR XML se envía al servidor. El servidor ejecuta la consulta y devuelve un conjunto de filas al cliente. A continuación, el cliente aplica la transformación FOR XML al conjunto de filas y genera un documento XML.  
   
  La propiedad de la raíz de xml proporciona el elemento raíz de nivel superior único para el documento XML que se genera.  
   

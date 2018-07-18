@@ -1,5 +1,5 @@
 ---
-title: Con carga masiva SQLXML en el entorno .NET | Documentos de Microsoft
+title: Con la carga masiva SQLXML en el entorno .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 270abbb40bdf6081b7409cf76a97925a1cd2b3d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970598"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053743"
 ---
-# <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 con .NET Framework compatibilidad: usar la carga masiva
+# <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>Compatibilidad de SQLXML 4.0 con .NET Framework: usar la carga masiva
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  En este tema se explica cómo se puede usar la funcionalidad de carga masiva XML en el entorno .NET. Para obtener información detallada sobre la carga masiva XML, vea [realizar carga masiva de datos XML & #40; SQLXML 4.0 & #41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
+  En este tema se explica cómo se puede usar la funcionalidad de carga masiva XML en el entorno .NET. Para obtener información detallada acerca de la carga masiva XML, vea [realizar carga masiva de datos XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
   
  Para utilizar el objeto COM de carga masiva SQLXML desde un entorno administrado, tiene que agregar una referencia de proyecto a este objeto. Esto genera una interfaz de contenedor administrado para el objeto COM de carga masiva.  
   
 > [!NOTE]  
->  La carga masiva XML administrada no funciona con flujos administrados y requiere un contenedor para los flujo nativos. El componente Carga masiva SQLXML no se ejecutará en un entorno multiproceso (atributo ' [MTAThread]'). Si intenta ejecutar el componente de carga masiva en un entorno multiproceso, obtendrá una excepción InvalidCastException con la siguiente información adicional: "Error de QueryInterface para la interfaz SQLXMLBULKLOADLib.ISQLXMLBulkLoad". La solución consiste en hacer que el objeto que contiene la carga masiva objeto subproceso único accesible (por ejemplo, mediante la **[STAThread]** atributo tal como se muestra en el ejemplo).  
+>  La carga masiva XML administrada no funciona con flujos administrados y requiere un contenedor para los flujo nativos. El componente Carga masiva SQLXML no se ejecutará en un entorno multiproceso (atributo ' [MTAThread]'). Si intenta ejecutar el componente carga masiva en un entorno multiproceso, obtendrá una excepción InvalidCastException con la siguiente información adicional: "Error de QueryInterface para la interfaz SQLXMLBULKLOADLib.ISQLXMLBulkLoad". La solución consiste en hacer que el objeto que contiene la carga masiva objeto único subproceso accesible (por ejemplo, mediante el **[STAThread]** atributo tal como se muestra en el ejemplo).  
   
  En este tema se proporciona una aplicación de ejemplo funcional en C# para realizar la carga masiva de los datos XML de la base de datos. Para crear un ejemplo funcional, siga estos pasos:  
   
@@ -155,6 +155,6 @@ ms.locfileid: "32970598"
      Esto crea la DLL del contenedor administrado (SQLXMLBULKLOADLib.dll) que puede utilizar en el proyecto de .NET Framework. En .NET Framework, puede agregar la referencia del proyecto a la DLL recién creada.  
   
 ## <a name="see-also"></a>Vea también  
- [Realizar la carga masiva de datos XML & #40; SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Realizar la carga masiva de datos XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

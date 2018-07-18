@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_clr_properties (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_clr_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,30 +25,30 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f95f4d1596d84648034b51833738a26817f5e96b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465481"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998007"
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  Devuelve una fila para cada propiedad relacionada con la integración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Common Language Runtime (CLR), incluidos la versión y el estado del entorno CLR hospedado. El CLR hospedado se inicializa mediante la ejecución de la [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md), o [DROP ASSEMBLY](../../t-sql/statements/drop-assembly-transact-sql.md) instrucciones, o ejecutando cualquier rutina CLR, el tipo o el desencadenador. El **sys.dm_clr_properties** vista no especifica si se ha habilitado la ejecución de código CLR de usuario en el servidor. Ejecución de código CLR de usuario se habilita utilizando la [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) procedimiento almacenado con el [clr habilitado](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) opción establecido en 1.  
+  Devuelve una fila para cada propiedad relacionada con la integración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Common Language Runtime (CLR), incluidos la versión y el estado del entorno CLR hospedado. El entorno CLR hospedado se inicializa mediante la ejecución de la [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md), o [DROP ASSEMBLY](../../t-sql/statements/drop-assembly-transact-sql.md) instrucciones, o ejecutando cualquier rutina, tipo o desencadenador CLR. El **sys.dm_clr_properties** vista no especifica si se ha habilitado la ejecución de código CLR de usuario en el servidor. La ejecución de código CLR de usuario se habilita mediante el uso de la [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) procedimiento almacenado con el [clr habilitado](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) opción establecido en 1.  
   
  El **sys.dm_clr_properties** vista contiene la **nombre** y **valor** columnas. Cada una de las filas de esta vista proporciona información detallada acerca de una propiedad del entorno CLR hospedado. Utilice esta vista para recopilar información acerca del entorno CLR hospedado, como el directorio de instalación de CLR, la versión de CLR y el estado actual del entorno CLR hospedado. Esta vista puede ayudarle a determinar si el código de integración CLR no funciona debido a problemas con la instalación de CLR en el equipo servidor.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**nvarchar(128)**|El nombre de la propiedad.|  
-|**value**|**nvarchar(128)**|Valor de la propiedad.|  
+|**Valor**|**nvarchar(128)**|Valor de la propiedad.|  
   
 ## <a name="properties"></a>Propiedades  
- El **directory** propiedad indica el directorio en el que se instaló .NET Framework en el servidor. Podría haber varias instalaciones de .NET Framework en el equipo servidor y el valor de esta propiedad identificaría la instalación que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estaría utilizando.  
+ El **directory** propiedad indica el directorio que se instaló .NET Framework en el servidor. Podría haber varias instalaciones de .NET Framework en el equipo servidor y el valor de esta propiedad identificaría la instalación que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estaría utilizando.  
   
  El **versión** propiedad indica la versión de .NET Framework y entorno CLR hospedado en el servidor.  
   
- El **sys.dm_clr_properties** vista de administración dinámica puede devolver seis valores distintos para la **estado** propiedad, que refleja el estado de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entorno CLR hospedado. Estas sobrecargas son:  
+ El **sys.dm_clr_properties** vista de administración dinámica puede devolver seis valores distintos para el **estado** propiedad, que refleja el estado de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entorno CLR hospedado. Estas sobrecargas son:  
   
 -   Mscoree is not loaded.  
   
@@ -62,20 +62,20 @@ ms.locfileid: "34465481"
   
 -   CLR is stopped.  
   
- El **Mscoree no está cargado** y **se carga Mscoree** Estados muestran la progresión de la inicialización del entorno CLR hospedada en el inicio del servidor y no es probable que se vean.  
+ El **Mscoree no está cargado** y **se carga Mscoree** Estados muestran la progresión de la inicialización del entorno CLR hospedada en el inicio del servidor y no es probables que se ha visto.  
   
- El **versión de CLR bloqueado con mscoree** estado puede aparecer en el entorno CLR hospedado no se utiliza y, por lo tanto, no se ha se ha inicializado. El CLR hospedado se inicializa la primera vez que una instrucción DDL (como [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)) o se ejecuta un objeto de base de datos administrados.  
+ El **versión CLR bloqueado con mscoree** estado puede verse donde no se usa el entorno CLR hospedado y, por lo tanto, aún no ha se ha inicializado. El entorno CLR hospedado se inicializa por primera vez una instrucción DDL (como [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)) o un objeto de base de datos administrado se ejecuta.  
   
- El **se inicializa el CLR** estado indica que el entorno CLR hospedado se ha inicializado correctamente. Tenga en cuenta que esto no indica si se ha habilitado la ejecución de código CLR de usuario. Si la ejecución de código CLR de usuario es el primera habilitado y deshabilitado, a continuación, usar el [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) procedimiento almacenado, el valor de estado se seguirá **se inicializa el CLR**.  
+ El **se inicializa CLR** estado indica que el entorno CLR hospedado se inicializó correctamente. Tenga en cuenta que esto no indica si se ha habilitado la ejecución de código CLR de usuario. Si la ejecución de código CLR de usuario es el primera habilitado y, a continuación, se deshabilita mediante la [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) procedimiento almacenado, el valor de estado se seguirá **se inicializa CLR**.  
   
- El **permanentemente error al inicializar el CLR** estado indica que hospeda CLR error de inicialización. Una causa probable es la presión de memoria, o también podría ser el resultado de un error del protocolo de enlace de hospedaje entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el entorno CLR. En este caso se producirá el mensaje de error 6512 o 6513.  
+ El **permanentemente error de inicialización de CLR** estado indica que entorno CLR hospedado error de inicialización. Una causa probable es la presión de memoria, o también podría ser el resultado de un error del protocolo de enlace de hospedaje entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el entorno CLR. En este caso se producirá el mensaje de error 6512 o 6513.  
   
- El **CLR se detiene estado** solo se produce cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está en el proceso que se va a cerrar.  
+ El **CLR se detiene estado** solo se produce cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es está cerrando.  
   
-## <a name="remarks"></a>Comentarios  
- Pueden cambiar las propiedades y los valores de esta vista en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debido a las mejoras de la funcionalidad de integración de CLR.  
+## <a name="remarks"></a>Notas  
+ Pueden cambiar las propiedades y valores de esta vista en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debido a las mejoras de la funcionalidad de integración de CLR.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
   
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_wait_stats (base de datos de SQL Azure) | Documentos de Microsoft
+title: Sys.dm_db_wait_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: ''
@@ -27,11 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: af54ac9890cf903e0646d9b6d8eefe031924ffce
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467871"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051409"
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34467871"
   
  Determinados tipos de tiempos de espera durante la ejecución de consultas pueden indicar cuellos de botella o puntos de pausa en la consulta. De forma similar, tiempos de espera altos, o contadores de espera en todo el servidor pueden indicar cuellos de botella o puntos de actividad en interacciones de consultas de interacción en la instancia del servidor. Por ejemplo, las esperas de bloqueos indican la contención de datos por las consultas; las esperas de bloqueos temporales de E/S de páginas indican tiempos de respuesta de E/S bajos; las esperas de actualizaciones de bloqueos temporales de páginas indican un diseño de archivo incorrecto.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |wait_type|**nvarchar(60)**|Nombre del tipo de espera. Para obtener más información, consulte [tipos de esperas](#WaitTypes), más adelante en este tema.|  
 |waiting_tasks_count|**bigint**|Número de esperas de este tipo de espera. Este recuento se incrementa al inicio de cada espera.|  
@@ -48,7 +48,7 @@ ms.locfileid: "34467871"
 |max_wait_time_ms|**bigint**|Tiempo de espera máximo de este tipo de espera.|  
 |signal_wait_time_ms|**bigint**|Diferencia entre el momento en que se indicó el subproceso en espera y el momento en que empezó a ejecutarse.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 -   Esta vista de administración dinámica solo muestra datos para la base de datos actual.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34467871"
   
 -   Estas estadísticas no permanecen en los eventos de conmutación por error de SQL Database, y todos los datos se acumulan desde la última vez que se restablecieron las estadísticas.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW DATABASE STATE en el servidor.  
   
 ##  <a name="WaitTypes"></a> Tipos de esperas  
@@ -81,11 +81,11 @@ ms.locfileid: "34467871"
   
  Aunque el subproceso ya no esté en espera, no tiene que empezar a ejecutarse inmediatamente. Esto se debe a que un subproceso primero se pone en la cola de trabajadores ejecutables y debe esperar a que se ejecute un cuanto en el programador.  
   
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los contadores de tiempo de espera son **bigint** valores y por lo tanto, no son tan propensos a completar el ciclo como los contadores equivalentes en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los contadores de tiempo de espera **bigint** valores y, por tanto, no son tan propensos a la sustitución del contador como los contadores equivalentes en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  En la tabla siguiente se muestran los tipos de espera encontrados por las tareas.  
   
-|Tipo de espera|Description|  
+|Tipo de espera|Descripción|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|Tiene lugar durante el acceso exclusivo a la carga de ensamblados.|  
@@ -199,27 +199,27 @@ ms.locfileid: "34467871"
 |LATCH_SH|Tiene lugar cuando se espera un bloqueo temporal de uso compartido (SH). No incluye bloqueos temporales de búfer ni de marca de transacción. En sys.dm_os_latch_stats está disponible una lista de esperas LATCH_*. Tenga en cuenta que los grupos LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX y LATCH_DT de sys.dm_os_latch_stats esperan juntos.|  
 |LATCH_UP|Tiene lugar cuando se espera un bloqueo temporal de actualización (UP). No incluye bloqueos temporales de búfer ni de marca de transacción. En sys.dm_os_latch_stats está disponible una lista de esperas LATCH_*. Tenga en cuenta que los grupos LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX y LATCH_DT de sys.dm_os_latch_stats esperan juntos.|  
 |LAZYWRITER_SLEEP|Tiene lugar cuando se suspenden tareas de escritura diferida. Ésta es una medida del tiempo invertido por las tareas en segundo plano que esperan. No tenga en cuenta este estado cuando busque pausas del usuario.|  
-|LCK_M_BU|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de actualización masiva (BU). Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IS|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de intención compartida (IS). Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IU|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de intención de actualización (IU). Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IX|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de intención exclusiva (IX). Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_NL|Tiene lugar cuando una tarea está esperando adquirir un bloqueo NULL en el valor de clave actual y un bloqueo de intervalo de inserción entre la clave anterior y la actual. Un bloqueo NULL en la clave es un bloqueo de liberación instantánea. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_S|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de uso compartido en el valor de clave actual y un bloqueo de intervalo de inserción entre la clave anterior y la actual. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_U|La tarea espera adquirir un bloqueo de actualización en el valor de clave actual y un bloqueo de intervalo de inserción entre la clave anterior y la actual. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_X|Tiene lugar cuando una tarea está esperando adquirir un bloqueo exclusivo en el valor de clave actual y un bloqueo de intervalo de inserción entre la clave anterior y la actual. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_S|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de uso compartido en el valor de clave actual y un bloqueo de intervalo compartido entre la clave anterior y la actual. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_U|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de actualización en el valor de clave actual y un bloqueo de intervalo de actualización entre la clave anterior y la actual. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_S|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de uso compartido en el valor de clave actual y un bloqueo de intervalo exclusivo entre la clave anterior y la actual. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_U|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de actualización en el valor de clave actual y un bloqueo de intervalo exclusivo entre la clave anterior y la actual. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_X|Tiene lugar cuando una tarea está esperando adquirir un bloqueo exclusivo en el valor de clave actual y un bloqueo de intervalo exclusivo entre la clave anterior y la actual. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_S|Tiene lugar cuando una tarea está esperando a adquirir un bloqueo compartido. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_M|Tiene lugar cuando una tarea está esperando a adquirir un bloqueo de modificación de esquema. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_S|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de uso compartido de esquema. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIU|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de uso compartido con intento de actualización. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIX|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de uso compartido con intención exclusiva. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_U|Tiene lugar cuando una tarea está esperando a adquirir un bloqueo de actualización. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_UIX|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de actualización con intención exclusiva. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_X|Tiene lugar cuando una tarea está esperando a adquirir un bloqueo exclusivo. Para una matriz de compatibilidad de bloqueos, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_BU|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de actualización masiva (BU). Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IS|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de intención compartida (IS). Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IU|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de intención de actualización (IU). Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IX|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de intención exclusiva (IX). Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_NL|Tiene lugar cuando una tarea está esperando adquirir un bloqueo NULL en el valor de clave actual y un bloqueo de intervalo de inserción entre la clave anterior y la actual. Un bloqueo NULL en la clave es un bloqueo de liberación instantánea. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_S|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de uso compartido en el valor de clave actual y un bloqueo de intervalo de inserción entre la clave anterior y la actual. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_U|La tarea espera adquirir un bloqueo de actualización en el valor de clave actual y un bloqueo de intervalo de inserción entre la clave anterior y la actual. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_X|Tiene lugar cuando una tarea está esperando adquirir un bloqueo exclusivo en el valor de clave actual y un bloqueo de intervalo de inserción entre la clave anterior y la actual. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RS_S|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de uso compartido en el valor de clave actual y un bloqueo de intervalo compartido entre la clave anterior y la actual. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RS_U|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de actualización en el valor de clave actual y un bloqueo de intervalo de actualización entre la clave anterior y la actual. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_S|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de uso compartido en el valor de clave actual y un bloqueo de intervalo exclusivo entre la clave anterior y la actual. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_U|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de actualización en el valor de clave actual y un bloqueo de intervalo exclusivo entre la clave anterior y la actual. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_X|Tiene lugar cuando una tarea está esperando adquirir un bloqueo exclusivo en el valor de clave actual y un bloqueo de intervalo exclusivo entre la clave anterior y la actual. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_S|Tiene lugar cuando una tarea está esperando a adquirir un bloqueo compartido. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SCH_M|Tiene lugar cuando una tarea está esperando a adquirir un bloqueo de modificación de esquema. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SCH_S|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de uso compartido de esquema. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SIU|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de uso compartido con intento de actualización. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SIX|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de uso compartido con intención exclusiva. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_U|Tiene lugar cuando una tarea está esperando a adquirir un bloqueo de actualización. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_UIX|Tiene lugar cuando una tarea está esperando adquirir un bloqueo de actualización con intención exclusiva. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_X|Tiene lugar cuando una tarea está esperando a adquirir un bloqueo exclusivo. Una matriz de compatibilidad de bloqueo, consulte [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
 |LOG_RATE_GOVERNOR|Se produce cuando la base de datos está esperando la cuota para escribir en el registro.|  
 |LOGBUFFER|Tiene lugar cuando una tarea está esperando tener espacio en el búfer del registro para almacenar un registro. Valores coherentemente altos pueden indicar que los dispositivos de registro no pueden hacer frente a la cantidad de registros que va a generar el servidor.|  
 |LOGGENERATION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -257,17 +257,17 @@ ms.locfileid: "34467871"
 |PREEMPTIVE_CLOSEBACKUPVDIDEVICE|Tiene lugar cuando el programador de SQLOS cambia a modo preferente para cerrar un dispositivo de copia de seguridad virtual.|  
 |PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL|Tiene lugar cuando el programador de SQLOS cambia a modo preferente para realizar las operaciones de clúster de conmutación por error de Windows.|  
 |PREEMPTIVE_COM_COCREATEINSTANCE|Tiene lugar cuando el programador de SQLOS cambia a modo preferente para crear un objeto COM.|  
-|PREEMPTIVE_HADR_LEASE_MECHANISM|Grupos de disponibilidad AlwaysOn concesión Administrador de programación para el diagnóstico CSS.|  
+|PREEMPTIVE_HADR_LEASE_MECHANISM|Administrador de programación para el diagnóstico CSS de concesión de grupos de disponibilidad AlwaysOn.|  
 |PREEMPTIVE_SOSTESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PRINT_ROLLBACK_PROGRESS|Se utiliza para esperar mientras los procesos del usuario finalizan en una base de datos que se ha pasado utilizando la cláusula de terminación ALTER DATABASE. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Se produce cuando una tarea en segundo plano está esperando a que se termine la tarea en segundo plano que recibe (a través de sondeo) las notificaciones de Clústeres de conmutación por error de Windows Server.  Exclusivamente para uso interno.|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|Una agregación, reemplazamiento o quitar operación está esperando para obtener un bloqueo de escritura en una lista interna AlwaysOn (por ejemplo, una lista de redes, direcciones de red o agentes de escucha de grupo de disponibilidad).  Exclusivamente para uso interno.|  
-|PWAIT_HADR_OFFLINE_COMPLETED|Una de AlwaysOn disponibilidad grupo operación de eliminación está esperando para que el grupo de disponibilidad de destino se quede sin conexión antes de destruir los objetos de clústeres de conmutación por error de Windows Server.|  
-|PWAIT_HADR_ONLINE_COMPLETED|Un siempre en crear o está esperando la operación del grupo de disponibilidad de conmutación por error para que el grupo de disponibilidad de destino para ponerse en línea.|  
-|PWAIT_HADR_POST_ONLINE_COMPLETED|Una de AlwaysOn disponibilidad grupo operación de eliminación está esperando la finalización de cualquier tarea en segundo plano que se programara como parte de un comando anterior. Por ejemplo, el puede haber una tarea en segundo plano que esté pasando las bases de datos de disponibilidad al rol principal. La DDL DROP AVAILABILITY GROUP siempre debe esperar a que esta tarea en segundo plano termine para evitar las condiciones de carrera.|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|Un append, reemplazamiento o eliminación operación está esperando para tomar un bloqueo de escritura en una lista interna AlwaysOn (por ejemplo, una lista de redes, direcciones de red o agentes de escucha de grupo de disponibilidad).  Exclusivamente para uso interno.|  
+|PWAIT_HADR_OFFLINE_COMPLETED|Una de AlwaysOn disponibilidad grupo operación de eliminación está esperando el grupo de disponibilidad de destino se quede sin conexión antes de destruir objetos de clústeres de conmutación por error de Windows Server.|  
+|PWAIT_HADR_ONLINE_COMPLETED|AlwaysOn cree o está esperando la operación del grupo de disponibilidad de conmutación por error para que el grupo de disponibilidad de destino a estar en línea.|  
+|PWAIT_HADR_POST_ONLINE_COMPLETED|Una AlwaysOn disponibilidad grupo operación de eliminación está esperando la finalización de cualquier tarea en segundo plano que se programara como parte de un comando anterior. Por ejemplo, el puede haber una tarea en segundo plano que esté pasando las bases de datos de disponibilidad al rol principal. La DDL DROP AVAILABILITY GROUP siempre debe esperar a que esta tarea en segundo plano termine para evitar las condiciones de carrera.|  
 |PWAIT_HADR_WORKITEM_COMPLETED|Espera interna de un subproceso que espera a que una tarea de trabajo asincrónico se complete. Se trata de una espera prevista y es para uso de CSS.|  
 |PWAIT_MD_LOGIN_STATS|Se produce durante la sincronización interna en las estadísticas de inicio de sesión de los metadatos.|  
 |PWAIT_MD_RELATION_CACHE|Se produce durante la sincronización interna en los metadatos de la tabla o el índice.|  

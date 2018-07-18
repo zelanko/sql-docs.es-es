@@ -1,5 +1,5 @@
 ---
-title: Trabajar con objetos de base de datos | Documentos de Microsoft
+title: Trabajar con objetos de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 37b8491bc441db0a2457ea4d87e6bb372326cafb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966590"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040203"
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>Crear, modificar y quitar objetos de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -48,6 +48,6 @@ ms.locfileid: "32966590"
  La instrucción **Drop** se utiliza para quitar un objeto y todos los objetos secundarios codependientes que hicieron falta para crear el objeto inicialmente.  
   
 ## <a name="see-also"></a>Vea también  
- [Modelo de objetos SMO](../../../relational-databases/server-management-objects-smo/smo-object-model.md)  
+ [Modelo de objetos de SMO](../../../relational-databases/server-management-objects-smo/smo-object-model.md)  
   
   

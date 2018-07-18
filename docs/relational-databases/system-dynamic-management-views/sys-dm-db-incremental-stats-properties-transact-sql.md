@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_incremental_stats_properties (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_db_incremental_stats_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6dd64a9c7b4171ad8024f2b86c07cb318fa81ad8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466241"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997877"
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Identificador del objeto (tabla) para el que se devuelven las propiedades del objeto de estadísticas.|  
 |stats_id|**int**|Identificador del objeto de estadísticas. Es único en la tabla. Para obtener más información, vea [sysno incluye la vista.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)no incluye la vista.|
@@ -75,9 +75,9 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  Este comportamiento permite el uso seguro de `sys.dm_db_incremental_stats_properties` cuando se aplica de manera cruzada a filas en vistas como `sys.objects` y `sys.stats`. Este método puede devolver propiedades de las estadísticas que corresponden a cada partición. Para ver las propiedades de las estadísticas combinadas en todas las particiones, use sys.dm_db_stats_properties en su lugar. 
 
-La fecha de actualización de estadísticas se almacena en el [objeto BLOB de estadísticas](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) junto con el [histograma](../../relational-databases/statistics/statistics.md#histogram) y el [vector de densidad](../../relational-databases/statistics/statistics.md#density), pero no en los metadatos. Cuando se lee ningún dato para generar datos de estadísticas, no se creó el blob de estadísticas, no está disponible, la fecha y la *last_updated* columna es NULL. Esto sucede en las estadísticas filtradas, en las que el predicado no devuelve ninguna fila, o en las tablas nuevas vacías.
+La fecha de actualización de estadísticas se almacena en el [objeto BLOB de estadísticas](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) junto con el [histograma](../../relational-databases/statistics/statistics.md#histogram) y el [vector de densidad](../../relational-databases/statistics/statistics.md#density), pero no en los metadatos. Cuando se lee ningún dato para generar datos de estadísticas, no se crea el blob de estadísticas, no está disponible, la fecha y la *last_updated* columna es NULL. Esto sucede en las estadísticas filtradas, en las que el predicado no devuelve ninguna fila, o en las tablas nuevas vacías.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita que el usuario tenga permisos de selección en columnas de estadísticas o posea la tabla, o que el usuario sea miembro del rol fijo de servidor `sysadmin`, del rol fijo de base de datos `db_owner` o del rol fijo de base de datos `db_ddladmin`.  
   
 ## <a name="examples"></a>Ejemplos  

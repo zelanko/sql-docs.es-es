@@ -1,5 +1,5 @@
 ---
-title: Casos de uso generales de XQuery | Documentos de Microsoft
+title: Casos de uso generales de XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9a28080c682d40d1e08aaa96e594c96496d79026
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078092"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999837"
 ---
 # <a name="general-xquery-use-cases"></a>Casos de uso generales de XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ WHERE CatalogDescription is not null
   
 -   El cuerpo de la consulta genera el XML requerido.  
   
--   En la cláusula WHERE, el **exist()** método se usa para buscar únicamente las filas que contienen descripciones de catálogo de productos. es decir, el XML que contiene el elemento <`ProductDescription`>.  
+-   En la cláusula WHERE, el **exist()** método se utiliza para buscar únicamente las filas que contienen descripciones de catálogo de productos. es decir, el XML que contiene el elemento <`ProductDescription`>.  
   
  El resultado es el siguiente:  
   
@@ -79,7 +79,7 @@ WHERE CatalogDescription is not null
 <Product ProductModelID="35"/>  
 ```  
   
- La siguiente consulta recupera la misma información, pero solo de los modelos de productos en cuya descripción de catálogo se incluya el peso (el elemento <`Weight`>) en las especificaciones (el elemento <`Specifications`>). En este ejemplo se utiliza WITH XMLNAMESPACES para declarar el prefijo pd y su enlace de espacio de nombres. De esta manera, el enlace no se describe en ambos el **query()** método y en el **exist()** método.  
+ La siguiente consulta recupera la misma información, pero solo de los modelos de productos en cuya descripción de catálogo se incluya el peso (el elemento <`Weight`>) en las especificaciones (el elemento <`Specifications`>). En este ejemplo se utiliza WITH XMLNAMESPACES para declarar el prefijo pd y su enlace de espacio de nombres. De este modo, no se describe el enlace tanto en el **query()** método y en el **exist()** método.  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -94,7 +94,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight ') = 1  
 ```  
   
- En la consulta anterior, la **exist()** método de la **xml** tipo de datos en la cláusula WHERE comprueba si hay un <`Weight`> elemento en el <`Specifications`> elemento.  
+ En la consulta anterior, el **exist()** método de la **xml** tipo de datos en la cláusula WHERE comprueba si hay una <`Weight`> elemento en el <`Specifications`> elemento.  
   
 ### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. Encontrar identificadores de modelos de productos para modelos de productos en cuyas descripciones de catálogo se incluyan imágenes de pequeño tamaño y ángulo frontal  
  La descripción del catálogo de productos XML incluye imágenes de los productos (el elemento <`Picture`>). Cada imagen tiene varias propiedades. Entre estas propiedades se incluyen el ángulo de la imagen (el elemento <`Angle`>) y el tamaño (el elemento <`Size`>).  
@@ -143,7 +143,7 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
 ...  
 ```  
   
-### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. Crear una lista plana del producto pares de nombre y la característica de modelo, con cada par incluido en el \<características > elemento  
+### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. Crear una lista plana del producto pares de nombre y la característica de modelo, con cada par incluido dentro del \<características > elemento  
  En la descripción de catálogo del modelo de producto, el XML incluye varias características del producto. Todas estas características se incluyen en el elemento <`Features`>. La consulta usa [construcción XML (XQuery)](../xquery/xml-construction-xquery.md) para construir el XML requerido. La expresión incluida entre llaves se reemplaza por el resultado.  
   
 ```  
@@ -194,8 +194,8 @@ WHERE ProductModelID=19
 ...      
 ```  
   
-### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. En la descripción del catálogo de un modelo de producto, el producto de la lista modelo Id. de nombre, modelo y características agrupan dentro de un \<producto > elemento  
- Con la información almacenada en la descripción del catálogo del modelo del producto, la consulta siguiente muestra el nombre del modelo de producto, Id. de modelo, y características se agrupan dentro de un \<producto > elemento.  
+### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. Desde la descripción del catálogo de un modelo de producto, el producto de la lista de modelos Id. de nombre, modelo y las características se agrupan dentro de un \<producto > elemento  
+ Con la información almacenada en la descripción del catálogo del modelo de producto, la consulta siguiente muestra el nombre del modelo de producto, Id. de modelo, y características se agrupan dentro de un \<producto > elemento.  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -231,7 +231,7 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="e-retrieve-product-model-feature-descriptions"></a>E. Recuperar descripciones de características de modelos de productos  
- La siguiente consulta genera XML que incluye un <`Product`> elemento que tiene **ProducModelID**, **ProductModelName** atributos y las primeras características del producto de dos. Las dos primeras características del producto son, concretamente, los dos primeros elementos secundarios del elemento <`Features`>. Si hay más características, devuelve un elemento <`There-is-more/`> vacío.  
+ La siguiente consulta genera XML que incluye un <`Product`> elemento que tiene **ProducModelID**, **ProductModelName** atributos y las primeros dos características del producto. Las dos primeras características del producto son, concretamente, los dos primeros elementos secundarios del elemento <`Features`>. Si hay más características, devuelve un elemento <`There-is-more/`> vacío.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -309,7 +309,7 @@ WHERE CatalogDescription.value('
   
 -   La cláusula WHERE se utiliza para recuperar únicamente las filas en las que la descripción de catálogo contiene la palabra "Aerodynamic" en el elemento <`Summary`>.  
   
--   El **contains()** función se utiliza para ver si la palabra está incluida en el texto.  
+-   El **contains()** función se usa para ver si la palabra está incluida en el texto.  
   
 -   El **value()** método de la **xml** tipo de datos compara el valor devuelto por **contains()** en 1.  
   
@@ -348,10 +348,10 @@ AND     CatalogDescription.exist('declare namespace p1="http://schemas.microsoft
   
 ## <a name="see-also"></a>Vea también  
  [Consultas XQuery con jerarquía](../xquery/xqueries-involving-hierarchy.md)   
- [Consultas XQuery basadas en orden](../xquery/xqueries-involving-order.md)   
- [Consultas XQuery para controlar datos relacionales](../xquery/xqueries-handling-relational-data.md)   
+ [Consultas XQuery con orden](../xquery/xqueries-involving-order.md)   
+ [Funciones de XQuery para controlar datos relacionales](../xquery/xqueries-handling-relational-data.md)   
  [Buscar cadenas en XQuery](../xquery/string-search-in-xquery.md)   
- [Control de espacios de nombres en XQuery](../xquery/handling-namespaces-in-xquery.md)   
+ [Controlar espacios de nombres en XQuery](../xquery/handling-namespaces-in-xquery.md)   
  [Agregar espacios de nombres a consultas con WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Datos XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Referencia del lenguaje XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

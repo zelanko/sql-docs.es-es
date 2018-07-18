@@ -1,31 +1,30 @@
 ---
-title: Objetos de administración (SMO) - términos de licencia compartida de SQL Server | Documentos de Microsoft
+title: Objetos de administración (SMO) - términos de licencia compartida de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bd92f1a4d3dd24e4eab1c4f886b28dad158d9fd1
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235102"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040433"
 ---
-# <a name="sql-server-shared-management-objects-smo-license-terms"></a>Términos de licencia de (SQL SMO) de objetos de administración compartida de SQL Server
+# <a name="sql-server-shared-management-objects-smo-license-terms"></a>Términos de licencia de (SMO) de objetos de administración compartida de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ## <a name="microsoft-software-license-terms"></a>TÉRMINOS DE LICENCIA DEL SOFTWARE DE MICROSOFT
-**OBJETOS DE ADMINISTRACIÓN COMPARTIDA DE MICROSOFT SQL SERVER DE 2017**
+**OBJETOS DE ADMINISTRACIÓN COMPARTIDA DE MICROSOFT SQL SERVER 2017**
 
 ---
 Los presentes términos de licencia constituyen un contrato entre Microsoft Corporation (o, en función de donde resida, una de sus filiales) y usted. Lea los términos de licencia. Son de aplicación al software antes mencionado, el cual incluye los soportes físicos en los que lo haya recibido, si los hubiera. Los términos también se aplican a cualquier
@@ -43,7 +42,7 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
 
 **1. DERECHOS DE INSTALACIÓN Y USO.**
 
-&nbsp;&nbsp;Puede instalar y usar cualquier número de copias del software de los dispositivos para diseñar, desarrollar y probar sus programas.
+&nbsp;&nbsp;Puede instalar y usar cualquier número de copias del software en sus dispositivos para diseñar, desarrollar y probar sus programas.
 
 **2.    REQUISITOS DE LICENCIA Y/O DERECHOS DE USUARIO ADICIONALES.**
 
@@ -55,7 +54,7 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii.   Requisitos de distribución. Para distribuir cualquier Código distribuible, deberá**
 * agregarle la funcionalidad primaria relevante en sus programas;
-* para cualquier código distribuible que tengan una extensión de nombre de archivo del archivo .dll, distribuir solo los resultados de ejecutar dicho código a través de un vinculador a su programa;
+* para cualquier código distribuible que tenga una extensión de nombre de archivo del archivo .dll, distribuir solo los resultados de ejecutar dicho código a través de un vinculador a su programa;
 * exigir a los distribuidores y usuarios finales externos que acepten los términos que lo protegen, al menos en lo que respecta al presente contrato; 
 * mostrar el aviso de copyright válido en los programas; y
 * indemnizar, defender y eximir de responsabilidad a Microsoft frente a cualquier reclamación, incluidos los honorarios de abogado, relativos a la distribución o uso de sus programas.

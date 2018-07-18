@@ -1,5 +1,5 @@
 ---
-title: no (función de XQuery) | Documentos de Microsoft
+title: no (función de XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -26,13 +26,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f3da41971a8af3fe92fc8c7034fa6cd749a68ac8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077662"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999817"
 ---
-# <a name="functions-on-boolean-values---not-function"></a>Funciones en valores booleanos - no funcionen 
+# <a name="functions-on-boolean-values---not-function"></a>Funciones usadas en valores booleanos: función no 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Devuelve TRUE si el valor booleano efectivo de *$arg* es false y devuelve FALSE si el valor booleano efectivo de *$arg* es true.  
@@ -49,7 +49,7 @@ fn:not($arg as item()*) as xs:boolean
  Secuencia de elementos para los que existe un valor booleano efectivo.  
   
 ## <a name="examples"></a>Ejemplos  
- Este tema ofrecen ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos de AdventureWorks.  
+ En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Usar la función not() de XQuery para buscar modelos de producto cuyas descripciones de catálogo no incluyen el \<especificaciones > elemento.  
  La siguiente consulta genera XML que contiene identificadores correspondientes a modelos de producto cuyas descripciones de catálogo no incluyen el elemento <`Specifications`>.  
@@ -69,13 +69,13 @@ WHERE CatalogDescription.exist('
   
  Observe lo siguiente en la consulta anterior:  
   
--   Dado que el documento utiliza espacios de nombres, en el ejemplo se utiliza la instrucción WITH NAMESPACES. Otra opción consiste en usar la **declarar el espacio de nombres** palabra clave en el [prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md) para definir el prefijo.  
+-   Dado que el documento utiliza espacios de nombres, en el ejemplo se utiliza la instrucción WITH NAMESPACES. Otra opción consiste en usar el **declarar el espacio de nombres** palabra clave en el [prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md) para definir el prefijo.  
   
 -   La consulta, a continuación, genera el XML que incluye el <`Product`> elemento y su **ProductModelID** atributo.  
   
 -   La cláusula WHERE utiliza el [método exist() (tipo de datos XML)](../t-sql/xml/exist-method-xml-data-type.md) para filtrar las filas. El **exist()** método devuelve True si hay \<ProductDescription > elementos que no tienen \<especificación > elementos secundarios. Tenga en cuenta el uso de la **not()** función.  
   
- Este conjunto de resultados está vacío, porque cada descripción de catálogo de modelos de productos incluye la \<especificaciones > elemento.  
+ Este conjunto de resultados está vacío, porque cada descripción de catálogo del modelo de producto se incluye la \<especificaciones > elemento.  
   
 ### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>B. Usar la función not() de XQuery para recuperar ubicaciones de centros de trabajo que no contienen el atributo MachineHours.  
  La siguiente consulta se especifica para la columna Instructions. En esta columna, se almacenan las instrucciones de fabricación de los modelos de producto.  
@@ -114,7 +114,7 @@ ProductModelID Result
 ### <a name="implementation-limitations"></a>Limitaciones de la implementación  
  Éstas son las limitaciones:  
   
--   El **not()** función solo admite argumentos de tipo xs: Boolean, o node() * o una secuencia vacía.  
+-   El **not()** función solo es compatible con los argumentos de tipo xs: Boolean, o node() * o una secuencia vacía.  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones de XQuery con el tipo de datos xml](../xquery/xquery-functions-against-the-xml-data-type.md)  

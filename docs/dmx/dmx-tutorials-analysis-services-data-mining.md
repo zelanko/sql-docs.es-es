@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriales de DMX (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Tutoriales de DMX (Analysis Services - minería de datos) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3d242236074c652f2210580f657d99e205f5ed6
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842208"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991079"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>Tutoriales de DMX (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34842208"
 ## <a name="reference"></a>Referencia  
  [Extensiones de minería de datos &#40;DMX&#41; elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
- [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)  
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)  
   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)  
   

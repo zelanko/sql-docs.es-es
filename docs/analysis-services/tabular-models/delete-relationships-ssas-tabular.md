@@ -1,5 +1,5 @@
 ---
-title: Eliminar relaciones | Documentos de Microsoft
+title: Eliminar relaciones | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 115d72bd0b833d1f392b2349d3ed4e4970f58453
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040099"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999184"
 ---
 # <a name="delete-relationships"></a>Eliminar relaciones 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

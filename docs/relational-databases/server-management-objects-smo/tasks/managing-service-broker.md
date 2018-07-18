@@ -1,5 +1,5 @@
 ---
-title: Administrar Service Broker | Documentos de Microsoft
+title: Administrar Service Broker | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1d3bb44a64386329570d78e8b3ce436b9573f63f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967960"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000947"
 ---
 # <a name="managing-service-broker"></a>Administrar Service Broker
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

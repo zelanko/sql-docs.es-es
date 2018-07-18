@@ -1,5 +1,5 @@
 ---
-title: 'Excluir elementos de esquema del documento XML mediante sql: asignar | Documentos de Microsoft'
+title: 'Excluir elementos de esquema del documento XML mediante sql: asigna | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -29,27 +29,27 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 640ae49de50fec55afb9c957042f5d317f41195f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969840"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001247"
 ---
-# <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Excluir elementos de esquema del documento XML mediante sql: asignado
+# <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Excluir elementos de esquema del documento XML mediante sql: asignar
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Cada elemento y atributo del esquema XSD se asigna a una tabla/vista y columna de base de datos debido a la asignación predeterminada. Si desea crear un elemento en el esquema XSD que no se asigna a ninguna tabla de base de datos (vista) o la columna y que no aparecen en el código XML, puede especificar el **sql: asignado** anotación.  
+  Cada elemento y atributo del esquema XSD se asigna a una tabla/vista y columna de base de datos debido a la asignación predeterminada. Si desea crear un elemento en el esquema XSD que no se asigna a ninguna tabla de base de datos (vista) o una columna y que no aparece en el archivo XML, puede especificar el **sql: asigna** anotación.  
   
- El **sql: asignado** anotación es especialmente útil si no se puede modificar el esquema o si el esquema se utiliza para validar XML de otros orígenes y aún contiene datos que no se almacenan en la base de datos. El **sql: asignado** anotación difiere de **sql: constante es** en que los atributos y elementos no asignados no aparecen en el documento XML.  
+ El **sql: asigna** anotación es especialmente útil si no se puede modificar el esquema o si se utiliza el esquema para validar XML de otros orígenes y aún contiene datos que no se almacenan en la base de datos. El **sql: asigna** difiere anotación **sql: constante es** en que los atributos y elementos no asignados no aparecen en el documento XML.  
   
- El **sql: asignado** anotación toma un valor booleano (0 = false, 1 = true). Los valores permitidos son 0, 1, true y false.  
+ El **sql: asigna** anotación toma un valor booleano (0 = false, 1 = true). Los valores permitidos son 0, 1, true y false.  
   
 ## <a name="examples"></a>Ejemplos  
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Especificar la anotación sql:mapped  
- Suponga que tiene un esquema XSD de algún otro origen. Este esquema XSD está compuesto de un  **\<Person.Contact >** elemento con **ContactID**, **FirstName**, **LastName**, y **HomeAddress** atributos.  
+ Suponga que tiene un esquema XSD de algún otro origen. Este esquema XSD consta de un  **\<Person.Contact >** elemento con **ContactID**, **FirstName**, **LastName**, y **HomeAddress** atributos.  
   
- Al asignar este esquema XSD a la tabla Person.Contact en la base de datos de AdventureWorks, **sql: asignado** se especifica en el **HomeAddress** atributo porque la tabla Employees no almacena la página principal direcciones de los empleados. Por consiguiente, este atributo no se asigna a la base de datos y no se devuelve en el documento XML resultante cuando se especifica una consulta XPath en el esquema de asignación.  
+ En este esquema XSD de asignación a la tabla Person.Contact en la base de datos AdventureWorks, **sql: asigna** se especifica en el **HomeAddress** atributo porque la tabla Employees no almacena la página principal direcciones de los empleados. Por consiguiente, este atributo no se asigna a la base de datos y no se devuelve en el documento XML resultante cuando se especifica una consulta XPath en el esquema de asignación.  
   
  Para el resto del esquema se produce una asignación predeterminada. El  **\<Person.Contact >** elemento se asigna a la tabla Person.Contact y todos los atributos se asignan a las columnas con el mismo nombre en la tabla Person.Contact.  
   
@@ -108,9 +108,9 @@ ms.locfileid: "32969840"
 </ROOT>  
 ```  
   
- Tenga en cuenta que el ContactID, FirstName y LastName están presentes, pero HomeAddress no lo es porque el esquema de asignación especificó 0 para el **sql: asignado** atributo.  
+ Tenga en cuenta que el ContactID, FirstName y LastName están presentes, pero HomeAddress no lo es porque el esquema de asignación especificó 0 para el **sql: asigna** atributo.  
   
 ## <a name="see-also"></a>Vea también  
- [Asignación predeterminada de elementos y atributos a las tablas y columnas XSD &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [Asignación predeterminada de atributos y elementos XSD a tablas y columnas &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

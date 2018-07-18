@@ -1,5 +1,5 @@
 ---
-title: Especificar una prueba de nodo en la ruta de acceso de ubicación (SQLXML 4.0) | Documentos de Microsoft
+title: Especificar una prueba de nodo en la ruta de acceso de ubicación (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e2c25b27a36a8505f0608ad8690ea13d6c60c197
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970290"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053753"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Especificar una prueba de nodo en la ruta de acceso de ubicación (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Una prueba de nodo especifica el tipo de nodo seleccionado por el paso de ubicación. Cada eje (**secundarios**, **primario**, **atributo**, o **en sí mismo**) tiene un tipo de nodo principal. Para el **atributo** eje, el tipo de nodo principal es  **\<atributo >**. Para el **primario**, **secundarios**, y **en sí mismo** ejes, el tipo de nodo principal es  **\<elemento >**.  
+  Una prueba de nodo especifica el tipo de nodo seleccionado por el paso de ubicación. Cada eje (**secundarios**, **primario**, **atributo**, o **self**) tiene un tipo de nodo principal. Para el **atributo** eje, el tipo de nodo principal es  **\<atributo >**. Para el **primario**, **secundarios**, y **self** ejes, el tipo de nodo principal es  **\<elemento >**.  
   
 > [!NOTE]  
 >  La prueba de nodo de carácter comodín * (por ejemplo, `child::*`) no se admite.  

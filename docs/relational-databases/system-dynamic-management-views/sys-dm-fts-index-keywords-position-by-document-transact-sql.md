@@ -23,16 +23,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b02615dbc260c951a08d3bfa5279b20464653203
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463668"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000897"
 ---
 # <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve información de posición de la palabra clave en los documentos indizados.  
+  Devuelve información de posición de la palabra clave en los documentos indexados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,14 +46,14 @@ OBJECT_ID('table_name')
   
 ## <a name="arguments"></a>Argumentos  
  db_id('*database_name*')  
- Una llamada a la [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) (función). Esta función acepta un nombre de base de datos y devuelve el identificador de base de datos, qué sys.dm_fts_index_keywords_position_by_document se usa para buscar la base de datos especificada.  
+ Una llamada a la [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) función. Esta función acepta un nombre de base de datos y devuelve el identificador de la base de datos, qué sys.dm_fts_index_keywords_position_by_document se usa para buscar la base de datos especificado.  
   
  object_id ('*table_name*')  
- Una llamada a la [object_id ()](../../t-sql/functions/object-id-transact-sql.md) (función). Esta función acepta un nombre de tabla y devuelve el identificador de la tabla que contiene el índice de texto completo que se va a inspeccionar.  
+ Una llamada a la [object_id ()](../../t-sql/functions/object-id-transact-sql.md) función. Esta función acepta un nombre de tabla y devuelve el identificador de la tabla que contiene el índice de texto completo que se va a inspeccionar.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Columna|Data type|Description|  
+|columna|Data type|Descripción|  
 |------------|---------------|-----------------|  
 |palabra clave|**varbinary(128)**|Que representa la palabra clave de cadena binaria.|  
 |display_term|**nvarchar(4000)**|Formato legible de la palabra clave. Este formato se deriva del formato interno que se almacena en el índice de texto completo.|  
@@ -61,14 +61,14 @@ OBJECT_ID('table_name')
 |document_id|**bigint**|Identificador del documento o fila en que el término actual se indizó con texto completo. Este identificador corresponde al valor de clave de texto completo de ese documento o fila.|  
 |position|**int**|La posición de la palabra clave en el documento.|  
   
-## <a name="remarks"></a>Comentarios  
- Use la DMV para identificar la ubicación de las palabras indizadas en los documentos indizados. Esta DMV puede utilizarse para solucionar problemas cuando **sys.dm_fts_index_keywords_by_document** indica las palabras están en el índice de texto completo, pero al ejecutar una consulta con esas palabras, no se devuelve el documento.  
+## <a name="remarks"></a>Notas  
+ Use la DMV para identificar la ubicación de las palabras indizadas en los documentos indexados. Esta DMV puede usarse para solucionar problemas cuando **sys.dm_fts_index_keywords_by_document** indica las palabras están en el índice de texto completo, pero al ejecutar una consulta mediante las palabras, no se devuelve el documento.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita el permiso SELECT en las columnas cubiertas por el índice de texto completo y permisos CREATE FULLTEXT CATALOG.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se devuelve las palabras clave del índice de texto completo de la `Production.Document` tabla de la `AdventureWorks` base de datos de ejemplo.  
+ El ejemplo siguiente devuelve las palabras clave del índice de texto completo de la `Production.Document` tabla de la `AdventureWorks` base de datos de ejemplo.  
   
 ```  
 USE AdventureWorks2012;  

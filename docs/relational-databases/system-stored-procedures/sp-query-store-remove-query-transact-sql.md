@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_remove_query (Transact-SQL) | Documentos de Microsoft
+title: sp_query_store_remove_query (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 803cd0f5df8d641eeb4119ea99b588571243dd0c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250107"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993657"
 ---
 # <a name="spquerystoreremovequery-transact-sql"></a>sp_query_store_remove_query (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Quita el almacén de consultas en la consulta, así como todos los planes y estadísticas en tiempo de ejecución.  
+  Quita el almacén de consultas en la consulta, así como asociados todos los planes y estadísticas en tiempo de ejecución.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,13 +54,13 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-## <a name="permissions"></a>Permissions  
- Requiere la **EXECUTE** permiso en la base de datos y **eliminar** permiso en las vistas de catálogo del almacén de consultas.  
+## <a name="permissions"></a>Permisos  
+ Requiere el **EXECUTE** permiso en la base de datos y **eliminar** permiso en las vistas de catálogo del almacén de consultas.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se devuelve información acerca de las consultas en el almacén de consultas.  
+ El ejemplo siguiente devuelve información acerca de las consultas en el almacén de consultas.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -71,7 +71,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Después de identificar la query_id que desea eliminar, utilice el siguiente ejemplo para eliminar la consulta.  
+ Después de identificar el query_id que desea eliminar, use el ejemplo siguiente para eliminar la consulta.  
   
  El ejemplo siguiente.  
   

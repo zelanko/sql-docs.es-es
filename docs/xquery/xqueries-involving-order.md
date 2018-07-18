@@ -1,5 +1,5 @@
 ---
-title: Consultas XQuery con orden | Documentos de Microsoft
+title: Consultas XQuery con orden | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 978e800ba5539878eb805c16f2460de3761dda59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077144"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051683"
 ---
 # <a name="xqueries-involving-order"></a>Consultas XQuery basadas en el orden
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- La consulta anterior recupera solamente los nodos de texto. Si desea que todo el <`step`> elemento devuelve en su lugar, quite el **string()** función de la consulta:  
+ La consulta anterior recupera solamente los nodos de texto. Si desea que todo el <`step`> en su lugar, devuelve el elemento se quite el **string()** función de la consulta:  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Encontrar todas las herramientas y todo el material utilizados en el segundo centro de trabajo en la fabricación de un producto  
  Para un modelo de producto específico, la consulta siguiente recupera las herramientas y el material utilizados en el segundo centro de trabajo de una serie de centros de trabajo del proceso de fabricación.  
@@ -167,7 +167,7 @@ where ProductModelID=19
   
  El cuerpo de la consulta genera XML que incluye el elemento <`ProductModel`> que tiene los atributos ProductModelID y ProductModelName.  
   
--   La consulta usa un FOR ... el bucle RETURN para recuperar las descripciones de las funciones del modelo del producto  El **position()** función se utiliza para recuperar las dos primeras características.  
+-   La consulta usa un FOR ... el bucle RETURN para recuperar las descripciones de las funciones del modelo del producto  El **position()** función se usa para recuperar las dos primeras características.  
   
  El resultado es el siguiente:  
   

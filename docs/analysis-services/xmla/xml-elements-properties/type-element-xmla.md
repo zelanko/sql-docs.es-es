@@ -1,5 +1,5 @@
 ---
-title: Tipo de elemento (XMLA) | Documentos de Microsoft
+title: Type (elemento) (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a080a1af46df731befc8ab66ce925b961be9b16
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576717"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051603"
 ---
 # <a name="type-element-xmla"></a>Elemento Type (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Determina el tipo de procesamiento que debe realizar la [proceso](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) elemento.  
+  Determina el tipo de procesamiento para realizar la [proceso](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34576717"
 |Valor predeterminado|None|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
@@ -58,7 +58,7 @@ ms.locfileid: "34576717"
 |*ProcessUpdate*|Actualiza los datos el objeto afectado.|  
 |*ProcessIndexes*|Crea o vuelve a generar índices y agregaciones en el objeto afectado.|  
 |*ProcessScriptCache*|Si se procesa el cubo, el servidor volverá a generar la caché de script de MDX. Si no, se producirá un error.<br /><br /> **Tenga en cuenta** se aplica solo al cubo.|  
-|*ProcessData*|Procesa los datos sólo en el objeto afectado.|  
+|*ProcessData*|Procesa los datos solo en el objeto afectado.|  
 |*ProcessDefault*|Detecta el estado del objeto afectado y después ejecuta la opción de procesamiento adecuada en el objeto afectado para optimizarlo y volver a dejarlo en un estado totalmente procesado.|  
 |*ProcessClear*|Quita los datos del objeto afectado y todos los objetos relacionados.|  
 |*ProcessStructure*|Únicamente procesa los datos del objeto afectado.|  

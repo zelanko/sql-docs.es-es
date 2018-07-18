@@ -1,5 +1,5 @@
 ---
-title: Wide World Importers - base de datos de ejemplo para SQL | Documentos de Microsoft
+title: 'Wide World Importers: base de datos de ejemplo para SQL | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -13,58 +13,58 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5a1eef0650c520ff4757de627633d096ffa46ec8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032652"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993484"
 ---
-# <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Las bases de datos de ejemplo de Wide World Importers para Microsoft SQL
+# <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Las bases de datos de ejemplo de Wide World Importers para SQL de Microsoft
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Se trata de una visión general de la empresa ficticia Wide World Importers y los flujos de trabajo que se mencionan en las bases de datos de ejemplo de WideWorldImporters para SQL Server y base de datos de SQL Azure.  
+Se trata de una visión general de la compañía ficticia Wide World Importers y los flujos de trabajo que se tratan en las bases de datos de ejemplo de WideWorldImporters para SQL Server y Azure SQL Database.  
 
-Wide World Importers (WWI) es un importador de mercancías novedad por mayor y un distribuidor que opere desde el área de la bahía de San Francisco.
+Wide World Importers (WWI) es un importador de mercancías novedad por mayor y un distribuidor que opera desde el área de la bahía de San Francisco.
 
-Como un mayorista, los clientes del WWI son principalmente las empresas revenden a individuos. WWI vende a clientes particulares en los Estados Unidos incluidos los almacenes especializados, supermercados, informática almacenes y tiendas de atracción turísticos, algunos usuarios. WWI también vende a otros mayoristas a través de una red de agentes que promover los productos en nombre del WWI. Mientras que todos los clientes del WWI actualmente se basan en los Estados Unidos, la empresa va a insertar para la expansión en otros países.
+Como un mayorista, los clientes de WWI son principalmente las empresas revenden a individuos. WWI vende a clientes particulares de Estados Unidos como almacenes de especialidad, supermercados, informática almacenes, departamentos de atracción de turismo y algunas personas. WWI también vende a otros mayoristas a través de una red de los agentes que promueven los productos en nombre de WWI. Mientras que todos los clientes de WWI actualmente se basan en los Estados Unidos, la empresa va a insertar expansión en otros países.
 
-WWI compra bienes de proveedores como novedad y fabricantes de juguete y otros mayoristas novedad. Los productos en su almacén de WWI y volver a ordenar de proveedores estándar según sea necesario para el cumplimiento de pedidos de clientes. También grandes volúmenes de materiales de embalaje de compra y vender en cantidades más pequeñas, como una comodidad para los clientes.
+WWI compra productos de proveedores como novedad y fabricantes de juguete y otros mayoristas novedad. Los productos en su almacén de WWI y reordenación de proveedores cotización según sea necesario para cumplir los pedidos del cliente. También grandes volúmenes de materiales de empaquetado de compra y venderlos en cantidades menores como una comodidad para los clientes.
 
-WWI inició recientemente para venderla a una variedad de comestible sorpresa como Chile bombones.  La empresa anteriormente no tenía que controlar elementos frío. Ahora, para satisfacer los requisitos de tratamiento de comida, debe supervisar la temperatura en su habitación refrigerador y cualquiera de los camiones que tienen secciones refrigerador.
+Recientemente WWI comenzado a vender una variedad de comestible sorpresa, como el chile bombones.  La compañía anteriormente no tenía que controlar elementos refrigerados. Ahora, para satisfacer los requisitos de control de alimentos, deben supervisar la temperatura en su sala de refrigerador y cualquiera de sus camionetas que tienen secciones del refrigerador.
 
-## <a name="workflow-for-warehouse-stock-items"></a>Flujo de trabajo para los elementos estándar de almacenamiento
+## <a name="workflow-for-warehouse-stock-items"></a>Flujo de trabajo para los elementos de stock de almacén
 
-El flujo típico de cómo se almacena y se distribuyen elementos es como sigue:
+El flujo típico para el modo en que se almacenó y distribuidas es como sigue:
 - WWI crea pedidos de compra y envía los pedidos a los proveedores.
-- Los elementos de envío de proveedores, WWI reciben y tiene en stock en su almacén.
-- Elementos de orden de los clientes de WWI
-- WWI rellena el pedido del cliente con elementos estándar en el almacén, y cuando no tiene suficientes existencias, solicitan las acciones adicionales de los proveedores.
-- Algunos clientes no desean esperar para elementos que no están en el almacén. Si digamos pedido cinco diferentes elementos estándar y cuatro están disponibles, desean recibir los cuatro elementos y el resto de producto de pedido pendiente. El elemento se les enviará más adelante en un envío independiente.
-- WWI facturas a los clientes para los artículos en existencias, por lo general convirtiendo el pedido a una factura.
-- Los clientes pueden realizar pedidos de elementos que no están en el almacén. Estos elementos están pendientes.
-- WWI ofrece artículos agotados a los clientes a través de sus propios van de entrega, o mediante otros métodos de transporte o correos.
-- Los clientes pagar facturas para WWI.
-- Periódicamente, WWI paga proveedores para los elementos creados en los pedidos de compra. Esto es a menudo en algún momento después de que han recibido los productos.
+- Los elementos de envío de proveedores, WWI los recibe y tiene en stock en su almacén.
+- Elementos de pedidos de clientes de WWI
+- WWI rellena el pedido del cliente con elementos estándar en el almacén, y cuando no tienen suficientes existencias, ordenan el material adicional a los proveedores.
+- Algunos clientes no desean esperar para los elementos que no están disponibles. Si por ejemplo pedido cinco diferentes artículos agotados y cuatro están disponibles, desean recibir los cuatro elementos y el resto de producto de pedido pendiente. El elemento se les enviará más adelante en un envío independiente.
+- WWI facturas normalmente a los clientes para los elementos de cotizaciones, convirtiendo el pedido a una factura.
+- Los clientes pueden solicitar elementos que no están disponibles. Estos elementos están pendientes.
+- WWI entrega stock elementos a los clientes a través de sus propios camionetas de entrega, o mediante otros métodos de transporte o correos.
+- Los clientes pagan las facturas a WWI.
+- Periódicamente, WWI paga proveedores para los elementos que estaban en pedidos de compra. Esto es a menudo en algún momento después de que han recibido los productos.
 
 ## <a name="data-warehouse-and-analysis-workflow"></a>Flujo de trabajo de análisis y almacenamiento de datos
 
-Mientras el equipo en WWI utilizar SQL Server Reporting Services para generar informes operativos a partir de la base de datos WideWorldImporters, también necesita realizar análisis en sus datos y necesita para generar informes estratégicos. El equipo ha creado un modelo de datos de dimensión en una base de datos WideWorldImportersDW. Esta base de datos se rellena con un paquete de Integration Services.
+Aunque el equipo de WWI usa SQL Server Reporting Services para generar informes operativos desde la base de datos WideWorldImporters, también que necesitan para realizar análisis en sus datos y necesita generar informes estratégicos. El equipo ha creado un modelo de datos de dimensión en una base de datos WideWorldImportersDW. Esta base de datos se rellena con un paquete de Integration Services.
 
-SQL Server Analysis Services se utiliza para crear modelos de datos analíticos de los datos en el modelo de datos dimensionales. SQL Server Reporting Services se usa para generar informes estratégicos directamente desde el modelo de datos multidimensionales y también del modelo analítico. Power BI se usa para crear paneles desde los mismos datos. Los paneles se usan en los sitios Web y en los teléfonos y tabletas. *Nota: estos informes y modelos de datos no están disponibles*
+SQL Server Analysis Services se usa para crear modelos de datos de análisis de los datos en el modelo de datos dimensional. SQL Server Reporting Services se usa para generar informes estratégicos directamente desde el modelo de datos dimensional y también desde el modelo de análisis. Se usa Power BI para crear paneles de los mismos datos. Los paneles se usan en los sitios Web y en teléfonos y tabletas. *Nota: estos informes y modelos de datos todavía no están disponibles*
 
 ## <a name="additional-workflows"></a>Flujos de trabajo adicionales
 
-Se trata de flujos de trabajo adicionales.
-- Notas de crédito de WWI problemas cuando un cliente no recibe la buena por algún motivo, o cuando los productos estén defectuosos. Estos se tratan como facturas negativo.
-- WWI cuenta periódicamente las cantidades del inventario de artículos agotados para asegurarse de que las cantidades de stock que se muestran como disponibles en su sistema son correctos. (El proceso de hacer esto se denomina un stocktake).
-- Temperaturas inactivas. Perecederos se almacenan en salas refrigerados. Datos del sensor de dichos locales se ingestión en la base de datos con fines de supervisión y análisis.
-- Seguimiento de la ubicación vehículo. Los vehículos que transportan mercancías para WWI incluyen sensores que realizan el seguimiento de la ubicación. Esta ubicación es ingestión nuevo en la base de datos para la supervisión y más análisis.
+Estos son los flujos de trabajo adicionales.
+- Notas de crédito de WWI problemas cuando un cliente no recibe lo bueno por algún motivo, o cuando los productos son defectuosos. Estos se tratan como facturas negativo.
+- WWI cuenta periódicamente las cantidades disponibles de stock elementos para asegurarse de que las cantidades de stock que se muestran como disponibles en su sistema sean precisas. (El proceso de hacer esto se denomina un stocktake).
+- Temperaturas en frío. Mercancías perecederas se almacenan en las salas refrigeradas. Datos del sensor desde dichos locales se ingieren en la base de datos para fines de supervisión y análisis.
+- Ubicación del vehículo de seguimiento. Vehículos que transportan mercancías para WWI incluyen sensores que realizan el seguimiento de la ubicación. Esta ubicación se ingiere nuevo en la base de datos para análisis y supervisión adicional.
 
 ## <a name="fiscal-year"></a>Año fiscal
 
-La empresa funciona con un ejercicio que comienza el 1 de noviembre.
+La empresa opera con un ejercicio que comienza el 1 de noviembre.
 
 ## <a name="terms-of-use"></a>Términos de uso
 
 La licencia para la base de datos de ejemplo y el código de ejemplo se describe aquí: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-La base de datos de ejemplo incluye datos públicos que se ha cargado desde data.gov y EarthData Natural. Los términos de uso se encuentran aquí: [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
+La base de datos de ejemplo incluye los datos públicos que se ha cargado desde data.gov y EarthData Natural. Los términos de uso están aquí: [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)

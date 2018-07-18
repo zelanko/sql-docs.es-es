@@ -1,5 +1,5 @@
 ---
-title: SELECT INTO (DMX) | Documentos de Microsoft
+title: SELECT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: acc30b259a9fa327c7f5d48fb0f77fdc3b8bf110
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842238"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040423"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Crea un nuevo modelo de minería de datos basado en la estructura de minería de datos de un modelo de minería de datos existente. El **SELECT INTO** instrucción crea el nuevo modelo de minería de datos copiando el esquema y otra información que no es específico del propio algoritmo.  
+  Crea un nuevo modelo de minería de datos basado en la estructura de minería de datos de un modelo de minería de datos existente. El **SELECT INTO** instrucción crea el nuevo modelo de minería de datos copiando el esquema y otra información que no es específico para el algoritmo real.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,14 +34,14 @@ FROM <existing model>
  *nuevo modelo*  
  Nombre único para el nuevo modelo que se está creando.  
   
- *Algoritmo*  
+ *algoritmo*  
  Nombre definido por el proveedor de un algoritmo de minería de datos.  
   
- *Lista de parámetros*  
+ *lista de parámetros*  
  Opcional. Lista delimitada por comas de parámetros definidos por el proveedor para el algoritmo.  
   
  *expression*  
- Una expresión que se evalúa como una condición de filtro válida en los datos de entrenamiento. Para obtener más información acerca de las expresiones que pueden utilizarse como filtros, consulte [filtros para los modelos de minería de datos &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ Una expresión que se evalúa como una condición de filtro válida en los datos de entrenamiento. Para obtener más información sobre las expresiones que se puede usar como filtros, consulte [filtros para modelos de minería de datos de &#40;Analysis Services - minería de datos&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
  *modelo existente*  
  Nombre del modelo existente que se va a copiar.  
@@ -54,7 +54,7 @@ FROM <existing model>
  El **WITH DRILLTHROUGH** cláusula permite la obtención de detalles en el nuevo modelo de minería de datos. La obtención de detalles solo se puede habilitar al crear el modelo.  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>Ejemplo 1: modificar los parámetros del modelo  
- En el ejemplo siguiente se crea un nuevo modelo de minería de datos basado en un modelo de minería de datos existente, `TM_Clustering`, que se crean en el [Tutorial básico de minería de datos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). En el nuevo modelo, el parámetro CLUSTER_COUNT se modifica de modo que exista un máximo de cinco clústeres en dicho modelo. En cambio, el modelo existente usa el valor predeterminado, que es 10.  
+ En el ejemplo siguiente se crea un nuevo modelo de minería de datos basado en un modelo de minería de datos existente, `TM_Clustering`, que se crean en el [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). En el nuevo modelo, el parámetro CLUSTER_COUNT se modifica de modo que exista un máximo de cinco clústeres en dicho modelo. En cambio, el modelo existente usa el valor predeterminado, que es 10.  
   
 ```  
 SELECT * INTO [New_Clustering]  
@@ -75,7 +75,7 @@ FROM [TM Clustering]
 >  Los filtros que se aplican a la tabla de casos se pueden modificar usando la instrucción SELECT INTO tal y como se muestra en este ejemplo; sin embargo, si el modelo original contiene un filtro en una tabla anidada, dicho filtro no se puede modificar ni quitar usando esta sintaxis, y se copia sin modificar del modelo original. Para crear un modelo con un filtro diferente en una tabla anidada, use la sintaxis ALTER STRUCTURE...ADD MODEL.  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

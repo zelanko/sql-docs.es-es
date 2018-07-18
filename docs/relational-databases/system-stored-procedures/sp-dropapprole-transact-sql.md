@@ -1,5 +1,5 @@
 ---
-title: sp_dropapprole (Transact-SQL) | Documentos de Microsoft
+title: sp_dropapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 56752702ef62ad4afae65bf2a935757e72c189d8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244891"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047210"
 ---
 # <a name="spdropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,12 +53,12 @@ sp_dropapprole [@rolename = ] 'role'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_dropapprole** sólo puede utilizarse para quitar roles de aplicación. Si un rol posee algún elemento protegible, no podrá quitarse. Para poder quitar un rol de aplicación que posea elementos protegibles, primero debe transferir la propiedad de esos elementos o quitarlos.  
   
- **sp_dropapprole** no puede ejecutarse en una transacción definida por el usuario.  
+ **sp_dropapprole** no se puede ejecutar dentro de una transacción definida por el usuario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY APPLICATION ROLE en la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  

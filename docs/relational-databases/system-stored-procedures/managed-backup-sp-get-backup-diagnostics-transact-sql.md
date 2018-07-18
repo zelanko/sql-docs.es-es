@@ -26,18 +26,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2b2f8c78b1802ff177040352cd7342b51b035c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239415"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051323"
 ---
 # <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Devuelve los eventos extendidos registrados por Smart Admin.  
   
- Utilice este procedimiento almacenado para supervisar eventos extendidos registrados por Smart Admin. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] eventos se registran en este sistema y se puede revisar y supervisan a través de este procedimiento almacenado.  
+ Utilice este procedimiento almacenado para supervisar los eventos extendidos registrados por Smart Admin. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] eventos se registran en este sistema y se pueden revisar y supervisar mediante este procedimiento almacenado.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,28 +51,28 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
  @xevent_channel  
  Tipo de evento extendido. El valor predeterminado se establece para devolver todos los eventos registrados durante los 30 minutos anteriores. Los eventos registrados dependen del tipo de Eventos extendidos habilitados. Puede utilizar este parámetro para filtrar el procedimiento almacenado para mostrar solo los eventos de un tipo determinado. Puede especificar el nombre completo del evento o especifique una subcadena como: **'Admin'**, **'Analytic'**, **'Operational'**, y **'Debug'** . El @event_channel es **VARCHAR (255)**.  
   
- Para obtener una lista de tipos habilitados actualmente de evento, utilice la **managed_backup.fn_get_current_xevent_settings** (función).  
+ Para obtener una lista de eventos habilitados actualmente tipos uso el **managed_backup.fn_get_current_xevent_settings** función.  
   
  [@begin_time  
  El inicio del período de tiempo cuyos eventos se deben mostrar. El @begin_time parámetro es DateTime y su valor predeterminado es null. Si esto no se especifica, se muestran los eventos de los últimos 30 minutos.  
   
  @end_time  
- El fin del período de tiempo cuyos eventos se deben mostrar. El @end_time parámetro es DateTime y su valor predeterminado es NULL.  Si esto no se especifica, se muestran los eventos hasta la hora actual.  
+ El fin del período de tiempo cuyos eventos se deben mostrar. El @end_time parámetro es DateTime con un valor predeterminado es NULL.  Si esto no se especifica, se muestran los eventos hasta la hora actual.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
  Este procedimiento almacenado devuelve una tabla con la siguiente información:  
   
 ||||  
 |-|-|-|  
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |event_type|NVARCHAR (512)|Tipo de evento extendido.|  
 |Evento|NVARCHAR (512)|Resumen de los registros de eventos.|  
-|Timestamp|TIMESTAMP|Marca de tiempo de evento que muestra si el evento se ha producido.|  
+|Timestamp|timestamp|Marca de tiempo de evento que muestra si el evento se ha producido.|  
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
- Requiere **EXECUTE** permisos en el procedimiento almacenado. También requiere **VIEW SERVER STATE** permisos ya que internamente llama a otros objetos del sistema que requieren este permiso.  
+### <a name="permissions"></a>Permisos  
+ Requiere **EXECUTE** permisos en el procedimiento almacenado. También requiere **VIEW SERVER STATE** permisos desde que llama internamente a otros objetos del sistema que requieren este permiso.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve todos los eventos registrados durante los últimos 30 minutos  

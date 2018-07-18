@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_health_components (Transact-SQL) | Documentos de Microsoft
+title: Sys.pdw_health_components (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5cc73d80ea4ca8c724a5cb0efbe63381de068cb1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178921"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000998"
 ---
 # <a name="syspdwhealthcomponents-transact-sql"></a>Sys.pdw_health_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Almacena información sobre todos los componentes y dispositivos que existen en el sistema. Se trata de hardware, dispositivos de almacenamiento y dispositivos de red.  
+  Almacena información sobre todos los componentes y dispositivos que existen en el sistema. Estos incluyen el hardware, dispositivos de almacenamiento y dispositivos de red.  
   
-|Nombre de la columna|Tipo de datos|Description|Intervalo|  
+|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|IdComponente|**int**|Identificador único de un componente o un dispositivo.<br /><br /> Clave para esta vista.|NOT NULL|  
-|group_id|**Int**|El grupo de componentes lógica a la que pertenece este componente. Vea [sys.pdw_health_components (almacenamiento de datos paralelos)](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).|NOT NULL|  
+|IdComponente|**int**|Identificador único de un componente o el dispositivo.<br /><br /> Clave para esta vista.|NOT NULL|  
+|group_id|**Int**|El grupo de componentes lógicos a la que pertenece este componente. Consulte [sys.pdw_health_components (almacenamiento de datos paralelos)](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).|NOT NULL|  
 |component_name|**nvarchar(255)**|Nombre del componente.|NOT NULL|  
   
 ## <a name="see-also"></a>Vea también  
- [Almacenamiento de datos SQL y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

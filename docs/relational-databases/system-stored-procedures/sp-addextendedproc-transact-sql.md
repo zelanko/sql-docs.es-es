@@ -1,5 +1,5 @@
 ---
-title: sp_addextendedproc (Transact-SQL) | Documentos de Microsoft
+title: sp_addextendedproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 2083d370479fa19049a083ef401574f21740929c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239795"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046093"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
   
 ## <a name="arguments"></a>Argumentos  
  [  **@functname =** ] **'***procedimiento***'**  
- Es el nombre de la función a la que ha de llamarse dentro de la biblioteca de vínculos dinámicos (DLL). *procedimiento* es **nvarchar (517)**, no tiene ningún valor predeterminado. *procedimiento* opcionalmente puede incluir el nombre del propietario en el formulario *owner.function*.  
+ Es el nombre de la función a la que ha de llamarse dentro de la biblioteca de vínculos dinámicos (DLL). *procedimiento* es **nvarchar (517)**, no tiene ningún valor predeterminado. *procedimiento* puede incluir opcionalmente el nombre del propietario en el formulario *owner.function*.  
   
  [  **@dllname =** ] **'***dll***'**  
  Es el nombre de la DLL que contiene la función. *DLL* es **varchar (255)**, no tiene ningún valor predeterminado. Se recomienda especificar la ruta de acceso completa del archivo DLL.  
@@ -60,21 +60,21 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Después de crea un procedimiento almacenado extendido, debe agregarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando **sp_addextendedproc**. Para obtener más información, consulte [agregar un procedimiento almacenado extendido a SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
   
- Este procedimiento se puede ejecutar solo en el **maestro** base de datos. Para ejecutar un procedimiento almacenado extendido desde una base de datos distinto de **maestro**, califique el nombre del procedimiento almacenado extendido con **principal**.  
+ Este procedimiento se puede ejecutar solo en el **maestro** base de datos. Para ejecutar un procedimiento almacenado extendido desde una base de datos distinto **maestro**, califique el nombre del procedimiento almacenado extendido con **maestro**.  
   
- **sp_addextendedproc** agrega entradas a la [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vista de catálogo, registre el nombre del nuevo procedimiento almacenado extendido con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También agrega una entrada en el [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) vista de catálogo.  
+ **sp_addextendedproc** agrega entradas a la [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vista de catálogo, registrar el nombre del nuevo procedimiento almacenado extendido con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También agrega una entrada en el [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) vista de catálogo.  
   
 > [!IMPORTANT]  
->  Las DLL existentes que no se registraron con una ruta completa no funcionarán tras una actualización a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para corregir el problema, utilice **sp_dropextendedproc** anular el registro del archivo DLL y, a continuación, vuelva a registrarlo con **sp_addextendedproc**, especificando la ruta completa.  
+>  Las DLL existentes que no se registraron con una ruta completa no funcionarán tras una actualización a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para corregir el problema, utilice **sp_dropextendedproc** para anular el registro de la DLL y, a continuación, vuelva a registrarlo con **sp_addextendedproc**, especificando la ruta completa.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_addextendedproc**.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se agrega la **xp_hello** el procedimiento almacenado extendido.  
+ En el ejemplo siguiente se agrega el **xp_hello** el procedimiento almacenado extendido.  
   
 ```  
 USE master;  

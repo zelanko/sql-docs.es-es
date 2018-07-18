@@ -1,5 +1,5 @@
 ---
-title: Consulta las columnas de datos de eventos | Documentos de Microsoft
+title: Columnas de datos de eventos de consultas | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 56a945a1130753fc2feb08a89bd4f6e2676f1bd0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045639"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042503"
 ---
 # <a name="queries-events-data-columns"></a>Columnas de datos de Eventos de consultas
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "34045639"
 |CurrentTime|2|5|Contiene la hora actual del evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene la hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene la hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Contiene la cantidad de tiempo transcurrido (en milisegundos) que duró el evento.|  
+|Duration|5|2|Contiene la cantidad de tiempo transcurrido (en milisegundos) que duró el evento.|  
 |CPUTime|6|2|Contiene la cantidad de tiempo de CPU (en milisegundos) usada por el evento.|  
 |Severity|22|1|Contiene el nivel de gravedad de una excepción asociada al evento de consulta. Los valores son:<br /><br /> 0 = Correcto.<br /><br /> 1 = De información<br /><br /> 2 = Advertencia<br /><br /> 3 = Error|  
 |Success|23|1|Contiene el éxito o el fracaso de un evento de consulta. Los valores son:<br /><br /> 0 = Error<br /><br /> 1 = Correcto|  
@@ -76,6 +76,6 @@ ms.locfileid: "34045639"
 |ServerName|43|8|Contiene el nombre de la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se ha producido el evento de consulta.|  
   
 ## <a name="see-also"></a>Vea también  
- [Categoría eventos de consultas](../../analysis-services/trace-events/queries-events-category.md)  
+ [Categoría Eventos de consultas](../../analysis-services/trace-events/queries-events-category.md)  
   
   

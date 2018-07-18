@@ -24,36 +24,36 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0aa5f28f52c9d0df4e942809612e1ca59a1cb3c5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463941"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38044241"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Devuelve una fila que muestra información de versión de sistema operativo.  
+Devuelve una fila que muestra información de versión del sistema operativo.  
   
-|Nombre de columna |Tipo de datos |Description |  
+|Nombre de columna |Tipo de datos |Descripción |  
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |El tipo de sistema operativo: Windows o Linux |
 |**host_distribution** |**nvarchar(256)** |Descripción del sistema operativo. |
 |**host_release**|**nvarchar(256)**|Versión del sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (número de versión). Para obtener una lista de valores y descripciones, consulte [versión del sistema operativo (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx). <br> Para Linux, devuelve una cadena vacía. |  
 |**host_service_pack_level**|**nvarchar(256)**|Nivel de Service Pack del sistema operativo Windows. <br> Para Linux, devuelve una cadena vacía. |  
-|**host_sku**|**int**|Identificador de referencia de almacén (SKU) de Windows. Para obtener una lista de identificadores de SKU y descripciones, consulte [función GetProductInfo](http://msdn.microsoft.com/library/ms724358.aspx). Acepta valores NULL. <br> Para Linux, devuelve NULL. |  
-|**os_language_version**|**int**|Identificador de configuración regional (LCID) del sistema operativo Windows. Para obtener una lista de descripciones y valores LCID, consulte [Locale IDs Assigned by Microsoft](http://go.microsoft.com/fwlink/?LinkId=208080). No puede ser null.|  
+|**host_sku**|**int**|Identificador de referencia de almacén (SKU) de Windows. Para obtener una lista de los identificadores de SKU y descripciones, consulte [función GetProductInfo](http://msdn.microsoft.com/library/ms724358.aspx). Acepta valores NULL. <br> Para Linux, devuelve NULL. |  
+|**os_language_version**|**int**|Identificador de configuración regional (LCID) del sistema operativo Windows. Para obtener una lista de valores LCID y las descripciones, consulte [Locale IDs Assigned by Microsoft](http://go.microsoft.com/fwlink/?LinkId=208080). No puede ser null.|  
 
-## <a name="remarks"></a>Comentarios  
-Esta vista es similar a [sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), adición de columnas para diferenciar Windows y Linux.
+## <a name="remarks"></a>Notas  
+Esta vista es similar a [sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), agregar columnas para diferenciar Windows y Linux.
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Permisos  
 El `SELECT` permiso en `sys.dm_os_host_info` se concede a los `public` rol de forma predeterminada. Si revoca, requiere `VIEW SERVER STATE` permiso en el servidor.   
  
 >  [!CAUTION]
->  A partir de la versión [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.3 de CTP, [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] versión 17 requiere `SELECT` permiso en `sys.dm_os_host_info` para conectarse a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Si `SELECT` se revoca el permiso de `public`, solo los inicios de sesión con `VIEW SERVER STATE` permiso puede conectarse con la versión más reciente de SSMS. (Otras herramientas, como `sqlcmd.exe` puede conectarse sin `SELECT` permiso en `sys.dm_os_host_info`.)
+>  Desde la versión [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.3, [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] requiere la versión 17 `SELECT` permiso en `sys.dm_os_host_info` con el fin de conectarse a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Si `SELECT` se revoca el permiso de `public`, solo los inicios de sesión con `VIEW SERVER STATE` permiso puede conectarse con la versión más reciente de SSMS. (Existen otras herramientas, como `sqlcmd.exe` puede conectarse sin `SELECT` permiso en `sys.dm_os_host_info`.)
 
   
 ## <a name="examples"></a>Ejemplos  
@@ -65,13 +65,13 @@ SELECT host_platform, host_distribution, host_release,
 FROM sys.dm_os_host_info;  
 ```  
 
-Este es un conjunto en Windows de resultados de ejemplo:
+Este es un ejemplo conjunto de resultados en Windows:
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
  |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |3082 |  
 
-Este es un conjunto en Linux de resultados de ejemplo:
+Este es un resultado de ejemplo que se establezca en Linux:
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |

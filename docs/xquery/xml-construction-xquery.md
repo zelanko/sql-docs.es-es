@@ -1,5 +1,5 @@
 ---
-title: Construcción de XML (XQuery) | Documentos de Microsoft
+title: Construcción de XML (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -30,33 +30,33 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 66dc8917b0fa80c79d385dafb4bfb4c4c96c4127
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077736"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995147"
 ---
 # <a name="xml-construction-xquery"></a>Construcción de XML (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  En XQuery, puede usar el **directa** y **calcula** constructores para construir estructuras XML dentro de una consulta.  
+  En XQuery, puede usar el **directo** y **calcula** constructores para construir estructuras XML dentro de una consulta.  
   
 > [!NOTE]  
->  No hay ninguna diferencia entre la **directa** y **calcula** constructores.  
+>  No hay ninguna diferencia entre la **directo** y **calcula** constructores.  
   
 ## <a name="using-direct-constructors"></a>Utilizar constructores directos  
  Cuando se utilizan constructores directos, se especifica una sintaxis parecida a XML al construir el XML. En los ejemplos siguientes se muestra la construcción de XML mediante los constructores directos.  
   
 ### <a name="constructing-elements"></a>Construir elementos  
- Cuando se utilizan notaciones XML, se pueden construir elementos. En el ejemplo siguiente se usa la expresión de constructor de elemento directo y crea un \<ProductModel > elemento. El elemento construido tiene tres elementos secundarios  
+ Cuando se utilizan notaciones XML, se pueden construir elementos. El ejemplo siguiente se usa la expresión de constructor de elemento directo y crea un \<ProductModel > elemento. El elemento construido tiene tres elementos secundarios  
   
 -   Un nodo de texto.  
   
 -   Dos nodos de elemento, \<resumen > y \<características >.  
   
-    -   El \<resumen > elemento tiene un nodo de texto secundario cuyo valor es "Some description".  
+    -   El \<Summary > elemento tiene un nodo de texto secundario cuyo valor es "Some description".  
   
-    -   El \<características > elemento tiene tres elementos secundarios del nodo de elemento, \<Color >, \<peso >, y \<garantía >. Cada uno de estos nodos tiene un nodo de texto secundario y los valores Red, 25 y 2 years parts and labor respectivamente.  
+    -   El \<características > elemento tiene tres elementos secundarios del nodo, \<Color >, \<peso >, y \<garantía >. Cada uno de estos nodos tiene un nodo de texto secundario y los valores Red, 25 y 2 years parts and labor respectivamente.  
   
 ```  
 declare @x xml;  
@@ -86,7 +86,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Aunque la construcción de elementos a partir de expresiones constantes, tal como se muestra en este ejemplo, resulta útil, la auténtica ventaja de esta característica del lenguaje XQuery es la capacidad de construir XML que extrae datos de una base de datos de forma dinámica. Puede utilizar llaves para especificar expresiones de consulta. En el XML resultante, se sustituye la expresión por su valor. Por ejemplo, la consulta siguiente construye un elemento <`NewRoot`> con un elemento secundario (<`e`>). El valor del elemento <`e`> se calcula mediante la especificación de una expresión de ruta de acceso dentro de llaves ("{... }").  
+ Aunque la construcción de elementos a partir de expresiones constantes, tal como se muestra en este ejemplo, resulta útil, la auténtica ventaja de esta característica del lenguaje XQuery es la capacidad de construir XML que extrae datos de una base de datos de forma dinámica. Puede utilizar llaves para especificar expresiones de consulta. En el XML resultante, se sustituye la expresión por su valor. Por ejemplo, la consulta siguiente construye un elemento <`NewRoot`> con un elemento secundario (<`e`>). El valor del elemento <`e`> se calcula mediante la especificación de una expresión de ruta de acceso dentro de llaves ("{...} }").  
   
 ```  
 DECLARE @x xml;  
@@ -106,7 +106,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
 </NewRoot>  
 ```  
   
- La consulta siguiente es similar a la anterior. Sin embargo, la expresión incluida entre llaves especifica la **data()** función para recuperar el valor atómico de la <`root`> elemento y lo asigna al elemento construido, <`e`>.  
+ La consulta siguiente es similar a la anterior. Sin embargo, la expresión entre llaves especifica la **data()** función para recuperar el valor atómico de la <`root`> elemento y lo asigna al elemento construido, <`e`>.  
   
 ```  
 DECLARE @x xml;  
@@ -250,7 +250,7 @@ This is product model catalog description.
   
  Cuando se construye un atributo, se puede especificar su valor con una expresión entre llaves. En este caso, el resultado de la expresión se devuelve como el valor del atributo.  
   
- En el ejemplo siguiente, la **data()** función no es estrictamente necesaria. Puesto que asigna el valor de la expresión a un atributo, **data()** se aplica implícitamente para recuperar el valor con tipo de la expresión especificada.  
+ En el ejemplo siguiente, la **data()** función no es estrictamente necesaria. Puesto que asigna el valor de expresión a un atributo, **data()** se aplica implícitamente para recuperar el valor con tipo de la expresión especificada.  
   
 ```  
 DECLARE @x xml;  
@@ -322,7 +322,7 @@ where ProductModelID=7;
         <a attr="Item 5" />  
         ```  
   
-    -   Use la [concat (función)](../xquery/functions-on-string-values-concat.md) para concatenar los dos argumentos de cadena en el valor de atributo resultante:  
+    -   Use la [función concat](../xquery/functions-on-string-values-concat.md) para concatenar los dos argumentos de cadena en el valor de atributo resultante:  
   
         ```  
         SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
@@ -352,7 +352,7 @@ where ProductModelID=7;
     select @x.query( '<a attr="{''Item'', /x }" />')  
     ```  
   
-     Si aplica el **data()** función, la consulta correctamente porque recuperará el valor atómico de la expresión, `/x`, que se concatena con la cadena. A continuación se muestra una secuencia de valores atómicos:  
+     Si aplica el **data()** funciona de la consulta de función, ya que recupera el valor atómico de la expresión, `/x`, que se concatena con la cadena. A continuación se muestra una secuencia de valores atómicos:  
   
     ```  
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
@@ -490,7 +490,7 @@ This is the result:
 ### <a name="xml-construction-and-white-space-handling"></a>Construcción de XML y control de los espacios en blanco  
  El contenido de los elementos en la construcción de XML puede incluir caracteres de espacio en blanco. Estos caracteres se controlan de las formas siguientes:  
   
--   Los caracteres de espacio en blanco en el URI de espacio de nombres se tratan como el tipo XSD **anyURI**. A continuación se especifica cómo se controlan:  
+-   Los caracteres de espacio en blanco en los URI de espacio de nombres se tratan como el tipo XSD **anyURI**. A continuación se especifica cómo se controlan:  
   
     -   Los caracteres de espacio en blanco situados al principio y al final se recortan.  
   
@@ -552,7 +552,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>Otros constructores directos de XML  
  Los constructores para el procesamiento de instrucciones y los comentarios XML utilizan la misma sintaxis que la de la construcción XML correspondiente. También se admiten los constructores calculados para nodos de texto, pero se utilizan básicamente en XML DML para construir nodos de texto.  
   
- **Tenga en cuenta** para obtener un ejemplo del uso de un constructor de nodo de texto explícito, vea el ejemplo específico de [insertar &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
+ **Tenga en cuenta** para obtener un ejemplo del uso de un constructor de nodo de texto explícitos, vea el ejemplo específico de [insertar &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
   
  En la consulta siguiente, el XML construido incluye un elemento, dos atributos, un comentario y una instrucción de procesamiento. Tenga en cuenta que se utiliza una coma antes de <`FirstLocation`>, pues se está construyendo una secuencia.  
   
@@ -640,7 +640,7 @@ text{"Some text "},
   
  Tenga en cuenta que los constructores de elementos y atributos calculados, tal como se define en la especificación de XQuery, permiten calcular los nombres de los nodos. Si utiliza constructores directos en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se deben especificar los nombres de nodos, tales como elemento y atributo, como literales constantes. Por tanto, no existe ninguna diferencia entre los constructores directos y los calculados para los elementos y atributos.  
   
- En el ejemplo siguiente, el contenido de los nodos construidos se obtiene de las instrucciones de fabricación de XML almacenadas en la columna Instructions de la **xml** tipo de datos en la tabla ProductModel.  
+ En el ejemplo siguiente, el contenido de los nodos construidos se obtiene de las instrucciones de fabricación XML almacenadas en la columna Instructions de la **xml** tipo de datos en la tabla ProductModel.  
   
 ```  
 SELECT Instructions.query('  

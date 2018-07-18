@@ -1,5 +1,5 @@
 ---
-title: TopCount (DMX) | Documentos de Microsoft
+title: TopCount (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 182c83cf6b2850941c2f21924395c0ebe160db01
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842778"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989861"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Se aplica a  
- Una expresión que devuelve una tabla, como un \<referencia de columna de la tabla >, o una función que devuelve una tabla.  
+ Una expresión que devuelve una tabla, como un \<referencia de columna de tabla >, o una función que devuelve una tabla.  
   
 ## <a name="return-type"></a>Tipo devuelto  
  \<expresión de tabla >  
@@ -37,14 +37,14 @@ TopCount(<table expression>, <rank expression>, <count>)
 ## <a name="remarks"></a>Notas  
  El valor proporcionado por el \<rank expression > argumento determina el orden decreciente de rango para las filas que se proporcionan en el \<expresión de tabla > argumento y el número de filas de nivel superior que se especifica en el \<recuento > se devuelve el argumento.  
   
- La función TopCount se presentó originalmente para habilitar las predicciones asociativas y por lo general, genera los mismos resultados que una instrucción que incluya **SELECT TOP** y **ORDER BY** cláusulas. Obtendrá un mejor rendimiento para las predicciones asociativas si usa el **predecir (DMX)** función, que admite la especificación de un número de predicciones que devolver.  
+ La función TopCount se presentó originalmente para habilitar las predicciones asociativas y en general, genera los mismos resultados que una instrucción que incluye **SELECT TOP** y **ORDER BY** cláusulas. Obtendrá un mejor rendimiento para las predicciones asociativas si usa el **predecir (DMX)** función, que admite la especificación de un número de predicciones que devolver.  
   
- Sin embargo, hay situaciones donde todavía tendrá que usar TopCount. Por ejemplo, DMX no admite la **arriba** calificador en una instrucción Sub-select. El [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) función tampoco admite la adición de **arriba**.  
+ Sin embargo, existen situaciones donde es posible que todavía deberá usar TopCount. Por ejemplo, DMX no admite la **superior** calificador en una instrucción Sub-select. El [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) función también no admite la adición de **superior**.  
   
 ## <a name="examples"></a>Ejemplos  
- Los siguientes ejemplos son consultas de predicción en el modelo de asociación que se compila mediante la [Tutorial básico de minería de datos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Las consultas devuelven los mismos resultados, pero el primer ejemplo utiliza TopCount y el segundo ejemplo utiliza la función de predicción.  
+ Los siguientes ejemplos son consultas de predicción en el modelo de asociación que se crea mediante el uso de la [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Las consultas devuelven los mismos resultados, pero el primer ejemplo utiliza TopCount y el segundo ejemplo usa la función Predict.  
   
- Para entender cómo funciona TopCount, puede resultar útil ejecutar primero una consulta de predicción que devuelve solo la tabla anidada.  
+ Para entender cómo funciona TopCount, puede ser útil ejecutar primero una consulta de predicción que devuelve solo la tabla anidada.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -87,11 +87,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- El primer argumento a la función TopCount es el nombre de una columna de tabla. En este ejemplo, la tabla anidada se devuelve al llamar a la función de predicción y con el argumento INCLUDE_STATISTICS.  
+ El primer argumento a la función TopCount es el nombre de una columna de tabla. En este ejemplo, la tabla anidada se devuelve al llamar a la función Predict y con el argumento INCLUDE_STATISTICS.  
   
- El segundo argumento a la función TopCount es la columna de la tabla anidada que se utiliza para ordenar los resultados. En este ejemplo, la opción INCLUDE_STATISTICS devuelve las columnas $SUPPORT, $PROBABILTY y $ADJUSTED PROBABILITY. En este ejemplo se utiliza $SUPPORT para clasificar los resultados.  
+ El segundo argumento a la función TopCount es la columna en la tabla anidada que se utiliza para ordenar los resultados. En este ejemplo, la opción INCLUDE_STATISTICS devuelve las columnas $SUPPORT, $PROBABILTY y $ADJUSTED PROBABILITY. En este ejemplo se utiliza $SUPPORT para clasificar los resultados.  
   
- El tercer argumento a la función TopCount especifica el número de filas que se va a devolver, como un número entero. Para obtener los tres productos de la parte superior, ordenados por $SUPPORT, se escribe 3.  
+ El tercer argumento a la función TopCount especifica el número de filas que se devolverán como un entero. Para obtener los tres productos de la parte superior, ordenados por $SUPPORT, se escribe 3.  
   
  Resultados del ejemplo:  
   
@@ -103,7 +103,7 @@ NATURAL PREDICTION JOIN
   
  Sin embargo, este tipo de consulta podría afectar al rendimiento en una configuración de producción. Esto se debe a que la consulta devuelve un conjunto de todas las predicciones del algoritmo, ordena estas predicciones y devuelve las tres primeras.  
   
- En el ejemplo siguiente se proporciona una instrucción alternativa que devuelve los mismos resultados pero se ejecuta significativamente más rápido. Este ejemplo reemplaza TopCount con la función de predicción, que acepta un número de predicciones como argumento. Este ejemplo también utiliza el **$SUPPORT** palabra clave que se va a recuperar directamente la columna de tabla anidada.  
+ En el ejemplo siguiente se proporciona una instrucción alternativa que devuelve los mismos resultados pero se ejecuta significativamente más rápido. Este ejemplo reemplaza TopCount con la función de predicción, que acepta un número de predicciones como argumento. En este ejemplo también usa el **$SUPPORT** palabra clave para recuperar directamente la columna de tabla anidada.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  

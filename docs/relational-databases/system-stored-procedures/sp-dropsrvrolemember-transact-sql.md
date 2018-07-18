@@ -1,5 +1,5 @@
 ---
-title: sp_dropsrvrolemember (Transact-SQL) | Documentos de Microsoft
+title: sp_dropsrvrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ff304ce765010d2097c76574b0186df43d8b9104
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242417"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049373"
 ---
 # <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,15 +72,15 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- Sp_dropsrvrolemember solo puede utilizarse para quitar un inicio de sesión de un rol fijo de servidor. Utilice sp_droprolemember para quitar a un miembro de un rol de base de datos.  
+## <a name="remarks"></a>Notas  
+ Sp_dropsrvrolemember solo puede usarse para quitar un inicio de sesión de un rol fijo de servidor. Utilice sp_droprolemember para quitar a un miembro de un rol de base de datos.  
   
  No se puede quitar el inicio de sesión de sa de ningún rol fijo de servidor.  
   
  no se puede ejecutar sp_dropsrvrolemember dentro de una transacción definida por el usuario.  
   
-## <a name="permissions"></a>Permissions  
- Requiere la pertenencia al rol fijada de servidor, o tener el permiso ALTER ANY LOGIN en el servidor y la pertenencia al rol desde el que se va a quitar el miembro de sysadmin.  
+## <a name="permissions"></a>Permisos  
+ Requiere la pertenencia al rol fijada de servidor, o ambos permisos ALTER ANY LOGIN en el servidor y la pertenencia al rol desde el que se va a quitar el miembro de sysadmin.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se quita el inicio de sesión `JackO` del rol fijo de servidor `sysadmin`.  
@@ -94,7 +94,7 @@ EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';
  [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Funciones de seguridad &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

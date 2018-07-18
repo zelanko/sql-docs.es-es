@@ -1,5 +1,5 @@
 ---
-title: Sys.trace_categories (Transact-SQL) | Documentos de Microsoft
+title: Sys.trace_categories (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -25,28 +25,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 85c5ad8a9cd6e901151797e763913713f2a228b7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220426"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993767"
 ---
 # <a name="systracecategories-transact-sql"></a>sys.trace_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Las clases de eventos similares se agrupan por categoría. Cada fila de la **sys.trace_categories** vista de catálogo identifica una categoría que sea única en todo el servidor. Estas categorías no cambian para una versión concreta de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+  Las clases de eventos similares se agrupan por categoría. Cada fila de la **sys.trace_categories** vista de catálogo identifica una categoría que sea única en el servidor. Estas categorías no cambian para una versión concreta de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
  Para obtener una lista completa de los eventos de seguimiento compatibles, consulte [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
 > **IMPORTANTE:** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use vistas de catálogo de eventos extendidos en su lugar.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**category_id**|**smallint**|Id. único de esta categoría. Esta columna también está disponible en la **sys.trace_events** vista de catálogo.|  
+|**category_id**|**smallint**|Id. único de esta categoría. Esta columna también está disponible en el **sys.trace_events** vista de catálogo.|  
 |**Nombre**|**nvarchar(128)**|Nombre único de esta categoría. Este parámetro no se traduce.|  
 |**Tipo**|**tinyint**|Tipo de categoría:<br /><br /> 0 = Normal<br /><br /> 1 = Conexión<br /><br /> 2 = Error|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

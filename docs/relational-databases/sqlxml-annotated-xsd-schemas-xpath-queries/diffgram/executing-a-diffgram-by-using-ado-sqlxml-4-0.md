@@ -1,5 +1,5 @@
 ---
-title: Ejecutar un DiffGram utilizando ADO (SQLXML 4.0) | Documentos de Microsoft
+title: Ejecutar un DiffGram mediante ADO (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,19 +23,19 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 02796c6cfe29817c48541a6b42b660ca7b2b0b57
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969113"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053723"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Ejecutar un DiffGram utilizando ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Esta aplicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic utiliza ADO para establecer una conexión a una instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y después ejecuta un DiffGram. En esta aplicación, el DiffGram y el esquema XSD están almacenados en un archivo. La aplicación carga el DiffGram del archivo especificado. Puede usar cualquiera de los DiffGrams (y el esquema XSD asociado) descritos en [ejemplos de DiffGram](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
+  Esta aplicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic utiliza ADO para establecer una conexión a una instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y después ejecuta un DiffGram. En esta aplicación, el DiffGram y el esquema XSD están almacenados en un archivo. La aplicación carga el DiffGram del archivo especificado. Puede usar cualquiera de los DiffGrams (y el esquema XSD asociado) se describe en [ejemplos de DiffGram](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
   
  Éste es el proceso de la aplicación de ejemplo:  
   
--   El **conn** objeto (**ADODB. Conexión**) establece una conexión a una instancia en ejecución de SQL Server en un servidor específico.  
+-   El **conn** objeto (**ADODB. Conexión**) establece una conexión a una instancia de ejecución de SQL Server en un servidor específico.  
   
 -   El **cmd** objeto (**ADODB.Command**) se ejecuta en la conexión establecida.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32969113"
   
 -   El DiffGram se copia en la secuencia de comandos (**strmIn**) desde un archivo.  
   
--   Flujo de salida del comando se establece en el **StrmOut** objeto (**ADODB. Transmitir**) recibir cualquier devolvió datos.  
+-   Flujo de salida del comando se establece en el **StrmOut** objeto (**ADODB. Stream**) a reciba cualquiera de los datos devueltos.  
   
 -   Si está utilizando el proveedor SQLOLEDB, obtendrá de forma predeterminada la funcionalidad de Microsoft SQLXML que proporciona Sqlxmlx.dll. Para utilizar Sqlxml4.dll con el proveedor SQLOLEDB, el **SQLXML Version** propiedad debe establecerse en **SQLXML.4.0** en el proveedor SQLOLEDB **conexión** objeto.  
   

@@ -1,5 +1,5 @@
 ---
-title: PredictTimeSeries (DMX) | Documentos de Microsoft
+title: PredictTimeSeries (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7b4f9303a96e6197cc6580a5c799404f48e5c4a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842748"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040443"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *\<referencia de columna de la tabla >*,  *\<referencia de columna escalar >*  
+ *\<referencia de columna de tabla >*,  *\<el número de referencia de columna escalar >*  
  Especifica el nombre de la columna que se va a predecir. La columna puede contener datos escalares o tabulares.  
   
  *n*  
@@ -49,7 +49,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  *inicio de n, n-end*  
  Especifica un intervalo de pasos de serie temporal.  
   
- *n-start* debe ser un número entero y no puede ser 0.  
+ *n-start* debe ser un entero y no puede ser 0.  
   
  *n-end* debe ser un entero mayor que *n-start*.  
   
@@ -66,12 +66,12 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  Estos argumentos solo se pueden utilizar cuando se agregan datos nuevos mediante una instrucción PREDICTION JOIN. Si usa una consulta PREDICTION JOIN y no especifica un argumento, el valor predeterminado es EXTEND_MODEL_CASES.  
   
 ## <a name="return-type"></a>Tipo devuelto  
- A \< *expresión de tabla*>.  
+ Un \< *expresión de tabla*>.  
   
 ## <a name="remarks"></a>Notas  
  El algoritmo de serie temporal [!INCLUDE[msCoName](../includes/msconame-md.md)] no admite la predicción histórica cuando se utiliza la instrucción PREDICTION JOIN para agregar datos.  
   
- En una instrucción PREDICTION JOIN, el proceso de predicción siempre se inicia en el estadio temporal inmediatamente posterior a la finalización de la serie de entrenamiento original. Esto es cierto incluso si se agregan datos nuevos. Por lo tanto, la *n* parámetro y *n-start* valores de parámetro deben ser un entero mayor que 0.  
+ En una instrucción PREDICTION JOIN, el proceso de predicción siempre se inicia en el estadio temporal inmediatamente posterior a la finalización de la serie de entrenamiento original. Esto es cierto incluso si se agregan datos nuevos. Por lo tanto, el *n* parámetro y *n-start* los valores de parámetro deben ser un entero mayor que 0.  
   
 > [!NOTE]  
 >  La longitud de los datos nuevos no afecta al punto inicial para la predicción. Por ello, si desea agregar datos nuevos y también realizar predicciones nuevas, asegúrese de que establece el punto de inicio de la predicción en un valor mayor que la longitud de los datos nuevos o que extiende el punto final de la predicción según la longitud de los datos nuevos.  
@@ -85,13 +85,13 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   En el tercer ejemplo se muestra cómo utilizar el parámetro EXTEND_MODEL_CASES para actualizar un modelo de minería de datos con datos nuevos.  
   
- Para más información sobre cómo trabajar con modelos de serie temporal, vea el tutorial de minería de datos, [lección 2: generar un escenario de previsión &#40;Tutorial intermedio de minería de datos&#41; ](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) y [DMX de predicción de serie de tiempo Tutorial](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Para más información sobre cómo trabajar con modelos de serie temporal, consulte el tutorial de minería de datos, [lección 2: generar un escenario de previsión &#40;Tutorial intermedio de minería de datos&#41; ](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) y [DMX de predicción de Series de tiempo Tutorial](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 > [!NOTE]  
 >  Podría obtener resultados diferentes en un modelo; los resultados de los ejemplos siguientes solo se proporcionan para mostrar el formato del resultado.  
   
 ### <a name="example-1-predicting-a-number-of-time-slices"></a>Ejemplo 1: predecir un número de intervalos de tiempo  
- En el ejemplo siguiente se usa el **PredictTimeSeries** función para devolver una predicción para los siguientes tres estadios temporales y restringe los resultados a la serie M200 de las regiones de Europa y Pacífico. En este modelo determinado, el atributo de predicción es Quantity, por lo que debe usar `[Quantity]` como el primer argumento a la función PredictTimeSeries.  
+ En el ejemplo siguiente se usa el **PredictTimeSeries** función para devolver una predicción durante los próximos tres estadios temporales y restringe los resultados a la serie M200 en las regiones de Europa y Pacífico. En este modelo determinado, el atributo de predicción es Quantity, por lo que debe usar `[Quantity]` como primer argumento a la función PredictTimeSeries.  
   
 ```  
 SELECT FLATTENED  
@@ -119,7 +119,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>Ejemplo 2: agregar datos nuevos y utilizar REPLACE_MODEL_CASES  
  Suponga que encuentra que los datos eran incorrectos para una región determinada y desea utilizar los patrones en el modelo, pero ajustar las predicciones para que coincidan con los datos nuevos. O bien, podría encontrar que otra región tiene tendencias más confiables y desea aplicar el modelo más confiable a los datos de una región diferente.  
   
- En tales escenarios, puede utilizar el parámetro REPLACE_MODEL_CASES y especificar un conjunto de datos nuevos para utilizar como datos históricos. De ese modo, las proyecciones se basarán en los patrones del modelo especificado, pero continuarán sin problemas desde el fin de los datos nuevos. Para obtener un tutorial completo de este escenario, vea [predicciones de serie temporal avanzadas &#40;Tutorial intermedio de minería de datos&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
+ En tales escenarios, puede utilizar el parámetro REPLACE_MODEL_CASES y especificar un conjunto de datos nuevos para utilizar como datos históricos. De ese modo, las proyecciones se basarán en los patrones del modelo especificado, pero continuarán sin problemas desde el fin de los datos nuevos. Para obtener un tutorial completo de este escenario, consulte [predicciones de serie temporal avanzadas &#40;Tutorial intermedio de minería de datos&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
   
  La consulta PREDICTION JOIN siguiente muestra la sintaxis para reemplazar los datos y realizar nuevas predicciones. Para los datos sustitutos, el ejemplo recupera el valor de las columnas Amount y Quantity, y multiplica cada uno por dos:  
   
@@ -144,7 +144,7 @@ ON
 [Forecasting].[Amount] = t.[Amount]  
 ```  
   
- Las tablas siguientes comparan los resultados de predicción.  
+ Las siguientes tablas comparan los resultados de predicción.  
   
  Predicciones originales:  
   
@@ -163,7 +163,7 @@ ON
 |M200 Pacific|9/25/2008 12:00:00 AM|84|  
   
 ### <a name="example-3-adding-new-data-and-using-extendmodelcases"></a>Ejemplo 3: agregar datos nuevos y utilizar EXTEND_MODEL_CASES  
- Ejemplo 3 muestra el uso de la *EXTEND_MODEL_CASES* opción para proporcionar nuevos datos, que se agregan al final de una serie de datos ya existente. En lugar de reemplazar los datos existentes, se agregan los datos nuevos al modelo.  
+ Ejemplo 3 muestra el uso de la *EXTEND_MODEL_CASES* opción para proporcionar nuevos datos, que se agregan al final de una serie de datos existente. En lugar de reemplazar los datos existentes, se agregan los datos nuevos al modelo.  
   
  En el ejemplo siguiente, los datos nuevos se proporcionan en la instrucción SELECT que sigue a NATURAL PREDICTION JOIN. Puede proporcionar varias filas de una nueva entrada con esta sintaxis, pero cada fila de entrada nueva debe tener una marca de tiempo única:  
   
@@ -219,9 +219,9 @@ WHERE ([Model Region] = 'M200 Europe'
 |11/25/2008 0:00|38|  
   
 ## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>Ejemplo 4: devolver estadísticas en una predicción de serie temporal  
- El **PredictTimeSeries** función no admite *INCLUDE_STATISTICS* como un parámetro. Sin embargo, se puede utilizar la consulta siguiente para devolver las estadísticas de predicción para una consulta de serie temporal. Este enfoque también se puede utilizar con modelos que tienen columnas de tabla anidadas.  
+ El **PredictTimeSeries** no se admite la función *INCLUDE_STATISTICS* como un parámetro. Sin embargo, se puede utilizar la consulta siguiente para devolver las estadísticas de predicción para una consulta de serie temporal. Este enfoque también se puede utilizar con modelos que tienen columnas de tabla anidadas.  
   
- En este modelo determinado, el atributo de predicción es Quantity, por lo que debe usar `[Quantity]` como el primer argumento a la función PredictTimeSeries. Si el modelo usa un atributo de predicción diferente, puede sustituir un nombre de columna distinto.  
+ En este modelo determinado, el atributo de predicción es Quantity, por lo que debe usar `[Quantity]` como primer argumento a la función PredictTimeSeries. Si el modelo usa un atributo de predicción diferente, puede sustituir un nombre de columna distinto.  
   
 ```  
 SELECT FLATTENED [Model Region],  
@@ -253,7 +253,7 @@ OR [Model Region] = 'M200 North America'
 >  La palabra clave FLATTENED se usó en este ejemplo para hacer que los resultados sean más fáciles de presentar en una tabla; sin embargo, si su proveedor admite conjuntos de filas jerárquicos, puede omitirla. Si omite la palabra clave FLATTENED, la consulta devuelve dos columnas: la primera contiene el valor que identifica la serie de datos `[Model Region]` y la segunda contiene la tabla anidada de estadísticas.  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Ejemplos de consultas de modelo de serie temporal](../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Predecir &#40;DMX&#41;](../dmx/predict-dmx.md)  
   

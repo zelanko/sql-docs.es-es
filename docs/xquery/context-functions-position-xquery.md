@@ -1,5 +1,5 @@
 ---
-title: posición (función de XQuery) | Documentos de Microsoft
+title: Position (función de XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c0afc659ea30da13a520c04c3d9f7efbdfaf8681
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077932"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052413"
 ---
-# <a name="context-functions---position-xquery"></a>Funciones de contexto - posición (XQuery)
+# <a name="context-functions---position-xquery"></a>Funciones de contexto: position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Esta función devuelve un valor entero que indica la posición del elemento de contexto dentro de la secuencia de elementos que se está procesando.  
@@ -40,11 +40,11 @@ ms.locfileid: "33077932"
 fn:position() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], **fn:Position()** solo pueden usarse en el contexto de un predicado dependiente del contexto. Concretamente, solo se puede utilizar entre corchetes ([ ]). Las comparaciones con esta función no reducen la cardinalidad durante una inferencia de tipo estático.  
+## <a name="remarks"></a>Notas  
+ En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], **fn:Position()** sólo puede utilizarse en el contexto de un predicado dependiente del contexto. Concretamente, solo se puede utilizar entre corchetes ([ ]). Las comparaciones con esta función no reducen la cardinalidad durante una inferencia de tipo estático.  
   
 ## <a name="examples"></a>Ejemplos  
- Este tema ofrecen ejemplos de XQuery con instancias XML almacenadas en varias **xml** escriba columnas en la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos.  
+ En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** escriba columnas en el [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos.  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Usar la función position() de XQuery para recuperar las dos primeras características de producto  
  La consulta siguiente recupera las dos primeras características, es decir, los dos primeros elementos secundarios del elemento <`Features`>, a partir de la descripción del catálogo de modelos de productos. Si hay más características, se incorporará un elemento <`there-is-more/`> al resultado.  
@@ -77,9 +77,9 @@ WHERE CatalogDescription is not null
   
 -   El cuerpo de la consulta genera XML que tiene un \<producto > elemento con **ProductModelID** y **ProductModelName** atributos y tiene características de producto que se devuelven como elementos secundarios.  
   
--   El **position()** función se utiliza en el predicado para determinar la posición de la \<características > elemento secundario de contexto. Si es la primera o segunda característica, se devuelve.  
+-   El **position()** función se utiliza en el predicado para determinar la posición de la \<características > elemento secundario en el contexto. Si es la primera o segunda característica, se devuelve.  
   
--   La instrucción IF incorpora un \<allí-is-more / > elemento en el resultado si hay más de dos características en el catálogo de productos.  
+-   La instrucción IF incorpora un \<allí-is-more / > elemento para el resultado si hay más de dos características en el catálogo de productos.  
   
 -   Dado que no todos los modelos de producto tienen sus descripciones de catálogo almacenadas en la tabla, la cláusula WHERE descarta las filas para las que CatalogDescriptions es NULL.  
   

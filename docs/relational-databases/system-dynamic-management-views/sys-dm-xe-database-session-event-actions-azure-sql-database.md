@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_xe_database_session_event_actions (base de datos de SQL Azure) | Documentos de Microsoft
+title: Sys.dm_xe_database_session_event_actions (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
@@ -17,13 +17,13 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: b52adfa82c532a8144e142f5d87c991a249becf8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468661"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040233"
 ---
-# <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>Sys.dm_xe_database_session_event_actions (base de datos de SQL Azure)
+# <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>Sys.dm_xe_database_session_event_actions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Devuelve información sobre las acciones de la sesión de eventos. Se ejecutan las acciones cuando se activan los eventos. Esta vista de administración agrega estadísticas del número de veces que se ha ejecutado una acción y el tiempo de ejecución total de la acción.  
@@ -32,15 +32,15 @@ ms.locfileid: "34468661"
 |-|  
 |**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 y todas las versiones futuras.|  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary (8)**|La dirección de memoria de la sesión de eventos. No admite valores NULL.|  
 |action_name|**nvarchar(60)**|El nombre de la acción. No admite valores NULL.|  
 |action_package_guid|**uniqueidentifier**|El GUID del paquete que contiene la acción. No admite valores NULL.|  
 |event_name|**nvarchar(60)**|Nombre del evento al que se enlaza la acción. No admite valores NULL.|  
-|event_package_guid|**uniqueidentifier**|El GUID para el paquete que contiene el evento. No admite valores NULL.|  
+|event_package_guid|**uniqueidentifier**|El GUID del paquete que contiene el evento. No admite valores NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalidades de relación  

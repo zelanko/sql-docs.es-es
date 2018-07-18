@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_parameter (Transact-SQL) | Documentos de Microsoft
+title: managed_backup.fn_get_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2420c689dff7e344c06a6667c15e08d3d4769872
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228748"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047263"
 ---
 # <a name="managedbackupfngetparameter-transact-sql"></a>managed_backup.fn_get_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,14 +55,14 @@ managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |parameter_name|NVARCHAR(128)|Nombre del parámetro. A continuación se muestra una lista de los parámetros devueltos:<br/><br/>**FileRetentionDebugXevent**<br/><br/>**SSMBackup2WADebugXevent**<br/><br/>**SSMBackup2WANotificationEmailIds**<br/><br/>**SSMBackup2WAEnableUserDefinedPolicy**<br/><br/>**SSMBackup2WAEverConfigured**<br/><br/>**StorageOperationDebugXevent**|  
 |parameter_value|NVARCHAR(128)|Valor establecido actual del parámetro.|  
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Permisos  
  Requiere permisos SELECT en la función.  
   
 ## <a name="examples"></a>Ejemplos  

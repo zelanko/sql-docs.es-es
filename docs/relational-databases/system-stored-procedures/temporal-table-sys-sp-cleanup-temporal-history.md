@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cleanup_temporal_history | Documentos de Microsoft
+title: Sys.sp_cleanup_temporal_history | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: ''
@@ -18,18 +18,18 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 6216ca6584c2bf6d78bb66096145cd49428398dc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257566"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051200"
 ---
 # <a name="sysspcleanuptemporalhistory-transact-sql"></a>Sys.sp_cleanup_temporal_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-Quita todas las filas de tabla de historial temporal que coinciden con el período de HISTORY_RETENTION configurado en una única transacción.
+Quita todas las filas de tabla temporal de historial que coincide con el período HISTORY_RETENTION configurado en una única transacción.
   
 ## <a name="syntax"></a>Sintaxis  
 ```  
@@ -40,23 +40,23 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 *@table_name*
 
-El nombre de la tabla temporal para la retención se invoca el Liberador de espacio.
+El nombre de la tabla temporal para la retención de qué se invoca la limpieza.
 
 *schema_name*
 
-El nombre del esquema que la tabla temporal actual pertenece a
+El nombre del esquema al que pertenece la tabla temporal actual
 
-*row_count_var* [salida]
+*row_count_var* [OUTPUT]
 
-El parámetro de salida que devuelve el número de filas eliminadas. Si la tabla de historial agrupado índice de almacén de columnas, se devolverá este parámetro siempre es 0.
+El parámetro de salida que devuelve el número de filas eliminadas. Si la tabla de historial agrupado de almacén de columnas, se devolverá este parámetro siempre es 0.
   
-## <a name="remarks"></a>Comentarios
-Este procedimiento almacenado puede utilizarse solo con las tablas temporales que ha especificado el período de retención finito.
-Utilice este procedimiento almacenado solo si necesita limpiar inmediatamente todas las filas de datos antiguas de la tabla de historial. Debe saber que puede tener un impacto significativo en el registro de base de datos y el subsistema de E/S como eliminan todas las filas aptas dentro de la misma transacción. 
+## <a name="remarks"></a>Notas
+Este procedimiento almacenado puede utilizarse solo con tablas temporales que ha especificado el período de retención finito.
+Utilice este procedimiento almacenado solo si tiene que limpiar inmediatamente todas las filas antiguas de la tabla de historial. Debe saber que puede tener un impacto significativo en el registro de base de datos y el subsistema de E/S como lo elimina todas las filas válidas en la misma transacción. 
 
-Se recomienda siempre se basan en una tarea de segundo plano interno para la limpieza que quita antiguos filas con un impacto mínimo en las cargas de trabajo normales y la base de datos en general.
+Siempre se recomienda depender de una tarea interna en segundo plano de limpieza que quita antiguos filas con un impacto mínimo en las cargas de trabajo normales y la base de datos en general.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Se requieren permisos db_owner.  
 
 ## <a name="example"></a>Ejemplo

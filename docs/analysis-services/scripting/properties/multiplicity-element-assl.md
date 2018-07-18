@@ -1,5 +1,5 @@
 ---
-title: Elemento Multiplicity (ASSL) | Documentos de Microsoft
+title: Elemento Multiplicity (ASSL) | Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2740e920332d55fd2826b8d91d6f7434d2f59e91
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042429"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045843"
 ---
 # <a name="multiplicity-element-assl"></a>Elemento Multiplicity (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34042429"
 </RelationshipEnd>  
 ```  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -44,14 +44,14 @@ ms.locfileid: "34042429"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elemento primario|[RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|*uno*|Este es el extremo de la clave principal.|  
+|*Uno*|Este es el extremo de la clave principal.|  
 |*Muchos*|Este es el extremo de la clave externa.|  
   
  La enumeración que corresponde a los valores permitidos para **rol** en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Multiplicity>.  

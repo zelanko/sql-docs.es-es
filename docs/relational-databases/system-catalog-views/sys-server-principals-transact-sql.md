@@ -1,5 +1,5 @@
 ---
-title: Sys.server_principals (Transact-SQL) | Documentos de Microsoft
+title: Sys.server_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,18 +26,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 503ae5f7918edabd609e6176eeb0fa5c1238dd77
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221636"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039039"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Contiene una fila por cada entidad de seguridad a nivel de servidor.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre de la entidad de seguridad. Es exclusivo en el servidor.|  
 |**principal_id**|**int**|Número de Id. de la entidad de seguridad. Es exclusivo en el servidor.|  
@@ -53,7 +53,7 @@ ms.locfileid: "33221636"
 |**owning_principal_id**|**int**|El **principal_id** del propietario de un rol de servidor. Es NULL si la entidad de seguridad no es un rol fijo de servidor.|  
 |**is_fixed_role**|**bit**|Devuelve 1 si la entidad de seguridad es uno de los roles fijos de servidor. Para obtener más información, vea [Roles de nivel de servidor](../../relational-databases/security/authentication-access/server-level-roles.md).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Cualquier inicio de sesión puede ver su propio nombre de inicio de sesión, los inicios de sesión del sistema y los roles fijos de servidor. Para ver otros inicios de sesión, se requiere ALTER ANY LOGIN o un permiso en el inicio de sesión. Para ver los roles de servidor definidos por el usuario, se requiere ALTER ANY SERVER ROLE o la pertenencia al rol.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

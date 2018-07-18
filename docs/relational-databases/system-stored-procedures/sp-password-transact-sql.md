@@ -1,5 +1,5 @@
 ---
-title: sp_password (Transact-SQL) | Documentos de Microsoft
+title: sp_password (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 186384ed3dc9ec22264c4cbb184f9369c3677af3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258193"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993707"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@old=** ] **'***contraseña_anterior***'**  
- Es la contraseña antigua. *contraseña_anterior* es **sysname**, su valor predeterminado es null.  
+ [  **@old=** ] **'***old_password***'**  
+ Es la contraseña antigua. *old_password* es **sysname**, su valor predeterminado es null.  
   
  [  **@new=** ] **'***nuevacontraseña***'**  
- Es la nueva contraseña. *nuevacontraseña* es **sysname**, no tiene ningún valor predeterminado. *contraseña_anterior* debe especificarse si no se utilizan parámetros con nombre.  
+ Es la nueva contraseña. *nuevacontraseña* es **sysname**, no tiene ningún valor predeterminado. *old_password* debe especificarse si no se utilizan parámetros con nombre.  
   
 > [!IMPORTANT]  
 >  No utilice una contraseña NULL. Utilice una contraseña segura. Para obtener más información, consulte [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
@@ -64,12 +64,12 @@ sp_password [ [ @old = ] 'old_password' , ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_password** llama a ALTER LOGIN. Esta instrucción admite opciones adicionales. Para obtener información acerca de cómo cambiar las contraseñas, consulte [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
- **sp_password** no puede ejecutarse en una transacción definida por el usuario.  
+ **sp_password** no se puede ejecutar dentro de una transacción definida por el usuario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY LOGIN. También requiere el permiso CONTROL SERVER para restablecer una contraseña sin suministrar la antigua, o si el inicio de sesión que se va a cambiar tiene el permiso CONTROL SERVER.  
   
  Una entidad de seguridad puede cambiar su propia contraseña.  

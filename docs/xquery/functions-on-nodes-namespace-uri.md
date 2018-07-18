@@ -1,5 +1,5 @@
 ---
-title: Función namespace-uri (XQuery) | Documentos de Microsoft
+title: Función namespace-uri (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0107819414ce52418b369401feecff73441b63bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077254"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039637"
 ---
-# <a name="functions-on-nodes---namespace-uri"></a>Funciones en nodos - uri de espacio de nombres
+# <a name="functions-on-nodes---namespace-uri"></a>Funciones usadas en nodos: namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve el espacio de nombres URI del QName especificado en *$arg* como xs: String.  
+  Devuelve el URI del QName especificado en el espacio de nombres *$arg* como xs: String.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,7 +46,7 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  Nombre del nodo cuya parte del URI del espacio de nombres se va a recuperar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 -   Si se omite este argumento, el valor predeterminado es el nodo del contexto.  
   
@@ -57,7 +57,7 @@ fn:namespace-uri($arg as node()?) as xs:string
 -   Si *$arg* es un elemento o nodo de atributo cuyo QName expandido no está en un espacio de nombres, la función devuelve la cadena de longitud cero  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se ofrece ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos de AdventureWorks.  
+ En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
   
 ### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. Recuperar el URI de espacio de nombres de un nodo específico  
  La consulta siguiente se especifica en una instancia XML sin tipo. La expresión de la consulta, `namespace-uri(/ROOT[1])`, recupera la parte del URI del espacio de nombres del nodo especificado.  
@@ -114,7 +114,7 @@ WHERE ProductModelID=19
 -   El **espacio** función devuelve instancias de tipo xs: String en lugar de xs: anyURI.  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones en nodos](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [Funciones usadas en nodos](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [Función local-name &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
   
   

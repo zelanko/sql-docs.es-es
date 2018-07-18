@@ -1,5 +1,5 @@
 ---
-title: Administrar Roles utilizando SSMS | Documentos de Microsoft
+title: Administrar Roles utilizando SSMS | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 08cd1e2c1244304f0a6310485b4cac49d3174e33
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045219"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045353"
 ---
 # <a name="manage-roles-by-using-ssms"></a>Administrar roles utilizando SSMS 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "34045219"
   
 4.  En **Establezca los permisos de base de datos para este rol**, seleccione una de las siguientes opciones de permiso:  
   
-    |Permiso|Description|  
+    |Permiso|Descripción|  
     |----------------|-----------------|  
     |**Control total (Administrador)**|Los miembros pueden realizar modificaciones en el esquema del modelo y pueden ver todos los datos.|  
     |**Procesar base de datos**|Los miembros pueden ejecutar las operaciones Procesar y Procesar todo. No pueden modificar el esquema del modelo y no pueden ver los datos.|  
@@ -58,9 +58,9 @@ ms.locfileid: "34045219"
   
 6.  En la ventana de configuración de la pertenencia, haga clic en **Agregar**y en el cuadro de diálogo **Seleccionar usuarios o grupos** , agregue los usuarios o grupos de Windows que desee añadir como miembros.  
   
-7.  Si el rol que va a crear tiene permisos de lectura, puede agregar filtros de fila para las tablas utilizando una fórmula DAX. Para agregar filtros de fila en la **propiedades de función: \<rolename >** cuadro de diálogo **seleccionar una página**, haga clic en **filtros de fila**.  
+7.  Si el rol que va a crear tiene permisos de lectura, puede agregar filtros de fila para las tablas utilizando una fórmula DAX. Para agregar filtros de fila, en el **propiedades de rol: \<rolename >** cuadro de diálogo **seleccionar una página**, haga clic en **filtros de fila**.  
   
-8.  En la ventana de filtros de fila, seleccione una tabla y, a continuación, haga clic en el **filtro DAX** campo y, a continuación, en la **filtro DAX - \<tablename >** , escriba una fórmula DAX.  
+8.  En la ventana de filtros de fila, seleccione una tabla y, a continuación, haga clic en el **filtro DAX** campo y, a continuación, en el **filtro DAX - \<tablename >** , escriba una fórmula DAX.  
   
     > [!NOTE]  
     >  El filtro DAX - \<tablename > campo no contiene un editor de consultas de Autocompletar o característica de Insertar función. Para usar Autocompletar al escribir una fórmula DAX, debe utilizar un editor de fórmulas DAX de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -75,7 +75,7 @@ ms.locfileid: "34045219"
   
 -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda la base de datos de modelos tabulares que contiene el rol que desea modificar, expanda **Roles**, haga clic con el botón secundario en el rol y después haga clic en **Propiedades**.  
   
-     En el **propiedades de la función** \<rolename > cuadro de diálogo, puede cambiar los permisos, agregar o quitar miembros, y agregar o modificar filtros de fila.  
+     En el **propiedades de la función** \<rolename > cuadro de diálogo, puede cambiar los permisos, agregar o quitar miembros y agregar o modificar filtros de fila.  
   
 ###  <a name="bkmk_deletet_role"></a> Para eliminar un rol  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_table (Transact-SQL) | Documentos de Microsoft
+title: sp_fulltext_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b6c759bd422ae815a284ae2cd14bc8b1861281ad
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260075"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995612"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -60,13 +60,13 @@ sp_fulltext_table
  [  **@action=**] **'***acción***'**  
  Se trata de la acción que se va a realizar. *acción* es **nvarchar (50)**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|**Crear**|Crea los metadatos para un índice de texto completo para la tabla al que hace referencia *qualified_table_name* y especifica que los datos del índice de texto completo de esta tabla deben residir en *fulltext_catalog_name*. Esta acción también designa el uso de *unique_index_name* como columna de clave de texto completo. Este índice único ya debe estar presente y debe estar definido en una columna de la tabla.<br /><br /> No se puede realizar ninguna búsqueda de texto completo sobre esta tabla hasta que se rellene el catálogo de texto completo.|  
-|**Drop**|Quita los metadatos en el índice de texto completo para *qualified_table_name*. Si el índice de texto completo está activo, se desactiva automáticamente antes de quitarlo. No es necesario quitar columnas antes de quitar el índice de texto completo.|  
-|**Activate**|Activa la capacidad de los datos de índice de texto completo que se pueden recopilar para *qualified_table_name*, después de que se ha desactivado. Debe haber al menos una columna que participe en el índice de texto completo antes de que se pueda activar.<br /><br /> Un índice de texto completo se convierte automáticamente en activo para su rellenado en el momento en que se agrega la primera columna para la indización. Si se quita la última columna del índice, éste se desactiva. Si está en proceso un seguimiento de cambios, al activar un índice inactivo se inicia otro rellenado.<br /><br /> Tenga en cuenta que esto no rellena realmente el índice de texto completo, sino que simplemente registra en la tabla en el catálogo de texto completo en el sistema de archivos para que las filas de *qualified_table_name* se puede recuperar durante el siguiente índice de texto completo rellenado.|  
+|**Crear**|Crea los metadatos para un índice de texto completo para la tabla al que hace referencia *qualified_table_name* y especifica que los datos del índice de texto completo para esta tabla deben residir en *fulltext_catalog_name*. Esta acción también designa el uso de *unique_index_name* como columna de clave de texto completo. Este índice único ya debe estar presente y debe estar definido en una columna de la tabla.<br /><br /> No se puede realizar ninguna búsqueda de texto completo sobre esta tabla hasta que se rellene el catálogo de texto completo.|  
+|**Drop**|Quita los metadatos del índice de texto completo para *qualified_table_name*. Si el índice de texto completo está activo, se desactiva automáticamente antes de quitarlo. No es necesario quitar columnas antes de quitar el índice de texto completo.|  
+|**Activate**|Activa la capacidad de los datos de índice de texto completo se recopilen para *qualified_table_name*, una vez que se ha desactivado. Debe haber al menos una columna que participe en el índice de texto completo antes de que se pueda activar.<br /><br /> Un índice de texto completo se convierte automáticamente en activo para su rellenado en el momento en que se agrega la primera columna para la indización. Si se quita la última columna del índice, éste se desactiva. Si está en proceso un seguimiento de cambios, al activar un índice inactivo se inicia otro rellenado.<br /><br /> Tenga en cuenta que esto no realmente rellenar el índice de texto completo, sino que simplemente registra en la tabla en el catálogo de texto completo en el sistema de archivos para que las filas de *qualified_table_name* se puede recuperar durante el siguiente índice de texto completo rellenado.|  
 |**Desactivar**|Desactiva el índice de texto completo para *qualified_table_name* para que ya no se pueden recopilar datos de índice de texto completo para la *qualified_table_name*. Los metadatos del índice de texto completo permanecen y se puede volver a activar la tabla.<br /><br /> Si está activo el seguimiento de cambios, desactivar un índice activo inmoviliza el estado del índice: se detiene cualquier rellenado en curso y no se propagan más cambios al índice.|  
-|**start_change_tracking**|Inicia un rellenado incremental del índice de texto completo. Si la tabla no incluye marca de tiempo, inicia un rellenado completo del índice de texto completo. Inicia un seguimiento de cambios en la tabla.<br /><br /> Seguimiento de cambios de texto completo no realiza un seguimiento de las operaciones WRITETEXT o UPDATETEXT realizadas en columnas indizadas de texto completo que son de tipo **imagen**, **texto**, o **ntext**.|  
+|**start_change_tracking**|Inicia un rellenado incremental del índice de texto completo. Si la tabla no incluye marca de tiempo, inicia un rellenado completo del índice de texto completo. Inicia un seguimiento de cambios en la tabla.<br /><br /> Seguimiento de cambios de texto completo no realiza un seguimiento de las operaciones WRITETEXT o UPDATETEXT realizadas en las columnas indizadas de texto completo del tipo **imagen**, **texto**, o **ntext**.|  
 |**stop_change_tracking**|Detiene el seguimiento de cambios en la tabla.|  
 |**update_index**|Propaga el conjunto actual de cambios de los que se ha realizado el seguimiento al índice de texto completo.|  
 |**start_background_updateindex**|Comienza a propagar los cambios de los que se ha realizado el seguimiento al índice de texto completo mientras se producen.|  
@@ -76,10 +76,10 @@ sp_fulltext_table
 |**Detener**|Detiene un rellenado completo o incremental.|  
   
  [  **@ftcat=**] **'***fulltext_catalog_name***'**  
- Es un nombre de catálogo de texto completo existente válido para un **crear** acción. Para todas las demás acciones, este parámetro debe ser NULL. *fulltext_catalog_name* es **sysname**, su valor predeterminado es null.  
+ Es un nombre válido y catálogo de texto completo para una **crear** acción. Para todas las demás acciones, este parámetro debe ser NULL. *fulltext_catalog_name* es **sysname**, su valor predeterminado es null.  
   
  [  **@keyname=**] **'***unique_index_name***'**  
- Es un índice válido columna de clave única, único no admiten valores NULL en *qualified_table_name* para un **crear** acción. Para todas las demás acciones, este parámetro debe ser NULL. *unique_index_name* es **sysname**, su valor predeterminado es null.  
+ Es un índice no válido de columna de clave única, único en *qualified_table_name* para un **crear** acción. Para todas las demás acciones, este parámetro debe ser NULL. *unique_index_name* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -87,16 +87,16 @@ sp_fulltext_table
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- Después de un índice de texto completo está desactivado para una tabla determinada, el índice de texto completo existente permanece vigente hasta que el siguiente llenado completo; Sin embargo, no se usa este índice porque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bloquea las consultas sobre tablas desactivadas.  
+## <a name="remarks"></a>Notas  
+ Después de desactiva un índice de texto completo para una tabla determinada, el índice de texto completo existente permanece vigente hasta el siguiente llenado completo Sin embargo, no se usa este índice porque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bloquea las consultas sobre tablas desactivadas.  
   
  Si se vuelve a activar la tabla y no se vuelve a llenar el índice, el índice antiguo sigue disponible para las consultas que se realizan sobre las columnas restantes habilitadas para texto completo, pero no sobre las nuevas. Las consultas que especifican una búsqueda en todas las columnas de texto completo encuentran datos de columnas eliminadas.  
   
- Después de una tabla se ha definido para la indización de texto completo, cambiar el texto completo columna de clave única de un tipo de datos a otro, cambiar el tipo de datos de esa columna o cambiar la clave única de texto completo de una columna a otra, sin volver a llenar completamente puede producir un error que se produzca durante una consulta posterior y devolver el mensaje de error: "conversión al tipo *data_type* error para el valor de clave de búsqueda de texto completo *key_value*." Para evitar esto, quite la definición de texto completo de esta tabla utilizando la **drop** acción de **sp_fulltext_table** y volver a definir mediante **sp_fulltext_table** y **sp_fulltext_column**.  
+ Después de una tabla se ha definido para la indización de texto completo, cambiar el texto columna de clave única de un tipo de datos a otro, ya sea cambiando el tipo de datos de esa columna o cambiando la clave única de texto completo de una columna a otro, sin volver a llenar completamente puede producir un error que se produzca durante una consulta posterior y devolver el mensaje de error: "conversión al tipo *data_type* error para el valor de clave de búsqueda de texto completo *key_value*." Para evitar esto, quite la definición de texto completo de esta tabla utilizando la **drop** acción de **sp_fulltext_table** y definirla con **sp_fulltext_table** y **sp_fulltext_column**.  
   
  La columna de clave de texto completo se debe definir para que tenga 900 bytes o menos. Se recomienda que el tamaño de la columna de clave sea lo más reducido posible por razones de rendimiento.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor **db_owner** y **db_ddladmin** fijo roles de base de datos o un usuario con permisos de referencia en el catálogo de texto completo se puede ejecutar **sp_fulltext_table**.  
   
 ## <a name="examples"></a>Ejemplos  

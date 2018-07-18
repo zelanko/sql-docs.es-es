@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: jeannt
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: abee195d109b751df856c720264a42241bf861f9
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466581"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052303"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepoolaffinity-transact-sql"></a>Sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "34466581"
 
 Devuelve información de afinidad de CPU sobre la configuración actual del grupo de recursos externos.
   
-|Nombre de columna|Tipo de datos|Description|
+|Nombre de columna|Tipo de datos|Descripción|
 |----------------|---------------|-----------------|
 |pool_id|**int**|El identificador del grupo de recursos externos. No admite valores NULL.|
 |processor_group|**smallint**|Identificador del grupo de procesadores lógicos de Windows. No admite valores NULL.|
 |cpu_mask|**bigint**|La máscara binaria que representa las CPU asociadas a este grupo. No admite valores NULL.|
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Los grupos creados con la afinidad de `AUTO` no aparecen en esta vista porque no tienen ninguna afinidad. Para obtener más información, consulte el [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41; ](../../t-sql/statements/create-external-resource-pool-transact-sql.md) y [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) instrucciones.
+Los grupos creados con la afinidad `AUTO` no aparecen en esta vista porque no tienen ninguna afinidad. Para obtener más información, consulte el [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41; ](../../t-sql/statements/create-external-resource-pool-transact-sql.md) y [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) instrucciones.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Permisos
 
 Requiere el permiso `VIEW SERVER STATE`.
 

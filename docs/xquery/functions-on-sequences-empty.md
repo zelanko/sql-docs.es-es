@@ -1,5 +1,5 @@
 ---
-title: vacío (función de XQuery) | Documentos de Microsoft
+title: está vacío (función de XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f312276737406070eb07f371d5fb1c807b8e24b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077212"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040503"
 ---
-# <a name="functions-on-sequences---empty"></a>Funciones utilizadas en secuencias - vacías
+# <a name="functions-on-sequences---empty"></a>Funciones usadas en secuencias: vacías
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Devuelve True si el valor de *$arg* es una secuencia vacía. De lo contrario, la función devuelve False.  
@@ -46,11 +46,11 @@ fn:empty($arg as item()*) as xs:boolean
  *$arg*  
  Secuencia de elementos. Si la secuencia está vacía, la función devuelve True. De lo contrario, la función devuelve False.  
   
-## <a name="remarks"></a>Comentarios  
- El **fn:Exists()** no se admite la función. Como alternativa, el **not()** función puede utilizarse.  
+## <a name="remarks"></a>Notas  
+ El **fn:Exists()** no se admite la función. Como alternativa, el **not()** se puede usar la función.  
   
 ## <a name="examples"></a>Ejemplos  
- Este tema ofrecen ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos de AdventureWorks.  
+ En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. Utilizar la función empty() de XQuery para determinar si un atributo está presente  
  En el proceso de fabricación del modelo de producto 7, esta consulta devuelve todas las ubicaciones de centros de trabajo que no tienen un **MachineHours** atributo.  

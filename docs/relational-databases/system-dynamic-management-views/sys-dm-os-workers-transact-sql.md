@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_workers (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_os_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2ea9d2aa6365c421bcf8e04920c2cf1bd4ab415a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467711"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052384"
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "34467711"
   Devuelve una fila por cada trabajador del sistema.  
   
 > [!NOTE]  
->  Para llamar a esta desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_workers**.  
+>  Al llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_workers**.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary (8)**|Dirección de memoria del trabajador.|  
 |status|**int**|Exclusivamente para uso interno.|  
@@ -61,7 +61,7 @@ ms.locfileid: "34467711"
 |exception_num|**int**|Número de error de la última excepción que encontró este trabajador.|  
 |exception_severity|**int**|Gravedad de la última excepción que encontró este trabajador.|  
 |exception_address|**varbinary (8)**|Dirección del código que produjo la excepción|  
-|affinity|**bigint**|La afinidad de subprocesos del trabajador. Coincide con la afinidad del subproceso de [sys.dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
+|affinity|**bigint**|La afinidad de subprocesos del trabajador. Coincide con la afinidad del subproceso en [sys.dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
 |state|**nvarchar(60)**|Estado del trabajador. Puede ser uno de los siguientes valores:<br /><br /> INIT = El trabajador se está inicializando actualmente.<br /><br /> RUNNING = El trabajador está trabajando de forma preferente o no preferente.<br /><br /> RUNNABLE = El trabajador está preparado para ejecutarse en el programador.<br /><br /> SUSPENDED = El trabajador está suspendido actualmente, esperando por un evento para enviarle una señal.|  
 |start_quantum|**bigint**|Tiempo en milisegundos al inicio de la ejecución actual de este trabajador.|  
 |end_quantum|**bigint**|Tiempo en milisegundos al final de la ejecución actual de este trabajador.|  
@@ -78,14 +78,14 @@ ms.locfileid: "34467711"
 |signal_worker_address|**varbinary (8)**|Dirección de memoria del último trabajador que indicó este objeto. Para obtener más información, consulte [sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |scheduler_address|**varbinary (8)**|Dirección de memoria del programador. Para obtener más información, consulte [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |processor_group|**smallint**|Almacena el identificador de grupo de procesadores que está asignado a este subproceso.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si el estado de trabajador es RUNNING y se está ejecutando de forma no preferente, la dirección del trabajador coincide con active_worker_address en sys.dm_os_schedulers.  
   
  Cuando se señala a un trabajador que espera en un evento, el trabajador se coloca al principio de la cola de ejecutables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que suceda esto 1.000 veces en una fila; después, el trabajador se coloca al final de la cola. Mover un trabajador al final de la cola tiene algunas implicaciones sobre el rendimiento.  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   

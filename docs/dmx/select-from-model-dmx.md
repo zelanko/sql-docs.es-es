@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;modelo&gt; (DMX) | Documentos de Microsoft
+title: SELECT FROM &lt;modelo&gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aac800e225eb5323b1bffeafda77d059f0a837e2
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842178"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989907"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SELECT FROM &lt;modelo&gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ SELECT <expression list> [TOP <n>] FROM <model>
  Opcional. Expresión que devuelve un valor escalar.  
   
 ## <a name="remarks"></a>Notas  
- Las columnas de la *lista de expresiones* debe ser definida como predict o predict only o relacionados con una columna de predicción.  
+ Las columnas de la *lista de expresiones* debe ser definida como predict o predict only, o relacionados con una columna de predicción.  
   
 ## <a name="naive-bayes-example"></a>Ejemplo de Bayes naive  
  En el siguiente ejemplo se realiza una combinación de predicción vacía en la columna Bike Buyer, que devuelve el estado más probable del modelo de minería de datos TM Naive Bayes.  
@@ -66,7 +66,7 @@ FROM Forecasting
   
 ## <a name="see-also"></a>Vea también  
  [SELECCIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
- [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

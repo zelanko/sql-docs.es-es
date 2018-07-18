@@ -1,5 +1,5 @@
 ---
-title: sp_grantlogin (Transact-SQL) | Documentos de Microsoft
+title: sp_grantlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: c0e5454e94024bf0cebe6d9b0b2702e1bcf989f6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248130"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054223"
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,16 +53,16 @@ sp_grantlogin [@loginame=] 'login'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_grantlogin** llama a CREATE LOGIN, que admite opciones adicionales. Para obtener información sobre cómo crear los inicios de sesión de SQL Server, vea [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
- **sp_grantlogin** no puede ejecutarse en una transacción definida por el usuario.  
+ **sp_grantlogin** no se puede ejecutar dentro de una transacción definida por el usuario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY LOGIN en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se utiliza `CREATE LOGIN` para crear un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión para el usuario de Windows `Corporate\BobJ.` éste es el método preferido.  
+ En el ejemplo siguiente se usa `CREATE LOGIN` para crear un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión para el usuario de Windows `Corporate\BobJ.` éste es el método preferido.  
   
 ```  
 CREATE LOGIN [Corporate\BobJ] FROM WINDOWS;  

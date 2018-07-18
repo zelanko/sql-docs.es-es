@@ -1,5 +1,5 @@
 ---
-title: Sys.trace_columns (Transact-SQL) | Documentos de Microsoft
+title: Sys.trace_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aae158d1daebfc5fbf51d18eeaccf8536d26e89e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220766"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993877"
 ---
 # <a name="systracecolumns-transact-sql"></a>sys.trace_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33220766"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use vistas de catálogo de eventos extendidos en su lugar.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**trace_column_id**|**smallint**|Id. único de esta columna.|  
 |**Nombre**|**nvarchar(128)**|Nombre único de esta columna. Este parámetro no se traduce.|  
@@ -51,7 +51,7 @@ ms.locfileid: "33220766"
 |**is_repeatable**|**bit**|Indica si se puede hacer referencia a la columna en los datos de "columna repetida".<br /><br /> 0 = falso<br /><br /> 1 = verdadero|  
 |**is_repeated_base**|**bit**|Indica si esta columna se utiliza como clave única para hacer referencia a datos repetidos.<br /><br /> 0 = falso<br /><br /> 1 = verdadero|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

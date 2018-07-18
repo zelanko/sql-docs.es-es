@@ -1,5 +1,5 @@
 ---
-title: StructureColumn (DMX) | Documentos de Microsoft
+title: StructureColumn (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e1bf58c9477cc06855d332ec3bd69b50a6bf19dc
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842628"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992415"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,14 +33,14 @@ StructureColumn('structure column name')
  Nombre de una columna de estructura de minería de datos de tabla anidada o caso.  
   
 ## <a name="result-type"></a>Tipo de resultado  
- El tipo que se devuelve depende del tipo de la columna que se hace referencia en el \<nombre de la columna de estructura > parámetro. Por ejemplo, si la columna de estructura de minería de datos a la que se hace referencia contiene un valor escalar, la función devuelve un valor escalar.  
+ El tipo que se devuelve depende del tipo de la columna que se hace referencia en el \<nombre de columna de estructura > parámetro. Por ejemplo, si la columna de estructura de minería de datos a la que se hace referencia contiene un valor escalar, la función devuelve un valor escalar.  
   
  Si es una tabla anidada, la función devuelve un valor de tabla. El valor de tabla devuelto se puede utilizar en la cláusula FROM de una instrucción sub-SELECT.  
   
 ## <a name="remarks"></a>Notas  
  Esta función es polimórfica y se puede utilizar en cualquier parte de una instrucción que permita expresiones, por ejemplo en una lista de expresiones SELECT, una expresión de condición WHERE y una expresión ORDER BY.  
   
- El nombre de la columna en la estructura de minería de datos es un valor de cadena y por lo tanto, deben incluirse entre comillas simples: por ejemplo, `StructureColumn('` **columna 1**`')`. Si hay varias columnas que tienen el mismo nombre, el nombre se resuelve en el contexto de la instrucción SELECT contenedora.  
+ El nombre de la columna en la estructura de minería de datos es un valor de cadena y por lo tanto, debe ir entre comillas simples: por ejemplo, `StructureColumn('` **columna 1**`')`. Si hay varias columnas que tienen el mismo nombre, el nombre se resuelve en el contexto de la instrucción SELECT contenedora.  
   
  Los resultados devueltos por una consulta mediante el **StructureColumn** función se ve afectada por la presencia de los filtros en el modelo. Es decir, el filtro del modelo controla los casos que se incluyen en el modelo de minería de datos. Por consiguiente, una consulta en la columna de estructura puede devolver solo los casos que se utilizaron en el modelo de minería de datos. Consulte la sección Ejemplos de este tema para obtener un ejemplo de código que muestre el efecto de los filtros de un modelo de minería de datos tanto en las tablas de casos como en una tabla anidada.  
   
@@ -116,7 +116,7 @@ WHERE StructureColumn(‘Occupation’) = ‘Architect’
  Tenga en cuenta que, en este ejemplo, se aplica un filtro a la columna de estructura para restringir los casos a los clientes cuya profesión sea 'arquitecto de ' (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`). Dado que la condición de filtro del modelo siempre se aplica a los casos al crearse el modelo, solo se incluyen en los casos del modelo aquellos que tienen en la tabla `Products` por lo menos una fila que la cumpla. Por consiguiente, se aplica tanto el filtro en la tabla anidada `Products` como el filtro en el caso `(‘Occupation’)`.  
   
 ### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Consulta de ejemplo 3: Seleccionar columnas de una tabla anidada  
- La consulta del ejemplo siguiente devuelve los nombres de los clientes que se usaron como casos de entrenamiento del modelo. Para cada cliente, la consulta devuelve también una tabla anidada que contiene los detalles de la compra. Aunque el modelo incluye la `ProductName` columna, el modelo no utiliza el valor de la `ProductName` columna. El modelo solo comprueba si el producto se compró en normal (`NOT``OnSale`) precio. Esta consulta no devuelve solo el nombre del producto, sino que también devuelve la cantidad comprada, que no está incluida en el modelo.  
+ La consulta del ejemplo siguiente devuelve los nombres de los clientes que se usaron como casos de entrenamiento del modelo. Para cada cliente, la consulta devuelve también una tabla anidada que contiene los detalles de la compra. Aunque el modelo incluye la `ProductName` columna, el modelo no utiliza el valor de la `ProductName` columna. El modelo solo comprueba si el producto se compró normales (`NOT``OnSale`) precio. Esta consulta no devuelve solo el nombre del producto, sino que también devuelve la cantidad comprada, que no está incluida en el modelo.  
   
 ```  
 SELECT CustomerName,    
@@ -137,7 +137,7 @@ WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

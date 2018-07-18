@@ -1,5 +1,5 @@
 ---
-title: SELECT (DMX) | Documentos de Microsoft
+title: SELECT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: def96304f13f57095679056e6eab0a004b5c47d9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842648"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989884"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,8 +47,8 @@ FROM <model/structure>[.aspect]
 SELECT FLATTENED <select list> FROM ...  
 ```  
   
-## <a name="top-n-and-order-by"></a>Parte superior \<n > y ORDER BY  
- Puede ordenar los resultados de una consulta mediante el uso de una expresión y, a continuación, se puede devolver un subconjunto de los resultados mediante una combinación de la **ORDER BY** y **arriba** cláusulas. Esto resulta útil en un escenario como el correo directo, en el que solo se desea enviar resultados a los destinatarios que tienen más probabilidad de responder. Puede ordenar los resultados de un consulta de predicción de correo por la probabilidad de predicción de destino y, a continuación, devolver sólo la parte superior \<n > resultados.  
+## <a name="top-n-and-order-by"></a>TOP \<n > y ORDER BY  
+ Puede ordenar los resultados de una consulta mediante el uso de una expresión y, a continuación, se puede devolver un subconjunto de los resultados mediante una combinación de la **ORDER BY** y **superior** cláusulas. Esto resulta útil en un escenario como el correo directo, en el que solo se desea enviar resultados a los destinatarios que tienen más probabilidad de responder. Puede ordenar los resultados de un consulta de predicción de correo por la probabilidad de predicción de destino y, a continuación, devolver sólo la parte superior \<n > resultados.  
   
 ## <a name="select-list"></a>Lista de selección  
  El  *\<lista de selección >* pueden incluir referencias a columna escalares, funciones de predicción y expresiones. Las opciones que estén disponibles dependen del algoritmo y de los contextos siguientes:  
@@ -77,7 +77,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- Puede limitar los casos que son devueltos por la consulta mediante el uso de un **donde** cláusula. El **donde** cláusula especifica hace referencia a esa columna en la **donde** expresión debe tener la misma semántica que las referencias de columna en la  *\<lista de selección >* de la **seleccione** instrucción y solo pueden devolver una expresión booleana. La sintaxis para la **donde** cláusula es como se indica a continuación.  
+ Puede limitar los casos que son devueltos por la consulta mediante el uso de un **donde** cláusula. El **donde** cláusula especifica hace referencia esa columna en el **donde** expresión debe tener la misma semántica que las referencias de columna en la  *\<lista de selección >* de la **seleccione** instrucción y solo pueden devolver una expresión booleana. La sintaxis de la **donde** es la siguiente cláusula  
   
 ```  
 WHERE < condition expression >  
@@ -100,7 +100,7 @@ WHERE < condition expression >
   
  El segundo tipo de predicción crea una combinación de predicción vacía en una columna de predicción de un modelo de minería de datos y devuelve el estado más probable de la columna. Los resultados de esta consulta están basados completamente en el contenido del modelo de minería de datos.  
   
- Puede insertar una instrucción select en la consulta de origen de una instrucción SELECT FROM PREDICTION JOIN mediante la siguiente sintaxis.  
+ Puede insertar una instrucción select en la consulta de origen de una instrucción SELECT FROM PREDICTION JOIN con la sintaxis siguiente.  
   
 ```  
 SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>  
@@ -109,7 +109,7 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
  Para obtener más información acerca de cómo crear consultas de predicción, vea [estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md).  
   
 ## <a name="clause-syntax"></a>Sintaxis de cláusulas  
- Debido a la complejidad de la exploración con el **seleccione** instrucción, elementos de sintaxis detallada y los argumentos se describen con cláusulas. Para obtener más información acerca de cada cláusula, haga clic en un tema de la siguiente lista:  
+ Debido a la complejidad de la exploración con el **seleccione** instrucción, los elementos de sintaxis detallada y los argumentos se describen con cláusulas. Para obtener más información acerca de cada cláusula, haga clic en un tema de la siguiente lista:  
   
  [SELECT DISTINCT FROM &#60;modelo &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
@@ -128,7 +128,7 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
  [SELECT FROM &#60;estructura&#62;. CASOS](../dmx/select-from-structure-cases.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)  

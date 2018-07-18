@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;modelo&gt; PREDICTION JOIN (DMX) | Documentos de Microsoft
+title: SELECT FROM &lt;modelo&gt; PREDICTION JOIN (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842168"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989517"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modelo&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *lista de asignación de combinación*  
  Opcional. Expresión lógica que compara columnas del modelo con columnas de la consulta de origen.  
   
- *Expresión de condición*  
+ *expresión de condición*  
  Opcional. Condición para restringir los valores que devuelve la lista de columnas.  
   
  *expression*  
@@ -72,7 +72,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  Puede especificar funciones de predicción que no devuelven una expresión de tabla en la \< *lista de expresiones select*> y la \< *expresión de condición*>.  
   
- **NATURAL PREDICTION JOIN** asigna automáticamente juntos los nombres de columna de la consulta de origen que coinciden con los nombres de columna en el modelo. Si usa **cláusula NATURAL PREDICTION**, puede omitir la cláusula ON.  
+ **NATURAL PREDICTION JOIN** enlaza automáticamente nombres de columna de la consulta de origen que coinciden con los nombres de columna en el modelo. Si usas **cláusula NATURAL PREDICTION**, puede omitir la cláusula ON.  
   
  La condición WHERE solo se puede aplicar a columnas de predicción o relacionadas.  
   
@@ -89,7 +89,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   Tiene dos hijos que viven en casa  
   
- Con el modelo de minería de datos TM Decision Tree y las características conocidas del sujeto, la consulta devuelve un valor booleano que describe si la persona compró la bicicleta y un conjunto de valores de tabla, devuelto por la [PredictHistogram &#40;DMX &#41; ](../dmx/predicthistogram-dmx.md) función, que describen cómo se realizó la predicción.  
+ Con el modelo de minería de datos TM Decision Tree y las características conocidas del sujeto, la consulta devuelve un valor booleano que describe si la persona compró la bicicleta y un conjunto de valores de tabla devuelta por la [PredictHistogram &#40;DMX &#41; ](../dmx/predicthistogram-dmx.md) función, que describen cómo se realizó la predicción.  
   
 ```  
 SELECT  
@@ -106,7 +106,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>Ejemplo 2: usar OPENQUERY  
- En el ejemplo siguiente se muestra cómo crear una consulta de predicción por lotes mediante una lista de clientes potenciales almacenada en un conjunto de datos externo. Dado que la tabla forma parte de una vista del origen de datos que se ha definido en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puede usar la consulta [OPENQUERY](../dmx/source-data-query-openquery.md) para recuperar los datos. Dado que los nombres de las columnas de la tabla son diferentes de los del modelo de minería de datos, el **ON** cláusula debe usarse para asignar las columnas de la tabla a las columnas del modelo.  
+ El ejemplo siguiente muestra cómo crear una consulta de predicción por lotes mediante una lista de clientes potenciales almacenada en un conjunto de datos externo. Dado que la tabla forma parte de una vista del origen de datos que se ha definido en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puede usar la consulta [OPENQUERY](../dmx/source-data-query-openquery.md) para recuperar los datos. Dado que los nombres de las columnas de la tabla son diferentes de los del modelo de minería de datos, el **ON** cláusula debe usarse para asignar las columnas de la tabla a las columnas del modelo.  
   
  La consulta devuelve nombre y el apellido de cada persona de la tabla, junto con una columna booleana que indica si es probable que cada persona compre una bicicleta, donde 0 significa que "probablemente no comprará una bicicleta" y 1 significa que "probablemente comprará una bicicleta". La última columna contiene la probabilidad del resultado predicho.  
   
@@ -163,7 +163,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- El [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md) función es polimórfica y puede utilizarse con todos los tipos de modelo. El valor de value3 se usa como argumento para la función con el fin de limitar el número de elementos que devuelve la consulta. El **seleccione** lista que sigue a la cláusula NATURAL PREDICTION JOIN proporciona los valores que se usará como entrada para la predicción.  
+ El [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md) función es polimórfica y se puede usar con todos los tipos de modelo. El valor de value3 se usa como argumento para la función con el fin de limitar el número de elementos que devuelve la consulta. El **seleccione** lista que sigue a la cláusula NATURAL PREDICTION JOIN proporciona los valores que se usará como entrada para la predicción.  
   
 ```  
 SELECT FLATTENED  
@@ -184,11 +184,11 @@ NATURAL PREDICTION JOIN
 |Water Bottle|  
 |Fender Set - Mountain|  
   
- Dado que la columna que contiene el atributo de predicción, `[v Assoc Seq Line Items]`, es una columna de la tabla, la consulta devuelve una única columna que contiene una tabla anidada. De forma predeterminada, la columna de tabla anidada se denomina `Expression`. Si el proveedor no admite conjuntos de filas jerárquicos, puede usar el **FLATTENED** palabra clave tal y como se muestra en este ejemplo para que sea más fácil ver los resultados.  
+ Dado que la columna que contiene el atributo de predicción, `[v Assoc Seq Line Items]`, es una columna de la tabla, la consulta devuelve una única columna que contiene una tabla anidada. De forma predeterminada, la columna de tabla anidada se denomina `Expression`. Si el proveedor no admite conjuntos de filas jerárquicos, puede usar el **FLATTENED** palabra clave, como se muestra en este ejemplo, para facilitar la visualización de los resultados.  
   
 ## <a name="see-also"></a>Vea también  
  [SELECCIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
- [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

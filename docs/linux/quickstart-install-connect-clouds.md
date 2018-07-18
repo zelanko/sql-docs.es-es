@@ -1,6 +1,6 @@
 ---
-title: Introducción a SQL Server 2017 en la nube | Documentos de Microsoft
-description: Este tutorial rápido muestra cómo ejecutar el servidor de SQL 2017 en Linux en la nube de su elección.
+title: Introducción a SQL Server 2017 en la nube | Microsoft Docs
+description: En este tutorial rápido se muestra cómo ejecutar el SQL Server 2017 en Linux en la nube de su elección.
 author: annashres
 ms.author: annashres
 manager: craigg
@@ -12,17 +12,17 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: f5d67ff25cb5d2816672fafe0602d56921c034bb
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322286"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995894"
 ---
-# <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>Inicio rápido: Ejecutar el servidor de SQL 2017 en la nube
+# <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>Inicio rápido: Ejecute el SQL Server 2017 en la nube
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En este tutorial rápido, se instalará SQL Server 2017 en Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) o Ubuntu en la nube de su elección. Vaya a [aprovisionar una máquina virtual de Linux SQL Server en el portal de Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) para ejecutar SQL Server en Linux en Azure.
+En este tutorial, se instalará SQL Server 2017 en Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) o Ubuntu en la nube de su elección. Vaya a [aprovisionar una máquina virtual de Linux con SQL Server en Azure portal](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) para ejecutar SQL Server en Linux en Azure.
 
     > [!NOTE]
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
@@ -32,37 +32,37 @@ En este tutorial rápido, se instalará SQL Server 2017 en Red Hat Enterprise Li
     * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
-1.  Conectar con el AMI con ssh
-1.  Siga el tutorial rápido para la distribución de Linux que eligió: 
+1.  Conectarse a la AMI con ssh
+1.  Siga la Guía de inicio rápido para la distribución de Linux elegida: 
     * [RHEL](quickstart-install-connect-red-hat.md)
-    * [SLES GRANDE](quickstart-install-connect-suse.md)
+    * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  Configurar para las conexiones remotas: 
-    * Abra el [consola EC2 de Amazon]( https://console.aws.amazon.com/ec2/)
+    * Abra el [consola de Amazon EC2]( https://console.aws.amazon.com/ec2/)
     * En el panel de navegación, elija **grupos de seguridad**. 
-    * Elija **entrantes, editar, Agregar regla**
-    * Agregar una regla de entrada para permitir el tráfico en el puerto en el que SQL Server escucha (puerto TCP 1433)
+    * Elija **entrante, editar, Agregar regla**
+    * Agregar una regla de entrada para permitir el tráfico en el puerto en el que SQL Server escucha (puerto TCP predeterminado 1433)
 
     
-## <a name="digital-ocean"></a>Océano digital
-1. Inicie sesión en el [el panel de control](https://cloud.digitalocean.com/login) y haga clic en crear un droplet
-1. Elija un droplet Ubuntu 16.04 con al menos 2 GB de memoria
+## <a name="digital-ocean"></a>Digital Ocean
+1. Inicie sesión en el [panel de control](https://cloud.digitalocean.com/login) y haga clic en crear una gota
+1. Elija una gota de Ubuntu 16.04 con al menos 2 GB de memoria
 1. Conectarse a la gota con ssh
 1. Siga el [inicio rápido de Ubuntu](quickstart-install-connect-ubuntu.md)
 1. Configurar para las conexiones remotas:
-    * En la parte superior del Panel de Control, siga el **red** vincular y, a continuación, seleccione **Firewalls**
-    * Agregar una regla de entrada para permitir el tráfico en el puerto en el que SQL Server escucha (puerto TCP 1433)
+    * En la parte superior del Panel de Control, siga el **redes** vincular y, a continuación, seleccione **Firewalls**
+    * Agregar una regla de entrada para permitir el tráfico en el puerto en el que SQL Server escucha (puerto TCP predeterminado 1433)
     
 ## <a name="google-cloud-platform"></a>Plataforma de nube de Google
-1.  Crear una imagen de Linux con al menos 2 GB de memoria desde el iniciador de la nube 
+1.  Crear una imagen de Linux con al menos 2 GB de memoria desde el selector en la nube 
     * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  Conectarse a la imagen con ssh
-1.  Siga el tutorial rápido para la distribución de Linux que eligió: 
+1.  Siga la Guía de inicio rápido para la distribución de Linux elegida: 
     * [RHEL](quickstart-install-connect-red-hat.md)
-    * [SLES GRANDE](quickstart-install-connect-suse.md)
+    * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  Configurar para las conexiones remotas: 
-    * Vaya a la [las reglas de Firewall](https://console.cloud.google.com/networking/firewalls)
-    * Agregar una regla de entrada para permitir el tráfico en el puerto en el que escucha SQL Server (valor predeterminado tcp: 1433)
+    * Vaya a la [reglas de Firewall](https://console.cloud.google.com/networking/firewalls)
+    * Agregar una regla de entrada para permitir el tráfico en el puerto en el que escucha SQL Server (predeterminado tcp: 1433)

@@ -1,5 +1,5 @@
 ---
-title: Utilizar consultas XPath en SQLXML 4.0 | Documentos de Microsoft
+title: Utilizar consultas XPath en SQLXML 4.0 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d6101bbe97a4ca329aba1e455fbaa234bdd5a32d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708693"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046123"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Utilizar consultas XPath en SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ ms.locfileid: "34708693"
  [Consultas XPath de ejemplo &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-xpath-queries-sqlxml-4-0.md)  
  Proporciona consultas XPath de ejemplo para SQLXML 4.0.  
   
- [Tipos de datos de XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)  
+ [Los tipos de datos de XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)  
  Describe tipos de datos XPath, que son significativamente diferentes de los de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y XSD.  
   
 ## <a name="see-also"></a>Vea también  
- [Formato XML del lado cliente &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
+ [Aplicación de formato XML del lado cliente &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   
   

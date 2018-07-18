@@ -1,5 +1,5 @@
 ---
-title: Operadores de XQuery con el tipo de datos xml | Documentos de Microsoft
+title: Operadores de XQuery con el tipo de datos xml | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 62c4875c74d6ff67e8d1760a29ac48672fc7765a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077572"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988184"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>Operadores XQuery con el tipo de datos XML
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Dado que tanto los operandos para el **eq** operador son valores atómicos, el operador de valor se utiliza en la consulta. Puede escribir la misma consulta mediante el operador de comparación general ( **=** ).  
+ Dado que tanto los operandos para el **eq** operador son valores atómicos, se usa el operador de valor en la consulta. Puede escribir la misma consulta utilizando el operador de comparación general ( **=** ).  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones de XQuery con el tipo de datos xml](../xquery/xquery-functions-against-the-xml-data-type.md)   

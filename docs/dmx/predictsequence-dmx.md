@@ -1,5 +1,5 @@
 ---
-title: PredictSequence (DMX) | Documentos de Microsoft
+title: PredictSequence (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 813641b7fa72405a0ba5a026e255f03feb94bd05
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841558"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992477"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,9 +34,9 @@ PredictSequence(\<table column reference, n-start, n-end>)
  Un \<expresión de tabla >.  
   
 ## <a name="remarks"></a>Notas  
- Si el *n* se especifica el parámetro, devuelve los siguientes valores:  
+ Si el *n* parámetro se especifica, devuelve los valores siguientes:  
   
--   Si *n* es mayor que cero, los valores de secuencia más probables en las próximas *n* pasos.  
+-   Si *n* es mayor que cero, los valores de secuencia más probable es que en los próximos *n* pasos.  
   
 -   Si ambos *n-start* y *n-end* se especifican, los valores de secuencia de *n-start* a *n-end*.  
   
@@ -51,7 +51,7 @@ From
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

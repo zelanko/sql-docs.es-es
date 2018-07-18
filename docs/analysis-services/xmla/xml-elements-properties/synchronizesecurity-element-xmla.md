@@ -1,5 +1,5 @@
 ---
-title: Elemento SynchronizeSecurity (XMLA) | Documentos de Microsoft
+title: Elemento SynchronizeSecurity (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f99f4c0ddf212d2fac33abd08c33ccf3dbe7998
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576487"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046929"
 ---
 # <a name="synchronizesecurity-element-xmla"></a>Elemento SynchronizeSecurity (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Especifica cómo sincronizar definiciones de seguridad, como los roles y permisos, durante un [sincronizar](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando.  
+  Especifica cómo sincronizar definiciones de seguridad, como roles y permisos, durante un [Synchronize](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,10 +36,10 @@ ms.locfileid: "34576487"
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String (enumeración)|  
-|Valor predeterminado|*skipMembership*|  
+|Valor predeterminado|*SkipMembership*|  
 |Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
@@ -47,13 +47,13 @@ ms.locfileid: "34576487"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El **seguridad** elemento determina si las definiciones de seguridad, como los roles y permisos, definidas en una base de datos de Analysis Services se sincronizan durante un **sincronizar** comando. Este elemento determina también si las cuentas de usuario de Windows y los grupos definidos como miembros de las definiciones de seguridad se incluyen como parte del comando **Synchronize** .  
+ El **seguridad** elemento determina si las definiciones de seguridad, como los roles y permisos, definidas en una base de datos de Analysis Services se sincronizan durante un **Synchronize** comando. Este elemento determina también si las cuentas de usuario de Windows y los grupos definidos como miembros de las definiciones de seguridad se incluyen como parte del comando **Synchronize** .  
   
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|*skipMembership*|Incluye las definiciones de seguridad, pero excluye la información de suscripción, durante un comando **Synchronize** .|  
+|*SkipMembership*|Incluye las definiciones de seguridad, pero excluye la información de suscripción, durante un comando **Synchronize** .|  
 |*CopyAll*|Incluye las definiciones de seguridad y la información de suscripción durante un comando **Synchronize** .|  
 |*IgnoreSecurity*|Excluye las definiciones de seguridad durante un comando **Synchronize** .|  
   

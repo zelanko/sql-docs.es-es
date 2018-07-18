@@ -1,5 +1,5 @@
 ---
-title: Ejecutar consultas XPath (proveedor SQLXMLOLEDB) | Documentos de Microsoft
+title: Ejecutar consultas XPath (proveedor SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a5cad9cb9284353aa856b45bad2fa6a14ad126d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969020"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049962"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Ejecutar consultas XPath (proveedor SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,14 +61,14 @@ ms.locfileid: "32969020"
 </xsd:schema>  
 ```  
   
- La propiedad de esquema de asignación proporciona el esquema de asignación en el que se ejecuta la consulta XPath. El esquema de asignación puede ser un esquema XSD o XDR. La propiedad de ruta de acceso Base proporciona la ruta de acceso de archivo para el esquema de asignación.  
+ La propiedad de esquema de asignación proporciona el esquema de asignación en la que se ejecutó la consulta XPath. El esquema de asignación puede ser un esquema XSD o XDR. La propiedad de ruta de acceso Base proporciona la ruta de acceso al esquema de asignación.  
   
- Clientsidexml, propiedad se establece en True. Por lo tanto, el documento XML se genera en el cliente.  
+ El clientsidexml, propiedad se establece en True. Por lo tanto, el documento XML se genera en el cliente.  
   
  En la aplicación, se especifica una consulta XPath directamente. Por ello, debe incluirse el dialecto XPath {ec2a4293-e898-11d2-b1b7-00c04f680c56}.  
   
 > [!NOTE]  
->  En el código, debe suministrarse el nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión. Además, este ejemplo especifica el uso de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) para el proveedor de datos que requiere la instalación de software de cliente de red adicional. Para obtener más información, consulte [requisitos del sistema para SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  En el código, debe suministrarse el nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión. Además, este ejemplo especifica el uso de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) para el proveedor de datos que requiere el software de cliente de red adicional para instalarse. Para obtener más información, consulte [requisitos del sistema para SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

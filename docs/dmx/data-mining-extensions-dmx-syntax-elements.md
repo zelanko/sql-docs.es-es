@@ -1,5 +1,5 @@
 ---
-title: Elementos de sintaxis de extensiones (DMX) de minería de datos | Documentos de Microsoft
+title: Los elementos de sintaxis de extensiones (DMX) de minería de datos | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a745449428a0a348dc60a5b47304612bb889556c
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842388"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989927"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Elementos de sintaxis de Extensiones de minería de datos (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -22,13 +22,13 @@ ms.locfileid: "34842388"
   En [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puede usar diversos elementos de sintaxis para definir las instrucciones de extensiones de minería de datos (DMX) que puede usar para crear, administrar y trabajar con modelos de minería de datos. En las secciones siguientes se describen estos elementos de sintaxis.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Identificadores &#40;DMX&#41;](../dmx/identifiers-dmx.md)  
+ [Los identificadores &#40;DMX&#41;](../dmx/identifiers-dmx.md)  
  Asigne nombres a objetos como modelos de minería de datos, estructuras de minería de datos y columnas.  
   
  [Tipos de datos &#40;DMX&#41;](../dmx/data-types-dmx.md)  
  Definen el tipo de datos que contiene una columna de modelo de minería de datos.  
   
- [Expresiones &#40;DMX&#41;](../dmx/expressions-dmx.md)  
+ [Las expresiones &#40;DMX&#41;](../dmx/expressions-dmx.md)  
  Unidades de sintaxis que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] puede resolver como valores de tabla, objetos o valores únicos o escalares.  
   
  [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
@@ -49,7 +49,7 @@ ms.locfileid: "34842388"
  [Distribuciones &#40;DMX&#41;](../dmx/distributions-dmx.md)  
  Define la distribución de datos dentro de una columna.  
   
- [Uso de &#40;DMX&#41;](../dmx/usage-dmx.md)  
+ [Uso &#40;DMX&#41;](../dmx/usage-dmx.md)  
  Define cómo usa un modelo de minería de datos las columnas que contiene.  
   
  [Las marcas de modelado &#40;DMX&#41;](../dmx/modeling-flags-dmx.md)  
@@ -57,7 +57,7 @@ ms.locfileid: "34842388"
   
 ## <a name="see-also"></a>Vea también  
  [Extensiones de minería de datos &#40;DMX&#41; referencia](../dmx/data-mining-extensions-dmx-reference.md)   
- [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
  [Extensiones de minería de datos &#40;DMX&#41; convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   

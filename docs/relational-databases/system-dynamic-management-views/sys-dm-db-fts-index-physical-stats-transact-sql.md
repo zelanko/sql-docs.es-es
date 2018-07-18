@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_fts_index_physical_stats (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_db_fts_index_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 952f07e7112b316e9109e0761deecf99f694306a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464141"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997977"
 ---
 # <a name="sysdmdbftsindexphysicalstats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "34464141"
   
 ||||  
 |-|-|-|  
-|**Nombre de columna**|**Tipo**|**Description**|  
-|**object_id**|int|Identificador de objeto de la tabla que contiene el índice.|  
+|**Nombre de columna**|**Tipo**|**Descripción**|  
+|**object_id**|INT|Identificador de objeto de la tabla que contiene el índice.|  
 |**fulltext_index_page_count**|**bigint**|Tamaño lógico de la extracción en número de páginas de índice.|  
 |**keyphrase_index_page_count**|**bigint**|Tamaño lógico de la extracción en número de páginas de índice.|  
 |**similarity_index_page_count**|**bigint**|Tamaño lógico de la extracción en número de páginas de índice.|  
@@ -54,7 +54,7 @@ ms.locfileid: "34464141"
   
 -   [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   

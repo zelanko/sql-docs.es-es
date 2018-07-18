@@ -1,5 +1,5 @@
 ---
-title: Comentarios en XQuery | Documentos de Microsoft
+title: Comentarios en XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 459507805f8b1a1803382e400722d910c802605b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076052"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042333"
 ---
 # <a name="comments-in-xquery"></a>Comentarios en XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ SELECT @x.query('
 ')  
 ```  
   
- Siguiente es otro ejemplo en el que se especifica una consulta con una columna de la instrucción de la **xml** tipo:  
+ La siguiente es otro ejemplo en el que se especifica una consulta en una columna Instruction del **xml** tipo:  
   
 ```  
 SELECT Instructions.query('  

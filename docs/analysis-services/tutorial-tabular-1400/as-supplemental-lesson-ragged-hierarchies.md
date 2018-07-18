@@ -1,5 +1,5 @@
 ---
-title: 'Lección complementaria de Analysis Services tutorial: jerarquías desiguales | Documentos de Microsoft'
+title: 'Lección complementaria tutorial de Analysis Services: jerarquías desiguales | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,28 +10,28 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bc5a2164576e2e6142d8835dad6f6c114b7a9c5b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043929"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042309"
 ---
-# <a name="supplemental-lesson---ragged-hierarchies"></a>Lección complementaria - jerarquías desiguales
+# <a name="supplemental-lesson---ragged-hierarchies"></a>Lección complementaria: jerarquías desiguales
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-En esta lección complementaria, resolver un problema común al dinamizar en jerarquías que contengan valores en blanco (miembros) en distintos niveles. Por ejemplo, una organización donde un director de alto nivel tiene tanto directores de departamento como no administradores como subordinados directos. O bien, jerarquías geográficas formada por país-ciudad, donde algunas ciudades no tienen un elemento primario estado o provincia, como Washington D.C., ciudad del Vaticano. Cuando una jerarquía tiene miembros en blanco, a menudo se desciende en niveles diferentes o desiguales.
+En esta lección complementaria, resolverá un problema común al dinamizar en jerarquías que contienen valores en blanco (miembros) en distintos niveles. Por ejemplo, una organización donde un director de alto nivel tiene tanto directores de departamento como no directores como subordinados directos. O bien, las jerarquías geográficas formadas país-región-ciudad, donde algunas ciudades no tienen un elemento primario estado o provincia, como Washington D.C., ciudad del Vaticano. Cuando una jerarquía tiene miembros en blanco, a menudo desciende en niveles diferentes o desiguales.
 
 ![As-Lesson-Detail-ragged-Hierarchies-Table](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-table.png)
 
-Los modelos tabulares en el nivel de compatibilidad de 1400 tienen más **ocultar miembros** propiedad para las jerarquías. El **predeterminado** configuración supone que no hay ningún miembro en blanco en cualquier nivel. El **ocultar miembros en blanco** configuración excluye los miembros en blanco de la jerarquía cuando se agrega a una tabla dinámica o informe.  
+Los modelos tabulares en el nivel de compatibilidad 1400 tienen más **ocultar miembros** propiedad para las jerarquías. El **predeterminado** configuración asume que no hay ningún miembro en blanco en cualquier nivel. El **ocultar miembros en blanco** configuración excluye los miembros en blanco de la jerarquía cuando se agrega a una tabla dinámica o informe.  
   
 Tiempo estimado para completar esta lección: **20 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
-En este artículo de lección complementaria forma parte de un tutorial de modelado tabular. Antes de realizar las tareas de esta lección complementaria, deberá haber finalizado todas las lecciones anteriores o tiene un proyecto de modelo de ejemplo Adventure Works Internet Sales completado. 
+En este artículo de la lección complementaria forma parte de un tutorial de modelado tabular. Antes de realizar las tareas de esta lección complementaria, debe haber completado todas las lecciones anteriores o tiene un proyecto de modelos de ejemplo Adventure Works Internet Sales completado. 
 
-Si ha creado el proyecto AW Internet Sales como parte del tutorial, el modelo no contiene aún los datos o jerarquías desiguales. Para completar esta lección complementaria, primero debe crear el problema mediante la adición de algunas tablas adicionales, crear relaciones, columnas calculadas, una medida y una nueva jerarquía de organización. Esa parte tarda unos 15 minutos. A continuación, obtendrá solucionar en tan solo unos minutos.  
+Si ha creado el proyecto AW Internet Sales como parte del tutorial, el modelo no tiene todavía ningún dato ni jerarquías desiguales. Para completar esta lección complementaria, primero debe crear el problema agregando algunas tablas, crear relaciones, columnas calculadas, una medida y una nueva jerarquía de organización. Solo tardará unos 15 minutos. A continuación, podrá solucionar el problema en cuestión de minutos.  
 
 ## <a name="add-tables-and-objects"></a>Agregar tablas y objetos
   
@@ -43,15 +43,15 @@ Si ha creado el proyecto AW Internet Sales como parte del tutorial, el modelo no
 
 3.  En el Editor de consultas, haga clic en **importación**
 
-4.  Cree el siguiente [relaciones](../tutorial-tabular-1400/as-lesson-4-create-relationships.md):
+4.  Cree la siguiente [relaciones](../tutorial-tabular-1400/as-lesson-4-create-relationships.md):
 
-    | tabla 1           | Columna       | Dirección del filtro   | tabla 2     | Columna      | Activo |
+    | tabla 1           | columna       | Dirección del filtro   | tabla 2     | columna      | Activo |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
-    | FactResellerSales | OrderDateKey | Predeterminado            | DimDate     | Date        | Sí    |
-    | FactResellerSales | DueDate      | Predeterminado            | DimDate     | Date        | no     |
-    | FactResellerSales | ShipDateKey  | Predeterminado            | DimDate     | Date        | no     |
-    | FactResellerSales | ProductKey   | Predeterminado            | DimProduct  | ProductKey  | Sí    |
-    | FactResellerSales | EmployeeKey  | En ambas tablas | DimEmployee | EmployeeKey | Sí    |
+    | FactResellerSales | OrderDateKey | Default            | DimDate     | date        | Sí    |
+    | FactResellerSales | DueDate      | Default            | DimDate     | date        | no     |
+    | FactResellerSales | ShipDateKey  | Default            | DimDate     | date        | no     |
+    | FactResellerSales | ProductKey   | Default            | DimProduct  | ProductKey  | Sí    |
+    | FactResellerSales | EmployeeKey  | Ambas tablas | DimEmployee | EmployeeKey | Sí    |
 
 5. En el **DimEmployee** de tabla, cree el siguiente [columnas calculadas](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md): 
 
@@ -60,7 +60,7 @@ Si ha creado el proyecto AW Internet Sales como parte del tutorial, el modelo no
     =PATH([EmployeeKey],[ParentEmployeeKey])
     ```
 
-    **FullName** 
+    **fullName** 
     ```
     =[FirstName] & " " & [MiddleName] & " " & [LastName]
     ```
@@ -90,7 +90,7 @@ Si ha creado el proyecto AW Internet Sales como parte del tutorial, el modelo no
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],5,1)) 
     ```
 
-6.  En el **DimEmployee** de tabla, cree un [jerarquía](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md) denominado **organización**. Agregue el columnas siguientes en el orden: **Level1**, **Level2**, **Level3**, **Level4**, **Level5**.
+6.  En el **DimEmployee** de tabla, cree un [jerarquía](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md) denominado **organización**. Agregue las columnas siguientes en el orden: **Level1**, **Level2**, **Level3**, **Level4**, **Level5**.
 
 7.  En el **FactResellerSales** de tabla, cree el siguiente [medida](../tutorial-tabular-1400/as-lesson-6-create-measures.md):
 
@@ -100,13 +100,13 @@ Si ha creado el proyecto AW Internet Sales como parte del tutorial, el modelo no
 
 8.  Use [analizar en Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md) para abrir Excel y crear automáticamente una tabla dinámica.
 
-9.  En **PivotTable Fields**, agregue el **organización** jerarquía desde el **DimEmployee** tabla a **filas**y el  **ResellerTotalSales** medida desde la **FactResellerSales** tabla a **valores**.
+9.  En **PivotTable Fields**, agregar el **organización** jerarquía desde el **DimEmployee** tabla **filas**y el  **ResellerTotalSales** medida desde la **FactResellerSales** tabla **valores**.
 
     ![As-Lesson-Detail-ragged-Hierarchies-PivotTable](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable.png)
 
-    Como puede ver en la tabla dinámica, la jerarquía muestra las filas que son desiguales. Hay muchas filas donde se muestran los miembros en blanco.
+    Como puede ver en la tabla dinámica, la jerarquía muestra filas desiguales. Hay muchas filas donde se muestran los miembros en blanco.
 
-## <a name="to-fix-the-ragged-hierarchy-by-setting-the-hide-members-property"></a>Para corregir la jerarquía desigual estableciendo los miembros de ocultar propiedad
+## <a name="to-fix-the-ragged-hierarchy-by-setting-the-hide-members-property"></a>Para corregir la jerarquía desigual estableciendo los miembros de ocultar, propiedad
 
 1.  En **Explorador de modelos tabulares**, expanda **tablas** > **DimEmployee** > **jerarquías**  >  **Organización**.
 
@@ -114,13 +114,13 @@ Si ha creado el proyecto AW Internet Sales como parte del tutorial, el modelo no
 
     ![As-Lesson-Detail-ragged-Hierarchies-hidemembers](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-hidemembers.png)
 
-3.  En Excel, actualizar la tabla dinámica. 
+3.  En Excel, actualice la tabla dinámica. 
 
     ![As-Lesson-Detail-ragged-Hierarchies-PivotTable-Refresh](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable-refresh.png)
 
-    Ahora se ve mucho mejor.
+    ¡Ahora se ve mucho mejor!
 
 ## <a name="see-also"></a>Vea también   
 [Lección 9: Crear jerarquías](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)  
-[Lección complementaria - seguridad dinámica](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
-[Lección complementaria - filas de detalles](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)  
+[Lección complementaria: seguridad dinámica](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
+[Lección complementaria: filas de detalles](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)  

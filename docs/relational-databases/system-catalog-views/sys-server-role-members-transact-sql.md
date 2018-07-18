@@ -1,5 +1,5 @@
 ---
-title: Sys.server_role_members (Transact-SQL) | Documentos de Microsoft
+title: Sys.server_role_members (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,26 +26,26 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 83d2548be09bc19a664dab70f18da8611bc31bc5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221086"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039027"
 ---
 # <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Devuelve una fila por cada miembro de cada rol fijo de servidor y cada rol de servidor definido por el usuario.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**role_principal_id**|**int**|Id. de la entidad de seguridad de servidor del rol.|  
 |**member_principal_id**|**int**|Id. de la entidad de seguridad de servidor del miembro.|  
   
- Para agregar o quitar la pertenencia al rol de servidor, use la [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)instrucción.  
+ Para agregar o quitar la pertenencia al rol de servidor, utilice el [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)instrucción.  
   
-## <a name="permissions"></a>Permissions  
- Los inicios de sesión pueden ver su propia pertenencia al rol de servidor de la pertenencia y pueden ver el valor principal_id de los miembros de los roles fijos de servidor. Para ver la pertenencia a todos los roles de servidor requiere la **VIEW DEFINITION ON SERVER ROLE** permiso o la pertenencia a la **securityadmin** rol fijo de servidor.  
+## <a name="permissions"></a>Permisos  
+ Los inicios de sesión pueden ver su propia pertenencia al rol de servidor de la pertenencia y pueden ver el valor principal_id de los miembros de los roles fijos de servidor. Para ver todas las pertenencia al rol de servidor requiere la **VIEW DEFINITION ON SERVER ROLE** permiso o la pertenencia a la **securityadmin** rol fijo de servidor.  
   
  Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

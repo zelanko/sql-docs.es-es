@@ -1,5 +1,5 @@
 ---
-title: Realizar la carga masiva de datos XML (SQLXML 4.0) | Documentos de Microsoft
+title: Realizar la carga masiva de datos XML (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c4087c97debb92415c9a4e72a4fc29ffeaf81713
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708183"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032493"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Realizar la carga masiva de datos XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34708183"
  [Introducción a la carga masiva XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/introduction-to-xml-bulk-load-sqlxml-4-0.md)  
  Proporciona información general sobre la carga masiva de datos XML con la utilidad Carga masiva XML. Entre los temas se incluye la transmisión de datos XML por secuencias y las diferentes entre las operaciones de carga masiva con y sin transacciones.  
   
- [Registre el proceso de generación &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/record-generation-process-sqlxml-4-0.md)  
+ [Registrar el proceso de generación &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/record-generation-process-sqlxml-4-0.md)  
  Describe el proceso y las reglas mediante los que se generan los registros para la carga masiva XML.  
   
  [Interpretación de anotaciones &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
@@ -51,10 +51,10 @@ ms.locfileid: "34708183"
  [Ejemplos de carga masiva XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)  
  Proporciona código de ejemplo que utiliza Carga masiva XML.  
   
- [Comportamiento de carga de forma masiva de XML y tipos de datos &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
+ [Comportamiento de carga de forma masiva de los tipos de datos y XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
  Describe el comportamiento de Carga masiva XML con diferentes tipos en XSD y XDR.  
   
- [Instrucciones y limitaciones de XML realizar la carga masiva &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  
+ [Instrucciones y limitaciones de XML de realizar la carga masiva &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  
  Enumera algunos aspectos que se deben tener en cuenta al trabajar con Carga masiva XML.  
   
   

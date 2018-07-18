@@ -1,5 +1,5 @@
 ---
-title: sp_addrolemember (Transact-SQL) | Documentos de Microsoft
+title: sp_addrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 147547c7392acaf528b7aef98c88affb8487fe99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239825"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032343"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,12 +60,12 @@ sp_addrolemember 'role', 'security_account'
  Es el nombre del rol en la base de datos actual. *rol* es un **sysname**, no tiene ningún valor predeterminado.  
   
  [ @membername=] '*security_account*'  
- Es la cuenta de seguridad que se va a agregar al rol. *security_account* es un **sysname**, no tiene ningún valor predeterminado. *security_account* puede ser un usuario de base de datos, el rol de base de datos, el inicio de sesión de Windows o el grupo de Windows.  
+ Es la cuenta de seguridad que se va a agregar al rol. *security_account* es un **sysname**, no tiene ningún valor predeterminado. *security_account* puede ser un usuario de base de datos, rol de base de datos, el inicio de sesión de Windows o grupo de Windows.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Un miembro agregado a un rol mediante sp_addrolemember hereda los permisos del rol. Si el nuevo miembro es una entidad de seguridad de nivel de Windows sin un usuario de base de datos correspondiente, se creará un usuario de base de datos pero no se asignará completamente al inicio de sesión. Compruebe siempre que el inicio de sesión existe y tiene acceso a la base de datos.  
   
  Un rol no puede incluirse como un miembro. Este tipo de definiciones "circulares" no es válido, incluso cuando la pertenencia solo esté implícita indirectamente en uno o varios miembros intermedios.  
@@ -74,14 +74,14 @@ sp_addrolemember 'role', 'security_account'
   
  Utilice sp_addrolemember únicamente para agregar un miembro a un rol de base de datos. Para agregar un miembro a un rol de servidor, use [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para agregar miembros a los roles flexibles de la base de datos, se debe cumplir una de las condiciones siguientes:  
   
 -   Pertenencia al rol fijo de base de datos db_securityadmin o db_owner.  
   
 -   Se debe pertenecer al rol propietario del rol.  
   
--   **ALTER ANY ROLE** permiso o **ALTER** permiso para el rol.  
+-   **ALTER ANY ROLE** permiso o **ALTER** permiso en el rol.  
   
  Para poder agregar miembros a los roles fijos de base de datos es necesario pertenecer al rol fijo de base de datos db_owner.  
   
@@ -113,7 +113,7 @@ EXEC sp_addrolemember 'Production', 'Mary5';
  En el ejemplo siguiente se agrega el inicio de sesión `LoginMary` a la `AdventureWorks2008R2` base de datos como usuario `UserMary`. A continuación, se agrega el usuario `UserMary` al rol `Production`.  
   
 > [!NOTE]  
->  Dado que el inicio de sesión `LoginMary` se conoce como el usuario de base de datos `UserMary` en el [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] la base de datos, el nombre de usuario `UserMary` debe especificarse. Se producirá un error en la instrucción a menos que un inicio de sesión `Mary5` exista. Inicios de sesión y los usuarios normalmente tienen el mismo nombre. Este ejemplo utiliza nombres diferentes para diferenciar las acciones que afectan al inicio de sesión y el usuario.  
+>  Dado que el inicio de sesión `LoginMary` se conoce como el usuario de base de datos `UserMary` en el [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de base de datos, el nombre de usuario `UserMary` debe especificarse. Se producirá un error en la instrucción a menos que un inicio de sesión `Mary5` exista. Inicios de sesión y los usuarios suelen tengan el mismo nombre. En este ejemplo utiliza nombres diferentes para diferenciar las acciones que afectan al inicio de sesión y el usuario.  
   
 ```  
 -- Uses AdventureWorks  
@@ -133,7 +133,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Roles de nivel de base de datos](../../relational-databases/security/authentication-access/database-level-roles.md)  

@@ -1,5 +1,5 @@
 ---
-title: Las expresiones XQuery | Documentos de Microsoft
+title: Las expresiones XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f3858da8849775173d77bdb6db0aa5ac3cbd183e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077372"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030363"
 ---
 # <a name="xquery-expressions"></a>Expresiones XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "33077372"
  [Expresiones primarias &#40;XQuery&#41;](../xquery/primary-expressions-xquery.md)  
  Se describen las expresiones XQuery principales. Incluyen literales, referencias de variables, expresiones de elementos de contexto, constructores y llamadas de funciones.  
   
- [Expresiones de ruta de acceso &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
- Se describen las expresiones de ruta de acceso XQuery. Estos buscan nodos, como elemento y atributo, texto, en un documento.  
+ [Expresiones de ruta &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
+ Se describen las expresiones de ruta de acceso XQuery. Estos buscan nodos, tales como element, attribute y texto, en un documento.  
   
- [Expresiones de secuencia &#40;XQuery&#41;](../xquery/sequence-expressions-xquery.md)  
+ [Las expresiones de secuencia &#40;XQuery&#41;](../xquery/sequence-expressions-xquery.md)  
  Se escriben los operadores XQuery necesarios para trabajar con secuencias de números.  
   
  [Expresiones aritméticas &#40;XQuery&#41;](../xquery/arithmetic-expressions-xquery.md)  
@@ -56,7 +56,7 @@ ms.locfileid: "33077372"
  [Construcción de XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
  Se describen los constructores XQuery que permiten generar XML en una consulta.  
   
- [Instrucción FLWOR e iteración &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
+ [FLWOR instrucción e iteración &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
  Se describe la sintaxis de iteración FLOWR. FLOWR es el acrónimo de FOR, LET, WHERE, ORDER BY y RETURN. No se admite el uso de LET.  
   
  [Ordenados y desordenados expresiones &#40;XQuery&#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
@@ -65,13 +65,13 @@ ms.locfileid: "33077372"
  [Expresiones condicionales &#40;XQuery&#41;](../xquery/conditional-expressions-xquery.md)  
  Describe la compatibilidad de XQuery para el atributo conditional **if-then-else** instrucción.  
   
- [Cuantificado expresiones &#40;XQuery&#41;](../xquery/quantified-expressions-xquery.md)  
+ [Cuantificar las expresiones &#40;XQuery&#41;](../xquery/quantified-expressions-xquery.md)  
  Se describen los cuantificadores existenciales y universales de XQuery.  
   
  [Expresiones SequenceType &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)  
  Se describe la sintaxis SequenceType de XQuery.  
   
- [Valide las expresiones &#40;XQuery&#41;](../xquery/validate-expressions-xquery.md)  
+ [Validar expresiones &#40;XQuery&#41;](../xquery/validate-expressions-xquery.md)  
  El **validar** no se admite la expresión.  
   
 ## <a name="see-also"></a>Vea también  

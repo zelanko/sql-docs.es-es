@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c4e752c1d8c88a4b0f9dadc129213a6f2ac8951
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988457"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978957"
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |db_name|SYSNAME|Nombre de base de datos.|  
 |db_guid|UNIQUEIDENTIFIER|Identificador que identifica la base de datos de forma única.|  
@@ -69,8 +69,8 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
- Debe pertenecer a la **db_backupoperator** rol de base de datos con **ALTER ANY CREDENTIAL** permisos. El usuario no se debe denegar **VIEW ANY DEFINITION** permisos.  
+### <a name="permissions"></a>Permisos  
+ Debe pertenecer a la **db_backupoperator** rol de base de datos con **ALTER ANY CREDENTIAL** permisos. El usuario no debe denegarse **VIEW ANY DEFINITION** permisos.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve la configuración de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para ‘TestDB’  

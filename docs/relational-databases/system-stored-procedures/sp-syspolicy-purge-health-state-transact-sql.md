@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_purge_health_state (Transact-SQL) | Documentos de Microsoft
+title: sp_syspolicy_purge_health_state (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80d1aa2edc25fceeb23ddd3db82f0153ee7197ab
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248671"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979079"
 ---
 # <a name="spsyspolicypurgehealthstate-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,12 +52,12 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Debe ejecutar sp_syspolicy_purge_health_state en el contexto de la base de datos del sistema msdb.  
   
  Si ejecuta este procedimiento almacenado sin ningún parámetro, el estado de mantenimiento del sistema se elimina para todos los nodos del Explorador de objetos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de base de datos PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

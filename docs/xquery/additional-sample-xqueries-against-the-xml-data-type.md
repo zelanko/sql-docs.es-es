@@ -1,5 +1,5 @@
 ---
-title: Adicional ejemplo consultas XQuery con el tipo de datos xml | Documentos de Microsoft
+title: Ejemplos adicionales consultas XQuery con el tipo de datos xml | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fa92635bcca9a206fcfb2f85e3da72e57facdeb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076208"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030373"
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>Ejemplos adicionales de consultas XQuery con el tipo de datos XML
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Los temas de esta sección proporcionan ejemplos adicionales que muestran cómo usar las consultas XQuery con el **xml** tipo de datos:  
+  Los temas de esta sección ofrecen más ejemplos que muestran cómo usar las consultas XQuery con el **xml** tipo de datos:  
   
 -   [Casos de uso generales de XQuery](../xquery/general-xquery-use-cases.md)  
   

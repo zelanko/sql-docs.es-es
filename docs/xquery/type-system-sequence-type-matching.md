@@ -1,5 +1,5 @@
 ---
-title: Coincidencia de tipos de secuencia | Documentos de Microsoft
+title: Equiparación de tipos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ce01e8b2f587527b264a3ea11021257375fb842
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078032"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980027"
 ---
-# <a name="type-system---sequence-type-matching"></a>Tipo de sistema: coincidencia de tipos de secuencia
+# <a name="type-system---sequence-type-matching"></a>Sistema de tipo: equiparación de tipos
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Un valor de expresión XQuery siempre es una secuencia de cero o más elementos. Un elemento puede ser un valor atómico o un nodo. El tipo de secuencia hace referencia a la capacidad de equiparar el tipo de secuencia devuelto por una expresión de consulta a un tipo específico. Por ejemplo:  
@@ -47,7 +47,7 @@ ms.locfileid: "33078032"
  Si una expresión devuelve una secuencia de valores atómicos, es posible que se deba buscar el tipo del valor en la secuencia. Los ejemplos siguientes muestran cómo se puede utilizar la sintaxis de tipo de secuencia para evaluar el tipo de valor atómico devuelto por una expresión.  
   
 ### <a name="example-determining-whether-a-sequence-is-empty"></a>Ejemplo: determinar si una secuencia está vacía  
- El **empty() de** tipo de secuencia se puede utilizar en una expresión de tipo de secuencia para determinar si la secuencia devuelta por la expresión especificada es una secuencia vacía.  
+ El **empty() de** tipo de secuencia se puede usar en una expresión de tipo de secuencia para determinar si la secuencia devuelta por la expresión especificada es una secuencia vacía.  
   
  En el ejemplo siguiente, el esquema XML permite que el elemento <`root`> tenga el atributo nillable:  
   
@@ -236,7 +236,7 @@ SELECT @var.query('(/node())[1] instance of processing-instruction()')
 ### <a name="implementation-limitations"></a>Limitaciones de la implementación  
  Éstas son las limitaciones específicas:  
   
--   **Document-Node()** con tipo de contenido no se admiten la sintaxis.  
+-   **Document-Node()** con el tipo de contenido no se admiten la sintaxis.  
   
 -   **processing-instruction(Name)** sintaxis no es compatible.  
   
@@ -314,7 +314,7 @@ GO
     ```  
   
 ### <a name="example-b"></a>Ejemplo B  
- En el ejemplo siguiente se muestra cómo determinar si el nodo devuelto por una expresión es un nodo de elemento con un nombre específico. Usa el **element()** de prueba.  
+ En el ejemplo siguiente se muestra cómo determinar si el nodo devuelto por una expresión es un nodo de elemento con un nombre específico. Usa el **element()** probar.  
   
  En el ejemplo siguiente, los dos elementos <`Customer`> de la instancia XML que se consultan son de dos tipos diferentes (`CustomerType` y `SpecialCustomerType`). Se da por supuesto que se desea conocer el tipo del elemento <`Customer`> devuelto por la expresión. En la siguiente colección de esquemas XML se definen los tipos `CustomerType` y `SpecialCustomerType`.  
   
@@ -430,7 +430,7 @@ RETURN
   
 -   En la prueba de elemento, el nombre de tipo debe ir seguido por el indicador de repetición (**?**).  
   
--   **elemento (ElementName, TypeName)** no se admite.  
+-   **Element (ElementName, TypeName)** no se admite.  
   
 -   **elemento (\*, TypeName)** no se admite.  
   

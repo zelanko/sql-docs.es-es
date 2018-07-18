@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_dms_services (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_exec_dms_services (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,25 +27,25 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9654ffe4e6e77defac0466882d65ae45b792ea4d
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463401"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982607"
 ---
 # <a name="sysdmexecdmsservices-transact-sql"></a>sys.dm_exec_dms_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contiene información sobre todos los servicios DMS que se ejecutan en los nodos de proceso de PolyBase. Muestra una fila por cada instancia del servicio.  
   
-|Nombre de la columna|Tipo de datos|Description|Intervalo|  
+|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|**int**|Identificador numérico único asociado con el núcleo DMS. Clave para esta vista.|Identificador único.|  
-|compute_node_id|**int**|Identificador del nodo en el que se ejecuta este servicio DMS|Vea *compute_node_id* en [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|compute_node_id|**int**|Identificador del nodo en el que se está ejecutando este servicio DMS|Consulte *compute_node_id* en [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |status|**nvarchar(32)**|Estado actual del servicio DMS||  
   
 ## <a name="see-also"></a>Vea también  
- [PolyBase, solución de problemas con las vistas de administración dinámica](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Solución de problemas con las vistas de administración dinámica de PolyBase](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vistas de administración dinámica relacionadas con la base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

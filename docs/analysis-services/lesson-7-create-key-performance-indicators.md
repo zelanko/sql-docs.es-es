@@ -1,5 +1,5 @@
 ---
-title: 'Lección 8: Crear indicadores clave de rendimiento | Documentos de Microsoft'
+title: 'Lección 8: Crear indicadores clave de rendimiento | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e56d4a533caaf95077eb06fabb5fd0bc0c42b07
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015482"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033413"
 ---
 # <a name="lesson-7-create-key-performance-indicators"></a>Lección 7: Crear indicadores clave de rendimiento
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -53,7 +53,7 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
     ![como-tabular-lesson7-kpi](../analysis-services/media/as-tabular-lesson7-kpi.png)
     
     > [!TIP]  
-    > Tenga en cuenta la expandible **descripciones** etiqueta debajo de los estilos de icono disponibles. Utilice esto para especificar descripciones para los distintos elementos KPI para que sean más fáciles de identificar en las aplicaciones cliente.  
+    > Observe la **descripciones** etiqueta debajo de los estilos de icono disponibles. Utilice esto para especificar descripciones para los distintos elementos KPI para que sean más fáciles de identificar en las aplicaciones cliente.  
   
 9. Haga clic en **Aceptar** para completar el KPI.  
   

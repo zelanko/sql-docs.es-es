@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad de las fórmulas DAX en el modo DirectQuery | Documentos de Microsoft
+title: Compatibilidad de las fórmulas DAX en el modo DirectQuery | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2005742b524db0ec5587ad3f8d959b03dec6965b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4bcebbcf8702c2605d36df844f5db7c7b5699a22
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045649"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985387"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilidad de las fórmulas DAX en el modo DirectQuery 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Para los modelos tabulares de 1200 y superior en el modo DirectQuery, ya no se aplican muchas limitaciones funcionales en versiones anteriores. En el caso de las fórmulas DAX en particular:
+Para los modelos tabulares 1200 y superior en el modo DirectQuery, muchas limitaciones funcionales en versiones anteriores ya no se aplican. En el caso de las fórmulas DAX en particular:
 
 - Ahora DirectQuery genera consultas más sencillas que reportan un mejor rendimiento.
-- Seguridad de nivel de fila (RLS) ahora se admite en el modo DirectQuery.
+- Ahora se admite la seguridad de nivel de fila (RLS) en el modo DirectQuery.
 - Ahora se admiten columnas calculadas para los modelos tabulares en el modo DirectQuery.
 
 ## <a name="dax-functions-in-directquery-mode"></a>Funciones DAX en el modo DirectQuery
 
-En resumen, se admiten todas las funciones DAX en los modelos DirectQuery. Sin embargo, no todas las funciones son compatibles con todos los tipos de fórmulas, y no todas las funciones se han optimizado para los modelos DirectQuery. Las funciones DAX se dividen básicamente en dos bandos: optimizadas y no optimizadas. Echemos un vistazo primero a las funciones optimizadas.
+En pocas palabras, todas las funciones DAX son compatibles con los modelos DirectQuery. Sin embargo, no todas las funciones son compatibles con todos los tipos de fórmulas, y no todas las funciones se han optimizado para los modelos DirectQuery. Las funciones DAX se dividen básicamente en dos bandos: optimizadas y no optimizadas. Echemos un vistazo primero a las funciones optimizadas.
 
 
 ### <a name="optimized-for-directquery"></a>Optimizadas para DirectQuery
@@ -39,16 +39,16 @@ Las siguientes funciones devuelven principalmente resultados escalares o agregad
 
 
 ### <a name="non-optimized-for-directquery"></a>No optimizadas para DirectQuery
-Estas funciones no se han optimizado para trabajar con DirectQuery. Estas funciones *no* se admiten bajo ningún concepto en fórmulas de seguridad de nivel de fila y de columna calculada. Pero *sí se admiten* en las fórmulas de medida y de consulta, si bien con rendimiento incierto.
+Estas funciones no se han optimizado para funcionar con DirectQuery. Estas funciones *no* se admiten bajo ningún concepto en fórmulas de seguridad de nivel de fila y de columna calculada. Pero *sí se admiten* en las fórmulas de medida y de consulta, si bien con rendimiento incierto.
 
  No incluiremos aquí todas las funciones. Básicamente, si una función no figura en las listas anteriores de funciones optimizadas, significa que es una función no optimizada para DirectQuery.
 
 Los motivos para que una determinada función no se haya podido optimizar para DirectQuery obedecen a que el motor relacional subyacente no puede realizar los mismos cálculos que los realizados por el motor xVelocity, o bien a que la fórmula no se puede convertir a una expresión SQL equivalente. En otros casos, el rendimiento de la expresión convertida y de los cálculos resultantes podría ser inaceptable.
 
-Para obtener información acerca de todas las funciones DAX, consulte la [referencia de funciones de DAX]. (https://msdn.microsoft.com/en-us/library/ee634396.aspx)
+Para obtener información acerca de todas las funciones DAX, consulte la [referencia de funciones DAX]. (https://msdn.microsoft.com/library/ee634396.aspx)
 
 ## <a name="dax-operators-in-directquery-mode"></a>Operadores DAX en el modo DirectQuery
-Todos los operadores de comparación y operaciones aritméticas DAX son totalmente compatibles en el modo DirectQuery. Para más información, vea [Referencia de operadores de DAX](https://msdn.microsoft.com/library/ee634237.aspx).
+Todos los operadores aritméticos y de comparación DAX son totalmente compatibles en el modo DirectQuery. Para más información, vea [Referencia de operadores de DAX](https://msdn.microsoft.com/library/ee634237.aspx).
 
 
  
@@ -117,7 +117,7 @@ En el modo DirectQuery, las conversiones de representaciones de cadena de fechas
 Los modelos que utilizan el almacén de datos en memoria admiten una gama más limitada de formatos de texto para fechas que los formatos de cadena para fechas que admite SQL Server. Sin embargo, DAX admite formatos de fecha y hora personalizados.  
   
 **Conversión de valores de cadena en otros valores no booleanos**  
-Cuando se realiza la conversión de cadenas en valores no booleanos, el modo DirectQuery se comporta igual que SQL Server. Para más información, vea [CAST y CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
+Cuando se realiza la conversión de cadenas en valores no booleanos, el modo DirectQuery se comporta igual que SQL Server. Para más información, vea [CAST y CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **No se permite la conversión de números en cadenas**  
 EJEMPLO: `CONCATENATE(102,”,345”)`  
@@ -342,7 +342,7 @@ En un modelo en memoria, el resultado termina en el último carácter de la cade
 
 
 ## <a name="see-also"></a>Vea también  
-[Modo DirectQuery](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[Modo DirectQuery](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 
 

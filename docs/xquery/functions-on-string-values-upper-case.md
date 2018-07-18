@@ -1,5 +1,5 @@
 ---
-title: Función de letra mayúscula (XQuery) | Documentos de Microsoft
+title: Letra mayúscula (función de XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 177659d16f1fda6e0d6dd45430949baf6331eefe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076222"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981906"
 ---
-# <a name="functions-on-string-values---upper-case"></a>Funciones en valores de cadena - mayúsculas
+# <a name="functions-on-string-values---upper-case"></a>Funciones usadas en valores de cadena: letras mayúsculas
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Esta función convierte cada carácter de *$arg* a su equivalente en letra mayúscula. La conversión de grafía binaria de Microsoft Windows para los puntos de código Unicode especifica cómo se convierten los caracteres a letra mayúscula. Esta norma es diferente de la asignación para la norma de punto de código Unicode.  
@@ -49,8 +49,8 @@ fn:upper-case($arg as xs:string?) as xs:string
 |Término|Definición|  
 |*$arg*|Valor de cadena que se va a convertir a letra mayúscula.|  
   
-## <a name="remarks"></a>Comentarios  
- Si el valor de *$arg* está vacía, se devuelve una cadena de longitud cero.  
+## <a name="remarks"></a>Notas  
+ Si el valor de *$arg* está vacío, se devuelve una cadena de longitud cero.  
   
 ## <a name="examples"></a>Ejemplos  
   

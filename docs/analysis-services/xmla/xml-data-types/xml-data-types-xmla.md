@@ -1,5 +1,5 @@
 ---
-title: Tipos de datos XML (XMLA) | Documentos de Microsoft
+title: Tipos de datos XML (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c52717a6f061f4708b2d3e46c6d34f837b2039af
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34573787"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981137"
 ---
 # <a name="xml-data-types-xmla"></a>Tipos de datos XML (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34573787"
 |----------------|-----------------|  
 |Boolean|El tipo de datos XML estándar **boolean** .|  
 |Decimal|El tipo de datos XML estándar **decimal** .|  
-|[EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|Un espacio de nombres en el elemento **root** . Este espacio de nombres se devuelve cuando un comando XMLA no devuelve un resultado debido a que el comando XMLA no devuelve generalmente un resultado o porque se produjo un error en la instancia de Analysis Services al ejecutar el comando XMLA.|  
+|[EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|Un espacio de nombres en el elemento **root** . Este espacio de nombres se devuelve cuando un comando XMLA no devuelve un resultado porque el comando XMLA no devuelve generalmente un resultado o porque se produjo un error en la instancia de Analysis Services al ejecutar el comando XMLA.|  
 |[EnumString](../../../analysis-services/xmla/xml-data-types/enumstring-data-type-xmla.md)|Un conjunto de constantes de cadena con nombre para un enumerador determinado.|  
 |Integer|El tipo de datos XML estándar **int** .|  
 |[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)|Datos multidimensionales devueltos por la *resultado* parámetro de la [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método.|  

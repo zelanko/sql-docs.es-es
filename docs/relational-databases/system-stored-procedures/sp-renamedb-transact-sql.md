@@ -1,5 +1,5 @@
 ---
-title: sp_renamedb (Transact-SQL) | Documentos de Microsoft
+title: sp_renamedb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 3e1763b46d3d98616685878b27f60d76b398ab49
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256941"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984192"
 ---
 # <a name="sprenamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@dbname=**] **'***Nombre_antiguo***'**  
- Es el nombre actual de la base de datos. *Nombre_antiguo* es **sysname**, no tiene ningún valor predeterminado.  
+ [  **@dbname=**] **'***old_name***'**  
+ Es el nombre actual de la base de datos. *old_name* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@newname=**] **'***new_name***'**  
  Es el nuevo nombre de la base de datos. *new_name* debe seguir las reglas para identificadores. *new_name* es **sysname**, no tiene ningún valor predeterminado.  
@@ -56,7 +56,7 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un número distinto de cero (error)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer a la **sysadmin** o **dbcreator** roles fijos de servidor.  
   
 ## <a name="examples"></a>Ejemplos  

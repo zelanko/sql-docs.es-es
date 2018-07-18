@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_external_script_execution_stats | Documentos de Microsoft
+title: Sys.dm_external_script_execution_stats | Microsoft Docs
 ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: jeannt
 ms.author: jeannt
 manager: craigg
 ms.openlocfilehash: 01380a29665d848fff1620787a97aabbcdac4033
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468361"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023819"
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,20 +40,20 @@ ms.locfileid: "34468361"
 > [!NOTE]  
 >  Esta DMV solo está disponible si ha instalado y después habilitado la característica que admite la ejecución del script externo. Para más información sobre cómo hacer esto para scripts de R, consulte [Set Up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md) (Configuración de servicios de R de SQL Server).  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |language|**nvarchar**|Nombre del lenguaje de script externo registrado. Cada script externo debe especificar el lenguaje en la solicitud de script para iniciar el iniciador asociado. |  
 |counter_name|**nvarchar**|Nombre de una función de script externo seleccionada. No admite valores NULL.|  
 |counter_value|**integer**|Número total de instancias que en que se ha llamado la función registrada de script externo en el servidor. Este valor es acumulativo, comienza en el momento en que se instaló la característica en la instancia y no se puede restablecer.|  
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW SERVER STATE en el servidor.  
   
 > [!NOTE]  
 >  Los usuarios que ejecuten scripts externos deben tener el permiso adicional EXECUTE ANY EXTERNAL SCRIPT, sin embargo, los administradores pueden usar esta DMV sin este permiso. 
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   Esta DMV se proporciona para la telemetría interna, a fin de supervisar el uso general de la nueva característica de ejecución de scripts externos que se proporciona en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. El servicio de telemetría comienza cuando LaunchPad comienza e incrementa un contador basado en disco cada vez que se llama una función registrada de script externo.
 
 Por lo general, los contadores de rendimiento solo son válidos siempre que el proceso que los genera esté activo. Por lo tanto, una consulta en una DMV no puede mostrar datos detallados para servicios que ya no están en ejecución. Por ejemplo, si un iniciador ejecuta scripts externos y los completa muy rápido, una DMV convencional podría no mostrar ningún dato.
@@ -65,7 +65,7 @@ Por lo tanto, los contadores a los que esta DMV hace seguimiento siguen en ejecu
 ### <a name="r-counter-values"></a>Valores de contadores de R
  Actualmente el único lenguaje de script externo que se admite en [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] es R. [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] controla las solicitudes de scripts externos para el lenguaje R. 
 
-Para R, esta DMV realiza un seguimiento del número de llamadas de R que se realizan en una instancia. Por ejemplo, si se llama a `rxLinMod` y se ejecuta de manera simultánea, el contador aumenta en 1.
+Para R, esta DMV supervisa el número de llamadas de R que se realizan en una instancia. Por ejemplo, si se llama a `rxLinMod` y se ejecuta de manera simultánea, el contador aumenta en 1.
  
 En el caso del lenguaje R, los valores del contador que aparecen en el campo *counter_name* representan los nombres de las funciones registradas de ScaleR. Los valores del campo *counter_value* representan los números acumulados de instancias de la función específica de ScaleR. 
 

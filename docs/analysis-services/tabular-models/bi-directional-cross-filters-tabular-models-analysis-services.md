@@ -1,5 +1,5 @@
 ---
-title: Bidireccional entre los filtros en los modelos tabulares | Documentos de Microsoft
+title: Bidireccional entre los filtros en los modelos tabulares | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89c3aee1bb762a5725e3242c88284d07abdb8de7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044879"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033313"
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>Filtros cruzados bidireccionales en los modelos tabulares
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34044879"
   
  ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS-BIDI-1-Filteroption")  
   
- Hay dos tipos de filtros cruzados: filtrado unidireccionales y bidireccionales. El filtrado unidireccional es la dirección de filtrado tradicional de varios a uno entre las tablas de hechos y dimensiones de una relación. El filtrado bidireccional es un filtro cruzado que permite usar el contexto de filtro de una relación como contexto de filtro para otra relación de tabla, con una tabla común a ambas relaciones.  
+ Hay dos tipos de filtros cruzados: filtrado unidireccional y bidireccional. El filtrado unidireccional es la dirección de filtrado tradicional de varios a uno entre las tablas de hechos y dimensiones de una relación. El filtrado bidireccional es un filtro cruzado que permite usar el contexto de filtro de una relación como contexto de filtro para otra relación de tabla, con una tabla común a ambas relaciones.  
   
  Dados **DimDate** y **DimProduct** con relaciones de clave externa con **FactOnlineSales**, un filtro cruzado bidireccional equivale al uso simultáneo de **FactOnlineSales-to-DimDate** más **FactOnlineSales-to-DimProduct** .  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34044879"
 ## <a name="walkthrough-an-example"></a>Tutorial de ejemplo  
  La mejor manera de comprender el valor del filtrado cruzado bidireccional es a través de un ejemplo. Considere el siguiente conjunto de datos de [ContosoRetailDW](http://www.microsoft.com/en-us/download/details.aspx?id=18279), que refleja la cardinalidad y los filtros cruzados que se crean de forma predeterminada.  
   
- ![SSAS-BIDI-2-modelo](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "modelo-SSAS-BIDI-2")  
+ ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
   
 > [!NOTE]  
 >  De forma predeterminada, durante la importación de datos, las relaciones de tablas se crean automáticamente en las configuraciones de varios a uno derivadas de las relaciones de clave externa y clave principal entre la tabla de hechos y las tablas de dimensiones relacionadas.  
@@ -82,7 +82,7 @@ ms.locfileid: "34044879"
   
  ![SSAS-bidi-6-prodcount-withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "ssas-bidi-6-prodcount-withfilter")  
   
-## <a name="learn-step-by-step"></a>Obtener información paso a paso  
+## <a name="learn-step-by-step"></a>Obtenga información paso a paso  
  Puede probar los filtros cruzados bidireccionales llevando a cabo los pasos de este tutorial. Para poder continuar, necesita:  
   
 -   Instancia de SQL Server 2016 Analysis Services, modo tabular y última versión de CTP.  
@@ -103,7 +103,7 @@ ms.locfileid: "34044879"
   
 3.  En el Diseñador de modelos tabulares, establezca la base de datos del área de trabajo en una instancia de SQL Server 2016 Preview Analysis Services en modo de servidor tabular.  
   
-4.  Compruebe el nivel de compatibilidad de modelo se establece en **SQL Server 2016 RTM (1200)** o superior.  
+4.  Compruebe el nivel de compatibilidad del modelo está establecido en **SQL Server 2016 RTM (1200)** o superior.  
   
      Haga clic en **Aceptar** para crear el proyecto.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "34044879"
 ### <a name="review-default-table-relationships"></a>Revisar las relaciones de tabla predeterminadas  
  Cambie a la vista de diagrama: **Modelo** > **Vista de modelo** > **Vista de diagrama**. La cardinalidad y las relaciones activas se indican visualmente. Todas las relaciones son relaciones uno a varios entre dos tablas cualesquiera relacionadas.  
   
- ![SSAS-BIDI-2-modelo](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "modelo-SSAS-BIDI-2")  
+ ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
   
  También puede hacer clic en **Tabla** > **Administrar relaciones** para ver la misma información en un diseño de tabla.  
   
@@ -198,8 +198,8 @@ ms.locfileid: "34044879"
   
 ## <a name="see-also"></a>Vea también  
  [Crear y administrar relaciones en Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
- [Un ejemplo práctico de cómo administrar las relaciones de varios a many simples en los modelos tabulares y PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
- [Resolver las relaciones de varios a varios aprovechando DAX entre tablas filtrado](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
+ [Un ejemplo práctico de cómo controlar las relaciones de varios a many simples en modelos tabulares y PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
+ [Resolver-to-many relationships leveraging DAX entre-Table tablas filtrado](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
  [Muchos a muchos revolution (SQLBI blog)](http://www.sqlbi.com/articles/many2many/)  
   
   

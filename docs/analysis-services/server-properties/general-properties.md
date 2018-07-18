@@ -1,5 +1,5 @@
 ---
-title: Propiedades generales | Documentos de Microsoft
+title: Propiedades generales | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 53d2563c050fc1567d396e9526505c5d4dd813a8
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238904"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033343"
 ---
 # <a name="general-properties"></a>Propiedades generales
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

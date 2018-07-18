@@ -1,5 +1,5 @@
 ---
-title: Identificadores (DMX) | Documentos de Microsoft
+title: Identificadores (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca1a3bd1754659548f6d1bc23764fd167006974a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842418"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978615"
 ---
 # <a name="identifiers-dmx"></a>Identificadores (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Todos los objetos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] debe tener un identificador. El nombre del objeto es su identificador. Servidores, bases de datos y objetos de base de datos como orígenes de datos, vistas del origen de datos, cubos, dimensiones, modelos de minería de datos y así sucesivamente tengan identificadores.  
+  Todos los objetos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] debe tener un identificador. El nombre del objeto es su identificador. Servidores, bases de datos y objetos de base de datos como orígenes de datos, vistas del origen de datos, cubos, dimensiones, modelos de minería de datos etc. tienen identificadores.  
   
  Existen dos clases de identificadores en Extensiones de minería de datos (DMX):  
   
@@ -30,7 +30,7 @@ ms.locfileid: "34842418"
  El identificador de un objeto se crea cuando se define el objeto. Así puede utilizar el identificador para hacer referencia al objeto. Los identificadores pueden tener 100 caracteres como máximo.  
   
 ##  <a name="RegularIdentifiers"></a> Identificadores normales  
- Los identificadores normales de DMX siguen las reglas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] respecto al formato de identificadores. Los identificadores normales de DMX no requieren delimitadores. Aquí te mostramos un ejemplo de una instrucción DMX que utiliza un identificador normal no delimitado:  
+ Los identificadores normales de DMX siguen las reglas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] respecto al formato de identificadores. Los identificadores normales de DMX no requieren delimitadores. Este es un ejemplo de una instrucción DMX que utiliza un identificador normal no delimitado:  
   
 ```  
 SELECT * FROM Clustering.CONTENT;  
@@ -41,11 +41,11 @@ SELECT * FROM Clustering.CONTENT;
   
 1.  El primer carácter de un identificador normal debe ser uno de los siguientes:  
   
-    -   Una letra, tal como se define por el estándar Unicode 2.0. Incluye los caracteres latinos de la "a" a la "z" y de la "A" a la "Z", además de los caracteres de letras de otros idiomas.  
+    -   Una letra, como se define en el estándar Unicode 2.0. Incluye los caracteres latinos de la "a" a la "z" y de la "A" a la "Z", además de los caracteres de letras de otros idiomas.  
   
     -   Un carácter de subrayado (_).  
   
-2.  Los caracteres subsiguientes pueden ser:  
+2.  Los caracteres siguientes pueden ser:  
   
     -   Letras, tal como se define en el estándar Unicode 2.0.  
   
@@ -76,7 +76,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   Cuando utilice palabras reservadas en los nombres de objeto o partes de nombres de objeto.  
   
-     Se recomienda evitar el uso de palabras clave reservadas en los nombres de objeto. Las bases de datos actualizadas desde versiones anteriores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] podrían contener identificadores que incluyan palabras que no estaban reservadas en la versión anterior de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pero que son palabras reservadas para[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Puede hacer referencia al objeto con identificadores delimitados hasta que se pueda cambiar el nombre.  
+     Se recomienda evitar el uso de palabras clave reservadas en los nombres de objeto. Las bases de datos que se actualizan desde versiones anteriores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] podrían contener identificadores que incluyan palabras que no estaban reservadas en la versión anterior de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , pero que son palabras reservadas para[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Puede hacer referencia al objeto con identificadores delimitados hasta que se pueda cambiar el nombre.  
   
 -   Cuando utilice caracteres no considerados como identificadores aceptados.  
   
@@ -99,7 +99,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
 ## <a name="see-also"></a>Vea también  
  [Extensiones de minería de datos &#40;DMX&#41; referencia](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
  [Extensiones de minería de datos &#40;DMX&#41; convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   

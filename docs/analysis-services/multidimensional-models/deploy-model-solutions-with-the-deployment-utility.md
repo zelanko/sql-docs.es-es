@@ -1,5 +1,5 @@
 ---
-title: Implementar soluciones de modelos con la utilidad de implementación | Documentos de Microsoft
+title: Implementar soluciones de modelos con la utilidad de implementación | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76d1a3e3cfff777f610bb00f52644af3903ac615
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027252"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975166"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Implementar soluciones de modelos con la utilidad de implementación
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34027252"
   La utilidad **Microsoft.AnalysisServices.Deployment** permite iniciar el motor de implementación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] desde el símbolo del sistema. Como archivo de entrada, la utilidad utiliza archivos de salida XML creados al construir un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Los archivos de entrada se pueden modificar fácilmente para personalizar la implementación de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . El script de implementación generado puede ejecutarse inmediatamente o guardarse para su implementación posterior.  
   
 > [!NOTE]
-> El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente/utilidad de implementación se instala con [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS). Asegúrese de que está utilizando la versión más reciente. De forma predeterminada, la versión más reciente del Asistente para la implementación se instala en C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio. 
+> El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] asistente o la utilidad de implementación se instala con [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS). Asegúrese de que está usando la versión más reciente. De forma predeterminada, la versión más reciente del Asistente para la implementación se instala en C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio. 
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -59,15 +59,15 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 > [!NOTE]  
 >  El argumento **/d** se usa solamente en modo de salida. Este argumento se omite si se especifica en modo silencioso o de respuesta. Para obtener más información sobre los modos, vea la sección [Modos](#Modes), más adelante en este tema.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La utilidad **Microsoft.AnalysisServices.Deployment** toma un conjunto de archivos que proporcionan definiciones de objetos, destinos de implementación y parámetros de configuración, e intenta implementar las definiciones de objetos en los destinos de implementación especificados mediante les opciones de implementación y los parámetros de configuración que se han indicado. Esta utilidad puede proporcionar una interfaz de usuario cuando se invoca en el modo de salida o en el archivo de salida. Para obtener más información sobre cómo usar la interfaz de usuario proporcionada por esta utilidad para crear archivos de respuesta, vea [Implementar soluciones de modelos con la utilidad de implementación](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
- La utilidad se encuentra en la carpeta de \Microsoft SQL Server\140\Binn\ManagementStudio de archivos (x86) \Program.  
+ La utilidad se encuentra en la carpeta de \Microsoft SQL Server\140\Binn\ManagementStudio archivos (x86) \Program.  
   
 ##  <a name="Modes"></a> Modos  
  La utilidad se puede ejecutar en los modos que se enumeran en la siguiente tabla.  
   
-|Modo|Description|  
+|Mode|Descripción|  
 |----------|-----------------|  
 |Modo silencioso|No se muestra ninguna interfaz de usuario y toda la información necesaria para la implementación la proporcionan los archivos de entrada. La utilidad no muestra el progreso en el modo silencioso. En su lugar, se puede usar un archivo de registro opcional para capturar el progreso y la información de errores para su posterior revisión.|  
 |Modo de respuesta|Se muestra la interfaz de usuario del Asistente para la implementación y las respuestas del usuario se guardan en los archivos de entrada especificados para la posterior implementación. La implementación no se produce en el modo de respuesta. El único propósito del modo de respuesta es capturar las respuestas del usuario|  

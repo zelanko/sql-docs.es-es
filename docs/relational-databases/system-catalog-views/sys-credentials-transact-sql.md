@@ -1,5 +1,5 @@
 ---
-title: Sys.Credentials (Transact-SQL) | Documentos de Microsoft
+title: Sys.Credentials (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -26,32 +26,32 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: ac0d1322be8e6c65d066c9de20d9a117b08f981a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180951"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031363"
 ---
 # <a name="syscredentials-transact-sql"></a>sys.credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Devuelve una fila por cada credencial de nivel de servidor.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |credential_id|**int**|Identificador de la credencial. Es único en el servidor.|  
-|name|**sysname**|Nombre de la credencial. Es único en el servidor.|  
+|NAME|**sysname**|Nombre de la credencial. Es único en el servidor.|  
 |credential_identity|**nvarchar(4000)**|Nombre de la identidad que se va a utilizar. Suele ser un usuario de Windows. No tiene que ser único.|  
 |create_date|**datetime**|Fecha y hora en que se creó la credencial.|  
 |modify_date|**datetime**|Fecha y hora en que se modificó la credencial por última vez.|  
-|target_type|**nvarchar (100)**|Tipo de credencial. Devuelve NULL para las credenciales tradicionales y CRYPTOGRAPHIC PROVIDER para las credenciales asignadas a un proveedor criptográfico. Para obtener más información acerca de los proveedores de administración de claves externas, vea [administración Extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
-|target_id|**int**|Identificador del objeto al que está asignada la credencial. Devuelve 0 para las credenciales tradicionales y un valor distinto de 0 para las credenciales asignadas a un proveedor criptográfico. Para obtener más información acerca de los proveedores de administración de claves externas, vea [administración Extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
+|target_type|**Nvarchar (100)**|Tipo de credencial. Devuelve NULL para las credenciales tradicionales y CRYPTOGRAPHIC PROVIDER para las credenciales asignadas a un proveedor criptográfico. Para obtener más información acerca de los proveedores de administración de claves externas, consulte [administración Extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
+|target_id|**int**|Identificador del objeto al que está asignada la credencial. Devuelve 0 para las credenciales tradicionales y un valor distinto de 0 para las credenciales asignadas a un proveedor criptográfico. Para obtener más información acerca de los proveedores de administración de claves externas, consulte [administración Extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
 
-## <a name="remarks"></a>Comentarios  
-Para las credenciales de nivel de base de datos, vea [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).
+## <a name="remarks"></a>Notas  
+Las credenciales de nivel de base de datos, vea [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).
   
-## <a name="permissions"></a>Permissions  
- Las necesita palabras clave `VIEW ANY DEFINITION` permiso o `ALTER ANY CREDENTIAL` permiso. Además, la entidad de seguridad no se debe denegar `VIEW ANY DEFINITION` permiso.  
+## <a name="permissions"></a>Permisos  
+ Requiere `VIEW ANY DEFINITION` permiso o `ALTER ANY CREDENTIAL` permiso. Además, no se debe denegar la entidad de seguridad `VIEW ANY DEFINITION` permiso.  
   
 ## <a name="see-also"></a>Vea también  
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   

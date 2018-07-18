@@ -1,5 +1,5 @@
 ---
-title: Expresiones principales (XQuery) | Documentos de Microsoft
+title: Expresiones principales (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d7f9fdcd3eaa54b74366f90891893c88cbf1aa32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078122"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031443"
 ---
 # <a name="primary-expressions-xquery"></a>Expresiones principales (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "33078122"
 |&quot;|"|  
 |&apos;|'|  
   
- Un literal de cadena también puede contener una referencia de carácter, una referencia de estilo XML a un carácter Unicode, que se identifica mediante su punto de código decimal o hexadecimal. Por ejemplo, el símbolo del Euro se puede representar la referencia de carácter, "&\#8364;".  
+ Un literal de cadena también puede contener una referencia de carácter, una referencia de estilo XML a un carácter Unicode, que se identifica mediante su punto de código decimal o hexadecimal. Por ejemplo, el símbolo del Euro se puede representar la referencia de carácter "&\#8364;".  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza la versión 1.0 de XML como base para el análisis.  
@@ -101,7 +101,7 @@ Go
   
  `<a>I don't know</a>`  
   
- Las funciones booleanas integradas, **true()** y **false()**, puede usarse para representar valores booleanos, como se muestra en el ejemplo siguiente.  
+ Las funciones booleanas integradas, **true()** y **false()**, puede usar para representar valores booleanos, como se muestra en el ejemplo siguiente.  
   
 ```  
 DECLARE @var XML  
@@ -138,7 +138,7 @@ for $x:i in /root return data($x:i)')
 GO  
 ```  
   
- Puede usar la función de extensión de SQL:variable() para hacer referencia a las variables SQL, como se muestra en la siguiente consulta.  
+ Puede usar la función de extensión SQL:variable() para hacer referencia a variables SQL, como se muestra en la siguiente consulta.  
   
 ```  
 DECLARE @price money  
@@ -159,10 +159,10 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
   
 -   No se admite la importación de módulos.  
   
--   No se admiten las declaraciones de variables externas. Una solución consiste en utilizar el [:variable()](../xquery/xquery-extension-functions-sql-variable.md).  
+-   No se admiten las declaraciones de variables externas. Una solución para este problema consiste en usar el [:variable()](../xquery/xquery-extension-functions-sql-variable.md).  
   
 ## <a name="context-item-expressions"></a>Expresiones de elementos de contexto  
- El elemento de contexto es el elemento que se está procesando en el contexto de una expresión de ruta de acceso. Se inicializa en una instancia de tipo de datos XML distinta de NULL con el nodo de documento. También puede cambiarse mediante el método nodes(), en el contexto de las expresiones XPath o en los predicados [].  
+ El elemento de contexto es el elemento que se está procesando en el contexto de una expresión de ruta de acceso. Se inicializa en una instancia de tipo de datos XML distinta de NULL con el nodo de documento. También puede cambiarse por el método nodes(), en el contexto de las expresiones XPath o los predicados [].  
   
  Una expresión que contiene un punto (.) devuelve el elemento de contexto. Por ejemplo, la consulta siguiente evalúa cada elemento <`a`> para detectar la presencia del atributo `attr`. Si el atributo está presente, se devuelve el elemento. Tenga en cuenta que la condición del predicado especifica que el nodo de contexto se especifica mediante un solo punto.  
   

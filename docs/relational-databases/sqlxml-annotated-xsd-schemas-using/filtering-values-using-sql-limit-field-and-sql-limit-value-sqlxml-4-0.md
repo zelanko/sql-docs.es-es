@@ -1,5 +1,5 @@
 ---
-title: 'Filtrar valores mediante SQL: limit-campo y SQL: limit-value (SQLXML 4.0) | Documentos de Microsoft'
+title: 'Filtrar valores mediante SQL: limit-campo y SQL: limit-value (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: cc72a5c28166d3eac2b1ee9200bb1c6549b818cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972120"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032585"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtras valores mediante sql:limit-field y sql:limit-value (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "32972120"
  El **SQL: limit-valor** anotación se utiliza para especificar el valor limitado en la columna que se especifica en el **SQL: limit-campo** anotación. El **SQL: limit-valor** anotación es opcional. Si **SQL: limit-valor** no es se especifica, se supone que un valor NULL.  
   
 > [!NOTE]  
->  Cuando se trabaja con un **SQL: limit-campo** donde la columna SQL asignada es del tipo **real**, SQLXML 4.0 realiza la conversión en el **SQL: limit-valor** según lo especificado en esquemas XML como un **nvarchar** valor especificado. Esto requiere que se especifiquen valores de límite decimal mediante la notación científica completa. Para obtener más información, vea el ejemplo B a continuación.  
+>  Cuando se trabaja con un **SQL: limit-campo** donde la columna SQL asignada es del tipo **real**, SQLXML 4.0 realiza la conversión en el **SQL: limit-valor** según lo especificado en los esquemas XML como un **nvarchar** valor especificado. Esto requiere que se especifiquen valores de límite decimal mediante la notación científica completa. Para obtener más información, vea el ejemplo B a continuación.  
   
 ## <a name="examples"></a>Ejemplos  
  Para crear ejemplos funcionales mediante estos ejemplos, necesita tener instalado lo siguiente:  
@@ -60,7 +60,7 @@ ms.locfileid: "32972120"
   
  Un cliente puede tener una dirección de envío y/o una dirección de facturación. Los valores de la columna AddressType son Shipping y Billing.  
   
- Éste es el esquema de asignación en el que el **ShipTo** atributo de esquema se asigna a la columna StreetAddress en la relación de Addresses. Los valores que se devuelven para este atributo se limitan solamente a direcciones shipping especificando la **SQL: limit-campo** y **SQL: limit-valor** anotaciones. De forma similar, el **BillTo** atributo schema devuelve solo la dirección de facturación de un cliente.  
+ Éste es el esquema de asignación en el que el **ShipTo** atributo de esquema se asigna a la columna StreetAddress en la relación de Addresses. Los valores devueltos para este atributo se limitan solamente a direcciones shipping especificando el **SQL: limit-campo** y **SQL: limit-valor** anotaciones. De forma similar, el **BillTo** atributo de esquema devuelve solo la dirección de facturación de un cliente.  
   
  Éste es el esquema:  
   
@@ -177,7 +177,7 @@ ms.locfileid: "32972120"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Éste es el esquema de asignación en el que el **OrderID** atributo en los detalles del pedido se asigna a la columna OrderID de la relación de pedidos. Los valores que se devuelven para este atributo se limitan a los que tienen un valor de 2.0000000e-001 (0.2) como se especifica para el **Discount** atributo mediante la **SQL: limit-campo** y **SQL: limit-valor** anotaciones.  
+ Éste es el esquema de asignación en el que el **OrderID** atributo en los detalles del pedido se asigna a la columna OrderID de la relación de pedidos. Los valores devueltos para este atributo se limitan a solo aquellos que tienen un valor de 2. 0000000e-001 (0.2) como se especifica para el **descuento** atributo mediante la **SQL: limit-campo** y **SQL: limit-valor** anotaciones.  
   
  Éste es el esquema:  
   

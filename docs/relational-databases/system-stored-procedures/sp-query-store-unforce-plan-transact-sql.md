@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_unforce_plan (Transact-SQL) | Documentos de Microsoft
+title: sp_query_store_unforce_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 13525b0f1c77a3c570f35f1a745b4402f6ef9cbe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253983"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036163"
 ---
 # <a name="spquerystoreunforceplan-transact-sql"></a>sp_query_store_unforce_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Habilita la unforcing un plan determinado para una consulta determinada.  
+  Habilita unforcing un plan determinado para una consulta determinada.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,13 +57,13 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-## <a name="permissions"></a>Permissions  
- Requiere la **EXECUTE** permiso en la base de datos y **insertar**, **actualización**, y **eliminar** permiso en el catálogo del almacén de consultas Vistas.  
+## <a name="permissions"></a>Permisos  
+ Requiere el **EXECUTE** permiso en la base de datos y **insertar**, **actualización**, y **eliminar** permiso en el catálogo del almacén de consultas Vistas.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se devuelve información acerca de las consultas en el almacén de consultas.  
+ El ejemplo siguiente devuelve información acerca de las consultas en el almacén de consultas.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -74,7 +74,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Después de identificar la query_id y plan_id que desea eliminar la aplicación, utilice el siguiente ejemplo para eliminar el plan de la aplicación.  
+ Después de identificar el query_id y plan_id que quiere no forzar, use el siguiente ejemplo para no forzar el plan.  
   
 ```  
 EXEC sp_query_store_unforce_plan 3, 3;  

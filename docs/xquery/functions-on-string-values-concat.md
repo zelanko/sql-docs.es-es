@@ -1,5 +1,5 @@
 ---
-title: concat (función de XQuery) | Documentos de Microsoft
+title: concat (función de XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8be65777bb65ad54735ad6bdf43ea88608355c5b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077262"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981937"
 ---
-# <a name="functions-on-string-values---concat"></a>Funciones en valores de cadena - concat
+# <a name="functions-on-string-values---concat"></a>Funciones usadas en valores de cadena: concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Acepta cero o más cadenas como argumentos y devuelve una cadena creada mediante la concatenación de los valores de cada uno de estos argumentos.  
@@ -48,14 +48,14 @@ fn:concat ($string as xs:string?
  *$string*  
  Cadena opcional que se concatenará.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La función requiere al menos dos argumentos. Si un argumento es una secuencia vacía, se tratará como una cadena de longitud cero.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres adicionales (pares suplentes)  
- El comportamiento de pares suplentes en las funciones XQuery depende del nivel de compatibilidad de la base de datos y, en algunos casos, del URI del espacio de nombres predeterminado de las funciones. Para obtener más información, vea la sección "XQuery funciones son los caracteres suplentes" en el tema [cambios recientes en las características del motor de base de datos en SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consulte también [nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) y [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ El comportamiento de pares suplentes en las funciones XQuery depende del nivel de compatibilidad de la base de datos y, en algunos casos, del URI del espacio de nombres predeterminado de las funciones. Para obtener más información, vea la sección "XQuery funciones detectan los caracteres suplentes" en el tema [cambios recientes en las características del motor de base de datos en SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consulte también [nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) y [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Ejemplos  
- Este tema ofrecen ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos de ejemplo AdventureWorks.  
+ En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos de ejemplo AdventureWorks.  
   
 ### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. Usar la función de XQuery concat() para concatenar cadenas  
  Para un modelo de producto determinado, esta consulta devuelve una cadena creada mediante la concatenación del período de garantía y la descripción de la misma. En el documento de descripción del catálogo, el elemento <`Warranty`> está formado por los elementos secundarios <`WarrantyPeriod`> y <`Description`>.  
@@ -81,9 +81,9 @@ WHERE  PD.ProductModelID=28
   
  Observe lo siguiente en la consulta anterior:  
   
--   En la cláusula SELECT, CatalogDescription es una **xml** columna de tipo. Por lo tanto, la [método query() (tipo de datos XML)](../t-sql/xml/query-method-xml-data-type.md), instructions.Query, se utiliza. La instrucción de XQuery se especifica como el argumento para el método de consulta.  
+-   En la cláusula SELECT, CatalogDescription es una **xml** columna de tipo. Por lo tanto, el [método query() (tipo de datos XML)](../t-sql/xml/query-method-xml-data-type.md), instructions.Query (), se utiliza. La instrucción de XQuery se especifica como el argumento para el método de consulta.  
   
--   El documento en el que se ejecuta la consulta utiliza espacios de nombres. Por lo tanto, la **espacio de nombres** palabra clave se utiliza para definir el prefijo del espacio de nombres. Para obtener más información, consulte [prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md).  
+-   El documento en el que se ejecuta la consulta utiliza espacios de nombres. Por lo tanto, el **espacio de nombres** palabra clave se usa para definir el prefijo del espacio de nombres. Para obtener más información, consulte [prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md).  
   
  El resultado es el siguiente:  
   
@@ -113,12 +113,12 @@ WHERE CatalogDescription.exist('//pd:ProductDescription ') = 1
   
 ```  
   
- Tenga en cuenta que el valor booleano que devuelve el **exist()** método de la **xml** tipo se compara con 1.  
+ Tenga en cuenta que el valor booleano devuelto por la **exist()** método de la **xml** tipo se compara con 1.  
   
 ### <a name="implementation-limitations"></a>Limitaciones de la implementación  
  Éstas son las limitaciones:  
   
--   El **concat()** función en SQL Server sólo acepta valores de tipo xs: String. Los demás valores se deben convertir explícitamente a xs:string o xdt:untypedAtomic.  
+-   El **concat()** función en SQL Server solo acepta valores de tipo xs: String. Los demás valores se deben convertir explícitamente a xs:string o xdt:untypedAtomic.  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones de XQuery con el tipo de datos xml](../xquery/xquery-functions-against-the-xml-data-type.md)  

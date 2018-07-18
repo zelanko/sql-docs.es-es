@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_job (Transact-SQL) | Documentos de Microsoft
+title: sp_delete_maintenance_plan_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5617e3d37b6c880e2d35b9f562e26714eea05a51
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242892"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974021"
 ---
 # <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,12 +59,12 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_delete_maintenance_plan_job** se debe ejecutar desde la **msdb** base de datos.  
   
- Cuando se han quitado todos los trabajos del plan de mantenimiento, se recomienda que los usuarios ejecuten **sp_delete_maintenance_plan_db** para quitar las bases de datos restantes del plan.  
+ Cuando se quiten todos los trabajos del plan de mantenimiento, se recomienda que los usuarios ejecuten **sp_delete_maintenance_plan_db** para quitar las bases de datos restantes del plan.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_delete_maintenance_plan_job**.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,5 +1,5 @@
 ---
-title: Utilizar ADO para ejecutar SQLXML 4.0 consulta | Documentos de Microsoft
+title: Utilizar ADO para ejecutar SQLXML 4.0 consultas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6ba44ff764f9adf8cc6b27f5ad298d8ebb5ad2c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972640"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031373"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Utilizar ADO para ejecutar consultas SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "32972640"
   
 1.  Compruebe tal como se indica a continuación que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client está instalado:  
   
-    1.  Desde el **iniciar** menú, elija **configuración**y, a continuación, haga clic en **el Panel de Control**.  
+    1.  Desde el **iniciar** menú, elija **configuración**y, a continuación, haga clic en **Panel de Control**.  
   
     2.  En el Panel de Control, abra **agregar o quitar programas**  
   

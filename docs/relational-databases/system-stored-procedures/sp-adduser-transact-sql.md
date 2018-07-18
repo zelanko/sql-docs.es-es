@@ -1,5 +1,5 @@
 ---
-title: sp_adduser (Transact-SQL) | Documentos de Microsoft
+title: sp_adduser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: d4f7afe6646fd22ff24aa6aee4e5dcde416420e9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239445"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036103"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_adduser [ @loginame = ] 'login'
  Es el nombre del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el inicio de sesión de Windows. *inicio de sesión* es un **sysname**, no tiene ningún valor predeterminado. *inicio de sesión* debe ser una existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión o inicio de sesión de Windows.  
   
  [  **@name_in_db =** ] **'***usuario***'**  
- Es el nombre del nuevo usuario de la base de datos. *usuario* es un **sysname**, su valor predeterminado es null. Si *usuario* no se especifica, el nombre del nuevo usuario de base de datos tiene como valor predeterminado el *inicio de sesión* nombre. Especificar *usuario* da al nuevo usuario un nombre de la base de datos distinto del nombre de inicio de sesión de nivel de servidor.  
+ Es el nombre del nuevo usuario de la base de datos. *usuario* es un **sysname**, su valor predeterminado es null. Si *usuario* no se especifica, el valor predeterminado es el nombre del nuevo usuario de base de datos a la *inicio de sesión* nombre. Especificar *usuario* da al nuevo usuario un nombre de la base de datos diferente del nombre de inicio de sesión de nivel de servidor.  
   
  [  **@grpname =** ] **'***rol***'**  
  Es el rol de base de datos del que el nuevo usuario forma parte automáticamente. *rol* es **sysname**, su valor predeterminado es null. *función* debe ser un rol de base de datos válido en la base de datos actual.  
@@ -61,27 +61,27 @@ sp_adduser [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_adduser** también creará un esquema que tiene el nombre del usuario.  
   
  Después de agregar un usuario, utilice las instrucciones GRANT, DENY y REVOKE para definir los permisos que controlan las actividades del usuario.  
   
  Use **sys.server_principals** para mostrar una lista de nombres de inicio de sesión válido.  
   
- Use **sp_helprole** para mostrar una lista de los nombres de función válido. Cuando se especifica un rol, el usuario obtiene automáticamente los permisos definidos para ese rol. Si no se especifica un rol, el usuario obtiene los permisos concedidos en el valor predeterminado **público** rol. Para agregar un usuario a un rol, un valor para el *nombre de usuario* debe proporcionarse. (*nombre de usuario* puede ser el mismo que *login_id*.)  
+ Use **sp_helprole** para mostrar una lista de los nombres de función válido. Cuando se especifica un rol, el usuario obtiene automáticamente los permisos definidos para ese rol. Si no se especifica un rol, el usuario obtiene los permisos concedidos en el valor predeterminado **pública** rol. Para agregar un usuario a un rol, un valor para el *nombre de usuario* debe proporcionarse. (*username* puede ser el mismo que *login_id*.)  
   
- Usuario **invitado** ya existe en cada base de datos. Al agregar el usuario **invitado** habilitará este usuario, si se deshabilitó anteriormente. De forma predeterminada, usuario **invitado** está deshabilitada en las nuevas bases de datos.  
+ Usuario **invitado** ya existe en cada base de datos. Al agregar un usuario **invitado** habilitará este usuario, si se deshabilitó anteriormente. De forma predeterminada, usuario **invitado** está deshabilitada en las nuevas bases de datos.  
   
  **sp_adduser** no se puede ejecutar dentro de una transacción definida por el usuario.  
   
- No se puede agregar un **invitado** usuario porque un **invitado** usuario ya existe en cada base de datos. Para habilitar la **invitado** usuario, conceda **invitado** permiso de conexión tal y como se muestra:  
+ No puede agregar un **invitado** usuario porque un **invitado** ya existe un usuario dentro de cada base de datos. Para habilitar el **invitado** usuario, conceder **invitado** permiso de conexión como se muestra:  
   
 ```  
 GRANT CONNECT TO guest;  
 GO  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la propiedad de la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -94,7 +94,7 @@ EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';
 ```  
   
 ### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. Agregar un usuario de base de datos con el mismo Id. de inicio de sesión  
- En el siguiente ejemplo se agrega el usuario `Arvind` a la base de datos para el inicio de sesión `Arvind` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este usuario pertenece en el valor predeterminado **público** rol.  
+ En el siguiente ejemplo se agrega el usuario `Arvind` a la base de datos para el inicio de sesión `Arvind` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El valor predeterminado que pertenece este usuario **pública** rol.  
   
 ```  
 EXEC sp_adduser 'Arvind';  

@@ -1,5 +1,5 @@
 ---
-title: Crear seguimientos del generador de perfiles para su reproducción (Analysis Services) | Documentos de Microsoft
+title: Creación de seguimientos de Profiler para reproducción (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d5928325ffe5b0b98da2058529b1cbb036a445be
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014792"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031643"
 ---
 # <a name="create-profiler-traces-for-replay-analysis-services"></a>Crear seguimientos del generador de perfiles para su reproducción (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34014792"
   
 -   La clase de evento Audit Login con todas sus columnas de datos. Esta clase de evento proporciona información sobre qué usuario ha iniciado la sesión y sobre la configuración de la misma. El SPID proporciona la referencia a la sesión de usuario. Para más información, consulte [Security Audit Data Columns](../../analysis-services/trace-events/security-audit-data-columns.md).  
   
--   La clase de evento Discover Begin con todas sus columnas de datos. La columna TextData proporciona el \<RequestType > parte de la solicitud de detección y la columna de RequestProperties proporciona el \<Propiedades > parte de la solicitud de descubrimiento. La columna EventSubclass proporciona el tipo de descubrimiento. Para más información, consulte [Discover Events Data Columns](../../analysis-services/trace-events/discover-events-data-columns.md).  
+-   La clase de evento Discover Begin con todas sus columnas de datos. La columna TextData proporciona el \<RequestType > parte de la solicitud de descubrimiento y la columna RequestProperties proporciona las \<Propiedades > parte de la solicitud de descubrimiento. La columna EventSubclass proporciona el tipo de descubrimiento. Para más información, consulte [Discover Events Data Columns](../../analysis-services/trace-events/discover-events-data-columns.md).  
   
 -   La clase de evento Discover End con todas sus columnas de datos. Esta clase de evento comprueba el estado de la solicitud de descubrimiento. Para más información, consulte [Discover Events Data Columns](../../analysis-services/trace-events/discover-events-data-columns.md).  
   

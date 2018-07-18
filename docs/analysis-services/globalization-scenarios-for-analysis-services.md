@@ -1,5 +1,5 @@
 ---
-title: Escenarios de globalización para Analysis Services | Documentos de Microsoft
+title: Escenarios de globalización para Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bdc6ec79432d97d8ed53cade4a7db4c0b8bbec82
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018292"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031907"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Escenarios de globalización para Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -63,8 +63,8 @@ ms.locfileid: "34018292"
 ## <a name="see-also"></a>Vea también  
  [Compatibilidad con traducción en Analysis Services](../analysis-services/translation-support-in-analysis-services.md)   
  [Internacionalización para aplicaciones de Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [Vaya el centro de desarrolladores Global](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [Aplicaciones de la tienda de Windows de escritura con diseño adaptable basado en la configuración regional](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Desarrollar aplicaciones universales de Windows con C# y XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Ir al Centro para desarrolladores Global](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Aplicaciones de escritura Windows Store con diseño adaptable basado en la configuración regional](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Desarrollo de aplicaciones Windows universales con C# y XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

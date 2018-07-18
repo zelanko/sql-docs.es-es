@@ -1,5 +1,5 @@
 ---
-title: (Transact-SQL) de procedimientos almacenados del sistema | Documentos de Microsoft
+title: (Transact-SQL) de procedimientos almacenados del sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2016
 ms.prod: sql
@@ -30,11 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 481b0c451f5161231cf64402c5c758870a07be62
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708643"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979467"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Procedimientos almacenados del sistema (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34708643"
   
 |Categoría|Descripción|  
 |--------------|-----------------|  
-|[Procedimientos almacenados de replicación geográfica activa](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Usar para administrar para administrar las configuraciones de replicación geográfica activa de la base de datos de SQL Azure|  
+|[Procedimientos almacenados de replicación geográfica activa](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Utilizado para administrar las configuraciones de replicación geográfica activa en Azure SQL Database|  
 |[Procedimientos almacenados del catálogo](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Se utilizan para implementar las funciones del diccionario de datos ODBC y aislar las aplicaciones ODBC de los cambios en las tablas subyacentes del sistema.|  
 |[Procedimientos almacenados de captura de datos modificados](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Permiten habilitar, deshabilitar o informar sobre los objetos de la captura de datos modificados.|  
 |[Procedimientos almacenados de cursor](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Se utilizan para implementar la funcionalidad de variable de cursor.|  
@@ -55,22 +55,22 @@ ms.locfileid: "34708643"
 |[Procedimientos almacenados de planes de mantenimiento de base de datos](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|Se utilizan para configurar las tareas de mantenimiento fundamentales necesarias para administrar el rendimiento de las bases de datos.|  
 |[Procedimientos almacenados de consultas distribuidas](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|Se utilizan para implementar y administrar consultas distribuidas.|  
 |[FileStream y procedimientos almacenados de FileTable &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|Se usa para configurar y administrar las características FILESTREAM y FileTable.|  
-|[Procedimientos almacenan de reglas de Firewall &#40;base de datos SQL Azure&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|Se utiliza para configurar el firewall de base de datos de SQL Azure.|  
+|[Procedimientos almacenan de reglas de Firewall &#40;base de datos SQL Azure&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|Se usa para configurar el firewall de Azure SQL Database.|  
 |[Procedimientos almacenados de búsqueda de texto completo](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|Se utilizan para implementar y consultar índices de texto completo.|  
 |[Procedimientos almacenados extendidos generales](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|Proporcionan una interfaz de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a los programas externos para diversas actividades de mantenimiento.|  
 |[Trasvase de registros de procedimientos almacenados](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)|Se utilizan para establecer, modificar y supervisar las configuraciones de trasvase de registros.|  
-|[Procedimientos almacenados de almacén de datos de administración &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Se utiliza para configurar el almacén de datos de administración.|  
-|[OLE procedimientos almacenados de automatización](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Permiten habilitar el uso de objetos de Automation estándar en un lote estándar de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|[Procedimientos almacenados de almacén de datos de administración &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Se usa para configurar el almacén de datos de administración.|  
+|[OLE Automation procedimientos almacenados](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Permiten habilitar el uso de objetos de Automation estándar en un lote estándar de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |[Procedimientos almacenados de administración basada en directivas](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Se usan para la administración basada en directivas.|  
-|[Procedimientos almacenados de PolyBase](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Agregar o quitar un equipo de un grupo de escalado horizontal de PolyBase.|  
-|[Procedimientos almacenados del almacén de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Se utiliza para optimizar el rendimiento.|  
+|[Procedimientos almacenados de PolyBase](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Agregar o quitar un equipo de un grupo de escalabilidad horizontal de PolyBase.|  
+|[Procedimientos almacenados de Query Store &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Se utiliza para optimizar el rendimiento.|  
 |[Procedimientos almacenados de replicación](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Se utilizan para administrar la replicación.|  
 |[Procedimientos almacenados de seguridad](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|Se utilizan para administrar la seguridad.|  
-|[Procedimientos de copia de seguridad de instantáneas](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Usar para eliminar la copia de seguridad FILE_SNAPSHOT junto con todas sus instantáneas o para eliminar una instantánea de archivo de copia de seguridad individual.|  
+|[Procedimientos almacenados de copia de seguridad de instantánea](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Se usa para eliminar la copia de seguridad FILE_SNAPSHOT junto con todas sus instantáneas o eliminar una instantánea de archivos de copia de seguridad individuales.|  
 |[Procedimientos almacenados de índice espacial](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Se utiliza para analizar y mejorar el rendimiento de la indización de los índices espaciales.|  
 |[Procedimientos almacenados del Agente SQL Server](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|Lo utiliza [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para supervisar el rendimiento y la actividad.|  
 |[Procedimientos almacenados de SQL Server Profiler](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|Los utiliza el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para administrar actividades programadas y controladas por eventos.|  
-|[Ajustar la base de datos almacenada procedimientos](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Se utiliza para administrar las bases de datos de stretch.|  
+|[Stretch Database almacena los procedimientos](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Se usa para administrar bases de datos de stretch.|  
 |[Procedimientos almacenados de tablas temporales](http://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|Uso de las tablas temporales|  
 |[Procedimientos almacenados de XML](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)|Se utilizan para la administración del texto XML.|  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34708643"
 >  A menos que se documente específicamente lo contrario, todos los procedimientos almacenados del sistema devuelven el valor 0 para indicar que son correctos. Para indicar un error, se devuelve un valor distinto de cero.  
   
 ## <a name="api-system-stored-procedures"></a>Procedimientos almacenados del sistema de la API  
- Los usuarios que ejecutan [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] con aplicaciones ADO, OLE DB y ODBC pueden observar que dichas aplicaciones usan procedimientos almacenados del sistema que no se tratan en la Referencia de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Estos procedimientos almacenados se usan por el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB y el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client para implementar la funcionalidad de una API de base de datos. Estos procedimientos almacenados simplemente son el mecanismo que el proveedor o el controlador utiliza para comunicar las solicitudes del usuario a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Están destinados al uso interno del proveedor o el controlador. Llamarlos explícitamente desde una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-no se admite la aplicación basada en.  
+ Los usuarios que ejecutan [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] con aplicaciones ADO, OLE DB y ODBC pueden observar que dichas aplicaciones usan procedimientos almacenados del sistema que no se tratan en la Referencia de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Estos procedimientos almacenados se utilizan por el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB y la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client para implementar la funcionalidad de una API de base de datos. Estos procedimientos almacenados simplemente son el mecanismo que el proveedor o el controlador utiliza para comunicar las solicitudes del usuario a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Están destinados al uso interno del proveedor o el controlador. Llamarlos explícitamente desde una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-no se admite la aplicación basada en.  
   
  El almacenados sp_createorphan y sp_droporphans se utilizan procedimientos para ODBC **ntext**, **texto**, y **imagen** de procesamiento.  
   

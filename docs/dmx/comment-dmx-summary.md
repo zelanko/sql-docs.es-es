@@ -1,5 +1,5 @@
 ---
-title: --(Comentario) (DMX) resumen | Documentos de Microsoft
+title: --(Comentario) (DMX) resumen | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: be2fc3e82e1da18a12af4bc4756811225e85a280
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841188"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031453"
 ---
 # <a name="---comment-dmx-summary"></a>--(Comentario) (DMX) resumen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34841188"
  Para obtener más información sobre cómo usar diferentes tipos de comentarios en DMX, vea [comentarios &#40;DMX&#41;](../dmx/comments-dmx.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Barra diagonal estrella &#40;comentario&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
+ [Barra diagonal y asterisco &#40;comentario&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
  [Doble barra diagonal &#40;comentario&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  

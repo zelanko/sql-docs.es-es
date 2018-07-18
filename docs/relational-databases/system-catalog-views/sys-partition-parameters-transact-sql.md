@@ -1,5 +1,5 @@
 ---
-title: Sys.partition_parameters (Transact-SQL) | Documentos de Microsoft
+title: Sys.partition_parameters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,29 +26,29 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e0287d1c3a88281bb1b56a6d632e77beeeb7791f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181393"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036388"
 ---
 # <a name="syspartitionparameters-transact-sql"></a>sys.partition_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Contiene una fila por cada parámetro de una función de partición.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|Id. de la función de partición a la que pertenece este parámetro.|  
 |**parameter_id**|**int**|Id. del parámetro. Es único en la función de partición y empieza por 1.|  
-|**system_type_id**|**tinyint**|Identificador del tipo de sistema del parámetro. Corresponde a la **system_type_id** columna de la **sys.types** vista de catálogo.|  
+|**system_type_id**|**tinyint**|Id. del tipo de sistema del parámetro. Corresponde a la **system_type_id** columna de la **sys.types** vista de catálogo.|  
 |**max_length**|**smallint**|Longitud máxima del parámetro en bytes.|  
 |**precisión**|**tinyint**|Precisión del parámetro si está basado en numerales; de lo contrario es 0.|  
 |**escala**|**tinyint**|Escala del parámetro si está basado en numerales; de lo contrario es 0.|  
 |**collation_name**|**sysname**|Nombre de la intercalación del parámetro, si está basado en caracteres; en caso contrario, es NULL.|  
 |**user_type_id**|**int**|Id. del tipo. Es único en la base de datos. Tipos de datos del sistema, **user_type_id** = **system_type_id**.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

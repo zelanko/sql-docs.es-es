@@ -1,5 +1,5 @@
 ---
-title: Especificar operadores aritméticos en consultas XPath (SQLXML 4.0) | Documentos de Microsoft
+title: Especificar operadores aritméticos en consultas XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,33 +22,33 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c6dbbac19be8ff9bd138995cb021012ee3b16373
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970626"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032363"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Especificar operadores aritméticos en consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  En el ejemplo siguiente se muestra cómo se especifican los operadores aritméticos en consultas XPath. La consulta XPath de este ejemplo se especifica en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  En el ejemplo siguiente se muestra cómo se especifican los operadores aritméticos en consultas XPath. La consulta XPath de este ejemplo se especifica en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. Especificar el operador aritmético *  
- Esta consulta XPath devuelve  **\<OrderDetail >** elementos que satisfacen el predicado especificado:  
+ Esta consulta XPath devuelve  **\<OrderDetail >** los elementos que satisfacen el predicado especificado:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- En la consulta, `child` es el eje y `OrderDetail` es la prueba de nodo (TRUE si **OrderDetail** es un  **\<nodo element >**, porque la  **\< elemento >** nodo es el nodo principal para el **secundarios** eje). Para todos los  **\<OrderDetail >** y nodos de elementos, se aplica la prueba en el predicado, se devuelven únicamente aquellos nodos que satisfacen la condición.  
+ En la consulta, `child` es el eje y `OrderDetail` es la prueba de nodo (TRUE si **OrderDetail** es un  **\<nodo element >**, porque el  **\< elemento >** nodo es el nodo principal para el **secundarios** eje). Para todos los  **\<OrderDetail >** nodos de elemento, la prueba del predicado se aplica y se devuelven únicamente los nodos que satisfacen la condición.  
   
 > [!NOTE]  
 >  Los números en XPath son números de punto flotante de precisión doble y la comparación de números de punto flotante, como los del ejemplo, hace que éstos se redondeen.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (ArithmeticOperatorA.xml) y guárdela en el directorio donde haya guardado el archivo SampleSchema1.xml.  
   

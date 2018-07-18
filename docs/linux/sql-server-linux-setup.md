@@ -1,5 +1,5 @@
 ---
-title: Guía de instalación de SQL Server 2017 en Linux | Documentos de Microsoft
+title: Guía de instalación de SQL Server 2017 en Linux | Microsoft Docs
 description: Instalar, actualizar y desinstalar SQL Server en Linux. Este artículo tratan los escenarios en línea, sin conexión y desatendidos.
 author: rothja
 ms.author: jroth
@@ -13,30 +13,30 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.openlocfilehash: bbf781d365174042f9358fd1e78a26d916f81f99
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323696"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982815"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guía de instalación para SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En este artículo se proporciona instrucciones para instalar, actualizar y desinstalar SQL Server 2017 en Linux.
+Este artículo proporcionan instrucciones para la instalación, actualización y desinstalación de SQL Server 2017 en Linux.
 
 > [!TIP]
-> Esta guía coves varios escenarios de implementación. Si solo desea obtener instrucciones de instalación paso a paso, vaya a uno de los tutoriales:
-> - [Inicio rápido RHEL](quickstart-install-connect-red-hat.md)
-> - [Inicio rápido SLES](quickstart-install-connect-suse.md)
+> Esta guía coves varios escenarios de implementación. Si solo desea para obtener instrucciones de instalación paso a paso, vaya a uno de los inicios rápidos:
+> - [Guía de inicio rápido RHEL](quickstart-install-connect-red-hat.md)
+> - [Guía de inicio rápido SLES](quickstart-install-connect-suse.md)
 > - [Inicio rápido de Ubuntu](quickstart-install-connect-ubuntu.md)
-> - [Inicio rápido de docker](quickstart-install-connect-docker.md)
+> - [Guía de inicio rápido de docker](quickstart-install-connect-docker.md)
 
 Para obtener respuestas a las preguntas más frecuentes, consulte el [SQL Server en Linux preguntas más frecuentes sobre](../linux/sql-server-linux-faq.md).
 
 ## <a id="supportedplatforms"></a> Plataformas compatibles
 
-SQL Server 2017 es compatible con Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) y Ubuntu. También se admite como una imagen de Docker, que se puede ejecutar en el motor de Docker en Linux o Docker para Windows y Mac.
+SQL Server 2017 es compatible con Ubuntu, SUSE Linux Enterprise Server (SLES) y Red Hat Enterprise Linux (RHEL). También se admite como una imagen de Docker, que puede ejecutar en el motor de Docker en Linux o Docker para Windows o Mac.
 
 | Plataforma | Versiones admitidas | Obtener
 |-----|-----|-----
@@ -45,71 +45,71 @@ SQL Server 2017 es compatible con Red Hat Enterprise Linux (RHEL), SUSE Linux En
 | **Ubuntu** | 16.04 | [Obtener Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Motor de docker** | 1.8+ | [Obtener Docker](http://www.docker.com/products/overview)
 
-Microsoft también admite la implementación y administración de contenedores de SQL Server mediante OpenShift y Kubernetes.
+Microsoft también admite la implementación y administración de contenedores de SQL Server mediante el uso de OpenShift y Kubernetes.
 
 > [!NOTE]
-> SQL Server se prueba y se admite en Linux para las distribuciones enumeradas anteriormente. Si decide instalar SQL Server en un sistema operativo no compatible, revise la **directiva de soporte técnico** sección de la [directiva de soporte técnico de Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) para comprender la compatibilidad con implicaciones.
+> SQL Server se ha probado y compatible con Linux para las distribuciones enumeradas anteriormente. Si decide instalar SQL Server en un sistema operativo no compatible, revise el **directiva de soporte técnico** sección de la [directiva de soporte técnico para Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) para entender la compatibilidad implicaciones.
 
 ## <a id="system"></a> Requisitos del sistema
 
-SQL Server 2017 tiene los siguientes requisitos de sistema para Linux:
+SQL Server 2017 tiene los siguientes requisitos del sistema para Linux:
 
 |||
 |-----|-----|
 | **Memoria** | 2 GB |
-| **Sistema de archivos** | **XFS** o **EXT4** (sí los sistemas de archivos, como **BTRFS**, no son compatibles) |
+| **Sistema de archivos** | **XFS** o **EXT4** (otros sistemas de archivos como **BTRFS**, no son compatibles) |
 | **Espacio en disco** | 6 GB |
 | **Velocidad del procesador** | 2 GHz |
 | **Núcleos de procesador** | 2 núcleos |
-| **Tipo de procesador** | solo x64 compatible |
+| **Tipo de procesador** | compatible con x64 64 solo |
 
-Si usa **Network File System (NFS)** recursos compartidos remotos en producción, tenga en cuenta los siguientes requisitos de soporte técnico:
+Si usas **Network File System (NFS)** recursos compartidos remotos en producción, tenga en cuenta los siguientes requisitos de soporte técnico:
 
-- Utilice la versión NFS **4.2 o posterior**. Las versiones anteriores de NFS son compatibles con las características necesarias, como fallocate y la creación de archivos dispersos, comunes a sistemas de archivos modernos.
-- Busque sólo el **/var/opt/mssql** directorios en el montaje NFS. No se admiten otros archivos, como los archivos binarios del sistema de SQL Server.
-- Asegúrese de que los clientes NFS usan la opción 'nolock' al montar el recurso compartido remoto.
+- Use la versión NFS **4.2 o superior**. Las versiones anteriores de NFS no admiten las características necesarias, como fallocate y creación del archivo disperso, comunes a los modernos sistemas de archivos.
+- Busque sólo el **/var/opt/mssql** directorios en el montaje NFS. Otros archivos, como los archivos binarios del sistema de SQL Server, no se admiten.
+- Asegúrese de que los clientes NFS usan la opción "nolock" al montar el recurso compartido remoto.
 
-## <a id="repositories"></a> Configurar repositorios de origen
+## <a id="repositories"></a> Configurar repositorios de código fuente
 
-Al instalar o actualizar SQL Server, obtendrá la versión más reciente de SQL Server 2017 desde el repositorio de Microsoft configurado. Utilice los tutoriales el **actualización acumulativa (CU)** repositorio. Pero en su lugar, puede configurar la **GDR** repositorio. Para obtener más información sobre los repositorios y cómo configurarlas, consulte [configurar repositorios para SQL Server en Linux](sql-server-linux-change-repo.md).
+Al instalar o actualizar SQL Server, obtenga la versión más reciente de SQL Server 2017 desde el repositorio de Microsoft configurado. Utilice los inicios rápidos el **actualización acumulativa (CU)** repositorio. Pero en su lugar, puede configurar el **GDR** repositorio. Para obtener más información sobre los repositorios y cómo configurarlas, consulte [configurar repositorios para SQL Server en Linux](sql-server-linux-change-repo.md).
 
 > [!IMPORTANT]
-> Si instaló anteriormente un CTP o versión RC de 2017 de SQL Server, debe eliminar el repositorio de vista previa y registrar una disponibilidad General (GA) uno. Para obtener más información, consulte [configurar repositorios para SQL Server en Linux](sql-server-linux-change-repo.md).
+> Si instaló anteriormente un CTP o la versión RC de SQL Server 2017, debe eliminar el repositorio de la versión preliminar y registrar una disponibilidad General (GA) uno. Para obtener más información, consulte [configurar repositorios para SQL Server en Linux](sql-server-linux-change-repo.md).
 
 ## <a id="platforms"></a> Instalar SQL Server
 
 Puede instalar a SQL Server en Linux desde la línea de comandos. Para obtener instrucciones, consulte uno de los siguientes tutoriales:
 
-- [Instalar en Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-- [Instalar en SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Instalación en Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Instalación en SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Instalar en Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Ejecutar en Docker](quickstart-install-connect-docker.md)
 - [Aprovisionar una máquina virtual de SQL en Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-## <a id="upgrade"></a> Actualizar SQL Server
+## <a id="upgrade"></a> Actualice SQL Server
 
-Para actualizar la **mssql server** el paquete a la versión más reciente, use uno de los siguientes comandos en función de la plataforma:
+Para actualizar el **mssql-server** a la versión más reciente del paquete, utilice uno de los siguientes comandos en función de su plataforma:
 
-| Plataforma | Comandos de actualización de paquete |
+| Plataforma | Comandos de actualización del paquete |
 |-----|-----|
 | RHEL | `sudo yum update mssql-server` |
-| SLES GRANDE | `sudo zypper update mssql-server` |
+| SLES | `sudo zypper update mssql-server` |
 | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
 
-Descargar el paquete más reciente de estos comandos y reemplace los binarios que se encuentran en `/opt/mssql/`. Las bases de datos generado por el usuario y las bases de datos del sistema no se ven afectados por esta operación.
+Estos comandos, descargue el paquete más reciente y reemplace los archivos binarios que se encuentran en `/opt/mssql/`. Las bases de datos generado por el usuario y las bases de datos del sistema no se ven afectados por esta operación.
 
-## <a id="rollback"></a> Revertir SQL Server
+## <a id="rollback"></a> Reversión SQL Server
 
 Para revertir o degradación de SQL Server a una versión anterior, siga estos pasos:
 
-1. Identifique el número de versión para el paquete de SQL Server que desea cambiar a. Para obtener una lista de números de paquete, consulte el [notas de la versión](sql-server-linux-release-notes.md).
+1. Identifique el número de versión para el paquete de SQL Server que desea cambiar. Para obtener una lista de números de paquete, consulte el [notas de la versión](sql-server-linux-release-notes.md).
 
-1. Degradar a una versión anterior de SQL Server. En los siguientes comandos, reemplace `<version_number>` con el número de versión de SQL Server ha identificado en el paso uno.
+1. Cambiar a una versión anterior de SQL Server. En los siguientes comandos, reemplace `<version_number>` con el número de versión de SQL Server que identificó en el paso uno.
 
-   | Plataforma | Comandos de actualización de paquete |
+   | Plataforma | Comandos de actualización del paquete |
    |-----|-----|
    | RHEL | `sudo yum downgrade mssql-server-<version_number>.x86_64` |
-   | SLES GRANDE | `sudo zypper install --oldpackage mssql-server=<version_number>` |
+   | SLES | `sudo zypper install --oldpackage mssql-server=<version_number>` |
    | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
 
 > [!NOTE]
@@ -117,7 +117,7 @@ Para revertir o degradación de SQL Server a una versión anterior, siga estos p
 
 ## <a id="versioncheck"></a> Comprobar la versión instalada de SQL Server
 
-Para comprobar la versión actual y la edición de SQL Server en Linux, utilice el procedimiento siguiente:
+Para comprobar la versión actual y la edición de SQL Server en Linux, use el procedimiento siguiente:
 
 1. Si aún no está instalado, instale el [herramientas de línea de comandos de SQL Server](sql-server-linux-setup-tools.md).
 
@@ -129,15 +129,15 @@ Para comprobar la versión actual y la edición de SQL Server en Linux, utilice 
 
 ## <a id="uninstall"></a> Desinstalar SQL Server
 
-Para quitar el **mssql server** el paquete en Linux, utilice uno de los siguientes comandos en función de la plataforma:
+Para quitar el **mssql-server** empaquetar en Linux, use uno de los siguientes comandos en función de su plataforma:
 
-| Plataforma | Comandos de eliminación de paquetes |
+| Plataforma | Comandos de eliminación de paquete |
 |-----|-----|
 | RHEL | `sudo yum remove mssql-server` |
-| SLES GRANDE | `sudo zypper remove mssql-server` |
+| SLES | `sudo zypper remove mssql-server` |
 | Ubuntu | `sudo apt-get remove mssql-server` |
 
-Quitar el paquete no eliminan los archivos de base de datos generada. Si desea eliminar los archivos de base de datos, use el comando siguiente:
+Si quita el paquete no elimina los archivos de base de datos generada. Si desea eliminar los archivos de base de datos, use el siguiente comando:
 
 ```bash
 sudo rm -rf /var/opt/mssql/
@@ -145,18 +145,18 @@ sudo rm -rf /var/opt/mssql/
 
 ## <a id="unattended"></a> Instalación desatendida
 
-Puede realizar una instalación desatendida de la manera siguiente:
+Puede realizar una instalación desatendida de la siguiente manera:
 
-- Siga los pasos de la inicial de la [tutoriales](#platforms) para registrar los repositorios e instalar SQL Server.
+- Siga los pasos de la inicial en el [inicios rápidos](#platforms) para registrar los repositorios e instalar SQL Server.
 - Al ejecutar `mssql-conf setup`, establezca [variables de entorno](sql-server-linux-configure-environment-variables.md) y usar el `-n` (sin preguntar) opción.
 
-En el ejemplo siguiente se configura la edición Developer de SQL Server con el **MSSQL_PID** variable de entorno. También acepta los términos de licencia (**ACCEPT_EULA**) y establece la contraseña del usuario administrador (**MSSQL_SA_PASSWORD**). El `-n` parámetro lleva a cabo una instalación sin autorización del usuario donde se extraigan los valores de configuración de las variables de entorno.
+En el ejemplo siguiente se configura la edición Developer de SQL Server con el **MSSQL_PID** variable de entorno. También acepta los términos de licencia (**ACCEPT_EULA**) y establece la contraseña del usuario SA (**MSSQL_SA_PASSWORD**). El `-n` parámetro realiza una instalación sin autorización del usuario donde se extraen los valores de configuración de las variables de entorno.
 
 ```bash
 sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' /opt/mssql/bin/mssql-conf -n setup
 ```
 
-También puede crear un script que realice otras acciones. Por ejemplo, puede instalar otros paquetes de SQL Server.
+También puede crear un script que lleva a cabo otras acciones. Por ejemplo, puede instalar otros paquetes de SQL Server.
 
 Para obtener un script de ejemplo más detallado, vea los ejemplos siguientes:
 
@@ -166,35 +166,35 @@ Para obtener un script de ejemplo más detallado, vea los ejemplos siguientes:
 
 ## <a id="offline"></a> Instalación sin conexión
 
-Si su equipo Linux no tiene acceso a los repositorios en línea que se utiliza en el [rápidas](#platforms), puede descargar los archivos del paquete directamente. Estos paquetes se encuentran en el repositorio de Microsoft, [ https://packages.microsoft.com ](https://packages.microsoft.com).
+Si su equipo Linux no tiene acceso a los repositorios en línea que se usan en el [inicios rápidos](#platforms), puede descargar los archivos del paquete directamente. Estos paquetes se encuentran en el repositorio de Microsoft, [ https://packages.microsoft.com ](https://packages.microsoft.com).
 
 > [!TIP]
-> Si se ha instalado correctamente con los pasos descritos en las guías de inicio rápidos, no es necesario descargar o instalar manualmente los paquetes de SQL Server. Esta sección es solo para el escenario sin conexión.
+> Si ha instalado correctamente mediante los pasos descritos en las guías de inicio rápido, no es necesario descargar o instalar manualmente los paquetes de SQL Server. En esta sección es solo para el escenario sin conexión.
 
-1. **Descargue el paquete de motor de base de datos para su plataforma**. Buscar vínculos de descarga de paquete en la sección de detalles del paquete de la [notas de la versión](sql-server-linux-release-notes.md).
+1. **Descargue el paquete del motor de base de datos para su plataforma**. Buscar vínculos de descarga del paquete en la sección de detalles del paquete de la [notas de la versión](sql-server-linux-release-notes.md).
 
-1. **Mover el paquete descargado en el equipo Linux**. Si utiliza un equipo diferente para descargar los paquetes, es una manera de mover los paquetes a su equipo Linux con el **scp** comando.
+1. **Mover el paquete descargado a su equipo Linux**. Si usa un equipo diferente para descargar los paquetes, es una manera de mover los paquetes a la máquina Linux con la **scp** comando.
 
-1. **Instalar el paquete del motor de base de datos**. Utilice uno de los siguientes comandos en función de la plataforma. Reemplace el nombre de archivo de paquete en este ejemplo con el nombre exacto que se descargó.
+1. **Instalar el paquete del motor de base de datos**. Utilice uno de los siguientes comandos en función de la plataforma. Reemplace el nombre del archivo de paquete en este ejemplo con el nombre exacto que descargó.
 
-   | Plataforma | Comando de instalación de paquete |
+   | Plataforma | Comando de instalación del paquete |
    |-----|-----|
    | RHEL | `sudo yum localinstall mssql-server_versionnumber.x86_64.rpm` |
-   | SLES GRANDE | `sudo zypper install mssql-server_versionnumber.x86_64.rpm` |
+   | SLES | `sudo zypper install mssql-server_versionnumber.x86_64.rpm` |
    | Ubuntu | `sudo dpkg -i mssql-server_versionnumber_amd64.deb` |
 
     > [!NOTE]
-    > También puede instalar los paquetes RPM (RHEL y SLES) con el `rpm -ivh` comando, pero los comandos en la tabla anterior instalan automáticamente las dependencias si aprueba disponible en repositorios.
+    > También puede instalar los paquetes RPM (RHEL y SLES) con el `rpm -ivh` comando, pero los comandos en la tabla anterior instalan automáticamente dependencias si aprueban disponibles desde los repositorios.
 
-1. **Resolver las dependencias que faltan**: es posible que tenga dependencias que faltan en este momento. De lo contrario, puede omitir este paso. En Ubuntu, si se tiene acceso a repositorios aprobados que contiene esas dependencias, la solución más fácil es utilizar el `apt-get -f install` comando. Este comando también completa la instalación de SQL Server. Para inspeccionar manualmente las dependencias, use los siguientes comandos:
+1. **Resolver las dependencias que faltan**: es posible que tenga dependencias que faltan en este momento. Si no es así, puede omitir este paso. En Ubuntu, si tiene acceso a repositorios aprobados que contiene esas dependencias, la solución más fácil es usar el `apt-get -f install` comando. Este comando también completa la instalación de SQL Server. Para inspeccionar manualmente las dependencias, use los siguientes comandos:
 
    | Plataforma | Mostrar dependencias (comando) |
    |-----|-----|
    | RHEL | `rpm -qpR mssql-server_versionnumber.x86_64.rpm` |
-   | SLES GRANDE | `rpm -qpR mssql-server_versionnumber.x86_64.rpm` |
+   | SLES | `rpm -qpR mssql-server_versionnumber.x86_64.rpm` |
    | Ubuntu | `dpkg -I mssql-server_versionnumber_amd64.deb` |
 
-   Después de resolver las dependencias que faltan, intente instalar de nuevo el paquete de server mssql.
+   Después de resolver las dependencias que faltan, intente instalar de nuevo el paquete mssql-server.
 
 1. **Completar la instalación de SQL Server**. Use **mssql-conf** para completar la instalación de SQL Server:
 
@@ -209,7 +209,7 @@ Después de la instalación, también puede instalar o habilitar característica
 - [Herramientas de línea de comandos de SQL Server](sql-server-linux-setup-tools.md)
 - [Agente SQL Server](sql-server-linux-setup-sql-agent.md)
 - [Búsqueda de texto completo de SQL Server](sql-server-linux-setup-full-text-search.md)
-- [Servicios de integración de SQL Server (Ubuntu)](sql-server-linux-setup-ssis.md)
+- [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 

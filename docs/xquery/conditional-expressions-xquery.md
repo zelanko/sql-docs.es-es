@@ -1,5 +1,5 @@
 ---
-title: Expresiones condicionales (XQuery) | Documentos de Microsoft
+title: Expresiones condicionales (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,16 +26,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3634414fb0353c9152d317c718707c3ce26ec812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076168"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979017"
 ---
 # <a name="conditional-expressions-xquery"></a>Expresiones condicionales (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XQuery admite el siguiente atributo conditional **if-then-else** instrucción:  
+  XQuery admite lo siguiente condicional **if-then-else** instrucción:  
   
 ```  
 if (<expression1>)  
@@ -55,13 +55,13 @@ else
   
 -   De lo contrario, se generará un error estático.  
   
- Tenga en cuenta lo siguiente:  
+ También tenga en cuenta lo siguiente:  
   
 -   La expresión de prueba se debe escribir entre paréntesis.  
   
 -   El **else** expresión es necesaria. Si no la necesita, puede devolver " ( ) ", tal como se ilustra en los ejemplos de este tema.  
   
- Por ejemplo, la siguiente consulta se especifica en el **xml** variable de tipo. El **si** condición prueba si el valor de la variable SQL (@v) dentro de la expresión XQuery mediante el uso de la [:variable()](../xquery/xquery-extension-functions-sql-variable.md) función de extensión. Si el valor de la variable es "FirstName", devolverá el elemento <`FirstName`>. De lo contrario, devolverá el elemento <`LastName`>.  
+ Por ejemplo, se especifica la consulta siguiente contra la **xml** variable de tipo. El **si** condición prueba el valor de la variable SQL (@v) dentro de la expresión XQuery mediante el uso de la [:variable()](../xquery/xquery-extension-functions-sql-variable.md) función de extensión. Si el valor de la variable es "FirstName", devolverá el elemento <`FirstName`>. De lo contrario, devolverá el elemento <`LastName`>.  
   
 ```  
 declare @x xml  

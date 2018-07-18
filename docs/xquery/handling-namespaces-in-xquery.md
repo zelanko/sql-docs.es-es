@@ -1,5 +1,5 @@
 ---
-title: Control de espacios de nombres en XQuery | Documentos de Microsoft
+title: Controlar espacios de nombres en XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4602c1234c00b15191ca616ed56352f0eb784d9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077922"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031393"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Controlar espacios de nombres en XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ WHERE ProductModelID=7
 …  
 ```  
   
- Tenga en cuenta que la **espacio de nombres** palabra clave se utiliza para definir un nuevo prefijo de espacio de nombres, "AWMI:". Este prefijo debe utilizarse después en la consulta para todos los elementos que se encuentren dentro del ámbito de dicho espacio de nombres.  
+ Tenga en cuenta que el **espacio de nombres** palabra clave se utiliza para definir un nuevo prefijo de espacio de nombres, "AWMI:". Este prefijo debe utilizarse después en la consulta para todos los elementos que se encuentren dentro del ámbito de dicho espacio de nombres.  
   
 ### <a name="b-declaring-a-default-namespace"></a>B. Declarar un espacio de nombres predeterminado  
  En la consulta anterior, se definía un nuevo prefijo de espacio de nombres. Ese prefijo tenía que utilizarse después en la consulta para seleccionar las estructuras XML previstas. También puede declarar un espacio de nombres como espacio de nombres predeterminado, tal y como se muestra en la siguiente consulta modificada:  
@@ -123,7 +123,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-construction-using-default-namespaces"></a>D. Construcción mediante espacios de nombres predeterminados  
- También puede definir un espacio de nombres predeterminado para utilizarlo en XML generado. Por ejemplo, la consulta siguiente muestra cómo se puede especificar un espacio de nombres predeterminado, "URI: SomeNamespace"\\, que se usará como valor predeterminado para los elementos nombrados localmente que se generen, como el `<Result>` elemento.  
+ También puede definir un espacio de nombres predeterminado para utilizarlo en XML generado. Por ejemplo, la consulta siguiente muestra cómo se puede especificar un espacio de nombres predeterminado, "URI: SomeNamespace"\\, que se usará como el valor predeterminado para los elementos nombrados localmente que se construyen, como el `<Result>` elemento.  
   
 ```  
 SELECT CatalogDescription.query('  

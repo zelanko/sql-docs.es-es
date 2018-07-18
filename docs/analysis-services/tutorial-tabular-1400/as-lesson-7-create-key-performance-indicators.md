@@ -1,5 +1,5 @@
 ---
-title: 'Lección tutorial de Analysis Services 7: crear indicadores clave de rendimiento | Documentos de Microsoft'
+title: 'Lección del tutorial de Analysis Services 7: crear indicadores clave de rendimiento | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 03dd09c8f06c8e4d96176f47dcc310008feaf564
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042719"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979137"
 ---
 # <a name="create-key-performance-indicators"></a>Crear indicadores clave de rendimiento
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-En esta lección, creará indicadores clave de rendimiento (KPI). KPI se usan para medir el rendimiento de un valor definido por una *Base* medida, con un *destino* valor también se define una medida o un valor absoluto. En aplicaciones cliente de informes, los KPI pueden proporcionar a los profesionales del negocio una manera rápida y sencilla de identificar un resumen de logros empresariales o tendencias. Para obtener más información, consulte [KPI](../tabular-models/kpis-ssas-tabular.md)
+En esta lección, creará indicadores clave de rendimiento (KPI). Los KPI se usan para medir el rendimiento de un valor definido por un *Base* medida contra un *destino* también definido por una medida o por un valor absoluto del valor. En aplicaciones cliente de informes, los KPI pueden proporcionar a los profesionales del negocio una manera rápida y sencilla de identificar un resumen de logros empresariales o tendencias. Para obtener más información, consulte [KPI](../tabular-models/kpis-ssas-tabular.md)
   
 Tiempo estimado para completar esta lección: **15 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
 
-Este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 6: crear medidas](../tutorial-tabular-1400/as-lesson-6-create-measures.md).   
+En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 6: crear medidas](../tutorial-tabular-1400/as-lesson-6-create-measures.md).   
   
 ## <a name="create-key-performance-indicators"></a>Crear indicadores clave de rendimiento  
   
@@ -55,7 +55,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
     ![kpi como lesson7](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
     
     > [!TIP]  
-    > Tenga en cuenta la expandible **descripciones** etiqueta debajo de los estilos de icono disponibles. Use las descripciones de los distintos elementos KPI para que sean más fáciles de identificar en las aplicaciones cliente.  
+    > Observe la **descripciones** etiqueta debajo de los estilos de icono disponibles. Utilice descripciones para los distintos elementos KPI para que sean más fáciles de identificar en las aplicaciones cliente.  
   
 9. Haga clic en **Aceptar** para completar el KPI.  
   
@@ -75,7 +75,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
   
 4.  En el cuadro de diálogo indicador clave de rendimiento (KPI), en **destino** seleccione **valor absoluto**y, a continuación, escriba **1.25**.   
   
-5.  En el campo de control deslizante (baja) izquierdo, deslice hasta que el campo muestre **0,8**y, a continuación, diapositiva campo el control deslizante de la derecha (alto), hasta que el campo muestre **1.03**.  
+5.  En el campo izquierdo de control deslizante (bajo), deslice hasta que el campo muestre **0.8**y, luego, deslice el control deslizante derecho (alto) de campo, hasta que el campo muestre **1.03**.  
   
 6.  En **Seleccionar estilo de icono**, seleccione el tipo de icono de rombo (rojo), triángulo (amarillo) y círculo (verde), y haga clic en **Aceptar**.  
   

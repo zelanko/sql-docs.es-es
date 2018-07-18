@@ -1,5 +1,5 @@
 ---
-title: Instrucciones y limitaciones de SQLXML 4.0 | Documentos de Microsoft
+title: Instrucciones y limitaciones de SQLXML 4.0 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 407a3a50c6dfa6b88ddfb22b8c00b1b487607421
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967630"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032615"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>Instrucciones y limitaciones de SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,6 +35,6 @@ ms.locfileid: "32967630"
   
      Ejecuta una aplicación que utiliza SQLXML 4.0 y PROGID independientes de la versión y decide instalar otro programa de software. Este programa podría instalar una versión anterior de SQLXML. Se puede producir un error en la aplicación porque los PROGID independientes de la versión de la aplicación apuntarán ahora a la versión anterior de SQLXML, que puede o no puede tener la característica SQLXML que utiliza la aplicación.  
   
--   Si por algún motivo no desea usar el proveedor SQLXMLOLEDB y en su lugar, desea utilizar SQLOLEDB proveedor para las características SQLXML, establecer el **SQLXML Version** propiedad en "SQLXML.4.0".  
+-   Si por algún motivo no desea usar el proveedor SQLXMLOLEDB y en su lugar quiere usar SQLOLEDB proveedor para las características SQLXML, establecer el **SQLXML Version** propiedad en "SQLXML.4.0".  
   
   

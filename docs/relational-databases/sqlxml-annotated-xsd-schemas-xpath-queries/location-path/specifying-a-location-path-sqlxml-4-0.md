@@ -1,5 +1,5 @@
 ---
-title: Especificar una ruta de acceso de ubicación (SQLXML 4.0) | Documentos de Microsoft
+title: Especificar una ruta de acceso de ubicación (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c2cad3730cd0948f94adc8ad5b877fd2e921bc3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708743"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032560"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Especificar una ruta de acceso de ubicación (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,19 +52,19 @@ ms.locfileid: "34708743"
   
 -   **Axis**  
   
-     El eje especifica la relación jerárquica entre los nodos seleccionados por el paso de ubicación y el nodo de contexto. El **primario**, **secundarios**, **atributo**, y **en sí mismo** se admiten los ejes. Si un **secundarios** eje se especifica en la ruta de acceso de ubicación, todos los nodos seleccionados por la consulta son los elementos secundarios del nodo de contexto. Si un **primario** eje se especifica, el nodo seleccionado es el nodo primario del nodo de contexto. Si un **atributo** eje se especifica, los nodos seleccionados son los atributos del nodo de contexto.  
+     El eje especifica la relación jerárquica entre los nodos seleccionados por el paso de ubicación y el nodo de contexto. El **primario**, **secundarios**, **atributo**, y **self** se admiten los ejes. Si un **secundarios** eje especificado en la ruta de acceso de ubicación, todos los nodos seleccionados por la consulta son elementos secundarios del nodo de contexto. Si un **primario** eje se especifica, el nodo seleccionado es el nodo primario del nodo de contexto. Si un **atributo** eje se especifica, los nodos seleccionados son los atributos del nodo de contexto.  
   
 -   **Prueba de nodo**  
   
-     Una prueba de nodo especifica el tipo de nodo seleccionado por el paso de ubicación. Cada eje (**secundarios**, **primario**, **atributo**, y **en sí mismo**) tiene un tipo de nodo principal. Para el **atributo** eje, el tipo de nodo principal es  **\<atributo >**. Para el **primario**, **secundarios**, y **en sí mismo** ejes, el tipo de nodo principal es  **\<elemento >**.  
+     Una prueba de nodo especifica el tipo de nodo seleccionado por el paso de ubicación. Cada eje (**secundarios**, **primario**, **atributo**, y **self**) tiene un tipo de nodo principal. Para el **atributo** eje, el tipo de nodo principal es  **\<atributo >**. Para el **primario**, **secundarios**, y **self** ejes, el tipo de nodo principal es  **\<elemento >**.  
   
-     Por ejemplo, si especifica la ruta de acceso de ubicación **child:: Customer**,  **\<cliente >** se seleccionan los elementos secundarios del nodo de contexto. Dado que la **secundarios** eje tiene  **\<elemento >** como su tipo de nodo principal, la prueba de nodo, Customer, es TRUE si Customer es un  **\<elemento >** nodo.  
+     Por ejemplo, si especifica la ruta de acceso de ubicación **child:: Customer**,  **\<cliente >** se seleccionan los elementos secundarios del nodo de contexto. Dado que el **secundarios** eje tiene  **\<elemento >** como su tipo de nodo principal, la prueba de nodo, Customer, es TRUE si el cliente es un  **\<elemento >** nodo.  
   
 -   **Predicados de selección (cero o más)**  
   
      Un predicado filtra un conjunto de nodos con respecto a un eje. La especificación de predicados de selección en una expresión XPath es similar a especificar una cláusula WHERE en una instrucción SELECT. El predicado se especifica entre corchetes. Al aplicar la prueba especificada en los predicados de selección, se filtran los nodos devueltos por la prueba de nodo. Para cada nodo del conjunto de nodos que se va a filtrar, la expresión de predicado se evalúa con ese nodo como el nodo de contexto, con el número de nodos del conjunto de nodos como tamaño de contexto. Si la expresión de predicado se evalúa como TRUE para ese nodo, el nodo se incluye en el conjunto de nodos resultante.  
   
-     La sintaxis de un paso de ubicación es el nombre de eje y la prueba de nodo separados por dos signos de dos puntos (::), seguidos de cero o más expresiones, cada una de ellas entre corchetes. Por ejemplo, la expresión de XPath (ruta de acceso de ubicación) **child:: Customer [@CustomerID= 'ALFKI']** selecciona todos los  **\<cliente >** elementos secundarios del nodo de contexto. La prueba del predicado se aplica al conjunto de nodos, que sólo devuelve el  **\<cliente >** nodos de elemento con el atributo de valor 'ALFKI' para su **CustomerID** atributo.  
+     La sintaxis de un paso de ubicación es el nombre de eje y la prueba de nodo separados por dos signos de dos puntos (::), seguidos de cero o más expresiones, cada una de ellas entre corchetes. Por ejemplo, la expresión XPath (ruta de acceso de ubicación) **child:: Customer [@CustomerID= 'ALFKI']** selecciona todos los  **\<cliente >** elementos secundarios del nodo de contexto. La prueba del predicado se aplica al conjunto de nodos, que devuelve solo el  **\<cliente >** nodos de elemento con el atributo de valor 'ALFKI' para su **CustomerID** atributo.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Especificar un eje &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  

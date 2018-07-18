@@ -1,5 +1,5 @@
 ---
-title: Introducción al uso de consultas XPath (SQLXML 4.0) | Documentos de Microsoft
+title: Introducción al uso de las consultas XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e620b704f7678a9af8510e7b1d81321aec6ba061
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972450"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982557"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introducción al uso de consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,18 +64,18 @@ ms.locfileid: "32972450"
   
      SQLXML 4.0 no admite la consulta raíz (/). Todas las consultas XPath deben comenzar en un nivel superior  **\<ElementType >** en el esquema.  
   
--   **Informar de errores**  
+-   **Informes de errores**  
   
      La especificación XPath de W3C no define ninguna condición de error. Las consultas XPath que no pueden seleccionar ningún nodo devuelven un conjunto de nodos vacío. En SQLXML 4.0, una consulta puede devolver muchos tipos de mensajes de error.  
   
--   **Orden del documento**  
+-   **Orden del documento.**  
   
-     En SQLXML 4.0, el orden del documento no siempre viene determinado. Por lo tanto, los predicados numéricos y ejes que use el orden del documento (como **siguiente**) no se implementan.  
+     En SQLXML 4.0, el orden del documento no siempre viene determinado. Por lo tanto, los predicados numéricos y ejes ese orden del documento use (tales como **siguiente**) no se implementan.  
   
      La falta de orden del documento también significa que el valor de cadena de un nodo solamente puede evaluarse cuando ese nodo se asigna a una única columna en una única fila. Un elemento con elementos secundarios o un nodo NMTOKENS o IDREFS no puede convertirse en una cadena.  
   
     > [!NOTE]  
-    >  En algunos casos, el **key-fields** anotación o las claves de la **relación** anotación puede dar lugar a un orden de documento determinista. Sin embargo, esto no es el uso principal de estas anotaciones para obtener más información, vea [identificar columnas de clave mediante SQL: de Key-campos &#40;SQLXML 4.0&#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md) y [especificar relaciones mediante sql: relación &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md).  
+    >  En algunos casos, el **key-fields** anotación o las claves de la **relación** anotación puede dar lugar a un orden del documento determinista. Sin embargo, esto no es el uso principal de estas anotaciones para obtener más información, vea [Fields identificar columnas de clave mediante-campos &#40;SQLXML 4.0&#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md) y [especificar relaciones mediante sql: relación &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md).  
   
 -   **Tipos de datos**  
   
@@ -98,7 +98,7 @@ ms.locfileid: "32972450"
   
 |Característica|Elemento|Vínculo a consultas de ejemplo|  
 |-------------|----------|----------------------------|  
-|Ejes|**atributo**, **secundarios**, **primario**, y **en sí mismo** ejes|[Especificar ejes en consultas XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
+|Ejes|**atributo**, **secundarios**, **primario**, y **self** ejes|[Especificar ejes en consultas XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Predicados con valores booleanos que incluyen predicados sucesivos y anidados||[Especificar operadores aritméticos en consultas XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Todos los operadores relacionales|=, !=, <, \<=, >, >=|[Especificar operadores relacionales en consultas XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Operadores aritméticos|+, -, *, div|[Especificar operadores aritméticos en consultas XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -112,10 +112,10 @@ ms.locfileid: "32972450"
   
 |Característica|Elemento|  
 |-------------|----------|  
-|Ejes|**antecesor**, **ancestor-or-self**, **descendientes**, **descendant-or-self (/ /)**, **siguiente**,  **siguiente**, **espacio de nombres**, **anterior**, **elemento anterior**|  
+|Ejes|**antecesor**, **antecesor o propio**, **descendiente**, **descendant-or-self (/ /)**, **siguiente**,  **siguientes-relacionados**, **espacio de nombres**, **anterior**, **precedentes-relacionados**|  
 |Predicados con valores numéricos||  
 |Operadores aritméticos|mod|  
-|Funciones de nodo|**antecesor**, **ancestor-or-self**, **descendientes**, **descendant-or-self (/ /)**, **siguiente**,  **siguiente**, **espacio de nombres**, **anterior**, **elemento anterior**|  
+|Funciones de nodo|**antecesor**, **antecesor o propio**, **descendiente**, **descendant-or-self (/ /)**, **siguiente**,  **siguientes-relacionados**, **espacio de nombres**, **anterior**, **precedentes-relacionados**|  
 |Funciones de cadena|**String()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**,  **substring-after()**, **substring()**, **string-length()**, **normalize()**, **translate()**|  
 |funciones booleanas|**lang()**|  
 |Funciones numéricas|**SUM()**, **floor()**, **ceiling()**, **round()**|  

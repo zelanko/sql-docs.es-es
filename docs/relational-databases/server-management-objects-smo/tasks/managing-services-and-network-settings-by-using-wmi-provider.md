@@ -1,5 +1,5 @@
 ---
-title: Administración de servicios y la configuración de red mediante el proveedor WMI | Documentos de Microsoft
+title: Administración de servicios y la configuración de red mediante el uso de proveedor WMI | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 77eef3609246b60c7a49adcde9ee72498bb6f215
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968600"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031633"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Administrar servicios y configuración de red utilizando el proveedor WMI
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32968600"
  El <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> objeto funciona independientemente de la conexión establecida con el <xref:Microsoft.SqlServer.Management.Smo.Server> objeto a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]y utiliza las credenciales de Windows para conectarse al servicio WMI.  
   
 ## <a name="example"></a>Ejemplo  
-Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
  Para los programas que utilizan el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de WMI, debe incluir el **importaciones** instrucción para calificar el espacio de nombres WMI. Inserte la instrucción después de las demás instrucciones **Imports** , antes de cualquier declaración de la aplicación, como:  

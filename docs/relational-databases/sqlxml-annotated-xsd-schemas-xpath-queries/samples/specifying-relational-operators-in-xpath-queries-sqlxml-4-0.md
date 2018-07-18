@@ -1,5 +1,5 @@
 ---
-title: Especificar operadores relacionales en consultas XPath (SQLXML 4.0) | Documentos de Microsoft
+title: Especificar operadores relacionales en consultas XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 71d17e2b77670ec02e345bfd30211d92ca3ab556
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971250"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032443"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Especificar operadores relacionales en consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  En los siguientes ejemplos se muestra cómo especificar operadores relacionales en consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  En los siguientes ejemplos se muestra cómo especificar operadores relacionales en consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-specify-relational-operator"></a>A. Especificar un operador relacional  
- Esta consulta XPath devuelve los elementos secundarios de la  **\<cliente >** elemento donde el **CustomerID** valor de atributo es "1" y que cualquier elemento secundario  **\<orden >** elementos contienen una  **\<OrderDetail >** secundario con un **OrderQty** atributo con un valor mayor que 3:  
+ Esta consulta XPath devuelve los elementos secundarios de la  **\<cliente >** elemento donde el **CustomerID** valor del atributo es "1" y que cualquier elemento secundario  **\<orden >** elementos contienen una  **\<OrderDetail >** secundario con un **OrderQty** atributo con un valor mayor que 3:  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
@@ -51,7 +51,7 @@ ms.locfileid: "32971250"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (SpecifyRelationalA.xml) y guárdela en el mismo directorio donde esté guardado el archivo SampleSchema1.xml.  
   
@@ -86,13 +86,13 @@ ms.locfileid: "32971250"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Especificar el operador relacional de la consulta XPath y usar una función booleana para comparar el resultado  
- Esta consulta devuelve todos los  **\<orden >** elementos secundarios del nodo de contexto que tienen un **SalesPersonID** atributo valor que es menor que 270:  
+ Esta consulta devuelve todos los  **\<orden >** elementos secundarios del nodo de contexto que tienen un **SalesPersonID** atributo el valor que es menor que 270:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
 ```  
   
- Un acceso directo a la **atributo** eje (@) se pueden especificar y porque la **secundarios** es el eje predeterminado, puede omitirse de la consulta:  
+ Un acceso directo a la **atributo** eje (@) se pueden especificar y porque el **secundarios** es el eje predeterminado, puede omitirse de la consulta:  
   
 ```  
 /Customer/Order[(@SalesPersonID < 270)=true()]  
@@ -103,7 +103,7 @@ ms.locfileid: "32971250"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (SpecifyRelationalB.xml) y guárdela en el directorio donde esté guardado el archivo SampleSchema1.xml.  
   

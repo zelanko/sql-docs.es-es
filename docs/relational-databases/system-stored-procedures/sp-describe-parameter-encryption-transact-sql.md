@@ -1,5 +1,5 @@
 ---
-title: sp_describe_parameter_encryption (Transact-SQL) | Documentos de Microsoft
+title: sp_describe_parameter_encryption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 810f73e16599f153c604c605e33ad1b6f282811b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260458"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974500"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Analiza especificado [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción y sus parámetros, para determinar qué parámetros corresponden a las columnas de base de datos que están protegidas mediante la característica Always Encrypted. Devuelve los metadatos de cifrado para los parámetros que corresponden a las columnas cifradas.  
+  Analiza el texto especificado [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción y sus parámetros, para determinar qué parámetros se corresponden con las columnas de la base de datos que están protegidas mediante la característica Always Encrypted. Devuelve los metadatos de cifrado de los parámetros que corresponden a columnas cifradas.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,11 +45,11 @@ sp_describe_parameter_encryption
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @tsql =] 'Transact-SQL_batch'  
+ [ @tsql =] 'SQL_batch Transact'  
  Una o varias instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Puede ser SQL_batch Transact nvarchar (n) o nvarchar (max).  
   
  [ @params =] 'N'parameters  
- *@params* Proporciona una cadena de declaración para los parámetros para el lote de Transact-SQL, que es similar a sp_executesql. Parámetros pueden ser nvarchar (n) o nvarchar (max).  
+ *@params* Proporciona una cadena de declaración para los parámetros para el lote de Transact-SQL, que es similar a sp_executesql. Los parámetros pueden ser nvarchar (n) o nvarchar (max).  
   
  Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en el [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. *n* es un marcador de posición que indica definiciones de parámetros adicionales. Todos los parámetros especificados en la instrucción deben definirse en *@params*. Si el [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o lote en la instrucción no contiene parámetros, *@params* no es necesario. NULL es el valor predeterminado para este parámetro.  
   
@@ -59,39 +59,39 @@ sp_describe_parameter_encryption
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_describe_parameter_encryption** devuelve dos conjuntos de resultados:  
   
--   El conjunto de resultados que describe las claves criptográficas configuradas para las columnas de la base de datos, los parámetros del elemento especificado [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción se corresponden.  
+-   El conjunto de resultados que describe las claves criptográficas configuradas para las columnas de la base de datos, los parámetros del elemento especificado [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción corresponden.  
   
--   El conjunto de descripciones de parámetros de la manera en que determinadas de resultados debe cifrarse. Este conjunto de resultados referencias de las claves descritas en el primer conjunto de resultados.  
+-   El conjunto que describen cómo determinados parámetros de resultados deben cifrarse. Este conjunto de resultados las referencias de las claves descritas en el primer conjunto de resultados.  
   
  Cada fila del primer conjunto de resultados describe un par de claves; una clave de cifrado de columna cifrada y su clave maestra de columna correspondiente.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**column_encryption_key_ordinal**|**int**|Id. de la fila en el conjunto de resultados.|  
+|**column_encryption_key_ordinal**|**int**|Id. de la fila del conjunto de resultados.|  
 |**database_id**|**int**|Id. de base de datos.|  
 |**column_encryption_key_id**|**int**|El identificador de clave de cifrado de columna. Nota: este identificador denota una fila en la [sys.column_encryption_keys &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) vista de catálogo.|  
 |**column_encryption_key_version**|**int**|Reservado para uso futuro. Actualmente, siempre contiene 1.|  
 |**column_encryption_key_metadata_version**|**binary (8)**|Una marca de tiempo que representa la hora de creación de la clave de cifrado de columna.|  
 |**column_encryption_key_encrypted_value**|**varbinary (4000)**|El valor cifrado de la clave de cifrado de columna.|  
-|**column_master_key_store_provider_name**|**sysname**|El nombre del proveedor del almacén de claves que contiene la clave maestra de columna que se usó para generar el valor cifrado de la clave de cifrado de columna.|  
-|**column_master_key_path**|**nvarchar(4000)**|La ruta de la clave de la clave maestra de columna que se usó para generar el valor cifrado de la clave de cifrado de columna.|  
-|**column_encryption_key_encryption_algorithm_name**|**sysname**|El nombre del algoritmo de cifrado usado para generar el valor de cifrado de la clave de cifrado de columna.|  
+|**column_master_key_store_provider_name**|**sysname**|El nombre del proveedor del almacén de claves que contiene la clave maestra de columna que se usó para generar el valor de la clave de cifrado de columna cifrado.|  
+|**column_master_key_path**|**nvarchar(4000)**|La ruta de acceso de la clave maestra de columna que se usó para generar el valor de la clave de cifrado de columna cifrado.|  
+|**column_encryption_key_encryption_algorithm_name**|**sysname**|Nombre del algoritmo de cifrado utilizado para generar el valor de cifrado de la clave de cifrado de columna.|  
   
- Cada fila del segundo conjunto de resultados contiene metadatos de cifrado para un parámetro.  
+ Cada fila del segundo conjunto de resultados contiene los metadatos de cifrado para un parámetro.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|Id. de la fila del conjunto de resultados.|  
-|**parameter_name**|**sysname**|Nombre de uno de los parámetros especificados en la *@params* argumento.|  
-|**column_encryption_algorithm**|**tinyint**|Código que indica el algoritmo de cifrado configurado para la columna, el parámetro corresponde a. Los valores admitidos actualmente son: 2 para **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
-|**column_encryption_type**|**tinyint**|Código que indica el tipo de cifrado configurado para la columna, el parámetro corresponde a. Los valores admitidos son:<br /><br /> 0 – texto simple (la columna no está cifrada)<br /><br /> 1 – el cifrado aleatorio<br /><br /> 2 – determinista cifrado.|  
-|**column_encryption_key_ordinal**|**int**|Establece el código de la fila en el primer resultado. La clave de cifrado de columna configurada para la columna describe la fila que se hace referencia, el parámetro corresponde a.|  
+|**parameter_name**|**sysname**|Nombre de uno de los parámetros especificados en el *@params* argumento.|  
+|**column_encryption_algorithm**|**tinyint**|Que indica el algoritmo de cifrado configurado para la columna, el parámetro que se corresponde con el código. Los valores admitidos actualmente son: 2 para **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
+|**column_encryption_type**|**tinyint**|Código que indica el tipo de cifrado configurado para la columna, el parámetro corresponde al. Los valores admitidos son:<br /><br /> 0 – plaintext (la columna no está cifrada)<br /><br /> 1 – el cifrado aleatorio<br /><br /> 2 – determinista cifrado.|  
+|**column_encryption_key_ordinal**|**int**|Establece el código de la fila en el primer resultado. La fila que se hace referencia describe la clave de cifrado de columna configurada para la columna, se corresponde con el parámetro.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Número de versión del algoritmo de normalización de tipo.|  
   
-## <a name="remarks"></a>Comentarios  
- A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] llama automáticamente a controlador de cliente, compatibilidad con Always Encrypted, **sp_describe_parameter_encryption** para recuperar los metadatos de cifrado para las consultas con parámetros, emitidas por la aplicación. Como consecuencia, el controlador utiliza los metadatos de cifrado para cifrar los valores de parámetros que corresponden a las columnas de base de datos protegidas con Always Encrypted y sustituye los valores de parámetro de texto simple, enviados por la aplicación, con el cifrado valores de parámetro, antes de enviar la consulta al motor de base de datos.  
+## <a name="remarks"></a>Notas  
+ Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] llama automáticamente a controlador de cliente, compatibilidad con Always Encrypted, **sp_describe_parameter_encryption** para recuperar los metadatos de cifrado para las consultas parametrizadas, emitidas por la aplicación. Posteriormente, el controlador utiliza los metadatos de cifrado para cifrar los valores de parámetros que corresponden a columnas de la base de datos protegidas con Always Encrypted y sustituye los valores de parámetro de texto simple, enviados por la aplicación, con el cifrado valores de parámetro antes de enviar la consulta al motor de base de datos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requerir la **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** y **VIEW ANY COLUMN MASTER KEY DEFINITION** permisos en la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -154,7 +154,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |column_master_key_store_provider_name|column_master_key_path|column_encryption_key_encryption_algorithm_name|  
 |------------------------------------------------|-------------------------------|----------------------------------------------------------|  
-|MSSQL_CERTIFICATE_STORE|CurrentUser/my/A66BB0F6DD70BDFF02B62D0F87E340288E6F9305|RSA_OAEP|  
+|MSSQL_CERTIFICATE_STORE|CurrentUser/mi/A66BB0F6DD70BDFF02B62D0F87E340288E6F9305|RSA_OAEP|  
   
  Este es el segundo conjunto de resultados:  
   

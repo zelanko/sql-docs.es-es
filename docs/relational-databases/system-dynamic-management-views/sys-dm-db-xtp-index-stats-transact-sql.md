@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_index_stats (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_db_xtp_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,21 +25,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e59eeea065a0346a623d929562fc554ad842e416
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468511"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031463"
 ---
 # <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Contiene las estadísticas recopiladas desde el último reinicio de la base de datos.  
   
- Para obtener más información, consulte [OLTP en memoria &#40;optimización en memoria&#41; ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) y [directrices para utilizar índices en tablas optimizadas en memoria](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
+ Para obtener más información, consulte [OLTP en memoria &#40;optimización en memoria&#41; ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) y [directrices para utilizar índices en tablas optimizadas para memoria](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
 
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|Id. del objeto al que pertenece este índice.|  
 |xtp_object_id|**bigint**|Id. interno correspondiente a la versión actual del objeto.<br /><br /> Nota: Se aplica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
@@ -60,10 +60,10 @@ ms.locfileid: "34468511"
 |phantom_expired_rows_removed|**bigint**|Exclusivamente para uso interno.|  
 |object_address|**varbinary (8)**|Exclusivamente para uso interno.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos actual.  
   
 ## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de tablas optimizadas en memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica de tabla optimizado para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

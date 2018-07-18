@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7bec37b0223f2384ebdfc2898717bd937bb0b046
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464651"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978127"
 ---
 # <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "34464651"
   
  Un gran número de reintentos indica la existencia de problemas de simultaneidad; llame al servicio de soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Para obtener más información acerca de índices no clúster con optimización para memoria, vea [SQL Server In-Memory OLTP Internals Overview](http://t.co/T6zToWc6y6), página 17.  
+ Para obtener más información acerca de los índices no clúster optimizados para memoria, vea [SQL Server In-Memory OLTP Internals Overview](http://t.co/T6zToWc6y6), página 17.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Id. del objeto.|  
-|xtp_object_id|**bigint**|Id. de la tabla optimizada en memoria.|  
+|xtp_object_id|**bigint**|Identificador de la tabla optimizada para memoria.|  
 |index_id|**int**|Id. del índice.|  
 |delta_pages|**bigint**|Número total de páginas delta de este índice en el árbol.|  
 |internal_pages|**bigint**|Para uso interno. Número total de páginas internas de este índice en el árbol.|  
@@ -66,10 +66,10 @@ ms.locfileid: "34464651"
 |key_merge_count|**bigint**|Número acumulativo de operaciones de mezcla de claves del índice.|  
 |key_merge_retry_count|**bigint**|Número acumulativo de reintentos de operaciones de mezcla de claves.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos actual.  
   
 ## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de tablas optimizadas en memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica de tabla optimizado para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento error (XMLA) | Documentos de Microsoft
+title: Elemento error (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f223bff2dced01c2b3f954ca14242b1a35c93813
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576557"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036653"
 ---
 # <a name="error-element-xmla"></a>Elemento Error (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "34576557"
 |Valor predeterminado|None|  
 |Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "34576557"
 |Ancestor|Elementos secundarios|  
 |--------------|--------------------|  
 |[de mensaje](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|None|  
-|[Celda](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md), [filas](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|[Descripción](../../../analysis-services/xmla/xml-elements-properties/description-element-xmla.md), [ErrorCode](../../../analysis-services/xmla/xml-elements-properties/errorcode-element-xmla.md), [HelpFile](../../../analysis-services/xmla/xml-elements-properties/helpfile-element-xmla.md), [origen](../../../analysis-services/xmla/xml-elements-properties/source-element-error-xmla.md)|  
+|[Celda](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md), [fila](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|[Descripción](../../../analysis-services/xmla/xml-elements-properties/description-element-xmla.md), [ErrorCode](../../../analysis-services/xmla/xml-elements-properties/errorcode-element-xmla.md), [HelpFile](../../../analysis-services/xmla/xml-elements-properties/helpfile-element-xmla.md), [origen](../../../analysis-services/xmla/xml-elements-properties/source-element-error-xmla.md)|  
   
 ## <a name="attributes"></a>Atributos  
   

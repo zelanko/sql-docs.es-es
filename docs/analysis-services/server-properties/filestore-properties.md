@@ -1,5 +1,5 @@
 ---
-title: Propiedades de FILESTORE | Documentos de Microsoft
+title: FILESTORE, propiedades | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3a5bf8e90352218b222bbd6a58ad876ca0e1364b
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239045"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975010"
 ---
 # <a name="filestore-properties"></a>Filestore, propiedades
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "35239045"
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **RandomFileAccessMode**  
- Una propiedad booleana que indica si se tiene acceso a los archivos de base de datos y a los archivos almacenados en memoria caché en modo de acceso a archivos aleatorio. Esta propiedad está desactivada de forma predeterminada. De forma predeterminada, el servidor no establece la marca de acceso a archivos aleatorio al abrir los archivos de datos de partición para el acceso de lectura.  
+ Una propiedad booleana que indica si se tiene acceso a los archivos de base de datos y a los archivos almacenados en memoria caché en modo de acceso a archivos aleatorio. Esta propiedad está desactivada de forma predeterminada. De forma predeterminada, el servidor no establece la marca de acceso de archivo aleatorio al abrir los archivos de datos de partición para el acceso de lectura.  
   
- En sistemas de tecnología avanzada, especialmente en aquellos con grandes recursos de memoria y varios nodos NUMA, puede ser ventajoso utilizar el acceso a archivos aleatorio. En el modo de acceso aleatorio, Windows omite las operaciones de asignación de la página que leen los datos del disco en la caché de archivos de sistema, con lo que se reduce la contención en la memoria caché.  
+ En sistemas de tecnología avanzada, especialmente en aquellos con grandes recursos de memoria y varios nodos NUMA, puede ser ventajoso utilizar el acceso a archivos aleatorio. En el modo de acceso aleatorio, Windows omite las operaciones de asignación de páginas que leen datos desde el disco en la caché de archivos del sistema, con lo que reduce la contención en la memoria caché.  
   
  Tendrá que ejecutar pruebas comparativas para determinar si el rendimiento de las consultas mejora al cambiar esta propiedad. Para obtener las prácticas recomendadas para realizar pruebas comparativas, como es borrar la memoria caché y evitar errores comunes, vea la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539). Para obtener información adicional sobre los inconvenientes del uso de esta propiedad, vea [ http://support.microsoft.com/kb/2549369 ](http://support.microsoft.com/kb/2549369).  
   

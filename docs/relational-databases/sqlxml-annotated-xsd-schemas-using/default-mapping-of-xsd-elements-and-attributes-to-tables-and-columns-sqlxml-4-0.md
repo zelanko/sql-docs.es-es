@@ -1,5 +1,5 @@
 ---
-title: Atributos de elementos de asignación XSD a tablas y columnas (SQLXML 4.0) predeterminados | Documentos de Microsoft
+title: Atributos de elementos de asignación XSD a tablas y columnas (SQLXML 4.0) predeterminados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -33,11 +33,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b8093c30d058b926d79f6494aa3dd08bd59a1c8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972060"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032646"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Asignación predeterminada de elementos y atributos XSD a tablas y columnas (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "32972060"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-default-mapping"></a>A. Especificar la asignación predeterminada  
- En este ejemplo, no hay ninguna anotación especificada en el esquema XSD. El  **\<Person.Contact >** elemento es de tipo complejo y, por lo tanto, se asigna de forma predeterminada a la tabla Person.Contact en la base de datos de AdventureWorks. Todos los atributos (ContactID, FirstName, LastName) de la  **\<Person.Contact >** elemento son de tipo simple y se asignan a las columnas con los mismos nombres en la tabla Person.Contact de forma predeterminada.  
+ En este ejemplo, no hay ninguna anotación especificada en el esquema XSD. El  **\<Person.Contact >** elemento es de tipo complejo y, por lo tanto, se asigna de forma predeterminada a la tabla Person.Contact en la base de datos AdventureWorks. Todos los atributos (ContactID, FirstName, LastName) de la  **\<Person.Contact >** elemento son de tipo simple y se asignan de forma predeterminada a las columnas con los mismos nombres en la tabla Person.Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -152,7 +152,7 @@ ms.locfileid: "32972060"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. Asignar un elemento XML a una columna de tipo de datos XML  
- En este ejemplo, la asignación predeterminada también tiene lugar debido a que no se usa ninguna anotación. El  **\<Production.ProductModel >** elemento es de tipo complejo y se asigna a la tabla con el mismo nombre en la base de datos. El **ProductModelID** atributo es del tipo simple y, por lo tanto, se asignan a las columnas con los mismos nombres. La única diferencia entre esto y los ejemplos anteriores es que la  **\<instrucciones >** elemento se asigna a una columna que usa el **xml** el tipo de datos mediante el **xsd: anyType** tipo.  
+ En este ejemplo, la asignación predeterminada también tiene lugar debido a que no se usa ninguna anotación. El  **\<Production.ProductModel >** elemento es de tipo complejo y se asigna a la tabla con el mismo nombre en la base de datos. El **ProductModelID** atributo es de tipo simple y, por lo tanto, se asignan a las columnas con los mismos nombres. La única diferencia entre esto y los ejemplos anteriores es que el  **\<instrucciones >** elemento se asigna a una columna que usa el **xml** el tipo de datos mediante el **xsd: anyType** tipo.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

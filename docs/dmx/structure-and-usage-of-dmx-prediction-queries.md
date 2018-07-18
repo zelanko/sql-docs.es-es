@@ -1,5 +1,5 @@
 ---
-title: Estructura y el uso de consultas de predicción DMX | Documentos de Microsoft
+title: Estructura y el uso de consultas de predicción DMX | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 37ff157cbddb0894880f12097c977b923d92f177
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841868"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981919"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Estructura y uso de las consultas de predicción DMX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  En [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puede usar la consulta de predicción de extensiones de minería de datos (DMX) para predecir valores de columna desconocido de un nuevo conjunto de datos, basándose en los resultados de un modelo de minería de datos.  
+  En [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puede usar la consulta de predicción de extensiones de minería de datos (DMX) para predecir valores de columna desconocidos de un nuevo conjunto de datos, basándose en los resultados de un modelo de minería de datos.  
   
  El tipo de consulta utilizado depende de la información que desee obtener del modelo. Si desea crear predicciones sencillas en tiempo real, como por ejemplo para saber si el perfil de un cliente potencial de un sitio web se ajusta al perfil de un comprador de bicicletas, entonces deberá usar una consulta singleton. Si desea crear un lote de predicciones a partir de un conjunto de escenarios incluidos en un origen de datos, deberá usar una consulta de predicción normal.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "34841868"
 ## <a name="query-structure"></a>Estructura de la consulta  
  Para generar una consulta de predicción en DMX, debe usar una combinación de los siguientes elementos:  
   
--   **SELECCIONE [FORMATO]**  
+-   **SELECCIONE [APLANADO]**  
   
 -   **TOP**  
   
--   **DE***\<modelo >***PREDICTION JOIN**  
+-   **DESDE***\<modelo >***PREDICTION JOIN**   
   
 -   **ON**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "34841868"
   
 -   **ORDER BY**  
   
- El **seleccione** elemento de una consulta de predicción define las columnas y conjunto de expresiones que se mostrarán en el resultado y pueden incluir los siguientes datos:  
+ El **seleccione** elemento de una consulta de predicción define las columnas y expresiones que se mostrarán en el resultado y pueden incluir los siguientes datos:  
   
 -   **Predecir** o **PredictOnly** columnas del modelo de minería de datos.  
   
@@ -63,15 +63,15 @@ ms.locfileid: "34841868"
   
  El **FROM**  *\<modelo >* **PREDICTION JOIN** elemento define los datos de origen que se usará para crear la predicción. Para una consulta singleton, se trata de una serie de valores que se asignan a columnas. Para una combinación de predicción vacía, se deja en blanco.  
   
- El **ON** elemento asigna las columnas que se definen en el modelo de minería de datos a columnas de un conjunto de datos externo. No es necesario incluir este elemento si se va a crear una consulta de combinación de predicción vacía o una combinación de predicción natural.  
+ El **ON** elemento asigna las columnas que se definen en el modelo de minería de datos a columnas en un conjunto de datos externo. No es necesario incluir este elemento si se va a crear una consulta de combinación de predicción vacía o una combinación de predicción natural.  
   
- Puede usar el **donde** cláusula para filtrar los resultados de una consulta de predicción. Puede usar un **arriba** o **ORDER BY** cláusula para seleccionar las predicciones más probables. Para obtener más información acerca del uso de estas cláusulas, vea [seleccione &#40;DMX&#41;](../dmx/select-dmx.md).  
+ Puede usar el **donde** cláusula para filtrar los resultados de una consulta de predicción. Puede usar un **superior** o **ORDER BY** cláusula para seleccionar las predicciones más probables. Para obtener más información sobre el uso de estas cláusulas, vea [seleccione &#40;DMX&#41;](../dmx/select-dmx.md).  
   
- Para obtener más información acerca de la sintaxis de una instrucción de predicción, vea [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41; ](../dmx/select-from-model-prediction-join-dmx.md) y [SELECT FROM &#60;modelo&#62; &#40;DMX &#41;](../dmx/select-from-model-dmx.md).  
+ Para obtener más información sobre la sintaxis de una instrucción de predicción, vea [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41; ](../dmx/select-from-model-prediction-join-dmx.md) y [SELECT FROM &#60;modelo&#62; &#40;DMX &#41;](../dmx/select-from-model-dmx.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Extensiones de minería de datos &#40;DMX&#41; referencia](../dmx/data-mining-extensions-dmx-reference.md)   
- [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
  [Extensiones de minería de datos &#40;DMX&#41; convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_droprolemember (Transact-SQL) | Documentos de Microsoft
+title: sp_droprolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9bb4bf48955c2b8c2f3039aa9e8e0f68e097f516
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258557"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974175"
 ---
 # <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,14 +66,14 @@ sp_droprolemember 'role' ,
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  sp_droprolemember quita a un miembro de un rol de base de datos mediante la eliminación de una fila de la tabla sysmembers. Cuando un miembro se quita de un rol, pierde los permisos que tenía por pertenecer a tal rol.  
   
- Para quitar un usuario de un rol fijo de servidor, utilice sp_dropsrvrolemember. No se puede quitar los usuarios del rol public, y dbo no se puede quitar cualquier rol.  
+ Para quitar un usuario de un rol fijo de servidor, utilice sp_dropsrvrolemember. No se puede quitar los usuarios del rol público y dbo no puede quitarse de ningún rol.  
   
  Puede utilizar sp_helpuser para ver los miembros de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rol y usar ALTER ROLE para agregar un miembro a un rol.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER para el rol.  
   
 ## <a name="examples"></a>Ejemplos  

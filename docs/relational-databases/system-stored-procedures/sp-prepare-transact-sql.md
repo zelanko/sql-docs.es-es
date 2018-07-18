@@ -1,5 +1,5 @@
 ---
-title: sp_prepare (Transact SQL) | Documentos de Microsoft
+title: sp_prepare (Transact SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 08e1c0f988d480e7c0c98d0818591734574ece87
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254369"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036303"
 ---
 # <a name="spprepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Prepara un con parámetros [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción y devuelve una instrucción *controlar* para su ejecución. sp_prepare se invoca especificando el identificador = 11 en un paquete de flujo TDS.  
+  Prepara un parametrizada [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción y devuelve una instrucción *controlar* para su ejecución. sp_prepare se invoca especificando el identificador 11 en un paquete de flujo TDS.  
   
  ![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,10 +45,10 @@ sp_prepare handle OUTPUT, params, stmt, options
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Identificador*  
+ *identificador*  
  Es un generado por SQL Server *identificador preparado* identificador. *controlar* es un parámetro necesario con un **int** valor devuelto.  
   
- *Params*  
+ *params*  
  Identifica instrucciones con parámetros. El *params* definición de las variables se sustituye por marcadores de parámetros en la instrucción. *params* es un parámetro necesario que requiere un **ntext**, **nchar**, o **nvarchar** valor de entrada. Escriba un valor NULL si la instrucción no tiene parámetros.  
   
  *stmt*  
@@ -57,7 +57,7 @@ sp_prepare handle OUTPUT, params, stmt, options
  *options*  
  Parámetro opcional que devuelve una descripción de las columnas del conjunto de resultados del cursor. *Opciones de* requiere el siguiente valor de entrada de tipo int:  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   

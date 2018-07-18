@@ -1,6 +1,6 @@
 ---
-title: Datos de ejemplo de descarga de la lección 1 y scripts de R (aprendizaje automático de SQL Server) que incruste | Documentos de Microsoft
-description: Tutorial que muestra cómo incrustar R en SQL Server los procedimientos almacenados y funciones de T-SQL
+title: Datos de ejemplo de descarga de la lección 1 y secuencias de comandos para embedded R (SQL Server Machine Learning) | Microsoft Docs
+description: Tutorial que muestra cómo insertar código de R en SQL Server los procedimientos almacenados y funciones de Transact-SQL
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/07/2018
@@ -9,18 +9,18 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 74a60a95da4fb701f3862c36e35a4bada6ef933b
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249838"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030383"
 ---
-# <a name="lesson-1-download-data-and-scripts"></a>Lección 1: Descargar los datos y las secuencias de comandos
+# <a name="lesson-1-download-data-and-scripts"></a>Lección 1: Descargar los datos y secuencias de comandos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
+En este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
 
-En este paso, se descargará el conjunto de datos de ejemplo y los [!INCLUDE[tsql](../../includes/tsql-md.md)] archivos que se utilizan en este tutorial de script. Los datos y los archivos de script se comparten en GitHub, pero la secuencia de comandos de PowerShell descargará los archivos de datos y la secuencia de comandos en un directorio local de su elección.
+En este paso, descargará el conjunto de datos de ejemplo y el [!INCLUDE[tsql](../../includes/tsql-md.md)] archivos de script que se usan en este tutorial. Los datos y los archivos de script que se comparten en GitHub, pero el script de PowerShell descargará los archivos de datos y la secuencia de comandos en un directorio local de su elección.
 
 ## <a name="download-tutorial-files-from-github"></a>Descargar archivos del tutorial desde Github
 
@@ -62,7 +62,7 @@ En este paso, se descargará el conjunto de datos de ejemplo y los [!INCLUDE[tsq
   
 ## <a name="next-lesson"></a>Lección siguiente
 
-[Lección 2: Importar datos a SQL Server usando PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[Lección 2: Importar datos a SQL Server mediante PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
 
 ## <a name="previous-lesson"></a>Lección anterior
 

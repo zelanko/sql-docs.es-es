@@ -1,5 +1,5 @@
 ---
-title: Elemento ExecuteResponse (XMLA) | Documentos de Microsoft
+title: Elemento ExecuteResponse (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a1ff44c8e2fb23e40aac30e70c73b4d260145bfd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576287"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979127"
 ---
-# <a name="xml-elements---objects---executeresponse"></a>XML elementos - objetos - ExecuteResponse
+# <a name="xml-elements---objects---executeresponse"></a>XML elementos: objetos: ExecuteResponse
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Contiene la información devuelta por una instancia de Analysis Services en respuesta a una [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) llamada al método.  
   
@@ -39,15 +39,15 @@ ms.locfileid: "34576287"
 |Valor predeterminado|None|  
 |Cardinalidad|1-1: Elemento requerido que puede aparecer una y solo una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|None|  
-|Elementos secundarios|[valor devuelto](../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
+|Elementos secundarios|[devolver](../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notas  
- El **ExecuteResponse** elemento es el elemento superior dentro del cuerpo de una respuesta SOAP para el **Execute** método.  
+ El **ExecuteResponse** elemento es el elemento superior dentro del cuerpo de respuesta SOAP para el **Execute** método.  
   
 ## <a name="see-also"></a>Vea también
  [Elemento DiscoverResponse &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)   

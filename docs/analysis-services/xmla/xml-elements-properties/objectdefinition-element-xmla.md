@@ -1,5 +1,5 @@
 ---
-title: Elemento ObjectDefinition (XMLA) | Documentos de Microsoft
+title: Elemento ObjectDefinition (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 71a8b5fe9e5fe1778ca941a597f86fb13249d623
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575897"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983576"
 ---
 # <a name="objectdefinition-element-xmla"></a>Elemento ObjectDefinition (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contiene uno o más elementos de Analysis Services Scripting Language (ASSL), utilizados para crear o modificar objetos en una instancia de Analysis Services.  
+  Contiene uno o varios elementos de Analysis Services Scripting Language (ASSL), utilizados para crear o modificar objetos en una instancia de Analysis Services.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34575897"
 |Valor predeterminado|None|  
 |Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  

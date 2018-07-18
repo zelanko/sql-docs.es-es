@@ -1,5 +1,5 @@
 ---
-title: sp_help_maintenance_plan (Transact-SQL) | Documentos de Microsoft
+title: sp_help_maintenance_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c144581e7d1ed73da251d13419d5ec04a7fd687
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260631"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979057"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +56,11 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
  None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Si *plan_id* se especifica, **sp_help_maintenance_plan** devolverá tres tablas: Plan, Database y Job.  
+ Si *plan_id* se especifica, **sp_help_maintenance_plan** devolverá tres tablas: Plan, base de datos y de trabajo.  
   
 ### <a name="plan-table"></a>Tabla Plan  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|Id. del plan de mantenimiento.|  
 |**plan_name**|**sysname**|Nombre del plan de mantenimiento.|  
@@ -70,26 +70,26 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**remote_history_server**|**int**|El nombre del servidor remoto en el que se puede escribir el informe de historial.|  
 |**max_remote_history_rows**|**int**|Número máximo de filas asignadas en la tabla del sistema en un servidor remoto en el que se puede escribir el informe del historial.|  
 |**user_defined_1**|**int**|Valor predeterminado es NULL.|  
-|**user_defined_2**|**nvarchar (100)**|Valor predeterminado es NULL.|  
+|**user_defined_2**|**Nvarchar (100)**|Valor predeterminado es NULL.|  
 |**user_defined_3**|**datetime**|Valor predeterminado es NULL.|  
 |**user_defined_4**|**uniqueidentifier**|Valor predeterminado es NULL.|  
   
 ### <a name="database-table"></a>Tabla Database  
   
-|Nombre de columna|Description|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |**database_name**|Nombre de todas las bases de datos asociadas con el plan de mantenimiento. *database_name* es **sysname**.|  
   
 ### <a name="job-table"></a>Tabla Job  
   
-|Nombre de columna|Description|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |**job_id**|Identificador de todos los trabajos asociados con el plan de mantenimiento. *job_id* es **uniqueidentifier**.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_help_maintenance_plan** está en el **msdb** base de datos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_help_maintenance_plan**.  
   
 ## <a name="examples"></a>Ejemplos  

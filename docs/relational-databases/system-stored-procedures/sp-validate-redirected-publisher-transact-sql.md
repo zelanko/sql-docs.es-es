@@ -1,5 +1,5 @@
 ---
-title: sp_validate_redirected_publisher (Transact-SQL) | Documentos de Microsoft
+title: sp_validate_redirected_publisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 89bb592d13d395bff62a09668efb9a3d0ecae60c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999629"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978947"
 ---
 # <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Comprueba que el host actual de la base de datos de publicación admite la replicación. Debe ejecutarse desde una base de datos de distribución. Llama a este procedimiento **sp_get_redirected_publisher**.  
+  Comprueba que el host actual de la base de datos de publicación admite la replicación. Debe ejecutarse desde una base de datos de distribución. Este procedimiento se llama **sp_get_redirected_publisher**.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,14 +63,14 @@ ms.locfileid: "32999629"
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si no existe ninguna entrada para el publicador y la base de datos de publicación, **sp_validate_redirected_publisher** devuelve null en el parámetro de salida *@redirected_publisher*. Si existe una entrada, esta se devuelve en el parámetro de salida en ambos casos: correcto y error.  
   
  Si la validación es correcta, **sp_validate_redirected_publisher** devuelve una indicación de éxito.  
   
  Si la validación no se realiza correctamente, se producen errores que describen el motivo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Autor de la llamada debe ser un miembro de la **sysadmin** rol fijo de servidor, el **db_owner** rol fijo de base de datos para la base de datos de distribución o un miembro de una lista de acceso de publicación para una publicación definida asociado a la base de datos del publicador.  
   
 ## <a name="see-also"></a>Vea también  

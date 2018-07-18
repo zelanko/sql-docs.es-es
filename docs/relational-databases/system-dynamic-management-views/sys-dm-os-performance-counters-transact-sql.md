@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_performance_counters (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_os_performance_counters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1bdbd9ea7029aaf8b18631a2303fdd1228ff0198
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466881"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980819"
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -37,25 +37,25 @@ ms.locfileid: "34466881"
   Devuelve una fila por contador de rendimiento que se mantiene en el servidor. Para obtener información acerca de cada contador de rendimiento, consulte [usar objetos de SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
 > [!NOTE]  
->  Para llamar a esta desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_performance_counters**.  
+>  Al llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_performance_counters**.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_name**|**nchar(128)**|Categoría a la que pertenece este contador.|  
-|**Nombre_contador**|**nchar(128)**|Nombre del contador. Para obtener más información acerca de un contador, este es el nombre del tema para seleccionar en la lista de contadores en [usar objetos de SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
-|**nombre_instancia**|**nchar(128)**|Nombre de la instancia específica del contador. A menudo contiene el nombre de la base de datos.|  
-|**cntr_value**|**bigint**|Valor actual del contador.<br /><br /> **Nota:** contadores por segundo, este valor es acumulado. El valor de la tarifa se debe calcular probando el valor en intervalos de tiempo distintos. La diferencia entre dos valores de ejemplo sucesivos es igual a la tarifa del intervalo de tiempo usado.|  
-|**cntr_type**|**int**|Tipo de contador definido en la arquitectura de rendimiento de Windows. Vea [WMI Performance Counter Types](http://msdn2.microsoft.com/library/aa394569.aspx) en MSDN o la documentación de Windows Server para obtener más información sobre los tipos de contador de rendimiento.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
+|**counter_name**|**nchar(128)**|Nombre del contador. Para obtener más información acerca de un contador, éste es el nombre del tema que se seleccione en la lista de contadores de [usar objetos de SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
+|**instance_name**|**nchar(128)**|Nombre de la instancia específica del contador. A menudo contiene el nombre de la base de datos.|  
+|**cntr_value**|**bigint**|Valor actual del contador.<br /><br /> **Nota:** contadores por segundo, este valor es acumulativo. El valor de la tarifa se debe calcular probando el valor en intervalos de tiempo distintos. La diferencia entre dos valores de ejemplo sucesivos es igual a la tarifa del intervalo de tiempo usado.|  
+|**cntr_type**|**int**|Tipo de contador definido en la arquitectura de rendimiento de Windows. Consulte [WMI Performance Counter Types](http://msdn2.microsoft.com/library/aa394569.aspx) en MSDN o la documentación de Windows Server para obtener más información sobre los tipos de contador de rendimiento.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si la instancia de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede mostrar los contadores de rendimiento del sistema operativo Windows, utilice la consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente para confirmar que se han deshabilitado los contadores de rendimiento.  
   
 ```  
 SELECT COUNT(*) FROM sys.dm_os_performance_counters;  
 ```  
   
- Si el valor devuelto es 0 filas, significa que se han deshabilitado los contadores de rendimiento. Debe examinar a continuación el registro de instalación y buscar el error 3409, "Vuelva a instalar sqlctr.ini para esta instancia y asegúrese de que la cuenta de inicio de sesión de la instancia tiene los permisos correctos para el Registro".  Esto denota que los contadores de rendimiento no estaban habilitados. Los errores inmediatamente anteriores al error 3409 deben indicar la causa principal del error en la habilitación del contador de rendimiento. Para obtener más información sobre los archivos de registro de instalación, consulte [ver y leer los archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
+ Si el valor devuelto es 0 filas, significa que se han deshabilitado los contadores de rendimiento. Debe examinar a continuación el registro de instalación y buscar el error 3409, "Vuelva a instalar sqlctr.ini para esta instancia y asegúrese de que la cuenta de inicio de sesión de la instancia tiene los permisos correctos para el Registro".  Esto denota que los contadores de rendimiento no estaban habilitados. Los errores inmediatamente anteriores al error 3409 deben indicar la causa principal del error en la habilitación del contador de rendimiento. Para obtener más información sobre los archivos de registro de instalación, consulte [vista y lectura de SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 ## <a name="permission"></a>Permiso
 

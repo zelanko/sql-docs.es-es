@@ -1,5 +1,5 @@
 ---
-title: Ordenados y desordenados expresiones (XQuery) | Documentos de Microsoft
+title: Ordenados y desordenados expresiones (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,22 +26,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f36e7adf5334ce9ef343b6d518d762a2b4f4c0c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076862"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974019"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>Expresiones ordenadas y no ordenadas (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  De forma predeterminada, el modo de ordenación para todas las operaciones en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es **ordenados**. Por lo tanto, las secuencias de nodo devuelven por las expresiones de ruta de acceso y las expresiones FLWOR, sin la **se ordena por** cláusula, están en orden del documento.  
+  De forma predeterminada, el modo de ordenación para todas las operaciones en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es **ordenados**. Por lo tanto, las secuencias de nodos devuelven por las expresiones de ruta de acceso y las expresiones FLWOR, sin la **se ordena por** cláusula, están en orden del documento.  
   
- La adición **ordenados** y **desordenada** no se admiten la sintaxis descrita en la especificación de XQuery.  
+ El texto adicional **ordenados** y **desordenados** no se admiten la sintaxis descrita en la especificación de XQuery.  
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones XQuery](../xquery/xquery-expressions.md)   
- [Instrucción FLWOR e iteración &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)   
- [Expresiones de ruta de acceso &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
+ [FLWOR instrucción e iteración &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)   
+ [Expresiones de ruta &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
   
   

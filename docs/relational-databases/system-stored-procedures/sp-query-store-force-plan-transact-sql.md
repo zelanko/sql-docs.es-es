@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_force_plan (Transact-SQL) | Documentos de Microsoft
+title: sp_query_store_force_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,18 +27,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f479710b8916fae3b315981663f97bac8488fb19
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257810"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036123"
 ---
 # <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Permite forzar un plan concreto para una consulta determinada.  
+  Permite forzar un plan determinado para una consulta determinada.  
   
- Cuando se fuerza un plan para una consulta determinada, cada vez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encuentra la consulta, intente forzar el plan en el optimizador. Si se produce un error al forzar el plan, se activa un XEvent y el optimizador se indica a optimizar en la forma normal.  
+ Cuando se fuerza un plan para una consulta determinada, el cada vez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encuentra la consulta, intenta forzar el plan en el optimizador. Si se produce un error al forzar el plan, un evento de XEvent se produce y se indica al optimizador a optimizar de manera normal.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,13 +59,13 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-## <a name="permissions"></a>Permissions  
- Requiere la **EXECUTE** permiso en la base de datos y **insertar**, **actualización**, y **eliminar** permiso en el catálogo del almacén de consultas Vistas.  
+## <a name="permissions"></a>Permisos  
+ Requiere el **EXECUTE** permiso en la base de datos y **insertar**, **actualización**, y **eliminar** permiso en el catálogo del almacén de consultas Vistas.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se devuelve información acerca de las consultas en el almacén de consultas.  
+ El ejemplo siguiente devuelve información acerca de las consultas en el almacén de consultas.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -76,7 +76,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Después de identificar la query_id y plan_id que desea forzar, utilizar el siguiente ejemplo para forzar la consulta para utilizar un plan.  
+ Después de identificar el query_id y plan_id que desee forzar, utilice el siguiente ejemplo para forzar la consulta para utilizar un plan.  
   
 ```  
 EXEC sp_query_store_force_plan 3, 3;  

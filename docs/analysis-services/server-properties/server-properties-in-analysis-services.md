@@ -1,5 +1,5 @@
 ---
-title: Propiedades del servidor de Analysis Services | Documentos de Microsoft
+title: Propiedades del servidor en Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238825"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975103"
 ---
 # <a name="server-properties-in-analysis-services"></a>Configurar las propiedades de servidor en Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   Un administrador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede modificar las propiedades de configuración predeterminadas del servidor de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cada instancia tiene sus propias propiedades de configuración, que se establecen independientemente de las demás instancias en el mismo servidor.  
   
- Para configurar el servidor, use SQL Server Management Studio o modifique el archivo msmdsrv.ini de una instancia específica de SQL Server Analysis Services.  
+ Para configurar el servidor, utilice SQL Server Management Studio o modifique el archivo msmdsrv.ini de una instancia específica de SQL Server Analysis Services.  
  
 Las páginas de propiedades de SQL Server Management Studio muestran un subconjunto de las propiedades con más probabilidad de ser modificadas. La lista completa de propiedades se encuentra en el archivo msmdsrv.ini.   
   
 > [!NOTE]  
->  En una instalación de SQL Server Analysis Services de forma predeterminada, msmdsrv.ini puede encontrarse en el \Program Server\MSAS13 de SQL. Carpeta MSSQLSERVER\OLAP\Config.
+>  En una instalación de SQL Server Analysis Services de forma predeterminada, msmdsrv.ini puede encontrarse en el SQL Server\MSAS13 \Program Files\Microsoft. Carpeta MSSQLSERVER\OLAP\Config.
 > 
 > Otras propiedades que afectan a la configuración del servidor incluyen las propiedades de configuración de implementación de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para más información sobre estas propiedades, vea [Especificar la configuración para la implementación de soluciones](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  

@@ -1,5 +1,5 @@
 ---
-title: (Nivel de compatibilidad de 1200) de creación de modelos tabulares | Documentos de Microsoft
+title: Tabular (nivel de compatibilidad 1200) de modelado | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b0b8d60c6c365d48f8eccc46cbc9a3b0f5222ff5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045069"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054692"
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>Modelado tabular (nivel de compatibilidad 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-Este tutorial ofrece lecciones sobre cómo crear un modelo tabular de Analysis Services en el [nivel de compatibilidad 1200](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) utilizando [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)e implementar el modelo en Analysis Services servidor local o en Azure.  
+Este tutorial proporciona lecciones sobre cómo crear un modelo tabular de Analysis Services en el [nivel de compatibilidad 1200](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) utilizando [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)e implementar el modelo en Analysis Services servidor local o en Azure.  
  
-Si está usando SQL Server 2017 o Azure Analysis Services y desea crear el modelo en la compatibilidad de 1400 nivel, use la [(nivel de compatibilidad de 1400) de creación de modelos tabulares](tutorial-tabular-1400/as-adventure-works-tutorial.md). Esta versión actualizada utiliza la característica de obtener datos moderna para conectarse e importar datos de origen, usa el lenguaje M para configurar las particiones e incluye lecciones complementarias adicionales.
+Si usa SQL Server 2017 o Azure Analysis Services, y desea crear el modelo en la compatibilidad de 1400 nivel, utilice el [(nivel de compatibilidad 1400) de modelos tabulares](tutorial-tabular-1400/as-adventure-works-tutorial.md). Esta versión actualizada usa la característica moderna de obtención de datos para conectarse e importar datos de origen, usa el lenguaje M configuración de particiones e incluye lecciones complementarias adicionales.
 
 > [!IMPORTANT]
-> Debe crear los modelos tabulares en el nivel de compatibilidad más reciente compatible con el servidor. Últimos modelos de nivel de compatibilidad ofrecen un rendimiento mejorado, características adicionales y se actualizarán a niveles de compatibilidad con versiones posteriores sin más problemas.
+> Debe crear los modelos tabulares en el nivel de compatibilidad más reciente compatible con el servidor. Modelos de nivel de compatibilidad con versiones posteriores ofrecen un rendimiento mejorado, características adicionales y se actualizarán más sin problemas a los niveles de compatibilidad con versiones futuras.
  
   
 ## <a name="what-you-learn"></a>¿Qué aprenderá   
@@ -37,27 +37,27 @@ Si está usando SQL Server 2017 o Azure Analysis Services y desea crear el model
   
 -   Cómo crear y administrar cálculos, medidas e indicadores clave de rendimiento que ayuden a los usuarios a analizar los datos del modelo.  
   
--   Cómo crear y administrar perspectivas y jerarquías que ayudan a los usuarios más examinar fácilmente los datos del modelo proporcionando funciones empresariales y puntos de vista específicos de la aplicación.  
+-   Cómo crear y administrar perspectivas y jerarquías que ayudan a los usuarios más examinar fácilmente los datos del modelo proporcionando empresariales y los puntos de vista específicos de la aplicación.  
   
--   Cómo crear particiones dividir los datos de la tabla en piezas lógicas más pequeñas, que se pueden procesar independientemente de otras particiones.  
+-   Cómo crear particiones de dividir los datos de tabla en piezas lógicas más pequeñas, que se pueden procesar independientemente de otras particiones.  
   
 -   Cómo proteger los objetos y los datos del modelo creando roles con miembros de usuario.  
   
--   Cómo implementar un modelo tabular con un servidor Analysis Services en local o en Azure.  
+-   Cómo implementar un modelo tabular en Analysis Services server local o en Azure.  
   
 ## <a name="scenario"></a>Escenario  
-Este tutorial se basa en Adventure Works Cycles, una compañía ficticia. Adventure Works es una empresa de fabricación multinacional dedicada que produce bicicletas, partes y accesorios para los mercados de Norteamérica, Europa y Asia. Con sede en Bothell, Washington, la compañía tiene a 500 trabajadores. Además, Adventure Works emplea varios equipos de ventas regionales en toda su base de mercado.  
+En este tutorial se basa en Adventure Works Cycles, una compañía ficticia. Adventure Works es una empresa de fabricación multinacional dedicada que genera bicicletas, piezas y accesorios de mercados de Norteamérica, Europa y Asia. Con sede en Bothell, Washington, la compañía tiene a 500 trabajadores. Además, Adventure Works emplea varios equipos regionales de ventas a lo largo de su base de mercado.  
   
 Para satisfacer mejor las necesidades de análisis de datos de los equipos de ventas y marketing, y de los directivos, le encargan que cree un modelo tabular para que los usuarios analicen datos de las ventas por Internet de la base de datos de ejemplo AdventureWorksDW.  
   
-Para completar el tutorial, y el modelo tabular Ventas por Internet de Adventure Works, debe realizar una serie de lecciones. En cada lección es una serie de tareas; es necesario para completar la lección completar cada tarea en orden. Mientras que en una determinada lección puede haber varias tareas que llevan a cabo un resultado similar, pero cómo completar cada tarea es ligeramente diferente. Esto sirve para mostrar que a menudo es más de una manera que se va a completar una tarea determinada como desafío práctica los conocimientos que ha aprendido en las tareas anteriores.  
+Para completar el tutorial, y el modelo tabular Ventas por Internet de Adventure Works, debe realizar una serie de lecciones. En cada lección es un número de tareas; es necesario para completar la lección completarlas todas en orden. Mientras que en una determinada lección puede haber varias tareas que obtienen un resultado similar, pero cómo completar cada tarea es ligeramente diferente. Esto consiste en demostrar que a menudo hay más de una manera para completar una tarea determinada y para ponerle conocimientos que ha adquirido en tareas anteriores.  
   
-El propósito de las lecciones es guiarle por la creación de un modelo tabular básico que se ejecuta en modo en memoria usando muchas de las características incluidas en SSDT. Como cada lección se basa en la anterior, debe completar las lecciones en orden. Una vez que haya completado todas las lecciones, ha creado e implementado el modelo tabular de ejemplo Adventure Works Internet Sales en un servidor de Analysis Services.  
+El propósito de las lecciones es guiarle a través de la creación de un modelo tabular básico que se ejecuta en modo en memoria mediante el uso de muchas de las características incluidas en SSDT. Como cada lección se basa en la anterior, debe completar las lecciones en orden. Una vez haya completado todas las lecciones, ha creado e implementado el modelo tabular de ejemplo Adventure Works Internet Sales en un servidor de Analysis Services.  
   
 Este tutorial no proporciona lecciones ni información sobre cómo administrar una base de datos del modelo tabular implementado utilizando SQL Server Management Studio o una aplicación cliente de informes para conectarse a un modelo implementado con objeto de examinar los datos del modelo.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
-Para completar este tutorial, necesitará los siguientes requisitos previos:  
+Para completar este tutorial, necesita los siguientes requisitos previos:  
   
 -   La versión más reciente de [SSDT](../ssdt/download-sql-server-data-tools-ssdt.md).
 
@@ -68,7 +68,7 @@ Para completar este tutorial, necesitará los siguientes requisitos previos:
 -   Una instancia de SQL Server con la base de datos de ejemplo Adventure Works DW. Esta base de datos de ejemplo incluye los datos necesarios para completar este tutorial. [Obtener la última versión](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
 
--   Un Azure Analysis Services o SQL Server 2016 o posterior instancia de Analysis Services para implementar su modelo. [Registrarse para obtener una evaluación gratuita de Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/).
+-   Una Azure Analysis Services o SQL Server 2016 o posterior instancia de Analysis Services para implementar el modelo. [Registrarse para obtener una evaluación gratuita de Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/).
   
 ## <a name="lessons"></a>Lecciones  
 Este tutorial incluye las siguientes lecciones:  
@@ -78,14 +78,14 @@ Este tutorial incluye las siguientes lecciones:
 |[Lección 1: Crear un nuevo proyecto de modelo tabular](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 minutos|  
 |[Lección 2: Agregar datos](../analysis-services/lesson-2-add-data.md)|20 minutos|  
 |[Lección 3: Marcar como tabla de fechas](../analysis-services/lesson-3-mark-as-date-table.md)|3 minutos|  
-|[Lección 4: Crear relaciones](../analysis-services/lesson-4-create-relationships.md)|10 minutos|  
+|[Lección 4: Creación de relaciones](../analysis-services/lesson-4-create-relationships.md)|10 minutos|  
 |[Lección 5: Crear columnas calculadas](../analysis-services/lesson-5-create-calculated-columns.md)|15 minutos|
 |[Lección 6: Crear medidas](../analysis-services/lesson-6-create-measures.md)|30 minutos|  
 |[Lección 7: Crear indicadores clave de rendimiento](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 minutos|  
 |[Lección 8: Crear perspectivas](../analysis-services/lesson-8-create-perspectives.md)|5 minutos|  
-|[Lección 9: Crear jerarquías](../analysis-services/lesson-9-create-hierarchies.md)|20 minutos|  
-|[Lección 10: Crear particiones](../analysis-services/lesson-10-create-partitions.md)|15 minutos|  
-|[Lección 11: Crear Roles](../analysis-services/lesson-11-create-roles.md)|15 minutos|  
+|[Lección 9: Creación de jerarquías](../analysis-services/lesson-9-create-hierarchies.md)|20 minutos|  
+|[Lección 10: Creación de particiones](../analysis-services/lesson-10-create-partitions.md)|15 minutos|  
+|[Lección 11: Creación de Roles](../analysis-services/lesson-11-create-roles.md)|15 minutos|  
 |[Lección 12: Analizar en Excel](../analysis-services/lesson-12-analyze-in-excel.md)|20 minutos| 
 |[Lección 13: Implementar](../analysis-services/lesson-13-deploy.md)|5 minutos|  
   

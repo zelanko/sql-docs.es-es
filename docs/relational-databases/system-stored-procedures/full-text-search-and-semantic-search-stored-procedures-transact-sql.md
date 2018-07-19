@@ -1,5 +1,5 @@
 ---
-title: Búsquedas de texto completo y semántica procedimientos almacenan (Transact-SQL) | Documentos de Microsoft
+title: Búsqueda de texto completo y búsqueda semántica (Transact-SQL) de procedimientos almacenados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,16 +23,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 735006f7e640bd6b35e57aafa2b0e70cb613e544
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239403"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063673"
 ---
 # <a name="full-text-search-and-semantic-search-stored-procedures-transact-sql"></a>Búsqueda de texto completo y procedimientos almacenados de búsqueda semántica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes procedimientos almacenados del sistema que se utilizan para implementar y consultar índices de texto completo e índices semánticos.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes procedimientos almacenados del sistema que se usan para implementar y consultar índices de texto completo e índices semánticos.  
   
 ## <a name="full-text-search-stored-procedures"></a>Procedimientos almacenados de la búsqueda de texto completo  
  [sp_fulltext_catalog](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)  

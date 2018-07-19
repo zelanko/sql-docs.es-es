@@ -1,5 +1,5 @@
 ---
-title: Ejecutar consultas XPath con espacios de nombres (clases administradas de SQLXML) | Documentos de Microsoft
+title: Ejecutar consultas XPath con espacios de nombres (clases administradas de SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b068d1d9848a7c462833d54fa6e92268fc83433f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969060"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051496"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Ejecutar consultas XPath con espacios de nombres (clases administradas de SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "32969060"
   
  Dado que no se admite el uso del carácter comodín (*) en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, debe especificar la consulta XPath mediante un prefijo de espacio de nombres. Para resolver el prefijo, utilice la propiedad de los espacios de nombres para especificar el enlace de espacio de nombres.  
   
- En el ejemplo siguiente, la consulta XPath especifica los espacios de nombres mediante el carácter comodín (\*) y las funciones de XPath local-name() y espacio. Esta consulta XPath devuelve todos los elementos donde el nombre local es **empleado** y el espacio de nombres URI es **urn: myschema:Contacts**:  
+ En el ejemplo siguiente, la consulta XPath especifica los espacios de nombres con el carácter comodín (\*) y las funciones de XPath local-name() y espacio. Esta consulta XPath devuelve todos los elementos donde el nombre local es **empleado** y el espacio de nombres URI es **urn: myschema:Contacts**:  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- En SQLXML 4.0, especifique esta consulta XPath con un prefijo de espacio de nombres. Un ejemplo es **x: Contact**, donde **x** es el prefijo de espacio de nombres. Fíjese en el siguiente esquema XSD:  
+ En SQLXML 4.0, especifique esta consulta XPath con un prefijo de espacio de nombres. Un ejemplo es **x: contacto**, donde **x** es el prefijo de espacio de nombres. Fíjese en el siguiente esquema XSD:  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  

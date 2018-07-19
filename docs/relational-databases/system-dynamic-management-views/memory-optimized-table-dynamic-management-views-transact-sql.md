@@ -1,5 +1,5 @@
 ---
-title: Vistas de administración dinámica (Transact-SQL) de tabla optimizada en memoria | Documentos de Microsoft
+title: Vistas de administración dinámica (Transact-SQL) de tabla optimizado para memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: da3bf7189d2fb4455b8186a41a24c7d5f546a348
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465531"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061573"
 ---
 # <a name="memory-optimized-table-dynamic-management-views-transact-sql"></a>Vistas de administración dinámica de tablas con optimización para memoria (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  El siguiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vistas de administración dinámica (DMV) se usan con OLTP en memoria:  
+  La siguiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vistas de administración dinámica (DMV) se usan con OLTP en memoria:  
   
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
@@ -45,15 +45,15 @@ ms.locfileid: "34465531"
 
 ### <a name="object-catalog-views"></a>Vistas de catálogo de objetos
 
-Las vistas de catálogo de objetos siguientes se utilizan específicamente con OLTP en memoria.
+Las siguientes vistas de catálogo de objetos se utilizan específicamente con OLTP en memoria.
 
 |||  
 |-|-|   
-|[Sys.hash_indexes & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
+|[sys.hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
 
 ### <a name="internal-dmvs"></a>DMV internas
 
-Hay DMV adicionales que están diseñadas para uso interno únicamente y para que no se proporciona documentación directa. En el área de tablas optimizadas en memoria, sin documentar DMV son los siguientes:
+Hay DMV adicionales que están pensadas para uso interno únicamente y para que no se proporciona ninguna documentación directa. En el área de las tablas optimizadas para memoria, sin documentar DMV incluyen lo siguiente:
 
 - Sys.dm_xtp_threads
 - sys.dm_xtp_transaction_recent_rows

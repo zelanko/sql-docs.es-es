@@ -1,5 +1,5 @@
 ---
-title: sp_dropserver (Transact-SQL) | Documentos de Microsoft
+title: sp_dropserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 82f030a0f35a75bb1494035c9db8cd0ae0f002c0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242186"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049343"
 ---
 # <a name="spdropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -57,12 +57,12 @@ sp_dropserver [ @server = ] 'server'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- Si ejecuta **sp_dropserver** en un servidor que esté asociada a las entradas de inicio de sesión de servidor remoto o vinculado o se configura como un publicador de replicación, se devuelve un mensaje de error. Para quitar todos los inicios de sesión de servidor remoto o vinculado de un servidor al quitar el servidor, use la **droplogins** argumento.  
+## <a name="remarks"></a>Notas  
+ Si ejecuta **sp_dropserver** en un servidor que tiene asociados a las entradas de inicio de sesión de servidor remoto o vinculado, o se configura como un publicador de replicación, se devuelve un mensaje de error. Para quitar todos los inicios de sesión de servidor remoto o vinculado para un servidor cuando se quita el servidor, use la **droplogins** argumento.  
   
  **sp_dropserver** no se puede ejecutar dentro de una transacción definida por el usuario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY LINKED SERVER en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -77,7 +77,7 @@ sp_dropserver 'ACCOUNTS', 'droplogins';
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_delete_backup (Transact-SQL) | Documentos de Microsoft
+title: sp_delete_backup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2015
 ms.prod: sql
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2955570ee99eaa05d9a689ccbe62973af3208d80
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241013"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054452"
 ---
 # <a name="spdeletebackup-transact-sql"></a>sp_delete_backup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Elimina todas las instantáneas y el archivo de copia de seguridad que componen una copia de seguridad instantánea de la base de datos especificada. Este procedimiento almacenado del sistema es el único método recomendado para administrar conjuntos de copia de seguridad de instantánea. Para obtener más información, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+  Elimina todas las instantáneas y el archivo de copia de seguridad que componen una copia de seguridad instantánea de la base de datos especificado. Este procedimiento almacenado del sistema es el único método recomendado para administrar conjuntos de copia de seguridad de instantánea. Para obtener más información, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +42,13 @@ sys.sp_delete_backup
   
 ## <a name="arguments"></a>Argumentos  
  *[ @backup_url =] backup_meta_file_url*  
- La dirección URL de la copia de seguridad va a eliminar, lo que elimina todas las instantáneas que componen el conjunto incluido el propio archivo de copia de seguridad especificado de la copia de seguridad.  
+ La dirección URL de la copia de seguridad se puede eliminar, lo que elimina todas las instantáneas que componen el conjunto incluyendo el propio archivo de copia de seguridad especificado de la copia de seguridad.  
   
  *[ @db_name =] database_name*  
- El nombre de la base de datos que contiene la instantánea que se va a eliminar. Cuando un nombre de base de datos es siempre, el sistema comprueba que la dirección URL de copia de seguridad proporcionado es una dirección URL de copia de seguridad para la base de datos especificada y usa [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) para eliminar cada instantánea. Si no se proporciona ningún nombre de base de datos, no se realiza esta comprobación de base de datos.  
+ El nombre de la base de datos que contiene la instantánea que se va a eliminar. Cuando un nombre de base de datos es siempre el sistema comprueba que la dirección URL de copia de seguridad proporcionado es una dirección URL de copia de seguridad para la base de datos especificada y usa [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) para eliminar cada instantánea. Si se proporciona ningún nombre de base de datos, no se realiza esta comprobación de la base de datos.  
   
-## <a name="permissions"></a>Permissions  
- Requiere el permiso ALTER ANY DATABASE o el permiso ALTER en la base de datos especificada.  
+## <a name="permissions"></a>Permisos  
+ Requiere el permiso ALTER ANY DATABASE o permiso ALTER en la base de datos especificado.  
   
 ## <a name="see-also"></a>Vea también  
  [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   

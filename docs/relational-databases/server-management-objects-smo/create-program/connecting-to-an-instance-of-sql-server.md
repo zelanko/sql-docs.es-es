@@ -1,5 +1,5 @@
 ---
-title: Conectarse a una instancia de SQL Server | Documentos de Microsoft
+title: Conectarse a una instancia de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,28 +22,28 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4b1e22218bc0d30bcb06b5d170c2403e4e5785e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972850"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058863"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Conectarse a una instancia de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  El primer paso de programación un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aplicación Management Objects (SMO) es crear una instancia de la <xref:Microsoft.SqlServer.Management.Smo.Server> objeto y establecer su conexión a una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  El primer paso de programación un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] application Management Objects (SMO) es crear una instancia de la <xref:Microsoft.SqlServer.Management.Smo.Server> objeto y establecer su conexión a una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Puede crear una instancia del objeto <xref:Microsoft.SqlServer.Management.Smo.Server> y establecer una conexión a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de tres maneras. La primera es utilizar una variable de objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> para proporcionar la información de conexión. La segunda es proporcionar la información de conexión estableciendo explícitamente las propiedades del objeto <xref:Microsoft.SqlServer.Management.Smo.Server>. La tercera es pasar el nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el constructor del objeto <xref:Microsoft.SqlServer.Management.Smo.Server>. 
   
- **Utilizar un objeto ServerConnection**  
+ **Uso de un objeto ServerConnection**  
   
  La ventaja de utilizar la variable de objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> es que se puede reutilizar la información de conexión. Declare una variable de objeto <xref:Microsoft.SqlServer.Management.Smo.Server>. A continuación, declare un objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> y establezca las propiedades con información de conexión como el nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y el modo de autenticación. A continuación, pase la variable de objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> como parámetro al constructor de objeto <xref:Microsoft.SqlServer.Management.Smo.Server>. No se recomienda compartir a la vez las conexiones entre objetos de servidor distintos. Utilice el método <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> para obtener una copia de los valores de conexión existentes.  
   
- **Establecer propiedades del objeto Server explícitamente**  
+ **Establecer las propiedades del objeto Server explícitamente**  
   
  De modo alternativo, puede declarar la variable de objeto <xref:Microsoft.SqlServer.Management.Smo.Server> y llamar al constructor predeterminado. Tal cual, el objeto <xref:Microsoft.SqlServer.Management.Smo.Server> intenta conectarse a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con todos los valores de conexión predeterminados.  
   
- **Proporcionar el nombre de la instancia de SQL Server en el constructor del objeto de servidor**  
+ **Proporcionar el nombre de instancia de SQL Server en el constructor del objeto de servidor**  
   
  Declare la variable de objeto <xref:Microsoft.SqlServer.Management.Smo.Server> y pase el nombre de instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como parámetro de cadena en el constructor. El objeto <xref:Microsoft.SqlServer.Management.Smo.Server> establece una conexión con la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con los valores de conexión predeterminados.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "32972850"
 ## <a name="connecting-to-an-instance-of-sql-server-for-rmo"></a>Conectarse a una instancia de SQL Server para RMO  
  Replication Management Objects (RMO) usa un método ligeramente distinto de SMO para conectarse a un servidor de replicación.  
   
- Objetos de programación de RMO requieren que una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se realiza utilizando la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> objeto implementado por el **Microsoft.SqlServer.Management.Common** espacio de nombres. Esta conexión al servidor se realiza independientemente de los objetos de programación RMO. A continuación, se pasa al objeto RMO durante la creación de la instancia o por asignación a la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> del objeto. De esta manera, se pueden crear y administrar los objetos de programación RMO y las instancias de objeto de conexión por separado y se puede reutilizar un objeto de conexión único con varios objetos de programación RMO. Las reglas siguientes se aplican a las conexiones a un servidor de replicación:  
+ Objetos de programación de RMO requieren que una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se realiza mediante el <xref:Microsoft.SqlServer.Management.Common.ServerConnection> objeto implementado por el **Microsoft.SqlServer.Management.Common** espacio de nombres. Esta conexión al servidor se realiza independientemente de los objetos de programación RMO. A continuación, se pasa al objeto RMO durante la creación de la instancia o por asignación a la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> del objeto. De esta manera, se pueden crear y administrar los objetos de programación RMO y las instancias de objeto de conexión por separado y se puede reutilizar un objeto de conexión único con varios objetos de programación RMO. Las reglas siguientes se aplican a las conexiones a un servidor de replicación:  
   
 -   Todas las propiedades de la conexión se definen para un objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> especificado.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "32972850"
 -   Se debe llamar al método <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> antes de pasar la conexión a cualquier objeto de programación RMO.  
   
 ## <a name="examples"></a>Ejemplos  
-Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Conectarse a la instancia local de SQL Server mediante la autenticación de Windows en Visual Basic  
  Para conectarse a la instancia local de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se requiere mucho código. En su lugar, se basa en la configuración predeterminada del método de autenticación y servidor. La primera operación que exija la recuperación de datos hará que se cree una conexión.  
@@ -136,7 +136,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-basic"></a>Conectarse a una instancia de SQL Server mediante la autenticación de SQL Server en Visual Basic  
  Al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe especificar el tipo de autenticación. En este ejemplo se muestra un método alternativo para declarar una variable de objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, que permite reutilizar la información de conexión.  
   
- El ejemplo es [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] código de .NET que muestra cómo conectarse a la instancia remota y *vPassword* incluyen el inicio de sesión y una contraseña.  
+ El ejemplo es [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] código .NET que se muestra cómo conectarse a la instancia remota y *vPassword* contienen el inicio de sesión y la contraseña.  
   
 ```VBNET  
 ' compile with:   
@@ -184,7 +184,7 @@ End Class
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-c"></a>Conectarse a una instancia de SQL Server mediante la autenticación de SQL Server en Visual C#  
  Al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe especificar el tipo de autenticación. En este ejemplo se muestra un método alternativo para declarar una variable de objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, que permite reutilizar la información de conexión.  
   
- El ejemplo es el código de Visual C# .NET que muestra cómo conectarse a la instancia remota y *vPassword* incluyen el inicio de sesión y una contraseña.  
+ El ejemplo es el código de Visual C# .NET que se muestra cómo conectarse a la instancia remota y *vPassword* contienen el inicio de sesión y la contraseña.  
   
 ```csharp  
 // compile with:   

@@ -1,5 +1,5 @@
 ---
-title: Ejecutar archivos de plantilla mediante la propiedad CommandStream | Documentos de Microsoft
+title: Ejecutar archivos de plantilla mediante el uso de la propiedad CommandStream | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d51834522bf6f6d3b8e3243340406d95376aac54
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971870"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051543"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Ejecutar archivos de plantilla utilizando la propiedad CommandStream
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Este ejemplo muestra cómo se pueden especificar archivos de plantilla que están compuestos de consultas SQL o XPath utilizando la propiedad CommandStream del objeto SqlXmlCommand. En esta aplicación, se abre un FileStreamobject para un archivo de comandos y se asigna la secuencia de archivo como el CommandStream que se ejecuta.  
+  En este ejemplo se muestra cómo se pueden especificar archivos de plantilla que están compuestos de consultas SQL o XPath utilizando la propiedad CommandStream del objeto SqlXmlCommand. En esta aplicación, se abre un FileStreamobject para un archivo de comandos y se asigna la secuencia de archivos como el CommandStream que se ejecuta.  
   
- En el ejemplo siguiente, la propiedad CommandType se especifica como SqlXmlCommandType.Template (no requiere tanta TemplateFile).  
+ En el ejemplo siguiente, se especifica la propiedad CommandType como SqlXmlCommandType.Template (no como TemplateFile).  
   
  Esta es la plantilla XML de ejemplo:  
   

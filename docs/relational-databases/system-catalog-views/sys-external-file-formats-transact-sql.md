@@ -1,5 +1,5 @@
 ---
-title: Sys.external_file_formats (Transact-SQL) | Documentos de Microsoft
+title: Sys.external_file_formats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f834434e2e03bad82df9221b1d66db6f4f1e300a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181070"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059132"
 ---
 # <a name="sysexternalfileformats-transact-sql"></a>Sys.external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -32,21 +32,21 @@ ms.locfileid: "33181070"
   
  Contiene una fila para cada formato de archivo externo en el servidor para [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-|Nombre de la columna|Tipo de datos|Description|Intervalo|  
+|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|Id. de objeto para el formato de archivo externo.||  
-|name|**sysname**|Nombre del formato de archivo. en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], esto es único para la base de datos. En [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], es único para el servidor.||  
-|format_type|**tinyint**|El tipo de formato de archivo.|PARQUET DELIMITEDTEXT, RCFILE, ORC,|  
-|field_terminator|**nvarchar (10)**|Para format_type = DELIMITEDTEXT, el terminador de campo.||  
-|string_delimiter|**nvarchar (10)**|Para format_type = DELIMITEDTEXT, esto es el delimitador de cadena.||  
-|date_format|**nvarchar(50)**|Para format_type = DELIMITEDTEXT, esto es el formato de hora y fecha definido por el usuario.||  
-|use_type_default|**bit**|Para format_type = texto DELIMITADO, especifica cómo controlar los valores que faltan cuando PolyBase está importando datos desde archivos de texto HDFS en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 – almacenar valores que faltan como la cadena 'NULL'.<br /><br /> 1 – almacenar valores que faltan, como el valor predeterminado de columna.|  
-|serde_method|**nvarchar(255)**|Para format_type = RCFILE, éste es el método de serialización/deserialización.||  
-|row_terminator|**nvarchar (10)**|Para format_type = DELIMITEDTEXT, ésta es la cadena de caracteres que finaliza cada fila en el archivo de Hadoop externo.|Siempre '\n'.|  
-|codificación|**nvarchar (10)**|Para format_type = DELIMITEDTEXT, éste es el método de codificación para el archivo de Hadoop externo.|Siempre 'UTF8'.|  
-|data_compression|**nvarchar(255)**|El método de compresión de datos para los datos externos.|Para format_type = DELIMITEDTEXT:<br /><br /> -'org.apache.hadoop.io.compress.DefaultCodec'<br />-'org.apache.hadoop.io.compress.GzipCodec'<br /><br /> Para format_type = RCFILE:<br /><br /> -'org.apache.hadoop.io.compress.DefaultCodec'<br /><br /> Para format_type = ORC:<br /><br /> -'org.apache.hadoop.io.compress.DefaultCodec'<br />-   'org.apache.hadoop.io.compress.SnappyCodec'<br /><br /> Para format_type = PARQUET:<br /><br /> -'org.apache.hadoop.io.compress.GzipCodec'<br />-   'org.apache.hadoop.io.compress.SnappyCodec'|  
+|NAME|**sysname**|Nombre del formato de archivo. en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], debe ser único para la base de datos. En [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], debe ser único para el servidor.||  
+|format_type|**tinyint**|El tipo de formato de archivo.|DELIMITEDTEXT, RCFILE, ORC, PARQUET|  
+|field_terminator|**nvarchar (10)**|Para obtener más format_type = DELIMITEDTEXT, esto es el terminador de campo.||  
+|string_delimiter|**nvarchar (10)**|Para obtener más format_type = DELIMITEDTEXT, es el delimitador de cadena.||  
+|date_format|**nvarchar(50)**|Para obtener más format_type = DELIMITEDTEXT, esto es el formato de hora y fecha definido por el usuario.||  
+|use_type_default|**bit**|Para format_type = texto DELIMITADO, especifica cómo controlar los valores que faltan cuando PolyBase está importando datos desde archivos de texto HDFS a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0: almacenar los valores que faltan, como la cadena 'NULL'.<br /><br /> 1: almacenar los valores que faltan, como el valor predeterminado de columna.|  
+|serde_method|**nvarchar(255)**|Para obtener más format_type = RCFILE, este es el método de serialización y deserialización.||  
+|row_terminator|**nvarchar (10)**|Para obtener más format_type = DELIMITEDTEXT, se trata de la cadena de caracteres que finaliza cada fila en el archivo externo de Hadoop.|Siempre '\n'.|  
+|codificación|**nvarchar (10)**|Para obtener más format_type = DELIMITEDTEXT, este es el método de codificación para el archivo externo de Hadoop.|Siempre 'UTF8'.|  
+|data_compression|**nvarchar(255)**|El método de compresión de datos para los datos externos.|Para obtener más format_type = DELIMITEDTEXT:<br /><br /> -'org.apache.hadoop.io.compress.DefaultCodec'<br />-'org.apache.hadoop.io.compress.GzipCodec'<br /><br /> Para obtener más format_type = RCFILE:<br /><br /> -'org.apache.hadoop.io.compress.DefaultCodec'<br /><br /> Para obtener más format_type = ORC:<br /><br /> -'org.apache.hadoop.io.compress.DefaultCodec'<br />-   'org.apache.hadoop.io.compress.SnappyCodec'<br /><br /> Para obtener más format_type = PARQUET:<br /><br /> -'org.apache.hadoop.io.compress.GzipCodec'<br />-   'org.apache.hadoop.io.compress.SnappyCodec'|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  La visibilidad de los metadatos en las vistas de catálogo se limita a los elementos protegibles y que son propiedad de un usuario o sobre los que el usuario tiene algún permiso. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

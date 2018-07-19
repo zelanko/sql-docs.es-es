@@ -1,5 +1,5 @@
 ---
-title: Tipo de sistema (XQuery) | Documentos de Microsoft
+title: Tipo de sistema (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -32,11 +32,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dcdaf7607d425dec01a9f2cf8c87ff55e5441aae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077558"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061473"
 ---
 # <a name="type-system-xquery"></a>Sistema de tipos (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,14 +51,14 @@ ms.locfileid: "33077558"
   
 -   El valor con tipo y el valor de cadena de un nodo.  
   
--   El [datos función &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) y [función de cadena &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md).  
+-   El [datos función &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) y [cadena función &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md).  
   
 -   La equiparación del tipo de secuencia devuelto por una expresión.  
   
 ## <a name="built-in-types-of-xml-schema"></a>Tipos integrados de esquema XML  
  Los tipos integrados de esquema XML tienen el prefijo de espacio de nombres predefinido xs. Algunos de estos tipos son **xs: Integer** y **xs: String**. Todos estos tipos integrados son compatibles y se pueden utilizar al crear una colección de esquemas XML.  
   
- Al consultar XML con tipo, el tipo estático y dinámico de los nodos se determina a partir de la colección de esquemas XML asociada a la columna o variable que se consulta. Para obtener más información acerca de los tipos estáticos y dinámicos, consulte [el contexto de expresión y evaluación de la consulta &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Por ejemplo, la consulta siguiente se especifica en un tipo **xml** columna (`Instructions`). La expresión utiliza `instance of` para comprobar que el valor con tipo del atributo `LotSize` devuelto es de tipo `xs:decimal`.  
+ Al consultar XML con tipo, el tipo estático y dinámico de los nodos se determina a partir de la colección de esquemas XML asociada a la columna o variable que se consulta. Para obtener más información acerca de los tipos estáticos y dinámicos, consulte [contexto de expresiones y evaluación de la consulta &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Por ejemplo, la consulta siguiente se especifica con un tipo **xml** columna (`Instructions`). La expresión utiliza `instance of` para comprobar que el valor con tipo del atributo `LotSize` devuelto es de tipo `xs:decimal`.  
   
 ```  
 SELECT Instructions.query('  
@@ -72,13 +72,13 @@ WHERE ProductModelID=7
  Esta información de tipos la proporciona la colección de esquemas XML asociada a la columna.  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>Tipos definidos en el espacio de nombres de tipos de datos XPath  
- Los tipos definidos en el **http://www.w3.org/2004/07/xpath-datatypes** espacio de nombres tienen el prefijo predefinido de **xdt**. La siguiente información se aplica a estos tipos:  
+ Los tipos definidos en el **http://www.w3.org/2004/07/xpath-datatypes** espacio de nombres tienen el prefijo predefinido **xdt**. La siguiente información se aplica a estos tipos:  
   
--   Estos tipos no se pueden utilizar al crear una colección de esquemas XML. Estos tipos se utilizan en el sistema de tipos XQuery y se utilizan para [XQuery y tipos estáticos](../xquery/xquery-and-static-typing.md). Puede convertir a los tipos atómicos, por ejemplo, **xdt: untypedAtomic**, en la **xdt** espacio de nombres.  
+-   Estos tipos no se pueden utilizar al crear una colección de esquemas XML. Estos tipos se utilizan en el sistema de tipos XQuery y se usan para [XQuery y tipos estáticos](../xquery/xquery-and-static-typing.md). Puede convertir a los tipos atómicos, por ejemplo, **xdt: untypedAtomic**, en el **xdt** espacio de nombres.  
   
--   Al consultar XML sin tipo, el tipo estático y dinámico de nodos de elemento es **xdt: sin tipo**, y el tipo de valores de atributo es **xdt: untypedAtomic**. El resultado de un **query()** método genera XML sin tipo. Esto significa que los nodos XML se devuelven como **xdt: sin tipo** y **xdt: untypedAtomic**, respectivamente.  
+-   Al consultar XML sin tipo, el tipo estático y dinámico de los nodos de elemento es **xdt: sin tipo**, y el tipo de valores de atributo es **xdt: untypedAtomic**. El resultado de una **query()** método genera XML sin tipo. Esto significa que los nodos XML se devuelven como **xdt: sin tipo** y **xdt: untypedAtomic**, respectivamente.  
   
--   El **xdt: daytimeduration** y **xdt: yearmonthduration** no se admiten tipos.  
+-   El **xdt: daytimeduration** y **xdt: yearmonthduration** tipos no son compatibles.  
   
  En el ejemplo siguiente, la consulta se especifica con una variable XML sin tipo. La expresión, `data(/a[1]`), devuelve una secuencia de un valor atómico. La función `data()` devuelve el valor con tipo del elemento `<a>`. Dado que se consulta XML sin tipo, el tipo de valor devuelto es `xdt:untypedAtomic`. Por tanto, `instance of` devuelve True.  
   
@@ -105,13 +105,13 @@ SELECT @x.query( '/a[1] instance of element()')
 >  Cuando se consulta una instancia XML con tipo y la expresión de la consulta incluye el eje principal, deja de estar disponible la información del tipo estático de los nodos resultantes. Sin embargo, el tipo dinámico sigue asociado a los nodos.  
   
 ## <a name="typed-value-vs-string-value"></a>Valor con tipo y valor de cadena  
- Cada nodo tiene un valor con tipo y un valor de cadena. Para los datos XML con tipo, la colección de esquemas XML asociada a la columna o variable que se consulta proporciona el tipo del valor con tipo. Para los datos XML sin tipo, el tipo del valor con tipo es **xdt: untypedAtomic**.  
+ Cada nodo tiene un valor con tipo y un valor de cadena. Para los datos XML con tipo, la colección de esquemas XML asociada a la columna o variable que se consulta proporciona el tipo del valor con tipo. Para los datos XML sin tipo, el tipo de valor con tipo es **xdt: untypedAtomic**.  
   
  Puede usar el **data()** o **string()** función para recuperar el valor de un nodo:  
   
 -   El [datos función &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) devuelve el valor con tipo de un nodo.  
   
--   El [función de cadena &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) devuelve el valor de cadena del nodo.  
+-   El [cadena función &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) devuelve el valor de cadena del nodo.  
   
  En la siguiente colección de esquemas XML, se define el elemento <`root`> del tipo entero:  
   
@@ -140,7 +140,7 @@ SET @x='<root>5</root>'
 SELECT @x.query('string(/root[1]) + 3')  
 ```  
   
- En el ejemplo siguiente se calcula el total de los atributos `LaborHours`. El `data()` función recupera los valores con tipo de `LaborHours` atributos de todos los <`Location`> elementos para un modelo de producto. Según el esquema XML asociado a la `Instruction` columna, `LaborHours` es de **xs: decimal** tipo.  
+ En el ejemplo siguiente se calcula el total de los atributos `LaborHours`. El `data()` función recupera los valores con tipo de `LaborHours` atributos de todos los <`Location`> elementos de un modelo de producto. Según el esquema XML asociado con el `Instruction` columna, `LaborHours` es de **xs: decimal** tipo.  
   
 ```  
 SELECT Instructions.query('   
@@ -154,7 +154,7 @@ WHERE ProductModelID=7
  Esta consulta devuelve 12.75 como resultado.  
   
 > [!NOTE]  
->  El uso explícito de la **data()** función en este ejemplo es solo para fines ilustrativos. Si no se especifica, **sum()** aplica implícitamente la **data()** función para extraer los valores con tipo de los nodos.  
+>  El uso explícito de la **data()** función en este ejemplo tiene solo fines ilustrativos. Si no se especifica, **sum()** aplica implícitamente la **data()** función para extraer los valores de los nodos con tipo.  
   
 ## <a name="see-also"></a>Vea también  
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

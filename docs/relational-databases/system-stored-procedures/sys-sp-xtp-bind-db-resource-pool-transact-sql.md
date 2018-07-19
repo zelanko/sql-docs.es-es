@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Documentos de Microsoft
+title: Sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4ce8af4df2491d6b80acf931ae769b1a0299504b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260298"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056093"
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -60,9 +60,9 @@ sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'
 ## <a name="messages"></a>Mensajes  
  Cuando se produce un error, `sp_xtp_bind_db_resource_pool` devuelve uno de estos mensajes.  
   
- **Base de datos no existe**  
+ **No existe la base de datos**  
  Database_name debe hacer referencia a una base de datos existente. Si no hay bases de datos con el identificador especificado, se devolverá el siguiente mensaje:   
-*Id. de base de datos %d no existe.  Use un identificador de base de datos válido para este enlace.*  
+*Id. de base de datos %d no existe.  Use un Id. de base de datos válido para este enlace.*  
   
 ```  
 Msg 911, Level 16, State 18, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
@@ -71,16 +71,16 @@ Database 'Hekaton_DB213' does not exist. Make sure that the name is entered corr
   
 **Base de datos es una base de datos del sistema**  
  Las tablas de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] no se pueden crear en bases de datos del sistema.  Por tanto, no es válido crear un enlace de memoria de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] para tales bases de datos.  Se devuelve el siguiente error:  
-*Database_name %s hace referencia a una base de datos del sistema.  Grupos de recursos solo se pueden enlazar a una base de datos de usuario.*  
+*Database_name %s hace referencia a una base de datos del sistema.  Los grupos de recursos solo pueden estar enlazados a una base de datos de usuario.*  
   
 ```  
 Msg 41371, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
 Binding to a resource pool is not supported for system database 'master'. This operation can only be performed on a user database.  
 ```  
   
-**No existe el grupo de recursos**  
+**Grupo de recursos no existe.**  
  El grupo de recursos de servidor que ha identificado resource_pool_name debe haberse creado antes de ejecutar `sp_xtp_bind_db_resource_pool`.  Si no hay un grupo con el identificador especificado, se devolverá el siguiente error:  
-*Grupo de recursos %s no existe.  Escriba un nombre de grupo de recursos válidos.*  
+*Grupo de recursos %s no existe.  Escriba un nombre de grupo de recursos válido.*  
   
 ```  
 Msg 41370, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
@@ -89,7 +89,7 @@ Resource pool 'Pool_Hekaton' does not exist or resource governor has not been re
   
 **Pool_name se refiere a un grupo de sistema reservado**  
  Los nombres de grupo “INTERNAL” y “DEFAULT” están reservados para los grupos de servidores del sistema.  No es válido enlazar explícitamente una base de datos a cualquiera de estos.  Si se especifica un nombre de grupo de servidores del sistema, se devuelve el error siguiente:  
-*Grupo de recursos %s es un grupo de recursos del sistema.  Grupos de recursos del sistema no se pueden enlazar explícitamente a una base de datos mediante este procedimiento.*  
+*Grupo de recursos %s es un grupo de recursos del sistema.  Grupos de recursos del sistema no pueden estar enlazados explícitamente a una base de datos mediante este procedimiento.*  
   
 ```  
 Msg 41373, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
@@ -97,8 +97,8 @@ Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'
 ```  
   
 **Base de datos ya está enlazado a otro grupo de recursos**  
- Una base de datos se puede enlazar a solo un grupo de recursos de servidor en todo momento. Los enlaces de la base de datos a grupos de recursos de servidor se deben haber quitado explícitamente antes de que se puedan enlazar a otro grupo. Vea [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
-*Base de datos %s ya está enlazado al grupo de recursos %s.  Debe desenlazar antes de poder crear un nuevo enlace.*  
+ Una base de datos se puede enlazar a solo un grupo de recursos de servidor en todo momento. Los enlaces de la base de datos a grupos de recursos de servidor se deben haber quitado explícitamente antes de que se puedan enlazar a otro grupo. Consulte [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
+*Base de datos %s ya está enlazado al grupo de recursos %s.  Es preciso que quite antes de poder crear un nuevo enlace.*  
   
 ```  
 Msg 41372, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 54  
@@ -109,7 +109,7 @@ Database 'Hekaton_DB' is currently bound to a resource pool. A database must be 
   
 **Enlace correcto**  
  Cuando el proceso es correcto, la función devuelve el siguiente mensaje de operación correcta, que se registra en el registro de errores de SQL  
-*Un enlace de recurso se creó correctamente entre la base de datos con Id. de %d y el grupo de recursos con Id. %d.*  
+*Un enlace de recursos se creó correctamente entre el grupo de recursos con Id. %d y de la base de datos con Id. de %d.*  
   
 ## <a name="examples"></a>Ejemplos  
 A.  El siguiente código de ejemplo enlaza la base de datos Hekaton_DB con el grupo de recursos de servidor Pool_Hekaton.  
@@ -120,7 +120,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  El enlace surte efecto la próxima vez que la base de datos pase a estar en línea.  
  
- B. Ejemplo ampliado de ejemplo que incluye algunas comprobaciones básicas anterior.  Ejecute la siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ B. Ejemplo ampliado de ejemplo que incluye algunas comprobaciones básicas anterior.  Ejecute el siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -158,6 +158,6 @@ END
   
 ## <a name="see-also"></a>Vea también  
  [Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Sys.sp_xtp_unbind_db_resource_pool & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
+ [Sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

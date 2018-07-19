@@ -1,5 +1,5 @@
 ---
-title: Consultas XQuery con jerarquía | Documentos de Microsoft
+title: Consultas XQuery con jerarquía | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,21 +24,21 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dd9e93969bd8677311edc22ae61f314c8b89c5d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077232"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048295"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Consultas XQuery con jerarquía
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  La mayoría **xml** escriba columnas en la **AdventureWorks** base de datos son documentos semiestructurados. Por lo tanto, los documentos almacenados en cada fila pueden tener un aspecto diferente. Los ejemplos de consultas incluidos en este tema muestran cómo extraer información de estos documentos.  
+  La mayoría **xml** escriba columnas en el **AdventureWorks** base de datos son documentos semiestructurados. Por lo tanto, los documentos almacenados en cada fila pueden tener un aspecto diferente. Los ejemplos de consultas incluidos en este tema muestran cómo extraer información de estos documentos.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. A partir de los documentos de instrucciones de fabricación, recupere ubicaciones de los centros de trabajo junto con el primer paso del proceso de fabricación en esas ubicaciones  
- Para el modelo de producto 7, la consulta genera XML que incluye el <`ManuInstr`> elemento, con **ProductModelID** y **ProductModelName** atributos y uno o más <`Location`> elementos secundarios.  
+ Para el modelo de producto 7, la consulta genera XML que incluye el <`ManuInstr`> elemento, con **ProductModelID** y **ProductModelName** atributos y uno o varios <`Location`> elementos secundarios.  
   
  Cada elemento <`Location`> tiene su propio conjunto de atributos y un elemento secundario <`step`>. Este elemento secundario <`step`> es el primer paso del proceso de fabricación en la ubicación del centro de trabajo.  
   
@@ -71,7 +71,7 @@ WHERE ProductModelID=7
   
 -   Al construir el elemento <`Location`>, $wc/@* recupera todos los atributos de ubicación de centros de trabajo.  
   
--   El **string()** función devuelve el valor de cadena de la <`step`> elemento.  
+-   El **string()** función devuelve el valor de cadena desde el <`step`> elemento.  
   
  Éste es un resultado parcial:  
   

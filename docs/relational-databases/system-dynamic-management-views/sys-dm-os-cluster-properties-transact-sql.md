@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_cluster_properties (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_os_cluster_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 617f40a71074c8480d38e2eb5f59e108ee2d6ff7
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464601"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058239"
 ---
 # <a name="sysdmosclusterproperties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,16 +38,16 @@ ms.locfileid: "34464601"
  Estas propiedades se usan para establecer los valores que afectan a la detección de errores, el tiempo de respuesta de errores y el registro para supervisar el estado de mantenimiento de la instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 
-|Nombre de la columna|Propiedad|Description|  
+|Nombre de la columna|Property|Descripción|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|bigint|Nivel de registro para el clúster de conmutación por error de SQL Server. Se puede activar el registro detallado para proporcionar detalles adicionales en los registros de errores para solucionar problemas. Los valores pueden ser los siguientes:<br /><br /> 0: el registro está desactivado (valor predeterminado)<br /><br /> 1: solo errores<br /><br /> 2: errores y advertencias<br /><br /> Para obtener más información, consulte [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
-|SqlDumperDumpFlags|bigint|Las marcas de volcado de SQLDumper determinan el tipo de archivos de volcado generados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El valor predeterminado es 0.|  
+|VerboseLogging|BIGINT|Nivel de registro para el clúster de conmutación por error de SQL Server. Se puede activar el registro detallado para proporcionar detalles adicionales en los registros de errores para solucionar problemas. Los valores pueden ser los siguientes:<br /><br /> 0: el registro está desactivado (valor predeterminado)<br /><br /> 1: solo errores<br /><br /> 2: errores y advertencias<br /><br /> Para obtener más información, consulte [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
+|SqlDumperDumpFlags|BIGINT|Las marcas de volcado de SQLDumper determinan el tipo de archivos de volcado generados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El valor predeterminado es 0.|  
 |SqlDumperDumpPath|nvarchar(260)|Ubicación donde la utilidad SQLDumper genera los archivos de volcado.|  
-|SqlDumperDumpTimeOut|bigint|Valor de tiempo de espera en milisegundos para que la utilidad SQLDumper genere un volcado en caso de un error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El valor predeterminado es 0.|  
-|FailureConditionLevel|bigint|Establece las condiciones en que el clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe producir la conmutación por error o reiniciarse. El valor predeterminado es 3. Para obtener una explicación detallada o para cambiar los valores de propiedad, vea [configurar los valores de propiedad FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).|  
-|HealthCheckTimeout|bigint|Valor de tiempo de espera que establece cuánto tiempo debe la DLL del recurso del motor de base de datos de SQL Server esperar la información de estado del servidor antes de considerar que la instancia de SQL Server no responde. El valor de tiempo de espera se expresa en milisegundos. Valor predeterminado es 60000. Para obtener más información o para cambiar el valor de esta propiedad, vea [Configure HealthCheckTimeout Property Settings](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md).|  
+|SqlDumperDumpTimeOut|BIGINT|Valor de tiempo de espera en milisegundos para que la utilidad SQLDumper genere un volcado en caso de un error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El valor predeterminado es 0.|  
+|FailureConditionLevel|BIGINT|Establece las condiciones en que el clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe producir la conmutación por error o reiniciarse. El valor predeterminado es 3. Para obtener una explicación detallada o para cambiar los valores de propiedad, vea [Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).|  
+|HealthCheckTimeout|BIGINT|Valor de tiempo de espera que establece cuánto tiempo debe la DLL del recurso del motor de base de datos de SQL Server esperar la información de estado del servidor antes de considerar que la instancia de SQL Server no responde. El valor de tiempo de espera se expresa en milisegundos. El valor predeterminado es 60000. Para obtener más información o para cambiar el valor de esta propiedad, vea [Configure HealthCheckTimeout Property Settings](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita permisos VIEW SERVER STATE en la instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="examples"></a>Ejemplos  

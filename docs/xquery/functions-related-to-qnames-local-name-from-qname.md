@@ -1,5 +1,5 @@
 ---
-title: local-nombre-de-QName (XQuery) | Documentos de Microsoft
+title: local-nombre-de-QName (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 691e26b9e58bbb83706fb987a06280321dc37656
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077762"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061363"
 ---
-# <a name="functions-related-to-qnames---local-name-from-qname"></a>Las funciones relacionadas con QNames - nombre local de QName
+# <a name="functions-related-to-qnames---local-name-from-qname"></a>Funciones relacionadas con QNames: local-nombre-de-QName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve un xs: NCName que representa la parte local del QName especificado por *$arg*. El resultado es una secuencia vacía si *$arg* es una secuencia vacía.  
@@ -44,7 +44,7 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  Es el QName del que se debería extraer el nombre local.  
   
 ## <a name="examples"></a>Ejemplos  
- Este tema ofrecen ejemplos de XQuery con instancias XML almacenadas en varias **xml** escriba columnas en la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos.  
+ En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** escriba columnas en el [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos.  
   
  En el ejemplo siguiente se usa el **local-name-from-QName()** función para recuperar el nombre local y URI de espacio de nombres de elementos de un valor de tipo QName. En el ejemplo, se realizan las tareas siguientes:  
   
@@ -82,6 +82,6 @@ FROM T
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Las funciones relacionadas con QNames &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [Funciones relacionadas con QNames &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

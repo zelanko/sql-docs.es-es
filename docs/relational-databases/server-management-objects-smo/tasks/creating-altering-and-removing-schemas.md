@@ -1,5 +1,5 @@
 ---
-title: Crear, modificar y eliminar esquemas | Documentos de Microsoft
+title: Crear, modificar y eliminar esquemas | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e2990ccbfd28e16d71aba887e814805e9af50bca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966770"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060263"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>Crear, modificar y eliminar esquemas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "32966770"
   El objeto <xref:Microsoft.SqlServer.Management.Smo.Schema> representa un contexto de propiedad para el objeto de la base de datos. La propiedad <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.Database> representa una colección de objetos <xref:Microsoft.SqlServer.Management.Smo.Schema>.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-schema-in-visual-basic"></a>Crear, modificar y quitar un esquema en Visual Basic  
  En este ejemplo de código se muestra cómo crear un esquema y cómo asignarlo a un objeto de base de datos. A continuación, el programa concede el permiso a un usuario y, después, crea una nueva tabla en el esquema.  

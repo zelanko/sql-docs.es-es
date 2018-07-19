@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_stats_histogram (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_db_stats_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,16 +25,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: af1930b1cd5f8536c9e9f196a8ea739538042ca0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464241"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042773"
 ---
 # <a name="sysdmdbstatshistogram-transact-sql"></a>Sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Devuelve el histograma de estadísticas para el objeto de base de datos especificada (tabla o vista indizada) actual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos. Similar a `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
+Devuelve el histograma de estadísticas para el objeto de base de datos especificado (tabla o vista indizada) en el actual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos. Similar a `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
 > [!NOTE] 
 > Está disponible a partir de esta DMF [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2
@@ -54,7 +54,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_id |**int**|Identificador del objeto (tabla o vista indizada) para el que se devuelven las propiedades del objeto de estadísticas.|  
 |stats_id |**int**|Identificador del objeto de estadísticas. Es único dentro de la vista indizada o la tabla. Para obtener más información, vea [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
@@ -63,13 +63,13 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |RANGE_ROWS |**real** |Número calculado de filas cuyo valor de columna está comprendido en un paso del histograma, sin incluir el límite superior. |
 |equal_rows |**real** |Número calculado de filas cuyo valor de columna es igual al límite superior del paso del histograma. |
 |DISTINCT_RANGE_ROWS |**bigint** |Número calculado de filas que tienen un valor de columna distinto en un paso del histograma, sin incluir el límite superior. |
-|average_range_rows |**real** |Número medio de filas con valores de columna duplicados en un paso del histograma, excluido el límite superior (`RANGE_ROWS / DISTINCT_RANGE_ROWS` para `DISTINCT_RANGE_ROWS > 0`). |
+|average_range_rows |**real** |Número promedio de filas con valores de columna duplicados en un paso del histograma, excluido el límite superior (`RANGE_ROWS / DISTINCT_RANGE_ROWS` para `DISTINCT_RANGE_ROWS > 0`). |
   
- ## <a name="remarks"></a>Comentarios  
+ ## <a name="remarks"></a>Notas  
  
  El conjunto de resultados de `sys.dm_db_stats_histogram` devuelve información similar a `DBCC SHOW_STATISTICS WITH HISTOGRAM` y también incluye `object_id`, `stats_id`, y `step_number`.
 
- Dado que la columna `range_high_key` es una datos sql_variant tipo, puede que necesite usar `CAST` o `CONVERT` si lleva a cabo comparación con una constante de cadena no es un predicado.
+ Dado que la columna `range_high_key` es una de datos sql_variant tipo, es posible que deba usar `CAST` o `CONVERT` si lleva a un predicado de comparación con una constante que no son de cadena.
 
 ### <a name="histogram"></a>Histograma
   
@@ -91,14 +91,14 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  El optimizador de consultas define los pasos del histograma en función de su importancia estadística. Utiliza un algoritmo de diferencias máximas para minimizar el número de pasos del histograma a la vez que minimiza las diferencias entre los valores límite. El número máximo de pasos es 200. El número de pasos del histograma puede ser menor que el número de valores distintos, incluso para las columnas con menos de 200 puntos de límite. Por ejemplo, una columna con 100 valores distintos puede tener un histograma con menos de 100 puntos de límite.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 
 Necesita que el usuario tenga permisos de selección en columnas de estadísticas o posea la tabla, o que el usuario sea miembro del rol fijo de servidor `sysadmin`, del rol fijo de base de datos `db_owner` o del rol fijo de base de datos `db_ddladmin`.
 
 ## <a name="examples"></a>Ejemplos  
 
 ### <a name="a-simple-example"></a>A. Ejemplo sencillo    
-En el ejemplo siguiente se crea y rellena una tabla sencilla. A continuación, crea las estadísticas en la `Country_Name` columna.
+El ejemplo siguiente se crea y rellena una tabla sencilla. A continuación, crea las estadísticas en la `Country_Name` columna.
 
 ```sql
 CREATE TABLE Country
@@ -109,12 +109,12 @@ INSERT Country (Country_Name) VALUES ('Canada'), ('Denmark'), ('Iceland'), ('Per
 CREATE STATISTICS Country_Stats  
     ON Country (Country_Name) ;  
 ```   
-Ocupa la clave principal `stat_id` el número 1, por lo que se llame a `sys.dm_db_stats_histogram` para `stat_id` número 2, para devolver el histograma de estadísticas para la `Country` tabla.    
+La clave principal se ocupa `stat_id` número 1, por lo que se llame a `sys.dm_db_stats_histogram` para `stat_id` número 2, para devolver el histograma de estadísticas para el `Country` tabla.    
 ```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
-### <a name="b-useful-query"></a>B. Consulta útil:   
+### <a name="b-useful-query"></a>B. Consultas útiles:   
 ```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
@@ -123,15 +123,15 @@ CROSS APPLY sys.dm_db_stats_histogram(s.[object_id], s.stats_id) AS hist
 WHERE s.[name] = N'<statistic_name>';
 ```
 
-### <a name="c-useful-query"></a>C. Consulta útil:
-En el ejemplo siguiente se seleccionan de tabla `Country` con un predicado en la columna `Country_Name`.
+### <a name="c-useful-query"></a>C. Consultas útiles:
+Selecciona el siguiente ejemplo de tabla `Country` con un predicado en la columna `Country_Name`.
 
 ```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
-En el ejemplo siguiente se examina la estadística creada anteriormente en la tabla `Country` y columna `Country_Name` para el paso del histograma coincidencia del predicado de la consulta anterior.
+El ejemplo siguiente se examina la estadística creada anteriormente en la tabla `Country` y la columna `Country_Name` el paso del histograma que coinciden con el predicado en la consulta anterior.
 
 ```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 

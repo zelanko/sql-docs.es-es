@@ -1,5 +1,5 @@
 ---
-title: Procedimientos almacenados (Transact-SQL) de almacenamiento de datos de administración | Documentos de Microsoft
+title: Almacén de datos de administración de los procedimientos almacenados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 242b3f7e0514b183b9626a6acb87779a595c6787
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237428"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060360"
 ---
 # <a name="management-data-warehouse-stored-procedures-transact-sql"></a>Procedimientos almacenados de almacén de administración de datos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

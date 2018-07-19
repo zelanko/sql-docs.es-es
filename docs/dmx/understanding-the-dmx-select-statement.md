@@ -1,5 +1,5 @@
 ---
-title: Descripción de la DMX Select (instrucción) | Documentos de Microsoft
+title: Descripción de DMX instrucción Select | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a63354280ef9c955c081d34d87d337ba0c9d4f87
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842608"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042053"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Descripción de la instrucción Select de DMX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  El [seleccione](../dmx/select-dmx.md) instrucción es la base para la mayoría de las consultas que crea con datos de extensiones de minería (DMX) en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Puede realizar muchos tipos distintos de tareas, como examinar modelos de minería de datos y realizar predicciones con ellos.  
+  El [seleccione](../dmx/select-dmx.md) instrucción es la base para la mayoría de las consultas que crean con extensiones de datos minería de datos (DMX) en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Puede realizar muchos tipos distintos de tareas, como examinar modelos de minería de datos y realizar predicciones con ellos.  
   
- Siguiente se indican las tareas que puede completar mediante la **seleccione** instrucción:  
+ Siguiente es las tareas que puede completar mediante la **seleccione** instrucción:  
   
 -   Examinar un modelo de minería de datos. El conjunto de filas de esquema define la estructura de un modelo.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34842608"
   
 -   Copiar modelos de minería de datos.  
   
- Cada una de estas tareas usa un conjunto diferente de datos, que llamaremos un *dominio de datos*. Definir el dominio de datos en el **FROM** cláusula de la instrucción.  
+ Cada una de estas tareas usa un conjunto diferente de datos, que llamaremos un *dominio datos*. Definir el dominio de datos en el **FROM** cláusula de la instrucción.  
   
 -   Desea buscar objetos en el propio modelo de minería de datos, como la regla que define un conjunto de datos, o una fórmula empleada para realizar predicciones.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "34842608"
   
      En ese caso, debe obtener detalles de la estructura de minería de datos, que es el dominio de datos, y examinar las filas individuales de columnas como Gender, Bike Buyer, etc.  
   
- **Importante:** todo lo que se incluye en la lista de expresiones o en la **donde** cláusula debe proceder del dominio de datos definido por el **FROM** cláusula. No puede mezclar dominios de datos.  
+ **Importante:** todo lo que se incluye en la lista de expresiones o en el **donde** cláusula debe proceder del dominio de datos definido por el **FROM** cláusula. No puede mezclar dominios de datos.  
   
-##  <a name="Select_Types"></a> Seleccionar tipos de  
+##  <a name="Select_Types"></a> Seleccionar tipos  
  La sintaxis de **seleccione** instrucción admite muchas tareas diferentes. Use los patrones siguientes para realizar estas tareas:  
   
 -   [Predecir](#Predicting)  
@@ -59,7 +59,7 @@ ms.locfileid: "34842608"
 ###  <a name="Predicting"></a> Predecir  
  Puede realizar predicciones basadas en un modelo de minería usando los siguientes tipos de consulta.  
   
- Puede incluir cualquiera de la exploración o de predicción **seleccione** instrucciones incluidas en el **FROM** y **donde** cláusulas de una combinación de predicción **seleccione** instrucción.  
+ Puede incluir cualquiera de la exploración o de predicción **seleccione** instrucciones dentro de la **FROM** y **donde** cláusulas de una combinación de predicción **seleccione** instrucción.  
   
 |Tipo de consulta|Descripción|  
 |----------------|-----------------|  

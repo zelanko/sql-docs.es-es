@@ -1,5 +1,5 @@
 ---
-title: Sys.sysobjects (Transact-SQL) | Documentos de Microsoft
+title: Sys.sysobjects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 45a2efd58090fa6b319c092f433b45b8b9a50d41
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221866"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061673"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "33221866"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|Nombre del objeto|  
+|NAME|**sysname**|Nombre del objeto|  
 |id|**int**|Número de identificación de objeto|  
 |xtype|**char(2)**|Tipo de objeto. Puede ser uno de los siguientes tipos de objeto:<br /><br /> AF = Función de agregado (CLR)<br /><br /> C = restricción CHECK<br /><br /> D = Valor predeterminado o restricción DEFAULT<br /><br /> F = Restricción FOREIGN KEY<br /><br /> L = Registro<br /><br /> FN = Función escalar<br /><br /> FS = Función escalar del ensamblado (CLR)<br /><br /> FT = Función con valores de tabla de ensamblado (CLR)<br /><br /> IF = Función de tabla en línea<br /><br /> IT = tabla interna<br /><br /> P = Procedimiento almacenado<br /><br /> PC = Procedimiento almacenado del ensamblado (CLR)<br /><br /> PK = Restricción PRIMARY KEY (de tipo K)<br /><br /> RF = Procedimiento almacenado de filtro de replicación<br /><br /> S = Tabla del sistema<br /><br /> SN = Sinónimo<br /><br /> SQ = Cola de servicio<br /><br /> TA = Desencadenador DML del ensamblado (CLR)<br /><br /> TF = Función de tabla<br /><br /> TR = desencadenador DML SQL<br /><br /> TT = Tipo de tabla<br /><br /> U = Tabla de usuario<br /><br /> UQ = Restricción UNIQUE (de tipo K)<br /><br /> V = Vista<br /><br /> X = Procedimiento almacenado extendido|  
-|uid|**smallint**|Identificador de esquema del propietario del objeto. Para bases de datos actualizadas a partir de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el identificador de esquema es igual que el identificador de usuario del propietario. Produce un desbordamiento o devuelve NULL si el número de usuarios y roles es superior a 32.767.<br /><br /> **\*\* Importante \* \***  si utiliza alguna de las siguientes acciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instrucciones DDL, debe utilizar el [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vista en lugar de sys.sysobjects de catálogo.<br /><br /> CREAR &AMP;#124; ALTER &AMP;#124; DROP USER<br /><br /> CREAR &AMP;#124; ALTER &AMP;#124; DROP ROLE<br /><br /> CREAR &AMP;#124; ALTER &AMP;#124; DROP APPLICATION ROLE<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
+|uid|**smallint**|Identificador de esquema del propietario del objeto. Para bases de datos actualizadas a partir de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el identificador de esquema es igual que el identificador de usuario del propietario. Produce un desbordamiento o devuelve NULL si el número de usuarios y roles es superior a 32.767.<br /><br /> **\*\* Importante \* \***  si utiliza alguna de las siguientes acciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instrucciones DDL, debe usar el [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) en lugar de sys.sysobjects la vista de catálogo.<br /><br /> CREAR &AMP;#124; ALTER &AMP;#124; DROP USER<br /><br /> CREAR &AMP;#124; ALTER &AMP;#124; DROP ROLE<br /><br /> CREAR &AMP;#124; ALTER &AMP;#124; DROP APPLICATION ROLE<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
 |info|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |base_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

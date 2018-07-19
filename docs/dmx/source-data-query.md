@@ -1,5 +1,5 @@
 ---
-title: '&lt;consulta de origen de datos&gt; | Documentos de Microsoft'
+title: '&lt;consulta de origen de datos&gt; | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fdd0a3091440295e393d969f1b8161b83fb58d95
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842988"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063965"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;consulta de origen de datos&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34842988"
   
  Mientras **OPENQUERY** es una función similar a **OPENROWSET**, **OPENQUERY** tiene las siguientes ventajas:  
   
--   Una consulta DMX es mucho más fácil escribir con **OPENQUERY**. En lugar de crear una nueva cadena de conexión cada vez que se escribe una consulta, puede aprovechar la cadena de conexión existente del origen de datos. El objeto de origen de datos también puede controlar el acceso a datos para usuarios individuales.  
+-   Es mucho más fácil escribir con una consulta DMX **OPENQUERY**. En lugar de crear una nueva cadena de conexión cada vez que se escribe una consulta, puede aprovechar la cadena de conexión existente del origen de datos. El objeto de origen de datos también puede controlar el acceso a datos para usuarios individuales.  
   
 -   El administrador dispone de más control sobre el modo de acceso a los datos del servidor. Por ejemplo, el administrador puede administrar los proveedores que se cargan en el servidor y los datos externos a los que se puede obtener acceso.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "34842988"
 ## <a name="see-also"></a>Vea también  
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
- [Tablas anidadas &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)  
+ [Tablas anidadas &#40;Analysis Services - minería de datos&#41;](../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)  
   
   

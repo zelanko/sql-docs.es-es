@@ -1,5 +1,5 @@
 ---
-title: Los lenguajes de programación | Documentos de Microsoft
+title: Lenguajes de programación | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -24,21 +24,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5de4117bd8c400d94cb1bdb5ac7c6dcc9ee109ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966730"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061932"
 ---
 # <a name="smo-programming-languages"></a>Lenguajes de programación de SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Esta sección se describe cómo programar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#. NET.
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Introducción a Visual C&#35; .NET](../../relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md)|Proporciona información sobre cómo empezar a escribir un programa SMO en Visual C# .NET|  
   
- SMO es un ensamblado de .NET. Para programar mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework, debe elegir un lenguaje que sea compatible con Common Language Runtime. En la referencia de SMO, hay sintaxis de los lenguajes administrados como Visual C#. NET.  
+ SMO es un ensamblado de .NET. Para programar mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework, debe elegir un lenguaje que sea compatible con Common Language Runtime. En la referencia SMO, hay sintaxis de los lenguajes administrados como Visual C#. NET.  
   
   

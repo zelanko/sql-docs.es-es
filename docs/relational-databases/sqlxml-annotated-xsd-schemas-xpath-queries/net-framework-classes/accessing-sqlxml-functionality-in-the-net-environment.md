@@ -1,5 +1,5 @@
 ---
-title: Acceso a la funcionalidad SQLXML en el entorno .NET | Documentos de Microsoft
+title: Acceso a la funcionalidad SQLXML en el entorno .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 023ffb86d8be4e2a6ba3dd897bdd64460824926b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968080"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051483"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>Acceso a la funcionalidad de SQLXML en el entorno .NET
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32968080"
   
 -   Cómo pueden aplicar actualizaciones de datos a tablas los DiffGrams que se generan en el entorno de .NET Framework [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- En esta aplicación se ejecuta una consulta XPath para un esquema XSD. La ejecución de la consulta XPath devuelve un documento XML que consta de los datos de contacto (**FirstName**, **LastName**). La aplicación carga el documento XML en el conjunto de datos en el entorno de .NET Framework. Se modifican los datos del conjunto de datos: el nombre del primer contacto del conjunto de datos cambia a "Susan". El DiffGram se genera a partir del conjunto de datos y después se aplica la actualización especificada en el DiffGram (el cambio en el nombre del empleado) a la tabla Person.Contact.   
+ En esta aplicación se ejecuta una consulta XPath para un esquema XSD. La ejecución de la consulta XPath devuelve un documento XML que contiene los datos de contacto (**FirstName**, **LastName**). La aplicación carga el documento XML en el conjunto de datos en el entorno de .NET Framework. Se modifican los datos del conjunto de datos: el nombre del primer contacto del conjunto de datos cambia a "Susan". El DiffGram se genera a partir del conjunto de datos y después se aplica la actualización especificada en el DiffGram (el cambio en el nombre del empleado) a la tabla Person.Contact.   
   
 > [!NOTE]  
 >  En el código, debe suministrarse el nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión.  

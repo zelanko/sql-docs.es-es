@@ -1,5 +1,5 @@
 ---
-title: Tipo de reglas de conversión en XQuery | Documentos de Microsoft
+title: Tipo de reglas de conversión en XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,22 +28,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3142794843083c5dcc314b7dc6b0f69cb62f889e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077912"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055250"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Reglas de conversión de tipos en XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   El siguiente diagrama de especificaciones de operadores y funciones de W3C XQuery 1.0 y XPath 2.0 muestra los tipos de datos integrados. Se incluyen los tipos primitivo integrado y derivado integrado.  
   
- ![Jerarquía de tipos de XQuery 1.0](../xquery/media/xquery-typing-rules.gif "jerarquía de tipos de XQuery 1.0")  
+ ![Jerarquía de tipos XQuery 1.0](../xquery/media/xquery-typing-rules.gif "jerarquía de tipos XQuery 1.0")  
   
  Este tema describe las reglas de conversión de tipos que se aplican al realizar conversiones de un tipo a otro utilizando uno de los métodos siguientes:  
   
--   Conversión explícita que realiza mediante **convertidos en** o las funciones de constructor de tipo (por ejemplo, `xs:integer("5")`).  
+-   Conversión explícita que se hace mediante **convertido** o las funciones de constructor de tipo (por ejemplo, `xs:integer("5")`).  
   
 -   Conversión implícita que se produce durante la promoción de tipo.  
   
@@ -54,19 +54,19 @@ ms.locfileid: "33077912"
   
 -   Un tipo primitivo integrado puede convertirse a otro tipo primitivo integrado, en función de las reglas de la tabla.  
   
--   Un tipo primitivo puede convertirse a cualquier tipo derivado de dicho tipo primitivo. Por ejemplo, es posible convertir **xs: decimal** a **xs: Integer**, o de **xs: decimal** a **xs**.  
+-   Un tipo primitivo puede convertirse a cualquier tipo derivado de dicho tipo primitivo. Por ejemplo, puede convertir **xs: decimal** a **xs: Integer**, o desde **xs: decimal** a **xs**.  
   
--   Un tipo derivado puede convertirse a cualquier tipo que sea su antecesor en la jerarquía de tipos, hasta llegar al tipo base primitivo integrado. Por ejemplo, es posible convertir **xs: token** a **xs: normalizedString** o a **xs: String**.  
+-   Un tipo derivado puede convertirse a cualquier tipo que sea su antecesor en la jerarquía de tipos, hasta llegar al tipo base primitivo integrado. Por ejemplo, puede convertir **xs: token** a **xs: normalizedString** o a **xs: String**.  
   
 -   Un tipo derivado puede convertirse a un tipo primitivo si su antecesor primitivo se puede convertir al tipo de destino. Por ejemplo, puede convertir **xs: Integer**, un tipo derivado, a un **xs: String**, primitivos de tipo, porque **xs: decimal**, **xs: Integer**del antecesor primitivo, se puede convertir en **xs: String**.  
   
--   Un tipo derivado puede convertirse a otro tipo derivado si el antecesor primitivo del tipo de origen puede convertirse al antecesor primitivo del tipo de destino. Por ejemplo, es posible convertir **xs: Integer** a **xs: token**, porque es posible convertir **xs: decimal** a **xs: String**.  
+-   Un tipo derivado puede convertirse a otro tipo derivado si el antecesor primitivo del tipo de origen puede convertirse al antecesor primitivo del tipo de destino. Por ejemplo, puede convertir **xs: Integer** a **xs: token**, ya que es posible convertir **xs: decimal** a **xs: String**.  
   
--   Las reglas para convertir tipos definidos por el usuario a tipos integrados son las mismas que se aplican a los tipos integrados. Por ejemplo, puede definir un **myInteger** tipo derivado de **xs: Integer** tipo. A continuación, **myInteger** pueden convertirse a **xs: token**, porque **xs: decimal** pueden convertirse a **xs: String**.  
+-   Las reglas para convertir tipos definidos por el usuario a tipos integrados son las mismas que se aplican a los tipos integrados. Por ejemplo, puede definir un **myInteger** tipo derivado de **xs: Integer** tipo. A continuación, **myInteger** puede convertirse a **xs: token**, porque **xs: decimal** puede convertirse a **xs: String**.  
   
  No se admiten los siguientes tipos de conversión:  
   
--   Conversión a o desde tipos de lista. Esto incluye los tipos de lista definida por el usuario y tipos de lista integrados como **xs: IDREFS**, **xs: Entities**, y **xs: NMTOKENS**.  
+-   Conversión a o desde tipos de lista. Esto incluye los tipos de lista definido por el usuario y los tipos de lista integrados como **xs: IDREFS**, **xs: Entities**, y **xs: NMTOKENS**.  
   
 -   Conversión a o desde **xs: QName** no se admite.  
   
@@ -142,19 +142,19 @@ go
 ```  
   
 ## <a name="implicit-casting"></a>Conversión implícita  
- La conversión implícita solo se admite para tipos numéricos y tipos atómicos sin tipo. Por ejemplo, la siguiente **min()** función devuelve el menor de los dos valores:  
+ La conversión implícita solo se admite para tipos numéricos y tipos atómicos sin tipo. Por ejemplo, la siguiente **min()** función devuelve el mínimo de los dos valores:  
   
 ```  
 min(xs:integer("1"), xs:double("1.1"))  
 ```  
   
- En este ejemplo, los dos valores pasan a la expresión XQuery **min()** función son de tipos diferentes. Por lo tanto, se efectúa una conversión implícita donde **entero** tipo se promueve a **doble** y los dos **doble** se comparan valores.  
+ En este ejemplo, los dos valores pasan a la expresión XQuery **min()** función son de tipos diferentes. Por lo tanto, se efectúa una conversión implícita donde **entero** tipo se promueve a **doble** y los dos **doble** se comparan los valores.  
   
  La promoción de tipo descrita en este ejemplo sigue estas reglas:  
   
 -   Un tipo numérico derivado integrado puede promoverse a su tipo base. Por ejemplo, **entero** puede promoverse a **decimal**.  
   
--   A **decimal** puede promoverse a **float,** y un **float** puede promoverse a **doble**.  
+-   Un **decimal** puede promoverse a **float,** y un **float** puede promoverse a **doble**.  
   
  La conversión implícita solo se admite para tipos numéricos; no se admite en los siguientes casos:  
   
@@ -175,7 +175,7 @@ min(xs:integer("1"), xs:double("1.1"))
  Cuando se convierte a tipos binarios como s:base64Binary o xs:hexBinary desde un tipo de cadena o untypedAtomic, los valores de entrada tienen que ser de codificación base64 o hexadecimal, respectivamente.  
   
 ##### <a name="casting-a-value-to-a-string-or-untypedatomic-type"></a>Convertir un valor a un tipo de cadena o untypedAtomic  
- La conversión al tipo de cadena o untypedAtomic transforma el valor a su representación léxica canónica de XQuery. Concretamente, esto puede suponer que un valor que se haya ajustado a un patrón determinado o a alguna otra restricción durante la entrada de datos no se represente conforme a dicha limitación.  Para informar a los usuarios acerca de esto, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifica los tipos que la restricción de tipo puede ser un problema al proporcionar una advertencia cuando dichos tipos se cargan en la colección de esquemas.  
+ La conversión al tipo de cadena o untypedAtomic transforma el valor a su representación léxica canónica de XQuery. Concretamente, esto puede suponer que un valor que se haya ajustado a un patrón determinado o a alguna otra restricción durante la entrada de datos no se represente conforme a dicha limitación.  Para informar a los usuarios acerca de esto, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifica los tipos en donde la restricción de tipo puede ser un problema al proporcionar una advertencia cuando dichos tipos se cargan en la colección de esquemas.  
   
  Cuando se convierte un valor del tipo xs:float o xs:double, o alguno de sus subtipos, al tipo de cadena o untypedAtomic, el valor se representa en forma de notación científica. Esto solo sucede cuando el valor absoluto es menor que 1.0E-6 o mayor o igual que 1.0E6, lo que significa que 0 se serializa en notación científica a 0.0E0.  
   

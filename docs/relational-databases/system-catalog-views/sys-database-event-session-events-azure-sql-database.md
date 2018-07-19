@@ -1,5 +1,5 @@
 ---
-title: Sys.database_event_session_events (base de datos de SQL Azure) | Documentos de Microsoft
+title: Sys.database_event_session_events (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,35 +19,35 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9287bfe2f99e4bebc7a57b9ac527c04ada95bf9b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178371"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38065483"
 ---
-# <a name="sysdatabaseeventsessionevents-azure-sql-database"></a>Sys.database_event_session_events (base de datos de SQL Azure)
+# <a name="sysdatabaseeventsessionevents-azure-sql-database"></a>Sys.database_event_session_events (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada evento de una sesión de eventos.  
   
 ||  
 |-|  
-|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 y las versiones posteriores.|  
+|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 y cualquier versión posterior.|  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Identificador de la sesión de eventos. No admite valores NULL.|  
 |event_id|**int**|Id. del evento. Este Id. es único dentro de un objeto de sesión de eventos. No admite valores NULL.|  
-|name|**sysname**|Nombre del evento. No admite valores NULL.|  
+|NAME|**sysname**|Nombre del evento. No admite valores NULL.|  
 |paquete|**sysname**|Nombre del paquete de eventos que contiene el evento. No admite valores NULL.|  
-|Módulo|**sysname**|Nombre del módulo que contiene el evento. No admite valores NULL.|  
+|módulo|**sysname**|Nombre del módulo que contiene el evento. No admite valores NULL.|  
 |predicate|**nvarchar(3000)**|La expresión de predicado aplicada al evento. Acepta valores NULL.|  
 |predicate_xml|**nvarchar(3000)**|La expresión de predicado XML aplicada al evento. Acepta valores NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW DATABASE STATE en el servidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta vista tiene las siguientes cardinalidades de relación.  
   
 ||||  

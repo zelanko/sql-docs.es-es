@@ -1,5 +1,5 @@
 ---
-title: Especificar predicados en un paso de expresión de ruta de acceso | Documentos de Microsoft
+title: Especificar predicados en un paso de expresión de ruta de acceso | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -26,20 +26,20 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 83e100d49f09616c429a1dd6b42550beb8bbcfa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078062"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058525"
 ---
-# <a name="path-expressions---specifying-predicates"></a>Expresiones de ruta de acceso: especificar predicados
+# <a name="path-expressions---specifying-predicates"></a>Expresiones de ruta de acceso: especificación de predicados
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Como se describe en el tema, [expresiones de ruta de acceso en XQuery](../xquery/path-expressions-xquery.md), un paso de eje en una expresión de ruta de acceso incluye los siguientes componentes:  
+  Como se describe en el tema [las expresiones de ruta de acceso de XQuery](../xquery/path-expressions-xquery.md), un paso de eje en una expresión de ruta de acceso incluye los siguientes componentes:  
   
 -   [Un eje](../xquery/path-expressions-specifying-axis.md).  
   
--   Una prueba de nodo. Para obtener más información, consulte [especificar la prueba de nodo en un paso de expresión de ruta de acceso](../xquery/path-expressions-specifying-node-test.md).  
+-   Una prueba de nodo. Para obtener más información, consulte [especificando la prueba de nodo en un paso de expresión de ruta de acceso](../xquery/path-expressions-specifying-node-test.md).  
   
 -   Cero o más predicados. Esto es opcional.  
   
@@ -144,7 +144,7 @@ WHERE ProductModelID=7
   
      La expresión de ruta de acceso de esta consulta devuelve solo los nodos del elemento <`Location`> que tengan especificado el atributo LotSize. Si el predicado devuelve una secuencia vacía para un elemento <`Location`> específico, ese centro de trabajo no se devuelve en el resultado.  
   
-2.  Predicado valores sólo pueden ser xs: Integer, xs: Boolean o nodo\*. Nodo\*, el predicado se evalúa como True si hay nodos y False para una secuencia vacía. Cualquier otro tipo numérico, como double y float, genera un error de tipos estáticos. El valor real del predicado de una expresión es True si y solo si el entero resultante es igual al valor de la posición de contexto. Además, los valores literales solo entero y la **last()** función reducen la cardinalidad de la expresión de paso filtrado en 1.  
+2.  Solo pueden ser valores xs: Integer, xs: Boolean o nodo de predicado\*. Nodo\*, el predicado se evalúa como True si hay nodos y False para una secuencia vacía. Cualquier otro tipo numérico, como double y float, genera un error de tipos estáticos. El valor real del predicado de una expresión es True si y solo si el entero resultante es igual al valor de la posición de contexto. Además, solo los valores literales enteros y **last()** función reducen la cardinalidad de la expresión de filtrado paso a 1.  
   
      Por ejemplo, la siguiente consulta recupera el tercer nodo de elemento secundario del elemento <`Features`>.  
   
@@ -168,7 +168,7 @@ WHERE ProductModelID=7
   
 3.  Si el valor de la expresión de predicado es un valor booleano de tipo simple, el valor real del predicado es igual al valor de la expresión de predicado.  
   
-     Por ejemplo, la siguiente consulta se especifica en un **xml**variable de tipo que contiene una instancia XML, la instancia XML de encuesta del cliente. La consulta recupera los clientes que tienen elementos secundarios. En esta consulta, que sería \<HasChildren > 1\</HasChildren >.  
+     Por ejemplo, la siguiente consulta se especifica en un **xml**variable de tipo que contiene una instancia XML, la instancia XML de encuesta de cliente. La consulta recupera los clientes que tienen elementos secundarios. En esta consulta, que sería \<HasChildren > 1\</HasChildren >.  
   
     ```  
     declare @x xml  
@@ -209,7 +209,7 @@ WHERE ProductModelID=7
   
 4.  Si el valor de la expresión de predicado es una secuencia que contiene al menos un nodo, el valor real del predicado es True.  
   
- Por ejemplo, la consulta siguiente recupera ProductModelID para los modelos de producto cuya descripción de catálogo XML incluya al menos una característica, un elemento secundario de la <`Features`> elemento del espacio de nombres asociado a la **wm**prefijo.  
+ Por ejemplo, la consulta siguiente recupera ProductModelID para los modelos de producto cuya descripción de catálogo XML incluya al menos una característica, un elemento secundario de la <`Features`> elemento del espacio de nombres asociado con el **wm**prefijo.  
   
 ```  
 SELECT ProductModelID  
@@ -225,9 +225,9 @@ WHERE CatalogDescription.exist('
   
 -   La cláusula WHERE especifica la [método exist() (tipo de datos XML)](../t-sql/xml/exist-method-xml-data-type.md).  
   
--   La expresión de ruta de acceso dentro de la **exist()** método especifica un predicado en el segundo paso. Si la expresión de predicado devuelve una secuencia de al menos una característica, el valor de esta expresión de predicado es True. En este caso, dado que la **exist()** método devuelve True, se devuelve ProductModelID.  
+-   La expresión de ruta de acceso dentro de la **exist()** método especifica un predicado en el segundo paso. Si la expresión de predicado devuelve una secuencia de al menos una característica, el valor de esta expresión de predicado es True. En este caso, porque el **exist()** método devuelve True, se devuelve ProductModelID.  
   
 ## <a name="static-typing-and-predicate-filters"></a>Tipos estáticos y filtros de predicado  
- Los predicados también pueden afectar al tipo de una expresión deducido de forma estática. Valores literales enteros y la **last()** función reducen la cardinalidad de la expresión de paso filtrado para al menos uno.  
+ Los predicados también pueden afectar al tipo de una expresión deducido de forma estática. Los valores literales enteros y **last()** función reducir la cardinalidad de la expresión de filtrado paso a lo sumo una.  
   
   

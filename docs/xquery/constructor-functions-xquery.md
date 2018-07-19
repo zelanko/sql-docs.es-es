@@ -1,5 +1,5 @@
 ---
-title: Funciones de constructor (XQuery) | Documentos de Microsoft
+title: Funciones de constructor (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6db36cc2dbd664869633d1d2f198684098ba29b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077752"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059742"
 ---
 # <a name="constructor-functions-xquery"></a>Funciones de constructor (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *$strval*  
  Cadena que se convertirá.  
   
- *TIPO*  
+ *TYP*  
  Cualquier tipo XSD integrado.  
   
-## <a name="remarks"></a>Comentarios  
- Se admiten constructores para tipos XSD atómicos base y derivados. Sin embargo, los subtipos de **xs: Duration**, que incluye **xdt: yearmonthduration y xdt: daytimeduration**, y **xs: QName**, **xs: NMTOKEN**, y **xs: Notation** no son compatibles. Los tipos atómicos definidos por el usuario que están disponibles en las colecciones de esquemas asociadas también están disponibles, siempre que se deriven directa o indirectamente de los tipos siguientes.  
+## <a name="remarks"></a>Notas  
+ Se admiten constructores para tipos XSD atómicos base y derivados. Sin embargo, los subtipos de **xs: Duration**, que incluye **xdt: yearmonthduration y xdt: daytimeduration**, y **xs: QName**, **NMTOKEN**, y **xs: Notation** no se admiten. Los tipos atómicos definidos por el usuario que están disponibles en las colecciones de esquemas asociadas también están disponibles, siempre que se deriven directa o indirectamente de los tipos siguientes.  
   
 #### <a name="supported-base-types"></a>Tipos base compatibles  
  Éstos son los tipos base admitidos:  
@@ -143,7 +143,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
 -   Si el argumento es un literal de otro tipo, la expresión se evaluará durante la compilación. Cuando el valor no satisfaga las restricciones de tipo, se devolverá la secuencia vacía.  
   
 ## <a name="examples"></a>Ejemplos  
- Este tema ofrecen ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos de AdventureWorks.  
+ En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Usar la función dateTime() de XQuery para recuperar descripciones antiguas de productos  
  En este ejemplo, un documento XML de ejemplo primero se asigna a un **xml** variable de tipo. El documento contiene tres elementos <`ProductDescription`> de ejemplo, y cada uno de ellos contiene un elemento secundario <`DateCreated`>.  
@@ -183,7 +183,7 @@ select @x.query('
   
 -   La estructura de bucle FOR ... Estructura de bucle de dónde se usa para recuperar el \<ProductDescription > elemento que cumpla la condición especificada en la cláusula WHERE.  
   
--   El **dateTime() de** función de constructor se utiliza para construir **dateTime** escriba valores para que se puedan comparar adecuadamente.  
+-   El **dateTime() de** función constructora que se usa para construir **dateTime** escriba valores para que se puedan comparar adecuadamente.  
   
 -   Finalmente, la consulta construye el XML resultante. Dado que se pretende construir una secuencia de atributos, en la construcción de XML se utilizan comas y paréntesis.  
   

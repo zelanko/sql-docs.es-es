@@ -1,5 +1,5 @@
 ---
-title: Crear Scripts de Analysis Services en Management Studio | Documentos de Microsoft
+title: Crear Scripts de Analysis Services en Management Studio | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28b1b0068f9ddd9bf47bc2fe93177db469c8b4f1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016822"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057823"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Crear scripts de Analysis Services en Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -62,6 +62,6 @@ ms.locfileid: "34016822"
     >  Normalmente se selecciona **Archivo** para crear versiones diferentes del archivo.  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de consultas XMLA & #40; Analysis Services - datos multidimensionales & #41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
+ [Editor de consultas XMLA &#40;Analysis Services - datos multidimensionales&#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

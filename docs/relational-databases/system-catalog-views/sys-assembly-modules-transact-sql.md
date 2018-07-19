@@ -1,5 +1,5 @@
 ---
-title: Sys.assembly_modules (Transact-SQL) | Documentos de Microsoft
+title: Sys.assembly_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,27 +26,27 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d457f00cdab5d8b7e6584c895c9a9070a1d9e395
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180281"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062030"
 ---
 # <a name="sysassemblymodules-transact-sql"></a>sys.assembly_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Devuelve una fila para cada función, procedimiento o desencadenador definido por un ensamblado de Common Language Runtime (CLR). Esta vista de catálogo asigna los procedimientos almacenados, desencadenadores o funciones CLR a su implementación subyacente. Los objetos de tipo TA, AF, PC, FS y FT tienen un módulo de ensamblado asociado. Para encontrar la asociación entre el objeto y el ensamblado, puede combinar esta vista de catálogo con otras. Por ejemplo, cuando se crea un procedimiento almacenado CLR, se representa mediante una fila de **sys.objects**, una fila en **sys.procedures** (que hereda de **sys.objects**), y una fila de **sys.assembly_modules**. El propio procedimiento almacenado está representado por los metadatos de **sys.objects** y **sys.procedures**. Se encontraron referencias a la implementación de CLR subyacente del procedimiento en **sys.assembly_modules**.  
+  Devuelve una fila para cada función, procedimiento o desencadenador definido por un ensamblado de Common Language Runtime (CLR). Esta vista de catálogo asigna los procedimientos almacenados, desencadenadores o funciones CLR a su implementación subyacente. Los objetos de tipo TA, AF, PC, FS y FT tienen un módulo de ensamblado asociado. Para encontrar la asociación entre el objeto y el ensamblado, puede combinar esta vista de catálogo con otras. Por ejemplo, cuando se crea un procedimiento almacenado CLR, se representa mediante una fila en **sys.objects**, una fila en **sys.procedures** (que hereda de **sys.objects**), y una fila en **sys.assembly_modules**. El propio procedimiento almacenado está representado por los metadatos de **sys.objects** y **sys.procedures**. Las referencias a la implementación de CLR subyacente del procedimiento se encuentran en **sys.assembly_modules**.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Número de identificación del objeto de SQL. Es único en una base de datos.|  
 |**assembly_id**|**int**|Id. del ensamblado desde el que se creó este módulo.|  
-|**assembly_class**|**sysname**|Nombre de la clase en el ensamblado que define este módulo.|  
-|**assembly_method**|**sysname**|Nombre del método en el **assembly_class** que define este módulo.<br /><br /> Es NULL para las funciones de agregado (AF).|  
+|**assembly_class**|**sysname**|Nombre de la clase dentro del ensamblado que define este módulo.|  
+|**assembly_method**|**sysname**|Nombre del método dentro de la **assembly_class** que define este módulo.<br /><br /> Es NULL para las funciones de agregado (AF).|  
 |**null_on_null_input**|**bit**|El módulo se ha declarado para generar una salida NULL para cualquier entrada NULL.|  
-|**execute_as_principal_id**|**int**|Id. de la entidad de seguridad de base de datos en la que se produce el contexto de ejecución, tal como lo especifica la cláusula EXECUTE AS de la función, procedimiento almacenado o desencadenador CLR.<br /><br /> NULL = EXECUTE AS CALLER. Ésta es la opción predeterminada.<br /><br /> Id. de la entidad de seguridad de base de datos especificada = EXECUTE AS SELF, EXECUTE AS *nombre_usuario*, o EXECUTE AS *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**int**|Id. de la entidad de seguridad de base de datos en la que se produce el contexto de ejecución, tal como lo especifica la cláusula EXECUTE AS de la función, procedimiento almacenado o desencadenador CLR.<br /><br /> NULL = EXECUTE AS CALLER. Ésta es la opción predeterminada.<br /><br /> Identificador de la entidad especificada de la base de datos = EXECUTE AS SELF, EXECUTE AS *user_name*, o EXECUTE AS *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,5 +1,5 @@
 ---
-title: sp_dropextendedproc (Transact-SQL) | Documentos de Microsoft
+title: sp_dropextendedproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 23361e6f28bdb87ab35a39ec68b448a60ad677d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244940"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049393"
 ---
 # <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,14 +56,14 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Ejecutar **sp_dropextendedproc** quita el nombre de procedimiento almacenado extendido definido por el usuario desde el [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vista de catálogo y quita la entrada de la [sys.extended_procedures ](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) vista de catálogo. Este procedimiento almacenado se puede ejecutar solo en el **maestro** base de datos.  
   
-**sp_dropextendedproc** no quita procedimientos almacenados extendido del sistema. En su lugar, el administrador del sistema debe denegar el permiso EXECUTE en el procedimiento almacenado extendido a la **público** rol.  
+**sp_dropextendedproc** no quita procedimientos almacenados extendidos del sistema. En su lugar, el administrador del sistema debe denegar el permiso EXECUTE en el procedimiento almacenado extendido a la **pública** rol.  
   
  **sp_dropextendedproc** no se puede ejecutar dentro de una transacción.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_dropextendedproc**.  
   
 ## <a name="examples"></a>Ejemplos  

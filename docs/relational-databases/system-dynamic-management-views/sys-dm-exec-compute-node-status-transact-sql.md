@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_compute_node_status (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_exec_compute_node_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,36 +26,36 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 79f0c7a7596f04f768a0ec4398ec90800bbbd08e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464181"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051503"
 ---
 # <a name="sysdmexeccomputenodestatus-transact-sql"></a>sys.dm_exec_compute_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contiene información adicional sobre el rendimiento y el estado de todos los nodos de PolyBase. Muestra una fila por cada nodo.  
   
-|Nombre de la columna|Tipo de datos|Description|Intervalo|  
+|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|compute_node_id|**int**|Identificador numérico único asociado al nodo.|Es único en el clúster de escalabilidad horizontal independientemente del tipo.|  
+|compute_node_id|**int**|Identificador numérico único asociado al nodo.|Único en clúster de escalabilidad horizontal, independientemente del tipo.|  
 |process_id|**int**|||  
-|nombreproceso|**nvarchar(255)**|Nombre lógico del nodo.|Cualquier cadena de longitud apropiada.|  
-|allocated_memory|**bigint**|Total asignado a memoria en este nodo.||  
+|nombreDeProceso|**nvarchar(255)**|Nombre lógico del nodo.|Cualquier cadena de longitud adecuada.|  
+|allocated_memory|**bigint**|Memoria total asignada en este nodo.||  
 |available_memory|**bigint**|Memoria total disponible en este nodo.||  
 |process_cpu_usage|**bigint**|Uso de CPU de proceso total, en tics.||  
 |total_cpu_usage|**bigint**|Uso total de CPU, en tics.||  
 |Thread_Count|**bigint**|Número total de subprocesos en uso en este nodo.||  
 |handle_count|**bigint**|Número total de identificadores en uso en este nodo.||  
-|total_elapsed_time|**bigint**|Tiempo total transcurrido desde que el sistema, iniciar o reiniciar.|Tiempo total transcurrido desde que el sistema, iniciar o reiniciar. Si total_elapsed_time supera el valor máximo de un entero (24,8 días en milisegundos), provocará el error de materialización debido a desbordamiento. El valor máximo en milisegundos equivale a días 24,8.|  
+|total_elapsed_time|**bigint**|Tiempo total transcurrido desde que el sistema, iniciar o reiniciar.|Tiempo total transcurrido desde que el sistema, iniciar o reiniciar. Si total_elapsed_time supera el valor máximo de un entero (24,8 días en milisegundos), provocará el error de materialización debido al desbordamiento. El valor máximo en milisegundos equivale a 24,8 días.|  
 |is_available|**bit**|Marca que indica si este nodo está disponible.||  
 |sent_time|**datetime**|Última vez que se envió un paquete de red por este||  
-|received_time|**datetime**|Última vez que se ha enviado un paquete de red desde este nodo.||  
-|error_id|**nvarchar(36)**|Identificador único del último error producido en este nodo.||  
+|received_time|**datetime**|Última vez que se envió un paquete de red por este nodo.||  
+|error_id|**nvarchar(36)**|Identificador único del último error que se produjo en este nodo.||  
   
 ## <a name="see-also"></a>Vea también  
- [PolyBase, solución de problemas con las vistas de administración dinámica](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Solución de problemas con las vistas de administración dinámica de PolyBase](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vistas de administración dinámica relacionadas con la base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

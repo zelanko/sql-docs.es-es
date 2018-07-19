@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_db (Transact-SQL) | Documentos de Microsoft
+title: sp_delete_maintenance_plan_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f21146a8fa893a40f3c613fce4105a19fc13dd6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247168"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049553"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,14 +62,14 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_delete_maintenance_plan_db** se debe ejecutar desde la **msdb** base de datos.  
   
  El **sp_delete_maintenance_plan_db** procedimiento almacenado quita la asociación entre el plan de mantenimiento y la base de datos especificado; no quita ni destruye la base de datos.  
   
  Cuando **sp_delete_maintenance_plan_db** quita la última base de datos del plan de mantenimiento, el procedimiento almacenado también elimina el plan de mantenimiento.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_delete_maintenance_plan_db**.  
   
 ## <a name="examples"></a>Ejemplos  

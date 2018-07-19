@@ -1,5 +1,5 @@
 ---
-title: Propiedades de grupo de subprocesos | Documentos de Microsoft
+title: Propiedades del grupo de subprocesos | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 47efe6ddd741cb458e5f3c5eda765f2e4e28c86f
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239255"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050606"
 ---
 # <a name="thread-pool-properties"></a>Propiedades de grupos de subprocesos
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa el subprocesamiento múltiple para realizar muchas operaciones, mejorando el rendimiento global del servidor al ejecutar varios trabajos en paralelo. Para administrar los subprocesos de manera más eficaz, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza grupos de subprocesos para preasignar subprocesos y facilitar la disponibilidad de subprocesos para el trabajo siguiente.  
   
- Cada instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantiene su propio conjunto de grupos de subprocesos. Hay diferencias en la forma en que las instancias tabulares y multidimensionales usan los grupos de subprocesos. Por ejemplo, solo las instancias multidimensionales usan el grupo de subprocesos **IOProcess** . Por lo tanto, la **PerNumaNode** propiedad, se describe en este artículo, no es significativa para las instancias tabulares. En la sección [Referencia de propiedad](#bkmk_propref) siguiente, se llama a los requisitos de modo de cada propiedad.
+ Cada instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantiene su propio conjunto de grupos de subprocesos. Hay diferencias en la forma en que las instancias tabulares y multidimensionales usan los grupos de subprocesos. Por ejemplo, solo las instancias multidimensionales usan el grupo de subprocesos **IOProcess** . Por lo tanto, el **PerNumaNode** propiedad, se describe en este artículo, no es significativa para las instancias tabulares. En la sección [Referencia de propiedad](#bkmk_propref) siguiente, se llama a los requisitos de modo de cada propiedad.
   
  Este artículo contiene las secciones siguientes:  
   
@@ -189,13 +189,13 @@ Se recomienda la actualización acumulativa 1 (CU1) para SQL Server 2016 o poste
   
  Los nodos NUMA se pasan por alto. Solo habrá un grupo de subprocesos IOProcess y todos los subprocesos de ese grupo de subprocesos tendrán afinidad con todos los procesadores lógicos. De forma predeterminada (donde PerNumaNode=-1), este es el valor operativo si el equipo tiene menos de 4 nodos NUMA.  
   
- ![Correspondencia de grupo de NUMA, procesador y subproceso](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, procesador y subproceso correspondencia de grupo")  
+ ![Correspondencia de grupo de NUMA, procesador y subproceso](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, procesador y subproceso de correspondencia de grupo")  
   
  **PerNumaNode=1**  
   
  Se crean grupos de subprocesos IOProcess para cada nodo NUMA. El hecho de tener grupos de subprocesos independiente mejora el acceso coordinado a los recursos locales, como la memoria caché local en un nodo NUMA.  
   
- ![Correspondencia de grupo de NUMA, procesador y subproceso](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, procesador y subproceso correspondencia de grupo")  
+ ![Correspondencia de grupo de NUMA, procesador y subproceso](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, procesador y subproceso de correspondencia de grupo")  
   
  **PerNumaNode=2**  
   
@@ -203,7 +203,7 @@ Se recomienda la actualización acumulativa 1 (CU1) para SQL Server 2016 o poste
   
  En el ejemplo siguiente, en un sistema que tiene 4 nodos NUMA y 32 procesadores lógicos, al establecer **PerNumaNode** en 2 se tendrían 32 grupos de subprocesos IOProcess. Los subprocesos de los 8 primeros grupos de subprocesos tendrían afinidad con todos los procesadores lógicos del nodo NUMA 0, pero con el procesador ideal establecido en 0, 1, 2 hasta 7. Los 8 grupos de subprocesos siguientes tendrían afinidad con todos los procesadores lógicos del nodo NUMA 1, con el procesador ideal establecido en 8, 9, 10 hasta 15, y así sucesivamente.  
   
- ![Correspondencia de grupo de NUMA, procesador y subproceso](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, procesador y subproceso correspondencia de grupo")  
+ ![Correspondencia de grupo de NUMA, procesador y subproceso](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, procesador y subproceso de correspondencia de grupo")  
   
  En este nivel de afinidad, el programador siempre intenta utilizar el procesador lógico ideal primero, dentro del nodo NUMA preferido. Si el procesador lógico no está disponible, el programador elige otro procesador del mismo nodo, o del mismo grupo de procesadores si no hay otros subprocesos disponibles. Para más información y ejemplos, vea [Valores de configuración de Analysis Services 2012 (blog de Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387).  
   
@@ -277,7 +277,7 @@ Se recomienda la actualización acumulativa 1 (CU1) para SQL Server 2016 o poste
  [Grupos de procesadores](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
  [Cambios en SQL Server 2012 en el grupo de subprocesos de Analysis Services](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 configuración (Blog de Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [Sistemas que tienen más de 64 procesadores compatibles](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [Sistemas compatibles que tienen más de 64 procesadores](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
  [Guía de operaciones de SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

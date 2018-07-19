@@ -1,5 +1,5 @@
 ---
-title: xp_grantlogin (Transact-SQL) | Documentos de Microsoft
+title: xp_grantlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 0fd1ba37422fa5491d6dd834bc35cdd536830b97
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258852"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058793"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,16 +51,16 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
  Nombre del usuario o grupo de Windows que se va a agregar. El usuario de Windows o grupo debe calificarse con un nombre de dominio de Windows en el formulario *dominio*\\*usuario*. *inicio de sesión* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@logintype =** ] **'***logintype***'**  
- Es el nivel de seguridad del inicio de sesión al que se concede acceso. *LoginType* es **varchar (5)**, su valor predeterminado es null. Solo **administración** puede especificarse. Si **administración** se especifica, *inicio de sesión* se concede acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y se agrega como un miembro de la **sysadmin** rol fijo de servidor.  
+ Es el nivel de seguridad del inicio de sesión al que se concede acceso. *LoginType* es **varchar (5)**, su valor predeterminado es null. Solo **admin** se pueden especificar. Si **admin** se especifica, *inicio de sesión* se concede acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y se agrega como miembro de la **sysadmin** rol fijo de servidor.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- **xp_grantlogin** es ahora un sistema almacenado del procedimiento en lugar de un procedimiento almacenado extendido. **xp_grantlogin** llamadas **sp_grantlogin** y **sp_addsrvrolemember**.  
+## <a name="remarks"></a>Notas  
+ **xp_grantlogin** es ahora un sistema almacenado procedimiento en lugar de un procedimiento almacenado extendido. **xp_grantlogin** llamadas **sp_grantlogin** y **sp_addsrvrolemember**.  
   
-## <a name="permissions"></a>Permissions  
- Debe pertenecer a la **securityadmin** rol fijo de servidor. Cuando se cambia el *logintype*, debe pertenecer a la **sysadmin** rol fijo de servidor.  
+## <a name="permissions"></a>Permisos  
+ Debe pertenecer a la **securityadmin** rol fijo de servidor. Al cambiar el *logintype*, debe pertenecer a la **sysadmin** rol fijo de servidor.  
   
 ## <a name="see-also"></a>Vea también  
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b0239d2d203e7cb32a2ea587ee069d26ad003b0e
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854357"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054877"
 ---
 # <a name="memory-properties"></a>Propiedades de memoria
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -35,7 +35,7 @@ Recuerde que los valores de configuración son por instancia. Si ejecuta varias 
 
 En la tabla siguiente se describe brevemente la configuración de memoria más usada (encontrará más información en la sección de referencia). Debe configurar esta configuración solo si Analysis Services compite por la memoria con otras aplicaciones en el mismo servidor:
 
-Configuración | Descripción
+Parámetro | Descripción
 --------|------------
 LowMemoryLimit | Para instancias multidimensionales, un umbral inferior en el que el servidor empieza a liberar memoria asignada a objetos de uso poco frecuente.
 VertiPaqMemoryLimit | Para instancias tabulares, un umbral inferior en el que el servidor empieza a liberar memoria asignada a objetos de uso poco frecuente.
@@ -68,7 +68,7 @@ Solo Azure Analysis Services. Una propiedad avanzada para controlar cuánta memo
   
   
 
-Configuración  |Descripción  
+Parámetro  |Descripción  
 ---------|---------
 **0**     |  Deshabilita la paginación. Si la memoria es insuficiente, el procesamiento genera un error de memoria insuficiente. Si ha deshabilitado la paginación, debe otorgar privilegios de Windows a la cuenta de servicio. Para obtener instrucciones, vea [Configurar las cuentas de servicio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md). 
 **1**     |  (Valor predeterminado) Esta propiedad habilita la paginación en disco mediante el archivo de paginación del sistema operativo (pagefile.sys).   
@@ -90,7 +90,7 @@ Cuando se establece en 1, es menos probable que se produzcan errores de procesam
  **MemoryHeapType**  
   Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Los valores válidos en SQL Server 2016 SP1 y versiones posteriores de Analysis Services:
   
-  Configuración | Descripción
+  Parámetro | Descripción
 --------|------------
 **-1** | (Valor predeterminado) automático. El motor decidirá cuál valor usar.
 **1** | Montón de Analysis Services.
@@ -102,7 +102,7 @@ Cuando se establece en 1, es menos probable que se produzcan errores de procesam
  **HeapTypeForObjects**  
   Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Los valores válidos son los siguientes:
   
-   Configuración | Descripción
+   Parámetro | Descripción
 --------|------------
 **-1** | (Valor predeterminado) automático. El motor decidirá cuál valor usar.
 **0** | Montón de LFH de Windows.

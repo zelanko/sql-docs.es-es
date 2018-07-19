@@ -1,5 +1,5 @@
 ---
-title: Usar el correo electrónico de base de datos | Documentos de Microsoft
+title: Usar el correo electrónico de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -21,21 +21,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b1e816228829d31d9ab114143ef45e806f226850
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967920"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061783"
 ---
 # <a name="using-database-mail"></a>Utilizar el correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  En SMO, el objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> referenciado por la propiedad <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> representa el subsistema del correo electrónico de base de datos. Mediante el objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> de SMO, puede configurar el subsistema del correo electrónico de base de datos y administrar los perfiles y cuentas de correo. SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> objeto pertenece a la **Server** objeto, lo que significa que el ámbito de las cuentas de correo electrónico está en el nivel de servidor.  
+  En SMO, el objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> referenciado por la propiedad <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> representa el subsistema del correo electrónico de base de datos. Mediante el objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> de SMO, puede configurar el subsistema del correo electrónico de base de datos y administrar los perfiles y cuentas de correo. SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> objeto pertenece a la **Server** objeto, lo que significa que el ámbito de las cuentas de correo está en el nivel de servidor.  
   
 ## <a name="examples"></a>Ejemplos  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
- Para los programas que usan [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] correo electrónico de base de datos, debe incluir el **importaciones** instrucción para calificar el espacio de nombres de correo electrónico. Inserte la instrucción después de las demás instrucciones **Imports** , antes de cualquier declaración de la aplicación, como:  
+ Para los programas que utilizan [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] correo electrónico de base de datos, debe incluir el **importaciones** instrucción para calificar el espacio de nombres de correo electrónico. Inserte la instrucción después de las demás instrucciones **Imports** , antes de cualquier declaración de la aplicación, como:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

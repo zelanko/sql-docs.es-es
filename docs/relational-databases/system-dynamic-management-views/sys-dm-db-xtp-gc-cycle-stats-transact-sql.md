@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_gc_cycle_stats (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_db_xtp_gc_cycle_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: cf11f8672c16b1a8c6ae3fd4676f69381d74bc72
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464121"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061393"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34464121"
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   
-|Nombre de columna|Tipo|Description|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|Identificador único del ciclo de recolección de elementos no utilizados.|  
 |ticks_at_cycle_start|**bigint**|Tics en el momento en el que se inició el ciclo.|  
@@ -56,7 +56,7 @@ ms.locfileid: "34464121"
 |xacts_copied_to_local|**bigint**|El número de transacciones copiadas de la canalización de transacciones en la matriz de generación de la base de datos.|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|Número de transacciones de cada generación.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW DATABASE STATE en el servidor.  
   
 ## <a name="usage-scenario"></a>Escenario de uso  
@@ -96,6 +96,6 @@ cycle_id   ticks_at_cycle_start ticks_at_cycle_end   base_generation  xacts_in_g
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de tablas optimizadas en memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica de tabla optimizado para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

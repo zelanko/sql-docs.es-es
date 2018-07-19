@@ -1,5 +1,5 @@
 ---
-title: Valor de elemento (XMLA) | Documentos de Microsoft
+title: Valor de elemento (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2ecaaf902ee1f29700b2d6333bbccd549d9c2193
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576797"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062856"
 ---
 # <a name="value-element-xmla"></a>Elemento Value (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contiene el valor deseado de un [atributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) elemento que va a agregar un [insertar](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) comando, o un [celda](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) elemento que se va a actualizar una [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)comando.  
+  Contiene el valor deseado de un [atributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) elemento va a agregar mediante una [insertar](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) comando, o un [celda](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) elemento actualizará un [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)comando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34576797"
 |Valor predeterminado|None|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  

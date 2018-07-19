@@ -1,5 +1,5 @@
 ---
-title: sp_depends (Transact-SQL) | Documentos de Microsoft
+title: sp_depends (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: cc84911c1280ef3a4d82c8ba291073eca75d89a9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261291"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049453"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,22 +70,22 @@ sp_depends [ @objname = ] '<object>'
   
  El siguiente conjunto de resultados muestra los objetos que  *\<objeto >* depende.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**nvarchar (257** **)**|Nombre del elemento que tiene una dependencia.|  
 |**Tipo**|**nvarchar(16)**|Tipo del elemento.|  
-|**actualizar**|**nvarchar(7)**|Indica si el elemento está actualizado.|  
-|**Seleccionado**|**nvarchar (8)**|Indica si el elemento se utiliza en una instrucción SELECT.|  
+|**actualizado**|**nvarchar (7)**|Indica si el elemento está actualizado.|  
+|**seleccionado**|**nvarchar (8)**|Indica si el elemento se utiliza en una instrucción SELECT.|  
 |**column**|**sysname**|Columna o parámetro con el que existe la dependencia.|  
   
  El siguiente conjunto de resultados muestra los objetos que dependen de  *\<objeto >*.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**nvarchar (257** **)**|Nombre del elemento que tiene una dependencia.|  
 |**Tipo**|**nvarchar(16)**|Tipo del elemento.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  

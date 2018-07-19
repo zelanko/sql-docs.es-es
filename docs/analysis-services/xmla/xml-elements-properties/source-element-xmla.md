@@ -1,5 +1,5 @@
 ---
-title: Origen de elemento (XMLA) | Documentos de Microsoft
+title: (XMLA) del elemento de origen | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8aaef002e649e01a51b99bd007ae5459e8cdbd97
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576427"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061063"
 ---
 # <a name="source-element-xmla"></a>Elemento Source (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34576427"
 |Valor predeterminado|None|  
 |Cardinalidad|1-n: Elemento necesario que puede aparecer más de una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
@@ -50,10 +50,10 @@ ms.locfileid: "34576427"
 |Elementos secundarios|[CubeID](../../../analysis-services/xmla/xml-elements-properties/cubeid-element-xmla.md), [DatabaseID](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md), [MeasureGroupID](../../../analysis-services/xmla/xml-elements-properties/measuregroupid-element-xmla.md), [PartitionID](../../../analysis-services/xmla/xml-elements-properties/partitionid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notas  
- El **origen** elemento es una referencia de objeto a una única partición que se combinan en una partición de destino especificada por el **destino** elemento del elemento primario **MergePartitions** elemento.  
+ El **origen** elemento es una referencia de objeto a una única partición que se combinarán en una partición de destino especificada por el **destino** elemento primario **MergePartitions** elemento.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se combinan las cuatro particiones del grupo de medida `Internet Sales` en la partición de destino `Internet_Sales_2004` . En el ejemplo se hace referencia a la **Adventure Works** cubo de la [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] ejemplo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos.  
+ En el ejemplo siguiente se combinan las cuatro particiones del grupo de medida `Internet Sales` en la partición de destino `Internet_Sales_2004` . El ejemplo hace referencia a la **Adventure Works** cubo de la [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] ejemplo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos.  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -70,7 +70,7 @@ ms.locfileid: "34576427"
 ```  
   
 ## <a name="see-also"></a>Vea también
- [Elemento de destino &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
+ [Elemento Target &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
  [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

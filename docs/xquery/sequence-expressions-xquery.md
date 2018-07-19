@@ -1,5 +1,5 @@
 ---
-title: Secuencia de expresiones (XQuery) | Documentos de Microsoft
+title: Secuencia de expresiones (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 34c26b529aeaee5e9f80ecc0a1a07d3cb8cedbf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077002"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048743"
 ---
 # <a name="sequence-expressions-xquery"></a>Expresiones de secuencias (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ select @x.query('for $i in ((1,2),10,(),(4, 5, 6))
 go  
 ```  
   
- Se pueden contar los elementos de la secuencia mediante el **fn:Count()** función.  
+ Puede contar los elementos de la secuencia mediante el **fn:Count()** función.  
   
 ```  
 declare @x xml  
@@ -137,7 +137,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>Filtrar secuencias  
- Es posible filtrar la secuencia devuelta por una expresión si se agrega un predicado a la expresión. Para obtener más información, consulte [expresiones de ruta de acceso &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Por ejemplo, la consulta siguiente devuelve una secuencia de tres nodos de elemento <`a`>:  
+ Es posible filtrar la secuencia devuelta por una expresión si se agrega un predicado a la expresión. Para obtener más información, consulte [expresiones de ruta &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Por ejemplo, la consulta siguiente devuelve una secuencia de tres nodos de elemento <`a`>:  
   
 ```  
 declare @x xml  

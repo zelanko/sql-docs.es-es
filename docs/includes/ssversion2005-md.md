@@ -1,1 +1,1 @@
-﻿ SQL Server 2005 
+ Resultado de 

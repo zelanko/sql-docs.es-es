@@ -1,5 +1,5 @@
 ---
-title: Usar archivos y grupos de archivos para almacenar datos | Documentos de Microsoft
+title: Uso de grupos de archivos y archivos de datos Store | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 12b85dd1126880721d9bf67d3f4337b39e67f94e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970566"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047333"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>Utilizar grupos de archivos y archivos para almacenar datos
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "32970566"
  Cada base de datos que se crea automáticamente tiene un grupo de archivos denominado "Principal" y un archivo de datos con el mismo nombre que la base de datos. Se pueden agregar archivos y grupos adicionales a las recopilaciones.  
   
 ## <a name="examples"></a>Ejemplos  
- Para los siguientes ejemplos de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para los siguientes ejemplos de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="adding-filegroups-and-datafiles-to-a-database-in-visual-basic"></a>Agregar grupos de archivos y archivos de datos a una base de datos en Visual Basic  
  El grupo de archivos principal y el archivo de datos se crean automáticamente con valores de propiedad predeterminados. En el ejemplo de código se especifican algunos valores de propiedad que puede utilizar. De lo contrario, se utilizan los valores de propiedad predeterminados.  

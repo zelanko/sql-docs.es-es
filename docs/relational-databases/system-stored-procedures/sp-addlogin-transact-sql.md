@@ -1,5 +1,5 @@
 ---
-title: sp_addlogin (Transact-SQL) | Documentos de Microsoft
+title: sp_addlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 5f9458c1459aef35bcf9d6e47963025f87000c32
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239925"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060160"
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,18 +66,18 @@ sp_addlogin [ @loginame = ] 'login'
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
  [ @defdb=] '*base de datos*'  
- Es la base de datos predeterminada del inicio de sesión (la base de datos a la que primero se conecta el inicio de sesión después de iniciarse la sesión). *base de datos* es **sysname**, su valor predeterminado es **principal**.  
+ Es la base de datos predeterminada del inicio de sesión (la base de datos a la que primero se conecta el inicio de sesión después de iniciarse la sesión). *base de datos* es **sysname**, su valor predeterminado es **maestro**.  
   
  [ @deflanguage=] '*lenguaje*'  
- Es el idioma predeterminado del inicio de sesión. *idioma* es **sysname**, su valor predeterminado es null. Si *lenguaje* no se especifica, el valor predeterminado *lenguaje* del nuevo inicio de sesión se establece en el idioma predeterminado actual del servidor.  
+ Es el idioma predeterminado del inicio de sesión. *lenguaje* es **sysname**, su valor predeterminado es null. Si *lenguaje* no se especifica, el valor predeterminado *lenguaje* del nuevo inicio de sesión se establece en el idioma predeterminado actual del servidor.  
   
  [ @sid=] '*sid*'  
- Especifica el número de identificación de seguridad (SID). *SID* es **varbinary (16)**, su valor predeterminado es null. Si *sid* es NULL, el sistema genera un SID para el nuevo inicio de sesión. A pesar del uso de un **varbinary** tipo de datos, valores que no sean NULL deben tener exactamente 16 bytes de longitud y no debe existir. Especificar *sid* es útil, por ejemplo, cuando se cifran o mueven [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicios de sesión de un servidor a otro y desea que los inicios de sesión tienen el mismo SID en servidores diferentes.  
+ Especifica el número de identificación de seguridad (SID). *SID* es **varbinary (16)**, su valor predeterminado es null. Si *sid* es NULL, el sistema genera un SID para el nuevo inicio de sesión. A pesar del uso de un **varbinary** tipo de datos, los valores distintos de NULL deben tener exactamente 16 bytes de longitud y no debe existir. Especificar *sid* es útil, por ejemplo, cuando se cifran o mueven [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicios de sesión de un servidor a otro y desean que los inicios de sesión tienen el mismo SID en servidores diferentes.  
   
  [ @encryptopt=] '*encryption_option*'  
  Especifica si la contraseña se pasa como texto sin cifrar o como hash de la contraseña de texto sin cifrar. Tenga en cuenta que no se realiza el cifrado. La palabra "cifrar" se utiliza aquí para la compatibilidad con versiones anteriores. Si se pasa una contraseña de texto sin cifrar, está en formato hash. El hash se almacena. *encryption_option* es **varchar (20)**, y puede tener uno de los siguientes valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |NULL|La contraseña se pasa como texto sin cifrar. Ésta es la opción predeterminada.|  
 |**skip_encryption**|La contraseña ya está en formato hash. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe almacenar el valor sin volver a procesar el hash de la contraseña.|  
@@ -86,29 +86,29 @@ sp_addlogin [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- Los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden contener entre 1 y 128 caracteres, y pueden incluir letras, símbolos y números. Los inicios de sesión no pueden contener una barra diagonal inversa (\\); ser un nombre de inicio de sesión reservado, por ejemplo sa o public, o ya existe, o ser NULL ni una cadena vacía (`''`).  
+## <a name="remarks"></a>Notas  
+ Los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden contener entre 1 y 128 caracteres, y pueden incluir letras, símbolos y números. Los inicios de sesión no pueden contener una barra diagonal inversa (\\); ser un nombre de inicio de sesión reservado, por ejemplo sa o public, o ya existe; o ser NULL ni una cadena vacía (`''`).  
   
- Si se proporciona el nombre de una base de datos predeterminada, puede conectarse a la base de datos especificada sin ejecutar la instrucción USE. Sin embargo, no se puede usar la base de datos predeterminada hasta que se concede acceso a esa base de datos por el propietario de la base de datos (mediante el uso de [sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) o [sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) o [sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md).  
+ Si se proporciona el nombre de una base de datos predeterminada, puede conectarse a la base de datos especificada sin ejecutar la instrucción USE. Sin embargo, no se puede usar la base de datos predeterminada hasta que se tiene acceso a esa base de datos por el propietario de la base de datos (mediante el uso de [sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) o [sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) o [sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md).  
   
  El número de SID es un GUID que identificará de forma exclusiva el inicio de sesión en el servidor.  
   
- Al cambiar el idioma predeterminado del servidor no se cambia el idioma predeterminado de los inicios de sesión existentes. Para cambiar el idioma predeterminado del servidor, utilice [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ Al cambiar el idioma predeterminado del servidor no se cambia el idioma predeterminado de los inicios de sesión existentes. Para cambiar el idioma predeterminado del servidor, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
- Usar **skip_encryption** para suprimir la contraseña hash es útil si la contraseña ya está en hash cuando se agrega el inicio de sesión a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la contraseña estaba en formato hash en una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use **skip_encryption_old**.  
+ Uso de **skip_encryption** para suprimir la contraseña hash es útil si la contraseña ya está en hash cuando se agrega el inicio de sesión a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la contraseña estaba en formato hash en una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilice **skip_encryption_old**.  
   
  sp_addlogin no se puede ejecutar desde una transacción definida por el usuario.  
   
  En la siguiente tabla se muestran varios procedimientos almacenados que se utilizan con sp_addlogin.  
   
-|Procedimiento almacenado|Description|  
+|Procedimiento almacenado|Descripción|  
 |----------------------|-----------------|  
 |[sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)|Agrega un usuario o grupo de Windows.|  
 |[sp_password](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)|Cambia la contraseña de un usuario.|  
 |[sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md)|Cambia la base de datos predeterminada de un usuario.|  
 |[sp_defaultlanguage](../../relational-databases/system-stored-procedures/sp-defaultlanguage-transact-sql.md)|Cambia el idioma predeterminado de un usuario.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY LOGIN.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_set_parameter (Transact-SQL) | Documentos de Microsoft
+title: managed_backup.sp_set_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a9f1d5eeec1fc5b24fbc1974d27e9f4b5efd00d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238342"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058833"
 ---
 # <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ EXEC managed_backup.sp_set_parameter
  @parameter_value  
  Valor del parámetro que desea establecer. @parameter el valor es nvarchar (128).  Los siguientes son pares permitidos de nombre de parámetro y valor:  
   
--   @parameter_name = 'SSMBackup2WANotificationEmailIds': @parameter_value = "email"  
+-   @parameter_name = 'SSMBackup2WANotificationEmailIds': @parameter_value = 'email'  
   
 -   @parameter_name = 'SSMBackup2WAEnableUserDefinedPolicy': @parameter_value = {'true' | 'false'}  
   
@@ -75,7 +75,7 @@ EXEC managed_backup.sp_set_parameter
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Permisos  
  Requiere **EXECUTE** permisos **managed_backup.sp_set_parameter** procedimiento almacenado.  
   
 ## <a name="examples"></a>Ejemplos  

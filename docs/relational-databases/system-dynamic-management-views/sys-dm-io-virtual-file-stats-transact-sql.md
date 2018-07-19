@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_io_virtual_file_stats (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_io_virtual_file_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2720aba7dc9b3d8c1a6e34db5a588829245ed97a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465961"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066836"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34465961"
   Devuelve las estadísticas de E/S de los archivos de registro y datos. Esta vista de administración dinámica reemplaza el [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) función.  
   
 > [!NOTE]  
->  Para llamar a esta desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], use el nombre **sys.dm_pdw_nodes_io_virtual_file_stats**. 
+>  Al llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], use el nombre **sys.dm_pdw_nodes_io_virtual_file_stats**. 
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -65,7 +65,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  Identificador de la base de datos. *database_id* es de tipo int, no tiene ningún valor predeterminado. Las entradas válidas son el número de identificación de una base de datos o NULL. Cuando se especifica NULL, se devuelven todas las bases de datos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- La función integrada [DB_ID](../../t-sql/functions/db-id-transact-sql.md) puede especificarse.  
+ La función integrada [DB_ID](../../t-sql/functions/db-id-transact-sql.md) se pueden especificar.  
   
 *file_ID* | ES NULL
 
@@ -73,13 +73,13 @@ sys.dm_pdw_nodes_io_virtual_file_stats
  
 Id. del archivo. *file_ID* es de tipo int, no tiene ningún valor predeterminado. Las entradas válidas son el número de identificación de un archivo o NULL. Cuando se especifica NULL, se devuelven todos los archivos de la base de datos.  
   
- La función integrada [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) se puede especificar y hace referencia a un archivo en la base de datos actual.  
+ La función integrada [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) pueden especificarse y hace referencia a un archivo en la base de datos actual.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|Nombre de base de datos.</br></br>Para almacenamiento de datos de SQL, este es el nombre de la base de datos que se almacenan en el nodo identificado por pdw_node_id. Cada nodo tiene una base de datos de tempdb con 13 archivos. Cada nodo tiene también una base de datos por la distribución, y cada base de datos de distribución tiene 5 archivos. Por ejemplo, si cada nodo contiene 4 distribuciones, los resultados muestran 20 archivos de base de datos de distribución por pdw_node_id. 
+|**database_name**|**sysname**|Nombre de base de datos.</br></br>Para SQL Data Warehouse, este es el nombre de la base de datos que se almacenan en el nodo que se identifica mediante pdw_node_id. Cada nodo tiene una base de datos tempdb que tiene 13 archivos. Cada nodo también tiene una base de datos por cada distribución, y cada base de datos de distribución tiene 5 archivos. Por ejemplo, si cada nodo contiene 4 distribuciones, los resultados muestran los 20 archivos de base de datos de distribución por pdw_node_id. 
 |**database_id**|**smallint**|Id. de base de datos.|  
 |**file_id**|**smallint**|Id. de archivo.|  
 |**sample_ms**|**bigint**|Número de milisegundos transcurridos desde que se inició el equipo. Esta columna se puede utilizar para comparar diferentes resultados de esta función.</br></br>El tipo de datos es **int** para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
@@ -97,14 +97,14 @@ Id. del archivo. *file_ID* es de tipo int, no tiene ningún valor predeterminado
 |**pdw_node_id**|**int**|**Se aplica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificador del nodo para la distribución.
  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW SERVER STATE. Para obtener más información, consulte [funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Ejemplos  
 
-### <a name="a-return-statistics-for-a-log-file"></a>A. Devolver estadísticas de un archivo de registro
+### <a name="a-return-statistics-for-a-log-file"></a>A. Devolver estadísticas para un archivo de registro
 
-**Se aplica a:** (a partir de 2008) de SQL Server, base de datos de SQL Azure
+**Se aplica a:** (a partir de 2008) de SQL Server, Azure SQL Database
 
  El ejemplo siguiente devuelve todas las estadísticas para el archivo de registro en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
@@ -113,9 +113,9 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Devolver estadísticas para el archivo en tempdb
+### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Devolver estadísticas para el archivo de tempdb
 
-**Se aplica a:** almacenamiento de datos SQL Azure
+**Se aplica a:** Azure SQL Data Warehouse
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
@@ -125,7 +125,7 @@ WHERE database_name = ‘tempdb’ AND file_id = 2;
 
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [¿O relacionados con las funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Puedo O relacionados con funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

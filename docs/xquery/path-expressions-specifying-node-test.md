@@ -1,5 +1,5 @@
 ---
-title: Especificar la prueba de nodo en un paso de expresión de ruta de acceso | Documentos de Microsoft
+title: Especificar la prueba de nodo en un paso de expresión de ruta de acceso | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3460ecf0a821d5c7ffa39f242650e06c0e8ddaf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077672"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058305"
 ---
-# <a name="path-expressions---specifying-node-test"></a>Expresiones de ruta de acceso: especificar la prueba de nodo
+# <a name="path-expressions---specifying-node-test"></a>Expresiones de ruta de acceso: especificación de prueba de nodo
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Un paso de eje de una expresión de ruta de acceso incluye los siguientes componentes:  
@@ -39,7 +39,7 @@ ms.locfileid: "33077672"
   
 -   [Cero o más calificadores de paso (opcionales)](../xquery/path-expressions-specifying-predicates.md)  
   
- Para obtener más información, consulte [expresiones de ruta de acceso &#40;XQuery&#41;](../xquery/path-expressions-xquery.md).  
+ Para obtener más información, consulte [expresiones de ruta &#40;XQuery&#41;](../xquery/path-expressions-xquery.md).  
   
  Una prueba de nodo es una condición y es el segundo componente del paso de eje en una expresión de ruta de acceso. Todos los nodos seleccionados por un paso deben satisfacer esta condición. Para la expresión de ruta de acceso `/child::ProductDescription`, la prueba de nodo es `ProductDescription`. Este paso solo recupera los nodos de elemento secundarios cuyo nombre sea ProductDescription.  
   
@@ -75,9 +75,9 @@ child::ProductDescription
   
  La expresión de ruta de acceso `/child::PD:ProductDescription/child::PD:Features/descendant::*,` incluye tres pasos. Estos pasos especifican ejes child y descendant. En cada paso, el nombre de nodo se especifica como la prueba de nodo. El carácter comodín (`*`) del tercer paso señala todos los nodos que pertenecen a la clase de nodo principal para el eje descendant. La clase de nodo principal del eje determina el tipo de nodo seleccionado. El nombre de nodo filtra los nodos seleccionados.  
   
- Como resultado, cuando se ejecuta esta expresión en documentos XML del catálogo de productos en la **ProductModel** tabla, recupera todos los secundarios del nodo de elemento de la \<características > nodo de elemento secundario de la \< ProductDescription > elemento.  
+ Como resultado, cuando se ejecuta esta expresión en documentos XML del catálogo del producto en el **ProductModel** tabla, recupera todos los secundarios del nodo de elemento de la \<características > elemento secundario del nodo la \< ProductDescription > elemento.  
   
- La expresión de ruta de acceso, `/child::PD:ProductDescription/attribute::ProductModelID`, se compone de dos pasos. Ambos pasos especifican un nombre de nodo como la prueba de nodo. Además, el segundo paso utiliza el eje attribute. Por tanto, cada paso selecciona nodos de la clase de nodo principal de su eje que tenga especificado el nombre como la prueba de nodo. Por lo tanto, la expresión devuelve **ProductModelID** nodo de atributo con el \<ProductDescription > nodo de elemento.  
+ La expresión de ruta de acceso, `/child::PD:ProductDescription/attribute::ProductModelID`, se compone de dos pasos. Ambos pasos especifican un nombre de nodo como la prueba de nodo. Además, el segundo paso utiliza el eje attribute. Por tanto, cada paso selecciona nodos de la clase de nodo principal de su eje que tenga especificado el nombre como la prueba de nodo. Por lo tanto, la expresión devuelve **ProductModelID** nodo de atributo de la \<ProductDescription > nodo de elemento.  
   
  Al especificar nombres de nodo para pruebas de nodo, puede utilizar el carácter comodín (*) para especificar el nombre local de un nodo o para su prefijo de espacio de nombres, tal y como muestra el ejemplo siguiente:  
   
@@ -111,13 +111,13 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 child::comment()  
 ```  
   
- De forma similar, `/child::ProductDescription/child::Features/child::comment()` recupera nodos de comentario secundarios de la \<características > nodo de elemento secundario de la \<ProductDescription > nodo de elemento.  
+ De forma similar, `/child::ProductDescription/child::Features/child::comment()` recupera nodos de comentario secundarios de la \<características > elemento secundario del nodo la \<ProductDescription > nodo de elemento.  
   
 ## <a name="examples"></a>Ejemplos  
  Los ejemplos siguientes comparan el nombre de nodo y la clase de nodo.  
   
 ### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. Resultados de especificar el nombre de nodo y el tipo de nodo como pruebas de nodo en una expresión de ruta de acceso  
- En el ejemplo siguiente, se asigna un documento XML sencillo a una **xml** variable de tipo. El documento se consulta por medio de diferentes expresiones de ruta de acceso. A continuación, se comparan los resultados.  
+ En el ejemplo siguiente, un documento XML simple se asigna a un **xml** variable de tipo. El documento se consulta por medio de diferentes expresiones de ruta de acceso. A continuación, se comparan los resultados.  
   
 ```  
 declare @x xml  
@@ -221,7 +221,7 @@ WHERE ProductModelID=19
   
  Observe lo siguiente en la consulta anterior:  
   
--   La palabra clave `namespace` del prólogo de XQuery define un prefijo que se utiliza en el cuerpo de la consulta. Para obtener más información sobre el prólogo de XQuery, vea [prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md) .  
+-   La palabra clave `namespace` del prólogo de XQuery define un prefijo que se utiliza en el cuerpo de la consulta. Para obtener más información acerca del prólogo de XQuery, vea [prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md) .  
   
 -   Los tres pasos de la expresión de ruta de acceso especifican el eje child y el nombre de nodo como la prueba de nodo.  
   

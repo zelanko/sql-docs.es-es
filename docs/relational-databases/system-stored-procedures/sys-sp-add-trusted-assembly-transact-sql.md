@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_add_trusted_assembly (Transact-SQL) | Documentos de Microsoft
+title: Sys.sp_add_trusted_assembly (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: thmullan
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1a3791d82f0970ec6ed3e04ede69492abbcddb59
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256571"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055780"
 ---
 # <a name="sysspaddtrustedassembly-transact-sql"></a>Sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -47,19 +47,19 @@ sp_add_trusted_assembly
     [ , [ @description = ] 'description' ]
 ```  
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 
 Este procedimiento agrega un ensamblado a [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 
 ## <a name="arguments"></a>Argumentos
 
 [ @hash =] '*valor*'  
-El valor de hash SHA2_512 del ensamblado que se va a agregar a la lista de ensamblados de confianza para el servidor. Confianza de ensamblados pueden cargarse cuando [seguridad estricta de CLR](../../database-engine/configure-windows/clr-strict-security.md) está habilitada, incluso si el ensamblado está firmado o la base de datos no está marcado como de confianza.
+El valor de hash SHA2_512 del ensamblado que se va a agregar a la lista de ensamblados de confianza para el servidor. Puede que se cargue cuando los ensamblados de confianza [seguridad estricta de CLR](../../database-engine/configure-windows/clr-strict-security.md) está habilitada, incluso si el ensamblado está firmado o la base de datos no está marcada como de confianza.
 
 [ @description =] '*descripción*'  
-Obtener descripción opcional definida por el usuario del ensamblado. Microsoft recomienda utilizar el nombre canónico que codifica el nombre simple, número de versión, referencia cultural, clave pública y arquitectura de ensamblado de confianza. Este valor unívocamente identifica el ensamblado en el lado de runtime (CLR) de lenguaje común y es el mismo que el valor de clr_name en sys.assemblies. 
+Descripción de definido por el usuario opcional del ensamblado. Microsoft recomienda usar el nombre canónico que codifica el nombre simple, número de versión, referencia cultural, clave pública y la arquitectura de ensamblado de confianza. Forma exclusiva este valor identifica el ensamblado del lado common language runtime (CLR) y es el mismo que el valor de clr_name en sys.assemblies. 
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Permisos
 
 Debe pertenecer a la `sysadmin` rol fijo de servidor o `CONTROL SERVER` permiso.
 

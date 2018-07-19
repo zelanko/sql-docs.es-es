@@ -1,5 +1,5 @@
 ---
-title: Sys.index_resumable_operations (Transact-SQL) | Documentos de Microsoft
+title: Sys.index_resumable_operations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql
@@ -25,38 +25,38 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 0d68f6e0946f9b5fb781448b2973939831b6cab9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180531"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058229"
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 **Sys.index_resumable_operations** es una vista de sistema que supervisa y comprueba el estado de ejecución actual para la reconstrucción de índices reanudable.  
-**Se aplica a**: SQL Server 2017 y Azure base de datos SQL 
+**Se aplica a**: SQL Server 2017 y Azure SQL Database 
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|Id. del objeto al que pertenece (que no acepta valores NULL) en este índice.|  
+|**object_id**|**int**|Identificador del objeto al que pertenece (que no acepta valores NULL) este índice.|  
 |**index_id**|**int**|Id. del índice (no acepta valores NULL). **index_id** es único solo dentro del objeto.|
 |**Nombre**|**sysname**|Nombre del índice. **nombre** es único solo dentro del objeto.|  
-|**sql_text**|**nvarchar(max)**|Texto de la instrucción DDL T-SQL|
-|**last_max_dop**|**smallint**|MAX_DOP usa la última (valor predeterminado = 0)|
-|**partition_number**|**int**|Número de partición en el índice o montón propietario. Para índices y tablas sin particiones o en caso de todas las particiones se va a volver a generar el valor de esta columna es NULL.|
-|**state**|**tinyint**|Estado operativo de índice reanudable:<br /><br />0 = en ejecución<br /><br />1 = pausa|
-|**state_desc**|**nvarchar(60)**|Descripción del estado operativo para reanudable índice (en ejecución o en pausa)|  
+|**sql_text**|**nvarchar(max)**|Texto de la instrucción DDL de T-SQL|
+|**last_max_dop**|**smallint**|Última MAX_DOP usa (predeterminado = 0)|
+|**partition_number**|**int**|Número de partición en el índice o montón propietario. Para tablas sin particiones e índices, o en caso de todas las particiones son que se va a volver a generar el valor de esta columna es NULL.|
+|**state**|**tinyint**|Estado operativo de índices reanudables:<br /><br />0 = en ejecución<br /><br />1 = pausa|
+|**state_desc**|**nvarchar(60)**|Descripción del estado operativo de índice reanudable (en ejecución o en pausa)|  
 |**start_time**|**datetime**|Hora de inicio de operación de índice (no acepta valores NULL)|
-|**last_pause_time**|**DateTime**| Último tiempo de pausa (admite valores NULL) de la operación de índice. Es NULL si la operación se ejecutan y nunca en pausa.|
+|**last_pause_time**|**valor DataTime**| Operación de índice último tiempo de pausa (que aceptan valores NULL). Es NULL si la operación está en ejecución y nunca en pausa.|
 |**total_execution_time**|**int**|Tiempo de ejecución total de tiempo de inicio en minutos (no acepta valores NULL)|
-|**percent_complete**|**real**|Realización de progreso de la operación de índice en % (que no acepta valores NULL).|
+|**percent_complete**|**real**|Finalización de progreso de operación de índice en % (que no acepta valores NULL).|
 |**page_count**|**bigint**|Número total de páginas de índice asignadas por la operación de generación de índice para el nuevo e índices de asignación (que no acepta valores NULL). 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
    
 ## <a name="example"></a>Ejemplo  
- Enumerar todas las operaciones de regeneración de índice reanudables que están en el estado de pausa. 
+ Enumera todas las operaciones de regeneración de índices reanudables que se encuentran en el estado de pausa. 
   
 ```  
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  

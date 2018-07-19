@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Documentos de Microsoft
+title: Sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a109d7f23ad475fa9d8f1229be5011495f94354f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236030"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060373"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>Sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Obtiene el **stmt_sql_handle** para un [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción en tipo de parametrización (simple o forzada) determinado. Esto permite hacer referencia a las consultas almacenadas en el almacén de consultas mediante el uso de sus **stmt_sql_handle** cuando conozca su texto.  
+  Obtiene el **stmt_sql_handle** para un [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción en el tipo de parametrización (simple o forzada) dado. Esto permite hacer referencia a las consultas almacenadas en el Store de la consulta mediante el uso de sus **stmt_sql_handle** cuando conoce su texto.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,38 +53,38 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 -   0: ninguno  
   
--   1 – usuario  
+-   1: usuario  
   
--   2-simple  
+-   2 – simple  
   
 -   3 – forzada  
   
 ## <a name="columns-returned"></a>Columnas devueltas  
- En la tabla siguiente se muestra las columnas que sys.fn_stmt_sql_handle_from_sql_stmt devuelve.  
+ La tabla siguiente enumeran las columnas que sys.fn_stmt_sql_handle_from_sql_stmt devuelve.  
   
-|Nombre de columna|Tipo|Description|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
-|**statement_sql_handle**|**varbinary(64)**|El identificador SQL.|  
+|**statement_sql_handle**|**varbinary (64)**|El identificador SQL.|  
 |**query_sql_text**|**nvarchar(max)**|El texto de la [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción.|  
-|**query_parameterization_type**|**tinyint**|El tipo de la parametrización de la consulta.|  
+|**query_parameterization_type**|**tinyint**|El tipo de parametrización de consultas.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-## <a name="permissions"></a>Permissions  
- Requiere la **EXECUTE** permiso en la base de datos y **eliminar** permiso en las vistas de catálogo del almacén de consultas.  
+## <a name="permissions"></a>Permisos  
+ Requiere el **EXECUTE** permiso en la base de datos y **eliminar** permiso en las vistas de catálogo del almacén de consultas.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se ejecuta una instrucción y, a continuación, utiliza `sys.fn_stmt_sql_handle_from_sql_stmt` para devolver el identificador SQL de esa instrucción.  
+ El ejemplo siguiente se ejecuta una instrucción y, a continuación, usa `sys.fn_stmt_sql_handle_from_sql_stmt` para devolver el identificador SQL de esa instrucción.  
   
 ```  
 SELECT * FROM sys.databases;   
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- Utilice la función para correlacionar datos de almacén de consultas con otras vistas de administración dinámica. El ejemplo siguiente:  
+ Use la función para correlacionar datos de la consulta Store con otras vistas de administración dinámica. El ejemplo siguiente:  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  

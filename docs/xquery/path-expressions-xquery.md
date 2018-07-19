@@ -1,5 +1,5 @@
 ---
-title: Expresiones de ruta de acceso (XQuery) | Documentos de Microsoft
+title: Expresiones de ruta de acceso (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b964a11fe7e726abf1e5342641171aa11f583cb7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077782"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063988"
 ---
 # <a name="path-expressions-xquery"></a>Expresiones de ruta de acceso (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "33077782"
   Estas expresiones buscan nodos, tales como element, attribute y text, en un documento. El resultado de una expresión de ruta de acceso siempre se produce en el orden de los documentos sin nodos duplicados en la secuencia resultante. Al especificar una ruta de acceso, se puede utilizar sintaxis abreviada o sin abreviar. La información siguiente se centra en la sintaxis sin abreviar. La sintaxis abreviada se describe más adelante en este tema.  
   
 > [!NOTE]  
->  Dado que las consultas de ejemplo en este tema se especifican en el **xml** columnas de tipo **CatalogDescription** y **instrucciones**, en la  **ProductModel** tabla, debe familiarizarse con el contenido y la estructura de los documentos XML almacenados en estas columnas.  
+>  Dado que las consultas de ejemplo en este tema se especifican en el **xml** columnas de tipo **CatalogDescription** y **instrucciones**, en el  **ProductModel** tabla, debe familiarizarse con el contenido y la estructura de los documentos XML almacenados en estas columnas.  
   
  Una expresión de ruta de acceso puede ser relativa o absoluta. A continuación se ofrece una descripción de ambas:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "33077782"
   
 -   El primer paso recupera los \<ProductDescription > elementos secundarios del nodo de elemento de la raíz del documento.  
   
--   El segundo paso recupera los \<resumen > elementos secundarios del nodo de elemento para cada recuperar \<ProductDescription > nodo de elemento, que a su vez se convierte en el nodo de contexto.  
+-   El segundo paso recupera los \<resumen > elementos secundarios del nodo para cada recuperar \<ProductDescription > nodo de elemento, que a su vez se convierte en el nodo de contexto.  
   
  Los pasos de una expresión de ruta de acceso pueden ser de eje o generales.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "33077782"
  [eje](../xquery/path-expressions-specifying-axis.md)  
  Define la dirección del movimiento. Se trata de un paso de eje de una expresión de ruta de acceso que empieza en el nodo de contexto y se navega hasta los nodos disponibles en la dirección especificada por el eje.  
   
- [Prueba de nodo](../xquery/path-expressions-specifying-node-test.md)  
+ [prueba de nodo](../xquery/path-expressions-specifying-node-test.md)  
  Especifica el tipo de nodo o los nombres de nodo que se seleccionarán.  
   
  Cero o más predicados opcionales  
@@ -75,7 +75,7 @@ ms.locfileid: "33077782"
   
 -   La expresión de ruta de acceso relativa, `child::root/child::Location[attribute::LocationID=10]`, incluye dos pasos separados por una barra diagonal. El primero especifica un eje (`child`) y una prueba de nodo (`root`). El segundo especifica los tres componentes de un paso de eje: un eje (secundario), una prueba de nodo (`Location`) y un predicado (`[attribute::LocationID=10]`).  
   
- Para obtener más información acerca de los componentes de un paso de eje, vea [especificar ejes en un paso de expresión de ruta de acceso](../xquery/path-expressions-specifying-axis.md), [especificar la prueba de nodo en un paso de expresión de ruta de acceso](../xquery/path-expressions-specifying-node-test.md), y [especificar predicados en una Paso de expresión de ruta de acceso](../xquery/path-expressions-specifying-predicates.md).  
+ Para obtener más información acerca de los componentes de un paso de eje, vea [especificar ejes en un paso de expresión de ruta de acceso](../xquery/path-expressions-specifying-axis.md), [especificando la prueba de nodo en un paso de expresión de ruta de acceso](../xquery/path-expressions-specifying-node-test.md), y [especificar predicados en una Paso de expresión de ruta de acceso](../xquery/path-expressions-specifying-predicates.md).  
   
 ## <a name="general-step"></a>Paso general  
  Un paso general es simplemente una expresión que debe dar como resultado una secuencia de nodos.  
@@ -87,7 +87,7 @@ ms.locfileid: "33077782"
 id(/a/b)  
 ```  
   
- Para obtener más información acerca de la función Id., vea [Id. de función &#40;XQuery&#41;](../xquery/functions-on-sequences-id.md).  
+ Para obtener más información acerca de la función id, consulte [Id. de función &#40;XQuery&#41;](../xquery/functions-on-sequences-id.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Especificar ejes en un paso de expresión de ruta de acceso](../xquery/path-expressions-specifying-axis.md)  

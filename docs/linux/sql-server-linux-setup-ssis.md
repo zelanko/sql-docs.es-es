@@ -1,5 +1,5 @@
 ---
-title: Instalar SQL Server Integration Services en Linux | Documentos de Microsoft
+title: Instalar SQL Server Integration Services en Linux | Microsoft Docs
 description: En este artículo se describe cómo instalar SQL Server Integration Services (SSIS) en Linux.
 author: leolimsft
 ms.author: lle
@@ -13,33 +13,33 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: d2e72c77ad5f200c07a6e71025a3461d6397032a
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323396"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062054"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Instalar SQL Server Integration Services (SSIS) en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Siga los pasos de este artículo para instalar SQL Server Integration Services (`mssql-server-is`) en Linux. Para obtener información sobre las características admitidas en esta versión de servicios de integración para Linux, consulte la [notas de la versión](sql-server-linux-release-notes.md).
+Siga los pasos descritos en este artículo para instalar SQL Server Integration Services (`mssql-server-is`) en Linux. Para obtener información sobre las características admitidas en esta versión de servicios de integración para Linux, consulte el [notas de la versión](sql-server-linux-release-notes.md).
 
 Instalar a servidores de integración de SQL Server para su plataforma:
 
 - [Ubuntu](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-## <a name="ubuntu"></a> Instalar SSIS en Ubuntu
-Para instalar el `mssql-server-is` el paquete en Ubuntu, siga estos pasos:
+## <a name="ubuntu"></a> Instalación de SSIS en Ubuntu
+Para instalar el `mssql-server-is` del paquete en Ubuntu, siga estos pasos:
 
-1. Importar las claves GPG repositorio público.
+1. Importe las claves GPG repositorio público.
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-2. Registrar el repositorio de Microsoft SQL Server Ubuntu.
+2. Registrar el repositorio de Ubuntu de Microsoft SQL Server.
 
    ```bash
    sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
@@ -52,7 +52,7 @@ Para instalar el `mssql-server-is` el paquete en Ubuntu, siga estos pasos:
    sudo apt-get install -y mssql-server-is
    ```
 
-4. Después de instalar Integration Services, ejecutar `ssis-conf`. Para obtener más información, consulte [configurar SSIS en Linux con ssis-conf](sql-server-linux-configure-ssis.md).
+4. Después de instalar Integration Services, ejecute `ssis-conf`. Para obtener más información, consulte [configurar SSIS en Linux con ssis-conf](sql-server-linux-configure-ssis.md).
 
    ```bash
    sudo /opt/ssis/bin/ssis-conf setup
@@ -77,8 +77,8 @@ Para quitar `mssql-server-is`, puede ejecutar el comando siguiente:
 sudo apt-get remove mssql-server-is
 ```
 
-## <a name="RHEL"></a> Instalar SSIS en RHEL
-Para instalar el `mssql-server-is` el paquete en RHEL, siga estos pasos:
+## <a name="RHEL"></a> Instalación de SSIS en RHEL
+Para instalar el `mssql-server-is` empaquetar en RHEL, siga estos pasos:
 
 1. Descargue el archivo de configuración del repositorio de Microsoft SQL Server Red Hat.
 
@@ -119,15 +119,15 @@ sudo yum remove mssql-server-is
 ```
 
 ## <a name="unattended-installation"></a>Instalación desatendida
-Para ejecutar una instalación desatendida cuando se ejecuta `ssis-conf setup`, haga lo siguiente:
+Para ejecutar una instalación desatendida al ejecutar `ssis-conf setup`, realice lo siguiente:
 1.  Especifique el `-n` (sin preguntar) opción.
-2.  Proporcionar los valores necesarios mediante el establecimiento de variables de entorno.
+2.  Proporcione los valores necesarios mediante el establecimiento de variables de entorno.
 
-En el ejemplo siguiente se hace lo siguiente:
+En el siguiente ejemplo hace lo siguiente:
 -   Instala SSIS.
 -   Especifica la edición Developer, proporcionando un valor para el `SSIS_PID` variable de entorno.
 -   Acepta los términos de licencia proporcionando un valor para el `ACCEPT_EULA` variable de entorno.
--   Se ejecuta una instalación desatendida mediante la especificación de la `-n` (sin preguntar) opción.
+-   Ejecuta una instalación desatendida mediante la especificación de la `-n` (sin preguntar) opción.
 
 ```
 sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 
@@ -135,10 +135,10 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>Variables de entorno para la instalación desatendida
 
-| Variable de entorno | Description |
+| Variable de entorno | Descripción |
 |---|---|
 | **ACCEPT_EULA** | Acepta el contrato de licencia de SQL Server cuando se establece en cualquier valor (por ejemplo, `Y`).|
-| **SSIS_PID** | Establece la clave de producto o de edición de SQL Server. Estos son los valores posibles:<br/>Evaluation<br/>Desarrollador<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>Una clave de producto<br/><br/>Si especifica una clave de producto, la clave del producto debe tener la forma `#####-#####-#####-#####-#####`, donde `#` es una letra o un número.  |
+| **SSIS_PID** | Establece la clave de producto o la edición de SQL Server. Estos son los valores posibles:<br/>Evaluation<br/>Desarrollador<br/>Express <br/>Web <br/>Estándar<br/>Enterprise <br/>Una clave de producto<br/><br/>Si especifica una clave de producto, la clave de producto debe tener el formato `#####-#####-#####-#####-#####`, donde `#` es una letra o un número.  |
 | | |
 
 ## <a name="next-steps"></a>Pasos siguientes
@@ -151,4 +151,4 @@ Para configurar opciones adicionales de SSIS en Linux, consulte [configurar SQL 
 -   [Extraer, transformar y cargar datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
 -   [Configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
 -   [Limitaciones y problemas conocidos de SSIS en Linux](sql-server-linux-ssis-known-issues.md)
--   [Ejecución en Linux con cron del paquete de programación de SQL Server Integration Services](sql-server-linux-schedule-ssis-packages.md)
+-   [Ejecución en Linux con cron de paquetes de programación de SQL Server Integration Services](sql-server-linux-schedule-ssis-packages.md)

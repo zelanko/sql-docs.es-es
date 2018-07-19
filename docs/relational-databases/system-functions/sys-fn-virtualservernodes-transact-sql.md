@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_virtualservernodes (Transact-SQL) | Documentos de Microsoft
+title: Sys.fn_virtualservernodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -29,11 +29,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4073c1668ef43e7d303a3e534d16763d33939e45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231476"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042793"
 ---
 # <a name="sysfnvirtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -53,11 +53,11 @@ fn_virtualservernodes()
 ```  
   
 ## <a name="tables-returned"></a>Tablas devueltas  
- Si el servidor actual es un servidor agrupado, **fn_virtualservernodes** devuelve una lista de nodos de la instancia de clúster de conmutación por error en el que este instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ha definido.  
+ Si el servidor actual es un servidor agrupado, **fn_virtualservernodes** devuelve una lista de nodos de la instancia en clúster de conmutación por error en que esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ha definido.  
   
  Si la instancia del servidor actual no es un servidor agrupado, **fn_virtualservernodes** devuelve un conjunto de filas vacío.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  El usuario debe tener el permiso VIEW SERVER STATE para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="examples"></a>Ejemplos  

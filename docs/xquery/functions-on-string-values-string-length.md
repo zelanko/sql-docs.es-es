@@ -1,5 +1,5 @@
 ---
-title: Función String-length (XQuery) | Documentos de Microsoft
+title: Función String-length (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 229aaf528780001001b9319ae352913f35d067fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078202"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059779"
 ---
-# <a name="functions-on-string-values---string-length"></a>Funciones en valores de cadena: longitud de la cadena
+# <a name="functions-on-string-values---string-length"></a>Funciones usadas en valores de cadena: longitud de cadena
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Devuelve la longitud de la cadena en caracteres.  
@@ -47,14 +47,14 @@ fn:string-length($arg as xs:string?) as xs:integer
  *$arg*  
  Cadena de origen cuya longitud se va a calcular.  
   
-## <a name="remarks"></a>Comentarios  
- Si el valor de *$arg* es una secuencia vacía, un **xs: Integer** devuelve el valor 0.  
+## <a name="remarks"></a>Notas  
+ Si el valor de *$arg* es una secuencia vacía, un **xs: Integer** devuelve el valor de 0.  
   
  El comportamiento de los pares suplentes en funciones XQuery depende del nivel de compatibilidad de la base de datos. Si el nivel de compatibilidad es 110 o superior, cada par suplente se cuenta como un carácter individual. Para los niveles de compatibilidad inferiores, se cuentan como dos caracteres. Para obtener más información, consulte [nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) y [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
  Si el valor contiene un carácter Unicode de 4 bytes representado por dos caracteres suplentes, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contará los caracteres suplentes individualmente.  
   
- El **string-length()** sin un parámetro solo puede utilizarse dentro de un predicado. Por ejemplo, la siguiente consulta devuelve el elemento <`ROOT`>:  
+ El **string-length()** sin un parámetro solo se puede usar dentro de un predicado. Por ejemplo, la siguiente consulta devuelve el elemento <`ROOT`>:  
   
 ```  
 DECLARE @x xml;  
@@ -63,10 +63,10 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ```  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres adicionales (pares suplentes)  
- El comportamiento de pares suplentes en las funciones XQuery depende del nivel de compatibilidad de la base de datos y, en algunos casos, del URI del espacio de nombres predeterminado de las funciones. Para obtener más información, vea la sección "XQuery funciones son los caracteres suplentes" en el tema [cambios recientes en las características del motor de base de datos en SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consulte también [nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) y [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ El comportamiento de pares suplentes en las funciones XQuery depende del nivel de compatibilidad de la base de datos y, en algunos casos, del URI del espacio de nombres predeterminado de las funciones. Para obtener más información, vea la sección "XQuery funciones detectan los caracteres suplentes" en el tema [cambios recientes en las características del motor de base de datos en SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consulte también [nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) y [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se ofrece ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos de AdventureWorks.  
+ En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. Usar la función string-length() de XQuery para recuperar productos con descripciones resumidas largas  
  Para productos cuya descripción resumida tiene más de 50 caracteres, la consulta siguiente recupera el id. de producto, la longitud de la descripción resumida y el resumen en sí, el elemento <`Summary`>.  
@@ -137,7 +137,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription')=1;
   
 -   **pd** y **wm** son los prefijos de espacio de nombres utilizados en esta consulta. Identifican los mismos espacios de nombres utilizados en el documento que se va a consultar.  
   
--   La consulta XQuery especifica un bucle FOR anidado. El bucle FOR externo es necesario, ya que van a recuperar el **ProductModelID** atributos de la <`ProductDescription`> elemento. El bucle FOR interno es necesario, porque solo desea obtener aquellos productos que tengan descripciones de garantía con menos de 20 caracteres.  
+-   La consulta XQuery especifica un bucle FOR anidado. El bucle FOR externo es necesario, ya que van a recuperar el **ProductModelID** los atributos de la <`ProductDescription`> elemento. El bucle FOR interno es necesario, porque solo desea obtener aquellos productos que tengan descripciones de garantía con menos de 20 caracteres.  
   
  Éste es el resultado parcial:  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_addsrvrolemember (Transact-SQL) | Documentos de Microsoft
+title: sp_addsrvrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 8d718d3cb44a4a1f148cd92df72dde7465b61762
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238885"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056103"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
  Es el nombre del inicio de sesión que se va a agregar al rol fijo de servidor. *inicio de sesión* es **sysname**, no tiene ningún valor predeterminado. *inicio de sesión* puede ser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión o un inicio de sesión de Windows. Si el inicio de sesión de Windows no tiene acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todavía, se le concede el acceso automáticamente.  
   
  [ @rolename **=** ] **'***rol***'**  
- Es el nombre del rol fijo de servidor al que se va a agregar el inicio de sesión. *rol* es **sysname**, su valor predeterminado es null y debe ser uno de los siguientes valores:  
+ Es el nombre del rol fijo de servidor al que se va a agregar el inicio de sesión. *rol* es **sysname**, su valor predeterminado es null, y debe ser uno de los siguientes valores:  
   
 -   sysadmin  
   
@@ -73,16 +73,16 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando se agrega un inicio de sesión a un rol fijo de servidor, el inicio de sesión obtiene los permisos asociados a dicho rol.  
   
  No se puede cambiar la pertenencia al rol de inicio de sesión sa y pública.  
   
- Utilice sp_addrolemember para agregar a un miembro a una base de datos fija o rol definido por el usuario.  
+ Utilice sp_addrolemember para agregar a un miembro a la base de datos fijo o definido por el usuario.  
   
- sp_addsrvrolemember no puede ejecutarse en una transacción definida por el usuario.  
+ sp_addsrvrolemember no se puede ejecutar dentro de una transacción definida por el usuario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol al que se agrega el nuevo miembro.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geometry_histogram (Transact-SQL) | Documentos de Microsoft
+title: sp_help_spatial_geometry_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: d12665106633cbbdf46284089ef5f7eb79d7ccbf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251346"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049313"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -78,22 +78,22 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Se devuelve un valor de tabla. En la siguiente cuadrícula se describe el contenido de la columna de la tabla.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Representa el identificador único de cada celda, el recuento empieza por 1.|  
-|**Celda**|**geometry**|Es un polígono rectangular que representa cada celda. La forma de la celda es idéntica a la de la celda usada para los índices espaciales.|  
+|**celda**|**geometry**|Es un polígono rectangular que representa cada celda. La forma de la celda es idéntica a la de la celda usada para los índices espaciales.|  
 |**row_count**|**bigint**|Indica el número de objetos espaciales que tocan la celda o que están contenidos en ella.|  
   
-## <a name="permissions"></a>Permissions  
- Usuario debe ser un miembro de la **público** rol. Requiere el permiso READ ACCESS en el servidor y el objeto.  
+## <a name="permissions"></a>Permisos  
+ Usuario debe ser un miembro de la **pública** rol. Requiere el permiso READ ACCESS en el servidor y el objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La pestaña Resultados espaciales de SSMS muestra una representación gráfica de los resultados. Puede consultar los resultados en la ventana espacial para obtener un número aproximado de elementos de resultados. Los objetos de la tabla pueden ocupar más de una celda. Por tanto, la suma de las celdas puede ser mayor que el número de objetos reales.  
   
- Puede que se agregue una fila adicional al conjunto de resultados que contiene el número de objetos situados fuera del cuadro de límite o que están en contacto con el borde de dicho cuadro. El **cellid** de esta fila es 0 y el **celda** de esta fila contiene un **LineString** que representa el cuadro de límite. Esta fila representa todo el espacio fuera del cuadro de límite.  
+ Puede que se agregue una fila adicional al conjunto de resultados que contiene el número de objetos situados fuera del cuadro de límite o que están en contacto con el borde de dicho cuadro. El **cellid** de esta fila es 0 y el **celda** de esta fila contiene un **LineString** que representa el rectángulo de selección. Esta fila representa todo el espacio fuera del cuadro de límite.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea una tabla de ejemplo y, a continuación, llama **sp_help_spatial_geometry_histogram** en la tabla.  
+ El ejemplo siguiente se crea una tabla de ejemplo y, a continuación, llama a **sp_help_spatial_geometry_histogram** en la tabla.  
   
  `USE AdventureWorksDW2012`  
   

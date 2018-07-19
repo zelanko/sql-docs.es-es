@@ -1,5 +1,5 @@
 ---
-title: Elemento (XMLA) del mensaje | Documentos de Microsoft
+title: Elemento (XMLA) del mensaje | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 29780b5578c5e48c2ff8781719f9ebffe065e62c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575707"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38065893"
 ---
 # <a name="message-element-xmla"></a>Elemento Message (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contiene un mensaje devuelto de una instancia de Analysis Services mediante un [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) o [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) llamada al método.  
+  Contiene un mensaje devuelto por una instancia de Analysis Services por una [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) o [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) llamada al método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,7 +43,7 @@ ms.locfileid: "34575707"
 |Valor predeterminado|None|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  

@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_columns (Transact-SQL) | Documentos de Microsoft
+title: sp_help_fulltext_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 6179297a3634479ebd090395d4cbb5cb48f0e441
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250175"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063663"
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +49,17 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@table_name=**] **'***table_name***'**  
- Es el nombre de tabla de una o dos partes para la que se solicita información de índice de texto completo. *table_name* es **nvarchar (517)**, su valor predeterminado es null. Si *table_name* se omite, se recupera información de la columna de índice de texto completo para cada tabla indizada de texto completo.  
+ Es el nombre de tabla de una o dos partes para la que se solicita información de índice de texto completo. *table_name* es **nvarchar (517)**, su valor predeterminado es null. Si *table_name* se omite, se recupera información de columna de índice de texto completo para cada tabla indizada de texto completo.  
   
  [  **@column_name=**] **'***column_name***'**  
- Es el nombre de la columna cuyos metadatos de índice de texto completo se solicitan. *column_name* es **sysname**, su valor predeterminado es null. Si *column_name* se omite o es NULL, se devuelve información de columna de texto completo para cada columna de índice de texto completo de *table_name*. Si *table_name* también se omite o es NULL, se devuelve información de columna de índice de texto completo para cada columna de índice de texto completo de todas las tablas de la base de datos.  
+ Es el nombre de la columna cuyos metadatos de índice de texto completo se solicitan. *column_name* es **sysname**, su valor predeterminado es null. Si *column_name* se omite o es NULL, se devuelve información de columna de texto completo para cada columna de índice de texto completo para *table_name*. Si *table_name* también se omite o es NULL, se devuelve información de columna de índice de texto completo para cada columna de índice de texto completo de todas las tablas de la base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|Propietario de la tabla. Es el nombre del usuario de la base de datos que ha creado la tabla.|  
 |**TABLE_ID**|**int**|Id. de la tabla.|  
@@ -70,7 +70,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 |**FULLTEXT_BLOBTP_COLID**|**int**|Id. de la columna de tipo de documento. Este valor solo es aplicable cuando la columna indizada de texto completo es un **varbinary (max)** o **imagen** columna.|  
 |**FULLTEXT_LANGUAGE**|**sysname**|Lenguaje utilizado para la búsqueda de texto completo de la columna.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los permisos de ejecución corresponden a los miembros del rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  

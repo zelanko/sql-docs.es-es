@@ -1,5 +1,5 @@
 ---
-title: Introducción a SMO | Documentos de Microsoft
+title: Introducción a SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -20,19 +20,19 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 76596e07a7d99f725f7c6b6f0c0f25b498aab729
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966430"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005992"
 ---
 # <a name="getting-started-in-smo"></a>Introducción a SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-Esta página proporciona vínculos a temas diseñados para ayudarle a empezar a utilizar objetos de administración de SQL Server (SMO). Los temas muestran la jerarquía de objetos SMO, escribir programas en SMO, SMO y lenguajes de programación diferentes y tareas de programación específicas de la portada.  
+Esta página proporciona vínculos a temas diseñados para ayudarle a empezar a usar SQL Server Management Objects (SMO). Los temas muestran la jerarquía de objetos SMO, escribir programas en SMO, SMO y diferentes lenguajes de programación y las tareas de programación específicas de la portada.  
  
 ##<a name="installing-smo"></a>Instalar SMO
-[Instalar SMO](installing-smo.md) proporciona instrucciones para instalar y hacer referencia a los ensamblados SMO.
+[Instalar SMO](installing-smo.md) se proporcionan instrucciones para instalar y hacer referencia a los ensamblados SMO.
 
 ## <a name="object-model"></a>Modelo de objetos  
 [Modelo de objetos](../../relational-databases/server-management-objects-smo/smo-object-model.md) describe la jerarquía de objetos SMO y cómo se relacionan entre sí los objetos.  

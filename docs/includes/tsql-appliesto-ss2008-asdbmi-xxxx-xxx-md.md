@@ -1,2 +1,2 @@
-<Token>**En este tema se aplica a:**![Sí](media/yes.png)SQL Server (a partir de 2008)![Sí](media/yes.png)base de datos de SQL de Azure (solo instancia administrada)![sin](media/no.png)almacenamiento de datos de SQL Azure ![no](media/no.png)almacenamiento de datos paralelos </Token>
+<Token>**ESTE TEMA SE APLICA A:**![sí](media/yes.png)SQL Server (a partir de la versión 2008)![sí](media/yes.png)Azure SQL Database (solo Instancia Administrada)![no](media/no.png)Azure SQL Data Warehouse ![no](media/no.png)Almacenamiento de datos paralelos </Token>
 

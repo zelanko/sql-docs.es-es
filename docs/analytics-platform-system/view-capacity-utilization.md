@@ -1,6 +1,6 @@
 ---
-title: Ver el uso de capacidad en el sistema de la plataforma de análisis | Documentos de Microsoft
-description: Ver el uso de capacidad en el sistema de la plataforma de análisis.
+title: Uso de la capacidad de ver en Analytics Platform System | Microsoft Docs
+description: Ver el uso de capacidad en Analytics Platform System.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,29 +9,29 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fcd440f3add9ff6823c9104fc94af736d3fdee4e
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 5fe722e6ce3d75f6e271e19d66551ccf951d045f
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539225"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909735"
 ---
-# <a name="view-capacity-utilization-in-analytics-platform-system"></a>Ver el uso de capacidad en el sistema de la plataforma de análisis
-Este tema explica cómo ver la utilización de la capacidad en el dispositivo PDW de SQL Server.  
+# <a name="view-capacity-utilization-in-analytics-platform-system"></a>Vista utilización de la capacidad de Analytics Platform System
+En este tema se explica cómo ver el uso de la capacidad en el dispositivo PDW de SQL Server.  
   
-## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Para ver la utilización de la capacidad mediante la consola de administración  
-Para ver el espacio utilizado, abra la consola de administración y haga clic en el **almacenamiento** ficha. Hay un **almacenamiento** ficha de la región PDW y la región HDI.  
+## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Para ver la utilización de la capacidad mediante el uso de la consola de administración  
+Para ver el espacio usado, abra la consola de administración y haga clic en el **almacenamiento** ficha. Hay un **almacenamiento** ficha para la región PDW.  
   
 ![Almacenamiento de la consola de administración PDW](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
 ## <a name="to-view-capacity-utilization-by-using-queries"></a>Para ver la utilización de la capacidad mediante el uso de consultas  
-Para saber si un nodo está quedando sin espacio, el sistema de supervisión de estado de SQL Server PDW ya supervisa el espacio libre para todos los volúmenes dentro de cada nodo.  
+Para saber si un nodo se está quedando sin espacio, el sistema de supervisión de estado de PDW de SQL Server ya supervisa el espacio libre para todos los volúmenes dentro de cada nodo.  
   
-Si el espacio libre dentro de un volumen es inferior al 30%, PDW de SQL Server genera un **advertencia** alerta en [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md).  La alerta permanecerá hasta que se libera espacio libre.  
+Si el espacio libre dentro de un volumen es inferior al 30%, PDW de SQL Server genera un **advertencia** alerta en [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md).  La alerta permanecerá hasta que haya espacio libre está disponible.  
   
-Si el espacio disponible en un volumen desciende por debajo del 10%, PDW de SQL Server genera un **crítico** alerta. Esto se considera crítica porque las consultas pudieron fallar si hacen que la base de datos expandir.  
+Si el espacio disponible en un volumen desciende por debajo del 10%, PDW de SQL Server genera un **críticos** alerta. Esto se considera crítica porque podrían producirse un error en las consultas si hacen que la base de datos expandir.  
   
-Para recuperar el uso de volúmenes, vea el ejemplo siguiente.  
+Para recuperar el uso de volúmenes, consulte el ejemplo siguiente.  
   
 ```sql  
 SELECT   
@@ -68,7 +68,7 @@ GROUP BY space.[pdw_node_id] , space.[node_name] , space.[component_instance_id]
 ORDER BY space.[pdw_node_id], MAX(space.[volume_name]);  
 ```  
   
-Para recuperar el espacio usado por las bases de datos en todos los nodos de dispositivo, vea el ejemplo siguiente.  
+Para recuperar el espacio usado por las bases de datos entre los nodos del dispositivo, consulte el ejemplo siguiente.  
   
 ```sql  
 SELECT   
@@ -105,5 +105,5 @@ ORDER BY [db_name], [pdw_node_id];
   
 ## <a name="see-also"></a>Vea también  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Supervisión de dispositivo &#40;sistema de la plataforma de análisis&#41;](appliance-monitoring.md)  
+[Supervisión del dispositivo &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

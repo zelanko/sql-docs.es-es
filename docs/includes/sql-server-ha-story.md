@@ -68,7 +68,7 @@ Debido a la diferencia en la pila de clúster, se necesitan algunos cambios para
 
 * WSFC 
 * External
-* Ninguno
+* None
 
 Todos los grupos de disponibilidad que necesitan disponibilidad deben utilizar un clúster subyacente, lo que en el caso de SQL Server 2017 significa un clúster WSFC o Pacemaker. Para los grupos de disponibilidad basados en Windows Server que usan un clúster WSFC subyacente, el tipo de clúster predeterminado es WSFC (y no es necesario configurarlo). Para los grupos de disponibilidad basados en Linux, al crear el grupo de disponibilidad, el tipo de clúster debe establecerse como Externo. La integración con Pacemaker se configura después de crear el grupo de disponibilidad, mientras que en un clúster de WSFC esto se hace en el momento de la creación.
 

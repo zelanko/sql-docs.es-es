@@ -1,7 +1,7 @@
 ---
 title: 'SQL Server Management Studio: Registro de cambios (SSMS) | Microsoft Docs'
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 06/26/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,23 +15,97 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84073aa122fbb4654e183fefa3c6b7977b751b1e
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+ms.openlocfilehash: dc20fa7c10d8922587801e6936c568e4363a207b
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619542"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957728"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio: Registro de cambios (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 En este artículo, se proporcionan detalles sobre las actualizaciones, mejoras y correcciones de errores de las versiones actuales y anteriores de SSMS. Descargue las [versiones anteriores de SSMS a continuación](#previous-ssms-releases).
 
 
-## <a name="ssms-177download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
-Número de versión: 17.7<br>
+
+## <a name="ssms-1781download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+*Se detectó un error en 17.8 relacionado con el aprovisionamiento de bases de datos SQL, por lo que SSMS 17.8.1 sustituye a 17.8.*
+
+
+Número de compilación: 14.0.17277.0<br>
+Fecha de publicación: 26 de junio de 2018
+
+
+### <a name="whats-new"></a>Novedades
+
+**SSMS general**
+
+Propiedades de la base de datos:
+
+- Esta mejora expone la opción de configuración **AUTOGROW_ALL_FILES** para grupos de archivos. Esta nueva opción de configuración se agrega en la ventana Propiedades de base de datos > Grupos de archivos en forma de una nueva columna (Crecimiento automático de todos los archivos) de casillas para cada grupo de archivos disponible (excepto para Secuencia de archivos y Grupos de archivos con optimización para memoria). El usuario puede habilitar o deshabilitar AUTOGROW_ALL_FILES para un determinado grupo de archivos alternando la casilla de Autogrow_All_Files correspondiente. En consecuencia, a la opción **AUTOGROW_ALL_FILES** se le aplica un script adecuado al aplicar scripts en la base de datos para CREATE o generar scripts para la base de datos (SQL2016 y posteriores).
+    
+Editor SQL:
+
+- Se ha mejorado la experiencia con Intellisense en Azure SQL Database cuando el usuario no tiene acceso maestro.
+
+Scripting:
+
+- Mejoras generales de rendimiento, especialmente a través de conexiones de alta latencia.
+    
+**Analysis Servics (AS)**
+
+- Se han actualizado las bibliotecas de cliente y los proveedores de datos de Analysis Services a la versión más reciente, que agregó compatibilidad para la nueva autoridad de AAD de Azure Government (login.microsoftonline.us).
+
+
+
+### <a name="bug-fixes"></a>Correcciones de errores
+
+**SSMS general**
+    
+Planes de mantenimiento:
+
+- Se ha corregido un problema al editar los planes de mantenimiento con Autenticación SQL por el cual se producía un error en la "Tarea Notificar al operador" al usar la autenticación SQL.
+    
+Scripting:
+
+- Se ha corregido un problema por el cual las acciones de PostProcess en SMO provocan el agotamiento de recursos y errores de inicio de sesión de SQL.
+    
+SMO:
+
+- Se ha corregido un problema por el cual se produce un problema en Table.Alter() si se agrega una columna con restricción predeterminada y la tabla ya tiene datos. Para obtener más información, consulte [sql server smo generating inline default constraint when adding a column to a table containing data](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625) (generación de restricción predeterminada en línea al agregar una columna a una tabla que contiene datos).
+    
+Always Encrypted:
+
+- Se ha corregido un problema (en DacFx) que provocaba un error de tiempo de espera de bloqueo al habilitar Always Encrypted en una tabla con particiones
+    
+
+**Analysis Services (AS)**
+
+- Se ha corregido un problema que se producía al modificar un origen de datos de OAuth en un modelo de compatibilidad de nivel 1400 de Analysis Services tabular, que provocaba que los cambios en los tokens de OAuth no se actualizaran en el origen de datos.
+- Se ha corregido un bloqueo en SSMS que podía producirse al usar algunas credenciales de origen de datos no válidas o editar orígenes de datos que no admitían la migración de Cambiar origen de datos en Power Query (por ejemplo, Oracle) en los modelos de compatibilidad de nivel 1400 de Analysis Services tabular.
+
+
+### <a name="known-issues"></a>Problemas conocidos
+
+- Al hacer clic en el botón *Script* después de modificar cualquier propiedad de grupo de archivos en la ventana *Propiedades*, se generan dos scripts: un script con una instrucción *USE <database>* y un segundo script con una instrucción *USE master*.  El script *USE master* se genera en el error y se debe descartar. Ejecute el script que contiene la instrucción *USE <database>*.
+- Algunos cuadros de diálogo muestran un error de edición no válida cuando se trabaja con nuevas ediciones de Azure SQL Database *de uso general* o *crítico para la empresa*.
+- Se puede observar alguna latencia en el visor de XEvents. Es un [problema conocido de .Net Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Considere la actualización a NetFx 4.7.2.
+
+
+
+## <a name="previous-ssms-releases"></a>Versiones de SSMS anteriores
+
+Para descargar las versiones anteriores de SSMS, haga clic en los vínculos de título de las secciones siguientes.
+
+
+## <a name="downloadssdtmediadownloadpng-ssms-177httpsgomicrosoftcomfwlinklinkid873126"></a>![descargar](../ssdt/media/download.png) [SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126)
+
 Número de compilación: 14.0.17254.0<br>
 Fecha de lanzamiento: 9 de mayo de 2018
+
+[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
+
 
 ### <a name="whats-new"></a>Novedades
 
@@ -178,9 +252,7 @@ Correo electrónico de base de datos:
 > [!WARNING]
 > Hay un problema conocido por el que SSMS 17.6 tiene un comportamiento inestable y se bloquea al usar [planes de mantenimiento](../relational-databases/maintenance-plans/maintenance-plans.md). Si usa planes de mantenimiento, no instale SSMS 17.6. Si ya ha instalado la versión 17.6 y experimenta este problema, cambie a la versión 17.5 de SSMS. 
 
-## <a name="previous-ssms-releases"></a>Versiones de SSMS anteriores
 
-Para descargar las versiones anteriores de SSMS, haga clic en los vínculos de título de las secciones siguientes.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-175httpsgomicrosoftcomfwlinklinkid867670"></a>![descargar](../ssdt/media/download.png) [SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
 Disponible con carácter general | Número de compilación: 14.0.17224.0
@@ -310,7 +382,7 @@ Almacén de consultas:
     - Se ha corregido un problema que hacía que SSMS se bloqueara si un usuario no tenía el permiso *VER ESTADO DEL SERVIDOR*.
     - Se ha corregido un problema en el que, al cerrar la ventana de datos actualizados del generador de perfiles XEvent, no se detenía la sesión subyacente.
 - Servidores registrados:
-    - Se ha corregido un problema que hacía que el comando "Mover a…" dejara de funcionar (vea el [artículo de Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) y el [artículo de Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)).
+    - Se ha corregido un problema por el cual el comando "Mover a…" dejó de funcionar [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) y [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/).
 - SMO:
     - Se ha corregido un problema en el que el método TransferData en el objeto de transferencia no funcionaba.
     - Se ha corregido un problema por el que las bases de datos de servidor iniciaban una excepción con las bases de datos de SQL DW en pausa.
@@ -728,7 +800,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Los errores de Always Encrypted al actualizar los módulos después del cifrado se tratan incorrectamente.
 - Se ha cambiado de 15 a 30 segundos el tiempo de espera predeterminado de conexión para OLTP y OLAP a fin de corregir una clase de errores de conexión que se omitían. 
 - Se ha corregido un bloqueo en SSMS cuando se iniciaba un informe personalizado. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3118856)
-- Se ha corregido un problema que hacía que se produjese un error en "Generar script…" para las bases de datos de SQL Azure.
+- Se ha corregido un problema por el cual se produce un error en "Generar script…" para bases de datos SQL de Azure.
 - Se ha corregido la opción "Script como" y el "Asistente para generar scripts" para que no agreguen nuevas líneas adicionales al generar scripts para objetos, como procedimientos almacenados. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - Proveedor SQLAS de PowerShell: se ha agregado la propiedad LastProcessed a las carpetas Dimension y MeasureGroup. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
 - Estadísticas de consultas activas: se ha corregido un problema que hacía que solo se mostrase la primera consulta de un lote. [Artículo de Connect] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  

@@ -15,12 +15,12 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df45518dc367d3b2a2c980ba39cad09084c30ecf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d433843076a83c8a09319c118bbd44e7f89a24d1
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401267"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262309"
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Lección 1-2: Agregar y configurar un administrador de conexiones de archivos planos
 En esta tarea, agregará un administrador de conexiones de archivos planos al paquete que acaba de crear. Un administrador de conexiones de archivos planos permite a un paquete extraer datos de un archivo plano. Mediante el administrador de conexiones de archivos planos puede especificar el nombre y la ubicación del archivo, la configuración regional y la página de códigos, y el formato del archivo, incluyendo los delimitadores de columna, que deben aplicarse cuando el paquete extrae datos del archivo plano. Además, puede especificar de forma manual el tipo de datos para columnas individuales, o usar el cuadro de diálogo **Sugerir tipos de columna** para asignar de forma automática las columnas de datos extraídos a los tipos de datos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -95,7 +95,7 @@ El administrador de conexiones de archivos planos proporciona información de co
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Date|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-    El tipo de datos sugerido para la columna **CurrencyID** no es compatible con el tipo de datos del campo de la tabla de destino. Puesto que el tipo de datos de `DimCurrency.CurrencyAlternateKey` es nchar (3), **CurrencyID** debe cambiarse de la cadena [DT_STR] a la cadena [DT_WSTR]. Adicionalmente, el campo `DimDate.FullDateAlternateKey` está definido como tipo de datos de fecha; por consiguiente, **CurrencyDate** debe cambiarse del tipo fecha [DT_Date] al tipo fecha de base de datos [DT_DBDATE].  
+    El tipo de datos sugerido para la columna **CurrencyID** no es compatible con el tipo de datos del campo de la tabla de destino. Puesto que el tipo de datos de `DimCurrency.CurrencyAlternateKey` es nchar (3), **CurrencyID** debe cambiarse de la cadena [DT_STR] a la cadena Unicode [DT_WSTR]. Adicionalmente, el campo `DimDate.FullDateAlternateKey` está definido como tipo de datos de fecha; por consiguiente, **CurrencyDate** debe cambiarse del tipo fecha [DT_Date] al tipo fecha de base de datos [DT_DBDATE].  
   
 2.  En la lista, seleccione la columna CurrencyID y, en el panel de propiedades, cambie el tipo de datos de la columna **CurrencyID** de cadena [DT_STR] a cadena Unicode [DT_WSTR].  
   
@@ -104,7 +104,7 @@ El administrador de conexiones de archivos planos proporciona información de co
 4.  Haga clic en **Aceptar**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Paso 3: agregar y configurar un administrador de conexiones OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+[Paso 3: Agregar y configurar un administrador de conexiones OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>Ver también  
 [Administrador de conexiones de archivos planos](../integration-services/connection-manager/flat-file-connection-manager.md)  

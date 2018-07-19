@@ -1,7 +1,7 @@
 ---
 title: Guía de diseño y de arquitectura de índices de SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -28,12 +28,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a934f7311096e9f97463fc9c7e826aab1fe063f6
-ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
+ms.openlocfilehash: 15c3db3784c056946a8ec047360691515c1c12be
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34812169"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909595"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guía de diseño y de arquitectura de índices de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -108,13 +108,20 @@ Para obtener más información sobre los índices de texto completo, vea [Rellen
 ### <a name="query-considerations"></a>Consideraciones sobre consultas  
  Cuando diseñe un índice, tenga en cuenta las siguientes directrices acerca de las consultas:  
   
--   Cree índices no clúster en las columnas que se usan con frecuencia en predicados y condiciones de combinación de las consultas. Sin embargo, debe evitar agregar columnas innecesarias. Si agrega demasiadas columnas de índice, puede reducir el espacio en disco y el rendimiento del mantenimiento del índice.  
+-   Cree índices no clúster en las columnas que se usan con frecuencia en predicados y condiciones de combinación de las consultas. Estas son las columnas SARGable<sup>1</sup>. Sin embargo, debe evitar agregar columnas innecesarias. Si agrega demasiadas columnas de índice, puede reducir el espacio en disco y el rendimiento del mantenimiento del índice.  
   
 -   La utilización de índices puede mejorar el rendimiento de las consultas, ya que los datos necesarios para satisfacer las necesidades de la consulta existen en el propio índice. Es decir, solo se requieren las páginas de índice, y no las páginas de datos de la tabla o el índice clúster, para recuperar los datos solicitados; por lo tanto, se reduce la E/S de disco global. Por ejemplo, una consulta de las columnas **a** y **b** en una tabla que tiene un índice compuesto creado en las columnas **a**, **b**y **c** puede recuperar los datos especificados del índice.  
-  
+
+    > [!IMPORTANT]
+    > Los índices de cobertura son la designación para un [índice no agrupado](#nonclustered-index-architecture) que resuelve uno o varios resultados de consulta similares directamente sin acceso a su tabla base y sin incurrir en búsquedas.
+    > Esos índices tienen todas las columnas no [SARGable](#sargable) necesarias en su nivel hoja. Esto significa que el índice cubre todas las columnas que devuelve la cláusula SELECT y todos los argumentos WHERE y JOIN.
+    > Posiblemente, hay mucho menos E/S para ejecutar la consulta, si el índice es lo suficientemente restringido en comparación con las filas y las columnas de la tabla misma, lo que significa que es un subconjunto real del total de columnas. Considere los índices de cobertura cuando seleccione una pequeña porción de una tabla de gran tamaño y donde esa porción pequeña esté definida mediante un predicado fijo, como [columnas dispersas](../relational-databases/tables/use-sparse-columns.md) que solo contienen unos pocos valores no NULL, por ejemplo.
+    
 -   Escriba consultas que inserten o modifiquen tantas filas como sea posible en una sola instrucción, en lugar de utilizar varias consultas para actualizar las mismas filas. Al utilizar solo una instrucción, se puede aprovechar el mantenimiento de índices optimizados.  
   
 -   Analice el tipo de la consulta y cómo se utilizan las columnas en ella. Por ejemplo, una columna utilizada en una consulta de coincidencia exacta sería una buena candidata para un índice no clúster o clúster.
+
+<a name="sargable"></a><sup>1</sup> El término SARGable en las bases de datos relacionales se refiere a un predicado **S**earch **ARG**ument-**able** que puede usar un índice para acelerar la ejecución de la consulta.
   
 ### <a name="column-considerations"></a>Consideraciones sobre columnas  
  Cuando diseñe un índice, tenga en cuenta las siguientes directrices acerca de las columnas:  
@@ -148,7 +155,7 @@ Para obtener más información sobre los índices de texto completo, vea [Rellen
 -   Almacén de columnas y almacén de filas
 -   Índice de hash e índice no agrupado para tablas optimizadas para memoria
   
- También puede personalizar las características iniciales de almacenamiento del índice para optimizar su rendimiento o mantenimiento; por ejemplo, puede establecer una opción como FILLFACTOR. Además, puede determinar la ubicación de almacenamiento del índice si utiliza grupos de archivos o esquemas de partición y mejorar así el rendimiento.  
+También puede personalizar las características iniciales de almacenamiento del índice para optimizar su rendimiento o mantenimiento; por ejemplo, puede establecer una opción como FILLFACTOR. Además, puede determinar la ubicación de almacenamiento del índice si utiliza grupos de archivos o esquemas de partición y mejorar así el rendimiento.  
   
 ###  <a name="Index_placement"></a> Colocación de índices en grupos de archivos o esquemas de particiones  
  Al desarrollar la estrategia de diseño del índice, debe tener en cuenta la ubicación de los índices en los grupos de archivos asociados con la base de datos. La selección cuidadosa del grupo de archivos o del esquema de partición puede mejorar el rendimiento de la consulta.  
@@ -159,9 +166,9 @@ Para obtener más información sobre los índices de texto completo, vea [Rellen
 -   Crear particiones de índices clúster y no clúster repartidos en varios grupos de archivos.  
 -   Mover una tabla de un grupo de archivos a otro quitando el índice clúster y especificando un nuevo grupo de archivos o un esquema de partición en la cláusula MOVE TO de la instrucción DROP INDEX o utilizando la instrucción CREATE INDEX con la cláusula DROP_EXISTING.  
   
- Si se crea el índice no clúster en otro grupo de archivos, es posible mejorar el rendimiento si los grupos de archivos utilizan distintas unidades físicas con sus propios controladores. De ese modo, la información de índice y los datos pueden leerse en paralelo mediante varios cabezales de disco. Por ejemplo, si la misma consulta emplea `Table_A` del grupo de archivos `f1` e `Index_A` del grupo de archivos `f2` , se puede mejorar el rendimiento porque ambos grupos de archivos se están usando sin contención. Sin embargo, si la consulta examina `Table_A` pero no se hace referencia a `Index_A` , solo se usará el grupo de archivos `f1` . Esto no produce ninguna mejora de rendimiento.  
+Si se crea el índice no clúster en otro grupo de archivos, es posible mejorar el rendimiento si los grupos de archivos utilizan distintas unidades físicas con sus propios controladores. De ese modo, la información de índice y los datos pueden leerse en paralelo mediante varios cabezales de disco. Por ejemplo, si la misma consulta emplea `Table_A` del grupo de archivos `f1` e `Index_A` del grupo de archivos `f2` , se puede mejorar el rendimiento porque ambos grupos de archivos se están usando sin contención. Sin embargo, si la consulta examina `Table_A` pero no se hace referencia a `Index_A` , solo se usará el grupo de archivos `f1` . Esto no produce ninguna mejora de rendimiento.  
   
- Como no se puede predecir qué tipo de acceso tendrá lugar ni cuándo, la mejor decisión consiste en repartir las tablas e índices en todos los grupos de archivos. De este modo se garantiza el acceso a todos los discos, ya que todos los datos e índices están repartidos por igual entre todos los discos independientemente de la forma de acceso a los datos. También se trata de un método más sencillo para los administradores de sistemas.  
+Como no se puede predecir qué tipo de acceso tendrá lugar ni cuándo, la mejor decisión consiste en repartir las tablas e índices en todos los grupos de archivos. De este modo se garantiza el acceso a todos los discos, ya que todos los datos e índices están repartidos por igual entre todos los discos independientemente de la forma de acceso a los datos. También se trata de un método más sencillo para los administradores de sistemas.  
   
 #### <a name="partitions-across-multiple-filegroups"></a>Particiones entre varios grupos de archivos  
  También puede considerar la opción de crear particiones de clúster y no clúster en varios grupos de archivos. Los índices con particiones se dividen horizontalmente o por filas, basándose en una función de partición. La función de partición define cómo se asigna cada fila a un conjunto de particiones en los valores de ciertas columnas, denominadas columnas de partición. Un esquema de partición especifica la asignación de las particiones a un conjunto de grupos de archivos.  
@@ -172,7 +179,7 @@ Para obtener más información sobre los índices de texto completo, vea [Rellen
   
 -   Realizar consultas de forma más rápida y eficiente. Cuando las consultas tienen acceso a varias particiones de un índice, el optimizador de consultas puede procesar particiones individuales simultáneamente y excluir particiones que no están afectadas por la consulta.  
   
- Para obtener más información, consulte [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+Para obtener más información, consulte [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Sort_Order"></a> Directrices para diseñar el criterio de ordenación de los índices  
  Al definir índices, debe tenerse en cuenta si los datos de la columna de clave de índice se almacenan en orden ascendente o descendente. El orden ascendente es el predeterminado y mantiene la compatibilidad con las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La sintaxis de las instrucciones CREATE INDEX, CREATE TABLE y ALTER TABLE admite las palabras clave ASC (ascendente) y DESC (descendente) en columnas individuales de índices y restricciones.  
@@ -237,7 +244,7 @@ Use estas vistas de metadatos para ver los atributos de los índices. Puede obte
   
 -   Se pueden utilizar en consultas por rango.  
   
- Si el índice agrupado no se crea con la propiedad `UNIQUE`, el [!INCLUDE[ssDE](../includes/ssde-md.md)] agrega automáticamente a la tabla una columna de valor de unicidad de 4 bytes. Cuando es necesario, el [!INCLUDE[ssDE](../includes/ssde-md.md)] agrega automáticamente un valor de unicidad a una fila para hacer que cada clave sea única. Esta columna y sus valores se utilizan de forma interna; los usuarios no pueden verlos ni tener acceso a ellos.  
+Si el índice agrupado no se crea con la propiedad `UNIQUE`, el [!INCLUDE[ssDE](../includes/ssde-md.md)] agrega automáticamente a la tabla una columna de valor de unicidad de 4 bytes. Cuando es necesario, el [!INCLUDE[ssDE](../includes/ssde-md.md)] agrega automáticamente un valor de unicidad a una fila para hacer que cada clave sea única. Esta columna y sus valores se utilizan de forma interna; los usuarios no pueden verlos ni tener acceso a ellos.  
   
 ### <a name="clustered-index-architecture"></a>Arquitectura de los índices clúster  
  En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], los índices se organizan como árboles B. Las páginas de un árbol b de índice se llaman nodos del índice. El nodo superior del árbol b se llama nodo raíz. Los nodos inferiores del índice se denominan nodos hoja. Los niveles del índice entre el nodo raíz y los nodos hoja se conocen en conjunto como niveles intermedios. En un índice clúster, los nodos hoja contienen las páginas de datos de la tabla subyacente. El nodo raíz y los nodos intermedios incluyen páginas de índice que contienen filas de índice. Cada fila de índice contiene un valor clave y un puntero a una página de nivel intermedio en el árbol b, o bien a una fila de datos del nivel hoja del índice. Las páginas de cada nivel del índice se vinculan en una lista con vínculos dobles.  
@@ -272,32 +279,32 @@ Use estas vistas de metadatos para ver los atributos de los índices. Puede obte
   
 -   Son únicas o contienen muchos valores distintos  
   
-     Por ejemplo, un Id. de empleado identifica de forma exclusiva a los empleados. Un índice agrupado o una restricción [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) en la columna `EmployeeID` aumentaría el rendimiento de las consultas que buscan información de empleado según el número de identificador del empleado. También se podría crear un índice clúster en las columnas `LastName`, `FirstName`y `MiddleName` , ya que los registros de empleados se suelen agrupar y consultar de esta forma, y la combinación de estas columnas seguiría proporcionando un alto grado de diferencia. 
+    Por ejemplo, un Id. de empleado identifica de forma exclusiva a los empleados. Un índice agrupado o una restricción [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) en la columna `EmployeeID` aumentaría el rendimiento de las consultas que buscan información de empleado según el número de identificador del empleado. También se podría crear un índice clúster en las columnas `LastName`, `FirstName`y `MiddleName` , ya que los registros de empleados se suelen agrupar y consultar de esta forma, y la combinación de estas columnas seguiría proporcionando un alto grado de diferencia. 
 
-     > [!TIP]
-     > Si no se especifica de otra forma, al crear una restricción [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] crea un [índice agrupado](#clustered_index) para admitir esa restricción.
-     > Aunque se puede usar *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* para aplicar la unicidad como PRIMARY KEY, no es una clave de agrupación eficaz.
-     > Si usa *uniqueidentifier* como PRIMARY KEY, se recomienda crearlo como un índice no agrupado y usar otra columna, como `IDENTITY`, para crear el índice agrupado.   
+    > [!TIP]
+    > Si no se especifica de otra forma, al crear una restricción [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] crea un [índice agrupado](#clustered_index) para admitir esa restricción.
+    > Aunque se puede usar *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* para aplicar la unicidad como PRIMARY KEY, no es una clave de agrupación eficaz.
+    > Si usa *uniqueidentifier* como PRIMARY KEY, se recomienda crearlo como un índice no agrupado y usar otra columna, como `IDENTITY`, para crear el índice agrupado.   
   
 -   Se tiene acceso a ellas de forma secuencial  
   
-     Por ejemplo, un identificador de producto identifica de forma exclusiva los productos de la tabla `Production.Product` en la base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Un índice clúster en `WHERE ProductID BETWEEN 980 and 999`mejoraría las consultas en las que se especifica una búsqueda secuencial, como `ProductID`. Esto se debe a que las filas se almacenan de forma ordenada en esta columna de clave.  
+    Por ejemplo, un identificador de producto identifica de forma exclusiva los productos de la tabla `Production.Product` en la base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Un índice clúster en `WHERE ProductID BETWEEN 980 and 999`mejoraría las consultas en las que se especifica una búsqueda secuencial, como `ProductID`. Esto se debe a que las filas se almacenan de forma ordenada en esta columna de clave.  
   
 -   Definido como `IDENTITY`.  
   
 -   Se utilizan con frecuencia para ordenar los datos recuperados de una tabla  
   
-     Puede resultar conveniente agrupar, es decir, ordenar físicamente la tabla de dicha columna para evitar una operación de ordenación cada vez que se consulta la columna.  
+    Puede resultar conveniente agrupar, es decir, ordenar físicamente la tabla de dicha columna para evitar una operación de ordenación cada vez que se consulta la columna.  
   
  Los índices clúster no son adecuados para los siguientes atributos:  
   
 -   Columnas sometidas a cambios frecuentes  
   
-     Esto provoca que se mueva toda la fila, ya que [!INCLUDE[ssDE](../includes/ssde-md.md)] debe mantener los valores de los datos de la fila ordenados físicamente. Esta consideración es importante en sistemas de procesamiento de transacciones de gran volumen en los que los datos tienden a ser volátiles.  
+    Esto provoca que se mueva toda la fila, ya que [!INCLUDE[ssDE](../includes/ssde-md.md)] debe mantener los valores de los datos de la fila ordenados físicamente. Esta consideración es importante en sistemas de procesamiento de transacciones de gran volumen en los que los datos tienden a ser volátiles.  
   
 -   Claves amplias  
   
-     Las claves amplias se componen de varias columnas o varias columnas de gran tamaño. Los valores clave del índice clúster se utilizan en todos los índices no clúster como claves de búsqueda. Los índices no clúster definidos en la misma tabla serán bastante más grandes, ya que sus entradas contienen la clave de agrupación en clústeres y las columnas de clave definidas para dicho índice no clúster.  
+    Las claves amplias se componen de varias columnas o varias columnas de gran tamaño. Los valores clave del índice clúster se utilizan en todos los índices no clúster como claves de búsqueda. Los índices no clúster definidos en la misma tabla serán bastante más grandes, ya que sus entradas contienen la clave de agrupación en clústeres y las columnas de clave definidas para dicho índice no clúster.  
   
 ##  <a name="Nonclustered"></a> Directrices para diseñar índices no clúster  
  Un índice no clúster contiene los valores de clave del índice y localizadores de fila que apuntan a la ubicación de almacenamiento de los datos de tabla. Se pueden crear varios índices no clúster en una tabla o una vista indizada. Por lo general, se deben diseñar índices no clúster para mejorar el rendimiento de consultas utilizadas con frecuencia no cubiertas por el índice clúster.  
@@ -309,19 +316,19 @@ Use estas vistas de metadatos para ver los atributos de los índices. Puede obte
   
 -   Las filas de datos de la tabla subyacente no están ordenadas ni almacenadas basándose en sus claves no agrupadas.  
   
--   La capa de hoja de un índice no clúster está compuesta por páginas de índices, en lugar de páginas de datos.  
+-   El nivel hoja de un índice no agrupado está compuesto por páginas de índices, en lugar de páginas de datos.  
   
- Los localizadores de filas de las filas de índices no clúster pueden ser un puntero a la fila o una clave de índice clúster para una fila, tal como se describe a continuación:  
+Los localizadores de filas de las filas de índices no clúster pueden ser un puntero a la fila o una clave de índice clúster para una fila, tal como se describe a continuación:  
   
 -   Si la tabla es un montón, lo que significa que no tiene ningún índice clúster, el localizador de fila es un puntero a la fila. El puntero se genera a partir del identificador (Id.) de archivo, el número de página y el número de la fila dentro de la página. El puntero completo se conoce como Id. de fila (RID).  
   
 -   Si la tabla tiene un índice clúster o si el índice está en una vista indizada, el localizador de fila es la clave del índice clúster para la fila.  
   
- Los índices no agrupados tienen una fila en [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md), con **index_id** > 1 para cada partición usada por el índice. De forma predeterminada, un índice no clúster tiene una sola partición. Cuando un índice no clúster tiene varias particiones, cada una tiene una estructura de árbol b que contiene las filas de índice de esa partición específica. Por ejemplo, si un índice no clúster tiene cuatro particiones, habrá cuatro estructuras de árbol b, una en cada partición.  
+Los índices no agrupados tienen una fila en [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md), con **index_id** > 1 para cada partición usada por el índice. De forma predeterminada, un índice no clúster tiene una sola partición. Cuando un índice no clúster tiene varias particiones, cada una tiene una estructura de árbol b que contiene las filas de índice de esa partición específica. Por ejemplo, si un índice no clúster tiene cuatro particiones, habrá cuatro estructuras de árbol b, una en cada partición.  
   
- En función de los tipos de datos del índice no clúster, cada estructura de índice no clúster tendrá una o más unidades de asignación en las que almacenar y administrar los datos de una partición específica. Como mínimo, cada índice no agrupado tendrá una unidad de asignación *IN_ROW_DATA* por partición encargada de almacenar las páginas de árbol B del índice. El índice no agrupado también tendrá una unidad de asignación *LOB_DATA* por partición si contiene columnas de objetos grandes (LOB). Además, tendrá una unidad de asignación *ROW_OVERFLOW_DATA* por partición si contiene columnas de longitud variable que superen el límite de tamaño de fila de 8060 bytes.  
+En función de los tipos de datos del índice no clúster, cada estructura de índice no clúster tendrá una o más unidades de asignación en las que almacenar y administrar los datos de una partición específica. Como mínimo, cada índice no agrupado tendrá una unidad de asignación *IN_ROW_DATA* por partición encargada de almacenar las páginas de árbol B del índice. El índice no agrupado también tendrá una unidad de asignación *LOB_DATA* por partición si contiene columnas de objetos grandes (LOB). Además, tendrá una unidad de asignación *ROW_OVERFLOW_DATA* por partición si contiene columnas de longitud variable que superen el límite de tamaño de fila de 8060 bytes.  
   
- En la siguiente ilustración se muestra la estructura de un índice no clúster en una sola partición.  
+En la siguiente ilustración se muestra la estructura de un índice no clúster en una sola partición.  
 
 ![bokind1a](../relational-databases/media/bokind1a.gif)  
   
@@ -345,19 +352,25 @@ Use estas vistas de metadatos para ver los atributos de los índices. Puede obte
   
 -   No devuelven conjuntos de resultados de gran tamaño.  
   
-     Cree índices filtrados para atender consultas que devuelven un subconjunto bien definido de filas en una tabla grande.  
-  
+     Cree índices filtrados para atender consultas que devuelven un subconjunto bien definido de filas en una tabla grande. 
+     
+     > [!TIP] 
+     > Por lo general, la cláusula WHERE de la instrucción CREATE INDEX coincide con la cláusula WHERE de una consulta que se cubre.  
+
 -   Contienen columnas que suelen incluirse en las condiciones de búsqueda de una consulta, como la cláusula WHERE, que devuelven coincidencias exactas.  
-  
+
+    > [!TIP]
+    > Cuando agregue índices nuevos, considere la relación costo-beneficio. Quizás sea preferible consolidar las necesidades de consultas adicionales en un índice existente. Por ejemplo, considere agregar una o dos columnas de nivel hoja adicionales a un índice existente, si permite la cobertura de varias consultas críticas en lugar de tener exactamente un índice de cobertura por cada consulta crítica.
+    
 ### <a name="column-considerations"></a>Consideraciones sobre columnas  
  Tenga en cuenta las columnas que tengan uno o varios de estos atributos:  
   
 -   Cubren la consulta.  
   
-     Se obtienen mejoras de rendimiento cuando el índice contiene todas las columnas de la consulta. El optimizador de consultas puede buscar todos los valores de columna del índice; no se tiene acceso a los datos de tabla o de índice clúster, lo que se traduce en menos operaciones de E/S de disco. Utilice un índice con columnas incluidas para agregar columnas de cobertura en lugar de crear una clave de índice ancho.  
+     Se obtienen mejoras de rendimiento cuando el índice contiene todas las columnas de la consulta. El optimizador de consultas puede buscar todos los valores de columna del índice; no se tiene acceso a los datos de tabla o de índice clúster, lo que se traduce en menos operaciones de E/S de disco. Utilice un índice con [columnas incluidas](#Included_Columns) para agregar columnas de cobertura en lugar de crear una clave de índice ancho.  
   
      Si la tabla tiene un índice clúster, las columnas definidas en él se anexan automáticamente al final de cada índice no clúster de la tabla. Esto puede producir una consulta cubierta sin especificar las columnas de índice clúster en la definición del índice no clúster. Por ejemplo, si una tabla tiene un índice clúster en la columna `C`, un índice no clúster en las columnas `B` y `A` tendrá como columnas de valores de clave las columnas `B`, `A`y `C`.  
-  
+      
 -   Gran número de valores distintos, como combinaciones de nombres y apellidos, si se utiliza un índice clúster para otras columnas.  
   
      Si hay muy pocos valores distintos, como solo 1 y 0, la mayoría de las consultas no utilizarán el índice, ya que una exploración de la tabla suele ser más eficaz. Para este tipo de datos, considere la creación de un índice filtrado en un valor distintivo que solo se da en un número pequeño de filas. Por ejemplo, si la mayoría de los valores es 0, el optimizador de consultas puede utilizar un índice filtrado para las filas de datos que contienen 1.  
@@ -392,7 +405,7 @@ INCLUDE (FileName);
 ```  
   
 ##### <a name="index-with-included-columns-guidelines"></a>Directrices del índice con columnas incluidas  
- Cuando diseñe índices no clúster con columnas incluidas tenga en cuenta las siguientes directrices:  
+Cuando diseñe índices no clúster con columnas incluidas tenga en cuenta las siguientes directrices:  
   
 -   Las columnas sin clave se definen en la cláusula INCLUDE de la instrucción CREATE INDEX.  
   
@@ -407,7 +420,7 @@ INCLUDE (FileName);
 -   Los nombres de columna no se pueden especificar en la lista INCLUDE y en la lista de columnas de clave.  
   
 -   Los nombres de columna no se pueden repetir en la lista INCLUDE.  
-  
+
 ##### <a name="column-size-guidelines"></a>Directrices del tamaño de columnas  
   
 -   Es necesario definir como mínimo una columna de clave. El número máximo de columnas sin clave es de 1023 columnas. Éste es el número máximo de columnas de la tabla menos 1.  

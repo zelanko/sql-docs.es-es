@@ -1,7 +1,7 @@
 ---
 title: Requisitos de hardware y software para instalar SQL Server 2016 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/23/2017
+ms.date: 07/06/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -48,12 +48,12 @@ caps.latest.revision: 333
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aef7f10021c179b8ab6a6498bbe251159b8bfe7a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: e057c582aea0646f0f151c1a342f89281d8479e0
+ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773191"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37890956"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Requisitos de hardware y software para instalar SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,7 +94,7 @@ Los siguientes requisitos se aplican a todas las instalaciones:
 |Componente|Requisito|  
 |---------------|-----------------|  
 |.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 y las versiones posteriores necesitan [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 para el Motor de base de datos, Master Data Services o la replicación. El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 instala automáticamente [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] también se puede instalar manualmente desde [Microsoft .NET Framework 4.6 (instalador web) para Windows](http://support.microsoft.com/kb/3045560).<br/><br/> Para ver más información, recomendaciones y directrices sobre [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6, consulte la [Guía de implementación de .NET Framework para desarrolladores](http://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]y [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] necesitan [KB2919355](http://support.microsoft.com/kb/2919355) para instalar [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
-|Software de red|Los sistemas operativos admitidos para [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] tienen software de red integrado. Las instancias con nombre y predeterminadas de una instalación independiente admiten los siguientes protocolos de red: Memoria compartida, Canalizaciones con nombre, TCP/IP y VIA.<br/><br/> Nota: la memoria compartida y VIA no se admiten en clústeres de conmutación por error.<br/><br/> Además, el protocolo VIA está en desuso. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> <br/><br/> Para obtener más información acerca de los protocolos de red y las bibliotecas de red, vea [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
+|Software de red|Los sistemas operativos admitidos para [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] tienen software de red integrado. Las instancias con nombre y predeterminadas de una instalación independiente admiten los siguientes protocolos de red: Memoria compartida, Canalizaciones con nombre, TCP/IP y VIA.<br/><br/> Nota: El protocolo VIA no es compatible con los clústeres de conmutación por error. La memoria compartida solo se admite si la conexión se realiza a través de la dirección de la canalización local para la instancia de clúster de conmutación por error.<br/><br/> Además, el protocolo VIA está en desuso. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> <br/><br/> Para obtener más información acerca de los protocolos de red y las bibliotecas de red, vea [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
 |Disco duro|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requiere un mínimo de 6 GB de espacio disponible en disco.<br/><br/> Las necesidades de espacio en disco variarán según los componentes de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] que instale. Para obtener más información, vea [Requisitos de espacio en disco duro](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) en este artículo. Para obtener información acerca de los tipos de almacenamiento admitidos para los archivos de datos, vea [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)|  
 |Unidad|Para la instalación desde disco se necesita una unidad de DVD.|  
 |Monitor|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requiere Super VGA (800x600) o un monitor de una resolución mayor.|  

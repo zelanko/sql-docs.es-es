@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,45 +25,44 @@ helpviewer_keywords:
 - viewing filegroup names
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 877969369a9b18cd7b13db556078a5773b89c947
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b5921a0d15230df4628d4dbb084bcbe964e39b46
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33052422"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782156"
 ---
 # <a name="filegroupname-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve el nombre del grupo de archivos correspondiente al número de identificación (Id.) del grupo de archivos especificado.  
+Esta función devuelve el nombre del grupo de archivos correspondiente al número de identificación (id.) del grupo de archivos especificado.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 FILEGROUP_NAME ( filegroup_id )   
 ```  
   
 ## <a name="arguments"></a>Argumentos  
  *filegroup_id*  
- Es el número de Id. del grupo de archivos para el que se va a devolver el nombre del grupo de archivos. *filegroup_id* es **smallint**.  
+
+El número de identificación del grupo de archivos cuyo nombre de grupo de archivos `FILEGROUP_NAME` va a devolver. *filegroup_id* tiene un tipo de datos **smallint**.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **nvarchar(128)**  
+**nvarchar(128)**  
   
 ## <a name="remarks"></a>Notas  
- *filegroup_id* corresponde a la columna **data_space_id** en la vista de catálogo **sys.filegroups**.  
+*filegroup_id* corresponde a la columna **data_space_id** de la vista de catálogo **sys.filegroups**.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se devuelve el nombre del grupo de archivos que corresponde al Id. de grupo de archivos `1` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+En este ejemplo se devuelve el nombre del grupo de archivos del identificador de grupo de archivos `1` en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
-  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  
 GO  
 ```  

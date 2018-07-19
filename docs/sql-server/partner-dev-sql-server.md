@@ -3,11 +3,6 @@ title: Asociados de desarrollo de SQL Server | Microsoft Docs
 description: Listas de asociados externos que cuentan con soluciones de desarrollo para Server.
 services: sql-server
 documentationcenter: NA
-author: MikeRayMSFT
-manager: craigg
-editor: ''
-ms.assetid: ''
-ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -17,19 +12,21 @@ ms.date: 17/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 5fe3417539d0d4bf031845804a3863b66d409f5c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: MikeRayMSFT
+manager: craigg
+ms.openlocfilehash: f85c316502c107a76e0186deb0b242068576c712
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031822"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926306"
 ---
 # <a name="sql-server-development-partners"></a>Asociados de desarrollo de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Para admitir el desarrollo de soluciones de base de datos de SQL Server, elija entre una amplia variedad de herramientas líderes del sector.  En este artículo se destacan las compañías asociadas de Microsoft que cuentan con soluciones de desarrollo para Microsoft SQL Server.
 
 ## <a name="our-development-partners"></a>Nuestros asociados de desarrollo
-| Asociado | Description | Vínculos |
+| Asociado | Descripción | Vínculos |
 | --- | --- | --- |
 |![idera][1] |**IDERA**<br>Rapid SQL es un entorno de desarrollo integrado de SQL inteligente que permite a los desarrolladores y administradores de bases de datos crear código SQL de alto rendimiento en todas las principales plataformas de base de datos, incluido SQL Server, desde una única interfaz.<br><br>[Requisitos del sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Sitio web][idera_website]<br>[Twitter][idera_twitter]<br>[Vídeo][idera_youtube] |
 |![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. ofrece a la comunidad de desarrolladores flexibilidad para elegir lenguajes de programación, marcos y servicios usando un conjunto de herramientas adecuado. Al utilizar el conjunto de herramientas de Click2Cloud, los desarrolladores pueden crear contenedores de SQL en Linux y adjuntarlos en una aplicación, a la vez que se permite una arquitectura segura multiinquilino. Los contenedores se pueden implementar de forma independiente en cualquier plataforma de contenedores basados en la nube.|[Marketplace][click2cloud_marketplace]<br>[Sitio web][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[Vídeo][click2cloud_youtube] |
@@ -54,8 +51,7 @@ Para obtener más información sobre otros asociados, vea los artículos sobre [
 <!--Datasheet Links-->
 
 <!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
-[click2cloud_marketplace]:https://marketplace.visualstudio.com/items?itemName=Click2CloudInc.Click2CloudDockerExtensionforVisualStudio 
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/--> [click2cloud_marketplace]:https://marketplace.visualstudio.com/items?itemName=Click2CloudInc.Click2CloudDockerExtensionforVisualStudio 
 
 <!--Press links-->
 <!--[idera_press]:-->

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 11/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: blob
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +17,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7fa5a31e0ffaafdff982fdfb64fd6f260624f70
-ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
+ms.openlocfilehash: 31f1e34d745c08ac19157fb9d2e096ac0d72ed69
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34799825"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36772080"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.locfileid: "34799825"
 ## <a name="why-rbs"></a>¿Por qué elegir RBS?  
   
 ### <a name="optimized-database-storage-and-performance"></a>Rendimiento y almacenamiento de base de datos optimizados  
- Si se almacenan los blobs en la base de datos, puede usarse una gran cantidad de espacio en los archivos y caros recursos del servidor. RBS transfiere los blobs a la solución de almacenamiento especializada que prefiera y almacena las referencias a los mismos en la base de datos. Esto libera almacenamiento en el servidor para los datos estructurados y también recursos del servidor para las operaciones de base de datos.  
+ Si se almacenan los blobs en la base de datos, puede usarse una gran cantidad de espacio en los archivos y caros recursos del servidor. RBS transfiere los blobs a la solución de almacenamiento especializada que prefiera y almacena las referencias a estos en la base de datos. Esto libera almacenamiento en el servidor para los datos estructurados y también recursos del servidor para las operaciones de base de datos.  
   
 ### <a name="efficient-blob-management"></a>Administración eficaz de blobs  
  Varias características de RBS permiten la administración de blobs almacenados:  

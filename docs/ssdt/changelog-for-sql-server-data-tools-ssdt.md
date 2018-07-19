@@ -1,7 +1,7 @@
 ---
 title: Registro de cambios para SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 07/02/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,18 +16,42 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 32f97f60a4315f7a4adc0630b386ffb250a54a37
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0f08b48b48570685a8b57bfbf76fd4a473604fed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286271"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Registro de cambios para SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Este registro de cambios hace referencia a [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Para ver entradas detalladas sobre las novedades y los cambios, consulte [el blog del equipo de SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+
+## <a name="ssdt-for-visual-studio-2017-1571"></a>SSDT para Visual Studio 2017 (15.7.1)
+Número de compilación: 14.0.16167.0  
+Fecha de publicación: 02 de julio de 2018  
+  
+### <a name="whats-new"></a>Novedades
+
+**SSIS:**
+
+- Se agrega compatibilidad para la autoridad de AAD de Azure Government (login.microsoftonline.us) para el uso con tareas de AS.
+- Se corrige un problema en el que la interfaz de usuario de la tarea de procesamiento de AS mostrará "Método no encontrado" cuando la versión del servidor de destino es SQLServer2016.
+- Se corrige un problema en el que algunos componentes de canalización no se pueden ejecutar cuando la versión del servidor de destino es SQLServer2012.
+
+**Instalador:**
+
+- La lista de instancias de VS se filtra para excluir las instancias que no pueden instalar SSDT.
+
+### <a name="known-issues"></a>Problemas conocidos:
+
+- La tarea Ejecutar paquete de SSIS no admite la depuración cuando ExecuteOutofProcess está establecido en True. Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas.
+- Al instalar SSDT en Windows 10 y elegir "Instalar la nueva instancia de SQL Server Data Tools para Visual Studio 2017", la instalación generará el error "The requested metafile operation is not supported" (No se admite la operación de metarchivo solicitada). Reinicie el equipo y vuelva a iniciar el instalador de SSDT para continuar con la instalación.
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1570"></a>SSDT para Visual Studio 2017 (15.7.0)
 Número de compilación: 14.0.16165.0  

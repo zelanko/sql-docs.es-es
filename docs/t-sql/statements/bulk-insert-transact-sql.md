@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,15 +27,15 @@ helpviewer_keywords:
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 caps.latest.revision: 153
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6388c41cf93e79b215927fbec6a2e31a4ef6ed3f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91e2501a500df7e6536f48f3ac3f17a12aad3b67
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075242"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782676"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ BULK INSERT
       { 'char' | 'native'| 'widechar' | 'widenative' } ]   
    [ [ , ] DATASOURCE = 'data_source_name' ]
    [ [ , ] ERRORFILE = 'file_name' ]
-   [ [ , ] ERRORFILE_DATASOURCE = 'data_source_name' ]   
+   [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]   
    [ [ , ] FIRSTROW = first_row ]   
    [ [ , ] FIRE_TRIGGERS ]   
    [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
@@ -132,7 +131,7 @@ Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blo
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda especificar un nombre de intercalación para cada columna de un [archivo de formato](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
   
-|Valor de CODEPAGE|Description|  
+|Valor de CODEPAGE|Descripción|  
 |--------------------|-----------------|  
 |ACP|Convierte columnas de los tipos de datos **char**, **varchar** o **text** de la página de códigos [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) a la página de códigos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |OEM (valor predeterminado)|Convierte columnas de los tipos de datos **char**, **varchar** o **text** de la página de códigos OEM a la página de códigos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -425,6 +424,18 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
+```
+
+### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Importar datos desde un archivo en Azure Blob Storage y especificar un archivo de error   
+En este ejemplo se muestra cómo cargar datos desde un archivo csv en una ubicación de Azure Blob Storage, que se ha configurado como un origen de datos externo, y también cómo especificar un archivo de error. Para hacerlo, se necesita una credencial de ámbito de base de datos que use una firma de acceso compartido. Observe que si se ejecuta en Azure SQL Database, la opción ERRORFILE debe ir acompañada de ERRORFILE_DATA_SOURCE; de lo contrario, la importación podría presentar un error de permisos. El archivo especificado en ERRORFILE no debe existir en el contenedor.
+
+```sql
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-01-19.csv'
+WITH (DATA_SOURCE = 'MyAzureInvoices',
+     FORMAT = 'CSV',
+     ERRORFILE = 'MyErrorFile',
+     ERRORFILE_DATA_SOURCE = 'MyAzureInvoices'); 
 ```
 
 Para ver ejemplos completos de `BULK INSERT`, incluido cómo configurar la credencial y el origen de datos externo, vea [Ejemplos de acceso masivo a datos en Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).

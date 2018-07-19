@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 51db3ea10ef3c4f074dbf0b6aaae2a80aac8d458
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8c7882dc973f51379483d629a6d02422931de7b1
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769681"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066005"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Crear o configurar un agente de escucha del grupo de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

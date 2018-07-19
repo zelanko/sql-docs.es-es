@@ -18,12 +18,15 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 80d50132c4e2b38ecda9d24b3c0f4c09b93ca4e6
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+- Find SQL Server Instance
+- find instance name
+- find sql server instance name
+ms.openlocfilehash: ef7bbf9b60cb29bee0285d8974a9b97cbe99a3c2
+ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455259"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080103"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: Recomendaciones y trucos adicionales al usar SSMS
 En este tutorial se le ofrecen algunos trucos adicionales al usar SQL Server Management Studio (SSMS). En este artículo aprenderá a: 
@@ -201,7 +204,7 @@ El registro de errores es un archivo que contiene información sobre lo que ocur
 
 6. Abra el archivo errorlog.log en el Bloc de notas. 
 
-## <a name="determine-sql-server-name"></a>Buscar el nombre de su instancia de SQL Server
+## <a name="determine-sql-server-name"></a>Búsqueda del nombre de la instancia de SQL Server.
 Tiene a su disposición algunas opciones para buscar el nombre de su instancia de SQL Server antes y después de conectarse a SQL Server.  
 
 ### <a name="before-you-connect-to-sql-server"></a>Antes de conectarse a SQL Server

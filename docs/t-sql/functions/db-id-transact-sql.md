@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,16 +23,16 @@ helpviewer_keywords:
 - DB_ID function
 ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 24b4ecf201ad5b805cd55693cfe8e4aa2d9dd619
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: b445816ec9d088138d17c103f39f1471ce16c57c
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239315"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786816"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,6 +53,9 @@ El nombre de la base de datos cuyo número de identificación de base de datos d
   
 ## <a name="return-types"></a>Tipos de valores devueltos
 **int**
+
+## <a name="remarks"></a>Notas
+`DB_ID` solo se puede usar para devolver el identificador de la base de datos actual de Azure SQL Database. Se devuelve NULL si el nombre de la base de datos que especificó es distinto de la base de datos actual.
   
 ## <a name="permissions"></a>Permisos  
 Si el autor de la llamada de `DB_ID` no posee una base de datos **master** o distinta de **tempdb** determinada, como mínimo se requieren los permisos `ALTER ANY DATABASE` o `VIEW ANY DATABASE` de nivel de servidor para ver la fila `DB_ID` correspondiente. Para la base de datos **master**, `DB_ID` necesita el permiso `CREATE DATABASE` como mínimo. La base de datos a la que se conecta el autor de la llamada siempre aparece en **sys.databases**.

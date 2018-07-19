@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - DATETIMEOFFSETFROMPARTS function
 ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 09e705fd426963018eadae7351df1046d3d1ef0c
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8fb64790887ea8e683f20e681d7e95211db1c2c5
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698276"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791158"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Esta función devuelve un valor **datetimeoffset** para los argumentos de fecha y hora especificados. El valor devuelto tiene una precisión especificada por el argumento precision y los desplazamientos determinados por los argumentos hour_offset y minute_offset.
+Esta función devuelve un valor **datetimeoffset** para los argumentos de fecha y hora especificados. El valor devuelto tiene una precisión especificada por el argumento precision y un desplazamiento especificado por los argumentos de desplazamiento.  
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,44 +43,46 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
 *year*  
-Expresión entera que especifica un año.
+Expresión entera que especifica un año.  
   
 *month*  
-Expresión entera que especifica un mes.
+Expresión entera que especifica un mes.  
   
 *day*  
-Expresión entera que especifica un día.
+Expresión entera que especifica un día.  
   
 *hour*  
-Expresión entera que especifica las horas.
+Expresión entera que especifica las horas.  
   
 *minute*  
-Expresión entera que especifica los minutos.
+Expresión entera que especifica los minutos.  
   
 *segundos*  
-Expresión entera que especifica los segundos.
+Expresión entera que especifica los segundos.  
   
 *fractions*  
-Expresión entera que especifica un valor de fracciones de segundo.
+Expresión entera que especifica un valor de fracciones de segundo.  
   
 *hour_offset*  
-Expresión entera que especifica la parte de hora del desplazamiento de zona horaria.
+Expresión entera que especifica la parte de hora del desplazamiento de zona horaria.  
   
 *minute_offset*  
-Expresión entera que especifica la parte de los minutos del desplazamiento de zona horaria.
+Expresión entera que especifica la parte de los minutos del desplazamiento de zona horaria.  
   
 *precisión*  
-Valor literal entero que especifica la precisión del valor **datetimeoffset** que `DATETIMEOFFSETFROMPARTS` va a devolver.
+Valor literal entero que especifica la precisión del valor **datetimeoffset** que `DATETIMEOFFSETFROMPARTS` va a devolver.  
   
 ## <a name="return-types"></a>Tipos de valores devueltos
-**datetimeoffset(** *precision* **)**
+**datetimeoffset(** *precision* **)**  
   
 ## <a name="remarks"></a>Notas  
-`DATETIMEOFFSETFROMPARTS` devuelve un tipo de datos **datetimeoffset** totalmente inicializado. `DATETIMEOFFSETFROMPARTS` usa los argumentos de desplazamiento para representar el desplazamiento de zona horaria. Si se omiten los argumentos de desplazamiento, `DATETIMEOFFSETFROMPARTS` asume un desplazamiento de zona horaria de 00:00; en otras palabras, no hay ningún desplazamiento de zona horaria. Para los argumentos de desplazamiento especificados, `DATETIMEOFFSETFROMPARTS` espera valores para ambos argumentos y valores positivos o negativos para esos argumentos. Para un valor *minute_offset* especificado sin un valor *hour_offset* especificado, `DATETIMEOFFSETFROMPARTS` producirá un error. Si otros argumentos tienen valores no válidos, `DATETIMEOFFSETFROMPARTS` producirá un error. `DATETIMEOFFSETFROMPARTS` devuelve NULL si al menos uno de los argumentos obligatorios tiene un valor NULL. Pero si el argumento *precision* tiene un valor NULL, `DATETIMEOFFSETFROMPARTS` producirá un error.
-  
-El argumento *fractions* depende del argumento *precision*. Por ejemplo, para un valor *precision* de 7, cada fracción representa 100 nanosegundos; si *precision* es 3, cada fracción representa un milisegundo. Para un valor de *precision* de cero, el valor de *fractions* también debe ser cero; de lo contrario, `DATETIMEOFFSETFROMPARTS` generará un error.
 
+`DATETIMEOFFSETFROMPARTS` devuelve un tipo de datos **datetimeoffset** totalmente inicializado. Los argumentos de desplazamiento representan el desplazamiento de zona horaria. En el caso de los argumentos de desplazamiento omitidos, `DATETIMEOFFSETFROMPARTS` supone un desplazamiento de zona horaria de `00:00`; en otras palabras, no hay ningún desplazamiento de zona horaria. En el caso de los argumentos de desplazamiento especificados, `DATETIMEOFFSETFROMPARTS` espera valores para ambos argumentos y ambos valores positivos o negativos. Si *minute_offset* tiene un valor y *hour_offset* no tiene ningún valor, `DATETIMEOFFSETFROMPARTS` generará un error. `DATETIMEOFFSETFROMPARTS` generará un error si los demás argumentos tienen valores no válidos. Si al menos uno de los argumentos requeridos tiene un valor `NULL`, `DATETIMEOFFSETFROMPARTS` va a devolver `NULL`. Pero si el argumento *precision* tiene un valor `NULL`, `DATETIMEOFFSETFROMPARTS` generará un error.  
+  
+El argumento *fractions* depende del argumento precision. Por ejemplo, para un valor precision de 7, cada fracción representa 100 nanosegundos; si precision es 3, cada fracción representa un milisegundo. Para un valor de precision de cero, el valor de fractions también debe ser cero; de lo contrario, `DATETIMEOFFSETFROMPARTS` generará un error.  
+  
 Esta función admite la conexión remota a servidores de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y versiones posteriores. No admitirá la conexión remota a servidores que tengan una versión inferior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="examples"></a>Ejemplos  
@@ -96,17 +97,21 @@ SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Resu
   
 ```sql
 Result  
--------------------------------------------  
-2010-12-07 00:00:00.0000000 +00:00  
+----------------------------------
+2010-12-31 14:23:23.0000000 +12:00  
   
 (1 row(s) affected)  
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. Ejemplo con fracciones de segundo  
-En este ejemplo se muestra el uso de los parámetros *fractions* y *precision*:
-1.   Cuando *fractions* tiene el valor 5 y *precision* el valor 1, el valor de *fractions* representa 5/10 de un segundo.  
-1.   Cuando *fractions* tiene el valor 50 y *precision* el valor 2, el valor de *fractions* representa 50/100 de un segundo.  
-1.   Cuando *fractions* tiene el valor 500 y *precision* tiene el valor 3, el valor de *fractions* representa 500/1000 de un segundo.  
+
+En este ejemplo se muestra el uso de los parámetros *fractions* y *precision*:  
+
+1. Cuando *fractions* tiene el valor 5 y *precision* el valor 1, el valor de *fractions* representa 5/10 de un segundo.  
+
+2. Cuando *fractions* tiene el valor 50 y *precision* el valor 2, el valor de *fractions* representa 50/100 de un segundo.  
+
+3. Cuando *fractions* tiene el valor 500 y *precision* tiene el valor 3, el valor de *fractions* representa 500/1000 de un segundo.  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 );  

@@ -26,12 +26,12 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f5a985cffb4aa982e598cbaaeb5c8ddb57133fd7
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 8c0f697cb84405cd84c2aa595a1d39f28f048474
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708033"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324489"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Realizar copias de seguridad y restaurar bases de datos de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "34708033"
   
 ##  <a name="glossary-of-backup-terms"></a>Glosario de términos de copia de seguridad
  **realizar copia de seguridad** [forma verbal]  
- Copia los datos o las entradas de registro de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de su registro de transacciones en un dispositivo de copia de seguridad, como un disco, para crear una copia de seguridad de datos o de registros.  
+ El proceso de creación de una **copia de seguridad [forma nominal]** mediante la copia de los registros de datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o los registros de su registro de transacciones.  
   
  **copia de seguridad** [forma nominal]  
  Copia de los datos que se puede usar para restaurar y recuperar los datos después de un error. Las copias de seguridad de una base de datos también se pueden usar para restaurar una copia de la base de datos en una nueva ubicación.  

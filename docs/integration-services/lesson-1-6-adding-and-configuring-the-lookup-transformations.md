@@ -16,12 +16,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6735e372f7c1a4b49cdf57e73ee5cd82b2930bba
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 57cadee90ac69a76942c6b3c763ffb9900c4f8d8
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332739"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297411"
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>Lección 1-6: Agregar y configurar transformaciones de búsqueda
 Tras configurar el origen de archivo plano para extraer datos del archivo de origen, la siguiente tarea consiste en definir las transformaciones de búsqueda necesarias para obtener los valores para las claves **CurrencyKey** y **DateKey**. Una transformación Búsqueda realiza una búsqueda combinando datos de la columna de entrada especificada en una columna de un conjunto de datos de referencia. El conjunto de datos de referencia puede ser una tabla o una vista existente, una tabla nueva o el resultado de una instrucción SQL. En este tutorial, la transformación Búsqueda utiliza un administrador de conexiones OLE DB para conectar con la base de datos que contiene los datos que constituyen el origen del conjunto de datos de referencia.  
@@ -41,7 +41,7 @@ En ambos casos, la transformación de búsqueda usará el administrador de conex
   
 1.  En el **cuadro de herramientas de SSIS**, expanda **Comunes**y arrastre **Búsqueda** a la superficie de diseño de la pestaña **Flujo de datos** . Coloque Búsqueda directamente bajo el origen **Extract Sample Currency Data** .  
   
-2.  Haga clic en el origen de archivo plano **Extract Sample Currency Data** y arrastre la flecha verde a la transformación **Búsqueda** que acaba de agregar para conectar los dos componentes.  
+2.  Haga clic en el origen de archivo plano **Extract Sample Currency Data** y arrastre la flecha azul a la transformación **Búsqueda** que acaba de agregar para conectar los dos componentes.  
   
 3.  En la superficie de diseño **Flujo de datos** , haga clic en **Búsqueda** en la transformación **Búsqueda** y cambie el nombre por **Lookup Currency Key**.  
   
@@ -114,7 +114,7 @@ En ambos casos, la transformación de búsqueda usará el administrador de conex
 12. En la ventana Propiedades, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)** y la propiedad **DefaultCodePage** en **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Paso 7: agregar y configurar el destino de OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+[Paso 7: Agregar y configurar el destino de OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>Ver también  
 [Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md)  

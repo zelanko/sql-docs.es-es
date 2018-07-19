@@ -17,21 +17,34 @@ caps.latest.revision: 5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 5677005fb992816e537c7780a62636c57f92b80d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 2263cf41c9e5b4f4a629db6f824b0d9198a03a55
+ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332529"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37891076"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tarea de carga de Azure SQL DW
-La **tarea de carga de Azure SQL DW** habilita un paquete SSIS para cargar datos locales en una tabla de Azure SQL Data Warehouse (DW). El formato de archivo de origen de datos que se admite actualmente es texto delimitado en codificación UTF8. El proceso de carga sigue el enfoque eficaz de PolyBase, tal y como se describe en el artículo [Estrategias y patrones de carga de Azure SQL Data Warehouse](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/). En concreto, los datos primero se cargan en Azure Blob Storage y, a continuación, en Azure SQL DW. Por lo tanto, esta tarea requiere una cuenta de Azure Blob Storage.
+
+La **tarea de carga de Azure SQL DW** permite que un paquete SSIS copie datos tabulares a Azure SQL Data Warehouse (DW) desde el sistema de archivos o Azure Blob Storage.
+La tarea usa PolyBase para mejorar el rendimiento, tal como se describe en el artículo [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) (Patrones y estrategias de carga de Azure SQL Data Warehouse).
+El formato de archivo de origen de datos que se admite actualmente es texto delimitado en codificación UTF8.
+Al copiar desde el sistema de archivos, los datos primeros se cargarán a Azure Blob Storage para almacenamiento provisional y luego a Azure SQL DW. Por lo tanto, se necesita una cuenta de Azure Blob Storage.
 
 La **tarea de carga de Azure SQL DW** es un componente de [Feature Pack de SQL Server Integration Services (SSIS) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
 Para agregar una **tarea de carga de Azure SQL DW**, arrástrela desde el cuadro de herramientas de SSIS y suéltela en el lienzo de diseño. A continuación, haga doble clic o clic con el botón secundario y haga clic en **Editar** para que se muestre el cuadro de diálogo de edición.
 
 En la página **General** , configure las propiedades siguientes.
+
+**SourceType** especifica el tipo de almacén de datos de origen. Seleccione uno de estos tipos:
+
+* **FileSystem:** los datos de origen residen en el sistema de archivos local.
+* **BlobStorage:** los datos de origen residen en Azure Blob Storage.
+
+Estas son las propiedades de cada tipo de origen.
+
+### <a name="filesystem"></a>FileSystem
 
 Campo|Descripción
 -----|-----------
@@ -52,9 +65,28 @@ TableName|Especifica el nombre de la tabla de destino. Elija un nombre de tabla 
 TableDistribution|Especifica el método de distribución para la tabla nueva. Se aplica si se especifica un nuevo nombre de tabla para **TableName**.
 HashColumnName|Especifica la columna usada para la distribución de la tabla hash. Se aplica si **HASH** se ha especificado para **TableDistribution**.
 
-Se mostrará otra página **Asignaciones** en función de si quiere cargar los datos en una tabla nueva o en una existente. En el primer caso, configure las columnas de origen que se van a asignar y los nombres correspondientes en la tabla de destino que se creará. En el segundo caso, configure las relaciones de asignación entre las columnas de origen y las de destino.
+### <a name="blobstorage"></a>BlobStorage
+
+Campo|Descripción
+-----|-----------
+AzureStorageConnection|Especifica un administrador de conexiones de Azure Storage.
+BlobContainer|Especifica el nombre del contenedor de blob en el que residen los datos de origen.
+BlobDirectory|Especifica el directorio de blobs (estructura jerárquica virtual) en el que residen los datos de origen.
+RowDelimiter|Especifica los caracteres que marcan el final de cada fila.
+ColumnDelimiter|Especifica uno o más caracteres que marcan el final de cada columna. Por ejemplo: &#124; (barra vertical), \t (tabulación), ' (comilla simple), " (comilla doble) y 0x5c (barra diagonal inversa).
+CompressionType|Especifica el formato de compresión que se usa para los datos de origen.
+AzureDwConnection|Especifica un administrador de conexión de ADO.NET para Azure SQL DW.
+TableName|Especifica el nombre de la tabla de destino. Elija un nombre de tabla existente o cree uno eligiendo **\<Nueva tabla ...>**.
+TableDistribution|Especifica el método de distribución para la tabla nueva. Se aplica si se especifica un nuevo nombre de tabla para **TableName**.
+HashColumnName|Especifica la columna usada para la distribución de la tabla hash. Se aplica si **HASH** se ha especificado para **TableDistribution**.
+
+Se mostrará otra página **Asignaciones** en función de si quiere copiar los datos en una tabla nueva o en una existente.
+En el primer caso, configure las columnas de origen que se van a asignar y los nombres correspondientes en la tabla de destino que se creará.
+En el segundo caso, configure las relaciones de asignación entre las columnas de origen y las de destino.
 
 En la página **Columnas** , configure las propiedades de tipos de datos para cada columna de origen.
 
-La página **T-SQL** muestra la instrucción T-SQL usada para cargar datos de Azure Blob Storage a Azure SQL DW. La instrucción T-SQL se genera automáticamente a partir de configuraciones de otras páginas y se ejecuta como parte de la tarea. Puede editar manualmente la instrucción T-SQL generada para adaptarla a sus necesidades concretas haciendo clic en el botón **Editar** . Puede revertirla para volver a la que se genera automáticamente más tarde haciendo clic en el botón **Restablecer** .
-
+La página **T-SQL** muestra la instrucción T-SQL usada para cargar datos de Azure Blob Storage a Azure SQL DW.
+La instrucción T-SQL se genera automáticamente a partir de configuraciones de otras páginas y se ejecuta como parte de la tarea.
+Puede editar manualmente la instrucción T-SQL generada para adaptarla a sus necesidades concretas haciendo clic en el botón **Editar** .
+Puede revertirla para volver a la que se genera automáticamente más tarde haciendo clic en el botón **Restablecer** .

@@ -1,10 +1,9 @@
 ---
 title: ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/12/2017
+ms.date: 06/18/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,19 +23,19 @@ helpviewer_keywords:
 - certificates [SQL Server], modifying
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b478026b549078601540322e8f249cc718146425
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9890f1f127b20cb857822df66b30b165f0862ab
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33065072"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781846"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Cambia la clave privada que se utiliza para cifrar un certificado o agrega una si no existe. Cambia la disponibilidad de un certificado a [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
@@ -59,7 +58,7 @@ ALTER CERTIFICATE certificate_name
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 ALTER CERTIFICATE certificate_name   
 {  
@@ -96,7 +95,7 @@ ALTER CERTIFICATE certificate_name
   
  Cuando la clave privada de un certificado que ya existe en la base de datos se importa desde un archivo, esta clave privada se protegerá automáticamente mediante la clave maestra de la base de datos. Para proteger la clave privada con una contraseña, utilice la frase ENCRYPTION BY PASSWORD.  
   
- La opción REMOVE PRIVATE KEY eliminará de la base de datos la clave privada del certificado. Puede hacer esto cuando el certificado se utilice para comprobar firmas o en escenarios de [!INCLUDE[ssSB](../../includes/sssb-md.md)] que no necesiten una clave privada. No elimine la clave privada de un certificado que proteja una clave simétrica.  
+ La opción REMOVE PRIVATE KEY eliminará de la base de datos la clave privada del certificado. Puede quitar la clave privada cuando el certificado se utilice para comprobar firmas o en escenarios de [!INCLUDE[ssSB](../../includes/sssb-md.md)] que no necesiten una clave privada. No elimine la clave privada de un certificado que proteja una clave simétrica.  
   
  No es necesario especificar una contraseña de descifrado cuando la clave privada se ha cifrado mediante la clave maestra de la base de datos.  
   

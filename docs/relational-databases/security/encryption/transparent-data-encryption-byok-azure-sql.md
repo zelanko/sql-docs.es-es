@@ -14,15 +14,15 @@ ms.service: sql-database
 ms.custom: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 04/19/2018
+ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e5031c7e0b17177bb09ee91845626c9c32bd1bcc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1b738239cca6b1afa543718ef64831f72b6490e0
+ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698336"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37107243"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Cifrado de datos transparente compatible con Bring Your Own Key para Azure SQL Database y SQL Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ Cuando TDE se configura por primera vez para usar un protector del TDE de Key Va
 
 ### <a name="general-guidelines"></a>Directrices generales
 - Asegúrese de que Azure Key Vault y Azure SQL Database vayan a estar en el mismo inquilino.  **No se admiten** interacciones entre el servidor y el almacén de claves de varios inquilinos.
-- Decida qué suscripciones se van a usar para los recursos necesarios, ya que para mover el servidor por las suscripciones más adelante se necesitará una nueva configuración de TDE con BYOK.
+- Decida qué suscripciones se van a usar para los recursos necesarios, ya que para mover el servidor por las suscripciones más adelante se necesitará una nueva configuración de TDE con BYOK. Más información sobre cómo [mover recursos](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-move-resources)
 - Al configurar TDE con BYOK, es importante tener en cuenta la carga depositada en el almacén de claves por las operaciones repetidas de encapsular/desencapsular. Por ejemplo, dado que todas las bases de datos asociadas a un servidor lógico usan el mismo protector de TDE, una conmutación por error de ese servidor desencadenará tantas operaciones de clave en el almacén como bases de datos haya en el servidor. Según nuestra experiencia y los [límites de servicio del almacén de claves](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) que hemos documentado, se recomienda asociar como máximo 500 bases de datos estándar o de uso general, o 200 bases de datos premium o críticas para la empresa a un Azure Key Vault en una sola suscripción para garantizar una disponibilidad alta uniforme al acceder al protector de TDE en el almacén. 
 - Opción recomendada: Guarde una copia local del protector del TDE.  Para ello es necesario que un dispositivo HSM cree un protector del TDE localmente y que un sistema de custodia de claves almacene una copia local del protector del TDE.
 
@@ -68,6 +68,7 @@ Cuando TDE se configura por primera vez para usar un protector del TDE de Key Va
 - Cree un Key Vault con la opción de [eliminación temporal](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) habilitada para protegerlo de una pérdida de datos en caso de que se eliminen por error una clave o un almacén de claves.  Debe usar [PowerShell para habilitar la propiedad "eliminación temporal"](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) en Key Vault. Esta opción aún no está disponible desde el portal de Azure Key Vault, pero la requiere SQL:  
   - Los recursos eliminados temporalmente se conservan durante un período de tiempo determinado de 90 días, a menos que se recuperen o purguen.
   - Las acciones de **recuperación** y **purga** tienen permisos propios asociados a una directiva de acceso al almacén de claves. 
+- Establezca un bloqueo de recurso en el almacén de claves para control quién puede eliminar este recurso crítico y ayudar a evitar la eliminación accidental o no autorizada.  [Más información sobre los bloqueos de recurso](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-lock-resources)
 
 - Conceda al servidor lógico acceso al almacén de datos usando su identidad de Azure Active Directory (Azure AD).  Si se usa la IU del portal, la identidad de Azure AD se crea automáticamente y los permisos de acceso al almacén de claves se conceden al servidor.  Al utilizar PowerShell para configurar TDE con BYOK, se debe crear la identidad de Azure AD y comprobar su finalización. Vea [Configuración de TDE con BYOK](transparent-data-encryption-byok-azure-sql-configure.md) para recibir instrucciones paso a paso para usar PowerShell.
 

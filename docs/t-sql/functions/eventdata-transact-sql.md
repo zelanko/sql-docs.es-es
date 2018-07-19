@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,20 +25,20 @@ helpviewer_keywords:
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 caps.latest.revision: 55
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0853aaa013cd46c81d22ad8093a891ecb54a6d3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: acdfdee721729b68b43a6b0a32a10cb91ea6d889
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055202"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790836"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve información acerca de los eventos de base de datos o servidor. EVENTDATA se llama cuando se activa una notificación de eventos y el resultado se devuelve al Service Broker especificado. EVENTDATA también se puede utilizar dentro del cuerpo de un desencadenador DDL o logon.  
+Esta función devuelve información acerca de los eventos de base de datos o servidor. `EVENTDATA` se llama cuando se activa una notificación de eventos y el resultado se devuelve al Service Broker especificado. Un desencadenador DDL o LOGON también admite el uso interno de `EVENTDATA`.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +50,17 @@ EVENTDATA( )
 ```  
   
 ## <a name="remarks"></a>Notas  
- EVENTDATA devuelve datos solo cuando se hace referencia al mismo directamente dentro de un desencadenador DDL o logon. EVENTDATA devuelve NULL si se llama desde otras rutinas, aunque un desencadenador DDL o logon llame a esas rutinas.  
+`EVENTDATA` devuelve datos solo cuando se hace referencia al mismo directamente dentro de un desencadenador DDL o LOGON. `EVENTDATA` devuelve NULL si otras rutinas lo llaman, incluso si un desencadenador DDL o LOGON llama a esas rutinas.
   
- Los datos devueltos por EVENTDATA no son válidos después de confirmar o revertir una transacción que ha llamado a EVENTDATA, de forma implícita o explícita.  
+Los datos que `EVENTDATA` devuelve no son válidos después de una transacción que
+
++ llamó a `EVENTDATA` de manera explícita
++ llamó a `EVENTDATA` de manera implícita
++ se confirma
++ se revierte  
   
 > [!CAUTION]  
->  EVENTDATA devuelve datos XML. Estos datos se envían al cliente como Unicode que utiliza 2 bytes para cada carácter. Los siguientes puntos de código Unicode se pueden representar en XML que devuelve EVENTDATA:  
+>  `EVENTDATA` devuelve datos de XML, enviados al cliente como Unicode que usa 2 bytes para cada carácter. `EVENTDATA` devuelve XML que puede representar estos puntos de código de Unicode:  
 >   
 >  `0x0009`  
 >   
@@ -68,24 +72,24 @@ EVENTDATA( )
 >   
 >  `>= 0xE000 && <= 0xFFFD`  
 >   
->  Algunos caracteres que pueden aparecer en identificadores y datos de [!INCLUDE[tsql](../../includes/tsql-md.md)] no se pueden expresar o permitir en XML. Los caracteres o datos que tienen puntos de código que no se muestran en la lista anterior se asignan a un signo de interrogación (?).  
+>  XML no puede expresar, ni permitirá, algunos caracteres que pueden aparecer en los datos e identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los caracteres o datos que tienen puntos de código que no se muestran en la lista anterior se asignan a un signo de interrogación (?).  
   
- Para proteger la seguridad de los inicios de sesión, cuando se ejecutan las instrucciones CREATE LOGIN o ALTER LOGIN, las contraseñas no se muestran.  
+Las contraseñas no se muestran cuando se ejecutan las instrucciones `CREATE LOGIN` o `ALTER LOGIN`. Esto protege la seguridad del inicio de sesión.  
   
 ## <a name="schemas-returned"></a>Esquemas devueltos  
- EVENTDATA devuelve un valor de tipo **xml**. De forma predeterminada, la definición de esquema para todos los eventos se instala en el directorio siguiente: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
+EVENTDATA devuelve un valor de tipo de datos **xml**. De manera predeterminada, la definición de esquema para todos los eventos se instala en este directorio: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
- Como alternativa, el esquema de eventos se publica en la página web [Microsoft SQL Server XML Schemas](http://go.microsoft.com/fwlink/?LinkID=31850) (Esquemas XML de Microsoft SQL Server).  
+La página web [Esquemas XML de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=31850) también tiene el esquema de eventos.  
   
- Para extraer el esquema de un evento concreto, busque el esquema del tipo complejo `EVENT_INSTANCE_\<event_type>`. Por ejemplo, para extraer el esquema del evento DROP_TABLE, busque el esquema de `EVENT_INSTANCE_DROP_TABLE`.  
+Para extraer el esquema de un evento concreto, busque el esquema del tipo complejo `EVENT_INSTANCE_<event_type>`. Por ejemplo, para extraer el esquema del evento `DROP_TABLE`, busque el esquema de `EVENT_INSTANCE_DROP_TABLE`.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-querying-event-data-in-a-ddl-trigger"></a>A. Consultar datos de evento en un desencadenador DDL  
- En el siguiente ejemplo se crea un desencadenador DDL para impedir que se creen tablas nuevas en la base de datos. La instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que activa el desencadenador se captura con XQuery con los datos XML que genera EVENTDATA. Para obtener más información, vea [Referencia del lenguaje XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md).  
+En este ejemplo se crea un desencadenador DDL que impide la creación de nuevas tablas de bases de datos. El uso de XQuery con los datos XML generados por `EVENTDATA` captura la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que activa el desencadenador. Consulte [Referencia del lenguaje XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md) para más información.  
   
 > [!NOTE]  
->  Cuando se consulta el elemento `\<TSQLCommand>` mediante **Resultados a cuadrícula** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no se muestran saltos de línea en el texto del comando. Es preferible usar **Resultados a texto**.  
+>  Cuando se usa **Resultados a cuadrícula** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para consultar el elemento `<TSQLCommand>`, no se muestran los saltos de línea en el texto del comando. Es preferible usar **Resultados a texto**.  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,10 +115,10 @@ GO
 ```  
   
 > [!NOTE]  
->  Cuando quiera devolver datos de evento, recomendamos usar el método XQuery **value()** en vez del método **query()**. El método **query()** devuelve XML e instancias de retorno de carro y avance de línea (CR/LF) con el carácter de escape “y” comercial en el resultado, mientras que el método **value()** representa instancias de CR/LF invisibles en el resultado.  
+>  Para devolver datos de evento, use el método XQuery **value()** en lugar del método **query()**. El método **query()** devuelve XML e instancias de retorno de carro y avance de línea (CR/LF) con el carácter de escape “y” comercial en el resultado, mientras que el método **value()** representa instancias de CR/LF invisibles en el resultado.  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. Crear una tabla de registro con datos de evento en un desencadenador DDL  
- En el siguiente ejemplo se crea una tabla para almacenar información sobre todos los eventos de nivel de base de datos y se rellena con un desencadenador DDL. El tipo de evento y la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] se capturan mediante XQuery con los datos XML generados por `EVENTDATA`.  
+En este ejemplo se crea una tabla para almacenar información sobre todos los eventos de nivel de base de datos y rellena esa tabla con un desencadenador DDL. El uso de XQuery con los datos XML generados por `EVENTDATA` captura el tipo de evento y la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ```  
 USE AdventureWorks2012;  

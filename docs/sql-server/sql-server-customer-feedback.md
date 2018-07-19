@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 07/12/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.suite: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 6684d58710b8be2cf96e06029792836cab9c69a3
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 21461642f4e45faaab365ab5bb30ecc7cc93e64e
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34074308"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926416"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configuración de SQL Server para enviar comentarios a Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ Para SQL Server en Linux, consulte [Customer Feedback for SQL Server on Linux](h
 Tras la instalación, la configuración de recopilación de datos de uso para componentes e instancias de SQL Server se puede cambiar a través de la aplicación Informes de uso y errores. Esta aplicación está disponible como parte de la instalación de SQL Server. Esta herramienta permite a cada instancia de SQL Server establecer su propia configuración Datos de uso.
 
 > [!NOTE]
-> La aplicación Informes de uso y errores se incluye en las herramientas de configuración de SQL Server. Puede usar esta herramienta para administrar su preferencia por la recopilación de comentarios de uso e informes de error de la misma forma que en SQL Server 2017. Los informes de error son independientes de la recopilación de comentarios de uso, de modo que pueden activarse o desactivarse independientemente de la recopilación de comentarios de uso. Los informes de errores recopilan volcados de memoria que se envían a Microsoft y que pueden contener información confidencial, como se describe en la declaración de privacidad.
+> La aplicación Informes de uso y errores se incluye en las herramientas de configuración de SQL Server. Puede usar esta herramienta para administrar su preferencia por la recopilación de comentarios de uso e informes de error de la misma forma que en SQL Server 2017. Los informes de error son independientes de la recopilación de comentarios de uso, de modo que pueden activarse o desactivarse independientemente de la recopilación de comentarios de uso. Los informes de errores recopilan volcados de memoria que se envían a Microsoft y que pueden contener información confidencial, como se describe en la [declaración de privacidad](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 Para iniciar Informes de uso y errores de SQL Server, haga clic o pulse **Iniciar** y, a continuación, busque en "Error" en el cuadro de búsqueda. Se mostrará el elemento Informes de uso y errores de SQL Server. Tras iniciar la herramienta, puede administrar comentarios de uso y errores graves que se recopilan para instancias y componentes instalados en ese equipo.
 

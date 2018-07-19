@@ -1,10 +1,9 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/21/2017
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -55,16 +54,16 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 caps.latest.revision: 223
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9b3e9f873046646b3c247cd2930c458da810d203
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 0253d659a428b46aceee2b261f4b07e96983325b
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582307"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782716"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -143,6 +142,8 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | STATISTICS_INCREMENTAL = { ON | OFF }  
   | DROP_EXISTING = { ON | OFF }  
   | ONLINE = { ON | OFF }  
+  | RESUMABLE = {ON | OF }
+  | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }  
   | ALLOW_PAGE_LOCKS = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
@@ -309,7 +310,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  Especifica la posición de datos FILESTREAM para la tabla cuando se crea un índice clúster. La cláusula FILESTREAM_ON permite mover los datos FILESTREAM a otro esquema de partición o a otro grupo de archivos FILESTREAM.  
   
- *filestream_filegroup_name* es el nombre de un grupo de archivos FILESTREAM. El grupo de archivos debe tener un archivo definido para el grupo de archivos, usando para ello las instrucciones [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) o [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md); en caso contrario, se produce un error.  
+ *filestream_filegroup_name* es el nombre de un grupo de archivos FILESTREAM. El grupo de archivos debe tener un archivo definido para el grupo de archivos, usando para ello las instrucciones [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) o [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md); en caso contrario, se produce un error.  
   
  Si se crean particiones de la tabla, la cláusula FILESTREAM_ON deberá incluirse y especificar un esquema de partición de grupos de archivos FILESTREAM que utilice la misma función de partición y columnas de partición que el esquema de partición para la tabla. En caso contrario, se produce un error.  
   
@@ -461,7 +462,26 @@ Especifica si las tablas subyacentes y los índices asociados están disponibles
  Los bloqueos de tabla se aplican durante la operación de índice. Una operación de índice sin conexión para crear, volver a crear o quitar un índice clúster, o para volver a crear o quitar un índice no clúster, adquiere un bloqueo de modificación del esquema (Sch-M) de la tabla. Esto evita que todos los usuarios tengan acceso a la tabla subyacente durante la operación. Una operación de índice sin conexión que crea un índice no clúster adquiere un bloqueo compartido (S) en la tabla. Esto evita que se realicen actualizaciones en la tabla subyacente, pero permite la realización de operaciones de lectura, como instrucciones SELECT.  
   
  Para más información, vea [Cómo funcionan las operaciones de índice en línea](../../relational-databases/indexes/how-online-index-operations-work.md).  
-  
+ 
+RESUMABLE **=** { ON | **OFF**}
+
+**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] como característica de versión preliminar pública
+
+ Especifica si una operación de índice en línea se puede reanudar.
+
+ ON: la operación de índice se puede reanudar.
+
+ OFF: la operación de índice no se puede reanudar.
+
+MAX_DURATION **=** *time* [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**).
+ 
+**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] como característica de versión preliminar pública 
+
+Indica el tiempo (valor entero especificado en minutos) durante el cual se ejecuta una operación de índice en línea reanudable antes de ponerse en pausa. 
+
+> [!WARNING]
+>  Para saber más sobre las operaciones de índices que pueden realizarse en línea, vea [Directrices para operaciones de índices en línea](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
+
  Los índices, incluidos los índices de las tablas temp globales, se pueden crear en línea, con las excepciones siguientes:  
   
 -   Índice XML  
@@ -648,7 +668,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** y **xml** se pueden indexar como una columna de clave o columna sin clave incluida, siempre que el tipo de datos de la columna calculada esté disponible como una columna índice de clave o sin clave. Por ejemplo, no puede crear un índice XML principal en una columna **xml** calculada. Si el tamaño de clave de índice supera los 900 bytes, se muestra un mensaje de advertencia.  
   
- La creación de un índice en una columna calculada puede producir un error en una operación de inserción o actualización que antes funcionaba. Este error podría ocurrir cuando la columna calculada produce un error aritmético. Por ejemplo, aunque la columna calculada `c` de la tabla siguiente produzca un error aritmético, la instrucción `INSERT` funcionará.  
+ La creación de un índice en una columna calculada puede producir un error en una operación de inserción o actualización que antes funcionaba. Este error podría ocurrir cuando la columna calculada produce un error aritmético. Por ejemplo, aunque la columna calculada `c` de la tabla siguiente produzca un error aritmético, la instrucción INSERT funcionará.  
   
 ```sql  
 CREATE TABLE t1 (a int, b int, c AS a/b);  
@@ -696,7 +716,50 @@ INSERT INTO t1 VALUES (1, 0);
 -   Las operaciones en línea se pueden realizar en índices con particiones e índices que contienen columnas calculadas persistentes, o columnas incluidas.  
   
  Para más información, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
-  
+ 
+### <a name="resumable-indexes"></a> Operaciones de índice reanudable
+
+**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] como característica de versión preliminar pública.
+
+Se aplican las directrices siguientes para las operaciones de índice reanudable:
+
+- Creación de índices en línea se especifica como reanudable mediante la opción REANUDABLE = ON. 
+- La opción RESUMABLE no se conserva en los metadatos de un índice dado y solo se aplica a la duración de una instrucción DDL actual. Por tanto, la cláusula RESUMABLE = ON debe especificarse explícitamente para habilitar la capacidad de reanudación.
+- La opción MAX_DURATION solo se admite para la opción RESUMABLE = ON. 
+-  MAX_DURATION para la opción RESUMABLE especifica el intervalo de tiempo para compilar un índice. Una vez pasado este tiempo, la operación de compilación de índice se pausa o completa su ejecución. El usuario decide cuándo se puede reanudar una compilación de un índice en pausa. El valor de **time** en minutos para MAX_DURATION debe ser mayor que 0 minutos y menor o igual que una semana (7 * 24 * 60 = 10080 minutos). Si se hace una pausa larga en una operación de índice puede afectar al rendimiento de DML en una tabla específica, así como a la capacidad de disco de base de datos, dado que ambos índices, el original y el que se acaba de crear, necesitan espacio en disco y deben actualizarse durante las operaciones de DML. Si se omite la opción MAX_DURATION, la operación de índice continuará hasta su finalización o hasta que se produzca un error. 
+- Para pausar inmediatamente la operación de índice, puede detener (Ctrl+C) el comando en curso, ejecutar el comando [ALTER INDEX](alter-index-transact-sql.md) PAUSE o ejecutar el comando KILL `<session_id>`. Una vez que el comando está en pausa, se puede reanudar mediante el comando [ALTER INDEX](alter-index-transact-sql.md). 
+- Al volver a ejecutar la instrucción CREATE INDEX para el índice reanudable, se reanuda automáticamente una operación de creación de índice en pausa.
+- La opción SORT_IN_TEMPDB=ON no es compatible con el índice reanudable. 
+- El comando DDL con RESUMABLE=ON no se puede ejecutar dentro de una transacción explícita (no puede formar parte del bloque begin TRAN … COMMIT).
+- Para reanudar o anular la compilación o recompilación de un índice, use la sintaxis [ALTER INDEX](alter-index-transact-sql.md) de T-SQL.
+
+> [!NOTE]
+> El comando DDL se ejecuta hasta que se completa, se pone en pausa o genera un error. En caso de que el comando se ponga en pausa, se emite un error que indica que se pausó la operación y que no se completó la creación de índice. Para más información sobre el estado actual del índice, vea [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Como ocurrió antes, en caso de fallo se generará también un error. 
+
+Para indicar que la creación de un índice se ejecuta como una operación reanudable y para comprobar su estado de ejecución actual, consulte [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Para la versión preliminar pública, las columnas siguientes de esta vista se establecen en 0:
+- total_execution_time
+- percent_complete y page_count
+
+**Recursos** Los recursos siguientes son necesarios para la operación de creación de índice en línea
+- el espacio adicional necesario para mantener el índice que se está generando, incluida la hora en que se pausó el índice;
+- Rendimiento de registro adicional durante la fase de ordenación. El uso de espacio del registro general para el índice reanudable es menor en comparación con la creación del índice en línea habitual y permite truncar el registro durante esta operación.
+- un estado DDL que impida cualquier modificación de DDL.
+  - La limpieza de registros fantasma se bloquea en el índice de la compilación durante la operación, tanto en pausa como cuando la operación está en ejecución.
+
+**Limitaciones funcionales actuales**
+
+> [!IMPORTANT]
+> **Creación de índices en línea reanudables** actualmente solo es compatible con los índices no agrupados.
+
+Abajo se detallan las funciones que se deshabilitan para las operaciones de creación de índices reanudables
+- Creación de índices reanudables no es compatible con un índice agrupado en la versión preliminar pública.
+- Después de poner en pausa una operación de creación de índice reanudable en línea, no es posible modificar el valor inicial de MAXDOP
+- La cláusula DROP EXISTING no es compatible
+- Crear un índice que contiene 
+ - Columna calculada o columna TIMESTAMP como columnas de clave
+ - Columna LOB como columna incluida para la creación de índices reanudables
+- Índice filtrado
+ 
 ## <a name="row-and-page-locks-options"></a>Opciones de bloqueo de fila y página  
  Si ALLOW_ROW_LOCKS = ON y ALLOW_PAGE_LOCK = ON, se permiten los bloqueos de nivel de fila, página y tabla cuando se tiene acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] elige el bloqueo apropiado y puede cambiar de escala el bloqueo: de un bloqueo de fila o página a un bloqueo de tabla.  
   
@@ -983,11 +1046,53 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1),
     DATA_COMPRESSION = ROW ON PARTITIONS (2 TO 4 ) ) ;  
 GO  
 ```  
-  
+### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. Crear, reanudar, pausar y anular operaciones de índices reanudables
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx1 on test_table PAUSE   
+ALTER INDEX test_idx2 on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx1 on test_table RESUME   
+ALTER INDEX test_idx2 on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx1 on test_table ABORT 
+ALTER INDEX test_idx2 on test_table ABORT 
+```
+
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="m-basic-syntax"></a>M. Sintaxis básica  
-  
+### <a name="n-basic-syntax"></a>N. Sintaxis básica  
+  ### <a name="create-resume-pause-and-abort-resumable-index-operations"></a>Crear, reanudar, pausar y anular operaciones de índices reanudables
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx on test_table ABORT 
+
 ```sql  
 CREATE INDEX IX_VendorID   
     ON ProductVendor (VendorID);  
@@ -997,7 +1102,7 @@ CREATE INDEX IX_VendorID
     ON Purchasing..ProductVendor (VendorID);  
 ```  
   
-### <a name="n-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>N. Crear un índice no agrupado en una tabla en la base de datos actual  
+### <a name="o-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>O. Crear un índice no agrupado en una tabla en la base de datos actual  
  En el ejemplo siguiente se crea un índice no agrupado en la columna `VendorID` de la tabla `ProductVendor`.  
   
 ```sql  
@@ -1005,7 +1110,7 @@ CREATE INDEX IX_ProductVendor_VendorID
     ON ProductVendor (VendorID);   
 ```  
   
-### <a name="o-create-a-clustered-index-on-a-table-in-another-database"></a>O. Crear un índice agrupado en una tabla de otra base de datos  
+### <a name="p-create-a-clustered-index-on-a-table-in-another-database"></a>P. Crear un índice agrupado en una tabla de otra base de datos  
  En el ejemplo siguiente se crea un índice no agrupado en la columna `VendorID` de la tabla `ProductVendor` en la base de datos `Purchasing`.  
   
 ```sql  

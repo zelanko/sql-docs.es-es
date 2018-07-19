@@ -17,12 +17,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b00b3fbfeeff2fa7c99ac8f69e3c46c79e4ed796
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1225f006f4a5e2e804b2d0afded32788c8e32f17
+ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334709"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964357"
 ---
 # <a name="azure-blob-source"></a>Origen de blobs de Azure
   El componente **Azure Blob Source** (Origen de blobs de Azure) permite que un paquete SSIS lea datos de un blob de Azure. Los formatos de archivo admitidos son: CSV y AVRO.
@@ -37,10 +37,14 @@ ms.locfileid: "35334709"
   
 3.  En el campo **Nombre de blob** , especifique la ruta de acceso al blob.  
   
-4.  En el campo **Blob file format** (Formato de archivo de blob), especifique el formato de blob que desea utilizar.  
+4.  En el campo **Blob file format** (Formato de archivo de blob), especifique el formato de blob que desea utilizar: **Text** o **Avro**.  
   
-5.  Si el formato de archivo es CSV, debe especificar el valor **Column delimiter character** (Carácter delimitador de columna). Seleccione también **Nombres de columna de la primera fila de datos** si la primera fila del archivo contiene nombres de columna.  
+5.  Si el formato de archivo es **Text**, debe especificar el valor **Carácter de delimitador de columna**. Seleccione también **Nombres de columna de la primera fila de datos** si la primera fila del archivo contiene nombres de columna.
+
+6.  Si el archivo está comprimido, seleccione **Decompress the file** (Descomprimir el archivo).
+
+7.  Si el archivo está comprimido, seleccione el **Tipo de compresión**: **GZIP**, **DEFLATE** o **BZIP2**. Tenga en cuenta que no se admite el formato Zip.
   
-6.  Después de especificar la información de conexión, cambie a la página **Columnas** para asignar columnas de origen a columnas de destino para el flujo de datos SSIS.  
+8.  Después de especificar la información de conexión, cambie a la página **Columnas** para asignar columnas de origen a columnas de destino para el flujo de datos SSIS.  
   
   

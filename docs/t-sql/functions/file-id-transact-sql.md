@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,20 +23,20 @@ helpviewer_keywords:
 - file names [SQL Server], FILE_ID
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0857a8982fe64d2e2461f5420588ea4a9c527556
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f7d7a1a8e585370353050abb508464ce0f1c0ed
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054012"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788476"
 ---
 # <a name="fileid-transact-sql"></a>FILE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve el número de identificación del archivo (Id.) del nombre de archivo lógico dado de la base de datos actual.  
+Para el nombre lógico dado de un archivo de componente de la base de datos actual, esta función devuelve el número de identificación (id.) del archivo.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) en su lugar.  
@@ -47,25 +46,26 @@ ms.locfileid: "33054012"
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 FILE_ID ( file_name )  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *file_name*  
- Es una expresión de tipo **sysname** que representa el nombre del archivo para el que se devuelve el identificador del archivo.  
+*file_name*  
+Una expresión de tipo **sysname**, que representa el nombre lógico del archivo cuyo valor de identificador de archivo `FILE_ID` va a devolver.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **smallint**  
+**smallint**  
   
 ## <a name="remarks"></a>Notas  
- *file_name* corresponde al nombre de archivo lógico mostrado en la columna name en las vistas de catálogo sys.master_files o sys.database_files.  
+*file_name* corresponde al nombre de archivo lógico mostrado en la columna name de las vistas de catálogo sys.master_files o sys.database_files.  
+
+`FILE_ID` devuelve `NULL` si *file_name* no corresponde al nombre lógico de un archivo de componente de la base de datos actual.
   
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el número de identificación de archivo asignado a los catálogos de texto completo es mayor que 32767. Dado que el tipo de valor devuelto de la función FILE_ID es **smallint**, esta función no se puede usar con archivos de texto completo. Use [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) en su lugar.  
+En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el número de identificación de archivo asignado a los catálogos de texto completo excede 32767. Como la función `FILE_ID` tiene un tipo de devolución **smallint**, `FILE_ID` no admitirá los archivos de texto completo. Use [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) en su lugar.  
   
 ## <a name="examples"></a>Ejemplos  
- El siguiente ejemplo devuelve el Id. de archivo para el archivo `AdventureWorks_Data`.  
-  
+En este ejemplo se devuelve el valor de identificador de archivo del archivo `AdventureWorks_Data`, un archivo de componente de la base de datos `ADVENTUREWORKS2012`.  
+
 ```sql  
 USE AdventureWorks2012;  
 GO  

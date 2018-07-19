@@ -1,7 +1,7 @@
 ---
 title: Introducción a los índices de almacén de columnas | Microsoft Docs
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,6 +13,7 @@ helpviewer_keywords:
 - indexes creation, columnstore
 - indexes [SQL Server], columnstore
 - columnstore index
+- batch mode execution
 - columnstore index, described
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
@@ -21,19 +22,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1987c099ba787f36dac77eb08a8e88b1e7c71869
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6647b4e87a1ea3e83bd76eacde73a93c7b6fe57
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941020"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791446"
 ---
 # <a name="columnstore-indexes---overview"></a>Introducción a los índices de almacén de columnas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Los *índices de almacén de columnas* son el estándar para almacenar y consultar las tablas de hechos de almacenamiento de datos de gran tamaño. Este índice usa el procesamiento de consultas y el almacenamiento de datos basado en columnas para **multiplicar por diez el rendimiento de las consultas** en el almacenamiento de datos frente al almacenamiento tradicional orientado por filas, así como **multiplicar por diez la compresión de datos** frente al tamaño de los datos sin comprimir. Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], los índices de almacén de columnas permiten los análisis operativos, es decir, ejecutar análisis de rendimiento en tiempo real en una carga de trabajo transaccional.  
   
- Vaya a los siguientes escenarios:  
+Vaya a los siguientes escenarios:  
   
 -   [Índices de almacén de columnas para el almacenamiento de datos](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
 -   [Introducción al almacén de columnas para análisis operativos en tiempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
@@ -42,61 +43,60 @@ Los *índices de almacén de columnas* son el estándar para almacenar y consult
  Un *columnstore index* es una tecnología de almacenamiento, recuperación y administración de datos que emplea un formato de datos en columnas denominado almacén de columnas.  
   
 ### <a name="key-terms-and-concepts"></a>Términos y conceptos clave  
- Estos son los términos y conceptos clave asociados a los índices de almacén de columnas.  
+Estos son los términos y conceptos clave asociados a los índices de almacén de columnas.  
   
- almacén de columnas  
- Un *almacén de columnas* son datos organizados lógicamente como una tabla con filas y columnas, y almacenados físicamente en un formato de columnas.  
+**almacén de columnas**  
+Un *almacén de columnas* son datos organizados lógicamente como una tabla con filas y columnas, y almacenados físicamente en un formato de columnas.  
   
- almacén de filas  
- Un *almacén de filas* son datos organizados lógicamente como una tabla con filas y columnas, y almacenados físicamente después en un formato de filas. Esta ha sido la forma tradicional de almacenar los datos de una tabla relacional. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], "almacén de filas" hace referencia a la tabla en la que el formato de almacenamiento de datos subyacente es un montón, un índice agrupado o una tabla optimizada para memoria.  
+**almacén de filas**  
+Un *almacén de filas* son datos organizados lógicamente como una tabla con filas y columnas, y almacenados físicamente después en un formato de filas. Esta ha sido la forma tradicional de almacenar los datos de una tabla relacional. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], "almacén de filas" hace referencia a la tabla en la que el formato de almacenamiento de datos subyacente es un montón, un índice agrupado o una tabla optimizada para memoria.  
   
 > [!NOTE]  
 > Al tratar los índices de almacén de columnas, usamos los términos *almacén de filas* y *almacén de columnas* para hacer hincapié en el formato del almacenamiento de datos.  
   
- grupo de filas  
- Un *grupo de filas* es un conjunto de filas que se comprimen con el formato del almacén de columnas al mismo tiempo. Un grupo de filas suele contener el número máximo de filas por grupo, que es 1.048.576 filas.  
+**grupo de filas**  
+Un *grupo de filas* es un conjunto de filas que se comprimen con el formato del almacén de columnas al mismo tiempo. Un grupo de filas suele contener el número máximo de filas por grupo, que es 1.048.576 filas.  
   
- Para conseguir unas tasas elevadas de rendimiento y compresión, el índice de almacén de columnas segmenta la tabla en grupos de filas y comprime cada grupo de filas a modo de columna. El número de filas del grupo de filas debe ser suficientemente grande como para mejorar las tasas de compresión y suficientemente pequeño como para beneficiarse de las operaciones en memoria.  
- segmento de columna  
- Un *segmento de columna* es una columna de datos perteneciente al grupo de filas.  
+Para conseguir unas tasas elevadas de rendimiento y compresión, el índice de almacén de columnas segmenta la tabla en grupos de filas y comprime cada grupo de filas a modo de columna. El número de filas del grupo de filas debe ser suficientemente grande como para mejorar las tasas de compresión y suficientemente pequeño como para beneficiarse de las operaciones en memoria.    
+
+**segmento de columna**  
+Un *segmento de columna* es una columna de datos perteneciente al grupo de filas.  
   
 -   Cada grupo de filas contiene un segmento de cada columna de la tabla.  
 -   Cada sector de columna se comprime junto y se almacena en un medio físico.  
   
- ![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
   
- Índice clúster de almacén de columnas  
- Un *índice de almacén de columnas agrupado* es el almacenamiento físico de toda la tabla.  
+**índice de almacén de columnas agrupado**  
+Un *índice de almacén de columnas agrupado* es el almacenamiento físico de toda la tabla.    
   
- ![Clustered Columnstore Index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
+![Clustered Columnstore Index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
   
- Para reducir la fragmentación de los segmentos de columna y mejorar el rendimiento, el índice de almacén de columnas puede almacenar temporalmente algunos datos en un índice agrupado (denominado almacén delta), así como una lista en forma de árbol b de los identificadores de las filas eliminadas. Las operaciones del almacén delta se administran en segundo plano. Para devolver los resultados correctos de la consulta, el índice clúster de almacén de columnas combina los resultados de la consulta tanto del almacén de columnas como del almacén delta.  
+Para reducir la fragmentación de los segmentos de columna y mejorar el rendimiento, el índice de almacén de columnas puede almacenar temporalmente algunos datos en un índice agrupado (denominado almacén delta), así como una lista en forma de árbol b de los identificadores de las filas eliminadas. Las operaciones del almacén delta se administran en segundo plano. Para devolver los resultados correctos de la consulta, el índice clúster de almacén de columnas combina los resultados de la consulta tanto del almacén de columnas como del almacén delta.  
   
- grupo de filas delta  
- Un *grupo de filas delta*, que solamente se usa con índices de almacén de columnas, es un índice agrupado que mejora el rendimiento y la compresión del almacén de columnas almacenando las filas hasta que el número de filas alcanza un umbral determinado, momento en el que pasan al almacén de columnas.  
+**grupo de filas delta**  
+Un *grupo de filas delta*, que solamente se usa con índices de almacén de columnas, es un índice agrupado que mejora el rendimiento y la compresión del almacén de columnas almacenando las filas hasta que el número de filas alcanza un umbral determinado, momento en el que pasan al almacén de columnas.  
 
- Cuando un grupo de filas delta alcanza el número máximo de filas, se cierra. Un proceso de motor de tupla comprueba si hay grupos de filas cerrados. Cuando encuentra el grupo de filas cerrado, lo comprime y lo almacena en el almacén de columnas.  
+Cuando un grupo de filas delta alcanza el número máximo de filas, se cierra. Un proceso de motor de tupla comprueba si hay grupos de filas cerrados. Cuando encuentra el grupo de filas cerrado, lo comprime y lo almacena en el almacén de columnas.  
   
-El índice de almacén de columnas A de almacén delta puede tener más de un grupo de filas delta.  Todos los grupos de filas delta se denominan colectivamente *almacén delta*.   
+**almacén delta** Un índice de almacén de columnas puede tener más de un grupo de filas delta.  Todos los grupos de filas delta se denominan colectivamente *almacén delta*.   
 
 Durante una gran carga masiva, la mayoría de las filas van directamente al almacén de columnas sin pasar por el almacén delta. Al final de la carga masiva, podría quedar un número de filas menor que el tamaño mínimo de un grupo de filas, que es 102.400 filas. Cuando esto sucede, las últimas filas van al almacén delta en lugar de al almacén de columnas. En el caso de cargas masivas pequeñas con menos de 102.400 filas, todas las filas van directamente al almacén delta.  
   
-
+**índice de almacén de columnas no agrupado**  
+Un *índice de almacén de columnas no agrupado* y un índice de almacén de columnas agrupado funcionan del mismo modo. La diferencia es que un índice no agrupado es un índice secundario creado en una tabla de almacén de filas, mientras que un índice de almacén de columnas agrupado es el almacenamiento principal de toda la tabla.  
   
- índice no clúster de almacén de columnas  
- Un *índice de almacén de columnas no agrupado* y un índice de almacén de columnas agrupado funcionan del mismo modo. La diferencia es que un índice no agrupado es un índice secundario creado en una tabla de almacén de filas, mientras que un índice de almacén de columnas agrupado es el almacenamiento principal de toda la tabla.  
+El índice no agrupado contiene una copia de parte o la totalidad de las filas y columnas de la tabla subyacente. El índice se define como una o varias columnas de la tabla y tiene una condición opcional que filtra las filas.  
   
- El índice no agrupado contiene una copia de parte o la totalidad de las filas y columnas de la tabla subyacente. El índice se define como una o varias columnas de la tabla y tiene una condición opcional que filtra las filas.  
+Un índice de almacén de columnas no agrupado permite análisis operativos en tiempo real en los que la carga de trabajo OLTP usa el índice agrupado subyacente mientras los análisis se ejecutan simultáneamente en el índice de almacén de columnas. Para obtener más información, vea [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)(Introducción al almacén de columnas para análisis operativos en tiempo real).  
   
- Un índice de almacén de columnas no agrupado permite análisis operativos en tiempo real en los que la carga de trabajo OLTP usa el índice agrupado subyacente mientras los análisis se ejecutan simultáneamente en el índice de almacén de columnas. Para obtener más información, vea [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)(Introducción al almacén de columnas para análisis operativos en tiempo real).  
-  
- ejecución por lotes  
- Una*ejecución por lotes* es un método de procesamiento de consultas en el que las consultas procesan varias filas a la vez. Las consultas de los índices de almacén de columnas usan la ejecución en modo por lotes, ya que suele duplicar o hasta cuadruplicar el rendimiento de las consultas. La ejecución en modo por lotes está estrechamente integrada con el formato de almacenamiento de almacén de columnas y optimizada alrededor del mismo. La ejecución en modo por lotes se conoce en ocasiones como ejecución basada en vectores o vectorizada.  
+**ejecución del modo por lotes**  
+La *ejecución del modo por lotes* es un método de procesamiento de consultas en el que las consultas procesan varias filas a la vez. La ejecución del modo por lotes está estrechamente integrada con el formato de almacenamiento de almacén de columnas y optimizada alrededor del mismo. La ejecución en modo por lotes se conoce en ocasiones como ejecución basada en vectores o vectorizada. Las consultas de los índices de almacén de columnas usan la ejecución en modo por lotes, ya que suele duplicar o hasta cuadruplicar el rendimiento de las consultas. Para más información sobre los modos de ejecución, consulte la [Guía de arquitectura de procesamiento de consultas](../query-processing-architecture-guide.md#execution-modes). 
   
 ##  <a name="benefits"></a> ¿Por qué debo usar un índice de almacén de columnas?  
- Un índice de almacén de columnas puede proporcionar un nivel muy alto de compresión de datos, normalmente hasta 10 veces superior, lo que reduce notablemente el costo de almacenamiento en el almacén de datos. Además, en los análisis ofrecen un mejor rendimiento de orden de magnitud que un índice de árbol b. Se trata del formato de almacenamiento de datos preferido para cargas de trabajo de análisis y almacenamiento de datos. Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede usar índices de almacén de columnas para llevar a cabo análisis operativos en tiempo real en la carga de trabajo operativa.  
+Un índice de almacén de columnas puede proporcionar un nivel muy alto de compresión de datos, normalmente hasta 10 veces superior, lo que reduce notablemente el costo de almacenamiento en el almacén de datos. Además, en los análisis ofrecen un mejor rendimiento de orden de magnitud que un índice de árbol b. Se trata del formato de almacenamiento de datos preferido para cargas de trabajo de análisis y almacenamiento de datos. Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede usar índices de almacén de columnas para llevar a cabo análisis operativos en tiempo real en la carga de trabajo operativa.  
   
- Motivos por los que los índices de almacén de columnas son tan rápidos:  
+Motivos por los que los índices de almacén de columnas son tan rápidos:  
   
 -   Las columnas almacenan valores del mismo dominio y normalmente tienen valores similares, lo que resulta en altas tasas de compresión. Esto reduce o elimina el cuello de botella de E/S en el sistema, al tiempo que reduce la superficie de memoria significativamente.  
   
@@ -107,24 +107,24 @@ Durante una gran carga masiva, la mayoría de las filas van directamente al alma
 -   Con frecuencia, las consultas seleccionan únicamente unas pocas columnas de una tabla, lo que reduce la E/S total desde los medios físicos.  
   
 ## <a name="when-should-i-use-a-columnstore-index"></a>¿Cuándo debo usar un índice de almacén de columnas?  
- Casos de uso recomendados:  
+Casos de uso recomendados:  
   
 -   Use un índice de almacén de columnas agrupado para almacenar tablas de hechos y tablas de dimensiones grandes de cargas de trabajo de almacenamiento de datos. Esto mejora el rendimiento de las consultas y la compresión de datos, hasta multiplicarlos por diez. Consulte [Columnstore Indexes for Data Warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md).  
   
 -   Use un índice de almacén de columnas no agrupado para realizar análisis en tiempo real en una carga de trabajo OLTP. Vea [Introducción al almacén de columnas para análisis operativos en tiempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
 ### <a name="how-do-i-choose-between-a-rowstore-index-and-a-columnstore-index"></a>¿Cómo elegir entre un índice de almacén de filas y un índice de almacén de columnas?  
- Los índices de almacén de filas tienen un mejor rendimiento en las consultas que buscan en datos o que buscan un valor determinado, o en las consultas realizadas en un rango de valores muy acotado. Use índices de almacén de filas en las cargas de trabajo transaccionales, ya que tienden a necesitar búsquedas de tabla, más que recorridos de tabla.  
+Los índices de almacén de filas tienen un mejor rendimiento en las consultas que buscan en datos o que buscan un valor determinado, o en las consultas realizadas en un rango de valores muy acotado. Use índices de almacén de filas en las cargas de trabajo transaccionales, ya que tienden a necesitar búsquedas de tabla, más que recorridos de tabla.  
   
- Los índices de almacén de columnas ofrecen un alto rendimiento en consultas analíticas en las que se analizan grandes cantidades de datos, especialmente en tablas grandes.  Use índices de almacén de columnas en cargas de trabajo de análisis y almacenamiento de datos, especialmente en las tablas de hechos, ya que tienden a necesitar recorridos de tabla completos, más que búsquedas de tabla.  
+Los índices de almacén de columnas ofrecen un alto rendimiento en consultas analíticas en las que se analizan grandes cantidades de datos, especialmente en tablas grandes.  Use índices de almacén de columnas en cargas de trabajo de análisis y almacenamiento de datos, especialmente en las tablas de hechos, ya que tienden a necesitar recorridos de tabla completos, más que búsquedas de tabla.  
   
 ### <a name="can-i-combine-rowstore-and-columnstore-on-the-same-table"></a>¿Puedo combinar un almacén de filas y un almacén de columnas en la misma tabla?  
- Sí. Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede crear un índice de almacén de columnas no agrupado actualizable en una tabla de almacén de filas. El índice de almacén de columnas almacena una copia de las columnas elegidas, por lo que no se necesita espacio adicional para ellas, pero se comprimirán hasta diez veces más de media. Gracias a esto, se pueden ejecutar análisis en el índice de almacén de columnas y realizar transacciones en el índice de almacén de filas al mismo tiempo. El almacén de columnas se actualiza cuando cambian los datos de la tabla de almacén de filas, de modo que ambos índices trabajan con los mismos datos.  
+Sí. Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede crear un índice de almacén de columnas no agrupado actualizable en una tabla de almacén de filas. El índice de almacén de columnas almacena una copia de las columnas elegidas, por lo que no se necesita espacio adicional para ellas, pero se comprimirán hasta diez veces más de media. Gracias a esto, se pueden ejecutar análisis en el índice de almacén de columnas y realizar transacciones en el índice de almacén de filas al mismo tiempo. El almacén de columnas se actualiza cuando cambian los datos de la tabla de almacén de filas, de modo que ambos índices trabajan con los mismos datos.  
   
- Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede tener uno o varios índices de almacén de filas no agrupados en un índice de almacén de columnas. Gracias a ello, podrá realizar búsquedas de tabla eficaces en el almacén de columnas subyacente. También habrá disponibles otras opciones. Por ejemplo, podrá aplicar una restricción de clave principal mediante una restricción UNIQUE en la tabla de almacén de filas. Puesto que un valor que no es único no se insertará en la tabla de almacén de filas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no podrá insertar ese valor en el almacén de columnas.  
+Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede tener uno o varios índices de almacén de filas no agrupados en un índice de almacén de columnas. Gracias a ello, podrá realizar búsquedas de tabla eficaces en el almacén de columnas subyacente. También habrá disponibles otras opciones. Por ejemplo, podrá aplicar una restricción de clave principal mediante una restricción UNIQUE en la tabla de almacén de filas. Puesto que un valor que no es único no se insertará en la tabla de almacén de filas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no podrá insertar ese valor en el almacén de columnas.  
   
 ## <a name="metadata"></a>Metadatos  
- Todas las columnas de un índice de almacén de columnas se almacenan en los metadatos como columnas incluidas. El índice de almacén de columnas no tiene columnas de clave.  
+Todas las columnas de un índice de almacén de columnas se almacenan en los metadatos como columnas incluidas. El índice de almacén de columnas no tiene columnas de clave.  
 
 |||
 |-|-|  
@@ -137,9 +137,9 @@ Durante una gran carga masiva, la mayoría de las filas van directamente al alma
 |[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
 ## <a name="related-tasks"></a>Related Tasks  
- Todas las tablas relacionales (a menos que se especifiquen como un índice de almacén de columnas no agrupado) usan el almacén de filas como formato de datos subyacente. `CREATE TABLE` crea una tabla de almacén de filas a menos que especifique la opción `WITH CLUSTERED COLUMNSTORE INDEX`.  
+Todas las tablas relacionales (a menos que se especifiquen como un índice de almacén de columnas no agrupado) usan el almacén de filas como formato de datos subyacente. `CREATE TABLE` crea una tabla de almacén de filas a menos que especifique la opción `WITH CLUSTERED COLUMNSTORE INDEX`.  
   
- Cuando se crea una tabla con la instrucción `CREATE TABLE`, puede crearla como un almacén de columnas especificando la opción `WITH CLUSTERED COLUMNSTORE INDEX`. Si ya tiene una tabla de almacén de filas y quiere convertirla en un almacén de columnas, puede usar la instrucción `CREATE COLUMNSTORE INDEX`.  
+Cuando se crea una tabla con la instrucción `CREATE TABLE`, puede crearla como un almacén de columnas especificando la opción `WITH CLUSTERED COLUMNSTORE INDEX`. Si ya tiene una tabla de almacén de filas y quiere convertirla en un almacén de columnas, puede usar la instrucción `CREATE COLUMNSTORE INDEX`.  
   
 |Tarea|Temas de referencia|Notas|  
 |----------|----------------------|-----------|  
@@ -170,8 +170,3 @@ Durante una gran carga masiva, la mayoría de las filas van directamente al alma
  [Arquitectura de los índices de almacén de columnas](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   
   
   
-
-
-
-
-

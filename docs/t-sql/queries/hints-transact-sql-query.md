@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -59,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9265dea7529c1f80eb2d12741193a43c216489e9
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34470296"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854347"
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL): consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -246,7 +245,7 @@ ms.locfileid: "34470296"
  SIMPLE indica al optimizador de consultas para que intente la parametrización simple. FORCED indica al optimizador de consultas que intente la parametrización forzada. Para más información, vea [Parametrización forzada en la guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) y [Parametrización simple en la guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
   
  RECOMPILE  
- Indica a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que descarte el plan generado para la consulta una vez ejecutada, obligando así al optimizador de consultas a que vuelva a compilar un plan de consulta la próxima vez que se ejecute la misma consulta. Sin especificar RECOMPILE, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] almacena en la memoria caché planes de consulta y los reutiliza. Cuando se compilan planes de consulta, la sugerencia de consulta RECOMPILE utiliza los valores actuales de cualquier variable local de la consulta y, si la consulta está en un procedimiento almacenado, los valores actuales enviados a cualquier parámetro.  
+ Indica a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que genere un plan nuevo y temporal para la consulta y descarte de inmediato ese plan una vez que se completa la ejecución de la consulta. El plan de consulta generado no reemplaza un plan almacenado en caché cuando la misma consulta se ejecuta sin la sugerencia RECOMPILE. Sin especificar RECOMPILE, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] almacena en la memoria caché planes de consulta y los reutiliza. Cuando se compilan planes de consulta, la sugerencia de consulta RECOMPILE utiliza los valores actuales de cualquier variable local de la consulta y, si la consulta está en un procedimiento almacenado, los valores actuales enviados a cualquier parámetro.  
   
  RECOMPILE es una alternativa útil a la creación de un procedimiento almacenado que utiliza la cláusula WITH RECOMPILE cuando solo se debe volver a compilar un subconjunto de consultas del procedimiento almacenado, en lugar de todo el procedimiento almacenado. Para más información, vea [Volver a compilar un procedimiento almacenado](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md). RECOMPILE también es útil al crear guías de plan.  
   

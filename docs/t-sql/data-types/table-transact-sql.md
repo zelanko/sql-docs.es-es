@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - table variables [SQL Server]
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1751c6c9b6a05cd4337bd376108ef8d7e3d84ea4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054231"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432244"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,8 +105,9 @@ Las variables **table** no se admiten en el modelo de razonamiento basado en cos
   
 Las consultas que modifican variables **table** no generan planes de ejecución de consultas en paralelo. El rendimiento puede verse afectado cuando se modifican variables **table** muy grandes o variables **table** en consultas complejas. En estas situaciones, puede optar por utilizar tablas temporales. Para obtener más información, vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Las consultas que leen variables **table** sin modificarlas pueden generarse en paralelo.
   
-En las variables **table** no se pueden crear índices de forma explícita; en estas variables **table** tampoco se conserva ninguna estadística. En determinados casos, el rendimiento puede mejorar si se utilizan tablas temporales, las cuales admiten índices y estadísticas. Para más información sobre tablas temporales, vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
-  
+En las variables **table** no se pueden crear índices de forma explícita; en estas variables **table** tampoco se conserva ninguna estadística. A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], se introdujo una sintaxis nueva que le permite crear determinado tipos de índice alineados con la definición de tabla.  Con esta nueva sintaxis, puede crear índices en las variables de **tabla** como parte de la definición de tabla. En determinados casos, el rendimiento puede mejorar si en su lugar se utilizan tablas temporales, las que proporcionan estadísticas y compatibilidad total del índice. Para más información sobre la creación de índices alineados y las tablas temporales, consulte[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
+
+
 Las restricciones CHECK, los valores DEFAULT y las columnas calculadas de la declaración de tipos **table** no pueden llamar a funciones definidas por el usuario.
   
 No se permite la operación de asignación entre variables **table**.

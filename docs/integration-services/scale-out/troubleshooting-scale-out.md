@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: ee095bce32da1d663aee1ed1c38d2cda52187a31
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 91063b4895ee46c5bd1746348b37d6564a0d4b10
+ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409797"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964287"
 ---
 # <a name="troubleshoot-scale-out"></a>Solución de problemas de escalabilidad horizontal
 
@@ -149,6 +149,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
     Tipo del valor: **REG_DWORD** 
 
     Datos del valor: **2**
+
+    > [!NOTE]
+    > Si tiene certificados no autofirmados en el almacén de certificados raíz, se produce un error de autenticación de certificado cliente. Para obtener más información, consulte [Internet Information Services (IIS) 8 may reject client certificate requests with HTTP 403.7 or 403.16 errors](https://support.microsoft.com/help/2802568/internet-information-services-iis-8-may-reject-client-certificate-requ) (Internet Information Services (IIS) 8 puede rechazar solicitudes de certificado de cliente con errores HTTP 403.7 o 403.16).
 
 ## <a name="http-request-error"></a>Error de solicitud HTTP
 

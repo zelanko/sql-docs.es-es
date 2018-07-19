@@ -22,12 +22,12 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7762c5e00dde9e317cc1a1521385faad4c7d1d49
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: d62566a8e5db1eaee81944d364f169ccfa6ef477
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235799"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262149"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,29 +91,31 @@ Para más información, consulte [Disk Space Requirements for Index DDL Operatio
 ## <a name="transaction-log-considerations"></a>Consideraciones del registro de transacciones  
  Las operaciones de índice a gran escala, realizadas sin conexión o en línea, pueden generar grandes cargas de datos que pueden hacer que el registro de transacciones se llene rápidamente. Para estar seguros de que la operación de índice se pueda revertir, el registro de transacciones no se puede truncar hasta que se haya completado la operación de índice; no obstante, se puede realizar una copia de seguridad del registro durante la operación de índice. Por lo tanto, el registro de transacciones debe tener suficiente espacio para almacenar las transacciones de la operación de índice y cualquier transacción de usuario simultánea durante la operación de índice. Para más información, consulte [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  
 
-## <a name="resumable-index-rebuild-considerations"></a>Consideraciones sobre la recompilación de índices reanudables
+## <a name="resumable-index-considerations"></a>Consideraciones sobre índices reanudables
 
 > [!NOTE]
-> La opción de índice reanudable se aplica a SQL Server (a partir de SQL Server 2017) y SQL Database. Vea [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
+> La opción de índice reanudable se aplica a SQL Server (a partir de SQL Server 2017) (solo regeneración de índice) y SQL Database (crear índice no agrupado y recompilación de índice). Consulte [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) (actualmente en versión preliminar pública solo para SQL Database) y [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). 
 
-Al realizar la recompilación de índices en línea reanudables, se aplican las siguientes directrices:
--   Administración, planeamiento y ampliación de los períodos de mantenimiento del índice. Puede pausar y reiniciar una operación de recompilación de índice varias veces para que se ajuste a los períodos de mantenimiento.
-- Recuperación de errores de recompilación de índice (por ejemplo, las conmutaciones por error de base de datos o quedarse sin espacio en disco).
+Al realizar la recompilación o la creación de índices en línea reanudables, se aplican las siguientes directrices:
+-   Administración, planeamiento y ampliación de los períodos de mantenimiento del índice. Puede pausar y reiniciar una operación de recompilación o creación de índice varias veces para que se ajuste a los períodos de mantenimiento.
+- Recuperación de errores de recompilación o creación de índice (por ejemplo, las conmutaciones por error de base de datos o quedarse sin espacio en disco).
 - Cuando una operación de índice está en pausa, tanto el índice original como uno recién creado requieren espacio en disco y deben actualizarse durante las operaciones de DML.
 
-- Se permite el truncamiento de registros de transacción durante una operación de recompilación de índice (no se puede realizar esta operación para una operación de índice en línea normal).
+- Permite el truncamiento de registros de transacciones durante la operación de recompilación o creación de índice.
 - Opción SORT_IN_TEMPDB=ON no admitida
 
 > [!IMPORTANT]
-> La recompilación reanudable no le exige que mantenga abierta una transacción de larga ejecución, lo que permite el truncamiento del registro durante esta operación y una mejor administración del espacio de registro. Con el nuevo diseño, se consigue mantener los datos necesarios en una base de datos junto con todas las referencias necesarias para reiniciar la operación reanudable.
+> La recompilación o creación de índice reanudable no le exige que mantenga abierta una transacción de larga ejecución, lo que permite el truncamiento del registro durante esta operación y una mejor administración del espacio de registro. Con el nuevo diseño, se consigue mantener los datos necesarios en una base de datos junto con todas las referencias necesarias para reiniciar la operación reanudable.
 
-Por lo general, no hay ninguna diferencia de rendimiento entre la recompilación de índices en línea reanudables y no reanudables. Al actualizar un índice reanudable mientras una operación de regeneración de índice está en pausa:
+Por lo general, no hay ninguna diferencia de rendimiento entre la recompilación de índices en línea reanudables y no reanudables. Para crear el índice reanudable, hay una sobrecarga constante que provoca una pequeña diferencia de rendimiento entre la creación de índices reanudables y no reanudables. Esta diferencia se aprecia principalmente solo en las tablas más pequeñas.
+
+Al actualizar un índice reanudable mientras una operación de índice está en pausa:
 - Para las cargas de trabajo principalmente de solo lectura, el impacto de rendimiento es insignificante. 
 - Para las cargas de trabajo con muchas actualizaciones, puede experimentar una reducción del rendimiento (nuestras pruebas muestran una inferior al 10 %).
 
-Por lo general, no hay ninguna diferencia en la calidad de desfragmentación entre la recompilación de índices en línea reanudables y no reanudables.
+Por lo general, no hay ninguna diferencia en la calidad de desfragmentación entre la recompilación o la creación de índices en línea reanudables y no reanudables.
 
-## <a name="online-default-options"></a>Opciones predeterminadas de ONLINE 
+## <a name="online-default-options"></a>Opciones predeterminadas en línea 
 
 > [!IMPORTANT]
 > Estas opciones están en fase de versión preliminar pública.

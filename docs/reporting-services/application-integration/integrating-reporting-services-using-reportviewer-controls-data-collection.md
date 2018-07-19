@@ -15,17 +15,17 @@ caps.latest.revision: 2
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: bc1edeb74cced8b18275b57deca6b078c13a56d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5d41ac350e03dfbecc53041b2bbfa2570ede717c
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013762"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926856"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>Integración de Reporting Services con los controles ReportViewer: recopilación de datos
 De forma predeterminada, el control ReportViewer recopila información anónima de uso para que Microsoft pueda entender mejor cómo lo usan los clientes. Analizando el modo en que implementan y usan el control ReportViewer, el desarrollo futuro se puede centrar en mejoras que ofrezcan mayor valor a los clientes.
 
-Para ver una explicación de las prácticas de recopilación y uso de datos de usuario de las versiones de Microsoft SQL Server 2016 y de cualquier otro producto y servicio, consulte esta [declaración de privacidad de Microsoft](https://www.microsoft.com/EN-US/privacystatement/SQLServer/Default.aspx).
+Para ver una explicación de las prácticas de recopilación y uso de datos de usuario de las versiones de Microsoft SQL Server 2016 y de cualquier otro producto y servicio, consulte esta [declaración de privacidad]((http://go.microsoft.com/fwlink/?LinkID=868444)).
 
 ## <a name="opting-out-of-telemetry"></a>Deshabilitar la telemetría
 

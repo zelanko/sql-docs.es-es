@@ -17,12 +17,12 @@ caps.latest.revision: 91
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 977041d3925ed11fc6098f1617c95c263391171f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: fa00305db62ead0bd7eded16f22991914e3c80cc
+ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771501"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080133"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar SQL Server desde el Asistente para la instalación (programa de instalación)
 
@@ -68,7 +68,10 @@ Microsoft ha identificado un problema con la versión concreta de los archivos b
   
      Para continuar, haga clic en **Siguiente**.  
 
-4.  En la página Términos de licencia, revise el contrato de licencia y, si está de acuerdo, active la casilla **Acepto los términos de licencia** y haga clic en **Siguiente**. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+4.  En la página Términos de licencia, revise el contrato de licencia y, si está de acuerdo, active la casilla **Acepto los términos de licencia** y haga clic en **Siguiente**.  
+
+  >[!NOTE]
+  > SQL Server transmite la información sobre su experiencia de instalación, así como otros datos de uso y rendimiento para ayudar a Microsoft a mejorar el producto. Para obtener más información acerca de los controles de privacidad y de procesamiento de datos de SQL Server, vea la [declaración de privacidad](https://privacy.microsoft.com/en-us/privacystatement) y [Configuración de SQL Server para enviar comentarios a Microsoft](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
   
 5.  En la ventana Reglas globales, el procedimiento de instalación avanzará automáticamente hasta la ventana Actualizaciones de productos si no hay ningún error de regla.  
   
@@ -80,9 +83,9 @@ Microsoft ha identificado un problema con la versión concreta de los archivos b
   
 9. En **Instalar reglas**, el programa de instalación de SQL Server busca posibles problemas que puedan producirse al ejecutar el programa de instalación. Si se producen errores, haga clic en la columna **Estado** para obtener más información. En caso contrario, haga clic en **Siguiente**. 
 
-10. En **Tipo de instalación**, efectúe una instalación nueva o agregue características a una instalación existente. Haga clic en **Siguiente**. 
+10. Si se trata de la primera instalación de SQL Server en el equipo, se omite la página **Tipo de instalación** y la instalación va directamente a la página **Selección de características**. Sin embargo, si SQL Server ya está instalado en el sistema, en el **Tipo de instalación** opte por realizar una instalación nueva o agregar características a una instalación existente. Haga clic en **Siguiente**. 
   
-11. En la página Selección de características, seleccione los componentes de la instalación. Por ejemplo, para instalar una nueva instancia del motor de base de datos de SQL Server, seleccione **Servicios de Motor de base de datos**.
+11. En la página **Selección de características**, seleccione los componentes de la instalación. Por ejemplo, para instalar una nueva instancia del motor de base de datos de SQL Server, seleccione **Servicios de Motor de base de datos**.
 
     Después de seleccionar el nombre de la característica, aparece una descripción de cada grupo del componente en el panel **Descripción de característica** . Puede activar cualquier combinación de casillas. Para más información, vea [Ediciones y componentes de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) y [Ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   

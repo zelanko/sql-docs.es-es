@@ -3,12 +3,9 @@ title: Ediciones y características admitidas de SQL Server 2017 | Microsoft Doc
 ms.custom: ''
 ms.date: 11/10/2017
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- server-general
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -40,12 +37,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cda2359f1e6ae92e49331bbd2bd3471107d2fdf
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 4e93dec74b1e647fac64e7982b11e51635163193
+ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702848"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37891016"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Ediciones y características admitidas de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -80,10 +77,10 @@ Para leer las notas de la versión más reciente e información sobre las noveda
 |Edición de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Definición|  
 |---------------------------------------|----------------|  
 |Enterprise|La mejor oferta, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition proporciona capacidades de centro de datos de tecnología avanzada completas con un rendimiento ultrarápido, virtualización ilimitada y Business Intelligence integral, que habilita los mayores niveles de servicio para las cargas de trabajo de gran importancia y el acceso del usuario final a ideas claras de los datos.|  
-|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard Edition proporciona de administración básica de bases de datos y base de datos de Business Intelligence para que los departamentos y pequeñas organizaciones ejecuten sus aplicaciones y admite las herramientas de desarrollo comunes, tanto locales como en la nube, que habilitan la administración eficaz de bases de datos con recursos de TI mínimos.|  
+|Estándar|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard Edition proporciona de administración básica de bases de datos y base de datos de Business Intelligence para que los departamentos y pequeñas organizaciones ejecuten sus aplicaciones y admite las herramientas de desarrollo comunes, tanto locales como en la nube, que habilitan la administración eficaz de bases de datos con recursos de TI mínimos.|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition es una opción con un costo total de propiedad bajo para los hosts de Web y los VAP de Web que proporciona capacidades asequibles de administración y escalabilidad para propiedades web, tanto de pequeña como de gran escala.|  
 |Desarrollador|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition permite a los desarrolladores compilar cualquier tipo de aplicación en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Incluye toda la funcionalidad de la edición Enterprise, pero tiene licencias para usarse como sistema de prueba y desarrollo, no como un servidor de producción. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer es una opción ideal para las personas que compilan y prueban aplicaciones.|  
-|Ediciones Express|Express Edition es una base de datos gratuita para principiantes y es ideal para aprender a compilar pequeñas aplicaciones de servidor y de escritorio orientadas a datos. Es la mejor opción para los fabricantes de software independientes, los desarrolladores y los aficionados que compilan aplicaciones cliente. Si necesita características de base de datos más avanzadas, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express se puede actualizar sin problemas a otras versiones superiores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB, una versión ligera de Express que tiene todas sus características de capacidad de programación, se ejecuta en modo usuario y presenta una instalación rápida y sin configuración, y una lista reducida de requisitos previos.|  
+|Ediciones Express|Express Edition es una base de datos gratuita para principiantes y es ideal para aprender a compilar pequeñas aplicaciones de servidor y de escritorio orientadas a datos. Es la mejor opción para los fabricantes de software independientes, los desarrolladores y los aficionados que compilan aplicaciones cliente. Si necesita características de base de datos más avanzadas, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express se puede actualizar sin problemas a otras versiones superiores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB es una versión ligera de Express que tiene todas sus características de capacidad de programación, se ejecuta en modo usuario y presenta una instalación rápida y sin configuración, y una lista reducida de requisitos previos.|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>Usar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con un servidor de Internet  
  En un servidor de Internet, como el servidor en el que se ejecuta Internet Information Services (IIS), se instalan normalmente las herramientas de cliente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Las herramientas de cliente incluyen los componentes de conectividad del cliente utilizados por una aplicación que se conecta a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -101,7 +98,7 @@ Para leer las notas de la versión más reciente e información sobre las noveda
   
  Use la información de las tablas siguientes para determinar el conjunto de características que mejor satisface sus necesidades.  
   
-|Componentes de servidor|Description|  
+|Componentes de servidor|Descripción|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] incluye el [!INCLUDE[ssDE](../includes/ssde-md.md)], el servicio principal para almacenar, procesar y proteger datos; también incluye replicación, búsqueda de texto completo, herramientas para administrar datos XML y relacionales, integración de análisis en base de datos e integración de PolyBase para el acceso a Hadoop y a otros orígenes de datos heterogéneos, además del servidor de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] incluye las herramientas para crear y administrar aplicaciones de procesamiento analítico en línea (OLAP) y de minería de datos.|  
@@ -109,10 +106,10 @@ Para leer las notas de la versión más reciente e información sobre las noveda
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es un conjunto de herramientas gráficas y objetos programables para mover, copiar y transformar datos. También incluye el componente de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) es la solución de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para la administración de datos maestros. MDS se pueden configurar para administrar cualquier dominio (productos, clientes, cuentas) e incluye jerarquías, seguridad específica, transacciones, creación de versiones de datos y reglas de negocios, así como un [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] que se puede usar para administrar datos.|  
 |Machine Learning Services (en base de datos)|Machine Learning Services (en base de datos) admite soluciones de aprendizaje automático distribuidas y escalables con orígenes de datos empresariales. En SQL Server 2016, se admitía el lenguaje R. SQL Server 2017 admite R y Python.|
-|Machine Learning Server (independiente)|Machine Learning Server (independiente) admite la implementación de soluciones de aprendizaje automático distribuidas y escalables en varias plataformas y con varios orígenes de datos empresariales, incluidos Linux, Hadoop y Teradata. En SQL Server 2016, se admitía el lenguaje R. SQL Server 2017 admite R y Python.|
+|Machine Learning Server (independiente)|Machine Learning Server (independiente) admite la implementación de soluciones de aprendizaje automático distribuidas y escalables en varias plataformas y con varios orígenes de datos empresariales, incluidos Linux y Hadoop. En SQL Server 2016, se admitía el lenguaje R. SQL Server 2017 admite R y Python.|
 
   
-|Herramientas de administración|Description|  
+|Herramientas de administración|Descripción|  
 |----------------------|-----------------|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es un entorno integrado para obtener acceso a los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y configurarlos, administrarlos y desarrollarlos. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] permite a los desarrolladores de software y a los administradores de diversos grados de conocimientos utilizar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> Descargue e instale <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] desde  [Descargar SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx)|  
 |Administrador de configuración de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |El Administrador de configuración de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona administración de configuración básica para los servicios, protocolos de servidor, protocolos de cliente y alias de cliente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
@@ -122,7 +119,7 @@ Para leer las notas de la versión más reciente e información sobre las noveda
 |[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]|[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] proporciona un IDE para compilar soluciones para los componentes de Business Intelligence: [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]y [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].<br /><br /> (Anteriormente denominado Business Intelligence Development Studio).<br /><br /> [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] SSDT también incluye "Proyectos de base de datos", que proporcionan un entorno integrado para que los desarrolladores de software de bases de datos realicen todo el trabajo de diseño de base de datos para cualquier plataforma de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (tanto interna como externa) en Visual Studio. Los desarrolladores de software de base de datos pueden usar el Explorador de servidores mejorado en Visual Studio para crear o modificar objetos de base de datos y datos fácilmente, o bien para ejecutar consultas.|  
 |Componentes de conectividad|Instala componentes para la comunicación entre clientes y servidores, y bibliotecas de red para DB-Library, ODBC y OLE DB.|  
   
-|Documentación|Description|  
+|Documentación|Descripción|  
 |-------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Libros en pantalla|Documentación principal para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].| 
 
@@ -133,7 +130,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
   
 ##  <a name="Cross-BoxScaleLimits"></a> Límites de escala  
   
-|Característica|Enterprise|Standard|Web|Express con Advanced Services|Express| 
+|Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express| 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|
 |Capacidad máxima de cálculo que usa una sola instancia: [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Sistema operativo máximo|Limitada a menos de 4 sockets o 24 núcleos|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos| 
 |Capacidad máxima de cálculo que usa una sola instancia: [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Sistema operativo máximo|Limitada a menos de 4 sockets o 24 núcleos|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|  
@@ -148,7 +145,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
  
 ##  <a name="RDBMSHA"></a> Alta disponibilidad de RDBMS  
   
-|Característica|Enterprise|Standard|Web|Express con Advanced Services|Express|  
+|Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Compatibilidad con Server Core <sup>1</sup>|Sí|Sí|Sí|Sí|Sí|  
 |Trasvase de registros|Sí|Sí|Sí|no|no|  
@@ -183,7 +180,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 
 ##  <a name="RDBMSSP"></a> Escalabilidad y rendimiento de RDBMS  
   
-|Característica|Enterprise|Standard|Web|Express con Advanced Services|Express|  
+|Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Almacén de columnas <sup>1</sup>|Sí|Sí|Sí|Sí|Sí|  
 |Archivos binarios de objetos de gran tamaño en índices de almacén de columnas en clúster|Sí|Sí|Sí|Sí|Sí|  
@@ -214,7 +211,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 
 ##  <a name="RDBMSS"></a> Seguridad de RDBMS  
   
-|Característica|Enterprise|Standard|Web|Express|Express con Advanced Services|  
+|Característica|Enterprise|Estándar|Web|Express|Express con Advanced Services|  
 |-------------|----------------|--------------|---------|-------------|------------------------------------| 
 |Seguridad de nivel de fila|Sí|Sí|Sí|Sí|Sí|  
 |Always Encrypted|Sí|Sí|Sí|Sí|Sí| 
@@ -229,7 +226,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 
 ##  <a name="Replication"></a> Replication  
   
-|Característica|Enterprise|Standard|Web|Express con Advanced Services|Express|   
+|Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Suscriptores heterogéneos|Sí|Sí|no|no|no|  
 |Replicación de mezcla|Sí|Sí|Sí (solo suscriptor)|Sí (solo suscriptor)|Sí (solo suscriptor)|   
@@ -243,7 +240,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
   
 ##  <a name="SSMS"></a> Herramientas de administración  
   
-|Característica|Enterprise|Standard|Web|Express con Advanced Services|Express| 
+|Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express| 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Objetos de administración de SQL (SMO)|Sí|Sí|Sí|Sí|Sí|  
 |Administrador de configuración de SQL|Sí|Sí|Sí|Sí|Sí|   
@@ -262,7 +259,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
   
 ##  <a name="RDBMSM"></a> Capacidad de administración de RDBMS  
   
-|Característica|Enterprise|Standard|Web|Express con Advanced Services|Express|   
+|Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Instancias de usuario|no|no|no|Sí|Sí| 
 |LocalDB|no|no|no|Sí|no| 
@@ -289,7 +286,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
  <sup>2</sup> En Linux, se admiten los scripts de PowerShell, desde equipos de Windows que se dirigen a los servidores de SQL Server en Linux. 
 ##  <a name="DevTools"></a> Herramientas de desarrollo  
   
-|Característica|Enterprise|Standard|Web|Express con Advanced Services|Express| 
+|Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express| 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Integración de Microsoft Visual Studio|Sí|Sí|Sí|Sí|Sí| 
 |IntelliSense (Transact-SQL y MDX)|Sí|Sí|Sí|Sí|Sí| 
@@ -298,7 +295,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
   
 ##  <a name="Programmability"></a> Programmability  
   
-|Característica|Enterprise|Standard|Web|Express con Advanced Services|Express 
+|Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Integración básica de R|Sí|Sí|Sí|Sí|no|   
 |Integración avanzada de R|Sí|no|no|no|no| 
@@ -337,7 +334,7 @@ Para obtener información sobre las características de SQL Server Integration S
   
 ##  <a name="DW"></a> Almacenamiento de datos  
   
-|Característica|Enterprise|Standard|Web|Express con Advanced Services|Express|   
+|Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Crear cubos sin base de datos|Sí|Sí|no|no|no |   
 |Ensayo de generación automática y esquema de almacenamiento de datos|Sí|Sí|no|no|no| 
@@ -377,7 +374,7 @@ Para obtener información sobre las características de Business Intelligence Cl
   
 ##  <a name="SLS"></a> Servicios espaciales y de ubicación  
   
-|Nombre de la característica|Enterprise|Standard|Web|Express con Advanced Services|Express|  
+|Nombre de la característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
 |Índices espaciales|Sí|Sí|Sí|Sí|Sí|   
 |Tipos de datos planares y geodésicos|Sí|Sí|Sí|Sí|Sí| 
@@ -386,14 +383,14 @@ Para obtener información sobre las características de Business Intelligence Cl
   
 ##  <a name="ADS"></a> Servicios de bases de datos adicionales  
   
-|Nombre de la característica|Enterprise|Standard|Web|Express con Advanced Services|Express|   
+|Nombre de la característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|Sí|Sí|Sí|Sí|Sí|   
 |Correo electrónico de base de datos|Sí|Sí|Sí|no|no| 
   
 ##  <a name="Other"></a> Otros componentes  
   
-|Nombre de la característica|Enterprise|Standard|Web|Express con Advanced Services|Express|   
+|Nombre de la característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|no|no| 
 |StreamInsight HA|StreamInsight Premium Edition|no|no|no|no|   

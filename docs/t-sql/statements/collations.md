@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - COLLATE clause
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5c9763da1ea1f9bb3e1e0d92ff02fbfa48a22c46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f83f32c9afb33da154c94d1b8194e37bc04fdc6
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33071632"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783807"
 ---
 # <a name="collations"></a>Intercalaciones
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -162,16 +161,16 @@ Chiapas
 ```  
   
 ### <a name="b-additional-examples"></a>B. Otros ejemplos  
- Para ver más ejemplos en los que se usa **COLLATE**, vea el ejemplo G de [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples), **Crear una base de datos y especificar un nombre de intercalación y sus opciones**, y el ejemplo C de [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column), **Cambiar la intercalación de columnas**.  
+ Para ver más ejemplos en los que se usa **COLLATE**, consulte el ejemplo de [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver#examples)**G. Crear una base de datos y especificar un nombre de intercalación y sus opciones**, y el ejemplo de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column)**V. Cambiar la intercalación de columnas**.  
   
 ## <a name="see-also"></a>Ver también  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
+ [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)    
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
- [Prioridad de intercalación &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
- [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
- [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
- [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)     
+ [Prioridad de intercalación](../../t-sql/statements/collation-precedence-transact-sql.md)     
+ [Constantes](../../t-sql/data-types/constants-transact-sql.md)     
+ [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)     
+ [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)     
+ [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
+ [Tipo de datos de tabla](../../t-sql/data-types/table-transact-sql.md)     
   
   

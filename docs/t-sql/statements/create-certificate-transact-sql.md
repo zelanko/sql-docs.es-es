@@ -1,10 +1,9 @@
 ---
 title: CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 06/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,19 +27,19 @@ helpviewer_keywords:
 - CREATE CERTIFICATE statement
 ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 caps.latest.revision: 74
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: abd46332127b1b15280df0ec5bab5655da5a148a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0f9fd16f4104e6e6d15aa4a5617f092a4c7e424
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074852"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942841"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Agrega un certificado a una base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -92,7 +91,7 @@ CREATE CERTIFICATE certificate_name [ AUTHORIZATION user_name ]
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 CREATE CERTIFICATE certificate_name   
     { <generate_new_keys> | FROM <existing_keys> }  
@@ -184,7 +183,7 @@ CREATE CERTIFICATE certificate_name
 > [!NOTE]  
 >  Las funciones integradas para el cifrado y firma no comprueban las fechas de expiración de los certificados. Los usuarios de estas funciones deben decidir cuándo comprobar la expiración de los certificados.  
   
- Se puede crear una descripción binaria de un certificado mediante las funciones [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) y [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md). Para ver un ejemplo donde se usa **CERTPRIVATEKEY** y **CERTENCODED** para copiar un certificado en otra base de datos, vea el ejemplo B del tema [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md).  
+ Se puede crear una descripción binaria de un certificado mediante las funciones [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) y [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md). Para ver un ejemplo donde se usa **CERTPRIVATEKEY** y **CERTENCODED** para copiar un certificado en otra base de datos, vea el ejemplo B del artículo [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso CREATE CERTIFICATE en la base de datos. Solo los inicios de sesión de Windows, los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los roles de aplicación pueden poseer certificados. Los grupos y roles no pueden poseer los certificados.  
@@ -233,7 +232,7 @@ GO
 ```  
   
 ### <a name="d-creating-a-self-signed-certificate"></a>D. Crear un certificado autofirmado  
- En este ejemplo se crea un certificado denominado `Shipping04` sin especificar una contraseña de cifrado. Este ejemplo se puede usar con [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+ En este ejemplo se crea un certificado denominado `Shipping04` sin especificar una contraseña de cifrado. Este ejemplo se puede usar con [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ```  
 CREATE CERTIFICATE Shipping04   

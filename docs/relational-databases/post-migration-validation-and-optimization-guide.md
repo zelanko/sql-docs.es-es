@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
 manager: ''
-ms.openlocfilehash: 72d3f28c6cc0e2998004b8b4883fdb846e2a92e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a38a652ad967b8e473d51eda335e430426d1187e
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956430"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297371"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guía de optimización y validación posterior a la migración
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ A continuación se muestran algunos de los escenarios comunes de rendimiento det
 
 **Se aplica a:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-Al migrar desde una versión anterior de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] o versiones más recientes y al actualizar el [nivel de compatibilidad de la base de datos](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) a la versión más reciente, una carga de trabajo podría quedar expuesta a sufrir una regresión del rendimiento.
+Al migrar desde una versión anterior de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] o versiones más recientes y al actualizar el [nivel de compatibilidad de la base de datos](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) a la versión más reciente disponible, una carga de trabajo podría quedar expuesta a sufrir una regresión del rendimiento.
 
 Esto es debido a que, a partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], todos los cambios del optimizador de consultas están vinculados al [nivel de compatibilidad de la base de datos](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)más reciente, por lo que los planes no se cambian en el momento de la actualización, sino cuando un usuario cambia la opción de base de datos `COMPATIBILITY_LEVEL` a la versión más reciente. Esta función, junto con el Almacén de consultas, confiere al usuario un enorme control sobre el rendimiento de las consultas en el proceso de actualización. 
 

@@ -1,7 +1,7 @@
 ---
 title: Azure Feature Pack para Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/24/2018
+ms.date: 07/09/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f30a22035e141a7a10bc6069a8d1b6eb26818029
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bc49dc5bd2375d52d3f8a849578bd5ac9ef74430
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405057"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934867"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack para Integration Services (SSIS)
 Feature Pack de SQL Server Integration Services (SSIS) para Azure es una extensión que proporciona los componentes que se muestran en esta página para que SSIS se conecte a los servicios de Azure, para transferir datos entre Azure y orígenes de datos locales, y para procesar los datos almacenados en Azure.
@@ -39,33 +39,37 @@ En las páginas de descarga también se incluye información sobre los requisito
 ## <a name="components-in-the-feature-pack"></a>Componentes de Feature Pack
 -   Administradores de conexión
 
+    -   [Administrador de conexiones de Azure Data Lake Analytics](connection-manager/azure-data-lake-analytics-connection-manager.md)
+
+    -   [Administrador de conexiones de Azure Data Lake Store](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
+    
+    -   [Administrador de conexiones de Azure HDInsight](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
+
+    -   [Administrador de conexiones de Azure Resource Manager](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
+    
     -   [Administrador de conexiones de almacenamiento de Azure](../integration-services/connection-manager/azure-storage-connection-manager.md)
 
     -   [Administrador de conexiones de suscripciones de Azure](../integration-services/connection-manager/azure-subscription-connection-manager.md)
     
-    -   [Administrador de conexiones de Azure Data Lake Store](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
-    
-    -   [Administrador de conexiones de Azure Resource Manager](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
-    
-    -   [Administrador de conexiones de Azure HDInsight](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
-
 -   Tareas
-
-    -   [Tarea de carga de blobs de Azure](../integration-services/control-flow/azure-blob-upload-task.md)
 
     -   [Tarea de descarga de blobs de Azure](../integration-services/control-flow/azure-blob-download-task.md)
 
-    -   [Tarea de Hive de HDInsight de Azure](../integration-services/control-flow/azure-hdinsight-hive-task.md)
+    -   [Tarea de carga de blobs de Azure](../integration-services/control-flow/azure-blob-upload-task.md)
 
-    -   [Tarea de Pig de Azure HDInsight](../integration-services/control-flow/azure-hdinsight-pig-task.md)
+    -   [Tarea de Azure Data Lake Analytics](control-flow/azure-data-lake-analytics-task.md)
+
+    -   [Tarea Sistema de archivos de Azure Data Lake Store](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 
     -   [Tarea de creación de clúster de HDInsight de Azure](../integration-services/control-flow/azure-hdinsight-create-cluster-task.md)
 
     -   [Tarea de eliminación de clúster de HDInsight de Azure](../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md)
     
-    -   [Tarea de carga de Azure SQL DW](../integration-services/control-flow/azure-sql-dw-upload-task.md)
+    -   [Tarea de Hive de HDInsight de Azure](../integration-services/control-flow/azure-hdinsight-hive-task.md)
 
-    -   [Tarea Sistema de archivos de Azure Data Lake Store](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
+    -   [Tarea de Pig de Azure HDInsight](../integration-services/control-flow/azure-hdinsight-pig-task.md)
+
+    -   [Tarea de carga de Azure SQL DW](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
 -   Componentes de flujo de datos
 
@@ -77,7 +81,7 @@ En las páginas de descarga también se incluye información sobre los requisito
     
     -   [Destino de Azure Data Lake Store](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Blob de Azure y enumerador de archivos ADLS. Consultar [Contenedor de bucles Para cada uno](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
+-   Enumerador de archivos de Azure Data Lake Store y Azure Blob. Consultar [Contenedor de bucles Para cada uno](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
 
 ## <a name="scenario-processing-big-data"></a>Escenario: Procesamiento de macrodatos
  Use el Conector Azure para completar el trabajo de procesamiento de macrodatos siguiente:
